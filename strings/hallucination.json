@@ -1,0 +1,255 @@
+{
+	"suspicion": [
+		"@pick(add_name)i'm watching you...",
+		"@pick(add_name)i know what you're doing",
+		"@pick(add_name)what are you hiding?",
+		"I saw that"
+	],
+	
+	"conversation": [
+		"Yes",
+		"Yeah",
+		"Yup",
+		"No",
+		"Nah",
+		"I doubt it",
+		"Uh...",
+		"Why?",
+		"But...",
+		"Hold on",
+		"Hmm",
+		"Yeah, i know",
+		"Weird"
+	],
+
+	"greetings": [
+		"",
+		"Hey, ",
+		"Hi ",
+		"Hello ",
+		"Wait, ",
+		"It's "
+	],
+
+	"getout": [
+		"@pick(add_name)get out",
+		"@pick(add_name)get out!",
+		"@pick(add_name)go away",
+		"@pick(add_name)fuck off",
+		"OUT!",
+		"@pick(add_name)out!"
+	],
+
+	"weird": [
+		"Kchck-Chkck? Kchchck!",
+		"Kchckchk...",
+		"EEEeeeeEEEE",
+		"khhhhh",
+		"#@�*&�",
+		"H**p m*",
+		"H-hhhhh..."
+	],
+
+	"didyouhearthat": [
+		"Did you hear that?",
+		"Did you see that?",
+		"What was that?"
+	],
+
+	"add_name": [
+		"%TARGETNAME%, ",
+		"%TARGETNAME% ",
+		""
+	],
+
+	"doubt": [
+		"Why?",
+		"What?",
+		"Wait, what?",
+		"@pick(add_name)wait",
+		"@pick(add_name)hold on",
+		"Uh..."
+	],
+
+	"aggressive": [
+		"@pick(add_name)give me that!",
+		"@pick(add_name)stop it!",
+		"@pick(add_name)i'm going to kill you!",
+		"@pick(add_name)fuck you!"
+	],
+
+	"help": [
+		"HELP",
+		"HELP",
+		"HELP",
+		"HELP",
+		"HELP",
+		"HELP ME",
+		"HELP HIM",
+		"HELP HER",
+		"HELP THEM",
+		"HELP US",
+		"HELP YOURSELF"
+	],
+
+	"escape": [
+		"@pick(add_name)RUN!!",
+		"They're behind me!",
+		"It's here!",
+		"@pick(add_name)follow me!",
+		"@pick(add_name)follow me"
+	],
+
+	"infection_advice": [
+		"@pick(add_name)stay away",
+		"@pick(add_name)don't get close",
+		"@pick(add_name)be careful",
+		"@pick(add_name)help me",
+		"@pick(add_name)kill me"
+	],
+
+	"people": [
+		"Sheriff",
+		"Ranger",
+		"Doctor",
+		"Centurion",
+		"Vault dweller",
+		"Drug dealer",
+		"Wastelander",
+		"Protectron",
+		"Raider",
+		"Bartender",
+		"%TARGETNAME%"
+	],
+
+	"accusations": [
+		"dead",
+		"rogue",
+		"cult",
+		"a cultist",
+		"enclave",
+		"brotherhood",
+		"a raider",
+		"a legionary",
+		"a gang leader",
+		"a gangster",
+		"a traitor",
+		"a slaver",
+		"a legion scout",
+		"a thief"
+	],
+
+	"threat": [
+		"Raider",
+		"Deathclaws",
+		"Cazadors",
+		"Slavers",
+		"Legion",
+		"Radscorpions",
+		"Radroaches",
+		"Ghouls",
+		"Vaulties",
+		"Traitor",
+		"Harm",
+		"Kidnappers",
+		"I hear shooting",
+		"Help",
+		"%TARGETNAME%"
+	],
+
+	"location": [
+		"the desert near @pick(sublocation)",
+		"Kebab",
+		"Den",
+		"the mall",
+		"the market",
+		"the NCR base",
+		"the power plant",
+		"the police station",
+		"Klamat",
+		"the Enclave base",
+		"the prison",
+		"the vault",
+		"the highway",
+		"inside @pick(sublocation)",
+		"Kebab hospital",
+		"brothel",
+		"Kebab bar",
+		"the Legion base",
+		"a vault",
+		"the boxing ring",
+		"Sunnydale",
+		"the tunnel",
+		"the hospital",
+		"the NCR prison"
+	],
+	
+	"sublocation": [
+		"the lounge",
+		"the bar",
+		"the tunnel",
+		"Klamat",
+		"the outpost",
+		"NCR base",
+		"Kebab",
+		"Den",
+		"the power plant",
+		"the prison",
+		"the Legion tunnel",
+		"the NCR prison",
+		"the garage",
+		"the Brotherhood base",
+		"the hospital",
+		"the diner",
+		"the chapel",
+		"the Kebab bar",
+		"the Enclave base",
+		"the vault",
+		"the highway",
+		"the Kebab crossroads"
+	],
+
+	"advice": [
+		"Hmm...not sure about that.",
+		"Yes. You're doing the right thing.",
+		"No. Stop what you're doing.",
+		"You should be wary of that person.",
+		"Trust that person.",
+		"That person wants to kill you.",
+		"Kill that person. You know who.",
+		"You should go somewhere else. Quickly.",
+		"Good luck. You'll need it.",
+		"You have my permission. Do it.",
+		"Just do it."
+	],
+
+	"chemicals": [
+		"Something",
+		"Ooze",
+		"Fire",
+		"Earth",
+		"Lightning",
+		"Air",
+		"Magic",
+		"Spiders",
+		"Button",
+		"Surprise",
+		"Happiness",
+		"Despair",
+		"Blood",
+		"Awesome",
+		"Infinity",
+		"Electronics",
+		"Time",
+		"Space",
+		"Pain",
+		"Guts",
+		"Life",
+		"Death",
+		"Phlebotinium",
+		"Mana",
+		"Energy",
+		"?????"
+	]
+
+}
