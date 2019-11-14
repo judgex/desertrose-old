@@ -9,7 +9,7 @@ Don't be a dick, and <b>read the rules</b> before you play.
 
 Development is active and we are always looking for more talent, we are open source and running a ported /tg/ version of legacy F13 code.
 
-Github: https://github.com/judgex/desertrose2
+Github: https://github.com/judgex/desertrose
 Discord: https://discord.gg/yqCRFB8
 
 </i>

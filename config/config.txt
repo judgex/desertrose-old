@@ -230,7 +230,7 @@ RULESURL https://discord.gg/PS5Genn
 
 
 ## Github address
-GITHUBURL https://github.com/judgex/desertrose2
+GITHUBURL https://github.com/judgex/desertrose
 
 ## Round specific stats address
 ## Link to round specific parsed logs; IE statbus. It is appended with the RoundID automatically by ticker/Reboot()
@@ -246,7 +246,7 @@ GITHUBURL https://github.com/judgex/desertrose2
 ## Github repo id
 ##This can be found by going to https://api.github.com/users/<user name here>/repos
 ##Or https://api.github.com/orgs/<org name here>/repos if the repo owner is an organization
-GITHUBREPOID 138069316
+GITHUBREPOID 49179392
 
 ## Ban appeals URL - usually for a forum or wherever people should go to contact your admins.
 # BANAPPEALS http://justanotherday.example.com
