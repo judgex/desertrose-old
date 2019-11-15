@@ -45,10 +45,8 @@ Admin			= +EVERYTHING *EVERYTHING
 Game Master		= +EVERYTHING *EVERYTHING
 Lazy Master 	= +EVERYTHING -AUTOLOGIN *EVERYTHING
 Three Dog		= -@ -ADMIN +DJ
-
 Scribe 			= +SERVER +DEBUG +VAREDIT +SPAWN -AUTOLOGIN
 Head Scribe 	= +@ +POLL -AUTOLOGIN
-
 Initiate		= +ADMIN
 Aspirant 		= +@ +BAN
 Knight 			= +@ +SPAWN +FUN +VAREDIT
