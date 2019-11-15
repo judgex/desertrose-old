@@ -74,6 +74,8 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	var/list/custom_names = list()
 	var/prefered_security_department = SEC_DEPT_RANDOM
 
+	var/flavor_text = ""
+
 		//Mob preview
 	var/icon/preview_icon = null
 
@@ -257,6 +259,18 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 			dat += "<div class='statusDisplay'><center><img src=previewicon.png width=[preview_icon.Width()] height=[preview_icon.Height()]></center></div>"
 
 			dat += "</td></tr></table>"
+
+			update_preview_icon()
+			dat += "<table><tr><td width='340px' height='300px' valign='top'>"
+			dat += "<h2>Flavor Text</h2>"
+			dat += "<a href='?_src_=prefs;preference=flavor_text;task=input'><b>Set Examine Text</b></a><br>"
+			if(lentext(features["flavor_text"]) <= 40)
+				if(!lentext(features["flavor_text"]))
+					dat += "\[...\]"
+				else
+					dat += "[features["flavor_text"]]"
+			else
+				dat += "[TextPreview(features["flavor_text"])]...<BR>"
 
 			dat += "<h2>Body</h2>"
 			dat += "<a href='?_src_=prefs;preference=all;task=random'>Random Body</A> "
@@ -1349,6 +1363,18 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					if(new_age)
 						age = max(min( round(text2num(new_age)), AGE_MAX),AGE_MIN)
 
+				if("flavor_text")
+					to_chat(user, "<font color='red'>Debug: flavortext menu opened</font>")
+					var/oldtext = features["flavor_text"]
+					var/msg = stripped_multiline_input(usr,"Set the flavor text in your 'examine' verb. This can also be used for OOC notes. \n To delete flavor text, input a space and hit 'OK'.","Flavor Text",html_decode(features["flavor_text"]), MAX_MESSAGE_LEN*2, TRUE) as null|message
+					if(msg)
+						msg = copytext(msg, 1, MAX_MESSAGE_LEN*2)
+						to_chat(user, "<font color='red'>Debug: message NOT null</font>")
+						features["flavor_text"] = msg
+					else
+						to_chat(user, "<font color='red'>Debug: message null</font>")
+						features["flavor_text"] = oldtext
+
 				if("metadata")
 					var/new_metadata = input(user, "Enter any information you'd like others to see, such as Roleplay-preferences:", "Game Preference" , metadata)  as message|null
 					if(new_metadata)
@@ -1756,6 +1782,8 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 	character.dna.features = features.Copy()
 	character.dna.real_name = character.real_name
+	character.flavor_text = features["flavor_text"] //Let's update their flavor_text at least initially
+
 	var/datum/species/chosen_species
 	if(pref_species.id in GLOB.roundstart_races)
 		chosen_species = pref_species.type
@@ -1802,3 +1830,46 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 			return
 		else
 			custom_names[name_id] = sanitized_name
+//////////////////////////////////////////////////////
+////////////////////SUBTLE COMMAND////////////////////
+//////////////////////////////////////////////////////
+/mob
+	var/flavor_text = "" //tired of fucking double checking this
+
+/mob/proc/update_flavor_text()
+	set src in usr
+	if(usr != src)
+		to_chat(usr, "No.")
+	var/msg = stripped_multiline_input(usr, "Set the flavor text in your 'examine' verb. This can also be used for OOC notes and preferences!", "Flavor Text", html_decode(flavor_text), MAX_MESSAGE_LEN*2, TRUE)
+
+	if(!isnull(msg))
+		msg = copytext(msg, 1, MAX_MESSAGE_LEN)
+		msg = html_encode(msg)
+
+		flavor_text = msg
+
+/mob/proc/warn_flavor_changed()
+	if(flavor_text && flavor_text != "") // don't spam people that don't use it!
+		to_chat(src, "<h2 class='alert'>OOC Warning:</h2>")
+		to_chat(src, "<span class='alert'>Your flavor text is likely out of date! <a href='?src=[REF(src)];flavor_change=1'>Change</a></span>")
+
+/mob/proc/print_flavor_text()
+	if(flavor_text && flavor_text != "")
+		// We are decoding and then encoding to not only get correct amount of characters, but also to prevent partial escaping characters being shown.
+		var/msg = html_decode(replacetext(flavor_text, "\n", " "))
+		if(lentext(msg) <= 40)
+			return "<span class='notice'>[html_encode(msg)]</span>"
+		else
+			return "<span class='notice'>[html_encode(copytext(msg, 1, 37))]... <a href='?src=[REF(src)];flavor_more=1'>More...</span></a>"
+
+/mob/proc/get_top_level_mob()
+	if(istype(src.loc,/mob)&&src.loc!=src)
+		var/mob/M=src.loc
+		return M.get_top_level_mob()
+	return src
+
+proc/get_top_level_mob(var/mob/S)
+	if(istype(S.loc,/mob)&&S.loc!=S)
+		var/mob/M=S.loc
+		return M.get_top_level_mob()
+	return S

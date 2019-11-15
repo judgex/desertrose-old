@@ -386,7 +386,7 @@
 		memory_throttle_time = world.time + 5 SECONDS
 		msg = copytext(msg, 1, MAX_MESSAGE_LEN)
 		msg = sanitize(msg)
-		
+
 		mind.store_memory(msg)
 	else
 		to_chat(src, "You don't have a mind datum for some reason, so you can't add a note to it.")
@@ -462,6 +462,13 @@
 		var/t1 = text("window=[href_list["mach_close"]]")
 		unset_machine()
 		src << browse(null, t1)
+
+	if(href_list["flavor_more"])
+		usr << browse(text("<HTML><HEAD><TITLE>[]</TITLE></HEAD><BODY><TT>[]</TT></BODY></HTML>", name, replacetext(flavor_text, "\n", "<BR>")), text("window=[];size=500x200", name))
+		onclose(usr, "[name]")
+
+	if(href_list["flavor_change"])
+		update_flavor_text()
 
 	if(href_list["refresh"])
 		if(machine && in_range(src, usr))
