@@ -301,6 +301,13 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["negative_quirks"]	>> negative_quirks
 	S["neutral_quirks"]		>> neutral_quirks
 
+	if((S["flavor_text"] != "") && (S["flavor_text"] != null) && S["flavor_text"]) //If old text isn't null and isn't "" but still exists.
+		S["flavor_text"]				>> features["flavor_text"] //Load old flavortext as current dna-based flavortext
+		WRITE_FILE(S["feature_flavor_text"], features["flavor_text"]) //Save it in our new type of flavor-text
+		WRITE_FILE(S["flavor_text"]	, "") //Remove old flavortext, completing the cut-and-paste into the new format.
+	else //We have no old flavortext, default to new
+		S["feature_flavor_text"]		>> features["flavor_text"]
+
 	//try to fix any outdated data if necessary
 	if(needs_update >= 0)
 		update_character(needs_update, S)		//needs_update == savefile_version if we need an update (positive integer)
@@ -494,6 +501,14 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["positive_quirks"]		, positive_quirks)
 	WRITE_FILE(S["negative_quirks"]		, negative_quirks)
 	WRITE_FILE(S["neutral_quirks"]		, neutral_quirks)
+
+
+	if((S["flavor_text"] != "") && (S["flavor_text"] != null) && S["flavor_text"]) //If old text isn't null and isn't "" but still exists.
+		S["flavor_text"]				>> features["flavor_text"] //Load old flavortext as current dna-based flavortext
+		WRITE_FILE(S["feature_flavor_text"], features["flavor_text"]) //Save it in our new type of flavor-text
+		WRITE_FILE(S["flavor_text"]	, "") //Remove old flavortext, completing the cut-and-paste into the new format.
+	else //We have no old flavortext, default to new
+		WRITE_FILE(S["feature_flavor_text"]	, features["flavor_text"])
 
 	return 1
 
