@@ -55,7 +55,7 @@
 	var/tickerPeriod = 300 //in deciseconds
 	var/atom/movable/fullDark
 	bullet_bounce_sound = null
-	name = "Bad Deathclaw"
+	name = "Desert Rose 2"
 	desc = "The wasteland is calling.."
 	//icon = 'icons/blank_title.png'
 	layer = FLY_LAYER
