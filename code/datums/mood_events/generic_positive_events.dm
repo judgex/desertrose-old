@@ -65,3 +65,8 @@
 	description = "<span class='nicegreen'>The dead have been given a proper burial</span>\n"
 	mood_change = 2
 	timeout = 3400
+
+/datum/mood_event/finished
+	description = "<span class='nicegreen'>I finished some.. stress relief.</span>\n"
+	mood_change = 6
+	timeout = 2400

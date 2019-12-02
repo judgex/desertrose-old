@@ -150,10 +150,10 @@
 
 	if(multiorgasms > (sexual_potency * 0.34)) //AAAAA, WE DONT WANT NEGATIVES HERE, RE
 		refactory_period = rand(250, 400) - sexual_potency//sex cooldown
-		src.set_drugginess(rand(20, 30))
+		SEND_SIGNAL(src, COMSIG_ADD_MOOD_EVENT, "finished", /datum/mood_event/finished)
 	else
 		refactory_period = rand(250, 400) - sexual_potency
-		src.set_drugginess(rand(5, 10))
+		SEND_SIGNAL(src, COMSIG_ADD_MOOD_EVENT, "finished", /datum/mood_event/finished)
 
 /mob/living/cum(mob/living/partner, target_orifice)
 	if(multiorgasms < sexual_potency)
