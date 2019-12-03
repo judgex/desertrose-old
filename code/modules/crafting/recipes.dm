@@ -612,7 +612,7 @@
 				/obj/item/stack/sheet/bone = 2)
 	category = CAT_PRIMAL
 	subcategory = CAT_TRIBAL
-*/ 
+*/
 /datum/crafting_recipe/boneaxe
 	name = "Bone Axe"
 	result = /obj/item/twohanded/fireaxe/boneaxe
@@ -763,7 +763,7 @@
 	name = "med-x"
 	result = /obj/item/reagent_containers/syringe/medx
 	time = 20
-	reqs = list(/obj/item/reagent_containers/syringe = 1, /obj/item/reagent_containers/food/snacks/grown/feracactus = 2, /obj/structure/flora/wasteplant/wild_agave = 1, /datum/reagent/consumable/ethanol/whiskey = 10)
+	reqs = list(/obj/item/reagent_containers/syringe = 1, /obj/item/reagent_containers/food/snacks/grown/feracactus = 2, /obj/item/reagent_containers/food/snacks/grown/agave = 1, /datum/reagent/consumable/ethanol/whiskey = 10)
 	tools = list(/obj/item/lighter, /obj/item/reagent_containers/glass/beaker)
 	category = CAT_DRUGS
 
