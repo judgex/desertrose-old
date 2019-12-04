@@ -1,7 +1,7 @@
 /obj/item/gun/ballistic/shotgun
-	name = "Ithaca M37"
+	name = "hunting shotgun"
 	desc = "A traditional hunting shotgun with wood furniture and a four-shell capacity underneath."
-	icon_state = "Itaca"
+	icon_state = "hunting"
 	item_state = "huntingshotgun"
 	w_class = WEIGHT_CLASS_BULKY
 	force = 20

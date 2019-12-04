@@ -580,7 +580,8 @@
 				/obj/item/instrument/guitar,
 				/obj/item/instrument/violin,
 				/obj/item/instrument/saxophone,
-				/obj/item/claymore/machete/pipe
+				/obj/item/claymore/machete/pipe,
+				/obj/item/kitchen/knife/cosmicdirty,
 				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/melee/tier3 //TIER 3 MELEE WEAPON
@@ -910,24 +911,32 @@
 				 /obj/item/ammo_box/tube/c4570
 				 )
 
-	var/loot10 = list(/obj/item/gun/ballistic/shotgun/automatic/hunting/brush/scoped,
-				 /obj/item/ammo_box/tube/c4570,
-				 /obj/item/ammo_box/tube/c4570
-				 )
+	var/loot10 = list(
+				/obj/item/gun/ballistic/shotgun/automatic/hunting/brush/scoped,
+				/obj/item/ammo_box/tube/c4570,
+				/obj/item/ammo_box/tube/c4570
+				)
 
-	var/loot11 = list(/obj/item/gun/ballistic/shotgun/antimateriel,
-				 /obj/item/ammo_box/a50MG,
-				 /obj/item/ammo_box/a50MG
-				 )
+	var/loot11 = list(
+				/obj/item/gun/ballistic/shotgun/antimateriel,
+				/obj/item/ammo_box/a50MG,
+				/obj/item/ammo_box/a50MG
+				)
 
 	var/loot12 = list(
 				/obj/item/gun/ballistic/shotgun/automatic/hunting,
 				/obj/item/ammo_box/a762/doublestacked,
 				/obj/item/ammo_box/a762/doublestacked
+				)			
+
+	var/loot13 = list(
+				/obj/item/gun/ballistic/automatic/shotgun/riot,
+				/obj/item/ammo_box/magazine/d12g,
+				/obj/item/ammo_box/magazine/d12g
 				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/tier4/Initialize(mapload) //on mapload, pick what shit to spawn
-	loot = pick(loot1, loot2, loot3, loot4, loot5, loot6, loot7, loot8, loot9, loot10, loot11, loot12)
+	loot = pick(loot1, loot2, loot3, loot4, loot5, loot6, loot7, loot8, loot9, loot10, loot11, loot12,)
 	. = ..()
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/tier5 //TIER 5 GUN
@@ -1203,7 +1212,10 @@
 				/obj/item/crafting/igniter,
 				/obj/item/crafting/timer,
 				/obj/item/crafting/sensor,
-				/obj/item/crafting/lunchbox)
+				/obj/item/crafting/lunchbox,
+				/obj/item/stack/crafting/metalparts/five,
+				/obj/item/stack/crafting/goodparts/three,
+				/obj/item/reagent_containers/glass/bottle/blackpowder)
 
 /obj/effect/spawner/lootdrop/f13/crafting/Initialize(mapload) //on mapload, pick how many shit to spawn
 	lootcount = pick(1, 2)
@@ -1259,7 +1271,9 @@
 				/obj/item/stack/sheet/plasteel/five = 1,
 				/obj/item/stack/sheet/plastic/five = 4,
 				/obj/item/stack/sheet/paperframes/twenty = 1,
-				/obj/item/stack/sheet/cloth/ten = 1
+				/obj/item/stack/sheet/cloth/ten = 1,
+				/obj/item/stack/crafting/metalparts/five = 4,
+				/obj/item/stack/crafting/goodparts/three = 2
 				)
 
 /obj/effect/spawner/lootdrop/f13/cash_random_low

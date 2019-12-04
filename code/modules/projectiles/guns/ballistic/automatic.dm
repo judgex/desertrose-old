@@ -8,6 +8,8 @@
 	fire_delay = 2
 	actions_types = list(/datum/action/item_action/toggle_firemode)
 	force = 20
+	var/auto_eject = 0
+	var/auto_eject_sound = null
 
 /obj/item/gun/ballistic/automatic/proto
 	name = "compact submachine gun"
@@ -81,6 +83,21 @@
 		update_icon()
 		alarmed = 1
 	return
+
+/obj/item/gun/ballistic/automatic/afterattack(atom/target, mob/living/user)
+	..()
+	if(auto_eject && magazine && magazine.stored_ammo && !magazine.stored_ammo.len)
+		magazine.dropped()
+		user.visible_message(
+			"[magazine] falls out and clatters on the floor!",
+			"<span class='notice'>[magazine] falls out and clatters on the floor!</span>"
+		)
+		if(auto_eject_sound)
+			playsound(user, auto_eject_sound, 40, 1)
+		magazine.forceMove(get_turf(src.loc))
+		magazine.update_icon()
+		magazine = null
+		update_icon()
 
 /obj/item/gun/ballistic/automatic/c20r
 	name = "tactical submachine gun"
@@ -746,6 +763,17 @@
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 
+/obj/item/gun/ballistic/automatic/shotgun/riot
+	name = "riot shotgun"
+	desc = "A compact riot shotgun designed to fight in close quarters."
+	icon_state = "riot_shotgun"
+	item_state = "huntingshotgun"
+	fire_sound = 'sound/f13weapons/repeater_fire.ogg'
+	fire_delay = 5
+	mag_type = /obj/item/ammo_box/magazine/d12g
+	w_class = WEIGHT_CLASS_BULKY
+	weapon_weight = WEAPON_HEAVY
+
 /obj/item/gun/ballistic/automatic/greasegun
 	name = "9mm submachine gun"
 	desc = "A mass-produced 9mm sub machine gun. Slow fire rate means less waste of ammo and controllable bursts."
@@ -870,5 +898,41 @@
 			spread = 1
 			to_chat(user, "<span class='notice'>You switch to semi-automatic.</span>")
 	playsound(user, 'sound/weapons/empty.ogg', 100, 1)
+	update_icon()
+	return
+
+/obj/item/gun/ballistic/automatic/m1garand
+	name = "battle rifle"
+	desc = "The WWII American Classic. Still has that satisfiying ping."
+	icon_state = "sniper_rifle"
+	item_state = "sniper_rifle"
+	mag_type = /obj/item/ammo_box/magazine/garand308
+	fire_sound = 'sound/f13weapons/hunting_rifle.ogg'
+	fire_delay = 3
+	burst_size = 1
+	extra_damage = 42
+	extra_penetration = 10
+	auto_eject = 1
+	auto_eject_sound = 'sound/f13weapons/garand_ping.ogg'
+
+/obj/item/gun/ballistic/automatic/m1garand/attack_self(mob/living/user)
+	var/obj/item/ammo_casing/AC = chambered //Find chambered round
+	if(magazine)
+		magazine.forceMove(drop_location())
+		magazine.update_icon()
+		if(magazine.ammo_count())
+			playsound(src, "sound/f13weapons/garand_ping.ogg", 70, 1)
+		else
+			playsound(src, "sound/f13weapons/garand_ping.ogg", 70, 1)
+		magazine = null
+		to_chat(user, "<span class='notice'>You eject the enbloc clip out of \the [src].</span>")
+	else if(chambered)
+		AC.forceMove(drop_location())
+		AC.bounce_away()
+		chambered = null
+		to_chat(user, "<span class='notice'>You unload the round from \the [src]'s chamber.</span>")
+		playsound(src, "gun_slide_lock", 70, 1)
+	else
+		to_chat(user, "<span class='notice'>There's no magazine in \the [src].</span>")
 	update_icon()
 	return
