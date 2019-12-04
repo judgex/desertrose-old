@@ -415,3 +415,42 @@ Trader
 	uniform =  /obj/item/clothing/under/rank/captain
 
 */
+//Tribal //
+
+/datum/job/wasteland/f13tribal
+	title = "Tribal"
+	flag = F13TRIBAL
+	faction = "Wastelander"
+	total_positions = -1
+	spawn_positions = -1
+	supervisors = "no one"
+	selection_color = "#dddddd"
+
+	outfit = /datum/outfit/job/wasteland/f13tribal
+
+/datum/outfit/job/wasteland/f13tribal
+	name = "Tribal"
+	jobtype = /datum/job/wasteland/f13tribal
+	id = null
+	ears = null
+	belt = null
+	backpack = null
+	satchel = null
+/datum/outfit/job/wasteland/f13tribal/pre_equip(mob/living/carbon/human/H)
+	..()
+	r_hand = pick(
+		/obj/item/twohanded/bonespear, \
+		/obj/item/claymore/machete)
+	uniform = pick(
+		/obj/item/clothing/under/pants/f13/caravan, \
+		/obj/item/clothing/under/pants/tan, \
+		/obj/item/clothing/under/pants/black, \
+		/obj/item/clothing/under/pants/camo, \
+		/obj/item/clothing/under/pants/f13/cloth)
+	suit = pick(
+		/obj/item/clothing/suit/f13/robe_liz, \
+		/obj/item/clothing/suit/f13/mantle_liz)
+	l_pocket = 	/obj/item/reagent_containers/pill/patch/healingpowder
+	r_pocket = /obj/item/flashlight/flare/torch
+	belt = 	/obj/item/kitchen/knife/combat/survival
+	shoes = /obj/item/clothing/shoes/sandal
