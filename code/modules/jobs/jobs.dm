@@ -81,7 +81,8 @@ GLOBAL_LIST_INIT(wasteland_positions, list(
 	"Raider",
 	"Great Khan",
 	"Preacher",
-	"Wastelander"
+	"Wastelander",
+	"Tribal"
 ))
 GLOBAL_LIST_INIT(security_positions, list(
 	"Chief of Security",
