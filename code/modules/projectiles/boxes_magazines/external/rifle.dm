@@ -61,7 +61,7 @@
 /obj/item/ammo_box/magazine/garand308
 	name = "en-bloc clip (7.62x51mm)"
 	icon_state = "enbloc-8"
-	ammo_type = /obj/item/projectile/bullet/a762m
+	ammo_type = /obj/item/ammo_casing/a762
 	caliber = "a762"
 	max_ammo = 8
 
