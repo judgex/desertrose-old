@@ -4,8 +4,8 @@
 	department_flag = LEGION
 	selection_color = "#ffeeee"
 	exp_type = EXP_TYPE_LEGION
-	forbids = "The Legion forbids: Ghouls (joining the legion, don't kill random wastelander ghouls just for being ghouls), Women in armed roles, chems and medicine besides healing powder. Lethally harming any servants of Caesar without proper reason."
-	enforces = "The Legion expects: Obeying orders of superiors. A roman style name. Wearing the uniform, unless acting as a nonlethal infiltrator. Expansion of Caesars Domain."
+	forbids = "The Legion forbids: Ghouls joining the Legion. Women in armed roles. Chems and drugs such as jet or alcohol. Reliance on technology. Lethally harming any servants of Caesar without proper reason."
+	enforces = "The Legion expects: Obeying orders of superiors. A roman style name. Wearing the uniform, unless acting as a nonlethal infiltrator."
 
 /datum/outfit/job/CaesarsLegion
 	id = null
@@ -479,10 +479,10 @@ Legionary
 	title = "Legion Explorer"
 	flag = F13EXPLORER
 	faction = "Legion"
-	total_positions = 2  //left as per req
-	spawn_positions = 2
-	description = "You answer directly to the Centurion and the Decanii, acting as the eyes of the Centuria you bear the responsibility of obtaining intelligence for your superiors and organizing the Scouts to do the same."
-	supervisors = "Venators, Decanii and the Centurion."
+	total_positions = 4  //left as per req
+	spawn_positions = 4
+	description = "Acting as the eyes and ears of the Legion, you are in the region to scout it out for potential conquest. Make note of your surroundings and above all, survive to report back."
+	supervisors = "Centurion."
 	exp_requirements = 1200
 
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13explorer

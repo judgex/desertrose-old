@@ -4,7 +4,7 @@
 	exp_type = EXP_TYPE_NCR
 	access = list(ACCESS_SECURITY, ACCESS_SEC_DOORS, ACCESS_NCR)
 	minimal_access = list(ACCESS_SECURITY, ACCESS_SEC_DOORS, ACCESS_NCR)
-	forbids = "The NCR forbids: Drugs (except for med-X), Drinking, Gambling, raiders (anywhere, being one is a crime), allying with factions you are at war with (such as the Legion or Brotherhood of Steel), and sex on duty."
+	forbids = "The NCR forbids: Chem and drug use such as jet or alcohol, while on duty. Execution of unarmed or otherwise subdued targets."
 	enforces = "The NCR expects: Obeying the lawful orders of superiors. Proper treatment of prisoners.  Good conduct within the Republics laws. Wearing the uniform."
 
 /datum/outfit/job/ncr/
@@ -459,10 +459,10 @@ Ranger
 	title = "NCR Patrol Ranger"
 	flag = F13RANGER
 	faction = "NCR"
-	total_positions = 2
-	spawn_positions = 2
-	description = "You answer directly to the Veteran Ranger and Captain, working either independently with other Rangers or Infantry to complete your mission objectives however required, working either alone, in a squad or with the Army. As a Ranger, you seize, destroy, capture, exploit, or recover designated targets on behalf of the NCR."
-	supervisors = "Veteran Ranger"
+	total_positions = 4
+	spawn_positions = 4
+	description = "As a Patrol Ranger your job is to keep the peace in the region and ensure that justice and law prevail in this bloodsoaked wasteland. As some of the best the NCR has to offer, your kind are legendary in the region for their ability to protect the weak, and serve the community."
+	supervisors = "Veteran Ranger."
 	selection_color = "#fff5cc"
 	exp_requirements = 720
 	exp_type = EXP_TYPE_NCRCOMMAND
