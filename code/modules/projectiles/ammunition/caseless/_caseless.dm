@@ -19,3 +19,9 @@
 	desc = "A dart for use in needler pistols."
 	caliber = "needle"
 	projectile_type = /obj/item/projectile/bullet/needle
+
+/obj/item/ammo_casing/caseless/needle/ap
+	name = "A needler round."
+	desc = "A dart for use in needler pistols."
+	caliber = "needle"
+	projectile_type = /obj/item/projectile/bullet/needle/ap

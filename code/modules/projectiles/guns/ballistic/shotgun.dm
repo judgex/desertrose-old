@@ -1,7 +1,7 @@
 /obj/item/gun/ballistic/shotgun
-	name = "Ithaca M37"
+	name = "hunting shotgun"
 	desc = "A traditional hunting shotgun with wood furniture and a four-shell capacity underneath."
-	icon_state = "Itaca"
+	icon_state = "hunting"
 	item_state = "huntingshotgun"
 	w_class = WEIGHT_CLASS_BULKY
 	force = 20
@@ -15,6 +15,7 @@
 	randomspread = 0
 	fire_delay = 2
 	distro = 1
+	fire_sound = 'sound/f13weapons/shotgun.ogg'
 
 /obj/item/gun/ballistic/shotgun/attackby(obj/item/A, mob/user, params)
 	. = ..()
@@ -107,6 +108,7 @@
 	extra_damage = 40
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
+	fire_sound = 'sound/f13weapons/hunting_rifle.ogg'
 
 /obj/item/gun/ballistic/shotgun/boltaction/enchanted
 	name = "enchanted bolt action rifle"

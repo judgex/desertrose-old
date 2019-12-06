@@ -136,11 +136,11 @@ Head Scribe
 	pa_wear = TRUE
 	chemwhiz = TRUE
 	suit = 			/obj/item/clothing/suit/armor/f13/headscribe
-	suit_store =	/obj/item/gun/energy/laser/pistol
+	suit_store =	/obj/item/gun/ballistic/revolver/needler
 	belt = 			/obj/item/storage/belt/utility/full/engi
 	backpack_contents = list(
 		/obj/item/kitchen/knife/combat=1, \
-		/obj/item/stock_parts/cell/ammo/ec=2)
+		/obj/item/ammo_box/needleap=2)
 
 /*
 Knight

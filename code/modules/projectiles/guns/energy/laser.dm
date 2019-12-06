@@ -174,6 +174,7 @@
 /obj/item/gun/energy/laser/scatter
 	name = "tribeam laser rifle"
 	desc = "A modified AER9 equipped with a refraction kit that spreads its bolts. It is usually only given to high-ranking soldiers within the Brotherhood, due to it's level of technology, as well as its reputation of friendly fire."
+	icon_state = "tribeam"
 	item_state = "laser-rifle9"
 	fire_delay = 3
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/scatter)

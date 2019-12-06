@@ -8,6 +8,8 @@
 	fire_delay = 2
 	actions_types = list(/datum/action/item_action/toggle_firemode)
 	force = 20
+	var/auto_eject = 0
+	var/auto_eject_sound = null
 
 /obj/item/gun/ballistic/automatic/proto
 	name = "compact submachine gun"
@@ -81,6 +83,21 @@
 		update_icon()
 		alarmed = 1
 	return
+
+/obj/item/gun/ballistic/automatic/afterattack(atom/target, mob/living/user)
+	..()
+	if(auto_eject && magazine && magazine.stored_ammo && !magazine.stored_ammo.len && !chambered)
+		magazine.dropped()
+		user.visible_message(
+			"[magazine] falls out and clatters on the floor!",
+			"<span class='notice'>[magazine] falls out and clatters on the floor!</span>"
+		)
+		if(auto_eject_sound)
+			playsound(user, auto_eject_sound, 40, 1)
+		magazine.forceMove(get_turf(src.loc))
+		magazine.update_icon()
+		magazine = null
+		update_icon()
 
 /obj/item/gun/ballistic/automatic/c20r
 	name = "tactical submachine gun"
@@ -746,6 +763,17 @@
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 
+/obj/item/gun/ballistic/automatic/shotgun/riot
+	name = "riot shotgun"
+	desc = "A compact riot shotgun designed to fight in close quarters."
+	icon_state = "riot_shotgun"
+	item_state = "huntingshotgun"
+	fire_sound = 'sound/f13weapons/riot_shotgun.ogg'
+	fire_delay = 5
+	mag_type = /obj/item/ammo_box/magazine/d12g
+	w_class = WEIGHT_CLASS_BULKY
+	weapon_weight = WEAPON_HEAVY
+
 /obj/item/gun/ballistic/automatic/greasegun
 	name = "9mm submachine gun"
 	desc = "A mass-produced 9mm sub machine gun. Slow fire rate means less waste of ammo and controllable bursts."
@@ -872,3 +900,34 @@
 	playsound(user, 'sound/weapons/empty.ogg', 100, 1)
 	update_icon()
 	return
+
+/obj/item/gun/ballistic/automatic/m1garand
+	name = "battle rifle"
+	desc = "The WWII American Classic. Still has that satisfiying ping."
+	icon_state = "m1garand"
+	item_state = "rifle"
+	mag_type = /obj/item/ammo_box/magazine/garand308
+	fire_sound = 'sound/f13weapons/hunting_rifle.ogg'
+	fire_delay = 3
+	burst_size = 1
+	extra_damage = 42
+	extra_penetration = 10
+	en_bloc = 1
+	auto_eject = 1
+	auto_eject_sound = 'sound/f13weapons/garand_ping.ogg'
+
+/obj/item/gun/ballistic/automatic/m1garand/update_icon()
+	..()
+	icon_state = "[initial(icon_state)]"
+
+/obj/item/gun/ballistic/automatic/m1garand/attackby(obj/item/A, mob/user, params)
+	. = ..()
+	if(.)
+		return
+
+/obj/item/gun/ballistic/automatic/m1garand/oldglory
+	name = "Old Glory"
+	desc = "This Machine kills communists!"
+	icon_state = "oldglory"
+	extra_damage = 50
+	extra_penetration = 15
