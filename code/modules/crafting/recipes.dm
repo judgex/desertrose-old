@@ -851,6 +851,7 @@
 /datum/crafting_recipe/jet
 	name = "Jet"
 	result = /obj/item/reagent_containers/pill/patch/jet
+	reqs = list(/datum/reagent/consumable/milk = 10, /obj/item/clothing/mask/cigarette = 3, /obj/item/toy/crayon/spraycan)
 	time = 20
 	tools = list(TOOL_SWORKBENCH)
 	category = CAT_DRUGS

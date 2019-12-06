@@ -11,6 +11,13 @@
 	layer = BELOW_OBJ_LAYER
 	anchored = TRUE
 	machine_tool_behaviour = TOOL_BWORKBENCH
+	var/wrenchable = 1
+
+/obj/machinery/workbench/can_be_unfasten_wrench(mob/user, silent)
+	if (!wrenchable)  // case also covered by NODECONSTRUCT checks in default_unfasten_wrench
+		return CANT_UNFASTEN
+
+	return ..()
 
 /obj/machinery/workbench/wrench_act(mob/living/user, obj/item/I)
 	default_unfasten_wrench(user, I, 10)
@@ -37,10 +44,9 @@
 	icon_state = "advanced_bench"
 	desc = "A large and advanced pre-war workbench to tackle any project!"
 	machine_tool_behaviour = TOOL_AWORKBENCH
+	can_be_unanchored = 0
+	wrenchable = 0
 
-/obj/machinery/workbench/advanced/wrench_act(mob/living/user, obj/item/I)
-	return
-	
 /obj/item/weaponcrafting/receiver
 	name = "modular receiver"
 	desc = "A prototype modular receiver and trigger assembly for a firearm."
