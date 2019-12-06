@@ -855,7 +855,7 @@
 "aqw" = (/obj/structure/fence/corner{icon_state = "corner"; dir = 6},/turf/open/indestructible/ground/outside/sidewalk{dir = 7; icon_state = "outerpavement"},/area/f13/wasteland)
 "aqx" = (/obj/structure/sign/departments/medbay/alt,/turf/closed/wall/r_wall/f13/vault,/area/f13/brotherhood)
 "aqy" = (/obj/structure/sign/departments/chemistry,/turf/closed/wall/r_wall/f13/vault,/area/f13/brotherhood)
-"aqz" = (/obj/effect/decal/cleanable/generic,/obj/structure/table,/turf/open/floor/plasteel/f13{icon_state = "whitebluechess"},/area/f13/brotherhood)
+"aqz" = (/obj/machinery/workbench/advanced,/turf/open/floor/plasteel/f13{icon_state = "whitebluechess"},/area/f13/brotherhood)
 "aqA" = (/obj/structure/table,/turf/open/floor/plasteel/f13{icon_state = "whitebluechess"},/area/f13/brotherhood)
 "aqB" = (/obj/structure/frame/machine,/obj/structure/table,/turf/open/floor/plasteel/f13{icon_state = "whitebluechess"},/area/f13/brotherhood)
 "aqC" = (/obj/structure/table,/turf/open/floor/f13/wood,/area/f13/building)
@@ -896,7 +896,7 @@
 "arl" = (/turf/open/indestructible/ground/outside/ruins{tag = "icon-rubble (SOUTHWEST)"; icon_state = "rubble"; dir = 10},/area/f13/ruins)
 "arm" = (/turf/open/floor/plasteel/f13/vault_floor/purple/whitepurplefull,/area/f13/brotherhood)
 "arn" = (/turf/open/indestructible/ground/outside/road{tag = "icon-horizontalinnermain2left (WEST)"; icon_state = "horizontalinnermain2left"; dir = 8},/area/f13/wasteland)
-"aro" = (/obj/structure/chalkboard,/turf/open/floor/plasteel/f13/vault_floor/purple/whitepurplefull,/area/f13/brotherhood)
+"aro" = (/obj/machinery/workbench,/turf/open/floor/plasteel/f13/vault_floor/purple/whitepurplefull,/area/f13/brotherhood)
 "arp" = (/turf/open/indestructible/ground/outside/road{tag = "icon-innermaincornerinner (NORTH)"; icon_state = "innermaincornerinner"; dir = 1},/area/f13/wasteland)
 "arq" = (/obj/structure/toilet{dir = 4},/obj/item/radio/intercom{frequency = 1361; name = "Vault Intercom"; pixel_x = -32},/turf/open/floor/plasteel/f13/vault_floor/blue/bluechess/bluechess2,/area/f13/vault)
 "arr" = (/obj/machinery/light{dir = 1},/obj/effect/turf_decal/stripes/corner,/turf/open/floor/plasteel/f13/vault_floor/blue,/area/f13/vault)
@@ -3390,6 +3390,7 @@
 "bnj" = (/obj/structure/closet/crate/bin,/obj/machinery/power/apc{dir = 8; name = "Chemistry APC"; pixel_x = -26},/obj/structure/cable{icon_state = "0-4"},/turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite/rarecyan,/area/f13/vault)
 "bnk" = (/obj/effect/decal/cleanable/dirt,/obj/structure/cable{icon_state = "4-8"},/turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite/rarecyan,/area/f13/vault)
 "bnl" = (/obj/structure/cable{icon_state = "4-8"},/turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite/rarecyan,/area/f13/vault)
+"bnm" = (/obj/machinery/workbench/standard,/turf/open/floor/plasteel/f13/vault_floor/purple/whitepurplefull,/area/f13/brotherhood)
 "bnn" = (/obj/structure/cable{icon_state = "4-8"},/obj/effect/decal/cleanable/dirt,/turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,/area/f13/vault)
 "bno" = (/obj/structure/closet/crate/secure/weapon,/obj/effect/spawner/lootdrop/f13/armor/random_high,/turf/open/floor/f13{tag = "icon-darkredfull"; icon_state = "darkredfull"},/area/f13/bunker)
 "bnp" = (/obj/structure/cable{icon_state = "1-2"},/obj/structure/cable{icon_state = "2-8"},/turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,/area/f13/vault)
@@ -3777,7 +3778,7 @@
 "byn" = (/obj/structure/simple_door/interior,/turf/open/floor/f13/wood,/area/f13/chapel)
 "byo" = (/obj/structure/table/wood,/obj/item/paper_bin,/obj/item/pen,/turf/open/floor/f13/wood,/area/f13/city)
 "bys" = (/obj/structure/table/wood,/obj/item/phone,/turf/open/floor/f13/wood,/area/f13/city)
-"byu" = (/obj/machinery/ammobench,/turf/open/floor/f13/wood,/area/f13/city)
+"byu" = (/obj/machinery/workbench/standard,/turf/open/floor/f13/wood,/area/f13/city)
 "byF" = (/obj/structure/sign/poster/contraband/pinup_shower,/turf/closed/wall/f13/wood/house,/area/f13/village)
 "byG" = (/obj/machinery/ntnet_relay,/turf/open/floor/circuit/telecomms/mainframe,/area/f13/tcoms)
 "byJ" = (/mob/living/simple_animal/hostile/radroach,/turf/open/floor/f13/wood,/area/f13/caves)
@@ -4203,7 +4204,7 @@
 "bVS" = (/obj/item/storage/toolbox/mechanical/old,/turf/open/indestructible/ground/inside/subway,/area/f13/sewer)
 "bVT" = (/obj/item/electronics/apc,/obj/item/stack/cable_coil,/turf/open/indestructible/ground/inside/subway,/area/f13/sewer)
 "bWg" = (/turf/open/floor/f13{tag = "icon-stagestairs"; icon_state = "stagestairs"},/area/f13/wasteland)
-"bWh" = (/obj/machinery/ammobench,/turf/open/floor/f13/wood,/area/f13/village)
+"bWh" = (/obj/machinery/workbench/standard,/turf/open/floor/f13/wood,/area/f13/village)
 "bWl" = (/obj/machinery/light,/turf/open/floor/wood/f13/carpet,/area/f13/village)
 "bWn" = (/obj/effect/spawner/lootdrop/trash,/turf/closed/mineral/random/low_chance,/area/f13/caves)
 "bWo" = (/obj/structure/sign/poster/contraband/pinup_couch,/turf/closed/wall/f13/wood/house,/area/f13/village)
@@ -4252,7 +4253,7 @@
 "dyg" = (/obj/structure/rack,/obj/effect/spawner/lootdrop/f13/foodspawner,/turf/open/floor/f13/wood,/area/f13/village)
 "dyA" = (/obj/structure/table/wood,/obj/effect/spawner/lootdrop/f13/weapon/melee/random,/turf/open/floor/f13/wood{tag = "icon-housewood2"; icon_state = "housewood2"},/area/f13/village)
 "dAO" = (/turf/closed/wall/f13/wood,/area/f13/chapel)
-"dCE" = (/obj/machinery/light/small{dir = 1},/obj/machinery/ammobench/makeshift,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/building)
+"dCE" = (/obj/machinery/light/small{dir = 1},/obj/machinery/workbench,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/building)
 "dDi" = (/obj/structure/table/wood,/obj/effect/spawner/lootdrop/f13/weapon/gun/random,/turf/open/floor/f13/wood,/area/f13/village)
 "dGk" = (/obj/structure/rack,/obj/effect/spawner/lootdrop/f13/weapon/melee/random,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/building)
 "dGF" = (/obj/structure/closet,/obj/effect/spawner/lootdrop/f13/weapon/gun/random_high,/turf/open/floor/f13/wood,/area/f13/village)
@@ -4386,7 +4387,7 @@
 "kqZ" = (/obj/effect/landmark/start/f13/pusher,/turf/open/floor/wood/f13/carpet,/area/f13/village)
 "kyS" = (/mob/living/simple_animal/hostile/handy,/turf/open/floor/plasteel/barber{icon = 'icons/turf/f13floors2.dmi'; icon_state = "bluerustychess2"; tag = "icon-bluerustychess2"},/area/f13/bunker)
 "kzJ" = (/mob/living/simple_animal/hostile/radroach,/turf/open/floor/f13/wood,/area/f13/clinic)
-"kBP" = (/obj/machinery/ammobench/makeshift,/turf/open/floor/f13/wood,/area/f13/village)
+"kBP" = (/obj/machinery/workbench,/turf/open/floor/f13/wood,/area/f13/village)
 "kEF" = (/obj/effect/spawner/lootdrop/f13/alcoholspawner,/turf/open/floor/f13/wood,/area/f13/building)
 "kHt" = (/mob/living/simple_animal/hostile/ghoul,/turf/open/indestructible/ground/outside/road{tag = "icon-horizontalinnermain2"; icon_state = "horizontalinnermain2"},/area/f13/wasteland)
 "kNi" = (/obj/effect/spawner/lootdrop/f13/armor/random,/turf/open/floor/f13/wood,/area/f13/village)
@@ -4541,7 +4542,7 @@
 "ttv" = (/obj/structure/closet,/obj/effect/spawner/lootdrop/clothing_low,/obj/effect/spawner/lootdrop/f13/weapon/gun/random,/turf/open/floor/f13/wood,/area/f13/village)
 "tyj" = (/obj/structure/table/wood,/obj/machinery/reagentgrinder,/turf/open/floor/f13/wood{tag = "icon-housewood2"; icon_state = "housewood2"},/area/f13/village)
 "tzw" = (/obj/structure/table/reinforced,/obj/item/clothing/mask/balaclava,/obj/item/clothing/mask/balaclava,/obj/item/clothing/mask/balaclava,/turf/open/floor/f13{tag = "icon-floorrusty"; icon_state = "floorrusty"},/area/f13/building)
-"tBj" = (/obj/machinery/ammobench/makeshift,/turf/open/floor/f13/wood{tag = "icon-housewood4-broken"; icon_state = "housewood4-broken"},/area/f13/sewer)
+"tBj" = (/obj/machinery/workbench,/turf/open/floor/f13/wood{tag = "icon-housewood4-broken"; icon_state = "housewood4-broken"},/area/f13/sewer)
 "tCB" = (/obj/effect/spawner/lootdrop/f13/weapon/gun/random_high,/turf/open/indestructible/ground/inside/mountain,/area/f13/tunnel)
 "tMd" = (/obj/structure/table/wood,/obj/machinery/computer/terminal{dir = 4; termtag = "Home"},/turf/open/floor/f13/wood,/area/f13/village)
 "tNG" = (/obj/item/stack/sheet/mineral/uranium{amount = 5},/turf/open/indestructible/ground/inside/mountain,/area/f13/radiation)
@@ -4890,7 +4891,7 @@ aaaaacaacaacaacaacaacaahbDQbDQaahaacaacaacaacaacaacaahbDQbDQbDQaahaacaacaacaacaa
 aaaaacaacaacaacaacaacaahbDQbDQaahaahaahaahaacaacaacaahaahaahaahaahaacaacaacaacaacaacaacaacaacaahbDQbDQaahaahaahaahaahaahaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaafaacaacaacaacaacaacaacaafaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaaaaaaaaaaaaaaaaaaaaaaaaaaKahtahtahtahtamLahtahtahtamLahtahtahtahtahtamLahtahtahtahtamLahtahtahtahtahtahtahtamLahtaaKamVamWamVamzahGaaKamJanfanqaaKaaaaaaaaaaaaaaaaaa
 aaaaacaacaacaacaacaacaahbDQbDQaahbDQbDQaahaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaahbDQbDQbDQbDQbDQbDQbDQaahaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaaaaaaaaaaaaaaaaaaaaaaaaaaKahtahtahtahtanHahtahtahtanHahtahtahtahtahtanHahtahtahtahtanHahtahtahtahtahtahtahtahtahtaaKanIahGahGahGanXaaKaaKaaKaaKaaKaaaaaaaaaaaaaaaaaa
 aaaaacaacaacaacaacaacaahbDQbDQbDQbDQbDQqdWaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaahbDQbDQbDQbDQbDQbDQbDQaahaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaaaaaaaaaaaaaaaaaaaaaaaaaaKaoEaoGaaKaaKaaKaaKaaKaaKaaKaaKahsahsaaKaaKaaKaaKaaKamGaaKaaKaaKaoHaoIaoIaoHaaKaaKahtahtaqxahGahGahGahGahGaqyaqzaqAaqBaaKaaaaaaaaaaaaaaaaaa
-aaaaacaacaacaacaacaacaahbDQbDQaahbDQbDQaahaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaahbDQbDQaahaahaahbDQbDQaahaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaaaaaaaaaaaaaaaaaaaaaaaaaaKahtahtaaKaqIaqIaqIaaKahxahxacXacXacXacXahxahxaaKarcamJardaaKariarjarmarmaroarmaaKahtahtahsahGahGahGahGahGaryarzarzaqAaaKaaaaaaaaaaaaaaaaaa
+aaaaacaacaacaacaacaacaahbDQbDQaahbDQbDQaahaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaahbDQbDQaahaahaahbDQbDQaahaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaaaaaaaaaaaaaaaaaaaaaaaaaaKahtahtaaKaqIaqIaqIaaKahxahxacXacXacXacXahxahxaaKarcamJardaaKariarjarmarmarobnmaaKahtahtahsahGahGahGahGahGaryarzarzaqAaaKaaaaaaaaaaaaaaaaaa
 aaaaacaacaacaacaacaacaahbDQbDQaahaahaahaahaacaacaacaacaacaacaacaacaahaahaahaahaahaacaacaacaacaahbDQbDQaahaacaahbDQbDQaahaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaaaaaaaaaaaKaaKaaKaaKaaKaaKahtahtaaKarzarzarzaaKarAarGacXacXacXacXarHarIaaKarKamJarOaaKarmarmarmarmarmarmaaKahtahtahsahGahGahGahGahGarParzarzarSaaKaaaaaaaaaaaaaaaaaa
 aaaaacaacaacaacaacaacaahbDQbDQaahaacaacaacaacaacaacaacaacaacaacaacaahbDQbDQbDQaahaacaacaacaacaahbDQbDQaahaacaahbDQbDQaahaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaaaaaaaaKaaKarTarUarWaaKaaKahtahtaaKaaKaaKaryaaKarXarGacXacXacXacXarHarYaaKarZamJasbaaKaseasoasqasrasoassaaKastaoGaqxahGahGahGahGahGbBbarzasuaqAaaKaaaaaaaaaaaaaaaaaa
 aaaaacaacaacaacaacaacaahbDQbDQaahaacaacaacaacaacaacaacaacaacaacaacaahbDQbDQbDQaahaacaacaacaacaahbDQbDQaahaacaahbDQbDQaahaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaacaaaaaaaaKasvarzarzarzasvaaKahtahtaaKaswaryarzaaKahxahxasyasJasJasyahxahxaaKasKamJasLaaKarmasNasOasOasNarmaoHahtahtaaKasPahGahGahGasQbBbarUarUaqAaaKaaaaaaaaaaaaaaaaaa
