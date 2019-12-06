@@ -61,8 +61,8 @@ Captain
 	flag = F13CAPTAIN
 	head_announce = list("Security")
 	faction = "NCR"
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 0
+	spawn_positions = 0
 	description = "You are the commanding officer of your company and direct superior to the Veteran Ranger and Lieutenant, coordinating with your staff you must ensure that the objectives of central command are completed to the letter. Working closely with them on logistics, mission planning and special operations with the Rangers, you are here to establish a strong foothold for the NCR within the region."
 	supervisors = "Colonel"
 	req_admin_notify = 1
@@ -99,8 +99,8 @@ Lieutenant
 /datum/job/ncr/f13lieutenant
 	title = "NCR Lieutenant"
 	flag = F13LIEUTENANT
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 0
+	spawn_positions = 0
 	faction = "NCR"
 	description = "You are the direct superior to the Sergeant and Enlisted, working with the Captain and under special circumstances, Rangers. You plan patrols, training and missions, working in some cases with Rangers in accomplishing objectives otherwise beyond the capabilities of ordinary enlisted personnel."
 	supervisors = "Captain and above"
@@ -141,8 +141,8 @@ Medic
 	title = "NCR Medical Officer"
 	flag = F13MEDIC
 	faction = "NCR"
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 0
+	spawn_positions = 0
 	description = "You are in charge of providing medical support to the NCR throughout the region. You are a non-combat role and should not be using your authority for anything outside of medical purposes. You answer to the Captain and should defer to Sergeants or higher on military matters."
 	supervisors = "Captain and above"
 	selection_color = "#fff5cc"
@@ -180,8 +180,8 @@ Medic
 /datum/job/ncr/f13sergeant
 	title = "NCR Sergeant"
 	flag = F13SERGEANT
-	total_positions = 2
-	spawn_positions = 2
+	total_positions = 0
+	spawn_positions = 0
 	faction = "NCR"
 	description = "You are the direct superior to the enlisted troops, working with the chain of command you echo the orders of your superiors and ensure that the Enlisted follow them to the letter. Additionally you are responsible for the well being of the troops and their ongoing training with the NCR."
 	supervisors = "Lieutenants and above"
@@ -222,8 +222,8 @@ Engineer
 	title = "NCR Engineer"
 	flag = F13ENGINEER
 	faction = "NCR"
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 0
+	spawn_positions = 0
 	description = "You are in charge of fortifying and building for NCR strategic locations throughout the region. You answer directly to the Lieutenant and Captain, while also organizing grunts to assist you as needed."
 	supervisors = "Lieutenants and above"
 	selection_color = "#fff5cc"
@@ -262,8 +262,8 @@ Corporal
 	title = "NCR Corporal"
 	flag = F13CORPORAL
 	faction = "NCR"
-	total_positions = 4
-	spawn_positions = 4
+	total_positions = 0
+	spawn_positions = 0
 	description = "You answer to your Sergeant and follow the chain of command, to your commanding officer, the Captain."
 	supervisors = "Sergeants and above"
 	selection_color = "#fff5cc"
@@ -302,8 +302,8 @@ Trooper
 	title = "NCR Trooper"
 	flag = F13TROOPER
 	faction = "NCR"
-	total_positions = 8
-	spawn_positions = 8
+	total_positions = 0
+	spawn_positions = 0
 	description =  "You answer to the Sergeants or Corporals,  following the chain of command, to your commanding officer, the Captain."
 	supervisors = "Corporals and above"
 	selection_color = "#fff5cc"
@@ -339,8 +339,8 @@ Recruit
 	title = "NCR Recruit"
 	flag = F13RECRUIT
 	faction = "NCR"
-	total_positions = 10
-	spawn_positions = 10
+	total_positions = 0
+	spawn_positions = 0
 	description = "You answer to the Sergeants or Corporals,  following the chain of command, to your commanding officer, the Captain."
 	supervisors = "Corporals and above"
 	selection_color = "#fff5cc"
@@ -376,8 +376,8 @@ Heavy Trooper
 /datum/job/ncr/f13heavytroop
 	title = "NCR Heavy Trooper"
 	flag = F13HEAVYTROOP
-	total_positions = 2
-	spawn_positions = 2
+	total_positions = 0
+	spawn_positions = 0
 	faction = "NCR"
 	description = "You are an elite, heavy trooper with the NCR that has years of experience and training under their belt. You are also equivalent to a Sergeant, and as such, can organize lower troops as you see fit to assist in NCR interests and goals throughout the region."
 	supervisors = "Lieutenants and above"
@@ -418,8 +418,8 @@ Veteran Ranger
 	title = "NCR Veteran Ranger"
 	flag = F13VETRANGER
 	faction = "NCR"
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 0
+	spawn_positions = 0
 	description = "You answer directly to the Captain, working either independently or in a team to complete your mission objectives however required, operating either alone, in a squad or with the NCR Army. As a Veteran Ranger you work closely with the Captain in planning special operations with your team while also carrying out those orders in the field by any means necessary."
 	supervisors = "Lieutenants and above"
 	selection_color = "#ffeeaa"
@@ -501,8 +501,8 @@ Recon Ranger
 	title = "NCR Recon Ranger"
 	flag = F13RECRANGER
 	faction = "NCR"
-	total_positions = 3
-	spawn_positions = 3
+	total_positions = 0
+	spawn_positions = 0
 	description = "You answer directly to the Captain, working either independently with other Rangers or Infantry to complete your mission objectives however required, working either alone, in a squad or with the Army. As a Recon Ranger, you perform reconnaissance, seize or destroy assets and capture, exploit, or recover designated targets on behalf of the NCR."
 	supervisors = "Veteran Ranger"
 	selection_color = "#fff5cc"
