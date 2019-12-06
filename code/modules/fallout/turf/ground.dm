@@ -48,7 +48,7 @@
 //////////////////////////////////////////////////////////////////////
 
 /turf/open/indestructible/ground/outside
-	turf_light_range = 3
+	turf_light_range = 6
 	turf_light_power = 0.75
 
 /turf/open/indestructible/ground/outside/Initialize()
