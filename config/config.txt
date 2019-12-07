@@ -24,7 +24,7 @@ SERVERSQLNAME fo13sql
 STATIONNAME Mojave Wasteland
 
 ## Put on byond hub: Uncomment this to put your server on the byond hub.
-#HUB
+HUB
 
 ## Uncomment and set the config in tools/discord/config.yml to enable sending stuff to discord's webhooks
 # USING_DISCORD
