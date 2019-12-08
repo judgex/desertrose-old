@@ -258,6 +258,17 @@ Wastelander
 	selection_color = "#dddddd"
 
 	outfit = /datum/outfit/job/wasteland/f13wastelander
+	
+	access = list()		//we can expand on this and make alterations as people suggest different loadouts
+	minimal_access = list()
+	loadout_options = list(
+	/datum/outfit/loadout/vault_refugee,
+	/datum/outfit/loadout/petro,
+	/datum/outfit/loadout/follower,
+	/datum/outfit/loadout/merchant,
+	/datum/outfit/loadout/gambler,
+	/datum/outfit/loadout/citizen,
+	/datum/outfit/loadout/slave)
 
 /datum/outfit/job/wasteland/f13wastelander
 	name = "Wastelander"
@@ -299,6 +310,65 @@ Wastelander
 	/obj/item/gun/ballistic/shotgun/remington, \
 	/obj/item/gun/ballistic/revolver/zipgun, \
 	/obj/item/gun/ballistic/revolver/pipe_rifle)
+	
+/datum/outfit/loadout/vault_refugee
+	name = "Vaultie"
+	uniform = /obj/item/clothing/under/f13/vault
+	gloves = /obj/item/pda
+	shoes = /obj/item/clothing/shoes/jackboots
+	gloves = /obj/item/clothing/gloves/fingerless
+	
+
+/datum/outfit/loadout/petro
+	name = "Petro"
+	suit = /obj/item/clothing/suit/armor/f13/vaquero
+	head = /obj/item/clothing/head/helmet/f13/vaquerohat
+	uniform = /obj/item/clothing/under/f13/petrochico
+	shoes = /obj/item/clothing/shoes/f13/fancy
+	gloves = /obj/item/clothing/gloves/rifleman
+
+/datum/outfit/loadout/follower
+	name = "Follower"
+	uniform = /obj/item/clothing/under/f13/follower
+	suit = /obj/item/clothing/suit/toggle/labcoat/f13/followers
+	shoes = /obj/item/clothing/shoes/f13/explorer
+	gloves = /obj/item/clothing/gloves/color/latex
+
+/datum/outfit/loadout/merchant
+	name = "Roving Trader"
+	uniform = /obj/item/clothing/under/f13/merchant
+	suit = /obj/item/clothing/neck/cloak
+	shoes = /obj/item/clothing/shoes/f13/brownie
+	head = /obj/item/clothing/head/f13/stormchaser
+	gloves = /obj/item/clothing/gloves/color/brown
+	glasses = /obj/item/clothing/glasses/f13/biker
+	
+/datum/outfit/loadout/gambler
+	name = "Gambler"
+	uniform = list(/obj/item/clothing/under/f13/cowboyg,
+	/obj/item/clothing/under/f13/bennys, 
+	/obj/item/clothing/under/f13/formal)
+	suit = /obj/item/clothing/suit/f13/cowboygvest
+	shoes = /obj/item/clothing/shoes/f13/fancy
+	head = list(/obj/item/clothing/head/fedora,
+ 	/obj/item/clothing/head/f13/gambler)
+
+/datum/outfit/loadout/citizen
+	name = "Legion Citizen"		//here I go showing my bias again
+	uniform = /obj/item/clothing/under/f13/doctor
+	shoes = /obj/item/clothing/shoes/f13/fancy
+	suit = /obj/item/clothing/suit/curator
+	head = /obj/item/clothing/head/scarecrow_hat
+	gloves = /obj/item/clothing/gloves/color/black
+	glasses = /obj/item/clothing/glasses/welding
+	
+/datum/outfit/loadout/slave
+	name = "NCR Citizen" 
+	uniform = /obj/item/clothing/under/f13/caravaneer
+	shoes = /obj/item/clothing/shoes/f13/tan
+	head = /obj/item/clothing/head/f13/cowboy
+	gloves = /obj/item/clothing/gloves/color/brown
+	glasses = /obj/item/clothing/glasses/orange
 
 /*
 Punished Raider
