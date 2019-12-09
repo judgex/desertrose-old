@@ -622,6 +622,12 @@
 	item_state = "enclave_armor"
 	armor = list("melee" = 60, "bullet" = 40, "laser" = 40, "energy" = 70, "bomb" = 39, "bio" = 70, "rad" = 70, "fire" = 70, "acid" = 0)
 
+/obj/item/clothing/suit/armor/f13/combat/swat
+	name = "SWAT combat armor"
+	desc = "A custom version of the pre-war combat armor, slimmed down and minimalist for domestic S.W.A.T. teams."
+	icon_state = "armoralt"
+	item_state = "armoralt"
+
 /obj/item/clothing/suit/armor/f13/rangercombat
 	name = "veteran ranger combat armor"
 	desc = "The NCR veteran ranger combat armor, or black armor consists of a pre-war L.A.P.D. riot suit under a duster with rodeo jeans. Considered one of the most prestigious suits of armor to earn and wear while in service of the NCR Rangers."

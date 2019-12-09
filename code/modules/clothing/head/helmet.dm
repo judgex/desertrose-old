@@ -386,6 +386,12 @@
 	item_state = "enclave_helmet"
 	armor = list("melee" = 50, "bullet" = 39, "laser" = 25, "energy" = 25, "bomb" = 39, "bio" = 0, "rad" = 50, "fire" = 0, "acid" = 20)
 
+/obj/item/clothing/head/helmet/f13/combat/swat
+	name = "SWAT combat helmet"
+	desc = "A prewar combat helmet issued to S.W.A.T. personnel."
+	icon_state = "swatsyndie"
+	item_state = "swatsyndie"
+
 //Legion
 /obj/item/clothing/head/helmet/f13/legion
 	name = "legion helmet"

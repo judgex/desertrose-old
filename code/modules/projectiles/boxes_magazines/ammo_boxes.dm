@@ -258,7 +258,7 @@
 	multiple_sprites = 1
 	materials = list(MAT_METAL = 7000)
 
-/obj/item/ammo_box/a556
+/obj/item/ammo_box/a556/stripper
 	name = "stripper clip (5.56x45mm)"
 	desc = "A stripper clip."
 	icon_state = "762"

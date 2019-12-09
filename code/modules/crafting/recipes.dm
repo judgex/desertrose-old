@@ -139,7 +139,7 @@
 	name = "needler stripper clip (needle darts)"
 	result = /obj/item/ammo_box/needle
 	reqs = list(/obj/item/stack/crafting/metalparts = 3)
-	tools = (TOOL_SWORKBENCH)
+	tools = list(TOOL_SWORKBENCH)
 	time = 10
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
@@ -148,7 +148,7 @@
 	name = "armour-piercing needler stripper clip (needle darts)"
 	result = /obj/item/ammo_box/needleap
 	reqs = list(/obj/item/stack/crafting/goodparts = 3)
-	tools = (TOOL_AWORKBENCH)
+	tools = list(TOOL_AWORKBENCH)
 	time = 10
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
@@ -157,7 +157,7 @@
 	name = "empty speed strip (.357)"
 	result = /obj/item/ammo_box/a357/empty
 	reqs = list(/obj/item/stack/sheet/metal = 2)
-	tools = (TOOL_BWORKBENCH)
+	tools = list(TOOL_BWORKBENCH)
 	time = 10
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
@@ -166,7 +166,7 @@
 	name = "empty speed loader (.38)"
 	result = /obj/item/ammo_box/c38/empty
 	reqs = list(/obj/item/stack/sheet/metal = 1)
-	tools = (TOOL_BWORKBENCH)
+	tools = list(TOOL_BWORKBENCH)
 	time = 10
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
@@ -175,7 +175,7 @@
 	name = "empty speed loader (10mm)"
 	result = /obj/item/ammo_box/l10mm/empty
 	reqs = list(/obj/item/stack/sheet/metal = 2)
-	tools = (TOOL_BWORKBENCH)
+	tools = list(TOOL_BWORKBENCH)
 	time = 10
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
@@ -184,7 +184,7 @@
 	name = "empty speed loader (.44)"
 	result = /obj/item/ammo_box/m44/empty
 	reqs = list(/obj/item/stack/sheet/metal = 2)
-	tools = (TOOL_BWORKBENCH)
+	tools = list(TOOL_BWORKBENCH)
 	time = 10
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
@@ -193,7 +193,7 @@
 	name = "empty speed loader (.45-70)"
 	result = /obj/item/ammo_box/c4570/empty
 	reqs = list(/obj/item/stack/sheet/metal = 4)
-	tools = (TOOL_BWORKBENCH)
+	tools = list(TOOL_BWORKBENCH)
 	time = 10
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
@@ -202,7 +202,7 @@
 	name = "empty speed loader tube (.44)"
 	result = /obj/item/ammo_box/tube/m44/empty
 	reqs = list(/obj/item/stack/sheet/metal = 3)
-	tools = (TOOL_SWORKBENCH)
+	tools = list(TOOL_SWORKBENCH)
 	time = 10
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
@@ -211,7 +211,7 @@
 	name = "empty speed loader tube (.357)"
 	result = /obj/item/ammo_box/tube/a357/empty
 	reqs = list(/obj/item/stack/sheet/metal = 3)
-	tools = (TOOL_SWORKBENCH)
+	tools = list(TOOL_SWORKBENCH)
 	time = 10
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
@@ -220,7 +220,7 @@
 	name = "empty speed loader tube (.45-70)"
 	result = /obj/item/ammo_box/tube/c4570/empty
 	reqs = list(/obj/item/stack/sheet/metal = 6)
-	tools = (TOOL_SWORKBENCH)
+	tools = list(TOOL_SWORKBENCH)
 	time = 10
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
@@ -229,7 +229,7 @@
 	name = "empty 10mm submachine gun magazine (10mm)"
 	result = /obj/item/ammo_box/magazine/m10mm_auto/empty
 	reqs = list(/obj/item/stack/sheet/metal = 2)
-	tools = (TOOL_SWORKBENCH)
+	tools = list(TOOL_SWORKBENCH)
 	time = 10
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
@@ -238,7 +238,7 @@
 	name = "empty 9mm submachine gun magazine (9mm)"
 	result = /obj/item/ammo_box/magazine/greasegun/empty
 	reqs = list(/obj/item/stack/sheet/metal = 2)
-	tools = (TOOL_SWORKBENCH)
+	tools = list(TOOL_SWORKBENCH)
 	time = 10
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
@@ -247,7 +247,7 @@
 	name = "empty shotgun drum magazine (12g)"
 	result = /obj/item/ammo_box/magazine/d12g/empty
 	reqs = list(/obj/item/stack/sheet/metal = 2)
-	tools = (TOOL_SWORKBENCH)
+	tools = list(TOOL_SWORKBENCH)
 	time = 10
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
@@ -256,7 +256,7 @@
 	name = "empty small rifle magazine (5.56mm)"
 	result = /obj/item/ammo_box/magazine/m556/rifle/small/empty
 	reqs = list(/obj/item/stack/sheet/metal = 2)
-	tools = (TOOL_SWORKBENCH)
+	tools = list(TOOL_SWORKBENCH)
 	time = 10
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
@@ -265,7 +265,7 @@
 	name = "empty 20rd rifle magazine (5.56mm)"
 	result = /obj/item/ammo_box/magazine/m556/rifle/empty
 	reqs = list(/obj/item/stack/sheet/metal = 3)
-	tools = (TOOL_SWORKBENCH)
+	tools = list(TOOL_SWORKBENCH)
 	time = 10
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
@@ -274,7 +274,7 @@
 	name = "empty 30rd rifle magazine (5.56mm)"
 	result = /obj/item/ammo_box/magazine/m556/rifle/assault/empty
 	reqs = list(/obj/item/stack/sheet/metal = 4)
-	tools = (TOOL_SWORKBENCH)
+	tools = list(TOOL_SWORKBENCH)
 	time = 10
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
@@ -283,7 +283,7 @@
 	name = "empty extended rifle magazine (5.56mm)"
 	result = /obj/item/ammo_box/magazine/m556/rifle/extended/empty
 	reqs = list(/obj/item/stack/sheet/metal = 5)
-	tools = (TOOL_SWORKBENCH)
+	tools = list(TOOL_SWORKBENCH)
 	time = 10
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
@@ -292,7 +292,7 @@
 	name = "empty handgun magazine (.45)"
 	result = /obj/item/ammo_box/magazine/m45/empty
 	reqs = list(/obj/item/stack/sheet/metal = 2)
-	tools = (TOOL_SWORKBENCH)
+	tools = list(TOOL_SWORKBENCH)
 	time = 10
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
@@ -301,7 +301,7 @@
 	name = "empty handgun magazine (.50ae)"
 	result = /obj/item/ammo_box/magazine/m50/empty
 	reqs = list(/obj/item/stack/sheet/metal = 3)
-	tools = (TOOL_SWORKBENCH)
+	tools = list(TOOL_SWORKBENCH)
 	time = 10
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
@@ -310,7 +310,7 @@
 	name = "empty 10mm pistol magazine (10mm)"
 	result = /obj/item/ammo_box/magazine/m10mm_adv/empty
 	reqs = list(/obj/item/stack/sheet/metal = 2)
-	tools = (TOOL_SWORKBENCH)
+	tools = list(TOOL_SWORKBENCH)
 	time = 10
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
@@ -319,7 +319,7 @@
 	name = "empty 9mm pistol magazine (9mm)"
 	result = /obj/item/ammo_box/magazine/m9mm/empty
 	reqs = list(/obj/item/stack/sheet/metal = 2)
-	tools = (TOOL_SWORKBENCH)
+	tools = list(TOOL_SWORKBENCH)
 	time = 10
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
@@ -328,7 +328,7 @@
 	name = "empty en-bloc clip (7.62x51mm)"
 	result = /obj/item/ammo_box/magazine/garand308
 	reqs = list(/obj/item/stack/sheet/metal = 1)
-	tools = (TOOL_SWORKBENCH)
+	tools = list(TOOL_SWORKBENCH)
 	time = 10
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO

@@ -1,7 +1,7 @@
 /obj/item/gun/ballistic/shotgun
-	name = "hunting shotgun"
+	name = "shotgun"
 	desc = "A traditional hunting shotgun with wood furniture and a four-shell capacity underneath."
-	icon_state = "hunting"
+	icon_state = "shotgun"
 	item_state = "huntingshotgun"
 	w_class = WEIGHT_CLASS_BULKY
 	force = 20
@@ -170,9 +170,9 @@
 	src.pump(user)
 
 /obj/item/gun/ballistic/shotgun/automatic/combat
-	name = "combat shotgun"
-	desc = "A semi automatic shotgun with tactical furniture and a six-shell capacity underneath."
-	icon_state = "cshotgun"
+	name = "city-killer combat shotgun"
+	desc = "A internal tube variant of the pre-war combat shotgun."
+	icon_state = "citykiller"
 	item_state = "cshotgun1"
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/com
 	w_class = WEIGHT_CLASS_BULKY
@@ -238,12 +238,31 @@
 // Trenchgun //
 /obj/item/gun/ballistic/shotgun/trench
 	name = "lever action shotgun"
-	desc = "A pre-war military grade shotgun with wood furniture and a five-shell capacity underneath plus one in chamber."
+	desc = "A lever action hunting shotgun with a five-shell capacity underneath plus one in chamber."
 	icon_state = "trenchgun"
 	item_state = "trenchgun"
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/trench
+	w_class = WEIGHT_CLASS_NORMAL
+	weapon_weight = WEAPON_HEAVY
+
+/obj/item/gun/ballistic/shotgun/hunting
+	name = "hunting shotgun"
+	desc = "A traditional hunting shotgun with wood furniture and a four-shell capacity underneath."
+	icon_state = "hunting"
+	item_state = "huntingshotgun"
+	mag_type = /obj/item/ammo_box/magazine/internal/shot/lethal
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
+	sawn_desc = "A concealed hand blaster, for any situation."
+
+/obj/item/gun/ballistic/shotgun/hunting/attackby(obj/item/A, mob/user, params)
+	..()
+	if(istype(A, /obj/item/circular_saw) || istype(A, /obj/item/gun/energy/plasmacutter))
+		sawoff(user)
+	if(istype(A, /obj/item/melee/transforming/energy))
+		var/obj/item/melee/transforming/energy/W = A
+		if(W.active)
+			sawoff(user)
 
 // RIOT SHOTGUN //
 /obj/item/gun/ballistic/shotgun/riot //for spawn in the armory
@@ -252,6 +271,7 @@
 	icon_state = "riotshotgun"
 	item_state = "shotgunriot"
 	force = 40
+	burst_size = 1
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/riot
 	sawn_desc = "Come with me if you want to live."
 	w_class = WEIGHT_CLASS_BULKY
@@ -396,7 +416,6 @@
 	extra_damage = 50
 	extra_penetration = 10
 
-
 /obj/item/gun/ballistic/shotgun/automatic/hunting/brush/scoped
 	name = "scoped brush gun"
 	desc = "A short lever action rifle chambered in the heavy 45-70 round. Issued to NCR Veteran Rangers in the absence of heavier weaponry."
@@ -412,8 +431,6 @@
 	fire_delay = 8
 	extra_damage = 50
 	extra_penetration = 15
-
-
 
 //Double Barrel Caravan Shotgun
 /obj/item/gun/ballistic/revolver/caravan_shotgun
