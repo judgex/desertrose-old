@@ -1,6 +1,6 @@
 //Fallout 13 holodisks directory
 //Here we get the basic mechanics as coded by WB! Praise him and other Unknown coder for this.
-
+/*
 /obj/item/holodisk
 	name = "holodisk"
 	desc = "A durable laser-readable storage device produced by Wattz Electronics.<br>Based on tape holography technology, it can store information safely for extended periods of time."
@@ -39,9 +39,9 @@
 			src.icon_state = initial(src.icon_state)
 			src.busy = 0
 	return
-
+*/
 //Here we get any holodisks we want, using the basic mechanics.
-
+/* Disabling this until file sizes are reduced.
 /obj/item/holodisk/abducted
 	soundFile =  'sound/f13items/holodisk_abducted.ogg'
 	soundLength = 430
@@ -85,7 +85,7 @@
 	item_state = "music1"
 	soundFile =  'sound/f13items/music_box.ogg' //Amazing grace
 	soundLength = 320
-
+*/
 /obj/item/holodisk/musicbox/New()
 	..()
 	name = "music box"

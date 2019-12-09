@@ -41,6 +41,7 @@
 	return
 
 //Here we get any holodisks we want, using the basic mechanics.
+/*  disabling holodisks until the sound files are replaced with much more reasonably-sized files.
 
 /obj/item/weapon/holodisk/holodiskabducted
 	soundFile =  'sound/f13items/holodisk_abducted.ogg'
@@ -64,7 +65,6 @@
 			src.icon_state = initial(src.icon_state)
 			src.busy = 0
 	return
-
 /obj/item/weapon/holodisk/powerarmor
 	desc = "A durable laser-readable storage device produced by Wattz Electronics, based on the tape holography technology, storing their information safely for extended periods of time.<br>This one is labeled, 'Power Armor For Dummies.'"
 	soundFile =  'sound/f13items/holodisk_pa.ogg'
@@ -119,6 +119,7 @@
 	desc = "A durable laser-readable storage device. This one is labeled 'Chick chicka boom'"
 	soundFile =  'sound/ambience/clown.ogg'
 	soundLength = 61
+*/
 /*
 /obj/item/weapon/holodisk/powerarmor/playAudio(mob/user)
 	if(!src.busy)
