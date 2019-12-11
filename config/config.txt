@@ -314,7 +314,7 @@ SOFT_POPCAP_MESSAGE Be warned that the server is currently serving a high number
 HARD_POPCAP_MESSAGE The server is currently serving a high number of users, You cannot currently join. You may wait for the number of living crew to decline, observe, or find alternative servers.
 
 ## Uncomment for 'extreme' population caps, players will not be allowed to join the server if living crew exceeds the listed number.
-EXTREME_POPCAP 44
+EXTREME_POPCAP 100
 
 ## Message for extreme cap
 EXTREME_POPCAP_MESSAGE Desert Rose is currently population capped while we organize and develop.  Thanks for your interest, please try again soon.
