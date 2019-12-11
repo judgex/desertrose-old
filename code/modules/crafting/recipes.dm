@@ -298,8 +298,8 @@
 	subcategory = CAT_AMMO
 
 /datum/crafting_recipe/m50
-	name = "empty handgun magazine (.50ae)"
-	result = /obj/item/ammo_box/magazine/m50/empty
+	name = "empty handgun magazine (.44 magnum)"
+	result = /obj/item/ammo_box/magazine/m44/empty
 	reqs = list(/obj/item/stack/sheet/metal = 3)
 	tools = list(TOOL_SWORKBENCH)
 	time = 10
@@ -489,16 +489,6 @@
 	reqs = list(/obj/item/stack/sheet/metal = 8,
 				/datum/reagent/blackpowder = 40)
 	tools = list(TOOL_SWORKBENCH)
-	time = 10
-	category = CAT_WEAPONRY
-	subcategory = CAT_AMMO
-
-/datum/crafting_recipe/a762lp
-	name = "7.62mm lowpower ammo box"
-	result = /obj/item/ammo_box/a762lpbox
-	reqs = list(/obj/item/stack/sheet/metal = 7,
-				/datum/reagent/blackpowder = 30)
-	tools = list(TOOL_BWORKBENCH)
 	time = 10
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO

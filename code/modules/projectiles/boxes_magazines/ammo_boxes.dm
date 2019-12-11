@@ -1,3 +1,5 @@
+//Speedloaders
+//.357 Magnum, .38 Special
 /obj/item/ammo_box/a357
 	name = "speed strip (.357)"
 	desc = "Designed to quickly reload revolvers."
@@ -22,6 +24,18 @@
 /obj/item/ammo_box/c38/empty
 	stored_ammo = 0
 
+/obj/item/ammo_box/tube/a357
+	name = "speed loader tube (.357)"
+	desc = "Designed to quickly reload repeaters."
+	icon_state = "44tube"
+	ammo_type = /obj/item/ammo_casing/a357
+	max_ammo = 7
+	multiple_sprites = 1
+	materials = list(MAT_METAL = 7000)
+
+/obj/item/ammo_box/tube/a357/empty
+	stored_ammo = 0
+//10mm
 /obj/item/ammo_box/l10mm
 	name = "speed loader (10mm)"
 	desc = "Designed to quickly reload revolvers."
@@ -34,6 +48,7 @@
 /obj/item/ammo_box/l10mm/empty
 	stored_ammo = 0
 
+//.44 Magnum
 /obj/item/ammo_box/m44
 	name = "speed loader (.44)"
 	desc = "Designed to quickly reload revolvers."
@@ -45,27 +60,6 @@
 
 /obj/item/ammo_box/m44/empty
 	stored_ammo = 0
-
-/obj/item/ammo_box/c4570
-	name = "speed loader (.45-70)"
-	desc = "Designed to quickly reload revolvers."
-	icon_state = "4570"
-	ammo_type = /obj/item/ammo_casing/c4570
-	max_ammo = 6
-	multiple_sprites = 1
-	materials = list(MAT_METAL = 8000)
-
-/obj/item/ammo_box/c4570/empty
-	stored_ammo = 0
-
-/*/obj/item/ammo_box/c4570SP
-	name = "speed loader (.45 LC)"
-	desc = "Designed to quickly reload revolvers."
-	icon_state = "4570"
-	ammo_type = /obj/item/ammo_casing/c4570SP
-	max_ammo = 6
-	multiple_sprites = 1
-	materials = list(MAT_METAL = 4000)*/
 
 /obj/item/ammo_box/tube/m44
 	name = "speed loader tube (.44)"
@@ -79,16 +73,17 @@
 /obj/item/ammo_box/tube/m44/empty
 	stored_ammo = 0
 
-/obj/item/ammo_box/tube/a357
-	name = "speed loader tube (.357)"
-	desc = "Designed to quickly reload repeaters."
-	icon_state = "44tube"
-	ammo_type = /obj/item/ammo_casing/a357
-	max_ammo = 7
+//.45-70 Gov't
+/obj/item/ammo_box/c4570
+	name = "speed loader (.45-70)"
+	desc = "Designed to quickly reload revolvers."
+	icon_state = "4570"
+	ammo_type = /obj/item/ammo_casing/c4570
+	max_ammo = 6
 	multiple_sprites = 1
-	materials = list(MAT_METAL = 7000)
+	materials = list(MAT_METAL = 8000)
 
-/obj/item/ammo_box/tube/a357/empty
+/obj/item/ammo_box/c4570/empty
 	stored_ammo = 0
 
 /obj/item/ammo_box/tube/c4570
@@ -103,103 +98,160 @@
 /obj/item/ammo_box/tube/c4570/empty
 	stored_ammo = 0
 
-/*/obj/item/ammo_box/tube/c4570SP
-	name = "speed loader tube (.45 LC)"
-	desc = "Designed to quickly reload repeaters."
-	icon_state = "357tube"
-	ammo_type = /obj/item/ammo_casing/c4570SP
-	max_ammo = 10
-	multiple_sprites = 1
-	materials = list(MAT_METAL = 7000)*/
-
-/obj/item/ammo_box/box38
-	name = "ammo box (.38)"
-	icon_state = "38box"
-	ammo_type = /obj/item/ammo_casing/a357/c38
-	max_ammo = 30
-	materials = list(MAT_METAL = 15000)
-	w_class = WEIGHT_CLASS_NORMAL
-
-/obj/item/ammo_box/c9mm
-	name = "ammo box (9mm)"
-	icon_state = "9mmbox"
-	ammo_type = /obj/item/ammo_casing/c9mm
-	max_ammo = 30
-	materials = list(MAT_METAL = 15000)
-	w_class = WEIGHT_CLASS_NORMAL
-
-/obj/item/ammo_box/c10mm
-	name = "ammo box (10mm)"
-	icon_state = "10mmbox"
-	ammo_type = /obj/item/ammo_casing/c10mm
-	max_ammo = 30
-	materials = list(MAT_METAL = 10000)
-	w_class = WEIGHT_CLASS_NORMAL
-
-/obj/item/ammo_box/a556
-	name = "ammo box (5.56)"
-	icon_state = "556box"
-	ammo_type = /obj/item/ammo_casing/a556
-	max_ammo = 40
-	materials = list(MAT_METAL = 20000)
-	w_class = WEIGHT_CLASS_NORMAL
-
-/obj/item/ammo_box/c45
-	name = "ammo box (.45)"
-	icon_state = "45box"
-	ammo_type = /obj/item/ammo_casing/c45
-	max_ammo = 30
-	materials = list(MAT_METAL = 10000)
-	w_class = WEIGHT_CLASS_NORMAL
-
+//Boxes
+//.357 Magnum, .38 Special
 /obj/item/ammo_box/a357box
-	name = "ammo box (.357)"
+	name = "ammo box (.357 Magnum FMJ)"
 	icon_state = "357box"
 	ammo_type = /obj/item/ammo_casing/a357
 	max_ammo = 30
 	materials = list(MAT_METAL = 15000)
 	w_class = WEIGHT_CLASS_NORMAL
 
+/obj/item/ammo_box/a357box/jhp
+	name = "ammo box (.357 Magnum JHP)"
+	ammo_type = /obj/item/ammo_casing/a357/jhp
+
+/obj/item/ammo_box/a357box/swc
+	name = "ammo box (.357 Magnum SWC)"
+	ammo_type = /obj/item/ammo_casing/a357/swc
+
+/obj/item/ammo_box/box38
+	name = "ammo box (.38 Spl)"
+	icon_state = "38box"
+	ammo_type = /obj/item/ammo_casing/a357/c38
+	max_ammo = 30
+	materials = list(MAT_METAL = 15000)
+	w_class = WEIGHT_CLASS_NORMAL
+
+//9mm
+/obj/item/ammo_box/c9mm
+	name = "ammo box (9mm FMJ)"
+	icon_state = "9mmbox"
+	ammo_type = /obj/item/ammo_casing/c9mm
+	max_ammo = 30
+	materials = list(MAT_METAL = 15000)
+	w_class = WEIGHT_CLASS_NORMAL
+
+/obj/item/ammo_box/c9mm/ap
+	name = "ammo box (9mm AP)"
+	ammo_type = /obj/item/ammo_casing/c9mm/ap
+
+/obj/item/ammo_box/c9mm/jhp
+	name = "ammo box (9mm JHP)"
+	ammo_type = /obj/item/ammo_casing/c9mm/jhp
+
+//10mm
+/obj/item/ammo_box/c10mm
+	name = "ammo box (10mm FMJ)"
+	icon_state = "10mmbox"
+	ammo_type = /obj/item/ammo_casing/c10mm
+	max_ammo = 30
+	materials = list(MAT_METAL = 10000)
+	w_class = WEIGHT_CLASS_NORMAL
+
+/obj/item/ammo_box/c10mm/jhp
+	name = "ammo box (10mm JHP)"
+	ammo_type = /obj/item/ammo_casing/c10mm/hp
+
+/obj/item/ammo_box/c10mm/ap
+	name = "ammo box (10mm AP)"
+	ammo_type = /obj/item/ammo_casing/c10mm/ap
+
+//5.56x45
+/obj/item/ammo_box/a556
+	name = "ammo box (5.56 FMJ)"
+	icon_state = "556box"
+	ammo_type = /obj/item/ammo_casing/a556
+	max_ammo = 40
+	materials = list(MAT_METAL = 20000)
+	w_class = WEIGHT_CLASS_NORMAL
+
+/obj/item/ammo_box/a556/jhp
+	name = "ammo box (5.56 JHP)"
+	ammo_type = /obj/item/ammo_casing/a556/jhp
+
+/obj/item/ammo_box/a556/ap
+	name = "ammo box (5.56 AP)"
+	ammo_type = /obj/item/ammo_casing/a556/ap
+
+/obj/item/ammo_box/a556/sport
+	name = "ammo box (.223)"
+	ammo_type = /obj/item/ammo_casing/a556/sport
+
+//.45 ACP
+/obj/item/ammo_box/c45
+	name = "ammo box (.45 FMJ)"
+	icon_state = "45box"
+	ammo_type = /obj/item/ammo_casing/c45
+	max_ammo = 30
+	materials = list(MAT_METAL = 10000)
+	w_class = WEIGHT_CLASS_NORMAL
+
+/obj/item/ammo_box/c45/jhp
+	name = "ammo box (.45 JHP)"
+	ammo_type = /obj/item/ammo_casing/c45/jhp
+
+//.44 Magnum
 /obj/item/ammo_box/m44box
-	name = "ammo box (.44)"
+	name = "ammo box (.44 Magnum FMJ)"
 	icon_state = "44box"
 	ammo_type = /obj/item/ammo_casing/m44
 	max_ammo = 30
 	materials = list(MAT_METAL = 15000)
 	w_class = WEIGHT_CLASS_NORMAL
 
+/obj/item/ammo_box/m44box/jhp
+	name = "ammo box (.44 Magnum JHP)"
+	ammo_type = /obj/item/ammo_casing/m44/jhp
+
+/obj/item/ammo_box/m44box/swc
+	name = "ammo box (.44 Magnum SWC)"
+	ammo_type = /obj/item/ammo_casing/m44/swc
+
+//7.62x51, .308 Winchester
 /obj/item/ammo_box/a308box
 	name = "ammo box (.308)"
 	icon_state = "308box"
-	ammo_type = /obj/item/ammo_casing/a308
+	ammo_type = /obj/item/ammo_casing/a762/sport
 	max_ammo = 30
 	materials = list(MAT_METAL = 15000)
 	w_class = WEIGHT_CLASS_NORMAL
 
 /obj/item/ammo_box/a762box
-	name = "ammo box (7.62)"
+	name = "ammo box (7.62x51 FMJ)"
 	icon_state = "762box"
 	ammo_type = /obj/item/ammo_casing/a762
 	max_ammo = 30
 	materials = list(MAT_METAL = 15000)
 	w_class = WEIGHT_CLASS_NORMAL
 
-/obj/item/ammo_box/a762lpbox
-	name = "ammo box (7.62 LP)"
-	icon_state = "762lpbox"
-	ammo_type = /obj/item/ammo_casing/a762/lp
-	max_ammo = 40
-	materials = list(MAT_METAL = 15000)
-	w_class = WEIGHT_CLASS_NORMAL
+/obj/item/ammo_box/a762box/jhp
+	name = "ammo box (7.62x51 JHP)"
+	ammo_type = /obj/item/ammo_casing/a762/jhp
 
+/obj/item/ammo_box/a762box/ap
+	name = "ammo box (7.62x51 AP)"
+	ammo_type = /obj/item/ammo_casing/a762/ap
+
+//.45-70 Gov't
 /obj/item/ammo_box/c4570box
-	name = "ammo box (.45-70)"
+	name = "ammo box (.45-70 FMJ)"
 	icon_state = "4570box"
 	ammo_type = /obj/item/ammo_casing/c4570
 	max_ammo = 30
 	materials = list(MAT_METAL = 15000)
 	w_class = WEIGHT_CLASS_NORMAL
 
+/obj/item/ammo_box/c4570box/jhp
+	name = "ammo box (.45-70 JHP)"
+	ammo_type = /obj/item/ammo_casing/c4570/jhp
+
+/obj/item/ammo_box/c4570box/swc
+	name = "ammo box (.45-70 SWC)"
+	ammo_type = /obj/item/ammo_casing/c4570/swc
+
+//.50 AE (Unused)
 /obj/item/ammo_box/a50MGbox
 	name = "ammo box (.50 MG)"
 	icon_state = "50box"
@@ -216,6 +268,7 @@
 	materials = list(MAT_METAL = 15000)
 	w_class = WEIGHT_CLASS_NORMAL
 
+//40mm grenades
 /obj/item/ammo_box/a40mm
 	name = "ammo box (40mm grenades)"
 	icon_state = "40mm"
@@ -224,6 +277,7 @@
 	multiple_sprites = 1
 	materials = list(MAT_METAL = 20000)
 
+//Needler
 /obj/item/ammo_box/needle
 	name = "needler stripper clip (needle darts)"
 	icon_state = "needler"
@@ -240,6 +294,9 @@
 	multiple_sprites = 1
 	materials = list(MAT_METAL = 5000)
 
+//Stripper clips
+
+//7.62x51, .308 Winchester
 /obj/item/ammo_box/a762
 	name = "stripper clip (7.62)"
 	desc = "A stripper clip."
@@ -253,11 +310,21 @@
 	name = "stripper clip (.308)"
 	desc = "A stripper clip."
 	icon_state = "308"
-	ammo_type = /obj/item/ammo_casing/a308
+	ammo_type = /obj/item/ammo_casing/a762/sport
 	max_ammo = 5
 	multiple_sprites = 1
 	materials = list(MAT_METAL = 7000)
 
+/obj/item/ammo_box/a762/doublestacked
+	name = "double stack stripper clip (.308)"
+	desc = "A stripper clip."
+	icon_state = "762a"
+	ammo_type = /obj/item/ammo_casing/a762/sport
+	max_ammo = 10
+	multiple_sprites = 1
+	materials = list(MAT_METAL = 10000)
+
+//5.56x45mm
 /obj/item/ammo_box/a556/stripper
 	name = "stripper clip (5.56x45mm)"
 	desc = "A stripper clip."
@@ -267,15 +334,7 @@
 	multiple_sprites = 1
 	materials = list(MAT_METAL = 2500)
 
-/obj/item/ammo_box/a762/doublestacked
-	name = "lowpower double stacked stripper clip (7.62mm)"
-	desc = "A 762 lowpower stripper."
-	icon_state = "762a"
-	ammo_type = /obj/item/ammo_casing/a762/lp
-	max_ammo = 10
-	multiple_sprites = 1
-	materials = list(MAT_METAL = 10000)
-
+//.50 BMG
 /obj/item/ammo_box/a50MG
 	name = "anti-materiel ammo rack (.50MG)"
 	desc = "A rack of .50 MG ammo, for when you really need something dead."
@@ -312,13 +371,7 @@
 	multiple_sprites = 1
 	materials = list(MAT_METAL = 20000)
 
-/obj/item/ammo_box/n762
-	name = "ammo box (7.62x38mmR)"
-	icon_state = "10mmbox"
-	ammo_type = /obj/item/ammo_casing/n762
-	max_ammo = 14
-	materials = list(MAT_METAL = 14000)
-
+//Toy
 /obj/item/ammo_box/foambox
 	name = "ammo box (Foam Darts)"
 	icon = 'icons/obj/guns/toy.dmi'

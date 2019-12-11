@@ -333,19 +333,6 @@
 	extra_damage = 60
 	extra_penetration = 20
 
-//Colt Rangemaster
-/obj/item/gun/ballistic/shotgun/automatic/hunting
-	name = "Colt Rangemaster"
-	desc = "A semi automatic Colt Rangemaster semi-automatic rifle chambered in .308."
-	icon_state = "rangemaster"
-	item_state = "fnfal"
-	mag_type = /obj/item/ammo_box/magazine/internal/rangemaster
-	fire_sound = 'sound/f13weapons/hunting_rifle.ogg'
-	w_class = WEIGHT_CLASS_BULKY
-	weapon_weight = WEAPON_HEAVY
-	fire_delay = 3
-	extra_damage = 40
-
 /obj/item/gun/ballistic/shotgun/automatic/hunting/trail
 	name = "trail carbine"
 	desc = "A lever action rifle chambered in .44 Magnum."
@@ -431,6 +418,28 @@
 	fire_delay = 8
 	extra_damage = 50
 	extra_penetration = 15
+
+/obj/item/gun/ballistic/revolver/widowmaker
+	name = "winchester widowmaker"
+	desc = "A Winchester Widowmaker double-barreled 12 gauge shotgun. A short barrel, with mahogany grip."
+	icon_state = "widowmaker"
+	item_state = "dshotgun1"
+	force = 20
+	mag_type = /obj/item/ammo_box/magazine/internal/shot/dual
+	sawn_desc = "Someone took the time to chop the last few inches off the barrel and stock of this shotgun. Now, the wide spread of this hand-cannon's short-barreled shots makes it perfect for short-range crowd control."
+	w_class = WEIGHT_CLASS_BULKY
+	weapon_weight = WEAPON_HEAVY
+	fire_delay = 4
+	distro = 1
+
+/obj/item/gun/ballistic/revolver/widowmaker/attackby(obj/item/A, mob/user, params)
+	..()
+	if(istype(A, /obj/item/circular_saw) || istype(A, /obj/item/gun/energy/plasmacutter))
+		sawoff(user)
+	if(istype(A, /obj/item/melee/transforming/energy))
+		var/obj/item/melee/transforming/energy/W = A
+		if(W.active)
+			sawoff(user)
 
 //Double Barrel Caravan Shotgun
 /obj/item/gun/ballistic/revolver/caravan_shotgun

@@ -598,7 +598,6 @@
 	fire_delay = 3
 	extra_damage = 20
 	spread = 8
-	extra_penetration = 20
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 
@@ -690,7 +689,6 @@
 	fire_sound = 'sound/f13weapons/varmint_rifle.ogg'
 	fire_delay = 4
 	extra_damage = 25
-	extra_penetration = 10
 	mag_type = /obj/item/ammo_box/magazine/m556/rifle
 	zoomable = FALSE
 	weapon_weight = WEAPON_HEAVY
@@ -752,7 +750,7 @@
 	weapon_weight = WEAPON_HEAVY
 
 /obj/item/gun/ballistic/automatic/shotgun/caws
-	name = "HK CAWS"
+	name = "H&K CAWS"
 	desc = "A select fire automatic shotgun, a modern variant of the Pancor Jackhammer."
 	icon_state = "caws"
 	item_state = "cshotgun1"
@@ -775,8 +773,8 @@
 	weapon_weight = WEAPON_HEAVY
 
 /obj/item/gun/ballistic/automatic/greasegun
-	name = "9mm submachine gun"
-	desc = "A mass-produced 9mm sub machine gun. Slow fire rate means less waste of ammo and controllable bursts."
+	name = "M3A1 Grease Gun"
+	desc = "An inexpensive .45 ACP submachine gun. Slow fire rate means less waste of ammo and controllable bursts."
 	icon_state = "grease_gun"
 	item_state = "smg9mm"
 	mag_type = /obj/item/ammo_box/magazine/greasegun
@@ -833,7 +831,7 @@
 	mag_type = /obj/item/ammo_box/magazine/m2mm
 	fire_sound = 'sound/f13weapons/gauss_rifle.ogg'
 	can_suppress = FALSE
-	burst_size = 1//Setting it to 0 is dumb. Just set it to one.
+	burst_size = 1
 	fire_delay = 10
 	zoomable = TRUE
 	zoom_amt = 10
@@ -931,3 +929,31 @@
 	icon_state = "oldglory"
 	extra_damage = 50
 	extra_penetration = 15
+
+/obj/item/gun/ballistic/automatic/rangemaster
+	name = "Colt Rangemaster"
+	desc = "A Colt Rangemaster semi-automatic rifle, chambered for 7.62x51. Single-shot only."
+	icon_state = "rangemaster"
+	fire_sound = 'sound/f13weapons/hunting_rifle.ogg'
+	mag_type = /obj/item/ammo_box/magazine/m762
+	w_class = WEIGHT_CLASS_BULKY
+	weapon_weight = WEAPON_HEAVY
+	burst_size = 1
+	fire_delay = 3
+	extra_damage = 40
+	burst_size = 1
+
+/obj/item/gun/ballistic/automatic/fnfal
+	name = "FN FAL"
+	desc = "This rifle has been more widely used by armed forces than any other rifle in history. It's a reliable assault weapon for any terrain or tactical situation."
+	icon_state = "fnfal"
+	item_state = "fnfal"
+	burst_size = 3
+	extra_damage = 30
+	mag_type = /obj/item/ammo_box/magazine/m762
+	init_mag_type = /obj/item/ammo_box/magazine/m762/ext
+	fire_sound = 'sound/f13weapons/assaultrifle_fire.ogg'
+	w_class = WEIGHT_CLASS_BULKY
+	weapon_weight = WEAPON_HEAVY
+	spread = 16
+	fire_delay = 3

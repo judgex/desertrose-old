@@ -1,9 +1,3 @@
-/obj/item/ammo_box/magazine/internal/cylinder/rev762
-	name = "nagant revolver cylinder"
-	ammo_type = /obj/item/ammo_casing/n762
-	caliber = "n762"
-	max_ammo = 7
-
 /obj/item/ammo_box/magazine/internal/cylinder/rus357
 	name = "russian revolver cylinder"
 	ammo_type = /obj/item/ammo_casing/a357

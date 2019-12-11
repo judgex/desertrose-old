@@ -27,7 +27,7 @@
 /obj/item/ammo_box/magazine/mm762
 	name = "ammo belt (7.62mm)"
 	icon_state = "762belt"
-	ammo_type = /obj/item/ammo_casing/a762/lp
+	ammo_type = /obj/item/ammo_casing/a762
 	max_ammo = 80
 	caliber = "a762"
 
@@ -47,9 +47,9 @@
 	multiple_sprites = 2
 
 /obj/item/ammo_box/magazine/w308
-	name = "sniper rifle magazine (.308)"
+	name = "sniper rifle magazine (7.62x51)"
 	icon_state = "sniper_mag"
-	ammo_type = /obj/item/ammo_casing/a308
+	ammo_type = /obj/item/ammo_casing/a762
 	caliber = "a762"
 	max_ammo = 7
 	multiple_sprites = 2

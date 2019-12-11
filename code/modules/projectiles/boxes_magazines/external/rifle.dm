@@ -74,3 +74,23 @@
 
 /obj/item/ammo_box/magazine/garand308/empty
 	stored_ammo = 0
+
+/obj/item/ammo_box/magazine/m762
+	name = "rifle magazine (7.62x51)"
+	icon_state = "mag308"
+	ammo_type = /obj/item/ammo_casing/a762
+	caliber = "a762"
+	max_ammo = 10
+	multiple_sprites = 2
+
+/obj/item/ammo_box/magazine/m762/empty
+	stored_ammo = 0
+
+/obj/item/ammo_box/magazine/m762/ext
+	name = "extended rifle magazine (7.62x51)"
+	icon_state = "extmag308"
+	max_ammo = 20
+	multiple_sprites = 2
+
+/obj/item/ammo_box/magazine/m762/ext/empty
+	stored_ammo = 0

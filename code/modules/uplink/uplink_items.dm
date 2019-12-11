@@ -418,7 +418,7 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 /datum/uplink_item/ammo/pistolfire
 	name = "10mm Incendiary Magazine"
 	desc = "An additional 8-round 10mm magazine; compatible with the Stechkin Pistol. Loaded with incendiary rounds which ignite the target."
-	item = /obj/item/ammo_box/magazine/m10mm/fire
+	item = /obj/item/ammo_box/magazine/m10mm
 	cost = 2
 	exclude_modes = list(/datum/game_mode/nuclear/clown_ops)
 

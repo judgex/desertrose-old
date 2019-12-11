@@ -33,13 +33,11 @@
 /mob/living/simple_animal/hostile/russian/ranged
 	icon_state = "russianranged"
 	icon_living = "russianranged"
-	loot = list(/obj/effect/mob_spawn/human/corpse/russian/ranged,
-				/obj/item/gun/ballistic/revolver/nagant)
+	loot = list(/obj/effect/mob_spawn/human/corpse/russian/ranged)
 	ranged = 1
 	retreat_distance = 5
 	minimum_distance = 5
 	projectilesound = 'sound/weapons/gunshot.ogg'
-	casingtype = /obj/item/ammo_casing/n762
 
 
 /mob/living/simple_animal/hostile/russian/ranged/mosin

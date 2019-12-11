@@ -38,6 +38,9 @@
 	..()
 	icon_state = "uzi9mm-[round(ammo_count(),4)]"
 
+/obj/item/ammo_box/magazine/uzim9mm/empty
+	stored_ammo = 0
+
 /obj/item/ammo_box/magazine/smgm9mm
 	name = "submachine gun magazine (9mm)"
 	icon_state = "smg9mm-42"
@@ -52,10 +55,6 @@
 /obj/item/ammo_box/magazine/smgm9mm/ap
 	name = "submachine gun magazine (Armour Piercing 9mm)"
 	ammo_type = /obj/item/ammo_casing/c9mm/ap
-
-/obj/item/ammo_box/magazine/smgm9mm/fire
-	name = "submachine gun magazine (Incindiary 9mm)"
-	ammo_type = /obj/item/ammo_casing/c9mm/inc
 
 /obj/item/ammo_box/magazine/smgm45
 	name = "submachine gun magazine (.45)"
@@ -91,10 +90,10 @@
 	stored_ammo = 0
 
 /obj/item/ammo_box/magazine/greasegun
-	name = "9mm submachine gun magazine (9mm)"
+	name = "9mm submachine gun magazine (.45)"
 	icon_state = "grease"
-	ammo_type = /obj/item/ammo_casing/c9mm
-	caliber = "9mm"
+	ammo_type = /obj/item/ammo_casing/c45
+	caliber = "45"
 	max_ammo = 30
 	multiple_sprites = 2
 
