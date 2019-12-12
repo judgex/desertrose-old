@@ -57,7 +57,7 @@ window "mainwindow"
 		background-color = #411d1e
 		is-default = true
 		saved-params = "pos;size;is-minimized;is-maximized"
-		title = "Bad Deathclaw - /tg/ Edition"
+		title = "Desert Rose"
 		icon = 'icons\\deathclawlogo.png'
 		macro = "default"
 		menu = "menu"
