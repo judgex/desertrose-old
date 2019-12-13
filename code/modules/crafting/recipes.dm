@@ -1286,6 +1286,17 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
 
+/datum/crafting_recipe/deagle
+	name = "desert eagle"
+	result = /obj/item/gun/ballistic/automatic/pistol/deagle
+	reqs = list(/obj/item/stack/sheet/mineral/wood = 1,
+				/obj/item/stack/crafting/metalparts = 3,
+				/obj/item/stack/sheet/metal = 3)
+	tools = list(TOOL_SWORKBENCH)
+	time = 120
+	category = CAT_WEAPONRY
+	subcategory = CAT_WEAPON
+
 /datum/crafting_recipe/thatgun
 	name = ".223 pistol"
 	result = /obj/item/gun/ballistic/revolver/thatgun
