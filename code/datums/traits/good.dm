@@ -33,7 +33,7 @@
 	mob_trait = TRAIT_BIG_LEAGUES
 	gain_text = "<span class='notice'>You feel like swinging for the fences!</span>"
 	lose_text = "<span class='danger'>You feel like bunting.</span>"
-/*
+
 /datum/quirk/chemwhiz
 	name = "Chem Whiz"
 	desc = "You've been playing around with chemicals all your life. You know how to use chemistry machinery."
@@ -41,16 +41,16 @@
 	mob_trait = TRAIT_CHEMWHIZ
 	gain_text = "<span class='notice'>The mysteries of chemistry are revealed to you.</span>"
 	lose_text = "<span class='danger'>You forget how the periodic table works.</span>"
-*/
-/*
+
+
 /datum/quirk/pa_wear
 	name = "PA Wear"
 	desc = "You've being around the wastes and have learned the importance of defense."
-	value = 3
+	value = 4
 	mob_trait = TRAIT_PA_WEAR
 	gain_text = "<span class='notice'>You realize how to use Power Armor.</span>"
 	lose_text = "<span class='danger'>You forget how Power Armor works.</span>"
-*/
+
 /datum/quirk/drunkhealing
 	name = "Drunken Resilience"
 	desc = "Nothing like a good drink to make you feel on top of the world. Whenever you're drunk, you slowly recover from injuries."
@@ -91,8 +91,8 @@
 /datum/quirk/hard_yards
 	name = "Hard Yards"
 	desc = "You've put them in, now reap the rewards."
-	value = 3
-	locked = TRUE
+	value = 2
+	locked = FALSE
 	mob_trait = TRAIT_HARD_YARDS
 	gain_text = "<span class='notice'>Rain or shine, nothing slows you down.</span>"
 	lose_text = "<span class='danger'>You walk with a less sure gait, the ground seeming less firm somehow.</span>"
