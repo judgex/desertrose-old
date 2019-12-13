@@ -756,7 +756,7 @@
 	item_state = "cshotgun1"
 	fire_sound = 'sound/f13weapons/repeater_fire.ogg'
 	mag_type = /obj/item/ammo_box/magazine/d12g
-	burst_size = 3
+	burst_size = 2
 	fire_delay = 4
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
@@ -767,6 +767,7 @@
 	icon_state = "riot_shotgun"
 	item_state = "huntingshotgun"
 	fire_sound = 'sound/f13weapons/riot_shotgun.ogg'
+	burst_size = 1
 	fire_delay = 5
 	mag_type = /obj/item/ammo_box/magazine/d12g
 	w_class = WEIGHT_CLASS_BULKY
@@ -942,6 +943,15 @@
 	fire_delay = 3
 	extra_damage = 40
 	burst_size = 1
+
+/obj/item/gun/ballistic/automatic/rangemaster/scoped
+	name = "Scoped Colt Rangemaster"
+	desc = "Nothing's better than seeing that surprised look on your target's face. The Loophole x20 Scope on this hunting rifle makes it easier than ever before. Accurate from first shot to last, no matter what kind of game you're gunning for."
+	icon_state = "rangemaster"
+	fire_sound = 'sound/f13weapons/hunting_rifle.ogg'
+	zoomable = TRUE
+	zoom_amt = 10
+	zoom_out_amt = 13
 
 /obj/item/gun/ballistic/automatic/fnfal
 	name = "FN FAL"

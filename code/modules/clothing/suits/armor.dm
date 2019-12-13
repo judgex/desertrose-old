@@ -145,8 +145,9 @@
 	icon_state = "tesla_armor"
 	item_state = "tesla_armor"
 	blood_overlay_type = "armor"
-	armor = list("melee" = 35, "bullet" = 35, "laser" = 55, "energy" = 55, "bomb" = 35, "bio" = 0, "rad" = 0, "fire" = 100, "acid" = 100)
+	armor = list("melee" = 50, "bullet" = 40, "laser" = 60, "energy" = 60, "bomb" = 40, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | ACID_PROOF
+	body_parts_covered = CHEST|GROIN|ARMS
 	var/hit_reflect_chance = 40
 
 /obj/item/clothing/suit/armor/laserproof/IsReflect(def_zone)
@@ -249,23 +250,55 @@
 
 //Fallout 13
 
-/obj/item/clothing/suit/armor/fluff/jensen
-	name = "armored trenchcoat"
-	desc = "A trenchcoat augmented with a special alloy for some protection and style."
-	icon_state = "jensencoat"
-	item_state = "jensencoat"
-	clothing_flags = THICKMATERIAL
-	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
-	armor = list("melee" = 40, "bullet" = 25, "laser" = 10, "energy" = 10, "bomb" = 16, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
+/obj/item/clothing/suit/armor/f13/leather_jacket
+	name = "leather jacket"
+	desc = "A black, heavy leather jacket."
+	body_parts_covered = CHEST|GROIN|ARMS
+	armor = list("melee" = 20, "bullet" = 15, "laser" = 15, "energy" = 15, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 10, "acid" = 0)
+
+/obj/item/clothing/suit/armor/f13/leather_jacket/combat
+	name = "combat leather jacket"
+	desc = "This heavily padded leather jacket is unusual in that it has two sleeves. You'll definitely make a fashion statement whenever, and wherever, you rumble."
+	armor = list("melee" = 30, "bullet" = 30, "laser" = 20, "energy" = 20, "bomb" = 30, "bio" = 0, "rad" = 0, "fire" = 25, "acid" = 25)
+
+/obj/item/clothing/suit/armor/f13/leather_jacket/combat/coat
+	name = "combat leather coat"
+	desc = "A combat leather jacket, outfitted with a special armored leather coat."
+	armor = list("melee" = 35, "bullet" = 35, "laser" = 25, "energy" = 25, "bomb" = 30, "bio" = 0, "rad" = 0, "fire" = 30, "acid" = 35)
+
+/obj/item/clothing/suit/armor/f13/kit
+	name = "armor kit"
+	desc = "Separate armor parts you can wear over the clothing to get the most basic protection from the dangers of wasteland.<br>It is unable to reflect laser beams and probably won't shield you from a random bullet, but it sure is better than going into the battle without any armor at all."
+	icon_state = "armorkit"
+	item_state = "armorkit"
+	body_parts_covered = CHEST|GROIN
+	armor = list("melee" = 20, "bullet" = 15, "laser" = 15, "energy" = 15, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 10, "acid" = 0)
 	strip_delay = 30
 
-/obj/item/clothing/suit/armor/fluff/chestplate
+/obj/item/clothing/suit/armor/f13/leatherarmor
+	name = "leather armor"
+	desc = "Your basic all leather apparel. Finely crafted from tanned brahmin hide."
+	icon_state = "leather_armor"
+	item_state = "leather_armor"
+	body_parts_covered = CHEST|GROIN
+	armor = list("melee" = 40, "bullet" = 35, "laser" = 25, "energy" = 25, "bomb" = 32, "bio" = 0, "rad" = 0, "fire" = 30, "acid" = 35)
+	flags_inv = HIDEJUMPSUIT
+	strip_delay = 40
+
+/obj/item/clothing/suit/armor/f13/leatherarmor/reinforced
+	name = "reinforced leather armor"
+	icon_state = "leather_armor_2"
+	item_state = "leather_armor_2"
+	desc = "An enhanced version of the basic leather armor with extra layers of protection. Finely crafted from tanned brahmin hide."
+	armor = list("melee" = 40, "bullet" = 40, "laser" = 30, "energy" = 30, "bomb" = 35, "bio" = 0, "rad" = 0, "fire" = 40, "acid" = 35)
+	
+/obj/item/clothing/suit/armor/f13/metalarmor
 	name = "metal armor"
 	desc = "A set of plates formed together to form a crude chestplate."
 	icon_state = "metal_chestplate"
 	item_state = "metal_chestplate"
 	body_parts_covered = CHEST|GROIN|ARMS
-	armor = list("melee" = 50, "bullet" = 35, "laser" = 35, "energy" = 20, "bomb" = 25, "bio" = 30, "rad" = 30, "fire" = 60, "acid" = 0)
+	armor = list("melee" = 40, "bullet" = 35, "laser" = 40, "energy" = 40, "bomb" = 40, "bio" = 30, "rad" = 15, "fire" = 60, "acid" = 0)
 	slowdown = 0.25
 	strip_delay = 10
 
@@ -278,24 +311,15 @@
 	STOP_PROCESSING(SSobj, src)
 	return ..()
 
-/obj/item/clothing/suit/armor/fluff/chestplate/mk2
+/obj/item/clothing/suit/armor/f13/metalarmor/reinforced
 	name = "metal armor mark 2"
 	desc = "A set of polished plates formed together to form a reflective chestplate specially effective agaisnt energy weaponry."
 	icon_state = "metal_chestplate2"
 	item_state = "metal_chestplate2"
 	body_parts_covered = CHEST|GROIN|ARMS|LEGS
-	armor = list("melee" = 50, "bullet" = 35, "laser" = 50, "energy" = 50, "bomb" = 25, "bio" = 30, "rad" = 30, "fire" = 60, "acid" = 0)
+	armor = list("melee" = 50, "bullet" = 40, "laser" = 50, "energy" = 50, "bomb" = 40, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
 	slowdown = 0
 	strip_delay = 10
-
-/obj/item/clothing/suit/armor/f13/kit
-	name = "armor kit"
-	desc = "Separate armor parts you can wear over the clothing to get the most basic protection from the dangers of wasteland.<br>It is unable to reflect laser beams and probably won't shield you from a random bullet, but it sure is better than going into the battle without any armor at all."
-	icon_state = "armorkit"
-	item_state = "armorkit"
-	body_parts_covered = CHEST|GROIN
-	armor = list("melee" = 30, "bullet" = 20, "laser" = 0, "energy" = 0, "bomb" = 16, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
-	strip_delay = 30
 
 /obj/item/clothing/suit/armor/f13/raider
 	name = "supa-fly raider armor"
@@ -303,56 +327,112 @@
 	icon_state = "supafly"
 	item_state = "supafly"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	armor = list("melee" = 40, "bullet" = 25, "laser" = 15, "energy" = 10, "bomb" = 16, "bio" = 20, "rad" = 0, "fire" = 50, "acid" = 0)
+	armor = list("melee" = 30, "bullet" = 30, "laser" = 20, "energy" = 20, "bomb" = 30, "bio" = 0, "rad" = 0, "fire" = 25, "acid" = 25)
 	strip_delay = 40
 
 /obj/item/clothing/suit/armor/f13/raider/sadist
 	name = "sadist raider armor"
 	icon_state = "sadist"
-	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	armor = list("melee" = 40, "bullet" = 25, "laser" = 15, "energy" = 10, "bomb" = 16, "bio" = 20, "rad" = 0, "fire" = 50, "acid" = 0)
 
 /obj/item/clothing/suit/armor/f13/raider/blastmaster
 	name = "blastmaster raider armor"
 	icon_state = "blastmaster"
 	max_heat_protection_temperature = ARMOR_MAX_TEMP_PROTECT
 	flash_protect = 2
-	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	armor = list("melee" = 40, "bullet" = 25, "laser" = 15, "energy" = 10, "bomb" = 16, "bio" = 20, "rad" = 0, "fire" = 50, "acid" = 0)
 
 /obj/item/clothing/suit/armor/f13/raider/yankee
 	name = "yankee raider armor"
 	desc = "A set of armor made from football player protective wear. Together we play."
 	icon_state = "yankee"
 	item_state = "yankee"
-	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	armor = list("melee" = 40, "bullet" = 25, "laser" = 15, "energy" = 10, "bomb" = 16, "bio" = 20, "rad" = 0, "fire" = 50, "acid" = 0)
 	strip_delay = 40
 
 /obj/item/clothing/suit/armor/f13/badlands
 	name = "badlands raider armor"
 	icon_state = "badlands"
 	item_state = "badlands"
-	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	armor = list("melee" = 40, "bullet" = 25, "laser" = 15, "energy" = 10, "bomb" = 16, "bio" = 20, "rad" = 0, "fire" = 50, "acid" = 0)
 
 /obj/item/clothing/suit/armor/f13/raider/painspike
 	name = "painspike raider armor"
 	desc = "A particularly unhuggable armor, even by raider standards."
 	icon_state = "painspike"
 	item_state = "painspike"
-	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	armor = list("melee" = 40, "bullet" = 25, "laser" = 15, "energy" = 10, "bomb" = 16, "bio" = 20, "rad" = 0, "fire" = 50, "acid" = 0)
 
-/obj/item/clothing/suit/armor/f13/leatherarmor
-	name = "leather armor"
-	desc = "A set of light armor made of boiled brahmin leather.<br>It should protect you against your average 9mm peashooter, but anything higher caliber will punch through it like butter."
-	icon_state = "leatherarmor"
-	item_state = "leatherarmor"
+/obj/item/clothing/suit/armor/f13/combat
+	name = "combat armor"
+	desc = "An old military grade pre war combat armor."
+	icon_state = "combat_armor"
+	item_state = "combat_armor"
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
+	armor = list("melee" = 40, "bullet" = 45, "laser" = 40, "energy" = 40, "bomb" = 50, "bio" = 60, "rad" = 60, "fire" = 60, "acid" = 20)
+	strip_delay = 60
+
+/obj/item/clothing/suit/armor/f13/combat/Initialize()
+	. = ..()
+	AddComponent(/datum/component/spraycan_paintable)
+	START_PROCESSING(SSobj, src)
+
+/obj/item/clothing/suit/armor/f13/combat/Destroy()
+	STOP_PROCESSING(SSobj, src)
+	return ..()
+
+/obj/item/clothing/suit/armor/f13/combat/mk2
+	name = "reinforced combat armor"
+	desc = "A reinforced model based of the pre-war combat armor."
+	icon_state = "combat_armor_mk2"
+	item_state = "combat_armor_mk2"
+	armor = list("melee" = 45, "bullet" = 50, "laser" = 45, "energy" = 45, "bomb" = 55, "bio" = 60, "rad" = 60, "fire" = 60, "acid" = 30)
+
+/obj/item/clothing/suit/armor/f13/combat/ncr
+	name = "ranger patrol armor"
+	desc = "A set of standard issue ranger patrol armor that provides defense similar to a suit of pre-war combat armor."
+	icon_state = "ncr_patrol"
+	item_state = "ncr_patrol"
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
+	armor = list("melee" = 40, "bullet" = 45, "laser" = 40, "energy" = 40, "bomb" = 50, "bio" = 0, "rad" = 0, "fire" = 60, "acid" = 20)
+
+/obj/item/clothing/suit/armor/f13/combat/brotherhood
+	name = "brotherhood combat armor"
+	desc = "A superior combat armor set made by the Brotherhood of Steel, standard issue for all initiates."
+	icon_state = "brotherhood_armor"
+	item_state = "brotherhood_armor"
+	armor = list("melee" = 60, "bullet" = 55, "laser" = 50, "energy" = 70, "bomb" = 60, "bio" = 70, "rad" = 70, "fire" = 70, "acid" = 40)
+
+/obj/item/clothing/suit/armor/f13/combat/enclave
+	name = "enclave combat armor"
+	desc = "An old set of pre-war combat armor, painted black."
+	icon_state = "enclave_armor"
+	item_state = "enclave_armor"
+	armor = list("melee" = 65, "bullet" = 60, "laser" = 60, "energy" = 75, "bomb" = 70, "bio" = 80, "rad" = 80, "fire" = 80, "acid" = 50)
+
+/obj/item/clothing/suit/armor/f13/combat/swat
+	name = "SWAT combat armor"
+	desc = "A custom version of the pre-war combat armor, slimmed down and minimalist for domestic S.W.A.T. teams."
+	icon_state = "armoralt"
+	item_state = "armoralt"
+	body_parts_covered = CHEST|GROIN
+
+/obj/item/clothing/suit/armor/f13/rangercombat
+	name = "veteran ranger combat armor"
+	desc = "The NCR veteran ranger combat armor, or black armor consists of a pre-war L.A.P.D. riot suit under a duster with rodeo jeans. Considered one of the most prestigious suits of armor to earn and wear while in service of the NCR Rangers."
+	icon_state = "ranger"
+	item_state = "ranger"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
-	armor = list("melee" = 35, "bullet" = 15, "laser" = 30, "energy" = 20, "bomb" = 0, "bio" = 60, "rad" = 20, "fire" = 80, "acid" = 0)
-	flags_inv = HIDEJUMPSUIT
-	strip_delay = 40
+	armor = list("melee" = 60, "bullet" = 50, "laser" = 40, "energy" = 40, "bomb" = 55, "bio" = 60, "rad" = 60, "fire" = 90, "acid" = 20)
+	strip_delay = 60
+
+/obj/item/clothing/suit/armor/f13/rangercombat/desert
+	name = "desert ranger combat armor"
+	desc = "This is the original armor the NCR Ranger Combat armor was based off of. An awe inspiring suit of armor used by the legendary Desert Rangers."
+	icon_state = "desert_ranger"
+	item_state = "desert_ranger"
+
+/obj/item/clothing/suit/armor/f13/rangercombat/eliteriot
+	name = "elite riot gear"
+	desc = "A heavily reinforced set of military grade armor, commonly seen in the Divide now repurposed and reissued to Chief Rangers."
+	icon_state = "elite_riot"
+	item_state = "elite_riot"
+	armor = list("melee" = 70, "bullet" = 60, "laser" = 40, "energy" = 60, "bomb" = 70, "bio" = 60, "rad" = 60, "fire" = 90, "acid" = 50)
 
 /obj/item/clothing/suit/armor/f13/chitinarmor
 	name = "insect chitin armor"
@@ -364,6 +444,7 @@
 	flags_inv = HIDEJUMPSUIT
 	strip_delay = 40
 
+/*
 /obj/item/clothing/suit/armor/f13/bmetalarmor
 	name = "metal armor"
 	desc = "A set of sturdy metal armor made from various bits of scrap metal. It looks heavy and impairs movement"
@@ -398,7 +479,7 @@
 	armor = list("melee" = 65, "bullet" = 40, "laser" = 50, "energy" = 60, "bomb" = 25, "bio" = 30, "rad" = 30, "fire" = 90, "acid" = 0)
 	slowdown = 0.75
 	strip_delay = 60
-
+*/
 // salvaged/broken power armor, does not require PA training
 
 /obj/item/clothing/suit/armor/f13/brokenpa
@@ -426,8 +507,6 @@
 	icon_state = "ncrpowerarmor"
 	item_state = "ncrpowerarmor"
 	armor = list("melee" = 75, "bullet" = 60, "laser" = 30, "energy" = 50, "bomb" = 48, "bio" = 60, "rad" = 50, "fire" = 80, "acid" = 0)
-
-
 
 /obj/item/clothing/suit/armor/f13/power_armor
 	w_class = WEIGHT_CLASS_HUGE
@@ -561,7 +640,6 @@
 	slowdown = 0.5
 	armor = list("melee" = 65, "bullet" = 50, "laser" = 30, "energy" = 15, "bomb" = 25, "bio" = 50, "rad" = 20, "fire" = 70, "acid" = 0)
 
-
 /obj/item/clothing/suit/armor/f13/legion/centurion
 	name = "legion centurion armor"
 	desc = "The Legion centurion armor is by far the strongest suit of armor available to Caesar's Legion. The armor is composed from other pieces of armor taken from that of the wearer's defeated opponents in combat."
@@ -574,81 +652,6 @@
 	icon_state = "leglegat"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
 	armor = list("melee" = 85, "bullet" = 60, "laser" = 40, "energy" = 40, "bomb" = 45, "bio" = 60, "rad" = 20, "fire" = 80, "acid" = 0)
-
-/obj/item/clothing/suit/armor/f13/combat
-	name = "combat armor"
-	desc = "An old military grade pre war combat armor."
-	icon_state = "combat_armor"
-	item_state = "combat_armor"
-	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	armor = list("melee" = 45, "bullet" = 30, "laser" = 30, "energy" = 60, "bomb" = 25, "bio" = 60, "rad" = 60, "fire" = 60, "acid" = 0)
-	strip_delay = 60
-
-/obj/item/clothing/suit/armor/f13/combat/Initialize()
-	. = ..()
-	AddComponent(/datum/component/spraycan_paintable)
-	START_PROCESSING(SSobj, src)
-
-/obj/item/clothing/suit/armor/f13/combat/Destroy()
-	STOP_PROCESSING(SSobj, src)
-	return ..()
-
-/obj/item/clothing/suit/armor/f13/combat/mk2
-	name = "reinforced combat armor"
-	desc = "A reinforced model based of the pre-war combat armor."
-	icon_state = "combat_armor_mk2"
-	item_state = "combat_armor_mk2"
-	armor = list("melee" = 60, "bullet" = 40, "laser" = 40, "energy" = 40, "bomb" = 39, "bio" = 70, "rad" = 70, "fire" = 70, "acid" = 0)
-
-/obj/item/clothing/suit/armor/f13/combat/ncr
-	name = "ranger patrol armor"
-	desc = "A set of standard issue ranger patrol armor that provides defense similar to a suit of pre-war combat armor."
-	icon_state = "ncr_patrol"
-	item_state = "ncr_patrol"
-	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	armor = list("melee" = 50, "bullet" = 40, "laser" = 30, "energy" = 40, "bomb" = 25, "bio" = 40, "rad" = 40, "fire" = 80, "acid" = 0)
-
-/obj/item/clothing/suit/armor/f13/combat/brotherhood
-	name = "brotherhood combat armor"
-	desc = "A superior combat armor set made by the Brotherhood of Steel, standard issue for all initiates."
-	icon_state = "brotherhood_armor"
-	item_state = "brotherhood_armor"
-	armor = list("melee" = 60, "bullet" = 40, "laser" = 40, "energy" = 70, "bomb" = 39, "bio" = 70, "rad" = 70, "fire" = 70, "acid" = 0)
-
-/obj/item/clothing/suit/armor/f13/combat/enclave
-	name = "enclave combat armor"
-	desc = "An old set of pre-war combat armor, painted black."
-	icon_state = "enclave_armor"
-	item_state = "enclave_armor"
-	armor = list("melee" = 60, "bullet" = 40, "laser" = 40, "energy" = 70, "bomb" = 39, "bio" = 70, "rad" = 70, "fire" = 70, "acid" = 0)
-
-/obj/item/clothing/suit/armor/f13/combat/swat
-	name = "SWAT combat armor"
-	desc = "A custom version of the pre-war combat armor, slimmed down and minimalist for domestic S.W.A.T. teams."
-	icon_state = "armoralt"
-	item_state = "armoralt"
-
-/obj/item/clothing/suit/armor/f13/rangercombat
-	name = "veteran ranger combat armor"
-	desc = "The NCR veteran ranger combat armor, or black armor consists of a pre-war L.A.P.D. riot suit under a duster with rodeo jeans. Considered one of the most prestigious suits of armor to earn and wear while in service of the NCR Rangers."
-	icon_state = "ranger"
-	item_state = "ranger"
-	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
-	armor = list("melee" = 60, "bullet" = 50, "laser" = 30, "energy" = 50, "bomb" = 39, "bio" = 60, "rad" = 60, "fire" = 90, "acid" = 0)
-	strip_delay = 60
-
-/obj/item/clothing/suit/armor/f13/rangercombat/desert
-	name = "desert ranger combat armor"
-	desc = "This is the original armor the NCR Ranger Combat armor was based off of. An awe inspiring suit of armor used by the legendary Desert Rangers."
-	icon_state = "desert_ranger"
-	item_state = "desert_ranger"
-
-/obj/item/clothing/suit/armor/f13/rangercombat/eliteriot
-	name = "elite riot gear"
-	desc = "A heavily reinforced set of military grade armor, commonly seen in the Divide now repurposed and reissued to Chief Rangers."
-	icon_state = "elite_riot"
-	item_state = "elite_riot"
-	armor = list("melee" = 70, "bullet" = 60, "laser" = 40, "energy" = 60, "bomb" = 55, "bio" = 60, "rad" = 60, "fire" = 90, "acid" = 0)
 
 /obj/item/clothing/suit/armor/f13/ncrarmor
 	name = "NCR patrol vest"

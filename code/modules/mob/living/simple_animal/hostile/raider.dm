@@ -16,12 +16,12 @@
 	maxHealth = 140
 	health = 140
 	harm_intent_damage = 5
-	melee_damage_lower = 30
-	melee_damage_upper = 56
+	melee_damage_lower = 25
+	melee_damage_upper = 50
 	attacktext = "punches"
-	attack_sound = 'sound/weapons/punch1.ogg'
+	attack_sound = 'sound/weapons/bladeslice.ogg'
 	a_intent = INTENT_HARM
-	loot = list(/obj/effect/mob_spawn/human/corpse/raidermelee, /obj/item/twohanded/sledgehammer)
+	loot = list(/obj/effect/mob_spawn/human/corpse/raidermelee, /obj/item/kitchen/knife/combat/survival)
 	atmos_requirements = list("min_oxy" = 5, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 1, "min_co2" = 0, "max_co2" = 5, "min_n2" = 0, "max_n2" = 0)
 	unsuitable_atmos_damage = 15
 	faction = list("raider")
@@ -32,7 +32,7 @@
 /mob/living/simple_animal/hostile/raider/ranged
 	icon_state = "raiderranged"
 	icon_living = "raiderranged"
-	loot = list(/obj/effect/mob_spawn/human/corpse/raiderranged, /obj/item/gun/ballistic/shotgun/boltaction)
+	loot = list(/obj/effect/mob_spawn/human/corpse/raiderranged, /obj/item/gun/ballistic/automatic/pistol/ninemil)
 	ranged = 1
 	maxHealth = 115
 	health = 115

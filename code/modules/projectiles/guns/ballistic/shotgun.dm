@@ -174,7 +174,7 @@
 	desc = "A internal tube variant of the pre-war combat shotgun."
 	icon_state = "citykiller"
 	item_state = "cshotgun1"
-	mag_type = /obj/item/ammo_box/magazine/internal/shot/com
+	mag_type = /obj/item/ammo_box/magazine/internal/shot/com/citykiller
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 

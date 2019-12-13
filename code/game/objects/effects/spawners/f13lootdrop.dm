@@ -196,170 +196,115 @@
 	name = "tier 1 armor"
 	lootcount = 2 //guranteeing it /will/ spawn
 	var/loot1 = list(
-				/obj/item/clothing/suit/armor/vest,
-				/obj/item/clothing/head/helmet/riot/vaultsec
+				/obj/item/clothing/suit/armor/f13/leather_jacket,
+				""
 				)
 				//"" returns absolutley nothing
 	var/loot2 = list(
-				/obj/item/clothing/suit/armor/vest/det_suit,
-				""
-				)
-
-	var/loot3 = list(
 				/obj/item/clothing/suit/armor/f13/kit,
 				""
 				)
-
-	var/loot4 = list(
+	var/loot3 = list(
 				/obj/item/clothing/suit/armor/f13/raider,
 				/obj/item/clothing/head/helmet/f13/raider
 				)
-
-	var/loot5 = list(
+	var/loot4 = list(
 				/obj/item/clothing/suit/armor/f13/raider/sadist,
 				/obj/item/clothing/head/helmet/f13/raider/arclight
 				)
-
-	var/loot6 = list(
+	var/loot5 = list(
 				/obj/item/clothing/suit/armor/f13/raider/blastmaster,
 				/obj/item/clothing/head/helmet/f13/raider/blastmaster
 				)
-
-	var/loot7 = list(
+	var/loot6 = list(
 				/obj/item/clothing/suit/armor/f13/raider/yankee,
 				/obj/item/clothing/head/helmet/f13/raider/yankee
 				)
-
+	var/loot7 = list(
+				/obj/item/clothing/suit/armor/f13/badlands,
+				/obj/item/clothing/head/helmet/f13/fiend
+				)
 	var/loot8 = list(
-				/obj/item/clothing/suit/armor/f13/leatherarmor,
-				""
+				/obj/item/clothing/suit/armor/f13/raider/painspike,
+				/obj/item/clothing/head/helmet/f13/raider/psychotic
 				)
-
 	var/loot9 = list(
-				/obj/item/clothing/suit/f13/mfp,
-				""
+				/obj/item/clothing/suit/armor/f13/raider,
+				/obj/item/clothing/head/helmet/f13/raider
 				)
-
 	var/loot10 = list(
-				/obj/item/clothing/suit/fluff/cowboybvest,
-				""
-				)
-
-	var/loot11 = list(
-				/obj/item/clothing/suit/fluff/cowboygvest,
-				""
-				)
-
-	var/loot12 = list(
-				/obj/item/clothing/suit/fluff/battlecruiser,
-				""
-				)
-
-	var/loot13 = list(
-				/obj/item/clothing/suit/fluff/vest,
-				""
-				)
-
-	var/loot14 = list(
-				/obj/item/clothing/suit/f13/veteran,
-				""
-				)
-
-	var/loot15 = list(
 				/obj/item/clothing/suit/f13/duster,
 				""
 				)
 
-	var/loot16 = list(
-				/obj/item/clothing/suit/f13/autumn,
-				""
-				)
-
 /obj/effect/spawner/lootdrop/f13/armor/tier1/Initialize(mapload) //on mapload, pick what shit to spawn
-	loot = pick(loot1, loot2, loot3, loot4, loot5, loot6, loot7, loot8, loot9, loot10, loot11, loot12, loot13, loot14, loot15, loot16)
+	loot = pick(loot1, loot2, loot3, loot4, loot5, loot6, loot7, loot8, loot9, loot10)
 	. = ..()
 
 /obj/effect/spawner/lootdrop/f13/armor/tier2 //TIER 2 ARMOR
 	name = "tier 2 armor"
 	lootcount = 2
 	var/loot1 = list(
-				/obj/item/clothing/suit/armor/fluff/chestplate,
-				/obj/item/clothing/head/helmet/f13/metalmask
+				/obj/item/clothing/suit/armor/f13/metalarmor,
+				/obj/item/clothing/head/helmet/knight/fluff/metal
 				)
 
 	var/loot2 = list(
-				/obj/item/clothing/suit/armor/f13/combat,
-				/obj/item/clothing/head/helmet/f13/combat
+				/obj/item/clothing/suit/armor/f13/metalarmor,
+				/obj/item/clothing/head/helmet/f13/metalmask
 				)
 
 	var/loot3 = list(
-				/obj/item/clothing/head/helmet/f13/combat/swat,
-				/obj/item/clothing/suit/armor/f13/combat/swat
+				/obj/item/clothing/suit/armor/f13/leatherarmor,
+				""
+				)
+	var/loot4 = list(
+				/obj/item/clothing/suit/armor/f13/leather_jacket/combat,
+				""
 				)
 
 /obj/effect/spawner/lootdrop/f13/armor/tier2/Initialize(mapload) //on mapload, pick what shit to spawn
-	loot = pick(loot1, loot2, loot3)
+	loot = pick(loot1, loot2, loot3, loot4)
 	. = ..()
 
 /obj/effect/spawner/lootdrop/f13/armor/tier3 //TIER 3 ARMOR
 	name = "tier 3 armor"
 	lootcount = 2
 	var/loot1 = list(
-				/obj/item/clothing/suit/armor/f13/combat/mk2,
-				/obj/item/clothing/head/helmet/f13/combat/mk2
+				/obj/item/clothing/suit/armor/f13/metalarmor/reinforced,
+				/obj/item/clothing/head/helmet/f13/metalmask/mk2
 				)
-
 	var/loot2 = list(
-				/obj/item/clothing/suit/armor/f13/brokenpa/t45b,
-				/obj/item/clothing/head/helmet/power_armor/t45b
+				/obj/item/clothing/suit/armor/f13/metalarmor/reinforced,
+				/obj/item/clothing/head/helmet/knight/fluff/metal/reinforced
 				)
-
 	var/loot3 = list(
-				/obj/item/clothing/suit/armor/fluff/chestplate/mk2,
-				/obj/item/clothing/head/helmet/f13/metalmask/mk2
+				/obj/item/clothing/suit/armor/f13/leather_jacket/combat/coat,
+				""
 				)
-
 	var/loot4 = list(
-				/obj/item/clothing/suit/armor/fluff/chestplate/mk2,
-				/obj/item/clothing/head/helmet/f13/metalmask/mk2
+				/obj/item/clothing/head/helmet/f13/combat/swat,
+				/obj/item/clothing/suit/armor/f13/combat/swat
 				)
-
-	var/loot5 = list(
-				/obj/item/clothing/suit/armor/f13/ibmetalarmor,
-				/obj/item/clothing/head/helmet/f13/metalmask
-				)
-
 
 /obj/effect/spawner/lootdrop/f13/armor/tier3/Initialize(mapload) //on mapload, pick what shit to spawn
-	loot = pick(loot1, loot2, loot3, loot4, loot5)
+	loot = pick(loot1, loot2, loot3, loot4)
 	. = ..()
 
 /obj/effect/spawner/lootdrop/f13/armor/tier4 //TIER 4 ARMOR
 	name = "tier 4 armor"
 	lootcount = 2
-
 	var/loot1 = list(
-				/obj/item/clothing/suit/armor/laserproof,
-				/obj/item/clothing/head/helmet/f13/tesla
+				/obj/item/clothing/suit/armor/f13/combat,
+				/obj/item/clothing/head/helmet/f13/combat
 				)
-
 	var/loot2 = list(
-				/obj/item/clothing/suit/armor/f13/rangercombat/desert,
-				/obj/item/clothing/head/helmet/f13/ncr/rangercombat/desert
-				)
-
-	var/loot3 = list(
-				/obj/item/clothing/suit/armor/f13/combat/mk2,
-				/obj/item/clothing/head/helmet/f13/combat/mk2
-				)
-
-	var/loot4 = list(
 				/obj/item/clothing/suit/armor/f13/brokenpa/t45b,
 				/obj/item/clothing/head/helmet/power_armor/t45b
 				)
 
 /obj/effect/spawner/lootdrop/f13/armor/tier4/Initialize(mapload) //on mapload, pick what shit to spawn
-	loot = pick(loot1, loot2, loot3, loot4)
+	loot = pick(loot1, loot2)
 	. = ..()
 
 
@@ -367,42 +312,24 @@
 	name = "tier 5 armor"
 	lootcount = 2
 	var/loot1 = list(
-				/obj/item/clothing/suit/armor/f13/power_armor/advanced,
-				/obj/item/clothing/head/helmet/power_armor/advanced
-				)
-
-	var/loot2 = list(
-				/obj/item/clothing/suit/armor/f13/power_armor/advanced/mk2,
-				/obj/item/clothing/head/helmet/power_armor/advanced/mk2
-				)
-
-	var/loot3 = list(
-				/obj/item/clothing/suit/armor/f13/power_armor/tesla,
-				/obj/item/clothing/head/helmet/power_armor/tesla
-				)
-
-	var/loot4 = list(
 				/obj/item/clothing/suit/armor/f13/power_armor/t45d,
 				/obj/item/clothing/head/helmet/power_armor/t45d
 				)
-
-	var/loot5 = list(
+	var/loot2 = list(
 				/obj/item/clothing/suit/armor/f13/power_armor/t51b,
 				/obj/item/clothing/head/helmet/power_armor/t51b
 				)
-
-	var/loot6 = list(
-				/obj/item/clothing/suit/armor/f13/power_armor/t45d,
-				/obj/item/clothing/head/helmet/power_armor/t45d
+	var/loot3 = list(
+				/obj/item/clothing/suit/armor/f13/combat/mk2,
+				/obj/item/clothing/head/helmet/f13/combat/mk2
 				)
-
-	var/loot7 = list(
-				/obj/item/clothing/suit/armor/f13/power_armor/t45d,
-				/obj/item/clothing/head/helmet/power_armor/t45d
+	var/loot4 = list(
+				/obj/item/clothing/suit/armor/laserproof,
+				/obj/item/clothing/head/helmet/f13/tesla
 				)
 
 /obj/effect/spawner/lootdrop/f13/armor/tier5/Initialize(mapload) //on mapload, pick what shit to spawn
-	loot = pick(loot1, loot2, loot3, loot4, loot5, loot6, loot7)
+	loot = pick(loot1, loot2, loot3, loot4)
 	. = ..()
 
 /obj/effect/spawner/lootdrop/f13/armor/random
@@ -672,42 +599,36 @@
 				)
 
 	var/loot7 = list(
-				/obj/item/gun/ballistic/revolver/detective,
-				/obj/item/ammo_box/c38,
-				/obj/item/ammo_box/c38
-				)
-
-	var/loot8 = list(
 				/obj/item/gun/ballistic/automatic/pistol/n99,
 				/obj/item/ammo_box/magazine/m10mm_adv,
 				/obj/item/ammo_box/magazine/m10mm_adv
 				)
 
-	var/loot9 = list(
+	var/loot8 = list(
 				/obj/item/gun/ballistic/automatic/pistol/m1911,
 				/obj/item/ammo_box/magazine/m45,
 				/obj/item/ammo_box/magazine/m45
 				)
 
-	var/loot10 = list(
+	var/loot9 = list(
 				/obj/item/gun/ballistic/automatic/pistol/ninemil,
 				/obj/item/ammo_box/magazine/m9mm,
 				/obj/item/ammo_box/magazine/m9mm
 				)
 
-	var/loot11 = list(
+	var/loot10 = list(
 				/obj/item/gun/ballistic/revolver/colt6250,
 				/obj/item/ammo_box/l10mm,
 				/obj/item/ammo_box/l10mm
 				)
 
-	var/loot12 = list(
+	var/loot11 = list(
 				/obj/item/gun/ballistic/automatic/marksman/servicerifle/varmint,
 				/obj/item/ammo_box/magazine/m556/rifle/small,
 				/obj/item/ammo_box/magazine/m556/rifle/small)
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/tier1/Initialize(mapload) //on mapload, pick what shit to spawn
-	loot = pick(loot1, loot2, loot3, loot4, loot5, loot6, loot7, loot8, loot9, loot10, loot11, loot12)
+	loot = pick(loot1, loot2, loot3, loot4, loot5, loot6, loot7, loot8, loot9, loot10, loot11)
 	. = ..()
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/tier2 //TIER 2 GUN
@@ -763,6 +684,7 @@
 				/obj/item/gun/ballistic/automatic/marksman/servicerifle/varmint/ratslayer,
 				/obj/item/ammo_box/magazine/m556/rifle/small,
 				/obj/item/ammo_box/magazine/m556/rifle/small)
+
 	var/loot10 = list(
 				/obj/item/gun/ballistic/revolver/police,
 				/obj/item/ammo_box/a357,
@@ -926,11 +848,7 @@
 				/obj/item/gun/energy/laser/plasma,
 				/obj/item/gun/energy/laser/plasma/scatter,
 				/obj/item/gun/ballistic/revolver/sequoia/scoped,
-				/obj/item/gun/ballistic/automatic/l6_saw/unrestricted,
-				/obj/item/gun/ballistic/automatic/sniper_rifle,
-				/obj/item/gun/ballistic/automatic/shotgun/caws,
-				/obj/item/gun/ballistic/automatic/shotgun/pancor,
-				/obj/item/gun/ballistic/automatic/bozar
+				/obj/item/gun/ballistic/automatic/sniper_rifle
 				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/random
@@ -1183,17 +1101,13 @@
 	fan_out_items = TRUE
 
 	loot = list(
-				/obj/item/crafting/fuse,
-				/obj/item/crafting/duct_tape,
-				/obj/item/crafting/wonderglue,
-				/obj/item/crafting/turpentine,
 				/obj/item/crafting/abraxo,
-				/obj/item/crafting/igniter,
-				/obj/item/crafting/timer,
-				/obj/item/crafting/sensor,
-				/obj/item/crafting/lunchbox,
+				/obj/item/stack/crafting/metalparts/three,
 				/obj/item/stack/crafting/metalparts/five,
 				/obj/item/stack/crafting/goodparts/three,
+				/obj/item/stack/crafting/goodparts/five,
+				/obj/item/stack/crafting/electronicparts/three,
+				/obj/item/stack/crafting/electronicparts/five,
 				/obj/item/reagent_containers/glass/bottle/blackpowder)
 
 /obj/effect/spawner/lootdrop/f13/crafting/Initialize(mapload) //on mapload, pick how many shit to spawn
@@ -1394,3 +1308,20 @@
 	loot = list(/obj/item/book/granter/trait/chemistry = 30,
 	/obj/item/book/granter/trait/trekking = 30, 
 	"" = 40)
+
+/obj/effect/spawner/lootdrop/f13/blueprint
+	name = "blueprint spawner"
+	lootcount = 1
+	loot = list(
+		/obj/item/blueprint/weapon/thatgun,
+		/obj/item/blueprint/weapon/m1garand,
+		/obj/item/blueprint/weapon/r91,
+		/obj/item/blueprint/weapon/infiltrator,
+		/obj/item/blueprint/weapon/servicerifle,
+		/obj/item/blueprint/weapon/marksmanrifle,
+		/obj/item/blueprint/weapon/fnfal,
+		/obj/item/blueprint/weapon/caws,
+		/obj/item/blueprint/weapon/needler,
+		/obj/item/blueprint/armor/tesla,
+		/obj/item/blueprint/armor/combat
+	)
