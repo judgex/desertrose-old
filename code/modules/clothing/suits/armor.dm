@@ -252,17 +252,23 @@
 
 /obj/item/clothing/suit/armor/f13/leather_jacket
 	name = "leather jacket"
+	icon_state = "leather_jacket"
+	item_state = "leather_jacket"
 	desc = "A black, heavy leather jacket."
 	body_parts_covered = CHEST|GROIN|ARMS
 	armor = list("melee" = 20, "bullet" = 15, "laser" = 15, "energy" = 15, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 10, "acid" = 0)
 
 /obj/item/clothing/suit/armor/f13/leather_jacket/combat
 	name = "combat leather jacket"
+	icon_state = "combat_jacket"
+	item_state = "combat_jacket"
 	desc = "This heavily padded leather jacket is unusual in that it has two sleeves. You'll definitely make a fashion statement whenever, and wherever, you rumble."
 	armor = list("melee" = 30, "bullet" = 30, "laser" = 20, "energy" = 20, "bomb" = 30, "bio" = 0, "rad" = 0, "fire" = 25, "acid" = 25)
 
 /obj/item/clothing/suit/armor/f13/leather_jacket/combat/coat
 	name = "combat leather coat"
+	icon_state = "combat_coat"
+	item_state = "combat_coat"
 	desc = "A combat leather jacket, outfitted with a special armored leather coat."
 	armor = list("melee" = 35, "bullet" = 35, "laser" = 25, "energy" = 25, "bomb" = 30, "bio" = 0, "rad" = 0, "fire" = 30, "acid" = 35)
 
