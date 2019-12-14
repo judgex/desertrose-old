@@ -32,6 +32,11 @@
 	ammo_type = /obj/item/ammo_casing/shotgun/buckshot
 	max_ammo = 6
 
+/obj/item/ammo_box/magazine/internal/shot/com/citykiller
+	name = "city killer shotgun internal magazine"
+	ammo_type = /obj/item/ammo_casing/shotgun/buckshot
+	max_ammo = 12
+
 /obj/item/ammo_box/magazine/internal/shot/com/compact
 	name = "compact combat shotgun internal magazine"
 	ammo_type = /obj/item/ammo_casing/shotgun/buckshot

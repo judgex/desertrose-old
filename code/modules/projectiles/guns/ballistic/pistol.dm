@@ -31,10 +31,10 @@
 
 /obj/item/gun/ballistic/automatic/pistol/deagle
 	name = "desert eagle"
-	desc = "A robust .50 AE handgun."
+	desc = "A robust .44 magnum handgun."
 	icon_state = "deagle"
 	force = 14
-	mag_type = /obj/item/ammo_box/magazine/m50
+	mag_type = /obj/item/ammo_box/magazine/m44
 	can_suppress = FALSE
 	w_class = WEIGHT_CLASS_NORMAL
 	extra_damage = 50
@@ -92,7 +92,7 @@
 	fire_sound = 'sound/f13weapons/10mm_fire_02.ogg'
 	w_class = WEIGHT_CLASS_NORMAL
 	fire_delay = 2
-	extra_damage = 25
+	extra_damage = 35
 	extra_penetration = 5
 	can_suppress = TRUE
 

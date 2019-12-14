@@ -259,6 +259,12 @@
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	armor = list("melee" = 40, "bullet" = 25, "laser" = 25, "energy" = 20, "bomb" = 16, "bio" = 0, "rad" = 0)
 
+/obj/item/clothing/head/helmet/knight/fluff/metal/reinforced
+	name = "reinforced metal helmet"
+	icon_state = "metalhelmet_r"
+	item_state = "metalhelmet_r"
+	armor = list("melee" = 45, "bullet" = 30, "laser" = 30, "energy" = 25, "bomb" = 16, "bio" = 0, "rad" = 0)
+
 /obj/item/clothing/head/helmet/knight/fluff/rider
 	name = "rider helmet" //Not raider. Rider.
 	desc = "It's a fancy dark metal helmet with orange spray painted flames."
@@ -385,6 +391,12 @@
 	icon_state = "enclave_helmet"
 	item_state = "enclave_helmet"
 	armor = list("melee" = 50, "bullet" = 39, "laser" = 25, "energy" = 25, "bomb" = 39, "bio" = 0, "rad" = 50, "fire" = 0, "acid" = 20)
+
+/obj/item/clothing/head/helmet/f13/combat/swat
+	name = "SWAT combat helmet"
+	desc = "A prewar combat helmet issued to S.W.A.T. personnel."
+	icon_state = "swatsyndie"
+	item_state = "swatsyndie"
 
 //Legion
 /obj/item/clothing/head/helmet/f13/legion
@@ -560,7 +572,6 @@
 	armor = list("melee" = 35, "bullet" = 35, "laser" = 55, "energy" = 55, "bomb" = 35, "bio" = 0, "rad" = 0, "fire" = 100, "acid" = 100)
 	var/hit_reflect_chance = 70
 	strip_delay = 10
-
 
 /obj/item/clothing/head/helmet/f13/tesla/IsReflect(def_zone)
 	if(!(def_zone in list("head"))) //If not shot where ablative is covering you, you don't get the reflection bonus!

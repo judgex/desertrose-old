@@ -101,13 +101,12 @@
 						)
 
 /obj/item/gun/ballistic/revolver/detective/process_fire(atom/target, mob/living/user, message = TRUE, params = null, zone_override = "", bonus_spread = 0)
-	if(magazine.caliber != initial(magazine.caliber))
-		if(prob(70 - (magazine.ammo_count() * 15)))	//minimum probability of 15, maximum of 60
-			playsound(user, fire_sound, 50, 1)
-			to_chat(user, "<span class='userdanger'>[src] blows up in your face!</span>")
-			user.take_bodypart_damage(0,20)
-			user.dropItemToGround(src)
-			return 0
+	if(prob(70 - (magazine.ammo_count() * 15)))	//minimum probability of 15, maximum of 60
+		playsound(user, fire_sound, 50, 1)
+		to_chat(user, "<span class='userdanger'>[src] blows up in your face!</span>")
+		user.take_bodypart_damage(0,20)
+		user.dropItemToGround(src)
+		return 0
 	..()
 /*
 /obj/item/gun/ballistic/revolver/detective/screwdriver_act(mob/living/user, obj/item/I)
@@ -153,14 +152,6 @@
 	fire_sound = 'sound/weapons/resonator_blast.ogg'
 	recoil = 8
 	pin = /obj/item/firing_pin
-	w_class = WEIGHT_CLASS_NORMAL
-
-/obj/item/gun/ballistic/revolver/nagant
-	name = "nagant revolver"
-	desc = "An old model of revolver that originated in Russia. Able to be suppressed. Uses 7.62x38mmR ammo."
-	icon_state = "nagant"
-	can_suppress = TRUE
-	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev762
 	w_class = WEIGHT_CLASS_NORMAL
 
 // A gun to play Russian Roulette!
@@ -371,7 +362,7 @@
 	fire_sound = 'sound/f13weapons/44mag.ogg'
 	w_class = WEIGHT_CLASS_NORMAL
 	fire_delay = 3
-	extra_damage = 30
+	extra_damage = 45
 	extra_penetration = 10
 
 /obj/item/gun/ballistic/revolver/m29/alt
@@ -396,16 +387,7 @@
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev357
 	w_class = WEIGHT_CLASS_NORMAL
 	fire_delay = 5
-	extra_damage = 30
-
-/obj/item/gun/ballistic/revolver/m29/sadokist
-	name = "Wise's Warmaker"
-	desc = "A pre-war 4 inch barrel Colt Anaconda. It has a high quality blued finish, and parkerized wooden grips. Engraved on the grip is the word Wise."
-	item_state = "wise44"
-	icon_state = "wise"
-	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev44
-	fire_sound = 'sound/f13weapons/sequoia.ogg'
-	w_class = WEIGHT_CLASS_NORMAL
+	extra_damage = 40
 
 /obj/item/gun/ballistic/revolver/needler
 	name = "needler pistol"
@@ -423,8 +405,7 @@
 	fire_sound = 'sound/f13weapons/10mm_fire_02.ogg'
 	w_class = WEIGHT_CLASS_NORMAL
 	fire_delay = 3
-	extra_damage = 30
-	extra_penetration = 10
+	extra_damage = 40
 
 /obj/item/gun/ballistic/revolver/sequoia
 	name = "ranger sequoia"
@@ -480,8 +461,7 @@
 	name = ".223 pistol"
 	desc = "A .223 rifle modified and cut down to a pistol. This is a one-of-a kind firearm, obviously made with love and skill."
 	icon_state = "thatgun"
-	fire_sound = 'sound/f13weapons/that_gun.ogg'
+	fire_sound = 'sound/f13weapons/magnum_fire.ogg'
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/thatgun
 	w_class = WEIGHT_CLASS_NORMAL
-	extra_damage = 35
-	extra_penetration = 10
+	extra_damage = 48

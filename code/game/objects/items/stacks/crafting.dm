@@ -14,6 +14,9 @@
     materials = list(MAT_METAL=10000)
     flags_1 = CONDUCT_1
 
+/obj/item/stack/crafting/metalparts/three
+    amount = 3
+
 /obj/item/stack/crafting/metalparts/five
     amount = 5
 
@@ -25,3 +28,18 @@
 
 /obj/item/stack/crafting/goodparts/three
     amount = 3
+
+/obj/item/stack/crafting/goodparts/five
+    amount = 5
+
+/obj/item/stack/crafting/electronicparts
+    name = "electronic parts"
+    icon_state = "sheet-electronicparts"
+    materials = list(MAT_GLASS=10000)
+    flags_1 = CONDUCT_1
+
+/obj/item/stack/crafting/electronicparts/three
+    amount = 3
+
+/obj/item/stack/crafting/electronicparts/five
+    amount = 5

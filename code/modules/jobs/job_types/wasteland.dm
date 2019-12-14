@@ -121,10 +121,8 @@ Raider
 	/datum/outfit/loadout/raider_yankee,
 	/datum/outfit/loadout/raider_blast,
 	/datum/outfit/loadout/raider_sadist,
-	/datum/outfit/loadout/raider_metal,
 	/datum/outfit/loadout/raider_painspike,
-	/datum/outfit/loadout/raider_badlands,
-	/datum/outfit/loadout/raider_metal/chestplate)
+	/datum/outfit/loadout/raider_badlands)
 
 /datum/outfit/job/wasteland/f13raider
 	name = "Raider"
@@ -232,7 +230,7 @@ Raider
 
 /datum/outfit/loadout/raider_metal
 	name = "Metal - Black"
-	suit = /obj/item/clothing/suit/armor/f13/bmetalarmor
+	suit = /obj/item/clothing/suit/armor/f13/metalarmor
 	head = list(/obj/item/clothing/head/helmet/f13/metalmask,
 	/obj/item/clothing/head/helmet/knight/fluff/metal,
 	/obj/item/clothing/head/helmet/f13/motorcycle,
@@ -242,7 +240,7 @@ Raider
 //As a subclass, this inherits the helmets from the raider_metal outfit
 /datum/outfit/loadout/raider_metal/chestplate
 	name = "Metal - Chest"
-	suit = /obj/item/clothing/suit/armor/fluff/chestplate
+	suit = /obj/item/clothing/suit/armor/f13/metalarmor
 
 /*
 Wastelander

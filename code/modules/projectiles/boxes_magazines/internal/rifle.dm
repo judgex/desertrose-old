@@ -8,20 +8,14 @@
 
 /obj/item/ammo_box/magazine/internal/boltaction/enchanted
 	max_ammo = 1
-	ammo_type = /obj/item/ammo_casing/a762/enchanted
+	ammo_type = /obj/item/ammo_casing/a762
 
 /obj/item/ammo_box/magazine/internal/boltaction/enchanted/arcane_barrage
 	ammo_type = /obj/item/ammo_casing/magic/arcane_barrage
 
 //Fallout 13
-/obj/item/ammo_box/magazine/internal/rangemaster
-	ammo_type = /obj/item/ammo_casing/a762
-	caliber = "a762"
-	max_ammo = 10
-	multiload = 1
-
 /obj/item/ammo_box/magazine/internal/boltaction/remington
-	ammo_type = /obj/item/ammo_casing/a308
+	ammo_type = /obj/item/ammo_casing/a762/sport
 	caliber = "a762"
 	max_ammo = 5
 	multiload = 1

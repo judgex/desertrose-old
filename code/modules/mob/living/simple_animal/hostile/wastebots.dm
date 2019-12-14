@@ -24,8 +24,8 @@
 	speak_emote = list("states")
 	gold_core_spawnable = HOSTILE_SPAWN
 	del_on_death = 1
-	loot = list(/obj/effect/decal/cleanable/robot_debris)
 	deathmessage = "blows apart!"
+	loot = list(/obj/effect/decal/cleanable/robot_debris, /obj/item/stack/crafting/electronicparts/three)
 
 /mob/living/simple_animal/hostile/handy/Initialize()
 	. = ..()
@@ -50,6 +50,7 @@
 	retreat_distance = 2
 	minimum_distance = 2
 	check_friendly_fire = TRUE
+	loot = list(/obj/effect/decal/cleanable/robot_debris, /obj/item/stack/crafting/electronicparts/three, /obj/item/stock_parts/cell/ammo/mfc)
 
 /mob/living/simple_animal/hostile/handy/gutsy/AttackingTarget()
 	. = ..()
@@ -75,6 +76,7 @@
 	projectiletype = /obj/item/projectile/beam/laser/pistol
 	faction = list("wastebot")
 	check_friendly_fire = TRUE
+	loot = list(/obj/effect/decal/cleanable/robot_debris, /obj/item/stack/crafting/electronicparts/five)
 
 /mob/living/simple_animal/pet/dog/protectron //Not an actual dog
 	name = "Trading Protectron"
@@ -119,6 +121,7 @@
 	projectiletype = /obj/item/projectile/beam/laser/pistol/weak
 	faction = list("wastebot")
 	check_friendly_fire = TRUE
+	loot = list(/obj/effect/decal/cleanable/robot_debris, /obj/item/stack/crafting/electronicparts/five, /obj/item/stock_parts/cell/ammo/mfc)
 
 /obj/item/projectile/beam/laser/pistol/weak
 	damage = 15 //quantity over quality

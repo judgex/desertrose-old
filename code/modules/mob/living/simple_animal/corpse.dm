@@ -216,18 +216,18 @@ obj/effect/mob_spawn/human/corpse/raider
 obj/effect/mob_spawn/human/corpse/raidermelee
     name = "Raider Melee Corpse"
     uniform = /obj/item/clothing/under/jabroni
-    suit = /obj/item/clothing/suit/armor/f13/bmetalarmor
+    suit = /obj/item/clothing/suit/armor/f13/leather_jacket
     shoes = /obj/item/clothing/shoes/jackboots
-    head = /obj/item/clothing/head/helmet/knight/fluff/metal
+    head = /obj/item/clothing/head/helmet/skull
     hair_style = "Bald"
     facial_hair_style = "Shaved"
 
 /obj/effect/mob_spawn/human/corpse/raiderranged
     name = "Raider Ranged Corpse"
     uniform = /obj/item/clothing/under/jabroni
-    suit = /obj/item/clothing/suit/armor/f13/raider
+    suit = /obj/item/clothing/suit/armor/f13/leather_jacket
     shoes = /obj/item/clothing/shoes/jackboots
-    head = /obj/item/clothing/head/helmet/f13/raider
+    head = /obj/item/clothing/head/helmet/skull
     hair_style = "Bald"
     facial_hair_style = "Shaved"
 
@@ -244,9 +244,9 @@ obj/effect/mob_spawn/human/corpse/raidermelee
 obj/effect/mob_spawn/human/corpse/raiderbossalt
     name = "Raider Boss Corpse"
     uniform = /obj/item/clothing/under/f13/mercc
-    suit = /obj/item/clothing/suit/armor/f13/bmetalarmor
+    suit = /obj/item/clothing/suit/armor/f13/metalarmor/reinforced
     shoes = /obj/item/clothing/shoes/combat
     gloves = /obj/item/clothing/gloves/color/black
-    head = /obj/item/clothing/head/helmet/knight/fluff/metal
+    head = /obj/item/clothing/head/helmet/knight/fluff/metal/reinforced
     hair_style = "Bald"
     facial_hair_style = "Shaved"

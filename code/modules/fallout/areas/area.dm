@@ -317,6 +317,102 @@
 	environment = 6
 	grow_chance = 5
 
+/area/f13/vault/reactor
+	name = "Reactor"
+	icon_state = "engine"
+
+/area/f13/vault/storage
+	name = "Storage"
+	icon_state = "storage"
+
+/area/f13/vault/storageoffice
+	name = "Storage Office"
+	icon_state = "storage_wing"
+
+/area/f13/vault/overseer
+	name = "Overseer"
+	icon_state = "overseer_office"
+
+/area/f13/vault/chiefoffice
+	name = "Chief Office"
+	icon_state = "sec_hos"
+
+/area/f13/vault/idcontrol
+	name = "ID Control Office"
+	icon_state = "hop_office"
+
+/area/f13/vault/vents
+	name = "Vents"
+	icon_state = "red"
+
+/area/f13/vault/botcontrol
+	name = "Bot Control"
+	icon_state = "mechbay"
+
+/area/f13/vault/atrium
+	name = "Vault Atrium"
+	icon_state = "vault_atrium_upper"
+
+/area/f13/vault/security
+	name = "Brig"
+	icon_state = "brig"
+
+/area/f13/vault/security/checkpoint
+	name = "Security Checkpoint"
+	icon_state = "checkpoint1"
+
+/area/f13/vault/security/armory
+	name = "Armory"
+	icon_state = "armory"
+
+/area/f13/vault/medical
+	name = "Medical Center"
+	icon_state = "medbay"
+
+/area/f13/vault/medical/surgery
+	name = "Surgery"
+	icon_state = "surgery"
+
+/area/f13/vault/medical/breakroom
+	name = "Break Room"
+	icon_state = "medbay2"
+
+/area/f13/vault/medical/morgue
+	name = "Morgue"
+	icon_state = "morgue"
+
+/area/f13/vault/medical/chemistry
+	name = "Chemistry"
+	icon_state = "chem"
+
+/area/f13/vault/science
+	name = "Science"
+	icon_state = "purple"
+
+/area/f13/vault/science/biology
+	name = "Biology"
+	icon_state = "purple"
+
+/area/f13/vault/garden
+	name = "Garden"
+	icon_state = "garden"
+
+/area/f13/vault/diner
+	name = "Dining Hall"
+	icon_state = "cafeteria"
+
+/area/f13/vault/custodial
+	name = "Custodial Closet"
+	icon_state = "auxstorage"
+
+/area/f13/vault/dormitory
+	name = "Dormitory"
+	icon_state = "crew_quarters"
+
+/area/f13/vault/lavatory
+	name = "Lavatory"
+	icon_state = "restrooms"
+
 /area/f13/brotherhood
 	name = "Brotherhood of Steel"//Brother Hood
 	icon_state = "brotherhood"
