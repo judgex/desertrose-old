@@ -34,7 +34,7 @@
 		icon_state = "45-[ammo_count()]"
 
 /obj/item/ammo_box/magazine/m45/empty
-	stored_ammo = 0
+	start_empty = 1
 
 
 /obj/item/ammo_box/magazine/pistolm9mm
@@ -57,7 +57,7 @@
 	multiple_sprites = 1
 
 /obj/item/ammo_box/magazine/m44/empty
-	stored_ammo = 0
+	start_empty = 1
 
 
 /*
@@ -73,7 +73,7 @@
 	multiple_sprites = 2
 
 /obj/item/ammo_box/magazine/m10mm_adv/empty
-	stored_ammo = 0
+	start_empty = 1
 
 
 /obj/item/ammo_box/magazine/m9mm
@@ -85,4 +85,5 @@
 	multiple_sprites = 2
 
 /obj/item/ammo_box/magazine/m9mm/empty
-	stored_ammo = 0
+	start_empty = 1
+

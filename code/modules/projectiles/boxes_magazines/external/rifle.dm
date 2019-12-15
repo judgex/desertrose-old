@@ -32,7 +32,7 @@
 	multiple_sprites = 2
 
 /obj/item/ammo_box/magazine/m556/rifle/empty
-	stored_ammo = 0
+	start_empty = 1
 
 /obj/item/ammo_box/magazine/m556/rifle/small
 	name = "small rifle magazine (5.56mm)"
@@ -40,7 +40,7 @@
 	max_ammo = 10
 
 /obj/item/ammo_box/magazine/m556/rifle/small/empty
-	stored_ammo = 0
+	start_empty = 1
 
 /obj/item/ammo_box/magazine/m556/rifle/assault
 	name = "rifle magazine (5.56mm)"
@@ -48,7 +48,7 @@
 	max_ammo = 30
 
 /obj/item/ammo_box/magazine/m556/rifle/assault/empty
-	stored_ammo = 0
+	start_empty = 1
 
 /obj/item/ammo_box/magazine/m556/rifle/extended
 	name = "extended rifle magazine (5.56mm)"
@@ -56,7 +56,7 @@
 	max_ammo = 50
 
 /obj/item/ammo_box/magazine/m556/rifle/extended/empty
-	stored_ammo = 0
+	start_empty = 1
 
 /obj/item/ammo_box/magazine/garand308
 	name = "en-bloc clip (7.62x51mm)"
@@ -73,7 +73,7 @@
 		icon_state = "enbloc-[ammo_count()]"
 
 /obj/item/ammo_box/magazine/garand308/empty
-	stored_ammo = 0
+	start_empty = 1
 
 /obj/item/ammo_box/magazine/m762
 	name = "rifle magazine (7.62x51)"
@@ -84,7 +84,7 @@
 	multiple_sprites = 2
 
 /obj/item/ammo_box/magazine/m762/empty
-	stored_ammo = 0
+	start_empty = 1
 
 /obj/item/ammo_box/magazine/m762/ext
 	name = "extended rifle magazine (7.62x51)"
@@ -93,4 +93,4 @@
 	multiple_sprites = 2
 
 /obj/item/ammo_box/magazine/m762/ext/empty
-	stored_ammo = 0
+	start_empty = 1
