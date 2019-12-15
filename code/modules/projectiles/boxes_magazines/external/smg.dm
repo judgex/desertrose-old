@@ -39,7 +39,7 @@
 	icon_state = "uzi9mm-[round(ammo_count(),4)]"
 
 /obj/item/ammo_box/magazine/uzim9mm/empty
-	stored_ammo = 0
+	start_empty = 1
 
 /obj/item/ammo_box/magazine/smgm9mm
 	name = "submachine gun magazine (9mm)"
@@ -87,7 +87,7 @@
 	multiple_sprites = 2
 
 /obj/item/ammo_box/magazine/m10mm_auto/empty
-	stored_ammo = 0
+	start_empty = 1
 
 /obj/item/ammo_box/magazine/greasegun
 	name = "9mm submachine gun magazine (.45)"
@@ -98,4 +98,4 @@
 	multiple_sprites = 2
 
 /obj/item/ammo_box/magazine/greasegun/empty
-	stored_ammo = 0
+	start_empty = 1
