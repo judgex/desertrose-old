@@ -205,7 +205,7 @@
 	name = "UFO Day"
 	begin_day = 2
 	begin_month = JULY
-	drone_hat = /obj/item/clothing/mask/facehugger/dead 
+	drone_hat = /obj/item/clothing/mask/facehugger/dead
 
 /datum/holiday/UFO/getStationPrefix() //Is such a thing even possible?
 	return pick("Ayy","Truth","Tsoukalos","Mulder") //Yes it is!
@@ -491,3 +491,15 @@ Since Ramadan is an entire month that lasts 29.5 days on average, the start and 
 
 /datum/holiday/easter/getStationPrefix()
 	return pick("Fluffy","Bunny","Easter","Egg")
+
+// Desert Rose 2 Patreon Supporter Holidays:
+// We'll export these to a file someday.  Just kidding.  LOL sorry.
+
+/datum/holiday/winter_solstice    // AgaricusMycelium's day.
+	name = "Winter Solstice"
+	begin_day = 22
+	begin_month = DECEMBER
+	end_day = 23
+
+/datum/holiday/winter_solstice/greet()
+	return "Welcome! Enjoy the Winter Solstice and have a merry Christmas!"
