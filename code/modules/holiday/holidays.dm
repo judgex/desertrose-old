@@ -497,9 +497,9 @@ Since Ramadan is an entire month that lasts 29.5 days on average, the start and 
 
 /datum/holiday/winter_solstice    // AgaricusMycelium's day.
 	name = "Winter Solstice"
-	begin_day = 22
+	begin_day = 21
 	begin_month = DECEMBER
-	end_day = 23
+	end_day = 22
 
 /datum/holiday/winter_solstice/greet()
 	return "Welcome! Enjoy the Winter Solstice and have a merry Christmas!"
