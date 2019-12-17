@@ -503,3 +503,13 @@ Since Ramadan is an entire month that lasts 29.5 days on average, the start and 
 
 /datum/holiday/winter_solstice/greet()
 	return "Welcome! Enjoy the Winter Solstice and have a merry Christmas!"
+
+/datum/holiday/polygamist_acceptance_day    // Methy day for Tilly
+	name = "Polygamist Acceptance Day"
+	begin_day = 16
+	begin_month = DECEMBER
+	end_day = 17
+
+/datum/holiday/polygamist_acceptance_day/greet()
+	return "It's Polygamist Acceptance Day! Support your local open relationships!"
+
