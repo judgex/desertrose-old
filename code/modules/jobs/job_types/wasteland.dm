@@ -304,10 +304,8 @@ Wastelander
 		/obj/item/reagent_containers/pill/radx=1, \
 		/obj/item/storage/bag/money/small/wastelander)
 	suit_store = pick(
-	/obj/item/gun/ballistic/revolver/detective, \
-	/obj/item/gun/ballistic/shotgun/remington, \
-	/obj/item/gun/ballistic/revolver/zipgun, \
-	/obj/item/gun/ballistic/revolver/pipe_rifle)
+	/obj/item/gun/ballistic/automatic/pistol/ninemil, \
+	/obj/item/gun/ballistic/automatic/pistol/n99)
 	
 /datum/outfit/loadout/vault_refugee
 	name = "Vaultie"
