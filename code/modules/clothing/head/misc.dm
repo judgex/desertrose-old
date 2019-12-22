@@ -285,7 +285,7 @@
 	name = "crown"
 	desc = "A crown fit for a king, a petty king maybe."
 	icon_state = "crown"
-	armor = list("melee" = 25, "bullet" = 0, "laser" = 0,"energy" = 16, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 100, "acid" = 50)
+	armor = list("melee" = 15, "bullet" = 10, "laser" = 15, "energy" = 0, "bomb" = 0, "bio" = 10, "rad" = 0, "fire" = 10, "acid" = 0)
 	resistance_flags = FIRE_PROOF
 	dynamic_hair_suffix = ""
 

@@ -528,7 +528,7 @@
 	burst_size = 3
 	fire_delay = 4
 	extra_damage = 20
-	extra_penetration = 10
+	extra_penetration = 5
 	can_suppress = FALSE //we dont have sprites therefore cease
 	force = 15
 	spread = 18

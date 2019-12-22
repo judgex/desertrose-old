@@ -1,16 +1,13 @@
-//Gun crafting parts til they can be moved elsewhere
-
-// PARTS //
 /obj/machinery/workbench
-	name = "basic workbench"
+	name = "workbench"
 	icon = 'icons/obj/machines/reloadingbench.dmi'
-	icon_state = "basic_bench"
+	icon_state = "standard_bench"
 	desc = "A basic workbench for simple to intermediate projects."
 	resistance_flags = INDESTRUCTIBLE
 	density = TRUE
 	layer = BELOW_OBJ_LAYER
 	anchored = TRUE
-	machine_tool_behaviour = TOOL_BWORKBENCH
+	machine_tool_behaviour = TOOL_WORKBENCH
 	var/wrenchable = 1
 
 /obj/machinery/workbench/can_be_unfasten_wrench(mob/user, silent)
@@ -33,17 +30,11 @@
 	if(user.transferItemToLoc(W, drop_location()))
 		return 1
 
-/obj/machinery/workbench/standard
-	name = "standard workbench"
-	desc = "A standard workbench for a wide variety of projects."
-	icon_state = "standard_bench"
-	machine_tool_behaviour = TOOL_SWORKBENCH
-
 /obj/machinery/workbench/advanced
 	name = "advanced workbench"
 	icon_state = "advanced_bench"
 	desc = "A large and advanced pre-war workbench to tackle any project!"
-	machine_tool_behaviour = TOOL_AWORKBENCH
+	machine_tool_behaviour = list(TOOL_AWORKBENCH, TOOL_WORKBENCH)
 	can_be_unanchored = 0
 	wrenchable = 0
 
@@ -58,7 +49,6 @@
 	desc = "A classic rifle stock that doubles as a grip, roughly carved out of wood."
 	icon = 'icons/obj/improvised.dmi'
 	icon_state = "riflestock"
-
 
 /obj/machinery/autolathe/ammobench
 	name = "universal reloading bench"

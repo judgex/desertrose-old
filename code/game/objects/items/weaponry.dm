@@ -79,6 +79,12 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	item_state = "salvagedmachete"
 	slot_flags = ITEM_SLOT_BELT
 
+/obj/item/claymore/machete/reinforced
+	name = "reinforced machete"
+	desc = "A reinforced machete made of high quality steel."
+	force = 35
+	throwforce = 25
+
 /obj/item/claymore/machete/gladius
 	name = "machete gladius"
 	desc = "A forged steel machete, the blade has been laborously sharpened and the weight has been evenly distributed for maximum killing power. An image of a bull is burned into the wooden handle."
@@ -297,6 +303,8 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 /obj/item/katana/suicide_act(mob/user)
 	user.visible_message("<span class='suicide'>[user] is slitting [user.p_their()] stomach open with [src]! It looks like [user.p_theyre()] trying to commit seppuku!</span>")
 	return(BRUTELOSS)
+
+
 
 /obj/item/wirerod
 	name = "wired rod"

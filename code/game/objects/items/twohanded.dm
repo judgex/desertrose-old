@@ -843,8 +843,8 @@
 	force = 11
 	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = ITEM_SLOT_BACK
-	force_unwielded = 20
-	force_wielded = 30
+	force_wielded = 32
+	throwforce = 25
 	throwforce = 20
 	throw_speed = 4
 	embedding = list("embedded_impact_pain_multiplier" = 3)
@@ -903,8 +903,8 @@
 	icon_state = "baseball0"
 	lefthand_file = 'icons/mob/inhands/weapons/polearms_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/polearms_righthand.dmi'
-	force_unwielded = 10
-	force_wielded = 35
+	force_unwielded = 15
+	force_wielded = 48
 	throwforce = 15
 	attack_verb = list("beat", "smacked", "clubbed", "clobbered")
 	w_class = WEIGHT_CLASS_NORMAL

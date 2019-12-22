@@ -43,17 +43,18 @@
 	icon_state = "tribal"
 	item_state = "tribal"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	armor = list(melee = 30, bullet = 10, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 0, fire = 10, acid = 0)
+	armor = list(melee = 30, bullet = 10, laser = 010, energy = 0, bomb = 10, bio = 0, rad = 0, fire = 10, acid = 0)
 	flags_inv = HIDEJUMPSUIT
 	strip_delay = 40
 	icon = 'icons/fallout/clothing/suits.dmi'
+
 /obj/item/clothing/suit/armor/f13/slam
 	name = "slammer raider armor"
 	desc = "Crude armor that appears to employ a tire of some kind as the shoulder pad. What appears to be a quilt is tied around the waist.<br>Come on and slam and turn your foes to jam!"
 	icon_state = "slam"
 	item_state = "slam"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	armor = list(melee = 20, bullet = 10, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 0, fire = 0, acid = 0)
+	armor = list(melee = 20, bullet = 10, laser = 10, energy = 0, bomb = 10, bio = 0, rad = 0, fire = 0, acid = 0)
 	flags_inv = HIDEJUMPSUIT
 	strip_delay = 40
 	icon = 'icons/fallout/clothing/suits.dmi'

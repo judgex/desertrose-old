@@ -676,7 +676,7 @@
 	icon_state = "veteran"
 	item_state = "suit-command"
 	body_parts_covered = CHEST|GROIN
-	armor = list("melee" = 10, "bullet" = 16, "laser" = 0, "energy" = 0, "bomb" = 16, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
+	armor = list("melee" = 10, "bullet" = 16, "laser" = 15, "energy" = 0, "bomb" = 16, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
 	allowed = list(/obj/item/gun)
 
 /obj/item/clothing/suit/f13/duster
@@ -685,7 +685,7 @@
 	icon_state = "duster"
 	item_state = "det_suit"
 	body_parts_covered = CHEST|LEGS|FEET|ARMS
-	armor = list("melee" = 10, "bullet" = 16, "laser" = 0, "energy" = 0, "bomb" = 16, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
+	armor = list("melee" = 10, "bullet" = 16, "laser" = 15, "energy" = 0, "bomb" = 16, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
 	allowed = list(/obj/item/gun)
 
 /obj/item/clothing/suit/f13/autumn //Based of Colonel Autumn's uniform.
@@ -694,7 +694,7 @@
 	icon_state = "autumn"
 	item_state = "autumn"
 	body_parts_covered = CHEST|LEGS|ARMS
-	armor = list("melee" = 10, "bullet" = 16, "laser" = 0, "energy" = 0, "bomb" = 16, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
+	armor = list("melee" = 10, "bullet" = 16, "laser" = 15, "energy" = 0, "bomb" = 16, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
 	allowed = list(/obj/item/gun)
 
 
@@ -704,7 +704,7 @@
 	icon_state = "scribe"
 	item_state = "scribe"
 	body_parts_covered = CHEST|ARMS|LEGS
-	armor = list("melee" = 10, "bullet" = 16, "laser" = 0, "energy" = 0, "bomb" = 16, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
+	armor = list("melee" = 15, "bullet" = 16, "laser" = 15, "energy" = 0, "bomb" = 16, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
 	allowed = list(/obj/item/gun)
 
 /obj/item/clothing/suit/f13/elder //Robes are made of finest cloth, so you won't be able to put sharp objects but pens in.
@@ -713,7 +713,7 @@
 	icon_state = "elder"
 	item_state = "elder"
 	body_parts_covered = CHEST|ARMS|LEGS
-	armor = list("melee" = 15, "bullet" = 16, "laser" = 0, "energy" = 0, "bomb" = 16, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
+	armor = list("melee" = 15, "bullet" = 16, "laser" = 15, "energy" = 0, "bomb" = 16, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
 	allowed = list(/obj/item/gun)
 
 /obj/item/clothing/suit/ghost_sheet

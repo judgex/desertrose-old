@@ -9,7 +9,7 @@
 	equip_delay_other = 40
 	max_integrity = 250
 	resistance_flags = NONE
-	armor = list("melee" = 25, "bullet" = 25, "laser" = 15, "energy" = 15, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 50)
+	armor = list("melee" = 25, "bullet" = 25, "laser" = 25, "energy" = 15, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 50)
 	allowed = list(/obj/item/gun)
 
 /obj/item/clothing/suit/armor/Initialize()
@@ -20,8 +20,8 @@
 /obj/item/clothing/suit/armor/vest
 	name = "armor vest"
 	desc = "A slim Type I armored vest that provides decent protection against most types of damage."
-	icon_state = "armoralt"
-	item_state = "armoralt"
+	icon_state = "vault_security"
+	item_state = "vault_security"
 	blood_overlay_type = "armor"
 	dog_fashion = /datum/dog_fashion/back
 
@@ -126,7 +126,7 @@
 	icon_state = "bonearmor"
 	item_state = "bonearmor"
 	blood_overlay_type = "armor"
-	armor = list("melee" = 50, "bullet" = 20, "laser" = 10, "energy" = 10, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 50)
+	armor = list("melee" = 40, "bullet" = 25, "laser" = 15, "energy" = 10, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 50)
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
 
 /obj/item/clothing/suit/armor/bulletproof
@@ -288,7 +288,6 @@
 	item_state = "leather_armor"
 	body_parts_covered = CHEST|GROIN
 	armor = list("melee" = 40, "bullet" = 35, "laser" = 25, "energy" = 25, "bomb" = 32, "bio" = 0, "rad" = 0, "fire" = 30, "acid" = 35)
-	flags_inv = HIDEJUMPSUIT
 	strip_delay = 40
 
 /obj/item/clothing/suit/armor/f13/leatherarmor/reinforced
@@ -297,14 +296,14 @@
 	item_state = "leather_armor_2"
 	desc = "An enhanced version of the basic leather armor with extra layers of protection. Finely crafted from tanned brahmin hide."
 	armor = list("melee" = 40, "bullet" = 40, "laser" = 30, "energy" = 30, "bomb" = 35, "bio" = 0, "rad" = 0, "fire" = 40, "acid" = 35)
-	
+
 /obj/item/clothing/suit/armor/f13/metalarmor
 	name = "metal armor"
 	desc = "A set of plates formed together to form a crude chestplate."
 	icon_state = "metal_chestplate"
 	item_state = "metal_chestplate"
 	body_parts_covered = CHEST|GROIN|ARMS
-	armor = list("melee" = 40, "bullet" = 35, "laser" = 40, "energy" = 40, "bomb" = 40, "bio" = 30, "rad" = 15, "fire" = 60, "acid" = 0)
+	armor = list("melee" = 45, "bullet" = 40, "laser" = 45, "energy" = 40, "bomb" = 40, "bio" = 30, "rad" = 15, "fire" = 60, "acid" = 0)
 	slowdown = 0.25
 	strip_delay = 10
 
@@ -317,13 +316,23 @@
 	STOP_PROCESSING(SSobj, src)
 	return ..()
 
+/obj/item/clothing/suit/armor/f13/metalarmor/strange
+	name = "strange metal armor"
+	desc = "A set of metal plates formed together to form a robust chestplate, designed to resist both projectile and laser weaponry."
+	icon_state = "metal_chestplate2"
+	item_state = "metal_chestplate2"
+	body_parts_covered = CHEST|GROIN|ARMS|LEGS
+	armor = list("melee" = 45, "bullet" = 45, "laser" = 60, "energy" = 50, "bomb" = 40, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
+	slowdown = 0
+	strip_delay = 10
+
 /obj/item/clothing/suit/armor/f13/metalarmor/reinforced
 	name = "metal armor mark 2"
 	desc = "A set of polished plates formed together to form a reflective chestplate specially effective agaisnt energy weaponry."
 	icon_state = "metal_chestplate2"
 	item_state = "metal_chestplate2"
 	body_parts_covered = CHEST|GROIN|ARMS|LEGS
-	armor = list("melee" = 50, "bullet" = 40, "laser" = 50, "energy" = 50, "bomb" = 40, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
+	armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 40, "bomb" = 40, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
 	slowdown = 0
 	strip_delay = 10
 
@@ -336,15 +345,28 @@
 	armor = list("melee" = 30, "bullet" = 30, "laser" = 20, "energy" = 20, "bomb" = 30, "bio" = 0, "rad" = 0, "fire" = 25, "acid" = 25)
 	strip_delay = 40
 
+/obj/item/clothing/suit/armor/f13/raider/reinforced
+	name = "reinforced supa-fly raider armor"
+	armor = list("melee" = 40, "bullet" = 40, "laser" = 30, "energy" = 25, "bomb" = 35, "bio" = 0, "rad" = 0, "fire" = 30, "acid" = 30)
+
 /obj/item/clothing/suit/armor/f13/raider/sadist
 	name = "sadist raider armor"
 	icon_state = "sadist"
+
+/obj/item/clothing/suit/armor/f13/raider/sadist/reinforced
+	name = "reinforced sadist raider armor"
+	icon_state = "sadist"
+	armor = list("melee" = 40, "bullet" = 40, "laser" = 30, "energy" = 25, "bomb" = 35, "bio" = 0, "rad" = 0, "fire" = 30, "acid" = 30)
 
 /obj/item/clothing/suit/armor/f13/raider/blastmaster
 	name = "blastmaster raider armor"
 	icon_state = "blastmaster"
 	max_heat_protection_temperature = ARMOR_MAX_TEMP_PROTECT
 	flash_protect = 2
+
+/obj/item/clothing/suit/armor/f13/raider/blastmaster/reinforced
+	name = "reinforced blastmaster raider armor"
+	armor = list("melee" = 40, "bullet" = 40, "laser" = 30, "energy" = 25, "bomb" = 35, "bio" = 0, "rad" = 0, "fire" = 30, "acid" = 30)
 
 /obj/item/clothing/suit/armor/f13/raider/yankee
 	name = "yankee raider armor"
@@ -353,10 +375,18 @@
 	item_state = "yankee"
 	strip_delay = 40
 
+/obj/item/clothing/suit/armor/f13/raider/yankee/reinforced
+	name = "reinforced yankee raider armor"
+	armor = list("melee" = 40, "bullet" = 40, "laser" = 30, "energy" = 25, "bomb" = 35, "bio" = 0, "rad" = 0, "fire" = 30, "acid" = 30)
+
 /obj/item/clothing/suit/armor/f13/badlands
 	name = "badlands raider armor"
 	icon_state = "badlands"
 	item_state = "badlands"
+
+/obj/item/clothing/suit/armor/f13/badlands/reinforced
+	name = "reinforced badlands raider armor"
+	armor = list("melee" = 40, "bullet" = 40, "laser" = 30, "energy" = 25, "bomb" = 35, "bio" = 0, "rad" = 0, "fire" = 30, "acid" = 30)
 
 /obj/item/clothing/suit/armor/f13/raider/painspike
 	name = "painspike raider armor"
@@ -364,13 +394,17 @@
 	icon_state = "painspike"
 	item_state = "painspike"
 
+/obj/item/clothing/suit/armor/f13/raider/painspike/reinforced
+	name = "reinforced painspike raider armor"
+	armor = list("melee" = 40, "bullet" = 40, "laser" = 40, "energy" = 30, "bomb" = 35, "bio" = 0, "rad" = 0, "fire" = 30, "acid" = 30)
+
 /obj/item/clothing/suit/armor/f13/combat
 	name = "combat armor"
 	desc = "An old military grade pre war combat armor."
 	icon_state = "combat_armor"
 	item_state = "combat_armor"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	armor = list("melee" = 40, "bullet" = 45, "laser" = 40, "energy" = 40, "bomb" = 50, "bio" = 60, "rad" = 60, "fire" = 60, "acid" = 20)
+	armor = list("melee" = 40, "bullet" = 45, "laser" = 40, "energy" = 40, "bomb" = 50, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20)
 	strip_delay = 60
 
 /obj/item/clothing/suit/armor/f13/combat/Initialize()
@@ -387,7 +421,7 @@
 	desc = "A reinforced model based of the pre-war combat armor."
 	icon_state = "combat_armor_mk2"
 	item_state = "combat_armor_mk2"
-	armor = list("melee" = 45, "bullet" = 50, "laser" = 45, "energy" = 45, "bomb" = 55, "bio" = 60, "rad" = 60, "fire" = 60, "acid" = 30)
+	armor = list("melee" = 45, "bullet" = 50, "laser" = 45, "energy" = 45, "bomb" = 55, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 30)
 
 /obj/item/clothing/suit/armor/f13/combat/ncr
 	name = "ranger patrol armor"
@@ -745,7 +779,7 @@
 	icon_state = "maxson_battlecoat"
 	item_state = "maxson_battlecoat"
 	body_parts_covered = CHEST
-	armor = list("melee" = 5, "bullet" = 5, "laser" = 10, "energy" = 0, "bomb" = 5, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
+	armor = list("melee" = 15, "bullet" = 10, "laser" = 15, "energy" = 0, "bomb" = 5, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
 
 /obj/item/clothing/suit/toggle/armor
 	allowed = null

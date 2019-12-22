@@ -30,6 +30,7 @@
 	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab/human/ghoul = 2,
 							/obj/item/stack/sheet/animalhide/human = 1,
 							/obj/item/stack/sheet/bone = 1)
+	loot = list(/obj/effect/gibspawner/human, /obj/item/stack/f13Cash/random/bottle_cap/low)
 
 /mob/living/simple_animal/hostile/ghoul/reaver
 	name = "feral ghoul reaver"

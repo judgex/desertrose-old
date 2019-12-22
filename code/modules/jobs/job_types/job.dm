@@ -198,6 +198,10 @@
 
 	var/chemwhiz = FALSE //F13 Chemwhiz, for chemistry machines
 	var/pa_wear = FALSE //F13 pa_wear, ability to wear PA
+	var/gunsmith_one = FALSE //F13 gunsmith perk, ability to craft Tier 2 guns and ammo
+	var/gunsmith_two = FALSE //F13 gunsmith perk, ability to craft Tier 3 guns and ammo
+	var/gunsmith_three = FALSE //F13 gunsmith perk, ability to craft Tier 4 guns and ammo
+	var/gunsmith_four = FALSE //F13 gunsmith perk, ability to craft Tier 5 guns and ammo
 
 /datum/outfit/job/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	switch(H.backbag)
@@ -227,6 +231,18 @@
 
 	if(pa_wear == TRUE)
 		H.add_trait(TRAIT_PA_WEAR)
+	
+	if(gunsmith_one == TRUE)
+		H.add_trait(TRAIT_GUNSMITH_ONE)
+
+	if(gunsmith_two == TRUE)
+		H.add_trait(TRAIT_GUNSMITH_TWO)
+	
+	if(gunsmith_three == TRUE)
+		H.add_trait(TRAIT_GUNSMITH_THREE)
+	
+	if(gunsmith_four == TRUE)
+		H.add_trait(TRAIT_GUNSMITH_FOUR)
 
 /datum/outfit/job/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	if(visualsOnly)
