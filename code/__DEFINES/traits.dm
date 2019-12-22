@@ -75,6 +75,12 @@
 #define TRAIT_TECHNOPHREAK		"technophreak" //Is this even really used?
 #define TRAIT_PA_WEAR           "pa_wear"
 
+// fallout crafting traits
+#define TRAIT_GUNSMITH_ONE      "gunsmith_one"
+#define TRAIT_GUNSMITH_TWO      "gunsmith_two"
+#define TRAIT_GUNSMITH_THREE    "gunsmith_three"
+#define TRAIT_GUNSMITH_FOUR     "gunsmith_four"
+
 // common trait sources
 #define TRAIT_GENERIC "generic"
 #define EYE_DAMAGE "eye_damage"

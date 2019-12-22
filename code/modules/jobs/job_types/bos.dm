@@ -76,7 +76,7 @@ Paladin
 	head_announce = list("Security")
 	total_positions = 1
 	spawn_positions = 1
-	description = "You are the field commander for the security team assigned to this region and are the direct superior to the Knights. As a Paladin, you lead your subordinates on patrols and scouting missions throughout the region. You are also responsible for managing the bunkers operations and security, and should take extra care in ensuring that your presence or location in the region is hidden to any outsider."
+	description = "You are the acting field commander until the Brotherhood regains it's strength to place an Elder for the bunker. Due to low manpower, you are the only Paladin assigned on this mission, delegate tasks to your Head Scribe and Knight and use your Initiates as footsoldiers. "
 	forbids = "The Brotherhood of Steel Forbids: Unethical human experimentation. Violence beyond what is needed to accomplish Brotherhood goals."
 	enforces = "The Brotherhood of Steel Expects: Obeying the Chain That - Binds your direct superior. Collection and safeguarding of technology from the wasteland. Experimentation and research."
 	supervisors = "the elder"
@@ -117,7 +117,7 @@ Head Scribe
 	faction = "BOS"
 	total_positions = 1
 	spawn_positions = 1
-	description = "You are the experienced scribe placed in charge of the research team assigned to this region, and the direct superior to the Scribes. As the Head Scribe, you are in charge of ensuring that supplies are processed into gear for the Knights, and work with the Paladin in organizing missions. The Brotherhoods presence in the Mojave is unknown to most outsiders, so you should take care in making sure that wastelanders do not recognize your identity, or find the location of your bunker."
+	description = "You are the foremost experienced scribe remaining in this bunker. Your role is to ensure the safekeeping and proper usage of technology within the Brotherhood. You are also the lead medical expert in this Chapter. Delegate your tasks to your Scribes and Initiate Scribes."
 	forbids = "The Brotherhood of Steel Forbids: Unethical human experimentation. Violence beyond what is needed to accomplish Brotherhood goals."
 	enforces = "The Brotherhood of Steel Expects: Obeying the Chain That - Binds your direct superior. Collection and safeguarding of technology from the wasteland. Experimentation and research."
 	supervisors = "the elder"
@@ -152,7 +152,7 @@ Knight
 	faction = "BOS"
 	total_positions = 1
 	spawn_positions = 1
-	description = "You answer directly to the Paladin, acting as a foot soldier on patrol and are responsible for the continued training and wellbeing of the initiate-knights. The Brotherhoods presence in the Mojave is unknown to most outsiders, so you should take care in making sure that wastelanders do not recognize your identity, or find the location of your bunker."
+	description = "You answer directly to the Paladin. You are the foremost technical expert and know how to manufacture a wide variety of weaponry and ammo. You are the Paladin's right hand man, and the chief armourer of the Chapter. You ensure everyone in the Bunker is properly equipped. Delegate your tasks to your Initiate Knights."
 	forbids = "The Brotherhood of Steel Forbids: Unethical human experimentation. Violence beyond what is needed to accomplish Brotherhood goals."
 	enforces = "The Brotherhood of Steel Expects: Obeying the Chain That - Binds your direct superior. Collection and safeguarding of technology from the wasteland. Experimentation and research."
 	supervisors = "the Paladin"
@@ -168,6 +168,10 @@ Knight
 	name = "Knight"
 	jobtype = /datum/job/bos/f13knight
 	pa_wear = TRUE
+	gunsmith_one = TRUE
+	gunsmith_two = TRUE
+	gunsmith_three = TRUE
+	gunsmith_four = TRUE
 	suit = 			/obj/item/clothing/suit/armor/f13/power_armor/t45d
 	head = 			/obj/item/clothing/head/helmet/power_armor/t45d
 	suit_store =	/obj/item/gun/energy/laser/aer9
@@ -192,7 +196,7 @@ Scribe
 	faction = "BOS"
 	total_positions = 2
 	spawn_positions = 2
-	description = "You answer directly to the Head Scribe, tasked with researching and reverse-engineering recovered technologies from the old world, while maintaining the brotherhoods scientific archives. You may also be given a trainee to assign duties to. The Brotherhoods presence in the Mojave is unknown to most outsiders, so you should take care in making sure that wastelanders do not recognize your identity, or find the location of your bunker."
+	description = "You answer directly to the Head Scribe, tasked with researching and reverse-engineering recovered technologies from the old world, while maintaining the brotherhoods scientific archives. You may also be given a trainee to assign duties to."
 	forbids = "The Brotherhood of Steel Forbids: Unethical human experimentation. Violence beyond what is needed to accomplish Brotherhood goals."
 	enforces = "The Brotherhood of Steel Expects: Obeying the Chain That - Binds your direct superior. Collection and safeguarding of technology from the wasteland. Experimentation and research."
 	supervisors = "the Head Scribe"
@@ -230,7 +234,7 @@ Initiate Knight
 	faction = "BOS"
 	total_positions = 2
 	spawn_positions = 2
-	description = "You answer directly to the Knights, as an inexperienced member of the brotherhood your sole purpose is to train in order to become a fully-fledged Knight in the future. You should take care in not straying from the bunker without an escort. The Brotherhoods presence in the Mojave is unknown to most outsiders, so you should take care in making sure that wastelanders do not recognize your identity, or find the location of your bunker."
+	description = "You answer directly to the Knights. You are an apprentice technician and know how to do a variety of mechanical tasks. You are either bolstering and maintaining the Brotherhood's supplies or do tasks on behalf of your superiors."
 	forbids = "The Brotherhood of Steel Forbids: Unethical human experimentation. Violence beyond what is needed to accomplish Brotherhood goals."
 	enforces = "The Brotherhood of Steel Expects: Obeying the Chain That - Binds your direct superior. Collection and safeguarding of technology from the wasteland. Experimentation and research."
 	supervisors = "the knights"
@@ -249,6 +253,8 @@ Initiate Knight
 	suit = 			/obj/item/clothing/suit/armor/f13/combat/brotherhood
 	head = 			/obj/item/clothing/head/helmet/f13/combat/brotherhood
 	suit_store =	/obj/item/gun/energy/laser/aer9
+	gunsmith_one = TRUE
+	gunsmith_two = TRUE
 	backpack_contents = list(
 		/obj/item/stock_parts/cell/ammo/mfc=2, \
 		/obj/item/gun/energy/laser/pistol=1, \
@@ -263,7 +269,7 @@ Initiate Scribe
 	faction = "BOS"
 	total_positions = 2
 	spawn_positions = 2
-	description = "You answer directly to the Scribes, and are tasked with training and taking orders from them to learn the basics of research, engineering and any other tasks assigned to you by your superiors. The Brotherhoods presence in the Mojave is unknown to most outsiders, so you should take care in making sure that wastelanders do not recognize your identity, or find the location of your bunker."
+	description = "You answer directly to the Scribes, and are tasked with training and taking orders from them to learn the basics of research, engineering and any other tasks assigned to you by your superiors."
 	forbids = "The Brotherhood of Steel Forbids: Unethical human experimentation. Violence beyond what is needed to accomplish Brotherhood goals."
 	enforces = "The Brotherhood of Steel Expects: Obeying the Chain That - Binds your direct superior. Collection and safeguarding of technology from the wasteland. Experimentation and research."
 	supervisors = "the scribes"

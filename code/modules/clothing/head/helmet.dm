@@ -69,7 +69,6 @@
 	flags_inv = HIDEEARS|HIDEFACE
 	strip_delay = 80
 	actions_types = list(/datum/action/item_action/toggle)
-	visor_flags_inv = HIDEFACE
 	toggle_cooldown = 0
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 	visor_flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
@@ -154,7 +153,7 @@
 	desc = "An ancient helmet made of bronze and leather."
 	flags_inv = HIDEEARS|HIDEHAIR
 	flags_cover = HEADCOVERSEYES
-	armor = list("melee" = 25, "bullet" = 0, "laser" = 25, "energy" = 10, "bomb" = 10, "bio" = 0, "rad" = 0, "fire" = 100, "acid" = 50)
+	armor = list("melee" = 25, "bullet" = 10, "laser" = 25, "energy" = 10, "bomb" = 10, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 50)
 	resistance_flags = FIRE_PROOF
 	icon_state = "roman"
 	item_state = "roman"
@@ -163,7 +162,7 @@
 
 /obj/item/clothing/head/helmet/roman/fake
 	desc = "An ancient helmet made of plastic and leather."
-	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
+	armor = list("melee" = 15, "bullet" = 10, "laser" = 15, "energy" = 0, "bomb" = 0, "bio" = 10, "rad" = 0, "fire" = 10, "acid" = 0)
 
 /obj/item/clothing/head/helmet/roman/legionaire
 	name = "roman legionaire helmet"
@@ -248,12 +247,13 @@
 	desc = "A hardhat with strips of leather and durathread for additional blunt protection."
 	icon_state = "durathread"
 	item_state = "durathread"
-	armor = list("melee" = 25, "bullet" = 10, "laser" = 20,"energy" = 10, "bomb" = 30, "bio" = 15, "rad" = 20, "fire" = 100, "acid" = 50)
+	armor = list("melee" = 25, "bullet" = 10, "laser" = 20,"energy" = 10, "bomb" = 30, "bio" = 15, "rad" = 20, "fire" = 50, "acid" = 50)
 	strip_delay = 60
 
 //Fallout 13
 /obj/item/clothing/head/helmet/knight/fluff/metal
 	name = "metal helmet"
+	desc = "An iron helmet forged by tribal warriors, with a unique design to protect the face from arrows and axes."
 	icon_state = "metalhelmet"
 	item_state = "metalhelmet"
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
@@ -263,7 +263,12 @@
 	name = "reinforced metal helmet"
 	icon_state = "metalhelmet_r"
 	item_state = "metalhelmet_r"
-	armor = list("melee" = 45, "bullet" = 30, "laser" = 30, "energy" = 25, "bomb" = 16, "bio" = 0, "rad" = 0)
+	armor = list("melee" = 45, "bullet" = 35, "laser" = 40, "energy" = 25, "bomb" = 16, "bio" = 0, "rad" = 0)
+
+/obj/item/clothing/head/helmet/knight/fluff/metal/strange
+	name = "strange helmet"
+	desc = "A steel helmet forged by tribal warriors, with additional plating to protect again projectile and laser fire."
+	armor = list("melee" = 40, "bullet" = 40, "laser" = 40, "energy" = 25, "bomb" = 16, "bio" = 0, "rad" = 0)
 
 /obj/item/clothing/head/helmet/knight/fluff/rider
 	name = "rider helmet" //Not raider. Rider.
@@ -294,6 +299,10 @@
 	armor = list("melee" = 40, "bullet" = 25, "laser" = 15, "energy" = 10, "bomb" = 16, "bio" = 20, "rad" = 0, "fire" = 50, "acid" = 0)
 	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 
+/obj/item/clothing/head/helmet/f13/raider/reinforced
+	name = "reinforced supa-fly raider helmet"
+	armor = list("melee" = 40, "bullet" = 30, "laser" = 25, "energy" = 15, "bomb" = 16, "bio" = 20, "rad" = 0, "fire" = 50, "acid" = 0)
+
 /obj/item/clothing/head/helmet/f13/raider/arclight
 	name = "raider arclight helmet"
 	desc = "This will protect you against flashes."
@@ -304,6 +313,10 @@
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 	armor = list("melee" = 40, "bullet" = 25, "laser" = 15, "energy" = 10, "bomb" = 16, "bio" = 20, "rad" = 0, "fire" = 50, "acid" = 0)
 
+/obj/item/clothing/head/helmet/f13/raider/arclight/reinforced
+	name = "reinforced raider arclight helmet"
+	armor = list("melee" = 40, "bullet" = 30, "laser" = 25, "energy" = 15, "bomb" = 16, "bio" = 20, "rad" = 0, "fire" = 50, "acid" = 0)
+
 /obj/item/clothing/head/helmet/f13/raider/blastmaster
 	name = "raider blastmaster helmet"
 	icon_state = "blastmaster"
@@ -311,6 +324,10 @@
 	dynamic_hair_suffix = ""
 	dynamic_fhair_suffix = ""
 	armor = list("melee" = 40, "bullet" = 25, "laser" = 15, "energy" = 10, "bomb" = 16, "bio" = 20, "rad" = 0, "fire" = 50, "acid" = 0)
+
+/obj/item/clothing/head/helmet/f13/raider/blastmaster/reinforced
+	name = "reinforced raider blastmaster helmet"
+	armor = list("melee" = 40, "bullet" = 30, "laser" = 15, "energy" = 15, "bomb" = 30, "bio" = 20, "rad" = 0, "fire" = 50, "acid" = 0)
 
 /obj/item/clothing/head/helmet/f13/raider/yankee
 	name = "yankee raider helmet"
@@ -320,6 +337,10 @@
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 	armor = list("melee" = 40, "bullet" = 25, "laser" = 15, "energy" = 10, "bomb" = 16, "bio" = 20, "rad" = 0, "fire" = 50, "acid" = 0)
 	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE
+
+/obj/item/clothing/head/helmet/f13/raider/yankee/reinforced
+	name = "reinforced yankee raider helmet"
+	armor = list("melee" = 45, "bullet" = 30, "laser" = 20, "energy" = 15, "bomb" = 16, "bio" = 20, "rad" = 0, "fire" = 50, "acid" = 0)
 
 /obj/item/clothing/head/helmet/f13/eyebot
 	name = "eyebot helmet"
@@ -334,6 +355,10 @@
 	dynamic_hair_suffix = ""
 	dynamic_fhair_suffix = ""
 
+/obj/item/clothing/head/helmet/f13/eyebot/reinforced
+	name = "reinforced eyebot helmet"
+	armor = list("melee" = 45, "bullet" = 30, "laser" = 20, "energy" = 15, "bomb" = 16, "bio" = 20, "rad" = 0, "fire" = 50, "acid" = 0)
+
 /obj/item/clothing/head/helmet/f13/raider/psychotic
 	name = "psycho-tic raider helmet"
 	desc = "A leather skullcap with tufts of hair sticking from each side."
@@ -342,6 +367,11 @@
 	flags_cover = HEADCOVERSEYES
 	armor = list("melee" = 40, "bullet" = 25, "laser" = 15, "energy" = 0, "bomb" = 16, "bio" = 20, "rad" = 0, "fire" = 50, "acid" = 0)
 	flags_inv = HIDEEARS|HIDEEYES|HIDEHAIR
+
+/obj/item/clothing/head/helmet/f13/raider/psychotic/reinforced
+	name = "reinforced psycho-tic raider helmet"
+	desc = "A leather skullcap with tufts of Yaoguai hair sticking from each side."
+	armor = list("melee" = 45, "bullet" = 30, "laser" = 20, "energy" = 5, "bomb" = 16, "bio" = 20, "rad" = 0, "fire" = 50, "acid" = 0)
 
 //Combat armor
 /obj/item/clothing/head/helmet/f13
@@ -356,7 +386,7 @@
 	item_state = "combat_helmet"
 	armor = list("melee" = 45, "bullet" = 30, "laser" = 30, "energy" = 60, "bomb" = 25, "bio" = 60, "rad" = 60, "fire" = 60, "acid" = 0)
 	strip_delay = 50
-	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR
+	flags_inv = HIDEEARS|HIDEHAIR
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
 	tint = 0
 	dynamic_hair_suffix = ""
@@ -498,7 +528,7 @@
 	item_state = "leglegat"
 	armor = list("melee" = 85, "bullet" = 60, "laser" = 40, "energy" = 40, "bomb" = 45, "bio" = 60, "rad" = 60, "fire" = 80, "acid" = 0)
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
-	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR
+	flags_inv = HIDEEARS|HIDEEYES|HIDEHAIR
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
 
 //Ranger Armors

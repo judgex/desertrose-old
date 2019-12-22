@@ -49,6 +49,7 @@
 
 /obj/effect/spawner/lootdrop/f13/armor
 	name = "armor spawners - DO NOT USE THIS"
+	icon_state = "armor_loot"
 
 /obj/effect/spawner/lootdrop/f13/armor/clothes
 	name = "pre-war clothes spawner"
@@ -337,8 +338,8 @@
     lootcount = 1
 
     loot = list(
-            /obj/effect/spawner/lootdrop/f13/armor/tier1 = 70,
-            /obj/effect/spawner/lootdrop/f13/armor/tier2 = 29,
+            /obj/effect/spawner/lootdrop/f13/armor/tier1 = 80,
+            /obj/effect/spawner/lootdrop/f13/armor/tier2 = 19,
             /obj/effect/spawner/lootdrop/f13/armor/tier3 = 1,
             )
 
@@ -347,9 +348,9 @@
     lootcount = 1
 
     loot = list(
-            /obj/effect/spawner/lootdrop/f13/armor/tier2 = 50,
+            /obj/effect/spawner/lootdrop/f13/armor/tier2 = 60,
             /obj/effect/spawner/lootdrop/f13/armor/tier3 = 30,
-            /obj/effect/spawner/lootdrop/f13/armor/tier4 = 20,
+            /obj/effect/spawner/lootdrop/f13/armor/tier4 = 10,
             )
 
 /* ------------------------------------------------
@@ -446,6 +447,7 @@
 
 /obj/effect/spawner/lootdrop/f13/weapon
 	name = "weapon spawners - DO NOT USE THIS"
+	icon_state = "gun_loot"
 
 /* ------------------------------------------------
    -----------MELEE WEAPON SPAWNERS----------------
@@ -453,6 +455,7 @@
 
 /obj/effect/spawner/lootdrop/f13/weapon/melee
 	name = "melee spawners - DO NOT USE THIS"
+	icon_state = "melee_loot"
 
 /obj/effect/spawner/lootdrop/f13/weapon/melee/tier1 //TIER 1 MELEE WEAPON
 	name = "tier 1 melee"
@@ -558,6 +561,7 @@
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun
 	name = "gun spawners - DO NOT USE THIS"
+	icon_state = "gun_loot"
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/tier1 //TIER 1 GUN
 	name = "tier 1 gun"
@@ -681,18 +685,13 @@
 				)
 
 	var/loot9 = list(
-				/obj/item/gun/ballistic/automatic/marksman/servicerifle/varmint/ratslayer,
-				/obj/item/ammo_box/magazine/m556/rifle/small,
-				/obj/item/ammo_box/magazine/m556/rifle/small)
-
-	var/loot10 = list(
 				/obj/item/gun/ballistic/revolver/police,
 				/obj/item/ammo_box/a357,
 				/obj/item/ammo_box/a357
 	)
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/tier2/Initialize(mapload) //on mapload, pick what shit to spawn
-	loot = pick(loot1, loot2, loot3, loot4, loot5, loot6, loot7, loot8, loot9, loot10)
+	loot = pick(loot1, loot2, loot3, loot4, loot5, loot6, loot7, loot8, loot9)
 	. = ..()
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/tier3 //TIER 3 GUN
@@ -820,9 +819,9 @@
 				)
 
 	var/loot12 = list(
-				/obj/item/gun/ballistic/shotgun/automatic/hunting,
-				/obj/item/ammo_box/a762/doublestacked,
-				/obj/item/ammo_box/a762/doublestacked
+				/obj/item/gun/ballistic/automatic/rangemaster,
+				/obj/item/ammo_box/magazine/m762,
+				/obj/item/ammo_box/magazine/m762
 				)			
 
 	var/loot13 = list(
@@ -856,8 +855,8 @@
     lootcount = 1
 
     loot = list(
-            /obj/effect/spawner/lootdrop/f13/weapon/gun/tier1 = 70,
-            /obj/effect/spawner/lootdrop/f13/weapon/gun/tier2 = 29,
+            /obj/effect/spawner/lootdrop/f13/weapon/gun/tier1 = 89,
+            /obj/effect/spawner/lootdrop/f13/weapon/gun/tier2 = 10,
             /obj/effect/spawner/lootdrop/f13/weapon/gun/tier3 = 1,
             )
 
@@ -866,9 +865,9 @@
 	lootcount = 1
 
 	loot = list(
-            /obj/effect/spawner/lootdrop/f13/weapon/gun/tier2 = 50,
-            /obj/effect/spawner/lootdrop/f13/weapon/gun/tier3 = 30,
-            /obj/effect/spawner/lootdrop/f13/weapon/gun/tier4 = 20,
+            /obj/effect/spawner/lootdrop/f13/weapon/gun/tier2 = 60,
+            /obj/effect/spawner/lootdrop/f13/weapon/gun/tier3 = 40,
+            /obj/effect/spawner/lootdrop/f13/weapon/gun/tier4 = 10,
             )
 
 
@@ -878,6 +877,7 @@
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ammo
 	name = "ammo spawners - DO NOT USE THIS"
+	icon_state = "ammo_loot"
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier1
 	name = "tier 1 ammo"
@@ -1305,12 +1305,16 @@
 /obj/effect/spawner/lootdrop/f13/traitbooks
 	name = "trait book spawner"
 	lootcount = 1
-	loot = list(/obj/item/book/granter/trait/chemistry = 30,
-	/obj/item/book/granter/trait/trekking = 30, 
-	"" = 40)
+	loot = list(/obj/item/book/granter/trait/chemistry = 10,
+	/obj/item/book/granter/trait/trekking = 10, 
+	/obj/item/book/granter/trait/gunsmith_one = 40,
+	/obj/item/book/granter/trait/gunsmith_two = 20,
+	/obj/item/book/granter/trait/gunsmith_three = 10,
+	/obj/item/book/granter/trait/gunsmith_four = 10)
 
 /obj/effect/spawner/lootdrop/f13/blueprint
 	name = "blueprint spawner"
+	icon_state = "blueprint_loot"
 	lootcount = 1
 	loot = list(
 		/obj/item/blueprint/weapon/thatgun,

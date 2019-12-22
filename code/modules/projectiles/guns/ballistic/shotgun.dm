@@ -289,7 +289,7 @@
 	fire_delay = 3
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
-	extra_damage = 40
+	extra_damage = 60
 
 /obj/item/gun/ballistic/shotgun/remington/attackby(obj/item/A, mob/user, params)
 	..()
@@ -330,8 +330,8 @@
 	weapon_weight = WEAPON_HEAVY
 	recoil = 1 //have fun
 	fire_delay = 6
-	extra_damage = 60
-	extra_penetration = 20
+	extra_damage = 70
+	extra_penetration = 10
 
 /obj/item/gun/ballistic/shotgun/automatic/hunting/trail
 	name = "trail carbine"
@@ -345,7 +345,7 @@
 	weapon_weight = WEAPON_HEAVY
 	fire_delay = 4
 	extra_damage = 40
-	extra_penetration = 10
+	extra_penetration = 0
 
 /obj/item/gun/ballistic/shotgun/automatic/hunting/trail/scoped
 	name = "scoped trail carbine"
@@ -401,7 +401,7 @@
 	weapon_weight = WEAPON_HEAVY
 	fire_delay = 6
 	extra_damage = 50
-	extra_penetration = 10
+	extra_penetration = 0
 
 /obj/item/gun/ballistic/shotgun/automatic/hunting/brush/scoped
 	name = "scoped brush gun"
@@ -417,7 +417,7 @@
 	weapon_weight = WEAPON_HEAVY
 	fire_delay = 8
 	extra_damage = 50
-	extra_penetration = 15
+	extra_penetration = 0
 
 /obj/item/gun/ballistic/revolver/widowmaker
 	name = "winchester widowmaker"

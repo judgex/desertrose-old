@@ -140,6 +140,42 @@
 	traitname = "trekking"
 	remarks = list("It never hurts to take the road less travelled...", "Proper movement is key to your survival...", "Whether during combat or for simple travel, the desert can be your friend...", "Without proper knowledge, it can be hard to traverse the desert on foot...", "A Ranger is always prepared...")
 
+/obj/item/book/granter/trait/gunsmith_one
+	name = "Guns and Bullets, Part 1"
+	desc = "A rare issue of Guns and Bullets detailing the basic manufacture of firearms, allowing the reader to craft Tier 2 firearms. It's barely holding up, and looks like only one person can study the knowledge from it."
+	icon_state = "gab1"
+	oneuse = FALSE
+	granted_trait = TRAIT_GUNSMITH_ONE
+	traitname = "Basic Gunsmithing"
+	remarks = list("Always keep your gun well lubricated...", "Keep your barrel free of grime...", "Perfect fitment is the key to a good firearm...", "Maintain a proper trigger pull length...", "Keep your sights zeroed to proper range...")
+
+/obj/item/book/granter/trait/gunsmith_two
+	name = "Guns and Bullets, Part 2"
+	desc = "A rare issue of Guns and Bullets following up Part 1, going further indepth into weapon mechanics, allowing the reader to craft Tier 3 firearms. It's barely holding up, and looks like only one person can study the knowledge from it."
+	icon_state = "gab2"
+	oneuse = FALSE
+	granted_trait = TRAIT_GUNSMITH_TWO
+	traitname = "Intermediate Gunsmithing"
+	remarks = list("Always keep your gun well lubricated...", "Keep your barrel free of grime...", "Perfect fitment is the key to a good firearm...", "Maintain a proper trigger pull length...", "Keep your sights zeroed to proper range...")
+
+/obj/item/book/granter/trait/gunsmith_three
+	name = "Guns and Bullets, Part 3"
+	desc = "A rare issue of Guns and Bullets following up Part 2, explaining difficult ballistics theory and weapon mechanics, allowing the reader to craft Tier 4 firearms. It's barely holding up, and looks like only one person can study the knowledge from it."
+	icon_state = "gab3"
+	oneuse = FALSE
+	granted_trait = TRAIT_GUNSMITH_THREE
+	traitname = "Experienced Gunsmithing"
+	remarks = list("Always keep your gun well lubricated...", "Keep your barrel free of grime...", "Perfect fitment is the key to a good firearm...", "Maintain a proper trigger pull length...", "Keep your sights zeroed to proper range...")
+
+/obj/item/book/granter/trait/gunsmith_four
+	name = "Guns and Bullets, Part 4"
+	desc = "An extremely rare issue of Guns and Bullets, showing some design flaws of weapons and how to rectify them, allowing the reader to craft Tier 5 firearms. It's barely holding up, and looks like only one person can study the knowledge from it."
+	icon_state = "gab4"
+	oneuse = FALSE
+	granted_trait = TRAIT_GUNSMITH_FOUR
+	traitname = "Expert Gunsmithing"
+	remarks = list("Always keep your gun well lubricated...", "Keep your barrel free of grime...", "Perfect fitment is the key to a good firearm...", "Maintain a proper trigger pull length...", "Keep your sights zeroed to proper range...")
+
 /obj/item/book/granter/action/drink_fling
 	granted_action = /datum/action/innate/drink_fling
 	name = "Tapper: This One's For You"

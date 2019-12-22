@@ -461,7 +461,7 @@ Ranger
 	faction = "NCR"
 	total_positions = 4
 	spawn_positions = 4
-	description = "As a Patrol Ranger your job is to keep the peace in the region and ensure that justice and law prevail in this bloodsoaked wasteland. As some of the best the NCR has to offer, your kind are legendary in the region for their ability to protect the weak, and serve the community."
+	description = "As a Patrol Ranger, you perform reconnaissance, seize or destroy assets and capture, or recover designated targets in service to the Republic. Your reason for being sent here is to find and exploit local assets within the Region in order to prepare Pahrump for the Republic's eventual arrival."
 	supervisors = "Veteran Ranger."
 	selection_color = "#fff5cc"
 	exp_requirements = 720

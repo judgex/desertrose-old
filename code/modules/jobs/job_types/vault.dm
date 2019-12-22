@@ -66,9 +66,8 @@ Overseer
 	shoes = 		/obj/item/clothing/shoes/jackboots
 	glasses = 		/obj/item/clothing/glasses/sunglasses
 	ears = 			/obj/item/radio/headset/headset_overseer
-	shoes = 		/obj/item/clothing/shoes/sneakers/brown
 	backpack = /obj/item/storage/backpack/satchel/leather
-	backpack_contents = list(/obj/item/storage/box/ids = 1, /obj/item/melee/oldstyle = 1)
+	backpack_contents = list(/obj/item/storage/box/ids = 1, /obj/item/melee/oldstyle = 1, /obj/item/gun/ballistic/revolver/m29 = 1, /obj/item/ammo_box/m44 = 2)
 
 ///datum/outfit/f13overseer/post_equip(mob/living/carbon/human/H)
 	//..()
@@ -120,15 +119,16 @@ Head of Security
 	shoes = 		/obj/item/clothing/shoes/jackboots
 	suit = 			/obj/item/clothing/suit/armor/vest/alt
 	head = 			/obj/item/clothing/head/collectable/police/cos
-	glasses = 		/obj/item/clothing/glasses/hud/security/sunglasses
-	l_hand =		/obj/item/shield/riot
+	belt = 			/obj/item/storage/belt/security
+	glasses = 		/obj/item/clothing/glasses/sunglasses
+	r_hand =		/obj/item/gun/ballistic/revolver/colt6250
 	r_pocket = 		/obj/item/assembly/flash/handheld
 	l_pocket = 		/obj/item/restraints/handcuffs
 	backpack = 		/obj/item/storage/backpack/security
 	satchel = 		/obj/item/storage/backpack/satchel/sec
 	duffelbag = 	/obj/item/storage/backpack/duffelbag/sec
 	box = 			/obj/item/storage/box/security
-	backpack_contents = list(/obj/item/melee/oldstyle = 1, /obj/item/restraints/handcuffs = 2)
+	backpack_contents = list(/obj/item/melee/classic_baton/telescopic = 1, /obj/item/restraints/handcuffs = 2, /obj/item/ammo_box/l10mm = 2)
 
 	implants = list(/obj/item/implant/mindshield)
 
@@ -322,16 +322,18 @@ Security Officer
 	ears = 			/obj/item/radio/headset/headset_vaultsec
 	uniform = 		/obj/item/clothing/under/f13/vault13
 	head = 			/obj/item/clothing/head/helmet/riot/vaultsec
-	suit =			/obj/item/clothing/suit/armor/vest/alt
+	suit =			/obj/item/clothing/suit/armor/vest
+	glasses = 		/obj/item/clothing/glasses/sunglasses
 	shoes = 		/obj/item/clothing/shoes/jackboots
-	l_hand =		/obj/item/shield/riot
+	belt = 			/obj/item/storage/belt/security
+	r_hand =		/obj/item/gun/ballistic/automatic/pistol/n99
 	l_pocket = 		/obj/item/restraints/handcuffs
 	r_pocket = 		/obj/item/assembly/flash/handheld
 	backpack = 		/obj/item/storage/backpack/security
 	satchel = 		/obj/item/storage/backpack/satchel/sec
 	duffelbag = 	/obj/item/storage/backpack/duffelbag/sec
 	box = 			/obj/item/storage/box/security
-	backpack_contents = list(/obj/item/melee/oldstyle = 1, /obj/item/restraints/handcuffs = 1)
+	backpack_contents = list(/obj/item/melee/classic_baton/telescopic = 1, /obj/item/restraints/handcuffs = 1, /obj/item/ammo_box/magazine/m10mm_adv = 2)
 
 	implants = list(/obj/item/implant/mindshield)
 
@@ -389,7 +391,7 @@ Vault Engineer
 	ears = 			/obj/item/radio/headset/headset_vault
 	uniform = 		/obj/item/clothing/under/f13/vault13
 	belt = 			/obj/item/storage/belt/utility/full/engi
-	shoes = 		/obj/item/clothing/shoes/workboots
+	shoes = 		/obj/item/clothing/shoes/sneakers/red
 	head = 			/obj/item/clothing/head/hardhat
 	r_pocket = 		/obj/item/t_scanner
 	backpack = 		/obj/item/storage/backpack/industrial

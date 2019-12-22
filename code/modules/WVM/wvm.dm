@@ -524,12 +524,13 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 	name = "Wasteland Vending Machine - Weapons"
 	icon_state = "weapon_idle"
 	prize_list = list(
-		new /datum/data/wasteland_equipment("Surrival knife",				/obj/item/kitchen/knife/combat/survival, 							70),
-		new /datum/data/wasteland_equipment("Combat knife",					/obj/item/kitchen/knife/combat, 									100),
-		new /datum/data/wasteland_equipment("Mosin nagant",					/obj/item/gun/ballistic/shotgun/boltaction,							120),
+		new /datum/data/wasteland_equipment("survival knife",				/obj/item/kitchen/knife/combat/survival, 							70),
 		new /datum/data/wasteland_equipment("9mm pistol",					/obj/item/gun/ballistic/automatic/pistol/ninemil,					150),
 		new /datum/data/wasteland_equipment("M1911",						/obj/item/gun/ballistic/automatic/pistol/m1911,						170),
-		new /datum/data/wasteland_equipment("Riot shield",					/obj/item/shield/riot,												600)
+		new /datum/data/wasteland_equipment("Guns and Bullets, Part 1",		/obj/item/book/granter/trait/gunsmith_one, 							200),
+		new /datum/data/wasteland_equipment("Guns and Bullets, Part 2",		/obj/item/book/granter/trait/gunsmith_two,							300),
+		new /datum/data/wasteland_equipment("Guns and Bullets, Part 3",		/obj/item/book/granter/trait/gunsmith_three, 						400),
+		new /datum/data/wasteland_equipment("Guns and Bullets, Part 4",		/obj/item/book/granter/trait/gunsmith_four, 							500)
 		)
 
 /obj/machinery/mineral/wasteland_vendor/ammo
@@ -543,7 +544,7 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		new /datum/data/wasteland_equipment("Speed loader (.44)",			/obj/item/ammo_box/m44,												70),
 		new /datum/data/wasteland_equipment("Speed loader (.38)",			/obj/item/ammo_box/c38,												70),
 		new /datum/data/wasteland_equipment("small rifle magazine (5.56mm)",/obj/item/ammo_box/magazine/m556/rifle/small,						100),
-		new /datum/data/wasteland_equipment("Blackpowder",					/obj/item/reagent_containers/glass/bottle/blackpowder,				120)
+		new /datum/data/wasteland_equipment("Blackpowder",					/obj/item/reagent_containers/glass/bottle/blackpowder,				65)
 		)
 
 /obj/machinery/mineral/wasteland_vendor/clothing
