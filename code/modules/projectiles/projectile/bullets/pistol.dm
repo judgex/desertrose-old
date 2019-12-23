@@ -42,15 +42,15 @@
 
 // Needler
 /obj/item/projectile/bullet/needle
-	name = "needle"
-	icon_state = "cbbolt"
-	damage = 30
-	armour_penetration = 30
+    name = "needle"
+    icon_state = "cbbolt"
+    damage = 0
+    armour_penetration = 0
 
 /obj/item/projectile/bullet/needle/ap
-	name = "armour piercing needle"
-	damage = 45
-	armour_penetration = 60
+    name = "armour piercing needle"
+    damage = 0
+    armour_penetration = 15
 
 /*
 /obj/item/ammo_casing/c9mmr
