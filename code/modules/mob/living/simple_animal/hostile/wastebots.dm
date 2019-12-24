@@ -109,7 +109,7 @@
 	maxHealth = 280
 	melee_damage_lower = 48
 	melee_damage_upper = 72
-	extra_projectiles = 5 //6 projectiles
+	extra_projectiles = 2 //6 projectiles
 	ranged_cooldown_time = 12 //brrrrrrrrrrrrt
 	ranged = TRUE
 	retreat_distance = 2
