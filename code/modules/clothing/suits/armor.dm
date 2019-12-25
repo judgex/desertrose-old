@@ -316,25 +316,25 @@
 	STOP_PROCESSING(SSobj, src)
 	return ..()
 
-/obj/item/clothing/suit/armor/f13/metalarmor/strange
-	name = "strange metal armor"
-	desc = "A set of metal plates formed together to form a robust chestplate, designed to resist both projectile and laser weaponry."
-	icon_state = "metal_chestplate2"
-	item_state = "metal_chestplate2"
-	body_parts_covered = CHEST|GROIN|ARMS|LEGS
-	armor = list("melee" = 45, "bullet" = 45, "laser" = 60, "energy" = 50, "bomb" = 40, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
-	slowdown = 0
-	strip_delay = 10
-
 /obj/item/clothing/suit/armor/f13/metalarmor/reinforced
-	name = "metal armor mark 2"
-	desc = "A set of polished plates formed together to form a reflective chestplate specially effective agaisnt energy weaponry."
-	icon_state = "metal_chestplate2"
-	item_state = "metal_chestplate2"
-	body_parts_covered = CHEST|GROIN|ARMS|LEGS
-	armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 40, "bomb" = 40, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
-	slowdown = 0
-	strip_delay = 10
+    name = "metal armor mark 2"
+    desc = "A set of polished plates formed together to form a reflective chestplate specially effective agaisnt energy weaponry."
+    icon_state = "metal_chestplate2"
+    item_state = "metal_chestplate2"
+    body_parts_covered = CHEST|GROIN|ARMS|LEGS
+    armor = list("melee" = 45, "bullet" = 45, "laser" = 55, "energy" = 50, "bomb" = 40, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
+    slowdown = 0
+    strip_delay = 10
+
+/obj/item/clothing/suit/armor/f13/metalarmor/strange
+    name = "strange metal armor"
+    desc = "A set of metal plates formed together to form a robust chestplate, designed to resist both projectile and laser weaponry."
+    icon_state = "metal_chestplate2"
+    item_state = "metal_chestplate2"
+    body_parts_covered = CHEST|GROIN|ARMS|LEGS
+    armor = list("melee" = 45, "bullet" = 50, "laser" = 50, "energy" = 40, "bomb" = 40, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
+    slowdown = 0
+    strip_delay = 10
 
 /obj/item/clothing/suit/armor/f13/raider
 	name = "supa-fly raider armor"
