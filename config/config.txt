@@ -67,6 +67,9 @@ ENABLE_LOCALHOST_RANK
 ## you have noone older than 0 days, since noone has been logged yet. Only turn this on once you have had the database up for 30 days.
 #USE_AGE_RESTRICTION_FOR_JOBS
 
+## Uncomment the following line to enable the role whitelisting system.
+USE_ROLE_WHITELIST
+
 ## Uncomment this to have the job system use the player's account creation date, rather than the when they first joined the server for job timers.
 #USE_ACCOUNT_AGE_FOR_JOBS
 
@@ -83,7 +86,7 @@ USE_EXP_RESTRICTIONS_HEADS_HOURS 3
 #USE_EXP_RESTRICTIONS_OTHER
 ## Allows admins to bypass job playtime requirements.
 USE_EXP_RESTRICTIONS_ADMIN_BYPASS
- 
+
 ## log OOC channel
 LOG_OOC
 
@@ -179,7 +182,7 @@ VOTE_PERIOD 600
 # DONT_DEL_NEWMOB
 
 ## set a hosted by name for unix platforms
-HOSTEDBY 
+HOSTEDBY
 
 ## Set to jobban "Guest-" accounts from Captain, HoS, HoP, CE, RD, CMO, Warden, Security, Detective, and AI positions.
 ## Set to 1 to jobban them from those positions, set to 0 to allow them.
@@ -356,12 +359,12 @@ ANNOUNCE_ADMIN_LOGIN
 
 ## Map rotation
 ## You should edit maps.txt to match your configuration when you enable this.#
-MAPROTATION
+#MAPROTATION
 
 ## Map voting
 ## Allows players to vote for their preffered map
 ## When it's set to zero, the map will be randomly picked each round#
-ALLOW_MAP_VOTING 1
+#ALLOW_MAP_VOTING 1
 
 ## Map rotate chance delta
 ## This is the chance of map rotation factored to the round length.
