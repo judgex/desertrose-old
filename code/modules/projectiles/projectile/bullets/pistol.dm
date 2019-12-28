@@ -7,7 +7,7 @@
 /obj/item/projectile/bullet/c45
 	damage = 0
 	armour_penetration = 0
-	stamina = 25 //To simulate stopping power.
+	stamina = 0
 
 /obj/item/projectile/bullet/c45/jhp
 	damage = 14
@@ -30,7 +30,7 @@
 /obj/item/projectile/bullet/c10mm
 	damage = 0
 	armour_penetration = 0
-	stamina = 25 //To simulate stopping power.
+	stamina = 0
 
 /obj/item/projectile/bullet/c10mm/ap
 	damage = -10
