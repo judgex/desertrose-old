@@ -363,7 +363,7 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	fire_delay = 3
 	extra_damage = 45
-	extra_penetration = 5
+	extra_penetration = 0
 
 /obj/item/gun/ballistic/revolver/m29/alt
 	item_state = "44magnum"
@@ -388,7 +388,7 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	fire_delay = 5
 	extra_damage = 40
-	extra_penetration = 10
+	extra_penetration = 5
 
 /obj/item/gun/ballistic/revolver/needler
 	name = "needler pistol"
@@ -402,7 +402,7 @@
 
 /obj/item/gun/ballistic/revolver/colt6250
 	name = "colt 6250"
-	desc = "The Colt 6520 10mm autoloading pistol is a highly durable and efficient weapon developed by Colt Firearms prior to the Great War.It proved to be resistant to the desert-like conditions of the post-nuclear wasteland and is a fine example of workmanship and quality construction."
+	desc = "The Colt 6520 10mm autoloading pistol is a highly durable and efficient weapon developed by Colt Firearms prior to the Great War. It proved to be resistant to the desert-like conditions of the post-nuclear wasteland and is a fine example of workmanship and quality construction."
 	icon_state = "colt6250"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev6250
 	fire_sound = 'sound/f13weapons/10mm_fire_02.ogg'
@@ -420,7 +420,7 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	fire_delay = 4
 	extra_damage = 50
-	extra_penetration = 5
+	extra_penetration = 0
 
 /obj/item/gun/ballistic/revolver/sequoia/scoped
 	name = "hunting revolver"

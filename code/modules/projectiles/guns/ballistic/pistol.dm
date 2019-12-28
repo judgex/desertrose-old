@@ -93,7 +93,7 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	fire_delay = 2
 	extra_damage = 35
-	extra_penetration = 5
+	extra_penetration = 3
 	can_suppress = TRUE
 
 /obj/item/gun/ballistic/automatic/pistol/ninemil

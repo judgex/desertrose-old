@@ -479,10 +479,10 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	mag_type = /obj/item/ammo_box/magazine/uzim9mm
 	burst_size = 2
-	extra_damage = 20
+	extra_damage = 25
 	extra_penetration = 5
 	force = 15
-	spread = 18
+	spread = 10
 
 /obj/item/gun/ballistic/automatic/mini_uzi/burst_select()
 	var/mob/living/carbon/human/user = usr
@@ -514,7 +514,7 @@
 	can_suppress = FALSE
 	burst_size = 3
 	fire_delay = 2
-	extra_damage = 25
+	extra_damage = 29
 
 /obj/item/gun/ballistic/automatic/smg10mm
 	name = "10mm submachine gun"
@@ -526,8 +526,8 @@
 	mag_type = /obj/item/ammo_box/magazine/m10mm_auto
 	fire_sound = 'sound/f13weapons/10mm_fire_03.ogg'
 	burst_size = 3
-	fire_delay = 4
-	extra_damage = 20
+	fire_delay = 1
+	extra_damage = 30
 	extra_penetration = 5
 	can_suppress = FALSE //we dont have sprites therefore cease
 	force = 15
@@ -560,9 +560,9 @@
 	init_mag_type = /obj/item/ammo_box/magazine/m556/rifle/assault
 	fire_sound = 'sound/f13weapons/assault_carbine.ogg'
 	burst_size = 2
-	fire_delay = 4
+	fire_delay = 3
 	burst_delay = 1.8
-	extra_damage = 25
+	extra_damage = 30
 	spread = 14
 	extra_penetration = 5
 	w_class = WEIGHT_CLASS_BULKY
@@ -596,7 +596,7 @@
 	fire_sound = 'sound/f13weapons/assaultrifle_fire.ogg'
 	burst_size = 3
 	fire_delay = 3
-	extra_damage = 20
+	extra_damage = 30
 	spread = 8
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
@@ -625,9 +625,9 @@
 	item_state = "fnfal"
 	init_mag_type = /obj/item/ammo_box/magazine/m556/rifle
 	suppressed = 1
-	fire_delay = 4
-	extra_damage = 20
-	extra_penetration = 10
+	fire_delay = 3
+	extra_damage = 30
+	extra_penetration = 5
 	zoomable = TRUE
 	zoom_amt = 10
 	zoom_out_amt = 13
@@ -662,7 +662,7 @@
 	can_suppress = FALSE
 	fire_delay = 6
 	extra_damage = 40
-	extra_penetration = 5
+	extra_penetration = 10
 	burst_size = 1
 	zoomable = TRUE
 	zoom_amt = 10
@@ -688,7 +688,7 @@
 	item_state = "servicerifle"
 	fire_sound = 'sound/f13weapons/varmint_rifle.ogg'
 	fire_delay = 4
-	extra_damage = 25
+	extra_damage = 35
 	mag_type = /obj/item/ammo_box/magazine/m556/rifle
 	zoomable = FALSE
 	weapon_weight = WEAPON_HEAVY
@@ -697,7 +697,7 @@
 	name = "R82 heavy service rifle"
 	desc = "A top of the line 5.56x45 semi-automatic service rifle manufactured by the NCR and issued to high ranking personnel."
 	fire_delay = 4
-	extra_damage = 30
+	extra_damage = 38
 	extra_penetration = 10
 	init_mag_type = /obj/item/ammo_box/magazine/m556/rifle/assault
 	mag_type = /obj/item/ammo_box/magazine/m556/rifle
@@ -711,7 +711,7 @@
 	icon_state = "varmint_rifle"
 	item_state = "varmintrifle"
 	fire_delay = 8
-	extra_damage = 30
+	extra_damage = 40
 	init_mag_type = /obj/item/ammo_box/magazine/m556/rifle/small
 	mag_type = /obj/item/ammo_box/magazine/m556/rifle
 
@@ -720,8 +720,8 @@
 	desc = "A modified Varmint Rifle with better stopping power, a scope, and suppressor. Oh, don't forget the sick paint job."
 	icon_state = "rat_slayer"
 	item_state = "ratslayer"
-	extra_damage = 35
-	extra_penetration = 10
+	extra_damage = 40
+	extra_penetration = 5
 	zoomable = TRUE
 	zoom_amt = 10
 	zoom_out_amt = 13
@@ -745,7 +745,7 @@
 	item_state = "cshotgun1"
 	fire_sound = 'sound/f13weapons/repeater_fire.ogg'
 	mag_type = /obj/item/ammo_box/magazine/d12g
-	burst_size = 3
+	burst_size = 2
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 
@@ -768,7 +768,7 @@
 	item_state = "huntingshotgun"
 	fire_sound = 'sound/f13weapons/riot_shotgun.ogg'
 	burst_size = 1
-	fire_delay = 5
+	fire_delay = 4
 	mag_type = /obj/item/ammo_box/magazine/d12g
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
@@ -783,10 +783,10 @@
 	can_suppress = FALSE
 	burst_size = 3
 	fire_delay = 3
-	extra_damage = 20
-	extra_penetration = 5
+	extra_damage = 29
+	extra_penetration = 0
 	force = 15
-	spread = 18
+	spread = 10
 
 /obj/item/gun/ballistic/automatic/greasegun/burst_select()
 	var/mob/living/carbon/human/user = usr
@@ -837,6 +837,7 @@
 	zoomable = TRUE
 	zoom_amt = 10
 	zoom_out_amt = 13
+	extra_penetration = 20
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 
@@ -871,7 +872,7 @@
 	weapon_weight = WEAPON_HEAVY
 	spread = 18
 	randomspread = 1
-	extra_damage = 20
+	extra_damage = 30
 	
 /obj/item/gun/ballistic/automatic/lmg/burst_select()
 	var/mob/living/carbon/human/user = usr
@@ -910,7 +911,7 @@
 	fire_delay = 3
 	burst_size = 1
 	extra_damage = 42
-	extra_penetration = 10
+	extra_penetration = 0
 	en_bloc = 1
 	auto_eject = 1
 	auto_eject_sound = 'sound/f13weapons/garand_ping.ogg'
@@ -928,8 +929,8 @@
 	name = "Old Glory"
 	desc = "This Machine kills communists!"
 	icon_state = "oldglory"
-	extra_damage = 50
-	extra_penetration = 15
+	extra_damage = 42
+	extra_penetration = 5
 
 /obj/item/gun/ballistic/automatic/rangemaster
 	name = "Colt Rangemaster"
@@ -941,7 +942,7 @@
 	weapon_weight = WEAPON_HEAVY
 	burst_size = 1
 	fire_delay = 3
-	extra_damage = 40
+	extra_damage = 42
 	burst_size = 1
 
 /obj/item/gun/ballistic/automatic/rangemaster/scoped
@@ -965,5 +966,5 @@
 	fire_sound = 'sound/f13weapons/assaultrifle_fire.ogg'
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
-	spread = 16
+	spread = 10
 	fire_delay = 3
