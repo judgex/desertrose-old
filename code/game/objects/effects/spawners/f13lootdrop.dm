@@ -276,12 +276,11 @@
 				/obj/item/clothing/head/helmet/f13/metalmask/mk2
 				)
 	var/loot2 = list(
-				/obj/item/clothing/suit/armor/f13/metalarmor/reinforced,
-				/obj/item/clothing/head/helmet/knight/fluff/metal/reinforced
+				/obj/item/clothing/suit/armor/f13/metalarmor/strange
+				/obj/item/clothing/head/helmet/knight/fluff/metal/strange
 				)
 	var/loot3 = list(
 				/obj/item/clothing/suit/armor/f13/leather_jacket/combat/coat,
-				""
 				)
 	var/loot4 = list(
 				/obj/item/clothing/head/helmet/f13/combat/swat,
@@ -303,6 +302,14 @@
 				/obj/item/clothing/suit/armor/f13/brokenpa/t45b,
 				/obj/item/clothing/head/helmet/power_armor/t45b
 				)
+	var/loot3 = list(
+				/obj/item/clothing/suit/armor/f13/leather_jacket/combat/riotpolice
+				/obj/item/clothing/head/helmet/f13/ncr/rangercombat/riotpolice
+				)
+	var/loot4 = list(
+				/obj/item/clothing/suit/armor/f13/combat/mk2,
+				/obj/item/clothing/head/helmet/f13/combat/mk2
+				)
 
 /obj/effect/spawner/lootdrop/f13/armor/tier4/Initialize(mapload) //on mapload, pick what shit to spawn
 	loot = pick(loot1, loot2)
@@ -321,12 +328,12 @@
 				/obj/item/clothing/head/helmet/power_armor/t51b
 				)
 	var/loot3 = list(
-				/obj/item/clothing/suit/armor/f13/combat/mk2,
-				/obj/item/clothing/head/helmet/f13/combat/mk2
-				)
-	var/loot4 = list(
 				/obj/item/clothing/suit/armor/laserproof,
 				/obj/item/clothing/head/helmet/f13/tesla
+				)
+	var/loot3 = list(
+				/obj/item/clothing/suit/armor/f13/rangercombat/desert
+				/obj/item/clothing/head/helmet/f13/ncr/rangercombat/desert
 				)
 
 /obj/effect/spawner/lootdrop/f13/armor/tier5/Initialize(mapload) //on mapload, pick what shit to spawn
@@ -506,7 +513,7 @@
 				/obj/item/kitchen/knife/butcher,
 				/obj/item/claymore/machete/golf,
 				/obj/item/claymore/machete,
-				/obj/item/circular_saw,
+				/obj/item/claymore/machete/reinforced
 				/obj/item/shield/legion/buckler,
 				)
 
