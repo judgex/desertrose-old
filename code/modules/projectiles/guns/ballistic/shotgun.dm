@@ -105,7 +105,7 @@
 	knife_x_offset = 27
 	knife_y_offset = 13
 	fire_delay = 5
-	extra_damage = 40
+	extra_damage = 45
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 	fire_sound = 'sound/f13weapons/hunting_rifle.ogg'
@@ -289,7 +289,7 @@
 	fire_delay = 3
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
-	extra_damage = 60
+	extra_damage = 65
 
 /obj/item/gun/ballistic/shotgun/remington/attackby(obj/item/A, mob/user, params)
 	..()
@@ -373,7 +373,7 @@
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 	fire_delay = 6
-	extra_damage = 40
+	extra_damage = 45
 
 /obj/item/gun/ballistic/shotgun/automatic/hunting/cowboy/scoped
 	name = "scoped cowboy repeater"
@@ -429,7 +429,7 @@
 	sawn_desc = "Someone took the time to chop the last few inches off the barrel and stock of this shotgun. Now, the wide spread of this hand-cannon's short-barreled shots makes it perfect for short-range crowd control."
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
-	fire_delay = 4
+	fire_delay = 1
 	distro = 1
 
 /obj/item/gun/ballistic/revolver/widowmaker/attackby(obj/item/A, mob/user, params)
@@ -453,7 +453,7 @@
 	fire_sound = 'sound/f13weapons/caravan_shotgun.ogg'
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
-	fire_delay = 4
+	fire_delay = 1
 	distro = 1
 
 /obj/item/gun/ballistic/revolver/caravan_shotgun/attackby(obj/item/A, mob/user, params)
