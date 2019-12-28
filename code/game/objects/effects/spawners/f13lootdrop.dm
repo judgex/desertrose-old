@@ -180,7 +180,7 @@
 				)
 	var/loot12 = list(
 				/obj/item/clothing/under/draculass,
-				/obj/item/clothing/neck/cloak,grey
+				/obj/item/clothing/neck/cloak/grey
 				""
 				)
 	var/loot13 = list(
