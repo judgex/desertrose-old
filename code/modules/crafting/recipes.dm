@@ -471,7 +471,7 @@
 	name = "magnum buckshot shotgun box"
 	result = /obj/item/storage/box/magnumshot
 	reqs = list(/obj/item/stack/sheet/metal = 5,
-				/datum/reagent/blackpowder = 40)
+				/datum/reagent/blackpowder = 35)
 	traits = list(TRAIT_GUNSMITH_TWO)
 	tools = list(TOOL_WORKBENCH, /obj/item/book/granter/trait/gunsmith_two)
 	time = 10
@@ -482,7 +482,7 @@
 	name = "buckshot shotgun box"
 	result = /obj/item/storage/box/lethalshot
 	reqs = list(/obj/item/stack/sheet/metal = 4,
-				/datum/reagent/blackpowder = 35)
+				/datum/reagent/blackpowder = 25)
 	traits = list(TRAIT_GUNSMITH_ONE)
 	tools = list(TOOL_WORKBENCH, /obj/item/book/granter/trait/gunsmith_one)
 	time = 10
@@ -493,7 +493,7 @@
 	name = "slug shotgun box"
 	result = /obj/item/storage/box/slugshot
 	reqs = list(/obj/item/stack/sheet/metal = 4,
-				/datum/reagent/blackpowder = 35)
+				/datum/reagent/blackpowder = 25)
 	traits = list(TRAIT_GUNSMITH_TWO)
 	tools = list(TOOL_WORKBENCH, /obj/item/book/granter/trait/gunsmith_two)
 	time = 10
@@ -504,7 +504,7 @@
 	name = "beanbag shotgun box"
 	result = /obj/item/storage/box/rubbershot/beanbag
 	reqs = list(/obj/item/stack/sheet/metal = 4,
-				/datum/reagent/blackpowder = 20)
+				/datum/reagent/blackpowder = 15)
 	tools = list(TOOL_WORKBENCH)
 	time = 10
 	category = CAT_WEAPONRY
@@ -514,7 +514,7 @@
 	name = "rubbershot shotgun box"
 	result = /obj/item/storage/box/rubbershot
 	reqs = list(/obj/item/stack/sheet/metal = 4,
-				/datum/reagent/blackpowder = 20)
+				/datum/reagent/blackpowder = 15)
 	tools = list(TOOL_WORKBENCH)
 	time = 10
 	category = CAT_WEAPONRY
@@ -1250,6 +1250,7 @@
 	name = "zip gun"
 	result = /obj/item/gun/ballistic/revolver/zipgun
 	reqs = list(/obj/item/stack/sheet/mineral/wood = 1,
+	/datum/reagent/blackpowder = 1,
 				/obj/item/stack/sheet/metal = 2)
 	tools = list(TOOL_WORKBENCH)
 	time = 120
@@ -1261,6 +1262,7 @@
 	result = /obj/item/gun/ballistic/automatic/pistol/n99
 	reqs = list(/obj/item/stack/sheet/mineral/wood = 1,
 				/obj/item/stack/crafting/metalparts = 3,
+				/datum/reagent/blackpowder = 10,
 				/obj/item/stack/sheet/metal = 1)
 	tools = list(TOOL_WORKBENCH)
 	time = 120
@@ -1272,6 +1274,7 @@
 	result = /obj/item/gun/ballistic/revolver/colt6250
 	reqs = list(/obj/item/stack/sheet/mineral/wood = 1,
 				/obj/item/stack/crafting/metalparts = 5,
+				/datum/reagent/blackpowder = 10,
 				/obj/item/stack/sheet/metal = 1)
 	tools = list(TOOL_WORKBENCH)
 	time = 120
@@ -1283,6 +1286,7 @@
 	result = /obj/item/gun/ballistic/automatic/pistol/ninemil
 	reqs = list(/obj/item/stack/sheet/mineral/wood = 1,
 				/obj/item/stack/crafting/metalparts = 1,
+				/datum/reagent/blackpowder = 10,
 				/obj/item/stack/sheet/metal = 2)
 	tools = list(TOOL_WORKBENCH)
 	time = 120
@@ -1294,6 +1298,7 @@
 	result = /obj/item/gun/ballistic/automatic/pistol/m1911
 	reqs = list(/obj/item/stack/sheet/mineral/wood = 1,
 				/obj/item/stack/crafting/metalparts = 2,
+				/datum/reagent/blackpowder = 10,
 				/obj/item/stack/sheet/metal = 1)
 	tools = list(TOOL_WORKBENCH)
 	time = 120
@@ -1305,6 +1310,7 @@
 	result = /obj/item/gun/ballistic/automatic/pistol/deagle
 	reqs = list(/obj/item/stack/sheet/mineral/wood = 1,
 				/obj/item/stack/crafting/metalparts = 3,
+				/datum/reagent/blackpowder = 15,
 				/obj/item/stack/sheet/metal = 3)
 	tools = list(TOOL_WORKBENCH, /obj/item/book/granter/trait/gunsmith_three)
 	traits = list(TRAIT_GUNSMITH_THREE)
@@ -1318,6 +1324,7 @@
 	reqs = list(/obj/item/gun/ballistic/shotgun/remington = 1,
 				/obj/item/stack/crafting/metalparts = 2,
 				/obj/item/stack/sheet/mineral/titanium = 1,
+				/datum/reagent/blackpowder = 15,
 				/obj/item/stack/sheet/metal = 3)
 	tools = list(TOOL_WORKBENCH, /obj/item/blueprint/weapon/thatgun, /obj/item/book/granter/trait/gunsmith_three)
 	traits = list(TRAIT_GUNSMITH_THREE)
@@ -1332,6 +1339,7 @@
 				/obj/item/stack/crafting/metalparts = 3,
 				/obj/item/stack/crafting/goodparts = 1,
 				/obj/item/stack/sheet/mineral/titanium = 3,
+				/datum/reagent/blackpowder = 5,
 				/obj/item/stack/sheet/metal = 4)
 	tools = list(TOOL_AWORKBENCH, /obj/item/blueprint/weapon/needler, /obj/item/book/granter/trait/gunsmith_two)
 	traits = list(TRAIT_GUNSMITH_TWO)
@@ -1343,6 +1351,7 @@
 	name = "pipe rifle"
 	result = /obj/item/gun/ballistic/revolver/pipe_rifle
 	reqs = list(/obj/item/stack/sheet/mineral/wood = 1,
+	/datum/reagent/blackpowder = 1,
 				/obj/item/stack/sheet/metal = 3)
 	tools = list(TOOL_WORKBENCH)
 	time = 120
@@ -1354,6 +1363,7 @@
 	result = /obj/item/gun/ballistic/shotgun/remington
 	reqs = list(/obj/item/stack/sheet/mineral/wood = 1,
 				/obj/item/stack/crafting/metalparts = 4,
+				/datum/reagent/blackpowder = 20,
 				/obj/item/stack/sheet/metal = 3)
 	tools = list(TOOL_WORKBENCH)
 	time = 120
@@ -1365,6 +1375,7 @@
 	result = /obj/item/gun/ballistic/shotgun/remington/scoped
 	reqs = list(/obj/item/gun/ballistic/shotgun/remington = 1,
 				/obj/item/stack/sheet/glass = 2,
+				/datum/reagent/blackpowder = 20,
 				/obj/item/stack/crafting/metalparts = 1)
 	tools = list(TOOL_WORKBENCH, /obj/item/book/granter/trait/gunsmith_one)
 	traits = list(TRAIT_GUNSMITH_ONE)
@@ -1378,6 +1389,7 @@
 	reqs = list(/obj/item/stack/sheet/mineral/wood = 1,
 				/obj/item/stack/crafting/metalparts = 2,
 				/obj/item/stack/crafting/goodparts = 2,
+				/datum/reagent/blackpowder = 25,
 				/obj/item/stack/sheet/metal = 1)
 	tools = list(TOOL_WORKBENCH, /obj/item/blueprint/weapon/m1garand, /obj/item/book/granter/trait/gunsmith_four)
 	traits = list(TRAIT_GUNSMITH_FOUR)
@@ -1390,6 +1402,7 @@
 	result = /obj/item/gun/ballistic/automatic/marksman/servicerifle/varmint
 	reqs = list(/obj/item/stack/sheet/mineral/wood = 1,
 				/obj/item/stack/crafting/metalparts = 4,
+				/datum/reagent/blackpowder = 20,
 				/obj/item/stack/sheet/metal = 1)
 	tools = list(TOOL_WORKBENCH)
 	time = 120
@@ -1401,7 +1414,8 @@
 	result = /obj/item/gun/ballistic/automatic/rangemaster
 	reqs = list(/obj/item/stack/sheet/mineral/wood = 1,
 				/obj/item/stack/crafting/metalparts = 4,
-				/obj/item/stack/sheet/metal = 3)
+				/obj/item/stack/sheet/metal = 3,
+				/datum/reagent/blackpowder = 20)
 	tools = list(TOOL_WORKBENCH, /obj/item/book/granter/trait/gunsmith_three)
 	traits = list(TRAIT_GUNSMITH_THREE)
 	time = 120
@@ -1413,7 +1427,8 @@
 	result = /obj/item/gun/ballistic/automatic/rangemaster/scoped
 	reqs = list(/obj/item/gun/ballistic/automatic/rangemaster = 1,
 				/obj/item/stack/sheet/glass = 2,
-				/obj/item/stack/crafting/metalparts = 1)
+				/obj/item/stack/crafting/metalparts = 1,
+				/datum/reagent/blackpowder = 20)
 	tools = list(TOOL_WORKBENCH, /obj/item/book/granter/trait/gunsmith_three)
 	traits = list(TRAIT_GUNSMITH_THREE)
 	time = 120
@@ -1427,7 +1442,8 @@
 				/obj/item/stack/crafting/metalparts = 1,
 				/obj/item/stack/sheet/metal = 4,
 				/obj/item/stack/crafting/goodparts = 1,
-				/obj/item/stack/sheet/mineral/titanium = 2)
+				/obj/item/stack/sheet/mineral/titanium = 2,
+				/datum/reagent/blackpowder = 30)
 	tools = list(TOOL_WORKBENCH, /obj/item/blueprint/weapon/r91, /obj/item/book/granter/trait/gunsmith_three)
 	traits = list(TRAIT_GUNSMITH_THREE)
 	time = 120
@@ -1441,7 +1457,8 @@
 				/obj/item/stack/sheet/glass = 2,
 				/obj/item/stack/crafting/goodparts = 1,
 				/obj/item/suppressor = 1,
-				/obj/item/stack/sheet/plastic = 1)
+				/obj/item/stack/sheet/plastic = 1,
+				/datum/reagent/blackpowder = 30)
 	tools = list(TOOL_AWORKBENCH, /obj/item/blueprint/weapon/infiltrator, /obj/item/book/granter/trait/gunsmith_three)
 	traits = list(TRAIT_GUNSMITH_THREE)
 	time = 120
@@ -1453,7 +1470,8 @@
 	result = /obj/item/gun/ballistic/automatic/marksman/servicerifle
 	reqs = list(/obj/item/stack/sheet/mineral/wood = 1,
 				/obj/item/stack/crafting/metalparts = 2,
-				/obj/item/stack/sheet/metal = 6)
+				/obj/item/stack/sheet/metal = 6,
+				/datum/reagent/blackpowder = 20)
 	tools = list(TOOL_WORKBENCH, /obj/item/blueprint/weapon/servicerifle, /obj/item/book/granter/trait/gunsmith_one)
 	traits = list(TRAIT_GUNSMITH_ONE)
 	time = 120
@@ -1467,7 +1485,8 @@
 				/obj/item/stack/crafting/metalparts = 3,
 				/obj/item/stack/crafting/goodparts = 3,
 				/obj/item/stack/sheet/metal = 3,
-				/obj/item/stack/sheet/mineral/titanium = 3)
+				/obj/item/stack/sheet/mineral/titanium = 3,
+				/datum/reagent/blackpowder = 30)
 	tools = list(TOOL_AWORKBENCH, /obj/item/blueprint/weapon/marksmanrifle, /obj/item/book/granter/trait/gunsmith_three)
 	traits = list(TRAIT_GUNSMITH_THREE)
 	time = 120
@@ -1480,7 +1499,8 @@
 	reqs = list(/obj/item/stack/sheet/mineral/wood = 1,
 				/obj/item/stack/crafting/metalparts = 2,
 				/obj/item/stack/sheet/metal = 3,
-				/obj/item/stack/sheet/mineral/titanium = 2)
+				/obj/item/stack/sheet/mineral/titanium = 2,
+				/datum/reagent/blackpowder = 30)
 	tools = list(TOOL_WORKBENCH, /obj/item/blueprint/weapon/fnfal, /obj/item/book/granter/trait/gunsmith_four)
 	traits = list(TRAIT_GUNSMITH_FOUR)
 	time = 120
@@ -1491,7 +1511,8 @@
 	name = "winchester widowmaker double barrel"
 	result = /obj/item/gun/ballistic/revolver/widowmaker
 	reqs = list(/obj/item/stack/sheet/mineral/wood = 1,
-				/obj/item/stack/crafting/metalparts = 5)
+				/obj/item/stack/crafting/metalparts = 5,
+				/datum/reagent/blackpowder = 5)
 	tools = list(TOOL_WORKBENCH)
 	time = 120
 	category = CAT_WEAPONRY
@@ -1502,7 +1523,8 @@
 	result = /obj/item/gun/ballistic/shotgun/hunting
 	reqs = list(/obj/item/stack/sheet/mineral/wood = 1,
 				/obj/item/stack/crafting/metalparts = 3,
-				/obj/item/stack/sheet/metal = 3)
+				/obj/item/stack/sheet/metal = 3,
+				/datum/reagent/blackpowder = 15)
 	tools = list(TOOL_WORKBENCH, /obj/item/book/granter/trait/gunsmith_one)
 	traits = list(TRAIT_GUNSMITH_ONE)
 	time = 120
@@ -1510,12 +1532,13 @@
 	subcategory = CAT_WEAPON
 
 /datum/crafting_recipe/citykiller
-	name = "city-killer combat shotgun"
+	name = "combat shotgun"
 	result = /obj/item/gun/ballistic/shotgun/automatic/combat
 	reqs = list(/obj/item/stack/sheet/mineral/wood = 1,
 				/obj/item/stack/crafting/metalparts = 4,
-				/obj/item/stack/crafting/goodparts = 1,
-				/obj/item/stack/sheet/metal = 1)
+				/obj/item/stack/crafting/goodparts = 2,
+				/obj/item/stack/sheet/metal = 1,
+				/datum/reagent/blackpowder = 35)
 	tools = list(TOOL_WORKBENCH, /obj/item/book/granter/trait/gunsmith_four)
 	traits = list(TRAIT_GUNSMITH_FOUR)
 	time = 120
@@ -1529,7 +1552,8 @@
 				/obj/item/stack/sheet/mineral/titanium = 2,
 				/obj/item/stack/sheet/metal = 2,
 				/obj/item/stack/crafting/metalparts = 3,
-				/obj/item/stack/crafting/goodparts = 3)
+				/obj/item/stack/crafting/goodparts = 3,
+				/datum/reagent/blackpowder = 35)
 	tools = list(TOOL_AWORKBENCH, /obj/item/blueprint/weapon/caws, /obj/item/book/granter/trait/gunsmith_four)
 	traits = list(TRAIT_GUNSMITH_FOUR)
 	time = 120
@@ -1540,7 +1564,8 @@
 	name = "M3A1 Grease Gun"
 	result = /obj/item/gun/ballistic/automatic/greasegun
 	reqs = list(/obj/item/stack/sheet/mineral/wood = 1,
-				/obj/item/stack/crafting/metalparts = 6)
+				/obj/item/stack/crafting/metalparts = 6,
+				/datum/reagent/blackpowder = 25)
 	tools = list(TOOL_WORKBENCH, /obj/item/book/granter/trait/gunsmith_two)
 	traits = list(TRAIT_GUNSMITH_TWO)
 	time = 120
@@ -1553,6 +1578,7 @@
 	reqs = list(/obj/item/stack/sheet/mineral/wood = 1,
 				/obj/item/stack/crafting/metalparts = 2,
 				/obj/item/stack/crafting/goodparts = 1,
+				/datum/reagent/blackpowder = 25,
 				/obj/item/stack/sheet/metal = 2)
 	tools = list(TOOL_WORKBENCH, /obj/item/book/granter/trait/gunsmith_two)
 	traits = list(TRAIT_GUNSMITH_TWO)
