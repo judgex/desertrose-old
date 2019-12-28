@@ -80,7 +80,8 @@
 				)
 	var/loot7 = list(
 				/obj/item/clothing/suit/jacket/puffer/vest,
-				/obj/item/clothing/under/pants/jeans
+				/obj/item/clothing/under/pants/jeans,
+				/obj/item/clothing/neck/cloak/grey
 				)
 	var/loot8 = list(
 				/obj/item/clothing/under/suit_jacket/charcoal,
@@ -92,7 +93,8 @@
 				)
 	var/loot10 = list(
 				/obj/item/clothing/under/suit_jacket/burgundy,
-				/obj/item/clothing/shoes/laceup
+				/obj/item/clothing/shoes/laceup,
+				/obj/item/clothing/neck/cloak
 				)
 	var/loot11 = list(
 				/obj/item/clothing/under/scratch,
@@ -133,7 +135,8 @@
 	lootcount = 2
 	var/loot1 = list(
 				/obj/item/clothing/head/ushanka,
-				/obj/item/clothing/under/soviet
+				/obj/item/clothing/under/soviet,
+				/obj/item/clothing/neck/cloak/grey
 				)
 	var/loot2 = list(
 				/obj/item/clothing/under/geisha,
@@ -177,6 +180,7 @@
 				)
 	var/loot12 = list(
 				/obj/item/clothing/under/draculass,
+				/obj/item/clothing/neck/cloak,grey
 				""
 				)
 	var/loot13 = list(
@@ -263,6 +267,9 @@
 				/obj/item/clothing/suit/armor/f13/leather_jacket/combat,
 				""
 				)
+	var/loot5 = list(
+				/obj/item/clothing/suit/armor/f13/leather_jacket/combat/coat,
+				)
 
 /obj/effect/spawner/lootdrop/f13/armor/tier2/Initialize(mapload) //on mapload, pick what shit to spawn
 	loot = pick(loot1, loot2, loot3, loot4)
@@ -286,6 +293,22 @@
 				/obj/item/clothing/head/helmet/f13/combat/swat,
 				/obj/item/clothing/suit/armor/f13/combat/swat
 				)
+	var/loot5 = list(
+				/obj/item/clothing/suit/armor/f13/combat,
+				/obj/item/clothing/head/helmet/f13/combat
+				)
+	var/loot6 = list(
+				/obj/item/clothing/suit/armor/f13/combat,
+				/obj/item/clothing/head/helmet/f13/combat
+				)
+	var/loot7 = list(
+				/obj/item/clothing/suit/armor/f13/combat/dark,
+				/obj/item/clothing/head/helmet/f13/combat/dark
+				)
+	var/loot8 = list(
+				/obj/item/clothing/suit/armor/f13/combat/mk2/dark,
+				/obj/item/clothing/head/helmet/f13/combat/mk2/dark
+				)
 
 /obj/effect/spawner/lootdrop/f13/armor/tier3/Initialize(mapload) //on mapload, pick what shit to spawn
 	loot = pick(loot1, loot2, loot3, loot4)
@@ -295,18 +318,14 @@
 	name = "tier 4 armor"
 	lootcount = 2
 	var/loot1 = list(
-				/obj/item/clothing/suit/armor/f13/combat,
-				/obj/item/clothing/head/helmet/f13/combat
-				)
-	var/loot2 = list(
 				/obj/item/clothing/suit/armor/f13/brokenpa/t45b,
 				/obj/item/clothing/head/helmet/power_armor/t45b
 				)
-	var/loot3 = list(
+	var/loot2 = list(
 				/obj/item/clothing/suit/armor/f13/leather_jacket/combat/riotpolice
 				/obj/item/clothing/head/helmet/f13/ncr/rangercombat/riotpolice
 				)
-	var/loot4 = list(
+	var/loot3 = list(
 				/obj/item/clothing/suit/armor/f13/combat/mk2,
 				/obj/item/clothing/head/helmet/f13/combat/mk2
 				)
@@ -331,7 +350,7 @@
 				/obj/item/clothing/suit/armor/laserproof,
 				/obj/item/clothing/head/helmet/f13/tesla
 				)
-	var/loot3 = list(
+	var/loot4 = list(
 				/obj/item/clothing/suit/armor/f13/rangercombat/desert
 				/obj/item/clothing/head/helmet/f13/ncr/rangercombat/desert
 				)
