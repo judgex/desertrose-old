@@ -350,10 +350,6 @@
 				/obj/item/clothing/suit/armor/laserproof,
 				/obj/item/clothing/head/helmet/f13/tesla
 				)
-	var/loot4 = list(
-				/obj/item/clothing/suit/armor/f13/rangercombat/desert
-				/obj/item/clothing/head/helmet/f13/ncr/rangercombat/desert
-				)
 
 /obj/effect/spawner/lootdrop/f13/armor/tier5/Initialize(mapload) //on mapload, pick what shit to spawn
 	loot = pick(loot1, loot2, loot3, loot4)
