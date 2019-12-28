@@ -8,6 +8,16 @@
 	item_state = "cloak"
 	w_class = WEIGHT_CLASS_SMALL
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
+	
+/obj/item/clothing/neck/cloak/grey
+	name = "dark cloak"
+	desc = "It's a cape that can be worn around your neck."
+	icon = 'icons/obj/clothing/cloaks.dmi'
+	icon_state = "cloak"
+	item_state = "cloak"
+	w_class = WEIGHT_CLASS_SMALL
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
+	color = "#4A4A4B" //Grey but it looks black
 
 /obj/item/clothing/head/cloakhood
 	name = "cloak hood"
