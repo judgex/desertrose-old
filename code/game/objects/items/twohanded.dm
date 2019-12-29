@@ -224,7 +224,7 @@
 	force = 5
 	throwforce = 15
 	w_class = WEIGHT_CLASS_BULKY
-	slot_flags = 0
+	slot_flags = ITEM_SLOT_BACK
 	force_unwielded = 10
 	force_wielded = 56
 	attack_verb = list("axed", "chopped", "cleaved", "torn", "hacked")
@@ -459,7 +459,7 @@
 	desc = "A improvised metal glaive that can be wielded."
 	force = 10
 	w_class = WEIGHT_CLASS_BULKY
-	slot_flags = 0
+	slot_flags = ITEM_SLOT_BACK
 	force_unwielded = 25
 	force_wielded = 40
 	throwforce = 25
@@ -561,7 +561,7 @@
 	righthand_file = 'icons/mob/inhands/64x64_righthand.dmi'
 	inhand_x_dimension = 64
 	inhand_y_dimension = 64
-	slot_flags = 0
+	slot_flags = ITEM_SLOT_BACK
 	force = 10
 	var/force_on = 72
 	w_class = WEIGHT_CLASS_HUGE
@@ -679,7 +679,7 @@
 	icon_state = "spearglass0"
 	name = "\improper metal spear"
 	desc = "A improvised metal spear."
-	slot_flags = 0
+	slot_flags = ITEM_SLOT_BACK
 	force_unwielded = 20
 	force_wielded = 25
 	throwforce = 20
@@ -843,7 +843,7 @@
 	desc = "A haphazardly-constructed yet still deadly weapon. The pinnacle of modern technology."
 	force = 11
 	w_class = WEIGHT_CLASS_BULKY
-	slot_flags = 0
+	slot_flags = ITEM_SLOT_BACK
 	force_wielded = 32
 	throwforce = 25
 	throwforce = 20
@@ -907,7 +907,7 @@
 	force_unwielded = 15
 	force_wielded = 48
 	throwforce = 15
-	slot_flags = 0
+	slot_flags = ITEM_SLOT_BACK
 	attack_verb = list("beat", "smacked", "clubbed", "clobbered")
 	w_class = WEIGHT_CLASS_NORMAL
 	sharpness = IS_BLUNT
@@ -926,7 +926,7 @@
 	force_unwielded = 20
 	force_wielded = 56
 	throwforce = 20
-	slot_flags = 0
+	slot_flags = ITEM_SLOT_BACK
 	attack_verb = list("bashed", "pounded", "bludgeoned", "pummeled", "thrashed")
 	w_class = WEIGHT_CLASS_BULKY
 	sharpness = IS_BLUNT
