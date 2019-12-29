@@ -53,6 +53,10 @@
 	//If you have the use_age_restriction_for_jobs config option enabled and the database set up, this option will add a requirement for players to be at least minimal_player_age days old. (meaning they first signed in at least that many days before.)
 	var/minimal_player_age = 6 // Sets minimum default account age to six days to prevent angry people from account-spamming.
 
+	//Role whitelisting, if USE_ROLE_WHITELIST is enabled in config.txt, these values will be considered for job selection.
+	var/whitelisted = 0 // Whether this job is whitelisted or not.
+	var/whitelist_group = "" // Which term is needed in the whitelist file for this job to be available
+
 	var/outfit = null
 
 	var/exp_requirements = 0
@@ -231,16 +235,16 @@
 
 	if(pa_wear == TRUE)
 		H.add_trait(TRAIT_PA_WEAR)
-	
+
 	if(gunsmith_one == TRUE)
 		H.add_trait(TRAIT_GUNSMITH_ONE)
 
 	if(gunsmith_two == TRUE)
 		H.add_trait(TRAIT_GUNSMITH_TWO)
-	
+
 	if(gunsmith_three == TRUE)
 		H.add_trait(TRAIT_GUNSMITH_THREE)
-	
+
 	if(gunsmith_four == TRUE)
 		H.add_trait(TRAIT_GUNSMITH_FOUR)
 

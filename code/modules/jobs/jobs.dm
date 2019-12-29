@@ -12,6 +12,41 @@ GLOBAL_LIST_INIT(command_positions, list(
     "Mayor",
     "Sheriff"
 ))
+//Whitelisted positions list FO13
+GLOBAL_LIST_INIT(faction_whitelist_positions, list(
+"Head Scribe",
+"Overseer",
+"Elder",
+"Head Scribe",
+"Paladin",
+"Knight",
+"Scribe",
+"Legion Centurion",
+"Legion Veteran Decanus",
+"Legion Libritor",
+"Veteran Legionnaire",
+"Legion Prime Decanus",
+"Prime Legionnaire",
+"Legion Recruit Decanus",
+"Recruit Legionnaire",
+"Legion Vexillarius",
+"Legion Venator",
+"NCR Captain",
+"NCR Lieutenant",
+"NCR Sergeant",
+"NCR Medical Officer",
+"NCR Engineer",
+"NCR Heavy Trooper",
+"NCR Corporal",
+"NCR Trooper",
+"NCR Recruit",
+"NCR Scout Lieutenant",
+"NCR Scout Sergeant"
+))
+
+GLOBAL_LIST_INIT(antagonist_whitelist_positions, list(
+	"Raider"
+))
 
 GLOBAL_LIST_INIT(brotherhood_positions, list(
 	"Elder",

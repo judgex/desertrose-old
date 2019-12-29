@@ -272,6 +272,13 @@
 	desc = "A combat leather jacket, outfitted with a special armored leather coat."
 	armor = list("melee" = 35, "bullet" = 35, "laser" = 25, "energy" = 25, "bomb" = 30, "bio" = 0, "rad" = 0, "fire" = 30, "acid" = 35)
 
+/obj/item/clothing/suit/armor/f13/leather_jacket/combat/riotpolice
+	name = "combat body armor"
+	icon_state = "combat_coat"
+	item_state = "combat_coat"
+	desc = "A heavy armor with ballistic inserts, sewn into a padded riot police coat."
+	armor = list("melee" = 50, "bullet" = 50, "laser" = 40, "energy" = 25, "bomb" = 30, "bio" = 0, "rad" = 0, "fire" = 5, "acid" = 35)
+
 /obj/item/clothing/suit/armor/f13/kit
 	name = "armor kit"
 	desc = "Separate armor parts you can wear over the clothing to get the most basic protection from the dangers of wasteland.<br>It is unable to reflect laser beams and probably won't shield you from a random bullet, but it sure is better than going into the battle without any armor at all."
@@ -306,7 +313,7 @@
 	armor = list("melee" = 45, "bullet" = 40, "laser" = 45, "energy" = 40, "bomb" = 40, "bio" = 30, "rad" = 15, "fire" = 60, "acid" = 0)
 	slowdown = 0.25
 	strip_delay = 10
-	color = "#514E4E" // Light Grey
+	color = "#625E5B"
 
 /obj/item/clothing/suit/armor/fluff/chestplate/Initialize()
 	. = ..()
@@ -326,7 +333,7 @@
     armor = list("melee" = 45, "bullet" = 45, "laser" = 55, "energy" = 50, "bomb" = 40, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
     slowdown = 0
     strip_delay = 10
-	color = "#514E4E" // Light Grey
+    color = "#625E5B"
 
 /obj/item/clothing/suit/armor/f13/metalarmor/strange
     name = "strange metal armor"
@@ -337,7 +344,7 @@
     armor = list("melee" = 45, "bullet" = 50, "laser" = 50, "energy" = 40, "bomb" = 40, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
     slowdown = 0
     strip_delay = 10
-	color = "#514E4E" // Light Grey
+    color = "#625E5B"
 
 /obj/item/clothing/suit/armor/f13/raider
 	name = "supa-fly raider armor"
@@ -413,7 +420,7 @@
 /obj/item/clothing/suit/armor/f13/combat/dark
 	name = "combat armor"
 	desc = "An old military grade pre war combat armor."
-	color = "#302E2E" // Dark Grey
+	color = "#514E4E"
 
 /obj/item/clothing/suit/armor/f13/combat/Initialize()
 	. = ..()
@@ -430,11 +437,11 @@
 	icon_state = "combat_armor_mk2"
 	item_state = "combat_armor_mk2"
 	armor = list("melee" = 45, "bullet" = 50, "laser" = 45, "energy" = 45, "bomb" = 55, "bio" = 60, "rad" = 15, "fire" = 60, "acid" = 30)
-	
+
 /obj/item/clothing/suit/armor/f13/combat/mk2/dark
 	name = "reinforced combat armor"
 	desc = "A reinforced model based of the pre-war combat armor."
-	color = "#302E2E" // Dark Grey
+	color = "#302E2E"
 
 /obj/item/clothing/suit/armor/f13/combat/ncr
 	name = "ranger patrol armor"
@@ -471,7 +478,7 @@
 	icon_state = "ranger"
 	item_state = "ranger"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
-	armor = list("melee" = 60, "bullet" = 50, "laser" = 40, "energy" = 40, "bomb" = 55, "bio" = 60, "rad" = 60, "fire" = 90, "acid" = 20)
+	armor = list("melee" = 55, "bullet" = 55, "laser" = 55, "energy" = 40, "bomb" = 55, "bio" = 60, "rad" = 60, "fire" = 90, "acid" = 20)
 	strip_delay = 60
 
 /obj/item/clothing/suit/armor/f13/rangercombat/desert
@@ -485,7 +492,7 @@
 	desc = "A heavily reinforced set of military grade armor, commonly seen in the Divide now repurposed and reissued to Chief Rangers."
 	icon_state = "elite_riot"
 	item_state = "elite_riot"
-	armor = list("melee" = 70, "bullet" = 60, "laser" = 40, "energy" = 60, "bomb" = 70, "bio" = 60, "rad" = 60, "fire" = 90, "acid" = 50)
+	armor = list("melee" = 65, "bullet" = 60, "laser" = 60, "energy" = 60, "bomb" = 70, "bio" = 60, "rad" = 60, "fire" = 90, "acid" = 50)
 
 /obj/item/clothing/suit/armor/f13/chitinarmor
 	name = "insect chitin armor"

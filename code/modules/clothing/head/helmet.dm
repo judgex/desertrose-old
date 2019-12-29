@@ -564,6 +564,11 @@
 	desc = "An old riot police helmet, out of use around the time of the war."
 	armor = list("melee" = 50, "bullet" = 50, "laser" = 40, "energy" = 50, "bomb" = 39, "bio" = 20, "rad" = 20, "fire" = 30, "acid" = 0)
 
+/obj/item/clothing/head/helmet/f13/ncr/rangercombat/riotpolice
+	name = "strange combat helmet"
+	desc = "An old riot police helmet, out of use around the time of the war."
+	armor = list("melee" = 50, "bullet" = 50, "laser" = 40, "energy" = 50, "bomb" = 39, "bio" = 20, "rad" = 20, "fire" = 30, "acid" = 0)
+
 /obj/item/clothing/head/helmet/f13/ncr/rangercombat/desert
 	name = "desert ranger combat helmet"
 	desc = "An U.S Marine Corps helmet, used by the legendary Desert Rangers."

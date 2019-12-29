@@ -151,6 +151,8 @@
 
 /datum/config_entry/flag/use_exp_tracking
 
+/datum/config_entry/flag/use_role_whitelist  //Use role whitelists?
+
 /datum/config_entry/flag/use_exp_restrictions_heads
 
 /datum/config_entry/number/use_exp_restrictions_heads_hours
