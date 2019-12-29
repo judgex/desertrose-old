@@ -287,7 +287,7 @@
 	icon_state = "leather_armor"
 	item_state = "leather_armor"
 	body_parts_covered = CHEST|GROIN
-	armor = list("melee" = 40, "bullet" = 35, "laser" = 25, "energy" = 25, "bomb" = 32, "bio" = 0, "rad" = 0, "fire" = 30, "acid" = 35)
+	armor = list("melee" = 40, "bullet" = 35, "laser" = 25, "energy" = 25, "bomb" = 32, "bio" = 0, "rad" = 10, "fire" = 30, "acid" = 35)
 	strip_delay = 40
 
 /obj/item/clothing/suit/armor/f13/leatherarmor/reinforced
@@ -295,7 +295,7 @@
 	icon_state = "leather_armor_2"
 	item_state = "leather_armor_2"
 	desc = "An enhanced version of the basic leather armor with extra layers of protection. Finely crafted from tanned brahmin hide."
-	armor = list("melee" = 40, "bullet" = 40, "laser" = 30, "energy" = 30, "bomb" = 35, "bio" = 0, "rad" = 0, "fire" = 40, "acid" = 35)
+	armor = list("melee" = 40, "bullet" = 40, "laser" = 30, "energy" = 30, "bomb" = 35, "bio" = 0, "rad" = 15, "fire" = 40, "acid" = 35)
 
 /obj/item/clothing/suit/armor/f13/metalarmor
 	name = "metal armor"
@@ -306,6 +306,7 @@
 	armor = list("melee" = 45, "bullet" = 40, "laser" = 45, "energy" = 40, "bomb" = 40, "bio" = 30, "rad" = 15, "fire" = 60, "acid" = 0)
 	slowdown = 0.25
 	strip_delay = 10
+	color = "#514E4E" // Light Grey
 
 /obj/item/clothing/suit/armor/fluff/chestplate/Initialize()
 	. = ..()
@@ -325,6 +326,7 @@
     armor = list("melee" = 45, "bullet" = 45, "laser" = 55, "energy" = 50, "bomb" = 40, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
     slowdown = 0
     strip_delay = 10
+	color = "#514E4E" // Light Grey
 
 /obj/item/clothing/suit/armor/f13/metalarmor/strange
     name = "strange metal armor"
@@ -335,6 +337,7 @@
     armor = list("melee" = 45, "bullet" = 50, "laser" = 50, "energy" = 40, "bomb" = 40, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
     slowdown = 0
     strip_delay = 10
+	color = "#514E4E" // Light Grey
 
 /obj/item/clothing/suit/armor/f13/raider
 	name = "supa-fly raider armor"
@@ -407,6 +410,11 @@
 	armor = list("melee" = 40, "bullet" = 45, "laser" = 40, "energy" = 40, "bomb" = 50, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20)
 	strip_delay = 60
 
+/obj/item/clothing/suit/armor/f13/combat/dark
+	name = "combat armor"
+	desc = "An old military grade pre war combat armor."
+	color = "#302E2E" // Dark Grey
+
 /obj/item/clothing/suit/armor/f13/combat/Initialize()
 	. = ..()
 	AddComponent(/datum/component/spraycan_paintable)
@@ -421,7 +429,12 @@
 	desc = "A reinforced model based of the pre-war combat armor."
 	icon_state = "combat_armor_mk2"
 	item_state = "combat_armor_mk2"
-	armor = list("melee" = 45, "bullet" = 50, "laser" = 45, "energy" = 45, "bomb" = 55, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 30)
+	armor = list("melee" = 45, "bullet" = 50, "laser" = 45, "energy" = 45, "bomb" = 55, "bio" = 60, "rad" = 15, "fire" = 60, "acid" = 30)
+	
+/obj/item/clothing/suit/armor/f13/combat/mk2/dark
+	name = "reinforced combat armor"
+	desc = "A reinforced model based of the pre-war combat armor."
+	color = "#302E2E" // Dark Grey
 
 /obj/item/clothing/suit/armor/f13/combat/ncr
 	name = "ranger patrol armor"

@@ -170,7 +170,7 @@
 	src.pump(user)
 
 /obj/item/gun/ballistic/shotgun/automatic/combat
-	name = "city-killer combat shotgun"
+	name = "combat shotgun"
 	desc = "A internal tube variant of the pre-war combat shotgun."
 	icon_state = "citykiller"
 	item_state = "cshotgun1"

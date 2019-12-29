@@ -18,8 +18,8 @@
 //5.56x45mm
 /obj/item/projectile/bullet/a556
 	damage = 0
-	armour_penetration = 10
-	stamina = 10
+	armour_penetration = 0
+	stamina = 0
 
 /obj/item/projectile/bullet/a556/ap
 	damage = -9

@@ -10,7 +10,7 @@
 	item_state = "jensencoat"
 //	flags = THICKMATERIAL
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
-	armor = list(melee = 50, bullet = 10, laser = 10, energy = 10, bomb = 0, bio = 0, rad = 0, fire = 30, acid = 30)
+	armor = list(melee = 30, bullet = 30, laser = 30, energy = 10, bomb = 0, bio = 0, rad = 0, fire = 30, acid = 30)
 	allowed = list(/obj/item/pen,/obj/item/paper,/obj/item/stamp,/obj/item/reagent_containers/food/drinks/flask,/obj/item/weapon,/obj/item/storage/box/matches,/obj/item/lighter,/obj/item/clothing/mask/cigarette,/obj/item/storage/fancy/cigarettes,/obj/item/flashlight,/obj/item/gun,/obj/item/ammo_box,/obj/item/ammo_casing)
 	resistance_flags = UNACIDABLE
 	strip_delay = 30
@@ -22,7 +22,7 @@
 	icon_state = "praetor"
 	item_state = "g_suit"
 	body_parts_covered = CHEST
-	armor = list(melee = 60, bullet = 40, laser = 40, energy = 40, bomb = 50, bio = 100, rad = 100, fire = 100, acid = 100)
+	armor = list(melee = 40, bullet = 40, laser = 40, energy = 30, bomb = 30, bio = 30, rad = 30, fire = 30, acid = 30)
 	resistance_flags = UNACIDABLE
 	strip_delay = 10
 	icon = 'icons/fallout/clothing/suits.dmi'
@@ -33,7 +33,7 @@
 	icon_state = "punkit" //Punk it
 	item_state = "punkit" //Pun kit
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
-	armor = list(melee = 30, bullet = 10, laser = 10, energy = 10, bomb = 10, bio = 20, rad = 20, fire = 50, acid = 50)
+	armor = list(melee = 30, bullet = 30, laser = 30, energy = 30, bomb = 10, bio = 20, rad = 20, fire = 30, acid = 30)
 	strip_delay = 30
 	icon = 'icons/fallout/clothing/suits.dmi'
 
@@ -43,7 +43,7 @@
 	icon_state = "tribal"
 	item_state = "tribal"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	armor = list(melee = 30, bullet = 10, laser = 010, energy = 0, bomb = 10, bio = 0, rad = 0, fire = 10, acid = 0)
+	armor = list(melee = 30, bullet = 20, laser = 20, energy = 0, bomb = 10, bio = 0, rad = 0, fire = 10, acid = 0)
 	flags_inv = HIDEJUMPSUIT
 	strip_delay = 40
 	icon = 'icons/fallout/clothing/suits.dmi'
@@ -54,7 +54,7 @@
 	icon_state = "slam"
 	item_state = "slam"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	armor = list(melee = 20, bullet = 10, laser = 10, energy = 0, bomb = 10, bio = 0, rad = 0, fire = 0, acid = 0)
+	armor = list(melee = 30, bullet = 30, laser = 30, energy = 0, bomb = 10, bio = 0, rad = 0, fire = 0, acid = 0)
 	flags_inv = HIDEJUMPSUIT
 	strip_delay = 40
 	icon = 'icons/fallout/clothing/suits.dmi'

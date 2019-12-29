@@ -258,17 +258,20 @@
 	item_state = "metalhelmet"
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	armor = list("melee" = 40, "bullet" = 25, "laser" = 25, "energy" = 20, "bomb" = 16, "bio" = 0, "rad" = 0)
+	color = "#514E4E" // Light Grey
 
 /obj/item/clothing/head/helmet/knight/fluff/metal/reinforced
 	name = "reinforced metal helmet"
 	icon_state = "metalhelmet_r"
 	item_state = "metalhelmet_r"
 	armor = list("melee" = 45, "bullet" = 35, "laser" = 40, "energy" = 25, "bomb" = 16, "bio" = 0, "rad" = 0)
+	color = "#514E4E" // Light Grey
 
 /obj/item/clothing/head/helmet/knight/fluff/metal/strange
 	name = "strange helmet"
 	desc = "A steel helmet forged by tribal warriors, with additional plating to protect again projectile and laser fire."
 	armor = list("melee" = 40, "bullet" = 40, "laser" = 40, "energy" = 25, "bomb" = 16, "bio" = 0, "rad" = 0)
+	color = "#514E4E" // Light Grey
 
 /obj/item/clothing/head/helmet/knight/fluff/rider
 	name = "rider helmet" //Not raider. Rider.
@@ -391,6 +394,11 @@
 	tint = 0
 	dynamic_hair_suffix = ""
 	dynamic_fhair_suffix = ""
+	
+/obj/item/clothing/head/helmet/f13/combat/dark
+	name = "combat helmet"
+	desc = "An old military grade pre-war combat helmet."
+	color = "#302E2E" // Dark Grey
 
 /obj/item/clothing/head/helmet/f13/combat/Initialize()
 	. = ..()
@@ -407,6 +415,10 @@
 	icon_state = "combat_helmet_mk2"
 	item_state = "combat_helmet_mk2"
 	armor = list("melee" = 60, "bullet" = 40, "laser" = 40, "energy" = 40, "bomb" = 39, "bio" = 70, "rad" = 70, "fire" = 70, "acid" = 0)
+	
+/obj/item/clothing/head/helmet/f13/combat/mk2/dark
+	name = "reinforced combat helmet"
+	color = "#302E2E" // Dark Grey
 
 /obj/item/clothing/head/helmet/f13/combat/brotherhood
 	name = "brotherhood combat helmet"
@@ -547,19 +559,24 @@
 	flash_protect = 1
 	glass_colour_type = /datum/client_colour/glass_colour/red
 
+/obj/item/clothing/head/helmet/f13/ncr/rangercombat/riotpolice
+	name = "strange combat helmet"
+	desc = "An old riot police helmet, out of use around the time of the war."
+	armor = list("melee" = 50, "bullet" = 50, "laser" = 40, "energy" = 50, "bomb" = 39, "bio" = 20, "rad" = 20, "fire" = 30, "acid" = 0)
+
 /obj/item/clothing/head/helmet/f13/ncr/rangercombat/desert
 	name = "desert ranger combat helmet"
 	desc = "An U.S Marine Corps helmet, used by the legendary Desert Rangers."
 	icon_state = "desert_ranger"
 	item_state = "desert_ranger"
-	armor = list("melee" = 60, "bullet" = 50, "laser" = 30, "energy" = 50, "bomb" = 39, "bio" = 60, "rad" = 60, "fire" = 90, "acid" = 0)
+	armor = list("melee" = 60, "bullet" = 50, "laser" = 30, "energy" = 50, "bomb" = 39, "bio" = 60, "rad" = 60, "fire" = 40, "acid" = 0)
 
 /obj/item/clothing/head/helmet/f13/ncr/rangercombat/eliteriot
 	name = "elite riot gear helmet"
 	desc = "An old combat helmet seen in the divide, repurposed for higher ranking Rangers."
 	icon_state = "elite_riot"
 	item_state = "elite_riot"
-	armor = list("melee" = 70, "bullet" = 60, "laser" = 40, "energy" = 60, "bomb" = 55, "bio" = 60, "rad" = 60, "fire" = 90, "acid" = 0)
+	armor = list("melee" = 70, "bullet" = 60, "laser" = 40, "energy" = 60, "bomb" = 55, "bio" = 60, "rad" = 60, "fire" = 40, "acid" = 0)
 	darkness_view = 128
 	lighting_alpha = LIGHTING_PLANE_ALPHA_LOWLIGHT_VISION
 
@@ -569,7 +586,7 @@
 	desc = "A crudely formed metal hockey mask."
 	icon_state = "metal_mask"
 	item_state = "metal_mask"
-	armor = list("melee" = 50, "bullet" = 35, "laser" = 35, "energy" = 20, "bomb" = 25, "bio" = 30, "rad" = 30, "fire" = 60, "acid" = 0)
+	armor = list("melee" = 50, "bullet" = 35, "laser" = 35, "energy" = 20, "bomb" = 25, "bio" = 30, "rad" = 30, "fire" = 20, "acid" = 0)
 	flags_inv = HIDEMASK|HIDEEYES|HIDEFACE
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 	strip_delay = 80
@@ -589,7 +606,7 @@
 	desc = "A reflective metal hockey mask."
 	icon_state = "metal_mask2"
 	item_state = "metal_mask2"
-	armor = list("melee" = 50, "bullet" = 35, "laser" = 50, "energy" = 50, "bomb" = 25, "bio" = 30, "rad" = 30, "fire" = 60, "acid" = 0)
+	armor = list("melee" = 50, "bullet" = 35, "laser" = 50, "energy" = 50, "bomb" = 25, "bio" = 30, "rad" = 30, "fire" = 30, "acid" = 0)
 	flags_inv = HIDEMASK|HIDEEYES|HIDEFACE
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 	strip_delay = 80
@@ -599,7 +616,7 @@
 	desc = "A prewar armor design by Nikola Tesla before being confinscated by the U.S. government. Provides the high energy weapons resistance."
 	icon_state = "tesla_helmet"
 	item_state = "tesla_helmet"
-	armor = list("melee" = 35, "bullet" = 35, "laser" = 55, "energy" = 55, "bomb" = 35, "bio" = 0, "rad" = 0, "fire" = 100, "acid" = 100)
+	armor = list("melee" = 35, "bullet" = 35, "laser" = 55, "energy" = 55, "bomb" = 35, "bio" = 0, "rad" = 10, "fire" = 30, "acid" = 80)
 	var/hit_reflect_chance = 70
 	strip_delay = 10
 
