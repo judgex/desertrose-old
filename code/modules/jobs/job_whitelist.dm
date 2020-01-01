@@ -28,7 +28,6 @@
 
 	for(var/rtype in SSjob.name_occupations)    //cycle through all of the jobs and add them to the full list
 		play_records[rtype] = rtype
-			to_chat(src, "Added 1 job to playable jobs. (play_records)")
 
 	qdel(whitelist_read)
 
@@ -41,4 +40,3 @@
 			play_records[rtypeWL] = 0
 
 	prefs.job_whitelists = play_records
-	to_chat(src, "Set job whitelist call completed")
