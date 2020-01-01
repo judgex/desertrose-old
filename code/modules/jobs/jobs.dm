@@ -12,9 +12,10 @@ GLOBAL_LIST_INIT(command_positions, list(
     "Mayor",
     "Sheriff"
 ))
-//Whitelisted positions list FO13
+//Whitelisted positions list FO13 anything that shows up here requires that the user have an entry in the 'role_whitelist' table of id,ckey,"faction"
 GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 "Head Scribe",
+"Chief of Security",
 "Overseer",
 "Elder",
 "Head Scribe",
@@ -31,19 +32,26 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 "Recruit Legionnaire",
 "Legion Vexillarius",
 "Legion Venator",
+"Legion Scout",
+"Legion Explorer",
+"Camp Follower",
 "NCR Captain",
 "NCR Lieutenant",
 "NCR Sergeant",
 "NCR Medical Officer",
 "NCR Engineer",
+"NCR Veteran Ranger",
+"NCR Recon Ranger",
 "NCR Heavy Trooper",
 "NCR Corporal",
 "NCR Trooper",
 "NCR Recruit",
 "NCR Scout Lieutenant",
-"NCR Scout Sergeant"
+"NCR Scout Sergeant",
+"NCR Patrol Ranger",
+"NCR Scout"
 ))
-
+//Whitelisted positions list FO13 anything that shows up here requires that the user have an entry in the 'role_whitelist' table of id,ckey,"antagonist"
 GLOBAL_LIST_INIT(antagonist_whitelist_positions, list(
 	"Raider"
 ))

@@ -1775,6 +1775,7 @@
 #include "code\modules\integrated_electronics\subtypes\trig.dm"
 #include "code\modules\jobs\access.dm"
 #include "code\modules\jobs\job_exp.dm"
+#include "code\modules\jobs\job_whitelist.dm"
 #include "code\modules\jobs\jobs.dm"
 #include "code\modules\jobs\loadout_ingame.dm"
 #include "code\modules\jobs\job_types\assistant.dm"
