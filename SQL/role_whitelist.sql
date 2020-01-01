@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jan 01, 2020 at 03:00 PM
+-- Generation Time: Jan 01, 2020 at 03:03 PM
 -- Server version: 10.3.11-MariaDB
 -- PHP Version: 7.2.11
 
@@ -31,7 +31,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `role_whitelist` (
   `id` int(11) NOT NULL,
   `ckey` varchar(32) NOT NULL,
-  `whitelist` int(50) NOT NULL
+  `whitelist` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
