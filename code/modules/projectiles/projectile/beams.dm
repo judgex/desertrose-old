@@ -190,20 +190,34 @@
 
 /obj/item/projectile/beam/laser/pistol
 	name = "laser beam"
+	damage = 12
+
+/obj/item/projectile/beam/laser/pistol/wattz
 	damage = 20
+
+/obj/item/projectile/beam/laser/pistol/wattz/magneto
+	name = "penetrating laser beam"
+	damage = 25
+	armour_penetration = 20
 
 /obj/item/projectile/beam/laser/tribeam
 	name = "tribeam laser"
 	damage = 15
 
 /obj/item/projectile/plasma
-	name = "plasma clot"
+	name = "plasma bolt"
 	icon_state = "plasma_clot"
 	damage_type = BURN
 	damage = 50
+	armour_penetration = 20
 
 /obj/item/projectile/plasma/pistol
 	damage = 45
+	armour_penetration = 10
+
+/obj/item/projectile/plasma/pistol/glock
+	damage = 30
 
 /obj/item/projectile/plasma/scatter
 	damage = 25
+	armour_penetration = 5

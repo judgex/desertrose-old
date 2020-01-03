@@ -10,6 +10,10 @@
 	var/chem_catalysts[] = list() //like tools but for reagents
 	var/category = CAT_NONE //where it shows up in the crafting UI
 	var/subcategory = CAT_NONE
+	var/gunsmith_one_req = FALSE
+	var/gunsmith_two_req = FALSE
+	var/gunsmith_three_req = FALSE
+	var/gunsmith_four_req = FALSE
 
 /*
 ---Fallout 13 Crafting
@@ -226,7 +230,7 @@
 	subcategory = CAT_AMMO
 
 /datum/crafting_recipe/greasegunmag
-	name = "empty 9mm submachine gun magazine (9mm)"
+	name = "empty .45 submachine gun magazine (9mm)"
 	result = /obj/item/ammo_box/magazine/greasegun/empty
 	reqs = list(/obj/item/stack/sheet/metal = 2)
 	traits = list(TRAIT_GUNSMITH_TWO)
@@ -324,6 +328,24 @@
 	name = "empty en-bloc clip (7.62x51mm)"
 	result = /obj/item/ammo_box/magazine/garand308/empty
 	reqs = list(/obj/item/stack/sheet/metal = 1)
+	tools = list(TOOL_WORKBENCH, /obj/item/book/granter/trait/gunsmith_four)
+	time = 10
+	category = CAT_WEAPONRY
+	subcategory = CAT_AMMO
+
+/datum/crafting_recipe/m762
+	name = "empty rifle magazine (7.62x51)"
+	result = /obj/item/ammo_box/magazine/m762/empty
+	reqs = list(/obj/item/stack/sheet/metal = 2)
+	tools = list(TOOL_WORKBENCH, /obj/item/book/granter/trait/gunsmith_three)
+	time = 10
+	category = CAT_WEAPONRY
+	subcategory = CAT_AMMO
+
+/datum/crafting_recipe/m762ext
+	name = "empty extended rifle magazine (7.62x51)"
+	result = /obj/item/ammo_box/magazine/m762/ext/empty
+	reqs = list(/obj/item/stack/sheet/metal = 4)
 	tools = list(TOOL_WORKBENCH, /obj/item/book/granter/trait/gunsmith_four)
 	time = 10
 	category = CAT_WEAPONRY
@@ -1580,6 +1602,29 @@
 				/obj/item/stack/crafting/goodparts = 1,
 				/datum/reagent/blackpowder = 25,
 				/obj/item/stack/sheet/metal = 2)
+	tools = list(TOOL_WORKBENCH, /obj/item/book/granter/trait/gunsmith_two)
+	traits = list(TRAIT_GUNSMITH_TWO)
+	time = 120
+	category = CAT_WEAPONRY
+	subcategory = CAT_WEAPON
+
+/datum/crafting_recipe/magnetowattz
+	name = "Wattz 1000 magneto-laser pistol"
+	result = /obj/item/gun/energy/laser/wattz/magneto
+	reqs = list(/obj/item/gun/energy/laser/wattz = 1,
+				/obj/item/stack/crafting/electronicparts = 2)
+	tools = list(TOOL_WORKBENCH)
+	time = 120
+	category = CAT_WEAPONRY
+	subcategory = CAT_WEAPON
+
+/datum/crafting_recipe/glock86a
+	name = "glock 86a"
+	result = /obj/item/gun/energy/laser/plasma/glock/extended
+	reqs = list(/obj/item/gun/energy/laser/plasma/glock = 1,
+				/obj/item/stack/crafting/metalparts = 3,
+				/obj/item/stack/sheet/metal = 1,
+				/obj/item/stack/crafting/electronicparts = 3)
 	tools = list(TOOL_WORKBENCH, /obj/item/book/granter/trait/gunsmith_two)
 	traits = list(TRAIT_GUNSMITH_TWO)
 	time = 120

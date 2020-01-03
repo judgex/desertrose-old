@@ -85,7 +85,6 @@
 	results = list("blackpowder" = 3)
 	required_reagents = list("saltpetre" = 1, "charcoal" = 1, "sulfur" = 1)
 
-/*
 /datum/chemical_reaction/reagent_explosion/blackpowder_explosion
 	name = "Black Powder Kaboom"
 	id = "blackpowder_explosion"
@@ -98,7 +97,6 @@
 /datum/chemical_reaction/reagent_explosion/blackpowder_explosion/on_reaction(datum/reagents/holder, created_volume)
 	sleep(rand(50,100))
 	..()
-*/
 
 /datum/chemical_reaction/thermite
 	name = "Thermite"

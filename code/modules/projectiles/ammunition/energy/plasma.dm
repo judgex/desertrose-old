@@ -33,3 +33,10 @@
 	projectile_type = /obj/item/projectile/plasma/pistol
 	fire_sound = 'sound/f13weapons/plasma_pistol.ogg'
 	e_cost = 75
+
+/obj/item/ammo_casing/energy/plasma/pistol/glock
+	projectile_type = /obj/item/projectile/plasma/pistol/glock
+	e_cost = 18.75
+
+/obj/item/ammo_casing/energy/plasma/pistol/glock/extended
+	e_cost = 9.375

@@ -242,12 +242,22 @@
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY | DEPARTMENTAL_FLAG_MEDICAL
 
 /datum/design/laserpistol
-	name = "Laser Pistol"
+	name = "AEP7 Laser Pistol"
+	desc = "A laser pistol."
+	id = "laserpistol"
+	build_type = PROTOLATHE
+	materials = list(MAT_GOLD = 2000, MAT_URANIUM = 1000, MAT_METAL = 2000, MAT_TITANIUM = 500)
+	build_path = /obj/item/gun/energy/laser/pistol
+	category = list("Weapons")
+	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+
+/datum/design/wattz
+	name = "Wattz 1000 Laser Pistol"
 	desc = "A laser pistol."
 	id = "laserpistol"
 	build_type = PROTOLATHE
 	materials = list(MAT_GOLD = 2500, MAT_URANIUM = 2000, MAT_METAL = 2500, MAT_TITANIUM = 1000)
-	build_path = /obj/item/gun/energy/laser/pistol
+	build_path = /obj/item/gun/energy/laser/wattz
 	category = list("Weapons")
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
 

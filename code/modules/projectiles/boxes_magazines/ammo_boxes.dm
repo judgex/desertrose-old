@@ -10,7 +10,7 @@
 	materials = list(MAT_METAL = 4000)
 
 /obj/item/ammo_box/a357/empty
-	stored_ammo = 0
+	start_empty = 1
 
 /obj/item/ammo_box/c38
 	name = "speed loader (.38)"
@@ -22,7 +22,7 @@
 	materials = list(MAT_METAL = 2000)
 
 /obj/item/ammo_box/c38/empty
-	stored_ammo = 0
+	start_empty = 1
 
 /obj/item/ammo_box/tube/a357
 	name = "speed loader tube (.357)"
@@ -34,7 +34,7 @@
 	materials = list(MAT_METAL = 7000)
 
 /obj/item/ammo_box/tube/a357/empty
-	stored_ammo = 0
+	start_empty = 1
 //10mm
 /obj/item/ammo_box/l10mm
 	name = "speed loader (10mm)"
@@ -46,7 +46,7 @@
 	materials = list(MAT_METAL = 4000)
 
 /obj/item/ammo_box/l10mm/empty
-	stored_ammo = 0
+	start_empty = 1
 
 //.44 Magnum
 /obj/item/ammo_box/m44
@@ -59,7 +59,7 @@
 	materials = list(MAT_METAL = 4000)
 
 /obj/item/ammo_box/m44/empty
-	stored_ammo = 0
+	start_empty = 1
 
 /obj/item/ammo_box/tube/m44
 	name = "speed loader tube (.44)"
@@ -84,7 +84,7 @@
 	materials = list(MAT_METAL = 8000)
 
 /obj/item/ammo_box/c4570/empty
-	stored_ammo = 0
+	start_empty = 1
 
 /obj/item/ammo_box/tube/c4570
 	name = "speed loader tube (.45-70)"
@@ -96,7 +96,7 @@
 	materials = list(MAT_METAL = 12000)
 
 /obj/item/ammo_box/tube/c4570/empty
-	stored_ammo = 0
+	start_empty = 1
 
 //Boxes
 //.357 Magnum, .38 Special
