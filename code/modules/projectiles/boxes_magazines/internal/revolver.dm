@@ -37,7 +37,7 @@
 	name = "needler internal mag"
 	ammo_type = /obj/item/ammo_casing/caseless/needle
 	caliber = "needle"
-	max_ammo = 5
+	max_ammo = 10
 
 /obj/item/ammo_box/magazine/internal/cylinder/rev38
 	name = "detective revolver cylinder"

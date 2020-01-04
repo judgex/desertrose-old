@@ -28,7 +28,7 @@
 	icon_state = "46x30mmtI-[round(ammo_count(),4)]"
 
 /obj/item/ammo_box/magazine/uzim9mm
-	name = "uzi magazine (9mm)"
+	name = "smg magazine (9mm)"
 	icon_state = "uzi9mm-32"
 	ammo_type = /obj/item/ammo_casing/c9mm
 	caliber = "9mm"
@@ -90,10 +90,10 @@
 	start_empty = 1
 
 /obj/item/ammo_box/magazine/greasegun
-	name = "9mm submachine gun magazine (.45)"
+	name = "45 submachine gun magazine (.45)"
 	icon_state = "grease"
 	ammo_type = /obj/item/ammo_casing/c45
-	caliber = "45"
+	caliber = ".45"
 	max_ammo = 30
 	multiple_sprites = 2
 

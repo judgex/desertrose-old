@@ -213,3 +213,47 @@
 	weapon_weight = WEAPON_LIGHT
 	cell_type = /obj/item/stock_parts/cell/ammo/ec
 	slot_flags = ITEM_SLOT_BELT
+
+/obj/item/gun/energy/laser/plasma/glock
+	name = "glock 86"
+	item_state = "plasma-pistol"
+	icon_state = "glock86"
+	desc = "Glock 86 Plasma Pistol. Designed by the Gaston Glock artificial intelligence. Shoots a small bolt of superheated plasma. Powered by a small energy cell."
+	ammo_type = list(/obj/item/ammo_casing/energy/plasma/pistol/glock)
+	w_class = WEIGHT_CLASS_NORMAL
+	weapon_weight = WEAPON_LIGHT
+	cell_type = /obj/item/stock_parts/cell/ammo/ec
+	slot_flags = ITEM_SLOT_BELT
+
+/obj/item/gun/energy/laser/plasma/glock/extended
+	name ="glock 86a"
+	item_state = "plasma-pistol"
+	icon_state = "glock86a"
+	desc = "This Glock 86 plasma pistol has had its magnetic housing chamber realigned to reduce the drain on its energy cell. Its efficiency has doubled, allowing it to fire more shots before the battery is expended."
+	ammo_type = list(/obj/item/ammo_casing/energy/plasma/pistol/glock/extended)
+	w_class = WEIGHT_CLASS_NORMAL
+	weapon_weight = WEAPON_LIGHT
+	cell_type = /obj/item/stock_parts/cell/ammo/ec
+	slot_flags = ITEM_SLOT_BELT
+
+/obj/item/gun/energy/laser/wattz
+	name = "Wattz 1000 laser pistol"
+	desc = "A Wattz 1000 Laser Pistol. Civilian model, so the wattage is lower than military or police versions. Uses small energy cells."
+	icon_state = "wattz1000"
+	item_state = "laser-pistol"
+	ammo_type = list(/obj/item/ammo_casing/energy/laser/pistol/wattz)
+	w_class = WEIGHT_CLASS_NORMAL
+	weapon_weight = WEAPON_LIGHT
+	cell_type = /obj/item/stock_parts/cell/ammo/ec
+	slot_flags = ITEM_SLOT_BELT
+
+/obj/item/gun/energy/laser/wattz/magneto
+	name = "Wattz 1000 magneto-laser pistol"
+	desc = "This Wattz 1000 laser pistol has been upgraded with a magnetic field targeting system that tightens the laser emission, giving this pistol extra penetrating power."
+	icon_state = "magnetowattz"
+	item_state = "laser-pistol"
+	ammo_type = list(/obj/item/ammo_casing/energy/laser/pistol/wattz/magneto)
+	w_class = WEIGHT_CLASS_NORMAL
+	weapon_weight = WEAPON_LIGHT
+	cell_type = /obj/item/stock_parts/cell/ammo/ec
+	slot_flags = ITEM_SLOT_BELT

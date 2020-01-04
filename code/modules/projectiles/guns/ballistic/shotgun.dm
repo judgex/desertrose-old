@@ -243,7 +243,7 @@
 	item_state = "trenchgun"
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/trench
 	w_class = WEIGHT_CLASS_NORMAL
-	weapon_weight = WEAPON_HEAVY
+	weapon_weight = WEAPON_LIGHT
 
 /obj/item/gun/ballistic/shotgun/hunting
 	name = "hunting shotgun"
