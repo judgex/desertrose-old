@@ -7,6 +7,7 @@
 	anchored = TRUE
 	horizontal = FALSE
 	delivery_icon = null
+	drag_delay = 0.0 SECONDS //encourage cleaning up wasteland.
 
 /obj/structure/closet/crate/bin/New()
 	..()
