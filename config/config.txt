@@ -252,7 +252,7 @@ GITHUBURL https://github.com/judgex/desertrose
 GITHUBREPOID 49179392
 
 ## Ban appeals URL - usually for a forum or wherever people should go to contact your admins.
-# BANAPPEALS http://justanotherday.example.com
+BANAPPEALS http://desertrosefallout13.boards.net/
 
 ## System command that invokes youtube-dl, used by Play Internet Sound.
 ## You can install youtube-dl with
