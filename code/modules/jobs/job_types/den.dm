@@ -97,8 +97,8 @@ Deputy
 	flag = F13DEPUTY
 	department_flag = DEN
 	faction = "Town"
-	total_positions = 2
-	spawn_positions = 2
+	total_positions = 4
+	spawn_positions = 4
 	supervisors = "the sheriff and the mayor"
 	description = "Working alongside the Sheriff you've known them for a while, having worked with them under the previous Sheriff - you bagged many a bandit and raider together on the road. These days you patrol the areas outside of town, tracking down bounties on the run and keeping the settlers safe from harm."
 	selection_color = "#dcba97"
@@ -137,8 +137,8 @@ Farmer
 	flag = F13FARMER
 	department_flag = DEN
 	faction = "Town"
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 4
+	spawn_positions = 4
 	supervisors = "the sheriff and the mayor"
 	description = "A local settler of Pahrump, you know a thing or two about cultivation and husbandry, making you a vital backbone of the town in growing medicines, crops and raising livestock in the service of the townsfolk."
 	selection_color = "#dcba97"
@@ -182,8 +182,8 @@ Prospector
 	flag = F13PROSPECTOR
 	department_flag = DEN
 	faction = "Town"
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 4
+	spawn_positions = 4
 	supervisors = "the sheriff and the mayor"
 	description = "Prospecting is a complicated business, some call it scrounging or looting but there is more to it then sifting through rubble - few can boast the skills you posess in mining and delving through the ruins of pre-war America. Not many survive this line of business and the pay has always been uncertain, but perhaps today you'll find strike gold."
 	selection_color = "#dcba97"
@@ -373,8 +373,8 @@ Settler
 	flag = F13SETTLER
 	department_flag = DEN
 	faction = "Town"
-	total_positions = 6
-	spawn_positions = 6
+	total_positions = 8
+	spawn_positions = 8
 	supervisors = "the sheriff and the mayor"
 	description = "Much of the wasteland is filled with conflict and strife, as a local settler to Pahrump you benefit in that you have a claim to the land and the opportunities that unfold. What destiny awaits you? Will you find your way? Or dissapear trying. Will you rise to glory or dissapear into obscurity?"
 	selection_color = "#dcba97"

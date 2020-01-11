@@ -106,8 +106,8 @@ Raider
 	head_announce = list("Security")
 	faction = "Wastelander"
 	social_faction = "Raiders"
-	total_positions = 6 //fuck raiders
-	spawn_positions = 6
+	total_positions = 10 //fuck raiders
+	spawn_positions = 10
 	description = "Likely having coming from a life of poverty and few opportunities, you have for your own reasons decided to become a raider - a post-war criminal whose sole focus is to benefit yourself and your infamous reputation by any means necessary. Form a gang, set off on your own or sneak your way into a local faction in order to corrupt it from the inside out - the choice is yours. But always remember, you must respect the stories of both your enemies and victims, if you can - give them a chance to tell it before they meet their end."
 	supervisors = "your desires"
 	selection_color = "#ff4747"
@@ -257,7 +257,7 @@ Wastelander
 	selection_color = "#dddddd"
 
 	outfit = /datum/outfit/job/wasteland/f13wastelander
-	
+
 	access = list()		//we can expand on this and make alterations as people suggest different loadouts
 	minimal_access = list()
 	loadout_options = list(
@@ -309,14 +309,14 @@ Wastelander
 	/obj/item/gun/ballistic/shotgun/remington, \
 	/obj/item/gun/ballistic/revolver/zipgun, \
 	/obj/item/gun/ballistic/revolver/pipe_rifle)
-	
+
 /datum/outfit/loadout/vault_refugee
 	name = "Vaultie"
 	uniform = /obj/item/clothing/under/f13/vault
 	gloves = /obj/item/pda
 	shoes = /obj/item/clothing/shoes/jackboots
 	gloves = /obj/item/clothing/gloves/fingerless
-	
+
 
 /datum/outfit/loadout/petro
 	name = "Petro"
@@ -341,11 +341,11 @@ Wastelander
 	head = /obj/item/clothing/head/f13/stormchaser
 	gloves = /obj/item/clothing/gloves/color/brown
 	glasses = /obj/item/clothing/glasses/f13/biker
-	
+
 /datum/outfit/loadout/gambler
 	name = "Gambler"
 	uniform = list(/obj/item/clothing/under/f13/cowboyg,
-	/obj/item/clothing/under/f13/bennys, 
+	/obj/item/clothing/under/f13/bennys,
 	/obj/item/clothing/under/f13/formal)
 	suit = /obj/item/clothing/suit/f13/cowboygvest
 	shoes = /obj/item/clothing/shoes/f13/fancy
@@ -360,9 +360,9 @@ Wastelander
 	head = /obj/item/clothing/head/scarecrow_hat
 	gloves = /obj/item/clothing/gloves/color/black
 	glasses = /obj/item/clothing/glasses/welding
-	
+
 /datum/outfit/loadout/slave
-	name = "NCR Citizen" 
+	name = "NCR Citizen"
 	uniform = /obj/item/clothing/under/f13/caravaneer
 	shoes = /obj/item/clothing/shoes/f13/tan
 	head = /obj/item/clothing/head/f13/cowboy
