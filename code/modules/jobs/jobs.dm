@@ -49,7 +49,9 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 "NCR Scout Lieutenant",
 "NCR Scout Sergeant",
 "NCR Patrol Ranger",
-"NCR Scout"
+"NCR Scout",
+"Mayor",
+"Sheriff"
 ))
 //Whitelisted positions list FO13 anything that shows up here requires that the user have an entry in the 'role_whitelist' table of id,ckey,"antagonist"
 GLOBAL_LIST_INIT(antagonist_whitelist_positions, list(
