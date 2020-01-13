@@ -39,7 +39,6 @@
 	if(!M.has_dna())
 		return  //No robots, AIs, aliens, Ians or other mobs should be affected by this.
 	if((method==VAPOR && prob(min(33, reac_volume))) || method==INGEST || method==PATCH || method==INJECT)
-		M.randmuti()
 		M.randmutb()
 		M.updateappearance()
 		M.domutcheck()
@@ -47,6 +46,7 @@
 
 /datum/reagent/toxin/FEV_solution/on_mob_life(mob/living/carbon/C)
 	C.apply_effect(5,EFFECT_IRRADIATE,0)
+	C.adjustCloneLoss(3,0)
 	return ..()
 
 /datum/reagent/toxin/plasma
