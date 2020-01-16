@@ -6,7 +6,6 @@
 	icon_living = "centaur"
 	icon_dead = "centaur_d"
 	mob_biotypes = list(MOB_ORGANIC, MOB_HUMANOID)
-	stat_attack = UNCONSCIOUS
 	robust_searching = 1
 	turns_per_move = 5
 	speak_emote = list("growls")

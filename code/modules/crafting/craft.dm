@@ -116,9 +116,8 @@
 		else
 			if(istype(I, /obj/item/reagent_containers))
 				var/obj/item/reagent_containers/RC = I
-				if(RC.is_drainable())
-					for(var/datum/reagent/A in RC.reagents.reagent_list)
-						.["other"][A.type] += A.volume
+				for(var/datum/reagent/A in RC.reagents.reagent_list)
+					.["other"][A.type] += A.volume
 			.["other"][I.type] += 1
 	for(var/obj/machinery/I in get_environment(user))
 		if(I.flags_1 & HOLOGRAM_1)

@@ -428,12 +428,12 @@
 	..()
 	if(isliving(M))
 		var/mob/living/L = M
-		L.add_trait(TRAIT_GOTTAGOREALLYFAST, id)
+		L.add_trait(TRAIT_IGNORESLOWDOWN, id)
 
 /datum/reagent/drug/turbo/on_mob_delete(mob/M)
 	if(isliving(M))
 		var/mob/living/L = M
-		L.remove_trait(TRAIT_GOTTAGOREALLYFAST, id)
+		L.remove_trait(TRAIT_IGNORESLOWDOWN, id)
 	..()
 
 /datum/reagent/drug/turbo/on_mob_life(mob/living/carbon/M)

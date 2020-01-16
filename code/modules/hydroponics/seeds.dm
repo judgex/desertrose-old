@@ -180,7 +180,8 @@
 			data = list("blood_type" = "O-")
 		if(rid == "nutriment" || rid == "vitamin")
 			// apple tastes of apple.
-			data = T.tastes
+			if(istype(T, /obj/item/reagent_containers/food/snacks/grown)) //prevents runtimes for growing non-snacks
+				data = T.tastes
 
 		T.reagents.add_reagent(rid, amount, data)
 

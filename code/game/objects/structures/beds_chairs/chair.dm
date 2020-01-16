@@ -217,7 +217,7 @@
 /obj/structure/chair/office
 	anchored = FALSE
 	buildstackamount = 5
-	drag_delay = 0.1 SECONDS //Pulling something on wheels is easy
+	drag_delay = 0.05 SECONDS //Pulling something on wheels is easy
 	item_chair = null
 
 

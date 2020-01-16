@@ -146,6 +146,7 @@
 	icon_state = "gab1"
 	oneuse = FALSE
 	granted_trait = TRAIT_GUNSMITH_ONE
+	tool_behaviour = TOOL_GUNTIER1
 	traitname = "Basic Gunsmithing"
 	remarks = list("Always keep your gun well lubricated...", "Keep your barrel free of grime...", "Perfect fitment is the key to a good firearm...", "Maintain a proper trigger pull length...", "Keep your sights zeroed to proper range...")
 
@@ -155,6 +156,7 @@
 	icon_state = "gab2"
 	oneuse = FALSE
 	granted_trait = TRAIT_GUNSMITH_TWO
+	tool_behaviour = list(TOOL_GUNTIER1, TOOL_GUNTIER2)
 	traitname = "Intermediate Gunsmithing"
 	remarks = list("Always keep your gun well lubricated...", "Keep your barrel free of grime...", "Perfect fitment is the key to a good firearm...", "Maintain a proper trigger pull length...", "Keep your sights zeroed to proper range...")
 
@@ -164,6 +166,7 @@
 	icon_state = "gab3"
 	oneuse = FALSE
 	granted_trait = TRAIT_GUNSMITH_THREE
+	tool_behaviour = list(TOOL_GUNTIER1, TOOL_GUNTIER2, TOOL_GUNTIER3)
 	traitname = "Experienced Gunsmithing"
 	remarks = list("Always keep your gun well lubricated...", "Keep your barrel free of grime...", "Perfect fitment is the key to a good firearm...", "Maintain a proper trigger pull length...", "Keep your sights zeroed to proper range...")
 
@@ -173,6 +176,7 @@
 	icon_state = "gab4"
 	oneuse = FALSE
 	granted_trait = TRAIT_GUNSMITH_FOUR
+	tool_behaviour = list(TOOL_GUNTIER1, TOOL_GUNTIER2, TOOL_GUNTIER3, TOOL_GUNTIER4)
 	traitname = "Expert Gunsmithing"
 	remarks = list("Always keep your gun well lubricated...", "Keep your barrel free of grime...", "Perfect fitment is the key to a good firearm...", "Maintain a proper trigger pull length...", "Keep your sights zeroed to proper range...")
 
