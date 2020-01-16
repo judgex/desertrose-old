@@ -254,7 +254,7 @@
 /datum/design/wattz
 	name = "Wattz 1000 Laser Pistol"
 	desc = "A laser pistol."
-	id = "laserpistol"
+	id = "wattzlaserpistol"
 	build_type = PROTOLATHE
 	materials = list(MAT_GOLD = 2500, MAT_URANIUM = 2000, MAT_METAL = 2500, MAT_TITANIUM = 1000)
 	build_path = /obj/item/gun/energy/laser/wattz

@@ -73,3 +73,27 @@
 /mob/living/simple_animal/hostile/eyebot/floatingeye/New()
 	..()
 	name = "FEB-[rand(1,99)]"
+
+/mob/living/simple_animal/pet/dog/eyebot //It's a propaganda eyebot, not a dog, but...
+	name = "propaganda eyebot"
+	desc = "This eyebot's weapons module has been removed and replaced with a loudspeaker. It appears to be shouting Pre-War propaganda."
+	icon = 'icons/fallout/mobs/animal.dmi'
+	icon_state = "eyebot"
+	icon_living = "eyebot"
+	icon_dead = "eyebot_d"
+	icon_gib = "eyebot_d"
+	maxHealth = 60
+	health = 60
+	speak_chance = 8
+	gender = NEUTER
+	mob_biotypes = list(MOB_ROBOTIC)
+	faction = list("hostile", "enclave", "wastebot", "ghoul", "cazador", "supermutant", "bighorner")
+	speak = list("America will never fall to communist invasion.", "Democracy is truth. Communism is death.", "Communism is the very definition of failure!", "Freedom is always worth fighting for.", "Memorial site recognized. Patriotism subroutines engaged. Honoring the fallen is the duty of every red blooded American.", "Cultural database accessed. Quoting New England poet Robert Frost: 'Freedom lies in being bold.'", "Defending Life, Liberty, and the pursuit of Happiness.")
+	speak_emote = list()
+	emote_hear = list()
+	emote_see = list()
+	response_help  = "shakes its radio"
+	response_disarm = "pushes"
+	response_harm   = "punches"
+	attack_sound = 'sound/voice/liveagain.ogg'
+	butcher_results = list(/obj/effect/gibspawner/robot = 1)

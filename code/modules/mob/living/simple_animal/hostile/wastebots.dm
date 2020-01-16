@@ -14,7 +14,6 @@
 	speed = 1
 	melee_damage_lower = 28 //halved this on req
 	melee_damage_upper = 28 //as above
-	stat_attack = UNCONSCIOUS
 	robust_searching = 1
 	attacktext = "slaps"
 	attack_sound = 'sound/weapons/circsawhit.ogg'
@@ -109,8 +108,9 @@
 	maxHealth = 280
 	melee_damage_lower = 48
 	melee_damage_upper = 72
-	extra_projectiles = 2 //6 projectiles
+	extra_projectiles = 4 //5 projectiles
 	ranged_cooldown_time = 12 //brrrrrrrrrrrrt
+	stat_attack = UNCONSCIOUS
 	ranged = TRUE
 	retreat_distance = 2
 	minimum_distance = 2
@@ -118,13 +118,13 @@
 	attacktext = "pulverizes"
 	attack_sound = 'sound/weapons/punch1.ogg'
 	projectilesound = 'sound/weapons/laser.ogg'
-	projectiletype = /obj/item/projectile/beam/laser/pistol/weak
+	projectiletype = /obj/item/projectile/beam/laser/pistol/ultraweak
 	faction = list("wastebot")
 	check_friendly_fire = TRUE
 	loot = list(/obj/effect/decal/cleanable/robot_debris, /obj/item/stack/crafting/electronicparts/five, /obj/item/stock_parts/cell/ammo/mfc)
 
-/obj/item/projectile/beam/laser/pistol/weak
-	damage = 15 //quantity over quality
+/obj/item/projectile/beam/laser/pistol/ultraweak
+	damage = 10 //quantity over quality
 
 /mob/living/simple_animal/hostile/handy/sentrybot/bullet_act(obj/item/projectile/Proj)
 	if(!Proj)

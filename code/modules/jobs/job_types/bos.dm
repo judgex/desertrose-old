@@ -285,6 +285,7 @@ Initiate Scribe
 /datum/outfit/job/bos/f13initiatescribe
 	name = "Initiate Scribe"
 	jobtype = /datum/job/bos/f13initiatescribe
+	chemwhiz = TRUE
 	backpack = /obj/item/storage/backpack/explorer
 	ears = 			/obj/item/radio/headset/headset_bos
 	uniform =		/obj/item/clothing/under/f13/recon

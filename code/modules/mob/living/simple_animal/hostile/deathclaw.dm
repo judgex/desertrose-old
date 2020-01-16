@@ -8,7 +8,6 @@
 	icon_gib = "deathclaw_gib"
 	gender = MALE
 	mob_biotypes = list(MOB_ORGANIC, MOB_BEAST)
-	stat_attack = UNCONSCIOUS
 	robust_searching = 1
 	anchored = 1
 	speak = list("ROAR!","Rawr!","GRRAAGH!","Growl!")
@@ -46,6 +45,7 @@
 	gender = FEMALE
 	maxHealth = 750
 	health = 750
+	stat_attack = UNCONSCIOUS
 	melee_damage_lower = 72
 	melee_damage_upper = 72
 	armour_penetration = 30
