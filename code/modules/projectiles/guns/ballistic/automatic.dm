@@ -359,8 +359,6 @@
 	weapon_weight = WEAPON_HEAVY
 	spread = 20
 	randomspread = 1
-	extra_damage = 15
-	extra_penetration = 10
 
 /obj/item/gun/ballistic/automatic/l6_saw/m38/update_icon()
 	icon_state = "M38[cover_open ? "open" : "closed"][magazine ? CEILING(get_ammo(0)/20, 1)*20 : "-empty"][suppressed ? "-suppressed" : ""]"
@@ -479,8 +477,6 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	mag_type = /obj/item/ammo_box/magazine/uzim9mm
 	burst_size = 2
-	extra_damage = 25
-	extra_penetration = 5
 	force = 15
 	spread = 10
 
@@ -514,7 +510,6 @@
 	can_suppress = FALSE
 	burst_size = 3
 	fire_delay = 2
-	extra_damage = 29
 
 /obj/item/gun/ballistic/automatic/smg10mm
 	name = "10mm submachine gun"
@@ -527,8 +522,6 @@
 	fire_sound = 'sound/f13weapons/10mm_fire_03.ogg'
 	burst_size = 3
 	fire_delay = 1
-	extra_damage = 30
-	extra_penetration = 5
 	can_suppress = FALSE //we dont have sprites therefore cease
 	force = 15
 	spread = 18
@@ -562,9 +555,7 @@
 	burst_size = 2
 	fire_delay = 3
 	burst_delay = 1.8
-	extra_damage = 30
 	spread = 14
-	extra_penetration = 5
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 
@@ -596,7 +587,6 @@
 	fire_sound = 'sound/f13weapons/assaultrifle_fire.ogg'
 	burst_size = 3
 	fire_delay = 3
-	extra_damage = 30
 	spread = 8
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
@@ -626,8 +616,6 @@
 	init_mag_type = /obj/item/ammo_box/magazine/m556/rifle
 	suppressed = 1
 	fire_delay = 3
-	extra_damage = 30
-	extra_penetration = 5
 	zoomable = TRUE
 	zoom_amt = 10
 	zoom_out_amt = 13
@@ -661,8 +649,6 @@
 	fire_sound = 'sound/f13weapons/marksman_rifle.ogg'
 	can_suppress = FALSE
 	fire_delay = 6
-	extra_damage = 40
-	extra_penetration = 10
 	burst_size = 1
 	zoomable = TRUE
 	zoom_amt = 10
@@ -678,7 +664,6 @@
 	fire_sound = 'sound/f13weapons/hunting_rifle.ogg'
 	fire_delay = 10
 	burst_size = 1
-	extra_penetration = 0
 	projectile_speed = 0.4
 
 /obj/item/gun/ballistic/automatic/marksman/servicerifle
@@ -688,7 +673,6 @@
 	item_state = "servicerifle"
 	fire_sound = 'sound/f13weapons/varmint_rifle.ogg'
 	fire_delay = 4
-	extra_damage = 35
 	mag_type = /obj/item/ammo_box/magazine/m556/rifle
 	zoomable = FALSE
 	weapon_weight = WEAPON_HEAVY
@@ -697,8 +681,6 @@
 	name = "R82 heavy service rifle"
 	desc = "A top of the line 5.56x45 semi-automatic service rifle manufactured by the NCR and issued to high ranking personnel."
 	fire_delay = 4
-	extra_damage = 38
-	extra_penetration = 10
 	init_mag_type = /obj/item/ammo_box/magazine/m556/rifle/assault
 	mag_type = /obj/item/ammo_box/magazine/m556/rifle
 	icon_state = "R82"
@@ -711,7 +693,6 @@
 	icon_state = "varmint_rifle"
 	item_state = "varmintrifle"
 	fire_delay = 8
-	extra_damage = 40
 	init_mag_type = /obj/item/ammo_box/magazine/m556/rifle/small
 	mag_type = /obj/item/ammo_box/magazine/m556/rifle
 
@@ -720,8 +701,6 @@
 	desc = "A modified Varmint Rifle with better stopping power, a scope, and suppressor. Oh, don't forget the sick paint job."
 	icon_state = "rat_slayer"
 	item_state = "ratslayer"
-	extra_damage = 40
-	extra_penetration = 5
 	zoomable = TRUE
 	zoom_amt = 10
 	zoom_out_amt = 13
@@ -783,8 +762,6 @@
 	can_suppress = FALSE
 	burst_size = 3
 	fire_delay = 3
-	extra_damage = 29
-	extra_penetration = 0
 	force = 15
 	spread = 10
 
@@ -814,8 +791,6 @@
 	mag_type = /obj/item/ammo_box/magazine/m556/rifle
 	burst_size = 2
 	fire_delay = 3
-	extra_damage = 35
-	extra_penetration = 15
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 	fire_sound = 'sound/f13weapons/bozar_fire.ogg'
@@ -837,7 +812,6 @@
 	zoomable = TRUE
 	zoom_amt = 10
 	zoom_out_amt = 13
-	extra_penetration = 20
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 
@@ -872,8 +846,7 @@
 	weapon_weight = WEAPON_HEAVY
 	spread = 18
 	randomspread = 1
-	extra_damage = 30
-	
+
 /obj/item/gun/ballistic/automatic/lmg/burst_select()
 	var/mob/living/carbon/human/user = usr
 	switch(select)
@@ -910,8 +883,6 @@
 	fire_sound = 'sound/f13weapons/hunting_rifle.ogg'
 	fire_delay = 3
 	burst_size = 1
-	extra_damage = 42
-	extra_penetration = 0
 	en_bloc = 1
 	auto_eject = 1
 	auto_eject_sound = 'sound/f13weapons/garand_ping.ogg'
@@ -929,8 +900,6 @@
 	name = "Old Glory"
 	desc = "This Machine kills communists!"
 	icon_state = "oldglory"
-	extra_damage = 42
-	extra_penetration = 5
 
 /obj/item/gun/ballistic/automatic/rangemaster
 	name = "Colt Rangemaster"
@@ -942,8 +911,6 @@
 	weapon_weight = WEAPON_HEAVY
 	burst_size = 1
 	fire_delay = 3
-	extra_damage = 42
-	burst_size = 1
 
 /obj/item/gun/ballistic/automatic/rangemaster/scoped
 	name = "Scoped Colt Rangemaster"
@@ -960,7 +927,6 @@
 	icon_state = "fnfal"
 	item_state = "fnfal"
 	burst_size = 3
-	extra_damage = 30
 	mag_type = /obj/item/ammo_box/magazine/m762
 	init_mag_type = /obj/item/ammo_box/magazine/m762/ext
 	fire_sound = 'sound/f13weapons/assaultrifle_fire.ogg'

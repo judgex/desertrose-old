@@ -102,6 +102,11 @@ Centurion
 
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13centurion
 
+	loadout_options = list(
+	/datum/outfit/loadout/centheavy, //10mm SMG and powerfist
+	/datum/outfit/loadout/centassault //9mm uzi and thermic lance
+	)
+
 /datum/job/CaesarsLegion/Legionnaire/f13centurion/after_spawn(mob/living/carbon/human/H, mob/M)
 	H.add_quirk("Hard Yards")
 
@@ -113,8 +118,6 @@ Centurion
 	suit = 			/obj/item/clothing/suit/armor/f13/legion/centurion
 	head = 			/obj/item/clothing/head/helmet/f13/legion/centurion
 	mask =			/obj/item/clothing/mask/bandana/legcenturion
-	r_hand =		/obj/item/melee/powerfist
-	suit_store =	/obj/item/gun/ballistic/automatic/smg10mm
 	glasses = 		/obj/item/clothing/glasses/sunglasses/big
 	r_pocket =      /obj/item/restraints/handcuffs
 	backpack_contents = list(
@@ -128,6 +131,20 @@ Centurion
 		/obj/item/assembly/signaler/electropack/shockcollar=1, \
 		/obj/item/assembly/signaler/electropack/boomcollar=2, \
 		/obj/item/storage/bag/money/small/legion)
+
+/datum/outfit/loadout/centheavy
+	name = "Heavy Centurion"
+	suit_store = /obj/item/gun/ballistic/automatic/smg10mm
+	backpack_contents = list(
+		/obj/item/melee/powerfist=1,
+		/obj/item/ammo_box/magazine/m10mm_auto=2)
+
+/datum/outfit/loadout/centassault
+	name = "Assault Centurion"
+	suit_store = /obj/item/gun/ballistic/automatic/mini_uzi
+	backpack_contents = list(
+		/obj/item/twohanded/required/thermic_lance=1,
+		/obj/item/ammo_box/magazine/uzim9mm=2)
 
 
 /*

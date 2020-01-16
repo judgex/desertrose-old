@@ -135,16 +135,16 @@
 	max_qty = HIGH_MAX / CASH_DEN
 
 /obj/item/stack/f13Cash/random/denarius/legionpay_basic
-	min_qty = 1
-	max_qty = 2
+	min_qty = LOW_MIN / CASH_DEN
+	max_qty = LOW_MAX / CASH_DEN
 
 /obj/item/stack/f13Cash/random/denarius/legionpay_veteran
-	min_qty = 2
-	max_qty = 3
+	min_qty = MED_MIN / CASH_DEN
+	max_qty = MED_MAX / CASH_DEN
 
 /obj/item/stack/f13Cash/random/denarius/legionpay_officer
-	min_qty = 4
-	max_qty = 5
+	min_qty = HIGH_MIN / CASH_DEN
+	max_qty = HIGH_MAX / CASH_DEN
 
 /obj/item/stack/f13Cash/aureus
 	name = "Aureus"
@@ -169,8 +169,8 @@
 	max_qty = 2
 
 /obj/item/stack/f13Cash/random/aureus/high
-	min_qty = 3
-	max_qty = 3
+	min_qty = 2
+	max_qty = 5 //uses flat values because aurei are worth so much
 
 /obj/item/stack/f13Cash/ncr
 	name = "NCR Dollar"
@@ -212,16 +212,16 @@
 	max_qty = HIGH_MAX / CASH_NCR
 
 /obj/item/stack/f13Cash/random/ncr/ncrpay_basic
-	min_qty = 10
-	max_qty = 20
+	min_qty = LOW_MIN / CASH_NCR
+	max_qty = LOW_MAX / CASH_NCR
 
 /obj/item/stack/f13Cash/random/ncr/ncrpay_veteran
-	min_qty = 40
-	max_qty = 80
+	min_qty = MED_MIN / CASH_NCR
+	max_qty = MED_MAX / CASH_NCR
 
 /obj/item/stack/f13Cash/random/ncr/ncrpay_officer
-	min_qty = 200
-	max_qty = 400
+	min_qty = HIGH_MIN / CASH_NCR
+	max_qty = HIGH_MAX / CASH_NCR
 
 #undef maxCoinIcon
 #undef CASH_CAP

@@ -109,7 +109,7 @@
 		return
 
 	var/mob/M = parent
-	var/obj/item/storage/box/kitbox = new
+	var/obj/item/storage/box/large/kitbox = new
 	kitbox.name = "Outfit: [selected_datum.name]"
 	kitbox.desc = "A box, supplying what you need."
 	kitbox.w_class = WEIGHT_CLASS_BULKY
@@ -117,6 +117,12 @@
 	M.put_in_hands(kitbox)
 	disable_loadout_select(M)
 
+/obj/item/storage/box/large/ComponentInitialize() //same storage as a backpack, to allow it to hold loadout items
+	. = ..()
+	GET_COMPONENT(STR, /datum/component/storage)
+	STR.max_combined_w_class = 21
+	STR.max_w_class = WEIGHT_CLASS_NORMAL
+	STR.max_items = 21
 
 /datum/component/loadout_selector/ui_interact(mob/user, ui_key="loadout_select", datum/tgui/ui=null, force_open=0, datum/tgui/master_ui=null, datum/ui_state/state=GLOB.default_state)
 	ui = SStgui.try_update_ui(user, src, ui_key, ui, force_open)

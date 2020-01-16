@@ -40,12 +40,12 @@
 	breakthings = FALSE
 
 /obj/item/projectile/bullet/a50MG
-	damage = 0
-	armour_penetration = 0
+	damage = 60
+	armour_penetration = 20
 
 /obj/item/projectile/bullet/a50MG/incendiary
-	damage = -30
-	armour_penetration = -20
+	damage = 40
+	armour_penetration = 0
 	var/fire_stacks = 4
 
 /obj/item/projectile/bullet/a50MG/incendiary/on_hit(atom/target, blocked = FALSE)
@@ -61,7 +61,7 @@
 	armour_penetration = 65 will punch through anything short of Enclave power armor*/
 
 /obj/item/projectile/bullet/a50MG/explosive
-	damage = -10
+	damage = 30
 	armour_penetration = 0
 
 /obj/item/projectile/bullet/a50MG/explosive/on_hit(atom/target, blocked = FALSE)
