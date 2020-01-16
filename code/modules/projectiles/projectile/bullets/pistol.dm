@@ -5,52 +5,50 @@
 
 //.45 ACP
 /obj/item/projectile/bullet/c45
-	damage = 0
+	damage = 35
 	armour_penetration = 0
-	stamina = 0
 
 /obj/item/projectile/bullet/c45/jhp
-	damage = 14
-	armour_penetration = -28
+	damage = 40
+	armour_penetration = -20
 
 //9x19mm
 /obj/item/projectile/bullet/c9mm
-	damage = 0
+	damage = 30
 	armour_penetration = 0
 
 /obj/item/projectile/bullet/c9mm/ap
-	damage = -8
-	armour_penetration = 16
+	damage = 25
+	armour_penetration = 20
 
 /obj/item/projectile/bullet/c9mm/jhp
-	damage = 16
-	armour_penetration = -32
+	damage = 35
+	armour_penetration = -20
 
 //10mm
 /obj/item/projectile/bullet/c10mm
-	damage = 0
+	damage = 35
 	armour_penetration = 0
-	stamina = 0
 
 /obj/item/projectile/bullet/c10mm/ap
-	damage = -10
+	damage = 30
 	armour_penetration = 20
 
 /obj/item/projectile/bullet/c10mm/hp
-	damage = 30
-	armour_penetration = -15
+	damage = 40
+	armour_penetration = -20
 
 // Needler
 /obj/item/projectile/bullet/needle
     name = "needle"
     icon_state = "cbbolt"
-    damage = 0
-    armour_penetration = 0
+    damage = 40
+    armour_penetration = 15
 
 /obj/item/projectile/bullet/needle/ap
     name = "armour piercing needle"
-    damage = 0
-    armour_penetration = 15
+    damage = 35
+    armour_penetration = 35
 
 /*
 /obj/item/ammo_casing/c9mmr

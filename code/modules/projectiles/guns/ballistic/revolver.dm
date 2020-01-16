@@ -362,8 +362,6 @@
 	fire_sound = 'sound/f13weapons/44mag.ogg'
 	w_class = WEIGHT_CLASS_NORMAL
 	fire_delay = 3
-	extra_damage = 45
-	extra_penetration = 0
 
 /obj/item/gun/ballistic/revolver/m29/alt
 	item_state = "44magnum"
@@ -387,8 +385,6 @@
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev357
 	w_class = WEIGHT_CLASS_NORMAL
 	fire_delay = 5
-	extra_damage = 40
-	extra_penetration = 5
 
 /obj/item/gun/ballistic/revolver/needler
 	name = "needler pistol"
@@ -397,8 +393,6 @@
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/revneedler
 	fire_sound = 'sound/weapons/gunshot_silenced.ogg'
 	w_class = WEIGHT_CLASS_SMALL
-	extra_damage = 40
-	extra_penetration = 15
 
 /obj/item/gun/ballistic/revolver/colt6250
 	name = "colt 6250"
@@ -408,7 +402,6 @@
 	fire_sound = 'sound/f13weapons/10mm_fire_02.ogg'
 	w_class = WEIGHT_CLASS_NORMAL
 	fire_delay = 3
-	extra_damage = 40
 
 /obj/item/gun/ballistic/revolver/sequoia
 	name = "ranger sequoia"
@@ -419,8 +412,6 @@
 	fire_sound = 'sound/f13weapons/sequoia.ogg'
 	w_class = WEIGHT_CLASS_NORMAL
 	fire_delay = 4
-	extra_damage = 50
-	extra_penetration = 0
 
 /obj/item/gun/ballistic/revolver/sequoia/scoped
 	name = "hunting revolver"
@@ -438,7 +429,6 @@
 	item_state = "gun"
 	fire_sound = 'sound/weapons/Gunshot.ogg'
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/improvised10mm
-	extra_damage = 40
 
 /obj/item/gun/ballistic/revolver/pipe_rifle
 	name = "pipe rifle"
@@ -449,7 +439,6 @@
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/improvised10mm
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
-	extra_damage = 50
 
 /obj/item/gun/ballistic/revolver/police
 	name = "police pistol"
@@ -458,7 +447,6 @@
 	fire_sound = 'sound/f13weapons/policepistol.ogg'
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev38
 	w_class = WEIGHT_CLASS_SMALL
-	extra_damage = 40
 
 /obj/item/gun/ballistic/revolver/thatgun
 	name = ".223 pistol"
@@ -467,4 +455,3 @@
 	fire_sound = 'sound/f13weapons/magnum_fire.ogg'
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/thatgun
 	w_class = WEIGHT_CLASS_NORMAL
-	extra_damage = 50

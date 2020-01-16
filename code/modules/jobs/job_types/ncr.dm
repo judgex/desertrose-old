@@ -78,13 +78,14 @@ Captain
 	uniform		= /obj/item/clothing/under/f13/ncr/officer
 	accessory 	= /obj/item/clothing/accessory/ncr/CPT
 	suit 		= /obj/item/clothing/suit/armor/f13/ncrarmor/captain
+	suit_store 	= /obj/item/gun/ballistic/automatic/pistol/deagle
 	head 		= /obj/item/clothing/head/beret/ncr
 	belt        = /obj/item/storage/belt/military/assault/ncr
 	glasses 	= /obj/item/clothing/glasses/sunglasses/big
 	shoes       = /obj/item/clothing/shoes/f13/military/ncr_officer
 	gloves      = /obj/item/clothing/gloves/f13/leather/ncr_officer
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m44=3, \
+		/obj/item/ammo_box/magazine/m44=4, \
 		/obj/item/kitchen/knife/combat/survival=1, \
 		/obj/item/gun/ballistic/automatic/pistol/deagle=1, \
 		/obj/item/melee/classic_baton/telescopic=1, \
@@ -428,6 +429,11 @@ Veteran Ranger
 
 	outfit = /datum/outfit/job/ncr/f13vetranger
 
+	loadout_options = list(
+	/datum/outfit/loadout/vrclassic, //AMR and Sequoia,
+	/datum/outfit/loadout/vrlite, //Scoped Rangemaster and Sequoia,
+	/datum/outfit/loadout/vrbrush //Scoped Brushgun and Sequoia
+	)
 
 /datum/job/ncr/f13vetranger/after_spawn(mob/living/carbon/human/H, mob/M)
 	H.add_quirk("Hard Yards")
@@ -443,14 +449,31 @@ Veteran Ranger
 	head = 			/obj/item/clothing/head/helmet/f13/ncr/rangercombat
 	gloves =		/obj/item/clothing/gloves/rifleman
 	shoes =			/obj/item/clothing/shoes/laced
-	suit_store = 	/obj/item/gun/ballistic/shotgun/antimateriel
 	backpack_contents = list(
 		/obj/item/gun/ballistic/revolver/sequoia=1, \
 		/obj/item/ammo_box/c4570=2, \
-		/obj/item/ammo_box/a50MG=2, \
 		/obj/item/kitchen/knife/combat=1, \
 		/obj/item/reagent_containers/hypospray/medipen/stimpak=1, \
 		/obj/item/storage/bag/money/small/ncrofficers)
+
+
+/datum/outfit/loadout/vrclassic
+	name = "Classic Veteran Ranger"
+	suit_store = /obj/item/gun/ballistic/shotgun/antimateriel
+	backpack_contents = list(
+		/obj/item/ammo_box/a50MG=2)
+
+/datum/outfit/loadout/vrlite
+	name = "Light Veteran Ranger"
+	suit_store = /obj/item/gun/ballistic/automatic/rangemaster/scoped
+	backpack_contents = list(
+		/obj/item/ammo_box/magazine/m762/ext=2)
+
+/datum/outfit/loadout/vrbrush
+	name = "Brush Veteran Ranger"
+	suit_store = /obj/item/gun/ballistic/shotgun/automatic/hunting/brush/scoped
+	backpack_contents = list(
+		/obj/item/ammo_box/tube/c4570=2)
 
 /*
 Ranger
@@ -469,6 +492,11 @@ Ranger
 
 	outfit = /datum/outfit/job/ncr/f13ranger
 
+	loadout_options = list(
+	/datum/outfit/loadout/prclassic, //Scoped Sniper rifle and .44,
+	/datum/outfit/loadout/prlite, //Unscoped Rangemaster and .44,
+	/datum/outfit/loadout/prtrail //Unscoped Trail carbine and .44
+	)
 
 /datum/job/ncr/f13ranger/after_spawn(mob/living/carbon/human/H, mob/M)
 	H.add_quirk("Hard Yards")
@@ -485,14 +513,32 @@ Ranger
 	gloves =		/obj/item/clothing/gloves/patrol
 	shoes =			/obj/item/clothing/shoes/laced
 	glasses = 		/obj/item/clothing/glasses/sunglasses/big
-	suit_store = 	/obj/item/gun/ballistic/shotgun/automatic/hunting/trail
 	backpack_contents = list(
-		/obj/item/ammo_box/tube/m44=3, \
+		/obj/item/gun/ballistic/revolver/m29/alt,
+		/obj/item/ammo_box/m44=2, \
 		/obj/item/restraints/handcuffs=1, \
 		/obj/item/kitchen/knife/combat=1, \
 		/obj/item/reagent_containers/hypospray/medipen/stimpak=1, \
-		/obj/item/storage/bag/money/small/ncrenlisted)
+		/obj/item/storage/bag/money/small/ncrofficers)
 	r_pocket = /obj/item/twohanded/binocs
+
+/datum/outfit/loadout/prclassic
+	name = "Classic Patrol Ranger"
+	suit_store = /obj/item/gun/ballistic/automatic/marksman/sniper
+	backpack_contents = list(
+		/obj/item/ammo_box/magazine/w308=2)
+
+/datum/outfit/loadout/prlite
+	name = "Light Patrol Ranger"
+	suit_store = /obj/item/gun/ballistic/automatic/rangemaster
+	backpack_contents = list(
+		/obj/item/ammo_box/magazine/m762=2)
+
+/datum/outfit/loadout/prtrail
+	name = "Trail Patrol Ranger"
+	suit_store = /obj/item/gun/ballistic/shotgun/automatic/hunting/trail
+	backpack_contents = list(
+		/obj/item/ammo_box/tube/m44=2)
 
 /*
 Recon Ranger
@@ -511,6 +557,11 @@ Recon Ranger
 
 	outfit = /datum/outfit/job/ncr/f13recranger
 
+	loadout_options = list(
+	/datum/outfit/loadout/rrclassic, //Scoped hunting rifle and .357,
+	/datum/outfit/loadout/rrlite, //Heavy service rifle and .357,
+	/datum/outfit/loadout/rrcowboy //Scoped cowboy repeater and .357
+	)
 
 /datum/job/ncr/f13recranger/after_spawn(mob/living/carbon/human/H, mob/M)
 	H.add_quirk("Hard Yards")
@@ -527,14 +578,31 @@ Recon Ranger
 	shoes = 		/obj/item/clothing/shoes/laced
 	gloves = null
 	glasses = 		/obj/item/clothing/glasses/sunglasses
-	suit_store = 	/obj/item/gun/ballistic/shotgun/automatic/hunting/cowboy/scoped
 	backpack_contents = list(
-		/obj/item/ammo_box/tube/a357=3, \
+		/obj/item/gun/ballistic/revolver/colt357,
+		/obj/item/ammo_box/a357=3, \
 		/obj/item/restraints/handcuffs=1, \
 		/obj/item/kitchen/knife/combat=1, \
 		/obj/item/reagent_containers/hypospray/medipen/stimpak=1, \
-		/obj/item/storage/bag/money/small/ncrenlisted)
-	box = null
+		/obj/item/storage/bag/money/small/ncrofficers)
+
+/datum/outfit/loadout/rrclassic
+	name = "Classic Recon Ranger"
+	suit_store = /obj/item/gun/ballistic/shotgun/remington/scoped
+	backpack_contents = list(
+		/obj/item/ammo_box/a762=2)
+
+/datum/outfit/loadout/rrlite
+	name = "Light Recon Ranger"
+	suit_store = /obj/item/gun/ballistic/automatic/marksman/servicerifle/r82
+	backpack_contents = list(
+		/obj/item/ammo_box/magazine/m556/rifle/assault=2)
+
+/datum/outfit/loadout/rrcowboy
+	name = "Cowboy Recon Ranger"
+	suit_store = /obj/item/gun/ballistic/shotgun/automatic/hunting/cowboy/scoped
+	backpack_contents = list(
+		/obj/item/ammo_box/tube/a357=2)
 
 /datum/job/ncr/f13scoutlt
 	title = "NCR Scout Lieutenant"

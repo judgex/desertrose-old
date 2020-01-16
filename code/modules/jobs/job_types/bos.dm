@@ -88,23 +88,37 @@ Paladin
 	access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
 	minimal_access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
 
+	loadout_options = list(
+	/datum/outfit/loadout/palaheavy, //Tribeam laser and 10mm pistol
+	/datum/outfit/loadout/palalite //Dual extended-mag plasma pistol
+	)
+
 /datum/outfit/job/bos/f13paladin
 	name = "Paladin"
 	jobtype = /datum/job/bos/f13paladin
 	pa_wear = TRUE
 	suit = 			/obj/item/clothing/suit/armor/f13/power_armor/t51b
 	head = 			/obj/item/clothing/head/helmet/power_armor/t51b
-	suit_store =	/obj/item/gun/energy/laser/scatter
 	mask =			/obj/item/clothing/mask/gas/sechailer/swat
 	backpack_contents = list(
-		/obj/item/stock_parts/cell/ammo/mfc=2, \
-		/obj/item/kitchen/knife/combat=1, \
-		/obj/item/gun/ballistic/automatic/pistol/n99=1, \
-		/obj/item/ammo_box/magazine/m10mm_adv=2)
+		/obj/item/kitchen/knife/combat=1)
 
 /datum/job/bos/f13paladin/after_spawn(mob/living/carbon/human/H, mob/M)
 	H.add_quirk("Hard Yards")
 
+/datum/outfit/loadout/palaheavy
+	name = "Heavy Paladin"
+	l_hand = /obj/item/gun/energy/laser/scatter
+	backpack_contents = list(
+		/obj/item/stock_parts/cell/ammo/mfc=2,
+		/obj/item/gun/ballistic/automatic/pistol/n99=1,
+		/obj/item/ammo_box/magazine/m10mm_adv=2)
+
+/datum/outfit/loadout/palalite
+	name = "Light Paladin"
+	backpack_contents = list(
+		/obj/item/stock_parts/cell/ammo/ec = 4,
+		/obj/item/gun/energy/laser/plasma/glock/extended=2)
 
 /*
 Head Scribe
