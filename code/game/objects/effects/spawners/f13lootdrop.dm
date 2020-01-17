@@ -124,10 +124,13 @@
 				/obj/item/clothing/under/suit_jacket/female,
 				/obj/item/clothing/shoes/laceup
 				)
-
+	var/loot18 = list(
+				/obj/item/clothing/under/f13/erpdress,
+				/obj/item/clothing/shoes/laceup
+				)
 
 /obj/effect/spawner/lootdrop/f13/armor/clothes/Initialize(mapload) //on mapload, pick what shit to spawn
-	loot = pick(loot1, loot2, loot3, loot4, loot5, loot6, loot7, loot8, loot9, loot10, loot11, loot12, loot13, loot14)
+	loot = pick(loot1, loot2, loot3, loot4, loot5, loot6, loot7, loot8, loot9, loot10, loot11, loot12, loot13, loot14, loot15, loot16, loot17, loot18)
 	. = ..()
 
 /obj/effect/spawner/lootdrop/f13/armor/costumes
@@ -370,9 +373,10 @@
     lootcount = 1
 
     loot = list(
-            /obj/effect/spawner/lootdrop/f13/armor/tier2 = 60,
+            /obj/effect/spawner/lootdrop/f13/armor/tier2 = 59,
             /obj/effect/spawner/lootdrop/f13/armor/tier3 = 30,
             /obj/effect/spawner/lootdrop/f13/armor/tier4 = 10,
+            /obj/item/ring = 1 //one ring to rule them all
             )
 
 /* ------------------------------------------------
@@ -861,7 +865,7 @@
 				/obj/item/gun/ballistic/shotgun/automatic/combat,
 				/obj/item/storage/box/lethalshot
 	)
-	
+
 	var/loot15 = list(
 				/obj/item/gun/energy/laser/plasma/glock,
 				/obj/item/stock_parts/cell/ammo/ec,
