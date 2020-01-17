@@ -752,7 +752,7 @@
 /mob/living/proc/get_shoes()
 	var/obj/A = get_item_by_slot(SLOT_SHOES)
 	if(findtext (A.name,"the"))
-		return copytext(A.name, 3, (lentext(A.name)) + 1)
+		return copytext(A.name, 3, (length(A.name)) + 1)
 	else
 		return A.name
 
