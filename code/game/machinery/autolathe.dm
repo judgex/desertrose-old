@@ -25,6 +25,8 @@
 	var/disable_wire
 	var/shock_wire
 
+	var/DRM = 0 //determines if DRM is active, preventing you from making ammo
+
 	var/busy = FALSE
 	var/prod_coeff = 1
 
@@ -369,6 +371,8 @@
 		return FALSE
 
 /obj/machinery/autolathe/proc/adjust_hacked(state)
+	if(DRM)
+		return
 	hacked = state
 	for(var/id in SSresearch.techweb_designs)
 		var/datum/design/D = SSresearch.techweb_designs[id]
@@ -389,10 +393,12 @@
 
 /obj/machinery/autolathe/constructionlathe
 	name = "Construction Lathe"
-	desc = "An autolathe that had VAULT-TEK DRM poorly added to it to prevent it from producing weaponry."
+	desc = "An autolathe that has had Vault-Tec DRM poorly added to it to prevent it from producing weaponry."
 	circuit = /obj/item/circuitboard/machine/autolathe/constructionlathe
 	super_advanced_technology = FALSE
 	resistance_flags = NONE
+	var/constage = 0 //construction stage for upgrading into a regular lathe
+	DRM = 1
 	categories = list(
 							"Tools",
 							"Electronics",
@@ -405,11 +411,44 @@
 							"Imported"
 							)
 
-/obj/machinery/autolathe/constructionlathe/adjust_hacked()
-	return
-
 /obj/machinery/autolathe/constructionlathe/attackby(obj/item/O, mob/user, params)
 	..()
+	if(DRM && panel_open)
+		if(constage == 0)
+			if(istype(O, /obj/item/book/granter/trait/gunsmith_four))
+				to_chat(user, "<span class='notice'>You upgrade [src] with ammunition schematics. You'll still need to bypass the DRM with some high-quality metal parts.</span>")
+				constage = 1
+				qdel(O)
+		if(constage == 1)
+			if(istype(O, /obj/item/stack/crafting/goodparts))
+				var/obj/item/stack/crafting/goodparts/S = O
+				if(S.get_amount() < 5)
+					to_chat(user, "<span class='warning'>You need at least 5 high-quality metal parts to upgrade [src].</span>")
+					return
+				S.use(5)
+				to_chat(user, "<span class='notice'>You upgrade [src] to bypass the DRM. You'll still need to install a makeshift reloader to finish the process.</span>")
+				constage = 2
+		if(constage == 2)
+			if(istype(O, /obj/item/crafting/reloader))
+				to_chat(user, "<span class='notice'>You upgrade [src] with a makeshift reloader, allowing it to finally produce ammunition again.</span>")
+				constage = 3
+				DRM = 0
+				categories = list(
+							"Tools",
+							"Electronics",
+							"Construction",
+							"T-Comm",
+							"Security",
+							"Machinery",
+							"Medical",
+							"Misc",
+							"Dinnerware",
+							"Imported"
+							)
+				hacked = TRUE
+				name = "modified construction lathe"
+				desc = "An autolathe that has been modified to have Vault-Tec DRM, and then modified again to have the DRM bypassed. Do what you want, 'cause a pirate is free."
+				qdel(O)
 	if(panel_open)
 		default_deconstruction_crowbar(O)
 		return TRUE
@@ -419,5 +458,5 @@
 
 /obj/machinery/autolathe/constructionlathe/can_build(datum/design/D, amount = 1)
 	. = ..()
-	if("Security" in D.category)
+	if("Security" in D.category && DRM == 1)
 		return FALSE
