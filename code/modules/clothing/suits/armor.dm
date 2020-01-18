@@ -417,6 +417,79 @@
 	armor = list("melee" = 40, "bullet" = 45, "laser" = 40, "energy" = 40, "bomb" = 50, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20)
 	strip_delay = 60
 
+/obj/item/clothing/suit/armor/f13/reconarmor
+	name = "recon armor"
+	desc = "An old military grade pre war combat armor."
+	icon_state = "recon_armor"
+	item_state = "recon_armor"
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
+	armor = list("melee" = 40, "bullet" = 45, "laser" = 40, "energy" = 40, "bomb" = 50, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20)
+	strip_delay = 60
+
+/obj/item/clothing/suit/armor/f13/combatmk2
+	name = "combat armor mk2"
+	desc = "An old military grade pre war combat armor."
+	icon_state = "combat_armor_mk2"
+	item_state = "combat_armor_mk2"
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
+	armor = list("melee" = 45, "bullet" = 55, "laser" = 45, "energy" = 45, "bomb" = 55, "bio" = 65, "rad" = 10, "fire" = 60, "acid" = 20)
+	strip_delay = 60
+
+/obj/item/clothing/suit/armor/f13/combatmk2ncr
+	name = "combat armor mk2"
+	desc = "An old military grade pre war combat armor for the ncr."
+	icon_state = "combat_armor_mk2_ncr"
+	item_state = "combat_armor_mk2_ncr"
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
+	armor = list("melee" = 45, "bullet" = 55, "laser" = 45, "energy" = 45, "bomb" = 55, "bio" = 65, "rad" = 10, "fire" = 60, "acid" = 20)
+	strip_delay = 60
+
+
+/obj/item/clothing/suit/armor/f13/combatmk2leg
+	name = "legatus armor mk2"
+	desc = "An old military grade pre war combat armor for the legatus."
+	icon_state = "combat_armor_mk2_leg"
+	item_state = "combat_armor_mk2_leg"
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
+	armor = list("melee" = 45, "bullet" = 55, "laser" = 45, "energy" = 45, "bomb" = 55, "bio" = 65, "rad" = 10, "fire" = 60, "acid" = 20)
+	strip_delay = 60
+
+/obj/item/clothing/suit/armor/f13/combatbosrein
+	name = "Reinforced BoS Armor"
+	desc = "An old military grade pre war combat armor for the legatus."
+	icon_state = "combat_armor_reinforced_bos"
+	item_state = "combat_armor_reinforced_bos"
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
+	armor = list("melee" = 45, "bullet" = 55, "laser" = 45, "energy" = 45, "bomb" = 55, "bio" = 65, "rad" = 10, "fire" = 60, "acid" = 20)
+	strip_delay = 60
+
+/obj/item/clothing/suit/armor/f13/combatrein
+	name = "Reinforced Combat Armor"
+	desc = "An old military grade pre war combat armor for the legatus."
+	icon_state = "combat_armor_reinforced"
+	item_state = "combat_armor_reinforced"
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
+	armor = list("melee" = 45, "bullet" = 55, "laser" = 45, "energy" = 45, "bomb" = 55, "bio" = 65, "rad" = 10, "fire" = 60, "acid" = 20)
+	strip_delay = 60
+
+/obj/item/clothing/suit/armor/f13/scoutarmor
+	name = "scout armor lt"
+	desc = "An old military grade pre war combat armor for the legatus."
+	icon_state = "scout_armor_lt"
+	item_state = "scout_armor_lt"
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
+	armor = list("melee" = 45, "bullet" = 55, "laser" = 45, "energy" = 45, "bomb" = 55, "bio" = 65, "rad" = 10, "fire" = 60, "acid" = 20)
+	strip_delay = 60
+
+/obj/item/clothing/suit/armor/f13/caeserpelt
+	name = "Caesers' Pelt"
+	desc = "A pelt for the godking Caeser himself"
+	icon_state = "caeser_pelt"
+	item_state = "caeser_pelt"
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
+	armor = list("melee" = 45, "bullet" = 55, "laser" = 45, "energy" = 45, "bomb" = 55, "bio" = 65, "rad" = 10, "fire" = 60, "acid" = 20)
+
+
 /obj/item/clothing/suit/armor/f13/combat/dark
 	name = "combat armor"
 	desc = "An old military grade pre war combat armor."

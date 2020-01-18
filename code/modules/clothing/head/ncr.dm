@@ -30,6 +30,16 @@
 /obj/item/clothing/head/hardhat/ncr
 	name = "NCR engineer helmet"
 	desc = "A standard issue NCR Infantry helmet, modified with a head lamp for engineers."
+	icon_state = "hardhat_ncr"
+	item_state = "hardhat_ncr"
+	item_color = "ncr"
+	dog_fashion = null
+	armor = list("melee" = 40, "bullet" = 40, "laser" = 30, "energy" = 20, "bomb" = 25, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
+	strip_delay = 50
+
+/obj/item/clothing/head/hardhat/ncr
+	name = "NCR engineer helmet"
+	desc = "A standard issue NCR Infantry helmet, modified with a head lamp for engineers."
 	icon_state = "hardhat0_ncr"
 	item_state = "hardhat0_ncr"
 	item_color = "ncr"
@@ -37,6 +47,7 @@
 	dog_fashion = null
 	armor = list("melee" = 40, "bullet" = 40, "laser" = 30, "energy" = 20, "bomb" = 25, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
 	strip_delay = 50
+
 
 /obj/item/clothing/head/f13/ncr/goggles/attack_self(mob/user)
 	if(can_toggle && !user.incapacitated())

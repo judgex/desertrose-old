@@ -84,6 +84,7 @@
 #define FILE_DIR "icons/obj/doors/airlocks/station"
 #define FILE_DIR "icons/obj/doors/airlocks/station2"
 #define FILE_DIR "icons/obj/doors/airlocks/survival"
+#define FILE_DIR "icons/obj/doors/airlocks/survival/horizontal"
 #define FILE_DIR "icons/obj/doors/airlocks/vault"
 #define FILE_DIR "icons/obj/fallout"
 #define FILE_DIR "icons/obj/flora"
