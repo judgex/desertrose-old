@@ -33,6 +33,7 @@
 	icon_state = "hardhat_ncr"
 	item_state = "hardhat_ncr"
 	item_color = "ncr"
+	flags_inv = HIDEEARS
 	dog_fashion = null
 	armor = list("melee" = 40, "bullet" = 40, "laser" = 30, "energy" = 20, "bomb" = 25, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
 	strip_delay = 50
