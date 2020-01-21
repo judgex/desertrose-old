@@ -54,7 +54,6 @@ Great Khan
 	name = "Great Khan"
 	jobtype = /datum/job/wasteland/f13pusher
 
-	chemwhiz = TRUE
 	id = null
 	ears = null
 	belt = /obj/item/claymore/machete/pipe
