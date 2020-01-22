@@ -13,13 +13,13 @@
 	move_to_delay = 5
 	stat_attack = UNCONSCIOUS
 	robust_searching = 1
-	environment_smash = ENVIRONMENT_SMASH_RWALLS
+	environment_smash = ENVIRONMENT_SMASH_WALLS
 	turns_per_move = 5
 	response_help = "touches"
 	response_disarm = "tries to perform a kung fu move, then suddenly remembers that it's actually"
 	response_harm = "hits"
-	maxHealth = 300
-	health = 300
+	maxHealth = 200
+	health = 200
 	force_threshold = 15
 	faction = list("hostile", "supermutant")
 	melee_damage_lower = 55
@@ -50,8 +50,8 @@
 	icon = 'icons/fallout/mobs/supermutant.dmi'
 	icon_state = "hulk_brahmin_s"
 	icon_dead = "hulk_brahmin_s"
-	maxHealth = 300
-	health = 300
+	maxHealth = 200
+	health = 200
 	speak_chance = 7 //30 //Oh my god he never shuts up.
 	anchored = TRUE
 	mob_size = MOB_SIZE_LARGE
