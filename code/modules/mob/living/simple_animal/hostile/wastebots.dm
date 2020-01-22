@@ -8,8 +8,8 @@
 	gender = NEUTER
 	mob_biotypes = list(MOB_ROBOTIC)
 	anchored = TRUE //unpullable
-	health = 160
-	maxHealth = 160
+	health = 105
+	maxHealth = 105
 	healable = 0
 	speed = 1
 	melee_damage_lower = 28 //halved this on req
@@ -36,8 +36,8 @@
 	icon_state = "gutsy"
 	icon_living = "gutsy"
 	icon_dead = "gib7"
-	health = 200
-	maxHealth = 200
+	health = 130
+	maxHealth = 130
 	melee_damage_lower = 72
 	melee_damage_upper = 72
 	attack_sound = 'sound/items/welder.ogg'
@@ -60,8 +60,8 @@
 	icon_state = "protectron"
 	icon_living = "protectron"
 	icon_dead = "protectron_dead"
-	health = 160
-	maxHealth = 160
+	health = 105
+	maxHealth = 105
 	speed = 4
 	melee_damage_lower = 5 //severely reduced melee damage here because its silly to have a ranged mob also be a cqc master
 	melee_damage_upper = 10
@@ -104,8 +104,8 @@
 	icon_state = "sentrybot"
 	icon_living = "sentrybot"
 	icon_dead = "sentrybot"
-	health = 280
-	maxHealth = 280
+	health = 200
+	maxHealth = 200
 	melee_damage_lower = 48
 	melee_damage_upper = 72
 	extra_projectiles = 4 //5 projectiles

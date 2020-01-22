@@ -13,8 +13,8 @@
 	response_disarm = "shoves"
 	response_harm = "hits"
 	speed = 1
-	maxHealth = 140
-	health = 140
+	maxHealth = 100
+	health = 100
 	harm_intent_damage = 5
 	melee_damage_lower = 25
 	melee_damage_upper = 50
@@ -34,8 +34,8 @@
 	icon_living = "raiderranged"
 	loot = list(/obj/effect/mob_spawn/human/corpse/raiderranged, /obj/item/gun/ballistic/automatic/pistol/ninemil)
 	ranged = 1
-	maxHealth = 115
-	health = 115
+	maxHealth = 75
+	health = 75
 	retreat_distance = 4
 	minimum_distance = 6
 	projectilesound = 'sound/weapons/gunshot.ogg'
@@ -44,8 +44,8 @@
 	name = "Raider Boss"
 	icon_state = "raiderboss"
 	icon_living = "raiderboss"
-	maxHealth = 170
-	health = 170
+	maxHealth = 115
+	health = 115
 	extra_projectiles = 2
 	loot = list(/obj/effect/mob_spawn/human/corpse/raiderboss, /obj/item/gun/ballistic/automatic/greasegun)
 

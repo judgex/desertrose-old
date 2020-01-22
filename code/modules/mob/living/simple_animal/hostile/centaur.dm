@@ -11,8 +11,8 @@
 	speak_emote = list("growls")
 	emote_see = list("screeches")
 	a_intent = INTENT_HARM
-	maxHealth = 100
-	health = 100
+	maxHealth = 65
+	health = 65
 	speed = 2
 	harm_intent_damage = 15
 	melee_damage_lower = 15
