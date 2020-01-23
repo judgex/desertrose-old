@@ -6,14 +6,13 @@
 	icon_living = "feralghoul"
 	icon_dead = "feralghoul_dead"
 	mob_biotypes = list(MOB_ORGANIC, MOB_HUMANOID)
-	stat_attack = UNCONSCIOUS
 	robust_searching = 1
 	turns_per_move = 5
 	speak_emote = list("growls")
 	emote_see = list("screeches")
 	a_intent = INTENT_HARM
-	maxHealth = 40
-	health = 40
+	maxHealth = 30
+	health = 30
 	speed = 2
 	harm_intent_damage = 15
 	melee_damage_lower = 15
@@ -23,7 +22,6 @@
 	atmos_requirements = list("min_oxy" = 5, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 1, "min_co2" = 0, "max_co2" = 5, "min_n2" = 0, "max_n2" = 0)
 	unsuitable_atmos_damage = 20
 	robust_searching = 0
-	stat_attack = UNCONSCIOUS
 	gold_core_spawnable = HOSTILE_SPAWN
 	faction = list("ghoul")
 	decompose = TRUE
@@ -41,8 +39,8 @@
 	icon_dead = "ghoulreaver_dead"
 	speed = 2
 	a_intent = INTENT_HARM
-	maxHealth = 100
-	health = 100
+	maxHealth = 65
+	health = 65
 	harm_intent_damage = 5
 	melee_damage_lower = 15
 	melee_damage_upper = 15
@@ -53,8 +51,8 @@
 	icon_state = "glowinghoul"
 	icon_living = "glowinghoul"
 	icon_dead = "glowinghoul_dead"
-	maxHealth = 80
-	health = 80
+	maxHealth = 50
+	health = 50
 	speed = 2
 	harm_intent_damage = 10
 	melee_damage_lower = 20

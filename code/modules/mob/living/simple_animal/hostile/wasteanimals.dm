@@ -20,8 +20,8 @@
 	robust_searching = 1
 	taunt_chance = 30
 	speed = 0
-	maxHealth = 40
-	health = 40
+	maxHealth = 30
+	health = 30
 	harm_intent_damage = 8
 	obj_damage = 20
 	melee_damage_lower = 20
@@ -56,8 +56,8 @@
 /mob/living/simple_animal/hostile/cazador/young
 	name = "young cazador"
 	desc = "A mutated insect known for its fast speed, deadly sting, and being huge bastards. This one's little."
-	maxHealth = 20
-	health = 20
+	maxHealth = 15
+	health = 15
 	speed = 1
 	melee_damage_lower = 5
 	melee_damage_upper = 10
@@ -100,8 +100,8 @@
 	emote_taunt_sound = 'sound/creatures/radscorpion_snip.ogg'
 	taunt_chance = 30
 	speed = 1
-	maxHealth = 150
-	health = 150
+	maxHealth = 100
+	health = 100
 	harm_intent_damage = 8
 	obj_damage = 20
 	melee_damage_lower = 35
@@ -150,8 +150,8 @@
 	emote_taunt = list("screeches")
 	taunt_chance = 30
 	speed = 1
-	maxHealth = 40
-	health = 40
+	maxHealth = 25
+	health = 25
 	harm_intent_damage = 8
 	obj_damage = 20
 	melee_damage_lower = 10
@@ -182,8 +182,8 @@
 	emote_taunt_sound = 'sound/creatures/radroach_chitter.ogg'
 	taunt_chance = 30
 	speed = 1
-	maxHealth = 20
-	health = 20
+	maxHealth = 15
+	health = 15
 	harm_intent_damage = 8
 	obj_damage = 20
 	melee_damage_lower = 10
@@ -214,8 +214,8 @@
 	emote_taunt = list("hisses")
 	taunt_chance = 30
 	speed = -1
-	maxHealth = 25
-	health = 25
+	maxHealth = 20
+	health = 20
 	harm_intent_damage = 8
 	obj_damage = 15
 	melee_damage_lower = 10

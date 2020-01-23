@@ -8,7 +8,6 @@
 	icon_gib = "deathclaw_gib"
 	gender = MALE
 	mob_biotypes = list(MOB_ORGANIC, MOB_BEAST)
-	stat_attack = UNCONSCIOUS
 	robust_searching = 1
 	anchored = 1
 	speak = list("ROAR!","Rawr!","GRRAAGH!","Growl!")
@@ -25,8 +24,8 @@
 	response_help  = "pets"
 	response_disarm = "gently pushes aside"
 	response_harm   = "hits"
-	maxHealth = 500
-	health = 500
+	maxHealth = 330
+	health = 330
 	obj_damage = 60
 	armour_penetration = 30
 	melee_damage_lower = 56
@@ -44,8 +43,9 @@
 	name = "mother deathclaw"
 	desc = "A massive, reptilian creature with powerful muscles, razor-sharp claws, and aggression to match. This one is an angry mother."
 	gender = FEMALE
-	maxHealth = 750
-	health = 750
+	maxHealth = 500
+	health = 500
+	stat_attack = UNCONSCIOUS
 	melee_damage_lower = 72
 	melee_damage_upper = 72
 	armour_penetration = 30

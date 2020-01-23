@@ -8,13 +8,12 @@
 	gender = NEUTER
 	mob_biotypes = list(MOB_ROBOTIC)
 	anchored = TRUE //unpullable
-	health = 160
-	maxHealth = 160
+	health = 105
+	maxHealth = 105
 	healable = 0
 	speed = 1
 	melee_damage_lower = 28 //halved this on req
 	melee_damage_upper = 28 //as above
-	stat_attack = UNCONSCIOUS
 	robust_searching = 1
 	attacktext = "slaps"
 	attack_sound = 'sound/weapons/circsawhit.ogg'
@@ -37,8 +36,8 @@
 	icon_state = "gutsy"
 	icon_living = "gutsy"
 	icon_dead = "gib7"
-	health = 200
-	maxHealth = 200
+	health = 130
+	maxHealth = 130
 	melee_damage_lower = 72
 	melee_damage_upper = 72
 	attack_sound = 'sound/items/welder.ogg'
@@ -61,8 +60,8 @@
 	icon_state = "protectron"
 	icon_living = "protectron"
 	icon_dead = "protectron_dead"
-	health = 160
-	maxHealth = 160
+	health = 105
+	maxHealth = 105
 	speed = 4
 	melee_damage_lower = 5 //severely reduced melee damage here because its silly to have a ranged mob also be a cqc master
 	melee_damage_upper = 10
@@ -105,12 +104,13 @@
 	icon_state = "sentrybot"
 	icon_living = "sentrybot"
 	icon_dead = "sentrybot"
-	health = 280
-	maxHealth = 280
+	health = 200
+	maxHealth = 200
 	melee_damage_lower = 48
 	melee_damage_upper = 72
-	extra_projectiles = 2 //6 projectiles
+	extra_projectiles = 4 //5 projectiles
 	ranged_cooldown_time = 12 //brrrrrrrrrrrrt
+	stat_attack = UNCONSCIOUS
 	ranged = TRUE
 	retreat_distance = 2
 	minimum_distance = 2
@@ -118,13 +118,13 @@
 	attacktext = "pulverizes"
 	attack_sound = 'sound/weapons/punch1.ogg'
 	projectilesound = 'sound/weapons/laser.ogg'
-	projectiletype = /obj/item/projectile/beam/laser/pistol/weak
+	projectiletype = /obj/item/projectile/beam/laser/pistol/ultraweak
 	faction = list("wastebot")
 	check_friendly_fire = TRUE
 	loot = list(/obj/effect/decal/cleanable/robot_debris, /obj/item/stack/crafting/electronicparts/five, /obj/item/stock_parts/cell/ammo/mfc)
 
-/obj/item/projectile/beam/laser/pistol/weak
-	damage = 15 //quantity over quality
+/obj/item/projectile/beam/laser/pistol/ultraweak
+	damage = 10 //quantity over quality
 
 /mob/living/simple_animal/hostile/handy/sentrybot/bullet_act(obj/item/projectile/Proj)
 	if(!Proj)

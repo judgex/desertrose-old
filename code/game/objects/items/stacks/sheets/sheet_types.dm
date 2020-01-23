@@ -245,6 +245,7 @@ GLOBAL_LIST_INIT(wood_recipes, list ( \
  */
 GLOBAL_LIST_INIT(cloth_recipes, list ( \
 	new/datum/stack_recipe("jumpsuit", /obj/item/clothing/under/color/white, 3), \
+	/*new/datum/stack_recipe("slave rags", /obj/item/clothing/under/f13/slaverags, 2), \ */ //uncomment when slave rags get a sprite
 	new/datum/stack_recipe("shoes", /obj/item/clothing/shoes/sneakers/white, 2), \
 	new/datum/stack_recipe("scarf", /obj/item/clothing/neck/scarf, 1), \
 	new/datum/stack_recipe("bandana", /obj/item/clothing/mask/bandana/white, 2), \

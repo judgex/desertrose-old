@@ -87,6 +87,8 @@
 	item_state = "oldranger"
 	armor = list(melee = 40, bullet = 20, laser = 20, energy = 20, bomb = 20, bio = 0, rad = 30, fire = 30, acid = 10)
 	glass_colour_type = /datum/client_colour/glass_colour/lightgreen
+	lighting_alpha = LIGHTING_PLANE_ALPHA_LOWLIGHT_VISION
+	darkness_view = 128
 
 /obj/item/clothing/head/f13/strange
 	name = "strange helmet"

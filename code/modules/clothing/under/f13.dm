@@ -249,7 +249,18 @@
 	desc = "A Pink Vest with Black Pants. Quite futuristic looking."
 	icon_state = "Biker"
 	item_state = "Biker"
-
+/* //slave rags, crafted from 2 cloth- uncomment when sprites available
+/obj/item/clothing/under/f13/slaverags
+	name = "slave rags"
+	desc = "Rags made for only the most basic and unworthy of slaves."
+	icon_state = "slaverags"
+	item_state = "slaverags"
+*/
+/obj/item/clothing/under/f13/erpdress
+	name = "bandage dress"
+	desc = "Made by the famous pre-war fashion designer Marie Calluna, this dress was made to hug your every curve and show off some deep cleavage."
+	icon_state = "bandagedress"
+	item_state = "bandagedress"
 
 //Minor Factions
 
@@ -310,7 +321,7 @@
 /obj/item/clothing/suit/armor/khan
 	name = "khan armored vest"
 	desc = "The symbol of the greatest pushers."
-	icon_state = "armorkit" //we need real sprites for this
+	icon_state = "khan"
 	item_state = "khan"
 
 //Warriors

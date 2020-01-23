@@ -113,7 +113,7 @@ GLOBAL_VAR_INIT(rpg_loot_items, FALSE)
 		materials = list()
 	. = ..()
 	if(w_class <= WEIGHT_CLASS_NORMAL) //pulling small items doesn't slow you down much
-		drag_delay = 0.1 SECONDS
+		drag_delay = 0.05 SECONDS
 	for(var/path in actions_types)
 		new path(src)
 	actions_types = null
@@ -793,7 +793,7 @@ GLOBAL_VAR_INIT(rpg_loot_items, FALSE)
 
 /obj/item/gun/proc/weapondraw(obj/item/gun/G, mob/living/user) // Eventually, this will be /obj/item/weapon and guns will be /obj/item/weapon/gun/etc. SOON.tm
 	user.visible_message("<span class='danger'>[user] grabs \a [G]!</span>") // probably could code in differences as to where you're picking it up from and so forth. later.
-	user.SetWeaponDrawDelay(max((4 * G.weapon_weight + 1),(user.AmountWeaponDrawDelay()))) 
+	user.SetWeaponDrawDelay(max((4 * G.weapon_weight + 1),(user.AmountWeaponDrawDelay())))
 	// TODO: Define where you're grabbing it from, assign numbers to them, and then divide the paralyze total by that. Tables/holster/belt/back/container.
 	user.log_message("[user] pulled a [G]", INDIVIDUAL_ATTACK_LOG)
 
