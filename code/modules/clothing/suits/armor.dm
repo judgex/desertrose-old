@@ -482,7 +482,7 @@
 	strip_delay = 60
 
 /obj/item/clothing/suit/armor/f13/caeserpelt
-	name = "Caesers' Pelt"
+	name = "Caesars' Pelt"
 	desc = "A pelt for the godking Caeser himself"
 	icon_state = "caeser_pelt"
 	item_state = "caeser_pelt"
