@@ -24,6 +24,14 @@
 	for(var/obj/item/bodypart/b in C.bodyparts)
 		b.max_damage = initial(b.max_damage)
 
+/datum/species/ghoul/qualifies_for_rank(rank, list/features)
+	if(rank in GLOB.legion_positions) /* legion HATES these ghoul */
+		return 0
+	if(rank in GLOB.brotherhood_positions) //don't hate them, just tolorate. 
+		return 0
+	if(rank in GLOB.vault_positions) //purest humans left in america. supposedly.
+		return 0
+	return ..()
 
 /*/datum/species/ghoul/glowing
 	name = "Glowing Ghoul"
