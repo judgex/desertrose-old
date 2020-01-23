@@ -265,8 +265,8 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 			dat += "<table><tr><td width='340px' height='300px' valign='top'>"
 			dat += "<h2>Flavor Text</h2>"
 			dat += "<a href='?_src_=prefs;preference=flavor_text;task=input'><b>Set Examine Text</b></a><br>"
-			if(lentext(features["flavor_text"]) <= 40)
-				if(!lentext(features["flavor_text"]))
+			if(length(features["flavor_text"]) <= 40)
+				if(!length(features["flavor_text"]))
 					dat += "\[...\]"
 				else
 					dat += "[features["flavor_text"]]"
@@ -1862,7 +1862,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	if(flavor_text && flavor_text != "")
 		// We are decoding and then encoding to not only get correct amount of characters, but also to prevent partial escaping characters being shown.
 		var/msg = html_decode(replacetext(flavor_text, "\n", " "))
-		if(lentext(msg) <= 40)
+		if(length(msg) <= 40)
 			return "<span class='notice'>[html_encode(msg)]</span>"
 		else
 			return "<span class='notice'>[html_encode(copytext(msg, 1, 37))]... <a href='?src=[REF(src)];flavor_more=1'>More...</span></a>"

@@ -89,3 +89,26 @@ Cyborg
 /datum/job/cyborg/after_spawn(mob/living/silicon/robot/R, mob/M)
 	R.add_trait(TRAIT_TECHNOPHREAK, TRAIT_GENERIC)
 	R.apply_pref_name("cyborg", M.client)
+
+/*
+Mr. Handy
+*/
+/datum/job/handy
+	title = "Mr. Handy"
+	flag = CYBORG
+	department_flag = ENGSEC
+	//faction = "Station"
+	total_positions = 0
+	spawn_positions = 1
+	supervisors = "Your Creators"	//Nodrak
+	selection_color = "#ddffdd"
+	minimal_player_age = 21
+	exp_requirements = 12000
+	exp_type = EXP_TYPE_CREW
+
+/datum/job/cyborg/equip(mob/living/carbon/human/H, visualsOnly = FALSE, announce = TRUE, latejoin = FALSE)
+	return H.Robotize(FALSE, latejoin)
+
+/datum/job/cyborg/after_spawn(mob/living/silicon/robot/R, mob/M)
+	R.add_trait(TRAIT_TECHNOPHREAK, TRAIT_GENERIC)
+	R.apply_pref_name("cyborg", M.client)

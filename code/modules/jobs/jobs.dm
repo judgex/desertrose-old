@@ -12,6 +12,10 @@ GLOBAL_LIST_INIT(command_positions, list(
     "Mayor",
     "Sheriff"
 ))
+
+
+GLOBAL_LIST_INIT(silicon_whitelist_positions, list(
+"Mr. Handy"))
 //Whitelisted positions list FO13 anything that shows up here requires that the user have an entry in the 'role_whitelist' table of id,ckey,"faction"
 GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 "Head Scribe",
@@ -131,6 +135,9 @@ GLOBAL_LIST_INIT(wasteland_positions, list(
 GLOBAL_LIST_INIT(security_positions, list(
 	"Chief of Security",
 	"Vault-tec Security"
+))
+GLOBAL_LIST_INIT(silicon_positions, list(
+	"Mr. Handy"
 ))
 /*
 GLOBAL_LIST_INIT(engineering_positions, list(
