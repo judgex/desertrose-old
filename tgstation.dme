@@ -1604,6 +1604,7 @@
 #include "code\modules\fallout\obj\structures\chair.dm"
 #include "code\modules\fallout\obj\structures\fridge.dm"
 #include "code\modules\fallout\obj\structures\obstacle.dm"
+#include "code\modules\fallout\obj\structures\radiotower.dm"
 #include "code\modules\fallout\obj\structures\simple_door.dm"
 #include "code\modules\fallout\obj\structures\table_frames.dm"
 #include "code\modules\fallout\obj\structures\tables_racks.dm"
