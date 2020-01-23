@@ -105,7 +105,6 @@
 	knife_x_offset = 27
 	knife_y_offset = 13
 	fire_delay = 5
-	extra_damage = 45
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 	fire_sound = 'sound/f13weapons/hunting_rifle.ogg'
@@ -289,7 +288,6 @@
 	fire_delay = 3
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
-	extra_damage = 65
 
 /obj/item/gun/ballistic/shotgun/remington/attackby(obj/item/A, mob/user, params)
 	..()
@@ -330,8 +328,6 @@
 	weapon_weight = WEAPON_HEAVY
 	recoil = 1 //have fun
 	fire_delay = 6
-	extra_damage = 70
-	extra_penetration = 10
 
 /obj/item/gun/ballistic/shotgun/automatic/hunting/trail
 	name = "trail carbine"
@@ -344,8 +340,6 @@
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 	fire_delay = 4
-	extra_damage = 40
-	extra_penetration = 0
 
 /obj/item/gun/ballistic/shotgun/automatic/hunting/trail/scoped
 	name = "scoped trail carbine"
@@ -373,7 +367,6 @@
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 	fire_delay = 6
-	extra_damage = 45
 
 /obj/item/gun/ballistic/shotgun/automatic/hunting/cowboy/scoped
 	name = "scoped cowboy repeater"
@@ -400,8 +393,6 @@
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 	fire_delay = 6
-	extra_damage = 50
-	extra_penetration = 0
 
 /obj/item/gun/ballistic/shotgun/automatic/hunting/brush/scoped
 	name = "scoped brush gun"
@@ -416,8 +407,6 @@
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 	fire_delay = 8
-	extra_damage = 50
-	extra_penetration = 0
 
 /obj/item/gun/ballistic/revolver/widowmaker
 	name = "winchester widowmaker"

@@ -692,6 +692,7 @@
 	desc = "A box full of rubber shots, designed for riot shotguns."
 	icon_state = "rubbershot_box"
 	illustration = null
+	w_class = WEIGHT_CLASS_SMALL
 
 /obj/item/storage/box/rubbershot/PopulateContents()
 	for(var/i in 1 to 7)
@@ -702,6 +703,7 @@
 	desc = "A box full of beanbag slugs, designed for riot shotguns."
 	icon_state = "rubbershot_box"
 	illustration = null
+	w_class = WEIGHT_CLASS_SMALL
 
 /obj/item/storage/box/rubbershot/beanbag/PopulateContents()
 	for(var/i in 1 to 7)
@@ -712,42 +714,87 @@
 	desc = "A box full of lethal buckshot rounds, designed for riot shotguns."
 	icon_state = "lethalshot_box"
 	illustration = null
+	w_class = WEIGHT_CLASS_SMALL
+
+/obj/item/storage/box/rubbershot/ComponentInitialize()
+	. = ..()
+	GET_COMPONENT(STR, /datum/component/storage)
+	STR.max_w_class = WEIGHT_CLASS_TINY
+	STR.max_combined_w_class = 14
+	STR.max_items = 14
+	STR.can_hold = typecacheof(list(/obj/item/ammo_casing/shotgun))
 
 /obj/item/storage/box/lethalshot/PopulateContents()
 	for(var/i in 1 to 7)
 		new /obj/item/ammo_casing/shotgun/buckshot(src)
+
+/obj/item/storage/box/lethalshot/ComponentInitialize()
+	. = ..()
+	GET_COMPONENT(STR, /datum/component/storage)
+	STR.max_w_class = WEIGHT_CLASS_TINY
+	STR.max_combined_w_class = 14
+	STR.max_items = 14
+	STR.can_hold = typecacheof(list(/obj/item/ammo_casing/shotgun))
 
 /obj/item/storage/box/magnumshot
 	name = "box of magnum buckshot shotgun shots"
 	desc = "A box full of lethal magnum buckshot rounds, designed for hunting shotguns."
 	icon_state = "lethalshot_box"
 	illustration = null
+	w_class = WEIGHT_CLASS_SMALL
 
 /obj/item/storage/box/magnumshot/PopulateContents()
 	for(var/i in 1 to 7)
 		new /obj/item/ammo_casing/shotgun/magnumshot(src)
+
+/obj/item/storage/box/magnumshot/ComponentInitialize()
+	. = ..()
+	GET_COMPONENT(STR, /datum/component/storage)
+	STR.max_w_class = WEIGHT_CLASS_TINY
+	STR.max_combined_w_class = 14
+	STR.max_items = 14
+	STR.can_hold = typecacheof(list(/obj/item/ammo_casing/shotgun))
 
 /obj/item/storage/box/slugshot
 	name = "box of slug shotgun shots"
 	desc = "A box full of slug rounds, designed for riot shotguns."
 	icon_state = "slugshot_box"
 	illustration = null
+	w_class = WEIGHT_CLASS_SMALL
 
 /obj/item/storage/box/slugshot/PopulateContents()
 	for(var/i in 1 to 7)
 		new /obj/item/ammo_casing/shotgun(src)
+
+/obj/item/storage/box/slugshot/ComponentInitialize()
+	. = ..()
+	GET_COMPONENT(STR, /datum/component/storage)
+	STR.max_w_class = WEIGHT_CLASS_TINY
+	STR.max_combined_w_class = 14
+	STR.max_items = 14
+	STR.can_hold = typecacheof(list(/obj/item/ammo_casing/shotgun))
 
 /obj/item/storage/box/beanbag
 	name = "box of beanbags"
 	desc = "A box full of beanbag shells."
 	icon_state = "beanbag_box"
 	illustration = null
+	w_class = WEIGHT_CLASS_SMALL
+
+/obj/item/storage/box/beanbag/ComponentInitialize()
+	. = ..()
+	GET_COMPONENT(STR, /datum/component/storage)
+	STR.max_w_class = WEIGHT_CLASS_TINY
+	STR.max_combined_w_class = 14
+	STR.max_items = 14
+	STR.can_hold = typecacheof(list(/obj/item/ammo_casing/shotgun))
 
 /obj/item/storage/box/techshot
 	name = "box of tech shells"
 	desc = "A box full of tech shells."
 	icon_state = "tech_box"
 	illustration = null
+	w_class = WEIGHT_CLASS_SMALL
 
 /obj/item/storage/box/techshot/PopulateContents()
 	switch (pickweight(list("ion" = 20, "laser" = 20, "pulse" = 20, "meteor" = 20, "incendiary" = 20, "chem" = 20, "wildcard" = 20)))
@@ -778,6 +825,14 @@
 		if ("wildcard")
 			for(var/i in 1 to 6)
 				new /obj/item/ammo_casing/shotgun/techshell(src)
+
+/obj/item/storage/box/techshot/ComponentInitialize()
+	. = ..()
+	GET_COMPONENT(STR, /datum/component/storage)
+	STR.max_w_class = WEIGHT_CLASS_TINY
+	STR.max_combined_w_class = 14
+	STR.max_items = 14
+	STR.can_hold = typecacheof(list(/obj/item/ammo_casing/shotgun))
 
 /obj/item/storage/box/beanbag/PopulateContents()
 	for(var/i in 1 to 6)
