@@ -133,7 +133,7 @@
 	name = "FEV solutionic agar"
 	id = "FEV_solutionvirusfood"
 	results = list("FEV_solutionvirusfood" = 1)
-	required_reagents = list("FEV_solution" = 1, "virusfood" = 1)
+	required_reagents = list("FEV_solution" = 1, "virusfood" = 1, "sugar" = 1)
 
 /datum/chemical_reaction/virus_food_synaptizine
 	name = "virus rations"
