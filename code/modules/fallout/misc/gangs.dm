@@ -8,6 +8,7 @@ GLOBAL_LIST_INIT(gang_names, list ( \
 "great khans", \
 "gang", \
 "gangs", \
+"yakuza", \
 ))
 
 //Which social factions are allowed to join gangs?
@@ -20,6 +21,9 @@ GLOBAL_LIST_EMPTY(all_gangs)
 
 //Great Khans
 GLOBAL_DATUM_INIT(greatkhans, /datum/gang/greatkhans, new)
+
+//Yakuza
+GLOBAL_DATUM_INIT(yakuza, /datum/gang/yakuza, new)
 
 /datum/gang
 	var/name = "gang"
@@ -71,6 +75,23 @@ GLOBAL_DATUM_INIT(greatkhans, /datum/gang/greatkhans, new)
 		/datum/gang_item/clothing/khan_vest
 	)
 
+/datum/gang/yakuza
+	name = "Yakuza"
+	color = "#b07f43"
+	round_start = TRUE
+	boss_items = list(
+		/datum/gang_item/equipment/spraycan,
+		/datum/gang_item/equipment/emp,
+		/datum/gang_item/equipment/necklace,
+
+		/datum/gang_item/weapon/shuriken,
+		/datum/gang_item/weapon/switchblade,
+
+		/datum/gang_item/clothing/prostitute_dress,
+		/datum/gang_item/clothing/hat
+
+	)
+
 /datum/gang/New(starting_members, starting_leader)
 	. = ..()
 	if(starting_leader)
@@ -110,7 +131,7 @@ GLOBAL_DATUM_INIT(greatkhans, /datum/gang/greatkhans, new)
 	var/where = new_leader.equip_in_one_of_slots(gangtool, slots, FALSE)
 	if(!where)
 		gangtool.forceMove(get_turf(new_leader))
-	
+
 	if(assigned_tool)
 		var/obj/item/device/gangtool/tool = assigned_tool
 		tool.name = "[initial(tool.name)] - [name]"

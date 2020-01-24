@@ -132,6 +132,13 @@
 #define F13USENGINEER	(1<<4)
 #define F13USCOLONIST	(1<<5)
 
+#define YAKUZA			(1<<10)
+
+#define OYABUN			(1<<0)
+#define WAKAGASHIRA		(1<<1)
+#define SHATEGASHIRA	(1<<2)
+#define KUMIIN			(1<<3)
+
 #define JOB_AVAILABLE 0
 #define JOB_UNAVAILABLE_GENERIC 1
 #define JOB_UNAVAILABLE_BANNED 2

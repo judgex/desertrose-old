@@ -95,6 +95,7 @@ Great Khan
 		GK.add_member(H)
 		H.gang = GK
 
+
 /*
 Raider
 */
