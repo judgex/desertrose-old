@@ -133,6 +133,18 @@
 		/obj/effect/decal/remains/xeno = 49,
 		/obj/effect/spawner/xeno_egg_delivery = 1)
 
+/obj/effect/spawner/lootdrop/rdconsole
+	name = "RD console spawner"
+	loot = list(
+		/obj/machinery/computer/rdconsole = 33,
+		/obj/structure/frame/computer  = 64)
+
+/obj/effect/spawner/lootdrop/rdboard
+	name = "RD board spawner"
+	loot = list(
+		/obj/item/circuitboard/computer/rdconsole = 33,
+		/obj/item/reagent_containers/food/snacks/deadmouse = 64)
+
 /obj/effect/spawner/lootdrop/costume
 	name = "random costume spawner"
 
