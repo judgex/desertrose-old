@@ -153,6 +153,7 @@ Head Scribe
 	suit_store =	/obj/item/gun/ballistic/revolver/needler
 	belt = 			/obj/item/storage/belt/utility/full/engi
 	backpack_contents = list(
+		/obj/item/shield/energy=1, \
 		/obj/item/kitchen/knife/combat=1, \
 		/obj/item/ammo_box/needleap=2)
 
