@@ -281,7 +281,7 @@
 	name = "hunting rifle"
 	desc = "A sturdy hunting rifle, chambered in 308. and in use before the war."
 	icon_state = "308"
-	item_state = "rifle"
+	item_state = "308"
 	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/remington
 	sawn_desc = "A hunting rifle, crudely shortened with a saw. It's far from accurate, but the short barrel makes it quite portable."
 	fire_sound = 'sound/f13weapons/hunting_rifle.ogg'
@@ -302,7 +302,7 @@
 	name = "scoped hunting rifle"
 	desc = "A sturdy hunting rifle, chambered in 308. and in use before the war. This one has a 8x scope mounted to it."
 	icon_state = "rifle308_scope"
-	item_state = "rifle"
+	item_state = "scoped308"
 	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/remington
 	sawn_desc = "In what is probably the most idiotic and crude modification of a gun you've ever seen, someone has taken this scoped hunting rifle and sawn off the bits that make it well-balanced and accurate."
 	fire_sound = 'sound/f13weapons/hunting_rifle.ogg'
@@ -310,6 +310,26 @@
 	zoomable = TRUE
 	zoom_amt = 10
 	zoom_out_amt = 13
+
+/obj/item/gun/ballistic/shotgun/remington/scoped/paciencia
+	name = "Paciencia"
+	desc = "A modified .308 hunting rifle with a reduced magazine but an augmented receiver. A Mexican flag is wrapped around the stock. You only have three shots- make them count."
+	icon_state = "paciencia"
+	item_state = "paciencia"
+	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/remington/paciencia
+	fire_delay = 5
+	extra_damage = 20 //60 damage- hits as hard as an AMR!
+	extra_penetration = 10
+
+/obj/item/gun/ballistic/shotgun/remington/scoped/paciencia/attackby(obj/item/A, mob/user, params) //no sawing off this one
+	if(istype(A, /obj/item/circular_saw) || istype(A, /obj/item/gun/energy/plasmacutter))
+		return
+	else if(istype(A, /obj/item/melee/transforming/energy))
+		var/obj/item/melee/transforming/energy/W = A
+		if(W.active)
+			return
+	else
+		..()
 
 //Anti-Materiel Rifle (NCR)
 /obj/item/gun/ballistic/shotgun/antimateriel

@@ -235,6 +235,9 @@
 /datum/action/item_action/toggle_mister
 	name = "Toggle Mister"
 
+/datum/action/item_action/toggle_shishkebab
+	name = "Toggle Shishkebab"
+
 /datum/action/item_action/activate_injector
 	name = "Activate Injector"
 

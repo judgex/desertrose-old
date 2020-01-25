@@ -136,7 +136,7 @@ Centurion
 	name = "Heavy Centurion"
 	suit_store = /obj/item/gun/ballistic/automatic/smg10mm
 	backpack_contents = list(
-		/obj/item/melee/powerfist=1,
+		/obj/item/melee/powerfist/goliath=1,
 		/obj/item/ammo_box/magazine/m10mm_auto=2)
 
 /datum/outfit/loadout/centassault

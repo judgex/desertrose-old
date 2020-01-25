@@ -946,3 +946,16 @@
 	name = "bumper sword"
 	desc = "A heavy makeshift sword fashioned out of a car bumper."
 	icon_state = "bmprsword[wielded]"
+
+/obj/item/twohanded/sledgehammer/supersledge
+	name = "super sledge"
+	desc = "A heavy sledgehammer manufacted from ultra-dense materials. It looks like it could crush someone's skull with ease."
+	icon = 'icons/obj/items_and_weapons.dmi'
+	icon_state = "supersledge0"
+	lefthand_file = 'icons/mob/inhands/weapons/polearms_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/weapons/polearms_righthand.dmi'
+	force_unwielded = 35
+	force_wielded = 72
+
+/obj/item/twohanded/sledgehammer/supersledge/update_icon()
+	icon_state = "supersledge[wielded]"

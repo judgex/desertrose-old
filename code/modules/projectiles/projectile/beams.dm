@@ -200,6 +200,11 @@
 	damage = 25
 	armour_penetration = 20
 
+/obj/item/projectile/beam/laser/solar
+	name = "solar scorcher beam"
+	damage = 30
+	armour_penetration = 20
+
 /obj/item/projectile/beam/laser/tribeam
 	name = "tribeam laser"
 	damage = 15
@@ -221,3 +226,9 @@
 /obj/item/projectile/plasma/scatter
 	damage = 25
 	armour_penetration = 5
+
+/obj/item/projectile/plasma/alien
+	name = "alien projectile"
+	icon_state = "ion"
+	damage = 85 //horrifyingly powerful, but very limited ammo
+	armour_penetration = 50

@@ -801,6 +801,7 @@
 #include "code\game\objects\items\scrolls.dm"
 #include "code\game\objects\items\sharpener.dm"
 #include "code\game\objects\items\shields.dm"
+#include "code\game\objects\items\shishkebab.dm"
 #include "code\game\objects\items\shooting_range.dm"
 #include "code\game\objects\items\signs.dm"
 #include "code\game\objects\items\singularityhammer.dm"
