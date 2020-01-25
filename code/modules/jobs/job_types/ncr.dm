@@ -85,9 +85,10 @@ Captain
 	shoes       = /obj/item/clothing/shoes/f13/military/ncr_officer
 	gloves      = /obj/item/clothing/gloves/f13/leather/ncr_officer
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m44=4, \
+		/obj/item/ammo_box/magazine/a50=2, \
+		/obj/item/ammo_box/magazine/m9mm=1, \
+		/obj/item/gun/ballistic/automatic/pistol/ninemil=1, \
 		/obj/item/kitchen/knife/combat/survival=1, \
-		/obj/item/gun/ballistic/automatic/pistol/deagle=1, \
 		/obj/item/melee/classic_baton/telescopic=1, \
 		/obj/item/twohanded/binocs=1, \
 		/obj/item/storage/bag/money/small/ncr, \

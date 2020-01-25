@@ -36,7 +36,6 @@
 /obj/item/ammo_box/magazine/m45/empty
 	start_empty = 1
 
-
 /obj/item/ammo_box/magazine/pistolm9mm
 	name = "pistol magazine (9mm)"
 	icon_state = "9x19p-8"
@@ -57,6 +56,18 @@
 	multiple_sprites = 1
 
 /obj/item/ammo_box/magazine/m44/empty
+	start_empty = 1
+
+
+/obj/item/ammo_box/magazine/a50
+	name = "handgun magazine (.50 AE)"
+	icon_state = "50ae"
+	ammo_type = /obj/item/ammo_casing/a50AE
+	caliber = "50AE"
+	max_ammo = 7
+	multiple_sprites = 1
+
+/obj/item/ammo_box/magazine/a50/empty
 	start_empty = 1
 
 

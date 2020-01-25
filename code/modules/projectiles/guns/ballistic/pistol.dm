@@ -30,10 +30,10 @@
 
 /obj/item/gun/ballistic/automatic/pistol/deagle
 	name = "desert eagle"
-	desc = "A robust .44 magnum handgun."
+	desc = "A robust .50 AE handgun, commonly used by gun enthusiasts and issued to high-ranking NCR officers."
 	icon_state = "deagle"
 	force = 14
-	mag_type = /obj/item/ammo_box/magazine/m44
+	mag_type = /obj/item/ammo_box/magazine/a50
 	can_suppress = FALSE
 	w_class = WEIGHT_CLASS_NORMAL
 
@@ -47,7 +47,7 @@
 	icon_state = "[initial(icon_state)][chambered ? "" : "-e"]"
 
 /obj/item/gun/ballistic/automatic/pistol/deagle/gold
-	desc = "A gold plated desert eagle folded over a million times by superior martian gunsmiths. Uses .50 AE ammo."
+	desc = "A gold plated desert eagle folded over a million times by superior Gun Runner gunsmiths. Uses .50 AE ammo."
 	icon_state = "deagleg"
 	item_state = "deagleg"
 

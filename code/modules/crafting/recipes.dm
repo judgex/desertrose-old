@@ -309,8 +309,8 @@
 	subcategory = CAT_AMMO
 
 /datum/crafting_recipe/m50
-	name = "empty handgun magazine (.44 magnum)"
-	result = /obj/item/ammo_box/magazine/m44/empty
+	name = "empty handgun magazine (.50 AE)"
+	result = /obj/item/ammo_box/magazine/a50/empty
 	reqs = list(/obj/item/stack/sheet/metal = 3)
 	traits = list(TRAIT_GUNSMITH_THREE)
 	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER3)
@@ -460,8 +460,19 @@
 	subcategory = CAT_AMMO
 
 /datum/crafting_recipe/a50mg
-	name = "50MG ammo box"
+	name = ".50 MG (rifle) ammo box"
 	result = /obj/item/ammo_box/a50MGbox
+	reqs = list(/obj/item/stack/sheet/metal = 10,
+				/datum/reagent/blackpowder = 50)
+	traits = list(TRAIT_GUNSMITH_THREE)
+	tools = list(TOOL_AWORKBENCH, TOOL_GUNTIER3)
+	time = 10
+	category = CAT_WEAPONRY
+	subcategory = CAT_AMMO
+
+/datum/crafting_recipe/a50ae
+	name = ".50 AE (pistol) ammo box"
+	result = /obj/item/ammo_box/a50AEbox
 	reqs = list(/obj/item/stack/sheet/metal = 10,
 				/datum/reagent/blackpowder = 50)
 	traits = list(TRAIT_GUNSMITH_THREE)

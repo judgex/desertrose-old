@@ -800,8 +800,8 @@
 
 	var/loot3 = list(
 				/obj/item/gun/ballistic/automatic/pistol/deagle,
-				/obj/item/ammo_box/magazine/m44,
-				/obj/item/ammo_box/magazine/m44
+				/obj/item/ammo_box/magazine/a50,
+				/obj/item/ammo_box/magazine/a50
 				)
 
 	var/loot4 = list(
