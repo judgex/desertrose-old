@@ -44,11 +44,6 @@
 	S.icon = null
 	S.verbs.Cut()
 
-/obj/structure/closet/bus/attackby(obj/item/I, mob/user, params)
-	if(istype(I, /obj/item/wrench))
-		return
-	..()
-
 /obj/structure/closet/bus/can_close(mob/living/user)
 	if(broken)
 		return 0
@@ -88,7 +83,7 @@
 
 /obj/structure/bus_door
 	name = "broken bus door"
-	icon = 'icons/fallout/trash.dmi'
+	icon = 'icons/fallout/objects/structures/trash.dmi'
 	icon_state = "bus_door"
 	anchored = 1
 	density = 0

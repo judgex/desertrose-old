@@ -12,9 +12,18 @@
 	anchored = FALSE
 	var/list/mob/occupants				//mob = bitflags of their control level.
 	var/max_occupants = 1
+	can_buckle = 1
+	buckle_lying = 0
 	var/max_drivers = 1
 	var/movedelay = 2
 	var/lastmove = 0
+	var/auto_door_open = TRUE
+	var/view_range = 7
+	var/datum/riding/riding_datum = null
+	var/engine_on = 0
+	var/engine_on_sound = null
+	var/engine_loop_sound = null
+	var/obj/item/key/key = null
 	var/key_type
 	var/obj/item/key/inserted_key
 	var/key_type_exact = TRUE		//can subtypes work
@@ -151,3 +160,87 @@
 	if(trailer && .)
 		var/dir_to_move = get_dir(trailer.loc, newloc)
 		step(trailer, dir_to_move)
+
+/obj/vehicle/proc/RemoveKey()
+	set name = "Remove Key"
+	set category = "Object"
+	set src in view(1)
+
+	if(!ishuman(usr))
+		return
+
+	if(engine_on)
+		StopEngine()
+
+	key.loc = loc
+	var/mob/living/carbon/human/H = usr
+	if(H)
+		H.put_in_hands(key)
+	key = null
+	src.verbs -= /obj/vehicle/proc/RemoveKey
+
+/obj/vehicle/proc/StartEngine()
+	set name = "Start Engine"
+	set category = "Object"
+	set src in view(1)
+
+	start_engine()
+
+/obj/vehicle/proc/StopEngine()
+	set name = "Stop Engine"
+	set category = "Object"
+	set src in view(1)
+
+	stop_engine()
+
+/obj/vehicle/proc/stop_engine()
+	src.verbs += /obj/vehicle/proc/StartEngine
+	src.verbs -= /obj/vehicle/proc/StopEngine
+
+	if(usr)
+		usr.visible_message("[usr] stop engine of [src].", "You stop engine.")
+
+	engine_on = FALSE
+
+
+
+/obj/vehicle/proc/start_engine()
+	if(!riding_datum)
+		usr.visible_message("<span class = 'notice'>Sit on [src] to do this.</span>")
+		return
+
+	if(!key)
+		usr.visible_message("<span class = 'notice'>There is no key.</span>")
+		return
+
+	if(!istype(key, riding_datum.keytype))
+		usr.visible_message("<span class = 'notice'>Wrong key.</span>")
+		return
+
+	src.verbs += /obj/vehicle/proc/StopEngine
+	src.verbs -= /obj/vehicle/proc/StartEngine
+
+	if(usr)
+		usr.visible_message("[usr] start engine of [src].", "You start engine.")
+
+	engine_on = TRUE
+
+/obj/vehicle/deconstruct(disassembled = TRUE)
+	new /obj/item/stack/sheet/metal (loc, 5)
+	qdel(src)
+
+/obj/vehicle/examine(mob/user)
+	..()
+	if(!(resistance_flags & INDESTRUCTIBLE))
+		if(resistance_flags & ON_FIRE)
+			to_chat(user, "<span class='warning'>It's on fire!</span>")
+		var/healthpercent = (obj_integrity/max_integrity) * 100
+		switch(healthpercent)
+			if(100 to INFINITY)
+				to_chat(user, "It seems pristine and undamaged.")
+			if(50 to 100)
+				to_chat(user, "It looks slightly damaged.")
+			if(25 to 50)
+				to_chat(user, "It appears heavily damaged.")
+			if(0 to 25)
+				to_chat(user, "<span class='warning'>It's falling apart!</span>")

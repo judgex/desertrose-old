@@ -31,6 +31,8 @@
 	armour_penetration = 30
 	melee_damage_lower = 56
 	melee_damage_upper = 56
+	aggro_vision_range = 14
+	see_in_dark = 10
 	attacktext = "claws"
 	attack_sound = 'sound/weapons/bladeslice.ogg'
 	friendly = "hugs"

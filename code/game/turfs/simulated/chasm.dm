@@ -116,3 +116,4 @@
 	var/turf/T = safepick(get_area_turfs(/area/fabric_of_reality))
 	if(T)
 		set_target(T)
+

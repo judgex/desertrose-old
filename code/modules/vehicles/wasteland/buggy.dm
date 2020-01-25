@@ -1,6 +1,6 @@
 //Fallout 13 dune buggy directory
 
-/obj/vehicle/ridden/fuel/motorcycle/buggy
+/obj/vehicle/fuel/motorcycle/buggy
 	name = "dune buggy"
 	desc = "<i>Ain't no place for fancy cars on the wasteland.<br>No place for classy brands, but nicknames.<br>Only the rusty and trusty death machines.<br>Only fuel and blood.</i>"
 	icon = 'icons/fallout/vehicles/medium_vehicles.dmi'
@@ -12,9 +12,11 @@
 	max_integrity = 600
 	fuel = 800
 	max_fuel = 800
+	engine_on_sound = 'sound/f13machines/buggy_start.ogg'
+	engine_loop_sound = 'sound/f13machines/buggy_loop.ogg'
 	var/list/names = list("Badger", "Bandit", "Desert Punk", "Dune Buddy", "Duster", "Rebel", "Rooster")
 
-/obj/vehicle/ridden/fuel/motorcycle/buggy/New()
+/obj/vehicle/fuel/motorcycle/buggy/New()
 	..()
 	name = pick(names)
 
@@ -59,14 +61,78 @@
 					buckled_mob.pixel_x = 3
 					buckled_mob.pixel_y = 6
 
-/obj/vehicle/ridden/fuel/motorcycle/buggy/olive
+/obj/vehicle/fuel/motorcycle/buggy/olive
 	icon_state = "buggy_olive"
 	names = list("Bang-Bang", "Bolo", "Dittybopper", "Geardo", "Joe", "Pollywog", "Zoomie")
 
-/obj/vehicle/ridden/fuel/motorcycle/buggy/red
+/obj/vehicle/fuel/motorcycle/buggy/red
 	icon_state = "buggy_red"
 	names = list("Crusher", "Grim Reaper", "Meat Grinder", "Mincer", "Reaver", "Ripper", "Ripsaw")
 
-/obj/vehicle/ridden/fuel/motorcycle/buggy/hot
+/obj/vehicle/fuel/motorcycle/buggy/hot
 	icon_state = "buggy_hot"
 	names = list("Dragon", "Fire And Flames", "Flash", "Igniter", "Heat", "Hot Wheels", "Trailblazer")
+
+/obj/vehicle/fuel/motorcycle/buggy/interceptor
+	icon_state = "interceptor"
+	names = list("V8 Interceptor", "V8 Interceptor", "V8 Interceptor", "V8 Interceptor", "V8 Interceptor", "V8 Interceptor", "V8 Interceptor")
+
+// Vertibird and thing
+
+/obj/vehicle/fuel/motorcycle/buggy/vertibird
+	name = "vertibird"
+	desc = "A fucking vertibird. Holy shit."
+	icon = 'icons/fallout/vehicles/vertibird.dmi'
+	icon_state = "vb-fast"
+	engine_on_sound = 'sound/f13machines/vertibird_start.ogg'
+	engine_loop_sound = 'sound/f13machines/vertibird_loop.ogg'
+	layer = RIPPLE_LAYER+0.5
+
+// We'll make more fixes later - Sansaur
+
+/obj/vehicle/fuel/motorcycle/buggy/vertibird/buckle_mob()
+	. = ..()
+
+/obj/vehicle/fuel/motorcycle/buggy/vertibird/relaymove(mob/user)
+	. = ..()
+
+/obj/vehicle/fuel/motorcycle/buggy/vertibird/post_buckle_mob(mob/living/M)
+	. = ..()
+
+/obj/vehicle/fuel/motorcycle/buggy/vertibird/New()
+	..()
+	name = "vertibird"
+
+/obj/vehicle/fuel/motorcycle/buggy/vertibird/Move(NewLoc,Dir=0,step_x=0,step_y=0)
+	forceMove(NewLoc)
+	..()
+
+/obj/vehicle/fuel/motorcycle/buggy/vertibird/ncr
+	name = "NCR vertibird"
+	desc = "A vertibird belonging to the NCR."
+	icon = 'icons/fallout/vehicles/vertibird.dmi'
+	icon_state = "vb-fast_ncr"
+	engine_on_sound = 'sound/f13machines/vertibird_start.ogg'
+	engine_loop_sound = 'sound/f13machines/vertibird_loop.ogg'
+	layer = RIPPLE_LAYER+0.5
+	bound_height = 64
+	bound_width = 64
+
+/datum/riding/motorcycle/buggy/vertibird/handle_vehicle_offsets()
+	..()
+	if(ridden.has_buckled_mobs())
+		for(var/m in ridden.buckled_mobs)
+			var/mob/living/buckled_mob = m
+			switch(buckled_mob.dir)
+				if(NORTH)
+					buckled_mob.pixel_x = 128
+					buckled_mob.pixel_y = 220
+				if(EAST)
+					buckled_mob.pixel_x = 210
+					buckled_mob.pixel_y = 128
+				if(SOUTH)
+					buckled_mob.pixel_x = 128
+					buckled_mob.pixel_y = 64
+				if(WEST)
+					buckled_mob.pixel_x = 64
+					buckled_mob.pixel_y = 128

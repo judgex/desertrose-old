@@ -703,3 +703,13 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 		to_chat(user, "<span class='warning'>[M] is too close to use [src] on.</span>")
 		return
 	M.attack_hand(user)
+
+/obj/item/weapon/oar
+	name = "oar"
+	icon = 'icons/obj/vehicles.dmi'
+	icon_state = "oar"
+	item_state = "rods"
+	desc = "Not to be confused with the kind Research hassles you for."
+	force = 12
+	w_class = WEIGHT_CLASS_NORMAL
+	resistance_flags = LAVA_PROOF | FIRE_PROOF
