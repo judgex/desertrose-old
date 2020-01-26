@@ -31,16 +31,16 @@
 	junkiness = 0
 
 /obj/item/reagent_containers/food/snacks/chips
-	name = "chips"
-	desc = "Commander Riker's What-The-Crisps."
-	icon_state = "chips"
-	trash = /obj/item/trash/chips
-	bitesize = 1
-	list_reagents = list("nutriment" = 1, "sugar" = 3, "sodiumchloride" = 1)
-	junkiness = 20
-	filling_color = "#FFD700"
-	tastes = list("salt" = 1, "crisps" = 1)
-	foodtype = JUNKFOOD | FRIED
+    name = "potato crisps"
+    desc = "A bag of spring valley potato crisps."
+    icon_state = "chips"
+    trash = /obj/item/trash/chips
+    bitesize = 1
+    list_reagents = list("nutriment" = 1, "sugar" = 3, "sodiumchloride" = 1)
+    junkiness = 20
+    filling_color = "#FFD700"
+    tastes = list("salt" = 1, "crisps" = 1)
+    foodtype = JUNKFOOD | FRIED
 
 /obj/item/reagent_containers/food/snacks/no_raisin
 	name = "4no raisins"
@@ -61,7 +61,7 @@
 	foodtype = FRUIT
 
 /obj/item/reagent_containers/food/snacks/spacetwinkie
-	name = "space twinkie"
+	name = "twinkie"
 	icon_state = "space_twinkie"
 	desc = "Guaranteed to survive longer than you will."
 	list_reagents = list("sugar" = 4)
@@ -70,8 +70,8 @@
 	foodtype = JUNKFOOD | GRAIN | SUGAR
 
 /obj/item/reagent_containers/food/snacks/cheesiehonkers
-	name = "cheesie honkers"
-	desc = "Bite sized cheesie snacks that will honk all over your mouth."
+	name = "cheezy poofs"
+	desc = "They're yummy, they're nutritious (well sort of), and they last forever without going stale - they're scrum-diddle-icious Cheezy Poofs, and giant mole rats just love 'em."
 	icon_state = "cheesie_honkers"
 	trash = /obj/item/trash/cheesie
 	list_reagents = list("nutriment" = 1, "sugar" = 3)
@@ -81,7 +81,7 @@
 	foodtype = JUNKFOOD | DAIRY | SUGAR
 
 /obj/item/reagent_containers/food/snacks/syndicake
-	name = "syndi-cakes"
+	name = "funnel cake"
 	icon_state = "syndi_cakes"
 	desc = "An extremely moist snack cake that tastes just as good after being nuked."
 	trash = /obj/item/trash/syndi_cakes
