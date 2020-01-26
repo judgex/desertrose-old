@@ -40,3 +40,10 @@
 
 /obj/item/ammo_casing/energy/plasma/pistol/glock/extended
 	e_cost = 9.375
+
+/obj/item/ammo_casing/energy/plasma/alien
+	projectile_type = /obj/item/projectile/plasma/alien
+	select_name = "alien projectile"
+	icon_state = "ion"
+	fire_sound = 'sound/f13weapons/plasma_pistol.ogg'
+	e_cost = 1000 //four shots and you're out. use them wisely.

@@ -30,10 +30,10 @@
 
 /obj/item/gun/ballistic/automatic/pistol/deagle
 	name = "desert eagle"
-	desc = "A robust .44 magnum handgun."
+	desc = "A robust .50 AE handgun, commonly used by gun enthusiasts and issued to high-ranking NCR officers."
 	icon_state = "deagle"
 	force = 14
-	mag_type = /obj/item/ammo_box/magazine/m44
+	mag_type = /obj/item/ammo_box/magazine/a50
 	can_suppress = FALSE
 	w_class = WEIGHT_CLASS_NORMAL
 
@@ -47,7 +47,7 @@
 	icon_state = "[initial(icon_state)][chambered ? "" : "-e"]"
 
 /obj/item/gun/ballistic/automatic/pistol/deagle/gold
-	desc = "A gold plated desert eagle folded over a million times by superior martian gunsmiths. Uses .50 AE ammo."
+	desc = "A gold plated desert eagle folded over a million times by superior Gun Runner gunsmiths. Uses .50 AE ammo."
 	icon_state = "deagleg"
 	item_state = "deagleg"
 
@@ -92,6 +92,14 @@
 	fire_delay = 2
 	can_suppress = TRUE
 
+/obj/item/gun/ballistic/automatic/pistol/n99/executive
+	name = "\improper Executive" //'the Executive'
+	desc = "A gas-operated N99 pistol chambered in 10mm rounds. It has an accurate two-round-burst and a blue Vault-Tec finish, for only the most robust overseers."
+	icon_state = "executive"
+	can_suppress = FALSE
+	burst_size = 2
+	extra_penetration = 10 //2x 35 damage, 10 AP- hits like a 2rd burst 5.56, but more accurate
+
 /obj/item/gun/ballistic/automatic/pistol/ninemil
 	name = "9mm pistol"
 	desc = "A mass produced pre-war Browning Hi-power 9mm pistol."
@@ -100,3 +108,12 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	fire_delay = 2
 	can_suppress = FALSE
+
+/obj/item/gun/ballistic/automatic/pistol/ninemil/maria
+	name = "Maria"
+	desc = "An ornately-decorated pre-war Browning Hi-power 9mm pistol with pearl grips and a polished nickel finish. The firing mechanism has been upgraded, so for anyone on the receiving end, it must seem like an eighteen-karat run of bad luck."
+	icon_state = "maria"
+	w_class = WEIGHT_CLASS_SMALL
+	fire_delay = 0
+	extra_damage = 10 //40 damage, 20 AP- hits like a 7.62 and fires faster
+	extra_penetration = 20

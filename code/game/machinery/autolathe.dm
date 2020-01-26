@@ -457,6 +457,8 @@
 		return TRUE
 
 /obj/machinery/autolathe/constructionlathe/can_build(datum/design/D, amount = 1)
-	. = ..()
-	if("Security" in D.category && DRM == 1)
-		return FALSE
+	if("Security" in D.category)
+		if(DRM == 1)
+			return FALSE
+	else
+		. = ..()

@@ -557,7 +557,10 @@
 				/obj/item/twohanded/required/kinetic_crusher,
 				/obj/item/nullrod/claymore/chainsaw_sword,
 				/obj/item/melee/powerfist,
-				/obj/item/melee/transforming/energy/axe
+				/obj/item/melee/transforming/energy/axe,
+				/obj/item/gun/ballistic/revolver/ballisticfist,
+				/obj/item/twohanded/sledgehammer/supersledge,
+				/obj/item/shishkebabpack
 				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/melee/random
@@ -797,8 +800,8 @@
 
 	var/loot3 = list(
 				/obj/item/gun/ballistic/automatic/pistol/deagle,
-				/obj/item/ammo_box/magazine/m44,
-				/obj/item/ammo_box/magazine/m44
+				/obj/item/ammo_box/magazine/a50,
+				/obj/item/ammo_box/magazine/a50
 				)
 
 	var/loot4 = list(
@@ -884,7 +887,19 @@
 				/obj/item/gun/energy/laser/plasma,
 				/obj/item/gun/energy/laser/plasma/scatter,
 				/obj/item/gun/ballistic/revolver/sequoia/scoped,
-				/obj/item/gun/ballistic/automatic/sniper_rifle
+				/obj/item/gun/ballistic/automatic/bozar
+				)
+
+/obj/effect/spawner/lootdrop/f13/weapon/gun/unique //UNIQUE GUN
+	name = "tier 5 gun"
+	lootcount = 1
+
+	loot = list(
+				/obj/item/gun/ballistic/revolver/colt357/lucky,
+				/obj/item/gun/ballistic/automatic/pistol/ninemil/maria,
+				/obj/item/gun/ballistic/shotgun/remington/scoped/paciencia,
+				/obj/item/gun/energy/laser/solar,
+				/obj/item/gun/energy/laser/plasma/alien
 				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/random
@@ -902,9 +917,11 @@
 	lootcount = 1
 
 	loot = list(
-            /obj/effect/spawner/lootdrop/f13/weapon/gun/tier2 = 60,
+            /obj/effect/spawner/lootdrop/f13/weapon/gun/tier2 = 55,
             /obj/effect/spawner/lootdrop/f13/weapon/gun/tier3 = 40,
             /obj/effect/spawner/lootdrop/f13/weapon/gun/tier4 = 10,
+            /obj/effect/spawner/lootdrop/f13/weapon/gun/tier5 = 4,
+            /obj/effect/spawner/lootdrop/f13/weapon/gun/unique = 1,
             )
 
 

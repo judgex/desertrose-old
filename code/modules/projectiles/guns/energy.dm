@@ -79,7 +79,10 @@
 
 /obj/item/gun/energy/can_shoot()
 	var/obj/item/ammo_casing/energy/shot = ammo_type[select]
-	return cell.charge >= shot.e_cost
+	if(cell)
+		return cell.charge >= shot.e_cost
+	else
+		return FALSE
 
 /obj/item/gun/energy/recharge_newshot(no_cyborg_drain)
 	if (!ammo_type || !cell)
@@ -229,6 +232,9 @@
 
 /obj/item/gun/energy/AltClick(mob/living/user)
 	if(cell)
+		if(can_charge == 0)
+			to_chat(user, "<span class='notice'>You can't remove the cell from \the [src].</span>")
+			return
 		cell.forceMove(drop_location())
 		user.put_in_hands(cell)
 		cell.update_icon()
@@ -257,4 +263,5 @@
 
 /obj/item/gun/energy/examine(mob/user)
 	..()
-	to_chat(user, "<span class='notice'>Alt-click to eject the battery.</span>")
+	if(can_charge == 1)
+		to_chat(user, "<span class='notice'>Alt-click to eject the battery.</span>")

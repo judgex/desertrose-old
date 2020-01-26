@@ -46,6 +46,11 @@
 	name = "double-barrel shotgun internal magazine"
 	max_ammo = 2
 
+/obj/item/ammo_box/magazine/internal/shot/dual/ballisticfist
+	name = "ballistic fist internal magazine"
+	max_ammo = 2
+	ammo_type = /obj/item/ammo_casing/shotgun/buckshot
+
 /obj/item/ammo_box/magazine/internal/shot/riot
 	name = "riot shotgun internal magazine"
 	ammo_type = /obj/item/ammo_casing/shotgun/buckshot

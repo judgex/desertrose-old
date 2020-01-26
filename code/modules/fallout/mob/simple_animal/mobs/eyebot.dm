@@ -92,7 +92,7 @@
 	speak_emote = list()
 	emote_hear = list()
 	emote_see = list()
-	response_help  = "shakes its radio"
+	response_help  = "shakes the radio of"
 	response_disarm = "pushes"
 	response_harm   = "punches"
 	attack_sound = 'sound/voice/liveagain.ogg'

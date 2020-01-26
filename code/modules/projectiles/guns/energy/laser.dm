@@ -171,6 +171,18 @@
 	cell_type = /obj/item/stock_parts/cell/ammo/ec
 	slot_flags = ITEM_SLOT_BELT
 
+/obj/item/gun/energy/laser/solar
+	name = "\improper Solar Scorcher"
+	desc = "This modified AEP7 laser pistol takes its power from the sun, recharging slowly using stored solar energy. However, it cannot be recharged manually as a result."
+	icon_state = "solarscorcher"
+	item_state = "solarscorcher"
+	ammo_type = list(/obj/item/ammo_casing/energy/laser/solar) //30 damage, 20 AP
+	cell_type = /obj/item/stock_parts/cell/ammo/ec //10 shots, self-charges
+	can_charge = 0
+	selfcharge = 1
+	w_class = WEIGHT_CLASS_NORMAL
+	slot_flags = ITEM_SLOT_BELT
+
 /obj/item/gun/energy/laser/scatter
 	name = "tribeam laser rifle"
 	desc = "A modified AER9 equipped with a refraction kit that spreads its bolts. It is usually only given to high-ranking soldiers within the Brotherhood, due to it's level of technology, as well as its reputation of friendly fire."
@@ -256,4 +268,14 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	weapon_weight = WEAPON_LIGHT
 	cell_type = /obj/item/stock_parts/cell/ammo/ec
+	slot_flags = ITEM_SLOT_BELT
+
+/obj/item/gun/energy/laser/plasma/alien
+	name = "alien blaster"
+	item_state = "alienblaster"
+	icon_state = "alienblaster"
+	desc = "This weapon is unlike any other you've ever seen before, and appears to be made out of metals not usually found on Earth. It certainly packs a punch, though."
+	ammo_type = list(/obj/item/ammo_casing/energy/plasma/alien)
+	cell_type = /obj/item/stock_parts/cell/ammo/alien //unchargeable, but removable
+	w_class = WEIGHT_CLASS_NORMAL
 	slot_flags = ITEM_SLOT_BELT

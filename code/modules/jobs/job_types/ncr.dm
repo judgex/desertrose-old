@@ -51,7 +51,6 @@ Colonel
 		/obj/item/gun/ballistic/automatic/pistol/m1911=1, \
 		/obj/item/melee/classic_baton/telescopic=1, \
 		/obj/item/storage/bag/money/small/ncr)
-	box = null
 
 /*
 Captain
@@ -85,14 +84,14 @@ Captain
 	shoes       = /obj/item/clothing/shoes/f13/military/ncr_officer
 	gloves      = /obj/item/clothing/gloves/f13/leather/ncr_officer
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m44=4, \
+		/obj/item/ammo_box/magazine/a50=2, \
+		/obj/item/ammo_box/magazine/m9mm=1, \
+		/obj/item/gun/ballistic/automatic/pistol/ninemil=1, \
 		/obj/item/kitchen/knife/combat/survival=1, \
-		/obj/item/gun/ballistic/automatic/pistol/deagle=1, \
 		/obj/item/melee/classic_baton/telescopic=1, \
 		/obj/item/twohanded/binocs=1, \
 		/obj/item/storage/bag/money/small/ncr, \
 		/obj/item/clothing/mask/ncr_facewrap)
-	box = null
 
 /*
 Lieutenant
@@ -133,7 +132,6 @@ Lieutenant
 		/obj/item/twohanded/binocs=1, \
 		/obj/item/storage/bag/money/small/ncrofficers, \
 		/obj/item/clothing/mask/ncr_facewrap)
-	box = null
 
 	/*
 Medic
@@ -173,7 +171,6 @@ Medic
 		/obj/item/storage/firstaid/regular,  \
 		/obj/item/storage/bag/money/small/ncrofficers,  \
 		/obj/item/book/granter/trait/chemistry)
-	box = null
 
 //sergeant
 
@@ -213,7 +210,6 @@ Medic
 		/obj/item/ammo_box/magazine/m9mm=2, \
 		/obj/item/storage/bag/money/small/ncrofficers, \
 		/obj/item/clothing/mask/ncr_facewrap)
-	box = null
 
 
 /*
@@ -254,7 +250,6 @@ Engineer
 		/obj/item/stack/sheet/mineral/wood/twenty,  \
 		/obj/item/storage/box/emptysandbags,  \
 		)
-	box = null
 
 /*
 Corporal
@@ -290,7 +285,6 @@ Corporal
 		/obj/item/stack/medical/gauze=1, \
 		/obj/item/storage/bag/money/small/ncrenlisted, \
 		/obj/item/clothing/mask/ncr_facewrap)
-	box = null
 
 
 
@@ -331,7 +325,6 @@ Trooper
 		/obj/item/stack/medical/gauze=1, \
 		/obj/item/storage/bag/money/small/ncrenlisted, \
 		/obj/item/clothing/mask/ncr_facewrap)
-	box = null
 
 /*
 Recruit
@@ -369,7 +362,6 @@ Recruit
 		/obj/item/reagent_containers/hypospray/medipen/stimpak=1, \
 		/obj/item/stack/medical/gauze=1, \
 		/obj/item/storage/bag/money/small/ncrenlisted)
-	box = null
 
 /*
 Heavy Trooper
@@ -410,7 +402,6 @@ Heavy Trooper
 		/obj/item/stack/medical/gauze=1, \
 		/obj/item/kitchen/knife/combat=1, \
 		/obj/item/storage/bag/money/small/ncrofficers)
-	box = null
 
 /*
 Veteran Ranger

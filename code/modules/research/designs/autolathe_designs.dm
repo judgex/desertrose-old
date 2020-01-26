@@ -758,6 +758,14 @@
 	build_path = /obj/item/ammo_box/c9mm
 	category = list("initial", "Security")
 
+/datum/design/a50AEbox
+	name = "Ammo Box (.50 AE)"
+	id = "a50AEbox"
+	build_type = AUTOLATHE
+	materials = list(MAT_METAL = 15000)
+	build_path = /obj/item/ammo_box/a50AEbox
+	category = list("initial", "Security")
+
 /datum/design/m44
 	name = "Speed Loader (.44)"
 	id = "m44"

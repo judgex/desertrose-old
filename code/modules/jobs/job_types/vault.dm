@@ -67,7 +67,7 @@ Overseer
 	glasses = 		/obj/item/clothing/glasses/sunglasses
 	ears = 			/obj/item/radio/headset/headset_overseer
 	backpack = /obj/item/storage/backpack/satchel/leather
-	backpack_contents = list(/obj/item/storage/box/ids = 1, /obj/item/melee/oldstyle = 1, /obj/item/gun/ballistic/revolver/m29 = 1, /obj/item/ammo_box/m44 = 2)
+	backpack_contents = list(/obj/item/storage/box/ids = 1, /obj/item/melee/oldstyle = 1, /obj/item/gun/ballistic/automatic/pistol/n99/executive = 1, /obj/item/ammo_box/magazine/m10mm_adv = 3)
 
 ///datum/outfit/f13overseer/post_equip(mob/living/carbon/human/H)
 	//..()
@@ -447,4 +447,4 @@ Vault Engineer
 	..()
 //	if(SSmapping.config.map_name == "Pahrump")
 //		total_positions = 0
-//		spawn_positions = 0 
+//		spawn_positions = 0

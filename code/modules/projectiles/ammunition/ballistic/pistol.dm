@@ -69,5 +69,5 @@
 /obj/item/ammo_casing/a50AE
 	name = ".50AE bullet casing"
 	desc = "A .50AE bullet casing."
-	caliber = ".50"
+	caliber = "50AE"
 	projectile_type = /obj/item/projectile/bullet/a50AE

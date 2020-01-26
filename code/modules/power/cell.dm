@@ -393,3 +393,11 @@
 	icon_state = "ec"
 	maxcharge = 300
 	chargerate = 300
+
+/obj/item/stock_parts/cell/ammo/alien
+	name = "alien weapon cell"
+	desc = "A weapon cell that glows and thrums with unearthly energies. You're not sure you'd be able to recharge it, but it seems very powerful."
+	icon_state = "aliencell"
+	ratingdesc = FALSE
+	maxcharge = 4000
+	chargerate = 0

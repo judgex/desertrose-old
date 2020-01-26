@@ -251,7 +251,7 @@
 	name = "ammo box (.45-70 SWC)"
 	ammo_type = /obj/item/ammo_casing/c4570/swc
 
-//.50 AE (Unused)
+//.50 MG and .50 AE
 /obj/item/ammo_box/a50MGbox
 	name = "ammo box (.50 MG)"
 	icon_state = "50box"
