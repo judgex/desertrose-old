@@ -1091,7 +1091,7 @@
 /datum/crafting_recipe/salvage_stimpak
 	name = "Salvage injector"
 	result = /obj/item/reagent_containers/syringe
-	reqs = list(/obj/item/reagent_containers/hypospray/medipen = 1)
+	reqs = list(/obj/item/reagent_containers/hypospray/medipen/stimpak = 1)
 	time = 20
 	tools = list(TOOL_WORKBENCH)
 	category = CAT_MEDICAL
