@@ -14,9 +14,9 @@
 	foodtype = JUNKFOOD | SUGAR
 
 /obj/item/reagent_containers/food/snacks/sosjerky
-	name = "\improper Scaredy's Private Reserve Beef Jerky"
+	name = " Dunton House Beef Jerky"
 	icon_state = "sosjerky"
-	desc = "Beef jerky made from the finest space cows."
+	desc = "Pre-war beef jerky made from the finest cows."
 	trash = /obj/item/trash/sosjerky
 	list_reagents = list("nutriment" = 1, "sugar" = 3, "sodiumchloride" = 2)
 	junkiness = 25
@@ -25,8 +25,8 @@
 	foodtype = JUNKFOOD | MEAT | SUGAR
 
 /obj/item/reagent_containers/food/snacks/sosjerky/healthy
-	name = "homemade beef jerky"
-	desc = "Homemade beef jerky made from the finest space cows."
+	name = "homemade jerky"
+	desc = "These smoked and dried chunks of beast-flesh remain chewy-licous and even somewhat nutritious for years, and years.."
 	list_reagents = list("nutriment" = 3, "vitamin" = 1)
 	junkiness = 0
 
@@ -45,7 +45,7 @@
 /obj/item/reagent_containers/food/snacks/no_raisin
 	name = "4no raisins"
 	icon_state = "4no_raisins"
-	desc = "Best raisins in the universe. Not sure why."
+	desc = "The best raisins in United States of American. Not sure why."
 	trash = /obj/item/trash/raisins
 	list_reagents = list("nutriment" = 2, "sugar" = 4)
 	junkiness = 25
@@ -55,7 +55,7 @@
 
 /obj/item/reagent_containers/food/snacks/no_raisin/healthy
 	name = "homemade raisins"
-	desc = "Homemade raisins, the best in all of spess."
+	desc = "Homemade raisins, the best in all of wasteland."
 	list_reagents = list("nutriment" = 3, "vitamin" = 2)
 	junkiness = 0
 	foodtype = FRUIT
