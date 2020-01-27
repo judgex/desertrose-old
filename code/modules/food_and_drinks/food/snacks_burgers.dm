@@ -98,7 +98,7 @@
 
 /obj/item/reagent_containers/food/snacks/burger/xeno
 	name = "xenoburger"
-	desc = "Smells caustic. Tastes like heresy."
+	desc = "Smells caustic. Tastes like mutation."
 	icon_state = "xburger"
 	bonus_reagents = list("nutriment" = 2, "vitamin" = 6)
 	tastes = list("bun" = 4, "acid" = 4)
