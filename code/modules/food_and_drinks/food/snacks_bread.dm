@@ -62,7 +62,7 @@
 	foodtype = GRAIN | MEAT
 
 /obj/item/reagent_containers/food/snacks/breadslice/xenomeat
-	name = "xenomeatbread slice"
+	name = "mutantmeatbread slice"
 	desc = "A slice of delicious meatbread. Extra mutated."
 	icon_state = "xenobreadslice"
 	filling_color = "#32CD32"
