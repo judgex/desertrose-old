@@ -243,8 +243,8 @@
 	isGlass = FALSE
 
 /obj/item/reagent_containers/food/drinks/beer
-	name = "space beer"
-	desc = "Beer. In space."
+	name = "beer"
+	desc = "Beer."
 	icon_state = "beer"
 	list_reagents = list("beer" = 30)
 	foodtype = GRAIN | ALCOHOL
