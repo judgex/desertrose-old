@@ -4,7 +4,7 @@
 
 /obj/item/reagent_containers/food/snacks/donut
 	name = "donut"
-	desc = "Goes great with robust coffee."
+	desc = "Goes great with coffee."
 	icon_state = "donut1"
 	bitesize = 5
 	bonus_reagents = list("sugar" = 1)
@@ -189,7 +189,7 @@
 
 /obj/item/reagent_containers/food/snacks/donkpocket
 	name = "\improper Donk-pocket"
-	desc = "The food of choice for the seasoned traitor."
+	desc = "The food of choice for the seasoned bandit."
 	icon_state = "donkpocket"
 	list_reagents = list("nutriment" = 4)
 	cooked_type = /obj/item/reagent_containers/food/snacks/donkpocket/warm
@@ -199,7 +199,7 @@
 
 /obj/item/reagent_containers/food/snacks/donkpocket/warm
 	name = "warm Donk-pocket"
-	desc = "The heated food of choice for the seasoned traitor."
+	desc = "The heated food of choice for the seasoned bandit."
 	bonus_reagents = list("omnizine" = 3)
 	list_reagents = list("nutriment" = 4, "omnizine" = 3)
 	tastes = list("meat" = 2, "dough" = 2, "laziness" = 1)
@@ -207,7 +207,7 @@
 
 /obj/item/reagent_containers/food/snacks/dankpocket
 	name = "\improper Dank-pocket"
-	desc = "The food of choice for the seasoned botanist."
+	desc = "The food of choice for the seasoned farmer"
 	icon_state = "dankpocket"
 	list_reagents = list("lipolicide" = 3, "space_drugs" = 3, "nutriment" = 4)
 	filling_color = "#00FF00"
