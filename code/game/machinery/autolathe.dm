@@ -460,5 +460,7 @@
 	if("Security" in D.category)
 		if(DRM == 1)
 			return FALSE
+		else
+			. = ..()
 	else
 		. = ..()
