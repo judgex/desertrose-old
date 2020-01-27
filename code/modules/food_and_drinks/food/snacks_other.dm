@@ -123,7 +123,7 @@
 
 /obj/item/reagent_containers/food/snacks/badrecipe
 	name = "burned mess"
-	desc = "Someone should be demoted from cook for this."
+	desc = "Someone should be fired from cook for this."
 	icon_state = "badrecipe"
 	list_reagents = list("bad_food" = 25, "carbon" = 5)
 	filling_color = "#8B4513"
@@ -290,7 +290,7 @@
 	foodtype = GRAIN | MEAT
 
 /obj/item/reagent_containers/food/snacks/fuegoburrito
-	name = "fuego plasma burrito"
+	name = "fuego lava burrito"
 	desc = "A super spicy burrito."
 	icon_state = "fuegoburrito"
 	bonus_reagents = list("nutriment" = 2, "vitamin" = 3)
@@ -331,8 +331,8 @@
 	foodtype = FRUIT
 
 /obj/item/reagent_containers/food/snacks/spacefreezy
-	name = "space freezy"
-	desc = "The best icecream in space."
+	name = "freezy"
+	desc = "The best icecream in America."
 	icon_state = "spacefreezy"
 	bonus_reagents = list("nutriment" = 2, "vitamin" = 2)
 	list_reagents = list("nutriment" = 6, "bluecherryjelly" = 5, "vitamin" = 4)
@@ -362,7 +362,7 @@
 
 /obj/item/reagent_containers/food/snacks/nachos
 	name = "nachos"
-	desc = "Chips from Space Mexico."
+	desc = "Chips from Mexico."
 	icon_state = "nachos"
 	bonus_reagents = list("nutriment" = 1, "vitamin" = 1)
 	list_reagents = list("nutriment" = 6, "vitamin" = 2)
