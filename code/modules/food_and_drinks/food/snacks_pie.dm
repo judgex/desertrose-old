@@ -20,7 +20,7 @@
 
 /obj/item/reagent_containers/food/snacks/pie/cream
 	name = "banana cream pie"
-	desc = "Just like back home, on clown planet! HONK!"
+	desc = "Just like back home in the circus! HONK!"
 	icon_state = "pie"
 	trash = /obj/item/trash/plate
 	bonus_reagents = list("nutriment" = 2, "vitamin" = 2)
@@ -130,9 +130,9 @@
 
 
 /obj/item/reagent_containers/food/snacks/pie/xemeatpie
-	name = "xeno-pie"
-	icon_state = "xenomeatpie"
-	desc = "A delicious meatpie. Probably heretical."
+	name = "mutant-pie"
+	icon_state = "mutantmeatpie"
+	desc = "A delicious meatpie. Probably mutagenic."
 	trash = /obj/item/trash/plate
 	bonus_reagents = list("nutriment" = 1, "vitamin" = 5)
 	tastes = list("pie" = 1, "meat" = 1, "acid" = 1)
