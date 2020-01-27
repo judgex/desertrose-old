@@ -310,7 +310,7 @@
 	overdose_threshold = 150
 
 /datum/reagent/lube
-	name = "Space Lube"
+	name = "Industrial Lube"
 	id = "lube"
 	description = "Lubricant is a substance introduced between two moving surfaces to reduce the friction and wear between them. giggity."
 	color = "#009CA8" // rgb: 0, 156, 168
