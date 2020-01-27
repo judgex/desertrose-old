@@ -97,7 +97,7 @@
 	foodtype = GRAIN | TOXIC
 
 /obj/item/reagent_containers/food/snacks/burger/xeno
-	name = "xenoburger"
+	name = "mutant burger"
 	desc = "Smells caustic. Tastes like mutation."
 	icon_state = "xburger"
 	bonus_reagents = list("nutriment" = 2, "vitamin" = 6)
