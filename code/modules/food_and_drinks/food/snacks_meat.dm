@@ -78,7 +78,7 @@
 
 /obj/item/reagent_containers/food/snacks/cornedbeef
 	name = "corned beef and cabbage"
-	desc = "Now you can feel like a real tourist vacationing in Ireland."
+	desc = "Now you can feel like a real tourist vacationing in Boston."
 	icon_state = "cornedbeef"
 	trash = /obj/item/trash/plate
 	bonus_reagents = list("nutriment" = 1, "vitamin" = 4)
@@ -246,7 +246,7 @@
 
 /obj/item/reagent_containers/food/snacks/sashimi
 	name = "carp sashimi"
-	desc = "Celebrate surviving attack from hostile alien lifeforms by hospitalising yourself."
+	desc = "Celebrate surviving attack from hostile sea life by hospitalising yourself."
 	icon_state = "sashimi"
 	bonus_reagents = list("nutriment" = 1, "capsaicin" = 4, "vitamin" = 4)
 	list_reagents = list("nutriment" = 6, "capsaicin" = 5)
