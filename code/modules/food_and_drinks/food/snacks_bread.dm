@@ -52,7 +52,7 @@
 	foodtype = GRAIN | MEAT
 
 /obj/item/reagent_containers/food/snacks/store/bread/xenomeat
-	name = "xenomeatbread loaf"
+	name = "mutantomeatbread loaf"
 	desc = "The culinary base of every self-respecting sandwich. Extra mutated."
 	icon_state = "xenomeatbread"
 	slice_path = /obj/item/reagent_containers/food/snacks/breadslice/xenomeat
