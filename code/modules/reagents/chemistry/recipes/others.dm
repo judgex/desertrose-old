@@ -6,7 +6,7 @@
 	required_reagents = list("ethanol" = 1, "charcoal" = 1, "chlorine" = 1)
 
 /datum/chemical_reaction/lube
-	name = "Space Lube"
+	name = "Industrial Lube"
 	id = "lube"
 	results = list("lube" = 4)
 	required_reagents = list("water" = 1, "silicon" = 1, "oxygen" = 1)
