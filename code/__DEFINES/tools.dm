@@ -16,6 +16,7 @@
 #define TOOL_LUNCHBOX       "lunchbox"
 #define TOOL_WORKBENCH      "workbench"
 #define TOOL_AWORKBENCH     "advanced workbench"
+#define TOOL_LOOM			"Loom"
 #define TOOL_GUNTIER1		"Guns and Bullets: Part 1"
 #define TOOL_GUNTIER2		"Guns and Bullets: Part 2"
 #define TOOL_GUNTIER3		"Guns and Bullets: Part 3"
