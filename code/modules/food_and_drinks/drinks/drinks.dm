@@ -222,7 +222,7 @@
 
 /obj/item/reagent_containers/food/drinks/mug/tea
 	name = "Duke Purple tea"
-	desc = "An insult to Duke Purple is an insult to the Space Queen! Any proper gentleman will fight you, if you sully this tea."
+	desc = "An insult to Duke Purple is an insult to the Queen! Any proper gentleman will fight you, if you sully this tea."
 	list_reagents = list("tea" = 30)
 
 /obj/item/reagent_containers/food/drinks/mug/coco
@@ -243,15 +243,15 @@
 	isGlass = FALSE
 
 /obj/item/reagent_containers/food/drinks/beer
-	name = "space beer"
-	desc = "Beer. In space."
+	name = "beer"
+	desc = "Beer."
 	icon_state = "beer"
 	list_reagents = list("beer" = 30)
 	foodtype = GRAIN | ALCOHOL
 
 /obj/item/reagent_containers/food/drinks/ale
 	name = "Magm-Ale"
-	desc = "A true dorf's drink of choice."
+	desc = "A true miner's drink of choice."
 	icon_state = "alebottle"
 	item_state = "beer"
 	list_reagents = list("ale" = 30)
@@ -305,7 +305,7 @@
 			if("milk")
 				icon_state = "milkbox"
 				name = "carton of milk"
-				desc = "An excellent source of calcium for growing space explorers."
+				desc = "An excellent source of calcium for growing explorers."
 				foodtype = DAIRY
 			if("applejuice")
 				icon_state = "juicebox"
@@ -350,7 +350,7 @@
 
 /obj/item/reagent_containers/food/drinks/flask
 	name = "flask"
-	desc = "Every good spaceman knows it's a good idea to bring along a couple of pints of whiskey wherever they go."
+	desc = "Every good wastelander knows it's a good idea to bring along a couple of pints of whiskey wherever they go."
 	icon_state = "flask"
 	materials = list(MAT_METAL=250)
 	volume = 60
@@ -358,7 +358,7 @@
 
 /obj/item/reagent_containers/food/drinks/flask/gold
 	name = "captain's flask"
-	desc = "A gold flask belonging to the captain."
+	desc = "A gold flask belonging to a ship's captain."
 	icon = 'icons/obj/drinks.dmi'
 	icon_state = "flask_gold"
 	materials = list(MAT_GOLD=500)
