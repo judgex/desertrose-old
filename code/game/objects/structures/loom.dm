@@ -7,6 +7,7 @@
 	icon_state = "loom"
 	density = TRUE
 	anchored = TRUE
+	machine_tool_behaviour = TOOL_LOOM
 
 /obj/structure/loom/attackby(obj/item/I, mob/user)
 	if(istype(I, /obj/item/stack/sheet))
