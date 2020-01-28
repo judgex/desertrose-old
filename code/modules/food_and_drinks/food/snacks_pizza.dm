@@ -17,7 +17,7 @@
 
 /obj/item/reagent_containers/food/snacks/pizza/margherita
 	name = "pizza margherita"
-	desc = "The most cheezy pizza in galaxy."
+	desc = "The most cheezy pizza in America."
 	icon_state = "pizzamargherita"
 	slice_path = /obj/item/reagent_containers/food/snacks/pizzaslice/margherita
 	bonus_reagents = list("nutriment" = 5, "vitamin" = 5)
@@ -26,7 +26,7 @@
 
 /obj/item/reagent_containers/food/snacks/pizzaslice/margherita
 	name = "margherita slice"
-	desc = "A slice of the most cheezy pizza in galaxy."
+	desc = "A slice of the most cheezy pizza in America."
 	icon_state = "pizzamargheritaslice"
 	filling_color = "#FFA500"
 	tastes = list("crust" = 1, "tomato" = 1, "cheese" = 1)
