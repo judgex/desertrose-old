@@ -8,6 +8,7 @@
 	density = TRUE
 	anchored = TRUE
 	machine_tool_behaviour = TOOL_LOOM
+	var/wrenchable = 0
 
 /obj/structure/loom/attackby(obj/item/I, mob/user)
 	if(istype(I, /obj/item/stack/sheet))
