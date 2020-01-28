@@ -1,6 +1,6 @@
 #define FABRIC_PER_SHEET 4
 
-/obj/structure/loom
+/obj/machinery/loom
 	name = "loom"
 	desc = "A simple device used to weave cloth and other thread-based fabrics together into usable material."
 	icon = 'icons/obj/hydroponics/equipment.dmi'
@@ -10,7 +10,7 @@
 	machine_tool_behaviour = TOOL_LOOM
 	var/wrenchable = 0
 
-/obj/structure/loom/attackby(obj/item/I, mob/user)
+/obj/machinery/loom/attackby(obj/item/I, mob/user)
 	if(istype(I, /obj/item/stack/sheet))
 		var/obj/item/stack/sheet/W = I
 		if(W.is_fabric && W.amount > 1)
