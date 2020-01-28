@@ -19,7 +19,7 @@
 
 /obj/item/reagent_containers/food/snacks/store/bread/plain
 	name = "bread"
-	desc = "Some plain old earthen bread."
+	desc = "Some plain old bread."
 	icon_state = "bread"
 	bonus_reagents = list("nutriment" = 7)
 	list_reagents = list("nutriment" = 10)
@@ -37,7 +37,7 @@
 
 /obj/item/reagent_containers/food/snacks/store/bread/meat
 	name = "meatbread loaf"
-	desc = "The culinary base of every self-respecting eloquen/tg/entleman."
+	desc = "The culinary base of every self-respecting sandwich."
 	icon_state = "meatbread"
 	slice_path = /obj/item/reagent_containers/food/snacks/breadslice/meat
 	bonus_reagents = list("nutriment" = 5, "vitamin" = 10)
@@ -52,8 +52,8 @@
 	foodtype = GRAIN | MEAT
 
 /obj/item/reagent_containers/food/snacks/store/bread/xenomeat
-	name = "xenomeatbread loaf"
-	desc = "The culinary base of every self-respecting eloquen/tg/entleman. Extra Heretical."
+	name = "mutantmeatbread loaf"
+	desc = "The culinary base of every self-respecting sandwich. Extra mutated."
 	icon_state = "xenomeatbread"
 	slice_path = /obj/item/reagent_containers/food/snacks/breadslice/xenomeat
 	bonus_reagents = list("nutriment" = 5, "vitamin" = 10)
@@ -62,8 +62,8 @@
 	foodtype = GRAIN | MEAT
 
 /obj/item/reagent_containers/food/snacks/breadslice/xenomeat
-	name = "xenomeatbread slice"
-	desc = "A slice of delicious meatbread. Extra Heretical."
+	name = "mutantmeatbread slice"
+	desc = "A slice of delicious meatbread. Extra mutated."
 	icon_state = "xenobreadslice"
 	filling_color = "#32CD32"
 	list_reagents = list("nutriment" = 6, "vitamin" = 1)
