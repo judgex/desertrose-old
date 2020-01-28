@@ -1722,3 +1722,10 @@
 	tools = list(TOOL_WORKBENCH)
 	category = CAT_PRIMAL
 	subcategory = CAT_TRIBAL
+	
+/datum/crafting_recipe/strawdummy
+	name = "Weave Target Dummy"
+	result = /obj/structure/punching_bag/dummy
+	time = 30
+	reqs = list(/obj/item/stack/sheet/hay = 15)
+	category = CAT_MISC
