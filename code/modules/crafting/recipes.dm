@@ -1713,3 +1713,12 @@
 	tools = list(TOOL_WORKBENCH)
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
+
+/datum/crafting_recipe/bonedie
+	name = "Carve Bone Die"
+	result = /obj/item/dice/d6
+	time = 30
+	reqs = list(/obj/item/stack/sheet/bone = 1)
+	tools = list(TOOL_WORKBENCH)
+	category = CAT_PRIMAL
+	subcategory = CAT_TRIBAL
