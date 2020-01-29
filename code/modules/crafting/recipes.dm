@@ -1729,3 +1729,20 @@
 	time = 30
 	reqs = list(/obj/item/stack/sheet/hay = 15)
 	category = CAT_MISC
+
+/datum/crafting_recipe/Tallow
+	name = "Render Fat From Scraps"
+	result = /obj/item/reagent_containers/food/snacks/tallow
+	time = 30
+	reqs = list(/obj/item/reagent_containers/food/snacks/meat/cutlet = 3)
+	category = CAT_MISC	
+
+/datum/crafting_recipe/TallowCandle
+	name = "Mold Tallow Candle"
+	result = /obj/item/candle
+	time = 30
+	reqs = list(
+		/obj/item/reagent_containers/food/snacks/tallow = 1,
+		/obj/item/stack/sheet/durathread = 3	
+	)
+	category = CAT_MISC	
