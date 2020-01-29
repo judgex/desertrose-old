@@ -1746,3 +1746,10 @@
 		/obj/item/stack/sheet/durathread = 3	
 	)
 	category = CAT_MISC	
+	
+	/datum/crafting_recipe/SalvageCandle
+	name = "Salvage Wax"
+	result = /obj/item/candle
+	time = 80
+	reqs = list(/obj/item/trash/candle = 5)
+	category = CAT_MISC
