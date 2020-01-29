@@ -1752,7 +1752,7 @@
 	result = /obj/item/candle
 	time = 80
 	reqs = list(
-	/obj/item/trash/candle = 5,
-	/obj/item/stack/sheet/durathread = 3
+		/obj/item/trash/candle = 5,
+		/obj/item/stack/sheet/durathread = 3
 	)
 	category = CAT_MISC
