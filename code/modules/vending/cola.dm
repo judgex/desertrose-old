@@ -44,7 +44,7 @@
 
 /obj/machinery/vending/cola/red
 	icon_state = "red_cola"
-	name = "/improper Cola Vendor"
+	name = "\improper Cola Vendor"
 	desc = "It vends cola"
 	product_slogans = "Cola, ice cold!"
 
