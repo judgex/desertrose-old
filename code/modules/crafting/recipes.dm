@@ -1713,3 +1713,46 @@
 	tools = list(TOOL_WORKBENCH)
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
+
+/datum/crafting_recipe/bonedie
+	name = "Carve Bone Die"
+	result = /obj/item/dice/d6
+	time = 30
+	reqs = list(/obj/item/stack/sheet/bone = 1)
+	tools = list(TOOL_WORKBENCH)
+	category = CAT_PRIMAL
+	subcategory = CAT_TRIBAL
+	
+/datum/crafting_recipe/strawdummy
+	name = "Weave Target Dummy"
+	result = /obj/structure/punching_bag/dummy
+	time = 30
+	reqs = list(/obj/item/stack/sheet/hay = 15)
+	category = CAT_MISC
+
+/datum/crafting_recipe/Tallow
+	name = "Render Fat From Scraps"
+	result = /obj/item/reagent_containers/food/snacks/tallow
+	time = 30
+	reqs = list(/obj/item/reagent_containers/food/snacks/meat/cutlet = 3)
+	category = CAT_MISC	
+
+/datum/crafting_recipe/TallowCandle
+	name = "Mold Tallow Candle"
+	result = /obj/item/candle
+	time = 30
+	reqs = list(
+		/obj/item/reagent_containers/food/snacks/tallow = 1,
+		/obj/item/stack/sheet/durathread = 3	
+	)
+	category = CAT_MISC	
+	
+	/datum/crafting_recipe/SalvageCandle
+	name = "Salvage Wax"
+	result = /obj/item/candle
+	time = 80
+	reqs = list(
+		/obj/item/trash/candle = 5,
+		/obj/item/stack/sheet/durathread = 3
+	)
+	category = CAT_MISC
