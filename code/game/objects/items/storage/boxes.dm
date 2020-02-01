@@ -695,7 +695,7 @@
 	w_class = WEIGHT_CLASS_SMALL
 
 /obj/item/storage/box/rubbershot/PopulateContents()
-	for(var/i in 1 to 7)
+	for(var/i in 1 to 14)
 		new /obj/item/ammo_casing/shotgun/rubbershot(src)
 
 /obj/item/storage/box/rubbershot/beanbag
@@ -706,7 +706,7 @@
 	w_class = WEIGHT_CLASS_SMALL
 
 /obj/item/storage/box/rubbershot/beanbag/PopulateContents()
-	for(var/i in 1 to 7)
+	for(var/i in 1 to 14)
 		new /obj/item/ammo_casing/shotgun/beanbag(src)
 
 /obj/item/storage/box/lethalshot
@@ -725,7 +725,7 @@
 	STR.can_hold = typecacheof(list(/obj/item/ammo_casing/shotgun))
 
 /obj/item/storage/box/lethalshot/PopulateContents()
-	for(var/i in 1 to 7)
+	for(var/i in 1 to 14)
 		new /obj/item/ammo_casing/shotgun/buckshot(src)
 
 /obj/item/storage/box/lethalshot/ComponentInitialize()
@@ -744,7 +744,7 @@
 	w_class = WEIGHT_CLASS_SMALL
 
 /obj/item/storage/box/magnumshot/PopulateContents()
-	for(var/i in 1 to 7)
+	for(var/i in 1 to 14)
 		new /obj/item/ammo_casing/shotgun/magnumshot(src)
 
 /obj/item/storage/box/magnumshot/ComponentInitialize()
@@ -763,7 +763,7 @@
 	w_class = WEIGHT_CLASS_SMALL
 
 /obj/item/storage/box/slugshot/PopulateContents()
-	for(var/i in 1 to 7)
+	for(var/i in 1 to 14)
 		new /obj/item/ammo_casing/shotgun(src)
 
 /obj/item/storage/box/slugshot/ComponentInitialize()
@@ -799,31 +799,31 @@
 /obj/item/storage/box/techshot/PopulateContents()
 	switch (pickweight(list("ion" = 20, "laser" = 20, "pulse" = 20, "meteor" = 20, "incendiary" = 20, "chem" = 20, "wildcard" = 20)))
 		if ("meteor")
-			for(var/i in 1 to 6)
+			for(var/i in 1 to 14)
 				new /obj/item/ammo_casing/shotgun/meteorslug(src)
 
 		if ("incendiary")
-			for(var/i in 1 to 6)
+			for(var/i in 1 to 14)
 				new /obj/item/ammo_casing/shotgun/incendiary(src)
 
 		if ("pulse")
-			for(var/i in 1 to 6)
+			for(var/i in 1 to 14)
 				new /obj/item/ammo_casing/shotgun/pulseslug(src)
 
 		if ("laser")
-			for(var/i in 1 to 6)
+			for(var/i in 1 to 14)
 				new /obj/item/ammo_casing/shotgun/laserslug(src)
 
 		if ("ion")
-			for(var/i in 1 to 6)
+			for(var/i in 1 to 14)
 				new /obj/item/ammo_casing/shotgun/ion(src)
 
 		if ("chem")
-			for(var/i in 1 to 6)
+			for(var/i in 1 to 14)
 				new /obj/item/ammo_casing/shotgun/dart(src)
 
 		if ("wildcard")
-			for(var/i in 1 to 6)
+			for(var/i in 1 to 14)
 				new /obj/item/ammo_casing/shotgun/techshell(src)
 
 /obj/item/storage/box/techshot/ComponentInitialize()
@@ -835,7 +835,7 @@
 	STR.can_hold = typecacheof(list(/obj/item/ammo_casing/shotgun))
 
 /obj/item/storage/box/beanbag/PopulateContents()
-	for(var/i in 1 to 6)
+	for(var/i in 1 to 14)
 		new /obj/item/ammo_casing/shotgun/beanbag(src)
 
 /obj/item/storage/box/actionfigure

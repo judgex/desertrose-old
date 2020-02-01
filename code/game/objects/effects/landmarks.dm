@@ -447,6 +447,9 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 	name = "NCR Colonel"
 	icon_state = "NCR Colonel"
 
+/obj/effect/landmark/start/f13/ncrambassador
+	name = "NCR Ambassador"
+
 /obj/effect/landmark/start/f13/ncrcaptain
 	name = "NCR Captain"
 	icon_state = "NCR Captain"
@@ -459,14 +462,9 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 	name = "NCR Sergeant"
 	icon_state = "NCR Sergeant"
 
-/obj/effect/landmark/start/f13/ncrmedic
-	name = "NCR Medical Officer"
-
-/obj/effect/landmark/start/f13/ncrengineer
-	name = "NCR Engineer"
-
-/obj/effect/landmark/start/f13/ncrcorporal
-	name = "NCR Corporal"
+/obj/effect/landmark/start/f13/ncrspecialist
+	name = "NCR Specialist"
+	icon_state = "NCR Trooper"
 
 /obj/effect/landmark/start/f13/ncrtrooper
 	name = "NCR Trooper"
@@ -476,29 +474,14 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 	name = "NCR Recruit"
 	icon_state = "NCR Recruit"
 
-/obj/effect/landmark/start/f13/ncrheavytroop
-	name = "NCR Heavy Trooper"
-
 /obj/effect/landmark/start/f13/ncrveteranranger
 	name = "NCR Veteran Ranger"
 	icon_state = "NCR Veteran Ranger"
 
 /obj/effect/landmark/start/f13/ncrranger
-	name = "NCR Patrol Ranger"
+	name = "NCR Ranger"
 	icon_state = "NCR Patrol Ranger"
 
-/obj/effect/landmark/start/f13/ncrreconranger
-	name = "NCR Recon Ranger"
-	icon_state = "NCR Recon Ranger"
-
-/obj/effect/landmark/start/f13/ncrscoutcpl
-	name = "NCR Scout"
-
-/obj/effect/landmark/start/f13/ncrscoutssgt
-	name = "NCR Scout Sergeant"
-
-/obj/effect/landmark/start/f13/ncrscoutlt
-	name = "NCR Scout Lieutenant"
 
 // Legion
 
@@ -510,43 +493,30 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 	name = "Legion Centurion"
 	icon_state = "Centurion"
 
-/obj/effect/landmark/start/f13/vetdecanus
-	name = "Legion Veteran Decanus"
+/obj/effect/landmark/start/f13/orator
+	name = "Legion Orator"
+
+/obj/effect/landmark/start/f13/decanus
+	name = "Legion Decanus"
+	icon_state = "Decanus"
 
 /obj/effect/landmark/start/f13/vexillarius
 	name = "Legion Vexillarius"
 	icon_state = "Vexillarius"
 
-/obj/effect/landmark/start/f13/primedecanus
-	name = "Legion Prime Decanus"
-
-/obj/effect/landmark/start/f13/decanus
-	name = "Legion Recruit Decanus"
-	icon_state = "Decanus"
-
-/obj/effect/landmark/start/f13/libritor
-	name = "Legion Libritor"
-	icon_state = "Veteran Legionnaire"
-
-/obj/effect/landmark/start/f13/veteranlegionnaire
-	name = "Veteran Legionnaire"
-	icon_state = "Veteran Legionnaire"
-
-/obj/effect/landmark/start/f13/primelegionnaire
-	name = "Prime Legionnaire"
-
 /obj/effect/landmark/start/f13/legionary
-	name = "Recruit Legionnaire"
-	icon_state = "Legionary"
+	name = "Legionary"
+	icon_state = "Veteran Legionnaire"
 
-/obj/effect/landmark/start/f13/scout
-	name = "Legion Scout"
+/obj/effect/landmark/start/f13/recleg
+	name = "Recruit Legionary"
+	icon_state = "Legionary"
 
 /obj/effect/landmark/start/f13/explorer
 	name = "Legion Explorer"
 
-/obj/effect/landmark/start/f13/venator
-	name = "Legion Venator"
+/obj/effect/landmark/start/f13/auxilia
+	name = "Auxilia"
 
 /obj/effect/landmark/start/f13/campfollower
 	name = "Camp Follower"

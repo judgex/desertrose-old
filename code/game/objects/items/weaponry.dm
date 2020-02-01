@@ -89,11 +89,10 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	name = "machete gladius"
 	desc = "A forged steel machete, the blade has been laborously sharpened and the weight has been evenly distributed for maximum killing power. An image of a bull is burned into the wooden handle."
 	icon_state = "machete"
-	lefthand_file = 'icons/mob/inhands/weapons/melee_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/melee_righthand.dmi'
 	item_state = "machete"
 	slot_flags = ITEM_SLOT_BELT
 	force = 35
+	throwforce = 25
 	block_chance = 10
 
 /obj/item/claymore/machete/pipe

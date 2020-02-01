@@ -477,6 +477,8 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	mag_type = /obj/item/ammo_box/magazine/uzim9mm
 	burst_size = 2
+	burst_delay = 2
+	fire_delay = 2
 	force = 15
 	spread = 10
 
@@ -510,6 +512,7 @@
 	can_suppress = FALSE
 	burst_size = 3
 	fire_delay = 2
+	burst_delay = 2
 
 /obj/item/gun/ballistic/automatic/smg10mm
 	name = "10mm submachine gun"
@@ -521,7 +524,8 @@
 	mag_type = /obj/item/ammo_box/magazine/m10mm_auto
 	fire_sound = 'sound/f13weapons/10mm_fire_03.ogg'
 	burst_size = 3
-	fire_delay = 1
+	fire_delay = 2
+	burst_delay = 2
 	can_suppress = FALSE //we dont have sprites therefore cease
 	force = 15
 	spread = 18
@@ -680,7 +684,8 @@
 /obj/item/gun/ballistic/automatic/marksman/servicerifle/r82
 	name = "R82 heavy service rifle"
 	desc = "A top of the line 5.56x45 semi-automatic service rifle manufactured by the NCR and issued to high ranking personnel."
-	fire_delay = 4
+	fire_delay = 1 //faster ROF, superior to regular service rifle
+	projectile_speed = 0.6 //faster velocity, superior to regular service rifle
 	init_mag_type = /obj/item/ammo_box/magazine/m556/rifle/assault
 	mag_type = /obj/item/ammo_box/magazine/m556/rifle
 	icon_state = "R82"
@@ -741,7 +746,7 @@
 	weapon_weight = WEAPON_HEAVY
 
 /obj/item/gun/ballistic/automatic/shotgun/riot
-	name = "riot shotgun"
+	name = "breacher shotgun" //name changed to distinguish from /obj/item/gun/ballistic/shotgun/riot
 	desc = "A compact riot shotgun designed to fight in close quarters."
 	icon_state = "riot_shotgun"
 	item_state = "huntingshotgun"
@@ -762,6 +767,7 @@
 	can_suppress = FALSE
 	burst_size = 3
 	fire_delay = 3
+	burst_delay = 3
 	force = 15
 	spread = 10
 
