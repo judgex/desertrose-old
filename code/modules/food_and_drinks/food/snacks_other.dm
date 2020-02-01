@@ -569,3 +569,12 @@
 	filling_color = "#A0522D"
 	tastes = list("chocolate" = 1)
 	foodtype = JUNKFOOD | SUGAR
+
+/obj/item/reagent_containers/food/snacks/tallow
+	name = "Tallow"
+	desc = "A block of pale waxy fat."
+	icon_state = "butter"
+	list_reagents = list("cooking_oil" = 20)
+	filling_color = "#FFD700"
+	tastes = list("sickly fat" = 1)
+	foodtype = MEAT | JUNKFOOD | GROSS
