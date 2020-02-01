@@ -89,3 +89,14 @@
 	result = /obj/item/reagent_containers/food/snacks/f13/squirrelstew
 	category = CAT_FOOD
 	subcategory = CAT_WASTEFOOD
+	
+/datum/crafting_recipe/food/pemmican
+	name = "pemmican"
+	reqs = list(
+    	/obj/item/reagent_containers/food/snacks/grown/corn = 1,
+    	/obj/item/reagent_containers/food/snacks/sosjerky/healthy = 2,
+    	/obj/item/reagent_containers/food/snacks/tallow = 1
+	)
+	result = /obj/item/reagent_containers/food/snacks/pemmican
+	category = CAT_FOOD
+	subcategory = CAT_WASTEFOOD
