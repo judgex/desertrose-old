@@ -291,3 +291,11 @@
 	icon_state = "doubleratkebab"
 	tastes = list("rat meat" = 2, "metal" = 1)
 	bonus_reagents = list("nutriment" = 6, "vitamin" = 2)
+	
+/obj/item/reagent_containers/food/snacks/pemmican
+	name = "pemmican"
+	desc = "A well-known food in survivalist circles, pemmican is a mixture of fat and protein from the meat of an animal."
+	icon_state = "phelmbiscuit"
+	list_reagents = list("nutriment" = 2, "vitamin" = 4)
+	tastes = list("dried meat" = 8, "Sawdust" = 4, "Corn" = 1)
+	foodtype = MEAT
