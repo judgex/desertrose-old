@@ -176,7 +176,7 @@ Orator
 	jobtype = /datum/job/CaesarsLegion/Legionnaire/f13orator
 	id = 			/obj/item/card/id/dogtag/legorator
 	shoes = 		/obj/item/clothing/shoes/f13/military/legionleather
-	suit = 			/obj/item/clothing/suit/armor/f13/legion/vet
+	suit = 			/obj/item/clothing/suit/armor/f13/legion/vet/orator
 	ears = 			/obj/item/radio/headset //best way to spread Caesar's news!
 	suit_store = 	/obj/item/gun/ballistic/revolver/colt357
 	backpack_contents = list(
