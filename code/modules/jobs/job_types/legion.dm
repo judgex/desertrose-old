@@ -220,11 +220,11 @@ Decanus
 	head = 			/obj/item/clothing/head/helmet/f13/legion/vet/decan
 	mask =			/obj/item/clothing/mask/bandana/legdecan
 	glasses = 		/obj/item/clothing/glasses/sunglasses/big
-	r_pocket =      /obj/item/restraints/handcuffs
 	backpack_contents = list(
 		/obj/item/restraints/legcuffs/bola=1, \
 		/obj/item/throwing_star/spear, \
 		/obj/item/reagent_containers/pill/patch/healingpowder=2, \
+		/obj/item/storage/box/handcuffs=1, \
 		/obj/item/flashlight/flare/torch=1, \
 		/obj/item/key/scollar=1, \
 		/obj/item/assembly/signaler/electropack/shockcollar=1, \
@@ -279,7 +279,7 @@ Vexillarius
 	suit = 			/obj/item/clothing/suit/armor/f13/legion/vet/vexil
 	head = 			/obj/item/clothing/head/helmet/f13/legion/vet/vexil
 	glasses = 		/obj/item/clothing/glasses/sunglasses/big
-	suit_store = 	/obj/item/gun/ballistic/shotgun/automatic/hunting/trail
+	suit_store = 	/obj/item/gun/ballistic/shotgun/automatic/hunting/trail/scoped
 	backpack_contents = list(
 		/obj/item/throwing_star/spear, \
 		/obj/item/throwing_star/spear, \
@@ -307,6 +307,11 @@ Legionary
 
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13legionary
 
+	loadout_options = list(
+	/datum/outfit/loadout/legassault, //.44 revolver
+	/datum/outfit/loadout/legbreach //hunting shotgun
+	)
+
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13legionary
 	name = "Legionary"
 	jobtype = /datum/job/CaesarsLegion/Legionnaire/f13legionary
@@ -316,17 +321,27 @@ Legionary
 	head = 			/obj/item/clothing/head/helmet/f13/legion/prime
 	mask =			/obj/item/clothing/mask/bandana/legprime
 	glasses = 		/obj/item/clothing/glasses/sunglasses
-	suit_store = 	/obj/item/gun/ballistic/revolver/m29
 	backpack_contents = list(
 		/obj/item/restraints/legcuffs/bola=1, \
 		/obj/item/throwing_star/spear, \
 		/obj/item/throwing_star/spear, \
 		/obj/item/claymore/machete/reinforced=1, \
-		/obj/item/ammo_box/m44=2, \
 		/obj/item/reagent_containers/pill/patch/healingpowder=2, \
 		/obj/item/flashlight/flare/torch=1, \
 		/obj/item/storage/bag/money/small/legenlisted)
 	r_pocket = /obj/item/restraints/handcuffs
+
+/datum/outfit/loadout/legassault
+	name = "Assault Legionary"
+	suit_store = /obj/item/gun/ballistic/revolver/m29
+	backpack_contents = list(
+		/obj/item/ammo_box/m44=2)
+
+/datum/outfit/loadout/legbreach
+	name = "Breacher Legionary"
+	suit_store = /obj/item/gun/ballistic/shotgun/hunting
+	backpack_contents = list(
+		/obj/item/storage/box/lethalshot=1)
 
 
 /*
