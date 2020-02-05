@@ -67,6 +67,9 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	var/facial_hair_style = "Shaved"	//Face hair type
 	var/facial_hair_color = "000"		//Facial hair color
 	var/skin_tone = "caucasian1"		//Skin color
+	var/has_penis = 0						//Do they have a penis? (for ERP verbs and surgery)
+	var/has_vagina = 0						//Do they have a vagina? (for ERP verbs and surgery)
+	var/has_breasts = 0						//Do they have breasts? (for ERP verbs and surgery)
 	var/eye_color = "000"				//Eye color
 	var/datum/species/pref_species = new /datum/species/human()	//Mutant race
 	var/list/features = list("mcolor" = "FFF", "tail_lizard" = "Smooth", "tail_human" = "None", "snout" = "Round", "horns" = "None", "ears" = "None", "wings" = "None", "frills" = "None", "spines" = "None", "body_markings" = "None", "legs" = "Normal Legs", "moth_wings" = "Plain")
@@ -290,7 +293,6 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 			dat += "<b>Socks:</b><BR><a href ='?_src_=prefs;preference=socks;task=input'>[socks]</a><BR>"
 			dat += "<b>Backpack:</b><BR><a href ='?_src_=prefs;preference=bag;task=input'>[backbag]</a><BR>"
 			dat += "<b>Uplink Spawn Location:</b><BR><a href ='?_src_=prefs;preference=uplink_loc;task=input'>[uplink_spawn_loc]</a><BR></td>"
-
 			var/use_skintones = pref_species.use_skintones
 			if(use_skintones)
 
@@ -324,6 +326,10 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				dat += "</td>"
 			else if(use_skintones || mutant_colors)
 				dat += "</td>"
+
+			dat += "<b>Penis:</b> <a href='?_src_=prefs;preference=has_penis'>Has Penis: [has_penis == 0 ? "No" : "Yes"]</A><br>"
+			dat += "<b>Vagina:</b> <a href='?_src_=prefs;preference=has_vagina'>Has Vagina: [has_vagina == 0 ? "No" : "Yes"]</A><br>"
+			dat += "<b>Breasts:</b> <a href='?_src_=prefs;preference=has_breasts'>Has Breasts: [has_breasts == 0 ? "No" : "Yes"]</A><br>"
 
 			if(HAIR in pref_species.species_traits)
 
@@ -1373,15 +1379,12 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 						age = max(min( round(text2num(new_age)), AGE_MAX),AGE_MIN)
 
 				if("flavor_text")
-					to_chat(user, "<font color='red'>Debug: flavortext menu opened</font>")
 					var/oldtext = features["flavor_text"]
 					var/msg = stripped_multiline_input(usr,"Set the flavor text in your 'examine' verb. This can also be used for OOC notes. \n To delete flavor text, input a space and hit 'OK'.","Flavor Text",html_decode(features["flavor_text"]), MAX_MESSAGE_LEN*2, TRUE) as null|message
 					if(msg)
 						msg = copytext(msg, 1, MAX_MESSAGE_LEN*2)
-						to_chat(user, "<font color='red'>Debug: message NOT null</font>")
 						features["flavor_text"] = msg
 					else
-						to_chat(user, "<font color='red'>Debug: message null</font>")
 						features["flavor_text"] = oldtext
 
 				if("metadata")
@@ -1637,6 +1640,22 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					facial_hair_style = random_facial_hair_style(gender)
 					hair_style = random_hair_style(gender)
 
+				if("has_penis")
+					if(has_penis == 1)
+						has_penis = 0
+					else
+						has_penis = 1
+				if("has_vagina")
+					if(has_vagina == 1)
+						has_vagina = 0
+					else
+						has_vagina = 1
+				if("has_breasts")
+					if(has_breasts == 1)
+						has_breasts = 0
+					else
+						has_breasts = 1
+
 				if("hotkeys")
 					hotkeys = !hotkeys
 					if(hotkeys)
@@ -1770,6 +1789,9 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 	character.gender = gender
 	character.age = age
+	character.has_penis = has_penis
+	character.has_vagina = has_vagina
+	character.has_breasts = has_breasts
 
 	character.eye_color = eye_color
 	var/obj/item/organ/eyes/organ_eyes = character.getorgan(/obj/item/organ/eyes)

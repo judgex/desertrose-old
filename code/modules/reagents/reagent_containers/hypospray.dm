@@ -100,12 +100,23 @@
 	if(!reagents.total_volume)
 		to_chat(user, "<span class='warning'>[src] is empty!</span>")
 		return
+
+	if(M == user)
+		to_chat(M, "<span class='notice'>You jab yourself with the [src].</span>")
+
+	else
+		M.visible_message("<span class='danger'>[user] attempts to use [src] on [M].</span>", \
+							"<span class='userdanger'>[user] attempts to use [src] on [M].</span>")
+		if(!do_mob(user, M))
+			return 0
+
 	..()
 	if(!iscyborg(user))
 		reagents.maximum_volume = 0 //Makes them useless afterwards
 		container_type = NONE
 	update_icon()
 	addtimer(CALLBACK(src, .proc/cyborg_recharge, user), 80)
+
 
 /obj/item/reagent_containers/hypospray/medipen/proc/cyborg_recharge(mob/living/silicon/robot/user)
 	if(!reagents.total_volume && iscyborg(user))

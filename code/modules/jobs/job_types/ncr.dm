@@ -127,7 +127,8 @@ Ambassador
 		/obj/item/ammo_box/a357=1, \
 		/obj/item/gun/ballistic/revolver/police=1, \
 		/obj/item/melee/classic_baton/telescopic=1, \
-		/obj/item/storage/bag/money/small/ncr=1) //lotsamoney
+		/obj/item/storage/bag/money/small/ncr=1,
+		/obj/item/megaphone=1)
 
 
 
@@ -479,7 +480,7 @@ Veteran Ranger
 	name = "Light Veteran Ranger"
 	suit_store = /obj/item/gun/ballistic/automatic/rangemaster/scoped
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m762/ext=2)
+		/obj/item/ammo_box/magazine/m762=2)
 
 /datum/outfit/loadout/vrbrush
 	name = "Brush Veteran Ranger"

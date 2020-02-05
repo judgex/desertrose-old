@@ -101,12 +101,12 @@
 		for(var/atom/movable/AM in turf)
 			if(!AM.CanPass(dummy,turf,1))
 				qdel(dummy)
-				return 0
+				return 0/* //removed because abuse
 		for(var/obj/effect/ebeam/medical/B in turf)// Don't cross the str-beams!
 			if(B.owner.origin != current_beam.origin)
 				explosion(B.loc,0,3,5,8)
 				qdel(dummy)
-				return 0
+				return 0*/
 	qdel(dummy)
 	return 1
 

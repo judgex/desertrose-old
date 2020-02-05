@@ -643,6 +643,7 @@
 	tint = 0
 	dynamic_hair_suffix = ""
 	dynamic_fhair_suffix = ""
+	speechspan = SPAN_ROBOT //makes you sound like a robot
 
 /obj/item/clothing/head/helmet/f13/brokenpa/t45d
 	name = "broken T-45d power helmet"
