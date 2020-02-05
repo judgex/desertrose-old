@@ -3,10 +3,10 @@ GLOBAL_LIST_INIT(command_positions, list(
     "Head Scribe",
     "Paladin",
     "Legion Centurion",
-	"Legion Venator",
+	"Legion Orator",
     "NCR Captain",
-    "NCR Scout Lieutenant",
 	"NCR Veteran Ranger",
+	"NCR Ambassador",
     "Overseer",
     "Chief of Security",
     "Mayor",
@@ -17,7 +17,7 @@ GLOBAL_LIST_INIT(command_positions, list(
 GLOBAL_LIST_INIT(silicon_whitelist_positions, list(
 "Mr. Handy"))
 //Whitelisted positions list FO13 anything that shows up here requires that the user have an entry in the 'role_whitelist' table of id,ckey,"faction"
-//NCR Recruit and Recruit Legionnaire removed from whitelisting.
+//NCR Recruit, Camp Follower and Recruit Legionnaire removed from whitelisting.
 GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 "Head Scribe",
 "Chief of Security",
@@ -28,37 +28,28 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 "Knight",
 "Scribe",
 "Legion Centurion",
-"Legion Veteran Decanus",
-"Legion Libritor",
-"Veteran Legionnaire",
-"Legion Prime Decanus",
-"Prime Legionnaire",
-"Legion Recruit Decanus",
+"Legion Orator",
+"Legion Decanus",
+"Legionary",
 "Legion Vexillarius",
-"Legion Venator",
 "Legion Scout",
 "Legion Explorer",
-"Camp Follower",
+"Auxilia",
 "NCR Captain",
+"NCR Ambassador",
 "NCR Lieutenant",
 "NCR Sergeant",
-"NCR Medical Officer",
-"NCR Engineer",
+"NCR Specialist",
 "NCR Veteran Ranger",
-"NCR Recon Ranger",
-"NCR Heavy Trooper",
-"NCR Corporal",
+"NCR Ranger",
 "NCR Trooper",
-"NCR Scout Lieutenant",
-"NCR Scout Sergeant",
-"NCR Patrol Ranger",
-"NCR Scout",
 "Mayor",
-"Sheriff"
+"Sheriff",
+"Deputy"
 ))
 //Whitelisted positions list FO13 anything that shows up here requires that the user have an entry in the 'role_whitelist' table of id,ckey,"antagonist"
 GLOBAL_LIST_INIT(antagonist_whitelist_positions, list(
-	"Raider"
+	"Raider" //Consider adding Great Khan to this list if people abuse it.
 ))
 
 GLOBAL_LIST_INIT(brotherhood_positions, list(
@@ -83,36 +74,26 @@ GLOBAL_LIST_INIT(den_positions, list(
 
 GLOBAL_LIST_INIT(legion_positions, list(
 	"Legion Centurion",
-	"Legion Veteran Decanus",
-	"Legion Libritor",
-	"Veteran Legionnaire",
-	"Legion Prime Decanus",
-	"Prime Legionnaire",
-	"Legion Recruit Decanus",
-	"Recruit Legionnaire",
+	"Legion Orator",
+	"Legion Decanus",
+	"Legionary",
+	"Recruit Legionary",
 	"Legion Vexillarius",
-	"Legion Venator",
 	"Legion Explorer",
-	"Legion Scout",
+	"Auxilia",
 	"Camp Follower"
 ))
 
 GLOBAL_LIST_INIT(ncr_positions, list(
 	"NCR Captain",
+	"NCR Ambassador",
 	"NCR Lieutenant",
 	"NCR Sergeant",
-	"NCR Medical Officer",
-	"NCR Engineer",
-	"NCR Heavy Trooper",
-	"NCR Corporal",
+	"NCR Specialist",
 	"NCR Trooper",
 	"NCR Recruit",
-	"NCR Scout Lieutenant",
-	"NCR Scout Sergeant",
-	"NCR Scout",
 	"NCR Veteran Ranger",
-	"NCR Patrol Ranger",
-	"NCR Recon Ranger"
+	"NCR Ranger"
 ))
 
 GLOBAL_LIST_INIT(vault_positions, list(
@@ -201,10 +182,10 @@ GLOBAL_LIST_INIT(exp_jobsmap, list(
 	EXP_TYPE_VAULT       = list("titles" = vault_positions		),
 	EXP_TYPE_WASTELAND	 = list("titles" = wasteland_positions	),
 	EXP_TYPE_SECURITY 	= list("titles" = security_positions),
-	EXP_TYPE_NCRCOMMAND = list("titles" = list("NCR Lieutenant","NCR Sergeant","NCR Heavy Trooper","NCR Captain","NCR Medical Officer","NCR Scout Sergeant","NCR Scout Lieutenant")),
-	EXP_TYPE_RANGER     = list("titles" = list("NCR Recon Ranger","NCR Patrol Ranger")),
+	EXP_TYPE_NCRCOMMAND = list("titles" = list("NCR Lieutenant","NCR Sergeant","NCR Captain","NCR Ambassador")),
+	EXP_TYPE_RANGER     = list("titles" = list("NCR Veteran Ranger","NCR Ranger")),
 	EXP_TYPE_SCRIBE     = list("titles" = list("Scribe")),
-	EXP_TYPE_DECANUS    = list("titles" = list("Legion Veteran Decanus","Legion Prime Decanus","Legion Recruit Decanus")),
+	EXP_TYPE_DECANUS    = list("titles" = list("Legion Decanus")),
 	//EXP_TYPE_ENCLAVE = list("titles" = enclave_positions),
 	// EXP_TYPE_CREW = list("titles" = command_positions | engineering_positions | medical_positions | science_positions | supply_positions | security_positions | civilian_positions | list("AI","Cyborg")), // crew positions
 	// EXP_TYPE_COMMAND = list("titles" = command_positions),

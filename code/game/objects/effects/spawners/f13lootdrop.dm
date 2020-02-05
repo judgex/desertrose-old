@@ -301,8 +301,8 @@
 				/obj/item/clothing/head/helmet/f13/combat
 				)
 	var/loot6 = list(
-				/obj/item/clothing/suit/armor/f13/combat,
-				/obj/item/clothing/head/helmet/f13/combat
+				/obj/item/clothing/suit/armor/bulletproof,
+				/obj/item/clothing/head/helmet/alt
 				)
 	var/loot7 = list(
 				/obj/item/clothing/suit/armor/f13/combat/dark,
@@ -996,7 +996,7 @@
 
 	loot = list(
 				/obj/item/ammo_box/magazine/d12g,
-				/obj/item/ammo_box/magazine/m44,
+				/obj/item/ammo_box/magazine/a50,
 				/obj/item/ammo_box/magazine/m556/rifle,
 				/obj/item/ammo_box/c4570,
 				/obj/item/ammo_box/tube/c4570,

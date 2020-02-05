@@ -147,6 +147,13 @@
     item_color = "ncrenlisted"
     minimize_when_attached = TRUE
 
+/obj/item/clothing/accessory/ncr/SPC
+    name = "(E-4) Specialist rank pins"
+    desc = "A Specialist should wear this."
+    icon_state = "ncrenlisted"
+    item_color = "ncrenlisted"
+    minimize_when_attached = TRUE
+
 /obj/item/clothing/accessory/ncr/TPR
     name = "(E-3) Trooper rank pins"
     desc = "A trooper should wear this."

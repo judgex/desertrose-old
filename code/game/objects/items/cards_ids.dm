@@ -198,6 +198,9 @@ update_label("John Doe", "Clowny")
 /obj/item/card/id/gold/mayor
 	name = "Mayor's identification card"
 	desc = "A golden identification card reserved for the Mayor of Kebob."
+	id_type = "Badge"
+	icon_state = "sheriff"
+	item_state = "badge-sheriff"
 
 /obj/item/card/id/dendoctor
 	name = "doctor's name badge"
@@ -452,6 +455,13 @@ update_label("John Doe", "Clowny")
 	icon_state = "sheriff"
 	item_state = "badge-sheriff"
 
+/obj/item/card/id/dogtag/ncrambassador
+	name = "ambassador's permit"
+	desc = "An ambassador's permit in a plastic holder."
+	icon_state = "doctor"
+	item_state = "card-doctor"
+	id_type = "name badge"
+
 /obj/item/card/id/dogtag/ncrtrooper
 	name = "trooper's tags"
 	desc = "A dog tag proving enlistment."
@@ -474,8 +484,20 @@ update_label("John Doe", "Clowny")
 
 /obj/item/card/id/dogtag/ncrranger
 	name = "ranger tags"
-	desc = "A dog tag that invokes fear in those who see it, belongs to a man with a big iron on his hip."
+	desc = "A dog tag that invokes fear in those who see it, belonging to someone with a big iron on their hip."
 	icon_state = "ncrdogtagranger"
+
+/obj/item/card/id/dogtag/legfollower
+	name = "follower medallion"
+	desc = "A silver disc stamped with the Legion's Bull insignia. Belongs to a camp follower."
+	icon_state = "legionmedallionrecruit"
+	id_type = "follower medallion"
+
+/obj/item/card/id/dogtag/legauxilia
+	name = "auxilia medallion"
+	desc = "A heavily marked silver disc stamped with the Legion's Bull insignia. Belongs to a respected auxilia of the Legion."
+	icon_state = "legionmedallionveteran"
+	id_type = "auxilia medallion"
 
 /obj/item/card/id/dogtag/legrecruit
 	name = "recruit medallion"
@@ -500,3 +522,9 @@ update_label("John Doe", "Clowny")
 	desc = "A golden disc awarded to the most fierce men in the whole legion. If you are close enough to read the insignia you won't be alive much longer."
 	icon_state = "legionmedallioncent"
 	id_type = "centurion medallion"
+
+/obj/item/card/id/dogtag/legorator
+	name = "orator medallion"
+	desc = "A golden disc awarded to the trusted political advisor to the Centurion. When they're around, the Legion won't be far behind."
+	icon_state = "legionmedallioncent"
+	id_type = "orator medallion"

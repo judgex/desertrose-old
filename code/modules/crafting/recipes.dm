@@ -289,7 +289,7 @@
 	time = 10
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
-
+/* //50 round magazines, let's not hand these out like candy.
 /datum/crafting_recipe/rifleextended556
 	name = "empty extended rifle magazine (5.56mm)"
 	result = /obj/item/ammo_box/magazine/m556/rifle/extended/empty
@@ -298,7 +298,7 @@
 	time = 10
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
-
+*/
 /datum/crafting_recipe/m45
 	name = "empty handgun magazine (.45)"
 	result = /obj/item/ammo_box/magazine/m45/empty
@@ -1625,8 +1625,8 @@
 				/obj/item/stack/crafting/goodparts = 1,
 				/datum/reagent/blackpowder = 25,
 				/obj/item/stack/sheet/metal = 2)
-	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER2)
-	traits = list(TRAIT_GUNSMITH_TWO)
+	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER3)
+	traits = list(TRAIT_GUNSMITH_THREE)
 	time = 120
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
