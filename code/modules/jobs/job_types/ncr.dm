@@ -184,7 +184,7 @@ Lieutenant
 		/obj/item/storage/pill_bottle/mining=1,
 		/obj/item/storage/firstaid/regular=1,
 		/obj/item/book/granter/trait/chemistry=2,
-		/obj/item/reagent_containers/hypospray/cmo=1)
+		/obj/item/reagent_containers/hypospray/CMO=1)
 
 /datum/outfit/loadout/ltcombat
 	name = "Combat Lieutenant"
