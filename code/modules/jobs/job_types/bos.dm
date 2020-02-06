@@ -97,6 +97,7 @@ Paladin
 	name = "Paladin"
 	jobtype = /datum/job/bos/f13paladin
 	pa_wear = TRUE
+	chemwhiz = TRUE
 	suit = 			/obj/item/clothing/suit/armor/f13/power_armor/t51b
 	head = 			/obj/item/clothing/head/helmet/power_armor/t51b
 	mask =			/obj/item/clothing/mask/gas/sechailer/swat
