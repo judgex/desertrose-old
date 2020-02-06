@@ -34,7 +34,8 @@ Mayor
 	head = /obj/item/clothing/head/f13/town/mayor
 	backpack_contents = list(
 		/obj/item/clothing/head/f13/town/big, \
-		/obj/item/ammo_box/a357=2)
+		/obj/item/ammo_box/a357=2,
+		/obj/item/pen/fountain/captain)
 
 /*
 Sheriff

@@ -73,7 +73,7 @@
 	font = FOUNTAIN_PEN_FONT
 
 /obj/item/pen/fountain/captain
-	name = "captain's fountain pen"
+	name = "mayor's fountain pen"
 	desc = "It's an expensive Oak fountain pen. The nib is quite sharp."
 	icon_state = "pen-fountain-o"
 	force = 5

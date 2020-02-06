@@ -507,7 +507,7 @@
 	materials = list(MAT_METAL = 1000, MAT_GLASS = 400)
 	build_path = /obj/item/assembly/signaler/advanced
 	category = list("initial", "T-Comm")
-
+/* //craftable with electronic parts
 /datum/design/radio_headset
 	name = "Radio Headset"
 	id = "radio_headset"
@@ -523,7 +523,7 @@
 	materials = list(MAT_METAL = 75, MAT_GLASS = 25)
 	build_path = /obj/item/radio/off
 	category = list("initial", "T-Comm")
-
+*/
 /datum/design/intercom_frame
 	name = "Intercom Frame"
 	id = "intercom_frame"

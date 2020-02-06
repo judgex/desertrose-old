@@ -8,12 +8,19 @@
 	var/blockTracking = 0 //For AI tracking
 	var/can_toggle = null
 	dynamic_hair_suffix = "+generic"
+	var/list/speechspan = null
 
 /obj/item/clothing/head/Initialize()
 	. = ..()
 	if(ishuman(loc) && dynamic_hair_suffix)
 		var/mob/living/carbon/human/H = loc
 		H.update_hair()
+
+/obj/item/clothing/head/get_head_speechspans(mob/living/carbon/user)
+	if(speechspan)
+		return speechspan
+	else
+		return
 
 /obj/item/clothing/head/worn_overlays(isinhands = FALSE)
 	. = list()

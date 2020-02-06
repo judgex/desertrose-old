@@ -4,7 +4,7 @@
 
  /datum/design/medbeam
 	name = "Medbeam Gun"
-	desc = "DONT CROSS THE DAMM BEAMS!"
+	desc = "Heals people from range with targeted nanites."
 	id = "medbeam"
 	build_type = PROTOLATHE
 	materials = list(MAT_METAL = 4000, MAT_GLASS = 2000, MAT_SILVER = 1000, MAT_DIAMOND = 1000)

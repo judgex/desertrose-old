@@ -614,6 +614,9 @@ GLOBAL_VAR_INIT(rpg_loot_items, FALSE)
 /obj/item/proc/get_held_item_speechspans(mob/living/carbon/user)
 	return
 
+/obj/item/proc/get_head_speechspans(mob/living/carbon/user) //we need this all the way back here for reasons
+	return
+
 /obj/item/hitby(atom/movable/AM)
 	return
 

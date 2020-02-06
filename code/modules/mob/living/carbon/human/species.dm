@@ -1145,8 +1145,8 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 				if(SANITY_UNSTABLE to SANITY_DISTURBED)
 					. += 0.5
 
-		if(H.has_trait(TRAIT_FAT))
-			. += (1.5 - flight)
+/*		if(H.has_trait(TRAIT_FAT))
+			. += (1.5 - flight)*/
 		if(H.bodytemperature < BODYTEMP_COLD_DAMAGE_LIMIT && !H.has_trait(TRAIT_RESISTCOLD))
 			. += (BODYTEMP_COLD_DAMAGE_LIMIT - H.bodytemperature) / COLD_SLOWDOWN_FACTOR
 	return .

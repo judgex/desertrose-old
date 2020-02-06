@@ -119,12 +119,6 @@
 		if(100 to 200)
 			msg += "<span class='warning'>[t_He] [t_is] twitching ever so slightly.</span>\n"
 
-	if(gender_ambiguous) //someone fucked up a gender reassignment surgery
-		if (gender == MALE)
-			msg += "[t_He] has a strange feminine quality to [t_him].\n"
-		else
-			msg += "[t_He] has a strange masculine quality to [t_him].\n"
-
 	if(client && client.prefs)
 		if(client.prefs.wasteland_toggles & VERB_CONSENT)
 			msg += "[t_His] player has allowed lewd verbs.\n"
@@ -235,11 +229,6 @@
 
 	if(nutrition < NUTRITION_LEVEL_STARVING - 50)
 		msg += "[t_He] [t_is] severely malnourished.\n"
-	else if(nutrition >= NUTRITION_LEVEL_FAT)
-		if(user.nutrition < NUTRITION_LEVEL_STARVING - 50)
-			msg += "[t_He] [t_is] plump and delicious looking - Like a fat little piggy. A tasty piggy.\n"
-		else
-			msg += "[t_He] [t_is] quite chubby.\n"
 	switch(disgust)
 		if(DISGUST_LEVEL_GROSS to DISGUST_LEVEL_VERYGROSS)
 			msg += "[t_He] look[p_s()] a bit grossed out.\n"

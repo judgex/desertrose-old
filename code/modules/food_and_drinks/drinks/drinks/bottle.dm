@@ -430,22 +430,23 @@
 		message_admins(message)
 		log_game("[key_name(user)] has primed a [name] for detonation at [AREACOORD(user)].")
 
-		to_chat(user, "<span class='info'>You light [src] on fire.</span>")
+		to_chat(user, "<span class='info'>You light [src] on fire. You're not sure this was a good idea.</span>")
 		add_overlay(GLOB.fire_overlay)
-		if(!isGlass)
-			spawn(50)
-				if(active)
-					var/counter
-					var/target = src.loc
-					for(counter = 0, counter<2, counter++)
-						if(istype(target, /obj/item/storage))
-							var/obj/item/storage/S = target
-							target = S.loc
-					if(istype(target, /atom))
-						var/atom/A = target
-						SplashReagents(A)
-						A.fire_act()
-					qdel(src)
+
+		spawn(rand(10,50)) //Throw. And pray.
+			if(active)
+				var/counter
+				var/target = src.loc
+				for(counter = 0, counter<2, counter++)
+					if(istype(target, /obj/item/storage))
+						var/obj/item/storage/S = target
+						target = S.loc
+				if(istype(target, /atom))
+					var/atom/A = target
+					SplashReagents(A)
+					A.fire_act()
+					visible_message("<span class='danger'>The molotov cocktail explodes!</span>")
+				qdel(src)
 
 /obj/item/reagent_containers/food/drinks/bottle/molotov/attack_self(mob/user)
 	if(active)
