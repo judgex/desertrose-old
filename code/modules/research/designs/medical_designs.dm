@@ -2,7 +2,7 @@
 ////////////Medical Tools////////////////
 /////////////////////////////////////////
 
- /datum/design/medbeam
+/datum/design/medbeam
 	name = "Medbeam Gun"
 	desc = "Heals people from range with targeted nanites."
 	id = "medbeam"
@@ -13,7 +13,7 @@
 	category = list("Misc", "Medical Designs")
 	departmental_flags = DEPARTMENTAL_FLAG_MEDICAL
 
- /datum/design/autosurgeon
+/datum/design/autosurgeon
 	name = "Autosurgeon"
 	desc = "Automatically implants things inside of it."
 	id = "autosurgeon"

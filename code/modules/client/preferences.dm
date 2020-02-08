@@ -327,9 +327,9 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 			else if(use_skintones || mutant_colors)
 				dat += "</td>"
 
-			dat += "<b>Penis:</b> <a href='?_src_=prefs;preference=has_penis'>Has Penis: [has_penis == 0 ? "No" : "Yes"]</A><br>"
-			dat += "<b>Vagina:</b> <a href='?_src_=prefs;preference=has_vagina'>Has Vagina: [has_vagina == 0 ? "No" : "Yes"]</A><br>"
-			dat += "<b>Breasts:</b> <a href='?_src_=prefs;preference=has_breasts'>Has Breasts: [has_breasts == 0 ? "No" : "Yes"]</A><br>"
+			dat += "<a href='?_src_=prefs;preference=has_penis'>Has Penis: [has_penis == 0 ? "No" : "Yes"]</A><br>"
+			dat += "<a href='?_src_=prefs;preference=has_vagina'>Has Vagina: [has_vagina == 0 ? "No" : "Yes"]</A><br>"
+			dat += "<a href='?_src_=prefs;preference=has_breasts'>Has Breasts: [has_breasts == 0 ? "No" : "Yes"]</A><br>"
 
 			if(HAIR in pref_species.species_traits)
 
