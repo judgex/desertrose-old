@@ -3,6 +3,16 @@
 /////Non-Board Computer Stuff//////
 ///////////////////////////////////
 
+/datum/design/headset
+	name = "Radio Headset"
+	desc = "A simple radio headset."
+	id = "headset"
+	build_type = PROTOLATHE
+	materials = list(MAT_GLASS = 100, MAT_GLASS = 50)
+	build_path = /obj/item/radio/headset
+	category = list("Electronics")
+	departmental_flags = DEPARTMENTAL_FLAG_SCIENCE
+
 /datum/design/intellicard
 	name = "Intellicard AI Transportation System"
 	desc = "Allows for the construction of an intellicard."

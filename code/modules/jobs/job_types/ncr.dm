@@ -413,6 +413,7 @@ Recruit
 	uniform =  		/obj/item/clothing/under/f13/ncr
 	accessory =     /obj/item/clothing/accessory/ncr/REC
 	suit = 			/obj/item/clothing/suit/armor/f13/ncrarmor
+	ears = 			/obj/item/radio/headset //no NCR comms
 	gloves = null
 	head = 			/obj/item/clothing/head/f13/ncr
 	glasses = 		null
