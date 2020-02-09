@@ -119,6 +119,7 @@ Centurion
 	head = 			/obj/item/clothing/head/helmet/f13/legion/centurion
 	mask =			/obj/item/clothing/mask/bandana/legcenturion
 	glasses = 		/obj/item/clothing/glasses/sunglasses/big
+	ears = 			/obj/item/radio/headset
 	r_pocket =      /obj/item/restraints/handcuffs
 	backpack_contents = list(
 		/obj/item/restraints/legcuffs/bola=1, \
@@ -219,6 +220,7 @@ Decanus
 	head = 			/obj/item/clothing/head/helmet/f13/legion/vet/decan
 	mask =			/obj/item/clothing/mask/bandana/legdecan
 	glasses = 		/obj/item/clothing/glasses/sunglasses/big
+	ears = 			/obj/item/radio/headset
 	backpack_contents = list(
 		/obj/item/restraints/legcuffs/bola=1, \
 		/obj/item/throwing_star/spear, \
@@ -279,6 +281,7 @@ Vexillarius
 	head = 			/obj/item/clothing/head/helmet/f13/legion/vet/vexil
 	glasses = 		/obj/item/clothing/glasses/sunglasses/big
 	suit_store = 	/obj/item/gun/ballistic/shotgun/automatic/hunting/trail/scoped
+	ears = 			/obj/item/radio/headset
 	backpack_contents = list(
 		/obj/item/throwing_star/spear, \
 		/obj/item/throwing_star/spear, \
@@ -327,7 +330,8 @@ Legionary
 		/obj/item/claymore/machete/reinforced=1, \
 		/obj/item/reagent_containers/pill/patch/healingpowder=2, \
 		/obj/item/flashlight/flare/torch=1, \
-		/obj/item/storage/bag/money/small/legenlisted)
+		/obj/item/storage/bag/money/small/legenlisted,
+		/obj/item/radio)
 	r_pocket = /obj/item/restraints/handcuffs
 
 /datum/outfit/loadout/legassault
@@ -378,7 +382,8 @@ Recruit Legionary
 		/obj/item/claymore/machete=1, \
 		/obj/item/ammo_box/a357=2, \
 		/obj/item/reagent_containers/pill/patch/healingpowder=2, \
-		/obj/item/flashlight/flare/torch=1)
+		/obj/item/flashlight/flare/torch=1,
+		/obj/item/radio)
 
 /*
 Explorer
@@ -420,7 +425,8 @@ Explorer
 		/obj/item/ammo_box/m44=2, \
 		/obj/item/reagent_containers/pill/patch/healingpowder=2, \
 		/obj/item/flashlight/flare/torch=1, \
-		/obj/item/storage/bag/money/small/legenlisted)
+		/obj/item/storage/bag/money/small/legenlisted,
+		/obj/item/radio)
 	r_pocket = /obj/item/twohanded/binocs
 
 /datum/outfit/loadout/explinfil
@@ -475,7 +481,8 @@ Auxilia
 	backpack_contents = list(
 		/obj/item/reagent_containers/pill/patch/healingpowder=1, \
 		/obj/item/flashlight/flare/torch=1, \
-		/obj/item/storage/bag/money/small/legenlisted)
+		/obj/item/storage/bag/money/small/legenlisted,
+		/obj/item/radio)
 
 /datum/outfit/loadout/auxmedic
 	name = "Medicus Auxilia"
@@ -542,22 +549,24 @@ Camp Follower
 	else if (follower_job == "miner")
 		belt = /obj/item/storage/bag/ore
 		backpack = /obj/item/pickaxe
+		l_hand = /obj/item/radio
 		if (prob(50))
 			suit = /obj/item/clothing/suit/fluff/vest
 	else if (follower_job == "farmer")
 		belt = /obj/item/storage/bag/plants
+		l_hand = /obj/item/radio
 		if (prob(50))
 			suit = /obj/item/clothing/suit/fluff/vest
 	else if (follower_job == "smith")
 		backpack = /obj/item/storage/backpack/satchel/explorer
-		backpack_contents = list(/obj/item/screwdriver, /obj/item/wrench, /obj/item/crowbar, /obj/item/wirecutters)
+		backpack_contents = list(/obj/item/radio, /obj/item/screwdriver, /obj/item/wrench, /obj/item/crowbar, /obj/item/wirecutters)
 		if (prob(50))
 			suit = /obj/item/clothing/suit/fluff/vest
 	else if (follower_job == "healer")
 		backpack = /obj/item/storage/backpack/satchel/explorer
-		backpack_contents = list(/obj/item/reagent_containers/pill/patch/healingpowder=4, /obj/item/stack/medical/gauze/improvised = 2)
+		backpack_contents = list(/obj/item/radio, /obj/item/reagent_containers/pill/patch/healingpowder=4, /obj/item/stack/medical/gauze/improvised = 2)
 		if (prob(50))
 			suit = /obj/item/clothing/suit/apron/surgical
 	else if (follower_job == "caretaker")
 		backpack = /obj/item/storage/backpack/satchel/explorer
-		backpack_contents = list(/obj/item/soap/homemade, /obj/item/melee/flyswatter, /obj/item/reagent_containers/glass/rag, /obj/item/reagent_containers/glass/bucket, /obj/item/stack/medical/gauze/improvised)
+		backpack_contents = list(/obj/item/radio, /obj/item/soap/homemade, /obj/item/melee/flyswatter, /obj/item/reagent_containers/glass/rag, /obj/item/reagent_containers/glass/bucket, /obj/item/stack/medical/gauze/improvised)
