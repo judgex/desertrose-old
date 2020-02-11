@@ -284,8 +284,8 @@
 	name = "empty 30rd rifle magazine (5.56mm)"
 	result = /obj/item/ammo_box/magazine/m556/rifle/assault/empty
 	reqs = list(/obj/item/stack/sheet/metal = 4)
-	traits = list(TOOL_GUNTIER2)
-	tools = list(TOOL_WORKBENCH)
+	traits = list(TRAIT_GUNSMITH_TWO)
+	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER2)
 	time = 10
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
@@ -1655,7 +1655,7 @@
 	subcategory = CAT_WEAPON
 */
 /datum/crafting_recipe/magnetowattz
-	name = "Wattz 1000 magneto-laser pistol"
+	name = "(Upgrade) Wattz 1000 magneto-laser pistol"
 	result = /obj/item/gun/energy/laser/wattz/magneto
 	reqs = list(/obj/item/gun/energy/laser/wattz = 1,
 				/obj/item/stack/crafting/electronicparts = 2)
@@ -1666,7 +1666,7 @@
 	subcategory = CAT_WEAPON
 
 /datum/crafting_recipe/glock86a
-	name = "glock 86a"
+	name = "(Upgrade) Glock 86a"
 	result = /obj/item/gun/energy/laser/plasma/glock/extended
 	reqs = list(/obj/item/gun/energy/laser/plasma/glock = 1,
 				/obj/item/stack/crafting/metalparts = 3,

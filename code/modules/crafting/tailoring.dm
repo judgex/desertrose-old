@@ -104,7 +104,7 @@
 	time = 60
 	category = CAT_CLOTHING
 	subcategory = CAT_CLOTHING
-
+/*CRAFT rework: removed for balance
 /datum/crafting_recipe/tesla_armor
 	name = "tesla armor"
 	result = /obj/item/clothing/suit/armor/laserproof
@@ -115,7 +115,7 @@
 	time = 60
 	category = CAT_CLOTHING
 	subcategory = CAT_CLOTHING
-
+*//*CRAFT rework: removed for balance
 /datum/crafting_recipe/tesla_helmet
 	name = "tesla helmet"
 	result = /obj/item/clothing/head/helmet/f13/tesla
@@ -126,7 +126,7 @@
 	time = 60
 	category = CAT_CLOTHING
 	subcategory = CAT_CLOTHING
-
+*//*
 /datum/crafting_recipe/combat_armor
 	name = "combat armor"
 	result = /obj/item/clothing/suit/armor/f13/combat
@@ -138,7 +138,7 @@
 	time = 60
 	category = CAT_CLOTHING
 	subcategory = CAT_CLOTHING
-
+*//*CRAFT rework: removed for balance
 /datum/crafting_recipe/combat_helmet
 	name = "combat armor"
 	result = /obj/item/clothing/head/helmet/f13/combat
@@ -150,7 +150,7 @@
 	time = 60
 	category = CAT_CLOTHING
 	subcategory = CAT_CLOTHING
-
+*/
 /datum/crafting_recipe/bandolier
 	name = "bandolier"
 	result = /obj/item/storage/belt/bandolier
