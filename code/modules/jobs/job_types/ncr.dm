@@ -445,7 +445,7 @@ Veteran Ranger
 
 	loadout_options = list(
 	/datum/outfit/loadout/vrclassic, //AMR and Sequoia,
-	/datum/outfit/loadout/vrlite, //Scoped Rangemaster and Sequoia,
+	/datum/outfit/loadout/vrlite, //Rangemaster and Sequoia,
 	/datum/outfit/loadout/vrbrush //Scoped Brushgun and Sequoia
 	)
 
@@ -479,7 +479,7 @@ Veteran Ranger
 
 /datum/outfit/loadout/vrlite
 	name = "Light Veteran Ranger"
-	suit_store = /obj/item/gun/ballistic/automatic/rangemaster/scoped
+	suit_store = /obj/item/gun/ballistic/automatic/rangemaster
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/m762=2)
 
@@ -508,8 +508,8 @@ Ranger
 
 	loadout_options = list(
 	/datum/outfit/loadout/prclassic, //Scoped Sniper rifle and .44,
-	/datum/outfit/loadout/prlite, //Unscoped Rangemaster and .44,
-	/datum/outfit/loadout/prtrail //Unscoped Trail carbine and .44
+	/datum/outfit/loadout/prlite, //Assault carbine and .44,
+	/datum/outfit/loadout/prtrail //Scoped Trail carbine and .44
 	)
 
 /datum/job/ncr/f13ranger/after_spawn(mob/living/carbon/human/H, mob/M)
@@ -544,12 +544,12 @@ Ranger
 
 /datum/outfit/loadout/prlite
 	name = "Light Ranger"
-	suit_store = /obj/item/gun/ballistic/automatic/rangemaster
+	suit_store = /obj/item/gun/ballistic/automatic/assault_carbine
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m762=2)
+		/obj/item/ammo_box/magazine/m556/rifle/assault=2)
 
 /datum/outfit/loadout/prtrail
 	name = "Trail Ranger"
-	suit_store = /obj/item/gun/ballistic/shotgun/automatic/hunting/trail
+	suit_store = /obj/item/gun/ballistic/shotgun/automatic/hunting/trail/scoped
 	backpack_contents = list(
 		/obj/item/ammo_box/tube/m44=2)

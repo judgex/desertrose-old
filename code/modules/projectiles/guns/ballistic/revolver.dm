@@ -441,21 +441,23 @@
 
 /obj/item/gun/ballistic/revolver/zipgun
 	name = "zipgun"
-	desc = "A crudely made single shot 10mm pistol."
+	desc = "A crudely-made 9mm pistol. You're not sure this thing is reliable."
 	icon_state = "zipgun"
 	item_state = "gun"
 	fire_sound = 'sound/weapons/Gunshot.ogg'
-	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/improvised10mm
+	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/improvised9mm
+	spread = 20
 
 /obj/item/gun/ballistic/revolver/pipe_rifle
 	name = "pipe rifle"
-	desc = "A crudely made single shot 10mm rifle."
+	desc = "A crudely-made 10mm rifle. It's not very accurate."
 	icon_state = "pipe_rifle"
 	item_state = "improvshotgun"
 	fire_sound = 'sound/weapons/Gunshot.ogg'
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/improvised10mm
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
+	spread = 15
 
 /obj/item/gun/ballistic/revolver/police
 	name = "police pistol"
