@@ -127,7 +127,8 @@ Ambassador
 		/obj/item/ammo_box/a357=1, \
 		/obj/item/gun/ballistic/revolver/police=1, \
 		/obj/item/melee/classic_baton/telescopic=1, \
-		/obj/item/storage/bag/money/small/ncr=1) //lotsamoney
+		/obj/item/storage/bag/money/small/ncr=1,
+		/obj/item/megaphone=1)
 
 
 
@@ -183,7 +184,7 @@ Lieutenant
 		/obj/item/storage/pill_bottle/mining=1,
 		/obj/item/storage/firstaid/regular=1,
 		/obj/item/book/granter/trait/chemistry=2,
-		/obj/item/gun/medbeam=1)
+		/obj/item/reagent_containers/hypospray/CMO=1)
 
 /datum/outfit/loadout/ltcombat
 	name = "Combat Lieutenant"
@@ -412,6 +413,7 @@ Recruit
 	uniform =  		/obj/item/clothing/under/f13/ncr
 	accessory =     /obj/item/clothing/accessory/ncr/REC
 	suit = 			/obj/item/clothing/suit/armor/f13/ncrarmor
+	ears = 			/obj/item/radio/headset //no NCR comms
 	gloves = null
 	head = 			/obj/item/clothing/head/f13/ncr
 	glasses = 		null
@@ -443,7 +445,7 @@ Veteran Ranger
 
 	loadout_options = list(
 	/datum/outfit/loadout/vrclassic, //AMR and Sequoia,
-	/datum/outfit/loadout/vrlite, //Scoped Rangemaster and Sequoia,
+	/datum/outfit/loadout/vrlite, //Rangemaster and Sequoia,
 	/datum/outfit/loadout/vrbrush //Scoped Brushgun and Sequoia
 	)
 
@@ -477,9 +479,9 @@ Veteran Ranger
 
 /datum/outfit/loadout/vrlite
 	name = "Light Veteran Ranger"
-	suit_store = /obj/item/gun/ballistic/automatic/rangemaster/scoped
+	suit_store = /obj/item/gun/ballistic/automatic/rangemaster
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m762/ext=2)
+		/obj/item/ammo_box/magazine/m762=2)
 
 /datum/outfit/loadout/vrbrush
 	name = "Brush Veteran Ranger"
@@ -506,8 +508,8 @@ Ranger
 
 	loadout_options = list(
 	/datum/outfit/loadout/prclassic, //Scoped Sniper rifle and .44,
-	/datum/outfit/loadout/prlite, //Unscoped Rangemaster and .44,
-	/datum/outfit/loadout/prtrail //Unscoped Trail carbine and .44
+	/datum/outfit/loadout/prlite, //Assault carbine and .44,
+	/datum/outfit/loadout/prtrail //Scoped Trail carbine and .44
 	)
 
 /datum/job/ncr/f13ranger/after_spawn(mob/living/carbon/human/H, mob/M)
@@ -542,12 +544,12 @@ Ranger
 
 /datum/outfit/loadout/prlite
 	name = "Light Ranger"
-	suit_store = /obj/item/gun/ballistic/automatic/rangemaster
+	suit_store = /obj/item/gun/ballistic/automatic/assault_carbine
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m762=2)
+		/obj/item/ammo_box/magazine/m556/rifle/assault=2)
 
 /datum/outfit/loadout/prtrail
 	name = "Trail Ranger"
-	suit_store = /obj/item/gun/ballistic/shotgun/automatic/hunting/trail
+	suit_store = /obj/item/gun/ballistic/shotgun/automatic/hunting/trail/scoped
 	backpack_contents = list(
 		/obj/item/ammo_box/tube/m44=2)

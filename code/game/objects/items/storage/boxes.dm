@@ -258,6 +258,17 @@
 	for(var/i in 1 to 7)
 		new /obj/item/grenade/chem_grenade/teargas(src)
 
+/obj/item/storage/box/signal
+	name = "signal box"
+	desc = "A box containing several smoke grenades and flares."
+	illustration = "secbox"
+
+/obj/item/storage/box/signal/PopulateContents()
+	for(var/i in 1 to 3)
+		new /obj/item/grenade/smokebomb(src)
+	for(var/i in 4 to 7)
+		new /obj/item/flashlight/flare(src)
+
 /obj/item/storage/box/emps
 	name = "box of emp grenades"
 	desc = "A box with 5 emp grenades."

@@ -2,9 +2,9 @@
 ////////////Medical Tools////////////////
 /////////////////////////////////////////
 
- /datum/design/medbeam
+/datum/design/medbeam
 	name = "Medbeam Gun"
-	desc = "DONT CROSS THE DAMM BEAMS!"
+	desc = "Heals people from range with targeted nanites."
 	id = "medbeam"
 	build_type = PROTOLATHE
 	materials = list(MAT_METAL = 4000, MAT_GLASS = 2000, MAT_SILVER = 1000, MAT_DIAMOND = 1000)
@@ -13,7 +13,7 @@
 	category = list("Misc", "Medical Designs")
 	departmental_flags = DEPARTMENTAL_FLAG_MEDICAL
 
- /datum/design/autosurgeon
+/datum/design/autosurgeon
 	name = "Autosurgeon"
 	desc = "Automatically implants things inside of it."
 	id = "autosurgeon"

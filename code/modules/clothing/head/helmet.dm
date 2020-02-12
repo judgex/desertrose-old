@@ -643,6 +643,7 @@
 	tint = 0
 	dynamic_hair_suffix = ""
 	dynamic_fhair_suffix = ""
+	speechspan = SPAN_ROBOT //makes you sound like a robot
 
 /obj/item/clothing/head/helmet/f13/brokenpa/t45d
 	name = "broken T-45d power helmet"
@@ -681,6 +682,7 @@
 	dynamic_fhair_suffix = ""
 	darkness_view = 128
 	lighting_alpha = LIGHTING_PLANE_ALPHA_LOWLIGHT_VISION
+	speechspan = SPAN_ROBOT //makes you sound like a robot
 
 /obj/item/clothing/head/helmet/power_armor/mob_can_equip(mob/user, mob/equipper, slot, disable_warning = 1)
 	var/mob/living/carbon/human/H = user

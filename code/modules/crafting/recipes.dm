@@ -284,8 +284,8 @@
 	name = "empty 30rd rifle magazine (5.56mm)"
 	result = /obj/item/ammo_box/magazine/m556/rifle/assault/empty
 	reqs = list(/obj/item/stack/sheet/metal = 4)
-	traits = list(TOOL_GUNTIER2)
-	tools = list(TOOL_WORKBENCH)
+	traits = list(TRAIT_GUNSMITH_TWO)
+	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER2)
 	time = 10
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
@@ -353,7 +353,7 @@
 	time = 10
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
-
+/* //way too powerful
 /datum/crafting_recipe/m762ext
 	name = "empty extended rifle magazine (7.62x51)"
 	result = /obj/item/ammo_box/magazine/m762/ext/empty
@@ -362,7 +362,7 @@
 	time = 10
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
-
+*/
 /datum/crafting_recipe/c45
 	name = ".45 FMJ ammo box"
 	result = /obj/item/ammo_box/c45
@@ -599,9 +599,9 @@
 	subcategory = CAT_AMMO
 
 /datum/crafting_recipe/a556sport
-	name = ".223 Remington ammo box"
+	name = "5.56 match ammo box"
 	result = /obj/item/ammo_box/a556/sport
-	reqs = list(/obj/item/stack/sheet/metal = 9,
+	reqs = list(/obj/item/stack/sheet/metal = 15,
 				/datum/reagent/blackpowder = 40)
 	tools = list(TOOL_WORKBENCH)
 	time = 10
@@ -651,7 +651,7 @@
 
 /datum/crafting_recipe/a762jhp
 	name = "7.62mm JHP ammo box"
-	result = /obj/item/ammo_box/a762box
+	result = /obj/item/ammo_box/a762box/jhp
 	reqs = list(/obj/item/stack/sheet/metal = 6,
 				/datum/reagent/blackpowder = 40)
 	traits = list(TRAIT_GUNSMITH_TWO)
@@ -662,7 +662,7 @@
 
 /datum/crafting_recipe/a762ap
 	name = "7.62mm AP ammo box"
-	result = /obj/item/ammo_box/a762box
+	result = /obj/item/ammo_box/a762box/ap
 	reqs = list(/obj/item/stack/sheet/metal = 10,
 				/datum/reagent/blackpowder = 40)
 	traits = list(TRAIT_GUNSMITH_TWO)
@@ -1251,8 +1251,24 @@
 	time = 10
 	category = CAT_MISC
 
-/datum/crafting_recipe/throwingknife
+/datum/crafting_recipe/headset
+	name = "radio headset"
+	result = /obj/item/radio/headset
+	reqs = list(/obj/item/stack/sheet/metal = 1,
+				/obj/item/stack/crafting/electronicparts = 1)
+	tools = list(TOOL_WORKBENCH)
+	time = 10
+	category = CAT_MISC
 
+/datum/crafting_recipe/handheldradio
+	name = "handheld radio"
+	result = /obj/item/radio/off
+	reqs = list(/obj/item/stack/sheet/metal = 1,
+				/obj/item/stack/crafting/electronicparts = 1)
+	time = 10
+	category = CAT_MISC
+
+/datum/crafting_recipe/throwingknife
 	name = "Throwing Knife"
 	result = /obj/item/throwing_star/throwingknife
 	reqs = list(/obj/item/stack/sheet/metal = 1,
@@ -1309,7 +1325,8 @@
 				/obj/item/stack/crafting/metalparts = 3,
 				/datum/reagent/blackpowder = 10,
 				/obj/item/stack/sheet/metal = 1)
-	tools = list(TOOL_WORKBENCH)
+	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER2)
+	traits = list(TRAIT_GUNSMITH_TWO)
 	time = 120
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
@@ -1321,7 +1338,8 @@
 				/obj/item/stack/crafting/metalparts = 5,
 				/datum/reagent/blackpowder = 10,
 				/obj/item/stack/sheet/metal = 1)
-	tools = list(TOOL_WORKBENCH)
+	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER1)
+	traits = list(TRAIT_GUNSMITH_ONE)
 	time = 120
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
@@ -1333,7 +1351,8 @@
 				/obj/item/stack/crafting/metalparts = 1,
 				/datum/reagent/blackpowder = 10,
 				/obj/item/stack/sheet/metal = 2)
-	tools = list(TOOL_WORKBENCH)
+	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER1)
+	traits = list(TRAIT_GUNSMITH_ONE)
 	time = 120
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
@@ -1345,11 +1364,12 @@
 				/obj/item/stack/crafting/metalparts = 2,
 				/datum/reagent/blackpowder = 10,
 				/obj/item/stack/sheet/metal = 1)
-	tools = list(TOOL_WORKBENCH)
+	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER2)
+	traits = list(TRAIT_GUNSMITH_TWO)
 	time = 120
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
-
+/* CRAFT rework: removed for balance
 /datum/crafting_recipe/deagle
 	name = "desert eagle"
 	result = /obj/item/gun/ballistic/automatic/pistol/deagle
@@ -1362,7 +1382,7 @@
 	time = 120
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
-
+*//* CRAFT rework: removed for balance
 /datum/crafting_recipe/thatgun
 	name = ".223 pistol"
 	result = /obj/item/gun/ballistic/revolver/thatgun
@@ -1376,7 +1396,7 @@
 	time = 120
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
-
+*//* CRAFT rework: removed for balance
 /datum/crafting_recipe/needler
 	name = "needler pistol"
 	result = /obj/item/gun/ballistic/revolver/needler
@@ -1391,7 +1411,7 @@
 	time = 120
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
-
+*/
 /datum/crafting_recipe/piperifle
 	name = "pipe rifle"
 	result = /obj/item/gun/ballistic/revolver/pipe_rifle
@@ -1410,7 +1430,8 @@
 				/obj/item/stack/crafting/metalparts = 4,
 				/datum/reagent/blackpowder = 20,
 				/obj/item/stack/sheet/metal = 3)
-	tools = list(TOOL_WORKBENCH)
+	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER2)
+	traits = list(TRAIT_GUNSMITH_TWO)
 	time = 120
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
@@ -1422,12 +1443,12 @@
 				/obj/item/stack/sheet/glass = 2,
 				/datum/reagent/blackpowder = 20,
 				/obj/item/stack/crafting/metalparts = 1)
-	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER1)
-	traits = list(TRAIT_GUNSMITH_ONE)
+	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER3)
+	traits = list(TRAIT_GUNSMITH_THREE)
 	time = 120
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
-
+/* CRAFT rework: removed for balance
 /datum/crafting_recipe/m1garand
 	name = "M1 Garand"
 	result = /obj/item/gun/ballistic/automatic/m1garand
@@ -1441,7 +1462,7 @@
 	time = 120
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
-
+*/
 /datum/crafting_recipe/varmintrifle
 	name = "varmint rifle"
 	result = /obj/item/gun/ballistic/automatic/marksman/servicerifle/varmint
@@ -1449,11 +1470,12 @@
 				/obj/item/stack/crafting/metalparts = 4,
 				/datum/reagent/blackpowder = 20,
 				/obj/item/stack/sheet/metal = 1)
-	tools = list(TOOL_WORKBENCH)
+	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER2)
+	traits = list(TRAIT_GUNSMITH_TWO)
 	time = 120
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
-
+/* CRAFT rework: removed for balance
 /datum/crafting_recipe/rangemaster
 	name = "colt rangemaster"
 	result = /obj/item/gun/ballistic/automatic/rangemaster
@@ -1466,7 +1488,7 @@
 	time = 120
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
-
+*//* CRAFT rework: removed for balance
 /datum/crafting_recipe/rangemasterscoped
 	name = "scoped colt rangemaster"
 	result = /obj/item/gun/ballistic/automatic/rangemaster/scoped
@@ -1479,7 +1501,7 @@
 	time = 120
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
-
+*//* CRAFT rework: removed for balance
 /datum/crafting_recipe/r91
 	name = "r91 assault rifle"
 	result = /obj/item/gun/ballistic/automatic/assault_rifle
@@ -1494,7 +1516,7 @@
 	time = 120
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
-
+*//* CRAFT rework: removed for balance
 /datum/crafting_recipe/r91
 	name = "infiltrator"
 	result = /obj/item/gun/ballistic/automatic/assault_rifle/infiltrator
@@ -1509,7 +1531,7 @@
 	time = 120
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
-
+*/
 /datum/crafting_recipe/servicerifle
 	name = "service rifle"
 	result = /obj/item/gun/ballistic/automatic/marksman/servicerifle
@@ -1517,12 +1539,12 @@
 				/obj/item/stack/crafting/metalparts = 2,
 				/obj/item/stack/sheet/metal = 6,
 				/datum/reagent/blackpowder = 20)
-	tools = list(TOOL_WORKBENCH, /obj/item/blueprint/weapon/servicerifle, TOOL_GUNTIER1)
-	traits = list(TRAIT_GUNSMITH_ONE)
+	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER3)
+	traits = list(TRAIT_GUNSMITH_THREE)
 	time = 120
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
-
+/* CRAFT rework: removed for balance
 /datum/crafting_recipe/marksmanrifle
 	name = "marksman rifle"
 	result = /obj/item/gun/ballistic/automatic/marksman
@@ -1537,7 +1559,7 @@
 	time = 120
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
-
+*//* CRAFT rework: removed for balance
 /datum/crafting_recipe/fnfal
 	name = "fn fal"
 	result = /obj/item/gun/ballistic/automatic/fnfal
@@ -1551,14 +1573,15 @@
 	time = 120
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
-
+*/
 /datum/crafting_recipe/widowmaker
 	name = "winchester widowmaker double barrel"
 	result = /obj/item/gun/ballistic/revolver/widowmaker
 	reqs = list(/obj/item/stack/sheet/mineral/wood = 1,
 				/obj/item/stack/crafting/metalparts = 5,
 				/datum/reagent/blackpowder = 5)
-	tools = list(TOOL_WORKBENCH)
+	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER1)
+	traits = list(TRAIT_GUNSMITH_ONE)
 	time = 120
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
@@ -1570,12 +1593,12 @@
 				/obj/item/stack/crafting/metalparts = 3,
 				/obj/item/stack/sheet/metal = 3,
 				/datum/reagent/blackpowder = 15)
-	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER1)
-	traits = list(TRAIT_GUNSMITH_ONE)
+	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER2)
+	traits = list(TRAIT_GUNSMITH_TWO)
 	time = 120
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
-
+/* CRAFT rework: removed for balance
 /datum/crafting_recipe/citykiller
 	name = "combat shotgun"
 	result = /obj/item/gun/ballistic/shotgun/automatic/combat
@@ -1589,7 +1612,7 @@
 	time = 120
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
-
+*//* CRAFT rework: removed for balance
 /datum/crafting_recipe/caws
 	name = "h&k caws"
 	result = /obj/item/gun/ballistic/automatic/shotgun/caws
@@ -1604,7 +1627,7 @@
 	time = 120
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
-
+*//*CRAFT rework: removed for balance
 /datum/crafting_recipe/greasegun
 	name = "M3A1 Grease Gun"
 	result = /obj/item/gun/ballistic/automatic/greasegun
@@ -1616,7 +1639,7 @@
 	time = 120
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
-
+*//* CRAFT rework: removed for balance
 /datum/crafting_recipe/smg10mm
 	name = "10mm submachine gun"
 	result = /obj/item/gun/ballistic/automatic/smg10mm
@@ -1630,26 +1653,27 @@
 	time = 120
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
-
+*/
 /datum/crafting_recipe/magnetowattz
-	name = "Wattz 1000 magneto-laser pistol"
+	name = "(Upgrade) Wattz 1000 magneto-laser pistol"
 	result = /obj/item/gun/energy/laser/wattz/magneto
 	reqs = list(/obj/item/gun/energy/laser/wattz = 1,
 				/obj/item/stack/crafting/electronicparts = 2)
-	tools = list(TOOL_WORKBENCH)
+	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER2)
+	traits = list(TRAIT_GUNSMITH_TWO)
 	time = 120
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
 
 /datum/crafting_recipe/glock86a
-	name = "glock 86a"
+	name = "(Upgrade) Glock 86a"
 	result = /obj/item/gun/energy/laser/plasma/glock/extended
 	reqs = list(/obj/item/gun/energy/laser/plasma/glock = 1,
 				/obj/item/stack/crafting/metalparts = 3,
 				/obj/item/stack/sheet/metal = 1,
 				/obj/item/stack/crafting/electronicparts = 3)
-	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER2)
-	traits = list(TRAIT_GUNSMITH_TWO)
+	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER3)
+	traits = list(TRAIT_GUNSMITH_THREE)
 	time = 120
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
@@ -1722,7 +1746,7 @@
 	tools = list(TOOL_WORKBENCH)
 	category = CAT_PRIMAL
 	subcategory = CAT_TRIBAL
-	
+
 /datum/crafting_recipe/strawdummy
 	name = "Weave Target Dummy"
 	result = /obj/structure/punching_bag/dummy
@@ -1735,7 +1759,7 @@
 	result = /obj/item/reagent_containers/food/snacks/tallow
 	time = 30
 	reqs = list(/obj/item/reagent_containers/food/snacks/meat/cutlet = 3)
-	category = CAT_MISC	
+	category = CAT_MISC
 
 /datum/crafting_recipe/TallowCandle
 	name = "Mold Tallow Candle"
@@ -1743,10 +1767,10 @@
 	time = 30
 	reqs = list(
 		/obj/item/reagent_containers/food/snacks/tallow = 1,
-		/obj/item/stack/sheet/durathread = 3	
+		/obj/item/stack/sheet/durathread = 3
 	)
-	category = CAT_MISC	
-	
+	category = CAT_MISC
+
 	/datum/crafting_recipe/SalvageCandle
 	name = "Salvage Wax"
 	result = /obj/item/candle

@@ -35,8 +35,6 @@
 	icon_state = "advanced_bench"
 	desc = "A large and advanced pre-war workbench to tackle any project!"
 	machine_tool_behaviour = list(TOOL_AWORKBENCH, TOOL_WORKBENCH)
-	can_be_unanchored = 0
-	wrenchable = 0
 
 /obj/item/weaponcrafting/receiver
 	name = "modular receiver"

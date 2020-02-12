@@ -176,7 +176,7 @@
 	ammo_type = /obj/item/ammo_casing/a556/ap
 
 /obj/item/ammo_box/a556/sport
-	name = "ammo box (.223)"
+	name = "ammo box (5.56 match)"
 	ammo_type = /obj/item/ammo_casing/a556/sport
 
 //.45 ACP

@@ -866,14 +866,15 @@
 
 	var/loot14 = list(
 				/obj/item/gun/ballistic/shotgun/automatic/combat,
-				/obj/item/storage/box/lethalshot
-	)
+				/obj/item/storage/box/lethalshot,
+				""
+				)
 
 	var/loot15 = list(
 				/obj/item/gun/energy/laser/plasma/glock,
 				/obj/item/stock_parts/cell/ammo/ec,
 				/obj/item/stock_parts/cell/ammo/ec,
-	)
+				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/tier4/Initialize(mapload) //on mapload, pick what shit to spawn
 	loot = pick(loot1, loot2, loot3, loot4, loot5, loot6, loot7, loot8, loot9, loot10, loot11, loot12, loot13, loot14, loot15)
@@ -891,7 +892,7 @@
 				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/unique //UNIQUE GUN
-	name = "tier 5 gun"
+	name = "unique gun"
 	lootcount = 1
 
 	loot = list(
@@ -917,10 +918,10 @@
 	lootcount = 1
 
 	loot = list(
-            /obj/effect/spawner/lootdrop/f13/weapon/gun/tier2 = 55,
+            /obj/effect/spawner/lootdrop/f13/weapon/gun/tier2 = 57,
             /obj/effect/spawner/lootdrop/f13/weapon/gun/tier3 = 40,
             /obj/effect/spawner/lootdrop/f13/weapon/gun/tier4 = 10,
-            /obj/effect/spawner/lootdrop/f13/weapon/gun/tier5 = 4,
+            /obj/effect/spawner/lootdrop/f13/weapon/gun/tier5 = 2,
             /obj/effect/spawner/lootdrop/f13/weapon/gun/unique = 1,
             )
 
@@ -1014,10 +1015,10 @@
 	lootdoubles = TRUE
 
 	loot = list(
-				/obj/item/ammo_box/magazine/mm195x129,
-				/obj/item/ammo_box/magazine/mm195x129/hollow,
-				/obj/item/ammo_box/magazine/sniper_rounds,
-				/obj/item/ammo_box/magazine/sniper_rounds/penetrator,
+				/obj/item/ammo_box/a50MG,
+				/obj/item/ammo_box/a50MG/incendiary,
+				/obj/item/ammo_box/magazine/m556/rifle/extended,
+				/obj/item/ammo_box/magazine/m762/ext,
 				/obj/item/ammo_box/magazine/d12g
 				)
 
@@ -1361,25 +1362,25 @@
 	lootcount = 1
 	loot = list(/obj/item/book/granter/trait/chemistry = 10,
 	/obj/item/book/granter/trait/trekking = 10,
-	/obj/item/book/granter/trait/gunsmith_one = 40,
+	/obj/item/book/granter/trait/pa_wear = 5,
+	/obj/item/book/granter/trait/gunsmith_one = 35,
 	/obj/item/book/granter/trait/gunsmith_two = 20,
 	/obj/item/book/granter/trait/gunsmith_three = 10,
 	/obj/item/book/granter/trait/gunsmith_four = 10)
 
 /obj/effect/spawner/lootdrop/f13/blueprint
-	name = "blueprint spawner"
+	name = "blueprint-tier item spawner"
 	icon_state = "blueprint_loot"
 	lootcount = 1
 	loot = list(
-		/obj/item/blueprint/weapon/thatgun,
-		/obj/item/blueprint/weapon/m1garand,
-		/obj/item/blueprint/weapon/r91,
-		/obj/item/blueprint/weapon/infiltrator,
-		/obj/item/blueprint/weapon/servicerifle,
-		/obj/item/blueprint/weapon/marksmanrifle,
-		/obj/item/blueprint/weapon/fnfal,
-		/obj/item/blueprint/weapon/caws,
-		/obj/item/blueprint/weapon/needler,
-		/obj/item/blueprint/armor/tesla,
-		/obj/item/blueprint/armor/combat
+		/obj/item/gun/ballistic/revolver/thatgun,
+		/obj/item/gun/ballistic/automatic/m1garand,
+		/obj/item/gun/ballistic/automatic/assault_rifle,
+		/obj/item/gun/ballistic/automatic/assault_rifle/infiltrator,
+		/obj/item/gun/ballistic/automatic/marksman,
+		/obj/item/gun/ballistic/automatic/fnfal,
+		/obj/item/gun/ballistic/automatic/shotgun/caws,
+		/obj/item/gun/ballistic/revolver/needler,
+		/obj/item/clothing/suit/armor/f13/power_armor/tesla,
+		/obj/item/clothing/suit/armor/f13/combat/mk2
 	)

@@ -931,6 +931,7 @@
 	name = "Colt Rangemaster"
 	desc = "A Colt Rangemaster semi-automatic rifle, chambered for 7.62x51. Single-shot only."
 	icon_state = "rangemaster"
+	item_state = "308"
 	fire_sound = 'sound/f13weapons/hunting_rifle.ogg'
 	mag_type = /obj/item/ammo_box/magazine/m762
 	w_class = WEIGHT_CLASS_BULKY
@@ -942,6 +943,7 @@
 	name = "Scoped Colt Rangemaster"
 	desc = "Nothing's better than seeing that surprised look on your target's face. The Loophole x20 Scope on this hunting rifle makes it easier than ever before. Accurate from first shot to last, no matter what kind of game you're gunning for."
 	icon_state = "rangemaster"
+	item_state = "scoped308"
 	fire_sound = 'sound/f13weapons/hunting_rifle.ogg'
 	zoomable = TRUE
 	zoom_amt = 10
@@ -955,7 +957,7 @@
 	burst_size = 3
 	automatic = 1
 	mag_type = /obj/item/ammo_box/magazine/m762
-	init_mag_type = /obj/item/ammo_box/magazine/m762/ext
+	init_mag_type = /obj/item/ammo_box/magazine/m762
 	fire_sound = 'sound/f13weapons/assaultrifle_fire.ogg'
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY

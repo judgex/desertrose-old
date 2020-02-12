@@ -744,7 +744,7 @@
 	if(!Adjacent(M) && (M.loc != src))
 		if((be_close == 0) || (dna.check_mutation(TK) && tkMaxRangeCheck(src, M)))
 			return TRUE
-		to_chat(src, "<span class='warning'>You are too far away!</span>")
+		to_chat(src, "<span class='warning'>You are too far away!</span>") //Bug: this is preventing flavor text from being seen except when adjacent. See print_flavor_text() in preferences.dm
 		return FALSE
 	return TRUE
 

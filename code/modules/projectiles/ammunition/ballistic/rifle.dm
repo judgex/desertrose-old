@@ -7,7 +7,7 @@
 	icon_state = "40mmHE"
 	projectile_type = /obj/item/projectile/bullet/a40mm
 
-// 5.56x45mm 
+// 5.56x45mm
 /obj/item/ammo_casing/a556
 	name = "5.56x45 FMJ bullet casing"
 	desc = "A 5.56x45mm full metal jacket bullet casing."
@@ -25,8 +25,8 @@
 	projectile_type = /obj/item/projectile/bullet/a556/jhp
 
 /obj/item/ammo_casing/a556/sport
-	name = ".223 Remington bullet casing"
-	desc = "A .223 Remington hunting bullet casing."
+	name = "5.56x45 match bullet casing"
+	desc = "A 5.56x45mm hand-loaded match grade bullet casing."
 	projectile_type = /obj/item/projectile/bullet/a556/sport
 
 // 7.62x51, .308 Winchester
