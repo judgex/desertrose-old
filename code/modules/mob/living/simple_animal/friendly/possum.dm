@@ -26,7 +26,7 @@
 
 /mob/living/simple_animal/opossum/poppy
 	name = "Poppy the Safety Possum"
-	desc = "It's an opossum, a small scavenging marsupial. It's wearing appropriate personal protective equipment, though."
+	desc = "After surviving 3 million years in North America before the war, what's a few more in radiation?"
 	icon_state = "poppypossum"
 	icon_living = "poppypossum"
 	icon_dead = "poppypossum_dead"
