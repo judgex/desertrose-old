@@ -197,7 +197,7 @@ update_label("John Doe", "Clowny")
 
 /obj/item/card/id/gold/mayor
 	name = "Mayor's identification card"
-	desc = "A golden identification card reserved for the Mayor of Kebob."
+	desc = "A golden identification card reserved for the Mayor of Oasis."
 	id_type = "Badge"
 	icon_state = "sheriff"
 	item_state = "badge-sheriff"
@@ -454,6 +454,13 @@ update_label("John Doe", "Clowny")
 	id_type = "Badge"
 	icon_state = "sheriff"
 	item_state = "badge-sheriff"
+
+/obj/item/card/id/dogtag/town
+	name = "citizenship permit"
+	desc = "A permit identifying the holder as a citizen of a nearby town."
+	icon_state = "doctor"
+	item_state = "card-doctor"
+	id_type = "name badge"
 
 /obj/item/card/id/dogtag/ncrambassador
 	name = "ambassador's permit"

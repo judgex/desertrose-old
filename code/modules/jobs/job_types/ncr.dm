@@ -2,8 +2,8 @@
 	department_flag = NCR
 	selection_color = "#ffeeaa"
 	exp_type = EXP_TYPE_NCR
-	access = list(ACCESS_SECURITY, ACCESS_SEC_DOORS, ACCESS_NCR)
-	minimal_access = list(ACCESS_SECURITY, ACCESS_SEC_DOORS, ACCESS_NCR)
+	access = list(ACCESS_NCR)
+	minimal_access = list(ACCESS_NCR)
 	forbids = "The NCR forbids: Chem and drug use such as jet or alcohol while on duty. Execution of unarmed or otherwise subdued targets without authorisation."
 	enforces = "The NCR expects: Obeying the lawful orders of superiors. Proper treatment of prisoners.  Good conduct within the Republic's laws. Wearing the uniform."
 

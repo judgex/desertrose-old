@@ -1484,6 +1484,11 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	name = "North Bunker Elevator"
 	flags_2 = BLOCK_RADIO_2
 
+/area/shuttle/vault113_elevator
+	name = "Vault 113 Elevator"
+	flags_2 = BLOCK_RADIO_2
+	ambientsounds = list('sound/f13ambience/vaulttec_vault.ogg')
+
 /area/shuttle/mining_elevator
 	name = "Mining Elevator"
 	flags_2 = BLOCK_RADIO_2

@@ -252,9 +252,9 @@
 	name = "Research Monitor (Computer Board)"
 	build_path = /obj/machinery/computer/security/research
 
-/obj/item/circuitboard/computer/kebab
-	name = "Kebab Monitor (Computer Board)"
-	build_path = /obj/machinery/computer/security/kebab
+/obj/item/circuitboard/computer/oasis
+	name = "Oasis Monitor (Computer Board)"
+	build_path = /obj/machinery/computer/security/oasis
 
 /obj/item/circuitboard/computer/ncr
 	name = "Republic Monitor (Computer Board)"
@@ -388,3 +388,7 @@
 /obj/item/circuitboard/computer/mining_control
 	name = "Mining Elevator Control (Computer board)"
 	build_path = /obj/machinery/computer/shuttle/miningelevator
+
+/obj/item/circuitboard/computer/vault113_control
+	name = "Vault 113 Elevator Control (Computer board)"
+	build_path = /obj/machinery/computer/shuttle/vault113elevator
