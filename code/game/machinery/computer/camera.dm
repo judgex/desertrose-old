@@ -209,7 +209,7 @@
 	icon_keyboard = "terminal_key"
 	icon_screen = "terminal_on_alt"
 	network = list("oasis")
-	circuit = /obj/item/circuitboard/computer/kebab
+	circuit = /obj/item/circuitboard/computer/oasis
 
 /obj/machinery/computer/security/ncr
 	name = "NCR camp camera terminal"
