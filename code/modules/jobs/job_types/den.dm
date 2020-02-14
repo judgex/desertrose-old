@@ -92,7 +92,7 @@ Sheriff
 		/obj/item/ammo_box/m44=2, \
 		/obj/item/restraints/handcuffs=1)
 	r_pocket = /obj/item/flashlight/flare
-	belt = /obj/item/gun/ballistic/revolver/m29
+	belt = /obj/item/gun/ballistic/revolver/m29/peacekeeper
 
 /datum/job/den/f13sheriff/after_spawn(mob/living/carbon/human/H, mob/M)
 	H.add_quirk("Hard Yards")

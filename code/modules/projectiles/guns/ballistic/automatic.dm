@@ -665,6 +665,8 @@
 	zoom_amt = 10
 	zoom_out_amt = 13
 	weapon_weight = WEAPON_HEAVY
+	actions_types = null
+	select = 0
 
 /obj/item/gun/ballistic/automatic/marksman/sniper
 	name = "sniper rifle"
@@ -703,7 +705,6 @@
 	mag_type = /obj/item/ammo_box/magazine/m556/rifle
 	icon_state = "R82"
 	item_state = "R82"
-	burst_size = 1
 	automatic = 1
 
 /obj/item/gun/ballistic/automatic/marksman/servicerifle/varmint
