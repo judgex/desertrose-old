@@ -138,6 +138,7 @@
 	fire_delay = 2
 	can_suppress = FALSE
 	burst_size = 0
+	automatic = 1
 	actions_types = list()
 	can_bayonet = TRUE
 	knife_x_offset = 25
@@ -278,6 +279,7 @@
 	item_state = "l6closedmag"
 	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = 0
+	automatic = 1
 	mag_type = /obj/item/ammo_box/magazine/mm195x129
 	weapon_weight = WEAPON_HEAVY
 	fire_sound = 'sound/weapons/gunshot_smg.ogg'
@@ -348,6 +350,7 @@
 	icon_state = "M38"
 	item_state = "M38"
 	slot_flags = 0
+	automatic = 1
 	mag_type = /obj/item/ammo_box/magazine/mm762
 	fire_sound = 'sound/f13weapons/assaultrifle_fire.ogg'
 	can_suppress = FALSE
@@ -513,6 +516,7 @@
 	burst_size = 3
 	fire_delay = 2
 	burst_delay = 2
+	automatic = 1
 
 /obj/item/gun/ballistic/automatic/smg10mm
 	name = "10mm submachine gun"
@@ -560,6 +564,7 @@
 	fire_delay = 3
 	burst_delay = 1.8
 	spread = 14
+	automatic = 1
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 
@@ -590,6 +595,7 @@
 	init_mag_type = /obj/item/ammo_box/magazine/m556/rifle/assault
 	fire_sound = 'sound/f13weapons/assaultrifle_fire.ogg'
 	burst_size = 3
+	automatic = 1
 	fire_delay = 3
 	spread = 8
 	w_class = WEIGHT_CLASS_BULKY
@@ -624,6 +630,7 @@
 	zoom_amt = 10
 	zoom_out_amt = 13
 	spread = 1
+	automatic = 1
 	fire_sound = 'sound/weapons/Gunshot_large_silenced.ogg'
 	weapon_weight = WEAPON_HEAVY
 	force = 15
@@ -658,6 +665,8 @@
 	zoom_amt = 10
 	zoom_out_amt = 13
 	weapon_weight = WEAPON_HEAVY
+	actions_types = null
+	select = 0
 
 /obj/item/gun/ballistic/automatic/marksman/sniper
 	name = "sniper rifle"
@@ -669,6 +678,12 @@
 	fire_delay = 10
 	burst_size = 1
 	projectile_speed = 0.4
+
+/obj/item/gun/ballistic/automatic/marksman/sniper/gold
+	name = "golden sniper rifle"
+	desc = "A DKS 501, chambered in .308 Winchester. This one has a gold trim and the words 'Old Cassius' engraved into the stock."
+	icon_state = "gold_sniper"
+	item_state = "gold_sniper"
 
 /obj/item/gun/ballistic/automatic/marksman/servicerifle
 	name = "service rifle"
@@ -683,14 +698,14 @@
 
 /obj/item/gun/ballistic/automatic/marksman/servicerifle/r82
 	name = "R82 heavy service rifle"
-	desc = "A top of the line 5.56x45 semi-automatic service rifle manufactured by the NCR and issued to high ranking personnel."
+	desc = "A top of the line 5.56x45 automatic service rifle manufactured by the NCR and issued to high ranking personnel."
 	fire_delay = 1 //faster ROF, superior to regular service rifle
 	projectile_speed = 0.6 //faster velocity, superior to regular service rifle
 	init_mag_type = /obj/item/ammo_box/magazine/m556/rifle/assault
 	mag_type = /obj/item/ammo_box/magazine/m556/rifle
 	icon_state = "R82"
 	item_state = "R82"
-	burst_size = 1
+	automatic = 1
 
 /obj/item/gun/ballistic/automatic/marksman/servicerifle/varmint
 	name = "varmint rifle"
@@ -720,6 +735,7 @@
 	fire_sound = 'sound/f13weapons/10mm_fire_03.ogg'
 	burst_size = 3
 	fire_delay = 0.2
+	automatic = 1
 	weapon_weight = WEAPON_HEAVY
 
 /obj/item/gun/ballistic/automatic/shotgun/pancor
@@ -730,6 +746,7 @@
 	fire_sound = 'sound/f13weapons/repeater_fire.ogg'
 	mag_type = /obj/item/ammo_box/magazine/d12g
 	burst_size = 2
+	automatic = 1
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 
@@ -742,6 +759,7 @@
 	mag_type = /obj/item/ammo_box/magazine/d12g
 	burst_size = 2
 	fire_delay = 4
+	automatic = 1
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 
@@ -797,6 +815,7 @@
 	mag_type = /obj/item/ammo_box/magazine/m556/rifle
 	burst_size = 2
 	fire_delay = 3
+	automatic = 1
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 	fire_sound = 'sound/f13weapons/bozar_fire.ogg'
@@ -827,6 +846,7 @@
 	icon_state = "lsw"
 	item_state = "l6closedmag"
 	slot_flags = 0
+	automatic = 1
 	mag_type = /obj/item/ammo_box/magazine/m556
 	fire_sound = 'sound/f13weapons/assaultrifle_fire.ogg'
 	can_suppress = FALSE
@@ -841,6 +861,7 @@
 	icon_state = "R84"
 	item_state = "R84"
 	slot_flags = 0
+	automatic = 1
 	mag_type = /obj/item/ammo_box/magazine/lmg
 	fire_sound = 'sound/f13weapons/assaultrifle_fire.ogg'
 	can_suppress = FALSE
@@ -935,6 +956,7 @@
 	icon_state = "fnfal"
 	item_state = "fnfal"
 	burst_size = 3
+	automatic = 1
 	mag_type = /obj/item/ammo_box/magazine/m762
 	init_mag_type = /obj/item/ammo_box/magazine/m762
 	fire_sound = 'sound/f13weapons/assaultrifle_fire.ogg'

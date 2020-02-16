@@ -150,4 +150,4 @@
 	materials = list(MAT_METAL = 75, MAT_GLASS = 25)
 
 /obj/item/radio/intercom/kebob
-	name = "Kebob intercom"
+	name = "Oasis intercom"
