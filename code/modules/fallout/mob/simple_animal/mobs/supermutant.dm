@@ -18,8 +18,8 @@
 	response_help = "touches"
 	response_disarm = "tries to perform a kung fu move, then suddenly remembers that it's actually"
 	response_harm = "hits"
-	maxHealth = 200
-	health = 200
+	maxHealth = 300
+	health = 300
 	force_threshold = 15
 	faction = list("hostile", "supermutant")
 	melee_damage_lower = 55
@@ -50,8 +50,8 @@
 	icon = 'icons/fallout/mobs/supermutant.dmi'
 	icon_state = "hulk_brahmin_s"
 	icon_dead = "hulk_brahmin_s"
-	maxHealth = 200
-	health = 200
+	maxHealth = 300
+	health = 300
 	speak_chance = 7 //30 //Oh my god he never shuts up.
 	anchored = TRUE
 	mob_size = MOB_SIZE_LARGE

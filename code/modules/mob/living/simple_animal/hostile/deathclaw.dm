@@ -24,8 +24,8 @@
 	response_help  = "pets"
 	response_disarm = "gently pushes aside"
 	response_harm   = "hits"
-	maxHealth = 330
-	health = 330
+	maxHealth = 500
+	health = 500
 	obj_damage = 60
 	armour_penetration = 30
 	melee_damage_lower = 56
@@ -43,8 +43,8 @@
 	name = "mother deathclaw"
 	desc = "A massive, reptilian creature with powerful muscles, razor-sharp claws, and aggression to match. This one is an angry mother."
 	gender = FEMALE
-	maxHealth = 500
-	health = 500
+	maxHealth = 750
+	health = 750
 	stat_attack = UNCONSCIOUS
 	melee_damage_lower = 72
 	melee_damage_upper = 72
