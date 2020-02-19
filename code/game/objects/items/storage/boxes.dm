@@ -408,12 +408,21 @@
 
 /obj/item/storage/box/deputy_badges
 	name = "box of spare badges"
-	desc = "A box containing the spare badges for deputies, use your sheriff badge on a deputy badge to assign it's owner."
+	desc = "A box containing the spare badges for deputies. Use your sheriff badge on a deputy badge to assign its owner."
 	illustration = "id"
 
 /obj/item/storage/box/deputy_badges/PopulateContents()
 	for(var/i in 1 to 3)
 		new /obj/item/card/id/dogtag/deputy(src)
+
+/obj/item/storage/box/citizenship_permits
+	name = "box of citizenship permits"
+	desc = "A box containing spare citizenship permits for Oasis. Use a mayor's ID on a citizenship permit to assign its owner."
+	illustration = "id"
+
+/obj/item/storage/box/citizenship_permits/PopulateContents()
+	for(var/i in 1 to 7)
+		new /obj/item/card/id/dogtag/town(src)
 
 //Some spare PDAs in a box
 /obj/item/storage/box/PDAs

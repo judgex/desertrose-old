@@ -196,11 +196,12 @@ update_label("John Doe", "Clowny")
 	righthand_file = 'icons/mob/inhands/equipment/idcards_righthand.dmi'
 
 /obj/item/card/id/gold/mayor
-	name = "Mayor's identification card"
-	desc = "A golden identification card reserved for the Mayor of Oasis."
-	id_type = "Badge"
-	icon_state = "sheriff"
-	item_state = "badge-sheriff"
+	name = "Mayor's mayoral permit"
+	desc = "A golden identification permit reserved for the Mayor of Oasis."
+	icon_state = "gold"
+	item_state = "gold_id"
+	id_type = "mayoral permit"
+	color = "yellow"
 
 /obj/item/card/id/dendoctor
 	name = "doctor's name badge"
@@ -436,22 +437,25 @@ update_label("John Doe", "Clowny")
 /obj/item/card/id/dogtag/deputy
 	name = "deputy's badge"
 	desc = "A silver badge which shows honour and dedication."
-	id_type = "Badge"
+	id_type = "badge"
 	assignment = "Deputy"
 	icon_state = "deputy"
 	item_state = "badge-deputy"
+	access = list(ACCESS_BAR, ACCESS_GATEWAY)
 
 /obj/item/card/id/dogtag/deputy/attackby(obj/item/W, mob/user, params)
 	if(istype(W, /obj/item/card/id/dogtag/sheriff))
-		registered_name = stripped_input(user, "Who do you want to designate as your deputy?", , "", MAX_NAME_LEN)
-		to_chat(user, "You scribble the [registered_name] for the name on the badge.")
-		update_label()
+		var/newname = stripped_input(user, "Who do you want to designate as your deputy?", , "", MAX_NAME_LEN)
+		if(newname)
+			to_chat(user, "You scribble the [registered_name] for the name on the badge.")
+			registered_name = newname
+			update_label()
 	return ..()
 
 /obj/item/card/id/dogtag/sheriff
 	name = "sheriff's badge"
 	desc = "A golden Sheriff's badge."
-	id_type = "Badge"
+	id_type = "badge"
 	icon_state = "sheriff"
 	item_state = "badge-sheriff"
 
@@ -460,14 +464,24 @@ update_label("John Doe", "Clowny")
 	desc = "A permit identifying the holder as a citizen of a nearby town."
 	icon_state = "doctor"
 	item_state = "card-doctor"
-	id_type = "name badge"
+	id_type = "citizenship permit"
+	access = list(ACCESS_BAR)
+
+/obj/item/card/id/dogtag/town/attackby(obj/item/W, mob/user, params)
+	if(istype(W, /obj/item/card/id/gold/mayor))
+		var/newname = stripped_input(user, "Who do you want to grant citizenship to?", , "", MAX_NAME_LEN)
+		if(newname)
+			to_chat(user, "You scribble the [registered_name] for the name on the permit.")
+			registered_name = newname
+			update_label()
+	return ..()
 
 /obj/item/card/id/dogtag/ncrambassador
 	name = "ambassador's permit"
 	desc = "An ambassador's permit in a plastic holder."
 	icon_state = "doctor"
 	item_state = "card-doctor"
-	id_type = "name badge"
+	id_type = "ambassador's permit"
 
 /obj/item/card/id/dogtag/ncrtrooper
 	name = "trooper's tags"

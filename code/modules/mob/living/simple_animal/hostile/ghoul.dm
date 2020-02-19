@@ -11,8 +11,8 @@
 	speak_emote = list("growls")
 	emote_see = list("screeches")
 	a_intent = INTENT_HARM
-	maxHealth = 30
-	health = 30
+	maxHealth = 40
+	health = 40
 	speed = 2
 	harm_intent_damage = 15
 	melee_damage_lower = 15
@@ -39,8 +39,8 @@
 	icon_dead = "ghoulreaver_dead"
 	speed = 2
 	a_intent = INTENT_HARM
-	maxHealth = 65
-	health = 65
+	maxHealth = 100
+	health = 100
 	harm_intent_damage = 5
 	melee_damage_lower = 15
 	melee_damage_upper = 15
@@ -51,8 +51,8 @@
 	icon_state = "glowinghoul"
 	icon_living = "glowinghoul"
 	icon_dead = "glowinghoul_dead"
-	maxHealth = 50
-	health = 50
+	maxHealth = 80
+	health = 80
 	speed = 2
 	harm_intent_damage = 10
 	melee_damage_lower = 20
