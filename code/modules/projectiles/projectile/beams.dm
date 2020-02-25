@@ -183,49 +183,55 @@
 		M.visible_message("<span class='danger'>[M] explodes into a shower of gibs!</span>")
 		M.gib()
 
-/obj/item/projectile/beam/laser/lasgun
+/obj/item/projectile/beam/laser/lasgun //AER9
 	name = "laser beam"
-	damage = 35
-	armour_penetration = 0
+	damage = 40
+	armour_penetration = 30
 
-/obj/item/projectile/beam/laser/pistol
+/obj/item/projectile/beam/laser/pistol //AEP7
 	name = "laser beam"
-	damage = 12
+	damage = 30
+	armour_penetration = 10
 
-/obj/item/projectile/beam/laser/pistol/wattz
+/obj/item/projectile/beam/laser/pistol/wattz //Wattz pistol
 	damage = 20
 
-/obj/item/projectile/beam/laser/pistol/wattz/magneto
+/obj/item/projectile/beam/laser/pistol/wattz/magneto //upgraded Wattz
 	name = "penetrating laser beam"
 	damage = 25
 	armour_penetration = 20
 
-/obj/item/projectile/beam/laser/solar
+/obj/item/projectile/beam/laser/solar //Solar Scorcher
 	name = "solar scorcher beam"
 	damage = 30
 	armour_penetration = 20
 
-/obj/item/projectile/beam/laser/tribeam
+/obj/item/projectile/beam/laser/tribeam //Tribeam laser, fires 3 shots, will melt you
 	name = "tribeam laser"
-	damage = 15
+	damage = 30
+	armour_penetration = 20
 
-/obj/item/projectile/plasma
+/obj/item/projectile/plasma //Plasma rifle
 	name = "plasma bolt"
 	icon_state = "plasma_clot"
 	damage_type = BURN
 	damage = 50
 	armour_penetration = 20
+	flag = "laser" //checks vs. energy protection
+	eyeblur = 0
+	is_reflectable = TRUE
 
-/obj/item/projectile/plasma/pistol
+/obj/item/projectile/plasma/pistol //Plasma pistol
 	damage = 45
 	armour_penetration = 10
 
-/obj/item/projectile/plasma/pistol/glock
-	damage = 30
+/obj/item/projectile/plasma/pistol/glock //Glock (upgraded plasma pistol)
+	damage = 45
+	armour_penetration = 15
 
-/obj/item/projectile/plasma/scatter
-	damage = 25
-	armour_penetration = 5
+/obj/item/projectile/plasma/scatter //Multiplas, fires 3 shots, will melt you
+	damage = 40
+	armour_penetration = 10
 
 /obj/item/projectile/plasma/alien
 	name = "alien projectile"

@@ -1,4 +1,12 @@
 /*
+Town access doors
+Sheriff/Deputy, Gatehouse etc: 62 ACCESS_GATEWAY
+General access: 25 ACCESS_BAR
+Clinic surgery/storage: 68 ACCESS_CLONING
+here's a tip, go search DEFINES/access.dm
+*/
+
+/*
 Mayor
 */
 
@@ -16,6 +24,8 @@ Mayor
 	exp_type = EXP_TYPE_DEN
 
 	outfit = /datum/outfit/job/den/f13mayor
+	access = list(ACCESS_BAR, ACCESS_CLONING, ACCESS_GATEWAY)
+	minimal_access = list(ACCESS_BAR, ACCESS_CLONING, ACCESS_GATEWAY)
 
 /datum/outfit/job/den/f13mayor
 	name = "Mayor"
@@ -34,7 +44,8 @@ Mayor
 	head = /obj/item/clothing/head/f13/town/mayor
 	backpack_contents = list(
 		/obj/item/clothing/head/f13/town/big, \
-		/obj/item/ammo_box/a357=2,
+		/obj/item/storage/box/citizenship_permits, \
+		/obj/item/ammo_box/a357=2, \
 		/obj/item/pen/fountain/captain)
 
 /*
@@ -56,6 +67,8 @@ Sheriff
 	exp_type = EXP_TYPE_DEN
 
 	outfit = /datum/outfit/job/den/f13sheriff
+	access = list(ACCESS_BAR, ACCESS_CLONING, ACCESS_GATEWAY)
+	minimal_access = list(ACCESS_BAR, ACCESS_CLONING, ACCESS_GATEWAY)
 
 /datum/outfit/job/den/f13sheriff
 	name = "Sheriff"
@@ -80,7 +93,7 @@ Sheriff
 		/obj/item/ammo_box/m44=2, \
 		/obj/item/restraints/handcuffs=1)
 	r_pocket = /obj/item/flashlight/flare
-	belt = /obj/item/gun/ballistic/revolver/m29
+	belt = /obj/item/gun/ballistic/revolver/m29/peacekeeper
 
 /datum/job/den/f13sheriff/after_spawn(mob/living/carbon/human/H, mob/M)
 	H.add_quirk("Hard Yards")
@@ -107,6 +120,8 @@ Deputy
 	exp_type = EXP_TYPE_DEN
 
 	outfit = /datum/outfit/job/den/f13deputy
+	access = list(ACCESS_BAR, ACCESS_GATEWAY)
+	minimal_access = list(ACCESS_BAR, ACCESS_GATEWAY)
 
 /datum/outfit/job/den/f13deputy
 	name = "Deputy"
@@ -146,13 +161,15 @@ Farmer
 
 
 	outfit = /datum/outfit/job/den/f13settler
+	access = list(ACCESS_BAR)
+	minimal_access = list(ACCESS_BAR)
 
 /datum/outfit/job/den/f13farmer
 	name = "Farmer"
 	jobtype = /datum/job/den/f13farmer
 
+	id = /obj/item/card/id/dogtag/town
 	ears = 			/obj/item/radio/headset/headset_den
-	id = null
 	backpack = /obj/item/storage/backpack/satchel/explorer
 	satchel = /obj/item/storage/backpack/satchel/explorer
 	l_pocket = /obj/item/storage/bag/money/small/settler
@@ -192,13 +209,15 @@ Prospector
 	exp_type = EXP_TYPE_DEN
 
 	outfit = /datum/outfit/job/den/f13prospector
+	access = list(ACCESS_BAR)
+	minimal_access = list(ACCESS_BAR)
 
 /datum/outfit/job/den/f13prospector
 	name = "Prospector"
 	jobtype = /datum/job/den/f13prospector
 
+	id = /obj/item/card/id/dogtag/town
 	ears = /obj/item/radio/headset/headset_den
-	id = null
 	backpack = /obj/item/storage/backpack/satchel/explorer
 	satchel = /obj/item/storage/backpack/satchel/explorer
 	l_pocket = /obj/item/storage/bag/money/small/settler
@@ -235,6 +254,8 @@ Doctor
 	exp_type = EXP_TYPE_DEN
 
 	outfit = /datum/outfit/job/den/f13dendoc
+	access = list(ACCESS_BAR, ACCESS_CLONING)
+	minimal_access = list(ACCESS_BAR, ACCESS_CLONING)
 
 /datum/outfit/job/den/f13dendoc
 	name = "Doctor"
@@ -275,8 +296,8 @@ Preacher
 
 	outfit = /datum/outfit/job/den/f13preacher
 
-	access = list()
-	minimal_access = list()
+	access = list(ACCESS_BAR)
+	minimal_access = list(ACCESS_BAR)
 
 /datum/job/den/f13preacher/after_spawn(mob/living/H, mob/M)
 	if(H.mind)
@@ -345,10 +366,10 @@ Preacher
 /datum/outfit/job/den/f13preacher
 	name = "Preacher"
 	jobtype = /datum/job/den/f13preacher
-	id = null
 	ears = /obj/item/radio/headset/headset_den
 	belt = null
 
+	id = /obj/item/card/id/dogtag/town
 	uniform = /obj/item/clothing/under/rank/chaplain
 	backpack_contents = list(/obj/item/camera/spooky = 1)
 	backpack = /obj/item/storage/backpack/cultpack
@@ -382,13 +403,15 @@ Settler
 	selection_color = "#dcba97"
 
 	outfit = /datum/outfit/job/den/f13settler
+	access = list(ACCESS_BAR)
+	minimal_access = list(ACCESS_BAR)
 
 /datum/outfit/job/den/f13settler
 	name = "Settler"
 	jobtype = /datum/job/den/f13settler
 
+	id = /obj/item/card/id/dogtag/town
 	ears = 			/obj/item/radio/headset/headset_den
-	id = null
 	belt = null
 	backpack = /obj/item/storage/backpack/satchel/explorer
 	satchel = /obj/item/storage/backpack/satchel/explorer

@@ -368,6 +368,43 @@
 	icon_state = "mysterious_m29"
 	w_class = WEIGHT_CLASS_NORMAL
 
+/obj/item/gun/ballistic/revolver/m29/peacekeeper
+	name = "Peacekeeper"
+	desc = "Even desert roses have thorns. This .44 revolver has been modified with a special hammer mechanism, allowing for slow, powerful shots, or fanning the hammer for a flurry of more inaccurate shots."
+	item_state = "m29peace"
+	icon_state = "m29peace"
+	extra_damage = 15
+	extra_penetration = 5
+	fire_delay = 15
+	burst_size = 1
+	burst_delay = 1
+	var/select = 0
+	actions_types = list(/datum/action/item_action/toggle_firemode)
+
+/obj/item/gun/ballistic/revolver/m29/peacekeeper/ui_action_click()
+	burst_select()
+
+/obj/item/gun/ballistic/revolver/m29/peacekeeper/proc/burst_select()
+	var/mob/living/carbon/human/user = usr
+	switch(select)
+		if(0)
+			select += 1
+			burst_size = 6 //fan the hammer
+			spread = 45
+			extra_damage = -10 //25 damage, 5 AP - equivalent to a .38 round. Sounds weak, but it's six-round-burst!
+			extra_penetration = 0
+			fire_delay = 1
+			to_chat(user, "<span class='notice'>You prepare to fan the hammer for a rapid burst of shots.</span>")
+		if(1)
+			select = 0
+			burst_size = 1
+			spread = 0
+			extra_damage = 15 //50 damage, 10 AP - equivalent to a .45-70 Govt round. Strong, but slow.
+			extra_penetration = 5
+			fire_delay = 10 //pace your shots
+			to_chat(user, "<span class='notice'>You switch to single-shot fire.</span>")
+	update_icon()
+
 /obj/item/gun/ballistic/revolver/m29/scoped
 	name = "\improper .44 magnum revolver"
 	icon_state = "scoped_m29"

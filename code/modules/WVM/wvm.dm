@@ -38,7 +38,7 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 	armor = list(melee = 20, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 50, acid = 70)
 	use_power = 0
 
-	var/stored_item_type = list()
+	var/stored_item_type = list(/obj/item)
 	var/content[0]		// store items
 	var/stored_caps = 0	// store caps
 	var/obj/item/lock_part/lock = null
@@ -60,7 +60,6 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 	idle_icon_state = "weapon_idle"
 	service_icon_state = "weapon_service"
 	lock_icon_state = "weapon_lock"
-	stored_item_type = list(/obj/item/gun, /obj/item/melee)
 
 /* Ammo Vending Machine*/
 /obj/machinery/trading_machine/ammo
@@ -70,7 +69,6 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 	idle_icon_state = "ammo_idle"
 	service_icon_state = "ammo_service"
 	lock_icon_state = "ammo_lock"
-	stored_item_type = list(/obj/item/ammo_box, /obj/item/stock_parts/cell)
 
 /* Armor Vending Machine*/
 /obj/machinery/trading_machine/armor
@@ -80,7 +78,6 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 	idle_icon_state = "armor_idle"
 	service_icon_state = "armor_service"
 	lock_icon_state = "armor_lock"
-	stored_item_type = list(/obj/item/clothing, /obj/item/storage/belt)
 
 /* Medical Vending Machine*/
 /obj/machinery/trading_machine/medical
@@ -90,7 +87,6 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 	idle_icon_state = "med_idle"
 	service_icon_state = "med_service"
 	lock_icon_state = "med_lock"
-	stored_item_type = list(/obj/item/reagent_containers)
 
 /* Initialization */
 /obj/machinery/trading_machine/Initialize()
@@ -519,7 +515,7 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		new /datum/data/wasteland_equipment("Stimpak",						/obj/item/reagent_containers/hypospray/medipen/stimpak,				100),
 		new /datum/data/wasteland_equipment("Chemistry for Wastelanders",	/obj/item/book/granter/trait/chemistry,								600)
 		)
-	
+
 /obj/machinery/mineral/wasteland_vendor/weapons
 	name = "Wasteland Vending Machine - Weapons"
 	icon_state = "weapon_idle"

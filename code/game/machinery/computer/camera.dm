@@ -202,14 +202,14 @@
 	network = list("rd")
 	circuit = /obj/item/circuitboard/computer/research
 
-/obj/machinery/computer/security/kebab
-	name = "kebabtown checkpoint camera terminal"
+/obj/machinery/computer/security/oasis
+	name = "oasis checkpoint camera terminal"
 	desc = "Used to access the various cameras located in the town."
 	icon_state = "terminal"
 	icon_keyboard = "terminal_key"
 	icon_screen = "terminal_on_alt"
-	network = list("kebab")
-	circuit = /obj/item/circuitboard/computer/kebab
+	network = list("oasis")
+	circuit = /obj/item/circuitboard/computer/oasis
 
 /obj/machinery/computer/security/ncr
 	name = "NCR camp camera terminal"

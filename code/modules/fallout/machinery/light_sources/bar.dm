@@ -48,6 +48,38 @@
 /obj/machinery/light/kebab_sign/break_light_tube()
 	return 0
 
+/obj/machinery/light/oasis
+	name = "Oasis sign"
+	icon_state = "Oasis"
+	base_state = "Oasis"
+	icon = 'icons/fallout/objects/structures/kebabtown.dmi'
+	fitting = "sign"
+	brightness = 4
+	active_power_usage = 50
+	density = 1
+	desc = "A sign marking the town of Oasis. It's remarkably fancy."
+	light_color = LIGHT_COLOR_YELLOW
+	light_type = null
+
+/obj/machinery/light/oasis/break_light_tube()
+	return 0
+
+/obj/machinery/light/oasis_sign
+	name = "Oasis"
+	icon_state = "oasis_sign"
+	base_state = "oasis_sign"
+	icon = 'icons/fallout/objects/structures/kebabtown.dmi'
+	fitting = "sign"
+	brightness = 4
+	active_power_usage = 50
+	density = 0
+	desc = "A sign marking the town of Oasis. It's remarkably fancy.."
+	light_color = LIGHT_COLOR_YELLOW
+	light_type = null
+
+/obj/machinery/light/oasis_sign/break_light_tube()
+	return 0
+
 /obj/machinery/light/chiken_ranch
 	name = "Chiken Ranch sign"
 	icon_state = "chiken_ranch"
