@@ -66,6 +66,32 @@
 	desc = "Worn by the Head of Personnel. It smells faintly of bureaucracy."
 	icon_state = "hopcloak"
 
+/obj/item/clothing/suit/hooded/cloak/desert
+	name = "desert cloak"
+	icon_state = "desertcloak"
+	desc = "A practical cloak made out of animal hide."
+	allowed = list(/obj/item/flashlight, /obj/item/tank/internals, /obj/item/pickaxe, /obj/item/twohanded/spear, /obj/item/twohanded/bonespear, /obj/item/gun)
+	hoodtype = /obj/item/clothing/head/hooded/cloakhood/desert
+	body_parts_covered = CHEST|GROIN|ARMS
+	armor = list("melee" = 20, "bullet" = 15, "laser" = 15, "energy" = 15, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 10, "acid" = 0)
+
+/obj/item/clothing/head/hooded/cloakhood/desert
+	name = "desert cloak hood"
+	icon_state = "desertcloak"
+	desc = "A protective and concealing hood."
+	flags_inv = HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR
+	armor = list("melee" = 20, "bullet" = 15, "laser" = 15, "energy" = 15, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 10, "acid" = 0)
+
+/obj/item/clothing/suit/hooded/cloak/desert/bridgekeeper
+	name = "tattered cloak"
+	desc = "An old ragged cloak that is covered in plasma burns and scorches."
+	hoodtype = /obj/item/clothing/head/hooded/cloakhood/desert/bridgekeeper
+	armor = list("melee" = 40, "bullet" = 45, "laser" = 40, "energy" = 40, "bomb" = 50, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20)
+
+/obj/item/clothing/head/hooded/cloakhood/desert/bridgekeeper
+	name = "tattered cloak hood"
+	armor = list("melee" = 45, "bullet" = 30, "laser" = 30, "energy" = 60, "bomb" = 25, "bio" = 60, "rad" = 60, "fire" = 60, "acid" = 0)
+
 /obj/item/clothing/suit/hooded/cloak/goliath
 	name = "deathclaw cloak"
 	icon_state = "goliath_cloak"

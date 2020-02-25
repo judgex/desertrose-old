@@ -305,6 +305,7 @@
 	max_ammo = 5
 	multiple_sprites = 1
 	materials = list(MAT_METAL = 5000)
+	w_class = WEIGHT_CLASS_SMALL
 
 /obj/item/ammo_box/a308
 	name = "stripper clip (.308)"
@@ -314,6 +315,7 @@
 	max_ammo = 5
 	multiple_sprites = 1
 	materials = list(MAT_METAL = 7000)
+	w_class = WEIGHT_CLASS_SMALL
 
 /obj/item/ammo_box/a762/doublestacked
 	name = "double stack stripper clip (.308)"
@@ -323,6 +325,7 @@
 	max_ammo = 10
 	multiple_sprites = 1
 	materials = list(MAT_METAL = 10000)
+	w_class = WEIGHT_CLASS_SMALL
 
 //5.56x45mm
 /obj/item/ammo_box/a556/stripper
@@ -333,6 +336,7 @@
 	max_ammo = 5
 	multiple_sprites = 1
 	materials = list(MAT_METAL = 2500)
+	w_class = WEIGHT_CLASS_SMALL
 
 //.50 BMG
 /obj/item/ammo_box/a50MG

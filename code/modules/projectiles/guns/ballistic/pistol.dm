@@ -101,12 +101,20 @@
 	extra_penetration = 10 //2x 35 damage, 10 AP- hits like a 2rd burst 5.56, but more accurate
 
 /obj/item/gun/ballistic/automatic/pistol/ninemil
-	name = "9mm pistol"
+	name = "browning hi-power"
 	desc = "A mass produced pre-war Browning Hi-power 9mm pistol."
 	icon_state = "ninemil"
 	mag_type = /obj/item/ammo_box/magazine/m9mm
 	w_class = WEIGHT_CLASS_NORMAL
 	fire_delay = 2
+	can_suppress = FALSE
+
+/obj/item/gun/ballistic/automatic/pistol/type17
+	name = "type 17"
+	desc = "A reproduction of the WW2 weapon and issued to the Chinese military at the time of the Great War. Most samples seen are surplus finds from the time of the Great War. Chambered in 9mm."
+	icon_state = "c96"
+	mag_type = /obj/item/ammo_box/magazine/m9mm
+	fire_delay = 1
 	can_suppress = FALSE
 
 /obj/item/gun/ballistic/automatic/pistol/ninemil/maria

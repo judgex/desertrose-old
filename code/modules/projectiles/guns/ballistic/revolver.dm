@@ -474,3 +474,13 @@
 	fire_sound = 'sound/f13weapons/magnum_fire.ogg'
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/thatgun
 	w_class = WEIGHT_CLASS_NORMAL
+
+/obj/item/gun/ballistic/automatic/pistol/zhurong
+	name = "Zhu-Rong v417"
+	desc = "The earlier model of the Chinese pistol found in the East Coast, which was known to be the model before all the simplifications of the design, making it smoother, packing a harderer punch. Chambered in 10mm."
+	icon_state = "zhurong"
+	w_class = WEIGHT_CLASS_SMALL
+	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev6250
+	fire_delay = 0
+	extra_damage = 20
+	extra_penetration = 5

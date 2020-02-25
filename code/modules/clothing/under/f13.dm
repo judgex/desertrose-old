@@ -796,6 +796,16 @@
 	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HEAD
 	can_adjust = 0
 
+/obj/item/clothing/under/f13/chinese
+	name = "chinese jumpsuit"
+	desc = "An ancient Chinese combat uniform. In use before the war."
+	icon_state = "chinese"
+	item_state = "bl_suit"
+	item_color = "combat"
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
+	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 20, "fire" = 20, "acid" = 40)
+	can_adjust = 0
+
 //Fluff
 
 
