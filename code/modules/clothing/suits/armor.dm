@@ -544,6 +544,14 @@
 	icon_state = "armoralt"
 	item_state = "armoralt"
 	body_parts_covered = CHEST|GROIN
+	armor = list("melee" = 45, "bullet" = 50, "laser" = 45, "energy" = 45, "bomb" = 55, "bio" = 60, "rad" = 15, "fire" = 60, "acid" = 30)
+
+/obj/item/clothing/suit/armor/f13/combat/chinese
+	name = "chinese combat armor"
+	desc = "An uncommon suit of pre-war Chinese combat armor. It's a very basic and straightforward piece of armor that covers the front of the user."
+	icon_state = "chicom_armor"
+	item_state = "chicom_armor"
+	armor = list("melee" = 35, "bullet" = 40, "laser" = 40, "energy" = 40, "bomb" = 60, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 10)
 
 /obj/item/clothing/suit/armor/f13/rangercombat
 	name = "veteran ranger combat armor"

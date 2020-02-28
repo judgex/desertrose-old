@@ -568,12 +568,21 @@
 /obj/item/storage/belt/holster/ComponentInitialize()
 	. = ..()
 	GET_COMPONENT(STR, /datum/component/storage)
-	STR.max_items = 3
+	STR.max_items = 4
 	STR.max_w_class = WEIGHT_CLASS_NORMAL
 	STR.can_hold = typecacheof(list(
 		/obj/item/gun/ballistic/automatic/pistol,
 		/obj/item/gun/ballistic/revolver,
 		/obj/item/ammo_box,
+		/obj/item/gun/energy/laser/solar,
+		/obj/item/gun/energy/laser/pistol,
+		/obj/item/gun/energy/laser/plasma/pistol,
+		/obj/item/gun/energy/laser/plasma/glock,
+		/obj/item/gun/energy/laser/plasma/glock/extended,
+		/obj/item/gun/energy/laser/wattz,
+		/obj/item/gun/energy/laser/wattz/magneto,
+		/obj/item/gun/energy/laser/plasma/alien,
+		/obj/item/stock_parts/cell/ammo/ec
 		))
 
 /obj/item/storage/belt/holster/full/PopulateContents()

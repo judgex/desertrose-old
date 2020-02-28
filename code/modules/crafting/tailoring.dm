@@ -290,7 +290,7 @@
 
 /datum/crafting_recipe/cloak
 	name = "brown cloak"
-	result = /obj/item/clothing/neck/cloak
+	result = /obj/item/clothing/suit/hooded/cloak/desert
 	reqs = list(/obj/item/stack/sheet/leather = 3)
 	tools = list(TOOL_WORKBENCH)
 	time = 25
