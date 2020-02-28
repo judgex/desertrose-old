@@ -1279,8 +1279,6 @@
 	..()
 
 /datum/reagent/medicine/stimpak/on_mob_life(mob/living/carbon/M)
-	if(M.getBruteLoss() == 0 && M.getFireLoss() == 0 && M.getToxLoss() == 0)
-		metabolization_rate = 1000 * REAGENTS_METABOLISM //instant metabolise if it won't help you, prevents prehealing before combat
 	if(!M.reagents.has_reagent("healing_powder")) // We don't want these healing items to stack, so we only apply the healing if these chems aren't found.We only check for the less powerful chems, so the least powerful one always heals.
 		M.adjustBruteLoss(-4*REM, 0)
 		M.adjustFireLoss(-4*REM, 0)
@@ -1307,8 +1305,6 @@ datum/reagent/medicine/super_stimpak
 	overdose_threshold = 20
 
 datum/reagent/medicine/super_stimpak/on_mob_life(mob/living/M)
-	if(M.getBruteLoss() == 0 && M.getFireLoss() == 0 && M.getToxLoss() == 0 && M.getOxyLoss() == 0)
-		metabolization_rate = 1000 * REAGENTS_METABOLISM //instant metabolise if it won't help you, prevents prehealing before combat
 	if(!M.reagents.has_reagent("healing_poultice") && !M.reagents.has_reagent("stimpak") && !M.reagents.has_reagent("healing_powder")) // We don't want these healing items to stack, so we only apply the healing if these chems aren't found. We only check for the less powerful chems, so the least powerful one always heals.
 		M.adjustBruteLoss(-6*REM)
 		M.adjustFireLoss(-6*REM)
@@ -1337,8 +1333,6 @@ datum/reagent/medicine/super_stimpak/on_mob_life(mob/living/M)
 	overdose_threshold = 30
 
 datum/reagent/medicine/bitter_drink/on_mob_life(mob/living/M)
-	if(M.getBruteLoss() == 0 && M.getFireLoss() == 0)
-		metabolization_rate = 1000 * REAGENTS_METABOLISM //instant metabolise if it won't help you, prevents prehealing before combat
 	if(!M.reagents.has_reagent("stimpak") && !M.reagents.has_reagent("healing_powder")) //should prevent stacking with healing powder and stimpaks
 		M.adjustFireLoss(-3*REM)
 		M.adjustBruteLoss(-3*REM)
@@ -1363,8 +1357,6 @@ datum/reagent/medicine/bitter_drink/on_mob_life(mob/living/M)
 	overdose_threshold = 30
 
 /datum/reagent/medicine/healing_powder/on_mob_life(mob/living/carbon/M)
-	if(M.getBruteLoss() == 0 && M.getFireLoss() == 0)
-		metabolization_rate = 1000 * REAGENTS_METABOLISM //instant metabolise if it won't help you, prevents prehealing before combat
 	M.adjustFireLoss(-3*REM)
 	M.adjustBruteLoss(-3*REM)
 	M.hallucination = max(M.hallucination, 5)
@@ -1395,8 +1387,6 @@ datum/reagent/medicine/bitter_drink/on_mob_life(mob/living/M)
 	overdose_threshold = 20
 
 /datum/reagent/medicine/healing_poultice/on_mob_life(mob/living/M)
-	if(M.getBruteLoss() == 0 && M.getFireLoss() == 0 && M.getOxyLoss() == 0)
-		metabolization_rate = 1000 * REAGENTS_METABOLISM //instant metabolise if it won't help you, prevents prehealing before combat
 	if(!M.reagents.has_reagent("stimpak") && !M.reagents.has_reagent("healing_powder")) // We don't want these healing items to stack, so we only apply the healing if these chems aren't found. We only check for the less powerful chems, so the least powerful one always heals.
 		M.adjustFireLoss(-4*REM)
 		M.adjustBruteLoss(-4*REM)
