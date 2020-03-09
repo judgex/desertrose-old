@@ -1568,9 +1568,6 @@
 	desc = "Any entrepreneuring botanist's dream. Contains thirteen different seeds, including three replica-pod seeds and two mystery seeds!"
 	cost = 1500
 	contains = list(/obj/item/seeds/nettle,
-					/obj/item/seeds/replicapod,
-					/obj/item/seeds/replicapod,
-					/obj/item/seeds/replicapod,
 					/obj/item/seeds/rainbow_bunch,
 					/obj/item/seeds/rainbow_bunch,
 					/obj/item/seeds/plump,
