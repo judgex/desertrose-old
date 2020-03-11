@@ -341,6 +341,14 @@ hum/*
 	name = "Emo 2"
 	icon_state = "hair_emo2"
 
+/datum/sprite_accessory/hair/lowbun //addition
+    name = "Low Bun"
+    icon_state = "hair_bun_s"
+
+/datum/sprite_accessory/hair/punk //addition
+	name = "Big Mohawk"
+	icon_state = "hair_punk_s"
+
 /datum/sprite_accessory/hair/emo_fringe
 	name = "Emo (Fringe)"
 	icon_state = "hair_emofringe"
