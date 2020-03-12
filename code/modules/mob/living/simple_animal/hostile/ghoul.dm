@@ -45,6 +45,36 @@
 	melee_damage_lower = 15
 	melee_damage_upper = 15
 
+/mob/living/simple_animal/hostile/ghoul/coldferal
+	name = "cold ghoul feral"
+	desc = "A ghoul that has lost it's mind and become aggressive. This one is strapped with metal armor, and appears far stronger."
+	icon = 'icons/mob/wastemobs.dmi'
+	icon_state = "cold_feral"
+	icon_living = "cold_feral"
+	icon_dead = "cold_feral_dead"
+	speed = 1.5
+	a_intent = INTENT_HARM
+	maxHealth = 200
+	health = 200
+	harm_intent_damage = 5
+	melee_damage_lower = 15
+	melee_damage_upper = 15
+
+/mob/living/simple_animal/hostile/ghoul/frozenreaver
+	name = "frozen ghoul reaver"
+	desc = "A ghoul that has lost it's mind and become aggressive. This one is strapped with metal armor, and appears far stronger."
+	icon = 'icons/mob/wastemobs.dmi'
+	icon_state = "frozen_reaver"
+	icon_living = "frozen_reaver"
+	icon_dead = "frozen_reaver_dead"
+	speed = 1.5
+	a_intent = INTENT_HARM
+	maxHealth = 200
+	health = 200
+	harm_intent_damage = 5
+	melee_damage_lower = 15
+	melee_damage_upper = 15
+
 /mob/living/simple_animal/hostile/ghoul/glowing
 	name = "glowing feral ghoul"
 	desc = "A feral ghoul that has absorbed massive amounts of radiation, causing them to glow in the dark and radiate constantly.."
@@ -67,6 +97,59 @@
 	summon_backup(10)
 
 /mob/living/simple_animal/hostile/ghoul/glowing/AttackingTarget()
+	. = ..()
+	if(. && ishuman(target))
+		var/mob/living/carbon/human/H = target
+		H.apply_effect(20, EFFECT_IRRADIATE, 0)
+
+/mob/living/simple_animal/hostile/ghoul/frozen
+	name = "frozen feral ghoul"
+	desc = "A feral ghoul that has absorbed massive amounts of cold and Radiates Cold Air.."
+	icon_state = "frozen_feral"
+	icon_living = "frozen feral"
+	icon_dead = "frozen_feral_dead"
+	maxHealth = 80
+	health = 80
+	speed = 2
+	harm_intent_damage = 10
+	melee_damage_lower = 20
+	melee_damage_upper = 20
+
+/mob/living/simple_animal/hostile/ghoul/frozen/Initialize()
+	. = ..()
+
+/mob/living/simple_animal/hostile/ghoul/frozen/Aggro()
+	..()
+	summon_backup(10)
+
+/mob/living/simple_animal/hostile/ghoul/frozen/AttackingTarget()
+	. = ..()
+	if(. && ishuman(target))
+		var/mob/living/carbon/human/H = target
+		H.apply_effect(20, EFFECT_IRRADIATE, 0)
+
+
+/mob/living/simple_animal/hostile/ghoul/hot
+	name = "hot glowing ghoul"
+	desc = "A feral ghoul that has absorbed massive amounts of cold and Radiates Cold Air.."
+	icon_state = "hot_glowing_one"
+	icon_living = "hot_glowing_one"
+	icon_dead = "hot_glowing_one"
+	maxHealth = 80
+	health = 80
+	speed = 2
+	harm_intent_damage = 10
+	melee_damage_lower = 20
+	melee_damage_upper = 20
+
+/mob/living/simple_animal/hostile/ghoul/hot/Initialize()
+	. = ..()
+
+/mob/living/simple_animal/hostile/ghoul/hot/Aggro()
+	..()
+	summon_backup(10)
+
+/mob/living/simple_animal/hostile/ghoul/hot/AttackingTarget()
 	. = ..()
 	if(. && ishuman(target))
 		var/mob/living/carbon/human/H = target

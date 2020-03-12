@@ -195,6 +195,70 @@
 	faction = list("gecko")
 	gold_core_spawnable = HOSTILE_SPAWN
 
+/mob/living/simple_animal/hostile/giantant
+	name = "fireant"
+	desc = "A large mutated insect that finds its way everywhere."
+	icon = 'icons/mob/wastemobs.dmi'
+	icon_state = "GiantAnt"
+	icon_living = "GiantAnt"
+	icon_dead = "GiantAnt_dead"
+	icon_gib = "GiantAnt_gib"
+	mob_biotypes = list(MOB_ORGANIC, MOB_BEAST)
+	speak_chance = 0
+	turns_per_move = 5
+	butcher_results = list(/obj/item/stack/sheet/sinew = 1)
+	response_help = "pets"
+	response_disarm = "gently pushes aside"
+	response_harm = "hits"
+	emote_taunt = list("chitters")
+	emote_taunt_sound = 'sound/creatures/radroach_chitter.ogg'
+	taunt_chance = 30
+	speed = 1
+	maxHealth = 20
+	health = 20
+	harm_intent_damage = 8
+	obj_damage = 20
+	melee_damage_lower = 10
+	melee_damage_upper = 10
+	attacktext = "stings"
+	attack_sound = 'sound/creatures/radroach_attack.ogg'
+	speak_emote = list("skitters")
+	atmos_requirements = list("min_oxy" = 5, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 1, "min_co2" = 0, "max_co2" = 5, "min_n2" = 0, "max_n2" = 0)
+	faction = list("gecko")
+	gold_core_spawnable = HOSTILE_SPAWN
+
+/mob/living/simple_animal/hostile/fireant
+	name = "fireant"
+	desc = "A large mutated insect that finds its way everywhere."
+	icon = 'icons/mob/wastemobs.dmi'
+	icon_state = "FireAnt"
+	icon_living = "FireAnt"
+	icon_dead = "FireAnt_dead"
+	icon_gib = "FireAnt_gib"
+	mob_biotypes = list(MOB_ORGANIC, MOB_BEAST)
+	speak_chance = 0
+	turns_per_move = 5
+	butcher_results = list(/obj/item/stack/sheet/sinew = 1)
+	response_help = "pets"
+	response_disarm = "gently pushes aside"
+	response_harm = "hits"
+	emote_taunt = list("chitters")
+	emote_taunt_sound = 'sound/creatures/radroach_chitter.ogg'
+	taunt_chance = 30
+	speed = 1
+	maxHealth = 20
+	health = 20
+	harm_intent_damage = 8
+	obj_damage = 20
+	melee_damage_lower = 10
+	melee_damage_upper = 10
+	attacktext = "stings"
+	attack_sound = 'sound/creatures/radroach_attack.ogg'
+	speak_emote = list("skitters")
+	atmos_requirements = list("min_oxy" = 5, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 1, "min_co2" = 0, "max_co2" = 5, "min_n2" = 0, "max_n2" = 0)
+	faction = list("gecko")
+	gold_core_spawnable = HOSTILE_SPAWN
+
 /mob/living/simple_animal/hostile/molerat
 	name = "molerat"
 	desc = "A large mutated rat-mole hybrid that finds its way everywhere. Common in caves and underground areas."
