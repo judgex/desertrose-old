@@ -53,6 +53,16 @@
 	desc = "It's a polar bear, in space, but not actually in space."
 	weather_immunities = list("snow")
 
+/mob/living/simple_animal/hostile/bear/wasteland
+	icon = 'icons/mob/wastemobs.dmi'
+	name = "frozen yao guai"
+	icon_state = "polar_yao_guai"
+	icon_living = "polar_yao_guai"
+	icon_dead = "polar_yao_guai_dead"
+	desc = "It's a rotting polar bear."
+	weather_immunities = list("snow")
+
+
 /mob/living/simple_animal/hostile/bear/russian
 	name = "combat bear"
 	desc = "A ferocious brown bear decked out in armor plating, a red star with yellow outlining details the shoulder plating."
