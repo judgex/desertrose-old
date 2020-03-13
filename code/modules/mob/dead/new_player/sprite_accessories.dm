@@ -163,6 +163,10 @@ hum/*
 	name = "Bobcut"
 	icon_state = "hair_bobcut"
 
+/datum/sprite_accessory/hair/longsideemo
+	name = "Long Side Emo"
+	icon_state = "hair_longsideemo"
+
 
 /datum/sprite_accessory/hair/bobcutalt
 	name = "Bobcut (Alt)"
