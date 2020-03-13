@@ -1169,3 +1169,78 @@
 		lawupdate = 1
 		return TRUE
 	return FALSE
+
+/mob/living/silicon/robot/security
+	icon_state = "Securitron"
+	faction = list("syndicate")
+	bubble_icon = "syndibot"
+	maxHealth = 400
+	health = 400
+	lawupdate = FALSE
+	scrambledcodes = TRUE // These are rogue borgs.
+	ionpulse = TRUE
+	braintype = "Robot"
+	speed = 1.5
+	var/playstyle_string = "<span class='userdanger'>You are a Syndicate assault cyborg!</span><br>\
+							<b>You are armed with powerful offensive tools to aid you in your mission: help the operatives secure the nuclear authentication disk. \
+							Your cyborg LMG will slowly produce ammunition from your power supply, and your operative pinpointer will find and locate fellow nuclear operatives. \
+							<i>Help the operatives secure the disk at all costs!</i></b>"
+	var/set_module = /obj/item/robot_module/security
+
+/mob/living/silicon/robot/security/New(loc)
+	..()
+	cell.maxcharge = INFINITY
+	cell.charge = INFINITY
+
+	module.transform_to(set_module)
+	laws = new /datum/ai_laws/malfunction()
+	spawn(5)
+		if(playstyle_string)
+			src << playstyle_string
+
+/mob/living/silicon/robot/security/bullet_act(obj/item/projectile/P)
+	if(istype(P, /obj/item/projectile/bullet))
+		var/reflectchance = 85 - round(P.damage/3)
+		if(prob(reflectchance))
+			apply_damage(P.damage * 0.4, P.damage_type)
+			visible_message("<span class='danger'>The [P.name] is reflected by [src]'s armor!</span>", \
+							"<span class='userdanger'>The [P.name] is reflected by your armor!</span>")
+
+			// Find a turf near or on the original location to bounce to
+			if(P.starting)
+				var/new_x = P.starting.x + pick(0, 0, -1, 1, -2, 2, -2, 2, -2, 2, -3, 3, -3, 3)
+				var/new_y = P.starting.y + pick(0, 0, -1, 1, -2, 2, -2, 2, -2, 2, -3, 3, -3, 3)
+				var/turf/curloc = get_turf(src)
+
+				// redirect the projectile
+				P.original = locate(new_x, new_y, P.z)
+				P.starting = curloc
+
+				P.firer = src
+				P.yo = new_y - curloc.y
+				P.xo = new_x - curloc.x
+
+			return -1 // complete projectile permutation
+	else if(istype(P, /obj/item/projectile/energy) || istype(P, /obj/item/projectile/beam))
+		var/reflectchance2 = 40 - round(P.damage/3)
+		if(prob(reflectchance2))
+			apply_damage(P.damage * 0.5, P.damage_type)
+			visible_message("<span class='danger'>The [P.name] is reflected by [src]'s armor!</span>", \
+							"<span class='userdanger'>The [P.name] is reflected by your armor!</span>")
+
+			// Find a turf near or on the original location to bounce to
+			if(P.starting)
+				var/new_x = P.starting.x + pick(0, 0, -1, 1, -2, 2, -2, 2, -2, 2, -3, 3, -3, 3)
+				var/new_y = P.starting.y + pick(0, 0, -1, 1, -2, 2, -2, 2, -2, 2, -3, 3, -3, 3)
+				var/turf/curloc = get_turf(src)
+
+				// redirect the projectile
+				P.original = locate(new_x, new_y, P.z)
+				P.starting = curloc
+
+				P.firer = src
+				P.yo = new_y - curloc.y
+				P.xo = new_x - curloc.x
+
+			return -1 // complete projectile permutation
+	return (..(P))
