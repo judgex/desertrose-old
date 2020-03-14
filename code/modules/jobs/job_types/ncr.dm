@@ -393,13 +393,13 @@ Trooper
 Recruit
 */
 /datum/job/ncr/f13recruit
-	title = "NCR Recruit"
+	title = "NCR Assistant"
 	flag = F13RECRUIT
 	faction = "NCR"
-	total_positions = -1
-	spawn_positions = -1
-	description = "You answer to everyone above you in the chain of command, taking orders from your Sergeant directly and obeying all commands given by officers such as the Lieutenant and Captain."
-	supervisors = "Sergeants and above"
+	total_positions = 4
+	spawn_positions = 4
+	description = "You are a noncombatant member of the NCR assigned the vital duty of helping them with cooking, farming, mining, and other menial tasks. You have no authority or formal military training, however, and should avoid combat wherever possible."
+	supervisors = "everyone in the NCR"
 	selection_color = "#fff5cc"
 	exp_requirements = 300
 	exp_type = EXP_TYPE_CREW
@@ -407,23 +407,20 @@ Recruit
 	outfit = /datum/outfit/job/ncr/f13recruit
 
 /datum/outfit/job/ncr/f13recruit
-	name = "NCR Recruit"
+	name = "NCR Assistant"
 	jobtype = /datum/job/ncr/f13recruit
 	id = 			/obj/item/card/id/dogtag/ncrtrooper
 	uniform =  		/obj/item/clothing/under/f13/ncr
 	accessory =     /obj/item/clothing/accessory/ncr/REC
-	suit = 			/obj/item/clothing/suit/armor/f13/ncrarmor
 	ears = 			/obj/item/radio/headset //no NCR comms
+	belt =			/obj/item/pickaxe
 	gloves = null
-	head = 			/obj/item/clothing/head/f13/ncr
 	glasses = 		null
-	suit_store = 	/obj/item/gun/ballistic/automatic/marksman/servicerifle/varmint
-	belt =          /obj/item/storage/belt/military/assault/ncr
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m556/rifle/small=2, \
 		/obj/item/kitchen/knife/combat/survival=1, \
 		/obj/item/reagent_containers/hypospray/medipen/stimpak=1, \
 		/obj/item/stack/medical/gauze=1, \
+		/obj/item/storage/bag/ore = 1,
 		/obj/item/storage/bag/money/small/ncrenlisted)
 
 /*

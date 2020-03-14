@@ -194,9 +194,9 @@ Decanus
 	title = "Legion Decanus"
 	flag = F13DECAN
 	faction = "Legion"
-	total_positions = 3
-	spawn_positions = 3
-	description = "You answer directly to the Centurion, working with them to organize the Legionaries and Recruits. You lead the Legionaries, Vexillari and Explorers on patrols, raids and scouting missions on behalf of your Centurion."
+	total_positions = 2
+	spawn_positions = 2
+	description = "You answer directly to the Centurion, working with them to organize the Legionaries. You lead the Legionaries, Vexillari and Explorers on patrols, raids and scouting missions on behalf of your Centurion."
 	supervisors = "the Centurion and up"
 	exp_requirements = 2400
 
@@ -301,8 +301,8 @@ Legionary
 	title = "Legionary"
 	flag = F13LEGIONARY
 	faction = "Legion"
-	total_positions = 12
-	spawn_positions = 12
+	total_positions = 2
+	spawn_positions = 2
 	description = "You answer to the Decani and the Centurion, as well as the Auxilia when in your camp. Acting as a loyal soldier of the Centuria, you have the great honour of serving under Caesar in his quest to unite the scattered tribes of The Mojave. You are a hardened warrior, and have been waging war with the Legion for many years."
 	supervisors = "the Decani and Centurion"
 	exp_requirements = 300
@@ -310,24 +310,23 @@ Legionary
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13legionary
 
 	loadout_options = list(
-	/datum/outfit/loadout/legassault, //.44 revolver
-	/datum/outfit/loadout/legbreach //hunting shotgun
+	/datum/outfit/loadout/legassault, //scoped .44 revolver
+	/datum/outfit/loadout/legbreach //lever-action shotgun
 	)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13legionary
 	name = "Legionary"
 	jobtype = /datum/job/CaesarsLegion/Legionnaire/f13legionary
-	id = 			/obj/item/card/id/dogtag/legprime
-	shoes =         /obj/item/clothing/shoes/f13/military/legionleather
-	suit = 			/obj/item/clothing/suit/armor/f13/legion/prime
-	head = 			/obj/item/clothing/head/helmet/f13/legion/prime
-	mask =			/obj/item/clothing/mask/bandana/legprime
+	id = 			/obj/item/card/id/dogtag/legveteran
+	suit = 			/obj/item/clothing/suit/armor/f13/legion/vet
+	head = 			/obj/item/clothing/head/helmet/f13/legion/vet
 	glasses = 		/obj/item/clothing/glasses/sunglasses
+	r_hand = 		/obj/item/shield/riot/roman
 	backpack_contents = list(
 		/obj/item/restraints/legcuffs/bola=1, \
 		/obj/item/throwing_star/spear, \
 		/obj/item/throwing_star/spear, \
-		/obj/item/claymore/machete/reinforced=1, \
+		/obj/item/claymore/machete/gladius=1, \
 		/obj/item/reagent_containers/pill/patch/healingpowder=2, \
 		/obj/item/flashlight/flare/torch=1, \
 		/obj/item/storage/bag/money/small/legenlisted,
@@ -336,13 +335,13 @@ Legionary
 
 /datum/outfit/loadout/legassault
 	name = "Assault Legionary"
-	suit_store = /obj/item/gun/ballistic/revolver/m29
+	suit_store = /obj/item/gun/ballistic/revolver/m29/scoped
 	backpack_contents = list(
 		/obj/item/ammo_box/m44=2)
 
 /datum/outfit/loadout/legbreach
 	name = "Breacher Legionary"
-	suit_store = /obj/item/gun/ballistic/shotgun/hunting
+	suit_store = /obj/item/gun/ballistic/shotgun/trench
 	backpack_contents = list(
 		/obj/item/storage/box/lethalshot=1)
 
@@ -354,8 +353,8 @@ Recruit Legionary
 	title = "Recruit Legionary"
 	flag = F13RECRUITLEG
 	faction = "Legion"
-	total_positions = -1
-	spawn_positions = -1
+	total_positions = 0
+	spawn_positions = 0
 	description = "You answer to the Decani and the Centurion, but are expected to follow orders from more experienced Legionaries and Auxilia when needed. You act as a loyal soldier within the Centuria, despite your relative inexperience."
 	supervisors = "the Decani and Centurion"
 	exp_requirements = 300
@@ -392,8 +391,8 @@ Explorer
 	title = "Legion Explorer"
 	flag = F13EXPLORER
 	faction = "Legion"
-	total_positions = 3
-	spawn_positions = 3
+	total_positions = 2
+	spawn_positions = 2
 	description = "Acting as the eyes and ears of the Legion, you are in the region to scout it out for potential conquest. Make note of your surroundings and above all, survive to report back."
 	supervisors = "the Decani and Centurion"
 	exp_requirements = 1200
@@ -456,8 +455,8 @@ Auxilia
 	flag = F13AUXILIA
 	faction = "Legion"
 	head_announce = list("Security")
-	total_positions = 5
-	spawn_positions = 5
+	total_positions = 3
+	spawn_positions = 3
 	description = "You are a respected and valued noncombatant for the Legion, commanding the slaves and Camp Followers and providing important surgical or engineering expertise. Though you hold more authority than the Legionaries in camp, you are not a warrior, and should not act as such unless absolutely necessary."
 	supervisors = "the Decani and Centurion"
 	exp_requirements = 400
@@ -514,8 +513,8 @@ Camp Follower
 	title = "Camp Follower"
 	flag = F13CAMPFOLLOWER
 	faction = "Legion"
-	total_positions = -1
-	spawn_positions = -1
+	total_positions = 5
+	spawn_positions = 5
 	description = "You answer to any member of the Legion, but take orders directly from the Auxilia around the camp. Working as a Camp Follower for the Centuria, you bear the great honor of supporting Caesar's Army in its conquest of the Mojave in whatever capacity required from those whom you serve. You perform any tasks required of you, for you know how to serve the Legion well."
 	supervisors = "the entire legion"
 	exp_requirements = 300

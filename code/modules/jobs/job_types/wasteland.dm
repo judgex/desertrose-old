@@ -36,10 +36,9 @@ Great Khan
 	department_head = list("Captain")
 	head_announce = list("Security")
 	faction = "Wastelander"
-	social_faction = "Raiders"
 	total_positions = 6
 	spawn_positions = 6
-	description = "You are no common raider or tribal settler, for you are a Great Khan. Your ancestry is that of fierce warriors and noble chieftans, whose rites and sagas tell of blood soaked battlefields and great sacrifice for your tribe. At least this was once the case, after the massacre at Bitter Springs by the NCR your people have lost much of their strength - now you and many other Khans travel west of Vegas through Red Rock Canyon in the hopes of settling in the region of Pahrump."
+	description = "You are no common raider or tribal settler, for you are a Great Khan. Your ancestry is that of fierce warriors and noble chieftans, whose rites and sagas tell of blood soaked battlefields and great sacrifice for your tribe. At least, this was once the case: after the massacre at Bitter Springs by the NCR, your people have lost much of their strength - now you and many other Khans travel west of Vegas through Red Rock Canyon in the hopes of settling in the region of Pahrump. <span class='bold'>You are not a raider, and should not act as such without permission from server staff.</span>"
 	supervisors = "your gang leadership"
 	selection_color = "#ff915e"
 	exp_requirements = 300
@@ -87,8 +86,6 @@ Great Khan
 	if(visualsOnly)
 		return
 
-	H.social_faction = "Raiders"
-
 	if(!H.gang)
 		var/datum/gang/greatkhans/GK = GLOB.greatkhans
 		GLOB.all_gangs |= GK
@@ -106,9 +103,9 @@ Raider
 	head_announce = list("Security")
 	faction = "Wastelander"
 	social_faction = "Raiders"
-	total_positions = 10 //fuck raiders
-	spawn_positions = 10
-	description = "Likely having coming from a life of poverty and few opportunities, you have for your own reasons decided to become a raider - a post-war criminal whose sole focus is to benefit yourself and your infamous reputation by any means necessary. Form a gang, set off on your own or sneak your way into a local faction in order to corrupt it from the inside out - the choice is yours. But always remember, you must respect the stories of both your enemies and victims, if you can - give them a chance to tell it before they meet their end."
+	total_positions = 0 //manually spawned in by staff
+	spawn_positions = 0
+	description = "Likely having coming from a life of poverty and few opportunities, you have - for your own reasons - decided to become a raider: a post-war criminal whose sole focus is to benefit yourself and your infamous reputation by any means necessary. Form a gang, set off on your own or sneak your way into a local faction in order to corrupt it from the inside out - the choice is yours. But always remember, you must respect the stories of both your enemies and victims, if you can - give them a chance to tell it before they meet their end."
 	supervisors = "your desires"
 	selection_color = "#ff4747"
 
