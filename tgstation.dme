@@ -1582,6 +1582,8 @@
 #include "code\modules\fallout\misc\gangtool.dm"
 #include "code\modules\fallout\misc\overlays.dm"
 #include "code\modules\fallout\mob\simple_animal\mobs\eyebot.dm"
+#include "code\modules\fallout\mob\simple_animal\mobs\fallout_NPC.dm"
+#include "code\modules\fallout\mob\simple_animal\mobs\Securitron.dm"
 #include "code\modules\fallout\mob\simple_animal\mobs\supermutant.dm"
 #include "code\modules\fallout\mob\simple_animal\mobs\wolf.dm"
 #include "code\modules\fallout\obj\bosbasepicker.dm"
