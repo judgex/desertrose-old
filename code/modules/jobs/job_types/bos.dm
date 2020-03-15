@@ -166,8 +166,8 @@ Knight
 	title = "Knight"
 	flag = F13KNIGHT
 	faction = "BOS"
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 2
+	spawn_positions = 2
 	description = "You answer directly to the Paladin. You are the foremost technical expert and know how to manufacture a wide variety of weaponry and ammo. You are the Paladin's right hand man, and the chief armourer of the Chapter. You ensure everyone in the Bunker is properly equipped. Delegate your tasks to your Initiate Knights."
 	forbids = "The Brotherhood of Steel Forbids: Unethical human experimentation. Violence beyond what is needed to accomplish Brotherhood goals."
 	enforces = "The Brotherhood of Steel Expects: Obeying the Chain That - Binds your direct superior. Collection and safeguarding of technology from the wasteland. Experimentation and research."
