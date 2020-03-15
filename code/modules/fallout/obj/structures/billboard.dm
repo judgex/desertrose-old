@@ -54,3 +54,12 @@
 /obj/structure/billboard/cola/pristine/New()
 	..()
 	icon_state = "cola1"
+
+/obj/structure/billboard/cola/cola_shop
+	name = "pristine Nuka-Cola billboard"
+	desc = "A pre-War ad for Nuka-Cola.<br>Oddly enough, it's good as new."
+	icon_state = "cola_shop"
+
+/obj/structure/billboard/cola/cola_shop/New()
+	..()
+	icon_state = "cola_shop"
