@@ -21,8 +21,8 @@
 	health = 300
 	healable = 0
 	faction = list("neutral", "city", "ncr")
-	emote_hear = list("подмигнул.")
-	speak = list("Уот так уот!","Представьте! Целых 510 лет! Мы столько не живем.", "Руки вверх, вы арестованы! Ха-ха, шутка.")
+	emote_hear = list("Beeps.")
+	speak = list("Stop Right There Criminal.")
 	death_sound = 'sound/f13npc/robot_death.ogg'
 	harm_intent_damage = 5
 	melee_damage_lower = 5
