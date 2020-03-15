@@ -154,3 +154,80 @@
 	if(. && ishuman(target))
 		var/mob/living/carbon/human/H = target
 		H.apply_effect(20, EFFECT_IRRADIATE, 0)
+
+/mob/living/simple_animal/hostile/ghoul/soldier
+	name = "Ghoul Soldier"
+	desc = "Have you ever seen a living ghoul before?<br>Ghouls are necrotic post-humans - decrepit, rotting, zombie-like mutants."
+	icon = 'icons/mob/wastemobs.dmi'
+	icon_state = "soldier_ghoul"
+	icon_living = "soldier_ghoul"
+	icon_dead = "soldier_ghoul_d"
+	icon_gib = "gib"
+	maxHealth = 90
+	health = 90
+
+/mob/living/simple_animal/hostile/ghoul/soldier/armored
+	name = "Armored Ghoul Soldier"
+	desc = "Have you ever seen a living ghoul before?<br>Ghouls are necrotic post-humans - decrepit, rotting, zombie-like mutants."
+	icon = 'icons/mob/wastemobs.dmi'
+	icon_state = "soldier_ghoul_a"
+	icon_living = "soldier_ghoul_a"
+	icon_dead = "soldier_ghoul_a_d"
+	icon_gib = "gib"
+	maxHealth = 100
+	health = 100
+
+/mob/living/simple_animal/hostile/ghoul/scorched
+	name = "Scorched Ghoul Soldier"
+	desc = "Have you ever seen a living ghoul before?<br>Ghouls are necrotic post-humans - decrepit, rotting, zombie-like mutants."
+	icon = 'icons/mob/wastemobs.dmi'
+	icon_state = "scorched_m"
+	icon_living = "scorched_m"
+	icon_dead = "scorched_m_d"
+	icon_gib = "gib"
+	speak_chance = 1
+	turns_per_move = 5
+	environment_smash = 0
+	response_help = "hugs"
+	response_disarm = "pushes aside"
+	response_harm = "growl"
+	move_to_delay = 4
+	maxHealth = 80
+	health = 80
+	faction = list("scorched", "hostile")
+	death_sound = list('sound/f13npc/scor_d1.ogg','sound/f13npc/scor_d2.ogg','sound/f13npc/scor_d3.ogg','sound/f13npc/scor_d4.ogg','sound/f13npc/scor_d5.ogg')
+	melee_damage_lower = 15
+	melee_damage_upper = 20
+	aggro_vision_range = 10
+	attacktext = "punches"
+	attack_sound = "punch"
+
+
+/mob/living/simple_animal/hostile/ghoul/scorched/ranged
+	name = "Ranged Ghoul Solder"
+	desc = "Have you ever seen a living ghoul before?<br>Ghouls are necrotic post-humans - decrepit, rotting, zombie-like mutants."
+	icon = 'icons/mob/wastemobs.dmi'
+	icon_state = "scorched_r"
+	icon_living = "scorched_r"
+	icon_dead = "scorched_r_d"
+	icon_gib = "gib"
+	speak_chance = 1
+	turns_per_move = 5
+	environment_smash = 0
+	response_help = "hugs"
+	response_disarm = "pushes aside"
+	response_harm = "ow"
+	move_to_delay = 4
+	maxHealth = 80
+	health = 80
+	ranged = 1
+	ranged_cooldown_time = 200
+	projectiletype = /obj/item/projectile/bullet/F13/c9mmBullet
+	projectilesound = 'sound/f13weapons/hunting_rifle.ogg'
+	faction = list("scorched", "hostile")
+	death_sound = list('sound/f13npc/scor_d1.ogg','sound/f13npc/scor_d2.ogg','sound/f13npc/scor_d3.ogg','sound/f13npc/scor_d4.ogg','sound/f13npc/scor_d5.ogg')
+	melee_damage_lower = 15
+	melee_damage_upper = 20
+	aggro_vision_range = 10
+	attacktext = "shoots"
+	attack_sound = "punch"

@@ -425,6 +425,7 @@
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list("melee" = 40, "bullet" = 45, "laser" = 40, "energy" = 40, "bomb" = 50, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20)
 	strip_delay = 60
+	icon = 'icons/fallout/clothing_w/suit.dmi'
 
 /obj/item/clothing/suit/armor/f13/combatmk2
 	name = "combat armor mk2"
@@ -443,7 +444,7 @@
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list("melee" = 45, "bullet" = 55, "laser" = 45, "energy" = 45, "bomb" = 55, "bio" = 65, "rad" = 10, "fire" = 60, "acid" = 20)
 	strip_delay = 60
-
+	icon = 'icons/fallout/clothing_w/suit.dmi'
 
 /obj/item/clothing/suit/armor/f13/combatmk2leg
 	name = "legatus armor mk2"
@@ -453,6 +454,7 @@
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list("melee" = 45, "bullet" = 55, "laser" = 45, "energy" = 45, "bomb" = 55, "bio" = 65, "rad" = 10, "fire" = 60, "acid" = 20)
 	strip_delay = 60
+	icon = 'icons/fallout/clothing_w/suit.dmi'
 
 /obj/item/clothing/suit/armor/f13/combatbosrein
 	name = "Reinforced BoS Armor"
@@ -462,6 +464,8 @@
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list("melee" = 45, "bullet" = 55, "laser" = 45, "energy" = 45, "bomb" = 55, "bio" = 65, "rad" = 10, "fire" = 60, "acid" = 20)
 	strip_delay = 60
+	icon = 'icons/fallout/clothing_w/suit.dmi'
+
 
 /obj/item/clothing/suit/armor/f13/combatrein
 	name = "Reinforced Combat Armor"
@@ -471,6 +475,7 @@
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list("melee" = 45, "bullet" = 55, "laser" = 45, "energy" = 45, "bomb" = 55, "bio" = 65, "rad" = 10, "fire" = 60, "acid" = 20)
 	strip_delay = 60
+	icon = 'icons/fallout/clothing_w/suit.dmi'
 
 /obj/item/clothing/suit/armor/f13/scoutarmor
 	name = "scout armor lt"
@@ -484,7 +489,8 @@
 /obj/item/clothing/suit/armor/f13/caeserpelt
 	name = "Caesars' Pelt"
 	desc = "A pelt for the godking Caeser himself"
-	icon_state = "caeser_pelt"
+	icon = 'icons/fallout/clothing_w/suit.dmi'
+	icon_state = "caesar_pelt"
 	item_state = "caeser_pelt"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list("melee" = 45, "bullet" = 55, "laser" = 45, "energy" = 45, "bomb" = 55, "bio" = 65, "rad" = 10, "fire" = 60, "acid" = 20)
@@ -507,6 +513,7 @@
 /obj/item/clothing/suit/armor/f13/combat/mk2
 	name = "reinforced combat armor"
 	desc = "A reinforced model based of the pre-war combat armor."
+	icon = 'icons/obj/clothing/suits.dmi'
 	icon_state = "combat_armor_mk2"
 	item_state = "combat_armor_mk2"
 	armor = list("melee" = 45, "bullet" = 50, "laser" = 45, "energy" = 45, "bomb" = 55, "bio" = 60, "rad" = 15, "fire" = 60, "acid" = 30)
@@ -574,6 +581,7 @@
 	icon_state = "elite_riot"
 	item_state = "elite_riot"
 	armor = list("melee" = 65, "bullet" = 60, "laser" = 60, "energy" = 60, "bomb" = 70, "bio" = 60, "rad" = 60, "fire" = 90, "acid" = 50)
+	icon = 'icons/fallout/clothing_w/suit.dmi'
 
 /obj/item/clothing/suit/armor/f13/chitinarmor
 	name = "insect chitin armor"

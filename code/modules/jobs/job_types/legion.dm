@@ -194,8 +194,8 @@ Decanus
 	title = "Legion Decanus"
 	flag = F13DECAN
 	faction = "Legion"
-	total_positions = 3
-	spawn_positions = 3
+	total_positions = 2
+	spawn_positions = 2
 	description = "You answer directly to the Centurion, working with them to organize the Legionaries and Recruits. You lead the Legionaries, Vexillari and Explorers on patrols, raids and scouting missions on behalf of your Centurion."
 	supervisors = "the Centurion and up"
 	exp_requirements = 2400
@@ -527,6 +527,8 @@ Camp Follower
 	jobtype = /datum/outfit/job/CaesarsLegion/f13campfollower
 	shoes = /obj/item/clothing/shoes/sandal
 	r_hand = /obj/item/flashlight/flare/torch
+	uniform = 		/obj/item/clothing/under/f13/legskirt
+	id =			/obj/item/card/id/dogtag/legfollower
 
 /datum/outfit/job/CaesarsLegion/f13campfollower/pre_equip(mob/living/carbon/human/H)
 	..()

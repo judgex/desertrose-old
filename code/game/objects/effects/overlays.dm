@@ -45,3 +45,10 @@
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "shieldsparkles"
 	anchored = TRUE
+
+/obj/effect/overlay/temp/impact_effect/plasma
+	icon_state = "greenshatter2"
+
+/obj/effect/overlay/beam/temp/impact_effect/plasma/Initialize()
+	. = ..()
+	QDEL_IN(src, 10)
