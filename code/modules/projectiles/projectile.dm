@@ -636,7 +636,7 @@
 
 //Bullets library
 /obj/item/projectile/bullet/F13
-	name = "ïóëè"
+	name = "bullet"
 //Bullets library: 9mm
 /obj/item/projectile/bullet/F13/c9mmBullet
 	damage = 14
