@@ -57,6 +57,24 @@
 	max_ammo = 6
 	multiple_sprites = 1
 	materials = list(MAT_METAL = 4000)
+/*
+/obj/item/ammo_box/m44/heap
+	name = "speed loader (.44) (+Heap!)"
+	ammo_type = /obj/item/ammo_casing/F13/m44/heap
+
+/obj/item/ammo_box/m44/armourpiercing
+	name = "speed loader (.44) (+AP!)"
+	ammo_type = /obj/item/ammo_casing/F13/m44/armourpiercing
+
+/obj/item/ammo_box/m44/toxic
+	name = "speed loader (.44) (+TOXIC!)"
+	ammo_type = /obj/item/ammo_casing/F13/m44/toxic
+
+/obj/item/ammo_box/m44/fire
+	name = "speed loader (.44) (+FIRE!)"
+	ammo_type = /obj/item/ammo_casing/F13/m44/fire
+
+*/
 
 /obj/item/ammo_box/m44/empty
 	start_empty = 1
@@ -316,6 +334,23 @@
 	multiple_sprites = 1
 	materials = list(MAT_METAL = 7000)
 	w_class = WEIGHT_CLASS_SMALL
+/*
+/obj/item/ammo_box/magazine/m308/heap
+	name = "rifle magazine (.308) (+Heap!)"
+	ammo_type = /obj/item/ammo_casing/F13/m308/heap
+
+/obj/item/ammo_box/magazine/m308/armourpiercing
+	name = "rifle magazine (.308) (+AP!)"
+	ammo_type = /obj/item/ammo_casing/F13/m308/armourpiercing
+
+/obj/item/ammo_box/magazine/m308/toxic
+	name = "rifle magazine (.308) (+TOXIC!)"
+	ammo_type = /obj/item/ammo_casing/F13/m308/toxic
+
+/obj/item/ammo_box/magazine/m308/fire
+	name = "rifle magazine (.308) (+FIRE!)"
+	ammo_type = /obj/item/ammo_casing/F13/m308/fire
+*/
 
 /obj/item/ammo_box/a762/doublestacked
 	name = "double stack stripper clip (.308)"
