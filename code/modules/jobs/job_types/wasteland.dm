@@ -79,7 +79,7 @@ Great Khan
 		/obj/item/gun/ballistic/revolver/caravan_shotgun, \
 		/obj/item/gun/ballistic/revolver/pipe_rifle, \
 		/obj/item/gun/ballistic/automatic/pistol/ninemil)
-	head = /obj/item/clothing/head/helmet/knight/f13/metal
+	head = /obj/item/clothing/head/helmet/f13/khan
 	shoes = /obj/item/clothing/shoes/f13/khan
 
 /datum/outfit/job/wasteland/f13pusher/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
