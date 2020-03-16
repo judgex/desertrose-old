@@ -3970,7 +3970,7 @@
 "bMQ" = (/obj/effect/decal/remains/human,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "darkdirty"},/area/f13/vault)
 "bMR" = (/turf/open/floor/f13{dir = 4; icon_state = "yellowsiding"},/area/f13/vault)
 "bMS" = (/obj/structure/simple_door/bunker,/obj/structure/spider/stickyweb,/turf/open/floor/f13,/area/f13/vault)
-"bMT" = (/obj/item/autosurgeon,/obj/structure/spider/stickyweb,/turf/open/floor/f13{icon_state = "darkdirty"},/area/f13/vault)
+"bMT" = (/obj/structure/spider/stickyweb,/turf/open/floor/f13{icon_state = "darkdirty"},/area/f13/vault)
 "bMU" = (/obj/effect/decal/remains/human,/turf/open/floor/f13{dir = 4; icon_state = "yellowsiding"},/area/f13/vault)
 "bMV" = (/obj/effect/decal/cleanable/dirt,/mob/living/simple_animal/hostile/handy/protectron,/turf/open/floor/f13,/area/f13/vault)
 "bMW" = (/obj/effect/decal/remains/human,/turf/open/floor/f13{icon_state = "darkdirtysolid"},/area/f13/vault)
