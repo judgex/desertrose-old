@@ -12,7 +12,7 @@
 	build_path = /obj/item/gun/medbeam
 	category = list("Misc", "Medical Designs")
 	departmental_flags = DEPARTMENTAL_FLAG_MEDICAL
-
+/*
 /datum/design/autosurgeon
 	name = "Autosurgeon"
 	desc = "Automatically implants things inside of it."
@@ -23,7 +23,7 @@
 	build_path = /obj/item/autosurgeon
 	category = list("Misc", "Medical Designs")
 	departmental_flags = DEPARTMENTAL_FLAG_MEDICAL
-
+*/ //Removes autosurgeon for now, see how well change is recieved etc.
 
 /datum/design/mmi
 	name = "Man-Machine Interface"
