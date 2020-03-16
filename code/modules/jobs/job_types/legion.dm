@@ -526,6 +526,8 @@ Camp Follower
 	jobtype = /datum/outfit/job/CaesarsLegion/f13campfollower
 	shoes = /obj/item/clothing/shoes/sandal
 	r_hand = /obj/item/flashlight/flare/torch
+	uniform = 		/obj/item/clothing/under/f13/legskirt
+	id =			/obj/item/card/id/dogtag/legfollower
 
 /datum/outfit/job/CaesarsLegion/f13campfollower/pre_equip(mob/living/carbon/human/H)
 	..()

@@ -58,3 +58,44 @@
 	desc = "A 2mm gauss projectile casing."
 	caliber = "2mm"
 	projectile_type = /obj/item/projectile/bullet/c2mm
+
+
+/obj/item/ammo_casing/F13/m308
+	desc = "A .308 bullet casing."
+	caliber = "308mm"
+	icon_state = "762-casing"
+	projectile_type = /obj/item/projectile/bullet/F13/c308mmBullet
+	randomspread = 1
+	variance = 2
+
+/obj/item/ammo_casing/F13/m308/heap
+	projectile_type = /obj/item/projectile/bullet/F13/c308mmBullet/heap
+
+/obj/item/ammo_casing/F13/m308/armourpiercing
+	projectile_type = /obj/item/projectile/bullet/F13/c308mmBullet/armourpiercing
+
+/obj/item/ammo_casing/F13/m308/toxic
+	projectile_type = /obj/item/projectile/bullet/F13/c308mmBullet/toxic
+
+/obj/item/ammo_casing/F13/m308/fire
+	projectile_type = /obj/item/projectile/bullet/F13/c308mmBullet/fire
+
+/obj/item/ammo_casing/F13/a556
+	desc = "A 5.56 bullet casing."
+	caliber = "223mm"
+	projectile_type = /obj/item/projectile/bullet/F13/c556Bullet
+	randomspread = 1
+	variance = 2
+
+/obj/item/ammo_casing/F13/a556/heap
+	projectile_type = /obj/item/projectile/bullet/F13/c556Bullet/heap
+
+/obj/item/ammo_casing/F13/a556/armourpiercing
+	projectile_type = /obj/item/projectile/bullet/F13/c556Bullet/armourpiercing
+
+/obj/item/ammo_casing/F13/a556/toxic
+	projectile_type = /obj/item/projectile/bullet/F13/c556Bullet/toxic
+
+/obj/item/ammo_casing/F13/a556/fire
+	projectile_type = /obj/item/projectile/bullet/F13/c556Bullet/fire
+
