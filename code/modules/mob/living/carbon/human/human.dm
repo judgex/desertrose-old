@@ -218,6 +218,12 @@
 
 
 /mob/living/carbon/human/Topic(href, href_list)
+
+	if(href_list["flavor_more"])
+		usr << browse(text("<HTML><HEAD><TITLE>[]</TITLE></HEAD><BODY><TT>[]</TT></BODY></HTML>", name, replacetext(flavor_text, "\n", "<BR>")), text("window=[];size=500x200", name))
+		onclose(usr, "[name]")
+		return
+
 	if(usr.canUseTopic(src, BE_CLOSE, NO_DEXTERY))
 		if(href_list["embedded_object"])
 			var/obj/item/bodypart/L = locate(href_list["embedded_limb"]) in bodyparts
@@ -744,7 +750,7 @@
 	if(!Adjacent(M) && (M.loc != src))
 		if((be_close == 0) || (dna.check_mutation(TK) && tkMaxRangeCheck(src, M)))
 			return TRUE
-		to_chat(src, "<span class='warning'>You are too far away!</span>") //Bug: this is preventing flavor text from being seen except when adjacent. See print_flavor_text() in preferences.dm
+		to_chat(src, "<span class='warning'>You are too far away!</span>")
 		return FALSE
 	return TRUE
 

@@ -138,8 +138,8 @@ Lieutenant
 /datum/job/ncr/f13lieutenant
 	title = "NCR Lieutenant"
 	flag = F13LIEUTENANT
-	total_positions = 3
-	spawn_positions = 3
+	total_positions = 2
+	spawn_positions = 2
 	faction = "NCR"
 	description = "You are the direct superior to the Sergeant and Enlisted, working with the Captain and under special circumstances, Rangers. You plan patrols, training and missions, working in some cases with Rangers in accomplishing objectives otherwise beyond the capabilities of ordinary enlisted personnel."
 	supervisors = "Captain and above"

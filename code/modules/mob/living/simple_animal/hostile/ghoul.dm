@@ -45,6 +45,36 @@
 	melee_damage_lower = 15
 	melee_damage_upper = 15
 
+/mob/living/simple_animal/hostile/ghoul/coldferal
+	name = "cold ghoul feral"
+	desc = "A ghoul that has lost it's mind and become aggressive. This one is strapped with metal armor, and appears far stronger."
+	icon = 'icons/mob/wastemobs.dmi'
+	icon_state = "cold_feral"
+	icon_living = "cold_feral"
+	icon_dead = "cold_feral_dead"
+	speed = 1.5
+	a_intent = INTENT_HARM
+	maxHealth = 200
+	health = 200
+	harm_intent_damage = 5
+	melee_damage_lower = 15
+	melee_damage_upper = 15
+
+/mob/living/simple_animal/hostile/ghoul/frozenreaver
+	name = "frozen ghoul reaver"
+	desc = "A ghoul that has lost it's mind and become aggressive. This one is strapped with metal armor, and appears far stronger."
+	icon = 'icons/mob/wastemobs.dmi'
+	icon_state = "frozen_reaver"
+	icon_living = "frozen_reaver"
+	icon_dead = "frozen_reaver_dead"
+	speed = 1.5
+	a_intent = INTENT_HARM
+	maxHealth = 200
+	health = 200
+	harm_intent_damage = 5
+	melee_damage_lower = 15
+	melee_damage_upper = 15
+
 /mob/living/simple_animal/hostile/ghoul/glowing
 	name = "glowing feral ghoul"
 	desc = "A feral ghoul that has absorbed massive amounts of radiation, causing them to glow in the dark and radiate constantly.."
@@ -71,3 +101,133 @@
 	if(. && ishuman(target))
 		var/mob/living/carbon/human/H = target
 		H.apply_effect(20, EFFECT_IRRADIATE, 0)
+
+/mob/living/simple_animal/hostile/ghoul/frozen
+	name = "frozen feral ghoul"
+	desc = "A feral ghoul that has absorbed massive amounts of cold and Radiates Cold Air.."
+	icon_state = "frozen_feral"
+	icon_living = "frozen feral"
+	icon_dead = "frozen_feral_dead"
+	maxHealth = 80
+	health = 80
+	speed = 2
+	harm_intent_damage = 10
+	melee_damage_lower = 20
+	melee_damage_upper = 20
+
+/mob/living/simple_animal/hostile/ghoul/frozen/Initialize()
+	. = ..()
+
+/mob/living/simple_animal/hostile/ghoul/frozen/Aggro()
+	..()
+	summon_backup(10)
+
+/mob/living/simple_animal/hostile/ghoul/frozen/AttackingTarget()
+	. = ..()
+	if(. && ishuman(target))
+		var/mob/living/carbon/human/H = target
+		H.apply_effect(20, EFFECT_IRRADIATE, 0)
+
+
+/mob/living/simple_animal/hostile/ghoul/hot
+	name = "hot glowing ghoul"
+	desc = "A feral ghoul that has absorbed massive amounts of cold and Radiates Cold Air.."
+	icon_state = "hot_glowing_one"
+	icon_living = "hot_glowing_one"
+	icon_dead = "hot_glowing_one"
+	maxHealth = 80
+	health = 80
+	speed = 2
+	harm_intent_damage = 10
+	melee_damage_lower = 20
+	melee_damage_upper = 20
+
+/mob/living/simple_animal/hostile/ghoul/hot/Initialize()
+	. = ..()
+
+/mob/living/simple_animal/hostile/ghoul/hot/Aggro()
+	..()
+	summon_backup(10)
+
+/mob/living/simple_animal/hostile/ghoul/hot/AttackingTarget()
+	. = ..()
+	if(. && ishuman(target))
+		var/mob/living/carbon/human/H = target
+		H.apply_effect(20, EFFECT_IRRADIATE, 0)
+
+/mob/living/simple_animal/hostile/ghoul/soldier
+	name = "Ghoul Soldier"
+	desc = "Have you ever seen a living ghoul before?<br>Ghouls are necrotic post-humans - decrepit, rotting, zombie-like mutants."
+	icon = 'icons/mob/wastemobs.dmi'
+	icon_state = "soldier_ghoul"
+	icon_living = "soldier_ghoul"
+	icon_dead = "soldier_ghoul_d"
+	icon_gib = "gib"
+	maxHealth = 90
+	health = 90
+
+/mob/living/simple_animal/hostile/ghoul/soldier/armored
+	name = "Armored Ghoul Soldier"
+	desc = "Have you ever seen a living ghoul before?<br>Ghouls are necrotic post-humans - decrepit, rotting, zombie-like mutants."
+	icon = 'icons/mob/wastemobs.dmi'
+	icon_state = "soldier_ghoul_a"
+	icon_living = "soldier_ghoul_a"
+	icon_dead = "soldier_ghoul_a_d"
+	icon_gib = "gib"
+	maxHealth = 100
+	health = 100
+
+/mob/living/simple_animal/hostile/ghoul/scorched
+	name = "Scorched Ghoul Soldier"
+	desc = "Have you ever seen a living ghoul before?<br>Ghouls are necrotic post-humans - decrepit, rotting, zombie-like mutants."
+	icon = 'icons/mob/wastemobs.dmi'
+	icon_state = "scorched_m"
+	icon_living = "scorched_m"
+	icon_dead = "scorched_m_d"
+	icon_gib = "gib"
+	speak_chance = 1
+	turns_per_move = 5
+	environment_smash = 0
+	response_help = "hugs"
+	response_disarm = "pushes aside"
+	response_harm = "growl"
+	move_to_delay = 4
+	maxHealth = 80
+	health = 80
+	faction = list("scorched", "hostile")
+	death_sound = list('sound/f13npc/scor_d1.ogg','sound/f13npc/scor_d2.ogg','sound/f13npc/scor_d3.ogg','sound/f13npc/scor_d4.ogg','sound/f13npc/scor_d5.ogg')
+	melee_damage_lower = 15
+	melee_damage_upper = 20
+	aggro_vision_range = 10
+	attacktext = "punches"
+	attack_sound = "punch"
+
+
+/mob/living/simple_animal/hostile/ghoul/scorched/ranged
+	name = "Ranged Ghoul Solder"
+	desc = "Have you ever seen a living ghoul before?<br>Ghouls are necrotic post-humans - decrepit, rotting, zombie-like mutants."
+	icon = 'icons/mob/wastemobs.dmi'
+	icon_state = "scorched_r"
+	icon_living = "scorched_r"
+	icon_dead = "scorched_r_d"
+	icon_gib = "gib"
+	speak_chance = 1
+	turns_per_move = 5
+	environment_smash = 0
+	response_help = "hugs"
+	response_disarm = "pushes aside"
+	response_harm = "ow"
+	move_to_delay = 4
+	maxHealth = 80
+	health = 80
+	ranged = 1
+	ranged_cooldown_time = 200
+	projectiletype = /obj/item/projectile/bullet/F13/c9mmBullet
+	projectilesound = 'sound/f13weapons/hunting_rifle.ogg'
+	faction = list("scorched", "hostile")
+	death_sound = list('sound/f13npc/scor_d1.ogg','sound/f13npc/scor_d2.ogg','sound/f13npc/scor_d3.ogg','sound/f13npc/scor_d4.ogg','sound/f13npc/scor_d5.ogg')
+	melee_damage_lower = 15
+	melee_damage_upper = 20
+	aggro_vision_range = 10
+	attacktext = "shoots"
+	attack_sound = "punch"

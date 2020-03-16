@@ -127,7 +127,7 @@
 	maxHealth = 50
 	gold_core_spawnable = FRIENDLY_SPAWN
 	blood_volume = BLOOD_VOLUME_NORMAL
-	faction = list("neutral", "wastebot")
+	faction = list("neutral")
 	var/is_calf = 0
 	var/food_type = /obj/item/reagent_containers/food/snacks/grown/wheat
 	var/has_calf = 0
@@ -620,4 +620,28 @@ mob/living/simple_animal/cow/brahmin/Topic(href, href_list)
 			back_icon = BF.get_overlay()
 		add_overlay(back_icon)
 
-	return 
+	return
+
+/mob/living/simple_animal/radstag
+	name = "radstag"
+	desc = "a two headed dear that will run at the first sight of danger."
+	icon = 'icons/mob/wastemobs.dmi'
+	icon_state = "radstag"
+	icon_living = "radstag"
+	icon_dead = "radstag_dead"
+	icon_gib = "radstag_gib"
+	gender = FEMALE
+	mob_biotypes = list(MOB_ORGANIC, MOB_BEAST)
+	turns_per_move = 5
+	see_in_dark = 6
+	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 6)
+	response_help  = "pets"
+	response_disarm = "gently pushes aside"
+	response_harm   = "kicks"
+	attacktext = "kicks"
+	attack_sound = 'sound/weapons/punch1.ogg'
+	health = 50
+	maxHealth = 50
+	gold_core_spawnable = FRIENDLY_SPAWN
+	blood_volume = BLOOD_VOLUME_NORMAL
+	faction = list("neutral")

@@ -48,3 +48,16 @@
 	health = 100
 	melee_damage_lower = 25
 	melee_damage_upper = 35
+
+/mob/living/simple_animal/hostile/wolf/cold
+	name = "cold feral dog"
+	desc = "The dogs that survived the Great War are a larger, and tougher breed, size of a wolf.<br>Wait... This one's a wolf!"
+	icon = 'icons/mob/wastemobs.dmi'
+	icon_state = "cold_wolf"
+	icon_living = "cold_wolf"
+	icon_dead = "cold_wolf_dead"
+	icon_gib = "gib"
+	maxHealth = 100
+	health = 100
+	melee_damage_lower = 25
+	melee_damage_upper = 35
