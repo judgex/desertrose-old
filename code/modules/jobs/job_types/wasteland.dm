@@ -60,7 +60,7 @@ Great Khan
 	backpack = /obj/item/storage/backpack/satchel/explorer
 	satchel = /obj/item/storage/backpack/satchel/explorer
 
-	suit = /obj/item/clothing/suit/armor/khan
+	suit = /obj/item/clothing/suit/toggle/labcoat/f13/khan
 	uniform = /obj/item/clothing/under/f13/khan
 
 /datum/outfit/job/wasteland/f13pusher/pre_equip(mob/living/carbon/human/H)
