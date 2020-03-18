@@ -56,8 +56,8 @@
 /mob/living/simple_animal/hostile/cazador/young
 	name = "young cazador"
 	desc = "A mutated insect known for its fast speed, deadly sting, and being huge bastards. This one's little."
-	maxHealth = 20
-	health = 20
+	maxHealth = 40
+	health = 40
 	speed = 1
 	melee_damage_lower = 5
 	melee_damage_upper = 10
@@ -214,18 +214,26 @@
 	emote_taunt_sound = 'sound/creatures/radroach_chitter.ogg'
 	taunt_chance = 30
 	speed = 1
-	maxHealth = 20
-	health = 20
-	harm_intent_damage = 8
+	maxHealth = 160
+	health = 160
+	harm_intent_damage = 15
 	obj_damage = 20
-	melee_damage_lower = 10
-	melee_damage_upper = 10
+	melee_damage_lower = 20
+	melee_damage_upper = 20
 	attacktext = "stings"
 	attack_sound = 'sound/creatures/radroach_attack.ogg'
 	speak_emote = list("skitters")
 	atmos_requirements = list("min_oxy" = 5, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 1, "min_co2" = 0, "max_co2" = 5, "min_n2" = 0, "max_n2" = 0)
 	faction = list("gecko")
 	gold_core_spawnable = HOSTILE_SPAWN
+	decompose = TRUE
+
+/mob/living/simple_animal/hostile/giantant/Initialize()
+	. = ..()
+
+/mob/living/simple_animal/hostile/giantant/Aggro()
+	..()
+	summon_backup(10)
 
 /mob/living/simple_animal/hostile/fireant
 	name = "fireant"
@@ -246,18 +254,33 @@
 	emote_taunt_sound = 'sound/creatures/radroach_chitter.ogg'
 	taunt_chance = 30
 	speed = 1
-	maxHealth = 20
-	health = 20
+	maxHealth = 140
+	health = 140
 	harm_intent_damage = 8
 	obj_damage = 20
-	melee_damage_lower = 10
-	melee_damage_upper = 10
+	melee_damage_lower = 15
+	melee_damage_upper = 15
 	attacktext = "stings"
 	attack_sound = 'sound/creatures/radroach_attack.ogg'
 	speak_emote = list("skitters")
 	atmos_requirements = list("min_oxy" = 5, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 1, "min_co2" = 0, "max_co2" = 5, "min_n2" = 0, "max_n2" = 0)
 	faction = list("gecko")
 	gold_core_spawnable = HOSTILE_SPAWN
+	decompose = TRUE
+
+/mob/living/simple_animal/hostile/fireant/Initialize()
+	. = ..()
+
+/mob/living/simple_animal/hostile/fireant/Aggro()
+	..()
+	summon_backup(10)
+
+/mob/living/simple_animal/hostile/fireant/AttackingTarget()
+	. = ..()
+	if(. && ishuman(target))
+		var/mob/living/carbon/human/H = target
+		H.reagents.add_reagent("napalm", 0.1)
+
 
 /mob/living/simple_animal/hostile/molerat
 	name = "molerat"

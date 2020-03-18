@@ -29,6 +29,11 @@
 	attacktext = "smashes"
 	attack_sound = "punch"
 
+/mob/living/simple_animal/hostile/supermutant/Aggro()
+	..()
+	summon_backup(15)
+	say("HUMANS, ATTACK!!!")
+
 /mob/living/simple_animal/hostile/supermutant/bullet_act(obj/item/projectile/Proj)
 	if(!Proj)
 		return
