@@ -99,7 +99,7 @@
 	emote_taunt = list("snips")
 	emote_taunt_sound = 'sound/creatures/radscorpion_snip.ogg'
 	taunt_chance = 30
-	speed = 1
+	speed = 1.25
 	maxHealth = 150
 	health = 150
 	harm_intent_damage = 8
@@ -182,8 +182,8 @@
 	emote_taunt_sound = 'sound/creatures/radroach_chitter.ogg'
 	taunt_chance = 30
 	speed = 1
-	maxHealth = 20
-	health = 20
+	maxHealth = 40
+	health = 40
 	harm_intent_damage = 8
 	obj_damage = 20
 	melee_damage_lower = 10
