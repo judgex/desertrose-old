@@ -477,8 +477,8 @@
 	name = "\improper Type U3 Uzi"
 	desc = "A lightweight, burst-fire submachine gun, for when you really want someone dead. Uses 9mm rounds."
 	icon_state = "mini-uzi"
-	w_class = WEIGHT_CLASS_NORMAL
 	mag_type = /obj/item/ammo_box/magazine/uzim9mm
+	w_class = WEIGHT_CLASS_NORMAL
 	burst_size = 2
 	burst_delay = 2
 	fire_delay = 2
@@ -523,9 +523,10 @@
 	desc = "A select fire open bolt 10mm submachine gun. The serial number and manufactuer markings have been scratched off."
 	icon_state = "smg10mm"
 	item_state = "smg10mm"
-	w_class = WEIGHT_CLASS_NORMAL
 	slot_flags = 0
 	mag_type = /obj/item/ammo_box/magazine/m10mm_auto
+	w_class = WEIGHT_CLASS_BULKY
+	weapon_weight = WEAPON_HEAVY
 	fire_sound = 'sound/f13weapons/10mm_fire_03.ogg'
 	burst_size = 3
 	fire_delay = 2
