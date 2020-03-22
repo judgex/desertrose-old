@@ -1708,7 +1708,7 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
 
-/datum/crafting_recipe/reinforcedmachete
+/datum/crafting_recipe/reinforcemachete
 	name = "Reinforce machete"
 	result = /obj/item/claymore/machete/reinforced
 	time = 80
