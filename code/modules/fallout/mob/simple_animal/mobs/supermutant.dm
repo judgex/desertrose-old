@@ -51,7 +51,7 @@
 
 /mob/living/simple_animal/pet/dog/mutant    //This is a supermutant, totally not a dog, and he is friendly
 	name = "Brah-Min"
-	desc = "A large, docile supermutant. Adopted by Kebab-town as a sort of watch dog for their brahmin herd."
+	desc = "A large, docile supermutant. Adopted by Oasis as a sort of watch dog for their brahmin herd."
 	icon = 'icons/fallout/mobs/supermutant.dmi'
 	icon_state = "hulk_brahmin_s"
 	icon_dead = "hulk_brahmin_s"
