@@ -1708,12 +1708,12 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
 
-/datum/crafting_recipe/gladius
-	name = "Machete Gladius"
-	result = /obj/item/claymore/machete/gladius
+/datum/crafting_recipe/reinforcedmachete
+	name = "Reinforce machete"
+	result = /obj/item/claymore/machete/reinforced
 	time = 80
-	reqs = list(/obj/item/stack/sheet/metal = 10,
-				/obj/item/stack/sheet/mineral/wood = 2)
+	reqs = list(/obj/item/stack/sheet/metal = 4,
+				/obj/item/claymore/machete = 1)
 	tools = list(TOOL_WORKBENCH)
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
