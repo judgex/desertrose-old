@@ -184,6 +184,15 @@
 		/turf/closed/mineral/gibtonite = 2, /turf/closed/mineral/bscrystal = 1)
 
 
+/turf/closed/mineral/random/no_chance   //so that the BoS need to go outside for getting their mining materials
+	icon_state = "rock_lowchance"
+	mineralChance = 0
+	mineralSpawnChanceList = list(
+		/turf/closed/mineral/uranium = 0, /turf/closed/mineral/diamond = 0, /turf/closed/mineral/gold = 0, /turf/closed/mineral/titanium = 0,
+		/turf/closed/mineral/silver = 0, /turf/closed/mineral/plasma = 0, /turf/closed/mineral/iron = 0,
+		/turf/closed/mineral/gibtonite = 0, /turf/closed/mineral/bscrystal = 0)
+
+
 /turf/closed/mineral/random/volcanic
 	environment_type = "basalt"
 	turf_type = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
