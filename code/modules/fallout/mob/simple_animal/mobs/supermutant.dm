@@ -18,8 +18,8 @@
 	response_help = "touches"
 	response_disarm = "tries to perform a kung fu move, then suddenly remembers that it's actually"
 	response_harm = "hits"
-	maxHealth = 300
-	health = 300
+	maxHealth = 350
+	health = 350
 	force_threshold = 15
 	faction = list("hostile", "supermutant")
 	melee_damage_lower = 55
@@ -28,6 +28,11 @@
 	anchored = TRUE //unpullable
 	attacktext = "smashes"
 	attack_sound = "punch"
+
+/mob/living/simple_animal/hostile/supermutant/Aggro()
+	..()
+	summon_backup(15)
+	say("HUMANS, ATTACK!!!")
 
 /mob/living/simple_animal/hostile/supermutant/bullet_act(obj/item/projectile/Proj)
 	if(!Proj)
