@@ -60,7 +60,7 @@ Great Khan
 	backpack = /obj/item/storage/backpack/satchel/explorer
 	satchel = /obj/item/storage/backpack/satchel/explorer
 
-	suit = /obj/item/clothing/suit/armor/khan
+	suit = /obj/item/clothing/suit/toggle/labcoat/f13/khan
 	uniform = /obj/item/clothing/under/f13/khan
 
 /datum/outfit/job/wasteland/f13pusher/pre_equip(mob/living/carbon/human/H)
@@ -79,7 +79,7 @@ Great Khan
 		/obj/item/gun/ballistic/revolver/caravan_shotgun, \
 		/obj/item/gun/ballistic/revolver/pipe_rifle, \
 		/obj/item/gun/ballistic/automatic/pistol/ninemil)
-	head = /obj/item/clothing/head/helmet/knight/f13/metal
+	head = /obj/item/clothing/head/helmet/f13/khan
 	shoes = /obj/item/clothing/shoes/f13/khan
 
 /datum/outfit/job/wasteland/f13pusher/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
