@@ -1007,6 +1007,15 @@
 	tools = list(TOOL_SCREWDRIVER, TOOL_WRENCH, TOOL_WELDER)
 	category = CAT_MISC
 
+/datum/crafting_recipe/Binoculars
+	name = "Binoculars"
+	result = /obj/item/twohanded/binocs
+	time = 60
+	reqs = list(/obj/item/stack/sheet/steel = 10,
+				/obj/item/stack/sheet/glass = 5)
+	tools = list(TOOL_SCREWDRIVER,TOOL_WORKBENCH)
+	category = CAT_MISC
+
 /datum/crafting_recipe/spooky_camera
 	name = "Camera Obscura"
 	result = /obj/item/camera/spooky
@@ -1708,12 +1717,12 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
 
-/datum/crafting_recipe/gladius
-	name = "Machete Gladius"
-	result = /obj/item/claymore/machete/gladius
+/datum/crafting_recipe/reinforcemachete
+	name = "Reinforce machete"
+	result = /obj/item/claymore/machete/reinforced
 	time = 80
-	reqs = list(/obj/item/stack/sheet/metal = 10,
-				/obj/item/stack/sheet/mineral/wood = 2)
+	reqs = list(/obj/item/stack/sheet/metal = 7,
+				/obj/item/claymore/machete = 1)
 	tools = list(TOOL_WORKBENCH)
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
