@@ -530,7 +530,7 @@
 	harm_intent_damage = 5
 	melee_damage_lower = 20
 	melee_damage_upper = 30
-	attacktext = "наносит удар"
+	attacktext = "attacks"
 	attack_sound = 'sound/weapons/punch1.ogg'
 	a_intent = INTENT_HARM
 	loot = list(/obj/effect/mob_spawn/human/corpse/raider)
@@ -545,7 +545,7 @@
 	speak_chance = 2
 
 /obj/effect/mob_spawn/human/corpse/raider
-	name = "Рейдер"
+	name = "Raider"
 	uniform = /obj/item/clothing/under/f13/rag
 	suit = /obj/item/clothing/suit/armor/f13/tribal
 	shoes = /obj/item/clothing/shoes/f13/rag

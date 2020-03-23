@@ -39,11 +39,18 @@
 	icon_dead = "ghoulreaver_dead"
 	speed = 2
 	a_intent = INTENT_HARM
-	maxHealth = 100
-	health = 100
-	harm_intent_damage = 5
-	melee_damage_lower = 15
-	melee_damage_upper = 15
+	maxHealth = 130
+	health = 130
+	harm_intent_damage = 6
+	melee_damage_lower = 17
+	melee_damage_upper = 17
+
+/mob/living/simple_animal/hostile/ghoul/reaver/Initialize()
+	. = ..()
+
+/mob/living/simple_animal/hostile/ghoul/reaver/Aggro()
+	..()
+	summon_backup(10)
 
 /mob/living/simple_animal/hostile/ghoul/coldferal
 	name = "cold ghoul feral"
@@ -81,8 +88,8 @@
 	icon_state = "glowinghoul"
 	icon_living = "glowinghoul"
 	icon_dead = "glowinghoul_dead"
-	maxHealth = 80
-	health = 80
+	maxHealth = 100
+	health = 100
 	speed = 2
 	harm_intent_damage = 10
 	melee_damage_lower = 20
