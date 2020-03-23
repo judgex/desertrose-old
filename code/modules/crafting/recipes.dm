@@ -1007,7 +1007,7 @@
 	tools = list(TOOL_SCREWDRIVER, TOOL_WRENCH, TOOL_WELDER)
 	category = CAT_MISC
 
-/datum/crafting_recipe/Binoculars
+/datum/crafting_recipe/binoculars
 	name = "Binoculars"
 	result = /obj/item/twohanded/binocs
 	time = 60
