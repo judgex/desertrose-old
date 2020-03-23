@@ -140,7 +140,7 @@ Lieutenant
 	flag = F13LIEUTENANT
 	total_positions = 1
 	spawn_positions = 1
-  faction = "NCR"
+	faction = "NCR"
 	description = "You are the direct superior to the Sergeant and Enlisted, working with the Captain and under special circumstances, Rangers. You plan patrols, training and missions, working in some cases with Rangers in accomplishing objectives otherwise beyond the capabilities of ordinary enlisted personnel."
 	supervisors = "Captain and above"
 	selection_color = "#fff5cc"
@@ -191,7 +191,7 @@ Lieutenant
 	suit = /obj/item/clothing/suit/armor/f13/ncrarmor/mantle/reinforced
 	suit_store = /obj/item/gun/ballistic/automatic/assault_carbine
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m556/rifle/assault=2,
+		/obj/item/ammo_box/magazine/m556/rifle=2,
 		/obj/item/book/granter/trait/trekking=1)
 
 /datum/outfit/loadout/ltscout
@@ -262,7 +262,7 @@ Sergeant
 	suit = /obj/item/clothing/suit/armor/f13/ncrarmor/mantle
 	suit_store = /obj/item/gun/ballistic/automatic/marksman/servicerifle/r82
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m556/rifle/assault=2)
+		/obj/item/ammo_box/magazine/m556/rifle=2)
 
 /datum/outfit/loadout/sgtscout
 	name = "Scout Sergeant"
@@ -303,9 +303,9 @@ Specialist
 	suit = 			/obj/item/clothing/suit/armor/f13/ncrarmor
 	belt =          /obj/item/storage/belt/military/NCR_Bandolier
 	glasses = 		null
-	suit_store = 	/obj/item/gun/ballistic/automatic/marksman/servicerifle
+	suit_store = 	/obj/item/gun/ballistic/automatic/pistol/ninemil
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m556/rifle=2, \
+		/obj/item/ammo_box/magazine/m9mm=2, \
 		/obj/item/kitchen/knife/combat/survival=1, \
 		/obj/item/reagent_containers/hypospray/medipen/stimpak=1, \
 		/obj/item/stack/medical/gauze=1, \
@@ -543,7 +543,7 @@ Ranger
 	name = "Light Ranger"
 	suit_store = /obj/item/gun/ballistic/automatic/assault_carbine
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m556/rifle/assault=2)
+		/obj/item/ammo_box/magazine/m556/rifle=2)
 
 /datum/outfit/loadout/prtrail
 	name = "Trail Ranger"
