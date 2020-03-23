@@ -1011,7 +1011,7 @@
 	name = "Binoculars"
 	result = /obj/item/twohanded/binocs
 	time = 60
-	reqs = list(/obj/item/stack/sheet/steel = 10,
+	reqs = list(/obj/item/stack/sheet/metal = 10,
 				/obj/item/stack/sheet/glass = 5)
 	tools = list(TOOL_SCREWDRIVER,TOOL_WORKBENCH)
 	category = CAT_MISC
