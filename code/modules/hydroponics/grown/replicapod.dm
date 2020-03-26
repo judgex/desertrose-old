@@ -10,7 +10,7 @@
 	container_type = INJECTABLE|DRAWABLE
 	lifespan = 50
 	endurance = 8
-	maturation = 10
+	maturation = 40
 	production = 1
 	yield = 1 //seeds if there isn't a dna inside
 	potency = 30
