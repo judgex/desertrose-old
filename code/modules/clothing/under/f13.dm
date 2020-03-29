@@ -60,6 +60,26 @@
 	icon_state = "scoutclothes"
 	item_state = "scoutclothes"
 	item_color = "scoutclothes"
+	
+/obj/item/clothing/under/f13/ncr/jumpsuit/light
+	name = "NCR engineer jumpsuit"
+	desc = "A tan jumpsuit with the NCR symbol painted on the back, often wore by civilian engineers. This one is light"
+	icon_state = "ncrjumpsuit_light"
+	item_state = "ncrjumpsuit_light"
+	item_color = "ncrjumpsuit_light"
+	lefthand_file = 'icons/mob/inhands/clothing_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/clothing_righthand.dmi'
+	can_adjust = TRUE
+
+/obj/item/clothing/under/f13/ncr/jumpsuit/dark
+	name = "NCR engineer jumpsuit"
+	desc = "A tan jumpsuit with the NCR symbol painted on the back, often wore by civilian engineers. This one is dark"
+	icon_state = "ncrjumpsuit_dark"
+	item_state = "ncrjumpsuit_dark"
+	item_color = "ncrjumpsuit_dark"
+	lefthand_file = 'icons/mob/inhands/clothing_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/clothing_righthand.dmi'
+	can_adjust = TRUE
 
 //Settlers
 
