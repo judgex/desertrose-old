@@ -406,23 +406,72 @@ Recruit
 
 	outfit = /datum/outfit/job/ncr/f13recruit
 
+loadout_options = list(
+	/datum/outfit/loadout/cook,
+	/datum/outfit/loadout/sharecropper, //farmers
+    /datum/outfit/loadout/engineer,
+    /datum/outfit/loadout/miner
+	)
+
 /datum/outfit/job/ncr/f13recruit
 	name = "NCR Assistant"
 	jobtype = /datum/job/ncr/f13recruit
 	id = 			/obj/item/card/id/dogtag/ncrtrooper
-	uniform =  		/obj/item/clothing/under/f13/ncr
-	accessory =     /obj/item/clothing/accessory/ncr/REC
+	shoes = 		/obj/item/clothing/shoes/f13/explorer
 	ears = 			/obj/item/radio/headset //no NCR comms
-	belt =			/obj/item/pickaxe
+	belt =			null
 	gloves = null
 	glasses = 		null
 	backpack_contents = list(
-		/obj/item/kitchen/knife/combat/survival=1, \
 		/obj/item/reagent_containers/hypospray/medipen/stimpak=1, \
 		/obj/item/stack/medical/gauze=1, \
-		/obj/item/storage/bag/ore = 1,
 		/obj/item/storage/bag/money/small/ncrenlisted)
 
+/datum/outfit/job/ncr/f13recruit/pre_equip(mob/living/carbon/human/H)
+	uniform = pick(
+		/obj/item/clothing/under/f13/doctor, \
+		/obj/item/clothing/under/f13/caravaneer, \
+		/obj/item/clothing/under/f13/ncr/jumpsuit/light, \
+        /obj/item/clothing/under/f13/ncr/jumpsuit/dark)
+
+
+/datum/outfit/loadout/cook
+	name = "NCR Cook"
+	suit = /obj/item/clothing/suit/apron/chef
+	uniform = /obj/item/clothing/under/f13/doctorm
+	backpack_contents = list(
+		/obj/item/kitchen/knife=1,
+        /obj/item/kitchen/rollingpin=1)
+
+/datum/outfit/loadout/sharecropper
+	name = "NCR Sharecropper"
+	uniform = /obj/item/clothing/under/f13/caravaneer
+	gloves = /obj/item/clothing/gloves/botanic_leather
+	backpack_contents = list(
+		/obj/item/reagent_containers/glass/bottle/nutrient/rh=2,
+        /obj/item/reagent_containers/spray/pestspray=1,
+        /obj/item/storage/bag/plants=1,
+        /obj/item/cultivator=1,
+        /obj/item/shovel/spade=1,
+        /obj/item/plant_analyzer=1)
+
+ /datum/outfit/loadout/engineer
+	name = "NCR Engineer"
+	uniform = /obj/item/clothing/under/f13/ncr/jumpsuit/light
+	gloves = /obj/item/clothing/gloves/color/red/insulated
+	backpack_contents = list(
+		/obj/item/storage/toolbox/mechanical/old=1,
+        /obj/item/multitool=1)
+
+/datum/outfit/loadout/miner
+	name = "NCR Miner"
+	uniform = /obj/item/clothing/under/f13/ncr/jumpsuit/dark
+	backpack_contents = list(
+		/obj/item/pickaxe=1,
+        /obj/item/shovel=1,
+        /obj/item/mining_scanner=1,
+        /obj/item/storage/bag/ore=1)
+		
 /*
 Veteran Ranger
 */
