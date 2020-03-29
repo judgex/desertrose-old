@@ -320,6 +320,7 @@ Legionary
 	id = 			/obj/item/card/id/dogtag/legveteran
 	suit = 			/obj/item/clothing/suit/armor/f13/legion/vet
 	head = 			/obj/item/clothing/head/helmet/f13/legion/vet
+	mask =			/obj/item/clothing/mask/bandana/legvet
 	glasses = 		/obj/item/clothing/glasses/sunglasses
 	r_hand = 		/obj/item/shield/riot/roman
 	backpack_contents = list(
