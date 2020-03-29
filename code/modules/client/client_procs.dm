@@ -127,7 +127,7 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
  * Handles checking for duplicate messages and people sending messages too fast
  *
  * The first checks are if you're sending too fast, this is defined as sending
- * SPAM_TRIGGER_AUTOMUTE messages in 
+ * SPAM_TRIGGER_AUTOMUTE messages in
  * 5 seconds, this will start supressing your messages,
  * if you send 2* that limit, you also get muted
  *
@@ -151,14 +151,14 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 	if(cache >= SPAM_TRIGGER_AUTOMUTE * 2)
 		total_message_count = 0
 		total_count_reset = 0
-		cmd_admin_mute(src, mute_type, 1)	
+		cmd_admin_mute(src, mute_type, 1)
 		return 1
 
 	//Otherwise just supress the message
 	else if(cache >= SPAM_TRIGGER_AUTOMUTE)
 		return 1
 
-		
+
 	if(CONFIG_GET(flag/automute_on) && !holder && last_message == message)
 		src.last_message_count++
 		if(src.last_message_count >= SPAM_TRIGGER_AUTOMUTE)
@@ -365,7 +365,16 @@ GLOBAL_LIST_EMPTY(external_rsc_urls)
 	var/nnpa = CONFIG_GET(number/notify_new_player_age)
 	if (isnum(cached_player_age) && cached_player_age == -1) //first connection
 		if (nnpa >= 0)
-			message_admins("New user: [key_name_admin(src)] is connecting here for the first time.")
+			var/list/http[] = world.Export("http://www.byond.com/members/[ckey]?format=text")  // Retrieve information from BYOND
+			var/Joined = 2550-01-01
+			if(http && http.len && ("CONTENT" in http))
+				var/String = file2text(http["CONTENT"])  //  Convert the HTML file to text
+				var/JoinPos = findtext(String, "joined")+10  //  Parse for the joined date
+				Joined = copytext(String, JoinPos, JoinPos+10)  //  Get the date in the YYYY-MM-DD format
+
+			log_admin("New user: [key_name_admin(src)] is connecting here for the first time. They joined BYOND on [Joined].")
+			message_admins("New user: [key_name_admin(src)] is connecting here for the first time. They joined BYOND on [Joined].")
+
 			if (CONFIG_GET(flag/irc_first_connection_alert))
 				send2irc_adminless_only("New-user", "[key_name(src)] is connecting for the first time!")
 	else if (isnum(cached_player_age) && cached_player_age < nnpa)
