@@ -138,8 +138,6 @@
 		H.social_faction = social_faction
 
 /datum/job/proc/get_access()
-	return get_all_accesses()
-/*
 	if(!config)	//Needed for robots.
 		return src.minimal_access.Copy()
 
@@ -152,7 +150,7 @@
 
 	if(CONFIG_GET(flag/everyone_has_maint_access)) //Config has global maint access set
 		. |= list(ACCESS_MAINT_TUNNELS)
-*/
+
 /datum/job/proc/announce_head(var/mob/living/carbon/human/H, var/channels) //tells the given channel that the given mob is the new department head. See communications.dm for valid channels.
 	if(H && GLOB.announcement_systems.len)
 		//timer because these should come after the captain announcement

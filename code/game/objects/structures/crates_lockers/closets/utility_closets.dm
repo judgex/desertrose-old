@@ -32,40 +32,21 @@
 			new /obj/item/tank/internals/emergency_oxygen(src)
 			new /obj/item/clothing/mask/breath(src)
 			new /obj/item/clothing/mask/breath(src)
-			new /obj/effect/spawner/lootdrop/f13/armor/random(src)
-			new /obj/effect/spawner/lootdrop/f13/weapon/gun/random(src)
-			new /obj/effect/spawner/lootdrop/f13/weapon/gun/random(src)
-			new /obj/item/reagent_containers/hypospray/medipen/stimpak(src)
+
 		if ("aid")
 			new /obj/item/tank/internals/emergency_oxygen(src)
 			new /obj/item/storage/firstaid/o2(src)
 			new /obj/item/clothing/mask/breath(src)
-			new /obj/effect/spawner/lootdrop/f13/armor/random(src)
-			new /obj/effect/spawner/lootdrop/f13/weapon/gun/random(src)
-			new /obj/effect/spawner/lootdrop/f13/weapon/gun/random(src)
-			new /obj/item/reagent_containers/hypospray/medipen/stimpak(src)
 
 		if ("tank")
 			new /obj/item/tank/internals/air(src)
 			new /obj/item/clothing/mask/breath(src)
-			new /obj/effect/spawner/lootdrop/f13/armor/random(src)
-			new /obj/effect/spawner/lootdrop/f13/weapon/gun/random(src)
-			new /obj/effect/spawner/lootdrop/f13/weapon/gun/random(src)
-			new /obj/item/reagent_containers/hypospray/medipen/stimpak(src)
 
 		if ("both")
 			new /obj/item/tank/internals/emergency_oxygen(src)
 			new /obj/item/clothing/mask/breath(src)
-			new /obj/effect/spawner/lootdrop/f13/armor/random(src)
-			new /obj/effect/spawner/lootdrop/f13/weapon/gun/random(src)
-			new /obj/effect/spawner/lootdrop/f13/weapon/gun/random(src)
-			new /obj/item/reagent_containers/hypospray/medipen/stimpak(src)
 
 		if ("nothing")
-			new /obj/effect/spawner/lootdrop/f13/armor/random(src)
-			new /obj/effect/spawner/lootdrop/f13/weapon/gun/random(src)
-			new /obj/effect/spawner/lootdrop/f13/weapon/gun/random(src)
-			new /obj/item/reagent_containers/hypospray/medipen/stimpak(src)
 			// doot
 
 		// teehee
@@ -89,10 +70,6 @@
 	new /obj/item/extinguisher(src)
 	new /obj/item/clothing/head/hardhat/red(src)
 
-	new /obj/effect/spawner/lootdrop/f13/armor/random(src)
-	new /obj/effect/spawner/lootdrop/f13/weapon/gun/random(src)
-	new /obj/effect/spawner/lootdrop/f13/weapon/gun/random(src)
-	new /obj/item/reagent_containers/hypospray/medipen/stimpak(src)
 /obj/structure/closet/firecloset/full/PopulateContents()
 	new /obj/item/clothing/suit/fire/firefighter(src)
 	new /obj/item/clothing/mask/gas(src)
@@ -100,10 +77,6 @@
 	new /obj/item/tank/internals/oxygen/red(src)
 	new /obj/item/extinguisher(src)
 	new /obj/item/clothing/head/hardhat/red(src)
-	new /obj/effect/spawner/lootdrop/f13/armor/random(src)
-	new /obj/effect/spawner/lootdrop/f13/weapon/gun/random(src)
-	new /obj/effect/spawner/lootdrop/f13/weapon/gun/random(src)
-	new /obj/item/reagent_containers/hypospray/medipen/stimpak(src)
 
 /*
  * Tool Closet
@@ -116,10 +89,6 @@
 
 /obj/structure/closet/toolcloset/PopulateContents()
 	..()
-	new /obj/effect/spawner/lootdrop/f13/armor/random(src)
-	new /obj/effect/spawner/lootdrop/f13/weapon/gun/random(src)
-	new /obj/effect/spawner/lootdrop/f13/weapon/gun/random(src)
-	new /obj/item/reagent_containers/hypospray/medipen/stimpak(src)
 	if(prob(40))
 		new /obj/item/clothing/suit/hazardvest(src)
 	if(prob(70))
@@ -166,10 +135,6 @@
 	new /obj/item/geiger_counter(src)
 	new /obj/item/clothing/suit/radiation(src)
 	new /obj/item/clothing/head/radiation(src)
-	new /obj/effect/spawner/lootdrop/f13/armor/random(src)
-	new /obj/effect/spawner/lootdrop/f13/weapon/gun/random(src)
-	new /obj/effect/spawner/lootdrop/f13/weapon/gun/random(src)
-	new /obj/item/reagent_containers/hypospray/medipen/stimpak(src)
 
 /*
  * Bombsuit closet
