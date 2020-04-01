@@ -138,8 +138,9 @@
 		H.social_faction = social_faction
 
 /datum/job/proc/get_access()
-	return get_all_accesses() //You get access! You get access! YOU get access!
-/*	if(!config)	//Needed for robots.
+	return get_all_accesses()
+/*
+	if(!config)	//Needed for robots.
 		return src.minimal_access.Copy()
 
 	. = list()
