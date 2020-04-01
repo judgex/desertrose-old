@@ -285,7 +285,7 @@
 	result = /obj/item/ammo_box/magazine/m556/rifle/assault/empty
 	reqs = list(/obj/item/stack/sheet/metal = 4)
 	traits = list(TRAIT_GUNSMITH_TWO)
-	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER2)
+	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER3)
 	time = 10
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
@@ -1007,6 +1007,15 @@
 	tools = list(TOOL_SCREWDRIVER, TOOL_WRENCH, TOOL_WELDER)
 	category = CAT_MISC
 
+/datum/crafting_recipe/binoculars
+	name = "Binoculars"
+	result = /obj/item/twohanded/binocs
+	time = 60
+	reqs = list(/obj/item/stack/sheet/metal = 10,
+				/obj/item/stack/sheet/glass = 5)
+	tools = list(TOOL_SCREWDRIVER,TOOL_WORKBENCH)
+	category = CAT_MISC
+
 /datum/crafting_recipe/spooky_camera
 	name = "Camera Obscura"
 	result = /obj/item/camera/spooky
@@ -1708,12 +1717,12 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
 
-/datum/crafting_recipe/gladius
-	name = "Machete Gladius"
-	result = /obj/item/claymore/machete/gladius
+/datum/crafting_recipe/reinforcemachete
+	name = "Reinforce machete"
+	result = /obj/item/claymore/machete/reinforced
 	time = 80
-	reqs = list(/obj/item/stack/sheet/metal = 10,
-				/obj/item/stack/sheet/mineral/wood = 2)
+	reqs = list(/obj/item/stack/sheet/metal = 7,
+				/obj/item/claymore/machete = 1)
 	tools = list(TOOL_WORKBENCH)
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON

@@ -17,7 +17,7 @@ GLOBAL_LIST_INIT(command_positions, list(
 GLOBAL_LIST_INIT(silicon_whitelist_positions, list(
 "Mr. Handy"))
 //Whitelisted positions list FO13 anything that shows up here requires that the user have an entry in the 'role_whitelist' table of id,ckey,"faction"
-//NCR Recruit, Camp Follower and Recruit Legionnaire removed from whitelisting.
+//NCR Assistant and Legion Camp Follower removed from whitelisting.
 GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 "Head Scribe",
 "Chief of Security",
@@ -27,6 +27,8 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 "Paladin",
 "Knight",
 "Scribe",
+"Initiate Knight",
+"Initiate Scribe",
 "Legion Centurion",
 "Legion Orator",
 "Legion Decanus",
@@ -91,7 +93,7 @@ GLOBAL_LIST_INIT(ncr_positions, list(
 	"NCR Sergeant",
 	"NCR Specialist",
 	"NCR Trooper",
-	"NCR Recruit",
+	"NCR Assistant",
 	"NCR Veteran Ranger",
 	"NCR Ranger"
 ))
