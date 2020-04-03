@@ -123,8 +123,8 @@
 	icon_state = "hosberetblack"
 
 /obj/item/clothing/head/HoS/beret/syndicate
-	name = "syndicate beret"
-	desc = "A black beret with thick armor padding inside. Stylish and robust."
+	name = "black beret"
+	desc = "A black beret with thin armor padding inside. Stylish and robust."
 
 /obj/item/clothing/head/warden
 	name = "warden's police hat"

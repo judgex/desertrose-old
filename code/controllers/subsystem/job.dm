@@ -382,8 +382,9 @@ SUBSYSTEM_DEF(job)
 			if(!AssignRole(player, SSjob.overflow_role))
 				RejectPlayer(player)
 	else if(player.client.prefs.joblessrole == BERANDOMJOB)
-		if(!GiveRandomJob(player))
-			RejectPlayer(player)
+/*		if(!GiveRandomJob(player))
+			RejectPlayer(player)*/
+		RejectPlayer(player) //Doesn't play nice with whitelists.
 	else if(player.client.prefs.joblessrole == RETURNTOLOBBY)
 		RejectPlayer(player)
 	else //Something gone wrong if we got here.

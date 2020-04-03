@@ -670,7 +670,8 @@
 	max_heat_protection_temperature = SPACE_HELM_MAX_TEMP_PROTECT
 	ispowerarmor = 1
 	strip_delay = 200
-	slowdown = 0.25
+	equip_delay_self = 20
+	slowdown = 0.1
 	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR|HIDEMASK|HIDEJUMPSUIT
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 	clothing_flags = THICKMATERIAL
@@ -683,17 +684,40 @@
 	darkness_view = 128
 	lighting_alpha = LIGHTING_PLANE_ALPHA_LOWLIGHT_VISION
 	speechspan = SPAN_ROBOT //makes you sound like a robot
+	var/emped = 0
 
 /obj/item/clothing/head/helmet/power_armor/mob_can_equip(mob/user, mob/equipper, slot, disable_warning = 1)
 	var/mob/living/carbon/human/H = user
 	if(src == H.head) //Suit is already equipped
-		return TRUE
+		return ..()
 	if (!H.has_trait(TRAIT_PA_WEAR) && !istype(src, /obj/item/clothing/head/helmet/power_armor/t45b) && slot == SLOT_HEAD)
 		to_chat(user, "<span class='warning'>You don't have the proper training to operate the power armor!</span>")
 		return 0
 	if(slot == SLOT_HEAD)
-		return TRUE
+		return ..()
 	return
+
+/obj/item/clothing/head/helmet/power_armor/emp_act(mob/living/carbon/human/owner, severity)
+	. = ..()
+	if(. & EMP_PROTECT_SELF)
+		return
+	if(emped == 0)
+		if(ismob(loc))
+			to_chat(loc, "<span class='warning'>Warning: electromagnetic surge detected in helmet. Rerouting power to emergency systems.</span>")
+			tint += 2
+			if(iscarbon(loc))
+				var/mob/living/carbon/C = loc
+				C.head_update(src, forced = 1)
+			armor = armor.modifyRating(melee = -20, bullet = -20, laser = -20)
+			emped = 1
+			sleep(50) //5 seconds of being blind and weak
+			to_chat(loc, "<span class='warning'>Helmet power reroute successful. All systems operational.</span>")
+			tint -= 2
+			if(iscarbon(loc))
+				var/mob/living/carbon/C = loc
+				C.head_update(src, forced = 1)
+			armor = armor.modifyRating(melee = 20, bullet = 20, laser = 20)
+			emped = 0
 
 /obj/item/clothing/head/helmet/power_armor/t45b
 	name = "salvaged T-45b helmet"
@@ -727,7 +751,7 @@
 
 /obj/item/clothing/head/helmet/power_armor/t51b
 	name = "T-51b power helmet"
-	desc = "It's a t51b power helmet, typically used by the Brotherhood. It looks somewhat charming."
+	desc = "It's a T-51b power helmet, typically used by the Brotherhood. It looks somewhat charming."
 	icon_state = "t51bhelmet"
 	item_state = "t51bhelmet"
 	armor = list("melee" = 80, "bullet" = 70, "laser" = 50, "energy" = 70, "bomb" = 62, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 0)

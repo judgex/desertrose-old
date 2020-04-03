@@ -299,6 +299,7 @@ GLOBAL_LIST_INIT(cloth_recipes, list ( \
 	new/datum/stack_recipe("softcap", /obj/item/clothing/head/soft/mime, 2), \
 	new/datum/stack_recipe("beanie", /obj/item/clothing/head/beanie, 2), \
 	new/datum/stack_recipe("armband", /obj/item/clothing/accessory/armband/white, 1), \
+	new/datum/stack_recipe("black beret", /obj/item/clothing/head/HoS/beret/syndicate, 4), \
 	null, \
 	new/datum/stack_recipe("blindfold", /obj/item/clothing/glasses/sunglasses/blindfold, 2), \
 	new/datum/stack_recipe("muzzle", /obj/item/clothing/mask/muzzle, 2), \

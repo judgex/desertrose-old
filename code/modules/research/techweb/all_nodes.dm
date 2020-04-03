@@ -27,7 +27,7 @@
 	display_name = "Advanced Biotechnology"
 	description = "Advanced Biotechnology"
 	prereq_ids = list("biotech")
-	design_ids = list("piercesyringe", "smoke_machine", "limbgrower", "defibrillator", "meta_beaker", "virusmaker")
+	design_ids = list("piercesyringe", "smoke_machine", "limbgrower", "defibrillator", "meta_beaker", "virusmaker", "medbeam")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 	export_price = 5000
 
@@ -55,7 +55,7 @@
 	display_name = "Experimental Surgery"
 	description = "When evolution isn't fast enough."
 	prereq_ids = list("adv_surgery")
-	design_ids = list("surgery_pacify","surgery_vein_thread","surgery_nerve_splice","surgery_nerve_ground","surgery_viral_bond")
+	design_ids = list("surgery_revival", "surgery_pacify","surgery_vein_thread","surgery_nerve_splice","surgery_nerve_ground","surgery_viral_bond", "autosurgeon")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 5000)
 	export_price = 5000
 

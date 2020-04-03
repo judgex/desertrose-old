@@ -34,9 +34,9 @@
 	var/creator // circuit creator if any
 	var/static/next_assembly_id = 0
 	hud_possible = list(DIAG_STAT_HUD, DIAG_BATT_HUD, DIAG_TRACK_HUD, DIAG_CIRCUIT_HUD) //diagnostic hud overlays
-	max_integrity = 50
+	max_integrity = 40 //one decent .308 shot
 	pass_flags = 0
-	armor = list("melee" = 50, "bullet" = 70, "laser" = 70, "energy" = 100, "bomb" = 10, "bio" = 100, "rad" = 100, "fire" = 0, "acid" = 0)
+	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 100, "rad" = 100, "fire" = 0, "acid" = 0)
 	anchored = FALSE
 	var/can_anchor = TRUE
 	var/detail_color = COLOR_ASSEMBLY_BLACK
