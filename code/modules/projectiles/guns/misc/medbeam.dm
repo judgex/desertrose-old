@@ -1,6 +1,6 @@
 /obj/item/gun/medbeam
 	name = "medical beamgun"
-	desc = "Don't cross the streams!"
+	desc = "A rather advanced gun that can be used to heal something it targets, crossing the streams or not actively holding it will cause loss of control and deactive this tool."
 	icon = 'icons/obj/chronos.dmi'
 	icon_state = "chronogun"
 	item_state = "chronogun"
@@ -75,6 +75,12 @@
 
 	last_check = world.time
 
+	if(istype(source, /mob/living/carbon/human))
+		var/mob/living/carbon/human/user = loc
+		if(user.get_active_held_item() != src) //Can't use the medbeam if your active select hand doesn't contain it
+			LoseTarget()
+			to_chat(source, "<span class='warning'>Your grasp on the medbeam loosens when you were no longer focusing on it!!</span>")
+
 	if(get_dist(source, current_target)>max_range || !los_check(source, current_target))
 		LoseTarget()
 		if(isliving(source))
@@ -101,12 +107,9 @@
 		for(var/atom/movable/AM in turf)
 			if(!AM.CanPass(dummy,turf,1))
 				qdel(dummy)
-				return 0/* //removed because abuse
-		for(var/obj/effect/ebeam/medical/B in turf)// Don't cross the str-beams!
-			if(B.owner.origin != current_beam.origin)
-				explosion(B.loc,0,3,5,8)
-				qdel(dummy)
-				return 0*/
+				return 0
+		for(var/obj/effect/ebeam/medical/B in turf) //Crossing the beams now just disables the beam
+			return 0
 	qdel(dummy)
 	return 1
 
