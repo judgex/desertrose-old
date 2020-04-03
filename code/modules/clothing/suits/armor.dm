@@ -701,11 +701,11 @@
 			slowdown += 15
 			armor = armor.modifyRating(melee = -20, bullet = -20, laser = -20)
 			emped = 1
-			sleep(50) //5 seconds of being slow and weak
-			to_chat(loc, "<span class='warning'>Armor power reroute successful. All systems operational.</span>")
-			slowdown -= 15
-			armor = armor.modifyRating(melee = 20, bullet = 20, laser = 20)
-			emped = 0
+			spawn(50) //5 seconds of being slow and weak
+				to_chat(loc, "<span class='warning'>Armor power reroute successful. All systems operational.</span>")
+				slowdown -= 15
+				armor = armor.modifyRating(melee = 20, bullet = 20, laser = 20)
+				emped = 0
 
 /obj/item/clothing/suit/armor/f13/power_armor/t45d
 	name = "T-45d power armor"
@@ -734,7 +734,6 @@
 	icon_state = "advpowerarmor1"
 	item_state = "advpowerarmor1"
 	armor = list("melee" = 90, "bullet" = 90, "laser" = 60, "energy" = 75, "bomb" = 72, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 0)
-	equip_delay_self = 50
 
 /obj/item/clothing/suit/armor/f13/power_armor/advanced/mk2
 	name = "advanced power armor mark II"
