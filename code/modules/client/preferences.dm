@@ -130,8 +130,8 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	var/job_enclave_med = 0
 	var/job_enclave_low = 0
 
-		// Want randomjob if preferences already filled - Donkie
-	var/joblessrole = BERANDOMJOB  //defaults to 1 for fewer assistants
+		// Return to lobby if preferences filled
+	var/joblessrole = RETURNTOLOBBY
 
 	// 0 = character settings, 1 = game preferences
 	var/current_tab = 0
@@ -785,9 +785,9 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 		HTML += "</td'></tr></table>"
 		HTML += "</center></table>"
 
-		var/message = "Be an [SSjob.overflow_role] if preferences unavailable"
+		var/message = "Be a [SSjob.overflow_role] if preferences unavailable"
 		if(joblessrole == BERANDOMJOB)
-			message = "Get random job if preferences unavailable"
+			message = "Return to lobby if preferences unavailable" //Random job disabled
 		else if(joblessrole == RETURNTOLOBBY)
 			message = "Return to lobby if preferences unavailable"
 		HTML += "<center><br><a href='?_src_=prefs;preference=job;task=random'>[message]</a></center>"
@@ -1236,11 +1236,11 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				switch(joblessrole)
 					if(RETURNTOLOBBY)
 						if(jobban_isbanned(user, SSjob.overflow_role))
-							joblessrole = BERANDOMJOB
+							joblessrole = RETURNTOLOBBY
 						else
 							joblessrole = BEOVERFLOW
 					if(BEOVERFLOW)
-						joblessrole = BERANDOMJOB
+						joblessrole = RETURNTOLOBBY
 					if(BERANDOMJOB)
 						joblessrole = RETURNTOLOBBY
 				SetChoices(user)

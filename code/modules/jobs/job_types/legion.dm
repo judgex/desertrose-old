@@ -277,6 +277,7 @@ Vexillarius
 	name = "Legion Vexillarius"
 	jobtype = /datum/job/CaesarsLegion/Legionnaire/f13vexillarius
 	id = 			/obj/item/card/id/dogtag/legveteran
+	mask =			/obj/item/clothing/mask/bandana/legvet
 	suit = 			/obj/item/clothing/suit/armor/f13/legion/vet/vexil
 	head = 			/obj/item/clothing/head/helmet/f13/legion/vet/vexil
 	glasses = 		/obj/item/clothing/glasses/sunglasses/big
@@ -318,6 +319,7 @@ Legionary
 	name = "Legionary"
 	jobtype = /datum/job/CaesarsLegion/Legionnaire/f13legionary
 	id = 			/obj/item/card/id/dogtag/legveteran
+	mask =			/obj/item/clothing/mask/bandana/legvet
 	suit = 			/obj/item/clothing/suit/armor/f13/legion/vet
 	head = 			/obj/item/clothing/head/helmet/f13/legion/vet
 	glasses = 		/obj/item/clothing/glasses/sunglasses

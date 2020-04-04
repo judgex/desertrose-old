@@ -41,11 +41,11 @@
 
 /obj/item/projectile/bullet/a50MG
 	damage = 60
-	armour_penetration = 20
+	armour_penetration = 60
 
 /obj/item/projectile/bullet/a50MG/incendiary
 	damage = 40
-	armour_penetration = 0
+	armour_penetration = 20
 	var/fire_stacks = 4
 
 /obj/item/projectile/bullet/a50MG/incendiary/on_hit(atom/target, blocked = FALSE)

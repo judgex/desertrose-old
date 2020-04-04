@@ -297,7 +297,7 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 			return 0
 		if(!ignore_spam && client.handle_spam_prevention(message,MUTE_IC))
 			return 0
-	var/static/regex/slurs = regex("nigg|fag|tranny|dyke|kike|spic|pedo|loli|shota", "i")
+	var/static/regex/slurs = regex("nigg|fag|tranny|dyke|kike|pedo|loli|shota", "i")
 	if(findtext(message, slurs))
 		//to_chat(src, "<B>Slurs are not allowed on Desert Rose.</B>")
 		log_admin("[key_name(client)] has triggered the slur filter in IC (say): [message]")
