@@ -9,7 +9,7 @@
 	w_class = WEIGHT_CLASS_SMALL
 	var/obj/item/organ/storedorgan
 	var/organ_type = /obj/item/organ
-	var/uses = INFINITE
+	var/uses = 1
 	var/starting_organ
 
 /obj/item/autosurgeon/Initialize(mapload)
@@ -22,7 +22,7 @@
 	I.forceMove(src)
 	name = "[initial(name)] ([storedorgan.name])"
 
-/obj/item/autosurgeon/attack_self(mob/user)//when the object it used...
+/obj/item/autosurgeon/attack_self(mob/living/carbon/user)//when the object it used...
 	if(!uses)
 		to_chat(user, "<span class='warning'>[src] has already been used. The tools are dull and won't reactivate.</span>")
 		return
@@ -30,14 +30,16 @@
 		to_chat(user, "<span class='notice'>[src] currently has no implant stored.</span>")
 		return
 	storedorgan.Insert(user)//insert stored organ into the user
-	user.visible_message("<span class='notice'>[user] presses a button on [src], and you hear a short mechanical noise.</span>", "<span class='notice'>You feel a sharp sting as [src] plunges into your body.</span>")
+	user.visible_message("<span class='notice'>[user] presses a button on [src], and you hear a short mechanical noise.</span>", "<span class='warning'>You feel a brutally sharp pain as [src] plunges into your body!</span>")
 	playsound(get_turf(user), 'sound/weapons/circsawhit.ogg', 50, 1)
+	user.adjustBruteLoss(60) //ow, oof, ouch, owie
 	storedorgan = null
 	name = initial(name)
 	if(uses != INFINITE)
 		uses--
 	if(!uses)
-		desc = "[initial(desc)] Looks like it's been used up."
+		to_chat(user, "<span class='notice'>[src] collapses in on itself into a pile of scrap. It can't be used again.</span>")
+		qdel(src)
 
 /obj/item/autosurgeon/attack_self_tk(mob/user)
 	return //stops TK fuckery

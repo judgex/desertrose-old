@@ -387,7 +387,7 @@
 	desc = "A pre-war ceramic and kevlar helmet designed to absorb kinetic impacts and stop projectiles from entering the users skull. Has the words BORN TO KILL written on the outside in chalk."
 	icon_state = "combat_helmet"
 	item_state = "combat_helmet"
-	armor = list("melee" = 45, "bullet" = 30, "laser" = 30, "energy" = 60, "bomb" = 25, "bio" = 60, "rad" = 60, "fire" = 60, "acid" = 0)
+	armor = list("melee" = 40, "bullet" = 45, "laser" = 40, "energy" = 40, "bomb" = 50, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20)
 	strip_delay = 50
 	flags_inv = HIDEEARS|HIDEHAIR
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
@@ -414,7 +414,7 @@
 	desc = "An advanced pre-war titanium plated, ceramic coated, kevlar, padded helmet designed to withstand extreme punishment of all forms."
 	icon_state = "combat_helmet_mk2"
 	item_state = "combat_helmet_mk2"
-	armor = list("melee" = 60, "bullet" = 40, "laser" = 40, "energy" = 40, "bomb" = 39, "bio" = 70, "rad" = 70, "fire" = 70, "acid" = 0)
+	armor = list("melee" = 45, "bullet" = 50, "laser" = 45, "energy" = 40, "bomb" = 39, "bio" = 70, "rad" = 70, "fire" = 70, "acid" = 0)
 
 /obj/item/clothing/head/helmet/f13/combat/mk2/dark
 	name = "reinforced combat helmet"
@@ -425,7 +425,7 @@
 	desc = "An improved combat helmet, seen commonly worn on initiates"
 	icon_state = "brotherhood_helmet"
 	item_state = "brotherhood_helmet"
-	armor = list("melee" = 60, "bullet" = 40, "laser" = 40, "energy" = 40, "bomb" = 39, "bio" = 70, "rad" = 70, "fire" = 70, "acid" = 0)
+	armor = list("melee" = 45, "bullet" = 50, "laser" = 45, "energy" = 40, "bomb" = 39, "bio" = 70, "rad" = 70, "fire" = 70, "acid" = 0)
 
 /obj/item/clothing/head/helmet/f13/combat/enclave
 	name = "enclave combat helmet"
@@ -670,7 +670,8 @@
 	max_heat_protection_temperature = SPACE_HELM_MAX_TEMP_PROTECT
 	ispowerarmor = 1
 	strip_delay = 200
-	slowdown = 0.25
+	equip_delay_self = 20
+	slowdown = 0.1
 	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR|HIDEMASK|HIDEJUMPSUIT
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 	clothing_flags = THICKMATERIAL
@@ -683,17 +684,40 @@
 	darkness_view = 128
 	lighting_alpha = LIGHTING_PLANE_ALPHA_LOWLIGHT_VISION
 	speechspan = SPAN_ROBOT //makes you sound like a robot
+	var/emped = 0
 
 /obj/item/clothing/head/helmet/power_armor/mob_can_equip(mob/user, mob/equipper, slot, disable_warning = 1)
 	var/mob/living/carbon/human/H = user
 	if(src == H.head) //Suit is already equipped
-		return TRUE
+		return ..()
 	if (!H.has_trait(TRAIT_PA_WEAR) && !istype(src, /obj/item/clothing/head/helmet/power_armor/t45b) && slot == SLOT_HEAD)
 		to_chat(user, "<span class='warning'>You don't have the proper training to operate the power armor!</span>")
 		return 0
 	if(slot == SLOT_HEAD)
-		return TRUE
+		return ..()
 	return
+
+/obj/item/clothing/head/helmet/power_armor/emp_act(mob/living/carbon/human/owner, severity)
+	. = ..()
+	if(. & EMP_PROTECT_SELF)
+		return
+	if(emped == 0)
+		if(ismob(loc))
+			to_chat(loc, "<span class='warning'>Warning: electromagnetic surge detected in helmet. Rerouting power to emergency systems.</span>")
+			tint += 2
+			if(istype(loc, /mob/living/carbon))
+				var/mob/living/carbon/M = loc
+				M.update_tint()
+			armor = armor.modifyRating(melee = -20, bullet = -20, laser = -20)
+			emped = 1
+			spawn(50) //5 seconds of being blind and weak
+				to_chat(loc, "<span class='warning'>Helmet power reroute successful. All systems operational.</span>")
+				tint -= 2
+				if(istype(loc, /mob/living/carbon))
+					var/mob/living/carbon/M = loc
+					M.update_tint()
+				armor = armor.modifyRating(melee = 20, bullet = 20, laser = 20)
+				emped = 0
 
 /obj/item/clothing/head/helmet/power_armor/t45b
 	name = "salvaged T-45b helmet"
@@ -709,14 +733,14 @@
 	desc = "It's an advanced power armor Mk I helmet, typically used by the Enclave. It looks somewhat threatening."
 	icon_state = "advhelmet1"
 	item_state = "advhelmet1"
-	armor = list("melee" = 90, "bullet" = 75, "laser" = 60, "energy" = 75, "bomb" = 72, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 0)
+	armor = list("melee" = 90, "bullet" = 90, "laser" = 60, "energy" = 75, "bomb" = 72, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 0)
 
 /obj/item/clothing/head/helmet/power_armor/advanced/mk2
 	name = "advanced power helmet MK2"
 	desc = "It's an improved model of advanced power armor used exclusively by the Enclave military forces, developed after the Great War.<br>Like its older brother, the standard advanced power armor, it's matte black with a menacing appearance, but with a few significant differences - it appears to be composed entirely of lightweight ceramic composites rather than the usual combination of metal and ceramic plates.<br>Additionally, like the T-51b power armor, it includes a recycling system that can convert human waste into drinkable water, and an air conditioning system for it's user's comfort."
 	icon_state = "advhelmet2"
 	item_state = "advhelmet2"
-	armor = list("melee" = 95, "bullet" = 90, "laser" = 70, "energy" = 90, "bomb" = 72, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 0)
+	armor = list("melee" = 95, "bullet" = 95, "laser" = 70, "energy" = 90, "bomb" = 72, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 0)
 
 /obj/item/clothing/head/helmet/power_armor/tesla
 	name = "tesla power helmet"
@@ -727,17 +751,17 @@
 
 /obj/item/clothing/head/helmet/power_armor/t51b
 	name = "T-51b power helmet"
-	desc = "It's a t51b power helmet, typically used by the Brotherhood. It looks somewhat charming."
+	desc = "It's a T-51b power helmet, typically used by the Brotherhood. It looks somewhat charming."
 	icon_state = "t51bhelmet"
 	item_state = "t51bhelmet"
-	armor = list("melee" = 80, "bullet" = 70, "laser" = 50, "energy" = 70, "bomb" = 62, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 0)
+	armor = list("melee" = 90, "bullet" = 85, "laser" = 50, "energy" = 70, "bomb" = 82, "bio" = 100, "rad" = 100, "fire" = 95, "acid" = 0)
 
 /obj/item/clothing/head/helmet/power_armor/t45d
 	name = "T-45d power helmet"
 	desc = "It's an old pre-War power armor helmet. It's pretty hot inside of it."
 	icon_state = "t45dhelmet"
 	item_state = "t45dhelmet"
-	armor = list("melee" = 75, "bullet" = 60, "laser" = 40, "energy" = 60, "bomb" = 62, "bio" = 100, "rad" = 90, "fire" = 90, "acid" = 0)
+	armor = list("melee" = 85, "bullet" = 80, "laser" = 40, "energy" = 60, "bomb" = 62, "bio" = 100, "rad" = 90, "fire" = 90, "acid" = 0)
 	var/brightness_on = 4 //luminosity when the light is on
 	var/on = 0
 	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR

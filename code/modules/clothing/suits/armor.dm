@@ -536,7 +536,7 @@
 	desc = "A superior combat armor set made by the Brotherhood of Steel, standard issue for all initiates."
 	icon_state = "brotherhood_armor"
 	item_state = "brotherhood_armor"
-	armor = list("melee" = 60, "bullet" = 55, "laser" = 50, "energy" = 70, "bomb" = 60, "bio" = 70, "rad" = 70, "fire" = 70, "acid" = 40)
+	armor = list("melee" = 45, "bullet" = 50, "laser" = 45, "energy" = 45, "bomb" = 55, "bio" = 60, "rad" = 15, "fire" = 60, "acid" = 30)
 
 /obj/item/clothing/suit/armor/f13/combat/enclave
 	name = "enclave combat armor"
@@ -641,6 +641,7 @@
 	item_flags = SLOWS_WHILE_IN_HAND
 	clothing_flags = THICKMATERIAL
 	strip_delay = 200
+	equip_delay_self = 50
 	resistance_flags = LAVA_PROOF | FIRE_PROOF | ACID_PROOF
 
 /obj/item/clothing/suit/armor/f13/brokenpa/t45b
@@ -659,15 +660,18 @@
 
 /obj/item/clothing/suit/armor/f13/power_armor
 	w_class = WEIGHT_CLASS_HUGE
-	slowdown = 0.75
-	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
+	slowdown = 0.4 //+0.1 from helmet = total 0.5
+	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
 	cold_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
-	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS
+	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
 	flags_inv = HIDEJUMPSUIT
 	item_flags = SLOWS_WHILE_IN_HAND
 	clothing_flags = THICKMATERIAL
+	equip_delay_self = 50
+	equip_delay_other = 60
 	strip_delay = 200
 	resistance_flags = LAVA_PROOF | FIRE_PROOF | ACID_PROOF
+	var/emped = 0
 
 /obj/item/clothing/suit/armor/f13/power_armor/mob_can_equip(mob/user, mob/equipper, slot, disable_warning = 1)
 	var/mob/living/carbon/human/H = user
@@ -679,7 +683,7 @@
 	if(slot == SLOT_WEAR_SUIT)
 		H.add_trait(TRAIT_STUNIMMUNE)
 		H.add_trait(TRAIT_PUSHIMMUNE)
-		return TRUE
+		return ..()
 
 /obj/item/clothing/suit/armor/f13/power_armor/dropped(mob/user)
 	var/mob/living/carbon/human/H = user
@@ -687,33 +691,49 @@
 	H.remove_trait(TRAIT_PUSHIMMUNE)
 	return ..()
 
+/obj/item/clothing/suit/armor/f13/power_armor/emp_act(mob/living/carbon/human/owner, severity)
+	. = ..()
+	if(. & EMP_PROTECT_SELF)
+		return
+	if(emped == 0)
+		if(ismob(loc))
+			to_chat(loc, "<span class='warning'>Warning: electromagnetic surge detected in armor. Rerouting power to emergency systems.</span>")
+			slowdown += 15
+			armor = armor.modifyRating(melee = -20, bullet = -20, laser = -20)
+			emped = 1
+			spawn(50) //5 seconds of being slow and weak
+				to_chat(loc, "<span class='warning'>Armor power reroute successful. All systems operational.</span>")
+				slowdown -= 15
+				armor = armor.modifyRating(melee = 20, bullet = 20, laser = 20)
+				emped = 0
+
 /obj/item/clothing/suit/armor/f13/power_armor/t45d
 	name = "T-45d power armor"
 	desc = "Originally developed and manufactured for the United States Army by American defense contractor West Tek, the T-45d power armor was the first version of power armor to be successfully deployed in battle."
 	icon_state = "t45dpowerarmor"
 	item_state = "t45dpowerarmor"
-	armor = list("melee" = 75, "bullet" = 60, "laser" = 40, "energy" = 60, "bomb" = 62, "bio" = 100, "rad" = 90, "fire" = 90, "acid" = 0)
+	armor = list("melee" = 85, "bullet" = 80, "laser" = 40, "energy" = 60, "bomb" = 62, "bio" = 100, "rad" = 90, "fire" = 90, "acid" = 0)
 
 /obj/item/clothing/suit/armor/f13/power_armor/t51b
 	name = "T-51b power armor"
 	desc = "The pinnacle of pre-war technology. This suit of power armor provides substantial protection to the wearer."
 	icon_state = "t51bpowerarmor"
 	item_state = "t51bpowerarmor"
-	armor = list("melee" = 80, "bullet" = 70, "laser" = 50, "energy" = 70, "bomb" = 62, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 0)
+	slowdown = 0.15 //+0.1 from helmet = total 0.25
+	armor = list("melee" = 90, "bullet" = 85, "laser" = 50, "energy" = 70, "bomb" = 82, "bio" = 100, "rad" = 100, "fire" = 95, "acid" = 0)
 
 /obj/item/clothing/suit/armor/f13/power_armor/t51b/sierra
 	name = "sierra power armor"
 	desc = "A captured set of T-51b power armor put into use by the NCR, it's been heavily modified and decorated with the head of a bear and intricate gold trimming. A two headed bear is scorched into the breastplate."
 	icon_state = "sierra"
 	item_state = "sierra"
-	armor = list("melee" = 90, "bullet" = 80, "laser" = 70, "energy" = 70, "bomb" = 72, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 0)
 
 /obj/item/clothing/suit/armor/f13/power_armor/advanced
 	name = "advanced power armor"
 	desc = "An advanced suit of armor typically used by the Enclave.<br>It is composed of lightweight metal alloys, reinforced with ceramic castings at key stress points.<br>Additionally, like the T-51b power armor, it includes a recycling system that can convert human waste into drinkable water, and an air conditioning system for it's user's comfort."
 	icon_state = "advpowerarmor1"
 	item_state = "advpowerarmor1"
-	armor = list("melee" = 90, "bullet" = 75, "laser" = 60, "energy" = 75, "bomb" = 72, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 0)
+	armor = list("melee" = 90, "bullet" = 90, "laser" = 60, "energy" = 75, "bomb" = 72, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 0)
 
 /obj/item/clothing/suit/armor/f13/power_armor/advanced/mk2
 	name = "advanced power armor mark II"
@@ -721,7 +741,7 @@
 	icon_state = "advpowerarmor2"
 	item_state = "advpowerarmor2"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
-	armor = list("melee" = 95, "bullet" = 90, "laser" = 70, "energy" = 90, "bomb" = 72, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 0)
+	armor = list("melee" = 95, "bullet" = 95, "laser" = 70, "energy" = 90, "bomb" = 72, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 0)
 
 /obj/item/clothing/suit/armor/f13/power_armor/tesla
 	name = "tesla power armor"

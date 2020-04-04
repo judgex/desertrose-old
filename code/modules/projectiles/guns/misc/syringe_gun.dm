@@ -112,4 +112,5 @@
 	item_state = "shotgun"
 	w_class = 4
 	zoomable = TRUE
-	zoom_amt = 7
+	zoom_amt = 10
+	zoom_out_amt = 13

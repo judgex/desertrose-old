@@ -45,7 +45,7 @@
 			log_admin("[key_name(src)] has attempted to advertise in OOC: [msg]")
 			message_admins("[key_name_admin(src)] has attempted to advertise in OOC: [msg]")
 			return
-		var/static/regex/slurs = regex("nigg|fag|tranny|dyke|kike|spic|pedo|loli|shota", "i")
+		var/static/regex/slurs = regex("nigg|fag|tranny|dyke|kike|pedo|loli|shota", "i")
 		if(findtext(msg, slurs))
 			to_chat(src, "<B>Slurs are not allowed on Desert Rose.</B>")
 			log_admin("[key_name(src)] has triggered the slur filter (OOC): [msg].")
