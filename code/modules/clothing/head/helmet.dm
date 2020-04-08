@@ -427,6 +427,14 @@
 	item_state = "brotherhood_helmet"
 	armor = list("melee" = 45, "bullet" = 50, "laser" = 45, "energy" = 40, "bomb" = 39, "bio" = 70, "rad" = 70, "fire" = 70, "acid" = 0)
 
+/obj/item/clothing/head/helmet/f13/combat/castellan
+	name = "castellan combat helmet"
+	desc = "The specialized combat helmet of the Castellan."
+	icon_state = "castellan_helmet"
+	item_state = "castellan_helmet"
+	armor = list("melee" = 50, "bullet" = 60, "laser" = 45, "energy" = 40, "bomb" = 39, "bio" = 70, "rad" = 70, "fire" = 70, "acid" = 20)
+
+
 /obj/item/clothing/head/helmet/f13/combat/enclave
 	name = "enclave combat helmet"
 	desc = "An intimidating helmet that is issued with it's corresponding suit."

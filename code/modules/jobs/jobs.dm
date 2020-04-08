@@ -1,7 +1,8 @@
 GLOBAL_LIST_INIT(command_positions, list(
     "Elder",
     "Head Scribe",
-    "Paladin",
+    "Paladin-Major",
+    "Castellan",
     "Legion Centurion",
 	"Legion Orator",
     "NCR Captain",
@@ -23,12 +24,13 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 "Chief of Security",
 "Overseer",
 "Elder",
+"Paladin-Major",
+"Castellan",
 "Head Scribe",
 "Paladin",
 "Knight",
 "Scribe",
-"Initiate Knight",
-"Initiate Scribe",
+"Initiate",
 "Legion Centurion",
 "Legion Orator",
 "Legion Decanus",
@@ -57,11 +59,11 @@ GLOBAL_LIST_INIT(antagonist_whitelist_positions, list(
 GLOBAL_LIST_INIT(brotherhood_positions, list(
 	"Elder",
 	"Head Scribe",
+	"Paladin-Major",
 	"Paladin",
 	"Knight",
 	"Scribe",
-	"Initiate Knight",
-	"Initiate Scribe"
+	"Initiate"
 ))
 
 GLOBAL_LIST_INIT(den_positions, list(

@@ -538,6 +538,13 @@
 	item_state = "brotherhood_armor"
 	armor = list("melee" = 45, "bullet" = 50, "laser" = 45, "energy" = 45, "bomb" = 55, "bio" = 60, "rad" = 15, "fire" = 60, "acid" = 30)
 
+/obj/item/clothing/suit/armor/f13/combat/castellan
+	name = "castellan combat armor"
+	desc = "A customized set of combat armor designed for the Castellan."
+	icon_state = "castellan_armor"
+	item_state = "castellan_armor"
+	armor = list("melee" = 50, "bullet" = 60, "laser" = 45, "energy" = 45, "bomb" = 55, "bio" = 60, "rad" = 15, "fire" = 60, "acid" = 30)
+
 /obj/item/clothing/suit/armor/f13/combat/enclave
 	name = "enclave combat armor"
 	desc = "An old set of pre-war combat armor, painted black."
