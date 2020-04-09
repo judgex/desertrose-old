@@ -169,9 +169,9 @@
 	icon_dead = "gib7"
 	health = 200
 	maxHealth = 200
-	melee_damage_lower = 80
-	melee_damage_upper = 80
-	speed = 5
+	melee_damage_lower = 20
+	melee_damage_upper = 30
+	speed = 0
 	attacktext = "grinds their claws on"
 	faction = list("wastebot")
 	loot = list(/obj/effect/decal/cleanable/robot_debris, /obj/item/stack/crafting/electronicparts/three, /obj/item/stock_parts/cell/ammo/mfc)
