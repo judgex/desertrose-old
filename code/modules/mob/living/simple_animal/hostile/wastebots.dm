@@ -160,3 +160,28 @@
 /mob/living/simple_animal/hostile/handy/sentrybot/Aggro()
 	. = ..()
 	summon_backup(15)
+
+/mob/living/simple_animal/hostile/handy/Assaultron
+	name = "assaultron"
+	desc = "A deadly close combat robot developed by RobCo.  Their head laser is absolutely devastating."
+	icon_state = "Assaultron"
+	icon_living = "Assaultron"
+	icon_dead = "gib7"
+	health = 200
+	maxHealth = 200
+	melee_damage_lower = 80
+	melee_damage_upper = 80
+	speed = 5
+	attacktext = "grinds their claws on"
+	faction = list("wastebot")
+	loot = list(/obj/effect/decal/cleanable/robot_debris, /obj/item/stack/crafting/electronicparts/three, /obj/item/stock_parts/cell/ammo/mfc)
+
+// BEGIN_INTERNALS
+// END_INTERNALS
+// BEGIN_FILE_DIR
+#define FILE_DIR .
+// END_FILE_DIR
+// BEGIN_PREFERENCES
+// END_PREFERENCES
+// BEGIN_INCLUDE
+// END_INCLUDE
