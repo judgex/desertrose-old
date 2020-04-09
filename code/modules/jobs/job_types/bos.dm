@@ -90,7 +90,7 @@ Paladin-Major
 
 	loadout_options = list(
 	/datum/outfit/loadout/majorstand, //Tribeam laser and 10mm pistol
-	/datum/outfit/loadout/majorvet, //Gauss rifle and AER7
+	/datum/outfit/loadout/majorvet, //Gauss rifle and AEP7
 	/datum/outfit/loadout/majorshot //Riot shotgun, magnum shot, and antique laser
 	)
 
@@ -124,7 +124,7 @@ Paladin-Major
 	backpack_contents = list(
 		/obj/item/stock_parts/cell/ammo/ec = 2,
 		/obj/item/gun/ballistic/automatic/m72=1,
-		/obj/item/ammo_box/magazine/m2mm=2,
+		/obj/item/ammo_box/magazine/m2mm=1,
 		/obj/item/gun/energy/laser/pistol=1)
 
 /datum/outfit/loadout/majorshot
@@ -157,7 +157,7 @@ Head Scribe
 
 	loadout_options = list(
 	/datum/outfit/loadout/hsstand, //Needler, pen, and medbeam
-	/datum/outfit/loadout/hspract //Syringe gun and hypospray
+	/datum/outfit/loadout/hspract //AEP7 and hypospray
 	)
 
 	outfit = /datum/outfit/job/bos/f13headscribe
@@ -189,7 +189,7 @@ Head Scribe
 /datum/outfit/loadout/hspract
 	name = "Medicinal Expert"
 	backpack_contents = list(
-		/obj/item/gun/syringe/rapidsyringe=1,
+		/obj/item/gun/energy/laser/pistol=1,
 		/obj/item/reagent_containers/hypospray/CMO=1
 		)
 
@@ -213,9 +213,9 @@ Castellan
 	exp_requirements = 600
 
 	loadout_options = list(
-	/datum/outfit/loadout/caststand, //Assault Carbine and AEP7
+	/datum/outfit/loadout/caststand, //AER9 and 10mm pistol
 	/datum/outfit/loadout/castsap, //glock86a and 2 blocks of c4
-	/datum/outfit/loadout/castsup //Tommygun and AEP7
+	/datum/outfit/loadout/castsup //Carbine and AEP7
 	)
 
 	outfit = /datum/outfit/job/bos/f13castellan
@@ -244,26 +244,26 @@ Castellan
 /datum/outfit/loadout/caststand
 	name = "Castellan Standard"
 	backpack_contents = list(
-		/obj/item/gun/ballistic/automatic/assault_carbine=1,
-		/obj/item/ammo_box/magazine/m556/rifle/assault=2,
-		/obj/item/stock_parts/cell/ammo/ec=2,
-		/obj/item/gun/energy/laser/pistol=1
+		/obj/item/gun/energy/laser/aer9=1,
+		/obj/item/gun/ballistic/automatic/pistol/n99=1,
+		/obj/item/stock_parts/cell/ammo/mfc=2,
+		/obj/item/ammo_box/magazine/m10mm_adv=2
 		)
 
 /datum/outfit/loadout/castsap
 	name = "Castellan Sapper"
 	backpack_contents = list(
-		/obj/item/gun/energy/laser/plasma/glock/extended=1,
-		/obj/item/grenade/plastic/c4=3
+		/obj/item/gun/energy/laser/plasma/glock=1,
+		/obj/item/grenade/plastic/c4=2
 		)
 
 /datum/outfit/loadout/castsup
-	name = "Castellan Support"
+	name = "Castellan Alternate"
 	backpack_contents = list(
-		/obj/item/gun/ballistic/automatic/tommygun=1,
-		/obj/item/ammo_box/magazine/tommygunm45=2,
-		/obj/item/gun/energy/laser/pistol=1,
-		/obj/item/stock_parts/cell/ammo/ec=2
+		/obj/item/gun/ballistic/automatic/assault_carbine=1,
+		/obj/item/ammo_box/magazine/m556/rifle/assault=2,
+		/obj/item/stock_parts/cell/ammo/ec=2,
+		/obj/item/gun/energy/laser/pistol=1
 		)
 /*
 Paladin
@@ -284,7 +284,7 @@ Paladin
 
 	loadout_options = list(
 	/datum/outfit/loadout/paladine, //AER9 and n99
-	/datum/outfit/loadout/paladinb, //Assault Rifle and AEP7
+	/datum/outfit/loadout/paladinb, //Carbine and AEP7
 	)
 
 	outfit = /datum/outfit/job/bos/f13paladin
@@ -320,7 +320,7 @@ Paladin
 /datum/outfit/loadout/paladinb
 	name = "Paladin Alternate"
 	backpack_contents = list(
-		/obj/item/gun/ballistic/automatic/assault_rifle=1,
+		/obj/item/gun/ballistic/automatic/assault_carbine=1,
 		/obj/item/gun/energy/laser/pistol=1,
 		/obj/item/stock_parts/cell/ammo/ec=2,
 		/obj/item/ammo_box/magazine/m556/rifle/assault=2
@@ -360,7 +360,7 @@ Scribe
 		/obj/item/stock_parts/cell/ammo/ec=2, \
 		/obj/item/kitchen/knife/combat=1, \
 		/obj/item/gun/energy/laser/pistol=1, \
-		/obj/item/reagent_containers/hypospray/medipen/stimpak=4) //super paks not in yet
+		/obj/item/reagent_containers/hypospray/medipen/stimpak=2) //super paks not in yet
 	//PA training not in yet
 
 /*
