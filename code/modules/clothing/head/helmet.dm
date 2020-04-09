@@ -432,7 +432,7 @@
 	desc = "The specialized combat helmet of the Castellan."
 	icon_state = "castellan_helmet"
 	item_state = "castellan_helmet"
-	armor = list("melee" = 50, "bullet" = 60, "laser" = 45, "energy" = 40, "bomb" = 39, "bio" = 70, "rad" = 70, "fire" = 70, "acid" = 20)
+	armor = list("melee" = 50, "bullet" = 55, "laser" = 40, "energy" = 40, "bomb" = 49, "bio" = 70, "rad" = 70, "fire" = 70, "acid" = 20)
 
 
 /obj/item/clothing/head/helmet/f13/combat/enclave
