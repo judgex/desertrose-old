@@ -427,12 +427,12 @@
 	item_state = "brotherhood_helmet"
 	armor = list("melee" = 45, "bullet" = 50, "laser" = 45, "energy" = 40, "bomb" = 39, "bio" = 70, "rad" = 70, "fire" = 70, "acid" = 0)
 
-/obj/item/clothing/head/helmet/f13/combat/castellan
-	name = "castellan combat helmet"
-	desc = "The specialized combat helmet of the Castellan."
-	icon_state = "castellan_helmet"
-	item_state = "castellan_helmet"
-	armor = list("melee" = 50, "bullet" = 55, "laser" = 40, "energy" = 40, "bomb" = 49, "bio" = 70, "rad" = 70, "fire" = 70, "acid" = 20)
+/obj/item/clothing/head/helmet/f13/combat/knightcap
+	name = "knight-captain combat helmet"
+	desc = "The specialized combat helmet of the Knight-Captain."
+	icon_state = "knightcap"
+	item_state = "knightcap"
+	armor = list("melee" = 50, "bullet" = 55, "laser" = 50, "energy" = 40, "bomb" = 49, "bio" = 70, "rad" = 70, "fire" = 70, "acid" = 20)
 
 
 /obj/item/clothing/head/helmet/f13/combat/enclave
@@ -762,14 +762,14 @@
 	desc = "It's a T-51b power helmet, typically used by the Brotherhood. It looks somewhat charming."
 	icon_state = "t51bhelmet"
 	item_state = "t51bhelmet"
-	armor = list("melee" = 80, "bullet" = 80, "laser" = 50, "energy" = 70, "bomb" = 82, "bio" = 100, "rad" = 100, "fire" = 95, "acid" = 0)
+	armor = list("melee" = 85, "bullet" = 80, "laser" = 55, "energy" = 70, "bomb" = 82, "bio" = 100, "rad" = 100, "fire" = 95, "acid" = 0)
 
 /obj/item/clothing/head/helmet/power_armor/t45d
 	name = "T-45d power helmet"
 	desc = "It's an old pre-War power armor helmet. It's pretty hot inside of it."
 	icon_state = "t45dhelmet"
 	item_state = "t45dhelmet"
-	armor = list("melee" = 70, "bullet" = 70, "laser" = 45, "energy" = 60, "bomb" = 62, "bio" = 100, "rad" = 90, "fire" = 90, "acid" = 0)
+	armor = list("melee" = 75, "bullet" = 70, "laser" = 45, "energy" = 60, "bomb" = 62, "bio" = 100, "rad" = 90, "fire" = 90, "acid" = 0)
 	var/brightness_on = 4 //luminosity when the light is on
 	var/on = 0
 	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR

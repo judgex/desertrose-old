@@ -75,11 +75,11 @@
 #define BOS				(1<<5)
 
 #define F13ELDER		(1<<0)
-#define F13PALADINMAJOR	(1<<1)
+#define F13SENTINEL		(1<<1)
 #define F13PALADIN		(1<<2)
-#define F13CASTELLAN	(1<<3)
-#define F13HEADSCRIBE	(1<<4)
-#define F13KNIGHT		(1<<5)
+#define F13KNIGHTCAPTAIN	(1<<3)
+#define F13KNIGHT		(1<<4)
+#define F13HEADSCRIBE	(1<<5)
 #define F13SCRIBE		(1<<6)
 #define F13INITIATE		(1<<7)
 

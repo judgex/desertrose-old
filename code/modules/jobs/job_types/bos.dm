@@ -66,12 +66,12 @@ Elder
 		/obj/item/gun/ballistic/automatic/pistol/n99=1)
 
 /*
-Paladin-Major
+Sentinel
 */
 
-/datum/job/bos/f13paladin_m
-	title = "Paladin-Major"
-	flag = F13PALADINMAJOR
+/datum/job/bos/f13sentinel
+	title = "Sentinel"
+	flag = F13SENTINEL
 	faction = "BOS"
 	head_announce = list("Security")
 	total_positions = 1
@@ -83,57 +83,53 @@ Paladin-Major
 	selection_color = "#7f8c8d"
 	exp_requirements = 1800
 
-	outfit = /datum/outfit/job/bos/f13paladin_m
+	outfit = /datum/outfit/job/bos/f13sentinel
 
 	access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
 	minimal_access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
 
 	loadout_options = list(
-	/datum/outfit/loadout/majorstand, //Tribeam laser and 10mm pistol
-	/datum/outfit/loadout/majorvet, //Gauss rifle and AEP7
-	/datum/outfit/loadout/majorshot //Riot shotgun, magnum shot, and antique laser
+	/datum/outfit/loadout/sentstand, //Tribeam laser and 10mm pistol
+	/datum/outfit/loadout/sentvet, //Gauss rifle and AEP7
+	/datum/outfit/loadout/sentshot //Riot shotgun, magnum shot, and antique laser
 	)
 
 
-/datum/outfit/job/bos/f13paladin_m
-	name = "Paladin-Major"
-	jobtype = /datum/job/bos/f13paladin_m
+/datum/outfit/job/bos/f13sentinel
+	name = "Sentinel"
+	jobtype = /datum/job/bos/f13sentinel
 	pa_wear = TRUE
-	chemwhiz = TRUE
 	suit = 			/obj/item/clothing/suit/armor/f13/power_armor/t51b
 	head = 			/obj/item/clothing/head/helmet/power_armor/t51b
 	mask =			/obj/item/clothing/mask/gas/sechailer/swat
 	backpack_contents = list(
 		/obj/item/kitchen/knife/combat=1)
 
-/datum/job/bos/f13paladin_m/after_spawn(mob/living/carbon/human/H, mob/M)
+/datum/job/bos/f13sentinel/after_spawn(mob/living/carbon/human/H, mob/M)
 	H.add_quirk("Hard Yards")
 	H.add_quirk("Lifegiver")
 	H.add_quirk("Iron Fist")
 
-/datum/outfit/loadout/majorstand
-	name = "Standard Major"
+/datum/outfit/loadout/sentstand
+	name = "Shock Sentinel"
 	l_hand = /obj/item/gun/energy/laser/scatter
 	backpack_contents = list(
 		/obj/item/stock_parts/cell/ammo/mfc=3,
 		/obj/item/gun/ballistic/automatic/pistol/n99=1,
 		/obj/item/ammo_box/magazine/m10mm_adv=2)
 
-/datum/outfit/loadout/majorvet
-	name = "Veteran Major"
+/datum/outfit/loadout/sentvet
+	name = "Veteran Sentinel"
 	backpack_contents = list(
 		/obj/item/stock_parts/cell/ammo/ec = 2,
 		/obj/item/gun/ballistic/automatic/m72=1,
 		/obj/item/ammo_box/magazine/m2mm=1,
 		/obj/item/gun/energy/laser/pistol=1)
 
-/datum/outfit/loadout/majorshot
-	name = "Breacher Major"
+/datum/outfit/loadout/sentshot
+	name = "Figurehead Sentinel"
 	backpack_contents = list(
-		/obj/item/gun/energy/laser/captain=1,
-		/obj/item/gun/ballistic/shotgun/riot=1,
-		/obj/item/storage/box/magnumshot=2)
-
+		/obj/item/gun/energy/laser/captain=1)
 
 
 /*
@@ -195,17 +191,17 @@ Head Scribe
 
 
 /*
-Castellan
+Knight-Captain
 */
 
-/datum/job/bos/f13castellan
-	title = "Castellan"
-	flag = F13CASTELLAN
+/datum/job/bos/f13knightcap
+	title = "Knight-Captain"
+	flag = F13KNIGHTCAPTAIN
 	head_announce = list("Security")
 	faction = "BOS"
 	total_positions = 1
 	spawn_positions = 1
-	description = "You are the Castellan, head of the Knight division in the Chapter. Your knowledge of pre-war materials and engineering is almost unparalleled, and you have basic combat training and experience. You are in charge of the Chapter's engineering Corps, and your Knights. Delegate to them as necessary. As Chief Armorer, you are also in charge of the armory."
+	description = "You are the Knight-Captain, head of the Knight division in the Chapter. Your knowledge of pre-war materials and engineering is almost unparalleled, and you have basic combat training and experience. You are in charge of the Chapter's engineering Corps, and your Knights. Delegate to them as necessary. As Chief Armorer, you are also in charge of the armory."
 	forbids = "The Brotherhood of Steel Forbids: Unethical human experimentation. Violence beyond what is needed to accomplish Brotherhood goals."
 	enforces = "The Brotherhood of Steel Expects: Obeying the Chain That - Binds your direct superior. Collection and safeguarding of technology from the wasteland. Experimentation and research."
 	supervisors = "the elder"
@@ -213,36 +209,37 @@ Castellan
 	exp_requirements = 600
 
 	loadout_options = list(
-	/datum/outfit/loadout/caststand, //AER9 and 10mm pistol
-	/datum/outfit/loadout/castsap, //glock86a and 2 blocks of c4
-	/datum/outfit/loadout/castsup //Carbine and AEP7
+	/datum/outfit/loadout/capstand, //AER9 and 10mm pistol
+	/datum/outfit/loadout/capsap, //glock86a and 2 blocks of c4
+	/datum/outfit/loadout/capalt //Carbine and AEP7
 	)
 
-	outfit = /datum/outfit/job/bos/f13castellan
+	outfit = /datum/outfit/job/bos/f13knightcap
 
 	access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
 	minimal_access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
 
-/datum/outfit/job/bos/f13castellan
-	name = "Castellan"
-	jobtype = /datum/job/bos/f13castellan
+/datum/outfit/job/bos/f13knightcap
+	name = "Knight-Captain"
+	jobtype = /datum/job/bos/f13knightcap
 	pa_wear = TRUE
-	suit = 			/obj/item/clothing/suit/armor/f13/combat/castellan
-	belt = 			/obj/item/storage/belt/military
+	chemwhiz = TRUE
+	suit = 			/obj/item/clothing/suit/armor/f13/combat/knightcap
+	belt = 			/obj/item/storage/belt/military/army
 	mask =			/obj/item/clothing/mask/gas/sechailer/swat
-	head =			/obj/item/clothing/head/helmet/f13/combat/castellan
+	head =			/obj/item/clothing/head/helmet/f13/combat/knightcap
 	backpack_contents = list(
 		/obj/item/kitchen/knife/combat=1, \
 		)
 
 
-/datum/job/bos/f13castellan/after_spawn(mob/living/carbon/human/H, mob/M)
+/datum/job/bos/f13knightcap/after_spawn(mob/living/carbon/human/H, mob/M)
 	H.add_quirk("Hard Yards")
 
 
 
-/datum/outfit/loadout/caststand
-	name = "Castellan Standard"
+/datum/outfit/loadout/capstand
+	name = "Knight-Captain"
 	backpack_contents = list(
 		/obj/item/gun/energy/laser/aer9=1,
 		/obj/item/gun/ballistic/automatic/pistol/n99=1,
@@ -250,15 +247,15 @@ Castellan
 		/obj/item/ammo_box/magazine/m10mm_adv=2
 		)
 
-/datum/outfit/loadout/castsap
-	name = "Castellan Sapper"
+/datum/outfit/loadout/capsap
+	name = "Knight-Captain Sapper"
 	backpack_contents = list(
 		/obj/item/gun/energy/laser/plasma/glock=1,
 		/obj/item/grenade/plastic/c4=2
 		)
 
-/datum/outfit/loadout/castsup
-	name = "Castellan Alternate"
+/datum/outfit/loadout/capalt
+	name = "Knight-Captain Alternate"
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/assault_carbine=1,
 		/obj/item/ammo_box/magazine/m556/rifle/assault=2,
@@ -275,10 +272,10 @@ Paladin
 	faction = "BOS"
 	total_positions = 2
 	spawn_positions = 2
-	description = "You answer directly to the Paladin-Major. You are this Chapter's main line of defense and offense; highly trained in combat and weaponry though with little practical field experience, you are eager to prove your worth to the Brotherhood. Your primary duties are defense and surface operations."
+	description = "You answer directly to the Sentinel. You are this Chapter's main line of defense and offense; highly trained in combat and weaponry though with little practical field experience, you are eager to prove your worth to the Brotherhood. Your primary duties are defense and surface operations."
 	forbids = "The Brotherhood of Steel Forbids: Unethical human experimentation. Violence beyond what is needed to accomplish Brotherhood goals."
 	enforces = "The Brotherhood of Steel Expects: Obeying the Chain That - Binds your direct superior. Collection and safeguarding of technology from the wasteland. Experimentation and research."
-	supervisors = "the Paladin-Major"
+	supervisors = "the Sentinel"
 	selection_color = "#95a5a6"
 	exp_requirements = 900
 
@@ -373,10 +370,10 @@ Knight
 	faction = "BOS"
 	total_positions = 2
 	spawn_positions = 2
-	description = "You report directly to the Castellan. You are the Brotherhood Knight, the veritable lifeblood of your organization. You are a versatile and adaptably trained person: from your primary duties of weapon & armor repair to basic combat, survival and stealth skills, the only thing you lack is proper experience."
+	description = "You report directly to the Knight-Captain. You are the Brotherhood Knight, the veritable lifeblood of your organization. You are a versatile and adaptably trained person: from your primary duties of weapon & armor repair to basic combat, survival and stealth skills, the only thing you lack is proper experience."
 	forbids = "The Brotherhood of Steel Forbids: Unethical human experimentation. Violence beyond what is needed to accomplish Brotherhood goals."
 	enforces = "The Brotherhood of Steel Expects: Obeying the Chain That - Binds your direct superior. Collection and safeguarding of technology from the wasteland. Experimentation and research."
-	supervisors = "the knights"
+	supervisors = "the Knight-Captain"
 	selection_color = "#95a5a6"
 	exp_requirements = 1800
 	exp_type = EXP_TYPE_CREW
