@@ -422,14 +422,14 @@
 
 /obj/item/clothing/head/helmet/f13/combat/brotherhood
 	name = "brotherhood combat helmet"
-	desc = "An improved combat helmet, seen commonly worn on initiates"
+	desc = "An improved combat helmet, employed by the Brotherhood and with the symbol of their order embroidered on the front."
 	icon_state = "brotherhood_helmet"
 	item_state = "brotherhood_helmet"
 	armor = list("melee" = 45, "bullet" = 50, "laser" = 45, "energy" = 40, "bomb" = 39, "bio" = 70, "rad" = 70, "fire" = 70, "acid" = 0)
 
 /obj/item/clothing/head/helmet/f13/combat/knightcap
 	name = "knight-captain combat helmet"
-	desc = "The specialized combat helmet of the Knight-Captain."
+	desc = "The specialized combat helmet of a Knight-Captain in the Brotherhood."
 	icon_state = "knightcap"
 	item_state = "knightcap"
 	armor = list("melee" = 50, "bullet" = 55, "laser" = 50, "energy" = 40, "bomb" = 49, "bio" = 70, "rad" = 70, "fire" = 70, "acid" = 20)

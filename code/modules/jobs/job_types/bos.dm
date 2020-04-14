@@ -19,7 +19,7 @@ Main doors: ACCESS_CAPTAIN 20
 	uniform = /obj/item/clothing/under/f13/recon
 	shoes = /obj/item/clothing/shoes/combat/swat
 	gloves = /obj/item/clothing/gloves/combat
-	belt = /obj/item/storage/belt/military/army
+	belt = /obj/item/storage/belt/military
 	glasses = /obj/item/clothing/glasses/night
 	id = /obj/item/card/id/dogtag
 
@@ -91,7 +91,7 @@ Sentinel
 	loadout_options = list(
 	/datum/outfit/loadout/sentstand, //Tribeam laser and 10mm pistol
 	/datum/outfit/loadout/sentvet, //Gauss rifle and AEP7
-	/datum/outfit/loadout/sentshot //Riot shotgun, magnum shot, and antique laser
+	/datum/outfit/loadout/sentshot //antique laser
 	)
 
 
@@ -100,6 +100,7 @@ Sentinel
 	jobtype = /datum/job/bos/f13sentinel
 	pa_wear = TRUE
 	suit = 			/obj/item/clothing/suit/armor/f13/power_armor/t51b
+	belt =			/obj/item/storage/belt/military/assault
 	head = 			/obj/item/clothing/head/helmet/power_armor/t51b
 	mask =			/obj/item/clothing/mask/gas/sechailer/swat
 	backpack_contents = list(
@@ -123,7 +124,7 @@ Sentinel
 	backpack_contents = list(
 		/obj/item/stock_parts/cell/ammo/ec = 2,
 		/obj/item/gun/ballistic/automatic/m72=1,
-		/obj/item/ammo_box/magazine/m2mm=1,
+		/obj/item/ammo_box/magazine/m2mm=2,
 		/obj/item/gun/energy/laser/pistol=1)
 
 /datum/outfit/loadout/sentshot
@@ -201,7 +202,7 @@ Knight-Captain
 	faction = "BOS"
 	total_positions = 1
 	spawn_positions = 1
-	description = "You are the Knight-Captain, head of the Knight division in the Chapter. Your knowledge of pre-war materials and engineering is almost unparalleled, and you have basic combat training and experience. You are in charge of the Chapter's engineering Corps, and your Knights. Delegate to them as necessary. As Chief Armorer, you are also in charge of the armory."
+	description = "You are the Knight-Captain, head of the Knight division in the Chapter. Your knowledge of pre-war materials and engineering is almost unparalleled, and you have basic combat training and experience. You are in charge of the Chapter's engineering Corps, and your Knights. You are also here to ensure all of your brothers and sisters adhere to the codex as warden of the brig, and master armorer."
 	forbids = "The Brotherhood of Steel Forbids: Unethical human experimentation. Violence beyond what is needed to accomplish Brotherhood goals."
 	enforces = "The Brotherhood of Steel Expects: Obeying the Chain That - Binds your direct superior. Collection and safeguarding of technology from the wasteland. Experimentation and research."
 	supervisors = "the elder"
@@ -224,8 +225,15 @@ Knight-Captain
 	jobtype = /datum/job/bos/f13knightcap
 	pa_wear = TRUE
 	chemwhiz = TRUE
+	gunsmith_one = TRUE
+	gunsmith_two = TRUE
+	gunsmith_three = TRUE
+	gunsmith_four = TRUE
+
+	backpack = 		/obj/item/storage/backpack/satchel/leather
+	uniform = 		/obj/item/clothing/under/syndicate
 	suit = 			/obj/item/clothing/suit/armor/f13/combat/knightcap
-	belt = 			/obj/item/storage/belt/military/army
+	belt = 			/obj/item/storage/belt/security/full
 	mask =			/obj/item/clothing/mask/gas/sechailer/swat
 	head =			/obj/item/clothing/head/helmet/f13/combat/knightcap
 	backpack_contents = list(
@@ -239,7 +247,7 @@ Knight-Captain
 
 
 /datum/outfit/loadout/capstand
-	name = "Knight-Captain"
+	name = "Knight-Captain Lawbringer"
 	backpack_contents = list(
 		/obj/item/gun/energy/laser/aer9=1,
 		/obj/item/gun/ballistic/automatic/pistol/n99=1,
@@ -255,7 +263,7 @@ Knight-Captain
 		)
 
 /datum/outfit/loadout/capalt
-	name = "Knight-Captain Alternate"
+	name = "Knight-Captain Close Support"
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/assault_carbine=1,
 		/obj/item/ammo_box/magazine/m556/rifle/assault=2,
@@ -296,6 +304,7 @@ Paladin
 
 	suit = 			/obj/item/clothing/suit/armor/f13/power_armor/t45d
 	head = 			/obj/item/clothing/head/helmet/power_armor/t45d
+	belt =			/obj/item/storage/belt/military
 	mask =			/obj/item/clothing/mask/gas/sechailer/swat
 	id = 			/obj/item/card/id/dogtag
 	backpack_contents = list(
@@ -349,8 +358,8 @@ Scribe
 	jobtype = /datum/job/bos/f13scribe
 	chemwhiz = TRUE
 	shoes = 		/obj/item/clothing/shoes/combat
+	belt =			/obj/item/storage/belt/utility/full/engi
 	suit = 			/obj/item/clothing/suit/f13/scribe
-	belt = 			/obj/item/storage/belt/utility/full/engi
 	id = 			/obj/item/card/id/dogtag
 	glasses =		/obj/item/clothing/glasses/sunglasses/big
 	backpack_contents = list(
@@ -391,8 +400,6 @@ Knight
 	suit_store =	/obj/item/gun/energy/laser/aer9
 	gunsmith_one = TRUE
 	gunsmith_two = TRUE
-	gunsmith_three = TRUE
-	gunsmith_four = TRUE
 	backpack_contents = list(
 		/obj/item/stock_parts/cell/ammo/mfc=2, \
 		/obj/item/gun/energy/laser/pistol=1, \
@@ -407,10 +414,10 @@ Initiate
 	faction = "BOS"
 	total_positions = 3
 	spawn_positions = 3
-	description = "You are the Brotherhood Initiate. Either recently inducted or born into the Brotherhood, you have recently proven yourself worthy of assignment to the Chapter. You are to assist your superiors and receive training how they deem fit. You are NEVER allowed to leave the bunker without the direct supervision of a superior."
-	forbids = "The Brotherhood of Steel Forbids: Unethical human experimentation. Violence beyond what is needed to accomplish Brotherhood goals."
+	description = "Either recently inducted or born into the Brotherhood, you have since proven yourself worthy of assignment to the Chapter. You are to assist your superiors and receive training how they deem fit. You are NEVER allowed to leave the bunker without the direct supervision of a superior."
+	forbids = "The Brotherhood of Steel Forbids: Unethical human experimentation. Violence beyond what is needed to accomplish Brotherhood goals. Initiates leaving the bunker without supervision."
 	enforces = "The Brotherhood of Steel Expects: Obeying the Chain That - Binds your direct superior. Collection and safeguarding of technology from the wasteland. Experimentation and research."
-	supervisors = "the scribes"
+	supervisors = "the Brotherhood"
 	selection_color = "#95a5a6"
 	exp_requirements = 1800
 	exp_type = EXP_TYPE_CREW
@@ -422,16 +429,15 @@ Initiate
 
 /datum/outfit/job/bos/f13initiate
 	name = "Initiate"
-	jobtype = /datum/job/bos/f13scribe
+	jobtype = /datum/job/bos/f13initiate
 	chemwhiz = TRUE
 	backpack = /obj/item/storage/backpack/explorer
 	ears = 			/obj/item/radio/headset/headset_bos
 	uniform =		/obj/item/clothing/under/f13/recon
-	shoes = 		/obj/item/clothing/shoes/combat/swat
+	shoes = 		/obj/item/clothing/shoes/combat
 	gloves = 		/obj/item/clothing/gloves/combat
 	belt = 			/obj/item/storage/belt/utility/full/engi
-	glasses =		/obj/item/clothing/glasses/sunglasses/big
 	id = 			/obj/item/card/id/dogtag
 	backpack_contents = list(
-		/obj/item/gun/energy/laser/pistol=1, \
+		/obj/item/gun/energy/laser/wattz=1, \
 		/obj/item/stock_parts/cell/ammo/ec=2)

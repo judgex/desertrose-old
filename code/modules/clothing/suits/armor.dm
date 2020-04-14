@@ -533,7 +533,7 @@
 
 /obj/item/clothing/suit/armor/f13/combat/brotherhood
 	name = "brotherhood combat armor"
-	desc = "A superior combat armor set made by the Brotherhood of Steel, standard issue for all initiates."
+	desc = "A superior combat armor set made by the Brotherhood of Steel, standard issue for all Knights."
 	icon_state = "brotherhood_armor"
 	item_state = "brotherhood_armor"
 	armor = list("melee" = 45, "bullet" = 50, "laser" = 45, "energy" = 45, "bomb" = 55, "bio" = 60, "rad" = 15, "fire" = 60, "acid" = 30)
@@ -667,7 +667,7 @@
 
 /obj/item/clothing/suit/armor/f13/power_armor
 	w_class = WEIGHT_CLASS_HUGE
-	slowdown = 0.5 //+0.1 from helmet = total 0.6
+	slowdown = 0.4 //+0.1 from helmet = total 0.5
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
 	cold_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
 	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
@@ -726,7 +726,7 @@
 	desc = "The pinnacle of pre-war technology. This suit of power armor provides substantial protection to the wearer."
 	icon_state = "t51bpowerarmor"
 	item_state = "t51bpowerarmor"
-	slowdown = 0.15 //+0.1 from helmet = total 0.25
+	slowdown = 0.3 //+0.1 from helmet = total 0.4
 	armor = list("melee" = 85, "bullet" = 80, "laser" = 55, "energy" = 70, "bomb" = 82, "bio" = 100, "rad" = 100, "fire" = 95, "acid" = 0)
 
 /obj/item/clothing/suit/armor/f13/power_armor/t51b/sierra
