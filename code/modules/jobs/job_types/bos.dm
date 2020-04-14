@@ -302,7 +302,7 @@ Paladin
 		/obj/item/kitchen/knife/combat=1, \
 		)
 
-/datum/job/bos/f13knight/after_spawn(mob/living/carbon/human/H, mob/M)
+/datum/job/bos/f13paladin/after_spawn(mob/living/carbon/human/H, mob/M)
 	H.add_quirk("Hard Yards")
 
 /datum/outfit/loadout/paladine
