@@ -173,7 +173,7 @@
 	config_entry_value = "http://www.tgstation13.org/wiki"
 
 /datum/config_entry/string/discordurl
-	config_entry_value = "https://discord.gg/rhPpXwy"
+	config_entry_value = "https://discord.gg/NGpP36m"
 
 /datum/config_entry/string/rulesurl
 	config_entry_value = "http://www.tgstation13.org/wiki/Rules"
