@@ -332,6 +332,26 @@
 	icon_state = "warriors"
 	item_state = "warriors"
 
+//Tribals
+
+/obj/item/clothing/under/f13/tribe
+	name = "tribal rags"
+	desc = "Dusty rags decorated with strips of leather and small pieces of turquoise."
+	icon_state = "tribalrags"
+	item_state = "tribalrags"
+
+/obj/item/clothing/under/f13/tribe_chief
+	name = "tribal chief robes"
+	desc = "Well maintained robes adorned with fine leather and polished turquoise."
+	icon_state = "chiefrags"
+	item_state = "chiefrags"
+
+/obj/item/clothing/under/f13/tribe_shaman
+	name = "tribal shaman robes"
+	desc = "Carefully hand wozen cloth robes with heavy turqoise jewelry drapped over top."
+	icon_state = "shamanrags"
+	item_state = "shamanrags"
+
 //Dust Devils
 
 //Boomers

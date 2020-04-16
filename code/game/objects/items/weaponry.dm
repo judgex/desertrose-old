@@ -104,6 +104,17 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	force = 25
 	sharpness = IS_BLUNT
 
+/obj/item/claymore/machete/warclub
+	name = "war club"
+	desc = "A simple carved wooden club with turquoise inlays."
+	icon_state = "warclub"
+	item_state = "warclub"
+	attack_verb = list("mashed", "bashed", "hit", "bludgeoned", "whacked")
+	force = 35
+	throwforce = 25
+	block_chance = 10
+	sharpness = IS_BLUNT
+
 /obj/item/claymore/machete/pipe/tireiron
 	name = "tire iron"
 	desc = "A rusty old tire iron, normally used for loosening nuts from car tires.<br>Though it has a short reach, it has decent damage and a fast swing."

@@ -25,3 +25,11 @@
 	desc = "A dart for use in needler pistols."
 	caliber = "needle"
 	projectile_type = /obj/item/projectile/bullet/needle/ap
+
+/obj/item/ammo_casing/caseless/arrow
+	name = "metal arrow"
+	desc = "A simple arrow with a metal head."
+	caliber = "arrow"
+	projectile_type = /obj/item/projectile/bullet/reusable/arrow
+	icon_state = "arrow"
+	w_class = 3
