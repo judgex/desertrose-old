@@ -593,6 +593,22 @@
 	flags_inv = HIDEJUMPSUIT
 	strip_delay = 40
 
+/obj/item/clothing/suit/armor/f13/tribe_armor
+	name = "light tribal armor"
+	desc = "Light armor made of leather stips and a large, flat piece of turquoise.Armor commonplace among the Wayfinders."
+	icon_state = "tribal_armor"
+	item_state = "tribal_armor"
+	body_parts_covered = CHEST|GROIN|ARMS
+	armor = list("melee" = 45, "bullet" = 30, "laser" = 35, "energy" = 25, "bomb" = 25, "bio" = 70, "rad" = 65, "fire" = 80, "acid" = 100)
+
+/obj/item/clothing/suit/armor/f13/tribe_heavy_armor
+	name = "heavy tribal armor"
+	desc = "Heavy armor make of sturdy leather and pieces of bone. Worn by seasoned veterans within the Wayfinder tribe."
+	icon_state = "heavy_tribal_armor"
+	item_state = "heavy_tribal_armor"
+	armor = list("melee" = 45, "bullet" = 50, "laser" = 45, "energy" = 45, "bomb" = 55, "bio" = 60, "rad" = 15, "fire" = 60, "acid" = 30)
+	flags_inv = HIDEJUMPSUIT
+
 /*
 /obj/item/clothing/suit/armor/f13/bmetalarmor
 	name = "metal armor"

@@ -583,7 +583,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 	name = "Vault Dweller"
 	icon_state = "Vault Dweller"
 
-// Kebab
+// Oasis
 
 /obj/effect/landmark/start/f13/mayor
 	name = "Mayor"
@@ -648,3 +648,17 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 
 /obj/effect/landmark/start/f13/uscolonist
 	name = "US Colonist"
+
+//Tribal
+
+/obj/effect/landmark/start/f13/chief
+	name = "Chief"
+	icon_state = "Chief"
+
+/obj/effect/landmark/start/f13/shaman
+	name = "Shaman"
+	icon_state = "Shaman"
+
+/obj/effect/landmark/start/f13/villager
+	name = "Villager"
+	icon_state = "Villager"

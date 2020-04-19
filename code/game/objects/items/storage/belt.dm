@@ -724,3 +724,27 @@
 	icon_state = "sheath"
 	item_state = "sheath"
 	w_class = WEIGHT_CLASS_BULKY
+
+/obj/item/storage/belt/tribe_quiver
+	name = "tribal quiver"
+	desc = "A simple leather quiver designed for holding arrows."
+	icon_state = "tribal_quiver"
+	item_state = "tribal_quiver"
+
+/obj/item/storage/belt/tribe_quiver/ComponentInitialize()
+	. = ..()
+	GET_COMPONENT(STR, /datum/component/storage)
+	STR.max_items = 8
+	STR.can_hold = typecacheof(list(/obj/item/ammo_casing/caseless/arrow))
+	STR.max_w_class = 3
+	STR.max_combined_w_class = 24
+
+/obj/item/storage/belt/tribe_quiver/PopulateContents()
+	new /obj/item/ammo_casing/caseless/arrow(src)
+	new /obj/item/ammo_casing/caseless/arrow(src)
+	new /obj/item/ammo_casing/caseless/arrow(src)
+	new /obj/item/ammo_casing/caseless/arrow(src)
+	new /obj/item/ammo_casing/caseless/arrow(src)
+	new /obj/item/ammo_casing/caseless/arrow(src)
+	new /obj/item/ammo_casing/caseless/arrow(src)
+	new /obj/item/ammo_casing/caseless/arrow(src)
