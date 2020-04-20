@@ -531,27 +531,29 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 	name = "Head Scribe"
 	icon_state = "Head Scribe"
 
-/obj/effect/landmark/start/f13/paladin
-	name = "Paladin"
+/obj/effect/landmark/start/f13/sentinel
+	name = "Sentinel"
 	icon_state = "Paladin"
 
-/obj/effect/landmark/start/f13/knight
-	name = "Knight"
+/obj/effect/landmark/start/f13/knightcap
+	name = "Knight-Captain"
+	icon_state = "Initiate Knight"
+
+/obj/effect/landmark/start/f13/paladin
+	name = "Paladin"
 	icon_state = "Knight"
 
 /obj/effect/landmark/start/f13/scribe
 	name = "Scribe"
 	icon_state = "Scribe"
 
-/obj/effect/landmark/start/f13/initiateknight
-	name = "Initiate Knight"
+/obj/effect/landmark/start/f13/Knight
+	name = "Knight"
 	icon_state = "Initiate Knight"
-	icon_state = "Knight"
 
-/obj/effect/landmark/start/f13/initiatescribe
-	name = "Initiate Scribe"
-	icon_state = "Initiate Scribe"
-	icon_state = "Scribe"
+/obj/effect/landmark/start/f13/initiate
+	name = "Initiate"
+	icon_state = "Initiate_Scribe"
 
 // Vault
 
@@ -583,7 +585,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 	name = "Vault Dweller"
 	icon_state = "Vault Dweller"
 
-// Oasis
+// Kebab
 
 /obj/effect/landmark/start/f13/mayor
 	name = "Mayor"

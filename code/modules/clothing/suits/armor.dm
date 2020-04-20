@@ -538,6 +538,13 @@
 	item_state = "brotherhood_armor"
 	armor = list("melee" = 45, "bullet" = 50, "laser" = 45, "energy" = 45, "bomb" = 55, "bio" = 60, "rad" = 15, "fire" = 60, "acid" = 30)
 
+/obj/item/clothing/suit/armor/f13/combat/knightcap
+	name = "knight-captain combat armor"
+	desc = "A customized set of combat armor designed for the Knight-Captain."
+	icon_state = "knightcap"
+	item_state = "knightcap"
+	armor = list("melee" = 50, "bullet" = 55, "laser" = 50, "energy" = 45, "bomb" = 60, "bio" = 60, "rad" = 15, "fire" = 60, "acid" = 30)
+
 /obj/item/clothing/suit/armor/f13/combat/enclave
 	name = "enclave combat armor"
 	desc = "An old set of pre-war combat armor, painted black."
