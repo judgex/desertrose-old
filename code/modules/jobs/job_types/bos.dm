@@ -91,7 +91,7 @@ Sentinel
 	loadout_options = list(
 	/datum/outfit/loadout/sentstand, //Tribeam laser and 10mm pistol
 	/datum/outfit/loadout/sentvet, //Gauss rifle and AEP7
-	/datum/outfit/loadout/sentshot //Riot shotgun, magnum shot, and antique laser
+	/datum/outfit/loadout/sentshot //nerfed combat rifle mk2 and laser pistol
 	)
 
 
@@ -100,6 +100,7 @@ Sentinel
 	jobtype = /datum/job/bos/f13sentinel
 	pa_wear = TRUE
 	suit = 			/obj/item/clothing/suit/armor/f13/power_armor/t51b
+	belt =			/obj/item/storage/belt/military/assault
 	head = 			/obj/item/clothing/head/helmet/power_armor/t51b
 	mask =			/obj/item/clothing/mask/gas/sechailer/swat
 	backpack_contents = list(
@@ -127,9 +128,13 @@ Sentinel
 		/obj/item/gun/energy/laser/pistol=1)
 
 /datum/outfit/loadout/sentshot
-	name = "Figurehead Sentinel"
+	name = "Fire Support Sentinel"
 	backpack_contents = list(
-		/obj/item/gun/energy/laser/captain=1)
+		/obj/item/gun/ballistic/automatic/ar=1,
+		/obj/item/ammo_box/magazine/m556=2,
+		/obj/item/gun/energy/laser/pistol=1,
+		/obj/item/stock_parts/cell/ammo/ec=2
+		)
 
 
 /*
@@ -169,7 +174,8 @@ Head Scribe
 	belt = 			/obj/item/storage/belt/utility/full/engi
 	backpack_contents = list(
 		/obj/item/shield/energy=1, \
-		/obj/item/kitchen/knife/combat=1 \
+		/obj/item/kitchen/knife/combat=1, \
+		/obj/item/reagent_containers/hypospray/medipen/stimpak/super=2 \
 		)
 
 
@@ -178,8 +184,7 @@ Head Scribe
 	l_hand = /obj/item/gun/ballistic/revolver/needler
 	backpack_contents = list(
 		/obj/item/ammo_box/needleap=2,
-		/obj/item/pen/fountain/captain=1,
-		/obj/item/gun/medbeam=1,
+		/obj/item/gun/medbeam=1
 		)
 
 /datum/outfit/loadout/hspract
@@ -225,7 +230,8 @@ Knight-Captain
 	pa_wear = TRUE
 	chemwhiz = TRUE
 	suit = 			/obj/item/clothing/suit/armor/f13/combat/knightcap
-	belt = 			/obj/item/storage/belt/military/army
+	uniform =		/obj/item/clothing/under/syndicate
+	belt = 			/obj/item/storage/belt/security/full
 	mask =			/obj/item/clothing/mask/gas/sechailer/swat
 	head =			/obj/item/clothing/head/helmet/f13/combat/knightcap
 	backpack_contents = list(
@@ -248,17 +254,18 @@ Knight-Captain
 		)
 
 /datum/outfit/loadout/capsap
-	name = "Knight-Captain Sapper"
+	name = "Close Support"
 	backpack_contents = list(
 		/obj/item/gun/energy/laser/plasma/glock=1,
-		/obj/item/grenade/plastic/c4=2
+		/obj/item/grenade/plastic/c4=2,
+		/obj/item/stock_parts/cell/ammo/ec=2
 		)
 
 /datum/outfit/loadout/capalt
-	name = "Knight-Captain Alternate"
+	name = "Warden-Defender"
 	backpack_contents = list(
-		/obj/item/gun/ballistic/automatic/assault_carbine=1,
-		/obj/item/ammo_box/magazine/m556/rifle/assault=2,
+		/obj/item/gun/ballistic/shotgun/riot=1,
+		/obj/item/storage/box/lethalshot=2,
 		/obj/item/stock_parts/cell/ammo/ec=2,
 		/obj/item/gun/energy/laser/pistol=1
 		)

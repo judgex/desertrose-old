@@ -109,6 +109,9 @@ Centurion
 
 /datum/job/CaesarsLegion/Legionnaire/f13centurion/after_spawn(mob/living/carbon/human/H, mob/M)
 	H.add_quirk("Hard Yards")
+	H.add_quirk("Lifegiver")
+	H.add_quirk("Iron Fist")
+	H.add_quirk("Big Leagues")
 
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13centurion
@@ -194,8 +197,8 @@ Decanus
 	title = "Legion Decanus"
 	flag = F13DECAN
 	faction = "Legion"
-	total_positions = 2
-	spawn_positions = 2
+	total_positions = 3
+	spawn_positions = 3
 	description = "You answer directly to the Centurion, working with them to organize the Legionaries. You lead the Legionaries, Vexillari and Explorers on patrols, raids and scouting missions on behalf of your Centurion."
 	supervisors = "the Centurion and up"
 	exp_requirements = 2400
@@ -302,8 +305,8 @@ Legionary
 	title = "Legionary"
 	flag = F13LEGIONARY
 	faction = "Legion"
-	total_positions = 4
-	spawn_positions = 4
+	total_positions = 6
+	spawn_positions = 6
 	description = "You answer to the Decani and the Centurion, as well as the Auxilia when in your camp. Acting as a loyal soldier of the Centuria, you have the great honour of serving under Caesar in his quest to unite the scattered tribes of The Mojave. You are a hardened warrior, and have been waging war with the Legion for many years."
 	supervisors = "the Decani and Centurion"
 	exp_requirements = 300
@@ -355,9 +358,9 @@ Recruit Legionary
 	title = "Recruit Legionary"
 	flag = F13RECRUITLEG
 	faction = "Legion"
-	total_positions = 0
-	spawn_positions = 0
-	description = "You answer to the Decani and the Centurion, but are expected to follow orders from more experienced Legionaries and Auxilia when needed. You act as a loyal soldier within the Centuria, despite your relative inexperience."
+	total_positions = 4
+	spawn_positions = 4
+	description = "You have recently come of age or been inducted into Caesar's Legion. You have absolutely no training, and are expected to follow every whim of the Decanii and your Centurion."
 	supervisors = "the Decani and Centurion"
 	exp_requirements = 300
 	exp_type = EXP_TYPE_CREW
@@ -374,15 +377,10 @@ Recruit Legionary
 	mask =			/obj/item/clothing/mask/bandana/legrecruit
 	glasses = 		/obj/item/clothing/glasses/legiongoggles
 	r_pocket =      /obj/item/restraints/handcuffs
-	suit_store = 	/obj/item/gun/ballistic/revolver/colt357
 	backpack_contents = list(
-		/obj/item/restraints/legcuffs/bola=1, \
-		/obj/item/throwing_star/spear, \
 		/obj/item/throwing_star/spear, \
 		/obj/item/throwing_star/spear, \
 		/obj/item/claymore/machete=1, \
-		/obj/item/ammo_box/a357=2, \
-		/obj/item/reagent_containers/pill/patch/healingpowder=2, \
 		/obj/item/flashlight/flare/torch=1,
 		/obj/item/radio)
 

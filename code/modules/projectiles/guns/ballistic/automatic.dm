@@ -222,14 +222,14 @@
 
 /obj/item/gun/ballistic/automatic/ar
 	name = "combat rifle mark II"
-	desc = "A robust assault rifle used by most likely advanced fighting forces."
+	desc = "An assault rifle used by American Special Forces towards the end of the war."
 	icon_state = "arg"
 	item_state = "arg"
 	slot_flags = 0
 	mag_type = /obj/item/ammo_box/magazine/m556
 	fire_sound = 'sound/weapons/gunshot_smg.ogg'
 	can_suppress = FALSE
-	burst_size = 3
+	burst_size = 2
 	fire_delay = 1
 	pin = /obj/item/firing_pin
 

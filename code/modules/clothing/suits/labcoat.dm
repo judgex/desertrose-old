@@ -47,3 +47,8 @@
 	name = "scientist labcoat"
 	desc = "A suit that protects against minor chemical spills. Has a purple stripe on the shoulder."
 	icon_state = "labcoat_tox"
+
+/obj/item/clothing/suit/toggle/labcoat/fieldscribe
+	name = "fieldscribe suit"
+	desc = "A suit that protects against the weather, and looks stylish, but not much else."
+	icon_state = "fieldscribe"
