@@ -70,6 +70,9 @@ LOAD_LEGACY_RANKS_ONLY
 ## Uncomment the following line to enable the role whitelisting system.  You will also need the table from role_whitelist.sql in the SQL directory.
 USE_ROLE_WHITELIST
 
+## Uncomment the following line to enable the database custom items system.  You will also need the table from custom_items.sql in the SQL directory.
+USE_CUSTOM_ITEMS_FROM_DB
+
 ## Uncomment this to have the job system use the player's account creation date, rather than the when they first joined the server for job timers.
 #USE_ACCOUNT_AGE_FOR_JOBS
 
