@@ -35,6 +35,8 @@ GLOBAL_PROTECT(security_mode)
 		load_whitelist()
 	LoadBans()
 
+	reload_custom_roundstart_items_list()  // From Citadel - custom loadout item loader init point.
+
 	GLOB.timezoneOffset = text2num(time2text(0,"hh")) * 36000
 
 	if(fexists(RESTART_COUNTER_PATH))

@@ -86,6 +86,10 @@ hum/*
 	name = "Afro (Large)"
 	icon_state = "hair_bigafro"
 
+/datum/sprite_accessory/hair/amazon
+	name = "Amazon"
+	icon_state = "amazon"
+
 /datum/sprite_accessory/hair/antenna
 	name = "Ahoge"
 	icon_state = "hair_antenna"
@@ -97,6 +101,10 @@ hum/*
 /datum/sprite_accessory/hair/balding
 	name = "Balding Hair"
 	icon_state = "hair_e"
+
+/datum/sprite_accessory/hair/beachwave
+	name = "Beachwave"
+	icon_state = "beachwave"
 
 /datum/sprite_accessory/hair/bedhead
 	name = "Bedhead"
@@ -477,6 +485,10 @@ hum/*
 	name = "Joestar"
 	icon_state = "hair_joestar"
 
+/datum/sprite_accessory/hair/jessica
+	name = "Jessica"
+	icon_state = "jessica"
+
 /datum/sprite_accessory/hair/kagami
 	name = "Kagami"
 	icon_state = "hair_kagami"
@@ -686,6 +698,7 @@ hum/*
 	name = "Poofy 2"
 	icon_state = "hair_poofy2"
 
+
 /datum/sprite_accessory/hair/quiff
 	name = "Quiff"
 	icon_state = "hair_quiff"
@@ -713,6 +726,10 @@ hum/*
 /datum/sprite_accessory/hair/rowbraid
 	name = "Rows (Braid)"
 	icon_state = "hair_rowbraid"
+
+/datum/sprite_accessory/hair/sabitsuki
+	name = "Sabitsuki"
+	icon_state = "sabitsuki"
 
 /datum/sprite_accessory/hair/scully
 	name = "Scully"

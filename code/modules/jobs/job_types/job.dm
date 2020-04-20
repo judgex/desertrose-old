@@ -78,6 +78,14 @@
 //H is usually a human unless an /equip override transformed it
 /datum/job/proc/after_spawn(mob/living/H, mob/M, latejoin = FALSE)
 	//do actions on H but send messages to M as the key may not have been transferred_yet
+	if(M.ckey)
+		var/list/custom_items = load_custom_items_from_db(M.ckey)
+		if (islist(custom_items))
+			load_custom_items_to_mob_from_db(H, custom_items)
+		if (!islist(custom_items))
+			to_chat(M, SPAN_NOTICE("Non list returned from load_custom_items_from_db"))
+	if(!M.ckey)
+		to_chat(M, SPAN_NOTICE("You had no ckey while trying to load your custom items, please tell an admin."))
 
 
 /datum/job/proc/announce(mob/living/carbon/human/H)

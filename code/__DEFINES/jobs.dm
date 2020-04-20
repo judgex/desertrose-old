@@ -123,6 +123,12 @@
 #define F13USENGINEER	(1<<4)
 #define F13USCOLONIST	(1<<5)
 
+#define TRIBAL			(1<<10)
+
+#define F13CHIEF		(1<<0)
+#define F13SHAMAN		(1<<1)
+#define F13VILLAGER		(1<<2)
+
 #define JOB_AVAILABLE 0
 #define JOB_UNAVAILABLE_GENERIC 1
 #define JOB_UNAVAILABLE_BANNED 2

@@ -18,3 +18,11 @@
 		var/turf/T = get_turf(src)
 		new ammo_type(T)
 		dropped = TRUE
+
+/obj/item/projectile/bullet/reusable/arrow
+    name = "metal arrow"
+    desc = "a simple arrow with a metal head."
+    damage = 40
+    armour_penetration = 5
+    icon_state = "arrow"
+    ammo_type = /obj/item/ammo_casing/caseless/arrow
