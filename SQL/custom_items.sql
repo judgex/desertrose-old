@@ -28,10 +28,13 @@ SET time_zone = "+00:00";
 -- Table structure for table `role_whitelist`
 --
 
-CREATE TABLE `role_whitelist` (
+CREATE TABLE `custom_items` (
   `id` int NOT NULL,
   `ckey` varchar(32) NOT NULL,
-  `whitelist` varchar(50) NOT NULL
+  `charactername` varchar(250) NOT NULL,
+  `rolename` varchar(250) NOT NULL,
+  `itempath` varchar(250) NOT NULL,
+  `description` varchar(250)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -41,7 +44,7 @@ CREATE TABLE `role_whitelist` (
 --
 -- Indexes for table `role_whitelist`
 --
-ALTER TABLE `role_whitelist`
+ALTER TABLE `custom_items`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -51,7 +54,7 @@ ALTER TABLE `role_whitelist`
 --
 -- AUTO_INCREMENT for table `role_whitelist`
 --
-ALTER TABLE `role_whitelist`
+ALTER TABLE `custom_items`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
