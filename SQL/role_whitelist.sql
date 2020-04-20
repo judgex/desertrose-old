@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `role_whitelist` (
-  `id` int(11) NOT NULL,
+  `id` int NOT NULL,
   `ckey` varchar(32) NOT NULL,
   `whitelist` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;

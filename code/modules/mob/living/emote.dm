@@ -429,8 +429,20 @@
 				else
 					alert("Unable to use this emote, must be either hearable or visible.")
 					return
+			var/static/regex/slurs = regex("nigg|fag|tranny|dyke|kike|pedo|loli|shota", "i")
+			if(findtext(custom_emote, slurs))
+				//to_chat(user, "<B>Slurs are not allowed on Desert Rose.</B>")
+				log_admin("[key_name(user)] has triggered the slur filter in IC (emote): [custom_emote]")
+				message_admins("[key_name_admin(user)] has triggered the slur filter in IC (emote): [custom_emote]")
+				//return 0 //Uncomment this (and the to_chat line) if we want to prevent them saying it, rather than just alert us.
 			message = custom_emote
 	else
+		var/static/regex/slurs = regex("nigg|fag|tranny|dyke|kike|pedo|loli|shota", "i")
+		if(findtext(params, slurs))
+			//to_chat(user, "<B>Slurs are not allowed on Desert Rose.</B>")
+			log_admin("[key_name(user)] has triggered the slur filter in IC (emote): [params]")
+			message_admins("[key_name_admin(user)] has triggered the slur filter in IC (emote): [params]")
+			//return 0 //Uncomment this (and the to_chat line) if we want to prevent them saying it, rather than just alert us.
 		message = params
 		if(type_override)
 			emote_type = type_override

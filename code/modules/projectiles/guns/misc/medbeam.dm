@@ -1,6 +1,6 @@
 /obj/item/gun/medbeam
 	name = "medical beamgun"
-	desc = "Don't cross the streams!"
+	desc = "A rather advanced gun that can be used to heal something it targets, albeit at the expense of causing minor blood toxicity. Not actively holding it will cause a loss of control and deactivate this tool."
 	icon = 'icons/obj/chronos.dmi'
 	icon_state = "chronogun"
 	item_state = "chronogun"
@@ -13,8 +13,6 @@
 	var/active = 0
 	var/datum/beam/current_beam = null
 	var/mounted = 0 //Denotes if this is a handheld or mounted version
-
-	weapon_weight = WEAPON_MEDIUM
 
 /obj/item/gun/medbeam/Initialize()
 	. = ..()
@@ -75,6 +73,12 @@
 
 	last_check = world.time
 
+	if(istype(source, /mob/living/carbon/human))
+		var/mob/living/carbon/human/user = loc
+		if(user.get_active_held_item() != src) //Can't use the medbeam if your active select hand doesn't contain it
+			LoseTarget()
+			to_chat(source, "<span class='warning'>Your grasp on the medbeam loosens when you stop actively focusing on it!</span>")
+
 	if(get_dist(source, current_target)>max_range || !los_check(source, current_target))
 		LoseTarget()
 		if(isliving(source))
@@ -101,12 +105,7 @@
 		for(var/atom/movable/AM in turf)
 			if(!AM.CanPass(dummy,turf,1))
 				qdel(dummy)
-				return 0/* //removed because abuse
-		for(var/obj/effect/ebeam/medical/B in turf)// Don't cross the str-beams!
-			if(B.owner.origin != current_beam.origin)
-				explosion(B.loc,0,3,5,8)
-				qdel(dummy)
-				return 0*/
+				return 0
 	qdel(dummy)
 	return 1
 
@@ -114,12 +113,17 @@
 	return
 
 /obj/item/gun/medbeam/proc/on_beam_tick(var/mob/living/target)
-	if(target.health != target.maxHealth)
+	if(target.getBruteLoss() != 0 || target.getFireLoss() != 0 || target.getOxyLoss() == 0) //Converts damage to toxins at a ratio of 4:1
 		new /obj/effect/temp_visual/heal(get_turf(target), "#80F5FF")
-	target.adjustBruteLoss(-4)
-	target.adjustFireLoss(-4)
-	target.adjustToxLoss(-1)
-	target.adjustOxyLoss(-1)
+	if(target.getBruteLoss() != 0)
+		target.adjustBruteLoss(-4)
+		target.adjustToxLoss(1)
+	if(target.getFireLoss() != 0)
+		target.adjustFireLoss(-4)
+		target.adjustToxLoss(1)
+	if(target.getOxyLoss() != 0)
+		target.adjustOxyLoss(-4)
+		target.adjustToxLoss(1)
 	return
 
 /obj/item/gun/medbeam/proc/on_beam_release(var/mob/living/target)

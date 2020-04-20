@@ -105,7 +105,7 @@ Ambassador
 	faction = "NCR"
 	total_positions = 1
 	spawn_positions = 1
-	description = "You are the political and diplomatic attaché to the NCR forces in the area. Though you are not part of the military, and should avoid conflict, you wield great bureaucratic power."
+	description = "You are the political and diplomatic attachÃ© to the NCR forces in the area. Though you are not part of the military, and should avoid conflict, you wield great bureaucratic power."
 	supervisors = "Colonel"
 	req_admin_notify = 1
 	exp_requirements = 900
@@ -138,8 +138,8 @@ Lieutenant
 /datum/job/ncr/f13lieutenant
 	title = "NCR Lieutenant"
 	flag = F13LIEUTENANT
-	total_positions = 3
-	spawn_positions = 3
+	total_positions = 1
+	spawn_positions = 1
 	faction = "NCR"
 	description = "You are the direct superior to the Sergeant and Enlisted, working with the Captain and under special circumstances, Rangers. You plan patrols, training and missions, working in some cases with Rangers in accomplishing objectives otherwise beyond the capabilities of ordinary enlisted personnel."
 	supervisors = "Captain and above"
@@ -191,7 +191,7 @@ Lieutenant
 	suit = /obj/item/clothing/suit/armor/f13/ncrarmor/mantle/reinforced
 	suit_store = /obj/item/gun/ballistic/automatic/assault_carbine
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m556/rifle/assault=2,
+		/obj/item/ammo_box/magazine/m556/rifle=2,
 		/obj/item/book/granter/trait/trekking=1)
 
 /datum/outfit/loadout/ltscout
@@ -209,8 +209,8 @@ Sergeant
 /datum/job/ncr/f13sergeant
 	title = "NCR Sergeant"
 	flag = F13SERGEANT
-	total_positions = 3
-	spawn_positions = 3
+	total_positions = 2
+	spawn_positions = 2
 	faction = "NCR"
 	description = "You are the direct superior to the enlisted troops, working with the chain of command you echo the orders of your superiors and ensure that the enlisted follow them to the letter. Additionally, you are responsible for the wellbeing of the troops and their ongoing training with the NCR."
 	supervisors = "Lieutenants and above"
@@ -262,7 +262,7 @@ Sergeant
 	suit = /obj/item/clothing/suit/armor/f13/ncrarmor/mantle
 	suit_store = /obj/item/gun/ballistic/automatic/marksman/servicerifle/r82
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m556/rifle/assault=2)
+		/obj/item/ammo_box/magazine/m556/rifle=2)
 
 /datum/outfit/loadout/sgtscout
 	name = "Scout Sergeant"
@@ -278,8 +278,8 @@ Specialist
 	title = "NCR Specialist"
 	flag = F13SPECIALIST
 	faction = "NCR"
-	total_positions = 3
-	spawn_positions = 3
+	total_positions = 2
+	spawn_positions = 2
 	description = "You are an experienced enlisted soldier with a high degree of skill in a particular area. You work closely with your squad, taking orders from your Sergeant to achieve the NCR's goals."
 	supervisors = "Sergeants and above"
 	selection_color = "#fff5cc"
@@ -303,9 +303,9 @@ Specialist
 	suit = 			/obj/item/clothing/suit/armor/f13/ncrarmor
 	belt =          /obj/item/storage/belt/military/NCR_Bandolier
 	glasses = 		null
-	suit_store = 	/obj/item/gun/ballistic/automatic/marksman/servicerifle
+	suit_store = 	/obj/item/gun/ballistic/automatic/pistol/ninemil
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m556/rifle=2, \
+		/obj/item/ammo_box/magazine/m9mm=2, \
 		/obj/item/kitchen/knife/combat/survival=1, \
 		/obj/item/reagent_containers/hypospray/medipen/stimpak=1, \
 		/obj/item/stack/medical/gauze=1, \
@@ -345,8 +345,8 @@ Trooper
 	title = "NCR Trooper"
 	flag = F13TROOPER
 	faction = "NCR"
-	total_positions = 12
-	spawn_positions = 12
+	total_positions = 4
+	spawn_positions = 4
 	description = "You answer to everyone above you in the chain of command, taking orders from your Sergeant directly and obeying all commands given by officers such as the Lieutenant and Captain."
 	supervisors = "Corporals and above"
 	selection_color = "#fff5cc"
@@ -393,13 +393,13 @@ Trooper
 Recruit
 */
 /datum/job/ncr/f13recruit
-	title = "NCR Recruit"
+	title = "NCR Assistant"
 	flag = F13RECRUIT
 	faction = "NCR"
-	total_positions = -1
-	spawn_positions = -1
-	description = "You answer to everyone above you in the chain of command, taking orders from your Sergeant directly and obeying all commands given by officers such as the Lieutenant and Captain."
-	supervisors = "Sergeants and above"
+	total_positions = 4
+	spawn_positions = 4
+	description = "You are a noncombatant member of the NCR assigned the vital duty of helping them with cooking, farming, mining, and other menial tasks. You have no authority or formal military training, however, and should avoid combat wherever possible."
+	supervisors = "everyone in the NCR"
 	selection_color = "#fff5cc"
 	exp_requirements = 300
 	exp_type = EXP_TYPE_CREW
@@ -407,23 +407,20 @@ Recruit
 	outfit = /datum/outfit/job/ncr/f13recruit
 
 /datum/outfit/job/ncr/f13recruit
-	name = "NCR Recruit"
+	name = "NCR Assistant"
 	jobtype = /datum/job/ncr/f13recruit
 	id = 			/obj/item/card/id/dogtag/ncrtrooper
 	uniform =  		/obj/item/clothing/under/f13/ncr
 	accessory =     /obj/item/clothing/accessory/ncr/REC
-	suit = 			/obj/item/clothing/suit/armor/f13/ncrarmor
 	ears = 			/obj/item/radio/headset //no NCR comms
+	belt =			/obj/item/pickaxe
 	gloves = null
-	head = 			/obj/item/clothing/head/f13/ncr
 	glasses = 		null
-	suit_store = 	/obj/item/gun/ballistic/automatic/marksman/servicerifle/varmint
-	belt =          /obj/item/storage/belt/military/assault/ncr
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m556/rifle/small=2, \
 		/obj/item/kitchen/knife/combat/survival=1, \
 		/obj/item/reagent_containers/hypospray/medipen/stimpak=1, \
 		/obj/item/stack/medical/gauze=1, \
+		/obj/item/storage/bag/ore = 1,
 		/obj/item/storage/bag/money/small/ncrenlisted)
 
 /*
@@ -496,8 +493,8 @@ Ranger
 	title = "NCR Ranger"
 	flag = F13RANGER
 	faction = "NCR"
-	total_positions = 4
-	spawn_positions = 4
+	total_positions = 2
+	spawn_positions = 2
 	description = "As a Ranger, you perform reconnaissance, seize or destroy assets, and capture or recover designated targets in service to the Republic. Your reason for being sent here is to find and exploit local assets within the Region in order to prepare the area for the Republic's eventual arrival."
 	supervisors = "Veteran Ranger"
 	selection_color = "#fff5cc"
@@ -546,7 +543,7 @@ Ranger
 	name = "Light Ranger"
 	suit_store = /obj/item/gun/ballistic/automatic/assault_carbine
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m556/rifle/assault=2)
+		/obj/item/ammo_box/magazine/m556/rifle=2)
 
 /datum/outfit/loadout/prtrail
 	name = "Trail Ranger"

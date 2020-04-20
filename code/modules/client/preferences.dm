@@ -130,8 +130,12 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	var/job_enclave_med = 0
 	var/job_enclave_low = 0
 
-		// Want randomjob if preferences already filled - Donkie
-	var/joblessrole = BERANDOMJOB  //defaults to 1 for fewer assistants
+	var/job_tribal_high = 0
+	var/job_tribal_med = 0
+	var/job_tribal_low = 0
+
+		// Return to lobby if preferences filled
+	var/joblessrole = RETURNTOLOBBY
 
 	// 0 = character settings, 1 = game preferences
 	var/current_tab = 0
@@ -785,9 +789,9 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 		HTML += "</td'></tr></table>"
 		HTML += "</center></table>"
 
-		var/message = "Be an [SSjob.overflow_role] if preferences unavailable"
+		var/message = "Be a [SSjob.overflow_role] if preferences unavailable"
 		if(joblessrole == BERANDOMJOB)
-			message = "Get random job if preferences unavailable"
+			message = "Return to lobby if preferences unavailable" //Random job disabled
 		else if(joblessrole == RETURNTOLOBBY)
 			message = "Return to lobby if preferences unavailable"
 		HTML += "<center><br><a href='?_src_=prefs;preference=job;task=random'>[message]</a></center>"
@@ -816,6 +820,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 		job_vault_med |= job_vault_high
 		job_wasteland_med |= job_wasteland_high
 		job_enclave_med |= job_enclave_high
+		job_tribal_med |= job_tribal_high
 		job_civilian_high = 0
 		job_engsec_high = 0
 		job_medsci_high = 0
@@ -825,6 +830,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 		job_den_high = 0
 		job_vault_high = 0
 		job_wasteland_high = 0
+		job_enclave_high = 0
 		job_enclave_high = 0
 
 	if (job.department_flag == CIVILIAN)
@@ -971,6 +977,20 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				job_enclave_low |= job.flag
 
 		return 1
+	else if (job.department_flag == TRIBAL)
+		job_tribal_low &= ~job.flag
+		job_tribal_med &= ~job.flag
+		job_tribal_high &= ~job.flag
+
+		switch(level)
+			if (1)
+				job_tribal_high |= job.flag
+			if (2)
+				job_tribal_med |= job.flag
+			if (3)
+				job_tribal_low |= job.flag
+
+		return 1
 	return 0
 
 /datum/preferences/proc/UpdateJobPreference(mob/user, role, desiredLvl)
@@ -1043,6 +1063,9 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	job_enclave_med = 0
 	job_enclave_low = 0
 
+	job_tribal_high = 0
+	job_tribal_med = 0
+	job_tribal_high = 0
 
 /datum/preferences/proc/GetJobDepartment(datum/job/job, level)
 	if(!job || !level)
@@ -1128,6 +1151,14 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					return job_enclave_med
 				if(3)
 					return job_enclave_low
+		if(TRIBAL)
+			switch(level)
+				if(1)
+					return job_tribal_high
+				if(2)
+					return job_tribal_med
+				if(3)
+					return job_tribal_low
 	return 0
 
 /datum/preferences/proc/SetQuirks(mob/user)
@@ -1236,11 +1267,11 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				switch(joblessrole)
 					if(RETURNTOLOBBY)
 						if(jobban_isbanned(user, SSjob.overflow_role))
-							joblessrole = BERANDOMJOB
+							joblessrole = RETURNTOLOBBY
 						else
 							joblessrole = BEOVERFLOW
 					if(BEOVERFLOW)
-						joblessrole = BERANDOMJOB
+						joblessrole = RETURNTOLOBBY
 					if(BERANDOMJOB)
 						joblessrole = RETURNTOLOBBY
 				SetChoices(user)
@@ -1380,7 +1411,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 				if("flavor_text")
 					var/oldtext = features["flavor_text"]
-					var/msg = stripped_multiline_input(usr,"Set the flavor text in your 'examine' verb. This can also be used for OOC notes. \n To delete flavor text, input a space and hit 'OK'.","Flavor Text",html_decode(features["flavor_text"]), MAX_MESSAGE_LEN*2, TRUE) as null|message
+					var/msg = stripped_multiline_input(usr," Set the flavor text in your 'examine' verb. This can also be used for OOC notes. \n Leave blank and hit 'OK' to delete it. Hit 'Cancel' to abort. \n This will not be visible if you wear a mask or helmet that hides your face.","Flavor Text",html_decode(features["flavor_text"]), MAX_MESSAGE_LEN*2, TRUE) as null|message
 					if(msg)
 						msg = copytext(msg, 1, MAX_MESSAGE_LEN*2)
 						features["flavor_text"] = msg

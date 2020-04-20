@@ -1,0 +1,97 @@
+Guide to Coding in Mobs for Desert Rose 2(Fallout 13 Source)
+
+First off when we want to code in mobs we need to generalize what type of mob we want to add and put it in its precise location since the icon locations are based on where you put it, however if you wish to have a seperate type of icon you can designate the path for it specifically and this will be explained later on.
+
+First to find the path of a mob you have never known before and say for example i want to add another type of ghoul, you have to goto objects in dream maker, then you would navigate to living then simple_animals then hostile and then after that you would double click ghoul which will bring up the code for the base ghoul which is located in code\modules\mob\living\simple_animal\hostile\ghoul.dm. The code for the base ghoul would look like this
+
+/mob/living/simple_animal/hostile/ghoul - This path designates exactly where the ghoul will be and the ending of it will be the name that you see in objects
+	name = "feral ghoul" - this is the name that you will see ingame
+	desc = "A ghoul that has lost it's mind and become aggressive." - this is the examine text you will see in game
+	icon = 'icons/mob/wastemobs.dmi' - this is the parent icon location where the ghoul icon is located
+	icon_state = "feralghoul" - this is the icon state in which the ghoul will look like in the object on when you use the map and use it
+	icon_living = "feralghoul" - this is what the mob looks like when its alive
+	icon_dead = "feralghoul_dead" - this is what the mob looks like when its dead or death of the mob takes place
+	mob_biotypes = list(MOB_ORGANIC, MOB_HUMANOID) - this defines that the mob is organic and a humanoid
+	robust_searching = 1 - this defines how often it is searching for nearby characters or anything of the opposing faction
+	turns_per_move = 5 - this is how fast the mob will attack
+	speak_emote = list("growls") - this is visual speeech that players will beable to see
+	emote_see = list("screeches") - this is visual emotes that players will beable to see
+	a_intent = INTENT_HARM - this defines that the mob will always be on harm intent
+	maxHealth = 40 - self explanatory that this is the max ammount of health the mob starts with
+	health = 40 - this is the starting health of the mob
+	speed = 2 - how fast the mob itself moves
+	harm_intent_damage = 15 - see melee damage lower
+	melee_damage_lower = 15 - damage is randomized based on variable including armor and other factors, these variables are placed into a equation then applied, i will go into further detail involving this later
+	melee_damage_upper = 15 - see melee damage lower
+	attacktext = "claws" - this will show ingame that they are attacking another mob with its claws 
+	attack_sound = 'sound/hallucinations/growl1.ogg' - the sound it plays when it attacks another mob
+	atmos_requirements = list("min_oxy" = 5, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 1, "min_co2" = 0, "max_co2" = 5, "min_n2" = 0, "max_n2" = 0) - the atmospheric requirements for this mob to stay alive, indicating that in space it will die
+	unsuitable_atmos_damage = 20 - this is the damage the mob is dealt when its atmos requirements are not met
+	robust_searching = 0
+	gold_core_spawnable = HOSTILE_SPAWN - allows it to be spawned from a spawner
+	faction = list("ghoul") - indicates the faction of the mob
+	decompose = TRUE - indicates that its corpse will decompose after a cetain ammount of time
+	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab/human/ghoul = 2,
+							/obj/item/stack/sheet/animalhide/human = 1,
+							/obj/item/stack/sheet/bone = 1) - the results after you butcher it with a knife
+//	loot = list(/obj/effect/gibspawner/human, /obj/item/stack/f13Cash/random/bottle_cap/low)   // not quite ready for cap drops on ghouls - this proc would be used if drops were allowed from mobs
+
+Now that im done explaining how each and every variable functions and what exactly it does, we will move on to wanting to create a new mob so lets go ahead and start with the beginning pathing
+
+/mob/living/simple_animal/hostile/ghoul/aggressive - this is indicating that it will be a new mob
+
+now lets go ahead to the next section which would be the name and the description, however make sure you tab once to input the indentation, proper indentation is paramount as it can destroy the structure of the entire code if inputted improperly.
+
+/mob/living/simple_animal/hostile/ghoul/aggressive
+	name = "aggressive ghoul" - always do names in lower case otherwise the code will think you are attempting to initiate a process
+	desc = "This mob is extremely hostile".
+	
+
+
+Github and You, A guide to pull requests.
+
+	1. First off before doing anything you should download github desktop from this link https://desktop.github.com/
+
+	2. Now that you have successfully download github desktop you should begin making making a fork which you can do by navigating here https://github.com/judgex/desertrose and pressing fork.
+	
+	3. Once you have successfully created a fork making sure you have navigated to YOUR fork, click "clone or download" and then click "Open in Desktop" this will allow you to clone the source to your computer
+	
+	4. Once you have successfully cloned it and made changes, you open github desktop and click "Fetch Origin" at the top and it will begin to compare your source to your fork and once it determines what is different it will show the compared differences.
+		4a. Once you have decided that it is sufficient, you put the name in "Summary" at the lower left corner above "Description" and then put in description.
+		4b. Once you have completed that you press commit changes.
+		4c. Once you have committed the changed you press push origin, this will push it to your fork.
+	
+	5. Now that you have successfully push your new pr to your fork, we want to push it to corvos fork and to do that, we have to navigate to our fork and in my case it would be at https://github.com/tichys/desertrose.
+	
+	6. Now that you've navigated to your fork you press "Pull Request" and then click "Create a pull request" input all the details of your changes and click "commit pull request"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

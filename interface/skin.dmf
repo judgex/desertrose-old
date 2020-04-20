@@ -169,6 +169,8 @@ window "infowindow"
 		background-color = #411d1e
 		saved-params = "pos;size;is-minimized;is-maximized"
 		is-pane = true
+		outer-size = 656x538
+		inner-size = 640x499
 	elem "info"
 		type = CHILD
 		pos = 0,30
@@ -213,7 +215,7 @@ window "infowindow"
 		saved-params = "is-checked"
 		text = "Wiki"
 		command = "wiki"
-	elem "forum"
+	elem "discord"
 		type = BUTTON
 		pos = 320,4
 		size = 100x20
@@ -223,7 +225,7 @@ window "infowindow"
 		background-color = #411d1e
 		saved-params = "is-checked"
 		text = "Discord"
-		command = "forum"
+		command = "discord"
 	elem "github"
 		type = BUTTON
 		pos = 420,4
@@ -262,6 +264,7 @@ window "outputwindow"
 		can-minimize = false
 		can-resize = false
 		is-pane = true
+		outer-size = 654x494
 	elem "browseroutput"
 		type = BROWSER
 		pos = 0,0
@@ -293,6 +296,8 @@ window "statwindow"
 		background-color = #411d1e
 		saved-params = "pos;size;is-minimized;is-maximized"
 		is-pane = true
+		outer-size = 656x538
+		inner-size = 640x499
 	elem "stat"
 		type = INFO
 		pos = 0,0

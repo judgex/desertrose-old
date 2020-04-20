@@ -87,7 +87,6 @@
 	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
 	amount_per_transfer_from_this = 10
 	volume = 10
-	ignore_flags = 1 //so you can medipen through hardsuits
 	container_type = DRAWABLE
 	flags_1 = null
 	list_reagents = list("epinephrine" = 10)

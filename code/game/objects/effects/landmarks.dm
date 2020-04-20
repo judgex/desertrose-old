@@ -471,7 +471,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 	icon_state = "NCR Trooper"
 
 /obj/effect/landmark/start/f13/ncrrecruit
-	name = "NCR Recruit"
+	name = "NCR Assistant"
 	icon_state = "NCR Recruit"
 
 /obj/effect/landmark/start/f13/ncrveteranranger
@@ -531,27 +531,29 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 	name = "Head Scribe"
 	icon_state = "Head Scribe"
 
-/obj/effect/landmark/start/f13/paladin
-	name = "Paladin"
+/obj/effect/landmark/start/f13/sentinel
+	name = "Sentinel"
 	icon_state = "Paladin"
 
-/obj/effect/landmark/start/f13/knight
-	name = "Knight"
+/obj/effect/landmark/start/f13/knightcap
+	name = "Knight-Captain"
+	icon_state = "Initiate Knight"
+
+/obj/effect/landmark/start/f13/paladin
+	name = "Paladin"
 	icon_state = "Knight"
 
 /obj/effect/landmark/start/f13/scribe
 	name = "Scribe"
 	icon_state = "Scribe"
 
-/obj/effect/landmark/start/f13/initiateknight
-	name = "Initiate Knight"
+/obj/effect/landmark/start/f13/Knight
+	name = "Knight"
 	icon_state = "Initiate Knight"
-	icon_state = "Knight"
 
-/obj/effect/landmark/start/f13/initiatescribe
-	name = "Initiate Scribe"
-	icon_state = "Initiate Scribe"
-	icon_state = "Scribe"
+/obj/effect/landmark/start/f13/initiate
+	name = "Initiate"
+	icon_state = "Initiate_Scribe"
 
 // Vault
 
@@ -648,3 +650,17 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 
 /obj/effect/landmark/start/f13/uscolonist
 	name = "US Colonist"
+
+//Tribal
+
+/obj/effect/landmark/start/f13/chief
+	name = "Chief"
+	icon_state = "Chief"
+
+/obj/effect/landmark/start/f13/shaman
+	name = "Shaman"
+	icon_state = "Shaman"
+
+/obj/effect/landmark/start/f13/villager
+	name = "Villager"
+	icon_state = "Villager"
