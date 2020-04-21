@@ -315,13 +315,13 @@ Legionary
 
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13legionary
 
-/datum/job/CaesarsLegion/Legionnaire/f13centurion/after_spawn(mob/living/carbon/human/H, mob/M)
-	H.add_quirk("Big Leagues")
-
 	loadout_options = list(
 	/datum/outfit/loadout/legassault, //scoped .44 revolver
 	/datum/outfit/loadout/legbreach //lever-action shotgun
 	)
+
+/datum/job/CaesarsLegion/Legionnaire/f13legionary/after_spawn(mob/living/carbon/human/H, mob/M)
+	H.add_quirk("Big Leagues")
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13legionary
 	name = "Legionary"
