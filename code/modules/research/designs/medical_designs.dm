@@ -2,7 +2,7 @@
 ////////////Medical Tools////////////////
 /////////////////////////////////////////
 
-/datum/design/medbeam
+/* /datum/design/medbeam
 	name = "Medbeam Gun"
 	desc = "Heals people from range with targeted nanites."
 	id = "medbeam"
@@ -11,7 +11,7 @@
 	construction_time = 50
 	build_path = /obj/item/gun/medbeam
 	category = list("Misc", "Medical Designs")
-	departmental_flags = DEPARTMENTAL_FLAG_MEDICAL
+	departmental_flags = DEPARTMENTAL_FLAG_MEDICAL */
 
 /datum/design/autosurgeon
 	name = "Autosurgeon"

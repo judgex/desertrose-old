@@ -538,6 +538,13 @@
 	item_state = "brotherhood_armor"
 	armor = list("melee" = 45, "bullet" = 50, "laser" = 45, "energy" = 45, "bomb" = 55, "bio" = 60, "rad" = 15, "fire" = 60, "acid" = 30)
 
+/obj/item/clothing/suit/armor/f13/combat/knightcap
+	name = "knight-captain combat armor"
+	desc = "A customized set of combat armor designed for the Knight-Captain."
+	icon_state = "knightcap"
+	item_state = "knightcap"
+	armor = list("melee" = 50, "bullet" = 55, "laser" = 50, "energy" = 45, "bomb" = 60, "bio" = 60, "rad" = 15, "fire" = 60, "acid" = 30)
+
 /obj/item/clothing/suit/armor/f13/combat/enclave
 	name = "enclave combat armor"
 	desc = "An old set of pre-war combat armor, painted black."
@@ -592,6 +599,22 @@
 	armor = list("melee" = 55, "bullet" = 30, "laser" = 25, "energy" = 25, "bomb" = 25, "bio" = 70, "rad" = 65, "fire" = 80, "acid" = 100)
 	flags_inv = HIDEJUMPSUIT
 	strip_delay = 40
+
+/obj/item/clothing/suit/armor/f13/tribe_armor
+	name = "light tribal armor"
+	desc = "Light armor made of leather stips and a large, flat piece of turquoise.Armor commonplace among the Wayfinders."
+	icon_state = "tribal_armor"
+	item_state = "tribal_armor"
+	body_parts_covered = CHEST|GROIN|ARMS
+	armor = list("melee" = 45, "bullet" = 30, "laser" = 35, "energy" = 25, "bomb" = 25, "bio" = 70, "rad" = 65, "fire" = 80, "acid" = 100)
+
+/obj/item/clothing/suit/armor/f13/tribe_heavy_armor
+	name = "heavy tribal armor"
+	desc = "Heavy armor make of sturdy leather and pieces of bone. Worn by seasoned veterans within the Wayfinder tribe."
+	icon_state = "heavy_tribal_armor"
+	item_state = "heavy_tribal_armor"
+	armor = list("melee" = 45, "bullet" = 50, "laser" = 45, "energy" = 45, "bomb" = 55, "bio" = 60, "rad" = 15, "fire" = 60, "acid" = 30)
+	flags_inv = HIDEJUMPSUIT
 
 /*
 /obj/item/clothing/suit/armor/f13/bmetalarmor

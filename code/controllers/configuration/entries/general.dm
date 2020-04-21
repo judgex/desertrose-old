@@ -153,6 +153,8 @@
 
 /datum/config_entry/flag/use_role_whitelist  //Use role whitelists?
 
+/datum/config_entry/flag/use_custom_items_from_db  //Use custom items from the database?
+
 /datum/config_entry/flag/use_exp_restrictions_heads
 
 /datum/config_entry/number/use_exp_restrictions_heads_hours
@@ -173,7 +175,7 @@
 	config_entry_value = "http://www.tgstation13.org/wiki"
 
 /datum/config_entry/string/discordurl
-	config_entry_value = "https://discord.gg/rhPpXwy"
+	config_entry_value = "https://discord.gg/NGpP36m"
 
 /datum/config_entry/string/rulesurl
 	config_entry_value = "http://www.tgstation13.org/wiki/Rules"
