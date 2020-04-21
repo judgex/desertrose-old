@@ -76,24 +76,3 @@
 	if(!gibbed)
 		visible_message("<span class='danger'>\the [src] shouts something incoherent about brahmins for the last time and stops moving...</span>")
 	..()
-
-/mob/living/simple_animal/hostile/supermutant/rangedmutant
-	desc = "A huge and ugly mutant humanoid.  This one is armed with a poorly maintained hunting rifle."
-	icon = 'icons/fallout/mobs/supermutant.dmi'
-	icon_state = "hulk_ranged_s"
-	icon_living = "hulk_ranged_s"
-	icon_dead = "hulk_ranged_s"
-	ranged = 1
-	maxHealth = 400
-	health = 400
-	retreat_distance = 4
-	minimum_distance = 6
-	projectiletype = /obj/item/projectile/bullet/F13/c308mmBullet
-	projectilesound = 'sound/f13weapons/hunting_rifle.ogg'
-	loot = list(/obj/item/ammo_box/a308)
-
-/mob/living/simple_animal/hostile/supermutant/rangedmutant/death(gibbed)
-	icon = 'icons/fallout/mobs/supermutant_dead.dmi'
-	icon_state = icon_dead
-	anchored = FALSE
-	..()
