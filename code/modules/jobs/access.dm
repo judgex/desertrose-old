@@ -349,13 +349,13 @@
 
 /proc/get_all_jobs()
 	return list("Centurion", "NCR Captain", "Overseer", "Sheriff",
-				"Paladin", "Knight", "Scribe", "Initiate", "Settler",
+				"Sentinel", "Paladin", "Knight-Captain", "Knight", "Head Scribe", "Scribe", "Initiate",
 				"Veteran Decanus", "Vexillarius", "Decanus", "Veteran Legionnaire", "Legionary",
 				"NCR Lieutenant", "NCR Sergeant", "NCR Trooper", "NCR Recruit",
 				"NCR Veteran Ranger", "NCR Patrol Ranger", "NCR Recon Ranger",
 				"NCR Scout", "NCR Scout Sergeant", "NCR Scout Lieutenant",
 				"Chief of Security", "Vault-tec Doctor", "Vault-tec Scientist",
-				"Vault-tec Security", "Vault-tec Engineer", "Vault Dweller",
+				"Vault-tec Security", "Vault-tec Engineer", "Vault Dweller", "Settler",
 				"Wastelander", "Raider", "Great Khan", "Preacher")
 
 /proc/get_all_job_icons() //For all existing HUD icons

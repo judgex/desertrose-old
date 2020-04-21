@@ -138,8 +138,8 @@ Lieutenant
 /datum/job/ncr/f13lieutenant
 	title = "NCR Lieutenant"
 	flag = F13LIEUTENANT
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 2
+	spawn_positions = 2
 	faction = "NCR"
 	description = "You are the direct superior to the Sergeant and Enlisted, working with the Captain and under special circumstances, Rangers. You plan patrols, training and missions, working in some cases with Rangers in accomplishing objectives otherwise beyond the capabilities of ordinary enlisted personnel."
 	supervisors = "Captain and above"
@@ -209,8 +209,8 @@ Sergeant
 /datum/job/ncr/f13sergeant
 	title = "NCR Sergeant"
 	flag = F13SERGEANT
-	total_positions = 2
-	spawn_positions = 2
+	total_positions = 3
+	spawn_positions = 3
 	faction = "NCR"
 	description = "You are the direct superior to the enlisted troops, working with the chain of command you echo the orders of your superiors and ensure that the enlisted follow them to the letter. Additionally, you are responsible for the wellbeing of the troops and their ongoing training with the NCR."
 	supervisors = "Lieutenants and above"
@@ -345,8 +345,8 @@ Trooper
 	title = "NCR Trooper"
 	flag = F13TROOPER
 	faction = "NCR"
-	total_positions = 4
-	spawn_positions = 4
+	total_positions = 5
+	spawn_positions = 5
 	description = "You answer to everyone above you in the chain of command, taking orders from your Sergeant directly and obeying all commands given by officers such as the Lieutenant and Captain."
 	supervisors = "Corporals and above"
 	selection_color = "#fff5cc"
@@ -398,7 +398,7 @@ Recruit
 	faction = "NCR"
 	total_positions = 4
 	spawn_positions = 4
-	description = "You are a noncombatant member of the NCR assigned the vital duty of helping them with cooking, farming, mining, and other menial tasks. You have no authority or formal military training, however, and should avoid combat wherever possible."
+	description = "You are a noncombatant member of the NCR assigned the vital duty of helping them with cooking, farming, mining, and other menial tasks. While you have been to basic training, it was rushed and hardly prepared you for the horrors of war. Your sidearm is to be used in your own defense, only."
 	supervisors = "everyone in the NCR"
 	selection_color = "#fff5cc"
 	exp_requirements = 300
@@ -421,6 +421,7 @@ Recruit
 		/obj/item/reagent_containers/hypospray/medipen/stimpak=1, \
 		/obj/item/stack/medical/gauze=1, \
 		/obj/item/storage/bag/ore = 1,
+		/obj/item/gun/ballistic/automatic/pistol/ninemil=1,
 		/obj/item/storage/bag/money/small/ncrenlisted)
 
 /*
@@ -511,6 +512,8 @@ Ranger
 
 /datum/job/ncr/f13ranger/after_spawn(mob/living/carbon/human/H, mob/M)
 	H.add_quirk("Hard Yards")
+	H.add_quirk("Lifegiver")
+	H.add_quirk("Iron Fist")
 
 
 /datum/outfit/job/ncr/f13ranger
@@ -543,7 +546,7 @@ Ranger
 	name = "Light Ranger"
 	suit_store = /obj/item/gun/ballistic/automatic/assault_carbine
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m556/rifle=2)
+		/obj/item/ammo_box/magazine/m556/rifle/assault=2)
 
 /datum/outfit/loadout/prtrail
 	name = "Trail Ranger"
