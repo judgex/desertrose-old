@@ -213,7 +213,8 @@ Decanus
 
 /datum/job/CaesarsLegion/Legionnaire/f13decan/after_spawn(mob/living/carbon/human/H, mob/M)
 	H.add_quirk("Hard Yards")
-
+	H.add_quirk("Big Leagues")
+	H.add_quirk("Iron Fist")
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13decan
 	name = "Legion Decanus"
@@ -231,6 +232,7 @@ Decanus
 		/obj/item/storage/box/handcuffs=1, \
 		/obj/item/flashlight/flare/torch=1, \
 		/obj/item/key/scollar=1, \
+		/obj/item/claymore/machete/gladius=1, \
 		/obj/item/assembly/signaler/electropack/shockcollar=1, \
 		/obj/item/storage/bag/money/small/legofficers)
 
@@ -243,10 +245,10 @@ Decanus
 
 /datum/outfit/loadout/decanspec
 	name = "Speculatores Decanus"
-	suit_store = /obj/item/gun/ballistic/automatic/marksman
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m556/rifle=2,
-		/obj/item/claymore/machete/gladius=1)
+		/obj/item/gun/ballistic/automatic/assault_carbine=1,
+		/obj/item/ammo_box/magazine/m556/rifle/assault=2
+		)
 
 /datum/outfit/loadout/decanprotec
 	name = "Protector Decanus"
@@ -274,7 +276,7 @@ Vexillarius
 
 /datum/job/CaesarsLegion/Legionnaire/f13vexillarius/after_spawn(mob/living/carbon/human/H, mob/M)
 	H.add_quirk("Hard Yards")
-
+	H.add_quirk("Big Leagues")
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13vexillarius
 	name = "Legion Vexillarius"
@@ -284,14 +286,14 @@ Vexillarius
 	suit = 			/obj/item/clothing/suit/armor/f13/legion/vet/vexil
 	head = 			/obj/item/clothing/head/helmet/f13/legion/vet/vexil
 	glasses = 		/obj/item/clothing/glasses/sunglasses/big
-	suit_store = 	/obj/item/gun/ballistic/shotgun/automatic/hunting/trail/scoped
+	suit_store = 	/obj/item/gun/ballistic/shotgun/automatic/hunting/brush
 	ears = 			/obj/item/radio/headset
 	backpack_contents = list(
 		/obj/item/throwing_star/spear, \
 		/obj/item/throwing_star/spear, \
 		/obj/item/claymore/machete/gladius=1, \
 		/obj/item/reagent_containers/pill/patch/healingpowder=2, \
-		/obj/item/ammo_box/tube/m44=2, \
+		/obj/item/ammo_box/tube/c4570=2, \
 		/obj/item/flashlight/flare/torch=1, \
 		/obj/item/megaphone/cornu=1, \
 		/obj/item/storage/bag/money/small/legenlisted)
@@ -317,6 +319,9 @@ Legionary
 	/datum/outfit/loadout/legassault, //scoped .44 revolver
 	/datum/outfit/loadout/legbreach //lever-action shotgun
 	)
+
+/datum/job/CaesarsLegion/Legionnaire/f13legionary/after_spawn(mob/living/carbon/human/H, mob/M)
+	H.add_quirk("Big Leagues")
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13legionary
 	name = "Legionary"
@@ -377,6 +382,7 @@ Recruit Legionary
 	mask =			/obj/item/clothing/mask/bandana/legrecruit
 	glasses = 		/obj/item/clothing/glasses/legiongoggles
 	r_pocket =      /obj/item/restraints/handcuffs
+	suit_store =	/obj/item/gun/ballistic/revolver/caravan_shotgun
 	backpack_contents = list(
 		/obj/item/throwing_star/spear, \
 		/obj/item/throwing_star/spear, \
