@@ -216,7 +216,7 @@ Knight-Captain
 	loadout_options = list(
 	/datum/outfit/loadout/capstand, //AER9 and 10mm pistol
 	/datum/outfit/loadout/capsap, //glock86a and 2 blocks of c4
-	/datum/outfit/loadout/capalt //Carbine and AEP7
+	/datum/outfit/loadout/capalt //Riot shotgun
 	)
 
 	outfit = /datum/outfit/job/bos/f13knightcap
@@ -429,7 +429,7 @@ Initiate
 
 /datum/outfit/job/bos/f13initiate
 	name = "Initiate"
-	jobtype = /datum/job/bos/f13scribe
+	jobtype = /datum/job/bos/f13initiate
 	chemwhiz = TRUE
 	backpack = /obj/item/storage/backpack/explorer
 	ears = 			/obj/item/radio/headset/headset_bos
