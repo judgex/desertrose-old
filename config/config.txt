@@ -14,7 +14,7 @@ $include antag_rep.txt
 # There are various options which are hard-locked for security reasons.
 
 ## Server name: This appears at the top of the screen in-game and in the BYOND hub. Uncomment and replace 'tgstation' with the name of your choice.
-@SERVERNAME Desert Rose 2
+@SERVERNAME jandostatiion
 ## Napist Note: honestly all the display garbage should be setup to be handled via config, not in their own separate files. cross-ref code/game/world.dm #L245
 
 ## Server SQL name: This is the name used to identify the server to the SQL DB, distinct from SERVERNAME as it must be at most 32 characters.
@@ -33,7 +33,7 @@ HUB
 # USING_DISCORD_OOC
 
 ## Lobby time: This is the amount of time between rounds that players have to setup their characters and be ready.
-LOBBY_COUNTDOWN 160
+LOBBY_COUNTDOWN 100
 ## initialization totaly factored in(TM)
 
 ## Round End Time: This is the amount of time after the round ends that players have to murder death kill each other.
@@ -58,7 +58,7 @@ LOAD_LEGACY_RANKS_ONLY
 #BAN_LEGACY_SYSTEM
 
 ## Comment this out to stop locally connected clients from being given the almost full access !localhost! admin rank
-#ENABLE_LOCALHOST_RANK
+ENABLE_LOCALHOST_RANK
 
 ## Uncomment this entry to have certain jobs require your account to be at least a certain number of days old to select. You can configure the exact age requirement for different jobs by editing
 ## the minimal_player_age variable in the files in folder /code/game/jobs/job/.. for the job you want to edit. Set minimal_player_age to 0 to disable age requirement for that job.
@@ -68,7 +68,7 @@ LOAD_LEGACY_RANKS_ONLY
 #USE_AGE_RESTRICTION_FOR_JOBS
 
 ## Uncomment the following line to enable the role whitelisting system.  You will also need the table from role_whitelist.sql in the SQL directory.
-USE_ROLE_WHITELIST
+# USE_ROLE_WHITELIST
 
 ## Uncomment the following line to enable the database custom items system.  You will also need the table from custom_items.sql in the SQL directory.
 USE_CUSTOM_ITEMS_FROM_DB
