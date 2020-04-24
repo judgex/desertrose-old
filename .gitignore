@@ -11,6 +11,7 @@
 /config/dbconfig.txt
 /config/admins.txt
 /config/comms.txt #shh
+/config/config.txt
 
 #Ignore compiled files and other files generated during compilation.
 *.mdme
