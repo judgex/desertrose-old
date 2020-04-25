@@ -194,6 +194,7 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 		bwoink = TRUE
 		AddInteraction("<font color='blue'>[key_name_admin(usr)] PM'd [LinkedReplyName()]</font>")
 		message_admins("<font color='blue'>Ticket [TicketHref("#[id]")] created</font>")
+		SSredbot.send_discord_message("ahelps", "Ticket #[id] created by [usr.ckey] ([usr.real_name]): [msg]", "ticket")
 	else
 		MessageNoRecipient(msg)
 
@@ -206,6 +207,7 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 
 	if(!is_bwoink)
 		discordsendmsg("ahelp", "**ADMINHELP: [C.key]: ** \"[msg]\" [heard_by_no_admins ? "**(NO ADMINS)**" : "" ]")
+		SSredbot.send_discord_message("ahelps", "Ticket #[id] created by [usr.ckey] ([usr.real_name]): [msg]", "ticket")
 
 	GLOB.ahelp_tickets.active_tickets += src
 
