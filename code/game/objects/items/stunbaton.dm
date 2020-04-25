@@ -12,11 +12,11 @@
 	attack_verb = list("beaten")
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 50, "bio" = 0, "rad" = 0, "fire" = 80, "acid" = 80)
 
-	var/stunforce = 140
+	var/stunforce = 100
 	var/status = 0
 	var/obj/item/stock_parts/cell/cell
-	var/hitcost = 1000
-	var/throw_hit_chance = 35
+	var/hitcost = 2000
+	var/throw_hit_chance = 5
 	var/preload_cell_type //if not empty the baton starts with this type of cell
 
 /obj/item/melee/baton/get_cell()
