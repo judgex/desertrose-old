@@ -422,17 +422,45 @@
 
 /obj/item/clothing/head/helmet/f13/combat/brotherhood
 	name = "brotherhood combat helmet"
-	desc = "An improved combat helmet, seen commonly worn on initiates"
+	desc = "An improved combat helmet, bearing the symbol of the Knights."
 	icon_state = "brotherhood_helmet"
 	item_state = "brotherhood_helmet"
-	armor = list("melee" = 45, "bullet" = 50, "laser" = 45, "energy" = 40, "bomb" = 39, "bio" = 70, "rad" = 70, "fire" = 70, "acid" = 0)
+	armor = list("melee" = 40, "bullet" = 45, "laser" = 40, "energy" = 45, "bomb" = 55, "bio" = 60, "rad" = 15, "fire" = 60, "acid" = 30)
+
+/obj/item/clothing/head/helmet/f13/atomzealot
+	name = "zealot helm"
+	desc = "The helmet of an agent of the Division."
+	icon_state = "atomzealot"
+	item_state = "atomzealot"
+	armor = list("melee" = 30, "bullet" = 35, "laser" = 30, "energy" = 30, "bomb" = 30, "bio" = 70, "rad" = 100, "fire" = 65, "acid" = 30)
+
+/obj/item/clothing/head/helmet/f13/atombeliever
+	name = "believer headdress"
+	desc = "The headwear of the true faith."
+	icon_state = "atombeliever"
+	item_state = "atombeliever"
+	armor = list("melee" = 10, "bullet" = 15, "laser" = 5, "energy" = 5, "bomb" = 20, "bio" = 70, "rad" = 100, "fire" = 20, "acid" = 0)
+
+/obj/item/clothing/head/helmet/f13/deathskull
+	name = "eerie helm"
+	desc = "A helmet fastened from the skull of a deer. Something about it doesn't look right."
+	icon_state = "shamskull"
+	item_state = "shamskull"
+	armor = list("melee" = 15, "bullet" = 20, "laser" = 15, "energy" = 20, "bomb" = 30, "bio" = 20, "rad" = 10, "fire" = 10, "acid" = 0)
+
+/obj/item/clothing/head/helmet/f13/hoodedmask
+	name = "hooded mask"
+	desc = "A gask mask with the addition of a hood."
+	icon_state = "hoddedmask"
+	item_state = "hoodedmask"
+	armor = list("melee" = 20, "bullet" = 20, "laser" = 20, "energy" = 20, "bomb" = 70, "bio" = 70, "rad" = 70, "fire" = 65, "acid" = 30)
 
 /obj/item/clothing/head/helmet/f13/combat/knightcap
 	name = "knight-captain combat helmet"
-	desc = "The specialized combat helmet of the Knight-Captain."
+	desc = "The specialized combat helmet of the Knight-Captain, with a golden crest."
 	icon_state = "knightcap"
 	item_state = "knightcap"
-	armor = list("melee" = 50, "bullet" = 55, "laser" = 50, "energy" = 40, "bomb" = 49, "bio" = 70, "rad" = 70, "fire" = 70, "acid" = 20)
+	armor = list("melee" = 45, "bullet" = 50, "laser" = 45, "energy" = 45, "bomb" = 60, "bio" = 60, "rad" = 15, "fire" = 60, "acid" = 30)
 
 /obj/item/clothing/head/helmet/f13/combat/enclave
 	name = "enclave combat helmet"
@@ -763,14 +791,14 @@
 	desc = "It's a T-51b power helmet, typically used by the Brotherhood. It looks somewhat charming."
 	icon_state = "t51bhelmet"
 	item_state = "t51bhelmet"
-	armor = list("melee" = 85, "bullet" = 80, "laser" = 55, "energy" = 70, "bomb" = 82, "bio" = 100, "rad" = 100, "fire" = 95, "acid" = 0)
+	armor = list("melee" = 90, "bullet" = 80, "laser" = 55, "energy" = 70, "bomb" = 82, "bio" = 100, "rad" = 100, "fire" = 95, "acid" = 0)
 
 /obj/item/clothing/head/helmet/power_armor/t45d
 	name = "T-45d power helmet"
 	desc = "It's an old pre-War power armor helmet. It's pretty hot inside of it."
 	icon_state = "t45dhelmet"
 	item_state = "t45dhelmet"
-	armor = list("melee" = 75, "bullet" = 80, "laser" = 40, "energy" = 60, "bomb" = 62, "bio" = 100, "rad" = 90, "fire" = 90, "acid" = 0)
+	armor = list("melee" = 80, "bullet" = 75, "laser" = 50, "energy" = 60, "bomb" = 62, "bio" = 100, "rad" = 90, "fire" = 90, "acid" = 0)
 	var/brightness_on = 4 //luminosity when the light is on
 	var/on = 0
 	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR

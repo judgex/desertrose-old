@@ -979,3 +979,94 @@
 	resistance_flags = UNACIDABLE
 	body_parts_covered = LEGS
 	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
+
+
+/obj/item/clothing/under/f13/bosform_f
+	name = "female initiate formalwear"
+	desc = "A dry-cleaned and fitted formal uniform of the Brotherhood of Steel, for special occasions. This one has no markings, and looks to be for a feminine person."
+	icon_state = "bosform_f"
+	item_state = "bosform_f"
+	item_color = "bosform_f"
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
+	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
+	can_adjust = 0
+
+/obj/item/clothing/under/f13/bosform_m
+	name = "male initiate formalwear"
+	desc = "A dry-cleaned and fitted formal uniform of the Brotherhood of Steel, for special occasions. This one has no markings, and looks to be for a masculine person."
+	icon_state = "bosform_m"
+	item_state = "bosform_m"
+	item_color = "bosform_m"
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
+	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
+	can_adjust = 0
+
+/obj/item/clothing/under/f13/bosformsilver_f
+	name = "female Brotherhood formalwear"
+	desc = "A dry-cleaned and fitted formal uniform of the Brotherhood of Steel, for special occasions. This one bears a silver chain, and looks to be for a feminine person."
+	icon_state = "bosformsilver_f"
+	item_state = "bosformsilver_f"
+	item_color = "bosformsilver_f"
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
+	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
+	can_adjust = 0
+
+/obj/item/clothing/under/f13/bosformsilver_m
+	name = "male Brotherhood formalwear"
+	desc = "A dry-cleaned and fitted formal uniform of the Brotherhood of Steel, for special occasions. This one bears a silver chain, and looks to be for a masculine person."
+	icon_state = "bosformsilver_m"
+	item_state = "bosformsilver_m"
+	item_color = "bosformsilver_m"
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
+	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
+	can_adjust = 0
+
+/obj/item/clothing/under/f13/bosformgold_f
+	name = "female ranking formalwear"
+	desc = "A dry-cleaned and fitted formal uniform of the Brotherhood of Steel, for special occasions. This one bears a gold chain; denoting authority, and looks to be for a feminine person."
+	icon_state = "bosformgold_f"
+	item_state = "bosformgold_f"
+	item_color = "bosformgold_f"
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
+	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
+	can_adjust = 0
+
+/obj/item/clothing/under/f13/bosformgold_m
+	name = "male ranking formalwear"
+	desc = "A dry-cleaned and fitted formal uniform of the Brotherhood of Steel, for special occasions. This one bears a gold chain; denoting authority, and looks to be for a masculine person."
+	icon_state = "bosformgold_m"
+	item_state = "bosformgold_m"
+	item_color = "bosformgold_m"
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
+	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
+	can_adjust = 0
+
+/obj/item/clothing/under/f13/atomfaithful
+	name = "faithful attire"
+	desc = "The attire worn by those Faithful to the Division."
+	icon_state = "atomfaithful"
+	item_state = "atomfaithful"
+	item_color = "atomfaithful"
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
+	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
+	can_adjust = 0
+
+/obj/item/clothing/under/f13/atomwitchunder
+	name = "seers underclothes"
+	desc = "The underclothes of the female seers of the Division."
+	icon_state = "atomwitchunder"
+	item_state = "atomwitchunder"
+	item_color = "atomwitchunder"
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
+	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
+	can_adjust = 0
+
+/obj/item/clothing/under/f13/atombeliever
+	name = "believer clothes"
+	desc = "The clothes of a true Believer in the Division."
+	icon_state = "atombeliever"
+	item_state = "atombeliever"
+	item_color = "atombeliever"
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
+	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
+	can_adjust = 0
