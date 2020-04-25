@@ -27,10 +27,10 @@ STATIONNAME Mojave Wasteland
 HUB
 
 ## Uncomment and set the config in tools/discord/config.yml to enable sending stuff to discord's webhooks
-# USING_DISCORD
+USING_DISCORD
 
 ## Uncomment to allow users to send discord messages to ooc, requires a bot and a comms_key
-# USING_DISCORD_OOC
+USING_DISCORD_OOC
 
 ## Lobby time: This is the amount of time between rounds that players have to setup their characters and be ready.
 LOBBY_COUNTDOWN 160
@@ -232,7 +232,7 @@ DISCORDURL https://discord.gg/NGpP36m
 WIKIURL https://wiki.fandom.com/wiki/Bad_Deathclaw_Wiki
 
 ## Rules address
-RULESURL https://discord.gg/PS5Genn
+RULESURL https://discord.gg/NGpP36m
 
 
 ## Github address
@@ -320,7 +320,7 @@ SOFT_POPCAP_MESSAGE Be warned that the server is currently serving a high number
 HARD_POPCAP_MESSAGE The server is currently serving a high number of users, You cannot currently join. You may wait for the number of living crew to decline, observe, or find alternative servers.
 
 ## Uncomment for 'extreme' population caps, players will not be allowed to join the server if living crew exceeds the listed number.
-EXTREME_POPCAP 100
+EXTREME_POPCAP 130
 
 ## Message for extreme cap
 EXTREME_POPCAP_MESSAGE Desert Rose is currently population capped while we organize and develop.  Thanks for your interest, please try again soon.
