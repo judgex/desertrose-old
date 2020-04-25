@@ -363,8 +363,8 @@ Recruit Legionary
 	title = "Recruit Legionary"
 	flag = F13RECRUITLEG
 	faction = "Legion"
-	total_positions = 4
-	spawn_positions = 4
+	total_positions = 2
+	spawn_positions = 2
 	description = "You have recently come of age or been inducted into Caesar's Legion. You have absolutely no training, and are expected to follow every whim of the Decanii and your Centurion."
 	supervisors = "the Decani and Centurion"
 	exp_requirements = 300

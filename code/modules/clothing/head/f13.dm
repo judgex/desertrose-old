@@ -46,6 +46,14 @@
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	strip_delay = 20
 
+/obj/item/clothing/head/f13/boscap
+	name = "Brotherhood formal cap"
+	desc = "A cap typically worn with the formal uniform for the local Brotherhood of Steel Chapter."
+	icon_state = "boscap"
+	item_state = "boscap"
+	armor = list("melee" = 10, "bullet" = 15, "laser" = 10, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 20, "acid" = 0)
+	strip_delay = 20
+
 /obj/item/clothing/head/helmet/f13/yankee
 	name = "yankee raider helmet"
 	desc = "A long time ago, this belonged to a football player, now it belongs to the wasteland."

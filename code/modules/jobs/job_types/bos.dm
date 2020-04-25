@@ -364,8 +364,7 @@ Scribe
 		/obj/item/stock_parts/cell/ammo/ec=2, \
 		/obj/item/kitchen/knife/combat=1, \
 		/obj/item/gun/energy/laser/pistol=1, \
-		/obj/item/reagent_containers/hypospray/medipen/stimpak=2) //super paks not in yet
-	//PA training not in yet
+		/obj/item/reagent_containers/hypospray/medipen/stimpak=2)
 
 /*
 Knight
@@ -394,6 +393,8 @@ Knight
 	name = "Knight"
 	jobtype = /datum/job/bos/f13knight
 	suit = 			/obj/item/clothing/suit/armor/f13/combat/brotherhood
+	uniform =		/obj/item/clothing/under/syndicate
+	mask =			/obj/item/clothing/mask/gas/sechailer/swat
 	head = 			/obj/item/clothing/head/helmet/f13/combat/brotherhood
 	suit_store =	/obj/item/gun/energy/laser/aer9
 	gunsmith_one = TRUE

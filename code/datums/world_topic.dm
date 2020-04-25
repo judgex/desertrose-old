@@ -168,7 +168,7 @@
 	.["security_level"] = get_security_level()
 	.["round_duration"] = SSticker ? round((world.time-SSticker.round_start_time)/10) : 0
 	// Amount of world's ticks in seconds, useful for calculating round duration
-	
+
 	//Time dilation stats.
 	.["time_dilation_current"] = SStime_track.time_dilation_current
 	.["time_dilation_avg"] = SStime_track.time_dilation_avg
@@ -199,3 +199,25 @@
 		if(C.prefs.chat_toggles & CHAT_OOC)
 			if(!(user in C.prefs.ignoring))
 				to_chat(C, "<font color='#9d00ff'><span class='ooc'><span class='prefix'>DSCRD:</span> <EM>[user]:</EM> <span class='message'>[msg]</span></span></font>")
+
+/datum/world_topic/whois
+	keyword = "whoIs"
+
+/datum/world_topic/whois/Run(list/input)
+	. = list()
+	.["players"] = GLOB.clients
+
+	return list2params(.)
+
+/datum/world_topic/getadmins
+	keyword = "getAdmins"
+
+/datum/world_topic/getadmins/Run(list/input)
+	. = list()
+	var/list/adm = get_admin_counts()
+	var/list/presentmins = adm["present"]
+	var/list/afkmins = adm["afk"]
+	.["admins"] = presentmins
+	.["admins"] += afkmins
+
+	return list2params(.)
