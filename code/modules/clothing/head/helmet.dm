@@ -621,10 +621,16 @@
 	desc = "A crudely formed metal hockey mask."
 	icon_state = "metal_mask"
 	item_state = "metal_mask"
+	toggle_message = "You lower"
+	alt_toggle_message = "You raise"
+	can_toggle = 1
 	armor = list("melee" = 50, "bullet" = 35, "laser" = 35, "energy" = 20, "bomb" = 25, "bio" = 30, "rad" = 30, "fire" = 20, "acid" = 0)
 	flags_inv = HIDEMASK|HIDEEYES|HIDEFACE
-	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 	strip_delay = 80
+	actions_types = list(/datum/action/item_action/toggle)
+	toggle_cooldown = 0
+	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
+	visor_flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 
 /obj/item/clothing/head/helmet/f13/metalmask/Initialize()
 	. = ..()
@@ -635,16 +641,12 @@
 	STOP_PROCESSING(SSobj, src)
 	return ..()
 
-
 /obj/item/clothing/head/helmet/f13/metalmask/mk2
 	name = "reflective metal mask"
 	desc = "A reflective metal hockey mask."
 	icon_state = "metal_mask2"
 	item_state = "metal_mask2"
 	armor = list("melee" = 50, "bullet" = 35, "laser" = 50, "energy" = 50, "bomb" = 25, "bio" = 30, "rad" = 30, "fire" = 30, "acid" = 0)
-	flags_inv = HIDEMASK|HIDEEYES|HIDEFACE
-	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
-	strip_delay = 80
 
 /obj/item/clothing/head/helmet/f13/tesla
 	name = "tesla helmet"
