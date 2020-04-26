@@ -348,7 +348,6 @@
 	export_price = 5000
 
 ////////////////////////Medical////////////////////////
-
 /datum/techweb_node/cloning
 	id = "cloning"
 	display_name = "Genetic Engineering"
