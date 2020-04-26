@@ -92,6 +92,13 @@
 	item_state = "scoutberet"
 	armor = list("melee" = 40, "bullet" = 40, "laser" = 30, "energy" = 20, "bomb" = 25, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
 
+/obj/item/clothing/head/beret/ncr_scout/replica
+	name = "NCR Third Scout beret replica"
+	desc = "This is a suede replica of the NCR scout beret. The delicate leather is soft to the touch and pliable."
+	icon_state = "scoutberet"
+	item_state = "scoutberet"
+	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
+
 /obj/item/clothing/head/beret/ncr_scout/tattered
 	name = "NCR tattered Third Scout beret"
 	desc = "A tattered brown beret, damaged by a high caliber rifle round. Its owner didn't live to tell the tale."
