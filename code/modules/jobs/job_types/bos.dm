@@ -227,10 +227,8 @@ Knight-Captain
 /datum/outfit/job/bos/f13knightcap
 	name = "Knight-Captain"
 	jobtype = /datum/job/bos/f13knightcap
-	gunsmith_one = TRUE
-	gunsmith_two = TRUE
-	gunsmith_three = TRUE
-	gunsmith_four = TRUE
+	pa_wear = TRUE
+	chemwhiz = TRUE
 	suit = 			/obj/item/clothing/suit/armor/f13/combat/knightcap
 	uniform =		/obj/item/clothing/under/syndicate
 	belt = 			/obj/item/storage/belt/security/full
@@ -281,7 +279,7 @@ Paladin
 	faction = "BOS"
 	total_positions = 2
 	spawn_positions = 2
-	description = "You answer directly to the Sentinel. You are this Chapter's main line of defense and offense; highly trained in combat and weaponry though with little practical field experience, you are eager to prove your worth to the Brotherhood. Your primary duties are defense and surface operations. You may also be assigned a trainee Initiate."
+	description = "You answer directly to the Sentinel. You are this Chapter's main line of defense and offense; highly trained in combat and weaponry though with little practical field experience, you are eager to prove your worth to the Brotherhood. Your primary duties are defense and surface operations."
 	forbids = "The Brotherhood of Steel Forbids: Unethical human experimentation. Violence beyond what is needed to accomplish Brotherhood goals."
 	enforces = "The Brotherhood of Steel Expects: Obeying the Chain That - Binds your direct superior. Collection and safeguarding of technology from the wasteland. Experimentation and research."
 	supervisors = "the Sentinel"
@@ -291,7 +289,6 @@ Paladin
 	loadout_options = list(
 	/datum/outfit/loadout/paladine, //AER9 and n99
 	/datum/outfit/loadout/paladinb, //Carbine and AEP7
-	/datum/outfit/loadout/paladinm, //Super sledge and AEP7
 	)
 
 	outfit = /datum/outfit/job/bos/f13paladin
@@ -312,7 +309,7 @@ Paladin
 		/obj/item/kitchen/knife/combat=1, \
 		)
 
-/datum/job/bos/f13paladin/after_spawn(mob/living/carbon/human/H, mob/M)
+/datum/job/bos/f13knight/after_spawn(mob/living/carbon/human/H, mob/M)
 	H.add_quirk("Hard Yards")
 
 /datum/outfit/loadout/paladine
@@ -332,15 +329,6 @@ Paladin
 		/obj/item/stock_parts/cell/ammo/ec=2,
 		/obj/item/ammo_box/magazine/m556/rifle/assault=2
 		)
-
-/datum/outfit/loadout/paladinm
-	name = "Close-Quarters Paladin"
-	backpack_contents = list(
-		/obj/item/twohanded/sledgehammer/supersledge=1,
-		/obj/item/gun/energy/laser/pistol=1,
-		/obj/item/stock_parts/cell/ammo/ec=2,
-		)
-
 /*
 Scribe
 */
@@ -378,9 +366,6 @@ Scribe
 		/obj/item/gun/energy/laser/pistol=1, \
 		/obj/item/reagent_containers/hypospray/medipen/stimpak=2)
 
-/datum/job/bos/f13scribe/after_spawn(mob/living/carbon/human/H, mob/M)
-	H.add_quirk("Poor Aim")
-
 /*
 Knight
 */
@@ -389,20 +374,15 @@ Knight
 	title = "Knight"
 	flag = F13KNIGHT
 	faction = "BOS"
-	total_positions = 3
-	spawn_positions = 3
-	description = "You report directly to the Knight-Captain. You are the Brotherhood Knight, the veritable lifeblood of your organization. You are a versatile and adaptably trained person: from your primary duties of weapon & armor repair to basic combat, survival and stealth skills, the only thing you lack is proper experience. You are also in charge of Initiates."
+	total_positions = 2
+	spawn_positions = 2
+	description = "You report directly to the Knight-Captain. You are the Brotherhood Knight, the veritable lifeblood of your organization. You are a versatile and adaptably trained person: from your primary duties of weapon & armor repair to basic combat, survival and stealth skills, the only thing you lack is proper experience."
 	forbids = "The Brotherhood of Steel Forbids: Unethical human experimentation. Violence beyond what is needed to accomplish Brotherhood goals."
 	enforces = "The Brotherhood of Steel Expects: Obeying the Chain That - Binds your direct superior. Collection and safeguarding of technology from the wasteland. Experimentation and research."
 	supervisors = "the Knight-Captain"
 	selection_color = "#95a5a6"
 	exp_requirements = 1800
 	exp_type = EXP_TYPE_CREW
-
-	loadout_options = list(
-	/datum/outfit/loadout/knighta, //AER9
-	/datum/outfit/loadout/knightb, //lever shotgun and teleshield
-	)
 
 	outfit = /datum/outfit/job/bos/f13knight
 
@@ -416,28 +396,15 @@ Knight
 	uniform =		/obj/item/clothing/under/syndicate
 	mask =			/obj/item/clothing/mask/gas/sechailer/swat
 	head = 			/obj/item/clothing/head/helmet/f13/combat/brotherhood
+	suit_store =	/obj/item/gun/energy/laser/aer9
 	gunsmith_one = TRUE
 	gunsmith_two = TRUE
 	gunsmith_three = TRUE
 	gunsmith_four = TRUE
 	backpack_contents = list(
+		/obj/item/stock_parts/cell/ammo/mfc=2, \
 		/obj/item/gun/energy/laser/pistol=1, \
 		/obj/item/stock_parts/cell/ammo/ec=2)
-
-/datum/outfit/loadout/knighta
-	name = "Footknight"
-	backpack_contents = list(
-		/obj/item/gun/energy/laser/aer9=1,
-		/obj/item/stock_parts/cell/ammo/mfc=2,
-		)
-
-/datum/outfit/loadout/knightb
-	name = "Knight-Defender"
-	backpack_contents = list(
-		/obj/item/gun/ballistic/shotgun/trench=1,
-		/obj/item/storage/box/lethalshot=2,
-		/obj/item/shield/riot/tele=1
-		)
 /*
 Initiate
 */
@@ -448,19 +415,13 @@ Initiate
 	faction = "BOS"
 	total_positions = 3
 	spawn_positions = 3
-	description = "Either recently inducted or born into the Brotherhood, you have since proven yourself worthy of assignment to the Chapter. You are to assist your superiors and receive training how they deem fit. You are NEVER allowed to leave the bunker without the direct supervision of a superior; doing so may result in exile or transferrence back the Valley."
+	description = "You are the Brotherhood Initiate. Either recently inducted or born into the Brotherhood, you have recently proven yourself worthy of assignment to the Chapter. You are to assist your superiors and receive training how they deem fit. You are NEVER allowed to leave the bunker without the direct supervision of a superior."
 	forbids = "The Brotherhood of Steel Forbids: Unethical human experimentation. Violence beyond what is needed to accomplish Brotherhood goals."
 	enforces = "The Brotherhood of Steel Expects: Obeying the Chain That - Binds your direct superior. Collection and safeguarding of technology from the wasteland. Experimentation and research."
-	supervisors = "the scribes, knights, or Paladins"
+	supervisors = "the scribes"
 	selection_color = "#95a5a6"
 	exp_requirements = 1800
 	exp_type = EXP_TYPE_CREW
-
-	loadout_options = list(
-	/datum/outfit/loadout/initiatek, //AEP7 and Engibelt with combat armor, no helmet
-	/datum/outfit/loadout/initiates, //Medical belt and chem knowledge
-	/datum/outfit/loadout/initiatep, //Salvaged power armor, and AEP7
-	)
 
 	outfit = /datum/outfit/job/bos/f13initiate
 
@@ -470,41 +431,15 @@ Initiate
 /datum/outfit/job/bos/f13initiate
 	name = "Initiate"
 	jobtype = /datum/job/bos/f13initiate
+	chemwhiz = TRUE
 	backpack = /obj/item/storage/backpack/explorer
 	ears = 			/obj/item/radio/headset/headset_bos
 	uniform =		/obj/item/clothing/under/f13/recon
 	shoes = 		/obj/item/clothing/shoes/combat/swat
 	gloves = 		/obj/item/clothing/gloves/combat
-	id = 			/obj/item/card/id/dogtag
-
-/datum/outfit/loadout/initiatek
-	name = "Knight-Aspirant"
 	belt = 			/obj/item/storage/belt/utility/full/engi
-	suit = 			/obj/item/clothing/suit/armor/f13/combat/brotherhood
+	glasses =		/obj/item/clothing/glasses/sunglasses/big
+	id = 			/obj/item/card/id/dogtag
 	backpack_contents = list(
-		/obj/item/gun/energy/laser/pistol=1,
-		/obj/item/stock_parts/cell/ammo/ec=2,
-		/obj/item/book/granter/trait/gunsmith_one=1,
-		/obj/item/book/granter/trait/gunsmith_two=1,
-		)
-
-/datum/outfit/loadout/initiates
-	name = "Scribe-Aspirant"
-	belt =			/obj/item/storage/belt/medical
-	suit =			/obj/item/clothing/suit/toggle/labcoat
-	glasses =		/obj/item/clothing/glasses/science
-	gloves =		/obj/item/clothing/gloves/color/latex
-	backpack_contents = list(
-		/obj/item/reagent_containers/hypospray/medipen/stimpak=2,
-		/obj/item/book/granter/trait/chemistry=1,
-		)
-
-/datum/outfit/loadout/initiatep
-	name = "Paladin-Aspirant"
-	suit =			/obj/item/clothing/suit/armor/f13/brokenpa/t45b
-	head = 			/obj/item/clothing/head/helmet/power_armor/t45b
-	backpack_contents = list(
-		/obj/item/gun/energy/laser/pistol=1,
-		/obj/item/stock_parts/cell/ammo/ec=2,
-		/obj/item/book/granter/trait/pa_wear=1,
-		)
+		/obj/item/gun/energy/laser/pistol=1, \
+		/obj/item/stock_parts/cell/ammo/ec=2)

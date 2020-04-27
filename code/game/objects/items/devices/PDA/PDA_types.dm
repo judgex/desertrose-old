@@ -95,7 +95,7 @@
 	icon_state = "pda-hop"
 
 /obj/item/pda/heads/hos
-	name = "knight-captain Pip-Boy 3000"
+	name = "head of security Pip-Boy 3000"
 	default_cartridge = /obj/item/cartridge/hos
 	icon_state = "pda-hos"
 
@@ -105,7 +105,7 @@
 	icon_state = "pda-ce"
 
 /obj/item/pda/heads/cmo
-	name = "head scribe Pip-Boy 3000"
+	name = "chief medical officer Pip-Boy 3000"
 	default_cartridge = /obj/item/cartridge/cmo
 	icon_state = "pda-cmo"
 
@@ -116,7 +116,7 @@
 	icon_state = "pda-rd"
 
 /obj/item/pda/captain
-	name = "sentinel Pip-Boy 3000"
+	name = "captain Pip-Boy 3000"
 	default_cartridge = /obj/item/cartridge/captain
 	inserted_item = /obj/item/pen/fountain/captain
 	icon_state = "pda-captain"
