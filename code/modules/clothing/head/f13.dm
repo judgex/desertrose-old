@@ -47,7 +47,7 @@
 	strip_delay = 20
 
 /obj/item/clothing/head/f13/boscap
-	name = "brotherhood formal cap"
+	name = "Brotherhood formal cap"
 	desc = "A cap typically worn with the formal uniform for the local Brotherhood of Steel Chapter."
 	icon_state = "boscap"
 	item_state = "boscap"

@@ -396,8 +396,8 @@ Recruit
 	title = "NCR Assistant"
 	flag = F13RECRUIT
 	faction = "NCR"
-	total_positions = 3
-	spawn_positions = 3
+	total_positions = 4
+	spawn_positions = 4
 	description = "You are a noncombatant member of the NCR assigned the vital duty of helping them with cooking, farming, mining, and other menial tasks. While you have been to basic training, it was rushed and hardly prepared you for the horrors of war. Your sidearm is to be used in your own defense, only."
 	supervisors = "everyone in the NCR"
 	selection_color = "#fff5cc"
@@ -449,8 +449,6 @@ Veteran Ranger
 
 /datum/job/ncr/f13vetranger/after_spawn(mob/living/carbon/human/H, mob/M)
 	H.add_quirk("Hard Yards")
-	H.add_quirk("Lifegiver")
-	H.add_quirk("Iron Fist")
 
 
 /datum/outfit/job/ncr/f13vetranger
@@ -469,6 +467,7 @@ Veteran Ranger
 		/obj/item/kitchen/knife/combat=1, \
 		/obj/item/reagent_containers/hypospray/medipen/stimpak=1, \
 		/obj/item/storage/bag/money/small/ncrofficers)
+
 
 /datum/outfit/loadout/vrclassic
 	name = "Classic Veteran Ranger"
@@ -513,6 +512,8 @@ Ranger
 
 /datum/job/ncr/f13ranger/after_spawn(mob/living/carbon/human/H, mob/M)
 	H.add_quirk("Hard Yards")
+	H.add_quirk("Lifegiver")
+	H.add_quirk("Iron Fist")
 
 
 /datum/outfit/job/ncr/f13ranger
@@ -545,7 +546,7 @@ Ranger
 	name = "Light Ranger"
 	suit_store = /obj/item/gun/ballistic/automatic/assault_carbine
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m556/rifle/assault=3)
+		/obj/item/ammo_box/magazine/m556/rifle/assault=2)
 
 /datum/outfit/loadout/prtrail
 	name = "Trail Ranger"
