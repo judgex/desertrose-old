@@ -281,7 +281,7 @@ Paladin
 	faction = "BOS"
 	total_positions = 2
 	spawn_positions = 2
-	description = "You answer directly to the Sentinel. You are this Chapter's main line of defense and offense; highly trained in combat and weaponry though with little practical field experience, you are eager to prove your worth to the Brotherhood. Your primary duties are defense and surface operations."
+	description = "You answer directly to the Sentinel. You are this Chapter's main line of defense and offense; highly trained in combat and weaponry though with little practical field experience, you are eager to prove your worth to the Brotherhood. Your primary duties are defense and surface operations. You may also be assigned a trainee Initiate."
 	forbids = "The Brotherhood of Steel Forbids: Unethical human experimentation. Violence beyond what is needed to accomplish Brotherhood goals."
 	enforces = "The Brotherhood of Steel Expects: Obeying the Chain That - Binds your direct superior. Collection and safeguarding of technology from the wasteland. Experimentation and research."
 	supervisors = "the Sentinel"
@@ -416,7 +416,6 @@ Knight
 	uniform =		/obj/item/clothing/under/syndicate
 	mask =			/obj/item/clothing/mask/gas/sechailer/swat
 	head = 			/obj/item/clothing/head/helmet/f13/combat/brotherhood
-	suit_store =	/obj/item/gun/energy/laser/aer9
 	gunsmith_one = TRUE
 	gunsmith_two = TRUE
 	gunsmith_three = TRUE
@@ -482,7 +481,6 @@ Initiate
 	name = "Knight-Aspirant"
 	belt = 			/obj/item/storage/belt/utility/full/engi
 	suit = 			/obj/item/clothing/suit/armor/f13/combat/brotherhood
-	glasses =		/obj/item/clothing/glasses/sunglasses/big
 	backpack_contents = list(
 		/obj/item/gun/energy/laser/pistol=1,
 		/obj/item/stock_parts/cell/ammo/ec=2,
@@ -503,10 +501,8 @@ Initiate
 
 /datum/outfit/loadout/initiatep
 	name = "Paladin-Aspirant"
-	belt =			/obj/item/storage/belt/military
 	suit =			/obj/item/clothing/suit/armor/f13/brokenpa/t45b
 	head = 			/obj/item/clothing/head/helmet/power_armor/t45b
-	glasses =		/obj/item/clothing/glasses/sunglasses/big
 	backpack_contents = list(
 		/obj/item/gun/energy/laser/pistol=1,
 		/obj/item/stock_parts/cell/ammo/ec=2,
