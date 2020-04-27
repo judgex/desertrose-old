@@ -123,13 +123,6 @@
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR
 	allowed = list(/obj/item/pen,/obj/item/paper,/obj/item/stamp,/obj/item/reagent_containers/food/drinks/flask,/obj/item/melee,/obj/item/storage/box/matches,/obj/item/lighter,/obj/item/clothing/mask/cigarette,/obj/item/storage/fancy/cigarettes,/obj/item/flashlight,/obj/item/weapon,/obj/item/storage/pill_bottle/dice,/obj/item/dice)
 
-/obj/item/clothing/suit/f13/sexymaid
-	name = "sexy maid outfit"
-	desc = "A maid outfit that shows just a little more skin than needed for cleaning duties."
-	icon_state = "sexymaid_s"
-	item_state = "sexymaid_s"
-	body_parts_covered = CHEST
-
 //Special Biosuit
 
 /obj/item/clothing/suit/bio_suit/f13/hazmat
@@ -193,4 +186,3 @@
 	body_parts_covered = CHEST
 	armor = list(melee = 0, bullet = 0, laser = 10, energy = 10, bomb = 0, bio = 10, rad = 10, fire = 10, acid = 10)
 	allowed = list(/obj/item/pen,/obj/item/paper,/obj/item/stamp,/obj/item/reagent_containers/food/drinks/flask,/obj/item/storage/box/matches,/obj/item/lighter,/obj/item/clothing/mask/cigarette,/obj/item/storage/fancy/cigarettes,/obj/item/flashlight,/obj/item/ammo_box,/obj/item/ammo_casing,/obj/item/scalpel,/obj/item/surgical_drapes,/obj/item/cautery,/obj/item/hemostat,/obj/item/retractor,/obj/item/storage/pill_bottle/dice,/obj/item/dice)
-

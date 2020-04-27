@@ -982,7 +982,7 @@
 
 
 /obj/item/clothing/under/f13/bosform_f
-	name = "female initiate service uniform"
+	name = "female initiate formalwear"
 	desc = "A dry-cleaned and fitted formal uniform of the Brotherhood of Steel, for special occasions. This one has no markings, and looks to be for a feminine person."
 	icon_state = "bosform_f"
 	item_state = "bosform_f"
@@ -992,7 +992,7 @@
 	can_adjust = 0
 
 /obj/item/clothing/under/f13/bosform_m
-	name = "male initiate service uniform"
+	name = "male initiate formalwear"
 	desc = "A dry-cleaned and fitted formal uniform of the Brotherhood of Steel, for special occasions. This one has no markings, and looks to be for a masculine person."
 	icon_state = "bosform_m"
 	item_state = "bosform_m"
@@ -1002,7 +1002,7 @@
 	can_adjust = 0
 
 /obj/item/clothing/under/f13/bosformsilver_f
-	name = "female brotherhood service uniform"
+	name = "female Brotherhood formalwear"
 	desc = "A dry-cleaned and fitted formal uniform of the Brotherhood of Steel, for special occasions. This one bears a silver chain, and looks to be for a feminine person."
 	icon_state = "bosformsilver_f"
 	item_state = "bosformsilver_f"
@@ -1012,7 +1012,7 @@
 	can_adjust = 0
 
 /obj/item/clothing/under/f13/bosformsilver_m
-	name = "male brotherhood service uniform"
+	name = "male Brotherhood formalwear"
 	desc = "A dry-cleaned and fitted formal uniform of the Brotherhood of Steel, for special occasions. This one bears a silver chain, and looks to be for a masculine person."
 	icon_state = "bosformsilver_m"
 	item_state = "bosformsilver_m"
@@ -1022,7 +1022,7 @@
 	can_adjust = 0
 
 /obj/item/clothing/under/f13/bosformgold_f
-	name = "female ranking service uniform"
+	name = "female ranking formalwear"
 	desc = "A dry-cleaned and fitted formal uniform of the Brotherhood of Steel, for special occasions. This one bears a gold chain; denoting authority, and looks to be for a feminine person."
 	icon_state = "bosformgold_f"
 	item_state = "bosformgold_f"
@@ -1032,7 +1032,7 @@
 	can_adjust = 0
 
 /obj/item/clothing/under/f13/bosformgold_m
-	name = "male ranking service uniform"
+	name = "male ranking formalwear"
 	desc = "A dry-cleaned and fitted formal uniform of the Brotherhood of Steel, for special occasions. This one bears a gold chain; denoting authority, and looks to be for a masculine person."
 	icon_state = "bosformgold_m"
 	item_state = "bosformgold_m"
