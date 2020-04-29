@@ -549,3 +549,11 @@ update_label("John Doe", "Clowny")
 	desc = "A golden disc awarded to the trusted political advisor to the Centurion. When they're around, the Legion won't be far behind."
 	icon_state = "legionmedallioncent"
 	id_type = "orator medallion"
+
+/obj/item/card/id/legionbrand
+    name = "Legion's brand"
+    desc = "A brand for identifying Caesar's Legion's slaves."
+    icon_state = "legionbrand"
+    item_state = "slave"
+    id_type = "Slave brand"
+    item_flags = NODROP
