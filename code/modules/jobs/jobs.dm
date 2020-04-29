@@ -88,7 +88,8 @@ GLOBAL_LIST_INIT(legion_positions, list(
     "Legion Vexillarius",
     "Legion Explorer",
     "Auxilia",
-    "Camp Follower"
+    "Camp Follower",
+    "Legion Slave"
 ))
 
 GLOBAL_LIST_INIT(ncr_positions, list(
