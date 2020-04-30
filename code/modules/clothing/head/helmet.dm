@@ -793,12 +793,24 @@
 	item_state = "t51bhelmet"
 	armor = list("melee" = 85, "bullet" = 75, "laser" = 55, "energy" = 70, "bomb" = 82, "bio" = 100, "rad" = 100, "fire" = 95, "acid" = 0)
 
+/obj/item/clothing/head/helmet/power_armor/t60
+	name = "T-60 power helmet"
+	desc = "It's an old pre-War power armor helmet. It's pretty hot inside of it."
+	icon_state = "t60helmet"
+	item_state = "t60helmet"
+	armor = list("melee" = 75, "bullet" = 70, "laser" = 50, "energy" = 60, "bomb" = 62, "bio" = 100, "rad" = 90, "fire" = 90, "acid" = 0)
+	var/brightness_on = 4 //luminosity when the light is on
+	var/on = 0
+	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
+	dynamic_hair_suffix = ""
+
 /obj/item/clothing/head/helmet/power_armor/t45d
 	name = "T-45d power helmet"
 	desc = "It's an old pre-War power armor helmet. It's pretty hot inside of it."
 	icon_state = "t45dhelmet"
 	item_state = "t45dhelmet"
-	armor = list("melee" = 75, "bullet" = 70, "laser" = 50, "energy" = 60, "bomb" = 62, "bio" = 100, "rad" = 90, "fire" = 90, "acid" = 0)
+	armor = list("melee" = 70, "bullet" = 65, "laser" = 45, "energy" = 60, "bomb" = 62, "bio" = 100, "rad" = 90, "fire" = 90, "acid" = 0)
 	var/brightness_on = 4 //luminosity when the light is on
 	var/on = 0
 	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR

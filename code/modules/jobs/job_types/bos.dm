@@ -297,8 +297,8 @@ Paladin
 	exp_requirements = 900
 
 	loadout_options = list(
-	/datum/outfit/loadout/paladinb, //AER9 and n99
-	/datum/outfit/loadout/paladine, //Carbine and AEP7
+	/datum/outfit/loadout/paladinb, //Carbine and aep7
+	/datum/outfit/loadout/paladine, //aer9 and n99
 	/datum/outfit/loadout/paladinm, //Super sledge and AEP7
 	)
 
@@ -312,8 +312,6 @@ Paladin
 	jobtype = /datum/job/bos/f13paladin
 	pa_wear = TRUE
 	uniform = 		/obj/item/clothing/under/f13/recon
-	suit = 			/obj/item/clothing/suit/armor/f13/power_armor/t45d
-	head = 			/obj/item/clothing/head/helmet/power_armor/t45d
 	mask =			/obj/item/clothing/mask/gas/sechailer/swat
 	belt = 			/obj/item/storage/belt/military
 	backpack_contents = list(
@@ -323,21 +321,12 @@ Paladin
 /datum/job/bos/f13paladin/after_spawn(mob/living/carbon/human/H, mob/M)
 	H.add_quirk("Hard Yards")
 
-/datum/outfit/loadout/paladine
-	name = "Paladin"
-	id = 			/obj/item/card/id/dogtag
-	backpack_contents = list(
-		/obj/item/gun/energy/laser/aer9=1,
-		/obj/item/gun/ballistic/automatic/pistol/n99=1,
-		/obj/item/stock_parts/cell/ammo/mfc=2,
-		/obj/item/ammo_box/magazine/m10mm_adv=2,
-		/obj/item/clothing/accessory/bos/paladin=1
 
-		)
 
 /datum/outfit/loadout/paladinb
 	name = "Paladin-Junior"
-	id = 			/obj/item/card/id/dogtag
+	suit = 			/obj/item/clothing/suit/armor/f13/power_armor/t45d
+	head = 			/obj/item/clothing/head/helmet/power_armor/t45d
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/assault_carbine=1,
 		/obj/item/gun/energy/laser/pistol=1,
@@ -346,9 +335,22 @@ Paladin
 		/obj/item/clothing/accessory/bos/juniorpaladin=1
 		)
 
+/datum/outfit/loadout/paladine
+	name = "Paladin"
+	suit = 			/obj/item/clothing/suit/armor/f13/power_armor/t60
+	head = 			/obj/item/clothing/head/helmet/power_armor/t60
+	backpack_contents = list(
+		/obj/item/gun/energy/laser/aer9=1,
+		/obj/item/gun/ballistic/automatic/pistol/n99=1,
+		/obj/item/stock_parts/cell/ammo/mfc=2,
+		/obj/item/ammo_box/magazine/m10mm_adv=2,
+		/obj/item/clothing/accessory/bos/paladin=1
+
+		)
 /datum/outfit/loadout/paladinm
 	name = "Paladin-Senior"
-	id = 			/obj/item/card/id/dogtag
+	suit = 			/obj/item/clothing/suit/armor/f13/power_armor/t60
+	head = 			/obj/item/clothing/head/helmet/power_armor/t60
 	backpack_contents = list(
 		/obj/item/twohanded/sledgehammer/supersledge=1,
 		/obj/item/gun/energy/laser/pistol=1,
