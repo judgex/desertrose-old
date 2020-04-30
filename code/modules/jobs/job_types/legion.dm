@@ -513,11 +513,78 @@ Auxilia
 
 
 /*
+Camp Follower
+
+/datum/job/CaesarsLegion/f13campfollower
+	title = "Camp Follower"
+	flag = F13CAMPFOLLOWER
+	faction = "Legion"
+	total_positions = 4
+	spawn_positions = 4
+	description = "You answer to any member of the Legion, but take orders directly from the Auxilia around the camp. Working as a Camp Follower for the Centuria, you bear the great honor of supporting Caesar's Army in its conquest of the Mojave in whatever capacity required from those whom you serve. You perform any tasks required of you, for you know how to serve the Legion well."
+	supervisors = "the entire legion"
+	exp_requirements = 300
+
+	outfit = /datum/outfit/job/CaesarsLegion/f13campfollower
+
+/datum/outfit/job/CaesarsLegion/f13campfollower
+	name = "Camp Follower"
+	jobtype = /datum/outfit/job/CaesarsLegion/f13campfollower
+	shoes = /obj/item/clothing/shoes/sandal
+	r_hand = /obj/item/flashlight/flare/torch
+	uniform = 		/obj/item/clothing/under/f13/legskirt
+	id =			/obj/item/card/id/dogtag/legfollower
+
+/datum/outfit/job/CaesarsLegion/f13campfollower/pre_equip(mob/living/carbon/human/H)
+	..()
+	var/follower_job = "nothing"
+	if (H.gender == MALE)
+		uniform = pick(
+			/obj/item/clothing/under/f13/caravan, \
+			/obj/item/clothing/under/f13/brahminm)
+		follower_job = pick("miner", "farmer", "smith", "healer")
+	else
+		uniform = pick(
+			/obj/item/clothing/under/f13/caravan, \
+			/obj/item/clothing/under/f13/brahminf)
+		follower_job = pick("cook", "farmer", "healer", "caretaker")
+
+	if (follower_job == "cook")
+		belt = /obj/item/kitchen/knife
+		if (prob(50))
+			suit = /obj/item/clothing/suit/apron/chef
+	else if (follower_job == "miner")
+		belt = /obj/item/storage/bag/ore
+		backpack = /obj/item/pickaxe
+		l_hand = /obj/item/radio
+		if (prob(50))
+			suit = /obj/item/clothing/suit/fluff/vest
+	else if (follower_job == "farmer")
+		belt = /obj/item/storage/bag/plants
+		l_hand = /obj/item/radio
+		if (prob(50))
+			suit = /obj/item/clothing/suit/fluff/vest
+	else if (follower_job == "smith")
+		backpack = /obj/item/storage/backpack/satchel/explorer
+		backpack_contents = list(/obj/item/radio, /obj/item/screwdriver, /obj/item/wrench, /obj/item/crowbar, /obj/item/wirecutters)
+		if (prob(50))
+			suit = /obj/item/clothing/suit/fluff/vest
+	else if (follower_job == "healer")
+		backpack = /obj/item/storage/backpack/satchel/explorer
+		backpack_contents = list(/obj/item/radio, /obj/item/reagent_containers/pill/patch/healingpowder=4, /obj/item/stack/medical/gauze/improvised = 2)
+		if (prob(50))
+			suit = /obj/item/clothing/suit/apron/surgical
+	else if (follower_job == "caretaker")
+		backpack = /obj/item/storage/backpack/satchel/explorer
+		backpack_contents = list(/obj/item/radio, /obj/item/soap/homemade, /obj/item/melee/flyswatter, /obj/item/reagent_containers/glass/rag, /obj/item/reagent_containers/glass/bucket, /obj/item/stack/medical/gauze/improvised)
+*/
+
+/*
 Slave
 */
 /datum/job/CaesarsLegion/slave
 	title = "Legion Slave"
-	flag = F13CAMPFOLLOWER
+	flag = F13LEGIONSLAVE
 	faction = "Legion"
 	total_positions = 4
 	spawn_positions = 4

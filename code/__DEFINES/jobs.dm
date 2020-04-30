@@ -71,6 +71,7 @@
 #define F13EXPLORER		(1<<7)
 #define F13AUXILIA		(1<<8)
 #define F13CAMPFOLLOWER	(1<<9)
+#define F13LEGIONSLAVE	(1<<10)
 
 #define BOS				(1<<5)
 
