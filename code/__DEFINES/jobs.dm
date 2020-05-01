@@ -94,6 +94,7 @@
 #define F13DEPUTY		(1<<5)
 #define F13MAYOR		(1<<6)
 #define F13PREACHER		(1<<7)
+#define F13SHOPKEEPER	(1<<8)// WHAT IS BITFLAG. WHAT DOES IT DO. WHERE IS THIS INFO USED.
 
 #define VAULT			(1<<7)
 
