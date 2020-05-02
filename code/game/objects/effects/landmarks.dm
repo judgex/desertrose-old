@@ -521,6 +521,9 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 /obj/effect/landmark/start/f13/campfollower
 	name = "Camp Follower"
 
+/obj/effect/landmark/start/f13/slave
+	name = "Legion Slave"
+
 // Brotherhood of Steel
 
 /obj/effect/landmark/start/f13/elder
@@ -538,6 +541,10 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 /obj/effect/landmark/start/f13/knightcap
 	name = "Knight-Captain"
 	icon_state = "Initiate Knight"
+
+/obj/effect/landmark/start/f13/seniorpaladin
+	name = "Senior Paladin"
+	icon_state = "Knight"
 
 /obj/effect/landmark/start/f13/paladin
 	name = "Paladin"
@@ -585,7 +592,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 	name = "Vault Dweller"
 	icon_state = "Vault Dweller"
 
-// Kebab
+// Kebab // Is not Kebab is Oasis REEEE
 
 /obj/effect/landmark/start/f13/mayor
 	name = "Mayor"
@@ -609,6 +616,10 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 
 /obj/effect/landmark/start/f13/dendoc
 	name = "Doctor"
+
+/obj/effect/landmark/start/f13/shopkeeper
+	name = "Shopkeeper"
+	icon_state = "Shopkeeper"
 
 // Wasteland
 

@@ -29,7 +29,7 @@
 	id = "FEV_solution"
 	description = "Might cause unpredictable mutations. Keep away from children."
 	color = "#00FF00"
-	toxpwr = 0
+	toxpwr = 5
 	taste_description = "slime"
 	taste_mult = 0.9
 
@@ -46,7 +46,7 @@
 
 /datum/reagent/toxin/FEV_solution/on_mob_life(mob/living/carbon/C)
 	C.apply_effect(5,EFFECT_IRRADIATE,0)
-	C.adjustCloneLoss(3,0)
+	C.adjustCloneLoss(30,0)
 	return ..()
 
 /datum/reagent/toxin/plasma

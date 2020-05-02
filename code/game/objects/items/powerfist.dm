@@ -20,8 +20,8 @@
 	name = "\improper Goliath" //the Goliath
 	desc = "A metal gauntlet with a piston-powered ram on top. This one has been painted in the colors of Caesar's Legion, and features a brutal metal spike to increase penetration and damage."
 	icon_state = "goliath"
-	force = 45 //you are Strongly Encouraged not to get hit by this.
-	armour_penetration = 100 //what is armor?
+	force = 40 //you are Strongly Encouraged not to get hit by this.
+	armour_penetration = 80 //what is armor?
 	throwforce = 20
 
 /obj/item/gun/ballistic/revolver/ballisticfist //it's a double-barrel shotgun disguised as a fist shhh

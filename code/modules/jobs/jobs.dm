@@ -28,6 +28,7 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 "Sentinel",
 "Knight-Captain",
 "Head Scribe",
+"Senior Paladin",
 "Paladin",
 "Knight",
 "Scribe",
@@ -63,6 +64,7 @@ GLOBAL_LIST_INIT(brotherhood_positions, list(
 	"Sentinel",
 	"Knight-Captain",
 	"Head Scribe",
+	"Senior Paladin",
 	"Paladin",
 	"Knight",
 	"Scribe",
@@ -88,7 +90,8 @@ GLOBAL_LIST_INIT(legion_positions, list(
     "Legion Vexillarius",
     "Legion Explorer",
     "Auxilia",
-    "Camp Follower"
+    "Camp Follower",
+    "Legion Slave"
 ))
 
 GLOBAL_LIST_INIT(ncr_positions, list(

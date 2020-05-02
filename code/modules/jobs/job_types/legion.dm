@@ -118,8 +118,6 @@ Centurion
 	name = "Legion Centurion"
 	jobtype = /datum/job/CaesarsLegion/Legionnaire/f13centurion
 	id =			/obj/item/card/id/dogtag/legcenturion
-	suit = 			/obj/item/clothing/suit/armor/f13/legion/centurion
-	head = 			/obj/item/clothing/head/helmet/f13/legion/centurion
 	mask =			/obj/item/clothing/mask/bandana/legcenturion
 	glasses = 		/obj/item/clothing/glasses/sunglasses/big
 	ears = 			/obj/item/radio/headset
@@ -137,14 +135,18 @@ Centurion
 		/obj/item/storage/bag/money/small/legion)
 
 /datum/outfit/loadout/centheavy
-	name = "Heavy Centurion"
+	name = "Paladin-Slayer Centurion"
+	suit = 			/obj/item/clothing/suit/armor/f13/legion/palacent
+	head = 			/obj/item/clothing/head/helmet/f13/legion/palacent
 	suit_store = /obj/item/gun/ballistic/automatic/smg10mm
 	backpack_contents = list(
 		/obj/item/melee/powerfist/goliath=1,
 		/obj/item/ammo_box/magazine/m10mm_auto=2)
 
 /datum/outfit/loadout/centassault
-	name = "Assault Centurion"
+	name = "Bear-Slayer Centurion"
+	suit = 			/obj/item/clothing/suit/armor/f13/legion/centurion
+	head = 			/obj/item/clothing/head/helmet/f13/legion/centurion
 	suit_store = /obj/item/gun/ballistic/automatic/mini_uzi
 	backpack_contents = list(
 		/obj/item/twohanded/required/thermic_lance=1,
@@ -152,6 +154,8 @@ Centurion
 
 /datum/outfit/loadout/centbreacher
 	name = "Breacher Centurion"
+	suit = 			/obj/item/clothing/suit/armor/f13/legion/centurion
+	head = 			/obj/item/clothing/head/helmet/f13/legion/centurion
 	suit_store = /obj/item/gun/ballistic/automatic/shotgun/riot
 	backpack_contents = list(
 		/obj/item/twohanded/fireaxe=1,
@@ -220,8 +224,6 @@ Decanus
 	name = "Legion Decanus"
 	jobtype = /datum/job/CaesarsLegion/Legionnaire/f13decan
 	id = 			/obj/item/card/id/dogtag/legveteran
-	suit = 			/obj/item/clothing/suit/armor/f13/legion/vet
-	head = 			/obj/item/clothing/head/helmet/f13/legion/vet/decan
 	mask =			/obj/item/clothing/mask/bandana/legdecan
 	glasses = 		/obj/item/clothing/glasses/sunglasses/big
 	ears = 			/obj/item/radio/headset
@@ -238,6 +240,8 @@ Decanus
 
 /datum/outfit/loadout/decancharger
 	name = "Charger Decanus"
+	suit = 			/obj/item/clothing/suit/armor/f13/legion/vet
+	head = 			/obj/item/clothing/head/helmet/f13/legion/vet/decan
 	suit_store = /obj/item/gun/ballistic/automatic/greasegun
 	backpack_contents = list(
 		/obj/item/twohanded/fireaxe/bmprsword=1,
@@ -245,6 +249,8 @@ Decanus
 
 /datum/outfit/loadout/decanspec
 	name = "Speculatores Decanus"
+	suit = 			/obj/item/clothing/suit/armor/f13/legion/heavy
+	head = 			/obj/item/clothing/head/helmet/f13/legion/heavy
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/assault_carbine=1,
 		/obj/item/ammo_box/magazine/m556/rifle/assault=2
@@ -252,6 +258,8 @@ Decanus
 
 /datum/outfit/loadout/decanprotec
 	name = "Protector Decanus"
+	suit = 			/obj/item/clothing/suit/armor/f13/legion/vet
+	head = 			/obj/item/clothing/head/helmet/f13/legion/vet/decan
 	suit_store = /obj/item/gun/ballistic/shotgun/trench
 	backpack_contents = list(
 		/obj/item/gun/ballistic/revolver/ballisticfist=1,
@@ -307,8 +315,8 @@ Legionary
 	title = "Legionary"
 	flag = F13LEGIONARY
 	faction = "Legion"
-	total_positions = 6
-	spawn_positions = 6
+	total_positions = 5
+	spawn_positions = 5
 	description = "You answer to the Decani and the Centurion, as well as the Auxilia when in your camp. Acting as a loyal soldier of the Centuria, you have the great honour of serving under Caesar in his quest to unite the scattered tribes of The Mojave. You are a hardened warrior, and have been waging war with the Legion for many years."
 	supervisors = "the Decani and Centurion"
 	exp_requirements = 300
@@ -328,8 +336,8 @@ Legionary
 	jobtype = /datum/job/CaesarsLegion/Legionnaire/f13legionary
 	id = 			/obj/item/card/id/dogtag/legveteran
 	mask =			/obj/item/clothing/mask/bandana/legvet
-	suit = 			/obj/item/clothing/suit/armor/f13/legion/vet
 	head = 			/obj/item/clothing/head/helmet/f13/legion/vet
+	suit = 			/obj/item/clothing/suit/armor/f13/legion/vet
 	glasses = 		/obj/item/clothing/glasses/sunglasses
 	r_hand = 		/obj/item/shield/riot/roman
 	backpack_contents = list(
@@ -345,6 +353,8 @@ Legionary
 
 /datum/outfit/loadout/legassault
 	name = "Assault Legionary"
+	head = 			/obj/item/clothing/head/helmet/f13/legion/vet
+	suit = 			/obj/item/clothing/suit/armor/f13/legion/vet
 	suit_store = /obj/item/gun/ballistic/revolver/m29/scoped
 	backpack_contents = list(
 		/obj/item/ammo_box/m44=2)
@@ -355,7 +365,6 @@ Legionary
 	backpack_contents = list(
 		/obj/item/storage/box/lethalshot=1)
 
-
 /*
 Recruit Legionary
 */
@@ -363,8 +372,8 @@ Recruit Legionary
 	title = "Recruit Legionary"
 	flag = F13RECRUITLEG
 	faction = "Legion"
-	total_positions = 2
-	spawn_positions = 2
+	total_positions = 3
+	spawn_positions = 3
 	description = "You have recently come of age or been inducted into Caesar's Legion. You have absolutely no training, and are expected to follow every whim of the Decanii and your Centurion."
 	supervisors = "the Decani and Centurion"
 	exp_requirements = 300
@@ -514,7 +523,7 @@ Auxilia
 
 /*
 Camp Follower
-*/
+
 /datum/job/CaesarsLegion/f13campfollower
 	title = "Camp Follower"
 	flag = F13CAMPFOLLOWER
@@ -577,3 +586,99 @@ Camp Follower
 	else if (follower_job == "caretaker")
 		backpack = /obj/item/storage/backpack/satchel/explorer
 		backpack_contents = list(/obj/item/radio, /obj/item/soap/homemade, /obj/item/melee/flyswatter, /obj/item/reagent_containers/glass/rag, /obj/item/reagent_containers/glass/bucket, /obj/item/stack/medical/gauze/improvised)
+*/
+
+/*
+Slave
+*/
+/datum/job/CaesarsLegion/slave
+	title = "Legion Slave"
+	flag = F13LEGIONSLAVE
+	faction = "Legion"
+	total_positions = 4
+	spawn_positions = 4
+	description = "You answer to any member of the Legion, but take orders directly from the Auxilia around the camp. You are to the point where you have been broken in as a slave and most slaves will no longer consider escaping as an option."
+	supervisors = "the entire legion"
+	exp_requirements = 300
+
+	outfit = /datum/outfit/job/CaesarsLegion/slave
+
+	loadout_options = list(
+	/datum/outfit/loadout/slcook, //Apron Chef, Knife, Frying Pan, radio
+	/datum/outfit/loadout/slfarmer, //Coveralls, bag plants,radio
+	/datum/outfit/loadout/slsmith, //vest, screwdriver, wrench, crowbar wirecutters, radio
+	/datum/outfit/loadout/slhealer, //Apron Surgical, Healing powder 4,improvized gauze 2 radio
+	/datum/outfit/loadout/slcaretaker, //robe_liz, soap, flyswatter, rag, bucket, gauze, radio
+	/datum/outfit/loadout/slminer) //vest, ore bag, pickaxe
+
+
+/datum/outfit/job/CaesarsLegion/slave
+	name		= "Legion Slave"
+	jobtype		= /datum/job/CaesarsLegion/slave
+	id			= /obj/item/card/id/legionbrand
+	uniform		= /obj/item/clothing/under/f13/rag
+	neck		= /obj/item/assembly/signaler/electropack/shockcollar
+	shoes		= /obj/item/clothing/shoes/f13/rag
+	r_hand = /obj/item/flashlight/flare/torch
+	backpack = /obj/item/storage/backpack/satchel/explorer
+
+/datum/outfit/loadout/slcook
+	name = "Cook"
+	suit = /obj/item/clothing/suit/apron/chef
+	belt = /obj/item/kitchen/knife
+	backpack_contents = list(
+		/obj/item/radio=1, \
+		/obj/item/claymore/machete/pipe/pan=1)
+
+/datum/outfit/loadout/slfarmer
+	name = "Farmer"
+	suit = /obj/item/clothing/suit/apron/overalls
+	belt = /obj/item/storage/bag/plants
+	r_hand = /obj/item/flashlight/flare/torch
+	backpack_contents = list(
+		/obj/item/radio=1)
+
+
+/datum/outfit/loadout/slsmith
+	name = "Smith"
+	suit = /obj/item/clothing/suit/fluff/vest
+	r_hand = /obj/item/flashlight/flare/torch
+	backpack_contents = list(
+		/obj/item/radio=1, \
+		/obj/item/screwdriver=1, \
+		/obj/item/wrench=1, \
+		/obj/item/crowbar=1, \
+		/obj/item/radio=1, \
+		/obj/item/wirecutters=1)
+
+
+/datum/outfit/loadout/slhealer
+	name = "Cleric"
+	suit = /obj/item/clothing/suit/apron/surgical
+	r_hand = /obj/item/flashlight/flare/torch
+	backpack_contents = list(
+		/obj/item/radio=1, \
+		/obj/item/reagent_containers/pill/patch/healingpowder=4,
+		/obj/item/stack/medical/gauze/improvised = 2)
+
+
+/datum/outfit/loadout/slcaretaker
+	name = "Caretaker"
+	suit = /obj/item/clothing/suit/f13/robe_liz
+	belt = /obj/item/radio
+	backpack_contents = list(
+		/obj/item/soap/homemade=1, \
+		/obj/item/melee/flyswatter=1, \
+		/obj/item/reagent_containers/glass/rag=1, \
+		/obj/item/reagent_containers/glass/bucket=1, \
+		/obj/item/stack/medical/gauze/improvised=1)
+
+
+/datum/outfit/loadout/slminer
+	name = "Miner"
+	suit = /obj/item/clothing/suit/fluff/vest
+	belt = /obj/item/storage/bag/ore
+
+	backpack_contents = list(
+		/obj/item/pickaxe=1, \
+		/obj/item/radio=1)
