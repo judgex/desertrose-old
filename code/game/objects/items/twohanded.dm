@@ -226,7 +226,7 @@
 	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = ITEM_SLOT_BACK
 	force_unwielded = 10
-	force_wielded = 45
+	force_wielded = 50
 	attack_verb = list("axed", "chopped", "cleaved", "torn", "hacked")
 	hitsound = 'sound/weapons/bladeslice.ogg'
 	sharpness = IS_SHARP
@@ -563,7 +563,7 @@
 	inhand_y_dimension = 64
 	slot_flags = ITEM_SLOT_BACK
 	force = 10
-	var/force_on = 55
+	var/force_on = 60
 	w_class = WEIGHT_CLASS_BULKY
 	throwforce = 20
 	throw_speed = 2
@@ -924,7 +924,7 @@
 	lefthand_file = 'icons/mob/inhands/weapons/polearms_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/polearms_righthand.dmi'
 	force_unwielded = 20
-	force_wielded = 35
+	force_wielded = 45
 	throwforce = 20
 	slot_flags = ITEM_SLOT_BACK
 	attack_verb = list("bashed", "pounded", "bludgeoned", "pummeled", "thrashed")
@@ -955,7 +955,7 @@
 	lefthand_file = 'icons/mob/inhands/weapons/polearms_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/polearms_righthand.dmi'
 	force_unwielded = 25
-	force_wielded = 55
+	force_wielded = 60
 
 /obj/item/twohanded/sledgehammer/supersledge/update_icon()
 	icon_state = "supersledge[wielded]"
