@@ -42,6 +42,7 @@ GLOBAL_VAR_INIT(time_last_changed_position, 0)
 	"NCR Captain",
 	"Elder",
 	"Sentinel",
+	"Senior Paladin",
 	"Paladin",
 	"Knight-Captain",
 	"Knight",

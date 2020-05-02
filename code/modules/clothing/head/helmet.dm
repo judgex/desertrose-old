@@ -807,14 +807,14 @@
 	desc = "It's a T-51b power helmet, typically used by the Brotherhood. It looks somewhat charming."
 	icon_state = "t51bhelmet"
 	item_state = "t51bhelmet"
-	armor = list("melee" = 85, "bullet" = 75, "laser" = 55, "energy" = 70, "bomb" = 82, "bio" = 100, "rad" = 100, "fire" = 95, "acid" = 0)
+	armor = list("melee" = 75, "bullet" = 70, "laser" = 50, "energy" = 60, "bomb" = 62, "bio" = 100, "rad" = 99, "fire" = 90, "acid" = 0)
 
 /obj/item/clothing/head/helmet/power_armor/t60
-	name = "T-60 power helmet"
-	desc = "It's an old pre-War power armor helmet. It's pretty hot inside of it."
+	name = "T-60a power helmet"
+	desc = "The T-60 powered helmet, equipped with targetting software suite, Friend-or-Foe identifiers, dynamic HuD, and an internal music player."
 	icon_state = "t60helmet"
 	item_state = "t60helmet"
-	armor = list("melee" = 75, "bullet" = 70, "laser" = 50, "energy" = 60, "bomb" = 62, "bio" = 100, "rad" = 90, "fire" = 90, "acid" = 0)
+	armor = list("melee" = 85, "bullet" = 75, "laser" = 55, "energy" = 70, "bomb" = 82, "bio" = 100, "rad" = 100, "fire" = 95, "acid" = 0)
 	var/brightness_on = 4 //luminosity when the light is on
 	var/on = 0
 	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR

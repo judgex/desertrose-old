@@ -755,11 +755,11 @@
 	armor = list("melee" = 70, "bullet" = 65, "laser" = 45, "energy" = 60, "bomb" = 62, "bio" = 100, "rad" = 90, "fire" = 90, "acid" = 0)
 
 /obj/item/clothing/suit/armor/f13/power_armor/t60
-	name = "T-60 power armor"
-	desc = "Developed in early 2077 after the Anchorage Reclamation, the T-60 series of power armor was designed to eventually replace the T-45d as the pinnacle of powered armor technology in the U.S. military arsenal."
+	name = "T-60a power armor"
+	desc = "Developed in early 2077 after the Anchorage Reclamation, the T-60 series of power armor was designed to eventually replace the T-51b as the pinnacle of powered armor technology in the U.S. military arsenal."
 	icon_state = "t60powerarmor"
 	item_state = "t60powerarmor"
-	armor = list("melee" = 75, "bullet" = 70, "laser" = 50, "energy" = 60, "bomb" = 62, "bio" = 100, "rad" = 90, "fire" = 90, "acid" = 0)
+	armor = list("melee" = 85, "bullet" = 75, "laser" = 55, "energy" = 70, "bomb" = 82, "bio" = 100, "rad" = 100, "fire" = 95, "acid" = 0)
 
 /obj/item/clothing/suit/armor/f13/power_armor/t51b
 	name = "T-51b power armor"
@@ -767,7 +767,7 @@
 	icon_state = "t51bpowerarmor"
 	item_state = "t51bpowerarmor"
 	slowdown = 0.15 //+0.1 from helmet = total 0.25
-	armor = list("melee" = 85, "bullet" = 75, "laser" = 55, "energy" = 70, "bomb" = 82, "bio" = 100, "rad" = 100, "fire" = 95, "acid" = 0)
+	armor = list("melee" = 75, "bullet" = 70, "laser" = 50, "energy" = 60, "bomb" = 62, "bio" = 100, "rad" = 99, "fire" = 90, "acid" = 0)
 
 /obj/item/clothing/suit/armor/f13/power_armor/t51b/sierra
 	name = "sierra power armor"
