@@ -122,7 +122,7 @@
 
 /mob/living/simple_animal/hostile/enclave
 	name = "Enclave"
-	desc = "Just an Enclave"
+	desc = "Just an Enclave."
 	icon_state = "enclave_scientist"
 	icon_living = "enclave_scientist"
 	icon_dead = "enclave_scientist"
@@ -132,29 +132,28 @@
 	response_help = "pokes"
 	response_disarm = "shoves"
 	response_harm = "Ouch"
-	speed = 1
+	speed = 0
 	stat_attack = 1
 	robust_searching = 1
 	maxHealth = 150
 	health = 150
 	harm_intent_damage = 5
-	melee_damage_lower = 10
-	melee_damage_upper = 10
-	attacktext = "Thrusts"
+	melee_damage_lower = 25
+	melee_damage_upper = 25
+	attacktext = "thrusts"
 	attack_sound = 'sound/weapons/punch1.ogg'
 	a_intent = INTENT_HARM
-	loot = list(/obj/effect/mob_spawn/human/corpse/enclave)
 	atmos_requirements = list("min_oxy" = 5, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 1, "min_co2" = 0, "max_co2" = 5, "min_n2" = 0, "max_n2" = 0)
 	unsuitable_atmos_damage = 15
 	faction = list("enclave")
 	check_friendly_fire = 1
 	status_flags = CANPUSH
 	del_on_death = 1
-	speak = list("For the Enclave!")
-	speak_emote = "Pulls out a weapon,"
+	speak = list("For the Enclave!", "Stars and Stripes!", "Liberty or death!")
+	speak_emote = "pulls out a weapon,"
 	speak_chance = 1
 
-/obj/effect/mob_spawn/human/corpse/enclave
+/obj/effect/mob_spawn/human/corpse/enclavescientist
 	name = "Enclave scientist"
 	uniform = /obj/item/clothing/under/f13/enclave_officer
 	suit = /obj/item/clothing/suit/radiation
@@ -165,14 +164,37 @@
 	head = /obj/item/clothing/head/radiation
 	//back = /obj/item/weapon/storage/backpack
 
+/obj/effect/mob_spawn/human/corpse/enclave/soldier_ca
+	name = "Enclave Private Soldier"
+	uniform = /obj/item/clothing/under/f13/enclave_officer
+	suit = /obj/item/clothing/suit/armor/f13/combat/enclave
+	shoes = /obj/item/clothing/shoes/f13/military
+	gloves = /obj/item/clothing/gloves/f13/military
+	//radio = /obj/item/device/radio/headset
+	mask = /obj/item/clothing/mask/gas
+	head = /obj/item/clothing/head/helmet/f13/combat/enclave
+	//back = /obj/item/weapon/storage/backpack
+
+/obj/effect/mob_spawn/human/corpse/enclave/soldier
+	name = "Enclave Soldier"
+	uniform = /obj/item/clothing/under/f13/enclave_officer
+	suit = /obj/item/clothing/suit/armor/f13/power_armor/advanced
+	shoes = /obj/item/clothing/shoes/f13/military
+	gloves = /obj/item/clothing/gloves/f13/military
+	//radio = /obj/item/device/radio/headset
+	mask = /obj/item/clothing/mask/gas
+	head = /obj/item/clothing/head/helmet/power_armor/advanced
+	//back = /obj/item/weapon/storage/backpack
+
 
 /mob/living/simple_animal/hostile/enclave/scientist
 	name = "Enclave scientist"
-	desc = "Just an Enclave scientist"
+	desc = "A scientist wearing an Advanced Radiation suit"
 	minimum_distance = 10
 	retreat_distance = 10
 	obj_damage = 0
 	environment_smash = 0
+	loot = list(/obj/effect/mob_spawn/human/corpse/enclavescientist)
 
 /mob/living/simple_animal/hostile/enclave/scientist/Aggro()
 	..()
@@ -180,14 +202,14 @@
 	say("For the Enclave!!")
 
 /mob/living/simple_animal/hostile/enclave/soldier
-	name = "Enclave Soldier"
-	desc = "Just a Enclave Soldier"
+	name = "Enclave Advanced Soldier"
+	desc = "An Enclave Soldier wearing Advanced Power Armor."
 	icon_state = "enclave_soldier"
 	icon_living = "enclave_soldier"
 	icon_dead = "enclave_soldier"
 	icon_gib = "enclave_soldier"
-	maxHealth = 890
-	health = 890
+	maxHealth = 1000
+	health = 1000
 	retreat_distance = 5
 	minimum_distance = 5
 	loot = list(/obj/effect/mob_spawn/human/corpse/enclave/soldier)
@@ -199,7 +221,7 @@
 
 /mob/living/simple_animal/hostile/enclave/soldier_ca
 	name = "Enclave Private Soldier"
-	desc = "Just a Enclave Soldier"
+	desc = "An Enclave soldier in Enclave Combat Armor."
 	icon_state = "enclave_soldier_ca"
 	icon_living = "enclave_soldier_ca"
 	icon_dead = "enclave_soldier_ca"
@@ -213,18 +235,6 @@
 	ranged = 1
 	projectiletype = /obj/item/projectile/beam
 	projectilesound = 'sound/weapons/resonator_fire.ogg'
-
-
-/obj/effect/mob_spawn/human/corpse/enclave/soldier
-	name = "Enclave Soldier"
-	uniform = /obj/item/clothing/under/f13/enclave_officer
-//	suit = /obj/item/clothing/suit/armor/f13/power_armor/advanced
-	shoes = /obj/item/clothing/shoes/f13/military
-	gloves = /obj/item/clothing/gloves/f13/military
-	//radio = /obj/item/device/radio/headset
-	//mask = /obj/item/clothing/mask/gas
-	head = /obj/item/clothing/head/helmet/power_armor/advanced
-	//back = /obj/item/weapon/storage/backpack
 
 
 /mob/living/simple_animal/hostile/bs
