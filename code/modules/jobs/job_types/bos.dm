@@ -101,9 +101,9 @@ Sentinel
 	pa_wear = TRUE
 	uniform = 		/obj/item/clothing/under/f13/recon
 	accessory = 	/obj/item/clothing/accessory/bos/sentinel
-	suit = 			/obj/item/clothing/suit/armor/f13/power_armor/t51b
+	suit = 			/obj/item/clothing/suit/armor/f13/power_armor/t60
 	belt =			/obj/item/storage/belt/military/assault
-	head = 			/obj/item/clothing/head/helmet/power_armor/t51b
+	head = 			/obj/item/clothing/head/helmet/power_armor/t60
 	mask =			/obj/item/clothing/mask/gas/sechailer/swat
 	id = 			/obj/item/card/id/dogtag
 	backpack_contents = list(
@@ -279,6 +279,52 @@ Knight-Captain
 		/obj/item/stock_parts/cell/ammo/ec=2,
 		/obj/item/gun/energy/laser/pistol=1
 		)
+
+/*
+Senior Paladin
+*/
+
+/datum/job/bos/f13seniorpaladin
+	title = "Senior Paladin"
+	flag = F13SENIORPALADIN
+	faction = "BOS"
+	total_positions = 1
+	spawn_positions = 1
+	description = "As the Chapter's Senior offensive warrior, you have proven your service and dedication to the Brotherhood over your time as a Paladin. As your skills gained, however, you were deigned to be more useful as a commander and trainer. Now you have your trusty super-sledge, and were recently given a suit of T-51b power armor. Your job is to coordinate the Paladins and ensure they work as a team, instilling discipline as you go."
+	forbids = "The Brotherhood of Steel Forbids: Unethical human experimentation. Violence beyond what is needed to accomplish Brotherhood goals."
+	enforces = "The Brotherhood of Steel Expects: Obeying the Chain That - Binds your direct superior. Collection and safeguarding of technology from the wasteland. Experimentation and research."
+	supervisors = "the Sentinel"
+	selection_color = "#95a5a6"
+	exp_requirements = 900
+
+	outfit = /datum/outfit/job/bos/f13seniorpaladin
+
+	access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
+	minimal_access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
+
+/datum/outfit/job/bos/f13seniorpaladin
+	name = "Senior Paladin"
+	jobtype = /datum/job/bos/f13seniorpaladin
+	pa_wear = TRUE
+	suit = 			/obj/item/clothing/suit/armor/f13/power_armor/t51b
+	head = 			/obj/item/clothing/head/helmet/power_armor/t51b
+	accessory = 	/obj/item/clothing/accessory/bos/seniorpaladin
+	uniform = 		/obj/item/clothing/under/f13/recon
+	backpack = 		/obj/item/twohanded/sledgehammer/supersledge
+	mask =			/obj/item/clothing/mask/gas/sechailer/swat
+	belt = 			/obj/item/storage/belt/military/assault
+	suit_store = 	/obj/item/gun/energy/laser/pistol
+	backpack_contents = list(
+		/obj/item/kitchen/knife/combat=1, \
+		/obj/item/stock_parts/cell/ammo/ec=2, \
+		)
+
+/datum/job/bos/f13seniorpaladin/after_spawn(mob/living/carbon/human/H, mob/M)
+	H.add_quirk("Hard Yards")
+
+
+
+
 /*
 Paladin
 */
@@ -287,8 +333,8 @@ Paladin
 	title = "Paladin"
 	flag = F13PALADIN
 	faction = "BOS"
-	total_positions = 3
-	spawn_positions = 3
+	total_positions = 2
+	spawn_positions = 2
 	description = "You answer directly to the Sentinel. You are this Chapter's main line of defense and offense; highly trained in combat and weaponry though with little practical field experience, you are eager to prove your worth to the Brotherhood. Your primary duties are defense and surface operations. You may also be assigned a trainee Initiate."
 	forbids = "The Brotherhood of Steel Forbids: Unethical human experimentation. Violence beyond what is needed to accomplish Brotherhood goals."
 	enforces = "The Brotherhood of Steel Expects: Obeying the Chain That - Binds your direct superior. Collection and safeguarding of technology from the wasteland. Experimentation and research."
@@ -299,7 +345,6 @@ Paladin
 	loadout_options = list(
 	/datum/outfit/loadout/paladinb, //Carbine and aep7
 	/datum/outfit/loadout/paladine, //aer9 and n99
-	/datum/outfit/loadout/paladinm, //Super sledge and AEP7
 	)
 
 	outfit = /datum/outfit/job/bos/f13paladin
@@ -311,6 +356,8 @@ Paladin
 	name = "Paladin"
 	jobtype = /datum/job/bos/f13paladin
 	pa_wear = TRUE
+	suit = 			/obj/item/clothing/suit/armor/f13/power_armor/t45d
+	head = 			/obj/item/clothing/head/helmet/power_armor/t45d
 	uniform = 		/obj/item/clothing/under/f13/recon
 	mask =			/obj/item/clothing/mask/gas/sechailer/swat
 	belt = 			/obj/item/storage/belt/military
@@ -325,8 +372,6 @@ Paladin
 
 /datum/outfit/loadout/paladinb
 	name = "Paladin-Junior"
-	suit = 			/obj/item/clothing/suit/armor/f13/power_armor/t45d
-	head = 			/obj/item/clothing/head/helmet/power_armor/t45d
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/assault_carbine=1,
 		/obj/item/gun/energy/laser/pistol=1,
@@ -337,8 +382,6 @@ Paladin
 
 /datum/outfit/loadout/paladine
 	name = "Paladin"
-	suit = 			/obj/item/clothing/suit/armor/f13/power_armor/t60
-	head = 			/obj/item/clothing/head/helmet/power_armor/t60
 	backpack_contents = list(
 		/obj/item/gun/energy/laser/aer9=1,
 		/obj/item/gun/ballistic/automatic/pistol/n99=1,
@@ -346,16 +389,6 @@ Paladin
 		/obj/item/ammo_box/magazine/m10mm_adv=2,
 		/obj/item/clothing/accessory/bos/paladin=1
 
-		)
-/datum/outfit/loadout/paladinm
-	name = "Paladin-Senior"
-	suit = 			/obj/item/clothing/suit/armor/f13/power_armor/t60
-	head = 			/obj/item/clothing/head/helmet/power_armor/t60
-	backpack_contents = list(
-		/obj/item/twohanded/sledgehammer/supersledge=1,
-		/obj/item/gun/energy/laser/pistol=1,
-		/obj/item/stock_parts/cell/ammo/ec=2,
-		/obj/item/clothing/accessory/bos/seniorpaladin=1
 		)
 
 /*

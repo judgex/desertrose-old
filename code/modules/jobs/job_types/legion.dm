@@ -135,18 +135,18 @@ Centurion
 		/obj/item/storage/bag/money/small/legion)
 
 /datum/outfit/loadout/centheavy
-	name = "Bear-Slayer Centurion"
-	suit = 			/obj/item/clothing/suit/armor/f13/legion/centurion
-	head = 			/obj/item/clothing/head/helmet/f13/legion/centurion
+	name = "Paladin-Slayer Centurion"
+	suit = 			/obj/item/clothing/suit/armor/f13/legion/palacent
+	head = 			/obj/item/clothing/head/helmet/f13/legion/palacent
 	suit_store = /obj/item/gun/ballistic/automatic/smg10mm
 	backpack_contents = list(
 		/obj/item/melee/powerfist/goliath=1,
 		/obj/item/ammo_box/magazine/m10mm_auto=2)
 
 /datum/outfit/loadout/centassault
-	name = "Paladin-Slayer Centurion"
-	suit = 			/obj/item/clothing/suit/armor/f13/legion/palacent
-	head = 			/obj/item/clothing/head/helmet/f13/legion/palacent
+	name = "Bear-Slayer Centurion"
+	suit = 			/obj/item/clothing/suit/armor/f13/legion/centurion
+	head = 			/obj/item/clothing/head/helmet/f13/legion/centurion
 	suit_store = /obj/item/gun/ballistic/automatic/mini_uzi
 	backpack_contents = list(
 		/obj/item/twohanded/required/thermic_lance=1,
