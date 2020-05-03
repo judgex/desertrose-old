@@ -165,7 +165,7 @@
 
 /obj/item/flag/bos
 	name = "Brotherhood of Steel flag"
-	desc = " A red and black flag with a sword surrounded in gears and wings, in a dazzling gold."
+	desc = "A red and black flag with a sword surrounded in gears and wings, in a dazzling gold."
 	icon_state = "bosflag"
 	item_state = "bosflag"
 	faction = "BOS"
@@ -190,7 +190,7 @@
 		if(do_after(user, 60, target = src))
 			var/obj/item/stack/sheet/leather/H = I
 			if(H.use(1))
-				var/flag = alert(user, "Please choose which faction flag you wish to create.", "Flag type", "NCR", "Legion", "Oasis")
+				var/flag = alert(user, "Please choose which faction flag you wish to create.", "Flag type", "NCR", "Legion", "Oasis", "BoS")
 				switch(flag)
 					if("NCR")
 						name = "NCR flag"
@@ -210,6 +210,12 @@
 						icon_state = "oasisflag"
 						item_state = "oasisflag"
 						faction = "Oasis"
+					if("BoS")
+						name = "Brotherhood of Steel flag"
+						desc = "A red and black flag with a sword surrounded in gears and wings, in a dazzling gold."
+						icon_state = "bosflag"
+						item_state = "bosflag"
+						faction = "BOS
 				update_icon()
 	else
 		attack_hand(user)

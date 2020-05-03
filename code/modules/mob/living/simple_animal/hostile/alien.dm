@@ -11,14 +11,13 @@
 	response_disarm = "shoves"
 	response_harm = "hits"
 	speed = 0
-	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab/xeno = 4,
-							/obj/item/stack/sheet/animalhide/xeno = 1)
-	maxHealth = 250
-	health = 250
+	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab/xeno = 4)
+	maxHealth = 275
+	health = 275
 	harm_intent_damage = 5
 	obj_damage = 60
-	melee_damage_lower = 75
-	melee_damage_upper = 75
+	melee_damage_lower = 60
+	melee_damage_upper = 60
 	attacktext = "slashes"
 	speak_emote = list("hisses")
 	bubble_icon = "alien"
