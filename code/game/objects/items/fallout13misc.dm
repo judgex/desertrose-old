@@ -215,7 +215,7 @@
 						desc = "A red and black flag with a sword surrounded in gears and wings, in a dazzling gold."
 						icon_state = "bosflag"
 						item_state = "bosflag"
-						faction = "BOS
+						faction = "BOS"
 				update_icon()
 	else
 		attack_hand(user)
