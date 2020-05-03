@@ -20,6 +20,7 @@ GLOBAL_LIST_INIT(silicon_whitelist_positions, list(
 "Mr. Handy"))
 //Whitelisted positions list FO13 anything that shows up here requires that the user have an entry in the 'role_whitelist' table of id,ckey,"faction"
 //NCR Assistant and Legion Camp Follower re-added to whitelisting.  BoS Initiate removed from whitelist.
+
 GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 "Head Scribe",
 "Chief of Security",
@@ -28,6 +29,7 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 "Sentinel",
 "Knight-Captain",
 "Head Scribe",
+"Senior Paladin",
 "Paladin",
 "Knight",
 "Scribe",
@@ -53,25 +55,53 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 "Chief",
 "Shaman"
 ))
+GLOBAL_LIST_INIT(faction_player_positions, list(
+"Senior Paladin",
+"Paladin",
+"Knight",
+"Scribe",
+"Legion Decanus",
+"Legionary",
+"Legion Vexillarius",
+"Legion Scout",
+"Legion Explorer",
+"Auxilia",
+"NCR Lieutenant",
+"NCR Sergeant",
+"NCR Specialist",
+"NCR Ranger",
+"NCR Trooper",
+"Deputy"
+
+))
 //Whitelisted positions list FO13 anything that shows up here requires that the user have an entry in the 'role_whitelist' table of id,ckey,"antagonist"
 GLOBAL_LIST_INIT(antagonist_whitelist_positions, list(
     "Raider" //Consider adding Great Khan to this list if people abuse it.
 ))
 
-GLOBAL_LIST_INIT(brotherhood_positions, list(
+
+GLOBAL_LIST_INIT(brotherhood_command_positions, list(
 	"Elder",
 	"Sentinel",
 	"Knight-Captain",
-	"Head Scribe",
+	"Head Scribe"
+))
+
+GLOBAL_LIST_INIT(brotherhood_positions, list(
+	"Senior Paladin",
 	"Paladin",
 	"Knight",
 	"Scribe",
 	"Initiate"
 ))
 
-GLOBAL_LIST_INIT(den_positions, list(
+GLOBAL_LIST_INIT(den_command_positions, list(
     "Mayor",
-    "Sheriff",
+    "Sheriff"
+))
+
+
+GLOBAL_LIST_INIT(den_positions, list(
     "Doctor",
     "Settler",
     "Deputy",
@@ -79,9 +109,12 @@ GLOBAL_LIST_INIT(den_positions, list(
     "Prospector"
 ))
 
-GLOBAL_LIST_INIT(legion_positions, list(
+GLOBAL_LIST_INIT(legion_command_positions, list(
     "Legion Centurion",
-    "Legion Orator",
+    "Legion Orator"
+))
+
+GLOBAL_LIST_INIT(legion_positions, list(
     "Legion Decanus",
     "Legionary",
     "Recruit Legionary",
@@ -92,21 +125,27 @@ GLOBAL_LIST_INIT(legion_positions, list(
     "Legion Slave"
 ))
 
-GLOBAL_LIST_INIT(ncr_positions, list(
+GLOBAL_LIST_INIT(ncr_command_positions, list(
     "NCR Captain",
-    "NCR Ambassador",
+    "NCR Veteran Ranger",
+    "NCR Ambassador"
+))
+
+GLOBAL_LIST_INIT(ncr_positions, list(
     "NCR Lieutenant",
     "NCR Sergeant",
     "NCR Specialist",
     "NCR Trooper",
     "NCR Assistant",
-    "NCR Veteran Ranger",
     "NCR Ranger"
 ))
 
-GLOBAL_LIST_INIT(vault_positions, list(
+GLOBAL_LIST_INIT(vault_command_positions, list(
     "Overseer",
-    "Chief of Security",
+    "Chief of Security"
+))
+
+GLOBAL_LIST_INIT(vault_positions, list(
     "Vault-tec Doctor",
     "Vault-tec Scientist",
     "Vault-tec Security",
@@ -121,8 +160,8 @@ GLOBAL_LIST_INIT(wasteland_positions, list(
     "Wastelander"
 ))
 GLOBAL_LIST_INIT(security_positions, list(
-    "Chief of Security",
-    "Vault-tec Security"
+    "Vault-tec Security",
+    "Deputy"
 ))
 GLOBAL_LIST_INIT(silicon_positions, list(
     "Mr. Handy"

@@ -1,41 +1,58 @@
 %A% %ADJECTIVE% familiar face
-%A% %ADJECTIVE% crewmember
-%A% %ADJECTIVE% security officer
+%A% %ADJECTIVE% friend
+%A% %ADJECTIVE% police
 %A% %ADJECTIVE% doctor
-%A% %ADJECTIVE% engineer
-%A% %ADJECTIVE% miner
-%A% %ADJECTIVE% slime
-%A% %ADJECTIVE% alien
+%A% %ADJECTIVE% wastelander
+%A% %ADJECTIVE% prospector
+%A% %ADJECTIVE% mutant
+%A% %ADJECTIVE% Securitron
 %A% %ADJECTIVE% traitor
 %A% %ADJECTIVE% ally
 %A% %ADJECTIVE% scientist
 %A% %ADJECTIVE% monkey
 %A% %ADJECTIVE% loved one
 %A% %ADJECTIVE% monster
-the %ADJECTIVE% captain
+the %ADJECTIVE% brotherhood
+the %ADJECTIVE% NCR
+the %ADJECTIVE% legion
 %A% %ADJECTIVE% hat
-%A% %ADJECTIVE% ID card
+%A% %ADJECTIVE% holotape
 %A% %ADJECTIVE% bottle
 %A% %ADJECTIVE% toolbox
 %A% %ADJECTIVE% gun
+%A% %ADJECTIVE% laser gun
+%A% %ADJECTIVE% power armor
+%A% %ADJECTIVE% protectron
+%A% %ADJECTIVE% money
+%A% %ADJECTIVE% Caeser
+%A% %ADJECTIVE% General Oliver
+%A% %ADJECTIVE% Courier 6
+%A% %ADJECTIVE% President Kimball
 the sun
-the engine
-the station
-%A% %ADJECTIVE% planet
-the medical bay
-the %ADJECTIVE% bridge
-the %ADJECTIVE% brig
-%A% %ADJECTIVE% shuttle
-%A% %ADJECTIVE% laboratory
+the generator
+the wasteland
+the Great War
+%A% %ADJECTIVE% Earth
+the medical clinic
+the %ADJECTIVE% Dam
+the %ADJECTIVE% prison
+%A% %ADJECTIVE% riverboat
+%A% %ADJECTIVE% ancient laboratory
 Vault-Tec
-the Syndicate
-the Wizard Federation
+the Enclave
+the Master
 %ADJECTIVE% blood
 %ADJECTIVE% plasma
 %ADJECTIVE% wind
 %ADJECTIVE% darkness
 %ADJECTIVE% light
 %ADJECTIVE% death
+%ADJECTIVE% blindness
+%ADJECTIVE% thirst
+%ADJECTIVE% hunger
+%ADJECTIVE% worry
+%ADJECTIVE% failure
+%ADJECTIVE% success
 %ADJECTIVE% blinking lights
 %ADJECTIVE% power
 %ADJECTIVE% riches
