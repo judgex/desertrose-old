@@ -113,6 +113,7 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	force = 35
 	throwforce = 25
 	block_chance = 10
+	armour_penetration = 5
 	sharpness = IS_BLUNT
 
 /obj/item/claymore/machete/pipe/tireiron
