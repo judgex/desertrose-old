@@ -12,6 +12,7 @@
 	gloves =        /obj/item/clothing/gloves/f13/handwraps
 	id = null
 	box = null
+	ears = null
 /*
 Tribal Chief
 */
@@ -40,6 +41,7 @@ Tribal Chief
 	backpack = /obj/item/storage/backpack/explorer
 	uniform = /obj/item/clothing/under/f13/tribe_chief
 	belt = /obj/item/claymore/machete/warclub
+	neck = /obj/item/clothing/neck/cloak/chiefcloak
 	backpack_contents = list(
 		/obj/item/restraints/legcuffs/bola=1,
 		/obj/item/reagent_containers/pill/patch/healingpowder=2,
@@ -71,9 +73,11 @@ Tribal Shaman
 	name = "Shaman"
 	jobtype = /datum/job/tribal/f13shaman
 
+	head = /obj/item/clothing/head/helmet/f13/shamanhead
 	backpack = /obj/item/storage/backpack/explorer
 	uniform = /obj/item/clothing/under/f13/tribe_shaman
-	belt = /obj/item/claymore/machete
+	r_pocket = /obj/item/kitchen/knife/ritualdagger
+	r_hand = /obj/item/twohanded/sledgehammer/shamanstaff
 	backpack_contents = list(
 		/obj/item/reagent_containers/pill/patch/healingpowder=2,
 		/obj/item/stack/medical/gauze=1,
@@ -86,8 +90,8 @@ Villager
 	flag = F13VILLAGER
 	department_flag = TRIBAL
 	faction = "Village"
-	total_positions = 4
-	spawn_positions = 4
+	total_positions = 8
+	spawn_positions = 8
 	supervisors = "Tribal Chief and Shaman"
 	description = "A proud member of the Wayfinder tribe, you do what needs to be done to ensure the survival of yourself and your people while following the laws of the tribe in regards to the historic aversion to pre-war weapons and technology."
 	selection_color = "#008080"

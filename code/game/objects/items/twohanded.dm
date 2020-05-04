@@ -959,3 +959,39 @@
 
 /obj/item/twohanded/sledgehammer/supersledge/update_icon()
 	icon_state = "supersledge[wielded]"
+
+/obj/item/twohanded/sledgehammer/warmace
+	name = "war mace"
+	desc = "A heavy wooden club with a turquoise head."
+	icon = 'icons/obj/items_and_weapons.dmi'
+	icon_state = "warmace0"
+	lefthand_file = 'icons/mob/inhands/weapons/polearms_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/weapons/polearms_righthand.dmi'
+	force_unwielded = 20
+	force_wielded = 40
+	throwforce = 20
+	armour_penetration = 20
+	slot_flags = ITEM_SLOT_BACK
+	attack_verb = list("bashed", "pounded", "bludgeoned", "pummeled", "thrashed")
+	w_class = WEIGHT_CLASS_BULKY
+	sharpness = IS_BLUNT
+
+/obj/item/twohanded/sledgehammer/warmace/update_icon()
+	icon_state = "warmace[wielded]"
+
+/obj/item/twohanded/sledgehammer/shamanstaff
+	name = "shaman staff"
+	desc = "An intricate staff, carried for centuries by the shaman class of thw Wayfayer Tribe."
+	icon = 'icons/obj/items_and_weapons.dmi'
+	icon_state = "shamanstaff0"
+	lefthand_file = 'icons/mob/inhands/weapons/polearms_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/weapons/polearms_righthand.dmi'
+	force_unwielded = 15
+	force_wielded = 30
+	slot_flags = ITEM_SLOT_BACK
+	attack_verb = list("bashed", "pounded", "bludgeoned", "pummeled", "thrashed")
+	w_class = WEIGHT_CLASS_BULKY
+	sharpness = IS_BLUNT
+
+/obj/item/twohanded/sledgehammer/shamanstaff/update_icon()
+	icon_state = "shamanstaff[wielded]"

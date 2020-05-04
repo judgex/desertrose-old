@@ -284,6 +284,13 @@
 	name = "security helmet"
 	desc = "A standard issue vault security helmet, pretty robust."
 
+/obj/item/clothing/head/helmet/f13/shamanhead
+	name = "ritual headress"
+	desc = "Hand carved skull headress, uniquely suited for the spiritual leader of the Wayfarer Tribe."
+	icon_state = "shamanhead"
+	item_state = "shamanhead"
+	armor = list("melee" = 10, "bullet" = 15, "laser" = 5, "energy" = 5, "bomb" = 20, "bio" = 70, "rad" = 10, "fire" = 20, "acid" = 0)
+
 //Remnants
 /obj/item/clothing/head/donor/enclave
 	name = "enclave forge cap"
