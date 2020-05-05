@@ -23,7 +23,7 @@
 	var/cycledelay = 200	//About 10 seconds / cycle
 	var/harvest = 0			//Ready to harvest?
 	var/obj/item/seeds/myseed = null	//The currently planted seed
-	var/rating = 1
+	var/rating = 3
 	var/unwrenchable = 1
 	var/recent_bee_visit = FALSE //Have we been visited by a bee recently, so bees dont overpollinate one plant
 	var/using_irrigation = FALSE //If the tray is connected to other trays via irrigation hoses
