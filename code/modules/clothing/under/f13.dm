@@ -347,12 +347,6 @@
 	item_state = "chiefrags"
 
 /obj/item/clothing/under/f13/tribe_shaman
-	name = "tribal shaman robes"
-	desc = "Well maintained robes adorned with fine leather and polished turquoise."
-	icon_state = "shamanrags"
-	item_state = "shamanrags"
-
-/obj/item/clothing/under/f13/tribe_
 
 	name = "tribal shaman robes"
 	desc = "Carefully hand wozen cloth robes with heavy turqoise jewelry drapped over top."

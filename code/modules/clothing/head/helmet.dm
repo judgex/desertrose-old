@@ -435,11 +435,11 @@
 	armor = list("melee" = 30, "bullet" = 35, "laser" = 30, "energy" = 30, "bomb" = 30, "bio" = 70, "rad" = 100, "fire" = 65, "acid" = 30)
 
 /obj/item/clothing/head/helmet/f13/shamanhead
-	name = "shaman helm"
-	desc = "The helmet worn by the spiritual leader of the Wayfinders."
+	name = "ritual headress"
+	desc = "Hand carved skull headress, uniquely suited for the spiritual leader of the Wayfarer Tribe."
 	icon_state = "shamanhead"
 	item_state = "shamanhead"
-	armor = list("melee" = 30, "bullet" = 35, "laser" = 30, "energy" = 30, "bomb" = 30, "bio" = 70, "rad" = 100, "fire" = 65, "acid" = 30)
+	armor = list("melee" = 10, "bullet" = 15, "laser" = 5, "energy" = 5, "bomb" = 20, "bio" = 70, "rad" = 10, "fire" = 20, "acid" = 0)
 
 /obj/item/clothing/head/helmet/f13/atombeliever
 	name = "believer headdress"
