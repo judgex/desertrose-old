@@ -410,7 +410,7 @@
 	if(!is_drainable())
 		if(bottle == TRUE)
 			to_chat(user, "You pop open \the [src] and the bottle cap falls to the ground.")
-			new /obj/item/stack/f13Cash(user.loc)
+			new /obj/item/stack/f13Cash/bottle_cap(user.loc)
 		else
 			to_chat(user, "You pull back the tab of \the [src] with a satisfying pop.") //Ahhhhhhhh
 		container_type = OPENCONTAINER
