@@ -347,6 +347,7 @@
 	item_state = "chiefrags"
 
 /obj/item/clothing/under/f13/tribe_shaman
+
 	name = "tribal shaman robes"
 	desc = "Carefully hand wozen cloth robes with heavy turqoise jewelry drapped over top."
 	icon_state = "shamanrags"

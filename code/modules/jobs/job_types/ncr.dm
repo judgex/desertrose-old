@@ -545,7 +545,7 @@ Ranger
 	name = "Light Ranger"
 	suit_store = /obj/item/gun/ballistic/automatic/assault_carbine
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m556/rifle/assault=3)
+		/obj/item/ammo_box/magazine/m556/rifle=2)
 
 /datum/outfit/loadout/prtrail
 	name = "Trail Ranger"

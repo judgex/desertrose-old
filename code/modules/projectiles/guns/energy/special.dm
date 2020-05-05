@@ -28,7 +28,7 @@
 
 /obj/item/gun/energy/decloner
 	name = "biological demolecularisor"
-	desc = "A gun that discharges high amounts of controlled radiation to slowly break a target into component elements."
+	desc = "A weapon developed by horrible third parties that makes use of an FEV retro-strain to physically rupture skin and organ cells."
 	icon_state = "decloner"
 	ammo_type = list(/obj/item/ammo_casing/energy/declone)
 	pin = null

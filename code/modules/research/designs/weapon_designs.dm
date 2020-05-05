@@ -158,18 +158,18 @@
 	build_path = /obj/item/gun/energy/beam_rifle
 	category = list("Weapons")
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
-
+*/
 /datum/design/decloner
-	name = "Decloner"
-	desc = "Your opponent will bubble into a messy pile of goop."
+	name = "Direct Application Device"
+	desc = "A device that makes use of the Forced Evolutionary virus with each shot."
 	id = "decloner"
 	build_type = PROTOLATHE
-	materials = list(MAT_GOLD = 5000,MAT_URANIUM = 10000)
-	reagents_list = list("FEV_solution" = 40)
+	materials = list(MAT_METAL = 10000,MAT_GLASS = 5000,MAT_GOLD = 5000,MAT_PLASMA = 500,MAT_URANIUM = 10000)
+	reagents_list = list("FEV_solution" = 60)
 	build_path = /obj/item/gun/energy/decloner
 	category = list("Weapons")
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
-*/
+
 /datum/design/rapidsyringe
 	name = "Rapid Syringe Gun"
 	desc = "A gun that fires many syringes."

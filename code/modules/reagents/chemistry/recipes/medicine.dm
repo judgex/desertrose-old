@@ -164,7 +164,7 @@
 	name = "Mutadone"
 	id = "mutadone"
 	results = list("mutadone" = 3)
-	required_reagents = list("FEV_solution" = 1, "acetone" = 1, "bromine" = 1)
+	required_reagents = list("stablemutationtoxin" = 1, "acetone" = 1, "bromine" = 1)
 
 /datum/chemical_reaction/antihol
 	name = "antihol"
@@ -176,7 +176,7 @@
 	name = "Cryoxadone"
 	id = "cryoxadone"
 	results = list("cryoxadone" = 3)
-	required_reagents = list("stable_plasma" = 1, "acetone" = 1, "FEV_solution" = 1)
+	required_reagents = list("stable_plasma" = 1, "acetone" = 1, "stablemutationtoxin" = 1)
 
 /datum/chemical_reaction/pyroxadone
 	name = "Pyroxadone"

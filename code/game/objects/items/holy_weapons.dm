@@ -303,7 +303,7 @@
 	item_state = "chainswordon"
 	name = "ripper"
 	desc = "A miniature chainsaw, as amazing as it sounds."
-	force = 50
+	force = 45
 	slot_flags = ITEM_SLOT_BELT
 	attack_verb = list("sawed", "torn", "cut", "chopped", "diced")
 	hitsound = 'sound/weapons/chainsawhit.ogg'

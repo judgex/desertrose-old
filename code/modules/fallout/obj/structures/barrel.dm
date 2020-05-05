@@ -125,6 +125,6 @@ obj/structure/reagent_dispensers/barrel/explosive/bullet_act(obj/item/projectile
 	desc = "Ancient containers with something inside of them. Or are they empty? Actually, that's a lot of barrels standing in a single spot..."
 	icon_state = "four_b"
 	tank_volume = 800
-	reagent_id = "FEV_solution"
+	reagent_id = "radium"
 	anchored = 1
 //	self_weight = 60
