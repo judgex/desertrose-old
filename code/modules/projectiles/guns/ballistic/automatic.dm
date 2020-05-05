@@ -621,35 +621,18 @@
 
 /obj/item/gun/ballistic/automatic/assault_rifle/infiltrator
 	name = "infiltrator"
-	desc = "A customized R91 assault rifle, with a scope, integrated suppressor, cut down stock and polymer furniture."
+	desc = "A customized R91 assault rifle, with an integrated suppressor, cut down stock and polymer furniture."
 	icon_state = "infiltrator"
 	item_state = "fnfal"
 	init_mag_type = /obj/item/ammo_box/magazine/m556/rifle
 	suppressed = 1
+	burst_size = 1
 	fire_delay = 3
-	zoomable = TRUE
-	zoom_amt = 10
-	zoom_out_amt = 13
 	spread = 1
 	automatic = 1
 	fire_sound = 'sound/weapons/Gunshot_large_silenced.ogg'
 	weapon_weight = WEAPON_HEAVY
 	force = 15
-
-/obj/item/gun/ballistic/automatic/assault_rifle/infiltrator/burst_select()
-	var/mob/living/carbon/human/user = usr
-	switch(select)
-		if(0)
-			select += 1
-			burst_size = 3
-			to_chat(user, "<span class='notice'>You switch to [burst_size]-rnd burst.</span>")
-		if(1)
-			select = 0
-			burst_size = 1
-			to_chat(user, "<span class='notice'>You switch to semi-automatic.</span>")
-	playsound(user, 'sound/weapons/empty.ogg', 100, 1)
-	update_icon()
-	return
 
 /obj/item/gun/ballistic/automatic/type93
 	name = "type 93 assault rifle"
