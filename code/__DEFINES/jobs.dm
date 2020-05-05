@@ -66,12 +66,11 @@
 #define F13ORATOR		(1<<2)
 #define F13DECAN		(1<<3)
 #define F13VEXILLARIUS	(1<<4)
-#define F13LEGIONARY	(1<<5)
-#define F13RECRUITLEG	(1<<6)
-#define F13EXPLORER		(1<<7)
+#define F13VETLEGIONARY	(1<<5)
+#define F13LEGIONARY	(1<<6)
+#define F13RECRUITLEG	(1<<7)
 #define F13AUXILIA		(1<<8)
-#define F13CAMPFOLLOWER	(1<<9)
-#define F13LEGIONSLAVE	(1<<10)
+#define F13LEGIONSLAVE	(1<<9)
 
 #define BOS				(1<<5)
 

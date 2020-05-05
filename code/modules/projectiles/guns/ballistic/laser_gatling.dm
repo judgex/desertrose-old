@@ -99,11 +99,11 @@
 	icon_state = "minigun_spin"
 	item_state = "minigun"
 	flags_1 = CONDUCT_1
-	slowdown = 1
+	slowdown = 1.5
 	slot_flags = null
 	w_class = WEIGHT_CLASS_HUGE
 	materials = list()
-	burst_size = 3
+	burst_size = 2
 	automatic = 0
 	fire_delay = 1
 	weapon_weight = WEAPON_HEAVY

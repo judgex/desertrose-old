@@ -127,7 +127,7 @@ Centurion
 		/obj/item/throwing_star/spear, \
 		/obj/item/reagent_containers/pill/patch/healingpowder=2, \
 		/obj/item/ammo_box/magazine/m10mm_auto=2, \
-		/obj/item/flashlight/flare/torch=1, \
+		/obj/item/flashlight/lantern=1, \
 		/obj/item/key/scollar=1, \
 		/obj/item/key/bcollar=1, \
 		/obj/item/assembly/signaler/electropack/shockcollar=1, \
@@ -144,16 +144,16 @@ Centurion
 		/obj/item/ammo_box/magazine/m10mm_auto=2)
 
 /datum/outfit/loadout/centassault
-	name = "Bear-Slayer Centurion"
-	suit = 			/obj/item/clothing/suit/armor/f13/legion/centurion
-	head = 			/obj/item/clothing/head/helmet/f13/legion/centurion
+	name = "Ranger-Hunter Centurion"
+	suit = 			/obj/item/clothing/suit/armor/f13/legion/rangercent
+	head = 			/obj/item/clothing/head/helmet/f13/legion/rangercent
 	suit_store = /obj/item/gun/ballistic/automatic/mini_uzi
 	backpack_contents = list(
 		/obj/item/twohanded/required/thermic_lance=1,
 		/obj/item/ammo_box/magazine/uzim9mm=2)
 
 /datum/outfit/loadout/centbreacher
-	name = "Breacher Centurion"
+	name = "Standard Centurion"
 	suit = 			/obj/item/clothing/suit/armor/f13/legion/centurion
 	head = 			/obj/item/clothing/head/helmet/f13/legion/centurion
 	suit_store = /obj/item/gun/ballistic/automatic/shotgun/riot
@@ -190,7 +190,7 @@ Orator
 		/obj/item/claymore/machete/gladius=1, \
 		/obj/item/ammo_box/a357=2, \
 		/obj/item/reagent_containers/pill/patch/healingpowder=2, \
-		/obj/item/flashlight/flare/torch=1,
+		/obj/item/flashlight/lantern=1,
 		/obj/item/storage/bag/money/small/legion=1,
 		/obj/item/megaphone/cornu=1)
 
@@ -203,7 +203,7 @@ Decanus
 	faction = "Legion"
 	total_positions = 3
 	spawn_positions = 3
-	description = "You answer directly to the Centurion, working with them to organize the Legionaries. You lead the Legionaries, Vexillari and Explorers on patrols, raids and scouting missions on behalf of your Centurion."
+	description = "You answer directly to the Centurion, working with them to organize the Legionaries. You lead the Legionaries, and Vexillari on patrols, raids and scouting missions on behalf of your Centurion."
 	supervisors = "the Centurion and up"
 	exp_requirements = 2400
 
@@ -211,7 +211,7 @@ Decanus
 
 	loadout_options = list(
 	/datum/outfit/loadout/decancharger, //greasegun and bumper sword
-	/datum/outfit/loadout/decanspec, //marksman carbine and machete gladius
+	/datum/outfit/loadout/decanspec, //nerfed infiltrator and machete gladius
 	/datum/outfit/loadout/decanprotec //lever-action shotgun, roman shield and ballistic fist
 	)
 
@@ -232,37 +232,36 @@ Decanus
 		/obj/item/throwing_star/spear, \
 		/obj/item/reagent_containers/pill/patch/healingpowder=2, \
 		/obj/item/storage/box/handcuffs=1, \
-		/obj/item/flashlight/flare/torch=1, \
+		/obj/item/flashlight/lantern=1, \
 		/obj/item/key/scollar=1, \
-		/obj/item/claymore/machete/gladius=1, \
 		/obj/item/assembly/signaler/electropack/shockcollar=1, \
 		/obj/item/storage/bag/money/small/legofficers)
 
 /datum/outfit/loadout/decancharger
-	name = "Charger Decanus"
+	name = "Recruit Decanus"
 	suit = 			/obj/item/clothing/suit/armor/f13/legion/vet
-	head = 			/obj/item/clothing/head/helmet/f13/legion/vet/decan
+	head = 			/obj/item/clothing/head/helmet/f13/legion/recruit/decan
 	suit_store = /obj/item/gun/ballistic/automatic/greasegun
 	backpack_contents = list(
 		/obj/item/twohanded/fireaxe/bmprsword=1,
 		/obj/item/ammo_box/magazine/greasegun=2)
 
 /datum/outfit/loadout/decanspec
-	name = "Speculatores Decanus"
-	suit = 			/obj/item/clothing/suit/armor/f13/legion/heavy
-	head = 			/obj/item/clothing/head/helmet/f13/legion/heavy
+	name = "Prime Decanus"
+	suit = 			/obj/item/clothing/suit/armor/f13/legion/vet
+	head = 			/obj/item/clothing/head/helmet/f13/legion/prime/decan
 	backpack_contents = list(
-		/obj/item/gun/ballistic/automatic/assault_carbine=1,
-		/obj/item/ammo_box/magazine/m556/rifle/assault=2
+		/obj/item/gun/ballistic/automatic/assault_rifle/infiltrator=1,
+		/obj/item/ammo_box/magazine/m556/rifle=2,
+		/obj/item/claymore/machete/gladius=1
 		)
 
 /datum/outfit/loadout/decanprotec
-	name = "Protector Decanus"
-	suit = 			/obj/item/clothing/suit/armor/f13/legion/vet
-	head = 			/obj/item/clothing/head/helmet/f13/legion/vet/decan
-	suit_store = /obj/item/gun/ballistic/shotgun/trench
+	name = "Veteran Decanus"
+	suit = 			/obj/item/clothing/suit/armor/f13/legion/heavy
+	head = 			/obj/item/clothing/head/helmet/f13/legion/heavy
+	suit_store = 	/obj/item/gun/ballistic/revolver/ballisticfist
 	backpack_contents = list(
-		/obj/item/gun/ballistic/revolver/ballisticfist=1,
 		/obj/item/storage/box/lethalshot=1,
 		/obj/item/storage/box/slugshot=1,
 		/obj/item/shield/riot/roman=1)
@@ -282,9 +281,15 @@ Vexillarius
 
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13vexillarius
 
+	loadout_options = list(
+		/datum/outfit/loadout/vexassault, //ripper, m29scoped
+		/datum/outfit/loadout/vexsupport //trail carbine, smoke bombs
+		)
+
 /datum/job/CaesarsLegion/Legionnaire/f13vexillarius/after_spawn(mob/living/carbon/human/H, mob/M)
 	H.add_quirk("Hard Yards")
 	H.add_quirk("Big Leagues")
+	H.add_quirk("Iron Fist")
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13vexillarius
 	name = "Legion Vexillarius"
@@ -292,47 +297,61 @@ Vexillarius
 	id = 			/obj/item/card/id/dogtag/legveteran
 	mask =			/obj/item/clothing/mask/bandana/legvet
 	suit = 			/obj/item/clothing/suit/armor/f13/legion/vet/vexil
-	head = 			/obj/item/clothing/head/helmet/f13/legion/vet/vexil
 	glasses = 		/obj/item/clothing/glasses/sunglasses/big
-	suit_store = 	/obj/item/gun/ballistic/shotgun/automatic/hunting/brush
 	ears = 			/obj/item/radio/headset
 	backpack_contents = list(
 		/obj/item/throwing_star/spear, \
 		/obj/item/throwing_star/spear, \
 		/obj/item/claymore/machete/gladius=1, \
 		/obj/item/reagent_containers/pill/patch/healingpowder=2, \
-		/obj/item/ammo_box/tube/c4570=2, \
-		/obj/item/flashlight/flare/torch=1, \
+		/obj/item/flashlight/lantern=1, \
 		/obj/item/megaphone/cornu=1, \
 		/obj/item/storage/bag/money/small/legenlisted)
 	r_pocket = /obj/item/restraints/handcuffs
 
+/datum/outfit/loadout/vexassault
+	name = "Assault Vexillarius"
+	head = 			/obj/item/clothing/head/helmet/f13/legion/vet/combvexil
+	suit_store = 	/obj/item/gun/ballistic/revolver/m29/scoped
+	backpack_contents = list(
+		/obj/item/ammo_box/m44=2,
+		/obj/item/nullrod/claymore/chainsaw_sword=1
+		)
+
+/datum/outfit/loadout/vexsupport
+	name = "Support Vexillarius"
+	head = 			/obj/item/clothing/head/helmet/f13/legion/vet/vexil
+	suit_store = 	/obj/item/gun/ballistic/shotgun/automatic/hunting/trail
+	backpack_contents = list(
+		/obj/item/ammo_box/tube/m44=2,
+		/obj/item/grenade/smokebomb=3,
+		/obj/item/grenade/plastic/c4=1
+		)
+
+
 
 /*
-Legionary
+Veteran Legionary
 */
-/datum/job/CaesarsLegion/Legionnaire/f13legionary
-	title = "Legionary"
-	flag = F13LEGIONARY
+/datum/job/CaesarsLegion/Legionnaire/f13vetlegionary
+	title = "Veteran Legionary"
+	flag = F13VETLEGIONARY
 	faction = "Legion"
-	total_positions = 5
-	spawn_positions = 5
+	total_positions = 3
+	spawn_positions = 3
 	description = "You answer to the Decani and the Centurion, as well as the Auxilia when in your camp. Acting as a loyal soldier of the Centuria, you have the great honour of serving under Caesar in his quest to unite the scattered tribes of The Mojave. You are a hardened warrior, and have been waging war with the Legion for many years."
 	supervisors = "the Decani and Centurion"
 	exp_requirements = 300
 
-	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13legionary
+	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13vetlegionary
 
 	loadout_options = list(
 	/datum/outfit/loadout/legassault, //scoped .44 revolver
 	/datum/outfit/loadout/legbreach //lever-action shotgun
 	)
 
-/datum/job/CaesarsLegion/Legionnaire/f13legionary/after_spawn(mob/living/carbon/human/H, mob/M)
-	H.add_quirk("Big Leagues")
-
-/datum/outfit/job/CaesarsLegion/Legionnaire/f13legionary
-	name = "Legionary"
+/datum/outfit/job/CaesarsLegion/Legionnaire/f13vetlegionary
+	name = "Veteran Legionary"
 	jobtype = /datum/job/CaesarsLegion/Legionnaire/f13legionary
 	id = 			/obj/item/card/id/dogtag/legveteran
 	mask =			/obj/item/clothing/mask/bandana/legvet
@@ -344,27 +363,86 @@ Legionary
 		/obj/item/restraints/legcuffs/bola=1, \
 		/obj/item/throwing_star/spear, \
 		/obj/item/throwing_star/spear, \
-		/obj/item/claymore/machete/gladius=1, \
+		/obj/item/claymore/machete/reinforced=1, \
 		/obj/item/reagent_containers/pill/patch/healingpowder=2, \
-		/obj/item/flashlight/flare/torch=1, \
+		/obj/item/flashlight/lantern=1, \
 		/obj/item/storage/bag/money/small/legenlisted,
 		/obj/item/radio)
 	r_pocket = /obj/item/restraints/handcuffs
 
 /datum/outfit/loadout/legassault
 	name = "Assault Legionary"
-	head = 			/obj/item/clothing/head/helmet/f13/legion/vet
-	suit = 			/obj/item/clothing/suit/armor/f13/legion/vet
-	suit_store = /obj/item/gun/ballistic/revolver/m29/scoped
+	suit_store = /obj/item/gun/ballistic/revolver/thatgun
 	backpack_contents = list(
-		/obj/item/ammo_box/m44=2)
+		/obj/item/twohanded/fireaxe=1,
+		)
 
 /datum/outfit/loadout/legbreach
 	name = "Breacher Legionary"
 	suit_store = /obj/item/gun/ballistic/shotgun/trench
 	backpack_contents = list(
+		/obj/item/storage/box/lethalshot=1,
+		/obj/item/shield/riot/roman=1
+		)
+
+/datum/job/CaesarsLegion/Legionnaire/f13vetlegionary/after_spawn(mob/living/carbon/human/H, mob/M)
+	H.add_quirk("Big Leagues")
+	H.add_quirk("Hard Yards")
+/*
+Prime Legionairy
+*/
+
+
+
+/datum/job/CaesarsLegion/Legionnaire/f13legionary
+	title = "Prime Legionary"
+	flag = F13LEGIONARY
+	faction = "Legion"
+	total_positions = 3
+	spawn_positions = 3
+	description = "You answer to the Decani and the Centurion, as well as the Auxilia when in your camp. Acting as a loyal soldier of the Centuria, you have the great honour of serving under Caesar in his quest to unite the scattered tribes of The Mojave. You have been through enough battles to call yourself a prime, but you are by no means yet a Veteran."
+	supervisors = "the Decani and Centurion"
+	exp_requirements = 300
+
+	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13legionary
+
+	loadout_options = list(
+	/datum/outfit/loadout/legassault, //.357 revolver
+	/datum/outfit/loadout/legbreach //hunting shotgun
+	)
+
+/datum/outfit/job/CaesarsLegion/Legionnaire/f13legionary
+	name = "Prime Legionary"
+	jobtype = /datum/job/CaesarsLegion/Legionnaire/f13legionary
+	id = 			/obj/item/card/id/dogtag/legprime
+	mask =			/obj/item/clothing/mask/bandana/legprime
+	head = 			/obj/item/clothing/head/helmet/f13/legion/prime
+	suit = 			/obj/item/clothing/suit/armor/f13/legion/prime
+	glasses = 		/obj/item/clothing/glasses/sunglasses
+	backpack_contents = list(
+		/obj/item/restraints/legcuffs/bola=1, \
+		/obj/item/throwing_star/spear, \
+		/obj/item/throwing_star/spear, \
+		/obj/item/claymore/machete=1, \
+		/obj/item/reagent_containers/pill/patch/healingpowder=2, \
+		/obj/item/flashlight/flare/torch=1, \
+		/obj/item/radio)
+	r_pocket = /obj/item/restraints/handcuffs
+
+/datum/outfit/loadout/legassault
+	name = "Foot Legionary"
+	suit_store = /obj/item/gun/ballistic/revolver/colt357
+	backpack_contents = list(
+		/obj/item/ammo_box/a357=2)
+
+/datum/outfit/loadout/legbreach
+	name = "Close Quarters Legionary"
+	suit_store = /obj/item/gun/ballistic/shotgun/hunting
+	backpack_contents = list(
 		/obj/item/storage/box/lethalshot=1)
 
+/datum/job/CaesarsLegion/Legionnaire/f13legionary/after_spawn(mob/living/carbon/human/H, mob/M)
+	H.add_quirk("Big Leagues")
 /*
 Recruit Legionary
 */
@@ -391,17 +469,16 @@ Recruit Legionary
 	mask =			/obj/item/clothing/mask/bandana/legrecruit
 	glasses = 		/obj/item/clothing/glasses/legiongoggles
 	r_pocket =      /obj/item/restraints/handcuffs
-	suit_store =	/obj/item/gun/ballistic/revolver/caravan_shotgun
+	suit_store =	/obj/item/gun/ballistic/revolver/pipe_rifle
 	backpack_contents = list(
-		/obj/item/throwing_star/spear, \
-		/obj/item/throwing_star/spear, \
-		/obj/item/claymore/machete=1, \
+		/obj/item/kitchen/knife/butcher, \
 		/obj/item/flashlight/flare/torch=1,
 		/obj/item/radio)
 
 /*
 Explorer
 */
+/*
 /datum/job/CaesarsLegion/Legionnaire/f13explorer
 	title = "Legion Explorer"
 	flag = F13EXPLORER
@@ -461,6 +538,7 @@ Explorer
 	suit_store = /obj/item/gun/ballistic/automatic/marksman/sniper
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/w308=2)
+*/
 
 /*
 Auxilia

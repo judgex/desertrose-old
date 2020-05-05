@@ -376,7 +376,7 @@ Paladin
 		/obj/item/gun/ballistic/automatic/assault_carbine=1,
 		/obj/item/gun/energy/laser/pistol=1,
 		/obj/item/stock_parts/cell/ammo/ec=2,
-		/obj/item/ammo_box/magazine/m556/rifle/assault=2,
+		/obj/item/ammo_box/magazine/m556/rifle=2,
 		/obj/item/clothing/accessory/bos/juniorpaladin=1
 		)
 
