@@ -226,12 +226,11 @@ Raider
 	head = /obj/item/clothing/head/helmet/f13/raider/psychotic
 
 /datum/outfit/loadout/raider_metal
-	name = "Metal - Black"
-	suit = /obj/item/clothing/suit/armor/f13/metalarmor
-	head = list(/obj/item/clothing/head/helmet/f13/metalmask,
-	/obj/item/clothing/head/helmet/knight/fluff/metal,
-	/obj/item/clothing/head/helmet/f13/motorcycle,
-	/obj/item/clothing/head/helmet/f13/eyebot = 0.2)
+	name = "Metal Raider"
+	suit = /obj/item/clothing/suit/armor/f13/raidermetal
+	head = /obj/item/clothing/head/helmet/f13/raidermetal
+	uniform = /obj/item/clothing/under/f13/raiderharness
+
 	//This 0.2 weight will make the eyebot less common. Everything has a weight of 1 if not specified
 
 //As a subclass, this inherits the helmets from the raider_metal outfit
