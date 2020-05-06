@@ -524,7 +524,7 @@
 	armor = list("melee" = 60, "bullet" = 40, "laser" = 25, "energy" = 15, "bomb" = 25, "bio" = 50, "rad" = 20, "fire" = 70, "acid" = 0)
 
 /obj/item/clothing/head/helmet/f13/legion/heavy
-	name = "legion heavy decan helmet"
+	name = "legion veteran decan helmet"
 	desc = "It's a metal legion helmet, with a plume, denoting veteran Decanus status."
 	icon_state = "legheavy"
 	item_state = "legheavy"
@@ -653,6 +653,20 @@
 	armor = list("melee" = 70, "bullet" = 60, "laser" = 40, "energy" = 60, "bomb" = 55, "bio" = 60, "rad" = 60, "fire" = 40, "acid" = 0)
 
 //Metal masks
+
+/obj/item/clothing/head/helmet/f13/raidermetal
+	name = "raider metal helmet"
+	desc = "A metal helmet, rusty and awful."
+	icon_state = "raidermetal"
+	item_state = "raidermetal"
+	can_toggle = 1
+	armor = list("melee" = 50, "bullet" = 35, "laser" = 35, "energy" = 20, "bomb" = 25, "bio" = 30, "rad" = 30, "fire" = 20, "acid" = 0)
+	flags_inv = HIDEMASK|HIDEEYES|HIDEFACE
+	strip_delay = 80
+	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
+	visor_flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
+
+
 /obj/item/clothing/head/helmet/f13/metalmask
 	name = "metal mask"
 	desc = "A crudely formed metal hockey mask."

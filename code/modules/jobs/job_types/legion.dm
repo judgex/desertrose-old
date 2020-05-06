@@ -124,15 +124,14 @@ Centurion
 	r_pocket =      /obj/item/restraints/handcuffs
 	backpack_contents = list(
 		/obj/item/restraints/legcuffs/bola=1, \
-		/obj/item/throwing_star/spear, \
 		/obj/item/reagent_containers/pill/patch/healingpowder=2, \
-		/obj/item/ammo_box/magazine/m10mm_auto=2, \
 		/obj/item/flashlight/lantern=1, \
 		/obj/item/key/scollar=1, \
 		/obj/item/key/bcollar=1, \
 		/obj/item/assembly/signaler/electropack/shockcollar=1, \
 		/obj/item/assembly/signaler/electropack/boomcollar=2, \
-		/obj/item/storage/bag/money/small/legion)
+		/obj/item/storage/bag/money/small/legofficers=1, \
+		)
 
 /datum/outfit/loadout/centheavy
 	name = "Paladin-Slayer Centurion"
@@ -191,12 +190,13 @@ Orator
 		/obj/item/ammo_box/a357=2, \
 		/obj/item/reagent_containers/pill/patch/healingpowder=2, \
 		/obj/item/flashlight/lantern=1,
-		/obj/item/storage/bag/money/small/legion=1,
+		/obj/item/storage/bag/money/small/legofficers=1,
 		/obj/item/megaphone/cornu=1)
 
 /*
 Decanus
 */
+
 /datum/job/CaesarsLegion/Legionnaire/f13decan
 	title = "Legion Decanus"
 	flag = F13DECAN
@@ -269,6 +269,7 @@ Decanus
 /*
 Vexillarius
 */
+
 /datum/job/CaesarsLegion/Legionnaire/f13vexillarius
 	title = "Legion Vexillarius"
 	flag = F13VEXILLARIUS
@@ -333,6 +334,7 @@ Vexillarius
 /*
 Veteran Legionary
 */
+
 /datum/job/CaesarsLegion/Legionnaire/f13vetlegionary
 	title = "Veteran Legionary"
 	flag = F13VETLEGIONARY
@@ -346,8 +348,8 @@ Veteran Legionary
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13vetlegionary
 
 	loadout_options = list(
-	/datum/outfit/loadout/legassault, //scoped .44 revolver
-	/datum/outfit/loadout/legbreach //lever-action shotgun
+	/datum/outfit/loadout/vetlegassault, //scoped .44 revolver
+	/datum/outfit/loadout/vetlegbreach //lever-action shotgun
 	)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13vetlegionary
@@ -370,29 +372,34 @@ Veteran Legionary
 		/obj/item/radio)
 	r_pocket = /obj/item/restraints/handcuffs
 
-/datum/outfit/loadout/legassault
+/datum/outfit/loadout/vetlegassault
 	name = "Assault Legionary"
 	suit_store = /obj/item/gun/ballistic/revolver/thatgun
 	backpack_contents = list(
 		/obj/item/twohanded/fireaxe=1,
 		)
 
-/datum/outfit/loadout/legbreach
-	name = "Breacher Legionary"
-	suit_store = /obj/item/gun/ballistic/shotgun/trench
+/datum/outfit/loadout/vetlegbreach
+	name = "Foot Legionary"
+	suit_store = /obj/item/gun/ballistic/automatic/assault_carbine
 	backpack_contents = list(
-		/obj/item/storage/box/lethalshot=1,
-		/obj/item/shield/riot/roman=1
+		/obj/item/ammo_box/magazine/m556/rifle=2,
+		)
+
+/datum/outfit/loadout/vetlegbreach
+	name = "Protector Legionary"
+	suit_store = /obj/item/gun/ballistic/automatic/assault_carbine
+	backpack_contents = list(
+		/obj/item/ammo_box/magazine/m556/rifle=2,
 		)
 
 /datum/job/CaesarsLegion/Legionnaire/f13vetlegionary/after_spawn(mob/living/carbon/human/H, mob/M)
 	H.add_quirk("Big Leagues")
 	H.add_quirk("Hard Yards")
+
 /*
 Prime Legionairy
 */
-
-
 
 /datum/job/CaesarsLegion/Legionnaire/f13legionary
 	title = "Prime Legionary"
