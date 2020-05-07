@@ -39,6 +39,7 @@
 	name = "NCR desert fatigues"
 	desc = "A set of standard issue New California Republic trooper fatigues."
 	icon_state = "ncr_uniform"
+	can_adjust = 1
 	item_state = "ncr_uniform"
 	item_color = "ncr_uniform"
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 30, "fire" = 20, "acid" = 50)
@@ -117,6 +118,14 @@
 	item_color = "ranger"
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 30, "fire" = 20, "acid" = 50)
 
+/obj/item/clothing/under/f13/trailranger
+	name = "ranger outfit"
+	desc = "Simple rustic clothes for a big iron packin' lawman. Worn often by NCR rangers."
+	icon_state = "cowboyrang"
+	item_state = "cowboyrang"
+	item_color = "cowboyrang"
+	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 30, "fire" = 20, "acid" = 50)
+
 /obj/item/clothing/under/f13/patrolranger
 	name = "patrol ranger outfit"
 	desc = "A pair of brown slacks and a breathable shirt, meant to be worn under NCR patrol ranger armour."
@@ -182,6 +191,13 @@
 	righthand_file = 'icons/mob/inhands/clothing_righthand.dmi'
 	alt_covers_chest = TRUE
 	can_adjust = TRUE
+
+/obj/item/clothing/under/f13/priestess
+	name = "priestess robes"
+	desc = "The robes worn by a Priestess of Mars."
+	icon_state = "priestess"
+	item_state = "priestess"
+	item_color = "priestess"
 
 // Generic
 
@@ -261,6 +277,30 @@
 	desc = "Made by the famous pre-war fashion designer Marie Calluna, this dress was made to hug your every curve and show off some deep cleavage."
 	icon_state = "bandagedress"
 	item_state = "bandagedress"
+
+/obj/item/clothing/under/f13/classdress
+	name = "classy dress"
+	desc = "A dress that shows off all of your assets in the best ways, while remaining quite formal and tasteful."
+	icon_state = "societydress"
+	item_state = "societydress"
+
+/obj/item/clothing/under/f13/bluedress
+	name = "blue dress"
+	desc = "A cute, but plain, common pre-war dress."
+	icon_state = "blue_dress"
+	item_state = "blue_dress"
+
+/obj/item/clothing/under/f13/pinkdress
+	name = "pink dress"
+	desc = "A cute, but plain, common pre-war dress."
+	icon_state = "pink_dress"
+	item_state = "pink_dress"
+
+/obj/item/clothing/under/f13/greendress
+	name = "green dress"
+	desc = "A cute, but plain, common pre-war dress."
+	icon_state = "green_dress"
+	item_state = "green_dress"
 
 //Minor Factions
 

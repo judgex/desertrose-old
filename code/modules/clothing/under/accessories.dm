@@ -148,8 +148,8 @@
     minimize_when_attached = TRUE
 
 /obj/item/clothing/accessory/ncr/SPC
-    name = "(E-4) Specialist rank pins"
-    desc = "A Specialist should wear this."
+    name = "(E-4) Corporal rank pins"
+    desc = "A Corporal should wear this."
     icon_state = "ncrenlisted"
     item_color = "ncrenlisted"
     minimize_when_attached = TRUE
@@ -428,8 +428,8 @@
 	item_color = "medband"
 
 /obj/item/clothing/accessory/armband/medblue
-	name = "medical guard armband"
-	desc = "An armband, worn by the station's security forces to display which department they're assigned to. This one is white and blue."
+	name = "first aid armband"
+	desc = "An armband, worn NCR troopers who are trained in and can perform first aid."
 	icon_state = "medblueband"
 	item_color = "medblueband"
 
