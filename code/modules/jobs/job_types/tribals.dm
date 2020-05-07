@@ -13,6 +13,13 @@
 	id = null
 	box = null
 	ears = null
+
+/datum/outfit/job/tribal/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	..()
+	if(visualsOnly)
+		return
+	H.add_trait(TRAIT_TECHNOPHOBE, TRAIT_GENERIC)
+
 /*
 Tribal Chief
 */

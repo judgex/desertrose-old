@@ -4,7 +4,7 @@ GLOBAL_LIST_INIT(command_positions, list(
     "Sentinel",
     "Knight-Captain",
     "Legion Centurion",
-    "Legion Orator",
+    "Priestess of Mars",
     "NCR Captain",
     "NCR Veteran Ranger",
     "NCR Ambassador",
@@ -34,7 +34,7 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 "Knight",
 "Scribe",
 "Legion Centurion",
-"Legion Orator",
+"Priestess of Mars",
 "Legion Decanus",
 "Veteran Legionary",
 "Prime Legionary",
@@ -113,7 +113,7 @@ GLOBAL_LIST_INIT(den_positions, list(
 
 GLOBAL_LIST_INIT(legion_command_positions, list(
     "Legion Centurion",
-    "Legion Orator"
+    "Priestess of Mars"
 ))
 
 GLOBAL_LIST_INIT(legion_positions, list(

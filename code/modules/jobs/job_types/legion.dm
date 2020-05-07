@@ -38,6 +38,12 @@
 		H.sexual_potency = 0
 		H.lust = 0
 
+/datum/outfit/job/CaesarsLegion/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	..()
+	if(visualsOnly)
+		return
+	H.add_trait(TRAIT_TECHNOPHOBE, TRAIT_GENERIC)
+
 /*
 Legate
 
@@ -162,36 +168,50 @@ Centurion
 
 
 /*
-Orator
+Priestess of Mars
 */
-/datum/job/CaesarsLegion/Legionnaire/f13orator
-	title = "Legion Orator"
-	flag = F13ORATOR
+/datum/job/CaesarsLegion/f13priestess
+	title = "Priestess of Mars"
+	flag = F13PRIESTESS
 	faction = "Legion"
 	total_positions = 1
 	spawn_positions = 1
-	description = "You are an experienced and trusted Legionary given the vital role of advising the Centurion on political matters and spreading word of Caesar's might to the profligates in the wastes. You are not a combatant, though you are permitted to defend yourself."
-	supervisors = "the Centurion"
+	description = "You are a spiritual and logistics advisor for the Legion forces in the area. Being raised in and from the homeland, you have fully adapted to the Legion's ideals and fully committed yourself to the role as mother and caretaker of the Legion's future. You are an icon to be respected, even by fellow Legion; and although a woman, your status does not allow you to be belittled."
+	supervisors = "the Centurion, Mars"
 	exp_requirements = 800
 	exp_type = EXP_TYPE_DECANUS
 
-	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13orator
+	outfit = /datum/outfit/job/CaesarsLegion/f13priestess
 
-/datum/outfit/job/CaesarsLegion/Legionnaire/f13orator
-	name = "Legion Orator"
-	jobtype = /datum/job/CaesarsLegion/Legionnaire/f13orator
-	id = 			/obj/item/card/id/dogtag/legorator
-	shoes = 		/obj/item/clothing/shoes/f13/military/legionleather
-	suit = 			/obj/item/clothing/suit/armor/f13/legion/vet/orator
-	ears = 			/obj/item/radio/headset //best way to spread Caesar's news!
-	suit_store = 	/obj/item/gun/ballistic/revolver/colt357
+/datum/outfit/job/CaesarsLegion/f13priestess
+	name = "Priestess of Mars"
+	uniform = /obj/item/clothing/under/f13/priestess
+	glasses = /obj/item/clothing/glasses/sunglasses/fakeblindfold
+	jobtype = /datum/job/CaesarsLegion/f13priestess
+	id = /obj/item/card/id/dogtag/legpriest
+	shoes = /obj/item/clothing/shoes/sandal
 	backpack_contents = list(
-		/obj/item/claymore/machete/gladius=1, \
-		/obj/item/ammo_box/a357=2, \
-		/obj/item/reagent_containers/pill/patch/healingpowder=2, \
+		/obj/item/reagent_containers/pill/patch/healingpowder=3, \
 		/obj/item/flashlight/lantern=1,
-		/obj/item/storage/bag/money/small/legofficers=1,
-		/obj/item/megaphone/cornu=1)
+		)
+
+/datum/outfit/job/CaesarsLegion/f13priestess/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	..()
+	if(visualsOnly)
+		return
+	if(H.gender == MALE)
+		H.gender = FEMALE
+		H.real_name = random_unique_name(MALE)
+		H.name = H.real_name
+		if(H.wear_id)
+			var/obj/item/card/id/dogtag/L = H.wear_id
+			L.registered_name = H.name
+			L.update_label()
+
+/datum/job/CaesarsLegion/f13priestess/after_spawn(mob/living/carbon/human/H, mob/M)
+	H.add_quirk("Poor Aim")
+	H.add_quirk("Spiritual")
+
 
 /*
 Decanus
@@ -244,7 +264,7 @@ Decanus
 	suit_store = /obj/item/gun/ballistic/automatic/greasegun
 	backpack_contents = list(
 		/obj/item/twohanded/fireaxe/bmprsword=1,
-		/obj/item/ammo_box/magazine/greasegun=2)
+		/obj/item/ammo_box/magazine/greasegun=1)
 
 /datum/outfit/loadout/decanspec
 	name = "Prime Decanus"
@@ -252,7 +272,7 @@ Decanus
 	head = 			/obj/item/clothing/head/helmet/f13/legion/prime/decan
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/assault_rifle/infiltrator=1,
-		/obj/item/ammo_box/magazine/m556/rifle=2,
+		/obj/item/ammo_box/magazine/m556/rifle=1,
 		/obj/item/claymore/machete/gladius=1
 		)
 
@@ -274,8 +294,8 @@ Vexillarius
 	title = "Legion Vexillarius"
 	flag = F13VEXILLARIUS
 	faction = "Legion"
-	total_positions = 2
-	spawn_positions = 2
+	total_positions = 1
+	spawn_positions = 1
 	description = "You answer directly to the Decani and the Centurion, acting as a standard bearer for your squad. You raise troop morale, relay orders from the Decanii and the Centurion, and rally men when ordered, however, you hold no actual authority over the troops and should instead only relay orders from your superiors."
 	supervisors = "the Decani and Centurion"
 	exp_requirements = 2100
@@ -302,7 +322,6 @@ Vexillarius
 	ears = 			/obj/item/radio/headset
 	backpack_contents = list(
 		/obj/item/throwing_star/spear, \
-		/obj/item/throwing_star/spear, \
 		/obj/item/claymore/machete/gladius=1, \
 		/obj/item/reagent_containers/pill/patch/healingpowder=2, \
 		/obj/item/flashlight/lantern=1, \
@@ -313,9 +332,9 @@ Vexillarius
 /datum/outfit/loadout/vexassault
 	name = "Assault Vexillarius"
 	head = 			/obj/item/clothing/head/helmet/f13/legion/vet/combvexil
-	suit_store = 	/obj/item/gun/ballistic/revolver/m29/scoped
+	suit_store = 	/obj/item/gun/ballistic/revolver/m29
 	backpack_contents = list(
-		/obj/item/ammo_box/m44=2,
+		/obj/item/ammo_box/m44=1,
 		/obj/item/nullrod/claymore/chainsaw_sword=1
 		)
 
@@ -324,8 +343,8 @@ Vexillarius
 	head = 			/obj/item/clothing/head/helmet/f13/legion/vet/vexil
 	suit_store = 	/obj/item/gun/ballistic/shotgun/automatic/hunting/trail
 	backpack_contents = list(
-		/obj/item/ammo_box/tube/m44=2,
-		/obj/item/grenade/smokebomb=3,
+		/obj/item/ammo_box/tube/m44=1,
+		/obj/item/grenade/smokebomb=2,
 		/obj/item/grenade/plastic/c4=1
 		)
 
@@ -349,7 +368,8 @@ Veteran Legionary
 
 	loadout_options = list(
 	/datum/outfit/loadout/vetlegassault, //scoped .44 revolver
-	/datum/outfit/loadout/vetlegbreach //lever-action shotgun
+	/datum/outfit/loadout/vetlegbreach, //lever-action shotgun
+	/datum/outfit/loadout/vetlegclose //shotgun
 	)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13vetlegionary
@@ -363,7 +383,6 @@ Veteran Legionary
 	r_hand = 		/obj/item/shield/riot/roman
 	backpack_contents = list(
 		/obj/item/restraints/legcuffs/bola=1, \
-		/obj/item/throwing_star/spear, \
 		/obj/item/throwing_star/spear, \
 		/obj/item/claymore/machete/reinforced=1, \
 		/obj/item/reagent_containers/pill/patch/healingpowder=2, \
@@ -381,21 +400,21 @@ Veteran Legionary
 
 /datum/outfit/loadout/vetlegbreach
 	name = "Foot Legionary"
-	suit_store = /obj/item/gun/ballistic/automatic/assault_carbine
+	suit_store = /obj/item/gun/ballistic/shotgun/automatic/hunting/trail
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m556/rifle=2,
+		/obj/item/ammo_box/tube/m44=1,
 		)
 
-/datum/outfit/loadout/vetlegbreach
+/datum/outfit/loadout/vetlegclose
 	name = "Protector Legionary"
-	suit_store = /obj/item/gun/ballistic/automatic/assault_carbine
+	suit_store = /obj/item/gun/ballistic/shotgun/trench
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m556/rifle=2,
+		/obj/item/storage/box/slugshot=1,
+		/obj/item/shield/riot/roman=1
 		)
 
 /datum/job/CaesarsLegion/Legionnaire/f13vetlegionary/after_spawn(mob/living/carbon/human/H, mob/M)
 	H.add_quirk("Big Leagues")
-	H.add_quirk("Hard Yards")
 
 /*
 Prime Legionairy
@@ -429,7 +448,6 @@ Prime Legionairy
 	backpack_contents = list(
 		/obj/item/restraints/legcuffs/bola=1, \
 		/obj/item/throwing_star/spear, \
-		/obj/item/throwing_star/spear, \
 		/obj/item/claymore/machete=1, \
 		/obj/item/reagent_containers/pill/patch/healingpowder=2, \
 		/obj/item/flashlight/flare/torch=1, \
@@ -450,6 +468,7 @@ Prime Legionairy
 
 /datum/job/CaesarsLegion/Legionnaire/f13legionary/after_spawn(mob/living/carbon/human/H, mob/M)
 	H.add_quirk("Big Leagues")
+	H.add_quirk("Poor Aim")
 /*
 Recruit Legionary
 */
@@ -481,6 +500,9 @@ Recruit Legionary
 		/obj/item/kitchen/knife/butcher, \
 		/obj/item/flashlight/flare/torch=1,
 		/obj/item/radio)
+
+/datum/job/CaesarsLegion/Legionnaire/f13recruitleg/after_spawn(mob/living/carbon/human/H, mob/M)
+	H.add_quirk("Poor Aim")
 
 /*
 Explorer
@@ -605,6 +627,9 @@ Auxilia
 		/obj/item/stack/sheet/leather/twenty=1,
 		/obj/item/stack/sheet/mineral/wood/fifty=1)
 
+
+/datum/job/CaesarsLegion/f13auxilia/after_spawn(mob/living/carbon/human/H, mob/M)
+	H.add_quirk("Poor Aim")
 
 /*
 Camp Follower
@@ -767,3 +792,6 @@ Slave
 	backpack_contents = list(
 		/obj/item/pickaxe=1, \
 		/obj/item/radio=1)
+
+/datum/job/CaesarsLegion/f13slave/after_spawn(mob/living/carbon/human/H, mob/M)
+	H.add_quirk("Poor Aim")

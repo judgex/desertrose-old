@@ -634,6 +634,19 @@
 	weapon_weight = WEAPON_HEAVY
 	force = 15
 
+
+/obj/item/gun/ballistic/automatic/infiltrator/burst_select()
+	var/mob/living/carbon/human/user = usr
+	switch(select)
+		if(0)
+			select = 0
+			burst_size = 1
+			spread = 1
+			to_chat(user, "<span class='notice'>You switch to semi-automatic.</span>")
+	playsound(user, 'sound/weapons/empty.ogg', 100, 1)
+	update_icon()
+	return
+
 /obj/item/gun/ballistic/automatic/type93
 	name = "type 93 assault rifle"
 	desc = "The Type 93 Chinese assault rifle was designed and manufactured by a Chinese industrial conglomerate for the People's Liberation Army during the Resource Wars, for the purpose of equipping the Chinese infiltrators and American fifth-columnists. Chambered in 5.56x45."

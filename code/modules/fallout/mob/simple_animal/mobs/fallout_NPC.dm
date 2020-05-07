@@ -122,7 +122,7 @@
 
 /mob/living/simple_animal/hostile/enclave
 	name = "Enclave"
-	desc = "Just an Enclave."
+	desc = ""
 	icon_state = "enclave_scientist"
 	icon_living = "enclave_scientist"
 	icon_dead = "enclave_scientist"
@@ -189,7 +189,7 @@
 
 /mob/living/simple_animal/hostile/enclave/scientist
 	name = "Enclave scientist"
-	desc = "A scientist wearing an Advanced Radiation suit"
+	desc = "An Enclave Scientist wearing an advanced radiation suit. While they may run from you, that does not exempt them from the evil they have committed."
 	minimum_distance = 10
 	retreat_distance = 10
 	obj_damage = 0
@@ -203,38 +203,48 @@
 
 /mob/living/simple_animal/hostile/enclave/soldier
 	name = "Enclave Advanced Soldier"
-	desc = "An Enclave Soldier wearing Advanced Power Armor."
-	icon_state = "enclave_soldier"
-	icon_living = "enclave_soldier"
+	desc = "An Enclave Soldier wearing Advanced Power Armor and a plasma multi-caster. Play time's over, mutie."
+	icon_state = "enclaverangedelite"
+	icon_living = "eclaverangedelite"
 	icon_dead = "enclave_soldier"
 	icon_gib = "enclave_soldier"
-	maxHealth = 1000
-	health = 1000
+	maxHealth = 750
+	health = 750
+	melee_damage_lower = 55
+	melee_damage_upper = 55
+	extra_projectiles = 5 //6 projectiles. oh lord.
 	retreat_distance = 5
 	minimum_distance = 5
+	ranged_cooldown_time = 12
 	loot = list(/obj/effect/mob_spawn/human/corpse/enclave/soldier)
 	healable = 1
 	ranged = 1
-	projectiletype = /obj/item/projectile/beam
+	attacktext = "power-fists"
+	projectiletype = /obj/item/projectile/plasma/repeater
 	projectilesound = 'sound/f13weapons/plasmarifle.ogg'
 
 
 /mob/living/simple_animal/hostile/enclave/soldier_ca
-	name = "Enclave Private Soldier"
-	desc = "An Enclave soldier in Enclave Combat Armor."
-	icon_state = "enclave_soldier_ca"
-	icon_living = "enclave_soldier_ca"
-	icon_dead = "enclave_soldier_ca"
+	name = "Enclave Footsoldier"
+	desc = "An Enclave soldier in Enclave Combat Armor, wielding an assault rifle."
+	icon_state = "enclaveranged"
+	icon_living = "enclaveranged"
+	icon_dead = "enclaveranged"
 	icon_gib = "enclave_soldier"
-	maxHealth = 250
-	health = 250
+	maxHealth = 275
+	health = 275
+	melee_damage_lower = 40
+	melee_damage_upper = 40
 	retreat_distance = 6
 	minimum_distance = 6
+	extra_projectiles = 1
+	ranged_cooldown_time = 22
 	loot = list(/obj/effect/mob_spawn/human/corpse/enclave/soldier)
 	healable = 1
 	ranged = 1
-	projectiletype = /obj/item/projectile/beam
-	projectilesound = 'sound/weapons/resonator_fire.ogg'
+	attacktext = "pistol-whips"
+	projectiletype = /obj/item/projectile/bullet/c46x30mm
+	projectilesound = 'sound/weapons/gunshot_smg.ogg'
 
 
 /mob/living/simple_animal/hostile/bs
@@ -273,7 +283,7 @@
 
 
 /obj/effect/mob_spawn/human/corpse/bs
-	name = "BS Knight"
+	name = "Brotherhood Knight"
 	uniform = /obj/item/clothing/under/f13/bdu
 	suit = /obj/item/clothing/suit/armor/f13/combat/brotherhood
 	shoes = /obj/item/clothing/shoes/f13/military
@@ -285,8 +295,8 @@
 
 
 /mob/living/simple_animal/hostile/bs/knight
-	name = "BS Knight"
-	desc = "Just a BS Knight"
+	name = "Brotherhood Knight"
+	desc = "A Brotherhood Knight wielding a laser pistol and older issue Brotherhood combat armor."
 	icon_state = "bs_knight"
 	icon_living = "bs_knight"
 	icon_dead = "bs_knight"
@@ -301,8 +311,8 @@
 
 
 /mob/living/simple_animal/hostile/bs/paladin
-	name = "BS Paladin"
-	desc = "Just a BS Paladin"
+	name = "Brotherhood Paladin"
+	desc = "A Paladin equipped with an AER9 and T-45d power armor. The Brotherhood has arrived."
 	icon_state = "bs_paladin"
 	icon_living = "bs_paladin"
 	icon_dead = "bs_paladin"
@@ -319,7 +329,7 @@
 
 
 /obj/effect/mob_spawn/human/corpse/bs/paladin
-	name = "BS Paladin"
+	name = "Brotherhood Paladin"
 	uniform = /obj/item/clothing/under/f13/bdu
 	suit = /obj/item/clothing/suit/armor/f13/power_armor/t45d
 	shoes = /obj/item/clothing/shoes/f13/military

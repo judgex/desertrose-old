@@ -181,9 +181,10 @@ Lieutenant
 	glasses = /obj/item/clothing/glasses/hud/health
 	suit_store =    /obj/item/healthanalyzer
 	backpack_contents = list(
+		/obj/item/clothing/accessory/armband/medblue=1,
 		/obj/item/storage/pill_bottle/mining=1,
 		/obj/item/storage/firstaid/regular=1,
-		/obj/item/book/granter/trait/chemistry=2,
+		/obj/item/book/granter/trait/chemistry=1,
 		/obj/item/reagent_containers/hypospray/CMO=1)
 
 /datum/outfit/loadout/ltcombat
@@ -191,7 +192,7 @@ Lieutenant
 	suit = /obj/item/clothing/suit/armor/f13/ncrarmor/mantle/reinforced
 	suit_store = /obj/item/gun/ballistic/automatic/assault_carbine
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m556/rifle=2,
+		/obj/item/ammo_box/magazine/m556/rifle=3,
 		/obj/item/book/granter/trait/trekking=1)
 
 /datum/outfit/loadout/ltscout
@@ -199,7 +200,7 @@ Lieutenant
 	suit = /obj/item/clothing/suit/armor/f13/ncrarmor/scout/officer
 	suit_store = /obj/item/gun/ballistic/automatic/marksman/sniper
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/w308=2,
+		/obj/item/ammo_box/magazine/w308=3,
 		/obj/item/book/granter/trait/trekking=1)
 
 
@@ -262,20 +263,20 @@ Sergeant
 	suit = /obj/item/clothing/suit/armor/f13/ncrarmor/mantle
 	suit_store = /obj/item/gun/ballistic/automatic/marksman/servicerifle/r82
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m556/rifle=2)
+		/obj/item/ammo_box/magazine/m556/rifle=3)
 
 /datum/outfit/loadout/sgtscout
 	name = "Scout Sergeant"
 	suit = /obj/item/clothing/suit/armor/f13/ncrarmor/scout/veteran
 	suit_store = /obj/item/gun/ballistic/automatic/marksman
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m556/rifle=2)
+		/obj/item/ammo_box/magazine/m556/rifle=3)
 
 /*
-Specialist
+Corporal
 */
 /datum/job/ncr/f13specialist
-	title = "NCR Specialist"
+	title = "NCR Corporal"
 	flag = F13SPECIALIST
 	faction = "NCR"
 	total_positions = 2
@@ -294,12 +295,11 @@ Specialist
 	)
 
 /datum/outfit/job/ncr/f13specialist
-	name = "NCR Specialist"
+	name = "NCR Corporal"
 	jobtype = /datum/job/ncr/f13specialist
 	uniform =  		/obj/item/clothing/under/f13/ncr
 	id = 			/obj/item/card/id/dogtag/ncrtrooper
 	accessory =     /obj/item/clothing/accessory/ncr/SPC
-	head = 			/obj/item/clothing/head/f13/ncr/goggles
 	suit = 			/obj/item/clothing/suit/armor/f13/ncrarmor
 	belt =          /obj/item/storage/belt/military/NCR_Bandolier
 	glasses = 		null
@@ -316,23 +316,35 @@ Specialist
 /datum/outfit/loadout/specmedic
 	name = "Field Medic"
 	glasses = /obj/item/clothing/glasses/hud/health
+	head = 	/obj/item/clothing/head/f13/ncr/medic
 	backpack_contents = list(
+		/obj/item/clothing/accessory/armband/medblue=1,
+		/obj/item/reagent_containers/hypospray/medipen/stimpak=3,
+		/obj/item/book/granter/trait/chemistry=1,
 		/obj/item/storage/pill_bottle/mining=1,
-		/obj/item/storage/firstaid/regular=1)
+		/obj/item/storage/firstaid/regular=1,
+		)
 
 /datum/outfit/loadout/specsapper
 	name = "Sapper"
 	glasses = /obj/item/clothing/glasses/welding
 	gloves = /obj/item/clothing/gloves/color/yellow
 	belt = /obj/item/storage/belt/utility/full/engi
+	suit_store = /obj/item/gun/ballistic/automatic/marksman/servicerifle
+	head = 	/obj/item/clothing/head/f13/ncr/goggles
 	backpack_contents = list(
-		/obj/item/grenade/plastic=1)
+		/obj/item/grenade/plastic=1,
+		/obj/item/stack/sheet/metal/fifty=2,
+		/obj/item/stack/sheet/glass/fifty=1,
+		/obj/item/ammo_box/magazine/m556/rifle=2
+		)
 
 /datum/outfit/loadout/specscout
 	name = "Scout"
 	suit_store = /obj/item/gun/ballistic/shotgun/remington/scoped
+	head = /obj/item/clothing/head/beret/ncr_scout
 	backpack_contents = list(
-		/obj/item/ammo_box/a308=2,
+		/obj/item/ammo_box/a308=3,
 		/obj/item/twohanded/binocs=1
 		)
 
@@ -380,13 +392,13 @@ Trooper
 	name = "Front-Line Trooper"
 	suit_store = 	/obj/item/gun/ballistic/automatic/marksman/servicerifle
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m556/rifle=2)
+		/obj/item/ammo_box/magazine/m556/rifle=3)
 
 /datum/outfit/loadout/trooperranged
 	name = "Ranged Trooper"
 	suit_store = /obj/item/gun/ballistic/shotgun/remington
 	backpack_contents = list(
-		/obj/item/ammo_box/a308=2
+		/obj/item/ammo_box/a308=3
 		)
 
 /*
@@ -465,7 +477,7 @@ Veteran Ranger
 	shoes =			/obj/item/clothing/shoes/laced
 	backpack_contents = list(
 		/obj/item/gun/ballistic/revolver/sequoia=1, \
-		/obj/item/ammo_box/c4570=2, \
+		/obj/item/ammo_box/c4570=3, \
 		/obj/item/kitchen/knife/combat=1, \
 		/obj/item/reagent_containers/hypospray/medipen/stimpak=1, \
 		/obj/item/storage/bag/money/small/ncrofficers)
@@ -474,19 +486,19 @@ Veteran Ranger
 	name = "Classic Veteran Ranger"
 	suit_store = /obj/item/gun/ballistic/shotgun/antimateriel
 	backpack_contents = list(
-		/obj/item/ammo_box/a50MG=2)
+		/obj/item/ammo_box/a50MG=3)
 
 /datum/outfit/loadout/vrlite
 	name = "Light Veteran Ranger"
 	suit_store = /obj/item/gun/ballistic/automatic/rangemaster
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m762=2)
+		/obj/item/ammo_box/magazine/m762=3)
 
 /datum/outfit/loadout/vrbrush
 	name = "Brush Veteran Ranger"
 	suit_store = /obj/item/gun/ballistic/shotgun/automatic/hunting/brush/scoped
 	backpack_contents = list(
-		/obj/item/ammo_box/tube/c4570=2)
+		/obj/item/ammo_box/tube/c4570=3)
 
 /*
 Ranger
@@ -519,10 +531,8 @@ Ranger
 	name = "NCR Ranger"
 	jobtype = /datum/job/ncr/f13ranger
 	id = 			/obj/item/card/id/dogtag/ncrranger
-	uniform =  		/obj/item/clothing/under/f13/patrolranger
-	suit = 			/obj/item/clothing/suit/armor/f13/combat/ncr
+	uniform =  		/obj/item/clothing/under/f13/ranger
 	belt =			/obj/item/storage/belt/military/assault/ncr
-	head = 			/obj/item/clothing/head/f13/ranger
 	gloves =		/obj/item/clothing/gloves/patrol
 	shoes =			/obj/item/clothing/shoes/laced
 	glasses = 		/obj/item/clothing/glasses/sunglasses/big
@@ -537,18 +547,28 @@ Ranger
 
 /datum/outfit/loadout/prclassic
 	name = "Classic Ranger"
+	head = 			/obj/item/clothing/head/f13/ranger
+	suit = /obj/item/clothing/suit/armor/f13/combat/ncr
 	suit_store = /obj/item/gun/ballistic/automatic/marksman/sniper
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/w308=2)
+		/obj/item/ammo_box/magazine/w308=3)
 
 /datum/outfit/loadout/prlite
 	name = "Light Ranger"
+	suit = /obj/item/clothing/suit/armor/f13/combat/ncr
+	head = /obj/item/clothing/head/f13/ranger
 	suit_store = /obj/item/gun/ballistic/automatic/assault_carbine
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m556/rifle=2)
+		/obj/item/ammo_box/magazine/m556/rifle=3)
 
 /datum/outfit/loadout/prtrail
 	name = "Trail Ranger"
+	uniform = /obj/item/clothing/under/f13/trailranger
+	suit = /obj/item/clothing/suit/armor/f13/trailranger
+	head = /obj/item/clothing/head/f13/trailranger
 	suit_store = /obj/item/gun/ballistic/shotgun/automatic/hunting/trail/scoped
 	backpack_contents = list(
-		/obj/item/ammo_box/tube/m44=2)
+		/obj/item/ammo_box/tube/m44=2,
+		/obj/item/gun/ballistic/revolver/m29/alt=1,
+		/obj/item/ammo_box/m44=2
+		)
