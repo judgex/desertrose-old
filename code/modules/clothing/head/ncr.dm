@@ -105,3 +105,9 @@
 	icon_state = "drill_hat"
 	item_state = "drillhat"
 	armor = list("melee" = 50, "bullet" = 40, "laser" = 30, "energy" = 40, "bomb" = 25, "bio" = 40, "rad" = 40, "fire" = 80, "acid" = 0)
+
+/obj/item/clothing/head/f13/trailranger
+	name = "NCR trail ranger hat"
+	desc = "A rustic, homely style cowboy hat worn by NCR trail rangers. Yeehaw!"
+	icon_state = "cowboyrang"
+	item_state = "cowboyrang"

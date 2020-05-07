@@ -72,6 +72,7 @@
 #define	TRAIT_LIFEGIVER			"lifegiver"
 
 #define	TRAIT_CHEMWHIZ			"chemwhiz"
+#define TRAIT_TECHNOPHOBE		"luddite"
 #define TRAIT_TECHNOPHREAK		"technophreak" //Is this even really used?
 #define TRAIT_PA_WEAR           "pa_wear"
 

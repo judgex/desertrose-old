@@ -181,9 +181,10 @@ Lieutenant
 	glasses = /obj/item/clothing/glasses/hud/health
 	suit_store =    /obj/item/healthanalyzer
 	backpack_contents = list(
+		/obj/item/clothing/accessory/armband/medblue=1,
 		/obj/item/storage/pill_bottle/mining=1,
 		/obj/item/storage/firstaid/regular=1,
-		/obj/item/book/granter/trait/chemistry=2,
+		/obj/item/book/granter/trait/chemistry=1,
 		/obj/item/reagent_containers/hypospray/CMO=1)
 
 /datum/outfit/loadout/ltcombat
@@ -272,10 +273,10 @@ Sergeant
 		/obj/item/ammo_box/magazine/m556/rifle=3)
 
 /*
-Specialist
+Corporal
 */
 /datum/job/ncr/f13specialist
-	title = "NCR Specialist"
+	title = "NCR Corporal"
 	flag = F13SPECIALIST
 	faction = "NCR"
 	total_positions = 2
@@ -294,12 +295,11 @@ Specialist
 	)
 
 /datum/outfit/job/ncr/f13specialist
-	name = "NCR Specialist"
+	name = "NCR Corporal"
 	jobtype = /datum/job/ncr/f13specialist
 	uniform =  		/obj/item/clothing/under/f13/ncr
 	id = 			/obj/item/card/id/dogtag/ncrtrooper
 	accessory =     /obj/item/clothing/accessory/ncr/SPC
-	head = 			/obj/item/clothing/head/f13/ncr/goggles
 	suit = 			/obj/item/clothing/suit/armor/f13/ncrarmor
 	belt =          /obj/item/storage/belt/military/NCR_Bandolier
 	glasses = 		null
@@ -316,21 +316,33 @@ Specialist
 /datum/outfit/loadout/specmedic
 	name = "Field Medic"
 	glasses = /obj/item/clothing/glasses/hud/health
+	head = 	/obj/item/clothing/head/f13/ncr/medic
 	backpack_contents = list(
+		/obj/item/clothing/accessory/armband/medblue=1,
+		/obj/item/reagent_containers/hypospray/medipen/stimpak=3,
+		/obj/item/book/granter/trait/chemistry=1,
 		/obj/item/storage/pill_bottle/mining=1,
-		/obj/item/storage/firstaid/regular=1)
+		/obj/item/storage/firstaid/regular=1,
+		)
 
 /datum/outfit/loadout/specsapper
 	name = "Sapper"
 	glasses = /obj/item/clothing/glasses/welding
 	gloves = /obj/item/clothing/gloves/color/yellow
 	belt = /obj/item/storage/belt/utility/full/engi
+	suit_store = /obj/item/gun/ballistic/automatic/marksman/servicerifle
+	head = 	/obj/item/clothing/head/f13/ncr/goggles
 	backpack_contents = list(
-		/obj/item/grenade/plastic=1)
+		/obj/item/grenade/plastic=1,
+		/obj/item/stack/sheet/metal/fifty=2,
+		/obj/item/stack/sheet/glass/fifty=1,
+		/obj/item/ammo_box/magazine/m556/rifle=2
+		)
 
 /datum/outfit/loadout/specscout
 	name = "Scout"
 	suit_store = /obj/item/gun/ballistic/shotgun/remington/scoped
+	head = /obj/item/clothing/head/beret/ncr_scout
 	backpack_contents = list(
 		/obj/item/ammo_box/a308=3,
 		/obj/item/twohanded/binocs=1
@@ -519,10 +531,8 @@ Ranger
 	name = "NCR Ranger"
 	jobtype = /datum/job/ncr/f13ranger
 	id = 			/obj/item/card/id/dogtag/ncrranger
-	uniform =  		/obj/item/clothing/under/f13/patrolranger
-	suit = 			/obj/item/clothing/suit/armor/f13/combat/ncr
+	uniform =  		/obj/item/clothing/under/f13/ranger
 	belt =			/obj/item/storage/belt/military/assault/ncr
-	head = 			/obj/item/clothing/head/f13/ranger
 	gloves =		/obj/item/clothing/gloves/patrol
 	shoes =			/obj/item/clothing/shoes/laced
 	glasses = 		/obj/item/clothing/glasses/sunglasses/big
@@ -537,18 +547,28 @@ Ranger
 
 /datum/outfit/loadout/prclassic
 	name = "Classic Ranger"
+	head = 			/obj/item/clothing/head/f13/ranger
+	suit = /obj/item/clothing/suit/armor/f13/combat/ncr
 	suit_store = /obj/item/gun/ballistic/automatic/marksman/sniper
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/w308=3)
 
 /datum/outfit/loadout/prlite
 	name = "Light Ranger"
+	suit = /obj/item/clothing/suit/armor/f13/combat/ncr
+	head = /obj/item/clothing/head/f13/ranger
 	suit_store = /obj/item/gun/ballistic/automatic/assault_carbine
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/m556/rifle=3)
 
 /datum/outfit/loadout/prtrail
 	name = "Trail Ranger"
+	uniform = /obj/item/clothing/under/f13/trailranger
+	suit = /obj/item/clothing/suit/armor/f13/trailranger
+	head = /obj/item/clothing/head/f13/trailranger
 	suit_store = /obj/item/gun/ballistic/shotgun/automatic/hunting/trail/scoped
 	backpack_contents = list(
-		/obj/item/ammo_box/tube/m44=3)
+		/obj/item/ammo_box/tube/m44=2,
+		/obj/item/gun/ballistic/revolver/m29/alt=1,
+		/obj/item/ammo_box/m44=2
+		)
