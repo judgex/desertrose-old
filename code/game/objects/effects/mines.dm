@@ -85,6 +85,14 @@
 /obj/effect/mine/sound/mineEffect(mob/victim)
 	playsound(loc, sound, 100, 1)
 
+/obj/effect/mine/sound/theme
+	icon = ""
+	name = "thememine"
+	var/themesound = 'sound/voice/abomtheme.ogg'
+
+/obj/effect/mine/sound/theme/mineEffect(mob/victim)
+	playsound(loc, themesound, 75, 1)
+
 
 /obj/effect/mine/sound/bwoink
 	name = "bwoink mine"
