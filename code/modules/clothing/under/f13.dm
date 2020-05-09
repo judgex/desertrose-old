@@ -302,6 +302,18 @@
 	icon_state = "green_dress"
 	item_state = "green_dress"
 
+/obj/item/clothing/under/f13/blackdress
+	name = "black dress"
+	desc = "A dark and revealing dress that mixes formality and seduction."
+	icon_state = "blackdress"
+	item_state = "blackdress"
+
+/obj/item/clothing/under/f13/xenon
+	name = "flashy jumpsuit"
+	desc = "A jumpsuit that seems to come from another time."
+	icon_state = "xenon"
+	item_state = "xenon"
+
 //Minor Factions
 
 //Roving Traders

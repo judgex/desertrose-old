@@ -131,7 +131,7 @@
 	turns_per_move = 5
 	response_help = "pokes"
 	response_disarm = "shoves"
-	response_harm = "Ouch"
+	response_harm = "hits"
 	speed = 0
 	stat_attack = 1
 	robust_searching = 1
@@ -151,7 +151,7 @@
 	del_on_death = 1
 	speak = list("For the Enclave!", "Stars and Stripes!", "Liberty or death!")
 	speak_emote = "pulls out a weapon,"
-	speak_chance = 1
+	speak_chance = 0
 
 /obj/effect/mob_spawn/human/corpse/enclavescientist
 	name = "Enclave scientist"
@@ -195,6 +195,10 @@
 	obj_damage = 0
 	environment_smash = 0
 	loot = list(/obj/effect/mob_spawn/human/corpse/enclavescientist)
+	ranged = 1
+	ranged_cooldown_time = 30
+	projectiletype = /obj/item/projectile/energy/declone
+	projectilesound = 'sound/f13weapons/plasmarifle.ogg'
 
 /mob/living/simple_animal/hostile/enclave/scientist/Aggro()
 	..()
@@ -237,7 +241,7 @@
 	melee_damage_upper = 40
 	retreat_distance = 6
 	minimum_distance = 6
-	extra_projectiles = 1
+	extra_projectiles = 2
 	ranged_cooldown_time = 22
 	loot = list(/obj/effect/mob_spawn/human/corpse/enclave/soldier)
 	healable = 1
@@ -672,3 +676,65 @@
 	//mask = /obj/item/clothing/mask/gas
 	head = /obj/item/clothing/head/helmet/f13/motorcycle
 	//back = /obj/item/weapon/storage/backpack
+
+/mob/living/simple_animal/hostile/abomination
+	name = "abomination"
+	desc = "A horrible fusion of man, animal, and something entirely different. It quakes and shudders, looking to be in an immense amount of pain. Blood and other fluids ooze from various gashes and lacerations on its body, punctuated by mouths that gnash and scream."
+	speak_emote = list("screams", "clicks", "chitters", "barks", "moans", "growls", "meows", "reverberates", "roars", "squeaks", "rattles", "exclaims", "yells", "remarks", "mumbles", "jabbers", "stutters", "seethes")
+	icon_state = "abomination"
+	icon_living = "abomination"
+	icon_dead = "abomination_dead"
+	robust_searching = 1
+	maxHealth = 1200
+	health = 1200
+	harm_intent_damage = 20
+	melee_damage_lower = 100
+	melee_damage_upper = 100
+	attacktext = "eviscerates"
+	attack_sound = 'sound/weapons/punch1.ogg'
+	attacktext = "lacerates"
+	speed = -0.5
+	var/static/list/abom_sounds
+	deathmessage = "wails as its form shudders and violently comes to a stop."
+	death_sound = 'sound/voice/abomburning.ogg'
+
+/mob/living/simple_animal/hostile/abomination/Initialize()
+	. = ..()
+	abom_sounds = list('sound/voice/abomination1.ogg', 'sound/voice/abomscream.ogg', 'sound/voice/abommoan.ogg', 'sound/voice/abomscream2.ogg', 'sound/voice/abomscream3.ogg')
+
+/mob/living/simple_animal/hostile/abomination/say(message, datum/language/language = null, var/list/spans = list(), language, sanitize, ignore_spam)
+	..()
+	if(stat)
+		return
+	var/chosen_sound = pick(abom_sounds)
+	playsound(src, chosen_sound, 100, TRUE)
+
+/mob/living/simple_animal/hostile/abomination/Life()
+	..()
+	if(stat)
+		return
+	if(prob(10))
+		var/chosen_sound = pick(abom_sounds)
+		playsound(src, chosen_sound, 100, TRUE)
+
+
+
+/mob/living/simple_animal/hostile/abomhorror
+	name = "failed experiment"
+	desc = "A terrible fusion of man, animal, and something else entirely. It looks to be in great pain."
+	speak_emote = list("screams", "clicks", "chitters", "barks", "moans", "growls", "meows", "reverberates", "roars", "squeaks", "rattles", "exclaims", "yells", "remarks", "mumbles", "jabbers", "stutters", "seethes")
+	icon_state = "horror"
+	icon_living = "horror"
+	icon_dead = "horror_dead"
+	robust_searching = 1
+	maxHealth = 700
+	health = 700
+	harm_intent_damage = 20
+	melee_damage_lower = 50
+	melee_damage_upper = 50
+	attacktext = "eviscerates"
+	attack_sound = 'sound/weapons/punch1.ogg'
+	attacktext = "lacerates"
+	speed = -0.5
+	var/static/list/abom_sounds
+	deathmessage = "wails as its form shudders and violently comes to a stop."
