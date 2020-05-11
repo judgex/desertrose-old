@@ -434,6 +434,13 @@
 	item_state = "atomzealot"
 	armor = list("melee" = 30, "bullet" = 35, "laser" = 30, "energy" = 30, "bomb" = 30, "bio" = 70, "rad" = 100, "fire" = 65, "acid" = 30)
 
+/obj/item/clothing/head/helmet/f13/shamanhead
+	name = "ritual headress"
+	desc = "Hand carved skull headress, uniquely suited for the spiritual leader of the Wayfarer Tribe."
+	icon_state = "shamanhead"
+	item_state = "shamanhead"
+	armor = list("melee" = 10, "bullet" = 15, "laser" = 5, "energy" = 5, "bomb" = 20, "bio" = 70, "rad" = 10, "fire" = 20, "acid" = 0)
+
 /obj/item/clothing/head/helmet/f13/atombeliever
 	name = "believer headdress"
 	desc = "The headwear of the true faith."
@@ -517,11 +524,11 @@
 	armor = list("melee" = 60, "bullet" = 40, "laser" = 25, "energy" = 15, "bomb" = 25, "bio" = 50, "rad" = 20, "fire" = 70, "acid" = 0)
 
 /obj/item/clothing/head/helmet/f13/legion/heavy
-	name = "legion heavy decanus helmet"
-	desc = "It's a metal legion helmet, with a plume, denoting Decanii status."
+	name = "legion veteran decan helmet"
+	desc = "It's a metal legion helmet, with a plume, denoting veteran Decanus status."
 	icon_state = "legheavy"
 	item_state = "legheavy"
-	armor = list("melee" = 60, "bullet" = 40, "laser" = 25, "energy" = 15, "bomb" = 25, "bio" = 50, "rad" = 20, "fire" = 70, "acid" = 0)
+	armor = list("melee" = 65, "bullet" = 45, "laser" = 25, "energy" = 15, "bomb" = 25, "bio" = 50, "rad" = 20, "fire" = 70, "acid" = 0)
 
 /obj/item/clothing/head/helmet/f13/legion/vet/explorer
 	name = "legion explorer hood"
@@ -530,10 +537,16 @@
 	item_state = "legexplorer"
 
 /obj/item/clothing/head/helmet/f13/legion/vet/vexil
-	name = "legion vexillarius helmet"
+	name = "legion fox vexillarius helmet"
 	desc = "It's leather legion vexillarius helmet."
 	icon_state = "legvexil"
 	item_state = "legvexil"
+
+/obj/item/clothing/head/helmet/f13/legion/vet/combvexil
+	name = "legion bear vexillarius helmet"
+	desc = "It's leather legion vexillarius helmet."
+	icon_state = "legvexil_alt"
+	item_state = "legvexil_alt"
 
 /obj/item/clothing/head/helmet/f13/legion/venator
 	name = "legion venator hood"
@@ -572,6 +585,14 @@
 	desc = "It's a large forged and case hardened bronze helmet with a steel insert around the skull and back of the neck. It has a large plume of red horse hair across the top of it going horizontally, symbolizing the position of a Centurion."
 	icon_state = "legcenturion"
 	item_state = "legcenturion"
+	armor = list("melee" = 60, "bullet" = 45, "laser" = 30, "energy" = 35, "bomb" = 39, "bio" = 60, "rad" = 20, "fire" = 80, "acid" = 0)
+	resistance_flags = LAVA_PROOF | FIRE_PROOF
+
+/obj/item/clothing/head/helmet/f13/legion/rangercent
+	name = "ranger-hunter centurion helmet"
+	desc = "The helmet of an NCR ranger, repurposed to fit the needs of the Ranger Hunter Centurion. It features a large red plume of horehair, denoting rank."
+	icon_state = "rangercent"
+	item_state = "rangercent"
 	armor = list("melee" = 60, "bullet" = 45, "laser" = 30, "energy" = 35, "bomb" = 39, "bio" = 60, "rad" = 20, "fire" = 80, "acid" = 0)
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
 
@@ -632,6 +653,20 @@
 	armor = list("melee" = 70, "bullet" = 60, "laser" = 40, "energy" = 60, "bomb" = 55, "bio" = 60, "rad" = 60, "fire" = 40, "acid" = 0)
 
 //Metal masks
+
+/obj/item/clothing/head/helmet/f13/raidermetal
+	name = "raider metal helmet"
+	desc = "A metal helmet, rusty and awful."
+	icon_state = "raidermetal"
+	item_state = "raidermetal"
+	can_toggle = 1
+	armor = list("melee" = 50, "bullet" = 35, "laser" = 35, "energy" = 20, "bomb" = 25, "bio" = 30, "rad" = 30, "fire" = 20, "acid" = 0)
+	flags_inv = HIDEMASK|HIDEEYES|HIDEFACE
+	strip_delay = 80
+	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
+	visor_flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
+
+
 /obj/item/clothing/head/helmet/f13/metalmask
 	name = "metal mask"
 	desc = "A crudely formed metal hockey mask."
@@ -832,6 +867,19 @@
 	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 	dynamic_hair_suffix = ""
+
+/obj/item/clothing/head/helmet/power_armor/excavator
+	name = "excavator power helmet"
+	desc = "The helmet of the excavator power armor suit."
+	icon_state = "excavator"
+	item_state = "excavator"
+	armor = list("melee" = 60, "bullet" = 55, "laser" = 45, "energy" = 60, "bomb" = 62, "bio" = 100, "rad" = 90, "fire" = 90, "acid" = 0)
+	var/brightness_on = 4 //luminosity when the light is on
+	var/on = 0
+	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
+	dynamic_hair_suffix = ""
+
 
 
 //LightToggle

@@ -6,7 +6,7 @@
 	damage = 60
 	knockdown = 100
 	dismemberment = 50
-	armour_penetration = 0
+	armour_penetration = 25
 	var/breakthings = TRUE
 
 /obj/item/projectile/bullet/p50/on_hit(atom/target, blocked = 0)
@@ -66,4 +66,4 @@
 
 /obj/item/projectile/bullet/a50MG/explosive/on_hit(atom/target, blocked = FALSE)
 	..()
-	explosion(target, 0, 2, 2, 2)
+	explosion(target, 0, 1, 1, 1)

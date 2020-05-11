@@ -221,6 +221,16 @@
 	eyeblur = 0
 	is_reflectable = TRUE
 
+/obj/item/projectile/plasma/repeater //Plasma repeater
+	name = "plasma stream"
+	icon_state = "plasma_clot"
+	damage_type = BURN
+	damage = 20
+	armour_penetration = 10
+	flag = "laser" //checks vs. energy protection
+	eyeblur = 0
+	is_reflectable = FALSE
+
 /obj/item/projectile/plasma/pistol //Plasma pistol
 	damage = 28
 	armour_penetration = 20

@@ -1,24 +1,23 @@
 /mob/living/simple_animal/hostile/alien
-	name = "alien hunter"
-	desc = "Hiss!"
-	icon = 'icons/mob/alien.dmi'
-	icon_state = "alienh"
-	icon_living = "alienh"
-	icon_dead = "alienh_dead"
+	name = "wanamingo"
+	desc = "A terrifying creature of unknown origin."
+	icon = 'icons/mob/deathclaw.dmi'
+	icon_state = "wanamingo"
+	icon_living = "wanamingo"
+	icon_dead = "wanamingo_dead"
 	icon_gib = "syndicate_gib"
 	gender = FEMALE
 	response_help = "pokes"
 	response_disarm = "shoves"
 	response_harm = "hits"
 	speed = 0
-	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab/xeno = 4,
-							/obj/item/stack/sheet/animalhide/xeno = 1)
-	maxHealth = 125
-	health = 125
+	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab/xeno = 4)
+	maxHealth = 275
+	health = 275
 	harm_intent_damage = 5
 	obj_damage = 60
-	melee_damage_lower = 25
-	melee_damage_upper = 25
+	melee_damage_lower = 60
+	melee_damage_upper = 60
 	attacktext = "slashes"
 	speak_emote = list("hisses")
 	bubble_icon = "alien"

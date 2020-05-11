@@ -46,3 +46,6 @@
 			A.disabled = !mend
 		if(WIRE_ZAP)
 			A.shock(usr, 50)
+
+
+

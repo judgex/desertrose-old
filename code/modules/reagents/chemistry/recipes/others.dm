@@ -118,7 +118,7 @@
 	name = "Mulligan"
 	id = "mulligan"
 	results = list("mulligan" = 1)
-	required_reagents = list("slime_toxin" = 1, "FEV_solution" = 1)
+	required_reagents = list("slime_toxin" = 1, "stablemutationtoxin" = 1)
 
 
 ////////////////////////////////// VIROLOGY //////////////////////////////////////////
@@ -130,10 +130,10 @@
 	required_reagents = list("water" = 5, "milk" = 5)
 
 /datum/chemical_reaction/virus_food_FEV_solution
-	name = "FEV solutionic agar"
+	name = "stable mutationic agar"
 	id = "FEV_solutionvirusfood"
 	results = list("FEV_solutionvirusfood" = 1)
-	required_reagents = list("FEV_solution" = 1, "virusfood" = 1, "sugar" = 1)
+	required_reagents = list("stablemutationtoxin" = 1, "virusfood" = 1, "sugar" = 1)
 
 /datum/chemical_reaction/virus_food_synaptizine
 	name = "virus rations"
@@ -532,7 +532,7 @@
 	name = "concentrated_barbers_aid"
 	id = "concentrated_barbers_aid"
 	results = list("concentrated_barbers_aid" = 2)
-	required_reagents = list("barbers_aid" = 1, "FEV_solution" = 1)
+	required_reagents = list("barbers_aid" = 1, "stablemutationtoxin" = 1)
 
 /datum/chemical_reaction/saltpetre
 	name = "saltpetre"
@@ -556,7 +556,7 @@
 	name = "royal bee jelly"
 	id = "royal_bee_jelly"
 	results = list("royal_bee_jelly" = 5)
-	required_reagents = list("FEV_solution" = 10, "honey" = 40)
+	required_reagents = list("stablemutationtoxin" = 10, "honey" = 40)
 
 /datum/chemical_reaction/laughter
 	name = "laughter"

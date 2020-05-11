@@ -271,7 +271,7 @@
 	if(spread)
 		randomized_gun_spread =	rand(0,spread)
 	if(user.has_trait(TRAIT_POOR_AIM)) //nice shootin' tex
-		bonus_spread += 25
+		bonus_spread += 60
 	var/randomized_bonus_spread = rand(0, bonus_spread)
 
 	if(burst_size > 1)

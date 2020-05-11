@@ -8,7 +8,7 @@
 	item_state = "cloak"
 	w_class = WEIGHT_CLASS_SMALL
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	
+
 /obj/item/clothing/neck/cloak/grey
 	name = "dark cloak"
 	desc = "It's a cape that can be worn around your neck."
@@ -65,6 +65,11 @@
 	name = "head of personnel's cloak"
 	desc = "Worn by the Head of Personnel. It smells faintly of bureaucracy."
 	icon_state = "hopcloak"
+
+/obj/item/clothing/neck/cloak/chiefcloak
+	name = "wayfarer cloak"
+	desc = "A symbol of the authority of the Wayfarer Chief."
+	icon_state = "chiefcloak"
 
 /obj/item/clothing/suit/hooded/cloak/desert
 	name = "desert cloak"

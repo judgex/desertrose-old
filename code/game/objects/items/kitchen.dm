@@ -6,6 +6,7 @@
  *		Butcher's cleaver
  *		Combat Knife
  *		Rolling Pins
+ 		Ritual Dagger (Wayfarer Tribe)
  */
 
 /obj/item/kitchen
@@ -168,6 +169,15 @@
 	force = 20
 	throwforce = 20
 	materials = list()
+
+/obj/item/kitchen/knife/ritualdagger
+	name = "ritual dagger"
+	desc = "An ancient blade used to carry out the spiritual rituals of the Wayfarer people."
+	icon_state = "ritualdagger"
+	item_state = "crysknife"
+	force = 25
+	throwforce = 20
+	armour_penetration = 10
 
 /obj/item/kitchen/knife/combat/cyborg
 	name = "cyborg knife"
