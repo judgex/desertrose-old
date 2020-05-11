@@ -408,3 +408,15 @@ GLOBAL_DATUM(necropolis_gate, /obj/structure/necropolis_gate/legion_gate)
 #undef COLLAPSE_ON_CROSS
 #undef DESTROY_ON_CROSS
 #undef UNIQUE_EFFECT
+
+/obj/structure/necropolis_arch/wayfarer
+	name = "wayfarer arch"
+	desc = "A massive carved arch, decorated with crystal skulls."
+	icon = 'icons/effects/160x160.dmi'
+	icon_state = "wayfarer_full"
+	appearance_flags = 0
+	layer = TABLE_LAYER
+	anchored = TRUE
+	pixel_x = -64
+	pixel_y = -40
+	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
