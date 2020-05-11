@@ -544,8 +544,18 @@ update_label("John Doe", "Clowny")
 	icon_state = "legionmedallioncent"
 	id_type = "centurion medallion"
 
-/obj/item/card/id/dogtag/legorator
-	name = "orator medallion"
-	desc = "A golden disc awarded to the trusted political advisor to the Centurion. When they're around, the Legion won't be far behind."
+/obj/item/card/id/dogtag/legpriest
+	name = "priestess medallion"
+	desc = "A golden disc awarded to the trusted spiritual guide to the nearby Legion."
 	icon_state = "legionmedallioncent"
-	id_type = "orator medallion"
+	item_state = "legionmedallioncent"
+	item_color = ""
+	id_type = "priestess medallion"
+
+/obj/item/card/id/legionbrand
+	name = "Legion's brand"
+	desc = "A brand for identifying Caesar's Legion's slaves."
+	icon_state = "legionbrand"
+	item_state = "slave"
+	id_type = "Slave brand"
+	item_flags = NODROP

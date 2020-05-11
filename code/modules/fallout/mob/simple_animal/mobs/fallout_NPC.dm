@@ -122,7 +122,7 @@
 
 /mob/living/simple_animal/hostile/enclave
 	name = "Enclave"
-	desc = "Just an Enclave"
+	desc = ""
 	icon_state = "enclave_scientist"
 	icon_living = "enclave_scientist"
 	icon_dead = "enclave_scientist"
@@ -131,30 +131,29 @@
 	turns_per_move = 5
 	response_help = "pokes"
 	response_disarm = "shoves"
-	response_harm = "Ouch"
-	speed = 1
+	response_harm = "hits"
+	speed = 0
 	stat_attack = 1
 	robust_searching = 1
 	maxHealth = 150
 	health = 150
 	harm_intent_damage = 5
-	melee_damage_lower = 10
-	melee_damage_upper = 10
-	attacktext = "Thrusts"
+	melee_damage_lower = 25
+	melee_damage_upper = 25
+	attacktext = "thrusts"
 	attack_sound = 'sound/weapons/punch1.ogg'
 	a_intent = INTENT_HARM
-	loot = list(/obj/effect/mob_spawn/human/corpse/enclave)
 	atmos_requirements = list("min_oxy" = 5, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 1, "min_co2" = 0, "max_co2" = 5, "min_n2" = 0, "max_n2" = 0)
 	unsuitable_atmos_damage = 15
 	faction = list("enclave")
 	check_friendly_fire = 1
 	status_flags = CANPUSH
 	del_on_death = 1
-	speak = list("For the Enclave!")
-	speak_emote = "Pulls out a weapon,"
-	speak_chance = 1
+	speak = list("For the Enclave!", "Stars and Stripes!", "Liberty or death!")
+	speak_emote = "pulls out a weapon,"
+	speak_chance = 0
 
-/obj/effect/mob_spawn/human/corpse/enclave
+/obj/effect/mob_spawn/human/corpse/enclavescientist
 	name = "Enclave scientist"
 	uniform = /obj/item/clothing/under/f13/enclave_officer
 	suit = /obj/item/clothing/suit/radiation
@@ -165,14 +164,41 @@
 	head = /obj/item/clothing/head/radiation
 	//back = /obj/item/weapon/storage/backpack
 
+/obj/effect/mob_spawn/human/corpse/enclave/soldier_ca
+	name = "Enclave Private Soldier"
+	uniform = /obj/item/clothing/under/f13/enclave_officer
+	suit = /obj/item/clothing/suit/armor/f13/combat/enclave
+	shoes = /obj/item/clothing/shoes/f13/military
+	gloves = /obj/item/clothing/gloves/f13/military
+	//radio = /obj/item/device/radio/headset
+	mask = /obj/item/clothing/mask/gas
+	head = /obj/item/clothing/head/helmet/f13/combat/enclave
+	//back = /obj/item/weapon/storage/backpack
+
+/obj/effect/mob_spawn/human/corpse/enclave/soldier
+	name = "Enclave Soldier"
+	uniform = /obj/item/clothing/under/f13/enclave_officer
+	suit = /obj/item/clothing/suit/armor/f13/power_armor/advanced
+	shoes = /obj/item/clothing/shoes/f13/military
+	gloves = /obj/item/clothing/gloves/f13/military
+	//radio = /obj/item/device/radio/headset
+	mask = /obj/item/clothing/mask/gas
+	head = /obj/item/clothing/head/helmet/power_armor/advanced
+	//back = /obj/item/weapon/storage/backpack
+
 
 /mob/living/simple_animal/hostile/enclave/scientist
 	name = "Enclave scientist"
-	desc = "Just an Enclave scientist"
+	desc = "An Enclave Scientist wearing an advanced radiation suit. While they may run from you, that does not exempt them from the evil they have committed."
 	minimum_distance = 10
 	retreat_distance = 10
 	obj_damage = 0
 	environment_smash = 0
+	loot = list(/obj/effect/mob_spawn/human/corpse/enclavescientist)
+	ranged = 1
+	ranged_cooldown_time = 30
+	projectiletype = /obj/item/projectile/energy/declone
+	projectilesound = 'sound/f13weapons/plasmarifle.ogg'
 
 /mob/living/simple_animal/hostile/enclave/scientist/Aggro()
 	..()
@@ -180,51 +206,49 @@
 	say("For the Enclave!!")
 
 /mob/living/simple_animal/hostile/enclave/soldier
-	name = "Enclave Soldier"
-	desc = "Just a Enclave Soldier"
-	icon_state = "enclave_soldier"
-	icon_living = "enclave_soldier"
+	name = "Enclave Advanced Soldier"
+	desc = "An Enclave Soldier wearing Advanced Power Armor and a plasma multi-caster. Play time's over, mutie."
+	icon_state = "enclaverangedelite"
+	icon_living = "eclaverangedelite"
 	icon_dead = "enclave_soldier"
 	icon_gib = "enclave_soldier"
-	maxHealth = 890
-	health = 890
+	maxHealth = 750
+	health = 750
+	melee_damage_lower = 55
+	melee_damage_upper = 55
+	extra_projectiles = 5 //6 projectiles. oh lord.
 	retreat_distance = 5
 	minimum_distance = 5
+	ranged_cooldown_time = 12
 	loot = list(/obj/effect/mob_spawn/human/corpse/enclave/soldier)
 	healable = 1
 	ranged = 1
-	projectiletype = /obj/item/projectile/beam
+	attacktext = "power-fists"
+	projectiletype = /obj/item/projectile/plasma/repeater
 	projectilesound = 'sound/f13weapons/plasmarifle.ogg'
 
 
 /mob/living/simple_animal/hostile/enclave/soldier_ca
-	name = "Enclave Private Soldier"
-	desc = "Just a Enclave Soldier"
-	icon_state = "enclave_soldier_ca"
-	icon_living = "enclave_soldier_ca"
-	icon_dead = "enclave_soldier_ca"
+	name = "Enclave Footsoldier"
+	desc = "An Enclave soldier in Enclave Combat Armor, wielding an assault rifle."
+	icon_state = "enclaveranged"
+	icon_living = "enclaveranged"
+	icon_dead = "enclaveranged"
 	icon_gib = "enclave_soldier"
-	maxHealth = 250
-	health = 250
+	maxHealth = 275
+	health = 275
+	melee_damage_lower = 40
+	melee_damage_upper = 40
 	retreat_distance = 6
 	minimum_distance = 6
+	extra_projectiles = 2
+	ranged_cooldown_time = 22
 	loot = list(/obj/effect/mob_spawn/human/corpse/enclave/soldier)
 	healable = 1
 	ranged = 1
-	projectiletype = /obj/item/projectile/beam
-	projectilesound = 'sound/weapons/resonator_fire.ogg'
-
-
-/obj/effect/mob_spawn/human/corpse/enclave/soldier
-	name = "Enclave Soldier"
-	uniform = /obj/item/clothing/under/f13/enclave_officer
-//	suit = /obj/item/clothing/suit/armor/f13/power_armor/advanced
-	shoes = /obj/item/clothing/shoes/f13/military
-	gloves = /obj/item/clothing/gloves/f13/military
-	//radio = /obj/item/device/radio/headset
-	//mask = /obj/item/clothing/mask/gas
-	head = /obj/item/clothing/head/helmet/power_armor/advanced
-	//back = /obj/item/weapon/storage/backpack
+	attacktext = "pistol-whips"
+	projectiletype = /obj/item/projectile/bullet/c46x30mm
+	projectilesound = 'sound/weapons/gunshot_smg.ogg'
 
 
 /mob/living/simple_animal/hostile/bs
@@ -263,7 +287,7 @@
 
 
 /obj/effect/mob_spawn/human/corpse/bs
-	name = "BS Knight"
+	name = "Brotherhood Knight"
 	uniform = /obj/item/clothing/under/f13/bdu
 	suit = /obj/item/clothing/suit/armor/f13/combat/brotherhood
 	shoes = /obj/item/clothing/shoes/f13/military
@@ -275,8 +299,8 @@
 
 
 /mob/living/simple_animal/hostile/bs/knight
-	name = "BS Knight"
-	desc = "Just a BS Knight"
+	name = "Brotherhood Knight"
+	desc = "A Brotherhood Knight wielding a laser pistol and older issue Brotherhood combat armor."
 	icon_state = "bs_knight"
 	icon_living = "bs_knight"
 	icon_dead = "bs_knight"
@@ -291,8 +315,8 @@
 
 
 /mob/living/simple_animal/hostile/bs/paladin
-	name = "BS Paladin"
-	desc = "Just a BS Paladin"
+	name = "Brotherhood Paladin"
+	desc = "A Paladin equipped with an AER9 and T-45d power armor. The Brotherhood has arrived."
 	icon_state = "bs_paladin"
 	icon_living = "bs_paladin"
 	icon_dead = "bs_paladin"
@@ -309,7 +333,7 @@
 
 
 /obj/effect/mob_spawn/human/corpse/bs/paladin
-	name = "BS Paladin"
+	name = "Brotherhood Paladin"
 	uniform = /obj/item/clothing/under/f13/bdu
 	suit = /obj/item/clothing/suit/armor/f13/power_armor/t45d
 	shoes = /obj/item/clothing/shoes/f13/military
@@ -652,3 +676,65 @@
 	//mask = /obj/item/clothing/mask/gas
 	head = /obj/item/clothing/head/helmet/f13/motorcycle
 	//back = /obj/item/weapon/storage/backpack
+
+/mob/living/simple_animal/hostile/abomination
+	name = "abomination"
+	desc = "A horrible fusion of man, animal, and something entirely different. It quakes and shudders, looking to be in an immense amount of pain. Blood and other fluids ooze from various gashes and lacerations on its body, punctuated by mouths that gnash and scream."
+	speak_emote = list("screams", "clicks", "chitters", "barks", "moans", "growls", "meows", "reverberates", "roars", "squeaks", "rattles", "exclaims", "yells", "remarks", "mumbles", "jabbers", "stutters", "seethes")
+	icon_state = "abomination"
+	icon_living = "abomination"
+	icon_dead = "abomination_dead"
+	robust_searching = 1
+	maxHealth = 1200
+	health = 1200
+	harm_intent_damage = 20
+	melee_damage_lower = 100
+	melee_damage_upper = 100
+	attacktext = "eviscerates"
+	attack_sound = 'sound/weapons/punch1.ogg'
+	attacktext = "lacerates"
+	speed = -0.5
+	var/static/list/abom_sounds
+	deathmessage = "wails as its form shudders and violently comes to a stop."
+	death_sound = 'sound/voice/abomburning.ogg'
+
+/mob/living/simple_animal/hostile/abomination/Initialize()
+	. = ..()
+	abom_sounds = list('sound/voice/abomination1.ogg', 'sound/voice/abomscream.ogg', 'sound/voice/abommoan.ogg', 'sound/voice/abomscream2.ogg', 'sound/voice/abomscream3.ogg')
+
+/mob/living/simple_animal/hostile/abomination/say(message, datum/language/language = null, var/list/spans = list(), language, sanitize, ignore_spam)
+	..()
+	if(stat)
+		return
+	var/chosen_sound = pick(abom_sounds)
+	playsound(src, chosen_sound, 100, TRUE)
+
+/mob/living/simple_animal/hostile/abomination/Life()
+	..()
+	if(stat)
+		return
+	if(prob(10))
+		var/chosen_sound = pick(abom_sounds)
+		playsound(src, chosen_sound, 100, TRUE)
+
+
+
+/mob/living/simple_animal/hostile/abomhorror
+	name = "failed experiment"
+	desc = "A terrible fusion of man, animal, and something else entirely. It looks to be in great pain."
+	speak_emote = list("screams", "clicks", "chitters", "barks", "moans", "growls", "meows", "reverberates", "roars", "squeaks", "rattles", "exclaims", "yells", "remarks", "mumbles", "jabbers", "stutters", "seethes")
+	icon_state = "horror"
+	icon_living = "horror"
+	icon_dead = "horror_dead"
+	robust_searching = 1
+	maxHealth = 700
+	health = 700
+	harm_intent_damage = 20
+	melee_damage_lower = 50
+	melee_damage_upper = 50
+	attacktext = "eviscerates"
+	attack_sound = 'sound/weapons/punch1.ogg'
+	attacktext = "lacerates"
+	speed = -0.5
+	var/static/list/abom_sounds
+	deathmessage = "wails as its form shudders and violently comes to a stop."

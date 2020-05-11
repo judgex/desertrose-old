@@ -313,3 +313,12 @@
 	else if(href_list["menu"])
 		menustat = "menu"
 		updateUsrDialog()
+
+/obj/machinery/biogenerator/ui_interact(mob/user)
+	if(isliving(user))
+		var/mob/living/L = user
+		if(L.has_trait(TRAIT_TECHNOPHOBE, TRAIT_GENERIC))
+			to_chat(user, "<span class='warning'>The array of simplistic button pressing confuses you. Besides, did you really want to spend all day staring at a screen?</span>")
+			return FALSE
+		else
+			. = ..()

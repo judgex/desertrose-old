@@ -13,6 +13,8 @@
 		            /obj/item/reagent_containers/food/condiment/pack/hotsauce = 5,
 		            /obj/item/reagent_containers/food/condiment/saltshaker = 5,
 		            /obj/item/reagent_containers/food/condiment/peppermill = 5,
+					/obj/item/reagent_containers/food/condiment/flour = 1,
+					/obj/item/reagent_containers/food/condiment/sugar = 1,
 		            /obj/item/reagent_containers/glass/bowl = 20)
 	contraband = list(/obj/item/kitchen/rollingpin = 2,
 		              /obj/item/kitchen/knife/butcher = 2)

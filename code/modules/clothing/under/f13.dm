@@ -21,8 +21,8 @@
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 30, "fire" = 20, "acid" = 50)
 
 /obj/item/clothing/under/f13/vault13
-	name = "vault 13 jumpsuit"
-	desc = "A blue jumpsuit with a yellow vault pattern and the number 13 printed on it."
+	name = "vault 113 jumpsuit"
+	desc = "A blue jumpsuit with a yellow vault pattern and the number 113 printed on it."
 	icon_state = "vault13"
 	item_state = "vault13"
 	item_color = "vault13"
@@ -39,6 +39,7 @@
 	name = "NCR desert fatigues"
 	desc = "A set of standard issue New California Republic trooper fatigues."
 	icon_state = "ncr_uniform"
+	can_adjust = 1
 	item_state = "ncr_uniform"
 	item_color = "ncr_uniform"
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 30, "fire" = 20, "acid" = 50)
@@ -117,6 +118,14 @@
 	item_color = "ranger"
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 30, "fire" = 20, "acid" = 50)
 
+/obj/item/clothing/under/f13/trailranger
+	name = "ranger outfit"
+	desc = "Simple rustic clothes for a big iron packin' lawman. Worn often by NCR rangers."
+	icon_state = "cowboyrang"
+	item_state = "cowboyrang"
+	item_color = "cowboyrang"
+	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 30, "fire" = 20, "acid" = 50)
+
 /obj/item/clothing/under/f13/patrolranger
 	name = "patrol ranger outfit"
 	desc = "A pair of brown slacks and a breathable shirt, meant to be worn under NCR patrol ranger armour."
@@ -182,6 +191,13 @@
 	righthand_file = 'icons/mob/inhands/clothing_righthand.dmi'
 	alt_covers_chest = TRUE
 	can_adjust = TRUE
+
+/obj/item/clothing/under/f13/priestess
+	name = "priestess robes"
+	desc = "The robes worn by a Priestess of Mars."
+	icon_state = "priestess"
+	item_state = "priestess"
+	item_color = "priestess"
 
 // Generic
 
@@ -261,6 +277,42 @@
 	desc = "Made by the famous pre-war fashion designer Marie Calluna, this dress was made to hug your every curve and show off some deep cleavage."
 	icon_state = "bandagedress"
 	item_state = "bandagedress"
+
+/obj/item/clothing/under/f13/classdress
+	name = "classy dress"
+	desc = "A dress that shows off all of your assets in the best ways, while remaining quite formal and tasteful."
+	icon_state = "societydress"
+	item_state = "societydress"
+
+/obj/item/clothing/under/f13/bluedress
+	name = "blue dress"
+	desc = "A cute, but plain, common pre-war dress."
+	icon_state = "blue_dress"
+	item_state = "blue_dress"
+
+/obj/item/clothing/under/f13/pinkdress
+	name = "pink dress"
+	desc = "A cute, but plain, common pre-war dress."
+	icon_state = "pink_dress"
+	item_state = "pink_dress"
+
+/obj/item/clothing/under/f13/greendress
+	name = "green dress"
+	desc = "A cute, but plain, common pre-war dress."
+	icon_state = "green_dress"
+	item_state = "green_dress"
+
+/obj/item/clothing/under/f13/blackdress
+	name = "black dress"
+	desc = "A dark and revealing dress that mixes formality and seduction."
+	icon_state = "blackdress"
+	item_state = "blackdress"
+
+/obj/item/clothing/under/f13/xenon
+	name = "flashy jumpsuit"
+	desc = "A jumpsuit that seems to come from another time."
+	icon_state = "xenon"
+	item_state = "xenon"
 
 //Minor Factions
 
@@ -347,6 +399,7 @@
 	item_state = "chiefrags"
 
 /obj/item/clothing/under/f13/tribe_shaman
+
 	name = "tribal shaman robes"
 	desc = "Carefully hand wozen cloth robes with heavy turqoise jewelry drapped over top."
 	icon_state = "shamanrags"
@@ -1067,6 +1120,16 @@
 	icon_state = "atombeliever"
 	item_state = "atombeliever"
 	item_color = "atombeliever"
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
+	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
+	can_adjust = 0
+
+/obj/item/clothing/under/f13/raiderharness
+	name = "raider harness"
+	desc = "A leather harness that barely covered the essentials."
+	icon_state = "raiderharness"
+	item_state = "raiderharness"
+	item_color = "raiderharness"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
 	can_adjust = 0

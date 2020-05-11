@@ -148,8 +148,8 @@
     minimize_when_attached = TRUE
 
 /obj/item/clothing/accessory/ncr/SPC
-    name = "(E-4) Specialist rank pins"
-    desc = "A Specialist should wear this."
+    name = "(E-4) Corporal rank pins"
+    desc = "A Corporal should wear this."
     icon_state = "ncrenlisted"
     item_color = "ncrenlisted"
     minimize_when_attached = TRUE
@@ -168,7 +168,91 @@
     item_color = "ncrenlisted"
     minimize_when_attached = TRUE
 
+//BOSRanks
 
+/obj/item/clothing/accessory/bos/initiateK
+    name = "Knight-Aspirant pin"
+    desc = "A silver pin with blue cloth, worn by Initiates aspiring to be Knights."
+    icon_state = "initiateK"
+    item_color = "initiateK"
+    minimize_when_attached = TRUE
+
+/obj/item/clothing/accessory/bos/initiateS
+    name = "Scribe-Aspirant pin"
+    desc = "A silver pin with red cloth, worn by Initiates aspiring to be Scribes."
+    icon_state = "initiateS"
+    item_color = "initiateS"
+    minimize_when_attached = TRUE
+
+/obj/item/clothing/accessory/bos/knight
+    name = "Knight pins"
+    desc = "A silver pin with one device and blue coloring, worn by fully fledged Knights of the Brotherhood."
+    icon_state = "knight"
+    item_color = "knight"
+    minimize_when_attached = TRUE
+
+/obj/item/clothing/accessory/bos/scribe
+    name = "Scribe pins"
+    desc = "A silver pin with one device and red coloring, worn by fully fledged Scribes of the Brotherhood."
+    icon_state = "scribe"
+    item_color = "scribe"
+    minimize_when_attached = TRUE
+
+/obj/item/clothing/accessory/bos/juniorpaladin
+    name = "Junior Paladin pins"
+    desc = "A silver pin with one device, and purple coloring. Worn by the Paladin-in-Training of the Brotherhood."
+    icon_state = "juniorpaladin"
+    item_color = "juniorpaladin"
+    minimize_when_attached = TRUE
+
+/obj/item/clothing/accessory/bos/knightcaptain
+    name = "Knight-Captain pins"
+    desc = "A silver pin with one device, a silver sword centered on the blue coloring, and notches denoting the rank of the Knight-Captain."
+    icon_state = "knight-captain"
+    item_color = "knight-captain"
+    minimize_when_attached = TRUE
+
+/obj/item/clothing/accessory/bos/seniorscribe
+    name = "Senior Scribe pins"
+    desc = "A silver pin with one device, a silver sword centered on the red coloring, and notches denoting the rank of the Senior Scribe."
+    icon_state = "seniorscribe"
+    item_color = "seniorscribe"
+    minimize_when_attached = TRUE
+
+/obj/item/clothing/accessory/bos/paladin
+    name = "Paladin pins"
+    desc = "A silver pin with one device, a silver sword centered on the blue coloring, and notches denoting the rank of the Paladin."
+    icon_state = "paladin"
+    item_color = "paladin"
+    minimize_when_attached = TRUE
+
+/obj/item/clothing/accessory/bos/seniorpaladin
+    name = "Senior Paladin pins"
+    desc = "A silver pin with one device gilded in gold, little notches at the top end, and a golden sword in the center of purple cloth; worn by the high-ranking Senior Paladin."
+    icon_state = "seniorpaladin"
+    item_color = "seniorpaladin"
+    minimize_when_attached = TRUE
+
+/obj/item/clothing/accessory/bos/headscribe
+    name = "Head-Scribe pins"
+    desc = "A gold-plated, silver lined pin with one device and two outstretched wings on the side; a golden sword centered on red-cloth. Worn by the Head Scribe."
+    icon_state = "headscribe"
+    item_color = "headscribe"
+    minimize_when_attached = TRUE
+
+/obj/item/clothing/accessory/bos/sentinel
+    name = "Sentinel pins"
+    desc = "A gold-plated, silver lined pin with one device and two outstretched wings on the side; a golden sword centered on purple-cloth. Worn by the Sentinel."
+    icon_state = "sentinel"
+    item_color = "sentinel"
+    minimize_when_attached = TRUE
+
+/obj/item/clothing/accessory/bos/elder
+    name = "Elder pins"
+    desc = "A gold-plated, silver lined pin with one device and two outstretched wings on the side; a golden sword centered on green-cloth. It bears notches with gems on the top half, and denotes the rank of Elder."
+    icon_state = "elder"
+    item_color = "elder"
+    minimize_when_attached = TRUE
 //Medals
 
 /obj/item/clothing/accessory/medal
@@ -344,8 +428,8 @@
 	item_color = "medband"
 
 /obj/item/clothing/accessory/armband/medblue
-	name = "medical guard armband"
-	desc = "An armband, worn by the station's security forces to display which department they're assigned to. This one is white and blue."
+	name = "first aid armband"
+	desc = "An armband, worn NCR troopers who are trained in and can perform first aid."
 	icon_state = "medblueband"
 	item_color = "medblueband"
 

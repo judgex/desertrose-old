@@ -78,8 +78,8 @@
 	list_reagents = list("charcoal" = 30)
 
 /obj/item/reagent_containers/glass/bottle/FEV_solution
-	name = "unstable FEV solution bottle"
-	desc = "A small bottle of unstable FEV solution. Randomly changes the DNA structure of whoever comes in contact."
+	name = " FEV bottle"
+	desc = "A small vial of the Forced Evolutionary Virus. You think that consuming this would be a bad idea."
 	list_reagents = list("FEV_solution" = 30)
 
 /obj/item/reagent_containers/glass/bottle/plasma

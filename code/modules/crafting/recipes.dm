@@ -1836,5 +1836,56 @@
 	result = /obj/item/clothing/suit/armor/f13/tribe_armor
 	time = 80
 	reqs = list(/obj/item/stack/sheet/leather = 6)
+	tools = list(TOOL_WORKBENCH)
 	category = CAT_PRIMAL
 	subcategory = CAT_TRIBAL
+
+/datum/crafting_recipe/warmace
+	name = "Carve Wooden Warmace"
+	result = /obj/item/twohanded/sledgehammer/warmace
+	time = 100
+	reqs = list(/obj/item/stack/sheet/mineral/wood = 10,
+				/obj/item/stack/sheet/cloth = 3)
+	tools = list(TOOL_WORKBENCH)
+	category = CAT_PRIMAL
+	subcategory = CAT_TRIBAL
+
+/datum/crafting_recipe/spearquiver
+	name = "Spear Quiver"
+	result = /obj/item/storage/backpack/spearquiver
+	time = 60
+	reqs = list(/obj/item/stack/sheet/leather = 3,
+				/obj/item/stack/sheet/metal = 1)
+	category = CAT_PRIMAL
+	subcategory = CAT_TRIBAL
+
+/datum/crafting_recipe/arrowap
+	name = "Sturdy Arrow"
+	result = /obj/item/ammo_casing/caseless/arrow/ap
+	time = 40
+	reqs = list(/obj/item/stack/rods = 2,
+				/obj/item/stack/crafting/metalparts = 2)
+	tools = list(TOOL_WORKBENCH)
+	category = CAT_WEAPONRY
+	subcategory = CAT_AMMO
+
+/datum/crafting_recipe/arrowpoison
+	name = "Poison Arrow"
+	result = /obj/item/ammo_casing/caseless/arrow/poison
+	time = 30
+	reqs = list(/obj/item/ammo_casing/caseless/arrow = 1,
+				/obj/item/grown/nettle/basic = 5)
+	tools = list(TOOL_WORKBENCH)
+	category = CAT_WEAPONRY
+	subcategory = CAT_AMMO
+
+/datum/crafting_recipe/arrowburn
+	name = "Burn Posion Arrow"
+	result = /obj/item/ammo_casing/caseless/arrow/burning
+	time = 30
+	reqs = list(/obj/item/ammo_casing/caseless/arrow = 1,
+				/obj/item/reagent_containers/food/drinks/bottle = 1,
+				/obj/item/reagent_containers/food/snacks/meat/slab/human/ghoul = 4)
+	tools = list(TOOL_WORKBENCH)
+	category = CAT_WEAPONRY
+	subcategory = CAT_AMMO
