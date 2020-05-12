@@ -687,9 +687,9 @@
 	robust_searching = 1
 	maxHealth = 1200
 	health = 1200
-	harm_intent_damage = 20
-	melee_damage_lower = 100
-	melee_damage_upper = 100
+	harm_intent_damage = 10
+	melee_damage_lower = 75
+	melee_damage_upper = 75
 	attacktext = "eviscerates"
 	attack_sound = 'sound/weapons/punch1.ogg'
 	attacktext = "lacerates"
@@ -697,6 +697,14 @@
 	var/static/list/abom_sounds
 	deathmessage = "wails as its form shudders and violently comes to a stop."
 	death_sound = 'sound/voice/abomburning.ogg'
+
+/mob/living/simple_animal/hostile/abomination/AttackingTarget()
+	. = ..()
+	if(. && ishuman(target))
+		var/mob/living/carbon/human/H = target
+		var/choice = pick(1, 2, 3, 4, 5, 6)
+		H.reagents.add_reagent("FEV_solution", choice)
+
 
 /mob/living/simple_animal/hostile/abomination/Initialize()
 	. = ..()

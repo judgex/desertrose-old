@@ -493,6 +493,12 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 	name = "Legion Centurion"
 	icon_state = "Centurion"
 
+/obj/effect/landmark/start/f13/orator
+	name = "Legion Orator"
+
+/obj/effect/landmark/start/f13/slavemaster
+	name = "Legion Slavemaster"
+
 /obj/effect/landmark/start/f13/priestess
 	name = "Priestess of Mars"
 
