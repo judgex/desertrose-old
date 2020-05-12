@@ -594,7 +594,7 @@ Auxilia
 	name = "Auxilia"
 	jobtype = /datum/job/CaesarsLegion/f13auxilia
 	id =			/obj/item/card/id/dogtag/legauxilia
-	shoes = 		/obj/item/clothing/shoes/sandal
+	shoes = 		/obj/item/clothing/shoes/roman
 	uniform = 		/obj/item/clothing/under/f13/legskirt
 	gloves =		null
 	belt =			null
