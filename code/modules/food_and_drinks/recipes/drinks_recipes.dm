@@ -695,3 +695,9 @@
 	id = "branca_menta"
 	results = list("branca_menta" = 3)
 	required_reagents = list("fernet" = 1, "creme_de_menthe" = 1, "ice" = 1)
+
+/datum/chemical_reaction/pirate_rum
+	name = "Cannonball"
+	id = "piraterum"
+	results = list("cannonball" = 3)
+	required_reagents = list("rum" = 2, "blackpwder" = 1)
