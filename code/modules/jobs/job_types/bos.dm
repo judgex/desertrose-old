@@ -201,6 +201,12 @@ Head Scribe
 		)
 
 
+/datum/outfit/job/bos/f13headscribe/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	..()
+	if(visualsOnly)
+		return
+	H.add_trait(TRAIT_MEDICALEXPERT, TRAIT_GENERIC)
+
 /*
 Knight-Captain
 */
@@ -295,7 +301,12 @@ Senior Paladin
 	enforces = "The Brotherhood of Steel Expects: Obeying the Chain That - Binds your direct superior. Collection and safeguarding of technology from the wasteland. Experimentation and research."
 	supervisors = "the Sentinel"
 	selection_color = "#95a5a6"
-	exp_requirements = 900
+	exp_requirements = 1200
+
+	loadout_options = list(
+		/datum/outfit/loadout/spaladina, //Super Sledge
+		/datum/outfit/loadout/spaladinb, //Goliath powerfist
+		)
 
 	outfit = /datum/outfit/job/bos/f13seniorpaladin
 
@@ -310,13 +321,24 @@ Senior Paladin
 	head = 			/obj/item/clothing/head/helmet/power_armor/t51b
 	accessory = 	/obj/item/clothing/accessory/bos/seniorpaladin
 	uniform = 		/obj/item/clothing/under/f13/recon
-	backpack = 		/obj/item/twohanded/sledgehammer/supersledge
 	mask =			/obj/item/clothing/mask/gas/sechailer/swat
 	belt = 			/obj/item/storage/belt/military/assault
-	suit_store = 	/obj/item/gun/energy/laser/pistol
+	suit_store = 	/obj/item/gun/energy/laser/plasma/glock
 	backpack_contents = list(
 		/obj/item/kitchen/knife/combat=1, \
 		/obj/item/stock_parts/cell/ammo/ec=2, \
+		)
+
+/datum/outfit/loadout/spaladina
+	name = "Promotee Senior-Paladin"
+	backpack_contents = list(
+		/obj/item/melee/powerfist=1,
+		)
+
+/datum/outfit/loadout/spaladinb
+	name = "Veteran Senior-Paladin"
+	backpack_contents = list(
+		/obj/item/twohanded/sledgehammer/supersledge=1,
 		)
 
 /datum/job/bos/f13seniorpaladin/after_spawn(mob/living/carbon/human/H, mob/M)
