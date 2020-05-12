@@ -50,7 +50,7 @@ menu "menu"
 window "mainwindow"
 	elem "mainwindow"
 		type = MAIN
-		pos = 0,0
+		pos = 281,0
 		size = 640x440
 		anchor1 = none
 		anchor2 = none
@@ -140,20 +140,17 @@ window "mainwindow"
 window "mapwindow"
 	elem "mapwindow"
 		type = MAIN
-		pos = 418,0
-		size = 1024x1024
+		pos = 281,0
+		size = 640x480
 		anchor1 = none
 		anchor2 = none
 		background-color = #411d1e
-		saved-params = ""
-		statusbar = false
+		saved-params = "pos;size;is-minimized;is-maximized"
 		is-pane = true
-		outer-size = 1090x1192
-		inner-size = 1068x1136
 	elem "map"
 		type = MAP
 		pos = 0,0
-		size = 1024x1024
+		size = 640x480
 		anchor1 = 0,0
 		anchor2 = 100,100
 		font-family = "Arial"
@@ -161,18 +158,19 @@ window "mapwindow"
 		is-default = true
 		saved-params = "icon-size"
 		zoom-mode = distort
-		style = ".center { text-align: center; }\n.maptext { font-family: 'Small Fonts'; font-size: 7px; -dm-text-outline: 1px black; color: white; line-height: 1.1; }\n.command_headset { font-weight: bold;\tfont-size: 8px; } .small { font-size: 6px; }\n.big { font-size: 8px; }\n.reallybig { font-size: 8px; }\n.extremelybig { font-size: 8px; }\n.greentext { color: #00ff00; font-size: 7px; }\n.redtext { color: #ff0000; font-size: 7px; }\n.clown { color: #ff69bf; font-size: 7px;  font-weight: bold; }\n.his_grace { color: #15d512; }\n.hypnophrase { color: #0d0d0d; font-weight: bold; }\n.yell { font-weight: bold; }\n.italics { font-size: 6px; }"
 
 window "infowindow"
 	elem "infowindow"
 		type = MAIN
-		pos = 0,0
+		pos = 281,0
 		size = 640x480
 		anchor1 = none
 		anchor2 = none
 		background-color = #411d1e
 		saved-params = "pos;size;is-minimized;is-maximized"
 		is-pane = true
+		outer-size = 656x538
+		inner-size = 640x499
 	elem "info"
 		type = CHILD
 		pos = 0,30
@@ -186,7 +184,7 @@ window "infowindow"
 		is-vert = false
 	elem "changelog"
 		type = BUTTON
-		pos = 16,5
+		pos = 16,4
 		size = 104x20
 		anchor1 = 3,0
 		anchor2 = 19,0
@@ -197,7 +195,7 @@ window "infowindow"
 		command = "changelog"
 	elem "rules"
 		type = BUTTON
-		pos = 120,5
+		pos = 120,4
 		size = 100x20
 		anchor1 = 19,0
 		anchor2 = 34,0
@@ -208,7 +206,7 @@ window "infowindow"
 		command = "rules"
 	elem "wiki"
 		type = BUTTON
-		pos = 220,5
+		pos = 220,4
 		size = 100x20
 		anchor1 = 34,0
 		anchor2 = 50,0
@@ -219,7 +217,7 @@ window "infowindow"
 		command = "wiki"
 	elem "discord"
 		type = BUTTON
-		pos = 320,5
+		pos = 320,4
 		size = 100x20
 		anchor1 = 50,0
 		anchor2 = 66,0
@@ -230,7 +228,7 @@ window "infowindow"
 		command = "discord"
 	elem "github"
 		type = BUTTON
-		pos = 420,5
+		pos = 420,4
 		size = 100x20
 		anchor1 = 66,0
 		anchor2 = 81,0
@@ -241,7 +239,7 @@ window "infowindow"
 		command = "github"
 	elem "report-issue"
 		type = BUTTON
-		pos = 520,5
+		pos = 520,4
 		size = 100x20
 		anchor1 = 81,0
 		anchor2 = 97,0
@@ -254,7 +252,7 @@ window "infowindow"
 window "outputwindow"
 	elem "outputwindow"
 		type = MAIN
-		pos = 0,0
+		pos = 281,0
 		size = 640x480
 		anchor1 = none
 		anchor2 = none
@@ -280,7 +278,7 @@ window "outputwindow"
 		auto-format = false
 	elem "output"
 		type = OUTPUT
-		pos = 0,0
+		pos = 2,1
 		size = 640x480
 		anchor1 = 0,0
 		anchor2 = 100,100
@@ -291,13 +289,15 @@ window "outputwindow"
 window "statwindow"
 	elem "statwindow"
 		type = MAIN
-		pos = 0,0
+		pos = 281,0
 		size = 640x480
 		anchor1 = none
 		anchor2 = none
 		background-color = #411d1e
 		saved-params = "pos;size;is-minimized;is-maximized"
 		is-pane = true
+		outer-size = 656x538
+		inner-size = 640x499
 	elem "stat"
 		type = INFO
 		pos = 0,0
@@ -310,30 +310,4 @@ window "statwindow"
 		saved-params = ""
 		tab-text-color = #ffffff
 		tab-background-color = #411d1e
-
-window "preferences_window"
-	elem "preferences_window"
-		type = MAIN
-		pos = 372,0
-		size = 1280x1000
-		anchor1 = none
-		anchor2 = none
-		is-visible = false
-		saved-params = "pos;size;is-minimized;is-maximized"
-		statusbar = false
-	elem "preferences_browser"
-		type = BROWSER
-		pos = 0,0
-		size = 960x1000
-		anchor1 = 0,0
-		anchor2 = 75,100
-		saved-params = ""
-	elem "character_preview_map"
-		type = MAP
-		pos = 960,0
-		size = 320x1000
-		anchor1 = 75,0
-		anchor2 = 100,100
-		right-click = true
-		saved-params = "zoom;letterbox;zoom-mode"
 
