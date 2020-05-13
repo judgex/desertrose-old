@@ -971,6 +971,17 @@
 	category = CAT_PRIMAL
 	subcategory = CAT_TRIBAL
 
+/datum/crafting_recipe/voodoo
+	name = "voodoo"
+	result = /obj/item/reagent_containers/pill/patch/voodoo
+	time = 20	
+	reqs = list(/obj/item/reagent_containers/food/snacks/meat/slab/human/ghoul = 2, 
+				/obj/item/reagent_containers/food/snacks/grown/feracactus = 2, 
+				/obj/item/reagent_containers/food/snacks/tallow = 1, 
+				/datum/reagent/consumable/nuka_cola = 10)
+	tools = list(TOOL_WORKBENCH)
+	category = CAT_TRIBAL
+
 /datum/crafting_recipe/smallcarton
 	name = "Small Carton"
 	result = /obj/item/reagent_containers/food/drinks/sillycup/smallcarton
