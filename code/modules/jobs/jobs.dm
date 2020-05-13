@@ -4,6 +4,7 @@ GLOBAL_LIST_INIT(command_positions, list(
     "Sentinel",
     "Knight-Captain",
     "Legion Centurion",
+    "Legion Orator",
     "Priestess of Mars",
     "NCR Captain",
     "NCR Veteran Ranger",
@@ -34,12 +35,14 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 "Knight",
 "Scribe",
 "Legion Centurion",
+"Legion Orator",
 "Priestess of Mars",
 "Legion Decanus",
 "Veteran Legionary",
 "Prime Legionary",
 "Legion Vexillarius",
 "Legion Scout",
+"Legion Slavemaster",
 "Legion Explorer",
 "Auxilia",
 "NCR Captain",
@@ -66,6 +69,7 @@ GLOBAL_LIST_INIT(faction_player_positions, list(
 "Prime Legionary",
 "Legion Vexillarius",
 "Legion Scout",
+"Legion Slavemaster",
 "Legion Explorer",
 "Auxilia",
 "NCR Lieutenant",
@@ -113,7 +117,8 @@ GLOBAL_LIST_INIT(den_positions, list(
 
 GLOBAL_LIST_INIT(legion_command_positions, list(
     "Legion Centurion",
-    "Priestess of Mars"
+    "Priestess of Mars",
+    "Legion Orator"
 ))
 
 GLOBAL_LIST_INIT(legion_positions, list(
@@ -123,6 +128,7 @@ GLOBAL_LIST_INIT(legion_positions, list(
     "Recruit Legionary",
     "Legion Vexillarius",
     "Legion Explorer",
+    "Legion Slavemaster",
     "Auxilia",
     "Camp Follower",
     "Legion Slave"
