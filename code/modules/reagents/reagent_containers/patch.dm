@@ -64,3 +64,9 @@
 	list_reagents = list("healing_poultice" = 10)
 	icon_state = "bandaid_healingpoultice"
 	self_delay = 0
+
+/obj/item/reagent_containers/pill/patch/voodoo
+	name = "Voodoo"
+	desc = "A tribal concoction, made from the left-over byproducts of various critters. It imbues the user with greater agility and a sense of invincibility."
+	list_reagents = list("methamphetamine" = 5, "coffee" = 30, "mine_salve" = 5)
+	icon_state = "Voodoo"
