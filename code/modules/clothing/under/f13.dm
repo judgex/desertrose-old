@@ -1133,3 +1133,25 @@
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
 	can_adjust = 0
+
+
+/obj/item/clothing/under/f13/fprostitute
+	name = "feminine prostitute outfit"
+	desc = "A latex outfit for someone who sells their companionship. Or really likes the breeze."
+	icon_state = "fprostitute"
+	item_state = "fprostitute"
+	item_color = "fprostitute"
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
+	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
+	can_adjust = 0
+
+/obj/item/clothing/under/f13/mprostitute
+	name = "masuline prostitute outfit"
+	desc = "A latex outfit for someone who sells their companionship. Or really likes the breeze."
+	icon_state = "mprostitute"
+	item_state = "mprostitute"
+	item_color = "mprostitute"
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
+	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
+	can_adjust = 0
+

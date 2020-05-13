@@ -168,8 +168,41 @@ Centurion
 
 
 /*
+Orator
+*/
+
+/datum/job/CaesarsLegion/Legionnaire/f13orator
+	title = "Legion Orator"
+	flag = F13ORATOR
+	faction = "Legion"
+	total_positions = 1
+	spawn_positions = 1
+	description = "You are the the resonator of Caesar's better wills; a Legionnaire who has, perhaps through injury or advanced age, proven himself unable to fight effectively any longer. Instead of facing \"retirement\" in the Legion, one of your superiors took note of your studies and way with words, and you have been made the face and voice of the Conturbernae."
+	supervisors = "the Centurion"
+	exp_requirements = 800
+	exp_type = EXP_TYPE_DECANUS
+
+	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13orator
+
+/datum/outfit/job/CaesarsLegion/Legionnaire/f13orator
+	name = "Legion Orator"
+	suit = 	/obj/item/clothing/suit/armor/f13/legion/vet/orator
+	jobtype = /datum/job/CaesarsLegion/f13orator
+	id = /obj/item/card/id/dogtag/legorator
+	backpack_contents = list(
+		/obj/item/reagent_containers/pill/patch/healingpowder=3, \
+		/obj/item/flashlight/lantern=1,
+		/obj/item/storage/box/ids/follower=1
+		)
+
+/datum/job/CaesarsLegion/f13orator/after_spawn(mob/living/carbon/human/H, mob/M)
+	H.add_quirk("Poor Aim")
+
+/*
 Priestess of Mars
 */
+
+
 /datum/job/CaesarsLegion/f13priestess
 	title = "Priestess of Mars"
 	flag = F13PRIESTESS
@@ -347,7 +380,39 @@ Vexillarius
 		/obj/item/grenade/smokebomb=2,
 		/obj/item/grenade/plastic/c4=1
 		)
+/*
+Slavemaster
+*/
+datum/job/CaesarsLegion/Legionnaire/f13slavemaster
+	title = "Legion Slavemaster"
+	flag = F13SLAVEMASTER
+	faction = "Legion"
+	total_positions = 1
+	spawn_positions = 1
+	description = "You are the feared and respected disciplinary corps of the Legion. Acting as both master of the Slaves and de-facto executioner of the Centurion's will within his ranks, you are a faceless and undoubtedly cruel torturer... but be careful to not let your hubris and malice lead to a strikeback from those you thought broken."
+	supervisors = "the Decani and Centurion"
+	exp_requirements = 300
 
+	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13slavemaster
+
+/datum/outfit/job/CaesarsLegion/Legionnaire/f13slavemaster
+	name = "Legion Slavemaster"
+	jobtype = /datum/job/CaesarsLegion/Legionnaire/f13legionary
+	id =			/obj/item/card/id/dogtag/legslavemaster
+	uniform =		/obj/item/clothing/under/gladiator
+	belt = 			/obj/item/melee/curator_whip
+	head = 			/obj/item/clothing/head/helmet/gladiator
+	glasses = 		/obj/item/clothing/glasses/sunglasses
+	backpack_contents = list(
+		/obj/item/claymore/machete/reinforced=1, \
+		/obj/item/reagent_containers/pill/patch/healingpowder=2, \
+		/obj/item/flashlight/lantern=1, \
+		/obj/item/storage/bag/money/small/legenlisted,
+		/obj/item/radio)
+	r_pocket = /obj/item/restraints/handcuffs
+
+/datum/job/CaesarsLegion/Legionnaire/f13slavemaster/after_spawn(mob/living/carbon/human/H, mob/M)
+	H.add_quirk("Big Leagues")
 
 
 /*
@@ -374,13 +439,12 @@ Veteran Legionary
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13vetlegionary
 	name = "Veteran Legionary"
-	jobtype = /datum/job/CaesarsLegion/Legionnaire/f13legionary
+	jobtype = /datum/job/CaesarsLegion/Legionnaire/f13vetlegionary
 	id = 			/obj/item/card/id/dogtag/legveteran
 	mask =			/obj/item/clothing/mask/bandana/legvet
 	head = 			/obj/item/clothing/head/helmet/f13/legion/vet
 	suit = 			/obj/item/clothing/suit/armor/f13/legion/vet
 	glasses = 		/obj/item/clothing/glasses/sunglasses
-	r_hand = 		/obj/item/shield/riot/roman
 	backpack_contents = list(
 		/obj/item/restraints/legcuffs/bola=1, \
 		/obj/item/throwing_star/spear, \
@@ -507,7 +571,7 @@ Recruit Legionary
 /*
 Explorer
 */
-/*
+
 /datum/job/CaesarsLegion/Legionnaire/f13explorer
 	title = "Legion Explorer"
 	flag = F13EXPLORER
@@ -524,25 +588,24 @@ Explorer
 	loadout_options = list(
 	/datum/outfit/loadout/explinfil, //C4, engineering supplies
 	/datum/outfit/loadout/explscout, //.44 trail carbine
-	/datum/outfit/loadout/explassassin //.308 DKS sniper rifle
+	//datum/outfit/loadout/explassassin //.308 DKS sniper rifle
 	)
 
 /datum/job/CaesarsLegion/Legionnaire/f13explorer/after_spawn(mob/living/carbon/human/H, mob/M)
 	H.add_quirk("Hard Yards")
+	H.add_quirk("Big Leagues")
 
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13explorer
 	name = "Legion Explorer"
 	jobtype = /datum/job/CaesarsLegion/Legionnaire/f13explorer
-	id = 		/obj/item/card/id/dogtag/legveteran
+	id = 		/obj/item/card/id/dogtag/legprime
 	suit = 		/obj/item/clothing/suit/armor/f13/legion/vet/explorer
 	head = 		/obj/item/clothing/head/helmet/f13/legion/vet/explorer
 	glasses = null
-	suit_store = /obj/item/gun/ballistic/revolver/m29/scoped
 	backpack_contents = list(
 		/obj/item/restraints/legcuffs/bola=1, \
 		/obj/item/claymore/machete/reinforced=1, \
-		/obj/item/ammo_box/m44=2, \
 		/obj/item/reagent_containers/pill/patch/healingpowder=2, \
 		/obj/item/flashlight/flare/torch=1, \
 		/obj/item/storage/bag/money/small/legenlisted,
@@ -551,7 +614,9 @@ Explorer
 
 /datum/outfit/loadout/explinfil
 	name = "Infiltrator Explorer"
+	suit_store = /obj/item/gun/ballistic/revolver/m29
 	backpack_contents = list(
+		/obj/item/ammo_box/m44=2,
 		/obj/item/grenade/plastic=1,
 		/obj/item/storage/belt/utility/full/engi=1,
 		/obj/item/clothing/glasses/welding=1)
@@ -562,13 +627,6 @@ Explorer
 	backpack_contents = list(
 		/obj/item/ammo_box/tube/m44=2)
 
-/datum/outfit/loadout/explassassin
-	name = "Assassin Explorer"
-	suit_store = /obj/item/gun/ballistic/automatic/marksman/sniper
-	backpack_contents = list(
-		/obj/item/ammo_box/magazine/w308=2)
-*/
-
 /*
 Auxilia
 */
@@ -577,8 +635,8 @@ Auxilia
 	flag = F13AUXILIA
 	faction = "Legion"
 	head_announce = list("Security")
-	total_positions = 3
-	spawn_positions = 3
+	total_positions = 2
+	spawn_positions = 2
 	description = "You are a respected and valued noncombatant for the Legion, commanding the slaves and Camp Followers and providing important surgical or engineering expertise. Though you hold more authority than the Legionaries in camp, you are not a warrior, and should not act as such unless absolutely necessary."
 	supervisors = "the Decani and Centurion"
 	exp_requirements = 400
@@ -594,7 +652,7 @@ Auxilia
 	name = "Auxilia"
 	jobtype = /datum/job/CaesarsLegion/f13auxilia
 	id =			/obj/item/card/id/dogtag/legauxilia
-	shoes = 		/obj/item/clothing/shoes/roman
+	shoes = 		/obj/item/clothing/shoes/sandal
 	uniform = 		/obj/item/clothing/under/f13/legskirt
 	gloves =		null
 	belt =			null
@@ -708,7 +766,7 @@ Slave
 	total_positions = 4
 	spawn_positions = 4
 	description = "You answer to any member of the Legion, but take orders directly from the Auxilia around the camp. You are to the point where you have been broken in as a slave and most slaves will no longer consider escaping as an option."
-	supervisors = "the entire legion"
+	supervisors = "the entire legion, but mostly the Slavemaster"
 	exp_requirements = 300
 
 	outfit = /datum/outfit/job/CaesarsLegion/slave
