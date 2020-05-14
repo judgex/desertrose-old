@@ -1908,3 +1908,65 @@
 	reqs = list(/obj/item/reagent_containers/food/snacks/grown/feracactus = 1, /obj/item/reagent_containers/food/snacks/grown/tobacco/space = 2, /datum/reagent/consumable/coffee = 10)
 	tools = list(TOOL_WORKBENCH)
 	category = CAT_DRUGS
+
+/datum/crafting_recipe/hideglue
+	name = "hide glue"
+	result = /obj/item/reagent_containers/pill/patch/coyotechew
+	time = 30
+	reqs = list(/obj/item/stack/sheet/bone = 2, /obj/item/stack/sheet/animalhide/brahmin = 2, /datum/reagent/water = 5)
+	category = CAT_TRIBAL
+
+/datum/crafting_recipe/pocketwatch
+	name = "pocket watch"
+	result = /obj/item/toy/handmade_watch
+	time = 30
+	reqs = list(/obj/item/crafting/wonderglue = 1, /obj/item/crafting/large_gear = 1, /obj/item/crafting/small_gear = 5)
+	tools = list(TOOL_WORKBENCH)
+	category = CAT_MISC
+
+/datum/crafting_recipe/large_gear
+	name = "cast large gear"
+	result = /obj/item/crafting/large_gear
+	time = 30
+	reqs = list(/obj/item/stack/sheet/metal = 3)
+	tools = list(TOOL_WORKBENCH)
+	category = CAT_MISC
+
+/datum/crafting_recipe/small_gear
+	name = "cast small gear"
+	result = /obj/item/crafting/small_gear
+	time = 30
+	reqs = list(/obj/item/stack/sheet/metal = 1)
+	tools = list(TOOL_WORKBENCH)
+	category = CAT_MISC
+
+/datum/crafting_recipe/turpentine
+	name = "distill turpentine"
+	result = /obj/item/crafting/turpentine
+	time = 30
+	reqs = list(/obj/item/stack/sheet/mineral/wood = 5, /obj/item/reagent_containers/food/snacks/grown/mutfruit = 2, /datum/reagent/water = 10)
+	tools = list(TOOL_WORKBENCH)
+	category = CAT_MISC
+
+/datum/crafting_recipe/wonderglue
+	name = "mix wonderglue"
+	result = /obj/item/crafting/wonderglue
+	time = 30
+	reqs = list(/obj/item/crafting/hideglue = 1, /obj/item/crafting/turpentine = 2, /obj/item/reagent_containers/food/snacks/tallow = 1)
+	tools = list(TOOL_WORKBENCH)
+	category = CAT_MISC
+
+/datum/crafting_recipe/rollingpaper
+	name = "rolling paper"
+	result = /obj/item/rollingpaper
+	time = 20
+	reqs = list(/obj/item/paper = 1)
+	category = CAT_MISC
+
+/datum/crafting_recipe/wastelandsoap
+	name = "cook soap"
+	result = /obj/item/soap/homemade
+	time = 60
+	reqs = list(/obj/item/stack/sheet/mineral/wood = 3, /obj/item/crafting/turpentine = 2, /datum/reagent/water = 30, /obj/item/reagent_containers/food/snacks/tallow = 3)
+	tools = list(TOOL_WORKBENCH)
+	category = CAT_MISC
