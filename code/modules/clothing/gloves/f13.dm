@@ -81,3 +81,16 @@
 	min_cold_protection_temperature = GLOVES_MIN_TEMP_PROTECT
 	heat_protection = HANDS
 	max_heat_protection_temperature = GLOVES_MAX_TEMP_PROTECT
+
+/obj/item/clothing/gloves/f13/lace
+	name = "lace gloves"
+	desc = "A tight, seethrough pair of black gloves, designed to be worn with something fancy."
+	icon_state = "lacegloves"
+	item_state = "lacegloves"
+	item_color = null
+	transfer_prints = TRUE
+	strip_delay = 20
+	cold_protection = HANDS
+	min_cold_protection_temperature = GLOVES_MIN_TEMP_PROTECT
+	heat_protection = HANDS
+	max_heat_protection_temperature = GLOVES_MAX_TEMP_PROTECT
