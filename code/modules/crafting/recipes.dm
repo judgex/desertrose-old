@@ -1889,3 +1889,14 @@
 	tools = list(TOOL_WORKBENCH)
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
+
+/datum/crafting_recipe/voodoo
+    name = "voodoo"
+    result = /obj/item/reagent_containers/pill/patch/voodoo
+    time = 20
+    reqs = list(/obj/item/reagent_containers/food/snacks/meat/slab/human/ghoul = 2,
+                /obj/item/reagent_containers/food/snacks/grown/feracactus = 2,
+                /obj/item/reagent_containers/food/snacks/tallow = 1,
+                /datum/reagent/consumable/nuka_cola = 10)
+    tools = list(TOOL_WORKBENCH)
+    category = CAT_TRIBAL
