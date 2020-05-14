@@ -156,6 +156,22 @@
 	list_reagents = list("nutriment" = 3, "vitamin" = 3)
 	tastes = list("cooked insect guts" = 1)
 
+/obj/item/reagent_containers/food/snacks/meat/slab/ant_meat
+	name = "ant meat"
+	desc = "A slab of ant meat."
+	icon_state = "mothmeat"
+	list_reagents = list("nutriment" = 2, "bad_food" = 3, "vitamin" = 1)
+	tastes = list("insect guts" = 1)
+	cooked_type = /obj/item/reagent_containers/food/snacks/meat/steak/radroach_meat
+	slice_path = null
+
+/obj/item/reagent_containers/food/snacks/meat/steak/ant_meat
+	name = "ant steak"
+	desc = "A chunk of fried ant flesh."
+	icon_state = "mothmeat"
+	list_reagents = list("nutriment" = 3, "vitamin" = 3)
+	tastes = list("cooked insect guts" = 1)
+
 /obj/item/reagent_containers/food/snacks/meat/slab/radscorpion_meat
 	name = "radscorpion meat"
 	desc = "A slab of radscorpion meat."
