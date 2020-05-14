@@ -11,8 +11,8 @@
 	speak_emote = list("growls")
 	emote_see = list("screeches")
 	a_intent = INTENT_HARM
-	maxHealth = 100
-	health = 100
+	maxHealth = 50
+	health = 50
 	speed = 2
 	harm_intent_damage = 5
 	obj_damage = 30
@@ -55,9 +55,8 @@
 	icon_living = "tunneler"
 	icon_dead = "tunneler_dead"
 	health = 120
-	maxhealth = 120
+	maxHealth = 120
 	speed = 1
-	ham_intent_damage = 5
 	melee_damage_lower = 20
 	melee_damage_upper = 25
 	a_intent = INTENT_HARM
