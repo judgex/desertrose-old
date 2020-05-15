@@ -532,6 +532,12 @@ update_label("John Doe", "Clowny")
 	icon_state = "legionmedallionprime"
 	id_type = "prime medallion"
 
+/obj/item/card/id/dogtag/legslavemaster
+	name = "slavemaster medallion"
+	desc = "A marked silver disc stamped with the Legion's Bull insignia. Belongs to the dreaded Slavemaster."
+	icon_state = "legionmedallionprime"
+	id_type = "slavemaster medallion"
+
 /obj/item/card/id/dogtag/legveteran
 	name = "veteran medallion"
 	desc = "A heavily marked silver disc stamped with the Legion's Bull insignia. Belongs to a veteran, and reeks of iron."
@@ -551,6 +557,13 @@ update_label("John Doe", "Clowny")
 	item_state = "legionmedallioncent"
 	item_color = ""
 	id_type = "priestess medallion"
+
+/obj/item/card/id/dogtag/legorator
+	name = "orator medallion"
+	desc = "A golden disc awarded to the one who is a dedicated ambassador for Caesar's Legion."
+	icon_state = "legionmedallioncent"
+	item_state = "legionmedallioncent"
+	id_type = "orator medallion"
 
 /obj/item/card/id/legionbrand
 	name = "Legion's brand"
