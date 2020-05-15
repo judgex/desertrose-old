@@ -52,3 +52,5 @@
 	name = "fieldscribe suit"
 	desc = "A suit that protects against the weather, and looks stylish, but not much else."
 	icon_state = "fieldscribe"
+	body_parts_covered = CHEST|ARMS
+	allowed = list(/obj/item/gun)
