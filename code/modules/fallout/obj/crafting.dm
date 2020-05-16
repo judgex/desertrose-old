@@ -155,3 +155,9 @@
 	desc = "This was a promotional item created by Vault-Tec before the Great War and used in the company's advertisements. With the right schematics, it can be used to make bottlecap mines."
 	icon_state = "lunchbox"
 	tool_behaviour = TOOL_LUNCHBOX
+
+
+/obj/item/crafting/hideglue
+	name = "Hide Glue"
+	desc = "Animal glue is an organic colloid of protein derivation used as an adhesive, sizing and coating, compo, and for colloidal applications in industry, which is derived primarily from collagenous material present in animal hide or from the extraction of collagen present in animal bones, primarily cattle."
+	icon_state = "hidepot"
