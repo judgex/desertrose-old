@@ -250,12 +250,10 @@ Sergeant
 	name = "Heavy Sergeant"
 	suit = 			/obj/item/clothing/suit/armor/f13/brokenpa/ncr
 	head = 			/obj/item/clothing/head/helmet/power_armor/t45b
-	suit_store =    /obj/item/gun/ballistic/shotgun/trench
+	suit_store =    /obj/item/gun/ballistic/automatic/l6_saw/m38
 	backpack_contents = list(
-		/obj/item/shield/riot/tele=1,
 		/obj/item/book/granter/trait/trekking=1,
-		/obj/item/storage/box/lethalshot=1,
-		/obj/item/storage/box/slugshot=1)
+		/obj/item/ammo_box/magazine/mm762=2)
 
 /datum/outfit/loadout/sgtcombat
 	name = "Combat Sergeant"
