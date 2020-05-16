@@ -35,11 +35,6 @@
 	desc = "A bar of soap. Smells of plasma."
 	icon_state = "soapnt"
 
-/obj/item/soap/wastelandsoap
-	desc = "In days gone by, lye soap was a homemaker’s ultimate all-purpose cleanser. Usually made with leftover cooking fats and lye made from wood ashes "
-	icon_state = "soapgibs"
-	cleanspeed = 45
-
 /obj/item/soap/homemade
 	desc = "A homemade bar of soap. Smells of... well...."
 	icon_state = "soapgibs"
