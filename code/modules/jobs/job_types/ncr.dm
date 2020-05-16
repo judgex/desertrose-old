@@ -423,6 +423,8 @@ Recruit
 	id = 			/obj/item/card/id/dogtag/ncrtrooper
 	uniform =  		/obj/item/clothing/under/f13/ncr
 	accessory =     /obj/item/clothing/accessory/ncr/REC
+	suit = 			/obj/item/clothing/suit/armor/f13/ncrarmor
+	suit_store = 	/obj/item/gun/ballistic/automatic/pistol/ninemil
 	ears = 			/obj/item/radio/headset //no NCR comms
 	belt =			/obj/item/pickaxe
 	gloves = null
@@ -432,7 +434,6 @@ Recruit
 		/obj/item/reagent_containers/hypospray/medipen/stimpak=1, \
 		/obj/item/stack/medical/gauze=1, \
 		/obj/item/storage/bag/ore = 1,
-		/obj/item/gun/ballistic/automatic/pistol/ninemil=1,
 		/obj/item/storage/bag/money/small/ncrenlisted)
 
 /*
