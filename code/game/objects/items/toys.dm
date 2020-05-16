@@ -1098,7 +1098,7 @@
 	if (cooldown < world.time)
 		cooldown = world.time + 1800 //3 minutes
 		user.visible_message("<span class='warning'>[user] rotates a cogwheel on [src].</span>", "<span class='notice'>You rotate a cogwheel on [src], it plays a loud noise!</span>", "<span class='italics'>You hear cogwheels turning.</span>")
-		playsound(src, 'sound/magic/clockwork/ark_activation.ogg', 50, 0)
+		playsound(src, 'sound/weapon/clockwork/gun_slide_lock_1.ogg', 50, 0)
 	else
 		to_chat(user, "<span class='alert'>The cogwheels are already turning!</span>")
 
