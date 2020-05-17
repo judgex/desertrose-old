@@ -1084,7 +1084,6 @@
 /*
  *
  */
-
 /obj/item/toy/handmade_watch
 	name = "handmand watch"
 	desc = "A stylish handmade watch made out of thousands of tiny cogwheels."
@@ -1100,7 +1099,7 @@
 		user.visible_message("<span class='warning'>[user] rotates a cogwheel on [src].</span>", "<span class='notice'>You rotate a cogwheel on [src], it plays a loud noise!</span>", "<span class='italics'>You hear cogwheels turning.</span>")
 	else
 		to_chat(user, "<span class='alert'>The cogwheels are already turning!</span>")
-
+   
 /obj/item/toy/clockwork_watch/examine(mob/user)
 	..()
 	to_chat(user, "<span class='info'>Time: [station_time_timestamp()]")
