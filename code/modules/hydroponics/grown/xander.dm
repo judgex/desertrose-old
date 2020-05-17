@@ -8,7 +8,7 @@
 	lifespan = 25
 	endurance = 10
 	yield = 3 //6 //Where did you get 6 from???
-	growthstages = 3
+	growthstages = 4
 	production = 1
 	maturation = 1
 	growing_icon = 'icons/obj/hydroponics/growing_vegetables.dmi'

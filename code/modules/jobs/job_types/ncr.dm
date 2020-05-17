@@ -77,7 +77,7 @@ Captain
 	uniform		= /obj/item/clothing/under/f13/ncr/officer
 	accessory 	= /obj/item/clothing/accessory/ncr/CPT
 	suit 		= /obj/item/clothing/suit/armor/f13/ncrarmor/captain
-	suit_store 	= /obj/item/gun/ballistic/automatic/pistol/deagle
+	suit_store 	= /obj/item/gun/ballistic/automatic/pistol/deagle/gold
 	head 		= /obj/item/clothing/head/beret/ncr
 	belt        = /obj/item/storage/belt/military/assault/ncr
 	glasses 	= /obj/item/clothing/glasses/sunglasses/big
@@ -86,8 +86,7 @@ Captain
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/a50=2, \
 		/obj/item/ammo_box/magazine/m9mm=1, \
-		/obj/item/gun/ballistic/automatic/pistol/ninemil=1, \
-		/obj/item/kitchen/knife/combat/survival=1, \
+		/obj/item/kitchen/knife/combat=1, \
 		/obj/item/melee/classic_baton/telescopic=1, \
 		/obj/item/twohanded/binocs=1, \
 		/obj/item/storage/bag/money/small/ncr, \
@@ -251,12 +250,10 @@ Sergeant
 	name = "Heavy Sergeant"
 	suit = 			/obj/item/clothing/suit/armor/f13/brokenpa/ncr
 	head = 			/obj/item/clothing/head/helmet/power_armor/t45b
-	suit_store =    /obj/item/gun/ballistic/shotgun/trench
+	suit_store =    /obj/item/gun/ballistic/automatic/l6_saw/m38
 	backpack_contents = list(
-		/obj/item/shield/riot/tele=1,
 		/obj/item/book/granter/trait/trekking=1,
-		/obj/item/storage/box/lethalshot=1,
-		/obj/item/storage/box/slugshot=1)
+		/obj/item/ammo_box/magazine/mm762=2)
 
 /datum/outfit/loadout/sgtcombat
 	name = "Combat Sergeant"
@@ -424,6 +421,8 @@ Recruit
 	id = 			/obj/item/card/id/dogtag/ncrtrooper
 	uniform =  		/obj/item/clothing/under/f13/ncr
 	accessory =     /obj/item/clothing/accessory/ncr/REC
+	suit = 			/obj/item/clothing/suit/armor/f13/ncrarmor
+	suit_store = 	/obj/item/gun/ballistic/automatic/pistol/ninemil
 	ears = 			/obj/item/radio/headset //no NCR comms
 	belt =			/obj/item/pickaxe
 	gloves = null
@@ -433,7 +432,6 @@ Recruit
 		/obj/item/reagent_containers/hypospray/medipen/stimpak=1, \
 		/obj/item/stack/medical/gauze=1, \
 		/obj/item/storage/bag/ore = 1,
-		/obj/item/gun/ballistic/automatic/pistol/ninemil=1,
 		/obj/item/storage/bag/money/small/ncrenlisted)
 
 /*

@@ -346,7 +346,7 @@
 
 /obj/item/gun/ballistic/automatic/l6_saw/m38
 	name = "M38 LMG"
-	desc = "A special LMG used by elite legionaries to support regular infantry."
+	desc = "A special LMG generally used to lay down suppressive fire."
 	icon_state = "M38"
 	item_state = "M38"
 	slot_flags = 0
@@ -354,9 +354,9 @@
 	mag_type = /obj/item/ammo_box/magazine/mm762
 	fire_sound = 'sound/f13weapons/assaultrifle_fire.ogg'
 	can_suppress = FALSE
-	burst_size = 3
-	fire_delay = 2
-	burst_delay = 1.8
+	burst_size = 1
+	fire_delay = 3
+	burst_delay = 3
 	slowdown = 1.0
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
@@ -372,23 +372,23 @@
 	switch(select)
 		if(0)
 			select += 1
-			burst_size += 2
-			spread = 20
+			burst_size = 2
+			spread = 30
 			to_chat(user, "<span class='notice'>You switch to [burst_size]-rnd burst.</span>")
 		if(1)
 			select += 1
-			burst_size += 2
-			spread = 30
+			burst_size = 3
+			spread = 40
 			to_chat(user, "<span class='notice'>You switch to [burst_size]-rnd burst.</span>")
 		if(2)
 			select += 1
-			burst_size += 3
-			spread = 40
+			burst_size = 4
+			spread = 50
 			to_chat(user, "<span class='notice'>You switch to [burst_size]-rnd burst.</span>")
 		if(3)
 			select = 0
 			burst_size = 1
-			spread = 1
+			spread = 20
 			to_chat(user, "<span class='notice'>You switch to semi-automatic.</span>")
 	playsound(user, 'sound/weapons/empty.ogg', 100, 1)
 	update_icon()

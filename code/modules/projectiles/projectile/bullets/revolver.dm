@@ -42,5 +42,5 @@
 
 // .50 Action Express
 /obj/item/projectile/bullet/a50AE
-	damage = 50
-	armour_penetration = 10
+	damage = 55
+	armour_penetration = 20

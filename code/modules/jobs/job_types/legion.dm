@@ -222,7 +222,7 @@ Priestess of Mars
 	glasses = /obj/item/clothing/glasses/sunglasses/fakeblindfold
 	jobtype = /datum/job/CaesarsLegion/f13priestess
 	id = /obj/item/card/id/dogtag/legpriest
-	shoes = /obj/item/clothing/shoes/sandal
+	shoes = /obj/item/clothing/shoes/roman
 	backpack_contents = list(
 		/obj/item/reagent_containers/pill/patch/healingpowder=3, \
 		/obj/item/flashlight/lantern=1,
@@ -652,7 +652,7 @@ Auxilia
 	name = "Auxilia"
 	jobtype = /datum/job/CaesarsLegion/f13auxilia
 	id =			/obj/item/card/id/dogtag/legauxilia
-	shoes = 		/obj/item/clothing/shoes/sandal
+	shoes = 		/obj/item/clothing/shoes/roman
 	uniform = 		/obj/item/clothing/under/f13/legskirt
 	gloves =		null
 	belt =			null
