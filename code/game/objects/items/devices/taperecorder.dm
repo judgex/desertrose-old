@@ -1,6 +1,6 @@
 /obj/item/taperecorder
-	name = "universal recorder"
-	desc = "A device that can record to cassette tapes, and play them. It automatically translates the content in playback."
+	name = "holotape recorder"
+	desc = "A device that can record to holotapes, and play them."
 	icon = 'icons/obj/device.dmi'
 	icon_state = "taperecorder_empty"
 	item_state = "analyzer"

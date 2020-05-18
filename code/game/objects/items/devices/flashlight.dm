@@ -1,11 +1,11 @@
 /obj/item/flashlight
 	name = "flashlight"
-	desc = "A hand-held emergency light."
+	desc = "A hand-held flashlight."
 	icon = 'icons/obj/lighting.dmi'
 	icon_state = "flashlight"
 	item_state = "flashlight"
-	lefthand_file = 'icons/mob/inhands/misc/devices_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/misc/devices_righthand.dmi'
+	lefthand_file = 'icons/mob/inhands/equipment/security_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/equipment/security_righthand.dmi'
 	w_class = WEIGHT_CLASS_SMALL
 	flags_1 = CONDUCT_1
 	slot_flags = ITEM_SLOT_BELT
