@@ -462,38 +462,46 @@
 		grinded = null
 		to_chat(user, "You eject the item inside.")
 
+/obj/item/reagent_containers/glass/mortar/proc/grind(mob/living/carbon/human/user)
+	if(!grinded)
+		to_chat(user, SPAN_NOTICE("There is nothing to grind!"))
+		return
+	if(user.getStaminaLoss() > 50)
+		to_chat(user, SPAN_WARNING("You are too tired to work!"))
+		return
+	to_chat(SPAN_NOTICE("You start grinding [grinded]..."))
+	if(!(do_after(user, 2 SECONDS, target = src) && grinded))
+		return // fail quietly
+	if(LAZYLEN(grinded.juice_results))
+		if(grinded.on_juice() == -1) //Call on_grind() to change amount as needed, and stop grinding the item if it returns -1
+			to_chat(user, SPAN_WARNING("[grinded] seems to be too hard to mash."))
+			return
+		reagents.add_reagent_list(grinded.juice_results)
+		to_chat(user, SPAN_NOTICE("You mash [grinded] into a paste."))
+	else if(LAZYLEN(grinded.grind_results))
+		if(grinded.on_grind() == -1) //Call on_grind() to change amount as needed, and stop grinding the item if it returns -1
+			to_chat(user, SPAN_WARNING("[grinded] seems to be too hard to crush."))
+			return
+		reagents.add_reagent_list(grinded.grind_results)
+		to_chat(user, SPAN_NOTICE("You crush [grinded] into a fine powder."))
+	else
+		to_chat(user, SPAN_NOTICE("You crush [grinded].")) // man, idk what to do with this, just crush it
+	grinded.reagents?.trans_to(src, grinded.reagents.total_volume)
+	user.adjustStaminaLoss(40)
+	QDEL_NULL(grinded)
+
 /obj/item/reagent_containers/glass/mortar/attackby(obj/item/I, mob/living/carbon/human/user)
 	..()
 	if(istype(I,/obj/item/pestle))
-		if(grinded)
-			if(user.getStaminaLoss() > 50)
-				to_chat(user, "<span class='warning'>You are too tired to work!</span>")
-				return
-			to_chat(user, "<span class='notice'>You start grinding...</span>")
-			if((do_after(user, 25, target = src)) && grinded)
-				user.adjustStaminaLoss(40)
-				if(grinded.reagents) //food and pills
-					grinded.reagents.trans_to(src, grinded.reagents.total_volume, transfered_by = user)
-				if(grinded.juice_results) //prioritize juicing
-					grinded.on_juice()
-					reagents.add_reagent_list(grinded.juice_results)
-					to_chat(user, "<span class='notice'>You juice [grinded] into a fine liquid.</span>")
-					QDEL_NULL(grinded)
-					return
-				grinded.on_grind()
-				reagents.add_reagent_list(grinded.grind_results)
-				to_chat(user, "<span class='notice'>You break [grinded] into powder.</span>")
-				QDEL_NULL(grinded)
-				return
-			return
-		else
-			to_chat(user, "<span class='warning'>There is nothing to grind!</span>")
-			return
+		grind(user)
+		return
 	if(grinded)
-		to_chat(user, "<span class='warning'>There is something inside already!</span>")
+		to_chat(user, SPAN_WARNING("There is something inside already!"))
 		return
-	if(I.juice_results || I.grind_results)
-		I.forceMove(src)
-		grinded = I
+	if(!(I.juice_results || I.grind_results || I.reagents))
+		to_chat(user, SPAN_WARNING("You can't grind this!"))
 		return
-	to_chat(user, "<span class='warning'>You can't grind this!</span>")
+	I.forceMove(src)
+	grinded = I
+	to_chat(user, SPAN_NOTICE("You put [I] in [src]."))
+	
