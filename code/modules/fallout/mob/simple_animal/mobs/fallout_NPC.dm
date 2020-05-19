@@ -394,7 +394,7 @@
 
 /mob/living/simple_animal/hostile/ncr/trooper
 	name = "NCR Trooper"
-	desc = "A trooper for the New California Republic."
+	desc = "Just a NCR Trooper"
 	icon_state = "ncr_trooper"
 	icon_living = "ncr_trooper"
 	icon_dead = "ncr_trooper"
