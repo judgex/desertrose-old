@@ -145,7 +145,7 @@
 
 /obj/item/flag
 	name = "empty flag"
-	desc = "you could put some leather there."
+	desc = "You could put some leather on this to make a flag."
 	density = 1
 	anchored = 1
 	w_class = 4
@@ -155,6 +155,7 @@
 	icon_state = "emptyflag"
 	item_state = "emptyflag"
 	var/faction = null
+	var/removing
 
 /obj/item/flag/ncr
 	name = "NCR flag"
@@ -215,8 +216,9 @@
 		attack_hand(user)
 
 /obj/item/flag/attack_hand(mob/user)
-	if(item_state != "emptyflag")
+	if(!removing && item_state != "emptyflag")
 		visible_message("<span class='notice'>[user] begins to remove a flag.</span>")
+		removing = TRUE
 		if(do_after(user, 30, target = src))
 			new /obj/item/stack/sheet/leather(loc)
 			name = "empty flag"
@@ -224,6 +226,7 @@
 			item_state = "emptyflag"
 			faction = null
 			update_icon()
+			removing = FALSE
 	else
 		anchored = 0
 		..()
