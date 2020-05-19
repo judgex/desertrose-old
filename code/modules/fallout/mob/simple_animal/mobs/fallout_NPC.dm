@@ -271,7 +271,7 @@
 	harm_intent_damage = 5
 	melee_damage_lower = 10
 	melee_damage_upper = 10
-	attacktext = "áüåò"
+	attacktext = "Ã¡Ã¼Ã¥Ã²"
 	attack_sound = 'sound/weapons/punch1.ogg'
 	a_intent = INTENT_HARM
 	loot = list(/obj/effect/mob_spawn/human/corpse/bs)
@@ -365,7 +365,7 @@
 	harm_intent_damage = 5
 	melee_damage_lower = 10
 	melee_damage_upper = 10
-	attacktext = "áüåò"
+	attacktext = "Ã¡Ã¼Ã¥Ã²"
 	attack_sound = 'sound/weapons/punch1.ogg'
 	a_intent = INTENT_HARM
 	loot = list(/obj/effect/mob_spawn/human/corpse/ncr)
@@ -411,7 +411,7 @@
 
 /mob/living/simple_animal/hostile/ncr/sergeant
 	name = "NCR Sergeant"
-	desc = "A sergeant for the New California Republic."
+	desc = "Just a NCR Sergeant"
 	icon_state = "ncr_sergeant"
 	icon_living = "ncr_sergeant"
 	icon_dead = "ncr_sergeant"
