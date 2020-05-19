@@ -321,7 +321,7 @@
 		return
 	if(reac_volume >= 1)
 		T.MakeSlippery(TURF_WET_LUBE, 15 SECONDS, min(reac_volume * 2 SECONDS, 120))
-
+/*
 /datum/reagent/mutationtoxin
 	name = "Stable Mutation Toxin"
 	id = "stablemutationtoxin"
@@ -531,6 +531,7 @@
 /datum/reagent/aslimetoxin/reaction_mob(mob/living/L, method=TOUCH, reac_volume)
 	if(method != TOUCH)
 		L.ForceContractDisease(new /datum/disease/transformation/slime(), FALSE, TRUE)
+*/
 
 /datum/reagent/gluttonytoxin
 	name = "Gluttony's Blessing"
