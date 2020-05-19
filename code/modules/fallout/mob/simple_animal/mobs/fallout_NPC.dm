@@ -150,7 +150,7 @@
 	status_flags = CANPUSH
 	del_on_death = 1
 	speak = list("For the Enclave!", "Stars and Stripes!", "Liberty or death!")
-	speak_emote = "pulls out a weapon,"
+	speak_emote = list("pulls out a weapon", "shouts")
 	speak_chance = 0
 
 /obj/effect/mob_spawn/human/corpse/enclavescientist
@@ -282,7 +282,7 @@
 	status_flags = CANPUSH
 	del_on_death = 1
 	speak = list("Semper Invicta!")
-	speak_emote = "rushes."
+	speak_emote = list("rushes")
 	speak_chance = 1
 
 
@@ -346,7 +346,7 @@
 
 /mob/living/simple_animal/hostile/ncr
 	name = "NCR"
-	desc = "Just an NCR"
+	desc = "Just an NCR."
 	icon_state = "ncr_trooper"
 	icon_living = "ncr_trooper"
 	icon_dead = "ncr_trooper"
@@ -376,7 +376,7 @@
 	status_flags = CANPUSH
 	del_on_death = 1
 	speak = list("Patrolling the Mojave almost makes you wish for a nuclear winter.", "When I got this assignment I was hoping there would be more gambling.", "It's been a long tour, all I can think about now is going back home.", "You know, if you were serving, you'd probably be halfway to general by now.", "You oughtta think about enlisting. We need you here.")
-	speak_emote = "says,"
+	speak_emote = list("says")
 	speak_chance = 1
 
 
@@ -394,7 +394,7 @@
 
 /mob/living/simple_animal/hostile/ncr/trooper
 	name = "NCR Trooper"
-	desc = "Just a NCR Trooper"
+	desc = "A trooper for the New California Republic."
 	icon_state = "ncr_trooper"
 	icon_living = "ncr_trooper"
 	icon_dead = "ncr_trooper"
@@ -411,7 +411,7 @@
 
 /mob/living/simple_animal/hostile/ncr/sergeant
 	name = "NCR Sergeant"
-	desc = "Just a NCR Sergeant"
+	desc = "A sergeant for the New California Republic."
 	icon_state = "ncr_sergeant"
 	icon_living = "ncr_sergeant"
 	icon_dead = "ncr_sergeant"
@@ -471,7 +471,7 @@
 	status_flags = CANPUSH
 	del_on_death = 1
 	speak = list("Ave, true to Caesar.", "True to Caesar.", "Ave, Amicus.", "The new slave girls are quite beautiful.", "Give me cause, Profligate.", "Degenerates like you belong on a cross.")
-	speak_emote = "says,"
+	speak_emote = list("says")
 	speak_chance = 1
 
 /obj/effect/mob_spawn/human/corpse/legion
@@ -565,7 +565,7 @@
 	status_flags = CANPUSH
 	del_on_death = 1
 	speak = "Yes!"
-	speak_emote = "rushes"
+	speak_emote = list("rushes")
 	speak_chance = 2
 
 /obj/effect/mob_spawn/human/corpse/raider
