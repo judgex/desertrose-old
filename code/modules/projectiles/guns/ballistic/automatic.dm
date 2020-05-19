@@ -426,8 +426,8 @@
 
 /obj/item/gun/ballistic/automatic/sniper_rifle/syndicate
 	name = "anti materiel rifle mark II"
-	desc = "An illegally modified .50 cal sniper rifle with suppression compatibility. Quickscoping still doesn't work."
-	pin = /obj/item/firing_pin/implant/pindicate
+	desc = "A modified .50 cal sniper rifle with suppression compatibility. Quickscoping still doesn't work."
+	fire_sound = 'sound/f13weapons/antimaterielfire.ogg'
 
 // Old Semi-Auto Rifle //
 
@@ -870,7 +870,7 @@
 
 /obj/item/gun/ballistic/automatic/lmg
 	name = "R84 LMG"
-	desc = "A post war lmg manufactured by the NCR. Issued to heavy troopers to support regular infantry."
+	desc = "A post war lmg, traditionally manufactured by NCR forces. It is designed as a suppressive support weapon, generally granted to Heavy Troopers to compliment their stripped power armor."
 	icon_state = "R84"
 	item_state = "R84"
 	slot_flags = 0
@@ -878,13 +878,13 @@
 	mag_type = /obj/item/ammo_box/magazine/lmg
 	fire_sound = 'sound/f13weapons/assaultrifle_fire.ogg'
 	can_suppress = FALSE
-	burst_size = 3
-	fire_delay = 2
-	burst_delay = 1.8
+	burst_size = 1
+	fire_delay = 3
+	burst_delay = 3
 	slowdown = 1.0
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
-	spread = 18
+	spread = 25
 	randomspread = 1
 
 /obj/item/gun/ballistic/automatic/lmg/burst_select()
@@ -892,23 +892,18 @@
 	switch(select)
 		if(0)
 			select += 1
-			burst_size += 2
-			spread = 18
+			burst_size = 2
+			spread = 35
 			to_chat(user, "<span class='notice'>You switch to [burst_size]-rnd burst.</span>")
 		if(1)
 			select += 1
-			burst_size += 2
-			spread = 26
+			burst_size = 3
+			spread = 45
 			to_chat(user, "<span class='notice'>You switch to [burst_size]-rnd burst.</span>")
 		if(2)
-			select += 1
-			burst_size += 3
-			spread = 34
-			to_chat(user, "<span class='notice'>You switch to [burst_size]-rnd burst.</span>")
-		if(3)
 			select = 0
 			burst_size = 1
-			spread = 1
+			spread = 25
 			to_chat(user, "<span class='notice'>You switch to semi-automatic.</span>")
 	playsound(user, 'sound/weapons/empty.ogg', 100, 1)
 	update_icon()

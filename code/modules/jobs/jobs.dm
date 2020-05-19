@@ -49,6 +49,8 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 "NCR Ambassador",
 "NCR Lieutenant",
 "NCR Sergeant",
+"NCR Military Police",
+"NCR Heavy Trooper",
 "NCR Corporal",
 "NCR Veteran Ranger",
 "NCR Ranger",
@@ -143,6 +145,8 @@ GLOBAL_LIST_INIT(ncr_command_positions, list(
 GLOBAL_LIST_INIT(ncr_positions, list(
     "NCR Lieutenant",
     "NCR Sergeant",
+    "NCR Military Police",
+    "NCR Heavy Trooper",
     "NCR Corporal",
     "NCR Trooper",
     "NCR Assistant",
