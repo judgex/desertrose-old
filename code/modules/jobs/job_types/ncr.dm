@@ -359,7 +359,7 @@ NCR Heavy Trooper
 /datum/outfit/job/ncr/f13ncrht
 	name = "NCR Heavy Trooper"
 	jobtype = /datum/job/ncr/f13ncrht
-	id = 			/obj/item/card/id/dogtag/ncrtrooper
+	id = 			/obj/item/card/id/dogtag/ncrht
 	uniform =  		/obj/item/clothing/under/f13/ncr
 	suit_store = 	/obj/item/gun/ballistic/automatic/lmg
 	suit = 			/obj/item/clothing/suit/armor/f13/brokenpa/ncr
@@ -407,7 +407,7 @@ NCR Military Police
 /datum/outfit/job/ncr/f13ncrmp
 	name = "NCR Military Police"
 	jobtype = /datum/job/ncr/f13trooper
-	id = 			/obj/item/card/id/dogtag/ncrtrooper
+	id = 			/obj/item/card/id/dogtag/ncrmp
 	uniform =  		/obj/item/clothing/under/f13/ncr
 	accessory =     /obj/item/clothing/accessory/ncr/SPC
 	head = 			/obj/item/clothing/head/f13/ncr/goggles
