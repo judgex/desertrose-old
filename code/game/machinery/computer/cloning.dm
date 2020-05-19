@@ -1,6 +1,5 @@
 #define AUTOCLONING_MINIMAL_LEVEL 3
 
-/*
 /obj/machinery/computer/cloning
 	name = "cloning console"
 	desc = "Used to clone people and manage DNA."
@@ -459,4 +458,3 @@
 	src.records += R
 	scantemp = "Subject successfully scanned."
 	playsound(src, 'sound/machines/terminal_prompt_confirm.ogg', 50, 0)
-*/
