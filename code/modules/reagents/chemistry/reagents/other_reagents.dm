@@ -321,7 +321,7 @@
 		return
 	if(reac_volume >= 1)
 		T.MakeSlippery(TURF_WET_LUBE, 15 SECONDS, min(reac_volume * 2 SECONDS, 120))
-/*
+
 /datum/reagent/mutationtoxin
 	name = "Stable Mutation Toxin"
 	id = "stablemutationtoxin"
@@ -332,6 +332,7 @@
 	var/datum/species/race = /datum/species/human
 	var/mutationtext = "<span class='danger'>The pain subsides. You feel... human.</span>"
 
+/*
 /datum/reagent/mutationtoxin/on_mob_life(mob/living/carbon/human/H)
 	..()
 	if(!istype(H))
