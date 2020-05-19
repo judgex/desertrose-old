@@ -54,10 +54,12 @@
 #define F13LIEUTENANT   (1<<3)
 #define F13SERGEANT		(1<<4)
 #define F13SPECIALIST	(1<<5)
-#define F13TROOPER		(1<<6)
-#define F13RECRUIT		(1<<7)
-#define F13VETRANGER	(1<<8)
-#define F13RANGER		(1<<9)
+#define F13NCRMP		(1<<6)
+#define F13NCRHT		(1<<7)
+#define F13TROOPER		(1<<8)
+#define F13RECRUIT		(1<<9)
+#define F13VETRANGER	(1<<10)
+#define F13RANGER		(1<<11)
 
 #define LEGION			(1<<4)
 
