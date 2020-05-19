@@ -77,6 +77,8 @@ GLOBAL_LIST_INIT(faction_player_positions, list(
 "NCR Lieutenant",
 "NCR Sergeant",
 "NCR Corporal",
+"NCR Military Police",
+"NCR Heavy Trooper",
 "NCR Ranger",
 "NCR Trooper",
 "Deputy"
