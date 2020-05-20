@@ -209,7 +209,7 @@
 		message = replacetext(message," thank you "," thank you, thank you very much ")
 		message = replacetext(message," what are you "," whatcha ")
 		message = replacetext(message," yes ",pick(" sure", "yea "))
-		message = replacetext(message," faggot "," square ")
+		message = replacetext(message," bitch "," square ")
 		message = replacetext(message," muh valids "," getting my kicks ")
 	return trim(message)
 

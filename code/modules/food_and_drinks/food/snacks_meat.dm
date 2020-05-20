@@ -96,10 +96,10 @@
 	tastes = list("meat" = 1, "salmon" = 1)
 	foodtype = MEAT | ALCOHOL
 
-/obj/item/reagent_containers/food/snacks/faggot
+/obj/item/reagent_containers/food/snacks/meatball
 	name = "meatball"
 	desc = "It's exactly what you'd expect from the name."
-	icon_state = "faggot"
+	icon_state = "meatball"
 	list_reagents = list("nutriment" = 4, "vitamin" = 1)
 	filling_color = "#800000"
 	tastes = list("meat" = 1)
@@ -291,7 +291,7 @@
 	icon_state = "doubleratkebab"
 	tastes = list("rat meat" = 2, "metal" = 1)
 	bonus_reagents = list("nutriment" = 6, "vitamin" = 2)
-	
+
 /obj/item/reagent_containers/food/snacks/pemmican
 	name = "pemmican"
 	desc = "A well-known food in survivalist circles, pemmican is a mixture of fat and protein from the meat of an animal."
