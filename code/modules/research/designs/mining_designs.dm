@@ -42,7 +42,7 @@
 	category = list("Mining Designs")
 	departmental_flags = DEPARTMENTAL_FLAG_CARGO
 
-/datum/design/plasmacutter
+/*/datum/design/plasmacutter
 	name = "Plasma Cutter"
 	desc = "You could use it to cut limbs off of xenos! Or, you know, mine stuff."
 	id = "plasmacutter"
@@ -50,9 +50,9 @@
 	materials = list(MAT_METAL = 1500, MAT_GLASS = 500, MAT_PLASMA = 400)
 	build_path = /obj/item/gun/energy/plasmacutter
 	category = list("Mining Designs")
-	departmental_flags = DEPARTMENTAL_FLAG_CARGO
+	departmental_flags = DEPARTMENTAL_FLAG_CARGO*/
 
-/datum/design/plasmacutter_adv
+/*/datum/design/plasmacutter_adv
 	name = "Advanced Plasma Cutter"
 	desc = "It's an advanced plasma cutter, oh my god."
 	id = "plasmacutter_adv"
@@ -60,7 +60,7 @@
 	materials = list(MAT_METAL = 3000, MAT_GLASS = 1000, MAT_PLASMA = 2000, MAT_GOLD = 500)
 	build_path = /obj/item/gun/energy/plasmacutter/adv
 	category = list("Mining Designs")
-	departmental_flags = DEPARTMENTAL_FLAG_CARGO
+	departmental_flags = DEPARTMENTAL_FLAG_CARGO*/
 
 /datum/design/jackhammer
 	name = "Sonic Jackhammer"
