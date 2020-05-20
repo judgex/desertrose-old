@@ -77,8 +77,8 @@
  * Plasma
  */
 /obj/item/tank/internals/plasma
-	name = "plasma tank"
-	desc = "Contains dangerous plasma. Do not inhale. Warning: extremely flammable."
+	name = "ultracite tank"
+	desc = "Contains dangerous ultracite gas. Do not inhale. Warning: extremely flammable."
 	icon_state = "plasma"
 	flags_1 = CONDUCT_1
 	slot_flags = null	//they have no straps!

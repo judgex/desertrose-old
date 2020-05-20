@@ -358,8 +358,8 @@
 	desc = "An extremely rare golden medal awarded only by CentCom. To receive such a medal is the highest honor and as such, very few exist. This medal is almost never awarded to anybody but commanders."
 
 /obj/item/clothing/accessory/medal/plasma
-	name = "plasma medal"
-	desc = "An eccentric medal made of plasma."
+	name = "ultracite medal"
+	desc = "An eccentric medal made of ultracite."
 	icon_state = "plasma"
 	item_color = "plasma"
 	medaltype = "medal-plasma"
