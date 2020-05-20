@@ -1,6 +1,7 @@
 //Fallout 13 protective helmets directory
 
 /obj/item/clothing/head/helmet/f13
+
 /obj/item/clothing/head/helmet/f13/tribal
 	name = "tribal power helmet"
 	desc = "This power armor helmet was salvaged by savages from the battlefield.<br>They believe that these helmets capture the spirits of their fallen wearers, so they painted some runes on to give it a more sacred meaning."
