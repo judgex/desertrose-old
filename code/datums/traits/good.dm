@@ -161,7 +161,7 @@
 	var/mob/living/carbon/human/H = quirk_holder
 	var/obj/item/heirloom_type  ///DONT CHANGE HERILOOM STUFF FOR SOME REASON DONT WORK IF YOU REMOVE IT AAAAA.
 	switch(quirk_holder.mind.assigned_role)
-		if("Elder", "Centurion", "Sheriff", "NCR Captain", "Overseer")
+		if("Sentinel", "Centurion", "Sheriff", "NCR Captain", "Overseer")
 			heirloom_type = pick(/obj/item/grenade/flashbang, 200 ; /obj/item/grenade/smokebomb, 200 ; /obj/item/grenade/plastic)
 		else
 			heirloom_type = pick(

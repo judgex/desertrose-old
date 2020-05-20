@@ -77,7 +77,7 @@ Captain
 	uniform		= /obj/item/clothing/under/f13/ncr/officer
 	accessory 	= /obj/item/clothing/accessory/ncr/CPT
 	suit 		= /obj/item/clothing/suit/armor/f13/ncrarmor/captain
-	suit_store 	= /obj/item/gun/ballistic/automatic/pistol/deagle
+	suit_store 	= /obj/item/gun/ballistic/automatic/pistol/deagle/gold
 	head 		= /obj/item/clothing/head/beret/ncr
 	belt        = /obj/item/storage/belt/military/assault/ncr
 	glasses 	= /obj/item/clothing/glasses/sunglasses/big
@@ -86,8 +86,7 @@ Captain
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/a50=2, \
 		/obj/item/ammo_box/magazine/m9mm=1, \
-		/obj/item/gun/ballistic/automatic/pistol/ninemil=1, \
-		/obj/item/kitchen/knife/combat/survival=1, \
+		/obj/item/kitchen/knife/combat=1, \
 		/obj/item/melee/classic_baton/telescopic=1, \
 		/obj/item/twohanded/binocs=1, \
 		/obj/item/storage/bag/money/small/ncr, \
@@ -221,7 +220,6 @@ Sergeant
 	outfit = /datum/outfit/job/ncr/f13sergeant
 
 	loadout_options = list(
-	/datum/outfit/loadout/sgtheavy, //Salvaged power armor, lever-action shotgun, telescopic shield
 	/datum/outfit/loadout/sgtcombat, //Mantle vest, 5.56 heavy service rifle
 	/datum/outfit/loadout/sgtscout //Scout armor, 5.56 marksman carbine
 	)
@@ -245,18 +243,6 @@ Sergeant
 		/obj/item/ammo_box/magazine/m9mm=2, \
 		/obj/item/storage/bag/money/small/ncrofficers, \
 		/obj/item/clothing/mask/ncr_facewrap)
-
-
-/datum/outfit/loadout/sgtheavy
-	name = "Heavy Sergeant"
-	suit = 			/obj/item/clothing/suit/armor/f13/brokenpa/ncr
-	head = 			/obj/item/clothing/head/helmet/power_armor/t45b
-	suit_store =    /obj/item/gun/ballistic/shotgun/trench
-	backpack_contents = list(
-		/obj/item/shield/riot/tele=1,
-		/obj/item/book/granter/trait/trekking=1,
-		/obj/item/storage/box/lethalshot=1,
-		/obj/item/storage/box/slugshot=1)
 
 /datum/outfit/loadout/sgtcombat
 	name = "Combat Sergeant"
@@ -347,8 +333,97 @@ Corporal
 		/obj/item/ammo_box/a308=3,
 		/obj/item/twohanded/binocs=1
 		)
+/*
+NCR Heavy Trooper
+*/
+
+/datum/job/ncr/f13ncrht
+	title = "NCR Heavy Trooper"
+	flag = F13NCRHT
+	faction = "NCR"
+	total_positions = 2
+	spawn_positions = 2
+	description = "You are a corporal or a Sargeant who has been selected for the special duty of Heavy Trooper. You are exceptionally physically fit, being conditioned to wear the many, many pounds of salvaged power armor; and trained with your R84 LMG. You are the poster-child of the NCR Embassy, and should act accordingly."
+	supervisors = "the officers"
+	selection_color = "#fff5cc"
+	exp_requirements = 300
+
+	outfit = /datum/outfit/job/ncr/f13ncrht
+
+	loadout_options = list(
+	/datum/outfit/loadout/heavycpl,
+	/datum/outfit/loadout/heavysgt,
+	)
 
 
+/datum/outfit/job/ncr/f13ncrht
+	name = "NCR Heavy Trooper"
+	jobtype = /datum/job/ncr/f13ncrht
+	id = 			/obj/item/card/id/dogtag/ncrht
+	uniform =  		/obj/item/clothing/under/f13/ncr
+	suit_store = 	/obj/item/gun/ballistic/automatic/lmg
+	suit = 			/obj/item/clothing/suit/armor/f13/brokenpa/ncr
+	head = 			/obj/item/clothing/head/helmet/power_armor/t45b
+	belt =          /obj/item/storage/belt/military/NCR_Bandolier
+	glasses = 		null
+	backpack_contents = list(
+		/obj/item/kitchen/knife/combat=1, \
+		/obj/item/reagent_containers/hypospray/medipen/stimpak=1, \
+		/obj/item/storage/bag/money/small/ncrenlisted=1, \
+		/obj/item/book/granter/trait/trekking=1, \
+		/obj/item/ammo_box/magazine/lmg=3
+		)
+
+/datum/outfit/loadout/heavycpl
+	name = "Heavy Corporal"
+	backpack_contents = list(
+		/obj/item/clothing/accessory/ncr/CPL=1,
+		)
+
+/datum/outfit/loadout/heavysgt
+	name = "Heavy Sargeant"
+	backpack_contents = list(
+		/obj/item/clothing/accessory/ncr/SGT=1,
+		)
+
+
+
+/*
+NCR Military Police
+*/
+/datum/job/ncr/f13ncrmp
+	title = "NCR Military Police"
+	flag = F13NCRMP
+	faction = "NCR"
+	total_positions = 2
+	spawn_positions = 2
+	description = "You are the primary enforcers of NCR law within the ranks of the local embassy. You are technically exempt from the standard chain of command, answering only to High-Command, and specifically, the NCR Office of Special Investigations (NCROSI). "
+	supervisors = "NCROSI"
+	selection_color = "#fff5cc"
+	exp_requirements = 300
+
+	outfit = /datum/outfit/job/ncr/f13ncrmp
+
+/datum/outfit/job/ncr/f13ncrmp
+	name = "NCR Military Police"
+	jobtype = /datum/job/ncr/f13trooper
+	id = 			/obj/item/card/id/dogtag/ncrmp
+	uniform =  		/obj/item/clothing/under/f13/ncr
+	accessory =     /obj/item/clothing/accessory/ncr/SPC
+	head = 			/obj/item/clothing/head/f13/ncr/goggles
+	suit = 			/obj/item/clothing/suit/armor/f13/ncrarmor
+	suit_store = 	/obj/item/gun/ballistic/shotgun/automatic/hunting
+	r_hand = 		/obj/item/melee/baton/cattleprod
+	belt =          /obj/item/storage/belt/military/NCR_Bandolier
+	glasses = 		null
+	backpack_contents = list(
+		/obj/item/kitchen/knife/combat=1, \
+		/obj/item/reagent_containers/hypospray/medipen/stimpak=1, \
+		/obj/item/storage/bag/money/small/ncrenlisted, \
+		/obj/item/storage/box/rubbershot = 1, \
+		/obj/item/storage/box/rubbershot/beanbag =1, \
+		/obj/item/stock_parts/cell/high/plus=1
+		)
 
 /*
 Trooper
@@ -424,6 +499,8 @@ Recruit
 	id = 			/obj/item/card/id/dogtag/ncrtrooper
 	uniform =  		/obj/item/clothing/under/f13/ncr
 	accessory =     /obj/item/clothing/accessory/ncr/REC
+	suit = 			/obj/item/clothing/suit/armor/f13/ncrarmor
+	suit_store = 	/obj/item/gun/ballistic/automatic/pistol/ninemil
 	ears = 			/obj/item/radio/headset //no NCR comms
 	belt =			/obj/item/pickaxe
 	gloves = null
@@ -433,7 +510,6 @@ Recruit
 		/obj/item/reagent_containers/hypospray/medipen/stimpak=1, \
 		/obj/item/stack/medical/gauze=1, \
 		/obj/item/storage/bag/ore = 1,
-		/obj/item/gun/ballistic/automatic/pistol/ninemil=1,
 		/obj/item/storage/bag/money/small/ncrenlisted)
 
 /*
@@ -484,9 +560,9 @@ Veteran Ranger
 
 /datum/outfit/loadout/vrclassic
 	name = "Classic Veteran Ranger"
-	suit_store = /obj/item/gun/ballistic/shotgun/antimateriel
+	suit_store = /obj/item/gun/ballistic/automatic/sniper_rifle/syndicate
 	backpack_contents = list(
-		/obj/item/ammo_box/a50MG=3)
+		/obj/item/ammo_box/magazine/sniper_rounds=3)
 
 /datum/outfit/loadout/vrlite
 	name = "Light Veteran Ranger"

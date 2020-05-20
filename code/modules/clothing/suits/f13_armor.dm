@@ -160,7 +160,8 @@
 	strip_delay = 30
 	allowed = list(/obj/item/weapon)
 	icon = 'icons/fallout/clothing/suits.dmi'
-	/obj/item/clothing/suit/armor/f13/battlecoat/vault
+
+/obj/item/clothing/suit/armor/f13/battlecoat/vault
 	name = "command coat"
 	desc = "A heavy pre-war bomber coat, dyed blue with the number '113' embroidered on the back. Most often worn by leaders, such as the Overseer."
 	icon_state = "vault_commandcoat"

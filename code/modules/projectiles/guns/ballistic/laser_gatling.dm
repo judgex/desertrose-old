@@ -14,8 +14,8 @@
 	var/obj/item/gun/ballistic/minigun/gun
 	var/armed = 0 //whether the gun is attached, 0 is attached, 1 is the gun is wielded.
 	var/overheat = 0
-	var/overheat_max = 40
-	var/heat_diffusion = 1
+	var/overheat_max = 50
+	var/heat_diffusion = 1.5
 
 /obj/item/minigunpack/Initialize()
 	. = ..()
@@ -99,13 +99,14 @@
 	icon_state = "minigun_spin"
 	item_state = "minigun"
 	flags_1 = CONDUCT_1
-	slowdown = 1.5
+	slowdown = 2.0
 	slot_flags = null
 	w_class = WEIGHT_CLASS_HUGE
 	materials = list()
-	burst_size = 2
+	burst_size = 1
 	automatic = 0
-	fire_delay = 1
+	fire_delay = 3
+	spread = 40
 	weapon_weight = WEAPON_HEAVY
 	fire_sound = 'sound/weapons/laser.ogg'
 	mag_type = /obj/item/ammo_box/magazine/internal/minigun

@@ -466,6 +466,14 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 	name = "NCR Specialist"
 	icon_state = "NCR Trooper"
 
+/obj/effect/landmark/start/f13/ncrmp
+	name = "NCR Military Police"
+	icon_state = "NCR Trooper"
+
+/obj/effect/landmark/start/f13/ncrht
+	name = "NCR Heavy Trooper"
+	icon_state = "NCR Trooper"
+
 /obj/effect/landmark/start/f13/ncrtrooper
 	name = "NCR Trooper"
 	icon_state = "NCR Trooper"

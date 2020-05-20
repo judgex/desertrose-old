@@ -66,6 +66,8 @@ GLOBAL_VAR_INIT(time_last_changed_position, 0)
 	"NCR Scout Lieutenant",
 	"NCR Scout Sergeant",
 	"NCR Scout",
+	"NCR Military Police",
+	"NCR Heavy Trooper",
 	"NCR Veteran Ranger",
 	"NCR Patrol Ranger",
 	"NCR Recon Ranger",

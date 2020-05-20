@@ -167,29 +167,12 @@
 	icon_state = "assaultron"
 	icon_living = "assaultron"
 	icon_dead = "gib7"
-	health = 200
-	maxHealth = 200
+	health = 450
+	maxHealth = 450
+	faction = list("wastebot", "enclave")
 	speed = 0
-	melee_damage_lower = 20
-	melee_damage_upper = 30
+	melee_damage_lower = 55
+	melee_damage_upper = 60
 	attacktext = "grinds their claws on"
 	faction = list("wastebot")
-	anchored = FALSE
 	loot = list(/obj/effect/decal/cleanable/robot_debris, /obj/item/stack/crafting/electronicparts/three, /obj/item/stock_parts/cell/ammo/mfc)
-
-/mob/living/simple_animal/hostile/handy/assaultron/attackby(obj/item/W as obj, mob/user as mob)
-	if(istype(W, /obj/item/weldingtool))
-		if(health == 200)
-			to_chat(user, "<span class='warning'>\The [src] does not require repairs.</span>")
-			return
-
-		if(!W.tool_start_check(user, amount=1))
-			return
-
-		to_chat(user, "<span class='notice'>You begin repairing damage to \the [src]...</span>")
-		if(W.use_tool(src, user, 20, volume=50, amount=1))
-			health = 200
-			adjustBruteLoss(-30)
-			to_chat(user, "<span class='notice'>You repair \the [src].</span>")
-		return
-	..()
