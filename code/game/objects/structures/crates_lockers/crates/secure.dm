@@ -46,8 +46,8 @@
 	icon_state = "weaponcrate"
 
 /obj/structure/closet/crate/secure/plasma
-	desc = "A secure plasma crate."
-	name = "plasma crate"
+	desc = "A secure ultracite crate."
+	name = "ultracite crate"
 	icon_state = "plasmacrate"
 
 /obj/structure/closet/crate/secure/gear

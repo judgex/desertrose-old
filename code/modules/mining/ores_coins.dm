@@ -130,10 +130,10 @@ GLOBAL_LIST_INIT(sand_recipes, list(\
 	singular_name = "volcanic ash pile"
 
 /obj/item/stack/ore/plasma
-	name = "plasma ore"
-	icon_state = "Plasma ore"
-	item_state = "Plasma ore"
-	singular_name = "plasma ore chunk"
+	name = "Ultracite ore"
+	icon_state = "Ultracite ore"
+	item_state = "Ultracite ore"
+	singular_name = "Ultracite ore chunk"
 	points = 15
 	materials = list(MAT_PLASMA=MINERAL_MATERIAL_AMOUNT)
 	refined_type = /obj/item/stack/sheet/mineral/plasma
@@ -386,7 +386,7 @@ GLOBAL_LIST_INIT(sand_recipes, list(\
 	grind_results = list("iron" = 4)
 
 /obj/item/coin/plasma
-	name = "plasma coin"
+	name = "Ultracite coin"
 	cmineral = "plasma"
 	icon_state = "coin_plasma_heads"
 	value = 100

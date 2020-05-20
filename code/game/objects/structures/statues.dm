@@ -104,7 +104,7 @@
 /obj/structure/statue/plasma
 	max_integrity = 200
 	material_drop_type = /obj/item/stack/sheet/mineral/plasma
-	desc = "This statue is suitably made from plasma."
+	desc = "This statue is suitably made from ultracite."
 
 /obj/structure/statue/plasma/scientist
 	name = "statue of a scientist"

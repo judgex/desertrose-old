@@ -24,7 +24,7 @@
 //PLASMA
 
 /turf/open/floor/mineral/plasma
-	name = "plasma floor"
+	name = "ultracite floor"
 	icon_state = "plasma"
 	floor_tile = /obj/item/stack/tile/mineral/plasma
 	icons = list("plasma","plasma_dam")
