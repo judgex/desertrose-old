@@ -1,10 +1,13 @@
 /obj/item/clothing/under/f13
+	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0) //Base type has no armor as well
 	body_parts_covered = CHEST|GROIN|ARMS|LEGS
 	fitted = NO_FEMALE_UNIFORM
 	can_adjust = FALSE
 	resistance_flags = NONE
 	has_sensor = NO_SENSORS //kek
 
+/obj/item/clothing/under/f13/female
+	fitted = FEMALE_UNIFORM_TOP
 
 //Vault
 
@@ -32,14 +35,13 @@
 	random_sensor = FALSE
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 30, "fire" = 20, "acid" = 50)
 
-
 //NCR
 
 /obj/item/clothing/under/f13/ncr
 	name = "NCR desert fatigues"
 	desc = "A set of standard issue New California Republic trooper fatigues."
 	icon_state = "ncr_uniform"
-	can_adjust = 1
+	can_adjust = TRUE
 	item_state = "ncr_uniform"
 	item_color = "ncr_uniform"
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 30, "fire" = 20, "acid" = 50)
@@ -166,7 +168,6 @@
 	item_color = "chef"
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 30, "fire" = 20, "acid" = 50)
 
-
 //Brotherhood of Steel
 
 /obj/item/clothing/under/f13/recon
@@ -176,7 +177,6 @@
 	item_state = "recon"
 	item_color = "recon"
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 40, "fire" = 30, "acid" = 80)
-
 
 //Legion
 
@@ -265,6 +265,7 @@
 	desc = "A Pink Vest with Black Pants. Quite futuristic looking."
 	icon_state = "Biker"
 	item_state = "Biker"
+
 /* //slave rags, crafted from 2 cloth- uncomment when sprites available
 /obj/item/clothing/under/f13/slaverags
 	name = "slave rags"
@@ -272,6 +273,7 @@
 	icon_state = "slaverags"
 	item_state = "slaverags"
 */
+
 /obj/item/clothing/under/f13/erpdress
 	name = "bandage dress"
 	desc = "Made by the famous pre-war fashion designer Marie Calluna, this dress was made to hug your every curve and show off some deep cleavage."
@@ -335,7 +337,6 @@
 	item_state = "follower"
 	item_color = "follower"
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 20, "fire" = 20, "acid" = 40)
-
 
 //Gangs
 /obj/item/clothing/under/f13/raider_leather
@@ -439,13 +440,9 @@
 	icon_state = "enclave_o"
 	item_state = "bl_suit"
 	item_color = "enclave_o"
-	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 20, "fire" = 20, "acid" = 40)
-	can_adjust = 0
 
 //Fallout 13 general clothing directory
-
-/obj/item/clothing/under/f13
 
 /obj/item/clothing/under/f13/navy
 	name = "navy jumpsuit"
@@ -453,9 +450,6 @@
 	icon_state = "navy"
 	item_state = "bl_suit"
 	item_color = "navy"
-	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
-	can_adjust = 0
 
 /obj/item/clothing/under/f13/navyofficer
 	name = "navy officer jumpsuit"
@@ -463,9 +457,6 @@
 	icon_state = "navyofficer"
 	item_state = "bl_suit"
 	item_color = "navyofficer"
-	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
-	can_adjust = 0
 
 /obj/item/clothing/under/f13/machinist
 	name = "workman outfit"
@@ -473,7 +464,6 @@
 	icon_state = "machinist"
 	item_state = "lb_suit"
 	item_color = "machinist"
-	can_adjust = 0
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 20, "fire" = 20, "acid" = 40)
 
 /obj/item/clothing/under/f13/lumberjack
@@ -482,7 +472,6 @@
 	icon_state = "lumberjack"
 	item_state = "r_suit"
 	item_color = "lumberjack"
-	can_adjust = 0
 
 /obj/item/clothing/under/f13/police
 	name = "pre-War police uniform"
@@ -492,7 +481,6 @@
 	item_color = "retro_police"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 10, "fire" = 10, "acid" = 40)
-	can_adjust = 0
 
 /obj/item/clothing/under/f13/cowboyt //Originally cowboy and mafia stuff by Nienhaus
 	name = "dusty prospector outfit"
@@ -500,7 +488,6 @@
 	icon_state = "cowboyt"
 	item_state = "det"
 	item_color = "cowboyt"
-	can_adjust = 0
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 20, "fire" = 20, "acid" = 40)
 
 /obj/item/clothing/under/f13/cowboyb
@@ -508,8 +495,6 @@
 	desc = "A white shirt with brass buttons and a pair of brown trousers, commonly worn by prospectors."
 	icon_state = "cowboyb"
 	item_state = "det"
-	item_color = "cowboyb"
-	can_adjust = 0
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 20, "fire" = 20, "acid" = 40)
 
 /obj/item/clothing/under/f13/cowboyg
@@ -518,7 +503,6 @@
 	icon_state = "cowboyg"
 	item_state = "sl_suit"
 	item_color = "cowboyg"
-	can_adjust = 0
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 20, "fire" = 20, "acid" = 40)
 
 /obj/item/clothing/under/f13/female/flapper
@@ -527,8 +511,6 @@
 	icon_state = "flapper"
 	item_state = "gy_suit"
 	item_color = "flapper"
-	fitted = FEMALE_UNIFORM_TOP
-	can_adjust = 0
 
 /obj/item/clothing/under/f13/bdu //WalterJe military standarts.
 	name = "battle dress uniform"
@@ -536,9 +518,7 @@
 	icon_state = "bdu"
 	item_state = "xenos_suit"
 	item_color = "bdu"
-	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
-	can_adjust = 1
+	can_adjust = TRUE
 
 /obj/item/clothing/under/f13/dbdu
 	name = "desert battle dress uniform"
@@ -546,9 +526,8 @@
 	icon_state = "dbdu"
 	item_state = "brownjsuit"
 	item_color = "dbdu"
-	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 20, "fire" = 20, "acid" = 40)
-	can_adjust = 1
+	can_adjust = TRUE
 
 /obj/item/clothing/under/f13/shiny //Firefly, yay!
 	name = "shiny outfit"
@@ -556,7 +535,6 @@
 	icon_state = "shiny"
 	item_state = "owl"
 	item_color = "shiny"
-	can_adjust = 0
 
 /obj/item/clothing/under/f13/batter //I guess we're going OFF limits.
 	name = "worn baseball uniform"
@@ -564,7 +542,6 @@
 	icon_state = "batter"
 	item_state = "w_suit"
 	item_color = "batter"
-	can_adjust = 0
 
 /obj/item/clothing/under/f13/bennys //Benny's suit from Fallout: New Vegas. But Benny was just a kid back in 2255, so it's just a fancy suit for you.
 	name = "fancy suit"
@@ -572,7 +549,6 @@
 	icon_state = "benny"
 	item_state = "white_suit"
 	item_color = "benny"
-	can_adjust = 0
 
 /obj/item/clothing/under/f13/relaxedwear
 	name = "pre-war male relaxedwear"
@@ -580,7 +556,6 @@
 	icon_state = "relaxedwear_m"
 	item_state = "g_suit"
 	item_color = "relaxedwear_m"
-	can_adjust = 0
 
 /obj/item/clothing/under/f13/spring
 	name = "pre-war male spring outfit"
@@ -588,7 +563,6 @@
 	icon_state = "spring_m"
 	item_state = "brownjsuit"
 	item_color = "spring_m"
-	can_adjust = 0
 
 /obj/item/clothing/under/f13/formal
 	name = "pre-war male formal wear"
@@ -596,9 +570,6 @@
 	icon_state = "formal_m"
 	item_state = "judge"
 	item_color = "formal_m"
-	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
-	can_adjust = 0
 
 /obj/item/clothing/under/f13/bodyguard
 	name = "bodyguard outfit"
@@ -606,9 +577,6 @@
 	icon_state = "bodyguard"
 	item_state = "sl_suit"
 	item_color = "bodyguard"
-	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
-	can_adjust = 0
 
 /obj/item/clothing/under/f13/rag
 	name = "torn rags"
@@ -632,7 +600,8 @@
 	icon_state = "tribal_f"
 	item_state = "lgloves"
 	item_color = "tribal_f"
-	can_adjust = 0
+	can_adjust = TRUE
+	fitted = NO_FEMALE_UNIFORM
 
 /obj/item/clothing/under/f13/settler
 	name = "settler outfit"
@@ -640,7 +609,6 @@
 	icon_state = "settler"
 	item_state = "brownjsuit"
 	item_color = "settler"
-	can_adjust = 0
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 20, "fire" = 20, "acid" = 40)
 
 /obj/item/clothing/under/f13/brahmin //Male version
@@ -649,7 +617,6 @@
 	icon_state = "brahmin_m"
 	item_state = "brownjsuit"
 	item_color = "brahmin_m"
-	can_adjust = 0
 
 /obj/item/clothing/under/f13/female/brahmin //Female version
 	name = "female brahmin-skin outfit"
@@ -657,8 +624,6 @@
 	icon_state = "brahmin_f"
 	item_state = "brownjsuit"
 	item_color = "brahmin_f"
-	fitted = FEMALE_UNIFORM_TOP
-	can_adjust = 0
 
 /obj/item/clothing/under/f13/doctor //Male version
 	name = "male doctor fatigues"
@@ -666,7 +631,6 @@
 	icon_state = "doctor_m"
 	item_state = "brownjsuit"
 	item_color = "doctor_m"
-	can_adjust = 0
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 20, "fire" = 20, "acid" = 40)
 
 /obj/item/clothing/under/f13/female/doctor //Female version
@@ -675,9 +639,7 @@
 	icon_state = "doctor_f"
 	item_state = "brownjsuit"
 	item_color = "doctor_f"
-	fitted = FEMALE_UNIFORM_TOP
-	can_adjust = 0
-	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 20, "fire" = 20, "acid" = 40)
+	fitted = NO_FEMALE_UNIFORM
 
 /obj/item/clothing/under/f13/mercadv //Male version
 	name = "male merc adventurer outfit"
@@ -685,9 +647,7 @@
 	icon_state = "merca_m"
 	item_state = "bl_suit"
 	item_color = "merca_m"
-	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 20, "fire" = 20, "acid" = 40)
-	can_adjust = 0
 
 /obj/item/clothing/under/f13/female/mercadv //Female version
 	name = "female merc adventurer outfit"
@@ -695,11 +655,7 @@
 	icon_state = "merca_f"
 	item_state = "bl_suit"
 	item_color = "merca_f"
-	fitted = FEMALE_UNIFORM_TOP
-	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 20, "fire" = 20, "acid" = 40)
-	can_adjust = 0
-
+	fitted = NO_FEMALE_UNIFORM
 
 /obj/item/clothing/under/f13/merccharm //Male version
 	name = "male merc charmer outfit"
@@ -707,9 +663,7 @@
 	icon_state = "mercc_m"
 	item_state = "bl_suit"
 	item_color = "mercc_m"
-	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 20, "fire" = 20, "acid" = 40)
-	can_adjust = 0
 
 /obj/item/clothing/under/f13/female/merccharm //Female version
 	name = "female merc charmer outfit"
@@ -717,10 +671,7 @@
 	icon_state = "mercc_f"
 	item_state = "bl_suit"
 	item_color = "mercc_f"
-	fitted = FEMALE_UNIFORM_TOP
-	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 20, "fire" = 20, "acid" = 40)
-	can_adjust = 0
 
 /obj/item/clothing/under/f13/mechanic
 	name = "worn blue jumpsuit"
@@ -728,7 +679,6 @@
 	icon_state = "mechanic"
 	item_state = "syndicate-blue"
 	item_color = "mechanic"
-	can_adjust = 0
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 20, "fire" = 20, "acid" = 40)
 
 /obj/item/clothing/under/f13/petrochico
@@ -737,7 +687,6 @@
 	icon_state = "petrochico"
 	item_state = "centcom"
 	item_color = "petrochico"
-	can_adjust = 0
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 20, "fire" = 20, "acid" = 40)
 
 /obj/item/clothing/under/f13/caravaneer
@@ -746,7 +695,6 @@
 	icon_state = "caravaneer"
 	item_state = "syndicate-blue"
 	item_color = "caravaneer"
-	can_adjust = 0
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 10, "fire" = 10, "acid" = 40)
 
 /obj/item/clothing/under/f13/trader
@@ -755,7 +703,6 @@
 	icon_state = "trader"
 	item_state = "bl_suit"
 	item_color = "trader"
-	can_adjust = 0
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 20, "fire" = 20, "acid" = 40)
 
 /obj/item/clothing/under/f13/merchant
@@ -764,7 +711,6 @@
 	icon_state = "merchant"
 	item_state = "brownjsuit"
 	item_color = "merchant"
-	can_adjust = 0
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 20, "fire" = 20, "acid" = 40)
 
 /obj/item/clothing/under/f13/worn
@@ -773,7 +719,6 @@
 	icon_state = "worn"
 	item_state = "brownjsuit"
 	item_color = "worn"
-	can_adjust = 0
 
 /obj/item/clothing/under/f13/vault
 	name = "vault jumpsuit"
@@ -781,7 +726,7 @@
 	icon_state = "vault"
 	item_state = "b_suit"
 	item_color = "vault"
-	can_adjust = 1
+	can_adjust = TRUE
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 10, "rad" = 30, "fire" = 30, "acid" = 40)
 
 /obj/item/clothing/under/f13/vault/v13 //The Legend is here.
@@ -814,7 +759,6 @@
 	icon_state = "followers"
 	item_state = "bar_suit"
 	item_color = "followers"
-	can_adjust = 0
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 20, "fire" = 20, "acid" = 40)
 
 /obj/item/clothing/under/f13/combat
@@ -823,9 +767,7 @@
 	icon_state = "combat"
 	item_state = "bl_suit"
 	item_color = "combat"
-	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 20, "fire" = 20, "acid" = 40)
-	can_adjust = 0
 
 /obj/item/clothing/under/f13/enclave_officer
 	name = "officer uniform"
@@ -833,9 +775,7 @@
 	icon_state = "enclave_o"
 	item_state = "bl_suit"
 	item_color = "enclave_o"
-	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 20, "fire" = 20, "acid" = 40)
-	can_adjust = 0
 
 /obj/item/clothing/under/f13/ncr/torn
 	name = "torn overcoat"
@@ -844,7 +784,6 @@
 	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
 	icon_state = "tornovercoat"
 	item_color = "tornovercoat"
-	can_adjust = 0
 
 /obj/item/clothing/under/f13/general
 	name = "general overcoat"
@@ -852,9 +791,7 @@
 	icon_state = "general"
 	item_state = "lb_suit"
 	item_color = "general"
-	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 20, "fire" = 40, "acid" = 40)
-	can_adjust = 0
 
 /obj/item/clothing/under/f13/recon
 	name = "recon armor"
@@ -862,12 +799,10 @@
 	icon_state = "recon"
 	item_state = "rig_suit"
 	item_color = "recon"
-	body_parts_covered = CHEST|GROIN|LEGS|ARMS|HEAD
 	flags_inv = HIDEHAIR
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 30, "fire" = 30, "acid" = 40)
 	cold_protection = CHEST|GROIN|LEGS|FEET|ARMS|HEAD
 	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HEAD
-	can_adjust = 0
 
 /obj/item/clothing/under/f13/chinese
 	name = "chinese jumpsuit"
@@ -875,12 +810,9 @@
 	icon_state = "chinese"
 	item_state = "bl_suit"
 	item_color = "chinese"
-	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 20, "fire" = 20, "acid" = 40)
-	can_adjust = 0
 
 //Fluff
-
 
 /obj/item/clothing/under/f13/agent47
 	name = "mysterious suit"
@@ -888,9 +820,6 @@
 	icon_state = "agent47"
 	item_state = "lawyer_black"
 	item_color = "agent47"
-	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
-	can_adjust = 0
 
 /obj/item/clothing/under/f13/psychologist
 	name = "psychologist's turtleneck"
@@ -898,19 +827,12 @@
 	icon_state = "psychturtle"
 	item_state = "b_suit"
 	item_color = "psychturtle"
-	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
-	can_adjust = 0
-
 /obj/item/clothing/under/f13/villain //Doubles as Gang Leader primary uniform for extra villainy
 	name = "green and black suit"
 	desc = "There is something evil in this suit, only a villain would wear something like that."
 	icon_state = "villain"
 	item_state = "syndicate-green"
 	item_color = "villain"
-	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0) //Because dying is fun. Especially for evil masterminds.
-	can_adjust = 0
 
 /obj/item/clothing/under/f13/gentlesuit
 	name = "gentlemans suit"
@@ -918,9 +840,6 @@
 	icon_state = "gentlesuit"
 	item_state = "gy_suit"
 	item_color = "gentlesuit"
-	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
-	can_adjust = 0
 
 /obj/item/clothing/under/f13/detectivealt
 	name = "fancy detective suit"
@@ -928,9 +847,7 @@
 	icon_state = "detectivealt"
 	item_state = "bl_suit"
 	item_color = "detectivealt"
-	body_parts_covered = CHEST|GROIN|LEGS
-	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
-	can_adjust = 1
+	can_adjust = TRUE
 
 /obj/item/clothing/under/f13/hopalt
 	name = "head of personnel's suit"
@@ -938,9 +855,6 @@
 	icon_state = "hopalt"
 	item_state = "b_suit"
 	item_color = "hopalt"
-	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	armor = list(melee = 0, bullet = 0, laser = 20, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
-	can_adjust = 0
 
 /obj/item/clothing/under/f13/roboticistalt
 	name = "roboticist's jumpsuit"
@@ -948,9 +862,7 @@
 	icon_state = "roboticsalt"
 	item_state = "jensensuit"
 	item_color = "roboticsalt"
-	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	armor = list(melee = 0, bullet = 0, laser = 10, energy = 10, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
-	can_adjust = 1
+	can_adjust = TRUE
 
 /obj/item/clothing/under/f13/bartenderalt
 	name = "fancy bartender's uniform"
@@ -958,9 +870,6 @@
 	icon_state = "barmanalt"
 	item_state = "bl_suit"
 	item_color = "barmanalt"
-	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
-	can_adjust = 0
 
 /obj/item/clothing/under/f13/spaceship
 	name = "crewman uniform"
@@ -968,25 +877,18 @@
 	icon_state = "spaceship_crewman"
 	item_state = "syndicate-black-red"
 	item_color = "spaceship_crewman"
-	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
-	can_adjust = 0
 
 /obj/item/clothing/under/f13/spaceship/officer
 	name = "officer uniform"
 	desc = "The insignia on this uniform tells you that this uniform belongs to some sort of officer."
 	icon_state = "spaceship_officer"
 	item_color = "spaceship_officer"
-	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
 
 /obj/item/clothing/under/f13/spaceship/captain
 	name = "captain uniform"
 	desc = "The insignia on this uniform tells you that this uniform belongs to some sort of captain."
 	icon_state = "spaceship_captain"
 	item_color = "spaceship_captain"
-	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
 
 //Female clothing! It's not misogyny, yet dresses shall be separate from /f13/ as Fallout build has its own female subtype.
 
@@ -1014,7 +916,6 @@
 	icon_state = "khan"
 	item_color = "khan"
 	body_parts_covered = LEGS
-	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
 
 /obj/item/clothing/under/pants/f13/warboy //Mad Max 4 2015 babe!
 	name = "war boy pants"
@@ -1022,7 +923,6 @@
 	icon_state = "warboy"
 	item_color = "warboy"
 	body_parts_covered = LEGS
-	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
 
 /obj/item/clothing/under/pants/f13/doom
 	name = "green pants"
@@ -1031,8 +931,6 @@
 	item_color = "green"
 	resistance_flags = UNACIDABLE
 	body_parts_covered = LEGS
-	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
-
 
 /obj/item/clothing/under/f13/bosform_f
 	name = "female initiate service uniform"
@@ -1040,9 +938,6 @@
 	icon_state = "bosform_f"
 	item_state = "bosform_f"
 	item_color = "bosform_f"
-	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
-	can_adjust = 0
 
 /obj/item/clothing/under/f13/bosform_m
 	name = "male initiate service uniform"
@@ -1050,9 +945,6 @@
 	icon_state = "bosform_m"
 	item_state = "bosform_m"
 	item_color = "bosform_m"
-	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
-	can_adjust = 0
 
 /obj/item/clothing/under/f13/bosformsilver_f
 	name = "female brotherhood service uniform"
@@ -1060,9 +952,6 @@
 	icon_state = "bosformsilver_f"
 	item_state = "bosformsilver_f"
 	item_color = "bosformsilver_f"
-	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
-	can_adjust = 0
 
 /obj/item/clothing/under/f13/bosformsilver_m
 	name = "male brotherhood service uniform"
@@ -1070,9 +959,6 @@
 	icon_state = "bosformsilver_m"
 	item_state = "bosformsilver_m"
 	item_color = "bosformsilver_m"
-	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
-	can_adjust = 0
 
 /obj/item/clothing/under/f13/bosformgold_f
 	name = "female ranking service uniform"
@@ -1080,9 +966,6 @@
 	icon_state = "bosformgold_f"
 	item_state = "bosformgold_f"
 	item_color = "bosformgold_f"
-	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
-	can_adjust = 0
 
 /obj/item/clothing/under/f13/bosformgold_m
 	name = "male ranking service uniform"
@@ -1090,9 +973,6 @@
 	icon_state = "bosformgold_m"
 	item_state = "bosformgold_m"
 	item_color = "bosformgold_m"
-	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
-	can_adjust = 0
 
 /obj/item/clothing/under/f13/atomfaithful
 	name = "faithful attire"
@@ -1100,9 +980,6 @@
 	icon_state = "atomfaithful"
 	item_state = "atomfaithful"
 	item_color = "atomfaithful"
-	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
-	can_adjust = 0
 
 /obj/item/clothing/under/f13/atomwitchunder
 	name = "seers underclothes"
@@ -1110,9 +987,6 @@
 	icon_state = "atomwitchunder"
 	item_state = "atomwitchunder"
 	item_color = "atomwitchunder"
-	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
-	can_adjust = 0
 
 /obj/item/clothing/under/f13/atombeliever
 	name = "believer clothes"
@@ -1120,9 +994,6 @@
 	icon_state = "atombeliever"
 	item_state = "atombeliever"
 	item_color = "atombeliever"
-	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
-	can_adjust = 0
 
 /obj/item/clothing/under/f13/raiderharness
 	name = "raider harness"
@@ -1130,10 +1001,6 @@
 	icon_state = "raiderharness"
 	item_state = "raiderharness"
 	item_color = "raiderharness"
-	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
-	can_adjust = 0
-
 
 /obj/item/clothing/under/f13/fprostitute
 	name = "feminine prostitute outfit"
@@ -1141,9 +1008,6 @@
 	icon_state = "fprostitute"
 	item_state = "fprostitute"
 	item_color = "fprostitute"
-	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
-	can_adjust = 0
 
 /obj/item/clothing/under/f13/mprostitute
 	name = "masuline prostitute outfit"
@@ -1151,7 +1015,3 @@
 	icon_state = "mprostitute"
 	item_state = "mprostitute"
 	item_color = "mprostitute"
-	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
-	can_adjust = 0
-
