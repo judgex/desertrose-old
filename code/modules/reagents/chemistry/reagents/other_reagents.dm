@@ -531,7 +531,6 @@
 /datum/reagent/aslimetoxin/reaction_mob(mob/living/L, method=TOUCH, reac_volume)
 	if(method != TOUCH)
 		L.ForceContractDisease(new /datum/disease/transformation/slime(), FALSE, TRUE)
-*/
 
 /datum/reagent/gluttonytoxin
 	name = "Gluttony's Blessing"
