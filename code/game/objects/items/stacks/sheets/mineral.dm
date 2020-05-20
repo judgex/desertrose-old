@@ -6,7 +6,7 @@ Mineral Sheets
 		- Diamond
 		- Snow
 		- Uranium
-		- Plasma
+		- Ultracite
 		- Gold
 		- Silver
 		- Clown
@@ -152,7 +152,7 @@ GLOBAL_LIST_INIT(uranium_recipes, list ( \
  * Plasma
  */
 /obj/item/stack/sheet/mineral/plasma
-	name = "solid plasma"
+	name = "Ultracite"
 	icon_state = "sheet-plasma"
 	item_state = "sheet-plasma"
 	singular_name = "plasma sheet"
@@ -168,8 +168,8 @@ GLOBAL_LIST_INIT(uranium_recipes, list ( \
 	return TOXLOSS//dont you kids know that stuff is toxic?
 
 GLOBAL_LIST_INIT(plasma_recipes, list ( \
-	new/datum/stack_recipe("plasma door", /obj/structure/mineral_door/transparent/plasma, 10, one_per_turf = 1, on_floor = 1), \
-	new/datum/stack_recipe("plasma tile", /obj/item/stack/tile/mineral/plasma, 1, 4, 20), \
+	new/datum/stack_recipe("Ultracite door", /obj/structure/mineral_door/transparent/plasma, 10, one_per_turf = 1, on_floor = 1), \
+	new/datum/stack_recipe("Ultracite tile", /obj/item/stack/tile/mineral/plasma, 1, 4, 20), \
 	new/datum/stack_recipe("Scientist Statue", /obj/structure/statue/plasma/scientist, 5, one_per_turf = 1, on_floor = 1), \
 	))
 
@@ -180,8 +180,8 @@ GLOBAL_LIST_INIT(plasma_recipes, list ( \
 /obj/item/stack/sheet/mineral/plasma/attackby(obj/item/W as obj, mob/user as mob, params)
 	if(W.is_hot() > 300)//If the temperature of the object is over 300, then ignite
 		var/turf/T = get_turf(src)
-		message_admins("Plasma sheets ignited by [ADMIN_LOOKUPFLW(user)] in [ADMIN_VERBOSEJMP(T)]")
-		log_game("Plasma sheets ignited by [key_name(user)] in [AREACOORD(T)]")
+		message_admins("Ultracite sheets ignited by [ADMIN_LOOKUPFLW(user)] in [ADMIN_VERBOSEJMP(T)]")
+		log_game("Ultracite sheets ignited by [key_name(user)] in [AREACOORD(T)]")
 		fire_act(W.is_hot())
 	else
 		return ..()

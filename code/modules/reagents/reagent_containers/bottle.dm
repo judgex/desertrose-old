@@ -83,8 +83,8 @@
 	list_reagents = list("FEV_solution" = 30)
 
 /obj/item/reagent_containers/glass/bottle/plasma
-	name = "liquid plasma bottle"
-	desc = "A small bottle of liquid plasma. Extremely toxic and reacts with micro-organisms inside blood."
+	name = "liquid ultracite bottle"
+	desc = "A small bottle of liquid ultracite. Extremely toxic and reacts with micro-organisms inside blood."
 	list_reagents = list("plasma" = 30)
 
 /obj/item/reagent_containers/glass/bottle/synaptizine

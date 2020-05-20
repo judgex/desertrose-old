@@ -88,7 +88,7 @@
 
 /mob/living/simple_animal/hostile/skeleton/plasmaminer
 	name = "shambling miner"
-	desc = "A plasma-soaked miner, their exposed limbs turned into a grossly incandescent bone seemingly made of plasma."
+	desc = "A ultracite-soaked miner, their exposed limbs turned into a grossly incandescent bone seemingly made of ultracite."
 	icon_state = "plasma_miner"
 	icon_living = "plasma_miner"
 	icon_dead = "plasma_miner"
@@ -104,7 +104,7 @@
 	loot = list(/obj/effect/decal/remains/plasma)
 
 /mob/living/simple_animal/hostile/skeleton/plasmaminer/jackhammer
-	desc = "A plasma-soaked miner, their exposed limbs turned into a grossly incandescent bone seemingly made of plasma. They seem to still have their mining tool in their hand, gripping tightly."
+	desc = "A ultracite-soaked miner, their exposed limbs turned into a grossly incandescent bone seemingly made of ultracite. They seem to still have their mining tool in their hand, gripping tightly."
 	icon_state = "plasma_miner_tool"
 	icon_living = "plasma_miner_tool"
 	icon_dead = "plasma_miner_tool"
