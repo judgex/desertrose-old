@@ -38,6 +38,15 @@
 	result = /obj/item/reagent_containers/food/snacks/kebab/tail
 	subcategory = CAT_MEAT
 
+/datum/crafting_recipe/food/brahmin
+	name = "Brahmin en brochette"
+	reqs = list(
+		/obj/item/stack/rods = 1,
+		/obj/item/reagent_containers/food/snacks/meat/slab  = 2
+	)
+	result = /obj/item/reagent_containers/food/snacks/kebab/brahmin
+	subcategory = CAT_MEAT
+
 // see code/module/crafting/table.dm
 
 ////////////////////////////////////////////////FISH////////////////////////////////////////////////

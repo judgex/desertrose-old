@@ -142,6 +142,13 @@
 	tastes = list("meat" = 3, "metal" = 1)
 	foodtype = MEAT
 
+/obj/item/reagent_containers/food/snacks/kebab/brahmin
+	name = "Brahmin en brochette"
+	desc = "A dish made from brahmin meat, cooked and served on brochettes, or skewers"
+	bonus_reagents = list("nutriment" = 2, "vitamin" = 4)
+	tastes = list("meat" = 3, "metal" = 1)
+	foodtype = MEAT
+
 /obj/item/reagent_containers/food/snacks/kebab/tofu
 	name = "tofu-kebab"
 	desc = "Vegan meat, on a stick."
