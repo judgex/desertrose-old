@@ -305,5 +305,5 @@
 	desc = "The golf ball-sized raw brahmin testicles are first dipped in batter, then fried in grease with some salt. Once they are fried to a deep, golden brown, they are served with a heaping of additional batter."
 	icon_state = "pigblanket"
 	list_reagents = list("nutriment" = 3, "vitamin" = 4)
-	tastes = list("dried meat" = 8, "Sawdust" = 4, "Corn" = 1)
+	tastes = list("tasty meat" = 8, "grease" = 4, "hot batter" = 1)
 	foodtype = MEAT
