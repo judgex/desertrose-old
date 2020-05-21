@@ -89,7 +89,7 @@
 	result = /obj/item/reagent_containers/food/snacks/f13/squirrelstew
 	category = CAT_FOOD
 	subcategory = CAT_WASTEFOOD
-	
+
 /datum/crafting_recipe/food/pemmican
 	name = "pemmican"
 	reqs = list(
@@ -98,5 +98,16 @@
     	/obj/item/reagent_containers/food/snacks/tallow = 1
 	)
 	result = /obj/item/reagent_containers/food/snacks/pemmican
+	category = CAT_FOOD
+	subcategory = CAT_WASTEFOOD
+
+/datum/crafting_recipe/food/brahminfries
+	name = "brahmin fries"
+	reqs = list(
+    	/datum/reagent/consumable/flour = 10,
+    	/obj/item/reagent_containers/food/snacks/meatball = 3,
+    	/obj/item/reagent_containers/food/snacks/tallow = 1
+	)
+	result = /obj/item/reagent_containers/food/snacks/brahminfries
 	category = CAT_FOOD
 	subcategory = CAT_WASTEFOOD

@@ -296,6 +296,14 @@
 	name = "pemmican"
 	desc = "A well-known food in survivalist circles, pemmican is a mixture of fat and protein from the meat of an animal."
 	icon_state = "phelmbiscuit"
-	list_reagents = list("nutriment" = 2, "vitamin" = 4)
+	list_reagents = list("nutriment" = 6, "vitamin" = 4)
+	tastes = list("dried meat" = 8, "Sawdust" = 4, "Corn" = 1)
+	foodtype = MEAT
+
+/obj/item/reagent_containers/food/snacks/brahminfries
+	name = "brahmin fries"
+	desc = "The golf ball-sized raw brahmin testicles are first dipped in batter, then fried in grease with some salt. Once they are fried to a deep, golden brown, they are served with a heaping of additional batter."
+	icon_state = "pigblanket"
+	list_reagents = list("nutriment" = 3, "vitamin" = 4)
 	tastes = list("dried meat" = 8, "Sawdust" = 4, "Corn" = 1)
 	foodtype = MEAT
