@@ -393,6 +393,12 @@
 	icon_state = "whiteband"
 	item_color = "whiteband"
 
+/obj/item/clothing/accessory/armband/black
+	name = "MP's armband"
+	desc = "An armband issued to NCR Military Police, signifying their alignment with NCROSI rather than the typical chain of command."
+	icon_state = "blackband"
+	item_color = "blackband"
+
 /obj/item/clothing/accessory/armband/deputy
 	name = "security deputy armband"
 	desc = "An armband, worn by personnel authorized to act as a deputy of station security."
