@@ -36,7 +36,7 @@
 			return
 		var/resist = L.getarmor(null, "acid")
 		if(prob(max(0, 100 - resist)))
-			L.acid_act(15, 10)
+			L.acid_act(7, 10)
 
 /datum/weather/acid_rain/weather_act_turf(turf/T)
 	for(var/O in T) 
