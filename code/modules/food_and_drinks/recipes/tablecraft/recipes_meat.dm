@@ -42,6 +42,7 @@
 	name = "Brahmin en brochette"
 	reqs = list(
 		/obj/item/stack/rods = 1,
+		/obj/item/stack/sheet/animalhide/brahmin = 1,
 		/obj/item/reagent_containers/food/snacks/meat/slab  = 2
 	)
 	result = /obj/item/reagent_containers/food/snacks/kebab/brahmin
