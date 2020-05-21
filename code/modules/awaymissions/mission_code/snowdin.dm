@@ -160,8 +160,8 @@
 	temperature = 180
 
 /turf/open/lava/plasma
-	name = "liquid plasma"
-	desc = "A flowing stream of chilled liquid plasma. You probably shouldn't get in."
+	name = "liquid ultracite"
+	desc = "A flowing stream of chilled liquid ultracite. You probably shouldn't get in."
 	icon_state = "liquidplasma"
 	initial_gas_mix = "o2=0;n2=82;plasma=24;TEMP=120"
 	baseturfs = /turf/open/lava/plasma
@@ -253,8 +253,8 @@
 
 
 /obj/vehicle/ridden/lavaboat/plasma
-	name = "plasma boat"
-	desc = "A boat used for traversing the streams of plasma without turning into an icecube."
+	name = "ultracite boat"
+	desc = "A boat used for traversing the streams of ultracite without turning into an icecube."
 	icon_state = "goliath_boat"
 	icon = 'icons/obj/lavaland/dragonboat.dmi'
 	resistance_flags = FREEZE_PROOF

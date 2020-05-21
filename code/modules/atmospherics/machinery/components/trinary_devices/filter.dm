@@ -71,7 +71,7 @@
 	name = "nitrous oxide filter"
 	filter_type = "n2o"
 /obj/machinery/atmospherics/components/trinary/filter/atmos/plasma
-	name = "plasma filter"
+	name = "ultracite filter"
 	filter_type = "plasma"
 
 /obj/machinery/atmospherics/components/trinary/filter/atmos/flipped //This feels wrong, I know
@@ -91,7 +91,7 @@
 	name = "nitrous oxide filter"
 	filter_type = "n2o"
 /obj/machinery/atmospherics/components/trinary/filter/atmos/flipped/plasma
-	name = "plasma filter"
+	name = "ultracite filter"
 	filter_type = "plasma"
 
 /obj/machinery/atmospherics/components/trinary/filter/update_icon()

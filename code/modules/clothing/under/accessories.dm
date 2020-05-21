@@ -358,8 +358,8 @@
 	desc = "An extremely rare golden medal awarded only by CentCom. To receive such a medal is the highest honor and as such, very few exist. This medal is almost never awarded to anybody but commanders."
 
 /obj/item/clothing/accessory/medal/plasma
-	name = "plasma medal"
-	desc = "An eccentric medal made of plasma."
+	name = "ultracite medal"
+	desc = "An eccentric medal made of ultracite."
 	icon_state = "plasma"
 	item_color = "plasma"
 	medaltype = "medal-plasma"
@@ -392,6 +392,12 @@
 	desc = "A fancy armband!"
 	icon_state = "whiteband"
 	item_color = "whiteband"
+
+/obj/item/clothing/accessory/armband/black
+	name = "MP's armband"
+	desc = "An armband issued to NCR Military Police, signifying their alignment with NCROSI rather than the typical chain of command."
+	icon_state = "blackband"
+	item_color = "blackband"
 
 /obj/item/clothing/accessory/armband/deputy
 	name = "security deputy armband"

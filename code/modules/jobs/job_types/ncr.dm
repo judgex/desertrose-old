@@ -209,8 +209,8 @@ Sergeant
 /datum/job/ncr/f13sergeant
 	title = "NCR Sergeant"
 	flag = F13SERGEANT
-	total_positions = 3
-	spawn_positions = 3
+	total_positions = 2
+	spawn_positions = 2
 	faction = "NCR"
 	description = "You are the direct superior to the enlisted troops, working with the chain of command you echo the orders of your superiors and ensure that the enlisted follow them to the letter. Additionally, you are responsible for the wellbeing of the troops and their ongoing training with the NCR."
 	supervisors = "Lieutenants and above"
@@ -343,7 +343,7 @@ NCR Heavy Trooper
 	faction = "NCR"
 	total_positions = 2
 	spawn_positions = 2
-	description = "You are a corporal or a Sargeant who has been selected for the special duty of Heavy Trooper. You are exceptionally physically fit, being conditioned to wear the many, many pounds of salvaged power armor; and trained with your R84 LMG. You are the poster-child of the NCR Embassy, and should act accordingly."
+	description = "You are a corporal or a Sergeant who has been selected for the special duty of Heavy Trooper. You are exceptionally physically fit, being conditioned to wear the many, many pounds of salvaged power armor; and trained with your R84 LMG. You are the poster-child of the NCR Embassy, and should act accordingly."
 	supervisors = "the officers"
 	selection_color = "#fff5cc"
 	exp_requirements = 300
@@ -381,7 +381,7 @@ NCR Heavy Trooper
 		)
 
 /datum/outfit/loadout/heavysgt
-	name = "Heavy Sargeant"
+	name = "Heavy Sergeant"
 	backpack_contents = list(
 		/obj/item/clothing/accessory/ncr/SGT=1,
 		)
@@ -406,23 +406,23 @@ NCR Military Police
 
 /datum/outfit/job/ncr/f13ncrmp
 	name = "NCR Military Police"
-	jobtype = /datum/job/ncr/f13trooper
+	jobtype = /datum/job/ncr/f13ncrmp
 	id = 			/obj/item/card/id/dogtag/ncrmp
 	uniform =  		/obj/item/clothing/under/f13/ncr
-	accessory =     /obj/item/clothing/accessory/ncr/SPC
-	head = 			/obj/item/clothing/head/f13/ncr/goggles
+	accessory =     /obj/item/clothing/accessory/armband/black
+	head = 			/obj/item/clothing/head/f13/ncr/mp
 	suit = 			/obj/item/clothing/suit/armor/f13/ncrarmor
-	suit_store = 	/obj/item/gun/ballistic/shotgun/automatic/hunting
-	r_hand = 		/obj/item/melee/baton/cattleprod
+	suit_store = 	/obj/item/gun/ballistic/shotgun/sc_pump
+	r_hand = 		/obj/item/melee/classic_baton
 	belt =          /obj/item/storage/belt/military/NCR_Bandolier
 	glasses = 		null
 	backpack_contents = list(
 		/obj/item/kitchen/knife/combat=1, \
+		/obj/item/restraints/handcuffs=1, \
 		/obj/item/reagent_containers/hypospray/medipen/stimpak=1, \
 		/obj/item/storage/bag/money/small/ncrenlisted, \
 		/obj/item/storage/box/rubbershot = 1, \
 		/obj/item/storage/box/rubbershot/beanbag =1, \
-		/obj/item/stock_parts/cell/high/plus=1
 		)
 
 /*
