@@ -138,7 +138,7 @@
 /////////////////////////Bluespace tech/////////////////////////
 
 /////////////////////////plasma tech/////////////////////////
-/datum/techweb_node/basic_plasma
+/*/datum/techweb_node/basic_plasma
 	id = "basic_plasma"
 	display_name = "Basic Plasma Research"
 	description = "Research into the mysterious and dangerous substance, plasma."
@@ -154,7 +154,7 @@
 	prereq_ids = list("basic_plasma")
 	design_ids = list("mech_plasma_cutter")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
-	export_price = 5000
+	export_price = 5000*/
 
 /////////////////////////robotics tech/////////////////////////
 /datum/techweb_node/robotics
@@ -348,14 +348,14 @@
 	export_price = 5000
 
 ////////////////////////Medical////////////////////////
-/datum/techweb_node/cloning
+/*/datum/techweb_node/cloning
 	id = "cloning"
 	display_name = "Genetic Engineering"
 	description = "We have the technology to make him."
 	prereq_ids = list("biotech")
 	design_ids = list("clonecontrol", "clonepod", "clonescanner", "scan_console", "cloning_disk")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
-	export_price = 5000
+	export_price = 5000*/
 
 /datum/techweb_node/cryotech
 	id = "cryotech"

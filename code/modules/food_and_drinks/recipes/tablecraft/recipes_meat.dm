@@ -38,6 +38,16 @@
 	result = /obj/item/reagent_containers/food/snacks/kebab/tail
 	subcategory = CAT_MEAT
 
+/datum/crafting_recipe/food/brahmin
+	name = "Brahmin en brochette"
+	reqs = list(
+		/obj/item/stack/rods = 1,
+		/obj/item/stack/sheet/animalhide/brahmin = 1,
+		/obj/item/reagent_containers/food/snacks/meat/slab  = 2
+	)
+	result = /obj/item/reagent_containers/food/snacks/kebab/brahmin
+	subcategory = CAT_MEAT
+
 // see code/module/crafting/table.dm
 
 ////////////////////////////////////////////////FISH////////////////////////////////////////////////
@@ -138,7 +148,7 @@
 /datum/crafting_recipe/food/sausage
 	name = "Sausage"
 	reqs = list(
-		/obj/item/reagent_containers/food/snacks/faggot = 1,
+		/obj/item/reagent_containers/food/snacks/meatball = 1,
 		/obj/item/reagent_containers/food/snacks/meat/cutlet = 2
 	)
 	result = /obj/item/reagent_containers/food/snacks/sausage
@@ -156,7 +166,7 @@
 	name = "Raw Khinkali"
 	reqs = list(
 		/obj/item/reagent_containers/food/snacks/doughslice = 1,
-		/obj/item/reagent_containers/food/snacks/faggot = 1
+		/obj/item/reagent_containers/food/snacks/meatball = 1
 	)
 	result =  /obj/item/reagent_containers/food/snacks/rawkhinkali
 	subcategory = CAT_MEAT

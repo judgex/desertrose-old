@@ -1,6 +1,6 @@
 
 /obj/vehicle/ridden/space
-	name = "Generic Space Vehicle!"
+	name = "motorcycle"
 
 /obj/vehicle/ridden/space/Initialize()
 	. = ..()
@@ -8,7 +8,7 @@
 	D.override_allow_spacemove = TRUE
 
 /obj/vehicle/ridden/space/speedbike
-	name = "Speedbike"
+	name = "motorcycle"
 	icon = 'icons/obj/bike.dmi'
 	icon_state = "speedbike_blue"
 	layer = LYING_MOB_LAYER

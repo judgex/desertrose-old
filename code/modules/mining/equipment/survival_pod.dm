@@ -9,8 +9,8 @@
 
 //Survival Capsule
 /obj/item/survivalcapsule
-	name = "bluespace shelter capsule"
-	desc = "An emergency shelter stored within a pocket of bluespace."
+	name = "shelter capsule"
+	desc = "An emergency shelter stored within a pill."
 	icon_state = "capsule"
 	icon = 'icons/obj/mining.dmi'
 	w_class = WEIGHT_CLASS_TINY
@@ -61,15 +61,15 @@
 
 		var/turf/T = deploy_location
 		if(!is_mining_level(T.z)) //only report capsules away from the mining/lavaland level
-			message_admins("[ADMIN_LOOKUPFLW(usr)] activated a bluespace capsule away from the mining level! [ADMIN_VERBOSEJMP(T)]")
-			log_admin("[key_name(usr)] activated a bluespace capsule away from the mining level at [AREACOORD(T)]")
+			message_admins("[ADMIN_LOOKUPFLW(usr)] activated a capsule away from the mining level! [ADMIN_VERBOSEJMP(T)]")
+			log_admin("[key_name(usr)] activated a capsule away from the mining level at [AREACOORD(T)]")
 		template.load(deploy_location, centered = TRUE)
 		new /obj/effect/particle_effect/smoke(get_turf(src))
 		qdel(src)
 
 /obj/item/survivalcapsule/luxury
-	name = "luxury bluespace shelter capsule"
-	desc = "An exorbitantly expensive luxury suite stored within a pocket of bluespace."
+	name = "luxury shelter capsule"
+	desc = "An exorbitantly expensive luxury suite stored within a pill."
 	template_id = "shelter_beta"
 
 //Pod objects

@@ -489,13 +489,13 @@ update_label("John Doe", "Clowny")
 	icon_state = "ncrdogtagrecruit"
 
 /obj/item/card/id/dogtag/ncrmp
-	name = "mp's tags"
-	desc = "A dog tag proving enlistment."
+	name = "military police tags"
+	desc = "A dog tag that associates one with the NCROSI."
 	icon_state = "ncrdogtagrecruit"
 
 /obj/item/card/id/dogtag/ncrht
 	name = "heavy trooper's tags"
-	desc = "A dog tag proving enlistment."
+	desc = "A dog tag proving the elite status of the heavy trooper."
 	icon_state = "ncrdogtagrecruit"
 
 /obj/item/card/id/dogtag/ncrsergeant

@@ -242,10 +242,10 @@ GLOBAL_LIST_INIT(hallucination_list, list(
 		xeno.throw_at(pump,7,1, xeno, FALSE, TRUE)
 		sleep(10)
 		var/xeno_name = xeno.name
-		to_chat(target, "<span class='notice'>[xeno_name] begins climbing into the ventilation system...</span>")
+		to_chat(target, "<span class='notice'>[xeno_name] begins climbing into the shadows...</span>")
 		sleep(30)
 		qdel(xeno)
-		to_chat(target, "<span class='notice'>[xeno_name] scrambles into the ventilation ducts!</span>")
+		to_chat(target, "<span class='notice'>[xeno_name] scrambles into the shadows!</span>")
 	qdel(src)
 
 /obj/effect/hallucination/simple/clown
@@ -668,8 +668,8 @@ GLOBAL_LIST_INIT(hallucination_list, list(
 		"Help!",\
 		"[pick_list_replacements(HAL_LINES_FILE, "threat")] in [pick_list_replacements(HAL_LINES_FILE, "location")][prob(50)?"!":"!!"]",\
 		"[pick("Where's [target.first_name()]?", "Set [target.first_name()] to arrest!")]",\
-		"[pick("C","Ai, c","Someone c","Rec")]all the shuttle!",\
-		"AI [pick("rogue", "is dead")]!!")
+		"[pick("C","Ai, c","Someone c","Rec")]all for help!",\
+		"He's [pick("is dead")]!!")
 
 	var/list/mob/living/carbon/people = list()
 	var/mob/living/carbon/person = null
@@ -744,7 +744,7 @@ GLOBAL_LIST_INIT(hallucination_list, list(
 
 		message_pool.Add("<B>[other]</B> [pick("sneezes","coughs")].")
 
-	message_pool.Add("<span class='notice'>You hear something squeezing through the ducts...</span>", \
+	message_pool.Add("<span class='notice'>You hear something chittering just out of sight...</span>", \
 		"<span class='notice'>Your [pick("arm", "leg", "back", "head")] itches.</span>",\
 		"<span class='warning'>You feel [pick("hot","cold","dry","wet","woozy","faint")].</span>",
 		"<span class='warning'>Your stomach rumbles.</span>",
@@ -874,9 +874,9 @@ GLOBAL_LIST_INIT(hallucination_list, list(
 	feedback_details += "Type: [message]"
 	switch(message)
 		if("blob_alert")
-			to_chat(target, "<h1 class='alert'>Biohazard Alert</h1>")
-			to_chat(target, "<br><br><span class='alert'>Confirmed outbreak of level 5 biohazard aboard [station_name()]. All personnel must contain the outbreak.</span><br><br>")
-			SEND_SOUND(target, 'sound/ai/outbreak5.ogg')
+			to_chat(target, "Something is very wrong!")
+			to_chat(target, "You feel like there is something crawling under your skin.")
+			/*SEND_SOUND(target, 'sound/ai/outbreak5.ogg')*/
 		if("ratvar")
 			target.playsound_local(target, 'sound/machines/clockcult/ark_deathrattle.ogg', 50, FALSE, pressure_affected = FALSE)
 			target.playsound_local(target, 'sound/effects/clockcult_gateway_disrupted.ogg', 50, FALSE, pressure_affected = FALSE)
@@ -884,16 +884,16 @@ GLOBAL_LIST_INIT(hallucination_list, list(
 			target.playsound_local(target, 'sound/effects/explosion_distant.ogg', 50, FALSE, pressure_affected = FALSE)
 		if("shuttle_dock")
 			to_chat(target, "<h1 class='alert'>Priority Announcement</h1>")
-			to_chat(target, "<br><br><span class='alert'>The train has arrived to the station. You have 3 minutes to board the train.</span><br><br>")
-			SEND_SOUND(target, 'sound/f13/quest.ogg')
+			to_chat(target, "<br><br><span class='alert'>The train has arrived to region. You have 3 minutes to board the train to hell.</span><br><br>")
+			/*SEND_SOUND(target, 'sound/f13/quest.ogg')*/
 		if("malf_ai") //AI is doomsdaying!
-			to_chat(target, "<h1 class='alert'>Anomaly Alert</h1>")
-			to_chat(target, "<br><br><span class='alert'>Hostile runtimes detected in all station systems, please deactivate your AI to prevent possible damage to its morality core.</span><br><br>")
-			SEND_SOUND(target, 'sound/ai/aimalf.ogg')
+			to_chat(target, "<h1 class='alert'>The Terminals They Talk!</h1>")
+			to_chat(target, "<br><br><span class='alert'>Computer terminals around the wasteland are displaying vile messages.</span><br><br>")
+			/*SEND_SOUND(target, 'sound/ai/aimalf.ogg')*/
 		if("meteors") //Meteors inbound!
-			to_chat(target, "<h1 class='alert'>Meteor Alert</h1>")
-			to_chat(target, "<br><br><span class='alert'>Meteors have been detected on collision course with the station.</span><br><br>")
-			SEND_SOUND(target, 'sound/ai/meteors.ogg')
+			to_chat(target, "<h1 class='alert'>Meteors Inbound!</h1>")
+			to_chat(target, "<br><br><span class='alert'>The sky is falling! Meteors can be seen falling in the distance.</span><br><br>")
+			/*SEND_SOUND(target, 'sound/ai/meteors.ogg')*/
 		if("supermatter")
 			SEND_SOUND(target, 'sound/magic/charge.ogg')
 			to_chat(target, "<span class='boldannounce'>You feel reality distort for a moment...</span>")

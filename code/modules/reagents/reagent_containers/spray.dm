@@ -58,8 +58,8 @@
 		message_admins("[ADMIN_LOOKUPFLW(user)] fired Fluacid from \a [src] at [ADMIN_VERBOSEJMP(T)].")
 		log_game("[key_name(user)] fired Fluacid from \a [src] at [AREACOORD(T)].")
 	if(reagents.has_reagent("lube"))
-		message_admins("[ADMIN_LOOKUPFLW(user)] fired Space lube from \a [src] at [ADMIN_VERBOSEJMP(T)].")
-		log_game("[key_name(user)] fired Space lube from \a [src] at [AREACOORD(T)].")
+		message_admins("[ADMIN_LOOKUPFLW(user)] fired lube from \a [src] at [ADMIN_VERBOSEJMP(T)].")
+		log_game("[key_name(user)] fired lube from \a [src] at [AREACOORD(T)].")
 	return
 
 

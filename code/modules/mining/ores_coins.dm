@@ -130,10 +130,10 @@ GLOBAL_LIST_INIT(sand_recipes, list(\
 	singular_name = "volcanic ash pile"
 
 /obj/item/stack/ore/plasma
-	name = "plasma ore"
-	icon_state = "Plasma ore"
-	item_state = "Plasma ore"
-	singular_name = "plasma ore chunk"
+	name = "Ultracite ore"
+	icon_state = "Ultracite ore"
+	item_state = "Ultracite ore"
+	singular_name = "Ultracite ore chunk"
 	points = 15
 	materials = list(MAT_PLASMA=MINERAL_MATERIAL_AMOUNT)
 	refined_type = /obj/item/stack/sheet/mineral/plasma
@@ -197,7 +197,7 @@ GLOBAL_LIST_INIT(sand_recipes, list(\
 
 /obj/item/twohanded/required/gibtonite
 	name = "gibtonite ore"
-	desc = "Extremely explosive if struck with mining equipment, Gibtonite is often used by miners to speed up their work by using it as a mining charge. This material is illegal to possess by unauthorized personnel under space law."
+	desc = "Extremely explosive if struck with mining equipment, Gibtonite is often used by miners to speed up their work by using it as a mining charge. This material is illegal to possess by unauthorized personnel under American law."
 	icon = 'icons/obj/mining.dmi'
 	icon_state = "Gibtonite ore"
 	item_state = "Gibtonite ore"
@@ -386,7 +386,7 @@ GLOBAL_LIST_INIT(sand_recipes, list(\
 	grind_results = list("iron" = 4)
 
 /obj/item/coin/plasma
-	name = "plasma coin"
+	name = "Ultracite coin"
 	cmineral = "plasma"
 	icon_state = "coin_plasma_heads"
 	value = 100

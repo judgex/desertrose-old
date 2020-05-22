@@ -189,7 +189,7 @@
 	list_reagents = list("charcoal" = 15)
 
 /obj/item/reagent_containers/syringe/antiviral
-	name = "syringe (spaceacillin)"
+	name = "syringe (penicillin)"
 	desc = "Contains antiviral agents."
 	list_reagents = list("spaceacillin" = 15)
 
@@ -212,7 +212,7 @@
 
 /obj/item/reagent_containers/syringe/plasma
 	name = "syringe (plasma)"
-	desc = "Contains plasma."
+	desc = "Contains ultracite."
 	list_reagents = list("plasma" = 15)
 
 /obj/item/reagent_containers/syringe/lethal

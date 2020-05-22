@@ -276,7 +276,7 @@
 
 /obj/item/reagent_containers/food/snacks/meat/slab/meatproduct
 	name = "meat product"
-	desc = "A slab of station reclaimed and chemically processed meat product."
+	desc = "A slab of reclaimed and chemically processed meat product."
 	foodtype = RAW | MEAT
 
 /obj/item/reagent_containers/food/snacks/meat/slab/monkey

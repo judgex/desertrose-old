@@ -237,12 +237,12 @@ again.
 //plasma windows
 
 /obj/effect/spawner/structure/window/plasma
-	name = "plasma window spawner"
+	name = "ultracite window spawner"
 	icon_state = "pwindow_spawner"
 	spawn_list = list(/obj/structure/grille, /obj/structure/window/plasma/fulltile)
 
 /obj/effect/spawner/structure/window/hollow/plasma
-	name = "hollow plasma window spawner"
+	name = "hollow ultracite window spawner"
 	icon_state = "phwindow_spawner_full"
 	spawn_list = list(/obj/structure/grille, /obj/structure/window/plasma, /obj/structure/window/plasma/spawner/north, /obj/structure/window/plasma/spawner/east, /obj/structure/window/plasma/spawner/west)
 
@@ -298,12 +298,12 @@ again.
 //plasma reinforced
 
 /obj/effect/spawner/structure/window/plasma/reinforced
-	name = "reinforced plasma window spawner"
+	name = "reinforced ultracite window spawner"
 	icon_state = "prwindow_spawner"
 	spawn_list = list(/obj/structure/grille, /obj/structure/window/plasma/reinforced/fulltile)
 
 /obj/effect/spawner/structure/window/hollow/plasma/reinforced
-	name = "hollow reinforced plasma window spawner"
+	name = "hollow reinforced ultracite window spawner"
 	icon_state = "phrwindow_spawner_full"
 	spawn_list = list(/obj/structure/grille, /obj/structure/window/plasma/reinforced, /obj/structure/window/plasma/reinforced/spawner/north, /obj/structure/window/plasma/reinforced/spawner/east, /obj/structure/window/plasma/reinforced/spawner/west)
 

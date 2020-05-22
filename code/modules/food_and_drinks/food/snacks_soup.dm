@@ -234,3 +234,11 @@
 	bonus_reagents = list("nutriment" = 1, "omnizine" = 5, "vitamin" = 5)
 	tastes = list("Monkey" = 1)
 	foodtype = MEAT | VEGETABLES
+
+/obj/item/reagent_containers/food/snacks/brahminnoodles
+	name = "brahmin noodles"
+	desc = "Ain't nothing to it. Brown the meat a bit and get your liquid in with the spices and salt. Add those veggies near theyIcon sic end so they still maintain some freshness."
+	icon_state = "milosoup"
+	bonus_reagents = list("nutriment" = 1, "omnizine" = 5, "vitamin" = 5)
+	tastes = list("beef" = 1, "noodles" = 1, "meaty broth" = 1)
+	foodtype = MEAT | VEGETABLES

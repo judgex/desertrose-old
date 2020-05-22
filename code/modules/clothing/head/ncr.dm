@@ -12,6 +12,12 @@
 	icon_state = "ncr_medical_helmet"
 	item_state = "ncr_medical_helmet"
 
+/obj/item/clothing/head/f13/ncr/mp
+	name = "NCR military police helmet"
+	desc = "A standard issue NCR helmet, with the letters \"MP\" scrawled on the front."
+	icon_state = "ncr_MP"
+	item_state = "ncr_MP"
+
 /obj/item/clothing/head/f13/ncr/goggles
 	name = "NCR storm helmet"
 	desc = "A standard issue NCR Infantry helmet, with a pair of goggles attached to it."
@@ -48,7 +54,6 @@
 	dog_fashion = null
 	armor = list("melee" = 40, "bullet" = 40, "laser" = 30, "energy" = 20, "bomb" = 25, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
 	strip_delay = 50
-
 
 /obj/item/clothing/head/f13/ncr/goggles/attack_self(mob/user)
 	if(can_toggle && !user.incapacitated())

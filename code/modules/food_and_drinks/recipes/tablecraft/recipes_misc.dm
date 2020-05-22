@@ -195,7 +195,7 @@
 	subcategory = CAT_MISCFOOD
 
 /datum/crafting_recipe/food/spacefreezy
-	name ="Space freezy"
+	name ="freezy"
 	reqs = list(
 		/datum/reagent/consumable/bluecherryjelly = 5,
 		/datum/reagent/consumable/spacemountainwind = 15,

@@ -321,7 +321,7 @@
 
 
 /obj/structure/piano
-	name = "space minimoog"
+	name = "minimoog"
 	icon = 'icons/obj/musician.dmi'
 	icon_state = "minimoog"
 	anchored = TRUE
@@ -337,11 +337,11 @@
 
 	if(prob(50))
 		name = "space minimoog"
-		desc = "This is a minimoog, like a space piano, but more spacey!"
+		desc = "This is a minimoog."
 		icon_state = "minimoog"
 	else
-		name = "space piano"
-		desc = "This is a space piano, like a regular piano, but always in tune! Even if the musician isn't."
+		name = "piano"
+		desc = "This is a piano."
 		icon_state = "piano"
 
 /obj/structure/piano/Destroy()
