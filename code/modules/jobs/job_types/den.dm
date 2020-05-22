@@ -310,7 +310,7 @@ Preacher
 		B.name = SSreligion.bible_name
 		B.icon_state = SSreligion.bible_icon_state
 		B.item_state = SSreligion.bible_item_state
-		to_chat(H, "There is already an established religion onboard the station. You are an acolyte of [SSreligion.deity]. Defer to the Chaplain.")
+		to_chat(H, "There is already an established religion. You are an acolyte of [SSreligion.deity]. Defer to the Chaplain.")
 		H.equip_to_slot_or_del(B, SLOT_IN_BACKPACK)
 		var/nrt = SSreligion.holy_weapon_type || /obj/item/nullrod
 		var/obj/item/nullrod/N = new nrt(H)
@@ -321,7 +321,7 @@ Preacher
 	if(M.client && M.client.prefs.custom_names["religion"])
 		new_religion = M.client.prefs.custom_names["religion"]
 
-	var/new_deity = "Space Jesus"
+	var/new_deity = "Jesus"
 	if(M.client && M.client.prefs.custom_names["deity"])
 		new_deity = M.client.prefs.custom_names["deity"]
 

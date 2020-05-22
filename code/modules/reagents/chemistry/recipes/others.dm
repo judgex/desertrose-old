@@ -427,7 +427,7 @@
 	required_reagents = list ("ammonia" = 1, "ethanol" = 1)
 
 /datum/chemical_reaction/space_cleaner
-	name = "Space cleaner"
+	name = "Cleaner"
 	id = "cleaner"
 	results = list("cleaner" = 2)
 	required_reagents = list("ammonia" = 1, "water" = 1)

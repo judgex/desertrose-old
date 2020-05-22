@@ -225,7 +225,7 @@
 
 	if(href_list["print"])
 		if(!CONFIG_GET(flag/ic_printing) && !debug)
-			to_chat(usr, "<span class='warning'>CentCom has disabled printing of custom circuitry due to recent allegations of copyright infringement.</span>")
+			to_chat(usr, "<span class='warning'>Vault-Tec has disabled printing of custom circuitry due to recent allegations of copyright infringement.</span>")
 			return
 		if(!can_clone) // Copying and printing ICs is cloning
 			to_chat(usr, "<span class='warning'>This printer does not have the cloning upgrade.</span>")

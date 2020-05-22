@@ -16,7 +16,7 @@
 	icon = 'icons/obj/terminals.dmi'
 	icon_state = "dorm_available"
 	var/shuttleId = "colony_drop"
-	desc = "Allows a deployable expedition base to be dropped from the station to a designated mining location. It can also \
+	desc = "Allows a deployable expedition base to be dropped to a designated mining location. It can also \
 interface with the mining shuttle at the landing site if a mobile beacon is also deployed."
 	var/launch_warning = TRUE
 	var/list/turrets = list() //List of connected turrets
@@ -137,7 +137,7 @@ interface with the mining shuttle at the landing site if a mobile beacon is also
 /obj/machinery/computer/auxillary_base/proc/set_landing_zone(turf/T, mob/user, var/no_restrictions)
 	var/obj/docking_port/mobile/auxillary_base/base_dock = locate(/obj/docking_port/mobile/auxillary_base) in SSshuttle.mobile
 	if(!base_dock) //Not all maps have an Aux base. This object is useless in that case.
-		to_chat(user, "<span class='warning'>This station is not equipped with an auxillary base. Please contact your Nanotrasen contractor.</span>")
+		to_chat(user, "<span class='warning'>This region is not equipped with an auxillary base. Please contact your Vault-Tek contractor.</span>")
 		return
 	if(!no_restrictions)
 		var/static/list/disallowed_turf_types = typecacheof(list(
@@ -264,7 +264,7 @@ interface with the mining shuttle at the landing site if a mobile beacon is also
 
 /obj/structure/mining_shuttle_beacon
 	name = "mining shuttle beacon"
-	desc = "A bluespace beacon calibrated to mark a landing spot for the mining shuttle when deployed near the auxillary mining base."
+	desc = "A beacon calibrated to mark a landing spot for the mining shuttle when deployed near the auxillary mining base."
 	anchored = FALSE
 	density = FALSE
 	var/shuttle_ID = "landing_zone_dock"
@@ -323,7 +323,7 @@ interface with the mining shuttle at the landing site if a mobile beacon is also
 
 			break
 	if(!Mport)
-		to_chat(user, "<span class='warning'>This station is not equipped with an approprite mining shuttle. Please contact Nanotrasen Support.</span>")
+		to_chat(user, "<span class='warning'>This region is not equipped with an approprite mining shuttle. Please contact Valut-Tek Support.</span>")
 		return
 
 	var/obj/docking_port/mobile/mining_shuttle
@@ -337,7 +337,7 @@ interface with the mining shuttle at the landing site if a mobile beacon is also
 		break
 
 	if(!mining_shuttle) //Not having a mining shuttle is a map issue
-		to_chat(user, "<span class='warning'>No mining shuttle signal detected. Please contact Nanotrasen Support.</span>")
+		to_chat(user, "<span class='warning'>No mining shuttle signal detected. Please contact Vault-Tek Support.</span>")
 		SSshuttle.stationary.Remove(Mport)
 		qdel(Mport)
 		return

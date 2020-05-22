@@ -688,14 +688,14 @@ Congratulations! You are now trained for invasive xenobiology research!"}
 
 /obj/structure/bed/abductor
 	name = "resting contraption"
-	desc = "This looks similar to contraptions from Earth. Could aliens be stealing our technology?"
+	desc = "This looks similar to contraptions from the pre-war earth. Could aliens be stealing our technology?"
 	icon = 'icons/obj/abductor.dmi'
 	buildstacktype = /obj/item/stack/sheet/mineral/abductor
 	icon_state = "bed"
 
 /obj/structure/table_frame/abductor
 	name = "alien table frame"
-	desc = "A sturdy table frame made from alien alloy."
+	desc = "A sturdy table frame made from a strange alloy."
 	icon_state = "alien_frame"
 	framestack = /obj/item/stack/sheet/mineral/abductor
 	framestackamount = 1

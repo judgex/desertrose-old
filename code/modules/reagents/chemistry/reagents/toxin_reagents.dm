@@ -150,7 +150,7 @@
 	description = "A strong neurotoxin that puts the subject into a death-like state."
 	reagent_state = SOLID
 	color = "#669900" // rgb: 102, 153, 0
-	toxpwr = 0.5
+	toxpwr = 1
 	taste_description = "death"
 
 /datum/reagent/toxin/zombiepowder/on_mob_add(mob/living/L)
@@ -162,7 +162,7 @@
 	..()
 
 /datum/reagent/toxin/zombiepowder/on_mob_life(mob/living/carbon/M)
-	M.adjustOxyLoss(0.5*REM, 0)
+	M.adjustOxyLoss(1*REM, 0)
 	..()
 	. = 1
 

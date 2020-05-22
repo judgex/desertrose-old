@@ -210,9 +210,9 @@
 	. = 1
 
 /datum/reagent/medicine/spaceacillin
-	name = "Spaceacillin"
+	name = "Penicillin"
 	id = "spaceacillin"
-	description = "Spaceacillin will prevent a patient from conventionally spreading any diseases they are currently infected with."
+	description = "Penicillin will prevent a patient from conventionally spreading any diseases they are currently infected with."
 	color = "#C8A5DC" // rgb: 200, 165, 220
 	metabolization_rate = 0.1 * REAGENTS_METABOLISM
 
@@ -1164,8 +1164,6 @@
 	return TRUE
 
 /datum/reagent/medicine/corazone
-	// Heart attack code will not do damage if corazone is present
-	// because it's SPACE MAGIC ASPIRIN
 	name = "Corazone"
 	id = "corazone"
 	description = "A medication used to treat pain, fever, and inflammation, along with heart attacks."
