@@ -8,7 +8,7 @@
 	reqs = list(
 		/datum/reagent/water = 10,
 		/obj/item/reagent_containers/glass/bowl = 1,
-		/obj/item/reagent_containers/food/snacks/faggot = 1,
+		/obj/item/reagent_containers/food/snacks/meatball = 1,
 		/obj/item/reagent_containers/food/snacks/grown/carrot = 1,
 		/obj/item/reagent_containers/food/snacks/grown/potato = 1
 	)
@@ -247,4 +247,16 @@
 		/obj/item/reagent_containers/food/snacks/meat/slab/monkey = 2
 	)
 	result = /obj/item/reagent_containers/food/snacks/soup/macaco
+	subcategory = CAT_SOUP
+
+/datum/crafting_recipe/food/brahminnoodles
+	name = "brahmin noodles"
+	reqs = list(
+    	/datum/reagent/water  = 10,
+    	/obj/item/reagent_containers/food/snacks/meat/steak = 1,
+    	/obj/item/reagent_containers/food/snacks/grown/mutfruit = 2,
+    	/obj/item/reagent_containers/food/snacks/boiledspaghetti = 1
+	)
+	result = /obj/item/reagent_containers/food/snacks/brahminnoodles
+	category = CAT_FOOD
 	subcategory = CAT_SOUP

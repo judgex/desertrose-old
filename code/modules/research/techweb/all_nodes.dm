@@ -138,7 +138,7 @@
 /////////////////////////Bluespace tech/////////////////////////
 
 /////////////////////////plasma tech/////////////////////////
-/datum/techweb_node/basic_plasma
+/*/datum/techweb_node/basic_plasma
 	id = "basic_plasma"
 	display_name = "Basic Plasma Research"
 	description = "Research into the mysterious and dangerous substance, plasma."
@@ -154,7 +154,7 @@
 	prereq_ids = list("basic_plasma")
 	design_ids = list("mech_plasma_cutter")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
-	export_price = 5000
+	export_price = 5000*/
 
 /////////////////////////robotics tech/////////////////////////
 /datum/techweb_node/robotics

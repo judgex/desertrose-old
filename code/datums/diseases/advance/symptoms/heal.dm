@@ -257,9 +257,9 @@
 	else if(M.IsSleeping())
 		return power * 0.25
 	else if(M.getBruteLoss() + M.getFireLoss() >= 70 && !active_coma)
-		to_chat(M, "<span class='warning'>You feel yourself slip into a regenerative coma...</span>")
+		to_chat(M, "<span class='warning'>You feel yourself slip into a cma...</span>")
 		active_coma = TRUE
-		addtimer(CALLBACK(src, .proc/coma, M), 60)
+		addtimer(CALLBACK(src, .proc/coma, M), 30)
 
 /datum/symptom/heal/coma/proc/coma(mob/living/M)
 	if(deathgasp)
@@ -278,7 +278,7 @@
 	M.update_canmove()
 
 /datum/symptom/heal/coma/Heal(mob/living/carbon/M, datum/disease/advance/A, actual_power)
-	var/heal_amt = 4 * actual_power
+	var/heal_amt = 1 * actual_power
 
 	var/list/parts = M.get_damaged_bodyparts(1,1)
 

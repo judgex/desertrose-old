@@ -60,7 +60,7 @@
 
 /datum/design/board/space_heater
 	name = "Machine Design (Space Heater Board)"
-	desc = "The circuit board for a space heater."
+	desc = "The circuit board for a heater."
 	id = "space_heater"
 	build_path = /obj/item/circuitboard/machine/space_heater
 	category = list ("Engineering Machinery")

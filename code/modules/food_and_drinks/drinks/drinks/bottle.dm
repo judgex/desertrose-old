@@ -138,7 +138,7 @@
 
 /obj/item/reagent_containers/food/drinks/bottle/gin
 	name = "Griffeater gin"
-	desc = "A bottle of high quality gin, produced in the New London Space Station."
+	desc = "A bottle of high quality gin, produced in London."
 	icon_state = "ginbottle"
 	list_reagents = list("gin" = 100)
 
@@ -175,13 +175,13 @@
 
 /obj/item/reagent_containers/food/drinks/bottle/patron
 	name = "Wrapp Artiste Patron"
-	desc = "Silver laced tequila, served in space night clubs across the region."
+	desc = "Silver laced tequila, served in night clubs across the region."
 	icon_state = "patronbottle"
 	list_reagents = list("patron" = 100)
 
 /obj/item/reagent_containers/food/drinks/bottle/rum
 	name = "Captain Pete's Cuban spiced rum"
-	desc = "This isn't just rum, oh no. It's practically GRIFF in a bottle."
+	desc = "This isn't just rum, oh no. It's practically spice in a bottle."
 	icon_state = "rumbottle"
 	list_reagents = list("rum" = 100)
 
@@ -193,7 +193,7 @@
 	foodtype = NONE
 
 /obj/item/reagent_containers/food/drinks/bottle/holywater/hell
-	desc = "A flask of holy water...it's been sitting in the Necropolis a while though."
+	desc = "A flask of holy water...it's been sitting in Necropolis a while though."
 	list_reagents = list("hell_water" = 100)
 
 /obj/item/reagent_containers/food/drinks/bottle/vermouth
@@ -204,7 +204,7 @@
 
 /obj/item/reagent_containers/food/drinks/bottle/kahlua
 	name = "Robert Robust's coffee liqueur"
-	desc = "A widely known, Mexican coffee-flavoured liqueur. In production since 1936, HONK."
+	desc = "A widely known, Mexican coffee-flavoured liqueur. In production since 1936."
 	icon_state = "kahluabottle"
 	list_reagents = list("kahlua" = 100)
 	foodtype = VEGETABLES
@@ -217,7 +217,7 @@
 
 /obj/item/reagent_containers/food/drinks/bottle/cognac
 	name = "Chateau de Baton premium cognac"
-	desc = "A sweet and strongly alchoholic drink, made after numerous distillations and years of maturing. You might as well not scream 'SHITCURITY' this time."
+	desc = "A sweet and strongly alchoholic drink, made after numerous distillations and years of maturing."
 	icon_state = "cognacbottle"
 	list_reagents = list("cognac" = 100)
 
@@ -230,18 +230,15 @@
 
 /obj/item/reagent_containers/food/drinks/bottle/absinthe
 	name = "extra-strong absinthe"
-	desc = "An strong alcoholic drink brewed and distributed by"
+	desc = "An anise-flavoured spirit derived from botanicals, including the flowers and leaves of Artemisia absinthium, together with green anise, sweet fennel, and other medicinal and culinary herbs"
 	icon_state = "absinthebottle"
 	list_reagents = list("absinthe" = 100)
 
-/obj/item/reagent_containers/food/drinks/bottle/absinthe/Initialize()
+/*/obj/item/reagent_containers/food/drinks/bottle/absinthe/Initialize()
 	. = ..()
 	redact()
 
 /obj/item/reagent_containers/food/drinks/bottle/absinthe/proc/redact()
-	// There was a large fight in the coderbus about a player reference
-	// in absinthe. Ergo, this is why the name generation is now so
-	// complicated. Judge us kindly.
 	var/shortname = pickweight(
 		list("T&T" = 1, "A&A" = 1, "Generic" = 1))
 	var/fullname
@@ -270,20 +267,20 @@
 
 	// Actually finally setting the new name and desc
 	name = "[shortname] [name]"
-	desc = "[desc] [fullname] Inc."
+	desc = "[desc] [fullname] Inc."*/
 
 
 /obj/item/reagent_containers/food/drinks/bottle/absinthe/premium
 	name = "Gwyn's premium absinthe"
-	desc = "A potent alcoholic beverage, almost makes you forget the ash in your lungs."
+	desc = "A potent alcoholic beverage, almost makes you forget the sand in your lungs."
 	icon_state = "absinthepremium"
 
-/obj/item/reagent_containers/food/drinks/bottle/absinthe/premium/redact()
-	return
+/*obj/item/reagent_containers/food/drinks/bottle/absinthe/premium/redact()
+	return*/
 
 /obj/item/reagent_containers/food/drinks/bottle/lizardwine
 	name = "bottle of lizard wine"
-	desc = "An alcoholic beverage from China, made by infusing lizard tails in ethanol. Inexplicably popular among command staff."
+	desc = "An alcoholic beverage from China, made by infusing lizard tails in ethanol. Inexplicably popular among wastelanders."
 	icon_state = "lizardwine"
 	list_reagents = list("lizardwine" = 100)
 	foodtype = FRUIT | ALCOHOL

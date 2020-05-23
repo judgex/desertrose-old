@@ -1,6 +1,6 @@
 /datum/weather/acid_rain
 	name = "acid rain"
-	desc = "The planet's thunderstorms are by nature acidic, and will incinerate anyone standing beneath them without protection."
+	desc = "The planet's thunderstorms are by nature acidic, and will melt anyone standing beneath them without protection."
 	probability = 2
 
 	telegraph_duration = 400
@@ -36,7 +36,7 @@
 			return
 		var/resist = L.getarmor(null, "acid")
 		if(prob(max(0, 100 - resist)))
-			L.acid_act(15, 10)
+			L.acid_act(7, 10)
 
 /datum/weather/acid_rain/weather_act_turf(turf/T)
 	for(var/O in T) 
