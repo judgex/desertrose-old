@@ -41,3 +41,5 @@
 	icon_state = "stobacco_leaves"
 	distill_reagent = null
 	wine_power = 50
+
+/*HRP*/

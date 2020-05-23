@@ -434,3 +434,5 @@
 	icon_state = "shroom"
 	icon = 'icons/obj/hydroponics/harvest.dmi'
 	filling_color = "#FF6347"
+
+/*MRP*/
