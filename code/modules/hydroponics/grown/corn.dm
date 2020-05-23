@@ -1,7 +1,7 @@
 // Corn
 /obj/item/seeds/corn
 	name = "pack of corn seeds"
-	desc = "I don't mean to sound corny..."
+	desc = "Grows in corn"
 	icon_state = "seed-corn"
 	species = "corn"
 	plantname = "Corn Stalks"
