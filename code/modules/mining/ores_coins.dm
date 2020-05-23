@@ -131,8 +131,8 @@ GLOBAL_LIST_INIT(sand_recipes, list(\
 
 /obj/item/stack/ore/plasma
 	name = "Ultracite ore"
-	icon_state = "Ultracite ore"
-	item_state = "Ultracite ore"
+	icon_state = "Plasma ore"
+	item_state = "Plasma ore"
 	singular_name = "Ultracite ore chunk"
 	points = 15
 	materials = list(MAT_PLASMA=MINERAL_MATERIAL_AMOUNT)

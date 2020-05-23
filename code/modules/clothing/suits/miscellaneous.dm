@@ -91,7 +91,7 @@
 	name = "black and red space suit replica"
 	icon_state = "syndicate-black-red"
 	item_state = "syndicate-black-red"
-	desc = "A plastic replica of the Syndicate space suit. You'll look just like a real murderous Syndicate agent in this! This is a toy, it is not made for use in space!"
+	desc = "A plastic replica of a communist space suit. You'll look just like a real murderous commie in this! This is a toy, it is not made for use in space!"
 	w_class = WEIGHT_CLASS_NORMAL
 	allowed = list(/obj/item/flashlight, /obj/item/tank/internals/emergency_oxygen, /obj/item/tank/internals/plasmaman, /obj/item/toy)
 	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT
@@ -423,7 +423,7 @@
 
 /obj/item/clothing/suit/jacket/letterman_nanotrasen
 	name = "blue letterman jacket"
-	desc = "A blue letterman jacket with a proud Nanotrasen N on the back. The tag says that it was made in Space China."
+	desc = "A blue letterman jacket with a proud N on the back. The tag says that it was made in China."
 	icon_state = "letterman_n"
 	item_state = "letterman_n"
 
@@ -467,7 +467,7 @@
 
 /obj/item/clothing/suit/hooded/wintercoat
 	name = "winter coat"
-	desc = "A heavy jacket made from 'synthetic' animal furs."
+	desc = "A heavy jacket made from animal furs."
 	icon_state = "coatwinter"
 	item_state = "coatwinter"
 	body_parts_covered = CHEST|GROIN|ARMS
