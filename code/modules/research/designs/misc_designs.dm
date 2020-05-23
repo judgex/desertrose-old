@@ -73,7 +73,7 @@
 	category = list("Equipment")
 	departmental_flags = DEPARTMENTAL_FLAG_SCIENCE
 
-/datum/design/diagnostic_hud_night
+/*/datum/design/diagnostic_hud_night
 	name = "Night Vision Diagnostic HUD"
 	desc = "Upgraded version of the diagnostic HUD designed to function during a power failure."
 	id = "diagnostic_hud_night"
@@ -81,7 +81,7 @@
 	materials = list(MAT_METAL = 600, MAT_GLASS = 600, MAT_URANIUM = 1000, MAT_PLASMA = 300)
 	build_path = /obj/item/clothing/glasses/hud/diagnostic/night
 	category = list("Equipment")
-	departmental_flags = DEPARTMENTAL_FLAG_SCIENCE
+	departmental_flags = DEPARTMENTAL_FLAG_SCIENCE*/
 
 /////////////////////////////////////////
 //////////////////Misc///////////////////
@@ -127,7 +127,7 @@
 	category = list("Equipment")
 	departmental_flags = DEPARTMENTAL_FLAG_CARGO | DEPARTMENTAL_FLAG_ENGINEERING
 
-/datum/design/engine_goggles
+/*/datum/design/engine_goggles
 	name = "Engineering Scanner Goggles"
 	desc = "Goggles used by engineers. The Meson Scanner mode lets you see basic structural and terrain layouts through walls, regardless of lighting condition. The T-ray Scanner mode lets you see underfloor objects such as cables and pipes."
 	id = "engine_goggles"
@@ -135,7 +135,7 @@
 	materials = list(MAT_METAL = 500, MAT_GLASS = 500, MAT_PLASMA = 100)
 	build_path = /obj/item/clothing/glasses/meson/engine
 	category = list("Equipment")
-	departmental_flags = DEPARTMENTAL_FLAG_ENGINEERING
+	departmental_flags = DEPARTMENTAL_FLAG_ENGINEERING*/
 
 /datum/design/tray_goggles
 	name = "Optical T-Ray Scanners"
@@ -147,7 +147,7 @@
 	category = list("Equipment")
 	departmental_flags = DEPARTMENTAL_FLAG_ENGINEERING
 
-/datum/design/nvgmesons
+/*/datum/design/nvgmesons
 	name = "Night Vision Optical Meson Scanners"
 	desc = "Prototype meson scanners fitted with an extra sensor which amplifies the visible light spectrum and overlays it to the UHD display."
 	id = "nvgmesons"
@@ -155,9 +155,9 @@
 	materials = list(MAT_METAL = 600, MAT_GLASS = 600, MAT_PLASMA = 350, MAT_URANIUM = 1000)
 	build_path = /obj/item/clothing/glasses/meson/night
 	category = list("Equipment")
-	departmental_flags = DEPARTMENTAL_FLAG_ENGINEERING | DEPARTMENTAL_FLAG_CARGO
+	departmental_flags = DEPARTMENTAL_FLAG_ENGINEERING | DEPARTMENTAL_FLAG_CARGO*/
 
-/datum/design/night_vision_goggles
+/*/datum/design/night_vision_goggles
 	name = "Night Vision Goggles"
 	desc = "Goggles that let you see through darkness unhindered."
 	id = "night_visision_goggles"
@@ -165,7 +165,7 @@
 	materials = list(MAT_METAL = 600, MAT_GLASS = 600, MAT_PLASMA = 350, MAT_URANIUM = 1000)
 	build_path = /obj/item/clothing/glasses/night
 	category = list("Equipment")
-	departmental_flags = DEPARTMENTAL_FLAG_SCIENCE | DEPARTMENTAL_FLAG_SECURITY
+	departmental_flags = DEPARTMENTAL_FLAG_SCIENCE | DEPARTMENTAL_FLAG_SECURITY*/
 
 /datum/design/magboots
 	name = "Magnetic Boots"
@@ -207,7 +207,7 @@
 	category = list("Equipment")
 	departmental_flags = DEPARTMENTAL_FLAG_ENGINEERING
 
-/datum/design/alienwrench
+/*/datum/design/alienwrench
 	name = "Advanced Wrench"
 	desc = "An advanced wrench obtained through Advanced technology."
 	id = "alien_wrench"
@@ -215,9 +215,9 @@
 	build_type = PROTOLATHE
 	materials = list(MAT_METAL = 5000, MAT_SILVER = 2500, MAT_PLASMA = 1000, MAT_TITANIUM = 2000, MAT_DIAMOND = 2000)
 	category = list("Equipment")
-	departmental_flags = DEPARTMENTAL_FLAG_ENGINEERING
+	departmental_flags = DEPARTMENTAL_FLAG_ENGINEERING*/
 
-/datum/design/alienwirecutters
+/*/datum/design/alienwirecutters
 	name = "Advanced Wirecutters"
 	desc = "Advanced wirecutters obtained through Advanced technology."
 	id = "alien_wirecutters"
@@ -225,9 +225,9 @@
 	build_type = PROTOLATHE
 	materials = list(MAT_METAL = 5000, MAT_SILVER = 2500, MAT_PLASMA = 1000, MAT_TITANIUM = 2000, MAT_DIAMOND = 2000)
 	category = list("Equipment")
-	departmental_flags = DEPARTMENTAL_FLAG_ENGINEERING
+	departmental_flags = DEPARTMENTAL_FLAG_ENGINEERING*/
 
-/datum/design/alienscrewdriver
+/*/datum/design/alienscrewdriver
 	name = "Advanced Screwdriver"
 	desc = "An advanced screwdriver obtained through Advanced technology."
 	id = "alien_screwdriver"
@@ -235,9 +235,9 @@
 	build_type = PROTOLATHE
 	materials = list(MAT_METAL = 5000, MAT_SILVER = 2500, MAT_PLASMA = 1000, MAT_TITANIUM = 2000, MAT_DIAMOND = 2000)
 	category = list("Equipment")
-	departmental_flags = DEPARTMENTAL_FLAG_ENGINEERING
+	departmental_flags = DEPARTMENTAL_FLAG_ENGINEERING*/
 
-/datum/design/aliencrowbar
+/*/datum/design/aliencrowbar
 	name = "Advanced Crowbar"
 	desc = "An advanced crowbar obtained through Advanced technology."
 	id = "alien_crowbar"
@@ -245,9 +245,9 @@
 	build_type = PROTOLATHE
 	materials = list(MAT_METAL = 5000, MAT_SILVER = 2500, MAT_PLASMA = 1000, MAT_TITANIUM = 2000, MAT_DIAMOND = 2000)
 	category = list("Equipment")
-	departmental_flags = DEPARTMENTAL_FLAG_ENGINEERING
+	departmental_flags = DEPARTMENTAL_FLAG_ENGINEERING*/
 
-/datum/design/alienwelder
+/*/datum/design/alienwelder
 	name = "Advanced Welding Tool"
 	desc = "An advanced welding tool obtained through Advanced technology."
 	id = "alien_welder"
@@ -255,9 +255,9 @@
 	build_type = PROTOLATHE
 	materials = list(MAT_METAL = 5000, MAT_SILVER = 2500, MAT_PLASMA = 5000, MAT_TITANIUM = 2000, MAT_DIAMOND = 2000)
 	category = list("Equipment")
-	departmental_flags = DEPARTMENTAL_FLAG_ENGINEERING
+	departmental_flags = DEPARTMENTAL_FLAG_ENGINEERING*/
 
-/datum/design/alienmultitool
+/*/datum/design/alienmultitool
 	name = "Advanced Multitool"
 	desc = "An advanced multitool obtained through Advanced technology."
 	id = "alien_multitool"
@@ -265,7 +265,7 @@
 	build_type = PROTOLATHE
 	materials = list(MAT_METAL = 5000, MAT_SILVER = 2500, MAT_PLASMA = 5000, MAT_TITANIUM = 2000, MAT_DIAMOND = 2000)
 	category = list("Equipment")
-	departmental_flags = DEPARTMENTAL_FLAG_ENGINEERING
+	departmental_flags = DEPARTMENTAL_FLAG_ENGINEERING*/
 
 /datum/design/diskplantgene
 	name = "Plant Data Disk"
@@ -301,7 +301,7 @@
 	category = list("Equipment")
 	departmental_flags = DEPARTMENTAL_FLAG_SERVICE
 
-/datum/design/blutrash
+/*/datum/design/blutrash
 	name = "Trashbag of Holding"
 	desc = "An advanced trash bag with bluespace properties; capable of holding a plethora of garbage."
 	id = "blutrash"
@@ -309,7 +309,7 @@
 	materials = list(MAT_GOLD = 1500, MAT_URANIUM = 250, MAT_PLASMA = 1500)
 	build_path = /obj/item/storage/bag/trash/bluespace
 	category = list("Equipment")
-	departmental_flags = DEPARTMENTAL_FLAG_SERVICE
+	departmental_flags = DEPARTMENTAL_FLAG_SERVICE*/
 
 /datum/design/buffer
 	name = "Floor Buffer Upgrade"
@@ -365,7 +365,7 @@
 ////////////Tools//////////////
 /////////////////////////////////////////
 
-/datum/design/exwelder
+/*/datum/design/exwelder
 	name = "Experimental Welding Tool"
 	desc = "An experimental welder capable of self-fuel generation."
 	id = "exwelder"
@@ -373,9 +373,9 @@
 	materials = list(MAT_METAL = 1000, MAT_GLASS = 500, MAT_PLASMA = 1500, MAT_URANIUM = 200)
 	build_path = /obj/item/weldingtool/experimental
 	category = list("Equipment")
-	departmental_flags = DEPARTMENTAL_FLAG_SCIENCE | DEPARTMENTAL_FLAG_ENGINEERING
+	departmental_flags = DEPARTMENTAL_FLAG_SCIENCE | DEPARTMENTAL_FLAG_ENGINEERING*/
 
-/datum/design/anomaly_neutralizer
+/*/datum/design/anomaly_neutralizer
 	name = "Anomaly Neutralizer"
 	desc = "An advanced tool capable of instantly neutralizing anomalies, designed to capture the fleeting aberrations created by the engine."
 	id = "anomaly_neutralizer"
@@ -383,7 +383,7 @@
 	materials = list(MAT_METAL = 2000, MAT_GOLD = 2000, MAT_PLASMA = 5000, MAT_URANIUM = 2000)
 	build_path = /obj/item/anomaly_neutralizer
 	category = list("Equipment")
-	departmental_flags = DEPARTMENTAL_FLAG_SCIENCE | DEPARTMENTAL_FLAG_ENGINEERING
+	departmental_flags = DEPARTMENTAL_FLAG_SCIENCE | DEPARTMENTAL_FLAG_ENGINEERING*/
 
 /////////////////////////////////////////
 ////////////Armour//////////////
@@ -399,20 +399,20 @@
 	category = list("Equipment")
 	departmental_flags = DEPARTMENTAL_FLAG_SCIENCE | DEPARTMENTAL_FLAG_ENGINEERING
 
-/datum/design/circuitboardthing
+/*/datum/design/circuitboardthing
 	name = "Advanced Machine Builder"
 	id = "circuitmaker"
 	build_type = PROTOLATHE
 	materials = list(MAT_METAL = 20000, MAT_GLASS = 1000, MAT_PLASMA = 10000, MAT_URANIUM = 10000)
 	build_path = /obj/item/circuitboardthing
 	category = list("Equipment")
-	departmental_flags = DEPARTMENTAL_FLAG_SCIENCE | DEPARTMENTAL_FLAG_ENGINEERING
+	departmental_flags = DEPARTMENTAL_FLAG_SCIENCE | DEPARTMENTAL_FLAG_ENGINEERING*/
 
-/datum/design/portaturretconstruct
+/*/datum/design/portaturretconstruct
 	name = "Portable Turret Constructor"
 	id = "turretmaker"
 	build_type = PROTOLATHE
 	materials = list(MAT_METAL = 20000, MAT_GLASS = 1000, MAT_PLASMA = 10000, MAT_URANIUM = 10000)
 	build_path = /obj/item/portaturretconstruct
 	category = list("Equipment")
-	departmental_flags = DEPARTMENTAL_FLAG_SCIENCE | DEPARTMENTAL_FLAG_ENGINEERING
+	departmental_flags = DEPARTMENTAL_FLAG_SCIENCE | DEPARTMENTAL_FLAG_ENGINEERING*/

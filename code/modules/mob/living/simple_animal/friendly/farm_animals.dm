@@ -357,7 +357,7 @@
 
 /obj/item/udder/Initialize()
 	create_reagents(50)
-	reagents.add_reagent("milk", 20)
+	reagents.add_reagent("milk", 20, "Potassium Iodide" = 5)
 	. = ..()
 
 /obj/item/udder/proc/generateMilk()

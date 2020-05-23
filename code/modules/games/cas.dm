@@ -2,7 +2,7 @@
 // This is a parody of Cards Against Humanity (https://en.wikipedia.org/wiki/Cards_Against_Humanity)
 // which is licensed under CC BY-NC-SA 2.0, the full text of which can be found at the following URL:
 // https://creativecommons.org/licenses/by-nc-sa/2.0/legalcode
-// Original code by Zuhayr, Polaris Station, ported with modifications
+// Original code by Zuhayr, Polaris, ported with modifications
 /datum/playingcard
 	var/name = "playing card"
 	var/card_icon = "card_back"

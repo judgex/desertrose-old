@@ -83,7 +83,7 @@
 	list_reagents = list("sodawater" = 50)
 
 /obj/item/reagent_containers/food/drinks/drinkingglass/filled/cola
-	name = "Space Cola"
+	name = "Cola"
 	list_reagents = list("cola" = 50)
 
 /obj/item/reagent_containers/food/drinks/drinkingglass/filled/nuka_cola

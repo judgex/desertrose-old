@@ -282,7 +282,7 @@
 /datum/plant_gene/trait/teleport
 	// Makes plant teleport people when squashed or slipped on.
 	// Teleport radius is calculated as max(round(potency*rate), 1)
-	name = "Bluespace Activity"
+	name = "Strange Activity"
 	rate = 0.1
 
 /datum/plant_gene/trait/teleport/on_squash(obj/item/reagent_containers/food/snacks/grown/G, atom/target)

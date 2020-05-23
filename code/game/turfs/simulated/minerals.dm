@@ -137,8 +137,8 @@
 	if (!mineralSpawnChanceList)
 		mineralSpawnChanceList = list(
 			/turf/closed/mineral/uranium = 5, /turf/closed/mineral/diamond = 1, /turf/closed/mineral/gold = 10,
-			/turf/closed/mineral/silver = 12, /turf/closed/mineral/plasma = 20, /turf/closed/mineral/iron = 40, /turf/closed/mineral/titanium = 11/*,
-			/turf/closed/mineral/gibtonite = 4, /turf/closed/mineral/bscrystal = 1*/)
+			/turf/closed/mineral/silver = 12, /turf/closed/mineral/iron = 40, /turf/closed/mineral/titanium = 11/*,
+			/turf/closed/mineral/gibtonite = 4, /turf/closed/mineral/plasma = 20*/, /turf/closed/mineral/bscrystal = 1)
 	if (display_icon_state)
 		icon_state = display_icon_state
 	. = ..()
@@ -161,7 +161,7 @@
 	mineralChance = 25
 	mineralSpawnChanceList = list(
 		/turf/closed/mineral/uranium = 35, /turf/closed/mineral/diamond = 30, /turf/closed/mineral/gold = 45, /turf/closed/mineral/titanium = 45,
-		/turf/closed/mineral/silver = 50, /turf/closed/mineral/plasma = 50/*, /turf/closed/mineral/bscrystal = 20*/)
+		/turf/closed/mineral/silver = 50, /*/turf/closed/mineral/plasma = 50,*/ /turf/closed/mineral/bscrystal = 20)
 
 /turf/closed/mineral/random/high_chance/volcanic
 	environment_type = "basalt"
@@ -171,7 +171,7 @@
 	defer_change = 1
 	mineralSpawnChanceList = list(
 		/turf/closed/mineral/uranium/volcanic = 35, /turf/closed/mineral/diamond/volcanic = 30, /turf/closed/mineral/gold/volcanic = 45, /turf/closed/mineral/titanium/volcanic = 45,
-		/turf/closed/mineral/silver/volcanic = 50, /turf/closed/mineral/plasma/volcanic = 50/*, /turf/closed/mineral/bscrystal/volcanic = 20*/)
+		/turf/closed/mineral/silver/volcanic = 50, /*/turf/closed/mineral/plasma/volcanic = 50,*/ /turf/closed/mineral/bscrystal/volcanic = 20)
 
 
 
@@ -180,8 +180,8 @@
 	mineralChance = 6
 	mineralSpawnChanceList = list(
 		/turf/closed/mineral/uranium = 2, /turf/closed/mineral/diamond = 1, /turf/closed/mineral/gold = 4, /turf/closed/mineral/titanium = 4,
-		/turf/closed/mineral/silver = 6, /turf/closed/mineral/plasma = 15, /turf/closed/mineral/iron = 40/*,
-		/turf/closed/mineral/gibtonite = 2, /turf/closed/mineral/bscrystal = 1*/)
+		/turf/closed/mineral/silver = 6, /*/turf/closed/mineral/plasma = 15,*/ /turf/closed/mineral/iron = 40, /turf/closed/mineral/bscrystal = 1/*,
+		/turf/closed/mineral/gibtonite = 2*/)
 
 
 /turf/closed/mineral/random/volcanic
@@ -194,14 +194,14 @@
 	mineralChance = 10
 	mineralSpawnChanceList = list(
 		/turf/closed/mineral/uranium/volcanic = 5, /turf/closed/mineral/diamond/volcanic = 1, /turf/closed/mineral/gold/volcanic = 10, /turf/closed/mineral/titanium/volcanic = 11,
-		/turf/closed/mineral/silver/volcanic = 12, /turf/closed/mineral/plasma/volcanic = 20, /turf/closed/mineral/iron/volcanic = 40,
-		/*/turf/closed/mineral/gibtonite/volcanic = 4,*/ /turf/open/floor/plating/asteroid/airless/cave/volcanic = 1, /*/turf/closed/mineral/bscrystal/volcanic = 1*/)
+		/turf/closed/mineral/silver/volcanic = 12, /*/turf/closed/mineral/plasma/volcanic = 20,*/ /turf/closed/mineral/iron/volcanic = 40,
+		/*/turf/closed/mineral/gibtonite/volcanic = 4,*/ /turf/open/floor/plating/asteroid/airless/cave/volcanic = 1, /turf/closed/mineral/bscrystal/volcanic = 1)
 
 
 /turf/closed/mineral/random/labormineral
 	mineralSpawnChanceList = list(
 		/turf/closed/mineral/uranium = 3, /turf/closed/mineral/diamond = 1, /turf/closed/mineral/gold = 8, /turf/closed/mineral/titanium = 8,
-		/turf/closed/mineral/silver = 20, /turf/closed/mineral/plasma = 30, /turf/closed/mineral/iron = 95 /*, /turf/closed/mineral/gibtonite = 2*/)
+		/turf/closed/mineral/silver = 20, /turf/closed/mineral/plasma = 30, /turf/closed/mineral/iron = 95/*, /turf/closed/mineral/gibtonite = 2*/)
 	icon_state = "rock_labor"
 
 
@@ -213,7 +213,7 @@
 	defer_change = 1
 	mineralSpawnChanceList = list(
 		/turf/closed/mineral/uranium/volcanic = 3, /turf/closed/mineral/diamond/volcanic = 1, /turf/closed/mineral/gold/volcanic = 8, /turf/closed/mineral/titanium/volcanic = 8,
-		/turf/closed/mineral/silver/volcanic = 20, /turf/closed/mineral/plasma/volcanic = 30, /*/turf/closed/mineral/bscrystal/volcanic = 1, /turf/closed/mineral/gibtonite/volcanic = 2,*/
+		/turf/closed/mineral/silver/volcanic = 20, /*/turf/closed/mineral/plasma/volcanic = 30,*/ /turf/closed/mineral/bscrystal/volcanic = 1/*, /turf/closed/mineral/gibtonite/volcanic = 2*/,
 		/turf/closed/mineral/iron/volcanic = 95)
 
 
@@ -320,11 +320,11 @@
 	defer_change = 1
 
 
-/turf/closed/mineral/plasma
+/*/turf/closed/mineral/plasma
 	mineralType = /obj/item/stack/ore/plasma
 	spreadChance = 8
 	spread = 1
-	scan_state = "rock_Plasma"
+	scan_state = "rock_Plasma"*/
 
 /turf/closed/mineral/plasma/volcanic
 	environment_type = "basalt"
@@ -344,12 +344,12 @@
 
 
 
-/turf/closed/mineral/bananium
+/*/turf/closed/mineral/bananium
 	mineralType = /obj/item/stack/ore/bananium
 	mineralAmt = 3
 	spreadChance = 0
 	spread = 0
-	scan_state = "rock_Bananium"
+	scan_state = "rock_Bananium"*/
 
 
 /turf/closed/mineral/bscrystal
