@@ -299,7 +299,7 @@
 	result = /obj/item/reagent_containers/food/drinks/bottle/lizardwine
 	subcategory = CAT_MISCFOOD
 
-/datum/crafting_recipe/food/powercrepe
+/*/datum/crafting_recipe/food/powercrepe
 	name = "Powercrepe"
 	time = 40
 	reqs = list(
@@ -310,7 +310,7 @@
 		/obj/item/melee/sabre = 1
 	)
 	result = /obj/item/reagent_containers/food/snacks/powercrepe
-	subcategory = CAT_MISCFOOD
+	subcategory = CAT_MISCFOOD*/
 
 /datum/crafting_recipe/food/taco
 	name ="Classic Taco"
