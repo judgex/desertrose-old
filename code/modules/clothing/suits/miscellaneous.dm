@@ -44,7 +44,6 @@
 	icon_state = "hgpirate"
 	item_state = "hgpirate"
 
-
 /obj/item/clothing/suit/cyborg_suit
 	name = "cyborg suit"
 	desc = "Suit for a cyborg costume."
@@ -54,14 +53,12 @@
 	fire_resist = T0C+5200
 	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT
 
-
 /obj/item/clothing/suit/justice
 	name = "justice suit"
 	desc = "this pretty much looks ridiculous" //Needs no fixing
 	icon_state = "justice"
 	item_state = "justice"
 	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT
-
 
 /obj/item/clothing/suit/judgerobe
 	name = "judge's robe"
@@ -71,7 +68,6 @@
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	allowed = list(/obj/item/storage/fancy/cigarettes, /obj/item/stack/spacecash)
 	flags_inv = HIDEJUMPSUIT
-
 
 /obj/item/clothing/suit/apron/overalls
 	name = "coveralls"
@@ -105,7 +101,6 @@
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT
 
-
 /obj/item/clothing/suit/imperium_monk
 	name = "\improper Imperium monk suit"
 	desc = "Have YOU killed a xeno today?"
@@ -115,7 +110,6 @@
 	flags_inv = HIDESHOES|HIDEJUMPSUIT
 	allowed = list(/obj/item/storage/book/bible, /obj/item/nullrod, /obj/item/reagent_containers/food/drinks/bottle/holywater, /obj/item/storage/fancy/candle_box, /obj/item/candle, /obj/item/tank/internals/emergency_oxygen)
 
-
 /obj/item/clothing/suit/chickensuit
 	name = "chicken suit"
 	desc = "A suit made long ago by the ancient empire KFC."
@@ -123,7 +117,6 @@
 	item_state = "chickensuit"
 	body_parts_covered = CHEST|ARMS|GROIN|LEGS|FEET
 	flags_inv = HIDESHOES|HIDEJUMPSUIT
-
 
 /obj/item/clothing/suit/monkeysuit
 	name = "monkey suit"
@@ -151,7 +144,6 @@
 	desc = "A plush white cloak made of synthetic feathers. Soft to the touch, stylish, and a 2 meter wing span that will drive your captives mad."
 	icon_state = "griffin_wings"
 	item_state = "griffin_wings"
-
 
 /obj/item/clothing/suit/holidaypriest
 	name = "holiday priest"
@@ -190,7 +182,6 @@
 			I.add_overlay(mutable_appearance('icons/mob/robots.dmi', "robot_e")) //gotta look realistic
 			add_alt_appearance(/datum/atom_hud/alternate_appearance/basic/silicons, "standard_borg_disguise", I) //you look like a robot to robots! (including yourself because you're totally a robot)
 
-
 /obj/item/clothing/suit/snowman
 	name = "snowman outfit"
 	desc = "Two white spheres covered in white glitter. 'Tis the season."
@@ -207,7 +198,6 @@
 	body_parts_covered = CHEST
 	armor = list(melee = 10, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
 	allowed = list(/obj/item/pen,/obj/item/paper,/obj/item/stamp,/obj/item/reagent_containers/food/drinks/flask,/obj/item/storage/box/matches,/obj/item/lighter,/obj/item/clothing/mask/cigarette,/obj/item/storage/fancy/cigarettes,/obj/item/flashlight,/obj/item/gun,/obj/item/ammo_box,/obj/item/ammo_casing)
-
 
 /obj/item/clothing/suit/poncho/green
 	name = "green poncho"
@@ -304,7 +294,6 @@
 	allowed = list()
 	actions_types = list(/datum/action/item_action/toggle_human_head)
 	hoodtype = /obj/item/clothing/head/hooded/human_head
-
 
 /obj/item/clothing/head/hooded/human_head
 	name = "bloated human head"
@@ -460,8 +449,6 @@
 	icon_state = "pharoah"
 	icon_state = "pharoah"
 	body_parts_covered = CHEST|GROIN
-
-
 
 // WINTER COATS
 
@@ -619,7 +606,6 @@
 /obj/item/clothing/head/hooded/winterhood/blue113
 	icon_state = "winterhood_blue113"
 
-
 //Fallout 13
 /obj/item/clothing/suit/fluff
 	allowed = list(/obj/item/gun)
@@ -631,7 +617,6 @@
 	item_state = "det_suit"
 	body_parts_covered = CHEST
 	armor = list("melee" = 10, "bullet" = 16, "laser" = 0, "energy" = 0, "bomb" = 16, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
-	allowed = list(/obj/item/gun)
 
 /obj/item/clothing/suit/fluff/battlecruiser //Do we have Star Craft here as well?!
 	name = "captain's coat"
@@ -640,7 +625,6 @@
 	item_state = "hostrench"
 	body_parts_covered = CHEST|ARMS
 	armor = list("melee" = 10, "bullet" = 16, "laser" = 0, "energy" = 0, "bomb" = 16, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
-	allowed = list(/obj/item/gun)
 
 /obj/item/clothing/suit/fluff/cowboybvest //Originally cowboy stuff by Nienhaus
 	name = "brown vest"
@@ -649,7 +633,6 @@
 	item_state = "lb_suit"
 	body_parts_covered = CHEST|GROIN
 	armor = list("melee" = 10, "bullet" = 16, "laser" = 0, "energy" = 0, "bomb" = 16, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
-	allowed = list(/obj/item/gun)
 
 /obj/item/clothing/suit/fluff/cowboygvest
 	name = "grey vest"
@@ -658,7 +641,6 @@
 	item_state = "gy_suit"
 	body_parts_covered = CHEST|GROIN
 	armor = list("melee" = 10, "bullet" = 16, "laser" = 0, "energy" = 0, "bomb" = 16, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
-	allowed = list(/obj/item/gun)
 
 /obj/item/clothing/suit/f13/mfp //Mad Max 1979 babe!
 	name = "mfp jacket"
@@ -668,7 +650,6 @@
 	body_parts_covered = CHEST|ARMS|LEGS
 	armor = list("melee" = 10, "bullet" = 16, "laser" = 0, "energy" = 0, "bomb" = 16, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
 	flags_inv = HIDEJUMPSUIT
-	allowed = list(/obj/item/gun)
 
 /obj/item/clothing/suit/f13/veteran
 	name = "merc veteran coat"
@@ -677,7 +658,6 @@
 	item_state = "suit-command"
 	body_parts_covered = CHEST|GROIN
 	armor = list("melee" = 10, "bullet" = 16, "laser" = 15, "energy" = 0, "bomb" = 16, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
-	allowed = list(/obj/item/gun)
 
 /obj/item/clothing/suit/f13/duster
 	name = "duster"
@@ -686,7 +666,6 @@
 	item_state = "det_suit"
 	body_parts_covered = CHEST|LEGS|FEET|ARMS
 	armor = list("melee" = 10, "bullet" = 16, "laser" = 15, "energy" = 0, "bomb" = 16, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
-	allowed = list(/obj/item/gun)
 
 /obj/item/clothing/suit/f13/autumn //Based of Colonel Autumn's uniform.
 	name = "tan trenchcoat"
@@ -695,8 +674,6 @@
 	item_state = "autumn"
 	body_parts_covered = CHEST|LEGS|ARMS
 	armor = list("melee" = 10, "bullet" = 16, "laser" = 15, "energy" = 0, "bomb" = 16, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
-	allowed = list(/obj/item/gun)
-
 
 /obj/item/clothing/suit/f13/scribe
 	name = "Brotherhood Scribe's robe"
@@ -705,7 +682,6 @@
 	item_state = "scribe"
 	body_parts_covered = CHEST|ARMS|LEGS
 	armor = list("melee" = 15, "bullet" = 16, "laser" = 15, "energy" = 0, "bomb" = 16, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
-	allowed = list(/obj/item/gun)
 
 /obj/item/clothing/suit/f13/seniorscribe
 	name = "Brotherhood Senior Scribe's robe"
@@ -714,7 +690,6 @@
 	item_state = "seniorscribe"
 	body_parts_covered = CHEST|ARMS|LEGS
 	armor = list("melee" = 15, "bullet" = 16, "laser" = 15, "energy" = 0, "bomb" = 16, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
-	allowed = list(/obj/item/gun)
 
 /obj/item/clothing/suit/f13/elder //Robes are made of finest cloth, so you won't be able to put sharp objects but pens in.
 	name = "Brotherhood Elder's robe"
@@ -723,7 +698,6 @@
 	item_state = "elder"
 	body_parts_covered = CHEST|ARMS|LEGS
 	armor = list("melee" = 15, "bullet" = 16, "laser" = 15, "energy" = 0, "bomb" = 16, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
-	allowed = list(/obj/item/gun)
 
 /obj/item/clothing/suit/ghost_sheet
 	name = "ghost sheet"
@@ -735,4 +709,3 @@
 	throw_range = 2
 	w_class = WEIGHT_CLASS_TINY
 	flags_inv = HIDEGLOVES|HIDEEARS|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
-

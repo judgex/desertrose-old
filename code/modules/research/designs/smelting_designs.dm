@@ -40,6 +40,7 @@
 	build_path = /obj/item/stack/sheet/titaniumglass
 	category = list("initial")
 
+
 /datum/design/plastitaniumglass_alloy
 	name = "Plasma + Titanium + Glass alloy"
 	id = "plastitaniumglass"

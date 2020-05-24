@@ -306,6 +306,7 @@ Senior Paladin
 	loadout_options = list(
 		/datum/outfit/loadout/spaladina, //Super Sledge
 		/datum/outfit/loadout/spaladinb, //Goliath powerfist
+		/datum/outfit/loadout/spaladinc, //Lasergatling. God help them.
 		)
 
 	outfit = /datum/outfit/job/bos/f13seniorpaladin
@@ -339,6 +340,12 @@ Senior Paladin
 	name = "Veteran Senior-Paladin"
 	backpack_contents = list(
 		/obj/item/twohanded/sledgehammer/supersledge=1,
+		)
+
+/datum/outfit/loadout/spaladinc
+	name = "Heavy-Duty Senior-Paladin"
+	backpack_contents = list(
+		/obj/item/minigunpack=1,
 		)
 
 /datum/job/bos/f13seniorpaladin/after_spawn(mob/living/carbon/human/H, mob/M)

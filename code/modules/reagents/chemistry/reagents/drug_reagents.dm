@@ -10,7 +10,7 @@
 		SEND_SIGNAL(M, COMSIG_CLEAR_MOOD_EVENT, "[id]_high")
 
 /datum/reagent/drug/space_drugs
-	name = "drugs"
+	name = "Space drugs"
 	id = "space_drugs"
 	description = "An illegal chemical compound used as drug."
 	color = "#60A584" // rgb: 96, 165, 132

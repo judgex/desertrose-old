@@ -12,7 +12,7 @@
 
 /obj/item/clothing/under/pants/mustangjeans
 	name = "Must Hang jeans"
-	desc = "Made in the finest jeans factory this side of Arizona."
+	desc = "Made in the finest space jeans factory this side of Alpha Centauri."
 	icon_state = "jeansmustang"
 	item_color = "jeansmustang"
 
@@ -72,6 +72,6 @@
 
 /obj/item/clothing/under/pants/camo
 	name = "camo pants"
-	desc = "A pair of woodland camouflage pants."
+	desc = "A pair of woodland camouflage pants. Probably not the best choice for a space station."
 	icon_state = "camopants"
 	item_color = "camopants"

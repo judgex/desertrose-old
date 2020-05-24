@@ -249,8 +249,6 @@
 /obj/item/clothing/mask/bandana/attack_self(mob/user)
 	adjustmask(user)
 
-
-
 /obj/item/clothing/mask/bandana/attackby(obj/item/I, mob/user, params)
 	if(istype(I, /obj/item/wirecutters) || I.is_sharp())
 		var/obj/item/stack/sheet/cloth/C = new (get_turf(src), 2)
@@ -303,9 +301,7 @@
 	desc = "A fine recruit bandana."
 	icon_state = "legrecruit"
 	flags_inv = HIDEFACE
-	flags_cover = MASKCOVERSMOUTH
 	visor_flags_inv = HIDEFACE
-	visor_flags_cover = MASKCOVERSMOUTH
 	adjusted_flags = null
 	actions_types = list(/datum/action/item_action/adjust)
 
@@ -314,9 +310,7 @@
 	desc = "A fine decan bandana."
 	icon_state = "legdecan"
 	flags_inv = HIDEFACE
-	flags_cover = MASKCOVERSMOUTH
 	visor_flags_inv = HIDEFACE
-	visor_flags_cover = MASKCOVERSMOUTH
 	adjusted_flags = null
 	actions_types = list(/datum/action/item_action/adjust)
 
@@ -325,9 +319,7 @@
 	desc = "A fine centurion bandana."
 	icon_state = "legcenturion"
 	flags_inv = HIDEFACE
-	flags_cover = MASKCOVERSMOUTH
 	visor_flags_inv = HIDEFACE
-	visor_flags_cover = MASKCOVERSMOUTH
 	adjusted_flags = null
 	actions_types = list(/datum/action/item_action/adjust)
 
@@ -336,9 +328,7 @@
 	desc = "A fine veteran bandana."
 	icon_state = "legvet"
 	flags_inv = HIDEFACE
-	flags_cover = MASKCOVERSMOUTH
 	visor_flags_inv = HIDEFACE
-	visor_flags_cover = MASKCOVERSMOUTH
 	adjusted_flags = null
 	actions_types = list(/datum/action/item_action/adjust)
 
@@ -347,9 +337,7 @@
 	desc = "A fine prime bandana"
 	icon_state = "legdecan"
 	flags_inv = HIDEFACE
-	flags_cover = MASKCOVERSMOUTH
 	visor_flags_inv = HIDEFACE
-	visor_flags_cover = MASKCOVERSMOUTH
 	adjusted_flags = null
 	actions_types = list(/datum/action/item_action/adjust)
 
@@ -378,7 +366,6 @@
 	flags_cover = MASKCOVERSMOUTH
 	visor_flags_inv = HIDEFACE
 	visor_flags_cover = MASKCOVERSMOUTH
-
 
 //Society Mask
 

@@ -5,7 +5,7 @@
 
 /datum/design/beacon
 	name = "Tracking Beacon"
-	desc = "A tracking beacon."
+	desc = "A blue space tracking beacon."
 	id = "beacon"
 	build_type = PROTOLATHE
 	materials = list(MAT_METAL = 150, MAT_GLASS = 100)

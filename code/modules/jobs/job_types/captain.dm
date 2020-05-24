@@ -9,7 +9,7 @@ Captain
 	//faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "Vault-Tec officials"
+	supervisors = "Vault-Tec officials and Space law"
 	selection_color = "#ccccff"
 	req_admin_notify = 1
 	minimal_player_age = 14
