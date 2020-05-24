@@ -143,14 +143,14 @@
 	list_reagents = list("gin" = 100)
 
 /obj/item/reagent_containers/food/drinks/bottle/whiskey
-	name = "Uncle Git's special reserve"
-	desc = "A premium single-malt whiskey, gently matured inside the tunnels of a nuclear shelter. TUNNEL WHISKEY RULES."
+	name = " Old appalachia kentucky bourbon"
+	desc = "The lable reads, Old Appalachia Kentucky bourbon Aged 9 years."
 	icon_state = "whiskeybottle"
 	list_reagents = list("whiskey" = 100)
 
 /obj/item/reagent_containers/food/drinks/bottle/vodka
-	name = "Tunguska triple distilled"
-	desc = "Aah, vodka. Prime choice of drink AND fuel by Russians worldwide."
+	name = "Surkov triple distilled"
+	desc = "Surkov brand vodka, imported from the Soviet Union."
 	icon_state = "vodkabottle"
 	list_reagents = list("vodka" = 100)
 
@@ -180,8 +180,8 @@
 	list_reagents = list("patron" = 100)
 
 /obj/item/reagent_containers/food/drinks/bottle/rum
-	name = "Captain Pete's Cuban spiced rum"
-	desc = "This isn't just rum, oh no. It's practically GRIFF in a bottle."
+	name = "Rooster's Cuban spiced rum"
+	desc = "A bottle of rum under the brand of Rooster's. "
 	icon_state = "rumbottle"
 	list_reagents = list("rum" = 100)
 
@@ -222,8 +222,8 @@
 	list_reagents = list("cognac" = 100)
 
 /obj/item/reagent_containers/food/drinks/bottle/wine
-	name = "Doublebeard's bearded special wine"
-	desc = "A faint aura of unease and asspainery surrounds the bottle."
+	name = "Falmouth merlot"
+	desc = "A Falmouth Winery merlot, vintage 2060."
 	icon_state = "winebottle"
 	list_reagents = list("wine" = 100)
 	foodtype = FRUIT | ALCOHOL
@@ -283,7 +283,7 @@
 
 /obj/item/reagent_containers/food/drinks/bottle/lizardwine
 	name = "bottle of lizard wine"
-	desc = "An alcoholic beverage from China, made by infusing lizard tails in ethanol. Inexplicably popular among command staff."
+	desc = "An alcoholic beverage from China, made by infusing lizard tails in ethanol."
 	icon_state = "lizardwine"
 	list_reagents = list("lizardwine" = 100)
 	foodtype = FRUIT | ALCOHOL

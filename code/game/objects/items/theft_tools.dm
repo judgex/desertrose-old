@@ -1,9 +1,3 @@
-//Items for nuke theft, supermatter theft traitor objective
-
-
-// STEALING THE NUKE
-
-//the nuke core - objective item
 /obj/item/nuke_core
 	name = "plutonium core"
 	desc = "Extremely radioactive. Wear goggles."

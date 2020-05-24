@@ -115,4 +115,4 @@
 	icon_state = "eggbowl"
 	bonus_reagents = list("nutriment" = 4, "vitamin" = 4)
 	tastes = list("rice" = 1, "egg" = 1)
-	foodtype = GRAIN | MEAT //EGG = MEAT -NinjaNomNom 2017
+	foodtype = GRAIN | MEAT

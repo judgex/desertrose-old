@@ -1,6 +1,6 @@
 /obj/item/storage/toolbox
 	name = "toolbox"
-	desc = "Danger. Very robust."
+	desc = "A heavy metal toolbox."
 	icon_state = "red"
 	item_state = "toolbox_red"
 	lefthand_file = 'icons/mob/inhands/equipment/toolbox_lefthand.dmi'

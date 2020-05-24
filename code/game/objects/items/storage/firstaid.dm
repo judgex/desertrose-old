@@ -10,7 +10,7 @@
  */
 /obj/item/storage/firstaid
 	name = "first-aid kit"
-	desc = "It's an emergency medical kit for those serious boo-boos."
+	desc = "It's an emergency medical kit for those serious wounds."
 	icon_state = "firstaid"
 	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
@@ -54,7 +54,7 @@
 
 /obj/item/storage/firstaid/fire
 	name = "burn treatment kit"
-	desc = "A specialized medical kit for when the toxins lab <i>-spontaneously-</i> burns down."
+	desc = "A specialized medical kit for when the bio lab <i>-spontaneously-</i> burns down."
 	icon_state = "ointment"
 	item_state = "firstaid-ointment"
 

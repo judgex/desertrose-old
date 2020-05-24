@@ -1,4 +1,4 @@
-// CARDS AGAINST SPESS
+// CARDS AGAINST Humankind
 // This is a parody of Cards Against Humanity (https://en.wikipedia.org/wiki/Cards_Against_Humanity)
 // which is licensed under CC BY-NC-SA 2.0, the full text of which can be found at the following URL:
 // https://creativecommons.org/licenses/by-nc-sa/2.0/legalcode
@@ -10,8 +10,8 @@
 	var/number
 
 /obj/item/toy/cards/deck/cas
-	name = "\improper CAS deck (white)"
-	desc = "A deck for the game Cards Against Spess, still popular after all these centuries. Warning: may include traces of broken fourth wall. This is the white deck."
+	name = "\improper CAH deck (white)"
+	desc = "A deck for the game Cards Agains Humankind, still popular after all these centuries. Warning: may include traces of broken fourth wall. This is the white deck."
 	icon = 'icons/obj/toy.dmi'
 	icon_state = "deck_caswhite_full"
 	deckstyle = "caswhite"
@@ -22,8 +22,8 @@
 	var/list/allcards = list()
 
 /obj/item/toy/cards/deck/cas/black
-	name = "\improper CAS deck (black)"
-	desc = "A deck for the game Cards Against Spess, still popular after all these centuries. Warning: may include traces of broken fourth wall. This is the black deck."
+	name = "\improper CAH deck (black)"
+	desc = "A deck for the game Cards Against Humankind, still popular after all these centuries. Warning: may include traces of broken fourth wall. This is the black deck."
 	icon_state = "deck_casblack_full"
 	deckstyle = "casblack"
 	card_face = "cas_black"

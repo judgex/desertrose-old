@@ -77,7 +77,7 @@
 		S.x = dx
 		var/dz = turf_source.y - T.y // Hearing from infront/behind
 		S.z = dz
-		// The y value is for above your head, but there is no ceiling in 2d spessmens.
+		// The y value is for above your head, but there is no ceiling in 2d ss13.
 		S.y = 1
 		S.falloff = (falloff ? falloff : FALLOFF_SOUNDS)
 

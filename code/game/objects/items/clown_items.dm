@@ -32,23 +32,23 @@
 	AddComponent(/datum/component/slippery, 3 SECONDS)
 
 /obj/item/soap/nanotrasen
-	desc = "A bar of soap. Smells of plasma."
+	desc = "A bar of soap. Smells of fuel."
 	icon_state = "soapnt"
 
 /obj/item/soap/homemade
 	desc = "A homemade bar of soap. Smells of... well...."
 	icon_state = "soapgibs"
-	cleanspeed = 30 // a little faster to reward chemists for going to the effort
+	cleanspeed = 30
 
 /obj/item/soap/deluxe
 	desc = "A deluxe Waffle Co. brand bar of soap. Smells of high-class luxury."
 	icon_state = "soapdeluxe"
-	cleanspeed = 25 //same speed as mop because deluxe -- captain gets one of these
+	cleanspeed = 25
 
 /obj/item/soap/syndie
 	desc = "An untrustworthy bar of soap made of strong chemical agents that dissolve blood faster."
 	icon_state = "soapsyndie"
-	cleanspeed = 10 //much faster than mop so it is useful for traitors who want to clean crime scenes
+	cleanspeed = 10
 
 /obj/item/soap/suicide_act(mob/user)
 	user.say(";FFFFFFFFFFFFFFFFUUUUUUUDGE!!")

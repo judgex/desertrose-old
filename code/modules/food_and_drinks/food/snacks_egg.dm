@@ -110,7 +110,6 @@
 	name = "omelette du fromage"
 	desc = "That's all you can say!"
 	icon_state = "omelette"
-	trash = /obj/item/trash/plate
 	bonus_reagents = list("nutriment" = 1, "vitamin" = 2)
 	list_reagents = list("nutriment" = 8, "vitamin" = 1)
 	bitesize = 1
@@ -141,7 +140,6 @@
 	desc = "There is only one egg on this, how rude."
 	icon_state = "benedict"
 	bonus_reagents = list("vitamin" = 4)
-	trash = /obj/item/trash/plate
 	w_class = WEIGHT_CLASS_NORMAL
 	list_reagents = list("nutriment" = 6, "vitamin" = 4)
 	tastes = list("egg" = 1, "bacon" = 1, "bun" = 1)

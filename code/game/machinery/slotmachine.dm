@@ -66,7 +66,7 @@
 	if(!.)
 		return .
 
-	money++ //SPESSH MAJICKS
+	money++
 
 /obj/machinery/computer/slot_machine/update_icon()
 	if(stat & NOPOWER)

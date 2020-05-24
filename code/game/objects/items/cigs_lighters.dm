@@ -261,40 +261,36 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 /obj/item/clothing/mask/cigarette/is_hot()
 	return lit * heat
 
-// Cigarette brands.
-
-/obj/item/clothing/mask/cigarette/space_cigarette //space cigs
+/obj/item/clothing/mask/cigarette/space_cigarette
 	desc = "a Lucky Strikes brand cigarette."
 
-/obj/item/clothing/mask/cigarette/dromedary //dromedary
+/obj/item/clothing/mask/cigarette/dromedary
 	desc = "A Winfield brand cigarette."
 
-/obj/item/clothing/mask/cigarette/uplift //uplift
+/obj/item/clothing/mask/cigarette/uplift
 	desc = "A Kings brand cigarette."
 
-/obj/item/clothing/mask/cigarette/robust //robust
+/obj/item/clothing/mask/cigarette/robust
 	desc = "A Marlboro brand cigarette."
 
-/obj/item/clothing/mask/cigarette/robustgold //robustgold
+/obj/item/clothing/mask/cigarette/robustgold
 	desc = "A Marlboro Gold brand cigarette."
-	list_reagents = list("nicotine" = 15, "gold" = 3) //tgstation said that having 3 there makes it so a special things comes up so
+	list_reagents = list("nicotine" = 15, "gold" = 3)
 
-/obj/item/clothing/mask/cigarette/carp  //carp
+/obj/item/clothing/mask/cigarette/carp
 	desc = "A Viceroy brand cigarette."
 
-/obj/item/clothing/mask/cigarette/syndicate //syndicate
+/obj/item/clothing/mask/cigarette/syndicate
 	desc = "An unknown brand cigarette."
 	list_reagents = list("nicotine" = 15, "omnizine" = 15)
 
-/obj/item/clothing/mask/cigarette/shadyjims //shadyjims
+/obj/item/clothing/mask/cigarette/shadyjims
 	desc = "A Shady Jim's Super Slims cigarette."
 	list_reagents = list("nicotine" = 15, "lipolicide" = 4, "ammonia" = 2, "plantbgone" = 1, "toxin" = 1.5)
 
-/obj/item/clothing/mask/cigarette/xeno //xeno
+/obj/item/clothing/mask/cigarette/xeno
 	desc = "A Xeno Filtered brand cigarette."
 	list_reagents = list ("nicotine" = 20, "regen_jelly" = 15, "krokodil" = 4)
-
-// Rollies.
 
 /obj/item/clothing/mask/cigarette/rollie
 	name = "rollie"
@@ -343,7 +339,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 ////////////
 /obj/item/clothing/mask/cigarette/cigar
 	name = "premium cigar"
-	desc = "A brown roll of tobacco and... well, you're not quite sure. This thing's huge!"
+	desc = "A brown roll of tobacco. This thing's huge!"
 	icon_state = "cigaroff"
 	icon_on = "cigaron"
 	icon_off = "cigaroff" //make sure to add positional sprites in icons/obj/cigarettes.dmi if you add more.
@@ -703,25 +699,25 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 ///////////////
 /obj/item/clothing/mask/vape
 	name = "\improper E-Cigarette"
-	desc = "A classy and highly sophisticated electronic cigarette, for classy and dignified gentlemen. A warning label reads \"Warning: Do not fill with flammable materials.\""//<<< i'd vape to that.
+	desc = "A classy and highly sophisticated electronic cigarette, for classy and dignified gentlemen. A warning label reads \"Warning: Do not fill with flammable materials."
 	icon = 'icons/obj/clothing/masks.dmi'
 	icon_state = null
 	item_state = null
 	w_class = WEIGHT_CLASS_TINY
 	var/chem_volume = 100
-	var/vapetime = 0 //this so it won't puff out clouds every tick
-	var/screw = 0 // kinky
-	var/super = 0 //for the fattest vapes dude.
+	var/vapetime = 0
+	var/screw = 0
+	var/super = 0
 
 /obj/item/clothing/mask/vape/suicide_act(mob/user)
-	user.visible_message("<span class='suicide'>[user] is puffin hard on dat vape, [user.p_they()] trying to join the vape life on a whole notha plane!</span>")//it doesn't give you cancer, it is cancer
+	user.visible_message("<span class='suicide'>[user] is puffin hard on dat vape, [user.p_they()] trying to join the vape life on a whole notha plane!</span>")
 	return (TOXLOSS|OXYLOSS)
 
 
 /obj/item/clothing/mask/vape/Initialize(mapload, param_color)
 	. = ..()
 	create_reagents(chem_volume)
-	reagents.set_reacting(FALSE) // so it doesn't react until you light it
+	reagents.set_reacting(FALSE)
 	reagents.add_reagent("nicotine", 50)
 	if(!icon_state)
 		if(!param_color)
@@ -770,7 +766,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 			to_chat(user, "<span class='notice'>[src] can't be modified!</span>")
 
 
-/obj/item/clothing/mask/vape/emag_act(mob/user)// I WON'T REGRET WRITTING THIS, SURLY.
+/obj/item/clothing/mask/vape/emag_act(mob/user)
 	if(screw)
 		if(!(obj_flags & EMAGGED))
 			cut_overlays()

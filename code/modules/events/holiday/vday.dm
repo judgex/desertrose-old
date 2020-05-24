@@ -1,8 +1,4 @@
 // Valentine's Day events //
-// why are you playing spessmens on valentine's day you wizard //
-
-
-// valentine / candy heart distribution //
 
 /datum/round_event_control/valentines
 	name = "Valentines!"
@@ -45,7 +41,7 @@
 	lover.mind.special_role = "valentine"
 	var/datum/antagonist/valentine/V = new
 	V.date = date.mind
-	lover.mind.add_antag_datum(V) //These really should be teams but i can't be assed to incorporate third wheels right now
+	lover.mind.add_antag_datum(V)
 
 /datum/round_event/valentines/announce(fake)
 	priority_announce("It's Valentine's Day! Give a valentine to that special someone!")
@@ -160,11 +156,11 @@
                 "A heart-shaped candy that reads: ERP",
                 "A heart-shaped candy that reads: LEWD",
                 "A heart-shaped candy that reads: LUSTY",
-                "A heart-shaped candy that reads: SPESS LOVE",
+                "A heart-shaped candy that reads: NUCLEAR LOVE",
                 "A heart-shaped candy that reads: AYY LMAO",
                 "A heart-shaped candy that reads: TABLE ME",
                 "A heart-shaped candy that reads: HAND CUFFS",
-                "A heart-shaped candy that reads: SHAFT MINER",
+                "A heart-shaped candy that reads: PROSPECTOR",
                 "A heart-shaped candy that reads: BANGING DONK",
                 "A heart-shaped candy that reads: Y-YOU T-TOO",
                 "A heart-shaped candy that reads: GOT WOOD",
@@ -175,6 +171,6 @@
                 "A heart-shaped candy that reads: BOX OF HUGS",
                 "A heart-shaped candy that reads: REEBE MINE",
                 "A heart-shaped candy that reads: PET ME",
-                "A heart-shaped candy that reads: TO THE DORMS",
+                "A heart-shaped candy that reads: TO THE BUNKS",
                 "A heart-shaped candy that reads: DIS MEMBER")
 	icon_state = pick("candyheart", "candyheart2", "candyheart3", "candyheart4")

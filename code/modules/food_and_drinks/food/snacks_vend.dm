@@ -17,7 +17,6 @@
 	name = " Dunton House Beef Jerky"
 	icon_state = "sosjerky"
 	desc = "Pre-war beef jerky made from the finest cows."
-	trash = /obj/item/trash/sosjerky
 	list_reagents = list("nutriment" = 1, "sugar" = 3, "sodiumchloride" = 2)
 	junkiness = 25
 	filling_color = "#8B0000"

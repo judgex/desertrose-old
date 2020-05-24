@@ -940,7 +940,7 @@
 
 /obj/item/toy/cards/deck/syndicate
 	name = "suspicious looking deck of cards"
-	desc = "A deck of space-grade playing cards. They seem unusually rigid."
+	desc = "A deck of playing cards. They seem unusually rigid."
 	deckstyle = "syndicate"
 	card_hitsound = 'sound/weapons/bladeslice.ogg'
 	card_force = 5
@@ -1099,7 +1099,7 @@
 		user.visible_message("<span class='warning'>[user] rotates a cogwheel on [src].</span>", "<span class='notice'>You rotate a cogwheel on [src], it plays a loud noise!</span>", "<span class='italics'>You hear cogwheels turning.</span>")
 	else
 		to_chat(user, "<span class='alert'>The cogwheels are already turning!</span>")
-   
+
 /obj/item/toy/clockwork_watch/examine(mob/user)
 	..()
 	to_chat(user, "<span class='info'>Time: [station_time_timestamp()]")

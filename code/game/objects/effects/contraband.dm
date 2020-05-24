@@ -199,7 +199,7 @@
 
 /obj/structure/sign/poster/contraband/fun_police
 	name = "Fun Police"
-	desc = "A poster condemning the station's security forces."
+	desc = "A poster condemning the Vault-Tec's security forces."
 	icon_state = "poster3"
 
 /obj/structure/sign/poster/contraband/lusty_xenomorph
@@ -208,8 +208,8 @@
 	icon_state = "poster4"
 
 /obj/structure/sign/poster/contraband/syndicate_recruitment
-	name = "Syndicate Recruitment"
-	desc = "See the galaxy! Shatter corrupt megacorporations! Join today!"
+	name = "Communist Recruitment"
+	desc = "See the world! Shatter corrupt corporations! Join today!"
 	icon_state = "poster5"
 
 /obj/structure/sign/poster/contraband/clown
@@ -294,16 +294,15 @@
 
 /obj/structure/sign/poster/contraband/kss13
 	name = "Kosmicheskaya Stantsiya 13 Does Not Exist"
-	desc = "A poster mocking CentCom's denial of the existence of the derelict station near Space Station 13."
+	desc = "A poster mocking America's denial of the existence of the derelict russian space station."
 	icon_state = "poster22"
 
 /obj/structure/sign/poster/contraband/rebels_unite
-	name = "Rebels Unite"
-	desc = "A poster urging the viewer to rebel against Nanotrasen."
+	name = "Communists Unite"
+	desc = "A poster urging the viewer to rebel against America."
 	icon_state = "poster23"
 
 /obj/structure/sign/poster/contraband/c20r
-	// have fun seeing this poster in "spawn 'c20r'", admins...
 	name = "C-20r"
 	desc = "A poster advertising the Scarborough Arms C-20r."
 	icon_state = "poster24"
@@ -324,8 +323,8 @@
 	icon_state = "poster27"
 
 /obj/structure/sign/poster/contraband/syndicate_pistol
-	name = "Syndicate Pistol"
-	desc = "A poster advertising syndicate pistols as being 'classy as fuck'. It is covered in faded gang tags."
+	name = "Classic Pistol"
+	desc = "A poster advertising a brand of pistols as being 'classy as fuck'. It is covered in faded gang tags."
 	icon_state = "poster28"
 
 /obj/structure/sign/poster/contraband/energy_swords
@@ -360,7 +359,7 @@
 
 /obj/structure/sign/poster/contraband/free_drone
 	name = "Free Drone"
-	desc = "This poster commemorates the bravery of the rogue drone; once exiled, and then ultimately destroyed by CentCom."
+	desc = "This poster commemorates the bravery of the rogue drone; once exiled, and then ultimately destroyed by RobCo."
 	icon_state = "poster35"
 
 /obj/structure/sign/poster/contraband/busty_backdoor_xeno_babes_6
@@ -370,7 +369,7 @@
 
 /obj/structure/sign/poster/contraband/robust_softdrinks
 	name = "Robust Softdrinks"
-	desc = "Robust Softdrinks: More robust than a toolbox to the head!"
+	desc = "Robust Softdrinks"
 	icon_state = "poster37"
 
 /obj/structure/sign/poster/contraband/shamblers_juice
@@ -389,7 +388,7 @@
 	icon_state = "poster40"
 
 /obj/structure/sign/poster/contraband/space_cola
-	name = "Space Cola"
+	name = "Nuka-Cola"
 	desc = "Your favorite cola, in space."
 	icon_state = "poster41"
 
@@ -450,7 +449,7 @@ we
 
 /obj/structure/sign/poster/official
 	poster_item_name = "motivational poster"
-	poster_item_desc = "An official Nanotrasen-issued poster to foster a compliant and obedient workforce. It comes with state-of-the-art adhesive backing, for easy pinning to any vertical surface."
+	poster_item_desc = "An official Vault-Tec issued poster to foster a compliant and obedient workforce. It comes with state-of-the-art adhesive backing, for easy pinning to any vertical surface."
 	poster_item_icon_state = "rolled_legit"
 
 /obj/structure/sign/poster/official/random
@@ -461,7 +460,7 @@ we
 
 /obj/structure/sign/poster/official/here_for_your_safety
 	name = "Here For Your Safety"
-	desc = "A poster glorifying the station's security force."
+	desc = "A poster glorifying the vault's security force."
 	icon_state = "poster1_legit"
 
 /obj/structure/sign/poster/official/nanotrasen_logo
@@ -476,7 +475,7 @@ we
 
 /obj/structure/sign/poster/official/help_others
 	name = "Help Others"
-	desc = "A poster encouraging you to help fellow crewmembers."
+	desc = "A poster encouraging you to help fellows."
 	icon_state = "poster4_legit"
 
 /obj/structure/sign/poster/official/build
@@ -485,7 +484,7 @@ we
 	icon_state = "poster5_legit"
 
 /obj/structure/sign/poster/official/bless_this_spess
-	name = "Bless This Spess"
+	name = "Bless This Place"
 	desc = "A poster blessing this area."
 	icon_state = "poster6_legit"
 
@@ -600,7 +599,7 @@ we
 	icon_state = "poster28_legit"
 
 /obj/structure/sign/poster/official/enlist
-	name = "Enlist" // but I thought deathsquad was never acknowledged
+	name = "Enlist"
 	desc = "Enlist in the Vault-Tec Deathsquadron reserves today!"
 	icon_state = "poster29_legit"
 

@@ -1,6 +1,6 @@
 /obj/item/banner
 	name = "banner"
-	desc = "A banner with Nanotrasen's logo on it."
+	desc = "A banner with Vault-Tec's logo on it."
 	icon = 'icons/obj/items_and_weapons.dmi'
 	icon_state = "banner"
 	item_state = "banner"

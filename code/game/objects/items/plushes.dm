@@ -360,8 +360,8 @@
 		desc += mood_message
 
 /obj/item/toy/plush/carpplushie
-	name = "space carp plushie"
-	desc = "An adorable stuffed toy that resembles a space carp."
+	name = "carp plushie"
+	desc = "An adorable stuffed toy that resembles a carp."
 	icon_state = "carpplush"
 	item_state = "carp_plushie"
 	attack_verb = list("bitten", "eaten", "fin slapped")
@@ -496,7 +496,7 @@
 
 /obj/item/toy/plush/nukeplushie
 	name = "operative plushie"
-	desc = "A stuffed toy that resembles a syndicate nuclear operative. The tag claims operatives to be purely fictitious."
+	desc = "A stuffed toy that resembles a communist operative. The tag claims operatives to be purely fictitious."
 	icon_state = "plushie_nuke"
 	item_state = "plushie_nuke"
 	attack_verb = list("shot", "nuked", "detonated")

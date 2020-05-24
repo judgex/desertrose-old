@@ -176,7 +176,7 @@
 
 /obj/item/storage/box/medipens/utility
 	name = "stimpack value kit"
-	desc = "A box with several stimpack medipens for the economical miner."
+	desc = "A box with several stimpacks for the economical prospector."
 	illustration = "syringe"
 
 /obj/item/storage/box/medipens/utility/PopulateContents()
@@ -315,7 +315,7 @@
 
 /obj/item/storage/box/exileimp
 	name = "boxed exile implant kit"
-	desc = "Box of exile implants. It has a picture of a clown being booted through the Gateway."
+	desc = "Box of exile implants."
 	illustration = "implant"
 
 /obj/item/storage/box/exileimp/PopulateContents()
@@ -660,7 +660,7 @@
 
 /obj/item/storage/box/smart_metal_foam
 	name = "box of smart metal foam grenades"
-	desc = "Used to rapidly seal hull breaches. This variety conforms to the walls of its area."
+	desc = "Used to rapidly seal hull breaches on ocean going ships. This variety conforms to the walls of its area."
 	illustration = "flashbang"
 
 /obj/item/storage/box/smart_metal_foam/PopulateContents()

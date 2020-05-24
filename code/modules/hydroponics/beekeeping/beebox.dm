@@ -99,8 +99,8 @@
 				honeycombs += HC
 
 		if(bees.len < get_max_bees())
-			var/freebee = FALSE //a freebee, geddit?, hahaha HAHAHAHA
-			if(bees.len <= 1) //there's always one set of worker bees, this isn't colony collapse disorder its 2d spessmen
+			var/freebee = FALSE
+			if(bees.len <= 1)
 				freebee = TRUE
 			if((bee_resources >= BEE_RESOURCE_NEW_BEE_COST && prob(BEE_PROB_NEW_BEE)) || freebee)
 				if(!freebee)

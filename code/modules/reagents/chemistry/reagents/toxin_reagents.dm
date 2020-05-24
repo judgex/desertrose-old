@@ -139,7 +139,7 @@
 /datum/reagent/toxin/carpotoxin
 	name = "Carpotoxin"
 	id = "carpotoxin"
-	description = "A deadly neurotoxin produced by the dreaded spess carp."
+	description = "A deadly neurotoxin produced by the dreaded carp."
 	color = "#003333" // rgb: 0, 51, 51
 	toxpwr = 2
 	taste_description = "fish"

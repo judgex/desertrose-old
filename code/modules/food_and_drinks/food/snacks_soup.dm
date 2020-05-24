@@ -32,7 +32,7 @@
 
 /obj/item/reagent_containers/food/snacks/soup/meatball
 	name = "meatball soup"
-	desc = "You've got balls kid, BALLS!"
+	desc = "You've got balls kid."
 	icon_state = "meatballsoup"
 	bonus_reagents = list("nutriment" = 1, "vitamin" = 5)
 	tastes = list("meat" = 1)

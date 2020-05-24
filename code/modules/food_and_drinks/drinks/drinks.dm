@@ -191,7 +191,7 @@
 //	Formatting is the same as food.
 
 /obj/item/reagent_containers/food/drinks/coffee
-	name = "robust coffee"
+	name = "hot coffee"
 	desc = "Careful, the beverage you're about to enjoy is extremely hot."
 	icon_state = "coffee"
 	list_reagents = list("coffee" = 30)
@@ -207,7 +207,7 @@
 	spillable = TRUE
 	isGlass = FALSE
 
-/obj/item/reagent_containers/food/drinks/mug/ // parent type is literally just so empty mug sprites are a thing
+/obj/item/reagent_containers/food/drinks/mug/
 	name = "mug"
 	desc = "A drink served in a classy mug."
 	icon_state = "tea"
@@ -243,15 +243,15 @@
 	isGlass = FALSE
 
 /obj/item/reagent_containers/food/drinks/beer
-	name = "beer"
-	desc = "Beer."
+	name = "gwinett lager"
+	desc = "The displays a wreathed portrait of Button Gwinnett above the text 'Button Gwinnett' on a stylized scroll, which is above the text 'Blackened Victory Lager.'"
 	icon_state = "beer"
 	list_reagents = list("beer" = 30)
 	foodtype = GRAIN | ALCOHOL
 
 /obj/item/reagent_containers/food/drinks/ale
-	name = "Magm-Ale"
-	desc = "A true miner's drink of choice."
+	name = "gwinnett ale"
+	desc = "The beverage displays a wreathed image of a dead Redcoat above the text 'Button Gwinnett' on a stylized scroll, which is above the text 'Dead Redcoat Ale.'"
 	icon_state = "alebottle"
 	item_state = "beer"
 	list_reagents = list("ale" = 30)
@@ -358,7 +358,7 @@
 
 /obj/item/reagent_containers/food/drinks/flask/gold
 	name = "captain's flask"
-	desc = "A gold flask belonging to a ship's captain."
+	desc = "A gold flask once belonging to a ferryboat captain."
 	icon = 'icons/obj/drinks.dmi'
 	icon_state = "flask_gold"
 	materials = list(MAT_GOLD=500)

@@ -111,7 +111,7 @@
 
 /obj/item/card/id
 	name = "identification card"
-	desc = "A card used to provide ID and determine access across the station."
+	desc = "A card used to provide ID and determine access."
 	var/id_type = "ID Card"
 	icon_state = "id"
 	item_state = "card-id"
@@ -261,15 +261,15 @@ update_label("John Doe", "Clowny")
 	access = list(ACCESS_MAINT_TUNNELS, ACCESS_SYNDICATE, ACCESS_SYNDICATE_LEADER)
 
 /obj/item/card/id/syndicate_command
-	name = "syndicate ID card"
-	desc = "An ID straight from the Syndicate."
+	name = "communist ID card"
+	desc = "An ID straight from China"
 	registered_name = "Syndicate"
 	assignment = "Syndicate Overlord"
 	access = list(ACCESS_SYNDICATE)
 
 /obj/item/card/id/captains_spare
-	name = "captain's spare ID"
-	desc = "The spare ID of the High Lord himself."
+	name = "Overseer's spare ID"
+	desc = "The spare ID of the Overseer."
 	icon_state = "gold"
 	item_state = "gold_id"
 	lefthand_file = 'icons/mob/inhands/equipment/idcards_lefthand.dmi'
@@ -283,8 +283,8 @@ update_label("John Doe", "Clowny")
 	. = ..()
 
 /obj/item/card/id/centcom
-	name = "\improper CentCom ID"
-	desc = "An ID straight from Central Command."
+	name = "\improper Vault-Tec ID"
+	desc = "An ID straight from Vault-Tec Central Command."
 	icon_state = "centcom"
 	registered_name = "Central Command"
 	assignment = "General"
@@ -294,7 +294,7 @@ update_label("John Doe", "Clowny")
 	. = ..()
 
 /obj/item/card/id/ert
-	name = "\improper CentCom ID"
+	name = "\improper Vault-Tec ERT ID"
 	desc = "An ERT ID card."
 	icon_state = "centcom"
 	registered_name = "Emergency Response Team Commander"

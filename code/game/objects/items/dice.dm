@@ -81,7 +81,7 @@
 	name = "d6"
 
 /obj/item/dice/d6/space
-	name = "space cube"
+	name = "gravity cube"
 	desc = "A die with six sides. 6 TIMES 255 TIMES 255 TILE TOTAL EXISTENCE, SQUARE YOUR MIND OF EDUCATED STUPID: 2 DOES NOT EXIST."
 	icon_state = "spaced6"
 

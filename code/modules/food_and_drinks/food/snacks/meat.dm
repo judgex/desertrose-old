@@ -399,7 +399,6 @@
 	icon_state = "meatsteak"
 	list_reagents = list("nutriment" = 5)
 	bonus_reagents = list("nutriment" = 2, "vitamin" = 1)
-	trash = /obj/item/trash/plate
 	filling_color = "#B22222"
 	foodtype = MEAT
 	tastes = list("meat" = 1)

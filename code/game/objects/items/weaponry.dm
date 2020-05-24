@@ -146,7 +146,7 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	item_state = "pan"
 	hitsound = 'sound/f13weapons/pan.ogg'
 	slot_flags = SLOT_BELT
-	force = 15 //Just try to swing a frying pan
+	force = 15
 	throw_speed = 1
 	throw_range = 2
 	throwforce = 10
@@ -171,9 +171,9 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	slot_flags = null
 	block_chance = 0 //RNG WON'T HELP YOU NOW, PANSY
 	light_range = 3
-	attack_verb = list("brutalized", "eviscerated", "disemboweled", "hacked", "carved", "cleaved") //ONLY THE MOST VISCERAL ATTACK VERBS
+	attack_verb = list("brutalized", "eviscerated", "disemboweled", "hacked", "carved", "cleaved")
 	var/notches = 0 //HOW MANY PEOPLE HAVE BEEN SLAIN WITH THIS BLADE
-	var/obj/item/disk/nuclear/nuke_disk //OUR STORED NUKE DISK
+	var/obj/item/disk/nuclear/nuke_disk
 
 /obj/item/claymore/highlander/Initialize()
 	. = ..()
@@ -190,8 +190,8 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 /obj/item/claymore/highlander/process()
 	if(ishuman(loc))
 		var/mob/living/carbon/human/H = loc
-		loc.layer = LARGE_MOB_LAYER //NO HIDING BEHIND PLANTS FOR YOU, DICKWEED (HA GET IT, BECAUSE WEEDS ARE PLANTS)
-		H.bleedsuppress = TRUE //AND WE WON'T BLEED OUT LIKE COWARDS
+		loc.layer = LARGE_MOB_LAYER
+		H.bleedsuppress = TRUE
 	else
 		if(!(flags_1 & ADMIN_SPAWNED_1))
 			qdel(src)
@@ -571,7 +571,7 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 
 /obj/item/statuebust
 	name = "bust"
-	desc = "A priceless ancient marble bust, the kind that belongs in a museum." //or you can hit people with it
+	desc = "A priceless ancient marble bust, the kind that belongs in a museum."
 	icon = 'icons/obj/statue.dmi'
 	icon_state = "bust"
 	force = 15
@@ -585,20 +585,20 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	desc = "For the beating to death of lizards with their own tails."
 	icon_state = "tailclub"
 	force = 14
-	throwforce = 1 // why are you throwing a club do you even weapon
+	throwforce = 1
 	throw_speed = 1
 	throw_range = 1
 	attack_verb = list("clubbed", "bludgeoned")
 
 /obj/item/melee/chainofcommand/tailwhip
-	name = "liz o' nine tails"
-	desc = "A whip fashioned from the severed tails of lizards."
+	name = "cat o' nine tails"
+	desc = "A whip fashioned from the severed leather cords."
 	icon_state = "tailwhip"
 	item_flags = NONE
 
 /obj/item/melee/chainofcommand/tailwhip/kitty
 	name = "cat o' nine tails"
-	desc = "A whip fashioned from the severed tails of cats."
+	desc = "A whip fashioned from the severed leather cords."
 	icon_state = "catwhip"
 
 /obj/item/melee/skateboard
@@ -628,7 +628,6 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	attack_verb = list("swatted", "smacked")
 	hitsound = 'sound/effects/snap.ogg'
 	w_class = WEIGHT_CLASS_SMALL
-	//Things in this list will be instantly splatted.  Flyman weakness is handled in the flyman species weakness proc.
 	var/list/strong_against
 
 /obj/item/melee/flyswatter/Initialize()
