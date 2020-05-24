@@ -41,6 +41,12 @@
 	desc = "A hardy, onion-like root with mild healing properties."
 	produce = /obj/item/reagent_containers/food/snacks/grown/xander
 
+/obj/structure/flora/wasteplant/wild_yucca
+	name = "wild banana yucca"
+	icon_state = "wild_yucca"
+	desc = "The species gets its common name banana yucca from its banana-shaped fruit. The specific epithet baccata means 'with berries'"
+	produce = /obj/item/reagent_containers/food/snacks/grown/yucca
+
 
 /obj/structure/flora/wasteplant/wild_feracactus
 	name = "wild barrel cactus"
@@ -66,5 +72,5 @@
 /obj/structure/flora/wasteplant/wild_agave
 	name = "wild agave"
 	icon_state = "wild_agave"
-	desc = "The juice of this fleshy plant soothes burns, but it also removes nutrients from the body."
+	desc = "The juice of this fleshy plant soothes burns, but it also robs nutrients from the body."
 	produce = /obj/item/reagent_containers/food/snacks/grown/agave
