@@ -3,7 +3,7 @@
 
 ////////////////////////////////////////////////DONUTS////////////////////////////////////////////////
 
-/datum/crafting_recipe/food/chaosdonut
+/*/datum/crafting_recipe/food/chaosdonut
 	name = "Chaos donut"
 	reqs = list(
 		/datum/reagent/consumable/frostoil = 5,
@@ -21,7 +21,7 @@
 		/obj/item/reagent_containers/food/snacks/pastrybase = 1
 	)
 	result = /obj/item/reagent_containers/food/snacks/donut
-	subcategory = CAT_PASTRY
+	subcategory = CAT_PASTRY*/
 
 /datum/crafting_recipe/food/jellydonut
 	name = "Jelly donut"
@@ -124,7 +124,7 @@
 	name = "Donkpocket"
 	reqs = list(
 		/obj/item/reagent_containers/food/snacks/pastrybase = 1,
-		/obj/item/reagent_containers/food/snacks/meatball = 1
+		/obj/item/reagent_containers/food/snacks/faggot = 1
 	)
 	result = /obj/item/reagent_containers/food/snacks/donkpocket
 	subcategory = CAT_PASTRY
@@ -200,7 +200,7 @@
 	reqs = list(
 		/datum/reagent/consumable/soysauce = 5,
 		/obj/item/reagent_containers/food/snacks/bun = 1,
-		/obj/item/reagent_containers/food/snacks/meatball = 1,
+		/obj/item/reagent_containers/food/snacks/faggot = 1,
 		/obj/item/reagent_containers/food/snacks/grown/cabbage = 1
 	)
 	result = /obj/item/reagent_containers/food/snacks/meatbun

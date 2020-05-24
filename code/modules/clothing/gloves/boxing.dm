@@ -1,10 +1,10 @@
 /obj/item/clothing/gloves/boxing
 	name = "boxing gloves"
-	desc = "Because you really needed another excuse to punch your crewmates."
+	desc = "Because you really needed another excuse to punch to someone."
 	icon_state = "boxing"
 	item_state = "boxing"
 	equip_delay_other = 60
-	species_exception = list(/datum/species/golem) // now you too can be a golem boxing champion
+	species_exception = list(/datum/species/golem)
 
 /obj/item/clothing/gloves/boxing/green
 	icon_state = "boxinggreen"

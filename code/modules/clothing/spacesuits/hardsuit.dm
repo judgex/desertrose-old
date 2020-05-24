@@ -264,8 +264,8 @@
 	//Syndicate hardsuit
 /obj/item/clothing/head/helmet/space/hardsuit/syndi
 	name = "blood-red hardsuit helmet"
-	desc = "A dual-mode advanced helmet designed for work in special operations. It is in EVA mode. Property of Gorlex Marauders."
-	alt_desc = "A dual-mode advanced helmet designed for work in special operations. It is in combat mode. Property of Gorlex Marauders."
+	desc = "A dual-mode advanced helmet designed for work in special operations. It is in EVA mode."
+	alt_desc = "A dual-mode advanced helmet designed for work in special operations. It is in combat mode."
 	icon_state = "hardsuit1-syndi"
 	item_state = "syndie_helm"
 	item_color = "syndi"
@@ -341,8 +341,8 @@
 
 /obj/item/clothing/suit/space/hardsuit/syndi
 	name = "blood-red hardsuit"
-	desc = "A dual-mode advanced hardsuit designed for work in special operations. It is in EVA mode. Property of Gorlex Marauders."
-	alt_desc = "A dual-mode advanced hardsuit designed for work in special operations. It is in combat mode. Property of Gorlex Marauders."
+	desc = "A dual-mode advanced hardsuit designed for work in special operations. It is in EVA mode."
+	alt_desc = "A dual-mode advanced hardsuit designed for work in special operations. It is in combat mode."
 	icon_state = "hardsuit1-syndi"
 	item_state = "syndie_hardsuit"
 	item_color = "syndi"
@@ -354,9 +354,9 @@
 
 //Elite Syndie suit
 /obj/item/clothing/head/helmet/space/hardsuit/syndi/elite
-	name = "elite syndicate hardsuit helmet"
-	desc = "An elite version of the syndicate helmet, with improved armour and fireproofing. It is in EVA mode. Property of Gorlex Marauders."
-	alt_desc = "An elite version of the syndicate helmet, with improved armour and fireproofing. It is in combat mode. Property of Gorlex Marauders."
+	name = "elite chinese hardsuit helmet"
+	desc = "An elite version of the chinese helmet, with improved armour and fireproofing. It is in EVA mode."
+	alt_desc = "An elite version of the chinese helmet, with improved armour and fireproofing. It is in combat mode."
 	icon_state = "hardsuit0-syndielite"
 	item_color = "syndielite"
 	armor = list("melee" = 60, "bullet" = 60, "laser" = 50, "energy" = 25, "bomb" = 55, "bio" = 100, "rad" = 70, "fire" = 100, "acid" = 100)
@@ -369,9 +369,9 @@
 
 
 /obj/item/clothing/suit/space/hardsuit/syndi/elite
-	name = "elite syndicate hardsuit"
-	desc = "An elite version of the syndicate hardsuit, with improved armour and fireproofing. It is in travel mode."
-	alt_desc = "An elite version of the syndicate hardsuit, with improved armour and fireproofing. It is in combat mode."
+	name = "elite chinse hardsuit"
+	desc = "An elite version of the chinese hardsuit, with improved armour and fireproofing. It is in travel mode."
+	alt_desc = "An elite version of the chinese hardsuit, with improved armour and fireproofing. It is in combat mode."
 	icon_state = "hardsuit0-syndielite"
 	item_color = "syndielite"
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/syndi/elite

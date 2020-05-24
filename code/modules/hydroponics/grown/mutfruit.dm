@@ -28,3 +28,4 @@
 		reagents.add_reagent("radium", 1 + round((seed.potency / 20), 1))
 		bitesize = 1 + round(reagents.total_volume / 3, 1)
 
+/*HRP*/

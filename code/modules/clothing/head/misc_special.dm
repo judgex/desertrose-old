@@ -15,7 +15,7 @@
  */
 /obj/item/clothing/head/welding
 	name = "welding helmet"
-	desc = "A head-mounted face cover designed to protect the wearer completely from space-arc eye."
+	desc = "A head-mounted face cover designed to protect the wearer completely from arc eye."
 	icon_state = "welding"
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 	item_state = "welding"

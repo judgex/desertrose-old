@@ -20,9 +20,10 @@
 		playsound(src, 'sound/effects/smoke.ogg', 50, TRUE)
 		visible_message("<span class='warning'>Oh, ye gods! [src] is ruined! But what if...?</span>")
 		name = "steamed ham"
-		desc = pick("Ahh, welcome. I hope you're prepared for an unforgettable luncheon!",
+		desc = pick("Ahh, Head of Personnel, welcome. I hope you're prepared for an unforgettable luncheon!",
 		"And you call these steamed hams despite the fact that they are obviously microwaved?",
-		"You know, these hamburgers taste quite similar to the ones they have at the Blue Oyster.")
+		"Aurora Station 13? At this time of shift, in this time of year, in this sector of space, localized entirely within your freezer?",
+		"You know, these hamburgers taste quite similar to the ones they have at the Maltese Falcon.")
 		tastes = list("fast food hamburger" = 1)
 
 /obj/item/reagent_containers/food/snacks/burger/human

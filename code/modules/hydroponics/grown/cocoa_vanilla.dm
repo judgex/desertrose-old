@@ -1,7 +1,7 @@
 // Cocoa Pod
 /obj/item/seeds/cocoapod
-	name = "pack of cocoa pod seeds"
-	desc = "These seeds grow into cacao trees. They look fattening." //SIC: cocoa is the seeds. The trees are spelled cacao.
+	name = "pack of cocao seeds"
+	desc = "These seeds grow into cacao trees."
 	icon_state = "seed-cocoapod"
 	species = "cocoapod"
 	plantname = "Cocao Tree"
@@ -32,7 +32,7 @@
 // Vanilla Pod
 /obj/item/seeds/cocoapod/vanillapod
 	name = "pack of vanilla pod seeds"
-	desc = "These seeds grow into vanilla trees. They look fattening."
+	desc = "These seeds grow into vanilla trees."
 	icon_state = "seed-vanillapod"
 	species = "vanillapod"
 	plantname = "Vanilla Tree"
@@ -49,4 +49,6 @@
 	filling_color = "#FFD700"
 	foodtype = FRUIT
 	tastes = list("vanilla" = 1)
-	distill_reagent = "vanilla" //Takes longer, but you can get even more vanilla from it.
+	distill_reagent = "vanilla"
+
+/*HRP*/

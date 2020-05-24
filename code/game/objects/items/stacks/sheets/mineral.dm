@@ -155,7 +155,7 @@ GLOBAL_LIST_INIT(uranium_recipes, list ( \
 	name = "Ultracite"
 	icon_state = "sheet-plasma"
 	item_state = "sheet-plasma"
-	singular_name = "ultracite sheet"
+	singular_name = "plasma sheet"
 	sheettype = "plasma"
 	resistance_flags = FLAMMABLE
 	max_integrity = 100

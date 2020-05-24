@@ -129,7 +129,7 @@
 /datum/reagent/consumable/banana
 	name = "Banana Juice"
 	id = "banana"
-	description = "The raw essence of a banana."
+	description = "The raw essence of a banana. HONK"
 	color = "#863333" // rgb: 175, 175, 0
 	taste_description = "banana"
 	glass_icon_state = "banana"
@@ -355,7 +355,7 @@
 /datum/reagent/consumable/icetea
 	name = "Iced Tea"
 	id = "icetea"
-	description = "Iced tea is a form of cold tea. Though usually served in a glass with ice, it can refer to any tea that has been chilled or cooled. It may be sweetened with sugar, syrup and/or apple slices."
+	description = "No relation to a certain rap artist/actor."
 	color = "#104038" // rgb: 16, 64, 56
 	nutriment_factor = 0
 	taste_description = "sweet tea"
@@ -380,8 +380,8 @@
 	color = "#100800" // rgb: 16, 8, 0
 	taste_description = "cola"
 	glass_icon_state  = "glass_brown"
-	glass_name = "glass of Cola"
-	glass_desc = "A glass of refreshing Cola."
+	glass_name = "glass of Space Cola"
+	glass_desc = "A glass of refreshing Space Cola."
 
 /datum/reagent/consumable/space_cola/on_mob_life(mob/living/carbon/M)
 	M.drowsyness = max(0,M.drowsyness-5)
@@ -409,14 +409,14 @@
 	. = 1
 
 /datum/reagent/consumable/spacemountainwind
-	name = "Mountain Wind"
+	name = "SM Wind"
 	id = "spacemountainwind"
-	description = "Blows right through you like a cold wind."
+	description = "Blows right through you like a space wind."
 	color = "#102000" // rgb: 16, 32, 0
 	taste_description = "sweet citrus soda"
 	glass_icon_state = "Space_mountain_wind_glass"
-	glass_name = "glass of Mountain Wind"
-	glass_desc = "Mountain Wind."
+	glass_name = "glass of Space Mountain Wind"
+	glass_desc = "Space Mountain Wind. As you know, there are no mountains in space, only wind."
 
 /datum/reagent/consumable/spacemountainwind/on_mob_life(mob/living/carbon/M)
 	M.drowsyness = max(0,M.drowsyness-7)
@@ -442,14 +442,14 @@
 	..()
 
 /datum/reagent/consumable/space_up
-	name = "Vuim"
+	name = "Space-Up"
 	id = "space_up"
-	description = "Tastes like a pure Maine spring water in your mouth."
+	description = "Tastes like a hull breach in your mouth."
 	color = "#00FF00" // rgb: 0, 255, 0
 	taste_description = "cherry soda"
 	glass_icon_state = "space-up_glass"
-	glass_name = "glass of Vim"
-	glass_desc = "Vim. It helps you keep your cool."
+	glass_name = "glass of Space-Up"
+	glass_desc = "Space-up. It helps you keep your cool."
 
 
 /datum/reagent/consumable/space_up/on_mob_life(mob/living/carbon/M)
@@ -517,12 +517,12 @@
 /datum/reagent/consumable/tonic
 	name = "Tonic Water"
 	id = "tonic"
-	description = "It tastes strange but at least the quinine keeps the malaria at bay."
+	description = "It tastes strange but at least the quinine keeps the Space Malaria at bay."
 	color = "#0064C8" // rgb: 0, 100, 200
 	taste_description = "tart and fresh"
 	glass_icon_state = "glass_clear"
 	glass_name = "glass of tonic water"
-	glass_desc = "Quinine tastes funny, but at least it'll keep that malaria away."
+	glass_desc = "Quinine tastes funny, but at least it'll keep that Space Malaria away."
 
 /datum/reagent/consumable/tonic/on_mob_life(mob/living/carbon/M)
 	M.dizziness = max(0,M.dizziness-5)
@@ -592,12 +592,12 @@
 /datum/reagent/consumable/doctor_delight
 	name = "The Doctor's Delight"
 	id = "doctorsdelight"
-	description = "A gulp a day keeps the doctor away! A mixture of juices that heals most damage types fairly quickly at the cost of hunger."
+	description = "A gulp a day keeps the Medibot away! A mixture of juices that heals most damage types fairly quickly at the cost of hunger."
 	color = "#FF8CFF" // rgb: 255, 140, 255
 	taste_description = "homely fruit"
 	glass_icon_state = "doctorsdelightglass"
 	glass_name = "Doctor's Delight"
-	glass_desc = "The doctor's favorite. Guaranteed to restore bodily injury; side effects include cravings and hunger."
+	glass_desc = "The space doctor's favorite. Guaranteed to restore bodily injury; side effects include cravings and hunger."
 
 /datum/reagent/consumable/doctor_delight/on_mob_life(mob/living/carbon/M)
 	M.adjustBruteLoss(-0.5, 0)

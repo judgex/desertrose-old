@@ -18,7 +18,7 @@
 /obj/item/reagent_containers/food/snacks/grown/eggplant
 	seed = /obj/item/seeds/eggplant
 	name = "eggplant"
-	desc = "Maybe there's a chicken inside?"
+	desc = "This is a eggplant"
 	icon_state = "eggplant"
 	filling_color = "#800080"
 	bitesize_mod = 2

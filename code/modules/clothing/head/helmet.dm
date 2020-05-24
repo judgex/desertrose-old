@@ -571,7 +571,7 @@
 
 /obj/item/clothing/head/helmet/f13/legion/centurion
 	name = "legion centurion helmet"
-	desc = "It's a large forged and case hardened bronze helmet with a steel insert around the skull and back of the neck. It has a large plume of red bighorner hair across the top of it going horizontally, symbolizing the position of a Centurion."
+	desc = "It's a large forged and case hardened bronze helmet with a steel insert around the skull and back of the neck. It has a large plume of red horse hair across the top of it going horizontally, symbolizing the position of a Centurion."
 	icon_state = "legcenturion"
 	item_state = "legcenturion"
 	armor = list("melee" = 60, "bullet" = 45, "laser" = 30, "energy" = 35, "bomb" = 39, "bio" = 60, "rad" = 20, "fire" = 80, "acid" = 0)
@@ -579,7 +579,7 @@
 
 /obj/item/clothing/head/helmet/f13/legion/rangercent
 	name = "ranger-hunter centurion helmet"
-	desc = "The helmet of an NCR ranger, repurposed to fit the needs of the Ranger Hunter Centurion. It features a large red plume of bighorner hair, denoting rank."
+	desc = "The helmet of an NCR ranger, repurposed to fit the needs of the Ranger Hunter Centurion. It features a large red plume of horehair, denoting rank."
 	icon_state = "rangercent"
 	item_state = "rangercent"
 	armor = list("melee" = 60, "bullet" = 45, "laser" = 30, "energy" = 35, "bomb" = 39, "bio" = 60, "rad" = 20, "fire" = 80, "acid" = 0)
@@ -587,7 +587,7 @@
 
 /obj/item/clothing/head/helmet/f13/legion/palacent
 	name = "paladin-slayer centurion helmet"
-	desc = "The once-marvelous helmet of the T-45d power armor set, repurposed by the Legion into a symbol of its might. It has a large plume of red bighorner hair across the top of it going horizontally, donoting the rank of Centurion."
+	desc = "The once-marvelous helmet of the T-45d power armor set, repurposed by the Legion into a symbol of its might. It has a large plume of red horse hair across the top of it going horizontally, donoting the rank of Centurion."
 	icon_state = "palacent"
 	item_state = "palacent"
 	armor = list("melee" = 75, "bullet" = 50, "laser" = 35, "energy" = 35, "bomb" = 39, "bio" = 60, "rad" = 20, "fire" = 80, "acid" = 0)

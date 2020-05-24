@@ -97,3 +97,5 @@
 
 /obj/item/grown/log/steel/CheckAccepted(obj/item/I)
 	return FALSE
+
+/*HRP*/

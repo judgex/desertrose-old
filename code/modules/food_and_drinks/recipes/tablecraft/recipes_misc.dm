@@ -172,7 +172,7 @@
 	subcategory = CAT_MISCFOOD
 
 /datum/crafting_recipe/food/fuegoburrito
-	name ="Fuego plasma burrito"
+	name ="Fuego burrito"
 	reqs = list(
 		/obj/item/reagent_containers/food/snacks/tortilla = 1,
 		/obj/item/reagent_containers/food/snacks/grown/ghost_chili = 2,
@@ -195,7 +195,7 @@
 	subcategory = CAT_MISCFOOD
 
 /datum/crafting_recipe/food/spacefreezy
-	name ="freezy"
+	name ="Space freezy"
 	reqs = list(
 		/datum/reagent/consumable/bluecherryjelly = 5,
 		/datum/reagent/consumable/spacemountainwind = 15,
@@ -215,7 +215,7 @@
 	result = /obj/item/reagent_containers/food/snacks/sundae
 	subcategory = CAT_MISCFOOD
 
-/datum/crafting_recipe/food/honkdae
+/*/datum/crafting_recipe/food/honkdae
 	name ="Honkdae"
 	reqs = list(
 		/datum/reagent/consumable/cream = 5,
@@ -225,7 +225,7 @@
 		/obj/item/reagent_containers/food/snacks/icecream = 1
 	)
 	result = /obj/item/reagent_containers/food/snacks/honkdae
-	subcategory = CAT_MISCFOOD
+	subcategory = CAT_MISCFOOD*/
 
 /datum/crafting_recipe/food/nachos
 	name ="Nachos"
@@ -277,7 +277,7 @@
 	subcategory = CAT_MISCFOOD
 
 
-/datum/crafting_recipe/food/stuffedlegion
+/*/datum/crafting_recipe/food/stuffedlegion
 	name = "Stuffed legion"
 	time = 40
 	reqs = list(
@@ -287,8 +287,7 @@
 		/datum/reagent/consumable/capsaicin = 2
 	)
 	result = /obj/item/reagent_containers/food/snacks/stuffedlegion
-	subcategory = CAT_MISCFOOD
-
+	subcategory = CAT_MISCFOOD*/
 
 /datum/crafting_recipe/food/lizardwine
 	name = "Lizard wine"
@@ -300,8 +299,7 @@
 	result = /obj/item/reagent_containers/food/drinks/bottle/lizardwine
 	subcategory = CAT_MISCFOOD
 
-
-/datum/crafting_recipe/food/powercrepe
+/*/datum/crafting_recipe/food/powercrepe
 	name = "Powercrepe"
 	time = 40
 	reqs = list(
@@ -312,7 +310,7 @@
 		/obj/item/melee/sabre = 1
 	)
 	result = /obj/item/reagent_containers/food/snacks/powercrepe
-	subcategory = CAT_MISCFOOD
+	subcategory = CAT_MISCFOOD*/
 
 /datum/crafting_recipe/food/taco
 	name ="Classic Taco"
@@ -330,7 +328,7 @@
 	reqs = list(
 		/obj/item/reagent_containers/food/snacks/tortilla = 1,
 		/obj/item/reagent_containers/food/snacks/cheesewedge = 1,
-		/obj/item/reagent_containers/food/snacks/meat/cutlet = 1,
+		/obj/item/reagent_containers/food/snacks/meat/cutlet = 1
 	)
 	result = /obj/item/reagent_containers/food/snacks/taco/plain
 	subcategory = CAT_MISCFOOD
