@@ -1,8 +1,3 @@
-/*
-CONTAINS:
-BEDSHEETS
-LINEN BINS
-*/
 
 /obj/item/bedsheet
 	name = "bedsheet"
@@ -125,7 +120,6 @@ LINEN BINS
 	item_color = "director"
 	dream_messages = list("authority", "a silvery ID", "a bomb", "a mech", "a facehugger", "maniacal laughter", "the research director")
 
-// for Free Golems.
 /obj/item/bedsheet/rd/royal_cape
 	name = "Royal Cape of the Liberator"
 	desc = "Majestic."

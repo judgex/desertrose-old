@@ -1,8 +1,3 @@
-
-///////////
-// EASEL //
-///////////
-
 /obj/structure/easel
 	name = "easel"
 	desc = "Only for the finest of art!"
@@ -13,8 +8,6 @@
 	max_integrity = 60
 	var/obj/item/canvas/painting = null
 
-
-//Adding canvases
 /obj/structure/easel/attackby(obj/item/I, mob/user, params)
 	if(istype(I, /obj/item/canvas))
 		var/obj/item/canvas/C = I
@@ -26,8 +19,6 @@
 	else
 		return ..()
 
-
-//Stick to the easel like glue
 /obj/structure/easel/Move()
 	var/turf/T = get_turf(src)
 	. = ..()
@@ -35,11 +26,6 @@
 		painting.forceMove(get_turf(src))
 	else
 		painting = null
-
-
-//////////////
-// CANVASES //
-//////////////
 
 #define AMT_OF_CANVASES	4 //Keep this up to date or shit will break.
 

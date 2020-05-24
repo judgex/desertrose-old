@@ -1,4 +1,3 @@
-// Poppy
 /obj/item/seeds/poppy
 	name = "pack of poppy seeds"
 	desc = "These seeds grow into poppies."
@@ -28,7 +27,6 @@
 	foodtype = VEGETABLES | GROSS
 	distill_reagent = "vermouth"
 
-// Lily
 /obj/item/seeds/poppy/lily
 	name = "pack of lily seeds"
 	desc = "These seeds grow into lilies."
@@ -45,7 +43,6 @@
 	icon_state = "lily"
 	filling_color = "#FFA500"
 
-// Geranium
 /obj/item/seeds/poppy/geranium
 	name = "pack of geranium seeds"
 	desc = "These seeds grow into geranium."
@@ -62,8 +59,6 @@
 	icon_state = "geranium"
 	filling_color = "#008B8B"
 
-
-// Harebell
 /obj/item/seeds/harebell
 	name = "pack of harebell seeds"
 	desc = "These seeds grow into pretty little flowers."
@@ -92,7 +87,6 @@
 	bitesize_mod = 3
 	distill_reagent = "vermouth"
 
-// Sunflower
 /obj/item/seeds/sunflower
 	name = "pack of sunflower seeds"
 	desc = "These seeds grow into sunflowers."
@@ -110,7 +104,7 @@
 	mutatelist = list(/obj/item/seeds/sunflower/moonflower, /obj/item/seeds/sunflower/novaflower)
 	reagents_add = list("cornoil" = 0.08, "nutriment" = 0.04)
 
-/obj/item/grown/sunflower // FLOWER POWER!
+/obj/item/grown/sunflower
 	seed = /obj/item/seeds/sunflower
 	name = "sunflower"
 	desc = "It's beautiful! A certain person might beat you to death if you trample these."
@@ -129,7 +123,6 @@
 	to_chat(M, "<font color='green'><b> [user] smacks you with a sunflower!</font><font color='yellow'><b>FLOWER POWER<b></font>")
 	to_chat(user, "<font color='green'>Your sunflower's </font><font color='yellow'><b>FLOWER POWER</b></font><font color='green'>strikes [M]</font>")
 
-// Moonflower
 /obj/item/seeds/sunflower/moonflower
 	name = "pack of moonflower seeds"
 	desc = "These seeds grow into moonflowers."
@@ -155,7 +148,6 @@
 	bitesize_mod = 2
 	distill_reagent = "absinthe" //It's made from flowers.
 
-// Novaflower
 /obj/item/seeds/sunflower/novaflower
 	name = "pack of novaflower seeds"
 	desc = "These seeds grow into novaflowers."
@@ -189,29 +181,3 @@
 /obj/item/grown/novaflower/add_juice()
 	..()
 	force = round((5 + seed.potency / 5), 1)
-
-/*/obj/item/grown/novaflower/attack(mob/living/carbon/M, mob/user)
-	if(!..())
-		return
-	if(isliving(M))
-		to_chat(M, "<span class='danger'>You are lit on fire from the intense heat of the [name]!</span>")
-		M.adjust_fire_stacks(seed.potency / 20)
-		if(M.IgniteMob())
-			message_admins("[ADMIN_LOOKUPFLW(user)] set [ADMIN_LOOKUPFLW(M)] on fire with [src] at [AREACOORD(user)]")
-			log_game("[key_name(user)] set [key_name(M)] on fire with [src] at [AREACOORD(user)]")
-
-/obj/item/grown/novaflower/afterattack(atom/A as mob|obj, mob/user,proximity)
-	. = ..()
-	if(!proximity)
-		return
-	if(force > 0)
-		force -= rand(1, (force / 3) + 1)
-	else
-		to_chat(usr, "<span class='warning'>All the petals have fallen off the [name] from violent whacking!</span>")
-		qdel(src)
-
-/obj/item/grown/novaflower/pickup(mob/living/carbon/human/user)
-	..()
-	if(!user.gloves)
-		to_chat(user, "<span class='danger'>The [name] burns your bare hand!</span>")
-		user.adjustFireLoss(rand(1, 5))*/

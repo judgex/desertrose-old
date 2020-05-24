@@ -1,4 +1,3 @@
-// Eggplant
 /obj/item/seeds/eggplant
 	name = "pack of eggplant seeds"
 	desc = "These seeds grow to produce berries that look nothing like eggs."
@@ -25,7 +24,6 @@
 	foodtype = FRUIT
 	wine_power = 20
 
-// Egg-Plant
 /obj/item/seeds/eggplant/eggy
 	desc = "These seeds grow to produce berries that look a lot like eggs."
 	icon_state = "seed-eggy"

@@ -1,5 +1,3 @@
-//Fallout 13 goggles directory
-
 /obj/item/clothing/glasses/f13
 	armor = list(melee = 10, bullet = 10, laser = 10, energy = 10, bomb = 10, bio = 10, rad = 10, fire = 10, acid = 10)
 
@@ -15,14 +13,9 @@
 	icon_state = "legion"
 	item_state = "legion"
 
-//Fallout 13 sunglasses
-
 /obj/item/clothing/glasses/sunglasses/f13
 	icon = 'icons/fallout/clothing/glasses.dmi'
 	armor = list(melee = 10, bullet = 10, laser = 10, energy = 10, bomb = 10, bio = 10, rad = 10, fire = 10, acid = 10)
-
-
-//Fallout 13 thermals
 
 /obj/item/clothing/glasses/thermal/f13
 	icon = 'icons/fallout/clothing/glasses.dmi'
@@ -41,8 +34,6 @@
 	icon_state = "enclavegoggles"
 	item_state = "enclavegoggles"
 
-//Fallout 13 science goggles
-
 /obj/item/clothing/glasses/science/f13
 	icon = 'icons/fallout/clothing/glasses.dmi'
 	armor = list(melee = 10, bullet = 10, laser = 10, energy = 10, bomb = 10, bio = 10, rad = 10, fire = 10, acid = 10)
@@ -54,8 +45,6 @@
 	item_state = "glasses"
 	resistance_flags = ACID_PROOF
 	armor = list(melee = 10, bullet = 10, laser = 10, energy = 10, bomb = 10, bio = 50, rad = 20, fire = 70, acid = 100)
-
-//Augmented eye
 
 /obj/item/clothing/glasses/hud/health/f13
 	armor = list(melee = 10, bullet = 10, laser = 10, energy = 10, bomb = 10, bio = 10, rad = 10, fire = 10, acid = 10)

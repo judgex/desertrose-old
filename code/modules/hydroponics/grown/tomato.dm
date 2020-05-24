@@ -1,4 +1,3 @@
-// Tomato
 /obj/item/seeds/tomato
 	name = "pack of tomato seeds"
 	desc = "These seeds grow into tomato plants."
@@ -11,7 +10,7 @@
 	icon_grow = "tomato-grow"
 	icon_dead = "tomato-dead"
 	genes = list(/datum/plant_gene/trait/squash, /datum/plant_gene/trait/repeated_harvest)
-	mutatelist = list(/obj/item/seeds/tomato/blood, /obj/item/seeds/tomato/killer) // /obj/item/seeds/tomato/blue
+	mutatelist = list(/obj/item/seeds/tomato/blood, /obj/item/seeds/tomato/killer)
 	reagents_add = list("vitamin" = 0.04, "nutriment" = 0.1)
 
 /obj/item/reagent_containers/food/snacks/grown/tomato
@@ -49,54 +48,7 @@
 	foodtype = FRUIT | GROSS
 	grind_results = list("ketchup" = 0, "blood" = 0)
 	distill_reagent = "bloodymary"
-/*
-// Blue Tomato
-/obj/item/seeds/tomato/blue
-	name = "pack of blue-tomato seeds"
-	desc = "These seeds grow into blue-tomato plants."
-	icon_state = "seed-bluetomato"
-	species = "bluetomato"
-	plantname = "Blue-Tomato Plants"
-	product = /obj/item/reagent_containers/food/snacks/grown/tomato/blue
-	yield = 2
-	icon_grow = "bluetomato-grow"
-	mutatelist = list(/obj/item/seeds/tomato/blue/bluespace)
-	genes = list(/datum/plant_gene/trait/slip, /datum/plant_gene/trait/repeated_harvest)
-	reagents_add = list("lube" = 0.2, "vitamin" = 0.04, "nutriment" = 0.1)
-	rarity = 20
 
-/obj/item/reagent_containers/food/snacks/grown/tomato/blue
-	seed = /obj/item/seeds/tomato/blue
-	name = "blue-tomato"
-	desc = "I say blue-mah-to, you say blue-mae-to."
-	icon_state = "bluetomato"
-	splat_type = /obj/effect/decal/cleanable/oil
-	filling_color = "#0000FF"
-	distill_reagent = "laughter"
-
-// Bluespace Tomato
-/obj/item/seeds/tomato/blue/bluespace
-	name = "pack of bluespace tomato seeds"
-	desc = "These seeds grow into bluespace tomato plants."
-	icon_state = "seed-bluespacetomato"
-	species = "bluespacetomato"
-	plantname = "Bluespace Tomato Plants"
-	product = /obj/item/reagent_containers/food/snacks/grown/tomato/blue/bluespace
-	yield = 2
-	mutatelist = list()
-	genes = list(/datum/plant_gene/trait/squash, /datum/plant_gene/trait/slip, /datum/plant_gene/trait/teleport, /datum/plant_gene/trait/repeated_harvest)
-	reagents_add = list("lube" = 0.2, "bluespace" = 0.2, "vitamin" = 0.04, "nutriment" = 0.1)
-	rarity = 50
-
-/obj/item/reagent_containers/food/snacks/grown/tomato/blue/bluespace
-	seed = /obj/item/seeds/tomato/blue/bluespace
-	name = "bluespace tomato"
-	desc = "So lubricated, you might slip through space-time."
-	icon_state = "bluespacetomato"
-	distill_reagent = null
-	wine_power = 80
-*/
-// Killer Tomato
 /obj/item/seeds/tomato/killer
 	name = "pack of killer-tomato seeds"
 	desc = "These seeds grow into killer-tomato plants."
@@ -144,3 +96,4 @@
 			K.health = K.maxHealth
 			K.visible_message("<span class='notice'>The Killer Tomato growls as it suddenly awakens.</span>")
 			qdel(src)
+/*MRP*/

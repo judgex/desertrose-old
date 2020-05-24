@@ -1,5 +1,3 @@
-// A very special plant, deserving it's own file.
-
 /obj/item/seeds/replicapod
 	name = "pack of replica pod seeds"
 	desc = "These seeds grow into replica pods. They say these are used to harvest humans."

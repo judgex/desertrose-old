@@ -1,12 +1,3 @@
-/* Alien shit!
- * Contains:
- *		structure/alien
- *		Resin
- *		Weeds
- *		Egg
- */
-
-
 /obj/structure/alien
 	icon = 'icons/mob/alien.dmi'
 	max_integrity = 100
@@ -31,10 +22,6 @@
 			if(damage_amount)
 				playsound(loc, 'sound/items/welder.ogg', 100, 1)
 
-/*
- * Generic alien stuff, not related to the purple lizards but still alien-like
- */
-
 /obj/structure/alien/gelpod
 	name = "gelatinous mound"
 	desc = "A mound of jelly-like substance encasing something inside."
@@ -46,9 +33,6 @@
 		new/obj/effect/mob_spawn/human/corpse/damaged(get_turf(src))
 	qdel(src)
 
-/*
- * Resin
- */
 /obj/structure/alien/resin
 	name = "resin"
 	desc = "Looks like some kind of thick resin."
@@ -63,7 +47,6 @@
 	var/resintype = null
 	CanAtmosPass = ATMOS_PASS_DENSITY
 
-
 /obj/structure/alien/resin/New(location)
 	..()
 	air_update_turf(1)
@@ -77,7 +60,7 @@
 	name = "resin wall"
 	desc = "Thick resin solidified into a wall."
 	icon = 'icons/obj/smooth_structures/alien/resin_wall.dmi'
-	icon_state = "smooth"	//same as resin, but consistency ho!
+	icon_state = "smooth"
 	resintype = "wall"
 	canSmoothWith = list(/obj/structure/alien/resin/wall, /obj/structure/alien/resin/membrane)
 
@@ -97,14 +80,8 @@
 /obj/structure/alien/resin/attack_paw(mob/user)
 	return attack_hand(user)
 
-
 /obj/structure/alien/resin/CanPass(atom/movable/mover, turf/target)
 	return !density
-
-
-/*
- * Weeds
- */
 
 #define NODERANGE 3
 
@@ -120,7 +97,7 @@
 	max_integrity = 15
 	canSmoothWith = list(/obj/structure/alien/weeds, /turf/closed/wall)
 	smooth = SMOOTH_MORE
-	var/last_expand = 0 //last world.time this weed expanded
+	var/last_expand = 0
 	var/growth_cooldown_low = 150
 	var/growth_cooldown_high = 200
 	var/static/list/blacklisted_turfs
@@ -135,7 +112,6 @@
 			/turf/open/space,
 			/turf/open/chasm,
 			/turf/open/lava))
-
 
 	last_expand = world.time + rand(growth_cooldown_low, growth_cooldown_high)
 	if(icon == initial(icon))
@@ -198,12 +174,6 @@
 
 #undef NODERANGE
 
-
-/*
- * Egg
- */
-
-//for the status var
 #define BURST "burst"
 #define GROWING "growing"
 #define GROWN "grown"
@@ -272,7 +242,6 @@
 		to_chat(user, "<span class='notice'>It feels slimy.</span>")
 		user.changeNext_move(CLICK_CD_MELEE)
 
-
 /obj/structure/alien/egg/proc/Grow()
 	status = GROWN
 	update_icon()
@@ -308,7 +277,6 @@
 /obj/structure/alien/egg/temperature_expose(datum/gas_mixture/air, exposed_temperature, exposed_volume)
 	if(exposed_temperature > 500)
 		take_damage(5, BURN, 0, 0)
-
 
 /obj/structure/alien/egg/HasProximity(atom/movable/AM)
 	if(status == GROWN)

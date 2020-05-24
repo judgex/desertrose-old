@@ -1,10 +1,9 @@
-// Wheat
 /obj/item/seeds/wheat
 	name = "pack of razorgrain seeds"
 	desc = "These kernals grow into razorgrain stalks"
 	icon_state = "seed-wheat"
 	species = "wheat"
-	plantname = "Wheat Stalks"
+	plantname = "Razorgrain Stalks"
 	product = /obj/item/reagent_containers/food/snacks/grown/wheat
 	production = 1
 	yield = 4
@@ -26,7 +25,6 @@
 	tastes = list("wheat" = 1)
 	distill_reagent = "beer"
 
-// Oat
 /obj/item/seeds/wheat/oat
 	name = "pack of oat seeds"
 	desc = "These may, or may not, grow into oat."
@@ -49,7 +47,6 @@
 	tastes = list("oat" = 1)
 	distill_reagent = "ale"
 
-// Rice
 /obj/item/seeds/wheat/rice
 	name = "pack of rice seeds"
 	desc = "These may, or may not, grow into rice."
@@ -73,7 +70,6 @@
 	tastes = list("rice" = 1)
 	distill_reagent = "sake"
 
-//Meatwheat - grows into synthetic meat
 /obj/item/seeds/wheat/meat
 	name = "pack of meatwheat seeds"
 	desc = "If you ever wanted to drive a vegetarian to insanity, here's how."

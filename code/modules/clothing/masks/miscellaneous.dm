@@ -8,14 +8,6 @@
 	gas_transfer_coefficient = 0.9
 	equip_delay_other = 20
 
-///obj/item/clothing/mask/muzzle/attack_paw(mob/user)
-//	if(iscarbon(user))
-//		var/mob/living/carbon/C = user
-//		if(src == C.wear_mask)
-//			to_chat(user, "<span class='warning'>You need help taking this off!</span>")
-//			return
-//	..()
-
 /obj/item/clothing/mask/surgical
 	name = "sterile mask"
 	desc = "A sterile mask designed to help prevent the spread of diseases."
@@ -33,8 +25,6 @@
 
 /obj/item/clothing/mask/surgical/attack_self(mob/user)
 	adjustmask(user)
-
-//NCR Facewrap
 
 /obj/item/clothing/mask/ncr_facewrap
 	name = "desert facewrap"
@@ -79,12 +69,6 @@
 		if(prob(3))
 			M += pick(" Ravioli, ravioli, give me the formuoli!"," Mamma-mia!"," Mamma-mia! That's a spicy meat-ball!", " La la la la la funiculi funicula!")
 	return trim(M)
-/*
-/obj/item/clothing/mask/joy
-	name = "joy mask"
-	desc = "Express your happiness or hide your sorrows with this laughing face with crying tears of joy cutout."
-	icon_state = "joy"
-*/
 
 /obj/item/clothing/mask/pig
 	name = "pig mask"
@@ -119,7 +103,6 @@
 		message = pick("Oink!","Squeeeeeeee!","Oink Oink!")
 	return message
 
-///frog mask - reeee!!
 /obj/item/clothing/mask/frog
 	name = "frog mask"
 	desc = "An ancient mask carved in the shape of a frog.<br> Sanity is like gravity, all it needs is a push."
@@ -128,32 +111,6 @@
 	flags_inv = HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	w_class = WEIGHT_CLASS_SMALL
 	var/voicechange = FALSE
-/*
-/obj/item/clothing/mask/frog/attack_self(mob/user)
-	voicechange = !voicechange
-	to_chat(user, "<span class='notice'>You turn the voice box [voicechange ? "on" : "off"]!</span>")
-
-
-/obj/item/clothing/mask/frog/speechModification(message) //whenever you speak
-	if(voicechange)
-		if(prob(5)) //sometimes, the angry spirit finds others words to speak.
-			message = pick("HUUUUU!!","SMOOOOOKIN'!!","Hello my baby, hello my honey, hello my rag-time gal.", "Feels bad, man.", "GIT DIS GUY OFF ME!!" ,"SOMEBODY STOP ME!!", "NORMIES, GET OUT!!")
-		else
-			message = pick("Ree!!", "Reee!!","REEE!!","REEEEE!!") //but its usually just angry gibberish,
-	return message
-
-
-/obj/item/clothing/mask/frog/cursed
-
-/obj/item/clothing/mask/frog/cursed/attack_self(mob/user)
-	return //no voicebox to alter.
-
-/obj/item/clothing/mask/frog/cursed/equipped(mob/user, slot)
-	var/mob/living/carbon/C = user
-	if(C.wear_mask == src)
-		to_chat(user, "<span class='warning'><B>[src] was cursed! Ree!!</B></span>")
-	return ..()
-*/
 
 /obj/item/clothing/mask/cowmask
 	name = "Cowface"
@@ -355,8 +312,6 @@
 	item_state = "scarecrow_sack"
 	flags_inv = HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 
-//Desert facewrap
-
 /obj/item/clothing/mask/facewrap
 	name = "desert facewrap"
 	desc = "A facewrap to help shield the face from sand and other dirt."
@@ -367,11 +322,9 @@
 	visor_flags_inv = HIDEFACE
 	visor_flags_cover = MASKCOVERSMOUTH
 
-//Society Mask
-
 /obj/item/clothing/mask/society
 	name = "golden facemask"
-	desc = "A burlap sack with eyeholes."
+	desc = "A brass half-face mask."
 	icon_state = "societymask"
 	item_state = "societymask"
 	flags_inv = HIDEFACE

@@ -1,4 +1,3 @@
-// Tea
 /obj/item/seeds/tea
 	name = "pack of tea aspera seeds"
 	desc = "These seeds grow into tea plants."
@@ -21,11 +20,10 @@
 	desc = "These aromatic tips of the tea plant can be dried to make tea."
 	icon_state = "tea_aspera_leaves"
 	filling_color = "#008000"
-	grind_results = list("teapowder" = 0)
+	grind_results = list("teapowder" = 2)
 	dry_grind = TRUE
 	can_distill = FALSE
 
-// Tea Astra
 /obj/item/seeds/tea/astra
 	name = "pack of tea astra seeds"
 	icon_state = "seed-teaastra"
@@ -41,7 +39,7 @@
 	name = "Tea Astra tips"
 	icon_state = "tea_astra_leaves"
 	filling_color = "#4582B4"
-	grind_results = list("teapowder" = 0, "salglu_solution" = 0)
+	grind_results = list("teapowder" = 2, "salglu_solution" = 0)
 
 
 // Coffee
@@ -71,7 +69,7 @@
 	filling_color = "#DC143C"
 	bitesize_mod = 2
 	dry_grind = TRUE
-	grind_results = list("coffeepowder" = 0)
+	grind_results = list("coffeepowder" = 2)
 	distill_reagent = "kahlua"
 
 // Coffee Robusta

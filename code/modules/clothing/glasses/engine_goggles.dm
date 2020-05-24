@@ -85,7 +85,7 @@
 
 	for(var/i in rad_places)
 		var/turf/place = i
-		if(get_dist(user, place) >= range*2)	//Rads are easier to see than wires under the floor
+		if(get_dist(user, place) >= range*2)
 			continue
 		var/strength = round(rad_places[i] / 1000, 0.1)
 		var/image/pic = new(loc = place)
@@ -128,7 +128,7 @@
 		else
 			user.update_inv_hands()
 
-/obj/item/clothing/glasses/meson/engine/tray //atmos techs have lived far too long without tray goggles while those damned engineers get their dual-purpose gogles all to themselves
+/obj/item/clothing/glasses/meson/engine/tray
 	name = "optical t-ray scanner"
 	icon_state = "trayson-t-ray"
 	item_state = "trayson-t-ray"

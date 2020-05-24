@@ -1,14 +1,3 @@
-/*
- * Contains:
- *		Fire protection
- *		Bomb protection
- *		Radiation protection
- */
-
-/*
- * Fire protection
- */
-
 /obj/item/clothing/suit/fire
 	name = "emergency firesuit"
 	desc = "A suit that helps protect against fire and heat."
@@ -44,14 +33,11 @@
 
 /obj/item/clothing/suit/fire/atmos
 	name = "firesuit"
-	desc = "An expensive firesuit that protects against even the most deadly of station fires. Designed to protect even if the wearer is set aflame."
+	desc = "An expensive firesuit that protects against even the most deadly of fires. Designed to protect even if the wearer is set aflame."
 	icon_state = "atmos_firesuit"
 	item_state = "firesuit_atmos"
 	max_heat_protection_temperature = FIRE_IMMUNITY_SUIT_MAX_TEMP_PROTECT
 
-/*
- * Bomb protection
- */
 /obj/item/clothing/head/bomb_hood
 	name = "bomb hood"
 	desc = "Use in case of bomb."
@@ -110,10 +96,6 @@
 /obj/item/clothing/suit/bomb_suit/white
 	icon_state = "bombsuit_white"
 	item_state = "bombsuit_white"
-
-/*
-* Radiation protection
-*/
 
 /obj/item/clothing/head/radiation
 	name = "radiation hood"

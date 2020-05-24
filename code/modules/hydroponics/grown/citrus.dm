@@ -1,4 +1,3 @@
-// Citrus - base type
 /obj/item/reagent_containers/food/snacks/grown/citrus
 	seed = /obj/item/seeds/lime
 	name = "citrus"
@@ -8,7 +7,6 @@
 	foodtype = FRUIT
 	wine_power = 30
 
-// Lime
 /obj/item/seeds/lime
 	name = "pack of lime seeds"
 	desc = "These are very sour seeds."
@@ -33,7 +31,6 @@
 	filling_color = "#00FF00"
 	juice_results = list("limejuice" = 0)
 
-// Orange
 /obj/item/seeds/orange
 	name = "pack of orange seeds"
 	desc = "Sour seeds."
@@ -61,7 +58,6 @@
 	juice_results = list("orangejuice" = 0)
 	distill_reagent = "triple_sec"
 
-// Lemon
 /obj/item/seeds/lemon
 	name = "pack of lemon seeds"
 	desc = "These are sour seeds."
@@ -86,8 +82,7 @@
 	filling_color = "#FFD700"
 	juice_results = list("lemonjuice" = 0)
 
-// Combustible lemon
-/obj/item/seeds/firelemon //combustible lemon is too long so firelemon
+/obj/item/seeds/firelemon
 	name = "pack of combustible lemon seeds"
 	desc = "When life gives you lemons, don't make lemonade. Make life take the lemons back! Get mad! I don't want your damn lemons!"
 	icon_state = "seed-firelemon"

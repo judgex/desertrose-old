@@ -1,6 +1,3 @@
-
-//BeanieStation13 Redux
-
 /obj/item/clothing/head/beanie //Default is white, this is meant to be seen
 	name = "beanie"
 	desc = "A stylish beanie. The perfect winter accessory for those with a keen fashion sense, and those who just can't handle a cold breeze on their heads."
@@ -45,9 +42,7 @@
 /obj/item/clothing/head/beanie/cyan
 	name = "cyan beanie"
 	icon_state = "beanie"
-	color = "#54A3CE" //Cyan (Or close to it)
-
-//Striped Beanies have unique sprites
+	color = "#54A3CE"
 
 /obj/item/clothing/head/beanie/christmas
 	name = "christmas beanie"

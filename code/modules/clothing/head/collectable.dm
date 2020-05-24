@@ -1,6 +1,3 @@
-
-//Hat Station 13
-
 /obj/item/clothing/head/collectable
 	name = "collectable hat"
 	desc = "A rare collectable hat."
@@ -8,7 +5,7 @@
 
 /obj/item/clothing/head/collectable/petehat
 	name = "ultra rare Pete's hat!"
-	desc = "It smells faintly of plasma."
+	desc = "It smells faintly of fuel."
 	icon_state = "petehat"
 
 /obj/item/clothing/head/collectable/slime
@@ -97,16 +94,7 @@
 	item_state = "pirate"
 
 	dog_fashion = /datum/dog_fashion/head/pirate
-/*
-/obj/item/clothing/head/collectable/kitty
-	name = "collectable kitty ears"
-	desc = "The fur feels... a bit too realistic."
-	icon_state = "kitty"
-	item_state = "kitty"
-	dynamic_hair_suffix = ""
 
-	dog_fashion = /datum/dog_fashion/head/kitty
-*/
 /obj/item/clothing/head/collectable/rabbitears
 	name = "collectable rabbit ears"
 	desc = "Not as lucky as the feet!"

@@ -1,4 +1,3 @@
-// Berries
 /obj/item/seeds/berry
 	name = "pack of berry seeds"
 	desc = "These seeds grow into berry bushes."
@@ -30,7 +29,6 @@
 	tastes = list("berry" = 1)
 	distill_reagent = "gin"
 
-// Poison Berries
 /obj/item/seeds/berry/poison
 	name = "pack of poison-berry seeds"
 	desc = "These seeds grow into poison-berry bushes."
@@ -54,7 +52,6 @@
 	distill_reagent = null
 	wine_power = 35
 
-// Death Berries
 /obj/item/seeds/berry/death
 	name = "pack of death-berry seeds"
 	desc = "These seeds grow into death berries."
@@ -79,7 +76,6 @@
 	distill_reagent = null
 	wine_power = 50
 
-// Glow Berries
 /obj/item/seeds/berry/glow
 	name = "pack of glow-berry seeds"
 	desc = "These seeds grow into glow-berry bushes."
@@ -105,7 +101,6 @@
 	distill_reagent = null
 	wine_power = 60
 
-// Cherries
 /obj/item/seeds/cherry
 	name = "pack of cherry pits"
 	desc = "Careful not to crack a tooth on one... That'd be the pits."
@@ -138,7 +133,6 @@
 	tastes = list("cherry" = 1)
 	wine_power = 30
 
-// Blue Cherries
 /obj/item/seeds/cherry/blue
 	name = "pack of blue cherry pits"
 	desc = "The blue kind of cherries."
@@ -162,7 +156,6 @@
 	tastes = list("blue cherry" = 1)
 	wine_power = 50
 
-// Grapes
 /obj/item/seeds/grape
 	name = "pack of grape seeds"
 	desc = "These seeds grow into grape vines."
@@ -196,7 +189,6 @@
 	tastes = list("grape" = 1)
 	distill_reagent = "wine"
 
-// Green Grapes
 /obj/item/seeds/grape/green
 	name = "pack of green grape seeds"
 	desc = "These seeds grow into green-grape vines."
@@ -205,7 +197,6 @@
 	plantname = "Green-Grape Vine"
 	product = /obj/item/reagent_containers/food/snacks/grown/grapes/green
 	reagents_add = list("kelotane" = 0.2, "vitamin" = 0.04, "nutriment" = 0.1, "sugar" = 0.1)
-	// No rarity: technically it's a beneficial mutant, but it's not exactly "new"...
 	mutatelist = list()
 
 /obj/item/reagent_containers/food/snacks/grown/grapes/green

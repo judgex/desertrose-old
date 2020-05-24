@@ -1,4 +1,3 @@
-// Watermelon
 /obj/item/seeds/watermelon
 	name = "pack of watermelon seeds"
 	desc = "These seeds grow into watermelon plants."
@@ -36,7 +35,6 @@
 	juice_results = list("watermelonjuice" = 0)
 	wine_power = 40
 
-// Holymelon
 /obj/item/seeds/watermelon/holy
 	name = "pack of holymelon seeds"
 	desc = "These seeds grow into holymelon plants."

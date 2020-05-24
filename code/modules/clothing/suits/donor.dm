@@ -1,10 +1,3 @@
-/*
- * Contains:
- *		Patreon Donor Items
- *
- *
- */
-
 /obj/item/clothing/suit/donor/soldier
 	name = "Soldier's Greatcoat"
 	desc = "A resistant, tan greatcoat, typically worn by pre-War Generals."

@@ -1,4 +1,3 @@
-// Cocoa Pod
 /obj/item/seeds/cocoapod
 	name = "pack of cocao seeds"
 	desc = "These seeds grow into cacao trees."
@@ -29,7 +28,6 @@
 	tastes = list("cocoa" = 1)
 	distill_reagent = "creme_de_cacao"
 
-// Vanilla Pod
 /obj/item/seeds/cocoapod/vanillapod
 	name = "pack of vanilla pod seeds"
 	desc = "These seeds grow into vanilla trees."

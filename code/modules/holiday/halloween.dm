@@ -1,10 +1,3 @@
-///////////////////////////////////////
-///////////HALLOWEEN CONTENT///////////
-///////////////////////////////////////
-
-
-//spooky recipes
-
 /datum/recipe/sugarcookie/spookyskull
 	reagents = list("flour" = 5, "sugar" = 5, "milk" = 5)
 	items = list(
@@ -19,9 +12,6 @@
 	)
 	result = /obj/item/reagent_containers/food/snacks/sugarcookie/spookycoffin
 
-//////////////////////////////
-//Spookoween trapped closets//
-//////////////////////////////
 
 #define SPOOKY_SKELETON 1
 #define ANGRY_FAITHLESS 2
@@ -103,17 +93,11 @@
 		spawn_atom_to_turf(/mob/living/simple_animal/hostile/retaliate/clown/insane, loc, 1, FALSE)
 		trapped = 0
 
-//don't spawn in crates
 /obj/structure/closet/crate/trigger_spooky_trap()
 	return
 
 /obj/structure/closet/crate/set_spooky_trap()
 	return
-
-
-////////////////////
-//Spookoween Ghost//
-////////////////////
 
 /mob/living/simple_animal/shade/howling_ghost
 	name = "ghost"
@@ -173,11 +157,6 @@
 
 /mob/living/simple_animal/shade/howling_ghost/CanPass(atom/movable/mover, turf/target)
 	return 1
-
-
-///////////////////////////
-//Spookoween Insane Clown//
-///////////////////////////
 
 /mob/living/simple_animal/hostile/retaliate/clown/insane
 	name = "insane clown"
@@ -247,13 +226,9 @@
 /mob/living/simple_animal/hostile/retaliate/clown/insane/handle_temperature_damage()
 	return
 
-/////////////////////////
-// Spooky Uplink Items //
-/////////////////////////
-
 /datum/uplink_item/dangerous/crossbow/candy
 	name = "Candy Corn Crossbow"
-	desc = "A standard miniature energy crossbow that uses a hard-light projector to transform bolts into candy corn. Happy Halloween!"
+	desc = "A standard miniature crossbow that launches into candy corn. Happy Halloween!"
 	category = "Holiday"
 	item = /obj/item/gun/energy/kinetic_accelerator/crossbow/halloween
 	surplus = 0

@@ -1,5 +1,3 @@
-//Fallout 13 general armor directory
-
 /obj/item/clothing/suit/armor/f13
 
 /obj/item/clothing/suit/armor/f13/cyberpunk
@@ -7,7 +5,6 @@
 	desc = "A trenchcoat augmented with a special alloy for some protection and style."
 	icon_state = "jensencoat"
 	item_state = "jensencoat"
-//	flags = THICKMATERIAL
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
 	armor = list(melee = 30, bullet = 30, laser = 30, energy = 10, bomb = 0, bio = 0, rad = 0, fire = 30, acid = 30)
 	allowed = list(/obj/item/pen,/obj/item/paper,/obj/item/stamp,/obj/item/reagent_containers/food/drinks/flask,/obj/item/weapon,/obj/item/storage/box/matches,/obj/item/lighter,/obj/item/clothing/mask/cigarette,/obj/item/storage/fancy/cigarettes,/obj/item/flashlight,/obj/item/gun,/obj/item/ammo_box,/obj/item/ammo_casing)
@@ -55,18 +52,7 @@
 	flags_inv = HIDEJUMPSUIT
 	strip_delay = 40
 	icon = 'icons/fallout/clothing/suits.dmi'
-/*
-/obj/item/clothing/suit/armor/f13/leatherarmor
-	name = "leather armor"
-	desc = "A set of light armor made of boiled brahmin leather.<br>It should protect against the average 9mm peashooter, but anything higher caliber will punch through it like butter."
-	icon_state = "leatherarmor"
-	item_state = "leatherarmor"
-	armor = list(melee = 40, bullet = 20, laser = 10, energy = 10, bomb = 20, bio = 0, rad = 0, fire = 0, acid = 0)
-	flags_inv = HIDEJUMPSUIT
-	strip_delay = 40
-	icon = 'icons/fallout/clothing/suits.dmi'
 
-*/
 /obj/item/clothing/suit/armor/f13/raidermetal
 	name = "raider metal armor"
 	desc = "A set of hand-crafted metal armor created from a variety of scrap pieces attached to a black leather base layer."
@@ -75,17 +61,7 @@
 	armor = list(melee = 40, bullet = 30, laser = 20, energy = 20, bomb = 30, bio = 0, rad = 0, fire = 10, acid = 0)
 	resistance_flags = FIRE_PROOF
 	icon = 'icons/fallout/clothing/suits.dmi'
-/*
-/obj/item/clothing/suit/armor/f13/bmetalarmor //uses the same path as bmetalarmor in armor.dm, causing the assless chaps bug
-	name = "black metal armor"
-	desc = "A set of sturdy metal armor made from various bits of scrap metal. It looks like it might impair movement."
-	icon_state = "bmetalarmor"
-	item_state = "bmetalarmor"
-	armor = list(melee = 50, bullet = 40, laser = 30, energy = 30, bomb = 40, bio = 0, rad = 0, fire = 20, acid = 0)
-	flags_inv = HIDEJUMPSUIT
-	resistance_flags = FIRE_PROOF
-	icon = 'icons/fallout/clothing/suits.dmi'
-*/
+
 /obj/item/clothing/suit/armor/f13/ncrarmor/soldier
 	name = "standard issue trooper armor"
 	desc = "A set of NCR armor that consists of an armored breastplate, metal pauldrons, and gauntlets, worn by NCR soldiers in combat environments.<br>This one has had its breastplate emblazoned with the emblem of the NCR, that has slightly faded over time."
@@ -167,8 +143,6 @@
 	icon_state = "vault_commandcoat"
 	item_state = "vault_commandcoat"
 	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
-
-//Knights of the Apocalypse
 
 /obj/item/clothing/suit/armor/riot/knight
 	name = "plate armour"

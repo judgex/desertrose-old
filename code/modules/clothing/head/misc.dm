@@ -1,5 +1,3 @@
-
-
 /obj/item/clothing/head/centhat
 	name = "\improper Vault-tec hat"
 	icon_state = "centcom"
@@ -115,7 +113,7 @@
 
 	dog_fashion = /datum/dog_fashion/head/rabbit
 
-/obj/item/clothing/head/simplekitty //See if these cant be put into the map because theyre functionally identical to rabbit ears
+/obj/item/clothing/head/simplekitty
 	name = "Kitty Headband"
 	desc = "A headband with a pair of cute kitty ears"
 	icon_state = "kittyb"

@@ -1,4 +1,3 @@
-// Carrot
 /obj/item/seeds/carrot
 	name = "pack of carrot seeds"
 	desc = "These seeds grow into carrots."
@@ -17,7 +16,7 @@
 /obj/item/reagent_containers/food/snacks/grown/carrot
 	seed = /obj/item/seeds/carrot
 	name = "carrot"
-	desc = "It's good for the eyes!"
+	desc = "Rabbits love these."
 	icon_state = "carrot"
 	filling_color = "#FFA500"
 	bitesize_mod = 2
@@ -35,7 +34,6 @@
 	else
 		return ..()
 
-// Parsnip
 /obj/item/seeds/carrot/parsnip
 	name = "pack of parsnip seeds"
 	desc = "These seeds grow into parsnips."
@@ -56,7 +54,6 @@
 	foodtype = VEGETABLES
 	wine_power = 35
 
-// White-Beet
 /obj/item/seeds/whitebeet
 	name = "pack of white-beet seeds"
 	desc = "These seeds grow into sugary beet producing plants."
@@ -82,7 +79,6 @@
 	foodtype = VEGETABLES
 	wine_power = 40
 
-// Red Beet
 /obj/item/seeds/redbeet
 	name = "pack of redbeet seeds"
 	desc = "These seeds grow into red beet producing plants."
@@ -106,3 +102,5 @@
 	bitesize_mod = 2
 	foodtype = VEGETABLES
 	wine_power = 60
+
+/*HRP*/

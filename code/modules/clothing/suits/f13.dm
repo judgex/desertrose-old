@@ -1,5 +1,3 @@
-//Fallout 13 various suits directory
-
 /obj/item/clothing/suit/f13
 
 /obj/item/clothing/suit/f13/robe_liz
@@ -130,8 +128,6 @@
 	item_state = "sexymaid_s"
 	body_parts_covered = CHEST
 
-//Special Biosuit
-
 /obj/item/clothing/suit/bio_suit/f13/hazmat
 	name = "hazmat suit"
 	desc = "Yellow Level A , hazmat protective suit.<br>You can see some numbers on the tag: 35 56."
@@ -146,8 +142,6 @@
 	icon_state = "hazmat"
 	item_state = "hazmat_helmet"
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
-
-//Fallout 13 toggle apparel directory
 
 /obj/item/clothing/suit/toggle/labcoat/f13
 

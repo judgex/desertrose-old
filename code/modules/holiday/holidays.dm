@@ -62,8 +62,6 @@
 
 	return FALSE
 
-// The actual holidays
-
 /datum/holiday/new_year
 	name = NEW_YEAR
 	begin_day = 30

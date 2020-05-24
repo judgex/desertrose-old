@@ -1,4 +1,3 @@
-// Starthistle
 /obj/item/seeds/starthistle
 	name = "pack of starthistle seeds"
 	desc = "A robust species of weed that often springs up in-between the cracks of spaceship parking lots."
@@ -6,7 +5,7 @@
 	species = "starthistle"
 	plantname = "Starthistle"
 	lifespan = 70
-	endurance = 50 // damm pesky weeds
+	endurance = 50
 	maturation = 5
 	production = 1
 	yield = 2
@@ -28,7 +27,6 @@
 
 	parent.update_tray()
 
-// Cabbage
 /obj/item/seeds/cabbage
 	name = "pack of cabbage seeds"
 	desc = "These seeds grow into cabbages."
@@ -56,7 +54,6 @@
 	foodtype = VEGETABLES
 	wine_power = 20
 
-// Sugarcane
 /obj/item/seeds/sugarcane
 	name = "pack of sugarcane seeds"
 	desc = "These seeds grow into sugarcane."
@@ -82,7 +79,6 @@
 	foodtype = VEGETABLES | SUGAR
 	distill_reagent = "rum"
 
-// Gatfruit
 /obj/item/seeds/gatfruit/
 	name = "pack of gatfruit seeds"
 	desc = "These seeds grow into .357 revolvers."
@@ -113,7 +109,6 @@
 	tastes = list("gunpowder" = 1)
 	wine_power = 90 //It burns going down, too.
 
-//Cherry Bombs
 /obj/item/seeds/cherry/bomb
 	name = "pack of cherry bomb pits"
 	desc = "They give you vibes of dread and frustration."
@@ -156,8 +151,6 @@
 	playsound(src, 'sound/effects/fuse.ogg', seed.potency, 0)
 	reagents.chem_temp = 1000 //Sets off the black powder
 	reagents.handle_reactions()
-
-// Lavaland cactus
 
 /obj/item/seeds/lavaland/cactus
 	name = "pack of fruiting cactus seeds"

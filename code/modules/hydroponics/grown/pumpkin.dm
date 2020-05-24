@@ -1,4 +1,3 @@
-// Pumpkin
 /obj/item/seeds/pumpkin
 	name = "pack of pumpkin seeds"
 	desc = "These seeds grow into pumpkin vines."
@@ -36,7 +35,6 @@
 	else
 		return ..()
 
-// Blumpkin
 /obj/item/seeds/pumpkin/blumpkin
 	name = "pack of blumpkin seeds"
 	desc = "These seeds grow into blumpkin vines."
@@ -58,3 +56,5 @@
 	foodtype = FRUIT
 	juice_results = list("blumpkinjuice" = 0)
 	wine_power = 50
+
+/*MRP*/

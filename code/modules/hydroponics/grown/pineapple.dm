@@ -1,4 +1,3 @@
-// Pineapple!
 /obj/item/seeds/pineapple
 	name = "pack of pineapple seeds"
 	desc = "a pack of seeds that grows into a pineapple plant"

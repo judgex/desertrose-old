@@ -167,8 +167,6 @@
 	. = ..()
 	allowed = GLOB.detective_vest_allowed
 
-//All of the armor below is mostly unused
-
 /obj/item/clothing/suit/armor/centcom
 	name = "\improper CentCom armor"
 	desc = "A suit that protects against some damage."
@@ -246,8 +244,6 @@
 	max_integrity = 200
 	resistance_flags = FLAMMABLE
 	armor = list("melee" = 20, "bullet" = 10, "laser" = 30, "energy" = 5, "bomb" = 15, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 50)
-
-//Fallout 13
 
 /obj/item/clothing/suit/armor/f13/leather_jacket
 	name = "leather jacket"
@@ -617,42 +613,6 @@
 	item_state = "heavy_tribal_armor"
 	armor = list("melee" = 45, "bullet" = 50, "laser" = 45, "energy" = 45, "bomb" = 55, "bio" = 60, "rad" = 15, "fire" = 60, "acid" = 30)
 	flags_inv = HIDEJUMPSUIT
-
-/*
-/obj/item/clothing/suit/armor/f13/bmetalarmor
-	name = "metal armor"
-	desc = "A set of sturdy metal armor made from various bits of scrap metal. It looks heavy and impairs movement"
-	icon_state = "bmetalarmor"
-	item_state = "bmetalarmor"
-	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	armor = list("melee" = 60, "bullet" = 40, "laser" = 40, "energy" = 30, "bomb" = 25, "bio" = 30, "rad" = 30, "fire" = 90, "acid" = 0)
-	slowdown = 0.75
-
-/obj/item/clothing/suit/armor/f13/kit/terrible
-	name = "scorched armor kit"
-	desc = "A few football pads and a belt. At this point, it's really just for looks."
-	armor = list("melee" = 1, "bullet" = 1, "laser" = 0, "energy" = 0, "bomb" = 1, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
-
-/obj/item/clothing/suit/armor/f13/leatherarmor/terrible
-	name = "battered leather armor"
-	desc = "A set of heavily worn brahmin leather armor. It looks like it's about to fall apart."
-	armor = list("melee" = 3, "bullet" = 3, "laser" = 0, "energy" = 0, "bomb" = 3, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
-
-/obj/item/clothing/suit/armor/f13/bmetalarmor/terrible
-	name = "rusting metal armor"
-	desc = "A set of rusting metal armor made from various bits of scrap metal. Several bullet holes have weakened it."
-	armor = list("melee" = 5, "bullet" = 5, "laser" = 0, "energy" = 0, "bomb" = 5, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
-
-/obj/item/clothing/suit/armor/f13/ibmetalarmor
-	name = "reflective metal armor"
-	desc = "A set of reflective metal armor made from various bits of scrap metal.<br>Will protect against bullets and dissipate lasers a lot better, still slowing you down."
-	icon_state = "bmetalarmor"
-	item_state = "bmetalarmor"
-	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	armor = list("melee" = 65, "bullet" = 40, "laser" = 50, "energy" = 60, "bomb" = 25, "bio" = 30, "rad" = 30, "fire" = 90, "acid" = 0)
-	slowdown = 0.75
-*/
-// salvaged/broken power armor, does not require PA training
 
 /obj/item/clothing/suit/armor/f13/brokenpa
 	w_class = WEIGHT_CLASS_HUGE

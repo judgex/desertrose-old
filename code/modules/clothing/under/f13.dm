@@ -9,8 +9,6 @@
 /obj/item/clothing/under/f13/female
 	fitted = FEMALE_UNIFORM_TOP
 
-//Vault
-
 /obj/item/clothing/under/f13/vault
 	name = "vault jumpsuit"
 	desc = "A blue jumpsuit with a yellow vault pattern printed on it."
@@ -34,8 +32,6 @@
 	sensor_mode = SENSOR_COORDS
 	random_sensor = FALSE
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 30, "fire" = 20, "acid" = 50)
-
-//NCR
 
 /obj/item/clothing/under/f13/ncr
 	name = "NCR desert fatigues"
@@ -63,8 +59,6 @@
 	icon_state = "scoutclothes"
 	item_state = "scoutclothes"
 	item_color = "scoutclothes"
-
-//Settlers
 
 /obj/item/clothing/under/f13/brahminm
 	name = "brahmin skin outfit"
@@ -109,8 +103,6 @@
 	icon_state = "settler"
 	item_state = "settler"
 	item_color = "settler"
-
-//The City
 
 /obj/item/clothing/under/f13/ranger
 	name = "ranger outfit"
@@ -168,8 +160,6 @@
 	item_color = "chef"
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 30, "fire" = 20, "acid" = 50)
 
-//Brotherhood of Steel
-
 /obj/item/clothing/under/f13/recon
 	name = "recon bodysuit"
 	desc = "A vacuum-sealed asbestos jumpsuit covering the entire body."
@@ -177,8 +167,6 @@
 	item_state = "recon"
 	item_color = "recon"
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 40, "fire" = 30, "acid" = 80)
-
-//Legion
 
 /obj/item/clothing/under/f13/legskirt
 	name = "legionary fatigues"
@@ -198,8 +186,6 @@
 	icon_state = "priestess"
 	item_state = "priestess"
 	item_color = "priestess"
-
-// Generic
 
 /obj/item/clothing/under/f13/machinist
 	name = "machinist bodysuit"
@@ -316,10 +302,6 @@
 	icon_state = "xenon"
 	item_state = "xenon"
 
-//Minor Factions
-
-//Roving Traders
-
 /obj/item/clothing/under/f13/roving
 	name = "roving trader outfit "
 	desc = "It's an outfit commonly worn by the roving traders."
@@ -327,8 +309,6 @@
 	item_state = "roving"
 	item_color = "roving"
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 20, "fire" = 20, "acid" = 40)
-
-//Followers of the Apocalypse
 
 /obj/item/clothing/under/f13/follower
 	name = "follower volunteer uniform"
@@ -338,7 +318,6 @@
 	item_color = "follower"
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 20, "fire" = 20, "acid" = 40)
 
-//Gangs
 /obj/item/clothing/under/f13/raider_leather
 	name = "raider leathers"
 	desc = "Scraps of material thrown together and typically worn by raiders."
@@ -361,8 +340,6 @@
 	item_state = "raiderrags"
 	item_color = "raiderrags"
 
-//Great Khans
-
 /obj/item/clothing/under/f13/khan
 	name = "great khan uniform"
 	desc = "The uniform of the the Great Khans."
@@ -377,15 +354,11 @@
 	icon_state = "khan"
 	item_state = "khan"
 
-//Warriors
-
 /obj/item/clothing/suit/armor/warriors
 	name = "warriors armored vest"
 	desc = "The symbol of the greatest gangers."
 	icon_state = "warriors"
 	item_state = "warriors"
-
-//Tribals
 
 /obj/item/clothing/under/f13/tribe
 	name = "tribal rags"
@@ -441,8 +414,6 @@
 	item_state = "bl_suit"
 	item_color = "enclave_o"
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 20, "fire" = 20, "acid" = 40)
-
-//Fallout 13 general clothing directory
 
 /obj/item/clothing/under/f13/navy
 	name = "navy jumpsuit"

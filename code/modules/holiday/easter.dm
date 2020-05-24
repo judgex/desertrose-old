@@ -84,7 +84,6 @@
 	. = ..()
 	countEggs()
 
-//Bunny Suit
 /obj/item/clothing/head/bunnyhead
 	name = "Easter Bunny Head"
 	icon_state = "bunnyhead"
@@ -100,7 +99,6 @@
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT
 
-//Egg prizes and egg spawns!
 /obj/item/reagent_containers/food/snacks/egg
 	var/containsPrize = FALSE
 
@@ -138,11 +136,10 @@
 		containsPrize = FALSE
 		qdel(src)
 
-//Easter Recipes + food
 /obj/item/reagent_containers/food/snacks/hotcrossbun
 	bitesize = 2
 	name = "hot-cross bun"
-	desc = "The Cross represents the Assistants that died for your sins."
+	desc = "The Cross represents those that died for your sins."
 	icon_state = "hotcrossbun"
 
 /datum/crafting_recipe/food/hotcrossbun

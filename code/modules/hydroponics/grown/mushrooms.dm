@@ -4,7 +4,6 @@
 	foodtype = VEGETABLES
 	wine_power = 40
 
-// Reishi
 /obj/item/seeds/reishi
 	name = "pack of reishi mycelium"
 	desc = "This mycelium grows into something medicinal and relaxing."
@@ -30,7 +29,6 @@
 	icon_state = "reishi"
 	filling_color = "#FF4500"
 
-// Fly Amanita
 /obj/item/seeds/amanita
 	name = "pack of fly amanita mycelium"
 	desc = "This mycelium grows into something horrible."
@@ -56,7 +54,6 @@
 	icon_state = "amanita"
 	filling_color = "#FF0000"
 
-// Destroying Angel
 /obj/item/seeds/angel
 	name = "pack of destroying angel mycelium"
 	desc = "This mycelium grows into something devastating."
@@ -84,7 +81,6 @@
 	filling_color = "#C0C0C0"
 	wine_power = 60
 
-// Liberty Cap
 /obj/item/seeds/liberty
 	name = "pack of liberty-cap mycelium"
 	desc = "This mycelium grows into liberty-cap mushrooms."
@@ -109,7 +105,6 @@
 	filling_color = "#DAA520"
 	wine_power = 80
 
-// Plump Helmet
 /obj/item/seeds/plump
 	name = "pack of plump-helmet mycelium"
 	desc = "This mycelium grows into helmets... maybe."
@@ -124,7 +119,6 @@
 	growthstages = 3
 	genes = list(/datum/plant_gene/trait/plant_type/fungal_metabolism)
 	growing_icon = 'icons/obj/hydroponics/growing_mushrooms.dmi'
-	mutatelist = list(/obj/item/seeds/plump/walkingmushroom)
 	reagents_add = list("vitamin" = 0.04, "nutriment" = 0.1)
 
 /obj/item/reagent_containers/food/snacks/grown/mushroom/plumphelmet
@@ -135,45 +129,6 @@
 	filling_color = "#9370DB"
 	distill_reagent = "manlydorf"
 
-// Walking Mushroom
-/obj/item/seeds/plump/walkingmushroom
-	name = "pack of walking mushroom mycelium"
-	desc = "This mycelium will grow into huge stuff!"
-	icon_state = "mycelium-walkingmushroom"
-	species = "walkingmushroom"
-	plantname = "Walking Mushrooms"
-	product = /obj/item/reagent_containers/food/snacks/grown/mushroom/walkingmushroom
-	lifespan = 30
-	endurance = 30
-	maturation = 5
-	yield = 1
-	growing_icon = 'icons/obj/hydroponics/growing_mushrooms.dmi'
-	mutatelist = list()
-	reagents_add = list("vitamin" = 0.05, "nutriment" = 0.15)
-	rarity = 30
-
-/obj/item/reagent_containers/food/snacks/grown/mushroom/walkingmushroom
-	seed = /obj/item/seeds/plump/walkingmushroom
-	name = "walking mushroom"
-	desc = "<I>Plumus Locomotus</I>: The beginning of the great walk."
-	icon_state = "walkingmushroom"
-	filling_color = "#9370DB"
-	can_distill = FALSE
-
-/obj/item/reagent_containers/food/snacks/grown/mushroom/walkingmushroom/attack_self(mob/user)
-	if(isspaceturf(user.loc))
-		return
-	var/mob/living/simple_animal/hostile/mushroom/M = new /mob/living/simple_animal/hostile/mushroom(user.loc)
-	M.maxHealth += round(seed.endurance / 4)
-	M.melee_damage_lower += round(seed.potency / 20)
-	M.melee_damage_upper += round(seed.potency / 20)
-	M.move_to_delay -= round(seed.production / 50)
-	M.health = M.maxHealth
-	qdel(src)
-	to_chat(user, "<span class='notice'>You plant the walking mushroom.</span>")
-
-
-// Chanterelle
 /obj/item/seeds/chanter
 	name = "pack of chanterelle mycelium"
 	desc = "This mycelium grows into chanterelle mushrooms."
@@ -199,8 +154,6 @@
 	icon_state = "chanterelle"
 	filling_color = "#FFA500"
 
-
-// Glowshroom
 /obj/item/seeds/glowshroom
 	name = "pack of glowshroom mycelium"
 	desc = "This mycelium -glows- into mushrooms!"
@@ -252,8 +205,6 @@
 	qdel(src)
 	return TRUE
 
-
-// Glowcap
 /obj/item/seeds/glowshroom/glowcap
 	name = "pack of glowcap mycelium"
 	desc = "This mycelium -powers- into mushrooms!"
@@ -277,8 +228,6 @@
 	effect_path = /obj/structure/glowshroom/glowcap
 	tastes = list("glowcap" = 1)
 
-
-//Shadowshroom
 /obj/item/seeds/glowshroom/shadowshroom
 	name = "pack of shadowshroom mycelium"
 	desc = "This mycelium will grow into something shadowy."
@@ -335,8 +284,6 @@
 	genes = list(/datum/plant_gene/trait/plant_type/fungal_metabolism)
 	growing_icon = 'icons/obj/hydroponics/growing_mushrooms.dmi'
 
-// Porcini (Leafy mushroom)
-
 /obj/item/seeds/lavaland/porcini
 	name = "pack of porcini mycelium"
 	desc = "This mycelium grows into Boletus edulus, also known as porcini. Native to the late Earth, but discovered on Lavaland. Has culinary, medicinal and relaxant effects."
@@ -346,8 +293,6 @@
 	product = /obj/item/reagent_containers/food/snacks/grown/ash_flora/mushroom_leaf
 	genes = list(/datum/plant_gene/trait/plant_type/fungal_metabolism)
 	growing_icon = 'icons/obj/hydroponics/growing_mushrooms.dmi'
-
-// Inocybe (Mushroom caps)
 
 /obj/item/seeds/lavaland/inocybe
 	name = "pack of inocybe mycelium"
@@ -359,8 +304,6 @@
 	genes = list(/datum/plant_gene/trait/plant_type/fungal_metabolism)
 	growing_icon = 'icons/obj/hydroponics/growing_mushrooms.dmi'
 
-// Embershroom (Mushroom stem)
-
 /obj/item/seeds/lavaland/ember
 	name = "pack of embershroom mycelium"
 	desc = "This mycelium grows into embershrooms, a species of bioluminescent mushrooms native to Lavaland."
@@ -370,9 +313,6 @@
 	product = /obj/item/reagent_containers/food/snacks/grown/ash_flora/mushroom_stem
 	genes = list(/datum/plant_gene/trait/plant_type/fungal_metabolism, /datum/plant_gene/trait/glow)
 	growing_icon = 'icons/obj/hydroponics/growing_mushrooms.dmi'
-
-
-//Fallout mushrooms
 
 /obj/item/seeds/fungus
 	name = "pack of cave fungus mycelium"

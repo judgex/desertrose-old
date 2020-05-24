@@ -1,4 +1,3 @@
-// Chili
 /obj/item/seeds/chili
 	name = "pack of chili seeds"
 	desc = "These seeds grow into chili plants."
@@ -28,7 +27,6 @@
 	foodtype = FRUIT
 	wine_power = 20
 
-// Ice Chili
 /obj/item/seeds/chili/ice
 	name = "pack of ice pepper seeds"
 	desc = "These seeds grow into ice pepper plants."
@@ -53,7 +51,6 @@
 	foodtype = FRUIT
 	wine_power = 30
 
-// Ghost Chili
 /obj/item/seeds/chili/ghost
 	name = "pack of ghost chili seeds"
 	desc = "These seeds grow into a chili said to be the hottest in the wasteland."
@@ -79,23 +76,3 @@
 	bitesize_mod = 4
 	foodtype = FRUIT
 	wine_power = 50
-
-/*/obj/item/reagent_containers/food/snacks/grown/ghost_chili/attack_hand(mob/user)
-	. = ..()
-	if(.)
-		return
-	if( ismob(loc) )
-		held_mob = loc
-		START_PROCESSING(SSobj, src)
-
-/obj/item/reagent_containers/food/snacks/grown/ghost_chili/process()
-	if(held_mob && loc == held_mob)
-		if(held_mob.is_holding(src))
-			if(istype(held_mob) && held_mob.gloves)
-				return
-			held_mob.adjust_bodytemperature(15 * TEMPERATURE_DAMAGE_COEFFICIENT)
-			if(prob(10))
-				to_chat(held_mob, "<span class='warning'>Your hand holding [src] burns!</span>")
-	else
-		held_mob = null
-		..()*/

@@ -1,5 +1,3 @@
-//Alphabetical order of civilian jobs.
-
 /obj/item/clothing/under/rank/bartender
 	desc = "It looks like it could use some more flair."
 	name = "bartender's uniform"
@@ -16,7 +14,7 @@
 	item_color = "purplebartender"
 	can_adjust = FALSE
 
-/obj/item/clothing/under/rank/captain //Alright, technically not a 'civilian' but its better then giving a .dm file for a single define.
+/obj/item/clothing/under/rank/captain
 	desc = "It's a blue jumpsuit with some gold markings denoting the rank of \"Captain\"."
 	name = "captain's jumpsuit"
 	icon_state = "captain"
@@ -41,7 +39,6 @@
 	body_parts_covered = CHEST|GROIN|ARMS
 	mutantrace_variation = MUTANTRACE_VARIATION
 	alt_covers_chest = TRUE
-
 
 /obj/item/clothing/under/rank/chaplain
 	desc = "It's a black jumpsuit, often worn by religious folk."
@@ -177,7 +174,7 @@
 
 /obj/item/clothing/under/rank/miner/lavaland
 	desc = "A green uniform for operating in hazardous environments."
-	name = "shaft miner's jumpsuit"
+	name = "Rad-Lander's jumpsuit"
 	icon_state = "explorer"
 	item_state = "explorer"
 	item_color = "explorer"

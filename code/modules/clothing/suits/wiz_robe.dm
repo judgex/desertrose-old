@@ -178,9 +178,6 @@
 	src.robe_charge = TRUE
 	to_chat(usr, "<span class='notice'>\The robe hums, its internal magic supply restored.</span>")
 
-
-//Shielded Armour
-
 /obj/item/clothing/suit/space/hardsuit/shielded/wizard
 	name = "battlemage armour"
 	desc = "Not all wizards are afraid of getting up close and personal."

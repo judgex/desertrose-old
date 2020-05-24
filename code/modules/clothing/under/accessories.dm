@@ -94,9 +94,6 @@
 	item_color = "maidapron"
 	minimize_when_attached = FALSE
 
-
-//Ranks
-
 /obj/item/clothing/accessory/ncr
     name = "(O-6) Colonel rank pin"
     desc = "An officer holding the rank of Colonel should wear these."
@@ -167,8 +164,6 @@
     icon_state = "ncrenlisted"
     item_color = "ncrenlisted"
     minimize_when_attached = TRUE
-
-//BOSRanks
 
 /obj/item/clothing/accessory/bos/initiateK
     name = "Knight-Aspirant pin"
@@ -253,7 +248,6 @@
     icon_state = "elder"
     item_color = "elder"
     minimize_when_attached = TRUE
-//Medals
 
 /obj/item/clothing/accessory/medal
 	name = "bronze medal"
@@ -265,12 +259,11 @@
 	var/medaltype = "medal" //Sprite used for medalbox
 	var/commended = FALSE
 
-//Pinning medals on people
 /obj/item/clothing/accessory/medal/attack(mob/living/carbon/human/M, mob/living/user)
 	if(ishuman(M) && (user.a_intent == INTENT_HELP))
 
 		if(M.wear_suit)
-			if((M.wear_suit.flags_inv & HIDEJUMPSUIT)) //Check if the jumpsuit is covered
+			if((M.wear_suit.flags_inv & HIDEJUMPSUIT))
 				to_chat(user, "<span class='warning'>Medals can only be pinned on jumpsuits.</span>")
 				return
 
@@ -376,11 +369,6 @@
 	name = "nobel sciences award"
 	desc = "A plasma medal which represents significant contributions to the field of science or engineering."
 
-
-////////////
-//Armbands//
-////////////
-
 /obj/item/clothing/accessory/armband
 	name = "red armband"
 	desc = "A fancy red armband!"
@@ -439,10 +427,6 @@
 	icon_state = "medblueband"
 	item_color = "medblueband"
 
-//////////////
-//OBJECTION!//
-//////////////
-
 /obj/item/clothing/accessory/lawyers_badge
 	name = "attorney's badge"
 	desc = "Fills you with the conviction of JUSTICE. Lawyers tend to want to show it to everyone they meet."
@@ -459,9 +443,6 @@
 	if(L)
 		L.bubble_icon = initial(L.bubble_icon)
 
-////////////////
-//HA HA! NERD!//
-////////////////
 /obj/item/clothing/accessory/pocketprotector
 	name = "pocket protector"
 	desc = "Can protect your clothing from ink stains, but you'll look like a nerd if you're using one."
@@ -479,10 +460,6 @@
 	. = ..()
 	for(var/i in 1 to 3)
 		new /obj/item/lipstick/random(src)
-
-////////////////
-//OONGA BOONGA//
-////////////////
 
 /obj/item/clothing/accessory/talisman
 	name = "bone talisman"

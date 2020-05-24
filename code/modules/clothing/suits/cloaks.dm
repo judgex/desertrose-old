@@ -1,5 +1,3 @@
-//Cloaks. No, not THAT kind of cloak.
-
 /obj/item/clothing/neck/cloak
 	name = "brown cloak"
 	desc = "It's a cape that can be worn around your neck."

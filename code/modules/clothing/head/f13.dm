@@ -1,5 +1,3 @@
-//Fallout 13 protective helmets directory
-
 /obj/item/clothing/head/helmet/f13
 
 /obj/item/clothing/head/helmet/f13/tribal
@@ -134,8 +132,6 @@
 	strip_delay = 50
 	resistance_flags = UNACIDABLE
 
-//Knights of the Apocalypse
-
 /obj/item/clothing/head/helmet/knight
 	name = "medieval helmet"
 	desc = "A classic metal helmet worn by all ranks of knights and horsemen of the Old Era."
@@ -183,8 +179,6 @@
 	icon_state = "rider"
 	item_state = "rider"
 
-//Fallout 13 soft caps directory
-
 /obj/item/clothing/head/soft/f13
 
 /obj/item/clothing/head/soft/f13/baseball
@@ -222,7 +216,7 @@
 
 /obj/item/clothing/head/f13
 
-/obj/item/clothing/head/f13/safari //Referencing the Jebediah from Mad Max 3 1985
+/obj/item/clothing/head/f13/safari
 	name = "pith helmet"
 	desc = "A lightweight, cloth-covered helmet made of pith.<br>Suitable for explorers or batshit crazy pilots."
 	icon_state = "safari"
@@ -302,15 +296,13 @@
 	flags_inv = HIDEHAIR
 	armor = list(melee = 20, bullet = 20, laser = 0, energy = 0, bomb = 20, bio = 0, rad = 0, fire = 30, acid = 0)
 
-//Fluff
-
 /obj/item/clothing/head/f13/rastacap
 	name = "rastacap"
 	desc = "<font color='#157206'>Him haffi drop him fork and run,</font><br><font color='green'>Him can't stand up to Jah Jah son,</font><br><font color='#fd680e'>Him haffi lef' ya with him gun,</font><br><font color='red'>Dig off with him bomb.</font>"
 	icon_state = "rastacap"
 	item_state = "fedora"
 	flags_inv = HIDEEARS|HIDEHAIR|HIDEFACIALHAIR
-	cold_protection = HEAD //This tam brings the warm reggae and Jamaican sun with it.
+	cold_protection = HEAD
 	min_cold_protection_temperature = FIRE_HELM_MIN_TEMP_PROTECT
 
 /obj/item/clothing/head/f13/fez
@@ -351,8 +343,6 @@
 	icon_state = "battlecruiser"
 	item_state = "battlecruiser"
 	armor = list(melee = 30, bullet = 20, laser = 20, energy = 10, bomb = 20, bio = 0, rad = 0, fire = 0, acid = 0)
-
-//Fluff welding masks
 
 /obj/item/clothing/head/welding/f13
 

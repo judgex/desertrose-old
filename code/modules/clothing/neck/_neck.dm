@@ -84,10 +84,6 @@
 			return
 	return ..(M,user)
 
-///////////
-//SCARVES//
-///////////
-
 /obj/item/clothing/neck/scarf //Default white color, same functionality as beanies.
 	name = "scarf"
 	icon_state = "scarf"
@@ -185,10 +181,6 @@
 	icon_state = "stripedbluescarf"
 	item_color = "stripedbluescarf"
 
-//////////////
-////COLLARS///
-//////////////
-
 /obj/item/clothing/neck/petcollar
 	name = "pet collar"
 	desc = "A sturdy brown leather dog collar. Kinky."
@@ -232,11 +224,9 @@
 /obj/item/key/collar
 	name = "Collar Key"
 	desc = "A key for a tiny lock on a collar or bag."
-//	var/keyID = 0 //USE FOR UNIQUE KEYING?
 
 /obj/item/key/collar/Initialize()
 	. = ..()
-//	keyID = GLOB.collar_number
 
 /obj/item/clothing/neck/petcollar/Initialize()
 	. = ..()
@@ -244,14 +234,6 @@
 /obj/item/clothing/neck/petcollar/locked/Initialize()
 	. = ..()
 	new /obj/item/key/collar(src)
-//	collarID = GLOB.collar_number
-//	GLOB.collar_number = collarID + 1 //USE FOR UNIQUE KEYING?
-
-
-
-//////////////
-//DOPE BLING//
-//////////////
 
 /obj/item/clothing/neck/necklace/dope
 	name = "gold necklace"
@@ -259,10 +241,6 @@
 	icon = 'icons/obj/clothing/neck.dmi'
 	icon_state = "bling"
 	item_color = "bling"
-
-///////////////////////////
-//CptPatriot Donator Item//
-///////////////////////////
 
 /obj/item/clothing/neck/scarf/cptpatriot
 	name = "desert scarf"

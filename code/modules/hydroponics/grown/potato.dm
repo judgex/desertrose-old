@@ -1,4 +1,3 @@
-// Potato
 /obj/item/seeds/potato
 	name = "pack of potato seeds"
 	desc = "Boil 'em! Mash 'em! Stick 'em in a stew!"
@@ -36,7 +35,6 @@
 	filling_color = "#E9967A"
 	bitesize = 100
 
-
 /obj/item/reagent_containers/food/snacks/grown/potato/attackby(obj/item/W, mob/user, params)
 	if(W.is_sharp())
 		to_chat(user, "<span class='notice'>You cut the potato into wedges with [W].</span>")
@@ -47,8 +45,6 @@
 	else
 		return ..()
 
-
-// Sweet Potato
 /obj/item/seeds/potato/sweet
 	name = "pack of sweet potato seeds"
 	desc = "These seeds grow into sweet potato plants."
@@ -65,3 +61,5 @@
 	desc = "It's sweet."
 	icon_state = "sweetpotato"
 	distill_reagent = "sbiten"
+
+/*HRP*/

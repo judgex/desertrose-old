@@ -1,4 +1,3 @@
-
 /obj/item/clothing/gloves/fingerless
 	name = "fingerless gloves"
 	desc = "Plain black gloves without fingertips for the hard working."

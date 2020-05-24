@@ -1,8 +1,3 @@
-//Fallout 13 shoes directory
-/*
-/obj/item/clothing/shoes
-	var/stepsound = TRUE
-*/
 /obj/item/clothing/shoes/f13
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/shoes
 
@@ -69,7 +64,6 @@
 /obj/item/clothing/shoes/f13/military/light
 	name = "advanced combat boots"
 	desc = "High speed, no-drag combat boots designed for use by U.S. special forces before the Great War.<br>The soles are made of aerated rubber to silence the movement of the wearer."
-//	stepsound = FALSE
 	clothing_flags = NOSLIP
 
 /obj/item/clothing/shoes/f13/military/diesel
@@ -127,8 +121,6 @@
 	icon_state = "legionlegate"
 	item_state = "legionlegate"
 	armor = list(melee = 30, bullet = 30, laser = 20, energy = 20, bomb = 30, bio = 0, rad = 10, fire = 30, acid = 10)
-
-//Fluff
 
 /obj/item/clothing/shoes/f13/swimfins
 	name = "swimming fins"

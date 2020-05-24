@@ -16,7 +16,6 @@
 	production = 5
 	maturation = 5
 
-
 /obj/item/reagent_containers/food/snacks/grown/feracactus
 	seed = /obj/item/seeds/feracactus
 	name = "barrel cactus fruit"

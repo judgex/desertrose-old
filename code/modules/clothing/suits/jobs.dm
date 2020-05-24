@@ -1,8 +1,3 @@
-/*
- * Job related
- */
-
-//Botanist
 /obj/item/clothing/suit/apron
 	name = "apron"
 	desc = "A basic blue apron."
@@ -12,7 +7,6 @@
 	body_parts_covered = CHEST|GROIN
 	allowed = list(/obj/item/reagent_containers/spray/plantbgone, /obj/item/plant_analyzer, /obj/item/seeds, /obj/item/reagent_containers/glass/bottle, /obj/item/reagent_containers/glass/beaker, /obj/item/cultivator, /obj/item/reagent_containers/spray/pestspray, /obj/item/hatchet, /obj/item/storage/bag/plants)
 
-//Captain
 /obj/item/clothing/suit/captunic
 	name = "captain's parade tunic"
 	desc = "Worn by a Captain to show their class."
@@ -22,7 +16,6 @@
 	flags_inv = HIDEJUMPSUIT
 	allowed = list(/obj/item/disk, /obj/item/stamp, /obj/item/reagent_containers/food/drinks/flask, /obj/item/melee, /obj/item/storage/lockbox/medal, /obj/item/assembly/flash/handheld, /obj/item/storage/box/matches, /obj/item/lighter, /obj/item/clothing/mask/cigarette, /obj/item/storage/fancy/cigarettes, /obj/item/tank/internals/emergency_oxygen, /obj/item/tank/internals/plasmaman)
 
-//Chaplain
 /obj/item/clothing/suit/nun
 	name = "nun robe"
 	desc = "Maximum piety."
@@ -48,7 +41,6 @@
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	allowed = list(/obj/item/storage/book/bible, /obj/item/nullrod, /obj/item/reagent_containers/food/drinks/bottle/holywater, /obj/item/storage/fancy/candle_box, /obj/item/candle, /obj/item/tank/internals/emergency_oxygen, /obj/item/tank/internals/plasmaman)
 
-//Chef
 /obj/item/clothing/suit/toggle/chef
 	name = "chef's apron"
 	desc = "An apron-jacket used by a high class chef."
@@ -60,7 +52,6 @@
 	allowed = list(/obj/item/kitchen)
 	togglename = "sleeves"
 
-//Cook
 /obj/item/clothing/suit/apron/chef
 	name = "cook's apron"
 	desc = "A basic, dull, white chef's apron."
@@ -70,7 +61,6 @@
 	body_parts_covered = CHEST|GROIN
 	allowed = list(/obj/item/kitchen)
 
-//Detective
 /obj/item/clothing/suit/det_suit
 	name = "trenchcoat"
 	desc = "An 18th-y multi-purpose trenchcoat. Someone who wears this means serious business."
@@ -92,7 +82,6 @@
 	icon_state = "greydet"
 	item_state = "greydet"
 
-//Engineering
 /obj/item/clothing/suit/hazardvest
 	name = "hazard vest"
 	desc = "A high-visibility vest used in work zones."
@@ -102,7 +91,6 @@
 	allowed = list(/obj/item/flashlight, /obj/item/tank/internals/emergency_oxygen, /obj/item/tank/internals/plasmaman, /obj/item/t_scanner, /obj/item/radio)
 	resistance_flags = NONE
 
-//Lawyer
 /obj/item/clothing/suit/toggle/lawyer
 	name = "blue suit jacket"
 	desc = "A snappy dress jacket."
@@ -124,8 +112,6 @@
 	icon_state = "suitjacket_black"
 	item_state = "ro_suit"
 
-
-//Mime
 /obj/item/clothing/suit/suspenders
 	name = "suspenders"
 	desc = "They suspend the illusion of the mime's play."
@@ -133,7 +119,6 @@
 	icon_state = "suspenders"
 	blood_overlay_type = "armor" //it's the less thing that I can put here
 
-//Security
 /obj/item/clothing/suit/security/officer
 	name = "security officer's jacket"
 	desc = "This jacket is for those special occasions when a security officer isn't required to wear their armor."
@@ -155,14 +140,12 @@
 	item_state = "hosbluejacket"
 	body_parts_covered = CHEST|ARMS
 
-//Surgeon
 /obj/item/clothing/suit/apron/surgical
 	name = "surgical apron"
 	desc = "A sterile blue surgical apron."
 	icon_state = "surgical"
 	allowed = list(/obj/item/scalpel, /obj/item/surgical_drapes, /obj/item/cautery, /obj/item/hemostat, /obj/item/retractor)
 
-//Curator
 /obj/item/clothing/suit/curator
 	name = "treasure hunter's coat"
 	desc = "Both fashionable and lightly armoured, this jacket is favoured by treasure hunters east of the colorado river."

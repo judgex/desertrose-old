@@ -1,4 +1,3 @@
-// Grass
 /obj/item/seeds/grass
 	name = "pack of grass seeds"
 	desc = "These seeds grow into grass. Yummy!"

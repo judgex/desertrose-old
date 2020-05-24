@@ -9,7 +9,6 @@
 	if(!IsAvailable())
 		return
 
-	// Damn our lack of abstract interfeces
 	if (istype(target, /obj/item/clothing/head/chameleon/drone))
 		var/obj/item/clothing/head/chameleon/drone/X = target
 		X.chameleon_action.random_look(owner)
@@ -35,9 +34,6 @@
 /datum/action/item_action/chameleon/drone/togglehatmask/Trigger()
 	if(!IsAvailable())
 		return
-
-	// No point making the code more complicated if no non-drone
-	// is ever going to use one of these
 
 	var/mob/living/simple_animal/drone/D
 

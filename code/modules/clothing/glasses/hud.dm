@@ -1,7 +1,7 @@
 /obj/item/clothing/glasses/hud
 	name = "HUD"
 	desc = "A heads-up display that provides important info in (almost) real time."
-	flags_1 = null //doesn't protect eyes because it's a monocle, duh
+	flags_1 = null
 	var/hud_type = null
 
 /obj/item/clothing/glasses/hud/equipped(mob/living/carbon/human/user, slot)
@@ -83,8 +83,6 @@
 	desc = "A stolen security HUD integrated with Syndicate chameleon technology. Provides flash protection."
 	flash_protect = 1
 
-	// Yes this code is the same as normal chameleon glasses, but we don't
-	// have multiple inheritance, okay?
 	var/datum/action/item_action/chameleon/change/chameleon_action
 
 /obj/item/clothing/glasses/hud/security/chameleon/New()

@@ -1,4 +1,3 @@
-// Apple
 /obj/item/seeds/apple
 	name = "pack of apple seeds"
 	desc = "These seeds grow into apple trees."
@@ -28,7 +27,6 @@
 	tastes = list("apple" = 1)
 	distill_reagent = "hcider"
 
-// Gold Apple
 /obj/item/seeds/apple/gold
 	name = "pack of golden apple seeds"
 	desc = "These seeds grow into golden apple trees. Good thing there are no firebirds in space."
@@ -40,7 +38,7 @@
 	production = 10
 	mutatelist = list()
 	reagents_add = list("gold" = 0.2, "vitamin" = 0.04, "nutriment" = 0.1)
-	rarity = 40 // Alchemy!
+	rarity = 40
 
 /obj/item/reagent_containers/food/snacks/grown/apple/gold
 	seed = /obj/item/seeds/apple/gold

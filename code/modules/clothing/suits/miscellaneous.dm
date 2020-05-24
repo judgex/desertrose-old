@@ -1,13 +1,3 @@
-/*
- * Contains:
- *		Lasertag
- *		Costume
- *		Misc
- */
-
-/*
- * Lasertag
- */
 /obj/item/clothing/suit/bluetag
 	name = "blue laser tag armor"
 	desc = "A piece of plastic armor. It has sensors that react to red light." //Lasers are concentrated light
@@ -28,9 +18,6 @@
 	allowed = list (/obj/item/gun/energy/laser/redtag)
 	resistance_flags = NONE
 
-/*
- * Costume
- */
 /obj/item/clothing/suit/pirate
 	name = "pirate coat"
 	desc = "Yarr."
@@ -252,8 +239,6 @@
 	icon_state = "ian"
 	item_state = "labcoat"
 	body_parts_covered = CHEST|GROIN|ARMS
-	//cold_protection = CHEST|GROIN|ARMS
-	//min_cold_protection_temperature = FIRE_SUIT_MIN_TEMP_PROTECT
 	allowed = list()
 	hoodtype = /obj/item/clothing/head/hooded/ian_hood
 	dog_fashion = /datum/dog_fashion/back
@@ -263,8 +248,6 @@
 	desc = "A hood that looks just like a corgi's head, it won't guarantee dog biscuits."
 	icon_state = "ian"
 	body_parts_covered = HEAD
-	//cold_protection = HEAD
-	//min_cold_protection_temperature = FIRE_SUIT_MIN_TEMP_PROTECT
 	flags_inv = HIDEHAIR|HIDEEARS
 
 /obj/item/clothing/suit/hooded/bee_costume // It's Hip!
@@ -309,10 +292,6 @@
 	icon_state = "officertanjacket"
 	item_state = "officertanjacket"
 	body_parts_covered = CHEST|ARMS
-
-/*
- * Misc
- */
 
 /obj/item/clothing/suit/straight_jacket
 	name = "straight jacket"
@@ -449,8 +428,6 @@
 	icon_state = "pharoah"
 	icon_state = "pharoah"
 	body_parts_covered = CHEST|GROIN
-
-// WINTER COATS
 
 /obj/item/clothing/suit/hooded/wintercoat
 	name = "winter coat"

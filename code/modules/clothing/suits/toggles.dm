@@ -1,5 +1,3 @@
-//Hoods for winter coats and chaplain hoodie etc
-
 /obj/item/clothing/suit/hooded
 	actions_types = list(/datum/action/item_action/toggle_hood)
 	var/obj/item/clothing/head/hooded/hood

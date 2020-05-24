@@ -41,9 +41,6 @@
 	icon_state = "weldingjapan"
 	item_state = "weldingjapan"
 
-/*
- * Cakehat
- */
 /obj/item/clothing/head/hardhat/cakehat
 	name = "cakehat"
 	desc = "You put the cake on your head. Brilliant."
@@ -85,9 +82,7 @@
 
 /obj/item/clothing/head/hardhat/cakehat/is_hot()
 	return on * heat
-/*
- * Ushanka
- */
+
 /obj/item/clothing/head/ushanka
 	name = "ushanka"
 	desc = "Perfect for winter in Siberia, da?"
@@ -112,9 +107,6 @@
 		earflaps = 1
 		to_chat(user, "<span class='notice'>You lower the ear flaps on the ushanka.</span>")
 
-/*
- * Pumpkin head
- */
 /obj/item/clothing/head/hardhat/pumpkinhead
 	name = "carved pumpkin"
 	desc = "A jack o' lantern! Believed to ward off evil spirits."
@@ -125,10 +117,6 @@
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
 	brightness_on = 2 //luminosity when on
 	flags_cover = HEADCOVERSEYES
-
-/*
- * Kitty ears - ADMINSPAWNABLE ONLY
- */
 
 /obj/item/clothing/head/kitty
 	name = "kitty ears"
@@ -142,7 +130,7 @@
 /obj/item/clothing/head/kitty/equipped(mob/living/carbon/human/user, slot)
 	if(ishuman(user) && slot == SLOT_HEAD)
 		update_icon(user)
-		user.update_inv_head() //Color might have been changed by update_icon.
+		user.update_inv_head()
 	..()
 
 /obj/item/clothing/head/kitty/update_icon(mob/living/carbon/human/user)
@@ -151,8 +139,6 @@
 
 /obj/item/clothing/head/kitty/genuine
 	desc = "A pair of kitty ears. A tag on the inside says \"Hand made from real cats.\""
-
-
 
 /obj/item/clothing/head/hardhat/reindeer
 	name = "novelty reindeer hat"
@@ -188,8 +174,6 @@
 /obj/item/clothing/head/cardborg/dropped(mob/living/user)
 	..()
 	user.remove_alt_appearance("standard_borg_disguise")
-
-
 
 /obj/item/clothing/head/wig
 	name = "wig"

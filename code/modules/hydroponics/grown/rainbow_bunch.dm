@@ -77,3 +77,5 @@
 			color = "#FFFFFF"
 			list_reagents = list("whitecrayonpowder" = 3)
 			desc += " This one is in a pure white color."
+
+/*HRP*/
