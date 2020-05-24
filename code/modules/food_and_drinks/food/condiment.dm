@@ -182,7 +182,7 @@
 	item_state = "carton"
 	lefthand_file = 'icons/mob/inhands/equipment/kitchen_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/kitchen_righthand.dmi'
-	list_reagents = list("milk" = 50, "Potassium Iodide" = 10)
+	list_reagents = list("milk" = 50)
 	possible_states = list()
 
 /obj/item/reagent_containers/food/condiment/flour
