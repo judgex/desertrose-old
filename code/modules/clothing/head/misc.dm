@@ -1,9 +1,9 @@
 
 
 /obj/item/clothing/head/centhat
-	name = "\improper CentCom hat"
+	name = "\improper Vault-tec hat"
 	icon_state = "centcom"
-	desc = "It's good to be emperor."
+	desc = "It's good to be the overseer."
 	item_state = "that"
 	flags_inv = 0
 	armor = list("melee" = 30, "bullet" = 15, "laser" = 30, "energy" = 10, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 50)
@@ -25,7 +25,7 @@
 
 /obj/item/clothing/head/canada
 	name = "striped red tophat"
-	desc = "It smells like fresh donut holes. / <i>Il sent comme des trous de beignets frais.</i>"
+	desc = "It smells like fresh donut holes."
 	icon_state = "canada"
 	item_state = "canada"
 
@@ -64,7 +64,7 @@
 	name = "black space-helmet replica"
 	icon_state = "syndicate-helm-black-red"
 	item_state = "syndicate-helm-black-red"
-	desc = "A plastic replica of a Syndicate agent's space helmet. You'll look just like a real murderous Syndicate agent in this! This is a toy, it is not made for use in space!"
+	desc = "A plastic replica of a communist space helmet. You'll look just like a real murderous commie in this! This is a toy, it is not made for use in space!"
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 
 /obj/item/clothing/head/cueball

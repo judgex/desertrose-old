@@ -3,7 +3,7 @@
 
 ////////////////////////////////////////////////DONUTS////////////////////////////////////////////////
 
-/datum/crafting_recipe/food/chaosdonut
+/*/datum/crafting_recipe/food/chaosdonut
 	name = "Chaos donut"
 	reqs = list(
 		/datum/reagent/consumable/frostoil = 5,
@@ -21,7 +21,7 @@
 		/obj/item/reagent_containers/food/snacks/pastrybase = 1
 	)
 	result = /obj/item/reagent_containers/food/snacks/donut
-	subcategory = CAT_PASTRY
+	subcategory = CAT_PASTRY*/
 
 /datum/crafting_recipe/food/jellydonut
 	name = "Jelly donut"

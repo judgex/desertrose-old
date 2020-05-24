@@ -124,7 +124,7 @@
 	result = /obj/item/reagent_containers/food/snacks/soup/blood
 	subcategory = CAT_SOUP
 
-/datum/crafting_recipe/food/slimesoup
+/*/datum/crafting_recipe/food/slimesoup
 	name = "Slime soup"
 	reqs = list(
 			/datum/reagent/water = 10,
@@ -156,7 +156,7 @@
 		/obj/item/reagent_containers/food/snacks/cheesewedge = 1,
 	)
 	result = /obj/item/reagent_containers/food/snacks/soup/mystery
-	subcategory = CAT_SOUP
+	subcategory = CAT_SOUP*/
 
 /datum/crafting_recipe/food/mushroomsoup
 	name = "Mushroom soup"

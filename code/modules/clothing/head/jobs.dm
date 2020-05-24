@@ -19,7 +19,6 @@
 	playsound(user, 'sound/machines/ding.ogg', 50, 1)
 	return(FIRELOSS)
 
-//Captain
 /obj/item/clothing/head/caphat
 	name = "captain's hat"
 	desc = "It's good being the king."
@@ -30,7 +29,6 @@
 	strip_delay = 60
 	dog_fashion = /datum/dog_fashion/head/captain
 
-//Captain: This is no longer space-worthy
 /obj/item/clothing/head/caphat/parade
 	name = "captain's parade cap"
 	desc = "Worn only by Captains with an abundance of class."
@@ -39,7 +37,6 @@
 	dog_fashion = null
 
 
-//Head of Personnel
 /obj/item/clothing/head/hopcap
 	name = "head of personnel's cap"
 	icon_state = "hopcap"
@@ -47,7 +44,6 @@
 	armor = list("melee" = 10, "bullet" = 16, "laser" = 0, "energy" = 0, "bomb" = 16, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 50)
 	dog_fashion = /datum/dog_fashion/head/hop
 
-//Chaplain
 /obj/item/clothing/head/nun_hood
 	name = "nun hood"
 	desc = "Maximum piety in this star system."
@@ -55,7 +51,6 @@
 	flags_inv = HIDEHAIR
 	flags_cover = HEADCOVERSEYES
 
-//Detective
 /obj/item/clothing/head/fedora/det_hat
 	name = "detective's fedora"
 	desc = "There's only one man who can sniff out the dirty stench of crime, and he's likely wearing this hat."
@@ -84,8 +79,6 @@
 			else
 				to_chat(user, "You just took a candy corn! You should wait a couple minutes, lest you burn through your stash.")
 
-
-//Mime
 /obj/item/clothing/head/beret
 	name = "beret"
 	desc = "A beret, a mime's favorite headwear."
@@ -101,9 +94,7 @@
 /obj/item/clothing/head/beret/highlander
 	desc = "That was white fabric. <i>Was.</i>"
 	item_flags = NODROP
-	dog_fashion = null //THIS IS FOR SLAUGHTER, NOT PUPPIES
-
-//Security
+	dog_fashion = null
 
 /obj/item/clothing/head/HoS
 	name = "head of security cap"
@@ -158,7 +149,6 @@
 	desc = "A special beret with the security insignia emblazoned on it. For officers with class."
 	icon_state = "officerberet"
 
-//Curator
 /obj/item/clothing/head/fedora/curator
 	name = "treasure hunter's fedora"
 	desc = "You got red text today kid, but it doesn't mean you have to like it."

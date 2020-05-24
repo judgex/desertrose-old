@@ -66,7 +66,7 @@
 	strip_delay = 40
 	resistance_flags = 0
 
-/obj/item/clothing/shoes/f13/military/light //I'm a ninja!
+/obj/item/clothing/shoes/f13/military/light
 	name = "advanced combat boots"
 	desc = "High speed, no-drag combat boots designed for use by U.S. special forces before the Great War.<br>The soles are made of aerated rubber to silence the movement of the wearer."
 //	stepsound = FALSE

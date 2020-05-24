@@ -75,7 +75,7 @@
 /obj/item/reagent_containers/food/snacks/grown/whitebeet
 	seed = /obj/item/seeds/whitebeet
 	name = "white-beet"
-	desc = "You can't beat white-beet."
+	desc = "a white-beet."
 	icon_state = "whitebeet"
 	filling_color = "#F4A460"
 	bitesize_mod = 2
@@ -101,7 +101,7 @@
 /obj/item/reagent_containers/food/snacks/grown/redbeet
 	seed = /obj/item/seeds/redbeet
 	name = "red beet"
-	desc = "You can't beat red beet."
+	desc = "a red beet."
 	icon_state = "redbeet"
 	bitesize_mod = 2
 	foodtype = VEGETABLES
