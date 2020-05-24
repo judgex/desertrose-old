@@ -220,7 +220,7 @@
 	glass = TRUE
 
 /obj/machinery/door/airlock/plasma
-	name = "ultracite airlock"
+	name = "graphite airlock"
 	desc = "No way this can end badly."
 	icon = 'icons/obj/doors/airlocks/station/plasma.dmi'
 	assemblytype = /obj/structure/door_assembly/door_assembly_plasma

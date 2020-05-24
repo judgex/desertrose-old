@@ -108,10 +108,10 @@ GLOBAL_LIST_INIT(uranium_recipes, list ( \
 	. = ..()
 
 /obj/item/stack/sheet/mineral/plasma
-	name = "Ultracite"
-	icon_state = "sheet-plasma"
-	item_state = "sheet-plasma"
-	singular_name = "plasma sheet"
+	name = "graphite"
+	icon_state = "sheet-adamantine"
+	item_state = "sheet-adamantine"
+	singular_name = "graphite sheet"
 	sheettype = "plasma"
 	resistance_flags = FLAMMABLE
 	max_integrity = 100
@@ -119,13 +119,13 @@ GLOBAL_LIST_INIT(uranium_recipes, list ( \
 	grind_results = list("plasma" = 20)
 	merge_type = /obj/item/stack/sheet/mineral/plasma
 
-GLOBAL_LIST_INIT(plasma_recipes, list ( \
-	new/datum/stack_recipe("Ultracite door", /obj/structure/mineral_door/transparent/plasma, 10, one_per_turf = 1, on_floor = 1), \
-	new/datum/stack_recipe("Ultracite tile", /obj/item/stack/tile/mineral/plasma, 1, 4, 20), \
-	))
+/*GLOBAL_LIST_INIT(plasma_recipes, list ( \
+	new/datum/stack_recipe("graphite door", /obj/structure/mineral_door/transparent/plasma, 10, one_per_turf = 1, on_floor = 1), \
+	new/datum/stack_recipe("graphite tile", /obj/item/stack/tile/mineral/plasma, 1, 4, 20), \
+	))*/
 
 /obj/item/stack/sheet/mineral/plasma/Initialize(mapload, new_amount, merge = TRUE)
-	recipes = GLOB.plasma_recipes
+	/*recipes = GLOB.plasma_recipes*/
 	. = ..()
 
 /obj/item/stack/sheet/mineral/gold

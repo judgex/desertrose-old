@@ -206,8 +206,8 @@
 	icon_state = "freon"
 
 /obj/effect/decal/cleanable/plasma
-	name = "stabilized ultracite"
-	desc = "A puddle of stabilized ultracite."
+	name = "liquid propane"
+	desc = "A puddle of liquid propane."
 	icon_state = "flour"
 	color = "#C8A5DC"
 

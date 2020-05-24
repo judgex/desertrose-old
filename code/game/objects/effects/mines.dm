@@ -69,7 +69,7 @@
 
 
 /obj/effect/mine/gas/plasma
-	name = "ultracite mine"
+	name = "propane mine"
 	gas_type = "plasma"
 
 

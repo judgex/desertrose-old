@@ -24,31 +24,10 @@
 //PLASMA
 
 /turf/open/floor/mineral/plasma
-	name = "ultracite floor"
+	name = "graphite floor"
 	icon_state = "plasma"
 	floor_tile = /obj/item/stack/tile/mineral/plasma
 	icons = list("plasma","plasma_dam")
-
-/turf/open/floor/mineral/plasma/temperature_expose(datum/gas_mixture/air, exposed_temperature, exposed_volume)
-	if(exposed_temperature > 300)
-		PlasmaBurn(exposed_temperature)
-
-/turf/open/floor/mineral/plasma/attackby(obj/item/W, mob/user, params)
-	if(W.is_hot() > 300)//If the temperature of the object is over 300, then ignite
-		message_admins("Plasma flooring was ignited by [ADMIN_LOOKUPFLW(user)] in [ADMIN_VERBOSEJMP(src)]")
-		log_game("Plasma flooring was ignited by [key_name(user)] in [AREACOORD(src)]")
-		ignite(W.is_hot())
-		return
-	..()
-
-/turf/open/floor/mineral/plasma/proc/PlasmaBurn(temperature)
-	make_plating()
-	atmos_spawn_air("plasma=20;TEMP=[temperature]")
-
-/turf/open/floor/mineral/plasma/proc/ignite(exposed_temperature)
-	if(exposed_temperature > 300)
-		PlasmaBurn(exposed_temperature)
-
 
 //GOLD
 

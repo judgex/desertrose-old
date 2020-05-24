@@ -27,7 +27,7 @@
 
 
 /obj/item/organ/alien/plasmavessel
-	name = "Ultracite vessel"
+	name = "graphite vessel"
 	icon_state = "plasma"
 	w_class = WEIGHT_CLASS_NORMAL
 	zone = BODY_ZONE_CHEST

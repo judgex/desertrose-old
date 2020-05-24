@@ -72,13 +72,9 @@
 	air_contents.gases[/datum/gas/nitrogen][MOLES] = (6*ONE_ATMOSPHERE)*volume/(R_IDEAL_GAS_EQUATION*T20C) * N2STANDARD
 	return
 
-
-/*
- * Plasma
- */
 /obj/item/tank/internals/plasma
-	name = "ultracite tank"
-	desc = "Contains dangerous ultracite gas. Do not inhale. Warning: extremely flammable."
+	name = "propane tank"
+	desc = "Contains dangerous propane gas. Do not inhale. Warning: extremely flammable."
 	icon_state = "plasma"
 	flags_1 = CONDUCT_1
 	slot_flags = null	//they have no straps!

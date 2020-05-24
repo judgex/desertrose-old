@@ -211,8 +211,8 @@
 	list_reagents = list("calomel" = 15)
 
 /obj/item/reagent_containers/syringe/plasma
-	name = "syringe (ultracite)"
-	desc = "Contains ultracite."
+	name = "syringe (propane)"
+	desc = "Contains liquid propane."
 	list_reagents = list("plasma" = 15)
 
 /obj/item/reagent_containers/syringe/lethal

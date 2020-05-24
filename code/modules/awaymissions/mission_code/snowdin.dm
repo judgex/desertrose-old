@@ -160,8 +160,8 @@
 	temperature = 180
 
 /turf/open/lava/plasma
-	name = "liquid ultracite"
-	desc = "A flowing stream of chilled liquid ultracite. You probably shouldn't get in."
+	name = "liquid propane"
+	desc = "A flowing stream of chilled liquid propane. You probably shouldn't get in."
 	icon_state = "liquidplasma"
 	initial_gas_mix = "o2=0;n2=82;plasma=24;TEMP=120"
 	baseturfs = /turf/open/lava/plasma
@@ -177,7 +177,7 @@
 		to_chat(user, "<span class='danger'>[C] is full.</span>")
 		return
 	C.reagents.add_reagent("plasma", rand(5, 10))
-	user.visible_message("[user] scoops some plasma from the [src] with \the [C].", "<span class='notice'>You scoop out some plasma from the [src] using \the [C].</span>")
+	user.visible_message("[user] scoops some liquid propane from the [src] with \the [C].", "<span class='notice'>You scoop out some liquid propane from the [src] using \the [C].</span>")
 
 /turf/open/lava/plasma/burn_stuff(AM)
 	. = 0
@@ -253,8 +253,8 @@
 
 
 /obj/vehicle/ridden/lavaboat/plasma
-	name = "ultracite boat"
-	desc = "A boat used for traversing the streams of ultracite without turning into an icecube."
+	name = "graphite boat"
+	desc = "A boat used for traversing the streams of liquid propane without turning into an icecube."
 	icon_state = "goliath_boat"
 	icon = 'icons/obj/lavaland/dragonboat.dmi'
 	resistance_flags = FREEZE_PROOF

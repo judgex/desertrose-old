@@ -266,29 +266,12 @@
 	set_opacity(FALSE)
 
 /obj/structure/mineral_door/transparent/plasma
-	name = "Ultracite door"
+	name = "graphite door"
 	icon_state = "plasma"
 	sheetType = /obj/item/stack/sheet/mineral/plasma
 
 /obj/structure/mineral_door/transparent/plasma/ComponentInitialize()
 	return
-
-/obj/structure/mineral_door/transparent/plasma/attackby(obj/item/W, mob/user, params)
-	if(W.is_hot())
-		var/turf/T = get_turf(src)
-		message_admins("Ultracite mineral door ignited by [ADMIN_LOOKUPFLW(user)] in [ADMIN_VERBOSEJMP(T)]")
-		log_game("Ultracite mineral door ignited by [key_name(user)] in [AREACOORD(T)]")
-		TemperatureAct()
-	else
-		return ..()
-
-/obj/structure/mineral_door/transparent/plasma/temperature_expose(datum/gas_mixture/air, exposed_temperature, exposed_volume)
-	if(exposed_temperature > 300)
-		TemperatureAct()
-
-/obj/structure/mineral_door/transparent/plasma/proc/TemperatureAct()
-	atmos_spawn_air("plasma=500;TEMP=1000")
-	deconstruct(FALSE)
 
 /obj/structure/mineral_door/transparent/diamond
 	name = "diamond door"

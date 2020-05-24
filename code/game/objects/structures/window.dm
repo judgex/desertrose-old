@@ -415,8 +415,8 @@
 	anchored = FALSE
 
 /obj/structure/window/plasma
-	name = "ultracite window"
-	desc = "A window made out of a ultracite-silicate alloy. It looks insanely tough to break and burn through."
+	name = "graphite window"
+	desc = "A window made out of a graphite-silicate matrix. It looks insanely tough to break and burn through."
 	icon_state = "plasmawindow"
 	reinf = FALSE
 	heat_resistance = 25000
@@ -440,8 +440,8 @@
 	anchored = FALSE
 
 /obj/structure/window/plasma/reinforced
-	name = "reinforced ultracite window"
-	desc = "A window made out of a ultracite-silicate alloy and a rod matrix. It looks hopelessly tough to break and is most likely nigh fireproof."
+	name = "reinforced graphite window"
+	desc = "A window made out of ultracite-silicate glass and a rod matrix. It looks hopelessly tough to break and is most likely nigh fireproof."
 	icon_state = "plasmarwindow"
 	reinf = TRUE
 	heat_resistance = 50000
@@ -578,8 +578,8 @@
 	anchored = FALSE
 
 /obj/structure/window/plastitanium
-	name = "plastitanium window"
-	desc = "An evil looking window of ultracite and titanium."
+	name = "Grapho-titanium window"
+	desc = "An evil looking window of graphite and titanium."
 	icon = 'icons/obj/smooth_structures/plastitanium_window.dmi'
 	icon_state = "plastitanium_window"
 	dir = FULLTILE_WINDOW_DIR

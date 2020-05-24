@@ -351,8 +351,8 @@
 	desc = "An extremely rare golden medal awarded only by CentCom. To receive such a medal is the highest honor and as such, very few exist. This medal is almost never awarded to anybody but commanders."
 
 /obj/item/clothing/accessory/medal/plasma
-	name = "ultracite medal"
-	desc = "An eccentric medal made of ultracite."
+	name = "graphite medal"
+	desc = "An eccentric medal made of graphite."
 	icon_state = "plasma"
 	item_color = "plasma"
 	medaltype = "medal-plasma"
@@ -367,7 +367,7 @@
 
 /obj/item/clothing/accessory/medal/plasma/nobel_science
 	name = "nobel sciences award"
-	desc = "A plasma medal which represents significant contributions to the field of science or engineering."
+	desc = "A medal which represents significant contributions to the field of science or engineering."
 
 /obj/item/clothing/accessory/armband
 	name = "red armband"

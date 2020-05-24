@@ -85,43 +85,13 @@
 	..()
 
 /turf/closed/wall/mineral/plasma
-	name = "ultracite wall"
-	desc = "A wall with ultracite plating. This is definitely a bad idea."
+	name = "graphite wall"
+	desc = "A wall with graphite plating."
 	icon = 'icons/turf/walls/plasma_wall.dmi'
 	icon_state = "plasma"
 	sheet_type = /obj/item/stack/sheet/mineral/plasma
 	thermal_conductivity = 0.04
 	canSmoothWith = list(/turf/closed/wall/mineral/plasma, /obj/structure/falsewall/plasma)
-
-/turf/closed/wall/mineral/plasma/attackby(obj/item/W, mob/user, params)
-	if(W.is_hot() > 300)//If the temperature of the object is over 300, then ignite
-		message_admins("Plasma wall ignited by [ADMIN_LOOKUPFLW(user)] in [ADMIN_VERBOSEJMP(src)]")
-		log_game("Plasma wall ignited by [key_name(user)] in [AREACOORD(src)]")
-		ignite(W.is_hot())
-		return
-	..()
-
-/turf/closed/wall/mineral/plasma/proc/PlasmaBurn(temperature)
-	new girder_type(src)
-	ScrapeAway()
-	var/turf/open/T = src
-	T.atmos_spawn_air("plasma=400;TEMP=[temperature]")
-
-/turf/closed/wall/mineral/plasma/temperature_expose(datum/gas_mixture/air, exposed_temperature, exposed_volume)//Doesn't fucking work because walls don't interact with air :(
-	if(exposed_temperature > 300)
-		PlasmaBurn(exposed_temperature)
-
-/turf/closed/wall/mineral/plasma/proc/ignite(exposed_temperature)
-	if(exposed_temperature > 300)
-		PlasmaBurn(exposed_temperature)
-
-/turf/closed/wall/mineral/plasma/bullet_act(var/obj/item/projectile/Proj)
-	if(istype(Proj, /obj/item/projectile/beam))
-		PlasmaBurn(2500)
-	else if(istype(Proj, /obj/item/projectile/ion))
-		PlasmaBurn(500)
-	..()
-
 
 /turf/closed/wall/mineral/wood
 	name = "wooden wall"

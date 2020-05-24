@@ -80,9 +80,9 @@ GLOBAL_LIST_INIT(pglass_recipes, list ( \
 ))
 
 /obj/item/stack/sheet/plasmaglass
-	name = "Ultracite glass"
-	desc = "A glass sheet made out of a Ultracite-silicate alloy. It looks extremely tough and heavily fire resistant."
-	singular_name = "Ultracite glass sheet"
+	name = "graphite glass"
+	desc = "A glass sheet made out of a graphite-silicate matrix. It looks extremely tough and heavily fire resistant."
+	singular_name = "grahite glass sheet"
 	icon_state = "sheet-pglass"
 	item_state = "sheet-pglass"
 	materials = list(MAT_PLASMA=MINERAL_MATERIAL_AMOUNT * 0.5, MAT_GLASS=MINERAL_MATERIAL_AMOUNT)
@@ -173,9 +173,9 @@ GLOBAL_LIST_INIT(prglass_recipes, list ( \
 ))
 
 /obj/item/stack/sheet/plasmarglass
-	name = "reinforced Ultracite glass"
-	desc = "A glass sheet made out of a ultracitea-silicate alloy and a rod matrice. It looks hopelessly tough and nearly fire-proof!"
-	singular_name = "reinforced plasma glass sheet"
+	name = "reinforced graphite glass"
+	desc = "A sheet of a graphite-silicate glass interlaced with a rod matrice. It looks hopelessly tough and nearly fire-proof!"
+	singular_name = "reinforcedgraphite glass sheet"
 	icon_state = "sheet-prglass"
 	item_state = "sheet-prglass"
 	materials = list(MAT_PLASMA=MINERAL_MATERIAL_AMOUNT * 0.5, MAT_GLASS=MINERAL_MATERIAL_AMOUNT, MAT_METAL = MINERAL_MATERIAL_AMOUNT * 0.5,)
@@ -212,9 +212,9 @@ GLOBAL_LIST_INIT(plastitaniumglass_recipes, list(
 	))
 
 /obj/item/stack/sheet/plastitaniumglass
-	name = "plastitanium glass"
-	desc = "A glass sheet made out of a ultracite-titanium-silicate alloy."
-	singular_name = "plastitanium glass sheet"
+	name = "graphotitanium glass"
+	desc = "A glass sheet made out of a graphite-titanium-silicate matrix."
+	singular_name = "graphotitanium glass sheet"
 	icon_state = "sheet-plastitaniumglass"
 	item_state = "sheet-plastitaniumglass"
 	materials = list(MAT_TITANIUM=MINERAL_MATERIAL_AMOUNT * 0.5, MAT_PLASMA=MINERAL_MATERIAL_AMOUNT * 0.5, MAT_GLASS=MINERAL_MATERIAL_AMOUNT)
