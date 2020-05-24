@@ -16,8 +16,7 @@
 	var/effectchance = 33
 	var/recharging = 0
 	var/recharge_locked = FALSE
-	var/obj/item/stock_parts/micro_laser/diode //used for upgrading!
-
+	var/obj/item/stock_parts/micro_laser/diode
 
 /obj/item/laser_pointer/red
 	pointer_icon_state = "red_laser"

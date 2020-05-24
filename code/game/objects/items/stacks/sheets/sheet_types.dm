@@ -1,20 +1,3 @@
-/* Different misc types of sheets
- * Contains:
- * Metal
- * Plasteel
- * Wood
- * Cloth
- * Plastic
- * Cardboard
- * Paper Frames
- * Runed Metal (cult)
- * Brass (clockwork cult)
- * Bronze (bake brass)
- */
-
-/*
- * Metal
- */
 GLOBAL_LIST_INIT(metal_recipes, list ( \
 	new/datum/stack_recipe("stool", /obj/structure/chair/stool, one_per_turf = TRUE, on_floor = TRUE), \
 	new/datum/stack_recipe("bar stool", /obj/structure/chair/stool/bar, one_per_turf = TRUE, on_floor = TRUE), \
@@ -273,9 +256,6 @@ GLOBAL_LIST_INIT(cloth_recipes, list ( \
 		new /datum/stack_recipe("Purple Bedsheet", /obj/item/bedsheet/purple, 3), \
 		new /datum/stack_recipe("Red Bedsheet", /obj/item/bedsheet/red, 3), \
 		new /datum/stack_recipe("Yellow Bedsheet", /obj/item/bedsheet/yellow, 3), \
-		new /datum/stack_recipe("Central Command Bedsheet", /obj/item/bedsheet/centcom, 3), \
-		new /datum/stack_recipe("Nanotrasen Bedsheet", /obj/item/bedsheet/nanotrasen, 3), \
-		new /datum/stack_recipe("Syndicate Bedsheet", /obj/item/bedsheet/syndie, 3), \
 		new /datum/stack_recipe("Captain's Bedsheet", /obj/item/bedsheet/captain, 3), \
 		new /datum/stack_recipe("Head of Personnel's Bedsheet", /obj/item/bedsheet/hop, 3), \
 		new /datum/stack_recipe("Head of Security's Bedsheet", /obj/item/bedsheet/hos, 3), \
@@ -285,11 +265,8 @@ GLOBAL_LIST_INIT(cloth_recipes, list ( \
 		new /datum/stack_recipe("Research Director's Bedsheet", /obj/item/bedsheet/rd, 3), \
 		new /datum/stack_recipe("Clown's Bedsheet", /obj/item/bedsheet/clown, 3), \
 		new /datum/stack_recipe("Rainbow Bedsheet", /obj/item/bedsheet/rainbow, 3), \
-		new /datum/stack_recipe("Mime's Bedsheet", /obj/item/bedsheet/mime, 3), \
 		new /datum/stack_recipe("Cosmic Bedsheet", /obj/item/bedsheet/cosmos, 3), \
-		new /datum/stack_recipe("Wizard's Bedsheet", /obj/item/bedsheet/wiz, 3), \
 		new /datum/stack_recipe("Patriot's Bedsheet", /obj/item/bedsheet/patriot, 3), \
-		new /datum/stack_recipe("Ian's Bedsheet", /obj/item/bedsheet/ian, 3), \
 	)), \
 	null, \
 	new/datum/stack_recipe("empty sandbag", /obj/item/stack/sheet/emptysandbag, 4), \
@@ -363,13 +340,12 @@ GLOBAL_LIST_INIT(cardboard_recipes, list ( \
 	new/datum/stack_recipe("shotgun buckshot box", /obj/item/storage/box/lethalshot, ), \
 	new/datum/stack_recipe("shotgun rubbershot box", /obj/item/storage/box/rubbershot, ), \
 	new/datum/stack_recipe("shotgun beanbag box", /obj/item/storage/box/beanbag, ), \
-	new/datum/stack_recipe("shotgun tech box", /obj/item/storage/box/techshot, ), \
 	null, \
 	new/datum/stack_recipe("large box", /obj/structure/closet/cardboard, 4), \
 	new/datum/stack_recipe("cardboard cutout", /obj/item/cardboard_cutout, 5), \
 ))
 
-/obj/item/stack/sheet/cardboard	//BubbleWrap //it's cardboard you fuck
+/obj/item/stack/sheet/cardboard
 	name = "cardboard"
 	desc = "Large sheets of card, like boxes folded flat."
 	singular_name = "cardboard sheet"
@@ -390,22 +366,6 @@ GLOBAL_LIST_INIT(cardboard_recipes, list ( \
 
 /obj/item/stack/sheet/cardboard/twenty
 	amount = 20
-
-/obj/item/stack/sheet/cardboard/attackby(obj/item/I, mob/user, params)
-	if(istype(I, /obj/item/stamp/clown) && !istype(loc, /obj/item/storage))
-		var/atom/droploc = drop_location()
-		if(use(1))
-			playsound(I, 'sound/items/bikehorn.ogg', 50, 1, -1)
-			to_chat(user, "<span class='notice'>You stamp the cardboard! Its a clown box! Honk!</span>")
-			if (amount >= 0)
-				new/obj/item/storage/box/clown(droploc) //bugfix
-	else
-		. = ..()
-
-
-/*
- * Runed Metal
- */
 
 GLOBAL_LIST_INIT(runed_metal_recipes, list ( \
 	new/datum/stack_recipe("runed door", /obj/machinery/door/airlock/cult, 1, time = 50, one_per_turf = TRUE, on_floor = TRUE), \
@@ -560,9 +520,6 @@ GLOBAL_LIST_INIT(bronze_recipes, list ( \
 /obj/item/stack/tile/bronze/thirty
 	amount = 30
 
-/*
- * Lesser and Greater gems - unused
- */
 /obj/item/stack/sheet/lessergem
 	name = "lesser gems"
 	desc = "Rare kind of gems which are only gained by blood sacrifice to minor deities. They are needed in crafting powerful objects."
@@ -580,9 +537,6 @@ GLOBAL_LIST_INIT(bronze_recipes, list ( \
 	item_state = "sheet-greatergem"
 	novariants = TRUE
 
-/*
- * Bones
- */
 /obj/item/stack/sheet/bone
 	name = "bones"
 	icon = 'icons/obj/mining.dmi'
@@ -686,9 +640,6 @@ new /datum/stack_recipe("paper frame door", /obj/structure/mineral_door/paperfra
 	pull_effort = 70
 	loom_result = /obj/item/stack/sheet/durathread
 
-/*
-*Hay
-*/
 
 GLOBAL_LIST_INIT(hay_recipes, list ( \
 	new/datum/stack_recipe("rice hat", /obj/item/clothing/head/rice_hat, 4, time = 5, one_per_turf = FALSE, on_floor = FALSE), \

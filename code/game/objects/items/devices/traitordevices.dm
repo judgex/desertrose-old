@@ -1,20 +1,3 @@
-/*
-
-Miscellaneous traitor devices
-
-BATTERER
-
-RADIOACTIVE MICROLASER
-
-*/
-
-/*
-
-The Batterer, like a flashbang but 50% chance to knock people over. Can be either very
-effective or pretty fucking useless.
-
-*/
-
 /obj/item/batterer
 	name = "mind batterer"
 	desc = "A strange device with twin antennas."
@@ -55,18 +38,6 @@ effective or pretty fucking useless.
 	times_used += 1
 	if(times_used >= max_uses)
 		icon_state = "battererburnt"
-
-/*
-		The radioactive microlaser, a device disguised as a health analyzer used to irradiate people.
-
-		The strength of the radiation is determined by the 'intensity' setting, while the delay between
-	the scan and the irradiation kicking in is determined by the wavelength.
-
-		Each scan will cause the microlaser to have a brief cooldown period. Higher intensity will increase
-	the cooldown, while higher wavelength will decrease it.
-
-		Wavelength is also slightly increased by the intensity as well.
-*/
 
 /obj/item/healthanalyzer/rad_laser
 	materials = list(MAT_METAL=400)
@@ -233,7 +204,6 @@ effective or pretty fucking useless.
 		else
 			charge = min(max_charge,charge + 50) //Charge in the dark
 		animate(user,alpha = CLAMP(255 - charge,0,255),time = 10)
-
 
 /obj/item/jammer
 	name = "radio jammer"

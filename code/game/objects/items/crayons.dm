@@ -9,9 +9,6 @@
 #define PAINT_LARGE_HORIZONTAL	2
 #define PAINT_LARGE_HORIZONTAL_ICON	'icons/effects/96x32.dmi'
 
-/*
- * Crayons
- */
 
 /obj/item/toy/crayon
 	name = "crayon"
@@ -451,13 +448,9 @@
 	paint_color = rgb(rand(0,255), rand(0,255), rand(0,255))
 	. = ..()
 
-/*
- * Crayon Box
- */
-
 /obj/item/storage/crayons
 	name = "box of crayons"
-	desc = "A box of crayons for all your rune drawing needs."
+	desc = "A box of crayons for all your drawing needs."
 	icon = 'icons/obj/crayons.dmi'
 	icon_state = "crayonbox"
 	w_class = WEIGHT_CLASS_SMALL
@@ -498,8 +491,6 @@
 			return
 	return ..()
 
-//Spraycan stuff
-
 /obj/item/toy/crayon/spraycan
 	name = "spray can"
 	icon_state = "spraycan"
@@ -526,31 +517,6 @@
 
 	pre_noise = TRUE
 	post_noise = FALSE
-
-/obj/item/toy/crayon/spraycan/suicide_act(mob/user)
-	var/mob/living/carbon/human/H = user
-	if(is_capped || !actually_paints)
-		user.visible_message("<span class='suicide'>[user] shakes up [src] with a rattle and lifts it to [user.p_their()] mouth, but nothing happens!</span>")
-		user.say("MEDIOCRE!!")
-		return SHAME
-	else
-		user.visible_message("<span class='suicide'>[user] shakes up [src] with a rattle and lifts it to [user.p_their()] mouth, spraying paint across [user.p_their()] teeth!</span>")
-		user.say("WITNESS ME!!")
-		if(pre_noise || post_noise)
-			playsound(loc, 'sound/effects/spray.ogg', 5, 1, 5)
-		if(can_change_colour)
-			paint_color = "#C0C0C0"
-		update_icon()
-		if(actually_paints)
-			H.lip_style = "spray_face"
-			H.lip_color = paint_color
-			H.update_body()
-		var/used = use_charges(user, 10, FALSE)
-		var/fraction = min(1, used / reagents.maximum_volume)
-		reagents.reaction(user, VAPOR, fraction * volume_multiplier)
-		reagents.trans_to(user, used, volume_multiplier)
-
-		return (OXYLOSS)
 
 /obj/item/toy/crayon/spraycan/New()
 	..()

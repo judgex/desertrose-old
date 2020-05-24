@@ -76,9 +76,6 @@
 	..()
 	to_chat(user, "Currently set to \"[dept_list[target_dept]]\".")
 
-//obj/item/circuitboard/computer/shield
-//	name = "Shield Control (Computer Board)"
-//	build_path = /obj/machinery/computer/stationshield
 /obj/item/circuitboard/computer/teleporter
 	name = "Teleporter (Computer Board)"
 	build_path = /obj/machinery/computer/teleporter

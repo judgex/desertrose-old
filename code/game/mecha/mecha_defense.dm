@@ -92,7 +92,6 @@
 		add_logs(user, src, "attacked")
 		return 1
 
-
 /obj/mecha/hulk_damage()
 	return 15
 
@@ -283,7 +282,6 @@
 			target.reagents.add_reagent("cryptobiolin", force/2)
 		if(target.reagents.get_reagent_amount("toxin") + force < force*2)
 			target.reagents.add_reagent("toxin", force/2.5)
-
 
 /obj/mecha/mech_melee_attack(obj/mecha/M)
 	if(!has_charge(melee_energy_drain))

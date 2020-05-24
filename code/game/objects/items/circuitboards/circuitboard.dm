@@ -1,8 +1,3 @@
-//File with the circuitboard and circuitboard/machine class definitions and procs
-
-
-// Circuitboard
-
 /obj/item/circuitboard
 	name = "circuit board"
 	icon = 'icons/obj/module.dmi'

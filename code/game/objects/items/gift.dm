@@ -1,18 +1,8 @@
-/* Gifts and wrapping paper
- * Contains:
- *		Gifts
- *		Wrapping Paper
- */
-
-/*
- * Gifts
- */
-
 GLOBAL_LIST_EMPTY(possible_gifts)
 
 /obj/item/a_gift
 	name = "gift"
-	desc = "PRESENTS!!!! eek!"
+	desc = "PRESENTS!!!!"
 	icon = 'icons/obj/storage.dmi'
 	icon_state = "giftdeliverypackage3"
 	item_state = "gift"

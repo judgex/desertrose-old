@@ -2,17 +2,9 @@
 #define PROXIMITY_ON_SCREEN "_red"
 #define PROXIMITY_NEAR "_yellow"
 
-/**
- * Multitool -- A multitool is used for hacking electronic devices.
- *
- */
-
-
-
-
 /obj/item/multitool
 	name = "multitool"
-	desc = "Used for pulsing wires to test which to cut. Not recommended by doctors."
+	desc = "Used for pulsing wires to test which to cut."
 	icon = 'icons/obj/device.dmi'
 	icon_state = "multitool"
 	item_state = "multitool"
@@ -92,8 +84,6 @@
 		[io1.name] and the [io2.holder.displayed_name]'s [io2.name].</span>")
 		io1.holder.interact(user) // This is to update the UI.
 		update_icon()
-
-
 
 // Syndicate device disguised as a multitool; it will turn red when an AI camera is nearby.
 

@@ -1,4 +1,3 @@
-//copy pasta of the space piano, don't hurt me -Pete
 /obj/item/instrument
 	name = "generic instrument"
 	resistance_flags = FLAMMABLE
@@ -101,7 +100,7 @@
 
 /obj/item/instrument/accordion
 	name = "accordion"
-	desc = "Pun-Pun not included."
+	desc = "Dancing monkey not included."
 	icon_state = "accordion"
 	item_state = "accordion"
 	instrumentId = "accordion"

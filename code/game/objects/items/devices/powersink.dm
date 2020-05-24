@@ -1,5 +1,3 @@
-// Powersink - used to drain station power
-
 /obj/item/powersink
 	desc = "A nulling power sink which drains energy from electrical systems."
 	name = "power sink"

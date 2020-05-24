@@ -10,7 +10,6 @@
 	var/prefix = "sharpened"
 	var/requires_sharpness = 1
 
-
 /obj/item/sharpener/attackby(obj/item/I, mob/user, params)
 	if(used)
 		to_chat(user, "<span class='warning'>The sharpening block is too worn to use again!</span>")

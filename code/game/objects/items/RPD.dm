@@ -1,8 +1,3 @@
-/*
-CONTAINS:
-RPD
-*/
-
 #define ATMOS_CATEGORY 0
 #define DISPOSALS_CATEGORY 1
 #define TRANSIT_CATEGORY 2

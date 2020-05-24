@@ -1,15 +1,3 @@
-/* Clown Items
- * Contains:
- *		Soap
- *		Bike Horns
- *		Air Horns
- *		Canned Laughter
- */
-
-/*
- * Soap
- */
-
 /obj/item/soap
 	name = "soap"
 	desc = "A cheap bar of soap. Doesn't smell."
@@ -50,12 +38,6 @@
 	icon_state = "soapsyndie"
 	cleanspeed = 10
 
-/obj/item/soap/suicide_act(mob/user)
-	user.say(";FFFFFFFFFFFFFFFFUUUUUUUDGE!!")
-	user.visible_message("<span class='suicide'>[user] lifts [src] to [user.p_their()] mouth and gnaws on it furiously, producing a thick froth! [user.p_they(TRUE)]'ll never get that BB gun now!</span>")
-	new /obj/effect/particle_effect/foam(loc)
-	return (TOXLOSS)
-
 /obj/item/soap/afterattack(atom/target, mob/user, proximity)
 	. = ..()
 	if(!proximity || !check_allowed_items(target))
@@ -93,11 +75,6 @@
 			target.wash_cream()
 	return
 
-
-/*
- * Bike Horns
- */
-
 /obj/item/bikehorn
 	name = "bike horn"
 	desc = "A horn off of a bicycle."
@@ -121,12 +98,6 @@
 	SEND_SIGNAL(M, COMSIG_ADD_MOOD_EVENT, "honk", /datum/mood_event/honk)
 	return ..()
 
-/obj/item/bikehorn/suicide_act(mob/user)
-	user.visible_message("<span class='suicide'>[user] solemnly points the horn at [user.p_their()] temple! It looks like [user.p_theyre()] trying to commit suicide!</span>")
-	playsound(src, 'sound/items/bikehorn.ogg', 50, 1)
-	return (BRUTELOSS)
-
-//air horn
 /obj/item/bikehorn/airhorn
 	name = "air horn"
 	desc = "Damn son, where'd you find this?"
@@ -136,7 +107,6 @@
 	. = ..()
 	AddComponent(/datum/component/squeak, list('sound/items/airhorn2.ogg'=1), 50)
 
-//golden bikehorn
 /obj/item/bikehorn/golden
 	name = "golden bike horn"
 	desc = "Golden? Clearly, it's made with bananium! Honk!"
@@ -164,7 +134,6 @@
 		M.emote("flip")
 	flip_cooldown = world.time + 7
 
-//canned laughter
 /obj/item/reagent_containers/food/drinks/soda_cans/canned_laughter
 	name = "Canned Laughter"
 	desc = "Just looking at this makes you want to giggle."

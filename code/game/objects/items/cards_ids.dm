@@ -1,16 +1,3 @@
-/* Cards
- * Contains:
- *		DATA CARD
- *		ID CARD
- *		FINGERPRINT CARD HOLDER
- *		FINGERPRINT CARD
- */
-
-
-
-/*
- * DATA CARDS - Used for the IC data card reader
- */
 /obj/item/card
 	name = "card"
 	desc = "Does card things."
@@ -158,14 +145,6 @@
 /obj/item/card/id/GetID()
 	return src
 
-/*
-Usage:
-update_label()
-	Sets the id name to whatever registered_name and assignment is
-
-update_label("John Doe", "Clowny")
-	Properly formats the name and occupation and sets the id name to the arguments
-*/
 /obj/item/card/id/proc/update_label(newname, newjob)
 	if(newname || newjob)
 		name = "[(!newname)	? "identification card"	: "[newname]'s [id_type]"][(!newjob) ? "" : " ([newjob])"]"

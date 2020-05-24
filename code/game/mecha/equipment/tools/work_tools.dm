@@ -1,7 +1,3 @@
-
-//Hydraulic clamp, Kill clamp, Extinguisher, RCD, Cable layer.
-
-
 /obj/item/mecha_parts/mecha_equipment/hydraulic_clamp
 	name = "hydraulic clamp"
 	desc = "Equipment for engineering exosuits. Lifts objects and loads them into cargo."
@@ -185,8 +181,6 @@
 			return 1
 	return 0
 
-
-
 /obj/item/mecha_parts/mecha_equipment/rcd
 	name = "mounted RCD"
 	desc = "An exosuit-mounted Rapid Construction Device."
@@ -286,9 +280,6 @@
 /obj/item/mecha_parts/mecha_equipment/rcd/get_equip_info()
 	return "[..()] \[<a href='?src=[REF(src)];mode=0'>D</a>|<a href='?src=[REF(src)];mode=1'>C</a>|<a href='?src=[REF(src)];mode=2'>A</a>\]"
 
-
-
-
 /obj/item/mecha_parts/mecha_equipment/cable_layer
 	name = "cable layer"
 	desc = "Equipment for engineering exosuits. Lays cable along the exosuit's path."
@@ -341,7 +332,6 @@
 			occupant_message("<span class='warning'>Reel is full.</span>")
 	else
 		occupant_message("<span class='warning'>Unable to load [target] - no cable found.</span>")
-
 
 /obj/item/mecha_parts/mecha_equipment/cable_layer/Topic(href,href_list)
 	..()

@@ -1,20 +1,3 @@
-//cleansed 9/15/2012 17:48
-
-/*
-CONTAINS:
-MATCHES
-CIGARETTES
-CIGARS
-SMOKING PIPES
-CHEAP LIGHTERS
-ZIPPO
-
-CIGARETTE PACKETS ARE IN FANCY.DM
-*/
-
-///////////
-//MATCHES//
-///////////
 /obj/item/match
 	name = "match"
 	desc = "A simple match stick, used for lighting fine smokables."
@@ -93,9 +76,6 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 /obj/item/match/is_hot()
 	return lit * heat
 
-//////////////////
-//FINE SMOKABLES//
-//////////////////
 /obj/item/clothing/mask/cigarette
 	name = "cigarette"
 	desc = "A roll of tobacco and nicotine."
@@ -333,10 +313,6 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	src.pixel_x = rand(-5, 5)
 	src.pixel_y = rand(-5, 5)
 
-
-////////////
-// CIGARS //
-////////////
 /obj/item/clothing/mask/cigarette/cigar
 	name = "premium cigar"
 	desc = "A brown roll of tobacco. This thing's huge!"
@@ -357,7 +333,6 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	icon_off = "cigar2off"
 	smoketime = 2000
 	chem_volume = 80
-
 
 /obj/item/clothing/mask/cigarette/cigar/havana
 	name = "premium Havanian cigar"
@@ -382,9 +357,6 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	desc = "A manky old cigar butt."
 	icon_state = "cigarbutt"
 
-/////////////////
-//SMOKING PIPES//
-/////////////////
 /obj/item/clothing/mask/cigarette/pipe
 	name = "smoking pipe"
 	desc = "A pipe, for smoking. Probably made of meerschaum or something."
@@ -424,7 +396,6 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	open_flame()
 	if(reagents && reagents.total_volume)	//	check if it has any reagents at all
 		handle_reagents()
-
 
 /obj/item/clothing/mask/cigarette/pipe/attackby(obj/item/O, mob/user, params)
 	if(istype(O, /obj/item/reagent_containers/food/snacks/grown))
@@ -479,10 +450,6 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	icon_off = "cobpipeoff"
 	smoketime = 0
 
-
-/////////
-//ZIPPO//
-/////////
 /obj/item/lighter
 	name = "\improper Zippo lighter"
 	desc = "The zippo."
@@ -665,10 +632,6 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	overlay_state = "slime"
 	grind_results = list("iron" = 1, "welding_fuel" = 5, "pyroxadone" = 5)
 
-
-///////////
-//ROLLING//
-///////////
 /obj/item/rollingpaper
 	name = "rolling paper"
 	desc = "A thin piece of paper used to make fine smokeables."
@@ -694,9 +657,6 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 		else
 			to_chat(user, "<span class='warning'>You need to dry this first!</span>")
 
-///////////////
-//VAPE NATION//
-///////////////
 /obj/item/clothing/mask/vape
 	name = "\improper E-Cigarette"
 	desc = "A classy and highly sophisticated electronic cigarette, for classy and dignified gentlemen. A warning label reads \"Warning: Do not fill with flammable materials."

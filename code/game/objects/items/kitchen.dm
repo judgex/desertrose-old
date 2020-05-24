@@ -1,14 +1,3 @@
-/* Kitchen tools
- * Contains:
- *		Fork
- *		Kitchen knives
- *		Ritual Knife
- *		Butcher's cleaver
- *		Combat Knife
- *		Rolling Pins
- 		Ritual Dagger (Wayfarer Tribe)
- */
-
 /obj/item/kitchen
 	icon = 'icons/obj/kitchen.dmi'
 	lefthand_file = 'icons/mob/inhands/equipment/kitchen_lefthand.dmi'
@@ -28,12 +17,7 @@
 	attack_verb = list("attacked", "stabbed", "poked")
 	hitsound = 'sound/weapons/bladeslice.ogg'
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 30)
-	var/datum/reagent/forkload //used to eat omelette
-
-/obj/item/kitchen/fork/suicide_act(mob/living/carbon/user)
-	user.visible_message("<span class='suicide'>[user] stabs \the [src] into [user.p_their()] chest! It looks like [user.p_theyre()] trying to take a bite out of [user.p_them()]self!</span>")
-	playsound(src, 'sound/items/eatfood.ogg', 50, 1)
-	return BRUTELOSS
+	var/datum/reagent/forkload
 
 /obj/item/kitchen/fork/attack(mob/living/carbon/M, mob/living/carbon/user)
 	if(!istype(M))
@@ -76,8 +60,7 @@
 
 /obj/item/kitchen/knife/Initialize()
 	. = ..()
-	AddComponent(/datum/component/butchering, 80 - force, 100, force - 10) //bonus chance increases depending on force
-
+	AddComponent(/datum/component/butchering, 80 - force, 100, force - 10)
 /obj/item/kitchen/knife/attack(mob/living/carbon/M, mob/living/carbon/user)
 	if(user.zone_selected == BODY_ZONE_PRECISE_EYES)
 		if(user.has_trait(TRAIT_CLUMSY) && prob(50))
@@ -85,12 +68,6 @@
 		return eyestab(M,user)
 	else
 		return ..()
-
-/obj/item/kitchen/knife/suicide_act(mob/user)
-	user.visible_message(pick("<span class='suicide'>[user] is slitting [user.p_their()] wrists with the [src.name]! It looks like [user.p_theyre()] trying to commit suicide.</span>", \
-						"<span class='suicide'>[user] is slitting [user.p_their()] throat with the [src.name]! It looks like [user.p_theyre()] trying to commit suicide.</span>", \
-						"<span class='suicide'>[user] is slitting [user.p_their()] stomach open with the [src.name]! It looks like [user.p_theyre()] trying to commit seppuku.</span>"))
-	return (BRUTELOSS)
 
 /obj/item/kitchen/knife/ritual
 	name = "ritual knife"
@@ -212,4 +189,3 @@
 /obj/item/kitchen/rollingpin/suicide_act(mob/living/carbon/user)
 	user.visible_message("<span class='suicide'>[user] begins flattening [user.p_their()] head with \the [src]! It looks like [user.p_theyre()] trying to commit suicide!</span>")
 	return BRUTELOSS
-/* Trays  moved to /obj/item/storage/bag */

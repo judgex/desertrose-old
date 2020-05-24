@@ -191,10 +191,7 @@ INITIALIZE_IMMEDIATE(/atom/movable/virtualspeaker)
 		verb_exclaim = M.verb_exclaim
 		verb_yell = M.verb_yell
 
-	// The mob's job identity
 	if(ishuman(M))
-		// Humans use their job as seen on the Wasteland Census. This is so the AI
-		// can know their job even if they don't carry an ID.
 		var/datum/data/record/findjob = find_record("name", name, GLOB.data_core.general)
 		if(findjob)
 			job = findjob.fields["rank"]

@@ -76,12 +76,6 @@
 			var/mob/camera/aiEye/E = V
 			E.update_ai_detect_hud()
 
-/* MED/SEC/DIAG HUD HOOKS */
-
-/*
- * THESE HOOKS SHOULD BE CALLED BY THE MOB SHOWING THE HUD
- */
-
 /***********************************************
  Medical HUD! Basic mode needs suit sensors on.
 ************************************************/

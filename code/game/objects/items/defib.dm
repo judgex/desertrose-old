@@ -350,13 +350,6 @@
 		var/mob/living/carbon/C = loc
 		C.update_inv_hands()
 
-/obj/item/twohanded/shockpaddles/suicide_act(mob/user)
-	user.visible_message("<span class='danger'>[user] is putting the live paddles on [user.p_their()] chest! It looks like [user.p_theyre()] trying to commit suicide!</span>")
-	if(req_defib)
-		defib.deductcharge(revivecost)
-	playsound(src, 'sound/machines/defib_zap.ogg', 50, 1, -1)
-	return (OXYLOSS)
-
 /obj/item/twohanded/shockpaddles/dropped(mob/user)
 	if(!req_defib)
 		return ..()
@@ -645,7 +638,7 @@
 	. = ..()
 
 /obj/item/twohanded/shockpaddles/syndicate
-	name = "syndicate defibrillator paddles"
+	name = "communist defibrillator paddles"
 	desc = "A pair of paddles used to revive deceased operatives. It possesses both the ability to penetrate armor and to deliver powerful shocks offensively."
 	combat = TRUE
 	icon = 'icons/obj/items_and_weapons.dmi'

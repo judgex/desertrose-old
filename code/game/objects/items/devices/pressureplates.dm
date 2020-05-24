@@ -1,4 +1,3 @@
-
 /obj/item/pressure_plate
 	name = "pressure plate"
 	desc = "An electronic device that triggers when stepped on."
@@ -78,4 +77,3 @@
 		active = FALSE
 		if(tile_overlay)
 			loc.overlays -= tile_overlay
-

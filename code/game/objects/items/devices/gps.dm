@@ -1,7 +1,7 @@
 GLOBAL_LIST_EMPTY(GPS_list)
 /obj/item/gps
 	name = "global positioning system"
-	desc = "Helping lost spacemen find their way through the planets since 2016."
+	desc = "Helping lost explorer find their way since 2016."
 	icon = 'icons/obj/telescience.dmi'
 	icon_state = "gps-c"
 	w_class = WEIGHT_CLASS_SMALL
@@ -116,8 +116,6 @@ GLOBAL_LIST_EMPTY(GPS_list)
 	data["signals"] = signals
 	return data
 
-
-
 /obj/item/gps/ui_act(action, params)
 	if(..())
 		return
@@ -138,7 +136,6 @@ GLOBAL_LIST_EMPTY(GPS_list)
 		if("globalmode")
 			global_mode = !global_mode
 			. = TRUE
-
 
 /obj/item/gps/science
 	icon_state = "gps-s"

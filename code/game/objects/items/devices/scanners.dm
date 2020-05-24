@@ -1,13 +1,3 @@
-
-/*
-
-CONTAINS:
-T-RAY
-HEALTH ANALYZER
-GAS ANALYZER
-SLIME SCANNER
-
-*/
 /obj/item/t_scanner
 	name = "\improper T-ray scanner"
 	desc = "A terahertz-ray emitter and scanner used to detect underfloor objects such as cables and pipes."

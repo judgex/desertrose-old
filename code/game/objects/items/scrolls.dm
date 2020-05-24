@@ -14,8 +14,6 @@
 	name = "lesser scroll of teleportation"
 	uses = 1
 
-
-
 /obj/item/teleportation_scroll/attack_self(mob/user)
 	user.set_machine(src)
 	var/dat = "<B>Teleportation Scroll:</B><BR>"

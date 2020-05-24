@@ -1,5 +1,3 @@
-//////////////////////////////////////// Action Buttons ///////////////////////////////////////////////
-
 /obj/mecha/proc/GrantActions(mob/living/user, human_occupant = 0)
 	if(human_occupant)
 		eject_action.Grant(user, src)

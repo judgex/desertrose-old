@@ -1,6 +1,6 @@
 /obj/item/melee/baton
-	name = "stunbaton"
-	desc = "A stun baton for incapacitating people with."
+	name = "cattle prod"
+	desc = "Normally used for herding stubborn cattle, it has been re-purposed as a non-lethal weapon against humans."
 	icon_state = "stunbaton"
 	item_state = "baton"
 	lefthand_file = 'icons/mob/inhands/equipment/security_lefthand.dmi'
@@ -21,10 +21,6 @@
 
 /obj/item/melee/baton/get_cell()
 	return cell
-
-/obj/item/melee/baton/suicide_act(mob/user)
-	user.visible_message("<span class='suicide'>[user] is putting the live [name] in [user.p_their()] mouth! It looks like [user.p_theyre()] trying to commit suicide!</span>")
-	return (FIRELOSS)
 
 /obj/item/melee/baton/Initialize()
 	. = ..()
@@ -180,10 +176,9 @@
 	if (!(. & EMP_PROTECT_SELF))
 		deductcharge(1000 / severity)
 
-//Makeshift stun baton. Replacement for stun gloves.
 /obj/item/melee/baton/cattleprod
-	name = "stunprod"
-	desc = "An improvised stun baton."
+	name = "cattle prod"
+	desc = "Normally used for herding stubborn cattle, it has been re-purposed as a non-lethal weapon against humans.."
 	icon_state = "stunprod_nocell"
 	item_state = "prod"
 	lefthand_file = 'icons/mob/inhands/weapons/melee_lefthand.dmi'

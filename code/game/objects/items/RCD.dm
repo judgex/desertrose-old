@@ -2,15 +2,6 @@
 #define LIGHT_MODE 2
 #define REMOVE_MODE 1
 
-/*
-CONTAINS:
-RCD - Rapid construction device
-ARCD - Admin Rapid construction device
-RLD - Rapid Lightning Device
-AMB - Advanced Machine Builder
-PTC - Portable Turret Constructor
-*/
-
 /obj/item/construction
 	name = "not for ingame use"
 	desc = "A device used to rapidly build and deconstruct. Reload with metal, plasteel, glass or compressed matter cartridges."

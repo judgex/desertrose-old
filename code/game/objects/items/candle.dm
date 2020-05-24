@@ -16,7 +16,6 @@
 /obj/item/candle/Initialize()
 	. = ..()
 	if(start_lit)
-		// No visible message
 		light(show_message = FALSE)
 
 /obj/item/candle/update_icon()
@@ -37,7 +36,7 @@
 
 /obj/item/candle/fire_act(exposed_temperature, exposed_volume)
 	if(!src.lit)
-		light() //honk
+		light()
 	..()
 
 /obj/item/candle/proc/light(show_message)
@@ -49,7 +48,6 @@
 		set_light(CANDLE_LUMINOSITY)
 		START_PROCESSING(SSobj, src)
 		update_icon()
-
 
 /obj/item/candle/process()
 	if(!lit)

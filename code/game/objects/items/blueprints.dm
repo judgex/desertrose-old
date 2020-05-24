@@ -40,8 +40,8 @@
 
 //Station blueprints!!!
 /obj/item/areaeditor/blueprints
-	name = "station blueprints"
-	desc = "Blueprints of the station. There is a \"Classified\" stamp and several coffee stains on it."
+	name = "vault blueprints"
+	desc = "Blueprints of the vault. There is a \"Classified\" stamp and several coffee stains on it."
 	icon = 'icons/obj/items_and_weapons.dmi'
 	icon_state = "blueprints"
 	fluffnotice = "Property of Vault-Tec. For heads of staff only. Store in high-secure storage."
@@ -219,11 +219,9 @@
 		M.name = replacetext(M.name,oldtitle,title)
 	//TODO: much much more. Unnamed airlocks, cameras, etc.
 
-//Blueprint Subtypes
-
 /obj/item/areaeditor/blueprints/cyborg
-	name = "station schematics"
-	desc = "A digital copy of the station blueprints stored in your memory."
+	name = "vault schematics"
+	desc = "A digital copy of the vault's blueprints stored in your memory."
 	icon = 'icons/obj/items_and_weapons.dmi'
 	icon_state = "blueprints"
-	fluffnotice = "Intellectual Property of Vault-Tec. For use in engineering cyborgs only. Wipe from memory upon departure from the station."
+	fluffnotice = "Intellectual Property of Vault-Tec. For use in engineering cyborgs only. Wipe from memory upon departure from the vault."

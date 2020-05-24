@@ -1,4 +1,3 @@
-//Cardboard cutouts! They're man-shaped and can be colored with a crayon to look like a human in a certain outfit, although it's limited, discolored, and obvious to more than a cursory glance.
 /obj/item/cardboard_cutout
 	name = "cardboard cutout"
 	desc = "A vaguely humanoid cardboard cutout. It's completely blank."

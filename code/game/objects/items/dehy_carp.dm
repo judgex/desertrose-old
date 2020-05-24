@@ -1,7 +1,3 @@
-/*
- *	Dehydrated Carp
- *	Instant carp, just add water
- */
 
 //Child of carpplushie because this should do everything the toy does and more
 /obj/item/toy/plush/carpplushie/dehy_carp
@@ -40,7 +36,7 @@
 				factions -= F
 		M.faction = factions
 	if (!owner || owner.faction != M.faction)
-		visible_message("<span class='warning'>You have a bad feeling about this.</span>") //welcome to the hostile carp enjoy your die
+		visible_message("<span class='warning'>You have a bad feeling about this.</span>")
 	else
 		visible_message("<span class='notice'>The newly grown [M.name] looks up at you with friendly eyes.</span>")
 	qdel(src)

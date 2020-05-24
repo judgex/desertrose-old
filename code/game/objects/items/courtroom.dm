@@ -1,7 +1,3 @@
-// Contains:
-// Gavel Hammer
-// Gavel Block
-
 /obj/item/gavelhammer
 	name = "gavel hammer"
 	desc = "Order, order! No bombs in my courthouse."

@@ -77,8 +77,6 @@
 /obj/item/toy/eightball/proc/clear_cooldown()
 	on_cooldown = FALSE
 
-// A broken magic eightball, it only says "YOU SUCK" over and over again.
-
 /obj/item/toy/eightball/broken
 	name = "broken magic eightball"
 	desc = "A black ball with a stenciled number eight in white on the side. It is cracked and seems empty."
@@ -90,9 +88,6 @@
 
 /obj/item/toy/eightball/broken/get_answer()
 	return fixed_answer
-
-// Haunted eightball is identical in description and function to toy,
-// except it actually ASKS THE DEAD (wooooo)
 
 /obj/item/toy/eightball/haunted
 	shake_time = 150

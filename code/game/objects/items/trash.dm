@@ -1,4 +1,3 @@
-//Added by Jack Rost
 /obj/item/trash
 	icon = 'icons/obj/janitor.dmi'
 	lefthand_file = 'icons/mob/inhands/misc/food_lefthand.dmi'

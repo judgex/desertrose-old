@@ -1,6 +1,3 @@
-//NEVER USE THIS IT SUX	-PETETHEGOAT
-//IT SUCKS A BIT LESS -GIACOM
-
 /obj/item/paint
 	gender= PLURAL
 	name = "paint"

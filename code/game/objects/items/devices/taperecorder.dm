@@ -1,6 +1,6 @@
 /obj/item/taperecorder
-	name = "universal recorder"
-	desc = "A device that can record to cassette tapes, and play them. It automatically translates the content in playback."
+	name = "holotape recorder"
+	desc = "A device that can record to holotapes tapes, and play them."
 	icon = 'icons/obj/device.dmi'
 	icon_state = "taperecorder_empty"
 	item_state = "analyzer"
@@ -148,7 +148,7 @@
 	else if(playing)
 		playing = 0
 		var/turf/T = get_turf(src)
-		T.visible_message("<font color=Maroon><B>Tape Recorder</B>: Playback stopped.</font>")
+		T.visible_message("<font color=Maroon><B>Holotape Recorder</B>: Playback stopped.</font>")
 	update_icon()
 
 
@@ -168,7 +168,7 @@
 	playing = 1
 	update_icon()
 	to_chat(usr, "<span class='notice'>Playing started.</span>")
-	var/used = mytape.used_capacity	//to stop runtimes when you eject the tape
+	var/used = mytape.used_capacity	//to stop runtimes when you eject the holotape
 	var/max = mytape.max_capacity
 	for(var/i = 1, used < max, sleep(10 * playsleepseconds))
 		if(!mytape)
@@ -236,7 +236,7 @@
 
 
 /obj/item/tape
-	name = "tape"
+	name = "holotape"
 	desc = "A magnetic tape that can hold up to ten minutes of content."
 	icon_state = "tape_white"
 	icon = 'icons/obj/device.dmi'
@@ -278,9 +278,9 @@
 
 /obj/item/tape/attackby(obj/item/I, mob/user, params)
 	if(ruined && istype(I, /obj/item/screwdriver) || istype(I, /obj/item/pen))
-		to_chat(user, "<span class='notice'>You start winding the tape back in...</span>")
+		to_chat(user, "<span class='notice'>You start winding the holotape back in...</span>")
 		if(I.use_tool(src, user, 120))
-			to_chat(user, "<span class='notice'>You wound the tape back in.</span>")
+			to_chat(user, "<span class='notice'>You wound the holotape back in.</span>")
 			fix()
 
 //Random colour tapes

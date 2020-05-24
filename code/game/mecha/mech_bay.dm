@@ -54,7 +54,6 @@
 			recharging_mech = null
 			recharge_console.update_icon()
 
-
 /obj/machinery/mech_bay_recharge_port/attackby(obj/item/I, mob/user, params)
 	if(default_deconstruction_screwdriver(user, "recharge_port-o", "recharge_port", I))
 		return
@@ -104,7 +103,6 @@
 				"maxcharge" = recharge_port.recharging_mech.cell.maxcharge
 				)
 	return data
-
 
 /obj/machinery/computer/mech_bay_power_console/proc/reconnect()
 	if(recharge_port)

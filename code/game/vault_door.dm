@@ -100,12 +100,6 @@
 			to_chat(user, "<span class='warning'>[src] is already in good condition!</span>")
 		return
 
-//ß íå õî÷ó ïåðåäåëûâàòü ýòî äåðüìî  - Google translate tells me that from Russian to english this is "Do not move your arms around this way." so dont.
-
-
-
-
-
 /obj/machinery/doorButtons/vaultButton
 	name = "vault access"
 	icon = 'icons/obj/lever.dmi'

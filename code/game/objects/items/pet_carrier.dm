@@ -1,10 +1,10 @@
 #define pet_carrier_full(carrier) carrier.occupants.len >= carrier.max_occupants || carrier.occupant_weight >= carrier.max_occupant_weight
 
-//Used to transport little animals without having to drag them across the station.
+//Used to transport little animals without having to drag them across the wasteland.
 //Comes with a handy lock to prevent them from running off.
 /obj/item/pet_carrier
 	name = "pet carrier"
-	desc = "A big white-and-blue pet carrier. Good for carrying <s>meat to the chef</s> cute animals around."
+	desc = "A big white-and-blue pet carrier. Good for carrying animals around."
 	icon = 'icons/obj/pet_carrier.dmi'
 	icon_state = "pet_carrier_open"
 	item_state = "pet_carrier"

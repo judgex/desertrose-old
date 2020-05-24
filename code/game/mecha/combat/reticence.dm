@@ -1,5 +1,5 @@
 /obj/mecha/combat/reticence
-	desc = "A silent, fast, and nigh-invisible miming exosuit. Popular among mimes and mime assassins."
+	desc = "A silent, fast, and nigh-invisible exosuit. Popular assassins."
 	name = "\improper reticence"
 	icon_state = "reticence"
 	step_in = 2
@@ -23,5 +23,5 @@
 	. = ..()
 	var/obj/item/mecha_parts/mecha_equipment/ME = new /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/silenced
 	ME.attach(src)
-	ME = new /obj/item/mecha_parts/mecha_equipment/rcd //HAHA IT MAKES WALLS GET IT
+	ME = new /obj/item/mecha_parts/mecha_equipment/rcd
 	ME.attach(src)

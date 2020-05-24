@@ -2,7 +2,7 @@
 
 /obj/structure/tank_dispenser
 	name = "tank dispenser"
-	desc = "A simple yet bulky storage device for gas tanks. Holds up to 10 oxygen tanks and 10 plasma tanks."
+	desc = "A simple yet bulky storage device for gas tanks. Holds up to 10 oxygen tanks and 10 fuel tanks."
 	icon = 'icons/obj/objects.dmi'
 	icon_state = "dispenser"
 	density = TRUE

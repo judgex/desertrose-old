@@ -1,27 +1,3 @@
-/* Two-handed Weapons
- * Contains:
- * 		Twohanded
- *		Fireaxe
- *		Double-Bladed Energy Swords
- *		Spears
- *		CHAINSAWS
- *		Bone Axe and Spear
- */
-
-/*##################################################################
-##################### TWO HANDED WEAPONS BE HERE~ -Agouri :3 ########
-####################################################################*/
-
-//Rewrote TwoHanded weapons stuff and put it all here. Just copypasta fireaxe to make new ones ~Carn
-//This rewrite means we don't have two variables for EVERY item which are used only by a few weapons.
-//It also tidies stuff up elsewhere.
-
-
-
-
-/*
- * Twohanded
- */
 /obj/item/twohanded
 	var/wielded = 0
 	var/force_unwielded = 0
@@ -116,7 +92,6 @@
 	if(!user.is_holding(src) && wielded && !istype(src, /obj/item/twohanded/required))
 		unwield(user)
 
-///////////OFFHAND///////////////
 /obj/item/twohanded/offhand
 	name = "offhand"
 	icon_state = "offhand"
@@ -212,10 +187,7 @@
 		to_chat(user, "<span class='notice'>You drop [src].</span>")
 	..(user, FALSE)
 
-/*
- * Fireaxe
- */
-/obj/item/twohanded/fireaxe  // DEM AXES MAN, marker -Agouri
+/obj/item/twohanded/fireaxe
 	icon_state = "fireaxe0"
 	lefthand_file = 'icons/mob/inhands/weapons/axes_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/axes_righthand.dmi'
@@ -258,10 +230,6 @@
 			var/obj/structure/grille/G = A
 			G.take_damage(40, BRUTE, "melee", 0)
 
-
-/*
- * Double-Bladed Energy Swords - Cheridan
- */
 /obj/item/twohanded/dualsaber
 	icon_state = "dualsaber0"
 	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
@@ -450,7 +418,6 @@
 	else
 		return ..()
 
-//spears
 /obj/item/twohanded/spear
 	icon_state = "spearglass0"
 	lefthand_file = 'icons/mob/inhands/weapons/polearms_lefthand.dmi'
@@ -551,7 +518,6 @@
 		desc = "A makeshift spear with [G] attached to it."
 	update_icon()
 
-//THERMIC LANCE
 /obj/item/twohanded/required/thermic_lance
 	name = "thermic lance"
 	desc = "A versatile power-welding tool. Useful for cutting apart metal and limbs."
@@ -600,7 +566,6 @@
 	if(wielded)
 		. = ..()
 
-// CHAINSAW
 /obj/item/twohanded/required/chainsaw
 	name = "chainsaw"
 	desc = "A versatile power tool. Useful for limbing trees and delimbing humans."
@@ -674,7 +639,6 @@
 		return 1
 	return 0
 
-//GREY TIDE
 /obj/item/twohanded/spear/grey_tide
 	icon_state = "spearglass0"
 	name = "\improper metal spear"
@@ -779,8 +743,6 @@
 		W.ScrapeAway()
 		return
 
-//HF blade
-
 /obj/item/twohanded/vibro_weapon
 	icon_state = "hfrequency0"
 	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
@@ -820,10 +782,7 @@
 /obj/item/twohanded/vibro_weapon/update_icon()
 	icon_state = "hfrequency[wielded]"
 
-/*
- * Bone Axe
- */
-/obj/item/twohanded/fireaxe/boneaxe  // Blatant imitation of the fireaxe, but made out of bone.
+/obj/item/twohanded/fireaxe/boneaxe
 	icon_state = "bone_axe0"
 	name = "bone axe"
 	desc = "A large, vicious axe crafted out of several sharpened bone plates and crudely tied together. Made of monsters, by killing monsters, for killing monsters."
@@ -832,10 +791,7 @@
 /obj/item/twohanded/fireaxe/boneaxe/update_icon()
 	icon_state = "bone_axe[wielded]"
 
-/*
- * Bone Spear
- */
-/obj/item/twohanded/bonespear	//Blatant imitation of spear, but made out of bone. Not valid for explosive modification.
+/obj/item/twohanded/bonespear
 	icon_state = "bone_spear0"
 	lefthand_file = 'icons/mob/inhands/weapons/polearms_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/polearms_righthand.dmi'
@@ -894,8 +850,6 @@
 	reagents.add_reagent("sodium_thiopental", 50)
 	reagents.add_reagent("pancuronium", 10)
 //end of Viper spear. Venom mix is interesting but a simpler poisoned weapon solution might be more generally useful, with injectable or open container weapons that have lower volume but can be easily refilled with small doses of venom or something
-
-//Baeball
 
 /obj/item/twohanded/baseball
 	name = "baseball bat"

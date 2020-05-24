@@ -1,7 +1,7 @@
 #define STATION_RENAME_TIME_LIMIT 3000
 
 /obj/item/station_charter
-	name = "station charter"
+	name = "vault directives"
 	icon = 'icons/obj/wizard.dmi'
 	icon_state = "scroll2"
 	desc = "An official document entrusting the governance of the vault and surrounding space to the Overseer."

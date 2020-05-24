@@ -1,5 +1,3 @@
-// CHAPLAIN CUSTOM ARMORS //
-
 /obj/item/clothing/head/helmet/chaplain
 	name = "crusader helmet"
 	desc = "Deus Vult."

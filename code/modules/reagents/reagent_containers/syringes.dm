@@ -211,7 +211,7 @@
 	list_reagents = list("calomel" = 15)
 
 /obj/item/reagent_containers/syringe/plasma
-	name = "syringe (plasma)"
+	name = "syringe (ultracite)"
 	desc = "Contains ultracite."
 	list_reagents = list("plasma" = 15)
 

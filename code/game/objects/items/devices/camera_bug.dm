@@ -1,9 +1,6 @@
-
 #define BUGMODE_LIST	0
 #define BUGMODE_MONITOR	1
 #define BUGMODE_TRACK	2
-
-
 
 /obj/item/camera_bug
 	name = "camera bug"
@@ -83,7 +80,6 @@
 				bugged_cameras[camera.c_tag] = camera
 	sortList(bugged_cameras)
 	return bugged_cameras
-
 
 /obj/item/camera_bug/proc/menu(list/cameras)
 	if(!cameras || !cameras.len)

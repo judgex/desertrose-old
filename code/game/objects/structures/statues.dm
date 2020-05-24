@@ -10,8 +10,6 @@
 	var/oreAmount = 5
 	var/material_drop_type = /obj/item/stack/sheet/metal
 
-
-
 /obj/structure/statue/Initialize()
 	. = ..()
 
@@ -52,9 +50,6 @@
 			if(drop_amt > 0)
 				new material_drop_type(get_turf(src), drop_amt)
 	qdel(src)
-
-//////////////////////////////////////STATUES/////////////////////////////////////////////////////////////
-////////////////////////uranium///////////////////////////////////
 
 /obj/structure/statue/uranium
 	max_integrity = 300
@@ -99,8 +94,6 @@
 			return
 	return
 
-////////////////////////////plasma///////////////////////////////////////////////////////////////////////
-
 /obj/structure/statue/plasma
 	max_integrity = 200
 	material_drop_type = /obj/item/stack/sheet/mineral/plasma
@@ -113,7 +106,6 @@
 /obj/structure/statue/plasma/temperature_expose(datum/gas_mixture/air, exposed_temperature, exposed_volume)
 	if(exposed_temperature > 300)
 		PlasmaBurn(exposed_temperature)
-
 
 /obj/structure/statue/plasma/bullet_act(obj/item/projectile/Proj)
 	var/burn = FALSE
@@ -147,8 +139,6 @@
 	if(exposed_temperature > 300)
 		PlasmaBurn(exposed_temperature)
 
-//////////////////////gold///////////////////////////////////////
-
 /obj/structure/statue/gold
 	max_integrity = 300
 	material_drop_type = /obj/item/stack/sheet/mineral/gold
@@ -173,8 +163,6 @@
 /obj/structure/statue/gold/rd
 	name = "statue of the research director"
 	icon_state = "rd"
-
-//////////////////////////silver///////////////////////////////////////
 
 /obj/structure/statue/silver
 	max_integrity = 300
@@ -201,8 +189,6 @@
 	name = "statue of a medical cyborg"
 	icon_state = "medborg"
 
-/////////////////////////diamond/////////////////////////////////////////
-
 /obj/structure/statue/diamond
 	max_integrity = 1000
 	material_drop_type = /obj/item/stack/sheet/mineral/diamond
@@ -219,8 +205,6 @@
 /obj/structure/statue/diamond/ai2
 	name = "statue of the AI core."
 	icon_state = "ai2"
-
-////////////////////////bananium///////////////////////////////////////
 
 /obj/structure/statue/bananium
 	max_integrity = 300
@@ -255,8 +239,6 @@
 		spawn(20)
 			spam_flag = 0
 
-/////////////////////sandstone/////////////////////////////////////////
-
 /obj/structure/statue/sandstone
 	max_integrity = 50
 	material_drop_type = /obj/item/stack/sheet/mineral/sandstone
@@ -266,8 +248,7 @@
 	desc = "A cheap statue of sandstone for a greyshirt."
 	icon_state = "assist"
 
-
-/obj/structure/statue/sandstone/venus //call me when we add marble i guess
+/obj/structure/statue/sandstone/venus
 	name = "statue of a pure maiden"
 	desc = "An ancient marble statue. The subject is depicted with a floor-length braid and is wielding a toolbox. By Jove, it's easily the most gorgeous depiction of a woman you've ever seen. The artist must truly be a master of his craft. Shame about the broken arm, though."
 	icon = 'icons/obj/statuelarge.dmi'
@@ -283,7 +264,6 @@
 	..()
 	icon_state = "stone-[pick(1,2)]"
 
-/////////////////////snow/////////////////////////////////////////
 
 /obj/structure/statue/snow
 	max_integrity = 50
@@ -293,9 +273,6 @@
 	name = "snowman"
 	desc = "Several lumps of snow put together to form a snowman."
 	icon_state = "snowman"
-
-
-//Wood
 
 /obj/structure/statue/wood
 	obj_integrity = 150

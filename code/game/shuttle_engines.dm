@@ -74,7 +74,6 @@
 		alter_engine_power(-engine_power)
 	. = ..()
 
-//Propagates the change to the shuttle.
 /obj/structure/shuttle/engine/proc/alter_engine_power(mod)
 	if(mod == 0)
 		return

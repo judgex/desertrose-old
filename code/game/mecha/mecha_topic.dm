@@ -1,8 +1,3 @@
-
-////////////////////////////////////
-///// Rendering stats window ///////
-////////////////////////////////////
-
 /obj/mecha/proc/get_stats_html()
 	. = {"<html>
 						<head><title>[src.name] data</title>

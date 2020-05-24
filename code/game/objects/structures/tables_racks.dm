@@ -1,17 +1,3 @@
-/* Tables and Racks
- * Contains:
- *		Tables
- *		Glass Tables
- *		Wooden Tables
- *		Reinforced Tables
- *		Racks
- *		Rack Parts
- */
-
-/*
- * Tables
- */
-
 /obj/structure/table
 	name = "table"
 	desc = "A square piece of metal standing on four metal legs. It can not move."

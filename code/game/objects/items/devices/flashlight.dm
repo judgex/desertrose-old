@@ -199,7 +199,6 @@
 	brightness_on = 5 // A little better than the standard flashlight.
 	hitsound = 'sound/weapons/genhit1.ogg'
 
-// the desk lamps are a bit special
 /obj/item/flashlight/lamp
 	name = "desk lamp"
 	desc = "A desk lamp with an adjustable mount."
@@ -214,14 +213,10 @@
 	materials = list()
 	on = TRUE
 
-
-// green-shaded desk lamp
 /obj/item/flashlight/lamp/green
 	desc = "A classic green-shaded desk lamp."
 	icon_state = "lampgreen"
 	item_state = "lampgreen"
-
-
 
 /obj/item/flashlight/lamp/verb/toggle_light()
 	set name = "Toggle light"
@@ -231,14 +226,11 @@
 	if(!usr.stat)
 		attack_self(usr)
 
-//Bananalamp
 /obj/item/flashlight/lamp/bananalamp
 	name = "banana lamp"
 	desc = "Only a clown would think to make a ghetto banana-shaped lamp. Even has a goofy pullstring."
 	icon_state = "bananalamp"
 	item_state = "bananalamp"
-
-// FLARES
 
 /obj/item/flashlight/flare
 	name = "flare"
@@ -256,7 +248,7 @@
 	grind_results = list("sulfur" = 15)
 
 /obj/item/flashlight/flare/New()
-	fuel = rand(800, 1000) // Sorry for changing this so much but I keep under-estimating how long X number of ticks last in seconds.
+	fuel = rand(800, 1000)
 	..()
 
 /obj/item/flashlight/flare/process()
@@ -294,7 +286,6 @@
 
 /obj/item/flashlight/flare/attack_self(mob/user)
 
-	// Usual checks
 	if(!fuel)
 		to_chat(user, "<span class='warning'>[src] is out of fuel!</span>")
 		return
@@ -303,7 +294,7 @@
 		return
 
 	. = ..()
-	// All good, turn it on.
+
 	if(.)
 		user.visible_message("<span class='notice'>[user] lights \the [src].</span>", "<span class='notice'>You light \the [src]!</span>")
 		playsound(loc, 'sound/effects/flare_light.ogg', 50, 0)
@@ -329,14 +320,13 @@
 
 /obj/item/flashlight/flare/torch/attack_self(mob/user)
 
-	// Usual checks
 	if(!fuel)
 		to_chat(user, "<span class='warning'>[src] is out of fuel!</span>")
 		return
 	if(on)
 		to_chat(user, "<span class='notice'>[src] is already on.</span>")
 		return
-	// All good, turn it on.
+
 	else
 		user.visible_message("<span class='notice'>[user] lights \the [src].</span>", "<span class='notice'>You light \the [src]!</span>")
 		playsound(loc, 'sound/effects/torch_light.ogg', 50, 0)
@@ -359,7 +349,7 @@
 	lefthand_file = 'icons/mob/inhands/equipment/mining_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/mining_righthand.dmi'
 	desc = "A mining lantern."
-	brightness_on = 6			// luminosity when on
+	brightness_on = 6
 
 
 /obj/item/flashlight/slime
@@ -372,7 +362,7 @@
 	w_class = WEIGHT_CLASS_SMALL
 	slot_flags = ITEM_SLOT_BELT
 	materials = list()
-	brightness_on = 6 //luminosity when on
+	brightness_on = 6
 
 /obj/item/flashlight/emp
 	var/emp_max_charges = 4
@@ -427,8 +417,6 @@
 	emp_max_charges = 100
 	emp_cur_charges = 100
 
-// Glowsticks, in the uncomfortable range of similar to flares,
-// but not similar enough to make it worth a refactor
 /obj/item/flashlight/glowstick
 	name = "glowstick"
 	desc = "A military-grade glowstick."
@@ -530,7 +518,7 @@
 	new T(loc)
 	return INITIALIZE_HINT_QDEL
 
-/obj/item/flashlight/spotlight //invisible lighting source
+/obj/item/flashlight/spotlight
 	name = "disco light"
 	desc = "Groovy..."
 	icon_state = null

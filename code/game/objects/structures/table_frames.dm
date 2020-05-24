@@ -1,14 +1,3 @@
-/* Table Frames
- * Contains:
- *		Frames
- *		Wooden Frames
- */
-
-
-/*
- * Normal Frames
- */
-
 /obj/structure/table_frame
 	name = "table frame"
 	desc = "Four metal legs with four framing rods for a table. You could easily pass through this."
@@ -105,10 +94,6 @@
 /obj/structure/table_frame/ratvar_act()
 	new /obj/structure/table_frame/brass(src.loc)
 	qdel(src)
-
-/*
- * Wooden Frames
- */
 
 /obj/structure/table_frame/wood
 	name = "wooden table frame"

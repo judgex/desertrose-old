@@ -1,7 +1,3 @@
-/////////////////////////
-////// Mecha Parts //////
-/////////////////////////
-
 /obj/item/mecha_parts
 	name = "mecha part"
 	icon = 'icons/mecha/mech_construct.dmi'
@@ -51,8 +47,6 @@
 	desc = "A Ripley APLU right leg. Contains somewhat complex servodrives and balance maintaining systems."
 	icon_state = "ripley_r_leg"
 
-///////// Odysseus
-
 /obj/item/mecha_parts/chassis/odysseus
 	name = "\improper Odysseus chassis"
 	construct_type = /datum/component/construction/unordered/mecha_chassis/odysseus
@@ -86,8 +80,6 @@
 	name = "\improper Odysseus right leg"
 	desc = "An odysseus right leg. Contains complex servodrives and balance maintaining systems to maintain stability for critical patients."
 	icon_state = "odysseus_r_leg"
-
-///////// Gygax
 
 /obj/item/mecha_parts/chassis/gygax
 	name = "\improper Gygax chassis"
@@ -129,9 +121,6 @@
 	desc = "A set of armor plates designed for the Gygax. Designed to effectively deflect damage with a lightweight construction."
 	icon_state = "gygax_armor"
 
-
-//////////// Durand
-
 /obj/item/mecha_parts/chassis/durand
 	name = "\improper Durand chassis"
 	construct_type = /datum/component/construction/unordered/mecha_chassis/durand
@@ -172,14 +161,9 @@
 	desc = "A set of armor plates for the Durand. Built heavy to resist an incredible amount of brute force."
 	icon_state = "durand_armor"
 
-////////// Firefighter
-
 /obj/item/mecha_parts/chassis/firefighter
 	name = "\improper Firefighter chassis"
 	construct_type = /datum/component/construction/unordered/mecha_chassis/firefighter
-
-
-////////// HONK
 
 /obj/item/mecha_parts/chassis/honker
 	name = "\improper H.O.N.K chassis"
@@ -214,9 +198,6 @@
 	name = "\improper H.O.N.K right leg"
 	desc = "A H.O.N.K right leg. The foot appears just large enough to fully accommodate a clown shoe."
 	icon_state = "honker_r_leg"
-
-
-////////// Phazon
 
 /obj/item/mecha_parts/chassis/phazon
 	name = "\improper Phazon chassis"
@@ -256,9 +237,6 @@
 	name="Phazon armor"
 	desc="Phazon armor plates. They are layered with plasma to protect the pilot from the stress of phasing and have unusual properties."
 	icon_state = "phazon_armor"
-
-
-///////// Circuitboards
 
 /obj/item/circuitboard/mecha
 	name = "exosuit circuit board"

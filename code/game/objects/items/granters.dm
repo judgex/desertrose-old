@@ -1,6 +1,3 @@
-
-///books that teach things (intrinsic actions like bar flinging, spells like fireball or smoke, or martial arts)///
-
 /obj/item/book/granter
 	due_date = 0 // Game time in deciseconds
 	unique = 1   // 0  Normal book, 1  Should not be treated as normal book, unable to be copied, unable to be modified

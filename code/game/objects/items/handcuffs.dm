@@ -98,7 +98,7 @@
 
 /obj/item/restraints/handcuffs/sinew
 	name = "sinew restraints"
-	desc = "A pair of restraints fashioned from long strands of flesh."
+	desc = "A pair of restraints fashioned from long dried strands of flesh."
 	icon = 'icons/obj/mining.dmi'
 	icon_state = "sinewcuff"
 	item_state = "sinewcuff"

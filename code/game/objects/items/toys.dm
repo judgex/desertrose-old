@@ -1,40 +1,9 @@
-/* Toys!
- * Contains
- *		Balloons
- *		Fake singularity
- *		Toy gun
- *		Toy crossbow
- *		Toy swords
- *		Crayons
- *		Snap pops
- *		Mech prizes
- *		AI core prizes
- *		Toy codex gigas
- * 		Skeleton toys
- *		Cards
- *		Toy nuke
- *		Fake meteor
- *		Foam armblade
- *		Toy big red button
- *		Beach ball
- *		Toy xeno
- *      Kitty toys!
- *		Snowballs
- *		Clockwork Watches
- *		Toy Daggers
- */
-
-
 /obj/item/toy
 	throwforce = 0
 	throw_speed = 3
 	throw_range = 7
 	force = 0
 
-
-/*
- * Balloons
- */
 /obj/item/toy/balloon
 	name = "water balloon"
 	desc = "A translucent balloon. There's nothing in it."
@@ -123,18 +92,12 @@
 	righthand_file = 'icons/mob/inhands/antag/balloons_righthand.dmi'
 	w_class = WEIGHT_CLASS_BULKY
 
-/*
- * Fake singularity
- */
 /obj/item/toy/spinningtoy
 	name = "gravitational singularity"
 	desc = "\"Singulo\" brand spinning toy."
 	icon = 'icons/obj/singularity.dmi'
 	icon_state = "singularity_s1"
 
-/*
- * Toy gun: Why isnt this an /obj/item/gun?
- */
 /obj/item/toy/gun
 	name = "cap gun"
 	desc = "Looks almost like the real thing! Ages 8 and up. Please recycle in an autolathe when you're out of caps."
@@ -207,9 +170,6 @@
 	..()
 	to_chat(user, "There [amount_left == 1 ? "is" : "are"] [amount_left] cap\s left.")
 
-/*
- * Toy swords
- */
 /obj/item/toy/sword
 	name = "toy sword"
 	desc = "A cheap, plastic replica of an energy sword. Realistic sounds! Ages 8 and up."
@@ -243,7 +203,6 @@
 		w_class = WEIGHT_CLASS_SMALL
 	add_fingerprint(user)
 
-// Copied from /obj/item/melee/transforming/energy/sword/attackby
 /obj/item/toy/sword/attackby(obj/item/W, mob/living/user, params)
 	if(istype(W, /obj/item/toy/sword))
 		if((W.item_flags & NODROP) || (item_flags & NODROP))
@@ -271,9 +230,6 @@
 	else
 		return ..()
 
-/*
- * Foam armblade
- */
 /obj/item/toy/foamblade
 	name = "foam armblade"
 	desc = "It says \"Sternside Changs #1 fan\" on it."
@@ -285,7 +241,6 @@
 	attack_verb = list("pricked", "absorbed", "gored")
 	w_class = WEIGHT_CLASS_SMALL
 	resistance_flags = FLAMMABLE
-
 
 /obj/item/toy/windupToolbox
 	name = "windup toolbox"
@@ -311,9 +266,6 @@
 	icon_state = initial(icon_state)
 	active = FALSE
 
-/*
- * Subtype of Double-Bladed Energy Swords
- */
 /obj/item/twohanded/dualsaber/toy
 	name = "double-bladed toy sword"
 	desc = "A cheap, plastic replica of TWO energy swords.  Double the fun!"
@@ -346,10 +298,6 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	attack_verb = list("attacked", "slashed", "stabbed", "sliced")
 	hitsound = 'sound/weapons/bladeslice.ogg'
-
-/*
- * Snap pops
- */
 
 /obj/item/toy/snappop
 	name = "snap pop"
@@ -399,10 +347,6 @@
 	new /obj/item/toy/snappop/phoenix(get_turf(src))
 	qdel(src)
 
-
-/*
- * Mech prizes
- */
 /obj/item/toy/prize
 	icon = 'icons/obj/toy.dmi'
 	icon_state = "ripleytoy"
@@ -410,7 +354,6 @@
 	var/cooldown = 30
 	var/quiet = 0
 
-//all credit to skasi for toy mech fun ideas
 /obj/item/toy/prize/attack_self(mob/user)
 	if(timer < world.time)
 		to_chat(user, "<span class='notice'>You play with [src].</span>")
@@ -487,7 +430,6 @@
 	icon_state = "reticenceprize"
 	quiet = 1
 
-
 /obj/item/toy/talking
 	name = "talking action figure"
 	desc = "A generic action figure modeled after nothing in particular."
@@ -502,7 +444,6 @@
 	var/chattering = FALSE
 	var/phomeme
 
-// Talking toys are language universal, and thus all species can use them
 /obj/item/toy/talking/attack_alien(mob/user)
 	return attack_hand(user)
 
@@ -537,9 +478,6 @@
 	if(chattering)
 		chatter(message, phomeme, user)
 
-/*
- * AI core prizes
- */
 /obj/item/toy/talking/AI
 	name = "toy AI"
 	desc = "A little toy model AI core with real law announcing action!"
@@ -590,11 +528,6 @@
 	chattering = TRUE
 	phomeme = "griffin"
 
-/*
-|| A Deck of Cards for playing various games of chance ||
-*/
-
-
 
 /obj/item/toy/cards
 	resistance_flags = FLAMMABLE
@@ -607,11 +540,6 @@
 	var/card_throw_speed = 3
 	var/card_throw_range = 7
 	var/list/card_attack_verb = list("attacked")
-
-/obj/item/toy/cards/suicide_act(mob/living/carbon/user)
-	user.visible_message("<span class='suicide'>[user] is slitting [user.p_their()] wrists with \the [src]! It looks like [user.p_they()] [user.p_have()] a crummy hand!</span>")
-	playsound(src, 'sound/items/cardshuffle.ogg', 50, 1)
-	return BRUTELOSS
 
 /obj/item/toy/cards/proc/apply_card_vars(obj/item/toy/cards/newobj, obj/item/toy/cards/sourceobj) // Applies variables for supporting multiple types of card deck
 	if(!istype(sourceobj))
@@ -750,7 +678,6 @@
 	var/list/currenthand = list()
 	var/choice = null
 
-
 /obj/item/toy/cards/cardhand/attack_self(mob/user)
 	user.set_machine(src)
 	interact(user)
@@ -765,7 +692,6 @@
 	popup.set_title_image(user.browse_rsc_icon(src.icon, src.icon_state))
 	popup.set_content(dat)
 	popup.open()
-
 
 /obj/item/toy/cards/cardhand/Topic(href, href_list)
 	if(..())
@@ -933,11 +859,6 @@
 	newobj.card_attack_verb = sourceobj.card_attack_verb
 	newobj.attack_verb = newobj.card_attack_verb
 
-
-/*
-|| Syndicate playing cards, for pretending you're Gambit and playing poker for the nuke disk. ||
-*/
-
 /obj/item/toy/cards/deck/syndicate
 	name = "suspicious looking deck of cards"
 	desc = "A deck of playing cards. They seem unusually rigid."
@@ -949,10 +870,6 @@
 	card_throw_range = 7
 	card_attack_verb = list("attacked", "sliced", "diced", "slashed", "cut")
 	resistance_flags = NONE
-
-/*
- * Fake nuke
- */
 
 /obj/item/toy/nuke
 	name = "\improper Nuclear Fission Explosive toy"
@@ -977,10 +894,6 @@
 		var/timeleft = (cooldown - world.time)
 		to_chat(user, "<span class='alert'>Nothing happens, and '</span>[round(timeleft/10)]<span class='alert'>' appears on a small display.</span>")
 
-/*
- * Fake meteor
- */
-
 /obj/item/toy/minimeteor
 	name = "\improper Mini-Meteor"
 	desc = "Relive the excitement of a meteor shower! SweetMeat-eor. Co is not responsible for any injuries, headaches or hearing loss caused by Mini-Meteor."
@@ -996,9 +909,6 @@
 				shake_camera(M, 3, 1)
 		qdel(src)
 
-/*
- * Toy big red button
- */
 /obj/item/toy/redbutton
 	name = "big red button"
 	desc = "A big, plastic red button. Reads 'From HonkCo Pranks?' on the back."
@@ -1020,10 +930,6 @@
 	else
 		to_chat(user, "<span class='alert'>Nothing happens.</span>")
 
-/*
- * Snowballs
- */
-
 /obj/item/toy/snowball
 	name = "snowball"
 	desc = "A compact ball of snow. Good for throwing at people."
@@ -1041,9 +947,6 @@
 		playsound(src, 'sound/effects/pop.ogg', 20, 1)
 		qdel(src)
 
-/*
- * Beach ball
- */
 /obj/item/toy/beach_ball
 	icon = 'icons/misc/beach.dmi'
 	icon_state = "ball"
@@ -1055,10 +958,6 @@
 	. = ..()
 	if(user.dropItemToGround(src))
 		throw_at(target, throw_range, throw_speed)
-
-/*
- * Clockwork Watch
- */
 
 /obj/item/toy/clockwork_watch
 	name = "steampunk watch"
@@ -1081,9 +980,6 @@
 	..()
 	to_chat(user, "<span class='info'>Station Time: [station_time_timestamp()]")
 
-/*
- *
- */
 /obj/item/toy/handmade_watch
 	name = "handmand watch"
 	desc = "A stylish handmade watch made out of thousands of tiny cogwheels."
@@ -1104,10 +1000,6 @@
 	..()
 	to_chat(user, "<span class='info'>Time: [station_time_timestamp()]")
 
-/*
- * Toy Dagger
- */
-
 /obj/item/toy/toy_dagger
 	name = "toy dagger"
 	desc = "A cheap plastic replica of a dagger. Produced by THE ARM Toys, Inc."
@@ -1117,10 +1009,6 @@
 	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
 	w_class = WEIGHT_CLASS_SMALL
-
-/*
- * Xenomorph action figure
- */
 
 /obj/item/toy/toy_xeno
 	icon = 'icons/obj/toy.dmi'
@@ -1147,8 +1035,6 @@
 		to_chat(user, "<span class='warning'>The string on [src] hasn't rewound all the way!</span>")
 		return
 
-// TOY MOUSEYS :3 :3 :3
-
 /obj/item/toy/cattoy
 	name = "toy mouse"
 	desc = "A colorful toy mouse!"
@@ -1157,11 +1043,6 @@
 	w_class = WEIGHT_CLASS_SMALL
 	var/cooldown = 0
 	resistance_flags = FLAMMABLE
-
-
-/*
- * Action Figures
- */
 
 /obj/item/toy/figure
 	name = "Non-Specific Action Figure action figure"
@@ -1378,7 +1259,6 @@
 	item_state = "doll"
 	var/doll_name = "Dummy"
 
-//Add changing looks when i feel suicidal about making 20 inhands for these.
 /obj/item/toy/dummy/attack_self(mob/user)
 	var/new_name = stripped_input(usr,"What would you like to name the dummy?","Input a name",doll_name,MAX_NAME_LEN)
 	if(!new_name)

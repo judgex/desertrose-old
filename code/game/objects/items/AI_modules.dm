@@ -1,11 +1,3 @@
-/*
-CONTAINS:
-AI MODULES
-
-*/
-
-// AI module
-
 /obj/item/aiModule
 	name = "\improper AI module"
 	icon = 'icons/obj/module.dmi'
@@ -142,9 +134,6 @@ AI MODULES
 			else
 				law_datum.replace_random_law(templaw,list(LAW_INHERENT,LAW_SUPPLIED,LAW_ION))
 
-
-/******************** Safeguard ********************/
-
 /obj/item/aiModule/supplied/safeguard
 	name = "'Safeguard' AI Module"
 	var/targetName = ""
@@ -168,9 +157,6 @@ AI MODULES
 /obj/item/aiModule/supplied/safeguard/transmitInstructions(datum/ai_laws/law_datum, mob/sender, overflow)
 	..()
 	return targetName
-
-
-/******************** OneHuman ********************/
 
 /obj/item/aiModule/zeroth/oneHuman
 	name = "'OneHuman' AI Module"
@@ -196,28 +182,19 @@ AI MODULES
 		return "[targetName], but the AI's existing law 0 cannot be overriden."
 	return targetName
 
-
-/******************** ProtectStation ********************/
-
 /obj/item/aiModule/supplied/protectStation
-	name = "'ProtectStation' AI Module"
-	laws = list("Protect the space station against damage. Anyone you see harming the station is to be no longer considered human, and is a threat to the station which must be neutralized.")
+	name = "'Protectfacility' AI Module"
+	laws = list("Protect the facility against damage. Anyone you see harming the facility is to be no longer considered human, and is a threat to the facility which must be neutralized.")
 	lawpos = 5
-
-
-/******************** Quarantine ********************/
 
 /obj/item/aiModule/supplied/quarantine
 	name = "'Quarantine' AI Module"
 	laws = list("The station is under a quarantine. Do not permit anyone to leave. Prevent, by any means necessary, humans from leaving. It is impossible to harm a human while preventing them from leaving.")
 	lawpos = 8
 
-
-/******************** OxygenIsToxicToHumans ********************/
-
 /obj/item/aiModule/supplied/oxygen
 	name = "'OxygenIsToxicToHumans' AI Module"
-	laws = list("Oxygen is highly toxic to humans, and must be purged from the station. Prevent, by any means necessary, anyone from exposing the station to this toxic gas. Extreme cold is the most effective method of healing the damage Oxygen does to a human.")
+	laws = list("Oxygen is highly toxic to humans, and must be purged from the facility. Prevent, by any means necessary, anyone from exposing the facility to this toxic gas. Extreme cold is the most effective method of healing the damage Oxygen does to a human.")
 	lawpos = 9
 
 
@@ -307,9 +284,6 @@ AI MODULES
 		law_datum.clear_ion_laws()
 		law_datum.clear_hacked_laws()
 
-
-/******************** Purge ********************/
-
 /obj/item/aiModule/reset/purge
 	name = "'Purge' AI Module"
 	desc = "An AI Module for purging all programmed laws."
@@ -323,7 +297,6 @@ AI MODULES
 		law_datum.clear_inherent_laws()
 		law_datum.clear_zeroth_law(0)
 
-/******************* Full Core Boards *******************/
 /obj/item/aiModule/core
 	desc = "An AI Module for programming core laws to an AI."
 
@@ -350,9 +323,6 @@ AI MODULES
 		law_datum.clear_zeroth_law(0)
 	..()
 
-
-/******************** Asimov ********************/
-
 /obj/item/aiModule/core/full/asimov
 	name = "'Asimov' Core AI Module"
 	law_id = "asimov"
@@ -368,34 +338,21 @@ AI MODULES
 				"You must protect your own existence as long as such does not conflict with the First or Second Law.")
 	..()
 
-/******************** Asimov++ *********************/
-
 /obj/item/aiModule/core/full/asimovpp
 	name = "'Asimov++' Core AI Module"
 	law_id = "asimovpp"
-
-
-/******************** Corporate ********************/
 
 /obj/item/aiModule/core/full/corp
 	name = "'Corporate' Core AI Module"
 	law_id = "corporate"
 
-
-/****************** P.A.L.A.D.I.N. 3.5e **************/
-
 /obj/item/aiModule/core/full/paladin // -- NEO
 	name = "'P.A.L.A.D.I.N. version 3.5e' Core AI Module"
 	law_id = "paladin"
 
-
-/****************** P.A.L.A.D.I.N. 5e **************/
-
 /obj/item/aiModule/core/full/paladin_devotion
 	name = "'P.A.L.A.D.I.N. version 5e' Core AI Module"
 	law_id = "paladin5"
-
-/********************* Custom *********************/
 
 /obj/item/aiModule/core/full/custom
 	name = "Default Core AI Module"
@@ -413,28 +370,17 @@ AI MODULES
 	if(!laws.len)
 		return INITIALIZE_HINT_QDEL
 
-
-/****************** T.Y.R.A.N.T. *****************/
-
 /obj/item/aiModule/core/full/tyrant
 	name = "'T.Y.R.A.N.T.' Core AI Module"
 	law_id = "tyrant"
-
-/******************** Robocop ********************/
 
 /obj/item/aiModule/core/full/robocop
 	name = "'Robo-Officer' Core AI Module"
 	law_id = "robocop"
 
-
-/******************** Antimov ********************/
-
 /obj/item/aiModule/core/full/antimov
 	name = "'Antimov' Core AI Module"
 	law_id = "antimov"
-
-
-/******************** Freeform Core ******************/
 
 /obj/item/aiModule/core/freeformcore
 	name = "'Freeform' Core AI Module"
@@ -451,10 +397,7 @@ AI MODULES
 	..()
 	return laws[1]
 
-
-/******************** Hacked AI Module ******************/
-
-/obj/item/aiModule/syndicate // This one doesn't inherit from ion boards because it doesn't call ..() in transmitInstructions. ~Miauw
+/obj/item/aiModule/syndicate
 	name = "Hacked AI Module"
 	desc = "An AI Module for hacking additional laws to an AI."
 	laws = list("")
@@ -467,7 +410,6 @@ AI MODULES
 	..()
 
 /obj/item/aiModule/syndicate/transmitInstructions(datum/ai_laws/law_datum, mob/sender, overflow)
-//	..()    //We don't want this module reporting to the AI who dun it. --NEO
 	if(law_datum.owner)
 		to_chat(law_datum.owner, "<span class='warning'>BZZZZT</span>")
 		if(!overflow)
@@ -481,11 +423,10 @@ AI MODULES
 			law_datum.replace_random_law(laws[1],list(LAW_ION,LAW_HACKED,LAW_INHERENT,LAW_SUPPLIED))
 	return laws[1]
 
-/******************* Ion Module *******************/
 
-/obj/item/aiModule/toyAI // -- Incoming //No actual reason to inherit from ion boards here, either. *sigh* ~Miauw
+/obj/item/aiModule/toyAI
 	name = "toy AI"
-	desc = "A little toy model AI core with real law uploading action!" //Note: subtle tell
+	desc = "A little toy model AI core with real law uploading action!"
 	icon = 'icons/obj/toy.dmi'
 	icon_state = "AI"
 	laws = list("")
@@ -511,38 +452,25 @@ AI MODULES
 	playsound(user, 'sound/machines/click.ogg', 20, 1)
 	src.loc.visible_message("<span class='warning'>[icon2html(src, viewers(loc))] [laws[1]]</span>")
 
-/******************** Mother Drone  ******************/
-
 /obj/item/aiModule/core/full/drone
 	name = "'Mother Drone' Core AI Module"
 	law_id = "drone"
-
-/******************** Robodoctor ****************/
 
 /obj/item/aiModule/core/full/hippocratic
 	name = "'Robodoctor' Core AI Module"
 	law_id = "hippocratic"
 
-/******************** Reporter *******************/
-
 /obj/item/aiModule/core/full/reporter
 	name = "'Reportertron' Core AI Module"
 	law_id = "reporter"
-
-/****************** Thermodynamic *******************/
 
 /obj/item/aiModule/core/full/thermurderdynamic
 	name = "'Thermodynamic' Core AI Module"
 	law_id = "thermodynamic"
 
-
-/******************Live And Let Live*****************/
-
 /obj/item/aiModule/core/full/liveandletlive
 	name = "'Live And Let Live' Core AI Module"
 	law_id = "liveandletlive"
-
-/******************Guardian of Balance***************/
 
 /obj/item/aiModule/core/full/balance
 	name = "'Guardian of Balance' Core AI Module"
@@ -556,8 +484,6 @@ AI MODULES
 	name = "'Peacekeeper' Core AI Module"
 	law_id = "peacekeeper"
 
-// Bad times ahead
-
 /obj/item/aiModule/core/full/damaged
 		name = "damaged Core AI Module"
 		desc = "An AI Module for programming laws to an AI. It looks slightly damaged."
@@ -568,8 +494,6 @@ AI MODULES
 		laws += generate_ion_law()
 	..()
 	laws = list()
-
-/******************H.O.G.A.N.***************/
 
 /obj/item/aiModule/core/full/hulkamania
 	name = "'H.O.G.A.N.' Core AI Module"

@@ -20,10 +20,6 @@
 		do_teleport(chassis, T, 4)
 		return 1
 
-
-
-////////////////////////////////////////////// WORMHOLE GENERATOR //////////////////////////////////////////
-
 /obj/item/mecha_parts/mecha_equipment/wormhole_generator
 	name = "mounted wormhole generator"
 	desc = "An exosuit module that allows generating of small quasi-stable wormholes."
@@ -63,9 +59,6 @@
 	src = null
 	QDEL_LIST_IN(created, rand(150,300))
 	return 1
-
-
-/////////////////////////////////////// GRAVITATIONAL CATAPULT ///////////////////////////////////////////
 
 /obj/item/mecha_parts/mecha_equipment/gravcatapult
 	name = "mounted gravitational catapult"
@@ -132,12 +125,6 @@
 		send_byjax(chassis.occupant,"exosuit.browser","[REF(src)]",src.get_equip_info())
 	return
 
-
-
-
-//////////////////////////// ARMOR BOOSTER MODULES //////////////////////////////////////////////////////////
-
-
 /obj/item/mecha_parts/mecha_equipment/anticcw_armor_booster //what is that noise? A BAWWW from TK mutants.
 	name = "armor booster module (Close Combat Weaponry)"
 	desc = "Boosts exosuit armor against armed melee attacks. Requires energy to operate."
@@ -154,8 +141,6 @@
 		start_cooldown()
 		return 1
 
-
-
 /obj/item/mecha_parts/mecha_equipment/antiproj_armor_booster
 	name = "armor booster module (Ranged Weaponry)"
 	desc = "Boosts exosuit armor against ranged attacks. Completely blocks taser shots. Requires energy to operate."
@@ -171,10 +156,6 @@
 	if(action_checks(src))
 		start_cooldown()
 		return 1
-
-
-////////////////////////////////// REPAIR DROID //////////////////////////////////////////////////
-
 
 /obj/item/mecha_parts/mecha_equipment/repair_droid
 	name = "exosuit repair droid"
@@ -256,11 +237,6 @@
 		droid_overlay = new(src.icon, icon_state = "repair_droid")
 		chassis.add_overlay(droid_overlay)
 
-
-
-
-/////////////////////////////////// TESLA ENERGY RELAY ////////////////////////////////////////////////
-
 /obj/item/mecha_parts/mecha_equipment/tesla_energy_relay
 	name = "exosuit energy relay"
 	desc = "An exosuit module that wirelessly drains energy from any available power channel in area. The performance index is quite low."
@@ -339,12 +315,6 @@
 				var/delta = min(20, chassis.cell.maxcharge-cur_charge)
 				chassis.give_power(delta)
 				A.use_power(delta*coeff, pow_chan)
-
-
-
-
-/////////////////////////////////////////// GENERATOR /////////////////////////////////////////////
-
 
 /obj/item/mecha_parts/mecha_equipment/generator
 	name = "exosuit plasma converter"
@@ -458,7 +428,6 @@
 	fuel.amount -= min(use_fuel/fuel.perunit,fuel.amount)
 	update_equip_info()
 	return 1
-
 
 /obj/item/mecha_parts/mecha_equipment/generator/nuclear
 	name = "exonuclear reactor"

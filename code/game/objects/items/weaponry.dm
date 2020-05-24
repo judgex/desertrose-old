@@ -14,9 +14,6 @@
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 100, "acid" = 70)
 	resistance_flags = FIRE_PROOF
 
-/obj/item/banhammer/suicide_act(mob/user)
-		user.visible_message("<span class='suicide'>[user] is hitting [user.p_them()]self with [src]! It looks like [user.p_theyre()] trying to ban [user.p_them()]self from life.</span>")
-		return (BRUTELOSS|FIRELOSS|TOXLOSS|OXYLOSS)
 /*
 oranges says: This is a meme relating to the english translation of the ss13 russian wiki page on lurkmore.
 mrdoombringer sez: and remember kids, if you try and PR a fix for this item's grammar, you are admitting that you are, indeed, a newfriend.
@@ -44,11 +41,6 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	w_class = WEIGHT_CLASS_NORMAL
 	hitsound = 'sound/weapons/bladeslice.ogg'
 	attack_verb = list("attacked", "slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
-
-/obj/item/sord/suicide_act(mob/user)
-	user.visible_message("<span class='suicide'>[user] is trying to impale [user.p_them()]self with [src]! It might be a suicide attempt if it weren't so shitty.</span>", \
-	"<span class='suicide'>You try to impale yourself with [src], but it's USELESS...</span>")
-	return SHAME
 
 /obj/item/claymore
 	name = "claymore"
@@ -122,7 +114,6 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	icon_state = "tire"
 	item_state = "tire"
 
-
 /obj/item/claymore/machete/golf
 	name = "9 iron"
 	desc = "This old and quite heavy 9 iron is bent and battered after many years of use by anyone who found it good enough to break bones and crash skulls."
@@ -152,17 +143,9 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	throwforce = 10
 	w_class = 2
 
-/obj/item/claymore/machete/pipe/pan/suicide_act(mob/user)
-	user.visible_message("<span class='suicide'>[user] keeps hitting \himself with the [src.name]! It looks like \he's trying to commit suicide.</span>")
-	return (BRUTELOSS|FIRELOSS)
-
 /obj/item/claymore/Initialize()
 	. = ..()
 	AddComponent(/datum/component/butchering, 40, 105)
-
-/obj/item/claymore/suicide_act(mob/user)
-	user.visible_message("<span class='suicide'>[user] is falling on [src]! It looks like [user.p_theyre()] trying to commit suicide!</span>")
-	return(BRUTELOSS)
 
 /obj/item/claymore/highlander //ALL COMMENTS MADE REGARDING THIS SWORD MUST BE MADE IN ALL CAPS
 	desc = "<b><i>THERE CAN BE ONLY ONE, AND IT WILL BE YOU!!!</i></b>\nActivate it in your hand to point to the nearest victim."
@@ -311,12 +294,6 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 /obj/item/katana/cursed
 	slot_flags = null
 
-/obj/item/katana/suicide_act(mob/user)
-	user.visible_message("<span class='suicide'>[user] is slitting [user.p_their()] stomach open with [src]! It looks like [user.p_theyre()] trying to commit seppuku!</span>")
-	return(BRUTELOSS)
-
-
-
 /obj/item/wirerod
 	name = "wired rod"
 	desc = "A rod with some wire wrapped around the top. It'd be easy to attach something to the top bit."
@@ -415,7 +392,6 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	materials = list(MAT_METAL=1150, MAT_WOOD=2075)
 	attack_verb = list("attacked", "poked", "jabbed", "torn", "gored")
 
-
 /obj/item/switchblade
 	name = "switchblade"
 	icon_state = "switchblade"
@@ -454,10 +430,6 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 		hitsound = 'sound/weapons/genhit.ogg'
 		sharpness = IS_BLUNT
 
-/obj/item/switchblade/suicide_act(mob/user)
-	user.visible_message("<span class='suicide'>[user] is slitting [user.p_their()] own throat with [src]! It looks like [user.p_theyre()] trying to commit suicide!</span>")
-	return (BRUTELOSS)
-
 /obj/item/phone
 	name = "red phone"
 	desc = "Should anything ever go wrong..."
@@ -470,13 +442,6 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	w_class = WEIGHT_CLASS_SMALL
 	attack_verb = list("called", "rang")
 	hitsound = 'sound/weapons/ring.ogg'
-
-/obj/item/phone/suicide_act(mob/user)
-	if(locate(/obj/structure/chair/stool) in user.loc)
-		user.visible_message("<span class='suicide'>[user] begins to tie a noose with [src]'s cord! It looks like [user.p_theyre()] trying to commit suicide!</span>")
-	else
-		user.visible_message("<span class='suicide'>[user] is strangling [user.p_them()]self with [src]'s cord! It looks like [user.p_theyre()] trying to commit suicide!</span>")
-	return(OXYLOSS)
 
 /obj/item/cane
 	name = "cane"
@@ -535,10 +500,6 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	gender = PLURAL
 	icon = 'icons/obj/wizard.dmi'
 	icon_state = "ectoplasm"
-
-/obj/item/ectoplasm/suicide_act(mob/user)
-	user.visible_message("<span class='suicide'>[user] is inhaling [src]! It looks like [user.p_theyre()] trying to visit the astral plane!</span>")
-	return (OXYLOSS)
 
 /obj/item/mounted_chainsaw
 	name = "mounted chainsaw"

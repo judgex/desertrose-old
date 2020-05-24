@@ -77,9 +77,6 @@
 			new /obj/item/stack/sheet/glass(get_turf(src), glass_amt)
 		qdel(src)
 
-
-
-// APC HULL
 /obj/item/wallframe/apc
 	name = "\improper APC frame"
 	desc = "Used for repairing or building APCs."

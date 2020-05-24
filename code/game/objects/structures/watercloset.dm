@@ -118,9 +118,6 @@
 		w_items += secret.w_class
 		contents += secret
 
-
-
-
 /obj/structure/urinal
 	name = "urinal"
 	desc = "The HU-452, an experimental urinal. Comes complete with experimental urinal cake."
@@ -332,7 +329,6 @@
 			if(is_cleanable(E))
 				qdel(E)
 
-
 /obj/machinery/shower/proc/wash_mob(mob/living/L)
 	SEND_SIGNAL(L, COMSIG_COMPONENT_CLEAN_ACT, CLEAN_WEAK)
 	L.wash_cream()
@@ -435,17 +431,12 @@
 		C.adjustFireLoss(5)
 		to_chat(C, "<span class='danger'>The water is searing!</span>")
 
-
-
-
 /obj/item/bikehorn/rubberducky
 	name = "rubber ducky"
 	desc = "Rubber ducky you're so fine, you make bathtime lots of fuuun. Rubber ducky I'm awfully fooooond of yooooouuuu~"	//thanks doohl
 	icon = 'icons/obj/watercloset.dmi'
 	icon_state = "rubberducky"
 	item_state = "rubberducky"
-
-
 
 /obj/structure/sink
 	name = "sink"
@@ -455,7 +446,6 @@
 	anchored = TRUE
 	var/busy = FALSE 	//Something's being washed at the moment
 	var/dispensedreagent = "water" // for whenever plumbing happens
-
 
 /obj/structure/sink/attack_hand(mob/living/user)
 	. = ..()
@@ -607,7 +597,6 @@
 //Shower Curtains//
 //Defines used are pre-existing in layers.dm//
 
-
 /obj/structure/curtain
 	name = "curtain"
 	desc = "Contains less than 1% mercury."
@@ -661,7 +650,6 @@
 		deconstruct()
 
 	return TRUE
-
 
 /obj/structure/curtain/attack_hand(mob/user)
 	. = ..()
