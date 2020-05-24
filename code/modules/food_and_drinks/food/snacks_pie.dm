@@ -1,4 +1,3 @@
-
 /obj/item/reagent_containers/food/snacks/pie
 	icon = 'icons/obj/food/piecake.dmi'
 	bitesize = 3
@@ -25,15 +24,15 @@
 	list_reagents = list("nutriment" = 6, "banana" = 5, "vitamin" = 2)
 	tastes = list("pie" = 1)
 	foodtype = GRAIN | DAIRY | SUGAR
-	var/stunning = FALSE //why are banana cream pies being used for combat.
+	var/stunning = FALSE
 
 /obj/item/reagent_containers/food/snacks/pie/cream/throw_impact(atom/hit_atom)
 	. = ..()
-	if(!.) //if we're not being caught
+	if(!.)
 		splat(hit_atom)
 
 /obj/item/reagent_containers/food/snacks/pie/cream/proc/splat(atom/movable/hit_atom)
-	if(isliving(loc)) //someone caught us!
+	if(isliving(loc))
 		return
 	var/turf/T = get_turf(hit_atom)
 	new/obj/effect/decal/cleanable/pie_smudge(T)

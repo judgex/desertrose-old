@@ -1,10 +1,9 @@
 
-/////////////////////////////////////////
 /////////////////Mining//////////////////
-/////////////////////////////////////////
+
 /datum/design/cargo_express
-	name = "Computer Design (Express Supply Console)"//shes beautiful
-	desc = "Allows for the construction of circuit boards used to build an Express Supply Console."//who?
+	name = "Computer Design (Express Supply Console)"
+	desc = "Allows for the construction of circuit boards used to build an Express Supply Console."
 	id = "cargoexpress"//the coder reading this
 	build_type = IMPRINTER
 	materials = list(MAT_GLASS = 1000)
@@ -14,7 +13,7 @@
 
 /datum/design/bluespace_pod
 	name = "Supply Drop Pod Upgrade Disk"
-	desc = "Allows the Cargo Express Console to call down the Bluespace Drop Pod, greatly increasing user saftey."//who?
+	desc = "Allows the Cargo Express Console to call down the Bluespace Drop Pod, greatly increasing user saftey."
 	id = "bluespace_pod"//the coder reading this
 	build_type = PROTOLATHE
 	materials = list(MAT_GLASS = 1000)
@@ -27,7 +26,7 @@
 	desc = "Yours is the drill that will pierce through the rock walls."
 	id = "drill"
 	build_type = PROTOLATHE
-	materials = list(MAT_METAL = 6000, MAT_GLASS = 1000) //expensive, but no need for miners.
+	materials = list(MAT_METAL = 6000, MAT_GLASS = 1000)
 	build_path = /obj/item/pickaxe/drill
 	category = list("Mining Designs")
 	departmental_flags = DEPARTMENTAL_FLAG_CARGO
@@ -37,7 +36,7 @@
 	desc = "Yours is the drill that will pierce the heavens!"
 	id = "drill_diamond"
 	build_type = PROTOLATHE
-	materials = list(MAT_METAL = 6000, MAT_GLASS = 1000, MAT_DIAMOND = 2000) //Yes, a whole diamond is needed.
+	materials = list(MAT_METAL = 6000, MAT_GLASS = 1000, MAT_DIAMOND = 2000)
 	build_path = /obj/item/pickaxe/drill/diamonddrill
 	category = list("Mining Designs")
 	departmental_flags = DEPARTMENTAL_FLAG_CARGO

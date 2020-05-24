@@ -1,5 +1,3 @@
-//Pastry is a food that is made from dough which is made from wheat or rye flour.
-//This file contains pastries that don't fit any existing categories.
 ////////////////////////////////////////////DONUTS////////////////////////////////////////////
 
 /obj/item/reagent_containers/food/snacks/donut

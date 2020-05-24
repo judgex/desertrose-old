@@ -83,9 +83,7 @@
 	category = list("Equipment")
 	departmental_flags = DEPARTMENTAL_FLAG_SCIENCE
 
-/////////////////////////////////////////
 //////////////////Misc///////////////////
-/////////////////////////////////////////
 
 /datum/design/welding_mask
 	name = "Welding Gas Mask"
@@ -361,9 +359,7 @@
 	category = list("Equipment")
 	departmental_flags = DEPARTMENTAL_FLAG_ENGINEERING
 
-/////////////////////////////////////////
 ////////////Tools//////////////
-/////////////////////////////////////////
 
 /datum/design/exwelder
 	name = "Experimental Welding Tool"
@@ -385,9 +381,7 @@
 	category = list("Equipment")
 	departmental_flags = DEPARTMENTAL_FLAG_SCIENCE | DEPARTMENTAL_FLAG_ENGINEERING
 
-/////////////////////////////////////////
 ////////////Armour//////////////
-/////////////////////////////////////////
 
 /datum/design/reactive_armour
 	name = "Reactive Armour Shell"

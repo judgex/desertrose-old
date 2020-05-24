@@ -1,17 +1,4 @@
-/////////////////////////////////////////
 ////////////Medical Tools////////////////
-/////////////////////////////////////////
-
-/* /datum/design/medbeam
-	name = "Medbeam Gun"
-	desc = "Heals people from range with targeted nanites."
-	id = "medbeam"
-	build_type = PROTOLATHE
-	materials = list(MAT_METAL = 4000, MAT_GLASS = 2000, MAT_SILVER = 1000, MAT_DIAMOND = 1000)
-	construction_time = 50
-	build_path = /obj/item/gun/medbeam
-	category = list("Misc", "Medical Designs")
-	departmental_flags = DEPARTMENTAL_FLAG_MEDICAL */
 
 /datum/design/autosurgeon
 	name = "Autosurgeon"
@@ -224,9 +211,7 @@
 	category = list("Medical Designs")
 	departmental_flags = DEPARTMENTAL_FLAG_MEDICAL
 
-/////////////////////////////////////////
 //////////Cybernetic Implants////////////
-/////////////////////////////////////////
 
 /datum/design/cyberimp_welding
 	name = "Welding Shield Eyes"
@@ -393,9 +378,7 @@
 	category = list("Misc", "Medical Designs")
 	departmental_flags = DEPARTMENTAL_FLAG_MEDICAL
 
-/////////////////////////////////////////
 ////////////Regular Implants/////////////
-/////////////////////////////////////////
 
 /datum/design/implanter
 	name = "Implanter"

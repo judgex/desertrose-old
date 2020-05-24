@@ -215,18 +215,6 @@
 	result = /obj/item/reagent_containers/food/snacks/sundae
 	subcategory = CAT_MISCFOOD
 
-/*/datum/crafting_recipe/food/honkdae
-	name ="Honkdae"
-	reqs = list(
-		/datum/reagent/consumable/cream = 5,
-		/obj/item/clothing/mask/gas/clown_hat = 1,
-		/obj/item/reagent_containers/food/snacks/grown/cherries = 1,
-		/obj/item/reagent_containers/food/snacks/grown/banana = 2,
-		/obj/item/reagent_containers/food/snacks/icecream = 1
-	)
-	result = /obj/item/reagent_containers/food/snacks/honkdae
-	subcategory = CAT_MISCFOOD*/
-
 /datum/crafting_recipe/food/nachos
 	name ="Nachos"
 	reqs = list(
@@ -276,19 +264,6 @@
 	result = /obj/item/reagent_containers/food/snacks/honeybar
 	subcategory = CAT_MISCFOOD
 
-
-/*/datum/crafting_recipe/food/stuffedlegion
-	name = "Stuffed legion"
-	time = 40
-	reqs = list(
-		/obj/item/reagent_containers/food/snacks/meat/steak/goliath = 1,
-		/obj/item/organ/regenerative_core/legion = 1,
-		/datum/reagent/consumable/ketchup = 2,
-		/datum/reagent/consumable/capsaicin = 2
-	)
-	result = /obj/item/reagent_containers/food/snacks/stuffedlegion
-	subcategory = CAT_MISCFOOD*/
-
 /datum/crafting_recipe/food/lizardwine
 	name = "Lizard wine"
 	time = 40
@@ -298,19 +273,6 @@
 	)
 	result = /obj/item/reagent_containers/food/drinks/bottle/lizardwine
 	subcategory = CAT_MISCFOOD
-
-/*/datum/crafting_recipe/food/powercrepe
-	name = "Powercrepe"
-	time = 40
-	reqs = list(
-		/obj/item/reagent_containers/food/snacks/flatdough = 1,
-		/datum/reagent/consumable/milk = 1,
-		/datum/reagent/consumable/cherryjelly = 5,
-		/obj/item/stock_parts/cell/super =1,
-		/obj/item/melee/sabre = 1
-	)
-	result = /obj/item/reagent_containers/food/snacks/powercrepe
-	subcategory = CAT_MISCFOOD*/
 
 /datum/crafting_recipe/food/taco
 	name ="Classic Taco"

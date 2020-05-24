@@ -1,6 +1,3 @@
-//Not only meat, actually, but also snacks that are almost meat, such as fish meat or tofu
-
-
 ////////////////////////////////////////////FISH////////////////////////////////////////////
 
 /obj/item/reagent_containers/food/snacks/cubancarp

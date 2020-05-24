@@ -3,26 +3,6 @@
 
 ////////////////////////////////////////////////DONUTS////////////////////////////////////////////////
 
-/*/datum/crafting_recipe/food/chaosdonut
-	name = "Chaos donut"
-	reqs = list(
-		/datum/reagent/consumable/frostoil = 5,
-		/datum/reagent/consumable/capsaicin = 5,
-		/obj/item/reagent_containers/food/snacks/pastrybase = 1
-	)
-	result = /obj/item/reagent_containers/food/snacks/donut/chaos
-	subcategory = CAT_PASTRY
-
-/datum/crafting_recipe/food/donut
-	time = 15
-	name = "Donut"
-	reqs = list(
-		/datum/reagent/consumable/sugar = 1,
-		/obj/item/reagent_containers/food/snacks/pastrybase = 1
-	)
-	result = /obj/item/reagent_containers/food/snacks/donut
-	subcategory = CAT_PASTRY*/
-
 /datum/crafting_recipe/food/jellydonut
 	name = "Jelly donut"
 	reqs = list(

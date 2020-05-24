@@ -3,7 +3,6 @@
 
 ////////////////////////////////////////////////BURGERS////////////////////////////////////////////////
 
-
 /datum/crafting_recipe/food/humanburger
 	name = "Human burger"
 	reqs = list(
@@ -55,7 +54,7 @@
 	subcategory = CAT_BURGER
 
 /datum/crafting_recipe/food/xenoburger
-	name = "Xeno burger"
+	name = "Mutant burger"
 	reqs = list(
 		/obj/item/reagent_containers/food/snacks/meat/steak/xeno = 1,
 		/obj/item/reagent_containers/food/snacks/bun = 1
@@ -89,130 +88,6 @@
 	)
 	result = /obj/item/reagent_containers/food/snacks/burger/tofu
 	subcategory = CAT_BURGER
-
-/*/datum/crafting_recipe/food/ghostburger
-	name = "Ghost burger"
-	reqs = list(
-		/obj/item/ectoplasm = 1,
-		/obj/item/reagent_containers/food/snacks/bun = 1
-	)
-	result = /obj/item/reagent_containers/food/snacks/burger/ghost
-	subcategory = CAT_BURGER
-
-/datum/crafting_recipe/food/clownburger
-	name = "Clown burger"
-	reqs = list(
-		/obj/item/clothing/mask/gas/clown_hat = 1,
-		/obj/item/reagent_containers/food/snacks/bun = 1
-	)
-	result = /obj/item/reagent_containers/food/snacks/burger/clown
-	subcategory = CAT_BURGER
-
-/datum/crafting_recipe/food/mimeburger
-	name = "Mime burger"
-	reqs = list(
-		/obj/item/clothing/mask/gas/mime = 1,
-		/obj/item/reagent_containers/food/snacks/bun = 1
-	)
-	result = /obj/item/reagent_containers/food/snacks/burger/mime
-	subcategory = CAT_BURGER*/
-
-/datum/crafting_recipe/food/redburger
-	name = "Red burger"
-	reqs = list(
-		/obj/item/reagent_containers/food/snacks/meat/steak/plain = 1,
-		/obj/item/toy/crayon/red = 1,
-		/obj/item/reagent_containers/food/snacks/bun = 1
-	)
-	result = /obj/item/reagent_containers/food/snacks/burger/red
-	subcategory = CAT_BURGER
-
-/datum/crafting_recipe/food/orangeburger
-	name = "Orange burger"
-	reqs = list(
-		/obj/item/reagent_containers/food/snacks/meat/steak/plain = 1,
-		/obj/item/toy/crayon/orange = 1,
-		/obj/item/reagent_containers/food/snacks/bun = 1
-	)
-	result = /obj/item/reagent_containers/food/snacks/burger/orange
-	subcategory = CAT_BURGER
-
-/datum/crafting_recipe/food/yellowburger
-	name = "Yellow burger"
-	reqs = list(
-		/obj/item/reagent_containers/food/snacks/meat/steak/plain = 1,
-		/obj/item/toy/crayon/yellow = 1,
-		/obj/item/reagent_containers/food/snacks/bun = 1
-	)
-	result = /obj/item/reagent_containers/food/snacks/burger/yellow
-	subcategory = CAT_BURGER
-
-/datum/crafting_recipe/food/greenburger
-	name = "Green burger"
-	reqs = list(
-		/obj/item/reagent_containers/food/snacks/meat/steak/plain = 1,
-		/obj/item/toy/crayon/green = 1,
-		/obj/item/reagent_containers/food/snacks/bun = 1
-	)
-	result = /obj/item/reagent_containers/food/snacks/burger/green
-	subcategory = CAT_BURGER
-
-/datum/crafting_recipe/food/blueburger
-	name = "Blue burger"
-	reqs = list(
-		/obj/item/reagent_containers/food/snacks/meat/steak/plain = 1,
-		/obj/item/toy/crayon/blue = 1,
-		/obj/item/reagent_containers/food/snacks/bun = 1
-	)
-	result = /obj/item/reagent_containers/food/snacks/burger/blue
-	subcategory = CAT_BURGER
-
-/datum/crafting_recipe/food/purpleburger
-	name = "Purple burger"
-	reqs = list(
-		/obj/item/reagent_containers/food/snacks/meat/steak/plain = 1,
-		/obj/item/toy/crayon/purple = 1,
-		/obj/item/reagent_containers/food/snacks/bun = 1
-	)
-	result = /obj/item/reagent_containers/food/snacks/burger/purple
-	subcategory = CAT_BURGER
-
-/datum/crafting_recipe/food/blackburger
-	name = "Black burger"
-	reqs = list(
-		/obj/item/reagent_containers/food/snacks/meat/steak/plain = 1,
-		/obj/item/toy/crayon/black = 1,
-		/obj/item/reagent_containers/food/snacks/bun = 1
-	)
-	result = /obj/item/reagent_containers/food/snacks/burger/black
-	subcategory = CAT_BURGER
-
-/datum/crafting_recipe/food/whiteburger
-	name = "White burger"
-	reqs = list(
-		/obj/item/reagent_containers/food/snacks/meat/steak/plain = 1,
-		/obj/item/toy/crayon/white = 1,
-		/obj/item/reagent_containers/food/snacks/bun = 1
-	)
-	result = /obj/item/reagent_containers/food/snacks/burger/white
-	subcategory = CAT_BURGER
-
-/*/datum/crafting_recipe/food/spellburger
-	name = "Spell burger"
-	reqs = list(
-		/obj/item/clothing/head/wizard/fake = 1,
-	)
-	result = /obj/item/reagent_containers/food/snacks/burger/spell
-	subcategory = CAT_BURGER
-
-/datum/crafting_recipe/food/spellburger2
-	name = "Spell burger"
-	reqs = list(
-		/obj/item/clothing/head/wizard = 1,
-		/obj/item/reagent_containers/food/snacks/bun = 1
-	)
-	result = /obj/item/reagent_containers/food/snacks/burger/spell
-	subcategory = CAT_BURGER*/
 
 /datum/crafting_recipe/food/bigbiteburger
 	name = "Big bite burger"
@@ -273,15 +148,6 @@
 	)
 	result = /obj/item/reagent_containers/food/snacks/burger/rat
 	subcategory = CAT_BURGER
-
-/*/datum/crafting_recipe/food/baseballburger
-	name = "Home run baseball burger"
-	reqs = list(
-			/obj/item/twohanded/baseball = 1,
-			/obj/item/reagent_containers/food/snacks/bun = 1
-	)
-	result = /obj/item/reagent_containers/food/snacks/burger/baseball
-	subcategory = CAT_BURGER*/
 
 /datum/crafting_recipe/food/baconburger
 	name = "Bacon Burger"

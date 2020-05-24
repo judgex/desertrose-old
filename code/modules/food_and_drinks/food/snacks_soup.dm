@@ -226,7 +226,6 @@
 	tastes = list("beet" = 1)
 	foodtype = VEGETABLES
 
-//SOPA DO MACACO SOPA DO MACACO FALLOUT 13
 /obj/item/reagent_containers/food/snacks/soup/macaco
 	name = "Macaco soup"
 	desc = "To think, the monkey would've beat you to death and steal your gun."

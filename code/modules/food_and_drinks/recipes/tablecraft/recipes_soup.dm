@@ -124,40 +124,6 @@
 	result = /obj/item/reagent_containers/food/snacks/soup/blood
 	subcategory = CAT_SOUP
 
-/*/datum/crafting_recipe/food/slimesoup
-	name = "Slime soup"
-	reqs = list(
-			/datum/reagent/water = 10,
-			/datum/reagent/toxin/slimejelly = 5,
-			/obj/item/reagent_containers/glass/bowl = 1
-	)
-	result = /obj/item/reagent_containers/food/snacks/soup/slime
-	subcategory = CAT_SOUP
-
-/datum/crafting_recipe/food/clownstears
-	name = "Clowns tears"
-	reqs = list(
-		/datum/reagent/water = 10,
-		/obj/item/reagent_containers/glass/bowl = 1,
-		/obj/item/reagent_containers/food/snacks/grown/banana = 1,
-		/obj/item/stack/ore/bananium = 1
-	)
-	result = /obj/item/reagent_containers/food/snacks/soup/clownstears
-	subcategory = CAT_SOUP
-
-/datum/crafting_recipe/food/mysterysoup
-	name = "Mystery soup"
-	reqs = list(
-		/datum/reagent/water = 10,
-		/obj/item/reagent_containers/glass/bowl = 1,
-		/obj/item/reagent_containers/food/snacks/badrecipe = 1,
-		/obj/item/reagent_containers/food/snacks/tofu = 1,
-		/obj/item/reagent_containers/food/snacks/boiledegg = 1,
-		/obj/item/reagent_containers/food/snacks/cheesewedge = 1,
-	)
-	result = /obj/item/reagent_containers/food/snacks/soup/mystery
-	subcategory = CAT_SOUP*/
-
 /datum/crafting_recipe/food/mushroomsoup
 	name = "Mushroom soup"
 	reqs = list(
@@ -237,7 +203,6 @@
 	result = /obj/item/reagent_containers/food/snacks/soup/beet/red
 	subcategory = CAT_SOUP
 
-//UMA DELICIA UMA DELICIA FALLOUT13
 /datum/crafting_recipe/food/macaco
 	name = "Macaco soup"
 	reqs = list(

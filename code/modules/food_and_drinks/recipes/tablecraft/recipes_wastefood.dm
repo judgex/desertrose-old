@@ -1,6 +1,3 @@
-//Wasteland food
-//Food made from mostly wasteland ingredients, hooray for immershun
-
 /datum/crafting_recipe/food/moleratwondermeat
 	name = "Molerat Wondermeat"
 	reqs = list(
@@ -89,7 +86,7 @@
 	result = /obj/item/reagent_containers/food/snacks/f13/squirrelstew
 	category = CAT_FOOD
 	subcategory = CAT_WASTEFOOD
-	
+
 /datum/crafting_recipe/food/pemmican
 	name = "pemmican"
 	reqs = list(

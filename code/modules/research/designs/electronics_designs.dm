@@ -1,7 +1,4 @@
-
-///////////////////////////////////
 /////Non-Board Computer Stuff//////
-///////////////////////////////////
 
 /datum/design/headset
 	name = "Radio Headset"
@@ -33,9 +30,8 @@
 	category = list("Electronics")
 	departmental_flags = DEPARTMENTAL_FLAG_ALL
 
-////////////////////////////////////////
 //////////Disk Construction Disks///////
-////////////////////////////////////////
+
 /datum/design/design_disk
 	name = "Design Storage Disk"
 	desc = "Produce additional disks for storing device designs."
