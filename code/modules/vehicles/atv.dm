@@ -1,7 +1,7 @@
 
 /obj/vehicle/ridden/atv
 	name = "all-terrain vehicle"
-	desc = "An all-terrain vehicle built for traversing rough terrain with ease. One of the few old world technologies that are still relevant in the wasteland"
+	desc = "An all-terrain vehicle built for traversing rough terrain with ease. One of the few old-Earth technologies that are still relevant on most planet-bound outposts."
 	icon_state = "atv"
 	key_type = /obj/item/key
 	var/static/mutable_appearance/atvcover

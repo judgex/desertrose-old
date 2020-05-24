@@ -204,7 +204,7 @@ GLOBAL_DATUM(necropolis_gate, /obj/structure/necropolis_gate/legion_gate)
 
 /obj/structure/necropolis_arch
 	name = "necropolis arch"
-	desc = "A massive stone arch."
+	desc = "A massive arch over the necropolis gate, set into a massive tower of stone."
 	icon = 'icons/effects/160x160.dmi'
 	icon_state = "arch_full"
 	appearance_flags = 0

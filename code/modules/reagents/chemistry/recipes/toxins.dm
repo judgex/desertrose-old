@@ -69,11 +69,11 @@
 	results = list("mutetoxin" = 2)
 	required_reagents = list("uranium" = 2, "water" = 1, "carbon" = 1)
 
-/*/datum/chemical_reaction/zombiepowder
+/datum/chemical_reaction/zombiepowder
 	name = "Zombie Powder"
 	id = "zombiepowder"
 	results = list("zombiepowder" = 2)
-	required_reagents = list("carpotoxin" = 5, "morphine" = 5, "copper" = 5)*/
+	required_reagents = list("carpotoxin" = 5, "morphine" = 5, "copper" = 5)
 
 /datum/chemical_reaction/mindbreaker
 	name = "Mindbreaker Toxin"

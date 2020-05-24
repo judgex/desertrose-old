@@ -963,7 +963,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 		var/hunger_rate = HUNGER_FACTOR
 		GET_COMPONENT_FROM(mood, /datum/component/mood, H)
 		if(mood && mood.sanity > SANITY_DISTURBED)
-			hunger_rate *= max(0.6, 1 - 0.002 * mood.sanity) //0.85 to 0.75
+			hunger_rate *= max(0.5, 1 - 0.002 * mood.sanity) //0.85 to 0.75
 
 		if(H.satiety > 0)
 			H.satiety--
@@ -971,7 +971,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 			H.satiety++
 			if(prob(round(-H.satiety/40)))
 				H.Jitter(5)
-			hunger_rate = 2 * HUNGER_FACTOR
+			hunger_rate = 3 * HUNGER_FACTOR
 		hunger_rate *= H.physiology.hunger_mod
 		H.nutrition = max(0, H.nutrition - hunger_rate)
 
@@ -987,7 +987,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 	if(H.nutrition > NUTRITION_LEVEL_FAT)
 		H.metabolism_efficiency = 1
 	else if(H.nutrition > NUTRITION_LEVEL_FED && H.satiety > 80)
-		if(H.metabolism_efficiency != 125 && !H.has_trait(TRAIT_NOHUNGER))
+		if(H.metabolism_efficiency != 1.25 && !H.has_trait(TRAIT_NOHUNGER))
 			to_chat(H, "<span class='notice'>You feel vigorous.</span>")
 			H.metabolism_efficiency = 1.25
 	else if(H.nutrition < NUTRITION_LEVEL_STARVING + 50)

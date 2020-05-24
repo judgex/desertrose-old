@@ -338,7 +338,7 @@
 	category = list("Durand")
 
 //H.O.N.K
-/*/datum/design/honk_chassis
+/datum/design/honk_chassis
 	name = "Exosuit Chassis (\"H.O.N.K\")"
 	id = "honk_chassis"
 	build_type = MECHFAB
@@ -399,11 +399,11 @@
 	build_path = /obj/item/mecha_parts/part/honker_right_leg
 	materials = list(MAT_METAL=20000,MAT_BANANIUM=5000)
 	construction_time = 200
-	category = list("H.O.N.K")*/
+	category = list("H.O.N.K")
 
 
 //Phazon
-/*/datum/design/phazon_chassis
+/datum/design/phazon_chassis
 	name = "Exosuit Chassis (\"Phazon\")"
 	id = "phazon_chassis"
 	build_type = MECHFAB
@@ -473,7 +473,7 @@
 	build_path = /obj/item/mecha_parts/part/phazon_armor
 	materials = list(MAT_METAL=25000,MAT_PLASMA=20000,MAT_TITANIUM=20000)
 	construction_time = 300
-	category = list("Phazon")*/
+	category = list("Phazon")
 
 //Exosuit Equipment
 /datum/design/mech_hydraulic_clamp
@@ -521,7 +521,7 @@
 	construction_time = 100
 	category = list("Exosuit Equipment")
 
-/*/datum/design/mech_generator
+/datum/design/mech_generator
 	name = "Exosuit Equipment (Plasma Generator)"
 	id = "mech_generator"
 	build_type = MECHFAB
@@ -564,7 +564,7 @@
 	build_path = /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/launcher/punching_glove
 	materials = list(MAT_METAL=20000,MAT_BANANIUM=7500)
 	construction_time = 400
-	category = list("Exosuit Equipment")*/
+	category = list("Exosuit Equipment")
 
 /////////////////////////////////////////
 //////////////Borg Upgrades//////////////
@@ -597,14 +597,14 @@
 // 	construction_time = 120
 // 	category = list("Cyborg Upgrade Modules")
 
-/*/datum/design/borg_upgrade_thrusters
+/datum/design/borg_upgrade_thrusters
 	name = "Cyborg Upgrade (Ion Thrusters)"
 	id = "borg_upgrade_thrusters"
 	build_type = MECHFAB
 	build_path = /obj/item/borg/upgrade/thrusters
 	materials = list(MAT_METAL=10000, MAT_PLASMA=5000, MAT_URANIUM = 6000)
 	construction_time = 120
-	category = list("Cyborg Upgrade Modules")*/
+	category = list("Cyborg Upgrade Modules")
 
 /datum/design/borg_upgrade_disablercooler
 	name = "Cyborg Upgrade (Rapid Disabler Cooling Module)"
@@ -633,14 +633,14 @@
 	construction_time = 120
 	category = list("Cyborg Upgrade Modules")
 
-/*/datum/design/borg_upgrade_lavaproof
+/datum/design/borg_upgrade_lavaproof
 	name = "Cyborg Upgrade (Lavaproof Tracks)"
 	id = "borg_upgrade_lavaproof"
 	build_type = MECHFAB
 	build_path = /obj/item/borg/upgrade/lavaproof
 	materials = list(MAT_METAL = 10000, MAT_PLASMA = 4000, MAT_TITANIUM = 5000)
 	construction_time = 120
-	category = list("Cyborg Upgrade Modules")*/
+	category = list("Cyborg Upgrade Modules")
 
 /datum/design/borg_syndicate_module
 	name = "Cyborg Upgrade (Illegal Modules)"
@@ -660,7 +660,7 @@
 	construction_time = 120
 	category = list("Cyborg Upgrade Modules")
 
-/*/datum/design/borg_upgrade_expandedsynthesiser
+/datum/design/borg_upgrade_expandedsynthesiser
 	name = "Cyborg Upgrade (Hypospray Expanded Synthesiser)"
 	id = "borg_upgrade_expandedsynthesiser"
 	build_type = MECHFAB
@@ -676,7 +676,7 @@
 	build_path = /obj/item/borg/upgrade/hypospray/high_strength
 	materials = list(MAT_METAL=15000, MAT_GLASS=15000, MAT_PLASMA=10000, MAT_URANIUM=5000)
 	construction_time = 120
-	category = list("Cyborg Upgrade Modules")*/
+	category = list("Cyborg Upgrade Modules")
 
 /datum/design/borg_upgrade_piercinghypospray
 	name = "Cyborg Upgrade (Piercing Hypospray)"
@@ -696,14 +696,14 @@
 	construction_time = 120
 	category = list("Cyborg Upgrade Modules")
 
-/*/datum/design/borg_upgrade_trashofholding
+/datum/design/borg_upgrade_trashofholding
 	name = "Cyborg Upgrade (Trash Bag of Holding)"
 	id = "borg_upgrade_trashofholding"
 	build_type = MECHFAB
 	build_path = /obj/item/borg/upgrade/tboh
 	materials = list(MAT_METAL=10000, MAT_GOLD=1500, MAT_URANIUM=250, MAT_PLASMA=1500)
 	construction_time = 120
-	category = list("Cyborg Upgrade Modules")*/
+	category = list("Cyborg Upgrade Modules")
 
 /datum/design/borg_upgrade_advancedmop
 	name = "Cyborg Upgrade (Advanced Mop)"

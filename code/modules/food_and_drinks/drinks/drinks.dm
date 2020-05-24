@@ -227,7 +227,7 @@
 
 /obj/item/reagent_containers/food/drinks/mug/coco
 	name = "Dutch hot coco"
-	desc = "Made in South America."
+	desc = "Made in Space South America."
 	list_reagents = list("hot_coco" = 30, "sugar" = 5)
 	foodtype = SUGAR
 
@@ -451,8 +451,8 @@
 	name = "lemon-lime soda"
 
 /obj/item/reagent_containers/food/drinks/soda_cans/space_up
-	name = "Vimm!"
-	desc = "Tastes like a combination of pure Maine spring water and other extracts and syrups."
+	name = "Space-Up!"
+	desc = "Tastes like a hull breach in your mouth."
 	icon_state = "space-up"
 	list_reagents = list("space_up" = 30)
 	foodtype = SUGAR | JUNKFOOD
