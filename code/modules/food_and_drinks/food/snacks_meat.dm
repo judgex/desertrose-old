@@ -96,10 +96,10 @@
 	tastes = list("meat" = 1, "salmon" = 1)
 	foodtype = MEAT | ALCOHOL
 
-/obj/item/reagent_containers/food/snacks/meatball
+/obj/item/reagent_containers/food/snacks/faggot
 	name = "meatball"
 	desc = "It's exactly what you'd expect from the name."
-	icon_state = "meatball"
+	icon_state = "faggot"
 	list_reagents = list("nutriment" = 4, "vitamin" = 1)
 	filling_color = "#800000"
 	tastes = list("meat" = 1)
@@ -140,13 +140,6 @@
 	desc = "Delicious meat, on a stick."
 	bonus_reagents = list("nutriment" = 1, "vitamin" = 2)
 	tastes = list("meat" = 3, "metal" = 1)
-	foodtype = MEAT
-
-/obj/item/reagent_containers/food/snacks/kebab/brahmin
-	name = "Brahmin en brochette"
-	desc = "A dish made from brahmin meat, cooked and served on brochettes, or skewers"
-	bonus_reagents = list("nutriment" = 2, "vitamin" = 4)
-	tastes = list("meat" = 3, "metal" = 1, "crispy skin" = 1)
 	foodtype = MEAT
 
 /obj/item/reagent_containers/food/snacks/kebab/tofu
@@ -298,19 +291,11 @@
 	icon_state = "doubleratkebab"
 	tastes = list("rat meat" = 2, "metal" = 1)
 	bonus_reagents = list("nutriment" = 6, "vitamin" = 2)
-
+	
 /obj/item/reagent_containers/food/snacks/pemmican
 	name = "pemmican"
 	desc = "A well-known food in survivalist circles, pemmican is a mixture of fat and protein from the meat of an animal."
 	icon_state = "phelmbiscuit"
-	list_reagents = list("nutriment" = 6, "vitamin" = 4)
+	list_reagents = list("nutriment" = 2, "vitamin" = 4)
 	tastes = list("dried meat" = 8, "Sawdust" = 4, "Corn" = 1)
-	foodtype = MEAT
-
-/obj/item/reagent_containers/food/snacks/brahminfries
-	name = "brahmin fries"
-	desc = "The golf ball-sized raw brahmin testicles are first dipped in batter, then fried in grease with some salt. Once they are fried to a deep, golden brown, they are served with a heaping of additional batter."
-	icon_state = "pigblanket"
-	list_reagents = list("nutriment" = 3, "vitamin" = 4)
-	tastes = list("tasty meat" = 8, "grease" = 4, "hot batter" = 1)
 	foodtype = MEAT

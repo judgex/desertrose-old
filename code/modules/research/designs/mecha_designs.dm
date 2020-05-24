@@ -106,7 +106,7 @@
 	category = list("Exosuit Modules")
 	departmental_flags = DEPARTMENTAL_FLAG_SCIENCE
 
-/*/datum/design/board/phazon_main
+/datum/design/board/phazon_main
 	name = "\"Phazon\" Central Control module"
 	desc = "Allows for the construction of a \"Phazon\" Central Control module."
 	id = "phazon_main"
@@ -131,7 +131,7 @@
 	materials = list(MAT_GLASS = 1000, MAT_BLUESPACE = 100)
 	build_path = /obj/item/circuitboard/mecha/phazon/targeting
 	category = list("Exosuit Modules")
-	departmental_flags = DEPARTMENTAL_FLAG_SCIENCE*/
+	departmental_flags = DEPARTMENTAL_FLAG_SCIENCE
 
 ////////////////////////////////////////
 /////////// Mecha Equpment /////////////
@@ -327,7 +327,7 @@
 	construction_time = 100
 	category = list("Exosuit Equipment")
 
-/*/datum/design/mech_plasma_cutter
+/datum/design/mech_plasma_cutter
 	name = "Exosuit Module Design (217-D Heavy Plasma Cutter)"
 	desc = "A device that shoots resonant plasma bursts at extreme velocity. The blasts are capable of crushing rock and demolishing solid obstacles."
 	id = "mech_plasma_cutter"
@@ -335,7 +335,7 @@
 	build_path = /obj/item/mecha_parts/mecha_equipment/weapon/energy/plasma
 	materials = list(MAT_METAL = 8000, MAT_GLASS = 1000, MAT_PLASMA = 2000)
 	construction_time = 100
-	category = list("Exosuit Equipment")*/
+	category = list("Exosuit Equipment")
 
 /datum/design/mech_taser
 	name = "Exosuit Weapon (PBT \"Pacifier\" Mounted Taser)"
@@ -377,7 +377,7 @@
 	construction_time = 200
 	category = list("Exosuit Equipment")
 
-/*/datum/design/mech_medical_beamgun
+/datum/design/mech_medical_beamgun
 	name = "Exosuit Medical Equipment (Medical Beamgun)"
 	desc = "Equipment for medical exosuits. A mounted medical nanite projector which will treat patients with a focused beam."
 	id = "mech_medi_beam"
@@ -385,7 +385,7 @@
 	materials = list(MAT_METAL = 15000, MAT_GLASS = 8000, MAT_PLASMA = 3000, MAT_GOLD = 8000, MAT_DIAMOND = 2000)
 	construction_time = 250
 	build_path = /obj/item/mecha_parts/mecha_equipment/medical/mechmedbeam
-	category = list("Exosuit Equipment")*/
+	category = list("Exosuit Equipment")
 
 /datum/design/ripley_Whole
 	name = "APLU (\"Ripley\") Completed"

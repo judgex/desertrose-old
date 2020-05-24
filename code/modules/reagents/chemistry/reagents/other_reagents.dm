@@ -887,7 +887,7 @@
 	return TRUE
 
 /datum/reagent/space_cleaner
-	name = "cleaner"
+	name = "Space cleaner"
 	id = "cleaner"
 	description = "A compound used to clean things. Now with 50% more sodium hypochlorite!"
 	color = "#A5F0EE" // rgb: 165, 240, 238
@@ -1538,7 +1538,7 @@
 /datum/reagent/royal_bee_jelly
 	name = "royal bee jelly"
 	id = "royal_bee_jelly"
-	description = "Royal Bee Jelly, if injected into a Queen Bee said bee will split into two bees."
+	description = "Royal Bee Jelly, if injected into a Queen Space Bee said bee will split into two bees."
 	color = "#00ff80"
 	taste_description = "strange honey"
 

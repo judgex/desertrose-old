@@ -37,13 +37,13 @@
 			var/nutrition_ratio = 0
 			switch(nutrition)
 				if(0 to NUTRITION_LEVEL_STARVING)
-					nutrition_ratio = 0.1
+					nutrition_ratio = 0.2
 				if(NUTRITION_LEVEL_STARVING to NUTRITION_LEVEL_HUNGRY)
-					nutrition_ratio = 0.3
+					nutrition_ratio = 0.4
 				if(NUTRITION_LEVEL_HUNGRY to NUTRITION_LEVEL_FED)
-					nutrition_ratio = 0.5
+					nutrition_ratio = 0.6
 				if(NUTRITION_LEVEL_FED to NUTRITION_LEVEL_WELL_FED)
-					nutrition_ratio = 0.7
+					nutrition_ratio = 0.8
 				else
 					nutrition_ratio = 1
 			if(satiety > 80)

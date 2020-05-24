@@ -75,7 +75,7 @@
 	return environment.temperature
 
 /obj/machinery/rnd/server/proc/produce_heat(heat_amt)
-	if(!(stat & (NOPOWER|BROKEN)))
+	if(!(stat & (NOPOWER|BROKEN))) //Blatently stolen from space heater.
 		var/turf/L = loc
 		if(istype(L))
 			var/datum/gas_mixture/env = L.return_air()

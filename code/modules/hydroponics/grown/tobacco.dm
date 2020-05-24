@@ -23,12 +23,13 @@
 	filling_color = "#008000"
 	distill_reagent = "creme_de_menthe" //Menthol, I guess.
 
+// Space Tobacco
 /obj/item/seeds/tobacco/space
-	name = "pack of tobacco seeds"
-	desc = "These seeds grow into tobacco plants."
+	name = "pack of space tobacco seeds"
+	desc = "These seeds grow into space tobacco plants."
 	icon_state = "seed-stobacco"
 	species = "stobacco"
-	plantname = "Tobacco Plant"
+	plantname = "Space Tobacco Plant"
 	product = /obj/item/reagent_containers/food/snacks/grown/tobacco/space
 	mutatelist = list()
 	reagents_add = list("salbutamol" = 0.05, "nicotine" = 0.08, "nutriment" = 0.03)
@@ -36,8 +37,8 @@
 
 /obj/item/reagent_containers/food/snacks/grown/tobacco/space
 	seed = /obj/item/seeds/tobacco/space
-	name = "tobacco leaves"
-	desc = "Dry them out to make some smokes."
+	name = "space tobacco leaves"
+	desc = "Dry them out to make some space-smokes."
 	icon_state = "stobacco_leaves"
 	distill_reagent = null
 	wine_power = 50

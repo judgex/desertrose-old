@@ -52,7 +52,7 @@
 	required_catalysts = list("enzyme" = 5)
 
 /datum/chemical_reaction/spacebeer
-	name = "Beer"
+	name = "Space Beer"
 	id = "spacebeer"
 	results = list("beer" = 10)
 	required_reagents = list("flour" = 10)
@@ -474,7 +474,7 @@
 	required_reagents = list("blumpkinjuice" = 1, "irishcream" = 2, "ice" = 1)
 
 /datum/chemical_reaction/pumpkin_latte
-	name = "Pumpkin spice latte"
+	name = "Pumpkin space latte"
 	id = "pumpkin_latte"
 	results = list("pumpkin_latte" = 15)
 	required_reagents = list("pumpkinjuice" = 5, "coffee" = 5, "cream" = 5)
@@ -515,7 +515,7 @@
 	name = "Fetching Fizz"
 	id = "fetching_fizz"
 	results = list("fetching_fizz" = 3)
-	required_reagents = list("nuka_cola" = 1, "iron" = 1)
+	required_reagents = list("nuka_cola" = 1, "iron" = 1) //Manufacturable from only the mining station
 	mix_message = "The mixture slightly vibrates before settling."
 
 /datum/chemical_reaction/hearty_punch
