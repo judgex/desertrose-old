@@ -16,6 +16,10 @@
 	input = /obj/item/reagent_containers/food/snacks/grown/potato/wedges
 	output = /obj/item/reagent_containers/food/snacks/fries
 
+/datum/food_processor_process/tatowedges
+	input = /obj/item/reagent_containers/food/snacks/grown/tato/wedges
+	output = /obj/item/reagent_containers/food/snacks/tatofries
+
 /datum/food_processor_process/sweetpotato
 	input = /obj/item/reagent_containers/food/snacks/grown/potato/sweet
 	output = /obj/item/reagent_containers/food/snacks/yakiimo
@@ -23,6 +27,10 @@
 /datum/food_processor_process/potato
 	input = /obj/item/reagent_containers/food/snacks/grown/potato
 	output = /obj/item/reagent_containers/food/snacks/tatortot
+
+/datum/food_processor_process/tato
+	input = /obj/item/reagent_containers/food/snacks/grown/tato
+	output = /obj/item/reagent_containers/food/snacks/tatotot
 
 /datum/food_processor_process/carrot
 	input = /obj/item/reagent_containers/food/snacks/grown/carrot

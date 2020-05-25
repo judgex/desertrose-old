@@ -215,6 +215,22 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	M.radiation = max(M.radiation-2,0)
 	return ..()
 
+/datum/reagent/consumable/ethanol/tatoshine
+	name = "Tato Shine"
+	id = "tatoshine"
+	description = "A murky drink smelling strongly of alcohol. You can see particles of grit drifting through the liquid"
+	color = "#0064C8" // rgb: 0, 100, 200
+	boozepwr = 80
+	taste_description = "powerful gritty alcohol"
+	glass_icon_state = "ginvodkaglass"
+	glass_name = "glass of tato shine"
+	glass_desc = "The glass contain tato shine. It smells like it could be used as rocket fuel."
+	shot_glass_icon_state = "shotglassclear"
+
+/datum/reagent/consumable/ethanol/vodka/on_mob_life(mob/living/carbon/M)
+	M.radiation = max(M.radiation-2,0)
+	return ..()
+
 /datum/reagent/consumable/ethanol/bilk
 	name = "Bilk"
 	id = "bilk"
@@ -609,7 +625,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	glass_icon_state = "beepskysmashglass"
 	glass_name = "Beepsky Smash"
 	glass_desc = "Heavy, hot and strong. Just like the Iron fist of the LAW."
-	
+
 /datum/reagent/consumable/ethanol/irish_cream
 	name = "Irish Cream"
 	id = "irishcream"
@@ -1253,7 +1269,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	glass_icon_state = "neurotoxinglass"
 	glass_name = "Neurotoxin"
 	glass_desc = "A drink that is guaranteed to knock you silly."
-	
+
 /datum/reagent/consumable/ethanol/hippies_delight
 	name = "Hippie's Delight"
 	id = "hippiesdelight"

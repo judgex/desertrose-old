@@ -195,6 +195,17 @@
 	glass_name = "glass of potato juice"
 	glass_desc = "Bleh..."
 
+/datum/reagent/consumable/tato_juice
+	name = "Tato Juice"
+	id = "tato"
+	description = "Juice of a Tato."
+	nutriment_factor = 2 * REAGENTS_METABOLISM
+	color = "#302000" // rgb: 48, 32, 0
+	taste_description = "bitter sadness"
+	glass_icon_state = "glass_brown"
+	glass_name = "glass of tato juice"
+	glass_desc = "It smells as bad as it looks"
+
 /datum/reagent/consumable/grapejuice
 	name = "Grape Juice"
 	id = "grapejuice"
@@ -380,8 +391,8 @@
 	color = "#100800" // rgb: 16, 8, 0
 	taste_description = "cola"
 	glass_icon_state  = "glass_brown"
-	glass_name = "glass of Space Cola"
-	glass_desc = "A glass of refreshing Space Cola."
+	glass_name = "glass of cola"
+	glass_desc = "A glass of refreshing cola."
 
 /datum/reagent/consumable/space_cola/on_mob_life(mob/living/carbon/M)
 	M.drowsyness = max(0,M.drowsyness-5)
@@ -409,14 +420,14 @@
 	. = 1
 
 /datum/reagent/consumable/spacemountainwind
-	name = "SM Wind"
+	name = "Mountain Wind"
 	id = "spacemountainwind"
 	description = "Blows right through you like a space wind."
 	color = "#102000" // rgb: 16, 32, 0
 	taste_description = "sweet citrus soda"
 	glass_icon_state = "Space_mountain_wind_glass"
-	glass_name = "glass of Space Mountain Wind"
-	glass_desc = "Space Mountain Wind. As you know, there are no mountains in space, only wind."
+	glass_name = "glass of Mountain Wind"
+	glass_desc = "A cool glass of Mountain Wind."
 
 /datum/reagent/consumable/spacemountainwind/on_mob_life(mob/living/carbon/M)
 	M.drowsyness = max(0,M.drowsyness-7)

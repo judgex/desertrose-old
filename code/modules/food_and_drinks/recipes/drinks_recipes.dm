@@ -65,6 +65,14 @@
 	required_reagents = list("potato" = 10)
 	required_catalysts = list("enzyme" = 5)
 
+/datum/chemical_reaction/vodka
+	name = "Tato Shine"
+	id = "tatoshine"
+	results = list("tatoshine" = 10)
+	required_reagents = list("tato" = 10)
+	required_catalysts = list("enzyme" = 5)
+
+
 /datum/chemical_reaction/kahlua
 	name = "Kahlua"
 	id = "kahlua"

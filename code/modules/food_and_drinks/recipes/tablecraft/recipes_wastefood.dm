@@ -97,3 +97,30 @@
 	result = /obj/item/reagent_containers/food/snacks/pemmican
 	category = CAT_FOOD
 	subcategory = CAT_WASTEFOOD
+
+/datum/crafting_recipe/food/cheesytatofries
+	name = "Cheesy tato fries"
+	reqs = list(
+		/obj/item/reagent_containers/food/snacks/tatofries = 1,
+		/obj/item/reagent_containers/food/snacks/cheesewedge = 1
+	)
+	result = /obj/item/reagent_containers/food/snacks/cheesytatofries
+	subcategory = CAT_WASTEFOOD
+
+/datum/crafting_recipe/food/cheesytatofries
+	name = "Tato fries"
+	reqs = list(
+		/obj/item/reagent_containers/food/snacks/tatofries = 1,
+		/obj/item/reagent_containers/food/snacks/tallow = 1
+	)
+	result = /obj/item/reagent_containers/food/snacks/tatofries
+	subcategory = CAT_WASTEFOOD
+
+/datum/crafting_recipe/food/bakedtato
+	name = "baked tato"
+	time = 40
+	reqs = list(
+		/obj/item/reagent_containers/food/snacks/grown/potato = 1
+	)
+	result = /obj/item/reagent_containers/food/snacks/bakedtato
+	subcategory = CAT_MISCFOOD

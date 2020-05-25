@@ -351,7 +351,6 @@
 	id = "blackpepper"
 	description = "A powder ground from peppercorns. *AAAACHOOO*"
 	reagent_state = SOLID
-	// no color (ie, black)
 	taste_description = "pepper"
 
 /datum/reagent/consumable/coco

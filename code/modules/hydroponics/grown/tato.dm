@@ -24,22 +24,22 @@
 	filling_color = "#E9967A"
 	bitesize = 100
 	foodtype = VEGETABLES
-	juice_results = list("potato" = 0)
-	distill_reagent = "vodka"
+	juice_results = list("tato" = 0)
+	distill_reagent = "enzyme"
 
-/*/obj/item/reagent_containers/food/snacks/grown/tato/wedges
+/obj/item/reagent_containers/food/snacks/grown/tato/wedges
 	name = "tato wedges"
 	desc = "Slices of neatly cut tato."
 	icon_state = "potato_wedges"
 	filling_color = "#E9967A"
 	bitesize = 100
 
-/obj/item/reagent_containers/food/snacks/grown/potato/attackby(obj/item/W, mob/user, params)
+/obj/item/reagent_containers/food/snacks/grown/tato/attackby(obj/item/W, mob/user, params)
 	if(W.is_sharp())
 		to_chat(user, "<span class='notice'>You cut the tato into wedges with [W].</span>")
-		var/obj/item/reagent_containers/food/snacks/grown/potato/wedges/Wedges = new /obj/item/reagent_containers/food/snacks/grown/potato/wedges
+		var/obj/item/reagent_containers/food/snacks/grown/tato/wedges/Wedges = new /obj/item/reagent_containers/food/snacks/grown/tato/wedges
 		remove_item_from_storage(user)
 		qdel(src)
 		user.put_in_hands(Wedges)
 	else
-		return ..()*/
+		return ..()

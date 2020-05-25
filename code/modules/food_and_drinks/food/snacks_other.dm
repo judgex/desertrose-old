@@ -98,6 +98,34 @@
 	tastes = list("potato" = 3, "valids" = 1)
 	foodtype = FRIED | VEGETABLES
 
+/obj/item/reagent_containers/food/snacks/tatotot
+	name = "tato toots"
+	desc = "A large nugget of fried fried tato ."
+	icon_state = "tatortot"
+	list_reagents = list("nutriment" = 4)
+	filling_color = "FFD700"
+	tastes = list("grit" = 3, "rotten ketchup" = 1)
+	foodtype = FRIED | VEGETABLES
+
+/obj/item/reagent_containers/food/snacks/bakedtato
+	name = "baked tato"
+	desc = "Totally baked."
+	icon_state = "loadedbakedpotato"
+	bonus_reagents = list("nutriment" = 1, "vitamin" = 1)
+	list_reagents = list("nutriment" = 4)
+	filling_color = "#D2B48C"
+	tastes = list("steamed gritt" = 1)
+	foodtype = VEGETABLES
+
+/obj/item/reagent_containers/food/snacks/tatofries
+	name = "tato fries"
+	desc = "tato fries are served hot and crispy, and are generally eaten with lots of condiments in order hide the bitter flavor."
+	icon_state = "fries"
+	list_reagents = list("nutriment" = 4)
+	filling_color = "#FFD700"
+	tastes = list("gritty potato" = 3, "sour tomato" = 1)
+	foodtype = VEGETABLES | GRAIN | FRIED
+
 /obj/item/reagent_containers/food/snacks/soydope
 	name = "soy dope"
 	desc = "Dope from a soy."
@@ -115,6 +143,16 @@
 	list_reagents = list("nutriment" = 6)
 	filling_color = "#FFD700"
 	tastes = list("fries" = 3, "cheese" = 1)
+	foodtype = VEGETABLES | GRAIN
+
+/obj/item/reagent_containers/food/snacks/cheesytatofries
+	name = "cheesy tato fries"
+	desc = "Tato fries. Covered in a large amount of cheese to mask the bitter flavor."
+	icon_state = "cheesyfries"
+	bonus_reagents = list("nutriment" = 1, "vitamin" = 2)
+	list_reagents = list("nutriment" = 6)
+	filling_color = "#FFD700"
+	tastes = list("gritty potato" = 2, "sour tomato" = 1, "cheese" = 3)
 	foodtype = VEGETABLES | GRAIN
 
 /obj/item/reagent_containers/food/snacks/badrecipe
