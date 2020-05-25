@@ -120,7 +120,7 @@
 	if(assembly)
 		if(assembly.battery)
 			var/bp = 5000
-			if(reagents.get_reagent_amount("blood"))
+			if(reagents.get_reagent_amount("blood")) //only blood is powerful enough to power the station(c)
 				var/datum/reagent/blood/B = locate() in reagents.reagent_list
 				if(lfwb)
 					if(B && B.data["cloneable"])

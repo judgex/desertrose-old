@@ -4,7 +4,7 @@
 
 /obj/item/clothing/suit/f13/robe_liz
 	name = "tan robe"
-	desc = "Only a reptilian would find this robe nice and comfortable."
+	desc = "Only a monk would find this robe nice and comfortable."
 	icon_state = "robe_liz"
 	item_state = "brownjsuit"
 	allowed = list(/obj/item/pen,/obj/item/paper,/obj/item/stamp,/obj/item/reagent_containers/food/drinks/flask,/obj/item/melee,/obj/item/storage/box/matches,/obj/item/lighter,/obj/item/clothing/mask/cigarette,/obj/item/storage/fancy/cigarettes,/obj/item/flashlight,/obj/item/ammo_box,/obj/item/ammo_casing,/obj/item/scalpel,/obj/item/surgical_drapes,/obj/item/cautery,/obj/item/hemostat,/obj/item/retractor,/obj/item/storage/pill_bottle/dice,/obj/item/dice)
@@ -65,7 +65,7 @@
 	armor = list(melee = 20, bullet = 10, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 0, fire = 20, acid = 0)
 	allowed = list(/obj/item/pen,/obj/item/paper,/obj/item/stamp,/obj/item/reagent_containers/food/drinks/flask,/obj/item/storage/box/matches,/obj/item/lighter,/obj/item/clothing/mask/cigarette,/obj/item/storage/fancy/cigarettes,/obj/item/flashlight,/obj/item/gun,/obj/item/ammo_box,/obj/item/ammo_casing)
 
-/obj/item/clothing/suit/f13/mfp/raider //"Offbeat" is actually a quote from Mad Max said by Max himself.
+/obj/item/clothing/suit/f13/mfp/raider
 	name = "offbeat jacket"
 	desc = "A black leather jacket with a single metal shoulder pad on the right side.<br>The right sleeve was obviously ripped or cut away.<br>It looks like it was originally a piece of a Main Force Patrol uniform."
 	icon_state = "mfp_raider"

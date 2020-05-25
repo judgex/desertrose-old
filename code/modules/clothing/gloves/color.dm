@@ -8,7 +8,7 @@
 	item_color="yellow"
 	resistance_flags = NONE
 
-/obj/item/clothing/gloves/color/fyellow                             //Cheap Chinese Crap
+/obj/item/clothing/gloves/color/fyellow
 	desc = "These gloves are cheap knockoffs of the coveted ones - no way this can end badly."
 	name = "budget insulated gloves"
 	icon_state = "yellow"
@@ -44,10 +44,10 @@
 	var/can_be_cut = 1
 
 /obj/item/clothing/gloves/color/black/hos
-	item_color = "hosred"	//Exists for washing machines. Is not different from black gloves in any way.
+	item_color = "hosred"
 
 /obj/item/clothing/gloves/color/black/ce
-	item_color = "chief"		//Exists for washing machines. Is not different from black gloves in any way.
+	item_color = "chief"
 
 /obj/item/clothing/gloves/color/black/attackby(obj/item/I, mob/user, params)
 	if(istype(I, /obj/item/wirecutters))
@@ -119,10 +119,10 @@
 	item_color="grey"
 
 /obj/item/clothing/gloves/color/grey/rd
-	item_color = "director"			//Exists for washing machines. Is not different from gray gloves in any way.
+	item_color = "director"
 
 /obj/item/clothing/gloves/color/grey/hop
-	item_color = "hop"				//Exists for washing machines. Is not different from gray gloves in any way.
+	item_color = "hop"
 
 /obj/item/clothing/gloves/color/light_brown
 	name = "light brown gloves"
@@ -139,7 +139,7 @@
 	item_color="brown"
 
 /obj/item/clothing/gloves/color/brown/cargo
-	item_color = "cargo"					//Exists for washing machines. Is not different from brown gloves in any way.
+	item_color = "cargo"
 
 /obj/item/clothing/gloves/color/captain
 	desc = "Regal blue gloves, with a nice gold trim, a diamond anti-shock coating, and an integrated thermal barrier. Swanky."
@@ -190,7 +190,7 @@
 	item_color="white"
 
 /obj/item/clothing/gloves/color/white/redcoat
-	item_color = "redcoat"		//Exists for washing machines. Is not different from white gloves in any way.
+	item_color = "redcoat"
 
 /obj/item/clothing/gloves/color/random
 	name = "random gloves"

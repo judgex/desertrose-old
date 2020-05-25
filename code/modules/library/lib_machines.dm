@@ -296,7 +296,7 @@ GLOBAL_LIST(cachedbooks) // List of our cached book datums
 			else if(!scanner.cache)
 				dat += "<FONT color=red>No data found in scanner memory.</FONT><BR>"
 			else
-				dat += "<TT>Post [scanner.cache.name] to newscasters?</TT>"
+				dat += "<TT>Post [scanner.cache.name] to station newscasters?</TT>"
 				dat += "<A href='?src=[REF(src)];newspost=1'>\[Post\]</A><BR>"
 			dat += "<A href='?src=[REF(src)];switchscreen=0'>(Return to main menu)</A><BR>"
 		if(7)
@@ -434,7 +434,7 @@ GLOBAL_LIST(cachedbooks) // List of our cached book datums
 							alert("Upload Complete. Uploaded title will be unavailable for printing for a short period")
 	if(href_list["newspost"])
 		if(!GLOB.news_network)
-			alert("No news network found. Aborting.")
+			alert("No news network found on station. Aborting.")
 		var/channelexists = 0
 		for(var/datum/newscaster/feed_channel/FC in GLOB.news_network.network_channels)
 			if(FC.channel_name == "Book Club")
@@ -443,7 +443,7 @@ GLOBAL_LIST(cachedbooks) // List of our cached book datums
 		if(!channelexists)
 			GLOB.news_network.CreateFeedChannel("Book Club", "Library", null)
 		GLOB.news_network.SubmitArticle(scanner.cache.dat, "[scanner.cache.name]", "Book Club", null)
-		alert("Upload complete. Your uploaded title is now available on newscasters.")
+		alert("Upload complete. Your uploaded title is now available on station newscasters.")
 	if(href_list["orderbyid"])
 		if(cooldown > world.time)
 			say("Printer unavailable. Please allow a short time before attempting to print.")

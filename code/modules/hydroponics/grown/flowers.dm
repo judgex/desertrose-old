@@ -148,7 +148,7 @@
 /obj/item/reagent_containers/food/snacks/grown/moonflower
 	seed = /obj/item/seeds/sunflower/moonflower
 	name = "moonflower"
-	desc = "Store in a location at least 50 yards away from werewolves."
+	desc = "Store in a location at least 50 yards away from rad-wolves."
 	icon_state = "moonflower"
 	slot_flags = ITEM_SLOT_HEAD
 	filling_color = "#E6E6FA"
@@ -190,7 +190,7 @@
 	..()
 	force = round((5 + seed.potency / 5), 1)
 
-/obj/item/grown/novaflower/attack(mob/living/carbon/M, mob/user)
+/*/obj/item/grown/novaflower/attack(mob/living/carbon/M, mob/user)
 	if(!..())
 		return
 	if(isliving(M))
@@ -214,4 +214,4 @@
 	..()
 	if(!user.gloves)
 		to_chat(user, "<span class='danger'>The [name] burns your bare hand!</span>")
-		user.adjustFireLoss(rand(1, 5))
+		user.adjustFireLoss(rand(1, 5))*/

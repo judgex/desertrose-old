@@ -40,7 +40,7 @@ Chaplain
 	if(M.client && M.client.prefs.custom_names["religion"])
 		new_religion = M.client.prefs.custom_names["religion"]
 
-	var/new_deity = "Jesus"
+	var/new_deity = "Space Jesus"
 	if(M.client && M.client.prefs.custom_names["deity"])
 		new_deity = M.client.prefs.custom_names["deity"]
 

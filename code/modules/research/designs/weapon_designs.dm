@@ -159,7 +159,7 @@
 	category = list("Weapons")
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
 */
-/*/datum/design/decloner
+/datum/design/decloner
 	name = "Direct Application Device"
 	desc = "A device that makes use of the Forced Evolutionary virus with each shot."
 	id = "decloner"
@@ -168,7 +168,7 @@
 	reagents_list = list("FEV_solution" = 60)
 	build_path = /obj/item/gun/energy/decloner
 	category = list("Weapons")
-	departmental_flags = DEPARTMENTAL_FLAG_SECURITY*/
+	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
 
 /datum/design/rapidsyringe
 	name = "Rapid Syringe Gun"
@@ -211,7 +211,7 @@
 	category = list("Weapons")
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY | DEPARTMENTAL_FLAG_MEDICAL
 
-/*/datum/design/pyro_grenade
+/datum/design/pyro_grenade
 	name = "Pyro Grenade"
 	desc = "An advanced grenade that is able to self ignite its mixture."
 	id = "pyro_Grenade"
@@ -219,7 +219,7 @@
 	materials = list(MAT_METAL = 2000, MAT_PLASMA = 500)
 	build_path = /obj/item/grenade/chem_grenade/pyro
 	category = list("Weapons")
-	departmental_flags = DEPARTMENTAL_FLAG_SECURITY | DEPARTMENTAL_FLAG_MEDICAL*/
+	departmental_flags = DEPARTMENTAL_FLAG_SECURITY | DEPARTMENTAL_FLAG_MEDICAL
 
 /datum/design/cryo_grenade
 	name = "Cryo Grenade"

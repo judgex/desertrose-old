@@ -85,7 +85,7 @@
 	seed = /obj/item/seeds/cannabis
 	icon = 'goon/icons/obj/hydroponics.dmi'
 	name = "cannabis leaf"
-	desc = "Recently legalized in most galaxies."
+	desc = "Recently legalized in most states."
 	icon_state = "cannabis"
 	filling_color = "#00FF00"
 	bitesize_mod = 2

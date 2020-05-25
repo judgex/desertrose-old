@@ -27,3 +27,5 @@
 		reagents.add_reagent("antitoxin", 1 + round((seed.potency / 5), 1))
 		reagents.add_reagent("salglu_solution", 1 + round((seed.potency / 20), 1))
 		bitesize = 1 + round(reagents.total_volume / 3, 1)
+
+/*HRP*/

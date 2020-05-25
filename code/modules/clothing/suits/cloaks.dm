@@ -1,3 +1,5 @@
+//Cloaks. No, not THAT kind of cloak.
+
 /obj/item/clothing/neck/cloak
 	name = "brown cloak"
 	desc = "It's a cape that can be worn around your neck."
@@ -15,7 +17,7 @@
 	item_state = "cloak"
 	w_class = WEIGHT_CLASS_SMALL
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	color = "#4A4A4B" //Grey but it looks black
+	color = "#4A4A4B"
 
 /obj/item/clothing/head/cloakhood
 	name = "cloak hood"
@@ -32,12 +34,12 @@
 
 /obj/item/clothing/neck/cloak/hos
 	name = "head of security's cloak"
-	desc = "Worn by Securistan, ruling the wasteland with an iron fist."
+	desc = "Worn by Securistan, ruling the station with an iron fist."
 	icon_state = "hoscloak"
 
 /obj/item/clothing/neck/cloak/qm
 	name = "quartermaster's cloak"
-	desc = "Worn by Cargonia, supplying the wastelans with the necessary tools for survival."
+	desc = "Worn by Cargonia, supplying the station with the necessary tools for survival."
 
 /obj/item/clothing/neck/cloak/cmo
 	name = "chief medical officer's cloak"
@@ -56,7 +58,7 @@
 
 /obj/item/clothing/neck/cloak/cap
 	name = "captain's cloak"
-	desc = "Worn by the overseer of a Vault."
+	desc = "Worn by the commander of Space Station 13."
 	icon_state = "capcloak"
 
 /obj/item/clothing/neck/cloak/hop

@@ -550,7 +550,7 @@
 
 /obj/structure/window/shuttle
 	name = "shuttle window"
-	desc = "A reinforced, air-locked window."
+	desc = "A reinforced, air-locked pod window."
 	icon = 'icons/obj/smooth_structures/shuttle_window.dmi'
 	icon_state = "shuttle_window"
 	dir = FULLTILE_WINDOW_DIR

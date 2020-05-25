@@ -29,12 +29,12 @@
 		/obj/item/reagent_containers/glass/bowl = 1,
 		/obj/item/reagent_containers/food/snacks/grown/ambrosia/vulgaris = 3,
 		/obj/item/reagent_containers/food/snacks/grown/potato = 1,
-		/obj/item/reagent_containers/food/snacks/meatball = 1
+		/obj/item/reagent_containers/food/snacks/faggot = 1
 	)
 	result = /obj/item/reagent_containers/food/snacks/salad/validsalad
 	subcategory = CAT_SALAD
 
-/datum/crafting_recipe/food/monkeysdelight
+/*/datum/crafting_recipe/food/monkeysdelight
 	name = "Monkeys delight"
 	reqs = list(
 		/datum/reagent/consumable/flour = 5,
@@ -45,7 +45,7 @@
 		/obj/item/reagent_containers/food/snacks/grown/banana = 1
 	)
 	result = /obj/item/reagent_containers/food/snacks/soup/monkeysdelight
-	subcategory = CAT_SALAD
+	subcategory = CAT_SALAD*/
 
 /datum/crafting_recipe/food/oatmeal
 	name = "Oatmeal"
