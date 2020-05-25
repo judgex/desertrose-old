@@ -47,6 +47,11 @@
 	desc = "The species gets its common name banana yucca from its banana-shaped fruit. The specific epithet baccata means 'with berries'"
 	produce = /obj/item/reagent_containers/food/snacks/grown/yucca
 
+/obj/structure/flora/wasteplant/wild_tato
+	name = "wild tato"
+	icon_state = "wild_tato"
+	desc = "The outside looks like a tomato, but the inside is brown. Tastes as absolutely disgusting as it looks, but will keep you from starving."
+	produce = /obj/item/reagent_containers/food/snacks/grown/tato
 
 /obj/structure/flora/wasteplant/wild_feracactus
 	name = "wild barrel cactus"

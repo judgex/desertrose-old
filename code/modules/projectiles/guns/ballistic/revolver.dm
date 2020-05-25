@@ -108,36 +108,6 @@
 		user.dropItemToGround(src)
 		return 0
 	..()
-/*
-/obj/item/gun/ballistic/revolver/detective/screwdriver_act(mob/living/user, obj/item/I)
-	if(magazine.caliber == "38")
-		to_chat(user, "<span class='notice'>You begin to reinforce the barrel of [src]...</span>")
-		if(magazine.ammo_count())
-			afterattack(user, user)	//you know the drill
-			user.visible_message("<span class='danger'>[src] goes off!</span>", "<span class='userdanger'>[src] goes off in your face!</span>")
-			return TRUE
-		if(I.use_tool(src, user, 30))
-			if(magazine.ammo_count())
-				to_chat(user, "<span class='warning'>You can't modify it!</span>")
-				return TRUE
-			magazine.caliber = "357"
-			desc = "The barrel and chamber assembly seems to have been modified."
-			to_chat(user, "<span class='notice'>You reinforce the barrel of [src]. Now it will fire .357 rounds.</span>")
-	else
-		to_chat(user, "<span class='notice'>You begin to revert the modifications to [src]...</span>")
-		if(magazine.ammo_count())
-			afterattack(user, user)	//and again
-			user.visible_message("<span class='danger'>[src] goes off!</span>", "<span class='userdanger'>[src] goes off in your face!</span>")
-			return TRUE
-		if(I.use_tool(src, user, 30))
-			if(magazine.ammo_count())
-				to_chat(user, "<span class='warning'>You can't modify it!</span>")
-				return
-			magazine.caliber = "38"
-			desc = initial(desc)
-			to_chat(user, "<span class='notice'>You remove the modifications on [src]. Now it will fire .38 rounds.</span>")
-	return TRUE
-*/
 
 /obj/item/gun/ballistic/revolver/mateba
 	name = "\improper Unica 6 auto-revolver"
@@ -153,9 +123,6 @@
 	recoil = 8
 	pin = /obj/item/firing_pin
 	w_class = WEIGHT_CLASS_NORMAL
-
-// A gun to play Russian Roulette!
-// You can spin the chamber to randomize the position of the bullet.
 
 /obj/item/gun/ballistic/revolver/russian
 	name = "\improper russian revolver"
@@ -373,7 +340,7 @@
 	desc = "Even desert roses have thorns. This .44 revolver has been modified with a special hammer mechanism, allowing for slow, powerful shots, or fanning the hammer for a flurry of more inaccurate shots."
 	item_state = "m29peace"
 	icon_state = "m29peace"
-	extra_damage = 15
+	extra_damage = 20
 	extra_penetration = 5
 	fire_delay = 15
 	burst_size = 1
@@ -389,19 +356,19 @@
 	switch(select)
 		if(0)
 			select += 1
-			burst_size = 6 //fan the hammer
+			burst_size = 6
 			spread = 45
-			extra_damage = -10 //25 damage, 5 AP - equivalent to a .38 round. Sounds weak, but it's six-round-burst!
-			extra_penetration = 0
+			extra_damage = -5
+			extra_penetration = 2
 			fire_delay = 1
 			to_chat(user, "<span class='notice'>You prepare to fan the hammer for a rapid burst of shots.</span>")
 		if(1)
 			select = 0
 			burst_size = 1
 			spread = 0
-			extra_damage = 15 //50 damage, 10 AP - equivalent to a .45-70 Govt round. Strong, but slow.
+			extra_damage = 15
 			extra_penetration = 5
-			fire_delay = 10 //pace your shots
+			fire_delay = 10
 			to_chat(user, "<span class='notice'>You switch to single-shot fire.</span>")
 	update_icon()
 
