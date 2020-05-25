@@ -98,13 +98,13 @@
 	name = "sandstorm"
 	desc = "A passing sand storm blankets the area in harmless sands."
 
-	telegraph_message = "<span class='userdanger'>Sandstorm is coming to the area, decreasing overall visibility outside.</span>"
+	telegraph_message = "<span class='userdanger'>A sandstorm is coming to the area, decreasing overall visibility outside.</span>"
 
-	weather_message = "<span class='userdanger'>Sand waft down around you like grotesque snow. The sandstorm is here...</span>"
+	weather_message = "<span class='userdanger'>Sand wafts down around you like grotesque snow. The sandstorm is here...</span>"
 
-	end_message = "<span class='boldannounce'>The sandstorm slows, stops. Another layer of sand to the ground beneath your feet.</span>"
+	end_message = "<span class='boldannounce'>The sandstorm slows, then finally stops. Another layer of sand to the ground beneath your feet.</span>"
 	end_sound = null
 
 	aesthetic = TRUE
 
-	probability = 15
+	probability = 10
