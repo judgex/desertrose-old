@@ -154,8 +154,8 @@
 	speak_chance = 0
 
 /obj/effect/mob_spawn/human/corpse/enclavescientist
-	name = "Enclave scientist"
-	uniform = /obj/item/clothing/under/f13/enclave_officer
+	name = "enclave scientist"
+	/obj/item/clothing/under/syndicate/combat
 	suit = /obj/item/clothing/suit/radiation
 	shoes = /obj/item/clothing/shoes/f13/military
 	gloves = /obj/item/clothing/gloves/f13/military
@@ -165,9 +165,8 @@
 	//back = /obj/item/weapon/storage/backpack
 
 /obj/effect/mob_spawn/human/corpse/enclave/soldier_ca
-	name = "Enclave Private Soldier"
-	uniform = /obj/item/clothing/under/f13/enclave_officer
-	suit = /obj/item/clothing/suit/armor/f13/combat/enclave
+	name = "enclave soldier"
+	uniform = /obj/item/clothing/under/syndicate/combat
 	shoes = /obj/item/clothing/shoes/f13/military
 	gloves = /obj/item/clothing/gloves/f13/military
 	//radio = /obj/item/device/radio/headset
@@ -176,19 +175,17 @@
 	//back = /obj/item/weapon/storage/backpack
 
 /obj/effect/mob_spawn/human/corpse/enclave/soldier
-	name = "Enclave Soldier"
-	uniform = /obj/item/clothing/under/f13/enclave_officer
-	suit = /obj/item/clothing/suit/armor/f13/power_armor/advanced
+	name = "nclave advanced soldier"
+	uniform = /obj/item/clothing/under/syndicate/combat
 	shoes = /obj/item/clothing/shoes/f13/military
 	gloves = /obj/item/clothing/gloves/f13/military
 	//radio = /obj/item/device/radio/headset
 	mask = /obj/item/clothing/mask/gas
-	head = /obj/item/clothing/head/helmet/power_armor/advanced
 	//back = /obj/item/weapon/storage/backpack
 
 
 /mob/living/simple_animal/hostile/enclave/scientist
-	name = "Enclave scientist"
+	name = "enclave scientist"
 	desc = "An Enclave Scientist wearing an advanced radiation suit. While they may run from you, that does not exempt them from the evil they have committed."
 	minimum_distance = 10
 	retreat_distance = 10
@@ -198,15 +195,10 @@
 	ranged = 1
 	ranged_cooldown_time = 30
 	projectiletype = /obj/item/projectile/energy/declone
-	projectilesound = 'sound/f13weapons/plasmarifle.ogg'
-
-/mob/living/simple_animal/hostile/enclave/scientist/Aggro()
-	..()
-	summon_backup(15)
-	say("For the Enclave!!")
+	projectilesound = 'sound/weapons/wave.ogg'
 
 /mob/living/simple_animal/hostile/enclave/soldier
-	name = "Enclave Advanced Soldier"
+	name = "enclave advanced soldier"
 	desc = "An Enclave Soldier wearing Advanced Power Armor and a plasma multi-caster. Play time's over, mutie."
 	icon_state = "enclaverangedelite"
 	icon_living = "eclaverangedelite"
@@ -217,7 +209,7 @@
 	melee_damage_lower = 55
 	melee_damage_upper = 55
 	extra_projectiles = 5 //6 projectiles. oh lord.
-	retreat_distance = 5
+	retreat_distance = 3
 	minimum_distance = 5
 	ranged_cooldown_time = 12
 	loot = list(/obj/effect/mob_spawn/human/corpse/enclave/soldier)
@@ -685,8 +677,8 @@
 	icon_living = "abomination"
 	icon_dead = "abomination_dead"
 	robust_searching = 1
-	maxHealth = 1200
-	health = 1200
+	maxHealth = 1000
+	health = 1000
 	harm_intent_damage = 10
 	melee_damage_lower = 75
 	melee_damage_upper = 75
@@ -702,7 +694,7 @@
 	. = ..()
 	if(. && ishuman(target))
 		var/mob/living/carbon/human/H = target
-		var/choice = pick(1, 2, 3, 4, 5, 6)
+		var/choice = pick(1, 1, 1, 2, 3, 5)
 		H.reagents.add_reagent("FEV_solution", choice)
 
 
