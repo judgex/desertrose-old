@@ -143,8 +143,6 @@
 	tastes = list("pie" = 1, "apple" = 1)
 	foodtype = GRAIN | FRUIT | SUGAR
 
-
-
 /obj/item/reagent_containers/food/snacks/pie/cherrypie
 	name = "cherry pie"
 	desc = "Taste so good, make a grown man cry."

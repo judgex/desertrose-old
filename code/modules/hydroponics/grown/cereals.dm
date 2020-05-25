@@ -1,9 +1,9 @@
 /obj/item/seeds/wheat
-	name = "pack of razorgrain seeds"
-	desc = "These kernals grow into razorgrain stalks"
+	name = "pack of razor grain seeds"
+	desc = "These kernals grow into razor grain stalks"
 	icon_state = "seed-wheat"
 	species = "wheat"
-	plantname = "Razorgrain Stalks"
+	plantname = "Razor grain stalks"
 	product = /obj/item/reagent_containers/food/snacks/grown/wheat
 	production = 1
 	yield = 4

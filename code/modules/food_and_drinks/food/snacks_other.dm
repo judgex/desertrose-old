@@ -348,6 +348,15 @@
 	tastes = list("parsnip" = 1)
 	foodtype = VEGETABLES
 
+/obj/item/reagent_containers/food/snacks/roastyucca
+	name = "roast yucca"
+	desc = "Sweet and crunchy."
+	icon_state = "roastparsnip"
+	list_reagents = list("nutriment" = 3, "vitamin" = 4)
+	filling_color = "#FF5500"
+	tastes = list("yucca" = 1)
+	foodtype = VEGETABLES
+
 /obj/item/reagent_containers/food/snacks/melonfruitbowl
 	name = "melon fruit bowl"
 	desc = "For people who wants edible fruit bowls."

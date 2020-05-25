@@ -124,3 +124,12 @@
 	)
 	result = /obj/item/reagent_containers/food/snacks/bakedtato
 	subcategory = CAT_MISCFOOD
+
+/datum/crafting_recipe/food/roastyucca
+	name = "roast yucca"
+	time = 40
+	reqs = list(
+		/obj/item/reagent_containers/food/snacks/grown/yucca = 1
+	)
+	result = /obj/item/reagent_containers/food/snacks/roastyucca
+	subcategory = CAT_MISCFOOD
