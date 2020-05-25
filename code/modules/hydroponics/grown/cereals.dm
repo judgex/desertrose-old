@@ -37,7 +37,7 @@
 /obj/item/reagent_containers/food/snacks/grown/oat
 	seed = /obj/item/seeds/wheat/oat
 	name = "oat"
-	desc = "Eat oats, do squats."
+	desc = "Brother may I have some."
 	gender = PLURAL
 	icon_state = "oat"
 	filling_color = "#556B2F"
