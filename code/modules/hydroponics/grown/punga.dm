@@ -11,13 +11,13 @@
 	production = 1
 	yield = 3
 	potency = 30
-	growthstages = 5
+	growthstages = 4
 	rarity = 20
 	growing_icon = 'icons/obj/hydroponics/growing_vegetables.dmi'
-	icon_grow = "punga_grow"
-	icon_dead = "punga_dead"
-	genes = list(/datum/plant_gene/trait/glow, /datum/plant_gene/trait/plant_type/fungal_metabolism, /datum/plant_gene/trait/repeated_harvest)
-	growing_icon = 'icons/obj/hydroponics/growing_mushrooms.dmi'
+	icon_grow = "punga-grow"
+	icon_dead = "punga-dead"
+	icon_harvest = "punga-harvest"
+	genes = list(/datum/plant_gene/trait/plant_type/fungal_metabolism, /datum/plant_gene/trait/repeated_harvest)
 	reagents_add = list("charcoal" = 0.1, "phosphorus" = 0.1, "nutriment" = 0.04)
 
 /obj/item/reagent_containers/food/snacks/grown/pungafruit

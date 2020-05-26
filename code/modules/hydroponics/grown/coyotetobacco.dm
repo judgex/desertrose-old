@@ -10,15 +10,16 @@
 	maturation = 5
 	production = 5
 	yield = 10
-	growthstages = 5
+	growthstages = 4
 	growing_icon = 'icons/obj/hydroponics/growing_vegetables.dmi'
-	icon_grow = "coyote_grow"
-	icon_dead = "coyote_dead"
+	icon_grow = "coyote-grow"
+	icon_dead = "coyote-dead"
+	icon_harvest = "coyote-harvest"
 	reagents_add = list("nicotine" = 0.03, "nutriment" = 0.03)
 
 /obj/item/reagent_containers/food/snacks/grown/coyotetobacco
 	seed = /obj/item/seeds/coyotetobacco
 	name = "coyote tobacco leaves"
 	desc = "This tobacco like plant is commonly used by tribals for a great variety of medicinal and ceremonial purposes."
-	icon_state = "Coyote Leaves"
+	icon_state = "Coyote Tobacco"
 	filling_color = "#008000"

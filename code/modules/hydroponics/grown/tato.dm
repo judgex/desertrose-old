@@ -9,10 +9,11 @@
 	maturation = 10
 	production = 1
 	yield = 4
-	growthstages = 5
+	growthstages = 4
 	growing_icon = 'icons/obj/hydroponics/growing_vegetables.dmi'
 	icon_grow = "tato-grow"
 	icon_dead = "tato-dead"
+	icon_harvest = "tato-harvest"
 	genes = list(/datum/plant_gene/trait/battery, /datum/plant_gene/trait/repeated_harvest)
 	reagents_add = list("vitamin" = 0.04, "nutriment" = 0.1)
 
