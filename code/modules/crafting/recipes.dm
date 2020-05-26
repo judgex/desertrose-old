@@ -1904,7 +1904,7 @@
     time = 20
     reqs = list(/obj/item/reagent_containers/food/snacks/meat/slab/human/ghoul = 2,
                 /obj/item/reagent_containers/food/snacks/grown/feracactus = 2,
-                /obj/item/reagent_containers/food/snacks/tallow = 1,
+                /obj/item/reagent_containers/food/snacks/grown/yucca = 1,
                 /datum/reagent/consumable/nuka_cola = 10)
     tools = list(TOOL_WORKBENCH)
     category = CAT_TRIBAL
@@ -1913,6 +1913,6 @@
 	name = "coyote tobacco chew"
 	result = /obj/item/reagent_containers/pill/patch/coyotechew
 	time = 30
-	reqs = list(/obj/item/reagent_containers/food/snacks/grown/coyotetobacco = 2, /obj/item/reagent_containers/food/snacks/grown/feracactus = 2)
+	reqs = list(/obj/item/reagent_containers/food/snacks/grown/coyotetobacco = 2, /obj/item/reagent_containers/food/snacks/grown/feracactus = 1, /obj/item/reagent_containers/food/snacks/grown/yucca = 1)
 	tools = list(TOOL_WORKBENCH)
-	category = CAT_DRUGS
+	category = CAT_TRIBAL
