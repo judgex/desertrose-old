@@ -31,12 +31,17 @@
 
 //Fallout 13 rubish decoration
 /obj/structure/car/attackby(obj/item/I, mob/user, params)
-	if(istype(I, /obj/item/crowbar))
+	if(istype(I, /obj/item/weldingtool))
 		user.visible_message("[user] starts to disassemble the wreck.</span>")
 		if(do_after(user, 100, target = user))
 			user.visible_message("[user] disassembles the wreck.</span>")
 			new /obj/item/stack/sheet/metal/ten/(get_turf(src))
-			qdel(src)
+			if (uses_left == 0)
+				qdel(src)
+				return
+			else
+				uses_left--
+				return
 
 /obj/structure/car/rubbish1
 	name = "pre-War rubbish"

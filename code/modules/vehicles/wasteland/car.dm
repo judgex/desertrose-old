@@ -9,6 +9,7 @@
 	density = 1
 	layer = ABOVE_MOB_LAYER
 	resistance_flags = INDESTRUCTIBLE
+	var/uses_left = 5
 
 /obj/structure/car/New()
 	..()
