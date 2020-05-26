@@ -110,6 +110,16 @@
 	desc = "A pinnacle of engineering - it fixes everything!"
 	icon_state = "duct_tape"
 
+/obj/item/crafting/coffee_pot
+	name = "coffeepot"
+	desc = "A coffeepot is a tall, narrow pot with a spout and a lid, in which coffee is made or served"
+	icon_state = "cofee_pot"
+
+/*/obj/item/crafting/rope //sprite won't take. Maybe someone else can get it to work.
+	name = "rope"
+	desc = "A strong, thick line made of braided bighorner hair."
+	icon_state = "rope"*/
+
 /obj/item/crafting/wonderglue
 	name = "wonder glue"
 	desc = "A pre-War brand of glue that has retained its adhesive qualities.<br>A glue itself is a liquid acrylic adhesive, meant to fix broken plastics and ceramics or used in the assembly of a great assortment of items."
@@ -155,3 +165,8 @@
 	desc = "This was a promotional item created by Vault-Tec before the Great War and used in the company's advertisements. With the right schematics, it can be used to make bottlecap mines."
 	icon_state = "lunchbox"
 	tool_behaviour = TOOL_LUNCHBOX
+
+/obj/item/crafting/campfirekit
+	name = "campfire kit"
+	desc = "A small box filled with an assortment of wood and tender. Useful for quickly making a fire."
+	icon_state = "lunchbox"
