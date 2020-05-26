@@ -168,5 +168,11 @@
 
 /obj/item/crafting/campfirekit
 	name = "campfire kit"
-	desc = "A small box filled with an assortment of wood and tender. Useful for quickly making a fire."
+	desc = "A small box filled with an assortment of wood and tender. Useful for quickly making a fire. Alt click to crate a camping fire."
 	icon_state = "lunchbox"
+
+/obj/item/crafting/campfirekit/AltClick(mob/user)
+	. = ..()
+	var/turf/T = get_turf(usr)
+	new /obj/structure/campfire(T)
+	return ..()
