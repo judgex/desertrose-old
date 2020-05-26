@@ -1,4 +1,3 @@
-// A very special plant, deserving it's own file.
 
 /obj/item/seeds/kudzu
 	name = "pack of kudzu seeds"

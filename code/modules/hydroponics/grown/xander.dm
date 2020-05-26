@@ -7,7 +7,7 @@
 	product = /obj/item/reagent_containers/food/snacks/grown/xander
 	lifespan = 25
 	endurance = 10
-	yield = 3 //6 //Where did you get 6 from???
+	yield = 3
 	growthstages = 4
 	production = 1
 	maturation = 1
