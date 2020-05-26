@@ -7,7 +7,7 @@
 	icon_dead = "deathclaw_dead"
 	icon_gib = "deathclaw_gib"
 	gender = MALE
-	a_intent = INTENT_HARM ////So we can not move past them.
+	a_intent = INTENT_HARM //So we can not move past them.
 	mob_biotypes = list(MOB_ORGANIC, MOB_BEAST)
 	robust_searching = 1
 	anchored = 1
@@ -25,12 +25,12 @@
 	response_help  = "pets"
 	response_disarm = "gently pushes aside"
 	response_harm   = "hits"
-	maxHealth = 600
-	health = 600
-	obj_damage = 65
-	armour_penetration = 35
-	melee_damage_lower = 60
-	melee_damage_upper = 60
+	maxHealth = 500
+	health = 500
+	obj_damage = 60
+	armour_penetration = 30
+	melee_damage_lower = 56
+	melee_damage_upper = 56
 	attacktext = "claws"
 	attack_sound = 'sound/weapons/bladeslice.ogg'
 	friendly = "hugs"
@@ -44,12 +44,12 @@
 	name = "mother deathclaw"
 	desc = "A massive, reptilian creature with powerful muscles, razor-sharp claws, and aggression to match. This one is an angry mother."
 	gender = FEMALE
-	maxHealth = 850
-	health = 850
+	maxHealth = 750
+	health = 750
 	stat_attack = UNCONSCIOUS
-	melee_damage_lower = 75
-	melee_damage_upper = 75
-	armour_penetration = 40
+	melee_damage_lower = 72
+	melee_damage_upper = 72
+	armour_penetration = 30
 	color = rgb(95,104,94)
 	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab/deathclaw = 6,
 							/obj/item/stack/sheet/animalhide/deathclaw = 3)
