@@ -109,16 +109,10 @@
 		if(4)				// supply shuttle timer
 			var/line1
 			var/line2
-			if(SSshuttle.supply.mode == SHUTTLE_IDLE)
-				if(is_station_level(SSshuttle.supply.z))
-					line1 = "CARGO"
-					line2 = "Docked"
-			else
-				line1 = "CARGO"
-				line2 = SSshuttle.supply.getTimerStr()
-				if(length(line2) > CHARS_PER_LINE)
-					line2 = "Error"
+			line1 = "CARGO"
+			line2 = "Error"
 			update_display(line1, line2)
+			//This was causing runtimes, from what I can tell we dont even have cargo shuttles in the game, removing is the best move. - Harcourt
 		if(5)
 			. = display_shuttle_status()
 	if (. != PROCESS_KILL)
