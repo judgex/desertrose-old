@@ -261,37 +261,37 @@
 
 /obj/item/clothing/mask/bandana/red
 	name = "red bandana"
-	desc = "A fine red bandana with nanotech lining."
+	desc = "A fine red bandana with linen lining."
 	icon_state = "bandred"
 
 /obj/item/clothing/mask/bandana/blue
 	name = "blue bandana"
-	desc = "A fine blue bandana with nanotech lining."
+	desc = "A fine blue bandana with linen lining."
 	icon_state = "bandblue"
 
 /obj/item/clothing/mask/bandana/green
 	name = "green bandana"
-	desc = "A fine green bandana with nanotech lining."
+	desc = "A fine green bandana with linen lining."
 	icon_state = "bandgreen"
 
 /obj/item/clothing/mask/bandana/gold
 	name = "gold bandana"
-	desc = "A fine gold bandana with nanotech lining."
+	desc = "A fine gold bandana with linen lining."
 	icon_state = "bandgold"
 
 /obj/item/clothing/mask/bandana/black
 	name = "black bandana"
-	desc = "A fine black bandana with nanotech lining."
+	desc = "A fine black bandana with linen lining."
 	icon_state = "bandblack"
 
 /obj/item/clothing/mask/bandana/white
 	name = "bandana"
-	desc = "A fine bandana with nanotech lining."
+	desc = "A fine bandana with linen lining."
 	icon_state = "bandwhite"
 
 /obj/item/clothing/mask/bandana/skull
 	name = "skull bandana"
-	desc = "A fine black bandana with nanotech lining and a skull emblem."
+	desc = "A fine black bandana with linen lining and a skull emblem."
 	icon_state = "bandskull"
 
 //Legion Bandanas - We make these as much like normal bandanas as possible without repathing them.

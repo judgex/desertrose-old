@@ -225,7 +225,7 @@
 	icon = 'icons/obj/doors/airlocks/station/plasma.dmi'
 	assemblytype = /obj/structure/door_assembly/door_assembly_plasma
 
-/obj/machinery/door/airlock/plasma/temperature_expose(datum/gas_mixture/air, exposed_temperature, exposed_volume)
+/*/obj/machinery/door/airlock/plasma/temperature_expose(datum/gas_mixture/air, exposed_temperature, exposed_volume)
 	if(exposed_temperature > 300)
 		PlasmaBurn(exposed_temperature)
 
@@ -254,7 +254,7 @@
 		log_game("Plasma airlock ignited by [key_name(user)] in [AREACOORD(src)]")
 		ignite(C.is_hot())
 	else
-		return ..()
+		return ..()*/
 
 /obj/machinery/door/airlock/plasma/glass
 	opacity = 0

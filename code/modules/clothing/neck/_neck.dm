@@ -47,7 +47,7 @@
 
 /obj/item/clothing/neck/stethoscope
 	name = "stethoscope"
-	desc = "An outdated medical apparatus for listening to the sounds of the human body. It also makes you look like you know what you're doing."
+	desc = "A medical apparatus for listening to the sounds of the human body. It also makes you look like you know what you're doing."
 	icon_state = "stethoscope"
 	item_color = "stethoscope"
 
@@ -189,7 +189,7 @@
 ////COLLARS///
 //////////////
 
-/obj/item/clothing/neck/petcollar //Be a good doggo
+/obj/item/clothing/neck/petcollar
 	name = "pet collar"
 	desc = "A sturdy brown leather dog collar. Kinky."
 	icon_state = "petcollar"
@@ -268,4 +268,4 @@
 	name = "desert scarf"
 	icon_state = "cptpatriotscarf"
 	item_color = "cptpatriotscarf"
-	desc = "A stylish scarf. This one has a camoflage pattern popularized during the Gulf War nearly two hundred years ago."
+	desc = "A stylish scarf. This one has a camoflage pattern popularized during the great war."

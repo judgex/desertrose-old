@@ -401,35 +401,35 @@
 
 /obj/item/clothing/accessory/armband/deputy
 	name = "security deputy armband"
-	desc = "An armband, worn by personnel authorized to act as a deputy of vault security."
+	desc = "An armband, worn by personnel authorized to act as a deputy of station security."
 
 /obj/item/clothing/accessory/armband/cargo
 	name = "cargo bay guard armband"
-	desc = "An armband, worn by the vault's security forces to display which department they're assigned to. This one is brown."
+	desc = "An armband, worn by the station's security forces to display which department they're assigned to. This one is brown."
 	icon_state = "cargoband"
 	item_color = "cargoband"
 
 /obj/item/clothing/accessory/armband/engine
 	name = "engineering guard armband"
-	desc = "An armband, worn by the vault's security forces to display which department they're assigned to. This one is orange with a reflective strip!"
+	desc = "An armband, worn by the station's security forces to display which department they're assigned to. This one is orange with a reflective strip!"
 	icon_state = "engieband"
 	item_color = "engieband"
 
 /obj/item/clothing/accessory/armband/science
 	name = "science guard armband"
-	desc = "An armband, worn by the vault's security forces to display which department they're assigned to. This one is purple."
+	desc = "An armband, worn by the station's security forces to display which department they're assigned to. This one is purple."
 	icon_state = "rndband"
 	item_color = "rndband"
 
 /obj/item/clothing/accessory/armband/hydro
 	name = "hydroponics guard armband"
-	desc = "An armband, worn by the vault's security forces to display which department they're assigned to. This one is green and blue."
+	desc = "An armband, worn by the station's security forces to display which department they're assigned to. This one is green and blue."
 	icon_state = "hydroband"
 	item_color = "hydroband"
 
 /obj/item/clothing/accessory/armband/med
 	name = "medical guard armband"
-	desc = "An armband, worn by the vault's security forces to display which department they're assigned to. This one is white."
+	desc = "An armband, worn by the station's security forces to display which department they're assigned to. This one is white."
 	icon_state = "medband"
 	item_color = "medband"
 

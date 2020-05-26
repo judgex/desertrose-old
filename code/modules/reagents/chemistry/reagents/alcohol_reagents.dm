@@ -251,7 +251,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 /datum/reagent/consumable/ethanol/gin
 	name = "Gin"
 	id = "gin"
-	description = "It's gin. I say, good sir."
+	description = "It's gin. In space. I say, good sir."
 	color = "#664300" // rgb: 102, 67, 0
 	boozepwr = 45
 	taste_description = "an alcoholic christmas tree"
@@ -422,7 +422,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	color = "#3E1B00"
 	glass_icon_state = "whiskeycolaglass"
 	glass_name = "Rum and Coke"
-	glass_desc = "The classic go-to of fratboys."
+	glass_desc = "The classic go-to of space-fratboys."
 
 /datum/reagent/consumable/ethanol/cuba_libre
 	name = "Cuba Libre"
@@ -500,7 +500,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	glass_desc = "A simple, yet superb mixture of Vodka and orange juice. Just the thing for the tired engineer."
 
 /datum/reagent/consumable/ethanol/screwdrivercocktail/on_mob_life(mob/living/carbon/M)
-	if(M.mind && M.mind.assigned_role in list("Engineer", "Atmospheric Technician", "Chief Engineer")) //Engineers lose radiation poisoning at a massive rate.
+	if(M.mind && M.mind.assigned_role in list("Station Engineer", "Atmospheric Technician", "Chief Engineer")) //Engineers lose radiation poisoning at a massive rate.
 		M.radiation = max(M.radiation - 25, 0)
 	return ..()
 
@@ -563,7 +563,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	taste_description = "oranges with a hint of pomegranate"
 	glass_icon_state = "tequilasunriseglass"
 	glass_name = "tequila Sunrise"
-	glass_desc = "Oh great, now you feel nostalgic about sunrises back home.."
+	glass_desc = "Oh great, now you feel nostalgic about sunrises back on Terra..."
 	var/obj/effect/light_holder
 
 /datum/reagent/consumable/ethanol/tequila_sunrise/on_mob_add(mob/living/M)
@@ -585,7 +585,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 /datum/reagent/consumable/ethanol/toxins_special
 	name = "Toxins Special"
 	id = "toxinsspecial"
-	description = "This thing is ON FIRE!"
+	description = "This thing is ON FIRE! CALL THE DAMN SHUTTLE!"
 	color = "#664300" // rgb: 102, 67, 0
 	boozepwr = 25
 	taste_description = "spicy toxins"
@@ -609,7 +609,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	glass_icon_state = "beepskysmashglass"
 	glass_name = "Beepsky Smash"
 	glass_desc = "Heavy, hot and strong. Just like the Iron fist of the LAW."
-
+	
 /datum/reagent/consumable/ethanol/irish_cream
 	name = "Irish Cream"
 	id = "irishcream"
@@ -734,13 +734,13 @@ All effects don't start immediately, but rather get worse over time; the rate is
 /datum/reagent/consumable/ethanol/manhattan_proj
 	name = "Manhattan Project"
 	id = "manhattan_proj"
-	description = "A scientist's drink of choice, for pondering ways to blow up the world."
+	description = "A scientist's drink of choice, for pondering ways to blow up the station."
 	color = "#664300" // rgb: 102, 67, 0
 	boozepwr = 45
 	taste_description = "death, the destroyer of worlds"
 	glass_icon_state = "proj_manhattanglass"
 	glass_name = "Manhattan Project"
-	glass_desc = "A scientist's drink of choice, for thinking how to blow up the world."
+	glass_desc = "A scientist's drink of choice, for thinking how to blow up the station."
 
 
 /datum/reagent/consumable/ethanol/manhattan_proj/on_mob_life(mob/living/carbon/M)
@@ -933,7 +933,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	taste_description = "a poor excuse for alcohol"
 	glass_icon_state = "grogglass"
 	glass_name = "Grog"
-	glass_desc = "A fine and cepa drink for wastelander scum."
+	glass_desc = "A fine and cepa drink for Space."
 
 
 /datum/reagent/consumable/ethanol/aloe
@@ -1022,15 +1022,15 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	glass_desc = "An Irish car bomb."
 
 /datum/reagent/consumable/ethanol/syndicatebomb
-	name = "Chinese Bomb"
+	name = "Syndicate Bomb"
 	id = "syndicatebomb"
 	description = "Tastes like terrorism!"
 	color = "#2E6671" // rgb: 46, 102, 113
 	boozepwr = 90
 	taste_description = "purified antagonism"
 	glass_icon_state = "syndicatebomb"
-	glass_name = "Chinese Bomb"
-	glass_desc = "A Chinese bomb."
+	glass_name = "Syndicate Bomb"
+	glass_desc = "A syndicate bomb."
 
 /datum/reagent/consumable/ethanol/syndicatebomb/on_mob_life(mob/living/carbon/M)
 	if(prob(5))
@@ -1132,14 +1132,14 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	shot_glass_icon_state = "shotglassbrown"
 
 
-/datum/reagent/consumable/ethanol/fetching_fizz
+/datum/reagent/consumable/ethanol/fetching_fizz //A reference to one of my favorite games of all time. Pulls nearby ores to the imbiber!
 	name = "Fetching Fizz"
 	id = "fetching_fizz"
-	description = "Whiskey sour/iron/uranium mixture resulting in a highly magnetic slurry. Mild alcohol content."
+	description = "Whiskey sour/iron/uranium mixture resulting in a highly magnetic slurry. Mild alcohol content." //Requires no alcohol to make but has alcohol anyway because ~magic~
 	color = rgb(255, 91, 15)
 	boozepwr = 10
 	metabolization_rate = 0.1 * REAGENTS_METABOLISM
-	taste_description = "charged metal"
+	taste_description = "charged metal" // the same as teslium, honk honk.
 	glass_icon_state = "fetching_fizz"
 	glass_name = "Fetching Fizz"
 	glass_desc = "Induces magnetism in the imbiber. Started as a barroom prank but evolved to become popular with miners and scrappers. Metallic aftertaste."
@@ -1253,7 +1253,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	glass_icon_state = "neurotoxinglass"
 	glass_name = "Neurotoxin"
 	glass_desc = "A drink that is guaranteed to knock you silly."
-
+	
 /datum/reagent/consumable/ethanol/hippies_delight
 	name = "Hippie's Delight"
 	id = "hippiesdelight"
@@ -1367,7 +1367,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	description = "Kicks just as hard as licking the powercell on a baton, but tastier."
 	color = "#cc0000"
 	boozepwr = 35
-	taste_description = "an invigorating bitter freshness which suffuses your being."
+	taste_description = "an invigorating bitter freshness which suffuses your being; no enemy of the station will go unrobusted this day"
 	glass_icon_state = "quadruple_sec"
 	glass_name = "Quadruple Sec"
 	glass_desc = "An intimidating and lawful beverage dares you to violate the law and make its day. Still can't drink it on duty, though."
@@ -1510,7 +1510,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	id = "crevice_spike"
 	description = "Sour, bitter, and smashingly sobering."
 	color = "#5BD231"
-	boozepwr = -10
+	boozepwr = -10 //sobers you up - ideally, one would drink to get hit with brute damage now to avoid alcohol problems later
 	taste_description = "a bitter SPIKE with a sour aftertaste"
 	glass_icon_state = "crevice_spike"
 	glass_name = "Crevice Spike"
@@ -1673,7 +1673,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 
 	name = "Fanciulli"
 	id = "fanciulli"
-	description = "What if the Manhattan coctail ACTUALLY used a bitter herb liquour? Helps you sobers up."
+	description = "What if the Manhattan coctail ACTUALLY used a bitter herb liquour? Helps you sobers up." //also causes a bit of stamina damage to symbolize the afterdrink lazyness
 	color = "#CA933F" // rgb: 202, 147, 63
 	boozepwr = -10
 	taste_description = "a sweet sobering mix"
@@ -1702,7 +1702,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	taste_description = "a bitter freshness"
 	glass_icon_state= "minted_fernet"
 	glass_name = "glass of branca menta"
-	glass_desc = "A glass of Branca Menta, perfect for those lazy and hot sunday summer afternoons."
+	glass_desc = "A glass of Branca Menta, perfect for those lazy and hot sunday summer afternoons." //Get lazy literally by drinking this
 
 
 /datum/reagent/consumable/ethanol/branca_menta/on_mob_life(mob/living/carbon/M)

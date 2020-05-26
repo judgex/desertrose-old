@@ -31,7 +31,7 @@
 // Gold Apple
 /obj/item/seeds/apple/gold
 	name = "pack of golden apple seeds"
-	desc = "These seeds grow into golden apple trees. Good thing there are no firebirds in wasteland."
+	desc = "These seeds grow into golden apple trees. Good thing there are no firebirds in space."
 	icon_state = "seed-goldapple"
 	species = "goldapple"
 	plantname = "Golden Apple Tree"

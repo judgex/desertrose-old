@@ -1,7 +1,7 @@
 // Wheat
 /obj/item/seeds/wheat
-	name = "pack of wheat seeds"
-	desc = "These may, or may not, grow into wheat."
+	name = "pack of razorgrain seeds"
+	desc = "These kernals grow into razorgrain stalks"
 	icon_state = "seed-wheat"
 	species = "wheat"
 	plantname = "Wheat Stalks"
@@ -15,8 +15,8 @@
 
 /obj/item/reagent_containers/food/snacks/grown/wheat
 	seed = /obj/item/seeds/wheat
-	name = "wheat"
-	desc = "Sigh... wheat... a-grain?"
+	name = "razorgrain"
+	desc = "A mutant form of wheat"
 	gender = PLURAL
 	icon_state = "wheat"
 	filling_color = "#F0E68C"

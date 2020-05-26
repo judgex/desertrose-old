@@ -49,7 +49,7 @@
 /obj/item/reagent_containers/food/snacks/grown/cabbage
 	seed = /obj/item/seeds/cabbage
 	name = "cabbage"
-	desc = "Ewwwwwwwwww. Cabbage."
+	desc = "This is a cabbage."
 	icon_state = "cabbage"
 	filling_color = "#90EE90"
 	bitesize_mod = 2
@@ -83,7 +83,7 @@
 	distill_reagent = "rum"
 
 // Gatfruit
-/obj/item/seeds/gatfruit
+/obj/item/seeds/gatfruit/
 	name = "pack of gatfruit seeds"
 	desc = "These seeds grow into .357 revolvers."
 	icon_state = "seed-gatfruit"
@@ -103,7 +103,7 @@
 	reagents_add = list("sulfur" = 0.1, "carbon" = 0.1, "nitrogen" = 0.07, "potassium" = 0.05)
 
 /obj/item/reagent_containers/food/snacks/grown/shell/gatfruit
-	seed = /obj/item/seeds/gatfruit
+	seed = /obj/item/seeds/gatfruit/
 	name = "gatfruit"
 	desc = "It smells like burning."
 	icon_state = "gatfruit"
@@ -168,3 +168,5 @@
 	product = /obj/item/reagent_containers/food/snacks/grown/ash_flora/cactus_fruit
 	growing_icon = 'icons/obj/hydroponics/growing_fruits.dmi'
 	growthstages = 2
+
+/*LRP*/

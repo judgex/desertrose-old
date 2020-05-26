@@ -1,7 +1,7 @@
 // Pineapple!
 /obj/item/seeds/pineapple
 	name = "pack of pineapple seeds"
-	desc = "Oooooooooooooh!"
+	desc = "a pack of seeds that grows into a pineapple plant"
 	icon_state = "seed-pineapple"
 	species = "pineapple"
 	plantname = "Pineapple Plant"
@@ -16,8 +16,8 @@
 
 /obj/item/reagent_containers/food/snacks/grown/pineapple
 	seed = /obj/item/seeds/pineapple
-	name = "pineapples"
-	desc = "Blorble."
+	name = "pineapple"
+	desc = "This is a pineapple"
 	icon_state = "pineapple"
 	force = 4
 	throwforce = 8
@@ -32,3 +32,5 @@
 	foodtype = FRUIT | PINEAPPLE
 	tastes = list("pineapple" = 1)
 	wine_power = 40
+
+/*HRP*/

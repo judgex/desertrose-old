@@ -41,6 +41,29 @@
 	desc = "A hardy, onion-like root with mild healing properties."
 	produce = /obj/item/reagent_containers/food/snacks/grown/xander
 
+obj/structure/flora/wasteplant/wild_punga
+	name = "wild punga"
+	icon_state = "wild_punga"
+	desc = "Punga fruit plants flower at a single point at the terminus of their stems, gradually developing into large, fleshy fruits with a yellow/brown, thick skin."
+	produce = /obj/item/reagent_containers/food/snacks/grown/pungafruit
+
+/obj/structure/flora/wasteplant/wild_coyote
+	name = "wild coyote tobacco shrub"
+	icon_state = "wild_coyote"
+	desc = "This tobacco like plant is commonly used by tribals for a great variety of medicinal and ceremonial purposes."
+	produce = /obj/item/reagent_containers/food/snacks/grown/coyotetobacco
+
+/obj/structure/flora/wasteplant/wild_yucca
+	name = "wild banana yucca"
+	icon_state = "wild_yucca"
+	desc = "The species gets its common name banana yucca from its banana-shaped fruit. The specific epithet baccata means 'with berries'"
+	produce = /obj/item/reagent_containers/food/snacks/grown/yucca
+
+/obj/structure/flora/wasteplant/wild_tato
+	name = "wild tato"
+	icon_state = "wild_tato"
+	desc = "The outside looks like a tomato, but the inside is brown. Tastes as absolutely disgusting as it looks, but will keep you from starving."
+	produce = /obj/item/reagent_containers/food/snacks/grown/tato
 
 /obj/structure/flora/wasteplant/wild_feracactus
 	name = "wild barrel cactus"

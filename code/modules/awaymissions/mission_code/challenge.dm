@@ -16,8 +16,8 @@
 
 
 /obj/machinery/power/emitter/energycannon
-	name = "Energy Cannon"
-	desc = "A heavy duty industrial laser."
+	name = "Siege Cannon"
+	desc = "A super-heavy fixed siege laser that fires in short intervals; though with devestating results."
 	icon = 'icons/obj/singularity.dmi'
 	icon_state = "emitter"
 	anchored = TRUE

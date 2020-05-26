@@ -130,8 +130,8 @@
 
 
 /obj/item/reagent_containers/food/snacks/pie/xemeatpie
-	name = "mutant-pie"
-	icon_state = "mutantmeatpie"
+	name = "mutant pie"
+	icon_state = "xenomeatpie"
 	desc = "A delicious meatpie. Probably mutagenic."
 	trash = /obj/item/trash/plate
 	bonus_reagents = list("nutriment" = 1, "vitamin" = 5)

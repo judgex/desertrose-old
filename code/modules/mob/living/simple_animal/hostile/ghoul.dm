@@ -38,7 +38,6 @@
 	icon_living = "ghoulreaver"
 	icon_dead = "ghoulreaver_dead"
 	speed = 2
-	a_intent = INTENT_HARM
 	maxHealth = 100
 	health = 100
 	harm_intent_damage = 6
@@ -60,7 +59,6 @@
 	icon_living = "cold_feral"
 	icon_dead = "cold_feral_dead"
 	speed = 1.5
-	a_intent = INTENT_HARM
 	maxHealth = 200
 	health = 200
 	harm_intent_damage = 5
@@ -75,7 +73,6 @@
 	icon_living = "frozen_reaver"
 	icon_dead = "frozen_reaver_dead"
 	speed = 1.5
-	a_intent = INTENT_HARM
 	maxHealth = 200
 	health = 200
 	harm_intent_damage = 5

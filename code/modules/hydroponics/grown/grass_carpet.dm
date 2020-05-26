@@ -1,4 +1,3 @@
-// Grass
 /obj/item/seeds/grass
 	name = "pack of grass seeds"
 	desc = "These seeds grow into grass. Yummy!"
@@ -30,8 +29,8 @@
 	var/tile_coefficient = 0.02 // 1/50
 	wine_power = 15
 
-/obj/item/reagent_containers/food/snacks/grown/grass/attack_self(mob/user)
-	to_chat(user, "<span class='notice'>You prepare the astroturf.</span>")
+/*/obj/item/reagent_containers/food/snacks/grown/grass/attack_self(mob/user)
+	to_chat(user, "<span class='notice'>You prepare the turf.</span>")
 	var/grassAmt = 1 + round(seed.potency * tile_coefficient) // The grass we're holding
 	for(var/obj/item/reagent_containers/food/snacks/grown/grass/G in user.loc) // The grass on the floor
 		if(G.type != type)
@@ -39,7 +38,7 @@
 		grassAmt += 1 + round(G.seed.potency * tile_coefficient)
 		qdel(G)
 	new stacktype(user.drop_location(), grassAmt)
-	qdel(src)
+	qdel(src)*/
 
 // Carpet
 /obj/item/seeds/grass/carpet
@@ -59,3 +58,5 @@
 	icon_state = "carpetclump"
 	stacktype = /obj/item/stack/tile/carpet
 	can_distill = FALSE
+
+/*mrp*/

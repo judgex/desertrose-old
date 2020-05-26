@@ -785,7 +785,7 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
 
-/datum/crafting_recipe/chemical_payload2
+/*/datum/crafting_recipe/chemical_payload2
 	name = "Chemical Payload (Gibtonite)"
 	result = /obj/item/bombcore/chemical
 	reqs = list(
@@ -796,7 +796,7 @@
 	parts = list(/obj/item/stock_parts/matter_bin = 1, /obj/item/grenade/chem_grenade = 2)
 	time = 50
 	category = CAT_WEAPONRY
-	subcategory = CAT_WEAPON
+	subcategory = CAT_WEAPON*/
 
 /datum/crafting_recipe/bonearmor
 	name = "Bone Armor"
@@ -989,7 +989,7 @@
 	category = CAT_MISC
 
 
-/datum/crafting_recipe/rcl
+/*/datum/crafting_recipe/rcl
 	name = "Makeshift Rapid Cable Layer"
 	result = /obj/item/twohanded/rcl/ghetto
 	time = 40
@@ -1005,7 +1005,7 @@
 		        /obj/item/stack/sheet/mineral/wood = 20,
 		        /obj/item/stack/cable_coil = 10)
 	tools = list(TOOL_SCREWDRIVER, TOOL_WRENCH, TOOL_WELDER)
-	category = CAT_MISC
+	category = CAT_MISC*/
 
 /datum/crafting_recipe/binoculars
 	name = "Binoculars"
@@ -1016,14 +1016,14 @@
 	tools = list(TOOL_SCREWDRIVER,TOOL_WORKBENCH)
 	category = CAT_MISC
 
-/datum/crafting_recipe/spooky_camera
+/*/datum/crafting_recipe/spooky_camera
 	name = "Camera Obscura"
 	result = /obj/item/camera/spooky
 	time = 15
 	reqs = list(/obj/item/camera = 1,
 				/datum/reagent/water/holywater = 10)
 	parts = list(/obj/item/camera = 1)
-	category = CAT_MISC
+	category = CAT_MISC*/
 
 //drugs
 /datum/crafting_recipe/jet
@@ -1038,7 +1038,7 @@
 	name = "Psycho"
 	result = /obj/item/reagent_containers/hypospray/medipen/psycho
 	time = 20
-	reqs = list(/obj/item/reagent_containers/syringe = 1, /obj/item/reagent_containers/food/snacks/grown/feracactus = 2, /obj/item/reagent_containers/food/snacks/grown/fungus = 2, /datum/reagent/consumable/nuka_cola = 10)
+	reqs = list(/obj/item/reagent_containers/syringe = 1, /obj/item/reagent_containers/food/snacks/grown/feracactus = 2, /obj/item/reagent_containers/food/snacks/grown/fungus = 2, /datum/reagent/consumable/nuka_cola = 1)
 	tools = list(TOOL_WORKBENCH)
 	category = CAT_DRUGS
 
@@ -1122,14 +1122,14 @@
 	time = 30
 	category = CAT_MISC
 
-/datum/crafting_recipe/reversebeartrap
+/*/datum/crafting_recipe/reversebeartrap
 	name = "Reverse Bear Trap"
 	result = /obj/item/reverse_bear_trap
 	reqs = list(/obj/item/stack/sheet/metal = 4,
 				/obj/item/crafting/timer = 1)
 	tools = list(TOOL_SCREWDRIVER, TOOL_WRENCH)
 	time = 60
-	category = CAT_ASSEM
+	category = CAT_ASSEM*/
 
 /datum/crafting_recipe/whip
 	name = "Leather whip"
@@ -1905,6 +1905,6 @@
 	name = "coyote tobacco chew"
 	result = /obj/item/reagent_containers/pill/patch/coyotechew
 	time = 30
-	reqs = list(/obj/item/reagent_containers/food/snacks/grown/feracactus = 1, /obj/item/reagent_containers/food/snacks/grown/tobacco/space = 2, /datum/reagent/consumable/coffee = 10)
+	reqs = list(/obj/item/reagent_containers/food/snacks/grown/coyotetobacco = 2, /obj/item/reagent_containers/food/snacks/grown/feracactus = 2)
 	tools = list(TOOL_WORKBENCH)
 	category = CAT_DRUGS
