@@ -76,5 +76,5 @@
     name = "coyote tobacco chew"
     desc = "Nicotiana attenuata, colloquially known as coyote tobacco. The plant is native to and grows wild in the southwestern United States and Mexico. It is not to be confused with the plant commonly used and processed into tobacco cigarettes."
     list_reagents = list("salbutamol" = 0.15, "nicotine" = 0.24, "spaceacillin" = 5)
-    icon_state = "bandaid_healingpowder"
+    icon_state = "bandaid_chew"
     self_delay = 30
