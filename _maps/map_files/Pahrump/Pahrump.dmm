@@ -24012,7 +24012,7 @@
 /turf/open/floor/f13/wood,
 /area/f13/city)
 "bns" = (
-/obj/machinery/door/airlock/wood{
+/obj/machinery/door/unpowered/wooddoor{
 	name = "Hotel";
 	req_one_access_txt = "25"
 	},
@@ -24165,7 +24165,7 @@
 /turf/open/floor/wood/f13,
 /area/f13/city)
 "bnP" = (
-/obj/machinery/door/airlock/wood{
+/obj/machinery/door/unpowered/wooddoor{
 	name = "Bar";
 	req_one_access_txt = "25"
 	},
@@ -25583,7 +25583,7 @@
 /turf/open/floor/f13/wood,
 /area/f13/city)
 "bsd" = (
-/obj/machinery/door/airlock/wood/glass{
+/obj/machinery/door/unpowered/wooddoor{
 	name = "Store"
 	},
 /obj/machinery/door/poddoor/shutters{
@@ -25880,7 +25880,7 @@
 /turf/open/floor/f13/wood,
 /area/f13/city)
 "btb" = (
-/obj/machinery/door/airlock/wood{
+/obj/machinery/door/unpowered/wooddoor{
 	name = "Store Backroom";
 	req_one_access_txt = "34"
 	},
@@ -26332,7 +26332,7 @@
 	},
 /area/f13/legion)
 "buy" = (
-/obj/machinery/door/airlock/wood/glass{
+/obj/machinery/door/unpowered/wooddoor{
 	name = "Farmhouse"
 	},
 /turf/open/floor/f13/wood,
@@ -27136,7 +27136,7 @@
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/city)
 "bwJ" = (
-/obj/machinery/door/airlock/wood/glass{
+/obj/machinery/door/unpowered/wooddoor{
 	name = "Town Hall"
 	},
 /turf/open/floor/f13/wood,
@@ -27676,7 +27676,7 @@
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/legion)
 "byt" = (
-/obj/machinery/door/airlock/wood{
+/obj/machinery/door/unpowered/wooddoor{
 	name = "Mayor's Office";
 	req_one_access_txt = "25"
 	},
@@ -27950,7 +27950,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
 /area/f13/clinic)
 "bzl" = (
-/obj/machinery/door/airlock/wood/glass{
+/obj/machinery/door/unpowered/wooddoor{
 	name = "Town Hall";
 	req_one_access_txt = "25"
 	},
@@ -28006,7 +28006,7 @@
 /turf/open/floor/plating/f13/inside/mountain,
 /area/f13/city)
 "bzu" = (
-/obj/machinery/door/airlock/wood/glass{
+/obj/machinery/door/unpowered/wooddoor{
 	name = "Elevator";
 	req_one_access_txt = "25"
 	},
@@ -28222,7 +28222,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
 /area/f13/clinic)
 "bAc" = (
-/obj/machinery/door/airlock/wood{
+/obj/machinery/door/unpowered/wooddoor{
 	name = "Town Hall";
 	req_one_access_txt = "25"
 	},
