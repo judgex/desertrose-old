@@ -30,18 +30,6 @@
 	S.verbs.Cut()
 
 //Fallout 13 rubish decoration
-/obj/structure/car/attackby(obj/item/I, mob/user, params)
-	if(istype(I, /obj/item/weldingtool))
-		user.visible_message("[user] starts to disassemble the wreck.</span>")
-		if(do_after(user, 100, target = user))
-			user.visible_message("[user] disassembles the wreck.</span>")
-			new /obj/item/stack/sheet/metal/ten/(get_turf(src))
-			if (uses_left == 0)
-				qdel(src)
-				return
-			else
-				uses_left--
-				return
 
 /obj/structure/car/rubbish1
 	name = "pre-War rubbish"
@@ -57,22 +45,26 @@
 	..()
 
 	var/atom/movable/S = new (locate(x+1,y,z))
+	S1 = S
 	S.density = 1
 	S.anchored = 1
 	S.icon = null
 	S.verbs.Cut()
 
 	S = new (locate(x+1,y+1,z))
+	S2 = S
 	S.density = 1
 	S.anchored = 1
 	S.icon = null
 	S.verbs.Cut()
 
 	S = new (locate(x,y+1,z))
+	S3 = S
 	S.density = 1
 	S.anchored = 1
 	S.icon = null
 	S.verbs.Cut()
+
 
 /obj/structure/car/rubbish2
 	name = "pre-War rubbish"
@@ -84,26 +76,31 @@
 	layer = ABOVE_MOB_LAYER
 	resistance_flags = INDESTRUCTIBLE
 
+
 /obj/structure/car/rubbish2/New()
 	..()
 
 	var/atom/movable/S = new (locate(x+1,y,z))
+	S1 = S
 	S.density = 1
 	S.anchored = 1
 	S.icon = null
 	S.verbs.Cut()
 
 	S = new (locate(x+1,y+1,z))
+	S2 = S
 	S.density = 1
 	S.anchored = 1
 	S.icon = null
 	S.verbs.Cut()
 
 	S = new (locate(x,y+1,z))
+	S3 = S
 	S.density = 1
 	S.anchored = 1
 	S.icon = null
 	S.verbs.Cut()
+
 
 /obj/structure/car/rubbish3
 	name = "pre-War rubbish"
@@ -119,22 +116,26 @@
 	..()
 
 	var/atom/movable/S = new (locate(x+1,y,z))
+	S1 = S
 	S.density = 1
 	S.anchored = 1
 	S.icon = null
 	S.verbs.Cut()
 
 	S = new (locate(x+1,y+1,z))
+	S2 = S
 	S.density = 1
 	S.anchored = 1
 	S.icon = null
 	S.verbs.Cut()
 
 	S = new (locate(x,y+1,z))
+	S3 = S
 	S.density = 1
 	S.anchored = 1
 	S.icon = null
 	S.verbs.Cut()
+
 
 /obj/structure/car/rubbish4
 	name = "pre-War rubbish"
@@ -150,22 +151,26 @@
 	..()
 
 	var/atom/movable/S = new (locate(x+1,y,z))
+	S1 = S
 	S.density = 1
 	S.anchored = 1
 	S.icon = null
 	S.verbs.Cut()
 
 	S = new (locate(x+1,y+1,z))
+	S2 = S
 	S.density = 1
 	S.anchored = 1
 	S.icon = null
 	S.verbs.Cut()
 
 	S = new (locate(x,y+1,z))
+	S3 = S
 	S.density = 1
 	S.anchored = 1
 	S.icon = null
 	S.verbs.Cut()
+
 
 /obj/structure/debris/v1
 	name = "pre-War building debris"
