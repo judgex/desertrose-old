@@ -1250,10 +1250,18 @@
 	time = 30
 	category = CAT_MEDICAL
 
+/datum/crafting_recipe/Bowl
+	name = "Glass Bowl"
+	result = /obj/item/reagent_containers/glass/bowl
+	reqs = list(/obj/item/stack/sheet/glass = 2)
+	tools = list(TOOL_WELDER)
+	time = 10
+	category = CAT_MISC
+
 /datum/crafting_recipe/spray
 	name = "Abraxo Cleaner"
 	result = /obj/item/reagent_containers/spray/cleaner
-	reqs = list(/obj/item/stack/sheet/plastic = 2,
+	reqs = list(/obj/item/stack/sheet/glass = 2,
 				/obj/item/crafting/abraxo = 1,
 				/datum/reagent/water = 50)
 	tools = list(TOOL_WELDER)
