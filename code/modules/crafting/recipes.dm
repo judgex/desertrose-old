@@ -1551,11 +1551,3 @@
                 /datum/reagent/consumable/nuka_cola = 10)
     tools = list(TOOL_WORKBENCH)
     category = CAT_TRIBAL
-
-/datum/crafting_recipe/coyotechew
-	name = "coyote tobacco chew"
-	result = /obj/item/reagent_containers/pill/patch/coyotechew
-	time = 30
-	reqs = list(/obj/item/reagent_containers/food/snacks/grown/feracactus = 1, /obj/item/reagent_containers/food/snacks/grown/tobacco/space = 2, /datum/reagent/consumable/coffee = 10)
-	tools = list(TOOL_WORKBENCH)
-	category = CAT_DRUGS

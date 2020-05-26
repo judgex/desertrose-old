@@ -123,7 +123,7 @@
 		/obj/item/reagent_containers/food/snacks/grown/potato = 1
 	)
 	result = /obj/item/reagent_containers/food/snacks/bakedtato
-	subcategory = CAT_MISCFOOD
+	subcategory = CAT_WASTEFOOD
 
 /datum/crafting_recipe/food/roastyucca
 	name = "roast yucca"
@@ -132,4 +132,4 @@
 		/obj/item/reagent_containers/food/snacks/grown/yucca = 1
 	)
 	result = /obj/item/reagent_containers/food/snacks/roastyucca
-	subcategory = CAT_MISCFOOD
+	subcategory = CAT_WASTEFOOD

@@ -861,8 +861,6 @@
 	icon_state = "spaceship_captain"
 	item_color = "spaceship_captain"
 
-//Female clothing! It's not misogyny, yet dresses shall be separate from /f13/ as Fallout build has its own female subtype.
-
 /obj/item/clothing/under/pants/f13/ghoul
 	name = "ripped pants"
 	desc = "A pair of ripped pants that were not washed for over a hundred years.<br>Thanks to these you don't get to see ghouls genitals too often.<br><i>You can also wear these, to pretend you are a feral ghoul, just saying...</i>"
