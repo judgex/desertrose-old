@@ -153,8 +153,8 @@ GLOBAL_LIST_INIT(uranium_recipes, list ( \
  */
 /obj/item/stack/sheet/mineral/plasma
 	name = "Graphite"
-	icon_state = "sheet-plasma"
-	item_state = "sheet-plasma"
+	icon_state = "sheet-adamantine"
+	item_state = "sheet-adamantine"
 	singular_name = "graphite sheet"
 	sheettype = "plasma"
 	/*resistance_flags = FLAMMABLE
