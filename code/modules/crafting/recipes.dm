@@ -60,14 +60,7 @@
 	name = "campfire kit"
 	result = /obj/item/crafting/campfirekit
 	reqs = list(/obj/item/stack/sheet/mineral/wood = 15)
-	time = 80
-	category = CAT_MISC
-
-/datum/crafting_recipe/campfirekit
-	name = "set up campfire kit"
-	result = /obj/structure/campfire
-	reqs = list(/obj/item/crafting/campfirekit = 1)
-	time = 40
+	time = 120 // Around 12 seconds
 	category = CAT_MISC
 
 /datum/crafting_recipe/barrelfire
