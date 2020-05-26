@@ -21,10 +21,6 @@
 	..()
 
 /obj/structure/campfire/attackby(obj/item/P, mob/user, params)
-	if(burned && !density) //No need to make a new var when all the existing campfires are either dense and removable or not dense and not removable
-		to_chat(user, "You remove some campfire ashes.")
-		qdel(src)
-		return
 	if(P.is_hot())
 		fire(user)
 	else if(istype(P, /obj/item/stack/sheet/mineral/wood))
@@ -80,7 +76,7 @@
 	playsound(src, 'sound/items/welder.ogg', 25, 1, -3)
 	START_PROCESSING(SSobj, src)
 	fired = 1
-//	desc = "A burning campfire... A warm, bright, and hopeful fire source.<br><b>It's hot!</b>"
+	desc = "A warm, bright, and hopeful fire source."
 	if(user)
 		user.visible_message("[user] has lit a [src].", "<span class='notice'>You have lit a [src].</span>")
 	update_icon()
@@ -108,16 +104,16 @@
 //		overlays.Cut()
 	..()
 
-/obj/structure/campfire/extinguish()
-//	name = "burned campfire"
-//	desc = "It has burned to ashes..."
+/*/obj/structure/campfire/extinguish()
+	name = "burned campfire"
+	desc = "It has burned to ashes..."
 	icon_state = initial(icon_state)
 	fired = 0
 	burned = 1
 	set_light(0)
 //	StopAmbient()
 	STOP_PROCESSING(SSobj, src)
-	update_icon()
+	update_icon()*/
 
 /obj/structure/campfire/infinity
 	fired = 1

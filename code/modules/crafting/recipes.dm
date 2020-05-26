@@ -33,6 +33,44 @@
 	time = 80
 	category = CAT_MISC
 
+/datum/crafting_recipe/stove
+	name = "cook stove"
+	result = /obj/machinery/microwave/stove
+	reqs = list(/obj/item/stack/crafting/electronicparts = 3,
+				/obj/item/stack/crafting/metalparts = 1,
+				/obj/item/stack/crafting/goodparts = 1,
+				/obj/item/stack/sheet/metal = 5,
+				/obj/item/stack/cable_coil = 2,
+				/obj/item/assembly/igniter = 1)
+	tools = list(TOOL_WELDER, TOOL_SCREWDRIVER)
+	time = 80
+	category = CAT_MISC
+
+/datum/crafting_recipe/bellystove
+	name = "pot belly stove"
+	result = /obj/structure/campfire/stove
+	reqs = list(/obj/item/stack/crafting/metalparts = 3,
+				/obj/item/stack/crafting/goodparts = 2,
+				/obj/item/stack/sheet/metal = 10)
+	tools = list(TOOL_WELDER, TOOL_SCREWDRIVER)
+	time = 80
+	category = CAT_MISC
+
+/datum/crafting_recipe/campfire
+	name = "stoke campfire"
+	result = /obj/structure/campfire
+	reqs = list(/obj/item/stack/sheet/mineral/wood = 15)
+	time = 80
+	category = CAT_MISC
+
+/datum/crafting_recipe/barrelfire
+	name = "stoke barrel fire"
+	result = /obj/structure/campfire/barrel
+	reqs = list(/obj/item/stack/sheet/mineral/wood = 15,
+				/obj/item/stack/sheet/metal = 10)
+	time = 80
+	category = CAT_MISC
+
 /datum/crafting_recipe/pin_removal
 	name = "Pin Removal"
 	result = /obj/item/gun
