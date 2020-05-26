@@ -80,6 +80,7 @@
 	if(user)
 		user.visible_message("[user] has lit a [src].", "<span class='notice'>You have lit a [src].</span>")
 	update_icon()
+	burned = 0
 	burn_process()
 
 /obj/structure/campfire/proc/burn_process()

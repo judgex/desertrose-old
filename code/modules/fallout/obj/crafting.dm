@@ -165,3 +165,8 @@
 	desc = "This was a promotional item created by Vault-Tec before the Great War and used in the company's advertisements. With the right schematics, it can be used to make bottlecap mines."
 	icon_state = "lunchbox"
 	tool_behaviour = TOOL_LUNCHBOX
+
+/obj/item/crafting/campfirekit
+	name = "campfire kit"
+	desc = "A small box filled with an assortment of wood and tender. Useful for quickly making a fire."
+	icon_state = "lunchbox"
