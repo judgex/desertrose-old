@@ -388,7 +388,7 @@
 	emote_hear = list("brays.")
 	var/obj/item/inventory_back
 	speak_chance = 0.4
-	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 6,
+	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 5,
 							/obj/item/reagent_containers/food/snacks/rawbrahmintongue = 2,
 							/obj/item/stack/sheet/animalhide/brahmin = 3)
 
