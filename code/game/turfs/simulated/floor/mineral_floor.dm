@@ -21,15 +21,13 @@
 	if (!icons)
 		icons = list()
 
-//PLASMA
-
 /turf/open/floor/mineral/plasma
-	name = "ultracite floor"
+	name = "graphite floor"
 	icon_state = "plasma"
 	floor_tile = /obj/item/stack/tile/mineral/plasma
 	icons = list("plasma","plasma_dam")
 
-/turf/open/floor/mineral/plasma/temperature_expose(datum/gas_mixture/air, exposed_temperature, exposed_volume)
+/*/turf/open/floor/mineral/plasma/temperature_expose(datum/gas_mixture/air, exposed_temperature, exposed_volume)
 	if(exposed_temperature > 300)
 		PlasmaBurn(exposed_temperature)
 
@@ -47,7 +45,7 @@
 
 /turf/open/floor/mineral/plasma/proc/ignite(exposed_temperature)
 	if(exposed_temperature > 300)
-		PlasmaBurn(exposed_temperature)
+		PlasmaBurn(exposed_temperature)*/
 
 
 //GOLD

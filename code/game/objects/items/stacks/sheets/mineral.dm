@@ -6,7 +6,7 @@ Mineral Sheets
 		- Diamond
 		- Snow
 		- Uranium
-		- Ultracite
+		- Graphite
 		- Gold
 		- Silver
 		- Clown
@@ -152,18 +152,18 @@ GLOBAL_LIST_INIT(uranium_recipes, list ( \
  * Plasma
  */
 /obj/item/stack/sheet/mineral/plasma
-	name = "Ultracite"
-	icon_state = "sheet-plasma"
-	item_state = "sheet-plasma"
-	singular_name = "plasma sheet"
+	name = "Graphite"
+	icon_state = "sheet-adamantine"
+	item_state = "sheet-adamantine"
+	singular_name = "graphite sheet"
 	sheettype = "plasma"
-	resistance_flags = FLAMMABLE
-	max_integrity = 100
+	/*resistance_flags = FLAMMABLE
+	max_integrity = 100*/
 	materials = list(MAT_PLASMA=MINERAL_MATERIAL_AMOUNT)
 	grind_results = list("plasma" = 20)
 	merge_type = /obj/item/stack/sheet/mineral/plasma
 
-/obj/item/stack/sheet/mineral/plasma/suicide_act(mob/living/carbon/user)
+/*/obj/item/stack/sheet/mineral/plasma/suicide_act(mob/living/carbon/user)
 	user.visible_message("<span class='suicide'>[user] begins licking \the [src]! It looks like [user.p_theyre()] trying to commit suicide!</span>")
 	return TOXLOSS//dont you kids know that stuff is toxic?
 
@@ -188,7 +188,7 @@ GLOBAL_LIST_INIT(plasma_recipes, list ( \
 
 /obj/item/stack/sheet/mineral/plasma/fire_act(exposed_temperature, exposed_volume)
 	atmos_spawn_air("plasma=[amount*10];TEMP=[exposed_temperature]")
-	qdel(src)
+	qdel(src)*/
 
 /*
  * Gold
