@@ -32,6 +32,7 @@
 	atmos_requirements = list("min_oxy" = 5, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 1, "min_co2" = 0, "max_co2" = 5, "min_n2" = 0, "max_n2" = 0)
 	faction = list("cazador")
 	movement_type = FLYING
+	a_intent = INTENT_HARM
 	gold_core_spawnable = HOSTILE_SPAWN
 
 /mob/living/simple_animal/hostile/cazador/AttackingTarget()
@@ -106,6 +107,7 @@
 	obj_damage = 20
 	melee_damage_lower = 35
 	melee_damage_upper = 35
+	a_intent = INTENT_HARM
 	attacktext = "stings"
 	attack_sound = 'sound/creatures/radscorpion_attack.ogg'
 	speak_emote = list("hisses")
@@ -160,6 +162,7 @@
 	speak_emote = list("hisses")
 	atmos_requirements = list("min_oxy" = 5, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 1, "min_co2" = 0, "max_co2" = 5, "min_n2" = 0, "max_n2" = 0)
 	faction = list("gecko")
+	a_intent = INTENT_HARM
 	gold_core_spawnable = HOSTILE_SPAWN
 
 /mob/living/simple_animal/hostile/radroach
@@ -193,6 +196,7 @@
 	speak_emote = list("skitters")
 	atmos_requirements = list("min_oxy" = 5, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 1, "min_co2" = 0, "max_co2" = 5, "min_n2" = 0, "max_n2" = 0)
 	faction = list("gecko")
+	a_intent = INTENT_HARM
 	gold_core_spawnable = HOSTILE_SPAWN
 
 /mob/living/simple_animal/hostile/giantant
@@ -226,6 +230,7 @@
 	atmos_requirements = list("min_oxy" = 5, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 1, "min_co2" = 0, "max_co2" = 5, "min_n2" = 0, "max_n2" = 0)
 	faction = list("gecko")
 	gold_core_spawnable = HOSTILE_SPAWN
+	a_intent = INTENT_HARM
 	decompose = TRUE
 
 /mob/living/simple_animal/hostile/giantant/Initialize()
@@ -267,6 +272,7 @@
 	faction = list("gecko")
 	gold_core_spawnable = HOSTILE_SPAWN
 	decompose = TRUE
+	a_intent = INTENT_HARM
 
 /mob/living/simple_animal/hostile/fireant/Initialize()
 	. = ..()
@@ -313,6 +319,7 @@
 	atmos_requirements = list("min_oxy" = 5, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 1, "min_co2" = 0, "max_co2" = 5, "min_n2" = 0, "max_n2" = 0)
 	faction = list("gecko")
 	gold_core_spawnable = HOSTILE_SPAWN
+	a_intent = INTENT_HARM
 
 /mob/living/simple_animal/hostile/radscorpion/black
 	name = "giant rad scorpion"

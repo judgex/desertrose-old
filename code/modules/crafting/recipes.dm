@@ -1038,7 +1038,7 @@
 	name = "Psycho"
 	result = /obj/item/reagent_containers/hypospray/medipen/psycho
 	time = 20
-	reqs = list(/obj/item/reagent_containers/syringe = 1, /obj/item/reagent_containers/food/snacks/grown/feracactus = 2, /obj/item/reagent_containers/food/snacks/grown/fungus = 2, /datum/reagent/consumable/nuka_cola = 10)
+	reqs = list(/obj/item/reagent_containers/syringe = 1, /obj/item/reagent_containers/food/snacks/grown/feracactus = 2, /obj/item/reagent_containers/food/snacks/grown/fungus = 2, /datum/reagent/consumable/nuka_cola = 1)
 	tools = list(TOOL_WORKBENCH)
 	category = CAT_DRUGS
 
@@ -1905,6 +1905,6 @@
 	name = "coyote tobacco chew"
 	result = /obj/item/reagent_containers/pill/patch/coyotechew
 	time = 30
-	reqs = list(/obj/item/reagent_containers/food/snacks/grown/feracactus = 1, /obj/item/reagent_containers/food/snacks/grown/tobacco/space = 2, /datum/reagent/consumable/coffee = 10)
+	reqs = list(/obj/item/reagent_containers/food/snacks/grown/coyotetobacco = 2, /obj/item/reagent_containers/food/snacks/grown/feracactus = 2)
 	tools = list(TOOL_WORKBENCH)
 	category = CAT_DRUGS

@@ -2382,8 +2382,8 @@
 	},
 /area/awaymission/snowdin/cave/cavern)
 "gg" = (
-/turf/open/floor/plating/asteroid/snow/ice,
 /obj/machinery/atmospherics/components/unary/outlet_injector/on,
+/turf/open/floor/plating/asteroid/snow/ice,
 /turf/open/floor/plating/snowed/cavern,
 /area/awaymission/snowdin/post/cavern2)
 "gh" = (
@@ -2530,8 +2530,8 @@
 /turf/open/floor/plasteel/floorgrime,
 /area/awaymission/snowdin/post/gateway)
 "gx" = (
-/turf/open/floor/plating/asteroid/snow/ice,
 /obj/structure/barricade/wooden/snowed,
+/turf/open/floor/plating/asteroid/snow/ice,
 /turf/open/floor/plating/snowed/cavern,
 /area/awaymission/snowdin/cave/cavern)
 "gy" = (

@@ -3493,6 +3493,12 @@
 "km" = (
 /turf/closed/wall/f13/tunnel,
 /area/centcom/evac)
+"kn" = (
+/obj/machinery/atmospherics/components/unary/vent_pump/on{
+	dir = 4
+	},
+/turf/open/floor/wood,
+/area/centcom/evac)
 "ko" = (
 /turf/closed/indestructible/abductor{
 	icon_state = "alien20"
@@ -4693,10 +4699,13 @@
 	},
 /area/centcom/evac)
 "nq" = (
-/obj/machinery/atmospherics/components/unary/vent_pump/on{
-	dir = 4
+/obj/machinery/atmospherics/pipe/manifold/supply/hidden{
+	dir = 8
 	},
-/turf/open/floor/wood,
+/obj/structure/cable/white{
+	icon_state = "1-8"
+	},
+/turf/open/floor/plasteel/vault,
 /area/centcom/evac)
 "nr" = (
 /obj/structure/chair/comfy/black{
@@ -5611,7 +5620,19 @@
 /turf/open/floor/plasteel/dark,
 /area/centcom/evac)
 "pq" = (
+/obj/structure/cable/white{
+	icon_state = "4-8"
+	},
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden,
+/turf/open/floor/plasteel/dark,
+/area/centcom/evac)
+"pr" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 6
+	},
 /obj/structure/cable/white{
 	icon_state = "4-8"
 	},
@@ -5781,6 +5802,11 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 10
 	},
+/turf/open/floor/plasteel/dark,
+/area/centcom/evac)
+"pL" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/machinery/light,
 /turf/open/floor/plasteel/dark,
 /area/centcom/evac)
 "pM" = (
@@ -5969,14 +5995,25 @@
 	},
 /area/centcom/evac)
 "qi" = (
+/obj/machinery/power/apc{
+	dir = 4;
+	name = "Commander's Office APC";
+	pixel_x = -26
+	},
+/obj/structure/cable/white{
+	icon_state = "0-4"
+	},
 /turf/open/floor/plasteel/vault,
 /area/centcom/evac)
 "qj" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/obj/structure/cable/white{
-	icon_state = "1-8"
-	},
 /turf/open/floor/plasteel/vault,
+/area/centcom/evac)
+"qk" = (
+/obj/machinery/atmospherics/components/unary/vent_pump/on{
+	dir = 8
+	},
+/turf/open/floor/plasteel/grimy,
 /area/centcom/evac)
 "ql" = (
 /obj/structure/table/wood,
@@ -6256,6 +6293,9 @@
 /obj/machinery/light_switch{
 	pixel_y = 24
 	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
 /turf/open/floor/wood,
 /area/centcom/evac)
 "qV" = (
@@ -6272,7 +6312,9 @@
 "qX" = (
 /obj/item/flashlight/lamp,
 /obj/structure/table/reinforced,
-/turf/open/floor/plasteel/vault,
+/turf/open/floor/plasteel/vault{
+	dir = 8
+	},
 /area/centcom/evac)
 "qY" = (
 /obj/machinery/computer/card/centcom,
@@ -6409,19 +6451,16 @@
 /area/centcom/evac)
 "ru" = (
 /obj/structure/chair/comfy/black,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/plasteel/grimy,
-/area/centcom/evac)
-"rv" = (
-/obj/structure/chair/office/dark{
-	dir = 4
-	},
-/turf/open/floor/wood,
 /area/centcom/evac)
 "rw" = (
 /obj/item/clipboard,
 /obj/structure/table/reinforced,
 /obj/item/detective_scanner,
-/turf/open/floor/plasteel/vault,
+/turf/open/floor/plasteel/vault{
+	dir = 8
+	},
 /area/centcom/evac)
 "rz" = (
 /obj/machinery/photocopier,
@@ -6660,7 +6699,16 @@
 	pixel_y = 5
 	},
 /obj/item/gun/energy/pulse/pistol/m1911,
+/obj/machinery/atmospherics/components/unary/vent_pump/on{
+	dir = 1
+	},
 /turf/open/floor/plasteel/grimy,
+/area/centcom/evac)
+"sd" = (
+/obj/structure/chair/office/dark{
+	dir = 4
+	},
+/turf/open/floor/wood,
 /area/centcom/evac)
 "se" = (
 /obj/machinery/light{
@@ -6734,12 +6782,16 @@
 /obj/item/folder/red,
 /obj/item/restraints/handcuffs,
 /obj/item/assembly/flash/handheld,
-/turf/open/floor/plasteel/vault,
+/turf/open/floor/plasteel/vault{
+	dir = 8
+	},
 /area/centcom/evac)
 "sr" = (
 /obj/item/storage/fancy/donut_box,
 /obj/structure/table/reinforced,
-/turf/open/floor/plasteel/vault,
+/turf/open/floor/plasteel/vault{
+	dir = 8
+	},
 /area/centcom/evac)
 "ss" = (
 /obj/item/paper_bin,
@@ -6751,7 +6803,9 @@
 /obj/machinery/newscaster{
 	pixel_x = 32
 	},
-/turf/open/floor/plasteel/vault,
+/turf/open/floor/plasteel/vault{
+	dir = 8
+	},
 /area/centcom/evac)
 "st" = (
 /obj/machinery/door/airlock/external{
@@ -7210,6 +7264,9 @@
 	dir = 6
 	},
 /area/centcom/evac)
+"tH" = (
+/turf/open/floor/plasteel/vault,
+/area/centcom/evac)
 "tI" = (
 /obj/item/twohanded/required/kirbyplants{
 	icon_state = "plant-21"
@@ -7539,6 +7596,9 @@
 "uy" = (
 /obj/machinery/light{
 	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
 	},
 /turf/open/floor/wood,
 /area/centcom/evac)
@@ -11276,17 +11336,6 @@
 /obj/machinery/light,
 /turf/open/floor/plating/f13/inside/mountain,
 /area/f13/tcoms)
-"Hz" = (
-/obj/machinery/power/apc{
-	dir = 8;
-	name = "Commander's Office APC";
-	pixel_x = -26
-	},
-/obj/structure/cable/white{
-	icon_state = "0-4"
-	},
-/turf/open/floor/plasteel/vault,
-/area/centcom/evac)
 "HH" = (
 /obj/machinery/light,
 /turf/open/floor/wood,
@@ -13065,12 +13114,6 @@
 	},
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/underground/mountain)
-"ZP" = (
-/obj/machinery/atmospherics/components/unary/vent_pump/on{
-	dir = 1
-	},
-/turf/open/floor/plasteel/vault,
-/area/centcom/evac)
 "ZU" = (
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
@@ -44353,7 +44396,7 @@ kf
 kf
 kf
 jU
-Hz
+qi
 qT
 rt
 sb
@@ -44603,15 +44646,15 @@ jU
 lM
 mL
 mL
-nq
+kn
 oo
 jU
 kf
 po
 pc
 qb
+nq
 qj
-ZP
 ru
 sc
 sR
@@ -45126,10 +45169,10 @@ kf
 jU
 uy
 op
-rv
-rv
+sd
+sd
 mL
-qi
+tH
 jU
 rb
 rb
@@ -45381,7 +45424,7 @@ kf
 ps
 kf
 jU
-nB
+mS
 qX
 rw
 sq
@@ -45635,10 +45678,10 @@ nR
 or
 ls
 oL
-ps
-pB
+pr
+pL
 jU
-nB
+qk
 nB
 Ag
 sr
