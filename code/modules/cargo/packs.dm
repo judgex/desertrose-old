@@ -46,6 +46,15 @@
 /datum/supply_pack/emergency
 	group = "Emergency"
 
+
+/datum/supply_pack/emergency/loadsofmoney
+	name = "Cash Credit Tade" //I need caps and I need them now!
+	desc = "Do you need bottle caps now? Well let us trade you 500 credits for 500 caps Today!"
+	cost = 1200
+	contains = list(/obj/item/stack/f13Cash/fivezerozero)//so you can properly #needcapsnow
+	crate_name = "fair trade"
+	crate_type = /obj/structure/closet/crate
+
 /datum/supply_pack/emergency/vehicle
 	name = "Tunnel Snake Gang Kit" //TUNNEL SNAKES OWN THIS TOWN
 	desc = "TUNNEL SNAKES OWN THIS TOWN. Contains - black gloves, a menacing skull bandanna, and a SWEET leather overcoat!"
@@ -274,7 +283,7 @@
 					/obj/item/clothing/head/helmet/sec,
 					/obj/item/clothing/head/helmet/sec)
 	crate_name = "helmet crate"
-
+/*
 /datum/supply_pack/security/laser
 	name = "Lasers Crate"
 	desc = "Contains three lethal, high-energy laser guns. Requires Security access to open."
@@ -283,7 +292,7 @@
 					/obj/item/gun/energy/laser,
 					/obj/item/gun/energy/laser)
 	crate_name = "laser crate"
-
+*/
 /datum/supply_pack/security/securitybarriers
 	name = "Security Barrier Grenades"
 	desc = "Stem the tide with four Security Barrier grenades. Requires Security access to open."
@@ -338,7 +347,7 @@
 	contains = list(/obj/item/clothing/head/helmet/justice,
 					/obj/item/clothing/mask/gas/sechailer)
 	crate_name = "security clothing crate"
-
+*/
 /datum/supply_pack/security/baton
 	name = "Stun Batons Crate"
 	desc = "Arm the Civil Protection Forces with three stun batons. Batteries included. Requires Security access to open."
@@ -347,7 +356,7 @@
 					/obj/item/melee/baton/loaded,
 					/obj/item/melee/baton/loaded)
 	crate_name = "stun baton crate"
-
+/*
 /datum/supply_pack/security/taser
 	name = "Taser Crate"
 	desc = "From the depths of stunbased combat, this order rises above, supreme. Contains three hybrid tasers, capable of firing both electrodes and disabling shots. Requires Security access to open."
@@ -393,7 +402,7 @@
 					/obj/item/kitchen/knife/combat,
 					/obj/item/kitchen/knife/combat)
 	crate_name = "combat knife crate"
-
+/* Stops exsiting in 2 line changes
 /datum/supply_pack/security/armory/ballistic
 	name = "Combat Shotguns Crate"
 	desc = "For when the enemy absolutely needs to be replaced with lead. Contains three Aussec-designed Combat Shotguns, and three Shotgun Bandoliers. Requires Armory access to open."
@@ -405,7 +414,7 @@
 					/obj/item/storage/belt/bandolier,
 					/obj/item/storage/belt/bandolier)
 	crate_name = "combat shotguns crate"
-/*
+
 /datum/supply_pack/security/armory/energy
 	name = "Energy Guns Crate"
 	desc = "Contains two Energy Guns, capable of firing both nonlethal and lethal blasts of light. Requires Armory access to open."
@@ -512,7 +521,7 @@
 					/obj/item/clothing/gloves/combat)
 	crate_name = "swat crate"
 
-
+/*
 /datum/supply_pack/security/armory/wt550
 	name = "WT-550 Auto Rifle Crate"
 	desc = "Contains two high-powered, semiautomatic rifles chambered in 4.6x30mm. Requires Armory access to open."
@@ -530,8 +539,7 @@
 					/obj/item/ammo_box/magazine/wt550m9,
 					/obj/item/ammo_box/magazine/wt550m9)
 	crate_name = "auto rifle ammo crate"
-
-
+/*
 //////////////////////////////////////////////////////////////////////////////
 //////////////////////////// Engineering /////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////
@@ -1016,6 +1024,14 @@
 	group = "Medical"
 	crate_type = /obj/structure/closet/crate/medical
 
+/datum/supply_pack/medical/brainwashing
+	name = "Brain Correction Disk"
+	desc = "Contains a disk to correct someone's brain..."
+	cost = 2500
+	contraband = TRUE
+	contains = list(/obj/item/disk/surgery/brainwashing)
+	crate_name = "brain correction disk storage"
+
 /datum/supply_pack/medical/firstaidbruises
 	name = "Bruise Treatment Kit Crate"
 	desc = "Contains three first aid kits focused on healing bruises and broken bones."
@@ -1129,6 +1145,14 @@
 					/obj/item/vending_refill/medical,
 					/obj/item/vending_refill/medical)
 	crate_name = "medical vending crate"
+
+/datum/supply_pack/medical/firstaidbruises
+	name = "Posibrain Crate"
+	desc = "Contains a posibrain, used in robotic contruction."
+	cost = 2500
+	contains = list(/obj/item/mmi/posibrain)
+	crate_name = "posibrain storage"
+
 /*
 /datum/supply_pack/medical/virus
 	name = "Virus Crate"
