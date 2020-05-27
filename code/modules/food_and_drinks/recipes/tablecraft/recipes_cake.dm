@@ -84,14 +84,14 @@
 	result = /obj/item/reagent_containers/food/snacks/store/cake/brain
 	subcategory = CAT_CAKE
 
-/datum/crafting_recipe/food/slimecake
+/*/datum/crafting_recipe/food/slimecake
 	name = "Slime cake"
 	reqs = list(
 		/obj/item/slime_extract = 1,
 		/obj/item/reagent_containers/food/snacks/store/cake/plain = 1
 	)
 	result = /obj/item/reagent_containers/food/snacks/store/cake/slimecake
-	subcategory = CAT_CAKE
+	subcategory = CAT_CAKE*/
 
 /datum/crafting_recipe/food/pumpkinspicecake
 	name = "Pumpkin spice cake"

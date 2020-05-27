@@ -45,22 +45,26 @@
 	..()
 
 	var/atom/movable/S = new (locate(x+1,y,z))
+	S1 = S
 	S.density = 1
 	S.anchored = 1
 	S.icon = null
 	S.verbs.Cut()
 
 	S = new (locate(x+1,y+1,z))
+	S2 = S
 	S.density = 1
 	S.anchored = 1
 	S.icon = null
 	S.verbs.Cut()
 
 	S = new (locate(x,y+1,z))
+	S3 = S
 	S.density = 1
 	S.anchored = 1
 	S.icon = null
 	S.verbs.Cut()
+
 
 /obj/structure/car/rubbish2
 	name = "pre-War rubbish"
@@ -72,26 +76,31 @@
 	layer = ABOVE_MOB_LAYER
 	resistance_flags = INDESTRUCTIBLE
 
+
 /obj/structure/car/rubbish2/New()
 	..()
 
 	var/atom/movable/S = new (locate(x+1,y,z))
+	S1 = S
 	S.density = 1
 	S.anchored = 1
 	S.icon = null
 	S.verbs.Cut()
 
 	S = new (locate(x+1,y+1,z))
+	S2 = S
 	S.density = 1
 	S.anchored = 1
 	S.icon = null
 	S.verbs.Cut()
 
 	S = new (locate(x,y+1,z))
+	S3 = S
 	S.density = 1
 	S.anchored = 1
 	S.icon = null
 	S.verbs.Cut()
+
 
 /obj/structure/car/rubbish3
 	name = "pre-War rubbish"
@@ -107,22 +116,26 @@
 	..()
 
 	var/atom/movable/S = new (locate(x+1,y,z))
+	S1 = S
 	S.density = 1
 	S.anchored = 1
 	S.icon = null
 	S.verbs.Cut()
 
 	S = new (locate(x+1,y+1,z))
+	S2 = S
 	S.density = 1
 	S.anchored = 1
 	S.icon = null
 	S.verbs.Cut()
 
 	S = new (locate(x,y+1,z))
+	S3 = S
 	S.density = 1
 	S.anchored = 1
 	S.icon = null
 	S.verbs.Cut()
+
 
 /obj/structure/car/rubbish4
 	name = "pre-War rubbish"
@@ -138,22 +151,26 @@
 	..()
 
 	var/atom/movable/S = new (locate(x+1,y,z))
+	S1 = S
 	S.density = 1
 	S.anchored = 1
 	S.icon = null
 	S.verbs.Cut()
 
 	S = new (locate(x+1,y+1,z))
+	S2 = S
 	S.density = 1
 	S.anchored = 1
 	S.icon = null
 	S.verbs.Cut()
 
 	S = new (locate(x,y+1,z))
+	S3 = S
 	S.density = 1
 	S.anchored = 1
 	S.icon = null
 	S.verbs.Cut()
+
 
 /obj/structure/debris/v1
 	name = "pre-War building debris"
