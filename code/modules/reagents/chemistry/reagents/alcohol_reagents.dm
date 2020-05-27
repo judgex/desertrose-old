@@ -215,6 +215,21 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	M.radiation = max(M.radiation-2,0)
 	return ..()
 
+/datum/reagent/consumable/ethanol/pungajuice
+	name = "punga juice"
+	id = "pungajuice"
+	description = "The fermented juice of the punga fruit, used to treat radiation sickness"
+	color = "#1B2E24"
+	boozepwr = 80
+	taste_description = "acidic slime"
+	glass_icon_state = "godlyblend"
+	glass_name = "glass of punga juice"
+	glass_desc = "The glass contain punga juice, used to treat radiation sickness"
+
+/datum/reagent/consumable/ethanol/punga/on_mob_life(mob/living/carbon/M)
+	M.radiation = max(M.radiation-2,0)
+	return ..()
+
 /datum/reagent/consumable/ethanol/bilk
 	name = "Bilk"
 	id = "bilk"
@@ -609,7 +624,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	glass_icon_state = "beepskysmashglass"
 	glass_name = "Beepsky Smash"
 	glass_desc = "Heavy, hot and strong. Just like the Iron fist of the LAW."
-	
+
 /datum/reagent/consumable/ethanol/irish_cream
 	name = "Irish Cream"
 	id = "irishcream"
@@ -1253,7 +1268,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	glass_icon_state = "neurotoxinglass"
 	glass_name = "Neurotoxin"
 	glass_desc = "A drink that is guaranteed to knock you silly."
-	
+
 /datum/reagent/consumable/ethanol/hippies_delight
 	name = "Hippie's Delight"
 	id = "hippiesdelight"

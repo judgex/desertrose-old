@@ -7,7 +7,6 @@
 	name = "\improper Cuban carp"
 	desc = "A grifftastic sandwich that burns your tongue and then leaves it numb!"
 	icon_state = "cubancarp"
-	trash = /obj/item/trash/plate
 	bonus_reagents = list("nutriment" = 1, "vitamin" = 4)
 	bitesize = 3
 	filling_color = "#CD853F"
@@ -24,7 +23,6 @@
 	filling_color = "#FA8072"
 	tastes = list("fish" = 1)
 	foodtype = MEAT
-
 
 /obj/item/reagent_containers/food/snacks/carpmeat/Initialize()
 	. = ..()
@@ -57,6 +55,29 @@
 
 ////////////////////////////////////////////MEATS AND ALIKE////////////////////////////////////////////
 
+/obj/item/reagent_containers/food/snacks/rawbrahmintongue
+	name = "Raw Brahmin Tongue"
+	desc = "The raw tongue of a brahmin, a wastelander favorite"
+	icon_state = "bacon"
+	bitesize = 3
+	filling_color = "#CD853F"
+	list_reagents = list("nutriment" = 3, "vitamin" = 2)
+	cooked_type = /obj/item/reagent_containers/food/snacks/cookedbrahmintongue
+	tastes = list("beef" = 4, "tender meat" = 1)
+	foodtype = MEAT
+
+/obj/item/reagent_containers/food/snacks/cookedbrahmintongue
+	name = "Brahmin Tongue"
+	desc = "A brahmin tongue slow roasted over an open fire and topped with a large amount of thick brown gravy"
+	icon_state = "stewedsoymeat"
+	bitesize = 3
+	filling_color = "#CD853F"
+	bonus_reagents = list("nutriment" = 1, "vitamin" = 4)
+	list_reagents = list("nutriment" = 5)
+	cooked_type = /obj/item/reagent_containers/food/snacks/cookedbrahmintongue
+	tastes = list("top quality beef" = 4, "tender meat" = 1, "tasty gravy" = 1)
+	foodtype = MEAT
+
 /obj/item/reagent_containers/food/snacks/tofu
 	name = "tofu"
 	desc = "We all love tofu."
@@ -80,7 +101,6 @@
 	name = "corned beef and cabbage"
 	desc = "Now you can feel like a real tourist vacationing in Boston."
 	icon_state = "cornedbeef"
-	trash = /obj/item/trash/plate
 	bonus_reagents = list("nutriment" = 1, "vitamin" = 4)
 	list_reagents = list("nutriment" = 5)
 	tastes = list("meat" = 1, "cabbage" = 1)
@@ -90,7 +110,6 @@
 	name = "Filet migrawr"
 	desc = "Because eating bear wasn't manly enough."
 	icon_state = "bearsteak"
-	trash = /obj/item/trash/plate
 	bonus_reagents = list("nutriment" = 2, "vitamin" = 6)
 	list_reagents = list("nutriment" = 2, "vitamin" = 5, "manlydorf" = 5)
 	tastes = list("meat" = 1, "salmon" = 1)
@@ -210,7 +229,6 @@
 	name = "stewed soy meat"
 	desc = "Even non-vegetarians will LOVE this!"
 	icon_state = "stewedsoymeat"
-	trash = /obj/item/trash/plate
 	bonus_reagents = list("nutriment" = 1)
 	list_reagents = list("nutriment" = 8)
 	filling_color = "#D2691E"
@@ -291,7 +309,7 @@
 	icon_state = "doubleratkebab"
 	tastes = list("rat meat" = 2, "metal" = 1)
 	bonus_reagents = list("nutriment" = 6, "vitamin" = 2)
-	
+
 /obj/item/reagent_containers/food/snacks/pemmican
 	name = "pemmican"
 	desc = "A well-known food in survivalist circles, pemmican is a mixture of fat and protein from the meat of an animal."

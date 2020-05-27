@@ -115,7 +115,7 @@
 		/obj/item/reagent_containers/food/snacks/bun = 1
 	)
 	result = /obj/item/reagent_containers/food/snacks/burger/mime
-	subcategory = CAT_BURGER*/
+	subcategory = CAT_BURGER
 
 /datum/crafting_recipe/food/redburger
 	name = "Red burger"
@@ -197,7 +197,7 @@
 	result = /obj/item/reagent_containers/food/snacks/burger/white
 	subcategory = CAT_BURGER
 
-/*/datum/crafting_recipe/food/spellburger
+/datum/crafting_recipe/food/spellburger
 	name = "Spell burger"
 	reqs = list(
 		/obj/item/clothing/head/wizard/fake = 1,
@@ -238,13 +238,13 @@
 	result = /obj/item/reagent_containers/food/snacks/burger/superbite
 	subcategory = CAT_BURGER
 
-/datum/crafting_recipe/food/slimeburger
+/*/datum/crafting_recipe/food/slimeburger
 	name = "Jelly burger"
 	reqs = list(
 		/datum/reagent/toxin/slimejelly = 5,
 		/obj/item/reagent_containers/food/snacks/bun = 1
 	)
-	result = /obj/item/reagent_containers/food/snacks/burger/jelly/slime
+	result = /obj/item/reagent_containers/food/snacks/burger/jelly/slime*/
 	subcategory = CAT_BURGER
 
 /datum/crafting_recipe/food/jellyburger
