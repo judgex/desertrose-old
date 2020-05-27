@@ -70,6 +70,12 @@ Captain
 
 	outfit = /datum/outfit/job/ncr/f13captain
 
+	loadout_options = list(
+	/datum/outfit/loadout/Captbasic, //Assault Carbine and Deagle
+	/datum/outfit/loadout/Captmarksman, //FN FAL and Deagle
+	/datum/outfit/loadout/Captheavy //Heavy service rifle and Deagle
+	)
+
 /datum/outfit/job/ncr/f13captain
 	name = "NCR Captain"
 	jobtype 	= /datum/job/ncr/f13captain
@@ -77,7 +83,7 @@ Captain
 	uniform		= /obj/item/clothing/under/f13/ncr/officer
 	accessory 	= /obj/item/clothing/accessory/ncr/CPT
 	suit 		= /obj/item/clothing/suit/armor/f13/ncrarmor/captain
-	suit_store 	= /obj/item/gun/ballistic/automatic/pistol/deagle/gold
+	suit_store 	= /obj/item/gun/ballistic/automatic/pistol/deagle/ctf
 	head 		= /obj/item/clothing/head/beret/ncr
 	belt        = /obj/item/storage/belt/military/assault/ncr
 	glasses 	= /obj/item/clothing/glasses/sunglasses/big
@@ -85,12 +91,35 @@ Captain
 	gloves      = /obj/item/clothing/gloves/f13/leather/ncr_officer
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/a50=2, \
-		/obj/item/ammo_box/magazine/m9mm=1, \
 		/obj/item/kitchen/knife/combat=1, \
 		/obj/item/melee/classic_baton/telescopic=1, \
 		/obj/item/twohanded/binocs=1, \
 		/obj/item/storage/bag/money/small/ncr, \
 		/obj/item/clothing/mask/ncr_facewrap)
+
+
+/datum/job/ncr/f13captain/after_spawn(mob/living/carbon/human/H, mob/M)
+	H.add_quirk("Hard Yards")
+	H.add_quirk("Lifegiver")
+	H.add_quirk("Self-Aware")
+
+/datum/outfit/loadout/Captbasic
+	name = "Standard Issue"
+	l_hand = /obj/item/gun/ballistic/automatic/assault_carbine
+	backpack_contents = list(
+	/obj/item/ammo_box/magazine/m556/rifle/assault=2)
+
+/datum/outfit/loadout/Captmarksman
+	name = "Marksman"
+	l_hand = /obj/item/gun/ballistic/automatic/marksman
+	backpack_contents = list(
+	/obj/item/ammo_box/magazine/m556/rifle/assault=2)
+
+/datum/outfit/loadout/Captheavy
+	name = "Heavy Fire Support"
+	l_hand = /obj/item/gun/ballistic/automatic/marksman/servicerifle/r82
+	backpack_contents = list(
+	/obj/item/ammo_box/magazine/m556/rifle/assault=2)
 
 
 
