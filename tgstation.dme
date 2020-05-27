@@ -1737,6 +1737,7 @@
 #include "code\modules\hydroponics\grown\corn.dm"
 #include "code\modules\hydroponics\grown\cotton.dm"
 #include "code\modules\hydroponics\grown\coyotetobacco.dm"
+#include "code\modules\hydroponics\grown\Datura.dm"
 #include "code\modules\hydroponics\grown\eggplant.dm"
 #include "code\modules\hydroponics\grown\feracactus.dm"
 #include "code\modules\hydroponics\grown\flowers.dm"

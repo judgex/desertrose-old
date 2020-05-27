@@ -41,6 +41,12 @@
 	desc = "A hardy, onion-like root with mild healing properties."
 	produce = /obj/item/reagent_containers/food/snacks/grown/xander
 
+/obj/structure/flora/wasteplant/wild_datura
+	name = "wild datura"
+	icon_state = "wild_datura"
+	desc = "The sacred datura root, useful as an anesthetic for surgery and in healing salves, as well as for rites of passage rituals and ceremonies"
+	produce = /obj/item/reagent_containers/food/snacks/grown/datura
+
 obj/structure/flora/wasteplant/wild_punga
 	name = "wild punga"
 	icon_state = "wild_punga"
