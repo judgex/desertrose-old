@@ -37,6 +37,9 @@
 	var/flavor_desc = ""
 	var/value = CASH_CAP
 
+/obj/item/stack/f13Cash/fivezerozero
+	amount = 500
+
 /obj/item/stack/f13Cash/Initialize()
 	. = ..()
 	update_desc()

@@ -368,3 +368,13 @@
 	door_type = "bunkerglass"
 	explosion_block = 4 //A glass window in it, reduces the resistance, am I right?
 	opaque = 0
+
+/obj/structure/simple_door/tent
+	name = "tent flap"
+	desc = "A fairly simple looking entrance to a war tent."
+	icon_state = "tent"
+	door_type = "tent"
+	material_type = /obj/item/stack/sheet/cloth
+	open_sound = "sound/effects/curtain.ogg"
+	close_sound = "sound/effects/curtain.ogg"
+	hard_open = 0
