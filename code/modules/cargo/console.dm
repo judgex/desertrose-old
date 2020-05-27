@@ -1,20 +1,20 @@
 /obj/machinery/computer/cargo
 	name = "supply console"
-	desc = "Used to order supplies, approve requests, and control the shuttle."
+	desc = "Used to order supplies, approve requests, and control the CASP platform."
 	icon_screen = "supply"
 	circuit = /obj/item/circuitboard/computer/cargo
 	var/requestonly = FALSE
 	var/contraband = FALSE
-	var/safety_warning = "For safety reasons the CASP Printer area \
+	var/safety_warning = "For safety reasons the CASP platform \
 		cannot transport live organisms, classified nuclear weaponry or \
 		homing beacons."
-	var/blockade_warning = "Bluespace instability detected. Shuttle movement impossible."
+	var/blockade_warning = "Instability detected. CASP platform movement impossible."
 
 	light_color = "#E2853D"//orange
 
 /obj/machinery/computer/cargo/request
 	name = "supply request console"
-	desc = "Used to request supplies from cargo."
+	desc = "Used to request supplies from CASP platform."
 	icon_screen = "request"
 	circuit = /obj/item/circuitboard/computer/cargo/request
 	requestonly = TRUE
@@ -122,10 +122,10 @@
 				SSshuttle.supply.contraband = contraband
 				SSshuttle.moveShuttle("supply", "supply_away", TRUE)
 				say("The supply shuttle has departed.")
-				investigate_log("[key_name(usr)] sent the supply shuttle away.", INVESTIGATE_CARGO)
+				investigate_log("[key_name(usr)] sent the CASP platform away.", INVESTIGATE_CARGO)
 			else
-				investigate_log("[key_name(usr)] called the supply shuttle.", INVESTIGATE_CARGO)
-				say("The supply shuttle has been called and will arrive in [SSshuttle.supply.timeLeft(600)] minutes.")
+				investigate_log("[key_name(usr)] called the CASP platform.", INVESTIGATE_CARGO)
+				say("The CASP platform has been called and will arrive in [SSshuttle.supply.timeLeft(600)] minutes.")
 				SSshuttle.moveShuttle("supply", "supply_home", TRUE)
 			. = TRUE
 		if("loan")
@@ -140,7 +140,7 @@
 				return
 			else
 				SSshuttle.shuttle_loan.loan_shuttle()
-				say("The supply shuttle has been loaned to CASP Printer area.")
+				say("The CASP platform has been loaned to CASP Printer area.")
 				. = TRUE
 		if("add")
 			var/id = text2path(params["id"])
