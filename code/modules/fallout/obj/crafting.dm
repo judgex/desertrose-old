@@ -175,4 +175,3 @@
 	. = ..()
 	var/turf/T = get_turf(usr)
 	new /obj/structure/campfire(T)
-	return ..()
