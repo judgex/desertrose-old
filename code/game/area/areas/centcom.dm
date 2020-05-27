@@ -2,7 +2,7 @@
 // CENTCOM
 
 /area/centcom
-	name = "CentCom"
+	name = "CASP Printer Area"
 	icon_state = "centcom"
 	dynamic_lighting = DYNAMIC_LIGHTING_FORCED
 	requires_power = FALSE
@@ -12,16 +12,16 @@
 	flags_1 = NONE
 
 /area/centcom/control
-	name = "CentCom Docks"
+	name = "CASP Printer Docks"
 
 /area/centcom/evac
-	name = "CentCom Recovery Ship"
+	name = "CASP Printer Recovery Ship"
 
 /area/centcom/supply
-	name = "CentCom Supply Shuttle Dock"
+	name = "CASP Printer Supply Dock"
 
 /area/centcom/ferry
-	name = "CentCom Transport Shuttle Dock"
+	name = "CASP Printer Transport Dock"
 
 /area/centcom/prison
 	name = "Admin Prison"
