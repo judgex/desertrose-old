@@ -96,7 +96,7 @@
 	initial_gas_mix = "co2=50000;TEMP=293.15"
 
 /turf/open/floor/engine/plasma
-	name = "ultracite floor"
+	name = "high yield fuel floor"
 	initial_gas_mix = "plasma=70000;TEMP=293.15"
 
 /turf/open/floor/engine/o2

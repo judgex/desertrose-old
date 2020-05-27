@@ -98,6 +98,20 @@
 	sheet_type = null
 	canSmoothWith = list(/turf/closed/wall/f13/store, /turf/closed/wall)
 
+/turf/closed/wall/f13/tentwall
+	name = "tent wall"
+	desc = "The walls of a portable tent."
+	icon = 'icons/fallout/turfs/walls/tent.dmi'
+	icon_state = "tent0"
+	icon_type_smooth = "tent"
+	hardness = 10
+	smooth = SMOOTH_OLD
+	//	disasemblable = 0
+	baseturfs = /turf/open/indestructible/ground/outside/ruins
+	girder_type = 0
+	sheet_type = null
+	canSmoothWith = list(/turf/closed/wall/f13/tentwall, /turf/closed/wall)
+
 /turf/closed/wall/f13/supermart
 	name = "supermart wall"
 	desc = "A pre-War supermart wall made of reinforced concrete."
