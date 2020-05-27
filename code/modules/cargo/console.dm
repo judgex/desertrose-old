@@ -5,7 +5,7 @@
 	circuit = /obj/item/circuitboard/computer/cargo
 	var/requestonly = FALSE
 	var/contraband = FALSE
-	var/safety_warning = "For safety reasons the automated supply shuttle \
+	var/safety_warning = "For safety reasons the CASP Printer area \
 		cannot transport live organisms, classified nuclear weaponry or \
 		homing beacons."
 	var/blockade_warning = "Bluespace instability detected. Shuttle movement impossible."
@@ -140,7 +140,7 @@
 				return
 			else
 				SSshuttle.shuttle_loan.loan_shuttle()
-				say("The supply shuttle has been loaned to CentCom.")
+				say("The supply shuttle has been loaned to CASP Printer area.")
 				. = TRUE
 		if("add")
 			var/id = text2path(params["id"])
