@@ -41,6 +41,12 @@
 	desc = "A hardy, onion-like root with mild healing properties."
 	produce = /obj/item/reagent_containers/food/snacks/grown/xander
 
+/obj/structure/flora/wasteplant/wild_prickly
+	name = "wild prickly pear"
+	icon_state = "wild_prickly"
+	desc = "Distinguished by having cylindrical, rather than flattened, stem segments with large barbed spines. The stem joints are very brittle on young stems, readily breaking off when the barbed spines stick to clothing or animal fur."
+	produce = /obj/item/reagent_containers/food/snacks/grown/pricklypear
+
 /obj/structure/flora/wasteplant/wild_datura
 	name = "wild datura"
 	icon_state = "wild_datura"
