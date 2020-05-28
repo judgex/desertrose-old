@@ -11,7 +11,7 @@
 	production = 1
 	yield = 5
 	potency = 50
-	growthstages = 3
+	growthstages = 4
 	growing_icon = 'icons/obj/hydroponics/growing_vegetables.dmi'
 	icon_grow = "pinyon-grow"
 	icon_dead = "pinyon-dead"
