@@ -47,6 +47,17 @@
 	desc = "This large spreading perennial vine is a close relative of many cultivated gourd crops. The ripe fruit forms a small gourd, which was reportedly boiled and eaten by various tribes."
 	produce = /obj/item/reagent_containers/food/snacks/grown/buffalogourd
 
+/*/obj/structure/flora/wasteplant/wild_horsenettle
+	name = "wild horsenettle"
+	icon_state = "wild_horsenettle"
+	desc = "The tribes use the berries of this toxic plant as a vegetable rennet."
+	produce = /obj/item/reagent_containers/food/snacks/grown/horsenettle
+
+/obj/structure/flora/wasteplant/wild_pinyon
+	name = "wild pinyon pine"
+	icon_state = "wild_pinyon"
+	desc = "The seeds of the pinyon pine, known as "pine nuts" or "piñóns", are an important food for settlers and tribes living in the mountains of the North American Southwest. All species of pine produce edible seeds, but in North America only the pinyon produces seeds large enough to be a major source of food.""
+	produce = /obj/item/reagent_containers/food/snacks/grown/pinyon*/
 
 /obj/structure/flora/wasteplant/wild_prickly
 	name = "wild prickly pear"
