@@ -41,6 +41,13 @@
 	desc = "A hardy, onion-like root with mild healing properties."
 	produce = /obj/item/reagent_containers/food/snacks/grown/xander
 
+/obj/structure/flora/wasteplant/wild_buffalogourd
+	name = "wild buffalo vines"
+	icon_state = "wild_buffalogourd"
+	desc = "This large spreading perennial vine is a close relative of many cultivated gourd crops. The ripe fruit forms a small gourd, which was reportedly boiled and eaten by various tribes."
+	produce = /obj/item/reagent_containers/food/snacks/grown/buffalogourd
+
+
 /obj/structure/flora/wasteplant/wild_prickly
 	name = "wild prickly pear"
 	icon_state = "wild_prickly"
