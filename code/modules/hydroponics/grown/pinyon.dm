@@ -12,8 +12,10 @@
 	yield = 5
 	potency = 50
 	growthstages = 3
-	growing_icon = 'icons/obj/hydroponics/growing_mushrooms.dmi'
-	icon_dead = "pinyon-dead"
+	growing_icon = 'icons/obj/hydroponics/growing_vegetables.dmi'
+	icon_grow = "gourd-grow"
+	icon_dead = "gourd-dead"
+	icon_harvest = "gourd-harvest"
 	genes = list(/datum/plant_gene/trait/repeated_harvest)
 	reagents_add = list("nutriment" = 0.04)
 
