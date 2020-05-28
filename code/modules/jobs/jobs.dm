@@ -33,6 +33,7 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 "Senior Paladin",
 "Paladin",
 "Knight",
+"Senior Scribe",
 "Scribe",
 "Legion Centurion",
 "Legion Orator",
@@ -65,6 +66,7 @@ GLOBAL_LIST_INIT(faction_player_positions, list(
 "Senior Paladin",
 "Paladin",
 "Knight",
+"Senior Scribe",
 "Scribe",
 "Legion Decanus",
 "Veteran Legionary",
@@ -101,6 +103,7 @@ GLOBAL_LIST_INIT(brotherhood_positions, list(
 	"Senior Paladin",
 	"Paladin",
 	"Knight",
+	"Senior Scribe",
 	"Scribe",
 	"Initiate"
 ))
