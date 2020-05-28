@@ -368,12 +368,6 @@
 	gold_core_spawnable = HOSTILE_SPAWN
 	a_intent = INTENT_HARM
 
-/mob/living/simple_animal/hostile/stalker/Move()
-	icon_state = "nightstalker (M)"
-
-/mob/living/simple_animal/hostile/stalkeryoung/Move()
-	icon_state = "nightstalker (M)"
-
 /mob/living/simple_animal/hostile/molerat
 	name = "molerat"
 	desc = "A large mutated rat-mole hybrid that finds its way everywhere. Common in caves and underground areas."
