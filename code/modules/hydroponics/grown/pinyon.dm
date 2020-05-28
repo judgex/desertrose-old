@@ -1,6 +1,6 @@
-/*/obj/item/seeds/pinyon
+/obj/item/seeds/pinyon
 	name = "pack of pinyon pine seeds"
-	desc = "The seeds of the pinyon pine, known as "pine nuts" or "piñóns", are an important food for settlers and tribes living in the mountains of the North American Southwest. All species of pine produce edible seeds, but in North America only the pinyon produces seeds large enough to be a major source of food."
+	desc = "The seeds of the pinyon pine, known as pine nuts, are an important food for settlers and tribes living in the mountains of the North American Southwest. All species of pine produce edible seeds, but in North America only the pinyon produces seeds large enough to be a major source of food."
 	icon_state = "seed-pinyon"
 	species = "pinyon pine"
 	plantname = "Pinyon Pine"
@@ -22,11 +22,11 @@
 /obj/item/reagent_containers/food/snacks/grown/pinyon
 	seed = /obj/item/seeds/wheat
 	name = "pinyon nuts"
-	desc = "The seeds of the pinyon pine, known as "pine nuts" or "piñóns", are an important food for settlers and tribes living in the mountains of the North American Southwest. All species of pine produce edible seeds, but in North America only the pinyon produces seeds large enough to be a major source of food."
+	desc = "The seeds of the pinyon pine, known as pine nuts, are an important food for settlers and tribes living in the mountains of the North American Southwest. All species of pine produce edible seeds, but in North America only the pinyon produces seeds large enough to be a major source of food."
 	gender = PLURAL
-	icon_state = "Pinyon"
+	icon_state = "Pinyon Nuts"
 	filling_color = "#F0E68C"
 	bitesize_mod = 2
 	foodtype = GRAIN
-	grind_results = list("pinyonflour" = 0)
-	tastes = list("pine nuts" = 1)*/
+	grind_results = list("flour" = 0)
+	tastes = list("pine nuts" = 1)
