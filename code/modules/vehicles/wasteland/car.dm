@@ -38,7 +38,7 @@
 			return
 		user.visible_message("[user] starts to disassemble the wreck.</span>")
 		inuse = TRUE
-		if(I.use_tool(src, user, 500, volume=100))
+		if(I.use_tool(src, user, 300, volume=100))
 			user.visible_message("[user] disassembles the wreck.</span>")
 			inuse = FALSE
 			new /obj/item/stack/sheet/metal/five/(get_turf(user))
