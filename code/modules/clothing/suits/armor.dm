@@ -415,6 +415,15 @@
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list("melee" = 40, "bullet" = 45, "laser" = 40, "energy" = 40, "bomb" = 50, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20)
 
+/obj/item/clothing/suit/armor/f13/combatrusted
+	name = "rusted combat armor"
+	desc = "An old military grade pre war combat armor.This set has seen better days, weathered by time. The composite plates look sound and intact still."
+	icon_state = "rusted_combat_armor"
+	item_state = "rusted_combat_armor"
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
+	armor = list("melee" = 38, "bullet" = 43, "laser" = 38, "energy" = 38, "bomb" = 48, "bio" = 58, "rad" = 10, "fire" = 58, "acid" = 18)
+	icon = 'icons/fallout/clothing_w/suit.dmi'
+
 /obj/item/clothing/suit/armor/f13/reconarmor
 	name = "recon armor"
 	desc = "An old military grade pre war combat armor."
