@@ -43,7 +43,7 @@
 
 /obj/structure/flora/wasteplant/wild_buffalogourd
 	name = "wild buffalo vines"
-	icon_state = "wild_buffalogourd"
+	icon_state = "wild_gourd"
 	desc = "This large spreading perennial vine is a close relative of many cultivated gourd crops. The ripe fruit forms a small gourd, which was reportedly boiled and eaten by various tribes."
 	produce = /obj/item/reagent_containers/food/snacks/grown/buffalogourd
 
