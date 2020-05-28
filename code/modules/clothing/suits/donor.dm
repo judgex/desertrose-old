@@ -5,7 +5,7 @@
  *
  */
 
-/obj/item/clothing/suit/donor/soldier //Based off of Colonel Autumn's uniform from FO3.
+/obj/item/clothing/suit/donor/soldier
 	name = "Soldier's Greatcoat"
 	desc = "A resistant, tan greatcoat, typically worn by pre-War Generals."
 	icon_state = "soldier"
@@ -20,4 +20,4 @@
 	/obj/item/restraints/handcuffs,
 	/obj/item/flashlight,
 	/obj/item/grenade)
-	
+

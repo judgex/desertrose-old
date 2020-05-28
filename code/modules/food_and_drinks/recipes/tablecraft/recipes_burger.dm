@@ -90,7 +90,7 @@
 	result = /obj/item/reagent_containers/food/snacks/burger/tofu
 	subcategory = CAT_BURGER
 
-/datum/crafting_recipe/food/ghostburger
+/*/datum/crafting_recipe/food/ghostburger
 	name = "Ghost burger"
 	reqs = list(
 		/obj/item/ectoplasm = 1,
@@ -212,7 +212,7 @@
 		/obj/item/reagent_containers/food/snacks/bun = 1
 	)
 	result = /obj/item/reagent_containers/food/snacks/burger/spell
-	subcategory = CAT_BURGER
+	subcategory = CAT_BURGER*/
 
 /datum/crafting_recipe/food/bigbiteburger
 	name = "Big bite burger"
@@ -238,13 +238,13 @@
 	result = /obj/item/reagent_containers/food/snacks/burger/superbite
 	subcategory = CAT_BURGER
 
-/datum/crafting_recipe/food/slimeburger
+/*/datum/crafting_recipe/food/slimeburger
 	name = "Jelly burger"
 	reqs = list(
 		/datum/reagent/toxin/slimejelly = 5,
 		/obj/item/reagent_containers/food/snacks/bun = 1
 	)
-	result = /obj/item/reagent_containers/food/snacks/burger/jelly/slime
+	result = /obj/item/reagent_containers/food/snacks/burger/jelly/slime*/
 	subcategory = CAT_BURGER
 
 /datum/crafting_recipe/food/jellyburger
@@ -274,14 +274,14 @@
 	result = /obj/item/reagent_containers/food/snacks/burger/rat
 	subcategory = CAT_BURGER
 
-/datum/crafting_recipe/food/baseballburger
+/*/datum/crafting_recipe/food/baseballburger
 	name = "Home run baseball burger"
 	reqs = list(
 			/obj/item/twohanded/baseball = 1,
 			/obj/item/reagent_containers/food/snacks/bun = 1
 	)
 	result = /obj/item/reagent_containers/food/snacks/burger/baseball
-	subcategory = CAT_BURGER
+	subcategory = CAT_BURGER*/
 
 /datum/crafting_recipe/food/baconburger
 	name = "Bacon Burger"

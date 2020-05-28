@@ -266,6 +266,10 @@
 	desc = "A cheap statue of sandstone for a greyshirt."
 	icon_state = "assist"
 
+/obj/structure/statue/sandstone/mars
+	name = "statue of Mars"
+	desc = "A statue dedicated to Legion's God of War."
+	icon_state = "marsred"
 
 /obj/structure/statue/sandstone/venus //call me when we add marble i guess
 	name = "statue of a pure maiden"

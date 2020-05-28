@@ -19,6 +19,8 @@
 	config_entry_value = 25
 	min_val = 0
 
+/datum/config_entry/flag/blockoocurls	// log OOC channel
+
 /datum/config_entry/flag/hub	// if the game appears on the hub or not
 
 /datum/config_entry/flag/log_ooc	// log OOC channel

@@ -108,11 +108,16 @@
 	..()
 
 /obj/item/projectile/beam/emitter
-	name = "emitter beam"
+	name = "siege beam"
 	icon_state = "emitter"
-	damage = 30
+	damage = 100
 	impact_effect_type = /obj/effect/temp_visual/impact_effect/green_laser
 	light_color = LIGHT_COLOR_GREEN
+
+/obj/item/projectile/beam/emitter/on_hit(atom/target, blocked = FALSE)
+	. = ..()
+	if (!QDELETED(target) && (isturf(target) || istype(target, /obj/structure/)))
+		target.ex_act(EXPLODE_HEAVY)
 
 /obj/item/projectile/beam/emitter/singularity_pull()
 	return //don't want the emitters to miss
@@ -185,13 +190,18 @@
 
 /obj/item/projectile/beam/laser/lasgun //AER9
 	name = "laser beam"
-	damage = 28
+	damage = 26
 	armour_penetration = 15
 
 /obj/item/projectile/beam/laser/pistol //AEP7
 	name = "laser beam"
-	damage = 22
+	damage = 21
 	armour_penetration = 10
+
+/obj/item/projectile/beam/laser/gatling //Gatling Laser Projectile
+	name = "rapid-fire laser beam"
+	damage = 12
+	armour_penetration = 50
 
 /obj/item/projectile/beam/laser/pistol/wattz //Wattz pistol
 	damage = 18

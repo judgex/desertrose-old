@@ -25,7 +25,7 @@
 //Chaplain
 /obj/item/clothing/suit/nun
 	name = "nun robe"
-	desc = "Maximum piety in this star system."
+	desc = "Maximum piety."
 	icon_state = "nun"
 	item_state = "nun"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS|HANDS

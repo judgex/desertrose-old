@@ -89,6 +89,8 @@
 /obj/item/reagent_containers/food/snacks/grown/coffee/robusta
 	seed = /obj/item/seeds/coffee/robusta
 	name = "coffee robusta beans"
-	desc = "Increases robustness by 37 percent!"
+	desc = "A handful of dark roasted of beans"
 	icon_state = "coffee_robusta"
-	grind_results = list("coffeepowder" = 0, "morphine" = 0)
+	grind_results = list("coffeepowder" = 3)
+
+/*HRP*/

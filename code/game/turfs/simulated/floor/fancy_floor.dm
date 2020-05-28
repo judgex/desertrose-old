@@ -93,7 +93,7 @@
 	ore_type = /obj/item/stack/sheet/mineral/snow
 	planetary_atmos = TRUE
 	floor_tile = null
-	initial_gas_mix = "o2=22;n2=82;TEMP=180"
+	initial_gas_mix = "o2=22;n2=82;TEMP=248"
 	slowdown = 2
 	bullet_sizzle = TRUE
 

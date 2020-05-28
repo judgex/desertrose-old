@@ -17,7 +17,7 @@
 	item_state = "cloak"
 	w_class = WEIGHT_CLASS_SMALL
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	color = "#4A4A4B" //Grey but it looks black
+	color = "#4A4A4B"
 
 /obj/item/clothing/head/cloakhood
 	name = "cloak hood"

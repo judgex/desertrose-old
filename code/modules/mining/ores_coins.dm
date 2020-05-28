@@ -130,18 +130,13 @@ GLOBAL_LIST_INIT(sand_recipes, list(\
 	singular_name = "volcanic ash pile"
 
 /obj/item/stack/ore/plasma
-	name = "Ultracite ore"
-	icon_state = "Ultracite ore"
-	item_state = "Ultracite ore"
-	singular_name = "Ultracite ore chunk"
+	name = "carbon chunks"
+	icon_state = "slag"
+	item_state = "slag"
+	singular_name = "carbon chunk"
 	points = 15
 	materials = list(MAT_PLASMA=MINERAL_MATERIAL_AMOUNT)
 	refined_type = /obj/item/stack/sheet/mineral/plasma
-
-/obj/item/stack/ore/plasma/welder_act(mob/living/user, obj/item/I)
-	to_chat(user, "<span class='warning'>You can't hit a high enough temperature to smelt [src] properly!</span>")
-	return TRUE
-
 
 /obj/item/stack/ore/silver
 	name = "silver ore"

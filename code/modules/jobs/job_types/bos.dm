@@ -173,7 +173,7 @@ Head Scribe
 	name = "Head Scribe"
 	jobtype = /datum/job/bos/f13headscribe
 	chemwhiz = TRUE
-	uniform = 		/obj/item/clothing/under/f13/recon
+	uniform = 		/obj/item/clothing/under/syndicate/brotherhood
 	accessory = 	/obj/item/clothing/accessory/bos/headscribe
 	suit = 			/obj/item/clothing/suit/armor/f13/headscribe
 	belt = 			/obj/item/storage/belt/utility/full/engi
@@ -419,6 +419,48 @@ Paladin
 		/obj/item/clothing/accessory/bos/paladin=1
 
 		)
+/*
+Senior Scribe
+*/
+
+/datum/job/bos/f13seniorscribe
+	title = "Senior Scribe"
+	flag = F13SENIORSCRIBE
+	faction = "BOS"
+	total_positions = 1
+	spawn_positions = 1
+	description = "You are the bunker's seniormost medical and scientific expert in the bunker, sans the Headscribe themselves. You are trained in both medicine and engineering, while also having extensive studies of the old world to assist in pinpointing what technology would be useful to the Brotherhood and its interests."
+	forbids = "The Brotherhood of Steel Forbids: Unethical human experimentation. Violence beyond what is needed to accomplish Brotherhood goals."
+	enforces = "The Brotherhood of Steel Expects: Obeying the Chain That - Binds your direct superior. Collection and safeguarding of technology from the wasteland. Experimentation and research."
+	supervisors = "the Head Scribe"
+	selection_color = "#95a5a6"
+	exp_requirements = 600
+	outfit = /datum/outfit/job/bos/f13seniorscribe
+
+	access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
+	minimal_access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
+
+/datum/outfit/job/bos/f13seniorscribe
+	name = "Senior Scribe"
+	jobtype = /datum/job/bos/f13scribe
+	chemwhiz = TRUE
+	uniform =		/obj/item/clothing/under/syndicate/brotherhood
+	shoes = 		/obj/item/clothing/shoes/combat
+	belt = 			/obj/item/storage/belt/utility/full/engi
+	accessory = 	/obj/item/clothing/accessory/bos/seniorscribe
+	suit = 			/obj/item/clothing/suit/f13/seniorscribe
+	id = 			/obj/item/card/id/dogtag
+	glasses =		/obj/item/clothing/glasses/sunglasses/big
+	backpack_contents = list(
+		/obj/item/stock_parts/cell/ammo/ec=2, \
+		/obj/item/kitchen/knife/combat=1, \
+		/obj/item/gun/energy/laser/pistol=1, \
+		/obj/item/reagent_containers/hypospray/medipen/stimpak=2, \
+		/obj/item/reagent_containers/hypospray/CMO=1)
+
+
+/datum/job/bos/f13seniorscribe/after_spawn(mob/living/carbon/human/H, mob/M)
+	H.add_quirk("Poor Aim")
 
 /*
 Scribe
@@ -428,20 +470,14 @@ Scribe
 	title = "Scribe"
 	flag = F13SCRIBE
 	faction = "BOS"
-	total_positions = 3
-	spawn_positions = 3
+	total_positions = 2
+	spawn_positions = 2
 	description = "You answer directly to the Head Scribe, tasked with researching and reverse-engineering recovered technologies from the old world, while maintaining the brotherhoods scientific archives. You may also be given a trainee to assign duties to."
 	forbids = "The Brotherhood of Steel Forbids: Unethical human experimentation. Violence beyond what is needed to accomplish Brotherhood goals."
 	enforces = "The Brotherhood of Steel Expects: Obeying the Chain That - Binds your direct superior. Collection and safeguarding of technology from the wasteland. Experimentation and research."
 	supervisors = "the Head Scribe"
 	selection_color = "#95a5a6"
 	exp_requirements = 600
-
-	loadout_options = list(
-	/datum/outfit/loadout/scribea, //Scribe
-	/datum/outfit/loadout/scribeb //Senior Scribe
-	)
-
 	outfit = /datum/outfit/job/bos/f13scribe
 
 	access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
@@ -454,6 +490,8 @@ Scribe
 	uniform =		/obj/item/clothing/under/syndicate/brotherhood
 	shoes = 		/obj/item/clothing/shoes/combat
 	belt = 			/obj/item/storage/belt/utility/full/engi
+	accessory = 	/obj/item/clothing/accessory/bos/scribe
+	suit = 			/obj/item/clothing/suit/f13/scribe
 	id = 			/obj/item/card/id/dogtag
 	glasses =		/obj/item/clothing/glasses/sunglasses/big
 	backpack_contents = list(
@@ -461,13 +499,6 @@ Scribe
 		/obj/item/kitchen/knife/combat=1, \
 		/obj/item/gun/energy/laser/pistol=1, \
 		/obj/item/reagent_containers/hypospray/medipen/stimpak=2)
-
-/datum/outfit/loadout/scribea
-	name = "Scribe"
-	backpack_contents = list(
-		/obj/item/clothing/suit/f13/scribe=1,
-		/obj/item/clothing/accessory/bos/scribe=1
-		)
 
 /datum/outfit/loadout/scribeb
 	name = "Senior Scribe"

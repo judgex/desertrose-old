@@ -313,8 +313,6 @@
 	item_state = "arclight"
 	dynamic_hair_suffix = ""
 	visor_flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE
-	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
-	armor = list("melee" = 40, "bullet" = 25, "laser" = 15, "energy" = 10, "bomb" = 16, "bio" = 20, "rad" = 0, "fire" = 50, "acid" = 0)
 
 /obj/item/clothing/head/helmet/f13/raider/arclight/reinforced
 	name = "reinforced raider arclight helmet"
@@ -326,7 +324,6 @@
 	item_state = "blastmaster"
 	dynamic_hair_suffix = ""
 	dynamic_fhair_suffix = ""
-	armor = list("melee" = 40, "bullet" = 25, "laser" = 15, "energy" = 10, "bomb" = 16, "bio" = 20, "rad" = 0, "fire" = 50, "acid" = 0)
 
 /obj/item/clothing/head/helmet/f13/raider/blastmaster/reinforced
 	name = "reinforced raider blastmaster helmet"
@@ -337,8 +334,6 @@
 	desc = "Long time ago, it has belonged to a football player, now it belongs to wasteland."
 	icon_state = "yankee"
 	item_state = "yankee"
-	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
-	armor = list("melee" = 40, "bullet" = 25, "laser" = 15, "energy" = 10, "bomb" = 16, "bio" = 20, "rad" = 0, "fire" = 50, "acid" = 0)
 	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE
 
 /obj/item/clothing/head/helmet/f13/raider/yankee/reinforced
@@ -368,7 +363,6 @@
 	icon_state = "psychotic"
 	item_state = "psychotic"
 	flags_cover = HEADCOVERSEYES
-	armor = list("melee" = 40, "bullet" = 25, "laser" = 15, "energy" = 0, "bomb" = 16, "bio" = 20, "rad" = 0, "fire" = 50, "acid" = 0)
 	flags_inv = HIDEEARS|HIDEEYES|HIDEHAIR
 
 /obj/item/clothing/head/helmet/f13/raider/psychotic/reinforced
@@ -377,9 +371,6 @@
 	armor = list("melee" = 45, "bullet" = 30, "laser" = 20, "energy" = 5, "bomb" = 16, "bio" = 20, "rad" = 0, "fire" = 50, "acid" = 0)
 
 //Combat armor
-/obj/item/clothing/head/helmet/f13
-	icon_state = "helmet"
-	item_state = "helmet"
 
 /obj/item/clothing/head/helmet/f13/combat
 	name = "combat helmet"
@@ -391,7 +382,6 @@
 	strip_delay = 50
 	flags_inv = HIDEEARS|HIDEHAIR
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
-	tint = 0
 	dynamic_hair_suffix = ""
 	dynamic_fhair_suffix = ""
 
@@ -501,7 +491,6 @@
 	desc = "It's a leather legion recruit helmet."
 	icon_state = "legrecruit"
 	item_state = "legrecruit"
-	armor = list("melee" = 40, "bullet" = 25, "laser" = 10, "energy" = 10, "bomb" = 16, "bio" = 30, "rad" = 20, "fire" = 50, "acid" = 0)
 
 /obj/item/clothing/head/helmet/f13/legion/recruit/scout
 	name = "legion scout hood"
@@ -604,7 +593,6 @@
 	armor = list("melee" = 75, "bullet" = 50, "laser" = 35, "energy" = 35, "bomb" = 39, "bio" = 60, "rad" = 20, "fire" = 80, "acid" = 0)
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
 
-
 /obj/item/clothing/head/helmet/f13/legion/legate
 	name = "legion legate helmet"
 	desc = "A custom forged steel full helmet complete with abstract points and arches. The face is extremely intimidating, as it was meant to be. This particular one was ordered to be forged by Caesar, given to his second legate in exchange for his undying loyalty to Caesar."
@@ -624,7 +612,6 @@
 	armor = list("melee" = 60, "bullet" = 50, "laser" = 30, "energy" = 50, "bomb" = 39, "bio" = 60, "rad" = 60, "fire" = 90, "acid" = 0)
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR|HIDEFACE
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
-	strip_delay = 50
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
 	dynamic_hair_suffix = ""
 	dynamic_fhair_suffix = ""
@@ -659,13 +646,12 @@
 	desc = "A metal helmet, rusty and awful."
 	icon_state = "raidermetal"
 	item_state = "raidermetal"
-	can_toggle = 1
+	can_toggle = TRUE
 	armor = list("melee" = 50, "bullet" = 35, "laser" = 35, "energy" = 20, "bomb" = 25, "bio" = 30, "rad" = 30, "fire" = 20, "acid" = 0)
 	flags_inv = HIDEMASK|HIDEEYES|HIDEFACE
 	strip_delay = 80
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 	visor_flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
-
 
 /obj/item/clothing/head/helmet/f13/metalmask
 	name = "metal mask"
@@ -721,14 +707,13 @@
 	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT
 	heat_protection = HEAD
 	max_heat_protection_temperature = SPACE_HELM_MAX_TEMP_PROTECT
-	ispowerarmor = 1
+	ispowerarmor = 1 //TRUE
 	strip_delay = 200
 	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR|HIDEMASK
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 	clothing_flags = THICKMATERIAL
 	resistance_flags = LAVA_PROOF | FIRE_PROOF | ACID_PROOF
 	flash_protect = 2
-	tint = 0
 	dynamic_hair_suffix = ""
 	dynamic_fhair_suffix = ""
 	speechspan = SPAN_ROBOT //makes you sound like a robot
@@ -756,7 +741,7 @@
 	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT
 	heat_protection = HEAD
 	max_heat_protection_temperature = SPACE_HELM_MAX_TEMP_PROTECT
-	ispowerarmor = 1
+	ispowerarmor = 1 //TRUE
 	strip_delay = 200
 	equip_delay_self = 20
 	slowdown = 0.1
@@ -766,7 +751,6 @@
 	resistance_flags = LAVA_PROOF | FIRE_PROOF | ACID_PROOF
 	item_flags = SLOWS_WHILE_IN_HAND
 	flash_protect = 2
-	tint = 0
 	dynamic_hair_suffix = ""
 	dynamic_fhair_suffix = ""
 	darkness_view = 128
@@ -821,14 +805,14 @@
 	desc = "It's an advanced power armor Mk I helmet, typically used by the Enclave. It looks somewhat threatening."
 	icon_state = "advhelmet1"
 	item_state = "advhelmet1"
-	armor = list("melee" = 90, "bullet" = 90, "laser" = 60, "energy" = 75, "bomb" = 72, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 0)
+	armor = list("melee" = 80, "bullet" = 80, "laser" = 50, "energy" = 75, "bomb" = 72, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 0)
 
 /obj/item/clothing/head/helmet/power_armor/advanced/mk2
 	name = "advanced power helmet MK2"
 	desc = "It's an improved model of advanced power armor used exclusively by the Enclave military forces, developed after the Great War.<br>Like its older brother, the standard advanced power armor, it's matte black with a menacing appearance, but with a few significant differences - it appears to be composed entirely of lightweight ceramic composites rather than the usual combination of metal and ceramic plates.<br>Additionally, like the T-51b power armor, it includes a recycling system that can convert human waste into drinkable water, and an air conditioning system for it's user's comfort."
 	icon_state = "advhelmet2"
 	item_state = "advhelmet2"
-	armor = list("melee" = 95, "bullet" = 95, "laser" = 70, "energy" = 90, "bomb" = 72, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 0)
+	armor = list("melee" = 90, "bullet" = 90, "laser" = 60, "energy" = 90, "bomb" = 72, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 0)
 
 /obj/item/clothing/head/helmet/power_armor/tesla
 	name = "tesla power helmet"
@@ -879,8 +863,6 @@
 	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 	dynamic_hair_suffix = ""
-
-
 
 //LightToggle
 

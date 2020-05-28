@@ -218,7 +218,6 @@
 	icon_state = "tdgreen"
 	item_state = "tdgreen"
 
-
 /obj/item/clothing/suit/armor/riot/knight
 	name = "plate armour"
 	desc = "A classic suit of plate armour, highly effective at stopping melee attacks."
@@ -415,7 +414,6 @@
 	item_state = "combat_armor"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list("melee" = 40, "bullet" = 45, "laser" = 40, "energy" = 40, "bomb" = 50, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20)
-	strip_delay = 60
 
 /obj/item/clothing/suit/armor/f13/reconarmor
 	name = "recon armor"
@@ -424,7 +422,6 @@
 	item_state = "recon_armor"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list("melee" = 40, "bullet" = 45, "laser" = 40, "energy" = 40, "bomb" = 50, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20)
-	strip_delay = 60
 	icon = 'icons/fallout/clothing_w/suit.dmi'
 
 /obj/item/clothing/suit/armor/f13/combatmk2
@@ -434,7 +431,6 @@
 	item_state = "combat_armor_mk2"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list("melee" = 45, "bullet" = 55, "laser" = 45, "energy" = 45, "bomb" = 55, "bio" = 65, "rad" = 10, "fire" = 60, "acid" = 20)
-	strip_delay = 60
 
 /obj/item/clothing/suit/armor/f13/combatmk2ncr
 	name = "combat armor mk2"
@@ -443,7 +439,6 @@
 	item_state = "combat_armor_mk2_ncr"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list("melee" = 45, "bullet" = 55, "laser" = 45, "energy" = 45, "bomb" = 55, "bio" = 65, "rad" = 10, "fire" = 60, "acid" = 20)
-	strip_delay = 60
 	icon = 'icons/fallout/clothing_w/suit.dmi'
 
 /obj/item/clothing/suit/armor/f13/combatmk2leg
@@ -453,7 +448,6 @@
 	item_state = "combat_armor_mk2_leg"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list("melee" = 45, "bullet" = 55, "laser" = 45, "energy" = 45, "bomb" = 55, "bio" = 65, "rad" = 10, "fire" = 60, "acid" = 20)
-	strip_delay = 60
 	icon = 'icons/fallout/clothing_w/suit.dmi'
 
 /obj/item/clothing/suit/armor/f13/combatbosrein
@@ -463,9 +457,7 @@
 	item_state = "combat_armor_reinforced_bos"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list("melee" = 45, "bullet" = 55, "laser" = 45, "energy" = 45, "bomb" = 55, "bio" = 65, "rad" = 10, "fire" = 60, "acid" = 20)
-	strip_delay = 60
 	icon = 'icons/fallout/clothing_w/suit.dmi'
-
 
 /obj/item/clothing/suit/armor/f13/combatrein
 	name = "Reinforced Combat Armor"
@@ -474,7 +466,6 @@
 	item_state = "combat_armor_reinforced"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list("melee" = 45, "bullet" = 55, "laser" = 45, "energy" = 45, "bomb" = 55, "bio" = 65, "rad" = 10, "fire" = 60, "acid" = 20)
-	strip_delay = 60
 	icon = 'icons/fallout/clothing_w/suit.dmi'
 
 /obj/item/clothing/suit/armor/f13/scoutarmor
@@ -484,7 +475,6 @@
 	item_state = "scout_armor_lt"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list("melee" = 45, "bullet" = 55, "laser" = 45, "energy" = 45, "bomb" = 55, "bio" = 65, "rad" = 10, "fire" = 60, "acid" = 20)
-	strip_delay = 60
 
 /obj/item/clothing/suit/armor/f13/atomzealot
 	name = "zealot armor"
@@ -493,7 +483,6 @@
 	item_state = "atomzealot"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list("melee" = 30, "bullet" = 35, "laser" = 40, "energy" = 45, "bomb" = 55, "bio" = 65, "rad" = 100, "fire" = 60, "acid" = 20)
-	strip_delay = 60
 
 /obj/item/clothing/suit/armor/f13/atomwitch
 	name = "atomic seer robes"
@@ -511,7 +500,6 @@
 	item_state = "caeser_pelt"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list("melee" = 45, "bullet" = 55, "laser" = 45, "energy" = 45, "bomb" = 55, "bio" = 65, "rad" = 10, "fire" = 60, "acid" = 20)
-
 
 /obj/item/clothing/suit/armor/f13/combat/dark
 	name = "combat armor"
@@ -545,8 +533,6 @@
 	desc = "A set of standard issue ranger patrol armor that provides defense similar to a suit of pre-war combat armor."
 	icon_state = "ncr_patrol"
 	item_state = "ncr_patrol"
-	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	armor = list("melee" = 40, "bullet" = 45, "laser" = 40, "energy" = 40, "bomb" = 50, "bio" = 0, "rad" = 0, "fire" = 60, "acid" = 20)
 
 /obj/item/clothing/suit/armor/f13/combat/brotherhood
 	name = "brotherhood combat armor"
@@ -591,7 +577,6 @@
 	item_state = "ranger"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
 	armor = list("melee" = 55, "bullet" = 55, "laser" = 55, "energy" = 40, "bomb" = 55, "bio" = 60, "rad" = 60, "fire" = 90, "acid" = 20)
-	strip_delay = 60
 
 /obj/item/clothing/suit/armor/f13/rangercombat/desert
 	name = "desert ranger combat armor"
@@ -642,7 +627,6 @@
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list("melee" = 60, "bullet" = 40, "laser" = 40, "energy" = 30, "bomb" = 25, "bio" = 30, "rad" = 30, "fire" = 90, "acid" = 0)
 	slowdown = 0.75
-	strip_delay = 60
 
 /obj/item/clothing/suit/armor/f13/kit/terrible
 	name = "scorched armor kit"
@@ -667,7 +651,6 @@
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list("melee" = 65, "bullet" = 40, "laser" = 50, "energy" = 60, "bomb" = 25, "bio" = 30, "rad" = 30, "fire" = 90, "acid" = 0)
 	slowdown = 0.75
-	strip_delay = 60
 */
 // salvaged/broken power armor, does not require PA training
 
@@ -789,7 +772,7 @@
 	desc = "An advanced suit of armor typically used by the Enclave.<br>It is composed of lightweight metal alloys, reinforced with ceramic castings at key stress points.<br>Additionally, like the T-51b power armor, it includes a recycling system that can convert human waste into drinkable water, and an air conditioning system for it's user's comfort."
 	icon_state = "advpowerarmor1"
 	item_state = "advpowerarmor1"
-	armor = list("melee" = 85, "bullet" = 80, "laser" = 65, "energy" = 75, "bomb" = 72, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 0)
+	armor = list("melee" = 80, "bullet" = 80, "laser" = 50, "energy" = 75, "bomb" = 72, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 0)
 
 /obj/item/clothing/suit/armor/f13/power_armor/advanced/mk2
 	name = "advanced power armor mark II"
@@ -797,7 +780,7 @@
 	icon_state = "advpowerarmor2"
 	item_state = "advpowerarmor2"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
-	armor = list("melee" = 95, "bullet" = 95, "laser" = 70, "energy" = 90, "bomb" = 72, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 0)
+	armor = list("melee" = 90, "bullet" = 90, "laser" = 60, "energy" = 90, "bomb" = 72, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 0)
 
 /obj/item/clothing/suit/armor/f13/power_armor/tesla
 	name = "tesla power armor"
@@ -816,14 +799,12 @@
 	body_parts_covered = CHEST|GROIN|ARMS|LEGS
 	allowed = list(/obj/item/gun, /obj/item/claymore, /obj/item/throwing_star/spear, /obj/item/restraints/legcuffs/bola, /obj/item/twohanded)
 	armor = list("melee" = 40, "bullet" = 25, "laser" = 10, "energy" = 10, "bomb" = 16, "bio" = 30, "rad" = 20, "fire" = 50, "acid" = 0)
-	strip_delay = 60
 
 /obj/item/clothing/suit/armor/f13/legion/recruit
 	name = "legion recruit armor"
 	desc = "Legion recruit armor is a common light armor, supplied to recruit legionaries and to recruit decanus units. Like most Legion armor, it is made from repurposed sports equipment, consisting of a football player's protective shoulder and chest pads reinforced with additional leather padding and worn over a baseball catcher's vest."
 	icon_state = "legrecruit"
 	slowdown = -0.15
-	armor = list("melee" = 40, "bullet" = 25, "laser" = 10, "energy" = 10, "bomb" = 16, "bio" = 30, "rad" = 20, "fire" = 50, "acid" = 0)
 
 /obj/item/clothing/suit/armor/f13/legion/recruit/scout
 	name = "legion scout armor"
@@ -886,7 +867,6 @@
 	name = "paladin-slayer centurion armor"
 	desc = "The armor of a Centurion who has bested one or more Brotherhood Paladins, adding pieces of his prizes to his own defense. The symbol of the Legion is crudely painted on this once-marvelous suit of armor."
 	icon_state = "palacent"
-	slowdown = 0
 	armor = list("melee" = 75, "bullet" = 50, "laser" = 35, "energy" = 35, "bomb" = 39, "bio" = 60, "rad" = 20, "fire" = 80, "acid" = 0)
 
 /obj/item/clothing/suit/armor/f13/legion/rangercent
@@ -911,7 +891,6 @@
 	item_state = "ncr_infantry_vest"
 	body_parts_covered = CHEST|GROIN|ARMS|LEGS
 	armor = list("melee" = 40, "bullet" = 35, "laser" = 20, "energy" = 20, "bomb" = 25, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
-	strip_delay = 60
 
 /obj/item/clothing/suit/armor/f13/ncrarmor/mantle
 	name = "NCR mantle vest"

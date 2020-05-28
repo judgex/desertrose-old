@@ -1,4 +1,3 @@
-// Tobacco
 /obj/item/seeds/tobacco
 	name = "pack of tobacco seeds"
 	desc = "These seeds grow into tobacco plants."
@@ -21,9 +20,8 @@
 	desc = "Dry them out to make some smokes."
 	icon_state = "tobacco_leaves"
 	filling_color = "#008000"
-	distill_reagent = "creme_de_menthe" //Menthol, I guess.
+	distill_reagent = "creme_de_menthe"
 
-// Space Tobacco
 /obj/item/seeds/tobacco/space
 	name = "pack of space tobacco seeds"
 	desc = "These seeds grow into space tobacco plants."
@@ -42,3 +40,5 @@
 	icon_state = "stobacco_leaves"
 	distill_reagent = null
 	wine_power = 50
+
+/*MRP*/
