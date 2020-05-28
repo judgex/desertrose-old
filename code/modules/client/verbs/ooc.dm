@@ -51,7 +51,12 @@
 			log_admin("[key_name(src)] has triggered the slur filter (OOC): [msg].")
 			message_admins("[key_name_admin(src)] has triggered the slur filter (OOC): [msg].")
 			return
-
+		if(CONFIG_GET(flag/blockoocurls))
+			if(findtext(msg, "://") || findtext(msg, "www."))
+				to_chat(src, "<B>Posting clickable links in OOC is not allowed.</B>")
+				log_admin("[key_name(src)] has attempted to post a clickable link in OOC: [msg]")
+				message_admins("[key_name_admin(src)] has attempted to post a clickable link in OOC: [msg]")
+				return
 	if(!(prefs.chat_toggles & CHAT_OOC))
 		to_chat(src, "<span class='danger'>You have OOC muted.</span>")
 		return

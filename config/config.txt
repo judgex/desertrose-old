@@ -473,3 +473,6 @@ BOT_IP 127.0.0.1:8081
 ##	For reference, Goonstation uses a resolution of 21x15 for it's widescreen mode.
 ##	Do note that changing this value will affect the title screen. The title screen will have to be updated manually if this is changed.
 DEFAULT_VIEW 15x15
+
+## Comment this out to enable clickable URLs from being posted in OOC
+BLOCKOOCURLS

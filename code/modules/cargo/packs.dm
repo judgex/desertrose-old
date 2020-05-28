@@ -720,6 +720,7 @@
 	cost = 5000
 	contains = list(/obj/machinery/power/am_control_unit)
 	crate_name = "antimatter control crate"
+
 /datum/supply_pack/engine/am_shielding
 	name = "Antimatter Shielding Crate"
 	desc = "Contains ten Antimatter shields, somehow crammed into a crate."
@@ -774,6 +775,10 @@
 					/obj/structure/particle_accelerator/power_box,
 					/obj/structure/particle_accelerator/end_cap)
 	crate_name = "particle accelerator crate"
+*/
+
+
+/*
 /datum/supply_pack/engine/collector
 	name = "Radiation Collector Crate"
 	desc = "Contains three radiation collectors. Useful for collecting energy off nearby Supermatter Crystals, Singularities or Teslas!"
@@ -789,6 +794,47 @@
 	contains = list(/obj/machinery/the_singularitygen)
 	crate_name = "singularity generator crate"
 */
+
+/datum/supply_pack/engine/scrap_e
+	name = "Scrap Electronics Crate"
+	desc = "A crate containing left over electronic parts from other printings."
+	cost = 3500
+	contains = list(/obj/item/stack/crafting/electronicparts/five,
+					/obj/item/stack/crafting/electronicparts/five,
+					/obj/item/stack/crafting/electronicparts/five,
+					/obj/item/stack/crafting/electronicparts/five)
+	crate_name = "scrap metal crate"
+
+/datum/supply_pack/engine/scrap_p
+	name = "Scrap Blackpowder Crate"
+	desc = "A crate containing a small amout of left over blackpowder and brass from other printings."
+	cost = 3500 //Only have 5 powder
+	contains = list(/obj/item/stack/crafting/powder,
+					/obj/item/stack/crafting/powder,
+					/obj/item/stack/crafting/powder,
+					/obj/item/stack/crafting/powder)
+	crate_name = "scrap blackpowder crate"
+
+/datum/supply_pack/engine/scrap_m
+	name = "Scrap Metal Crate"
+	desc = "A crate containing left over metal parts from other printings."
+	cost = 3500 //Cheaper to just get metal crates
+	contains = list(/obj/item/stack/crafting/metalparts/five,
+					/obj/item/stack/crafting/metalparts/five,
+					/obj/item/stack/crafting/metalparts/five,
+					/obj/item/stack/crafting/metalparts/five)
+	crate_name = "scrap metal crate"
+
+/datum/supply_pack/engine/scrap_advm
+	name = "Scrap High Quality Metal Crate"
+	desc = "A crate containing left over higher quality metal parts from other printings."
+	cost = 7000
+	contains = list(/obj/item/stack/crafting/goodparts/five,
+					/obj/item/stack/crafting/goodparts/five,
+					/obj/item/stack/crafting/goodparts/five,
+					/obj/item/stack/crafting/goodparts/five)
+	crate_name = "scrap metal crate"
+
 /datum/supply_pack/engine/solar
 	name = "Solar Panel Crate"
 	desc = "Go green with this DIY advanced solar array. Contains twenty one solar assemblies, a solar-control circuit board, and tracker. If you have any questions, please check out the enclosed instruction book."

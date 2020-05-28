@@ -110,23 +110,7 @@ the new instance inside the host to be updated to the template's stats.
 /mob/camera/disease/say(message, datum/language/language = null)
 	return
 
-/mob/camera/disease/Hear(message, atom/movable/speaker, message_language, raw_message, radio_freq, list/spans, message_mode, atom/movable/source)
-	. = ..()
-	var/atom/movable/to_follow = speaker
-	if(radio_freq)
-		var/atom/movable/virtualspeaker/V = speaker
-		to_follow = V.source
-	var/link
-	if(to_follow in hosts)
-		link = FOLLOW_LINK(src, to_follow)
-	else
-		link = ""
-	// Create map text prior to modifying message for goonchat
-	if (client?.prefs.chat_on_map && (client.prefs.see_chat_non_mob || ismob(speaker)))
-		create_chat_message(speaker, message_language, raw_message, spans, message_mode)
-	// Recompose the message, because it's scrambled by default
-	message = compose_message(speaker, message_language, raw_message, radio_freq, spans, message_mode, FALSE, source)
-	to_chat(src, "[link] [message]")
+
 
 /mob/camera/disease/Move(NewLoc, Dir = 0)
 	if(freemove)
