@@ -1,7 +1,7 @@
 /obj/item/seeds/buffalogourd
 	name = "pack of buffalo gourd seeds"
 	desc = "These seeds grow into buffalo vines."
-	icon_state = "seed-buffalo"
+	icon_state = "seed-gourd"
 	species = "buffalo gourd"
 	plantname = "buffalo vines"
 	product = /obj/item/reagent_containers/food/snacks/grown/buffalogourd
