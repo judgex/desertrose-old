@@ -552,6 +552,10 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 	name = "Head Scribe"
 	icon_state = "Head Scribe"
 
+/obj/effect/landmark/start/f13/seniorscribe
+	name = "Senior Scribe"
+	icon_state = "Head Scribe"
+
 /obj/effect/landmark/start/f13/sentinel
 	name = "Sentinel"
 	icon_state = "Paladin"
