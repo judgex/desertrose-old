@@ -13,7 +13,7 @@
 	lifespan = 50
 	endurance = 40
 	yield = 5
-	growthstages = 4
+	growthstages = 3
 	production = 2
 	maturation = 1
 
