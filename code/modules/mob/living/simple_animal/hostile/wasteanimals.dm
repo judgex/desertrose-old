@@ -321,11 +321,11 @@
 	taunt_chance = 30
 	speed = -1
 	maxHealth = 50
-	health = 50
+	health = 100
 	harm_intent_damage = 10
 	obj_damage = 15
 	melee_damage_lower = 10
-	melee_damage_upper = 10
+	melee_damage_upper = 20
 	attacktext = "bites"
 	attack_sound = 'sound/creatures/nightstalker_bite.ogg'
 	speak_emote = list("chitters")
@@ -354,12 +354,12 @@
 	emote_taunt = list("growls")
 	taunt_chance = 30
 	speed = -1
-	maxHealth = 100
-	health = 100
+	maxHealth = 300
+	health = 300
 	harm_intent_damage = 30
 	obj_damage = 15
-	melee_damage_lower = 10
-	melee_damage_upper = 10
+	melee_damage_lower = 20
+	melee_damage_upper = 40
 	attacktext = "bites"
 	attack_sound = 'sound/creatures/nightstalker_bite.ogg'
 	speak_emote = list("chitters")
@@ -368,7 +368,11 @@
 	gold_core_spawnable = HOSTILE_SPAWN
 	a_intent = INTENT_HARM
 
+/mob/living/simple_animal/hostile/stalker/Move()
+	icon_state = "nightstalker (M)"
 
+/mob/living/simple_animal/hostile/stalkeryoung/Move()
+	icon_state = "nightstalker (M)"
 
 /mob/living/simple_animal/hostile/molerat
 	name = "molerat"
