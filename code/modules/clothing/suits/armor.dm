@@ -429,16 +429,16 @@
 	item_state = "rusted_cowboy"
 	armor = list("melee" = 22, "bullet" = 24, "laser" = 45, "energy" = 35, "bomb" = 35, "bio" = 40, "rad" = 10, "fire" = 60, "acid" = 10)
 
-/obj/item/clothing/suit/armor/f13/raidercombat
+/obj/item/clothing/suit/armor/f13/radier/raidercombat
 	name = "raider combat armor"
 	desc = "An old military grade pre war combat armor.It appears to be fitted with metal plates to replace the decaying ceramic plates"
 	icon_state = "raider_combat"
 	item_state = "raider_combat"
 	armor = list("melee" = 42, "bullet" = 40, "laser" = 35, "energy" = 30, "bomb" = 50, "bio" = 50, "rad" = 10, "fire" = 60, "acid" = 10)
 
-/obj/item/clothing/suit/armor/f13/raider_metal
+/obj/item/clothing/suit/armor/f13/raider/raidermetal
 	name = "raider metal armor"
-	desc = "A suit of welded, fused metal plates."
+	desc = "A suit of welded, fused metal plates. Looks bulky, with great protection"
 	icon_state = "raider_metal"
 	item_state = "raider_metal"
 	armor = list("melee" = 40, "bullet" = 40, "laser" = 35, "energy" = 35, "bomb" = 50, "bio" = 50, "rad" = 10, "fire" = 60, "acid" = 10)

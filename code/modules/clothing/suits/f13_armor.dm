@@ -67,14 +67,7 @@
 	icon = 'icons/fallout/clothing/suits.dmi'
 
 */
-/obj/item/clothing/suit/armor/f13/raidermetal
-	name = "raider metal armor"
-	desc = "A set of hand-crafted metal armor created from a variety of scrap pieces attached to a black leather base layer."
-	icon_state = "raidermetal"
-	item_state = "raidermetal"
-	armor = list(melee = 40, bullet = 30, laser = 20, energy = 20, bomb = 30, bio = 0, rad = 0, fire = 10, acid = 0)
-	resistance_flags = FIRE_PROOF
-	icon = 'icons/fallout/clothing/suits.dmi'
+
 /*
 /obj/item/clothing/suit/armor/f13/bmetalarmor //uses the same path as bmetalarmor in armor.dm, causing the assless chaps bug
 	name = "black metal armor"
