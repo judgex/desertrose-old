@@ -448,9 +448,10 @@
 /obj/item/clothing/head/helmet/f13/hoodedmask
 	name = "hooded mask"
 	desc = "A gask mask with the addition of a hood."
-	icon_state = "hoddedmask"
-	item_state = "hoodedmask"
+	icon_state = "Hooded_Gask_Mask"
+	item_state = "Hooded_Gask_Mask"
 	armor = list("melee" = 20, "bullet" = 20, "laser" = 20, "energy" = 20, "bomb" = 70, "bio" = 70, "rad" = 70, "fire" = 65, "acid" = 30)
+	icon = 'icons/fallout/clothing_w/head.dmi'
 
 /obj/item/clothing/head/helmet/f13/combat/knightcap
 	name = "knight-captain combat helmet"
