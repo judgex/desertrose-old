@@ -1,4 +1,3 @@
-//Fallout 13 fridge directory
 
 /obj/structure/closet/fridge
 	name = "fridge"

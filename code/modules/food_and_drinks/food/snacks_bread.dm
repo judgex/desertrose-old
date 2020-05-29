@@ -1,4 +1,3 @@
-
 /obj/item/reagent_containers/food/snacks/store/bread
 	icon = 'icons/obj/food/burgerbread.dmi'
 	volume = 80

@@ -78,7 +78,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 /datum/reagent/consumable/ethanol/beer
 	name = "Beer"
 	id = "beer"
-	description = "An alcoholic beverage brewed since ancient times on Old Earth. Still popular today."
+	description = "An alcoholic beverage brewed since before the war. Still popular today."
 	color = "#664300" // rgb: 102, 67, 0
 	nutriment_factor = 1 * REAGENTS_METABOLISM
 	boozepwr = 25
@@ -89,7 +89,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 /datum/reagent/consumable/ethanol/beer/green
 	name = "Green Beer"
 	id = "greenbeer"
-	description = "An alcoholic beverage brewed since ancient times on Old Earth. This variety is dyed a festive green."
+	description = "An alcoholic beverage brewed since before the war. This variety is dyed a festive green."
 	color = "#A8E61D"
 	taste_description = "green piss water"
 	glass_icon_state = "greenbeerglass"
@@ -266,7 +266,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 /datum/reagent/consumable/ethanol/gin
 	name = "Gin"
 	id = "gin"
-	description = "It's gin. In space. I say, good sir."
+	description = "It's gin. I say, good sir."
 	color = "#664300" // rgb: 102, 67, 0
 	boozepwr = 45
 	taste_description = "an alcoholic christmas tree"
@@ -325,7 +325,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 /datum/reagent/consumable/ethanol/lizardwine
 	name = "Lizard wine"
 	id = "lizardwine"
-	description = "An alcoholic beverage from Space China, made by infusing lizard tails in ethanol."
+	description = "An alcoholic beverage from China, made by infusing lizard tails in ethanol."
 	color = "#7E4043" // rgb: 126, 64, 67
 	boozepwr = 45
 	taste_description = "scaley sweetness"
@@ -749,7 +749,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 /datum/reagent/consumable/ethanol/manhattan_proj
 	name = "Manhattan Project"
 	id = "manhattan_proj"
-	description = "A scientist's drink of choice, for pondering ways to blow up the station."
+	description = "A scientist's drink of choice, for pondering ways to blow up the world."
 	color = "#664300" // rgb: 102, 67, 0
 	boozepwr = 45
 	taste_description = "death, the destroyer of worlds"
@@ -765,7 +765,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 /datum/reagent/consumable/ethanol/whiskeysoda
 	name = "Whiskey Soda"
 	id = "whiskeysoda"
-	description = "For the more refined griffon."
+	description = "For the more refined gentleman."
 	color = "#664300" // rgb: 102, 67, 0
 	boozepwr = 70
 	taste_description = "soda"
@@ -1122,7 +1122,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	glass_name = "Drunken Blumpkin"
 	glass_desc = "A drink for the drunks."
 
-/datum/reagent/consumable/ethanol/whiskey_sour //Requested since we had whiskey cola and soda but not sour.
+/datum/reagent/consumable/ethanol/whiskey_sour
 	name = "Whiskey Sour"
 	id = "whiskey_sour"
 	description = "Lemon juice/whiskey/sugar mixture. Moderate alcohol content."
@@ -1165,7 +1165,6 @@ All effects don't start immediately, but rather get worse over time; the rate is
 		step_towards(O, get_turf(M))
 	return ..()
 
-//Another reference. Heals those in critical condition extremely quickly.
 /datum/reagent/consumable/ethanol/hearty_punch
 	name = "Hearty Punch"
 	id = "hearty_punch"
@@ -1188,7 +1187,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 		. = 1
 	return ..() || .
 
-/datum/reagent/consumable/ethanol/bacchus_blessing //An EXTREMELY powerful drink. Smashed in seconds, dead in minutes.
+/datum/reagent/consumable/ethanol/bacchus_blessing
 	name = "Bacchus' Blessing"
 	id = "bacchus_blessing"
 	description = "Unidentifiable mixture. Unmeasurably high alcohol content."
@@ -1198,8 +1197,6 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	glass_icon_state = "glass_brown2"
 	glass_name = "Bacchus' Blessing"
 	glass_desc = "You didn't think it was possible for a liquid to be so utterly revolting. Are you sure about this...?"
-
-
 
 /datum/reagent/consumable/ethanol/atomicbomb
 	name = "Atomic Bomb"
@@ -1382,7 +1379,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	description = "Kicks just as hard as licking the powercell on a baton, but tastier."
 	color = "#cc0000"
 	boozepwr = 35
-	taste_description = "an invigorating bitter freshness which suffuses your being; no enemy of the station will go unrobusted this day"
+	taste_description = "an invigorating bitter freshness which suffuses your being."
 	glass_icon_state = "quadruple_sec"
 	glass_name = "Quadruple Sec"
 	glass_desc = "An intimidating and lawful beverage dares you to violate the law and make its day. Still can't drink it on duty, though."
@@ -1812,7 +1809,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 		if(0 to 20)
 			alcohol_description = "sweet"
 		else
-			alcohol_description = "watery" //How the hell did you get negative boozepwr?
+			alcohol_description = "watery"
 
 	var/list/fruits = list()
 	if(names_in_order.len <= 3)

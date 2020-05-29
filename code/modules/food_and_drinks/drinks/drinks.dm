@@ -1,6 +1,3 @@
-////////////////////////////////////////////////////////////////////////////////
-/// Drinks.
-////////////////////////////////////////////////////////////////////////////////
 /obj/item/reagent_containers/food/drinks
 	name = "drink"
 	desc = "yummy"
@@ -185,7 +182,6 @@
 	materials = list(MAT_METAL=400)
 	volume = 25
 
-///////////////////////////////////////////////Drinks
 //Notes by Darem: Drinks are simply containers that start preloaded. Unlike condiments, the contents can be ingested directly
 //	rather then having to add it to something else first. They should only contain liquids. They have a default container size of 50.
 //	Formatting is the same as food.
@@ -332,9 +328,6 @@
 		name = "small carton"
 		desc = "A small carton, intended for holding drinks."
 
-
-
-//////////////////////////drinkingglass and shaker//
 //Note by Darem: This code handles the mixing of drinks. New drinks go in three places: In Chemistry-Reagents.dm (for the drink
 //	itself), in Chemistry-Recipes.dm (for the reaction that changes the components into the drink), and here (for the drinking glass
 //	icon states.
@@ -377,7 +370,6 @@
 	volume = 30
 	spillable = TRUE
 
-//////////////////////////soda_cans//
 //These are in their own group to be used as IED's in /obj/item/grenade/ghettobomb.dm
 
 /obj/item/reagent_containers/food/drinks/soda_cans
@@ -503,7 +495,6 @@
 	desc = "There is no air shortage. Do not drink."
 	icon_state = "air"
 	list_reagents = list("nitrogen" = 24, "oxygen" = 6)
-//F13 EDIT
 
 /obj/item/reagent_containers/food/drinks/soda_cans/f13nukacola
 	name = "Nuka-Cola"

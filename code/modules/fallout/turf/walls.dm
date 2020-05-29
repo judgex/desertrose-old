@@ -1,5 +1,3 @@
-//Fallout 13 general destructible walls directory
-
 /turf/closed/wall/f13/
 	name = "glitch"
 	desc = "<font color='#6eaa2c'>You suddenly realize the truth - there is no spoon.<br>Something has caused a glitch in the simulation.</font>"
@@ -168,8 +166,6 @@
 	smooth = SMOOTH_OLD
 	canSmoothWith = list(/turf/closed/wall/f13/vault, /turf/closed/wall/r_wall/f13/vault, /turf/closed/wall)
 
-//Fallout 13 indestructible walls
-
 /turf/closed/indestructible/f13
 	name = "glitch"
 	desc = "<font color='#6eaa2c'>You suddenly realize the truth - there is no spoon.<br>Something has caused a glitch in the simulation.</font>"
@@ -233,7 +229,6 @@
 	..()
 	icon_state = "rock[rand(1,6)]"
 
-//Splashscreen
 /*
 /turf/closed/indestructible/f13/splashscreen
 	var/tickerPeriod = 300 //in deciseconds

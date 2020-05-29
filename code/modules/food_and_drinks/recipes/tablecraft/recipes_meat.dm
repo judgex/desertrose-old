@@ -1,6 +1,4 @@
-
-
-////////////////////////////////////////////////KEBABS////////////////////////////////////////////////
+// see code/module/crafting/table.dm
 
 /datum/crafting_recipe/food/humankebab
 	name = "Human kebab"
@@ -38,9 +36,6 @@
 	result = /obj/item/reagent_containers/food/snacks/kebab/tail
 	subcategory = CAT_MEAT
 
-// see code/module/crafting/table.dm
-
-////////////////////////////////////////////////FISH////////////////////////////////////////////////
 
 /datum/crafting_recipe/food/cubancarp
 	name = "Cuban carp"
@@ -81,8 +76,6 @@
 	result = /obj/item/reagent_containers/food/snacks/sashimi
 	subcategory = CAT_MEAT
 
-////////////////////////////////////////////////MR SPIDER////////////////////////////////////////////////
-
 /datum/crafting_recipe/food/spidereggsham
 	name = "Spider eggs ham"
 	reqs = list(
@@ -92,8 +85,6 @@
 	)
 	result = /obj/item/reagent_containers/food/snacks/spidereggsham
 	subcategory = CAT_MEAT
-
-////////////////////////////////////////////////MISC RECIPE's////////////////////////////////////////////////
 
 /datum/crafting_recipe/food/cornedbeef
 	name = "Corned beef"

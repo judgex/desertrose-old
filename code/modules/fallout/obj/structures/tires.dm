@@ -1,5 +1,3 @@
-//Fallout 13 automobile tires directory
-
 /obj/structure/tires
 	name = "tire"
 	desc = "A ring-shaped vehicle component that covers the wheel's rim to protect it and enable better vehicle performance."

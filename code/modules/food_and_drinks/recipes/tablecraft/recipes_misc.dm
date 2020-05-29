@@ -1,8 +1,6 @@
 
 // see code/module/crafting/table.dm
 
-// MISC
-
 /datum/crafting_recipe/food/candiedapple
 	name = "Candied apple"
 	reqs = list(/datum/reagent/water = 5,
@@ -105,16 +103,14 @@
 	result = /obj/item/reagent_containers/food/snacks/baguette
 	subcategory = CAT_MISCFOOD
 
-////////////////////////////////////////////////TOAST////////////////////////////////////////////////
-
-/datum/crafting_recipe/food/slimetoast
+/*/datum/crafting_recipe/food/slimetoast
 	name = "Slime toast"
 	reqs = list(
 		/datum/reagent/toxin/slimejelly = 5,
 		/obj/item/reagent_containers/food/snacks/breadslice/plain = 1
 	)
 	result = /obj/item/reagent_containers/food/snacks/jelliedtoast/slime
-	subcategory = CAT_MISCFOOD
+	subcategory = CAT_MISCFOOD*/
 
 /datum/crafting_recipe/food/jelliedyoast
 	name = "Jellied toast"
@@ -289,7 +285,7 @@
 	result = /obj/item/reagent_containers/food/snacks/stuffedlegion
 	subcategory = CAT_MISCFOOD*/
 
-/datum/crafting_recipe/food/lizardwine
+/*/datum/crafting_recipe/food/lizardwine
 	name = "Lizard wine"
 	time = 40
 	reqs = list(
@@ -297,7 +293,7 @@
 		/datum/reagent/consumable/ethanol = 100
 	)
 	result = /obj/item/reagent_containers/food/drinks/bottle/lizardwine
-	subcategory = CAT_MISCFOOD
+	subcategory = CAT_MISCFOOD*/
 
 /*/datum/crafting_recipe/food/powercrepe
 	name = "Powercrepe"

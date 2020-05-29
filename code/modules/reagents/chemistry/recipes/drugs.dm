@@ -1,10 +1,10 @@
 /datum/chemical_reaction/space_drugs
-	name = "Space Drugs"
+	name = "Drugs"
 	id = "space_drugs"
 	results = list("space_drugs" = 3)
 	required_reagents = list("mercury" = 1, "sugar" = 1, "lithium" = 1)
 
-/datum/chemical_reaction/crank
+/*/datum/chemical_reaction/crank
 	name = "Crank"
 	id = "crank"
 	results = list("crank" = 5)
@@ -32,4 +32,4 @@
 	name = "aranesp"
 	id = "aranesp"
 	results = list("aranesp" = 3)
-	required_reagents = list("epinephrine" = 1, "atropine" = 1, "morphine" = 1)
+	required_reagents = list("epinephrine" = 1, "atropine" = 1, "morphine" = 1)*/

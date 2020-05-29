@@ -135,7 +135,7 @@
 		new /obj/effect/hotspot(turf)
 	holder.chem_temp = 1000 // hot as shit
 
-/datum/chemical_reaction/reagent_explosion/methsplosion
+/*/datum/chemical_reaction/reagent_explosion/methsplosion
 	name = "Meth explosion"
 	id = "methboom1"
 	required_temp = 380 //slightly above the meth mix time.
@@ -154,7 +154,7 @@
 /datum/chemical_reaction/reagent_explosion/methsplosion/methboom2
 	id = "methboom2"
 	required_reagents = list("diethylamine" = 1, "iodine" = 1, "phosphorus" = 1, "hydrogen" = 1) //diethylamine is often left over from mixing the ephedrine.
-	required_temp = 300 //room temperature, chilling it even a little will prevent the explosion
+	required_temp = 300*/ //room temperature, chilling it even a little will prevent the explosion
 
 /datum/chemical_reaction/sorium
 	name = "Sorium"
@@ -181,7 +181,7 @@
 	var/range = CLAMP(sqrt(created_volume), 1, 6)
 	goonchem_vortex(T, 1, range)
 
-/datum/chemical_reaction/liquid_dark_matter
+/*/datum/chemical_reaction/liquid_dark_matter
 	name = "Liquid Dark Matter"
 	id = "liquid_dark_matter"
 	results = list("liquid_dark_matter" = 3)
@@ -204,7 +204,7 @@
 /datum/chemical_reaction/ldm_vortex/on_reaction(datum/reagents/holder, created_volume)
 	var/turf/T = get_turf(holder.my_atom)
 	var/range = CLAMP(sqrt(created_volume/2), 1, 6)
-	goonchem_vortex(T, 0, range)
+	goonchem_vortex(T, 0, range)*/
 
 /datum/chemical_reaction/flash_powder
 	name = "Flash powder"

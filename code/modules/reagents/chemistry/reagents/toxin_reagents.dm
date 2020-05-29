@@ -674,7 +674,7 @@
 	. = 1
 	..()
 
-/datum/reagent/toxin/heparin //Based on a real-life anticoagulant. I'm not a doctor, so this won't be realistic.
+/datum/reagent/toxin/heparin
 	name = "Heparin"
 	id = "heparin"
 	description = "A powerful anticoagulant. Victims will bleed uncontrollably and suffer scaling bruising."
@@ -692,7 +692,7 @@
 	return ..() || .
 
 
-/datum/reagent/toxin/rotatium //Rotatium. Fucks up your rotation and is hilarious
+/datum/reagent/toxin/rotatium
 	name = "Rotatium"
 	id = "rotatium"
 	description = "A constantly swirling, oddly colourful fluid. Causes the consumer's sense of direction and hand-eye coordination to become wild."
@@ -771,9 +771,6 @@
 	for(var/datum/reagent/medicine/R in M.reagents.reagent_list)
 		M.reagents.remove_reagent(R.id,remove_amt)
 	return ..()
-
-//ACID
-
 
 /datum/reagent/toxin/acid
 	name = "Sulphuric acid"

@@ -1,5 +1,3 @@
-//Fallout 13 wall destruction simulation
-
 /turf/closed/wall
 	var/damage = 0
 	var/damage_overlay = 0

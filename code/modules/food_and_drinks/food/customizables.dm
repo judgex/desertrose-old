@@ -4,13 +4,6 @@
 #define INGREDIENTS_STACKPLUSTOP 4
 #define INGREDIENTS_LINE 5
 
-//**************************************************************
-//
-// Customizable Food
-//
-//**************************************************************
-
-
 /obj/item/reagent_containers/food/snacks/customizable
 	bitesize = 4
 	w_class = WEIGHT_CLASS_SMALL
@@ -145,14 +138,6 @@
 		qdel(.)
 	return ..()
 
-
-
-
-
-/////////////////////////////////////////////////////////////////////////////
-//////////////      Customizable Food Types     /////////////////////////////
-/////////////////////////////////////////////////////////////////////////////
-
 /obj/item/reagent_containers/food/snacks/customizable/burger
 	name = "burger"
 	desc = "A timeless classic."
@@ -278,12 +263,6 @@
 /obj/item/reagent_containers/food/snacks/customizable/soup/Initialize()
 	. = ..()
 	eatverb = pick("slurp","sip","suck","inhale","drink")
-
-
-
-
-
-// Bowl ////////////////////////////////////////////////
 
 /obj/item/reagent_containers/glass/bowl
 	name = "bowl"

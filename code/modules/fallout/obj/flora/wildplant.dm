@@ -1,5 +1,3 @@
-//Fallout 13 wild plants directory
-
 /turf/open
 	var/list/allowed_plants
 

@@ -1,6 +1,3 @@
-
-
-///////////////////////////////////////////////Alchohol bottles! -Agouri //////////////////////////
 //Functionally identical to regular drinks. The only difference is that the default bottle size is 100. - Darem
 //Bottles now knockdown and break when smashed on people's heads. - Giacom
 
@@ -115,7 +112,6 @@
 
 	return
 
-//Keeping this here for now, I'll ask if I should keep it here.
 /obj/item/broken_bottle
 	name = "broken bottle"
 	desc = "A bottle with a sharp broken bottom."
@@ -239,9 +235,6 @@
 	redact()
 
 /obj/item/reagent_containers/food/drinks/bottle/absinthe/proc/redact()
-	// There was a large fight in the coderbus about a player reference
-	// in absinthe. Ergo, this is why the name generation is now so
-	// complicated. Judge us kindly.
 	var/shortname = pickweight(
 		list("T&T" = 1, "A&A" = 1, "Generic" = 1))
 	var/fullname
@@ -268,7 +261,6 @@
 
 	fullname = jointext(final_fullname, " ")
 
-	// Actually finally setting the new name and desc
 	name = "[shortname] [name]"
 	desc = "[desc] [fullname] Inc."
 
@@ -323,8 +315,6 @@
 	desc = "A bottle of pure Fernet Bronca, produced in Cordoba."
 	icon_state = "fernetbottle"
 	list_reagents = list("fernet" = 100)
-
-//////////////////////////JUICES AND STUFF ///////////////////////
 
 /obj/item/reagent_containers/food/drinks/bottle/orangejuice
 	name = "orange juice"
@@ -388,8 +378,6 @@
 	list_reagents = list("grenadine" = 100)
 	foodtype = FRUIT
 
-
-////////////////////////// MOLOTOV ///////////////////////
 /obj/item/reagent_containers/food/drinks/bottle/molotov
 	name = "molotov cocktail"
 	desc = "A throwing weapon used to ignite things, typically filled with an accelerant. Recommended highly by rioters and revolutionaries. Light and toss."

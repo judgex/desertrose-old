@@ -88,7 +88,7 @@
 	required_reagents = list("formaldehyde" = 1, "sodium" = 1, "chlorine" = 1, "lithium" = 1)
 	mix_message = "<span class='danger'>The mixture thins and loses all color.</span>"
 
-/datum/chemical_reaction/rotatium
+/*/datum/chemical_reaction/rotatium
 	name = "Rotatium"
 	id = "Rotatium"
 	results = list("rotatium" = 3)
@@ -100,7 +100,7 @@
 	id = "Skewium"
 	results = list("skewium" = 5)
 	required_reagents = list("rotatium" = 2, "plasma" = 2, "sacid" = 1)
-	mix_message = "<span class='danger'>Wow! it turns out if you mix rotatium with some plasma and sulphuric acid, it gets even worse!</span>"
+	mix_message = "<span class='danger'>Wow! it turns out if you mix rotatium with some plasma and sulphuric acid, it gets even worse!</span>"*/
 
 /datum/chemical_reaction/anacea
 	name = "Anacea"
@@ -108,8 +108,8 @@
 	results = list("anacea" = 3)
 	required_reagents = list("haloperidol" = 1, "impedrezene" = 1, "radium" = 1)
 
-/datum/chemical_reaction/mimesbane
+/*/datum/chemical_reaction/mimesbane
 	name = "Mime's Bane"
 	id = "mimesbane"
 	results = list("mimesbane" = 3)
-	required_reagents = list("radium" = 1, "mutetoxin" = 1, "nothing" = 1)
+	required_reagents = list("radium" = 1, "mutetoxin" = 1, "nothing" = 1)*/

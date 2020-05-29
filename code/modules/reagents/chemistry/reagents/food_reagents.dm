@@ -1,8 +1,3 @@
-///////////////////////////////////////////////////////////////////
-					//Food Reagents
-//////////////////////////////////////////////////////////////////
-
-
 // Part of the food code. Also is where all the food
 // 	condiments, additives, and such go.
 
@@ -443,9 +438,9 @@
 		qdel(hotspot)
 
 /datum/reagent/consumable/enzyme
-	name = "Universal Enzyme"
+	name = "Rennet"
 	id = "enzyme"
-	description = "A universal enzyme used in the preperation of certain chemicals and foods."
+	description = "A chemical used in the preperation of certain chemicals and foods."
 	color = "#365E30" // rgb: 54, 94, 48
 	taste_description = "sweetness"
 

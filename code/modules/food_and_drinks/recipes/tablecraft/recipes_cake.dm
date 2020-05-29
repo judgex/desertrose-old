@@ -66,14 +66,14 @@
 	result = /obj/item/reagent_containers/food/snacks/store/cake/chocolate
 	subcategory = CAT_CAKE
 
-/datum/crafting_recipe/food/birthdaycake
+/*/datum/crafting_recipe/food/birthdaycake
 	name = "Birthday cake"
 	reqs = list(
 		/obj/item/clothing/head/hardhat/cakehat = 1,
 		/obj/item/reagent_containers/food/snacks/store/cake/plain = 1
 	)
 	result = /obj/item/reagent_containers/food/snacks/store/cake/birthday
-	subcategory = CAT_CAKE
+	subcategory = CAT_CAKE*/
 
 /datum/crafting_recipe/food/braincake
 	name = "Brain cake"

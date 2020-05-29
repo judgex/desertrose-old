@@ -1,8 +1,6 @@
 
 // see code/module/crafting/table.dm
 
-////////////////////////////////////////////////SPAGHETTI////////////////////////////////////////////////
-
 /datum/crafting_recipe/food/tomatopasta
 	name = "Tomato pasta"
 	reqs = list(
@@ -29,14 +27,14 @@
 	result = /obj/item/reagent_containers/food/snacks/meatballspaghetti
 	subcategory = CAT_SPAGHETTI*/
 
-/datum/crafting_recipe/food/spesslaw
+/*/datum/crafting_recipe/food/spesslaw
 	name = "Spesslaw"
 	reqs = list(
 		/obj/item/reagent_containers/food/snacks/boiledspaghetti = 1,
 		/obj/item/reagent_containers/food/snacks/faggot = 4
 	)
 	result = /obj/item/reagent_containers/food/snacks/spesslaw
-	subcategory = CAT_SPAGHETTI
+	subcategory = CAT_SPAGHETTI*/
 
 /datum/crafting_recipe/food/beefnoodle
 	name = "Beef noodle"

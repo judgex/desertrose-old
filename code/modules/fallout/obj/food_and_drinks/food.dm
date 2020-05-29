@@ -23,7 +23,7 @@
 
 /obj/item/reagent_containers/food/snacks/meat/slab/wolf
 	name = "dog meat"
-	desc = "Some Asians love this stuff.<br>It does not taste too bad actually."
+	desc = "Some wastelanders love this stuff.<br>It does not taste too bad actually."
 	list_reagents = list("nutriment" = 6, "vitamin" = 2)
 	bitesize = 4 //Average animal
 	filling_color = "#FA8072"
@@ -260,7 +260,6 @@
 	list_reagents = list("nutriment" = 10)
 	filling_color = "#B22222"
 
-//WASTELAND EGGS
 
 /obj/item/reagent_containers/food/snacks/f13/deathclawegg
     name = "Deathclaw Egg"
@@ -269,8 +268,6 @@
     bonus_reagents = list("toxin" = 30)
     list_reagents = list("eggyolk" = 40)
     filling_color = "#F0E68C"
-
-//WASTELAND PREPARED MEALS
 
 /obj/item/reagent_containers/food/snacks/f13/molejerky
     name = "Molerat Wondermeat"

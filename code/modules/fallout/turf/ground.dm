@@ -1,5 +1,3 @@
-//Fallout 13 general indestructible floor directory
-
 /turf
 	var/baseturf_icon
 	var/baseturf_dir = 0
@@ -165,8 +163,6 @@
 				ChangeTurf(baseturfs)
 		if(1)
 			ChangeTurf(baseturfs)
-
-/////////////////////////////////////////////////////////
 
 #define SHROOM_SPAWN_GROUND	1
 

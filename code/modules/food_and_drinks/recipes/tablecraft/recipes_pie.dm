@@ -1,8 +1,6 @@
 
 // see code/module/crafting/table.dm
 
-////////////////////////////////////////////////PIES////////////////////////////////////////////////
-
 /datum/crafting_recipe/food/bananacreampie
 	name = "Banana cream pie"
 	reqs = list(
@@ -34,7 +32,7 @@
 	subcategory = CAT_PIE
 
 /datum/crafting_recipe/food/xenopie
-	name = "Xeno pie"
+	name = "Mutant pie"
 	reqs = list(
 		/obj/item/reagent_containers/food/snacks/pie/plain = 1,
 		/obj/item/reagent_containers/food/snacks/meat/cutlet/xeno = 1
@@ -108,7 +106,7 @@
 	result = /obj/item/reagent_containers/food/snacks/pie/pumpkinpie
 	subcategory = CAT_PIE
 
-/datum/crafting_recipe/food/goldenappletart
+/datum/crafting_recipe/food/*/goldenappletart
 	name = "Golden apple tart"
 	reqs = list(
 		/datum/reagent/consumable/milk = 5,
@@ -117,7 +115,7 @@
 		/obj/item/reagent_containers/food/snacks/grown/apple/gold = 1
 	)
 	result = /obj/item/reagent_containers/food/snacks/pie/appletart
-	subcategory = CAT_PIE
+	subcategory = CAT_PIE*/
 
 /datum/crafting_recipe/food/grapetart
 	name = "Grape tart"
@@ -130,7 +128,7 @@
 	result = /obj/item/reagent_containers/food/snacks/pie/grapetart
 	subcategory = CAT_PIE
 
-/datum/crafting_recipe/food/blumpkinpie
+/*/datum/crafting_recipe/food/blumpkinpie
 	name = "Blumpkin pie"
 	reqs = list(
 		/datum/reagent/consumable/milk = 5,
@@ -139,7 +137,7 @@
 		/obj/item/reagent_containers/food/snacks/grown/blumpkin = 1
 	)
 	result = /obj/item/reagent_containers/food/snacks/pie/blumpkinpie
-	subcategory = CAT_PIE
+	subcategory = CAT_PIE*/
 
 /datum/crafting_recipe/food/dulcedebatata
 	name = "Dulce de batata"

@@ -1,5 +1,3 @@
-//Fallout 13 floor plating directory
-
 /turf/open/floor/plating/wooden
 	name = "house base"
 	icon_state = "housebase"

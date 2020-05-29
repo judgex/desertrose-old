@@ -1,4 +1,3 @@
-
 /datum/chemical_reaction/leporazine
 	name = "Leporazine"
 	id = "leporazine"
@@ -13,7 +12,7 @@
 	required_reagents = list("carpotoxin" = 1, "cryptobiolin" = 1, "copper" = 1)
 
 /datum/chemical_reaction/spaceacillin
-	name = "Spaceacillin"
+	name = "penicillin"
 	id = "spaceacillin"
 	results = list("spaceacillin" = 2)
 	required_reagents = list("cryptobiolin" = 1, "epinephrine" = 1)

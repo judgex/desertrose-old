@@ -1,11 +1,3 @@
-//In the beginning of time, there was a door subtype called /dooor/ to allow a shitcode copypaste.
-// "Fuck them copypastes, someone pls, make a system for dooor so no one gets to copypaste shit!"
-//  - bartnixon
-// "The system was always there, you just needed to use it ..."
-//  - bauen1, the guy having to clean up the mess
-// "I know what you feel, bro (and thx)."
-//  - maxyo
-
 /obj/structure/simple_door
 	name = "wooden door"
 	desc = "It opens and closes - nothing out of the ordinary."

@@ -56,9 +56,6 @@
 		return !density
 */
 
-
-/////BARRICADE TYPES///////
-
 /obj/structure/barricade/wooden
 	name = "wooden barricade"
 	desc = "This space is blocked off by a wooden barricade."

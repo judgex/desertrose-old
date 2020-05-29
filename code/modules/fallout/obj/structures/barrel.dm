@@ -1,4 +1,3 @@
-//Fallout 13 barrels directory
 
 /obj/structure/reagent_dispensers/barrel
 	name = "barrel"
@@ -113,7 +112,7 @@ obj/structure/reagent_dispensers/barrel/explosive/bullet_act(obj/item/projectile
 
 /obj/structure/reagent_dispensers/barrel/three
 	name = "three old barrels"
-	desc = "Ancient containers with something inside of them. Or are they empty? Actually, how would you know that..."
+	desc = "Ancient containers with something inside of them."
 	icon_state = "three_b"
 	tank_volume = 1500
 	reagent_id = "water"
@@ -122,7 +121,7 @@ obj/structure/reagent_dispensers/barrel/explosive/bullet_act(obj/item/projectile
 
 /obj/structure/reagent_dispensers/barrel/four
 	name = "four old barrels"
-	desc = "Ancient containers with something inside of them. Or are they empty? Actually, that's a lot of barrels standing in a single spot..."
+	desc = "Ancient containers with something inside of them."
 	icon_state = "four_b"
 	tank_volume = 800
 	reagent_id = "radium"

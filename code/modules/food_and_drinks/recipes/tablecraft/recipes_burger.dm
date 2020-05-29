@@ -1,9 +1,6 @@
 
 // see code/module/crafting/table.dm
 
-////////////////////////////////////////////////BURGERS////////////////////////////////////////////////
-
-
 /datum/crafting_recipe/food/humanburger
 	name = "Human burger"
 	reqs = list(
@@ -55,7 +52,7 @@
 	subcategory = CAT_BURGER
 
 /datum/crafting_recipe/food/xenoburger
-	name = "Xeno burger"
+	name = "Mutant burger"
 	reqs = list(
 		/obj/item/reagent_containers/food/snacks/meat/steak/xeno = 1,
 		/obj/item/reagent_containers/food/snacks/bun = 1

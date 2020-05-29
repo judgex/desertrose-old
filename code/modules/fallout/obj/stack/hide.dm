@@ -1,5 +1,3 @@
-//Fallout 13 animal hides directory
-
 /obj/item/stack/sheet/animalhide/gecko
 	name = "gecko skin"
 	desc = "The perfect material for crafting clothing and armor."

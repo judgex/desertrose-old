@@ -1,5 +1,3 @@
-//Fallout 13 general destructible floor directory
-
 /turf/open/floor/f13
 	name = "floor"
 

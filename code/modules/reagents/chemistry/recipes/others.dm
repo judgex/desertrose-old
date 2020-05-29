@@ -1,4 +1,3 @@
-
 /datum/chemical_reaction/sterilizine
 	name = "Sterilizine"
 	id = "sterilizine"
@@ -36,7 +35,7 @@
 	required_reagents = list("water" = 1, "sodium" = 1, "chlorine" = 1)
 
 /datum/chemical_reaction/plasmasolidification
-	name = "Solid Plasma"
+	name = "Solid fuel crystals"
 	id = "solidplasma"
 	required_reagents = list("iron" = 5, "frostoil" = 5, "plasma" = 20)
 	mob_react = FALSE
@@ -119,9 +118,6 @@
 	id = "mulligan"
 	results = list("mulligan" = 1)
 	required_reagents = list("slime_toxin" = 1, "stablemutationtoxin" = 1)
-
-
-////////////////////////////////// VIROLOGY //////////////////////////////////////////
 
 /datum/chemical_reaction/virus_food
 	name = "Virus Food"
@@ -324,11 +320,6 @@
 		if(D)
 			D.Neuter()
 
-
-
-////////////////////////////////// foam and foam precursor ///////////////////////////////////////////////////
-
-
 /datum/chemical_reaction/surfactant
 	name = "Foam surfactant"
 	id = "foam surfactant"
@@ -350,7 +341,6 @@
 	s.start()
 	holder.clear_reagents()
 	return
-
 
 /datum/chemical_reaction/metalfoam
 	name = "Metal Foam"
@@ -411,9 +401,6 @@
 	required_reagents = list("foaming_agent" = 3, "acetone" = 1, "iron" = 1)
 	mix_message = "The solution mixes into a frothy metal foam and conforms to the walls of its container."
 
-
-/////////////////////////////// Cleaning and hydroponics /////////////////////////////////////////////////
-
 /datum/chemical_reaction/ammonia
 	name = "Ammonia"
 	id = "ammonia"
@@ -427,7 +414,7 @@
 	required_reagents = list ("ammonia" = 1, "ethanol" = 1)
 
 /datum/chemical_reaction/space_cleaner
-	name = "Space cleaner"
+	name = "cleaner"
 	id = "cleaner"
 	results = list("cleaner" = 2)
 	required_reagents = list("ammonia" = 1, "water" = 1)
@@ -456,19 +443,17 @@
 	results = list("drying_agent" = 3)
 	required_reagents = list("stable_plasma" = 2, "ethanol" = 1, "sodium" = 1)
 
-//////////////////////////////////// Other goon stuff ///////////////////////////////////////////
-
 /datum/chemical_reaction/acetone
 	name = "acetone"
 	id = "acetone"
 	results = list("acetone" = 3)
 	required_reagents = list("oil" = 1, "welding_fuel" = 1, "oxygen" = 1)
 
-/datum/chemical_reaction/carpet
+/*/datum/chemical_reaction/carpet
 	name = "carpet"
 	id = "carpet"
 	results = list("carpet" = 2)
-	required_reagents = list("space_drugs" = 1, "blood" = 1)
+	required_reagents = list("space_drugs" = 1, "blood" = 1)*/
 
 /datum/chemical_reaction/oil
 	name = "Oil"
@@ -489,7 +474,7 @@
 	required_reagents = list("oil" = 1)
 	required_temp = 480
 
-/datum/chemical_reaction/colorful_reagent
+/*/datum/chemical_reaction/colorful_reagent
 	name = "colorful_reagent"
 	id = "colorful_reagent"
 	results = list("colorful_reagent" = 5)
@@ -502,7 +487,7 @@
 	required_temp = 374
 
 /datum/chemical_reaction/life/on_reaction(datum/reagents/holder, created_volume)
-	chemical_mob_spawn(holder, rand(1, round(created_volume, 1)), "Life") // Lol.
+	chemical_mob_spawn(holder, rand(1, round(created_volume, 1)), "Life")
 
 /datum/chemical_reaction/corgium
 	name = "corgium"
@@ -532,7 +517,7 @@
 	name = "concentrated_barbers_aid"
 	id = "concentrated_barbers_aid"
 	results = list("concentrated_barbers_aid" = 2)
-	required_reagents = list("barbers_aid" = 1, "stablemutationtoxin" = 1)
+	required_reagents = list("barbers_aid" = 1, "stablemutationtoxin" = 1)*/
 
 /datum/chemical_reaction/saltpetre
 	name = "saltpetre"
@@ -558,17 +543,17 @@
 	results = list("royal_bee_jelly" = 5)
 	required_reagents = list("stablemutationtoxin" = 10, "honey" = 40)
 
-/datum/chemical_reaction/laughter
+/*/datum/chemical_reaction/laughter
 	name = "laughter"
 	id = "laughter"
-	results = list("laughter" = 10) // Fuck it. I'm not touching this one.
-	required_reagents = list("sugar" = 1, "banana" = 1)
+	results = list("laughter" = 10)
+	required_reagents = list("sugar" = 1, "banana" = 1)*/
 
 /datum/chemical_reaction/plastic_polymers
 	name = "plastic polymers"
 	id = "plastic_polymers"
 	required_reagents = list("oil" = 5, "sacid" = 2, "ash" = 3)
-	required_temp = 374 //lazily consistent with soap & other crafted objects generically created with heat.
+	required_temp = 374
 
 /datum/chemical_reaction/plastic_polymers/on_reaction(datum/reagents/holder, created_volume)
 	var/location = get_turf(holder.my_atom)

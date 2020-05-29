@@ -1,10 +1,6 @@
 
 // see code/datums/recipe.dm
-
-
 // see code/module/crafting/table.dm
-
-////////////////////////////////////////////////SANDWICHES////////////////////////////////////////////////
 
 /datum/crafting_recipe/food/sandwich
 	name = "Sandwich"

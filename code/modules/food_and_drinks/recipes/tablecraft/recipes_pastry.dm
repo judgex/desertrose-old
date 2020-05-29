@@ -1,8 +1,6 @@
 
 // see code/module/crafting/table.dm
 
-////////////////////////////////////////////////DONUTS////////////////////////////////////////////////
-
 /*/datum/crafting_recipe/food/chaosdonut
 	name = "Chaos donut"
 	reqs = list(
@@ -41,16 +39,14 @@
 	result = /obj/item/reagent_containers/food/snacks/donut/jelly/cherryjelly
 	subcategory = CAT_PASTRY
 
-/datum/crafting_recipe/food/slimejellydonut
+/*/datum/crafting_recipe/food/slimejellydonut
 	name = "Slime jelly donut"
 	reqs = list(
 		/datum/reagent/toxin/slimejelly = 5,
 		/obj/item/reagent_containers/food/snacks/pastrybase = 1
 	)
 	result = /obj/item/reagent_containers/food/snacks/donut/jelly/slimejelly
-	subcategory = CAT_PASTRY
-
-////////////////////////////////////////////////WAFFLES AND PANCAKES////////////////////////////////////////////////
+	subcategory = CAT_PASTRY*/
 
 /datum/crafting_recipe/food/waffles
 	time = 15
@@ -116,9 +112,6 @@
 	result = /obj/item/reagent_containers/food/snacks/pancakes/chocolatechip
 	subcategory = CAT_PASTRY
 
-
-////////////////////////////////////////////////DONKPOCCKETS////////////////////////////////////////////////
-
 /datum/crafting_recipe/food/donkpocket
 	time = 15
 	name = "Donkpocket"
@@ -138,8 +131,6 @@
 	)
 	result = /obj/item/reagent_containers/food/snacks/dankpocket
 	subcategory = CAT_PASTRY
-
-////////////////////////////////////////////////MUFFINS////////////////////////////////////////////////
 
 /datum/crafting_recipe/food/muffin
 	time = 15

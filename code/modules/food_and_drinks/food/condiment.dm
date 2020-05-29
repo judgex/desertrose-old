@@ -1,10 +1,7 @@
-
-///////////////////////////////////////////////Condiments
 //Notes by Darem: The condiments food-subtype is for stuff you don't actually eat but you use to modify existing food. They all
 //	leave empty containers when used up and can be filled/re-filled with other items. Formatting for first section is identical
 //	to mixed-drinks code. If you want an object that starts pre-loaded, you need to make it in addition to the other code.
 
-//Food items that aren't eaten normally and leave an empty container behind.
 /obj/item/reagent_containers/food/condiment
 	name = "condiment container"
 	desc = "Just your average condiment container."
@@ -225,10 +222,6 @@
 	list_reagents = list("mayonnaise" = 50)
 	possible_states = list()
 
-
-
-//Food packs. To easily apply deadly toxi... delicious sauces to your food!
-
 /obj/item/reagent_containers/food/condiment/pack
 	name = "condiment pack"
 	desc = "A small plastic pack with condiments to put on your food."
@@ -275,13 +268,11 @@
 		icon_state = "condi_empty"
 		desc = "A small condiment pack. It is empty."
 
-//Ketchup
 /obj/item/reagent_containers/food/condiment/pack/ketchup
 	name = "ketchup pack"
 	originalname = "ketchup"
 	list_reagents = list("ketchup" = 10)
 
-//Hot sauce
 /obj/item/reagent_containers/food/condiment/pack/hotsauce
 	name = "hotsauce pack"
 	originalname = "hotsauce"

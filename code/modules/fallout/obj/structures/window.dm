@@ -1,5 +1,3 @@
-//Fallout 13 main windows directory
-
 /obj/structure/window/fulltile/ruins
 	icon = 'icons/obj/wood_window.dmi'
 	icon_state = "ruinswindow"

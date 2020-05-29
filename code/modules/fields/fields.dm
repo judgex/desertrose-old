@@ -1,4 +1,3 @@
-
 //Movable and easily code-modified fields! Allows for custom AOE effects that affect movement and anything inside of them, and can do custom turf effects!
 //Supports automatic recalculation/reset on movement.
 //If there's any way to make this less CPU intensive than I've managed, gimme a call or do it yourself! - kevinz000

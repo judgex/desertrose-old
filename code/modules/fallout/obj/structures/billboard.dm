@@ -1,5 +1,3 @@
-//Fallout 13 decorative billboards directory
-
 /obj/structure/billboard
 	name = "billboard"
 	desc = "Shitspawn detected!<br>Please report the admin abuse immediately!<br>Just kidding, nevermind."

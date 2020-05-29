@@ -1,8 +1,6 @@
 
 // see code/module/crafting/table.dm
 
-////////////////////////////////////////////////SOUP////////////////////////////////////////////////
-
 /datum/crafting_recipe/food/meatballsoup
 	name = "Meatball soup"
 	reqs = list(
@@ -196,7 +194,7 @@
 	subcategory = CAT_SOUP
 
 /datum/crafting_recipe/food/spacylibertyduff
-	name = "Spacy liberty duff"
+	name = "liberty duff"
 	reqs = list(
 		/datum/reagent/consumable/ethanol/vodka = 5,
 		/obj/item/reagent_containers/glass/bowl = 1,
@@ -237,7 +235,6 @@
 	result = /obj/item/reagent_containers/food/snacks/soup/beet/red
 	subcategory = CAT_SOUP
 
-//UMA DELICIA UMA DELICIA FALLOUT13
 /datum/crafting_recipe/food/macaco
 	name = "Macaco soup"
 	reqs = list(

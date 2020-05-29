@@ -1,8 +1,6 @@
 
 // see code/module/crafting/table.dm
 
-////////////////////////////////////////////////SALADS////////////////////////////////////////////////
-
 /datum/crafting_recipe/food/herbsalad
 	name = "Herb salad"
 	reqs = list(
@@ -13,7 +11,7 @@
 	result = /obj/item/reagent_containers/food/snacks/salad/herbsalad
 	subcategory = CAT_SALAD
 
-/datum/crafting_recipe/food/aesirsalad
+/*/datum/crafting_recipe/food/aesirsalad
 	name = "Aesir salad"
 	reqs = list(
 		/obj/item/reagent_containers/glass/bowl = 1,
@@ -32,7 +30,7 @@
 		/obj/item/reagent_containers/food/snacks/faggot = 1
 	)
 	result = /obj/item/reagent_containers/food/snacks/salad/validsalad
-	subcategory = CAT_SALAD
+	subcategory = CAT_SALAD*/
 
 /*/datum/crafting_recipe/food/monkeysdelight
 	name = "Monkeys delight"

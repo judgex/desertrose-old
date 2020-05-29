@@ -611,7 +611,6 @@
 	new chosen(get_turf(holder.my_atom))
 	..()
 
-//Rainbow :o)
 /datum/chemical_reaction/slime/slimeRNG
 	name = "Random Core"
 	id = "slimerng"

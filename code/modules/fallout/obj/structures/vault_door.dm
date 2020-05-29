@@ -1,5 +1,3 @@
-//Fallout 13 Vault blast doors and controls directory
-
 /obj/structure/vault_door
 	name = "Vault 113 blast door"
 	desc = "A conventional Vault blast door of \"Nine cog\" model.<br>A blast door design incorporates proper sealants against radiation and other hazardous elements that may be created in the event of a nuclear war, to properly protect its inhabitants."
