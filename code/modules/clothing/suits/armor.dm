@@ -442,6 +442,7 @@
 	icon_state = "raider_metal"
 	item_state = "raider_metal"
 	armor = list("melee" = 40, "bullet" = 40, "laser" = 35, "energy" = 35, "bomb" = 50, "bio" = 50, "rad" = 10, "fire" = 60, "acid" = 10)
+	resistance_flags = FIRE_PROOF
 
 /obj/item/clothing/suit/armor/f13/combatrusted
 	name = "rusted combat armor"
