@@ -448,10 +448,31 @@
 /obj/item/clothing/head/helmet/f13/hoodedmask
 	name = "hooded mask"
 	desc = "A gask mask with the addition of a hood."
-	icon_state = "Hooded_Gask_Mask"
-	item_state = "Hooded_Gask_Mask"
+	icon_state = "Hooded_Gas_Mask"
+	item_state = "Hooded_Gas_Mask"
 	armor = list("melee" = 20, "bullet" = 20, "laser" = 20, "energy" = 20, "bomb" = 70, "bio" = 70, "rad" = 70, "fire" = 65, "acid" = 30)
-	icon = 'icons/fallout/clothing_w/head.dmi'
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+
+/obj/item/clothing/head/helmet/f13/brahmincowboyhat
+	name = "brahmin leather cowboy hat"
+	desc = "A cowboy hat made from brahmin hides."
+	icon_state = "brahmin_leather_cowboy_hat"
+	item_state = "brahmin_leather_cowboy_hat"
+	armor = list("melee" = 15, "bullet" = 15, "laser" = 15, "energy" = 15, "bomb" = 70, "bio" = 70, "rad" = 70, "fire" = 70, "acid" = 15)
+
+/obj/item/clothing/head/helmet/f13/rustedcowboyhat
+	name = "Rusted Cowboy Hat"
+	desc = "A cowboy hat made from tanned leather hides."
+	icon_state = "rusted_cowboy"
+	item_state = "rusted_cowboy"
+	armor = list("melee" = 15, "bullet" = 15, "laser" = 15, "energy" = 15, "bomb" = 70, "bio" = 70, "rad" = 70, "fire" = 70, "acid" = 15)
+
+/obj/item/clothing/head/helmet/f13/raidercombathelmet
+	name = "raider combat helmet"
+	desc = "A combat helmet modified with metal plating"
+	icon_state = "raider_combat_helmet"
+	item_state = "raider_combat_helmet"
+	armor = list("melee" = 40, "bullet" = 30, "laser" = 35, "energy" = 35, "bomb" = 70, "bio" = 70, "rad" = 70, "fire" = 65, "acid" = 30)
 
 /obj/item/clothing/head/helmet/f13/combat/knightcap
 	name = "knight-captain combat helmet"
