@@ -296,8 +296,29 @@ Preacher
 
 	outfit = /datum/outfit/job/den/f13preacher
 
+	loadout_options = list(
+	/datum/outfit/loadout/standardpreacher, //Robes, Book
+	/datum/outfit/loadout/atompreacher, //Atoms Judgement, Followers Robes
+	)
+
 	access = list(ACCESS_BAR)
 	minimal_access = list(ACCESS_BAR)
+
+/datum/outfit/loadout/atompreacher
+	name = "Atom's Devout"
+	l_hand = /obj/item/twohanded/sledgehammer/atomsjudgement
+	backpack_contents = list(
+		/obj/item/clothing/under/f13/atombeliever=1,
+		/obj/item/clothing/under/f13/atomfaithful=3,
+		/obj/item/clothing/head/helmet/f13/atombeliever=1
+		)
+
+/datum/outfit/loadout/standardpreacher
+	name = "Protector of the Faith"
+	l_hand = /obj/item/nullrod
+	backpack_contents = list(
+		/obj/item/reagent_containers/hypospray/medipen/stimpak=2
+		)
 
 /datum/job/den/f13preacher/after_spawn(mob/living/H, mob/M)
 	if(H.mind)

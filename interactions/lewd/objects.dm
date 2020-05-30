@@ -154,3 +154,10 @@
 /obj/item/pneumatic_cannon/dildo/Initialize()
 	. = ..()
 	allowed_typecache = dildo_typecache
+
+/obj/item/dildo/wooden
+	name = "Wooden Dildo"
+	desc = "Human ingenuity knows no boundaries"
+	icon = 'honk/icons/obj/items/dildo.dmi'
+	icon_state = "dildowood"
+	item_state = "dildowood"
