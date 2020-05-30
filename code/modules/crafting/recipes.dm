@@ -56,6 +56,21 @@
 	time = 80
 	category = CAT_MISC
 
+/datum/crafting_recipe/Dildo_Plastic
+	name = "Plastic Dildo"
+	result = /obj/item/dildo
+	reqs = list(/obj/item/stack/sheet/plastic = 5
+				/obj/item/lighter = 1)
+	time = 20
+	category = CAT_MISC
+
+/datum/crafting_recipe/Dildo_Tribal
+	name = "Wooden Dildo"
+	result = /obj/item/dildo
+	reqs = list(/obj/item/stack/sheet/mineral/wood = 3)
+	time = 85
+	category = CAT_MISC
+
 /datum/crafting_recipe/campfirekit
 	name = "campfire kit"
 	result = /obj/item/crafting/campfirekit
