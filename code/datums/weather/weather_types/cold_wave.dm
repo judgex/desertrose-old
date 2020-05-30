@@ -3,7 +3,7 @@
 	desc = "Harsh cold wave will grip an entire area."
 	probability = 7
 
-	telegraph_message = "<span class='userdanger'><i>aA cold snap is coming to the area, freezing the air around those outside.</i></span>"
+	telegraph_message = "<span class='userdanger'><i>A cold snap is coming to the area, freezing the air around those outside.</i></span>"
 	telegraph_duration = 300
 	telegraph_overlay = "snow_storm"
 	telegraph_sound = 'sound/f13effects/sandstorm_warning.ogg'

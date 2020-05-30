@@ -916,6 +916,25 @@
 	icon_state = "baseball[wielded]"
 	return
 
+/obj/item/twohanded/baseball/spiked
+	name = "spiked baseball bat"
+	desc = "There ain't a skull in the league that can withstand a swatter, especially with large nails drilled through the top of it."
+	icon = 'icons/obj/items_and_weapons.dmi'
+	icon_state = "baseballspike0"
+	lefthand_file = 'icons/mob/inhands/weapons/polearms_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/weapons/polearms_righthand.dmi'
+	force_unwielded = 20
+	force_wielded = 40
+	throwforce = 15
+	slot_flags = ITEM_SLOT_BACK
+	attack_verb = list("beat", "smacked", "clubbed", "clobbered")
+	w_class = WEIGHT_CLASS_NORMAL
+	sharpness = IS_BLUNT
+
+/obj/item/twohanded/baseball/spiked/update_icon()  //Currently only here to fuck with the on-mob icons.
+	icon_state = "baseballspike[wielded]"
+	return
+
 /obj/item/twohanded/sledgehammer
 	name = "sledgehammer"
 	desc = "A heavy sledgehammer that lost most of its use besides caving in heads."
@@ -957,8 +976,22 @@
 	force_unwielded = 25
 	force_wielded = 60
 
+
 /obj/item/twohanded/sledgehammer/supersledge/update_icon()
 	icon_state = "supersledge[wielded]"
+
+/obj/item/twohanded/sledgehammer/atomsjudgement
+	name = "atom's judgement"
+	desc = "A heavy sledgehammer manufacted from ultra-dense materials. The head of this hammer seems to of been replaced with four fusion cores, shorted to discharge its fissle material."
+	icon = 'icons/obj/items_and_weapons.dmi'
+	icon_state = "atom_hammer0"
+	lefthand_file = 'icons/mob/inhands/weapons/polearms_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/weapons/polearms_righthand.dmi'
+	force_unwielded = 25
+	force_wielded = 60
+
+/obj/item/twohanded/sledgehammer/atomsjudgement/update_icon()
+	icon_state = "atom_hammer[wielded]"
 
 /obj/item/twohanded/sledgehammer/warmace
 	name = "war mace"
