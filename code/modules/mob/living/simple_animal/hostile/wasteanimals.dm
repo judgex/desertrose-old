@@ -334,6 +334,17 @@
 	gold_core_spawnable = HOSTILE_SPAWN
 	a_intent = INTENT_HARM
 
+/mob/living/simple_animal/hostile/stalker/AttackingTarget()
+	. = ..()
+	if(. && ishuman(target))
+		var/mob/living/carbon/human/H = target
+		H.reagents.add_reagent("cazador_venom", 3)
+
+/datum/reagent/toxin/cazador_venom/on_mob_life(mob/living/M)
+	if(volume >= 12)
+		M.adjustToxLoss(5, 0)
+	..()
+
 /mob/living/simple_animal/hostile/stalker
 	name = "nightstalker"
 	desc = "A crazed genetic hybrid of rattlesnake and coyote DNA."
@@ -372,10 +383,10 @@
 	. = ..()
 	if(. && ishuman(target))
 		var/mob/living/carbon/human/H = target
-		H.reagents.add_reagent("cazador_venom", 10)
+		H.reagents.add_reagent("cazador_venom", 7)
 
 /datum/reagent/toxin/cazador_venom/on_mob_life(mob/living/M)
-	if(volume >= 7)
+	if(volume >= 9)
 		M.adjustToxLoss(5, 0)
 	..()
 
