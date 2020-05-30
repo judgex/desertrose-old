@@ -52,9 +52,25 @@
 	reqs = list(/obj/item/stack/crafting/metalparts = 3,
 				/obj/item/stack/crafting/goodparts = 2,
 				/obj/item/stack/sheet/metal = 10)
-	tools = list(TOOL_WELDER, TOOL_SCREWDRIVER)
+	tools = list(TOOL_WELDER, TOOL_WORKBENCH)
 	time = 80
 	category = CAT_MISC
+
+/datum/crafting_recipe/dildo_plastic
+    name = "plastic dildo"
+    result = /obj/item/dildo
+    reqs = list(/obj/item/stack/sheet/plastic)
+    time = 20
+    tools = list(TOOL_WELDER, TOOL_WORKBENCH)
+    category = CAT_MISC
+
+/datum/crafting_recipe/dildo_tribal
+    name = "wooden dildo"
+    result = /obj/item/dildo/wooden
+    reqs = list(/obj/item/stack/sheet/mineral/wood = 3)
+    tools = list(TOOL_KNIFE)
+    time = 85
+    category = CAT_MISC
 
 /datum/crafting_recipe/campfirekit
 	name = "campfire kit"
@@ -1766,6 +1782,16 @@
 	time = 80
 	reqs = list(/obj/item/stack/sheet/metal = 6,
 				/obj/item/stack/sheet/cloth = 1)
+	tools = list(TOOL_WORKBENCH)
+	category = CAT_WEAPONRY
+	subcategory = CAT_WEAPON
+
+/datum/crafting_recipe/baseballspiked
+	name = "spiked baseball bat"
+	result = /obj/item/twohanded/baseball/spiked
+	time = 80
+	reqs = list(/obj/item/stack/sheet/metal = 4,
+				/obj/item/twohanded/baseball = 1)
 	tools = list(TOOL_WORKBENCH)
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
