@@ -104,8 +104,8 @@
 	time = 60
 	category = CAT_CLOTHING
 	subcategory = CAT_CLOTHING
-/*CRAFT rework: removed for balance
-/datum/crafting_recipe/tesla_armor
+
+/*/datum/crafting_recipe/tesla_armor
 	name = "tesla armor"
 	result = /obj/item/clothing/suit/armor/laserproof
 	reqs = list(/obj/item/clothing/suit/armor/f13/metalarmor/reinforced = 1,
@@ -115,7 +115,7 @@
 	time = 60
 	category = CAT_CLOTHING
 	subcategory = CAT_CLOTHING
-*//*CRAFT rework: removed for balance
+
 /datum/crafting_recipe/tesla_helmet
 	name = "tesla helmet"
 	result = /obj/item/clothing/head/helmet/f13/tesla
@@ -126,7 +126,7 @@
 	time = 60
 	category = CAT_CLOTHING
 	subcategory = CAT_CLOTHING
-*//*
+
 /datum/crafting_recipe/combat_armor
 	name = "combat armor"
 	result = /obj/item/clothing/suit/armor/f13/combat
@@ -138,7 +138,7 @@
 	time = 60
 	category = CAT_CLOTHING
 	subcategory = CAT_CLOTHING
-*//*CRAFT rework: removed for balance
+
 /datum/crafting_recipe/combat_helmet
 	name = "combat armor"
 	result = /obj/item/clothing/head/helmet/f13/combat
@@ -149,8 +149,8 @@
 	tools = list(TOOL_AWORKBENCH, /obj/item/blueprint/armor/combat)
 	time = 60
 	category = CAT_CLOTHING
-	subcategory = CAT_CLOTHING
-*/
+	subcategory = CAT_CLOTHING*/
+
 /datum/crafting_recipe/bandolier
 	name = "bandolier"
 	result = /obj/item/storage/belt/bandolier
@@ -296,8 +296,8 @@
 	time = 25
 	category = CAT_CLOTHING
 	subcategory = CAT_WASTELAND
-/*
-/datum/crafting_recipe/durathread_vest
+
+/*/datum/crafting_recipe/durathread_vest
 	name = "Makeshift Vest"
 	result = /obj/item/clothing/suit/armor/vest/durathread
 	reqs = list( /obj/item/stack/sheet/durathread = 5,
@@ -324,7 +324,6 @@
 	category = CAT_CLOTHING
 	subcategory = CAT_CLOTHING
 
-/* - Commented out for now, these are particularly rare without rnd anyway and dont fit all sunglasses types.
 /datum/crafting_recipe/hudsunsec
 	name = "Security HUDsunglasses"
 	result = /obj/item/clothing/glasses/hud/security/sunglasses
@@ -385,7 +384,6 @@
 	reqs = list(/obj/item/clothing/glasses/sunglasses/reagent = 1)
 	category = CAT_CLOTHING
 	subcategory = CAT_CLOTHING
-*/
 
 /datum/crafting_recipe/ghostsheet
 	name = "Ghost Sheet"
@@ -396,7 +394,6 @@
 	category = CAT_CLOTHING
 	subcategory = CAT_CLOTHING
 
-//f13 additions
 /datum/crafting_recipe/metalarmor
 	name = "metal armor"
 	result = /obj/item/clothing/suit/armor/f13/bmetalarmor
@@ -431,8 +428,6 @@
 	time = 120
 	category = CAT_CLOTHING
 	subcategory = CAT_CLOTHING
-
-//Tribal armors
 
 /datum/crafting_recipe/tribalgeckoarmor
 	name = "Gecko Armor"
