@@ -22,7 +22,7 @@
 	seed = /obj/item/seeds/pricklypear
 	name = "prickly pear fruit"
 	desc = "Distinguished by having cylindrical, rather than flattened, stem segments with large barbed spines. The stem joints are very brittle on young stems, readily breaking off when the barbed spines stick to clothing or animal fur."
-	icon_state = "feracactus"
+	icon_state = "Prickly Pear"
 	filling_color = "#FF6347"
 	foodtype = FRUIT
 	bitesize_mod = 2
