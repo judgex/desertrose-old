@@ -389,7 +389,7 @@ hum/*
 	name = "Fade (None)"
 	icon_state = "hair_nofade"
 
-/datum/sprite_accessory/hair/fag
+/datum/sprite_accessory/hair/flow
 	name = "Flow Hair"
 	icon_state = "hair_f"
 
@@ -413,7 +413,7 @@ hum/*
 	name = "Flat Top (Big)"
 	icon_state = "hair_bigflattop"
 
-/datum/sprite_accessory/hair/fag	//grimacing emoji
+/datum/sprite_accessory/hair/flow	//grimacing emoji
 	name = "Flow Hair"
 	icon_state = "hair_f"
 
