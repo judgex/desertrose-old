@@ -151,6 +151,13 @@
 	icon = 'icons/fallout/turfs/ground.dmi'
 //	step_sounds = list("human" = "erikafootsteps")
 
+/turf/open/indestructible/ground/outside/snow
+	initial_gas_mix = "o2=22;n2=82;TEMP=248"
+	name = "snow"
+	icon = 'icons/turf/snow.dmi'
+	desc = "Looks cold."
+	icon_state = "snow"
+
 /turf/open/indestructible/ground/outside/ruins/ex_act(severity, target)
 	contents_explosion(severity, target)
 	switch(severity)
