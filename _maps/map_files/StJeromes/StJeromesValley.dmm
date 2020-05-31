@@ -3526,7 +3526,7 @@
 "bpP" = (/obj/effect/landmark/start/f13/centurion,/turf/open/indestructible/ground/inside/subway,/area/f13/tunnel)
 "bpQ" = (/obj/effect/landmark/start/f13/wastelander,/turf/open/indestructible/ground/outside/road{icon_state = "verticalleftborderright0"},/area/f13/tunnel)
 "bpR" = (/turf/closed/indestructible/rock,/area/f13/wasteland)
-"bpS" = (/turf/open/space/basic,/area/f13/wasteland)
+"bpS" = (/turf/open/space/basic,/area/space)
 "bpT" = (/turf/closed/indestructible/riveted,/area/f13/wasteland)
 "bpU" = (/turf/open/indestructible,/area/f13/wasteland)
 "bpV" = (/obj/machinery/telecomms/relay/preset/telecomms,/turf/open/indestructible,/area/f13/wasteland)
