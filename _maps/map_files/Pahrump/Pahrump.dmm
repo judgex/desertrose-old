@@ -5554,7 +5554,7 @@
 "ccP" = (/obj/structure/sign/departments/science,/turf/closed/wall/r_wall/f13vault{icon_state = "2-i"},/area/f13/vault)
 "ccQ" = (/obj/structure/sign/departments/medbay,/turf/closed/wall/r_wall/f13vault{icon_state = "2-i"},/area/f13/vault)
 "ccR" = (/obj/structure/table,/obj/machinery/light{dir = 8; light_color = "#e8eaff"},/turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,/area/f13/vault)
-"ccS" = (/obj/machinery/door/airlock/medical{name = "Operating Theatre"; req_access_txt = "68"; req_one_access_txt = "68"},/turf/open/floor/plasteel/f13/vault_floor/floor,/area/f13/vault)
+"ccS" = (/obj/machinery/door/airlock/medical{name = "Operating Theatre"; req_access_txt = "64"; req_one_access_txt = "68"},/turf/open/floor/plasteel/f13/vault_floor/floor,/area/f13/vault)
 "ccT" = (/obj/structure/sign/departments/examroom,/turf/closed/wall/r_wall/f13vault{icon_state = "2-i"},/area/f13/vault)
 "ccU" = (/obj/machinery/door/airlock/medical{name = "Operating Theatre"; req_access_txt = "45; 5"},/turf/open/floor/plasteel/f13/vault_floor/floor,/area/f13/vault)
 "ccV" = (/obj/machinery/chem_heater,/turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,/area/f13/vault)
