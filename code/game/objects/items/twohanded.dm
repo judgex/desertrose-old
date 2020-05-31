@@ -923,9 +923,9 @@
 	icon_state = "baseballspike0"
 	lefthand_file = 'icons/mob/inhands/weapons/polearms_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/polearms_righthand.dmi'
-	force_unwielded = 20
+	force_unwielded = 25
 	force_wielded = 40
-	throwforce = 15
+	throwforce = 20
 	slot_flags = ITEM_SLOT_BACK
 	attack_verb = list("beat", "smacked", "clubbed", "clobbered")
 	w_class = WEIGHT_CLASS_NORMAL
