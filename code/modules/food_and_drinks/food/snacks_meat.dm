@@ -90,7 +90,7 @@
 
 /obj/item/reagent_containers/food/snacks/cookedbrahminliver
 	name = "Charred Brahmin Liver"
-	desc = "A brahmin tongue slow roasted over an open fire and topped with a large amount of thick brown gravy"
+	desc = "A fatty brahmin liver roasted in a cast iron pan over mesquite wood."
 	icon_state = "Charred Brahmin Liver"
 	bitesize = 3
 	filling_color = "#CD853F"
