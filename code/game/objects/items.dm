@@ -813,3 +813,4 @@ GLOBAL_VAR_INIT(rpg_loot_items, FALSE)
 			played_sound = pick(equipsound)
 
 		playsound(src, played_sound, volume, 1)
+		
