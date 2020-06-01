@@ -94,3 +94,27 @@
 	)
 	result = /obj/item/reagent_containers/food/snacks/salad/citrusdelight
 	subcategory = CAT_SALAD
+
+/datum/crafting_recipe/food/tatosalad
+	name = "Tato salad"
+	reqs = list(
+		/obj/item/reagent_containers/glass/bowl = 1,
+		/obj/item/reagent_containers/food/snacks/grown/xander = 1,
+		/obj/item/reagent_containers/food/snacks/grown/tato = 2,
+		/obj/item/reagent_containers/food/snacks/meat/steak = 1,
+		/obj/item/reagent_containers/food/snacks/grown/wheat = 1
+	)
+	result = /obj/item/reagent_containers/food/snacks/salad/tatosalad
+	subcategory = CAT_SALAD
+
+/datum/crafting_recipe/food/desertsalad
+	name = "Desert salad"
+	reqs = list(
+		/obj/item/reagent_containers/glass/bowl = 1,
+		/obj/item/reagent_containers/food/snacks/grown/feracactus = 1,
+		/obj/item/reagent_containers/food/snacks/grown/pricklypear = 1,
+		/obj/item/reagent_containers/food/snacks/friedbrahminskin = 1,
+		/obj/item/reagent_containers/food/snacks/grown/pinyon = 1
+	)
+	result = /obj/item/reagent_containers/food/snacks/salad/desertsalad
+	subcategory = CAT_SALAD

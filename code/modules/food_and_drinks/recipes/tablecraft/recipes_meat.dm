@@ -197,3 +197,12 @@
 	)
 	result = /obj/item/reagent_containers/food/snacks/salad/ricepork
 	subcategory = CAT_MEAT
+
+/datum/crafting_recipe/food/friedbrahminskin
+	name = "Fried brahmin skin."
+	reqs = list(
+		/obj/item/stack/sheet/animalhide/brahmin = 2,
+		/obj/item/reagent_containers/food/snacks/tallow = 1
+	)
+	result = /obj/item/reagent_containers/food/snacks/friedbrahminskin
+	subcategory = CAT_MEAT

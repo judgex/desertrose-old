@@ -58,7 +58,7 @@
 /obj/item/reagent_containers/food/snacks/rawbrahmintongue
 	name = "Raw Brahmin Tongue"
 	desc = "The raw tongue of a brahmin, a wastelander favorite"
-	icon_state = "bacon"
+	icon_state = "BrahminTongue"
 	bitesize = 3
 	filling_color = "#CD853F"
 	list_reagents = list("nutriment" = 3, "vitamin" = 2)
@@ -317,3 +317,15 @@
 	list_reagents = list("nutriment" = 2, "vitamin" = 4)
 	tastes = list("dried meat" = 8, "Sawdust" = 4, "Corn" = 1)
 	foodtype = MEAT
+
+/obj/item/reagent_containers/food/snacks/friedbrahminskin
+	name = "Brahmin cracklings"
+	desc = "Cracklings are the solid material which remains after rendering animal fat and skin to produce lard, tallow, or schmaltz. It is often eaten as a snack food or made into animal feed. It is also used in cooking."
+	icon_state = "Fried Brahmin Skin"
+	filling_color = "#CD5C5C"
+	bonus_reagents = list("nutriment" = 1, "vitamin" = 1)
+	list_reagents = list("nutriment" = 6, "vitamin" = 1)
+	tastes = list("crispy skin" = 1)
+	foodtype = MEAT
+	var/roasted = FALSE
+

@@ -38,14 +38,14 @@
 	tastes = list("meat" = 1)
 	foodtype = MEAT
 
-/obj/item/reagent_containers/food/snacks/soup/slime
+/*/obj/item/reagent_containers/food/snacks/soup/slime
 	name = "slime soup"
 	desc = "If no water is available, you may substitute tears."
 	icon_state = "slimesoup"
 	bonus_reagents = list("nutriment" = 1, "slimejelly" = 5, "vitamin" = 5)
 	list_reagents = list("nutriment" = 5, "slimejelly" = 5, "water" = 5, "vitamin" = 4)
 	tastes = list("slime" = 1)
-	foodtype = TOXIC | SUGAR
+	foodtype = TOXIC | SUGAR*/
 
 /obj/item/reagent_containers/food/snacks/soup/blood
 	name = "tomato soup"
@@ -66,14 +66,14 @@
 	tastes = list("soy" = 1)
 	foodtype = MEAT
 
-/obj/item/reagent_containers/food/snacks/soup/clownstears
+/*/obj/item/reagent_containers/food/snacks/soup/clownstears
 	name = "clown's tears"
 	desc = "Not very funny."
 	icon_state = "clownstears"
 	bonus_reagents = list("nutriment" = 1, "banana" = 5, "vitamin" = 8, "clownstears" = 10)
 	list_reagents = list("nutriment" = 4, "banana" = 5, "water" = 5, "vitamin" = 8, "clownstears" = 10)
 	tastes = list("a bad joke" = 1)
-	foodtype = FRUIT | SUGAR
+	foodtype = FRUIT | SUGAR*/
 
 /obj/item/reagent_containers/food/snacks/soup/vegetable
 	name = "vegetable soup"
@@ -180,7 +180,7 @@
 
 
 /obj/item/reagent_containers/food/snacks/soup/spacylibertyduff
-	name = "spacy liberty duff"
+	name = "liberty duff"
 	desc = "Jello gelatin, from Alfred Hubbard's cookbook."
 	icon_state = "spacylibertyduff"
 	bitesize = 3
@@ -226,7 +226,6 @@
 	tastes = list("beet" = 1)
 	foodtype = VEGETABLES
 
-//SOPA DO MACACO SOPA DO MACACO FALLOUT 13
 /obj/item/reagent_containers/food/snacks/soup/macaco
 	name = "Macaco soup"
 	desc = "To think, the monkey would've beat you to death and steal your gun."
@@ -234,3 +233,22 @@
 	bonus_reagents = list("nutriment" = 1, "omnizine" = 5, "vitamin" = 5)
 	tastes = list("Monkey" = 1)
 	foodtype = MEAT | VEGETABLES
+
+/obj/item/reagent_containers/food/snacks/soup/moleratstew
+	name = "molerat stew"
+	desc = "A nice and warm stew. Healthy and strong."
+	icon_state = "stew"
+	bonus_reagents = list("nutriment" = 1, "tomatojuice" = 5, "vitamin" = 5)
+	list_reagents = list("nutriment" = 10, "oculine" = 5, "tomatojuice" = 5, "vitamin" = 5)
+	bitesize = 7
+	volume = 100
+	tastes = list("gamey meat" = 1, "herbal notes" = 1, "filling stew" = 1)
+	foodtype = VEGETABLES | MEAT
+
+/obj/item/reagent_containers/food/snacks/grown/buffalogourd
+	name = "Buffalo gourd soup"
+	desc = "A tasty soup made with roasted gourd"
+	icon_state = "Gourd Soup"
+	bonus_reagents = list("nutriment" = 4, "vitamin" = 6)
+	tastes = list("buttery flesh" = 1, "creamy soup" = 1)
+	foodtype = VEGETABLES
