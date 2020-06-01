@@ -69,7 +69,7 @@
 	var/zoom_amt = 3 //Distance in TURFs to move the user's screen forward (the "zoom" effect)
 	var/zoom_out_amt = 0
 	var/datum/action/toggle_scope_zoom/azoom
-
+	var/equipsound = null
 /obj/item/gun/Initialize()
 	. = ..()
 	if(pin)
@@ -132,6 +132,10 @@
 /obj/item/gun/pickup(mob/living/user)
 	. = ..()
 	weapondraw(src, user)
+
+/obj/item/gun/pickup(mob/living/user)
+	. = ..()
+	play_equip_sound(src)
 
 /obj/item/gun/emp_act(severity)
 	. = ..()
