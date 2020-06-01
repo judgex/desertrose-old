@@ -74,8 +74,29 @@
 	filling_color = "#CD853F"
 	bonus_reagents = list("nutriment" = 1, "vitamin" = 4)
 	list_reagents = list("nutriment" = 5)
-	cooked_type = /obj/item/reagent_containers/food/snacks/cookedbrahmintongue
 	tastes = list("top quality beef" = 4, "tender meat" = 1, "tasty gravy" = 1)
+	foodtype = MEAT
+
+/obj/item/reagent_containers/food/snacks/rawbrahminliver
+	name = "Raw Brahmin Liver"
+	desc = "The raw tongue of a brahmin, a wastelander favorite"
+	icon_state = "Brahmin Liver"
+	bitesize = 3
+	filling_color = "#CD853F"
+	list_reagents = list("nutriment" = 3, "vitamin" = 2)
+	cooked_type = /obj/item/reagent_containers/food/snacks/cookedbrahminliver
+	tastes = list("beef" = 4, "tender meat" = 1)
+	foodtype = MEAT
+
+/obj/item/reagent_containers/food/snacks/cookedbrahminliver
+	name = "Charred Brahmin Liver"
+	desc = "A brahmin tongue slow roasted over an open fire and topped with a large amount of thick brown gravy"
+	icon_state = "Charred Brahmin Liver"
+	bitesize = 3
+	filling_color = "#CD853F"
+	bonus_reagents = list("nutriment" = 1, "vitamin" = 4)
+	list_reagents = list("nutriment" = 5)
+	tastes = list("slow cooked liver" = 4, "delicious crunch" = 1)
 	foodtype = MEAT
 
 /obj/item/reagent_containers/food/snacks/tofu
