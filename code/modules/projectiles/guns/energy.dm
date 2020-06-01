@@ -240,6 +240,7 @@
 		cell.update_icon()
 		cell = null
 		to_chat(user, "<span class='notice'>You pull the cell out of \the [src].</span>")
+		playsound(src, 'sound/f13weapons/equipsounds/laserreload.ogg', 50, 1)
 	else
 		to_chat(user, "<span class='notice'>There's no cell in \the [src].</span>")
 	return
@@ -265,3 +266,4 @@
 	..()
 	if(can_charge == 1)
 		to_chat(user, "<span class='notice'>Alt-click to eject the battery.</span>")
+
