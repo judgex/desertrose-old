@@ -217,3 +217,14 @@
 	)
 	result = /obj/item/reagent_containers/food/snacks/brahminwellington
 	subcategory = CAT_MEAT
+
+/datum/crafting_recipe/food/deathclawwellington
+	name = "Deathclaw wellington"
+	reqs = list(
+		/datum/reagent/consumable/flour = 10,
+		/obj/item/reagent_containers/food/snacks/tallow = 1,
+		/obj/item/reagent_containers/food/snacks/grown/mesquite = 1,
+		/obj/item/reagent_containers/food/snacks/meat/slab/deathclaw = 2
+	)
+	result = /obj/item/reagent_containers/food/snacks/deathclawwellington
+	subcategory = CAT_MEAT

@@ -338,3 +338,14 @@
 	list_reagents = list("nutriment" = 8)
 	tastes = list("smokey meat" = 3, "cheese" = 1, "sour cream" = 1, "flaky crust" = 2)
 	foodtype = MEAT | GRAIN
+
+/obj/item/reagent_containers/food/snacks/deathclawwellington
+	name = "Deathclaw wellington"
+	desc = "A pie made of top grade steak coated with pâté and duxelles, which is then wrapped in molerat ham and buttery puff pastry"
+	icon_state = "Deathclaw Wellington"
+	bonus_reagents = list("nutriment" = 1, "vitamin" = 2)
+	bitesize = 4
+	filling_color = "#FFA07A"
+	list_reagents = list("nutriment" = 8)
+	tastes = list("high grade meat" = 2, "smokey meat" = 3, "cheese" = 1, "sour cream" = 1, "flaky crust" = 2)
+	foodtype = MEAT | GRAIN
