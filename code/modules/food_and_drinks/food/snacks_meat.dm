@@ -327,5 +327,14 @@
 	list_reagents = list("nutriment" = 6, "vitamin" = 1)
 	tastes = list("crispy skin" = 1)
 	foodtype = MEAT
-	var/roasted = FALSE
 
+/obj/item/reagent_containers/food/snacks/brahminwellington
+	name = "Brahmin wellington"
+	desc = "A pie made of fillet steak coated with pâté and duxelles, which is then wrapped in molerat ham and puff pastry"
+	icon_state = "Brahmin Wellington"
+	bonus_reagents = list("nutriment" = 1, "vitamin" = 2)
+	bitesize = 4
+	filling_color = "#FFA07A"
+	list_reagents = list("nutriment" = 8)
+	tastes = list("smokey meat" = 3, "cheese" = 1, "sour cream" = 1, "flaky crust" = 2)
+	foodtype = MEAT | GRAIN
