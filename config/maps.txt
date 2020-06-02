@@ -20,6 +20,6 @@ endmap
 map StJeromesValley
 	votable
 endmap
-map Sunnyvale
+map sunnyvale
 	votable
 endmap

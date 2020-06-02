@@ -1,6 +1,3 @@
-
-////////////////////////////////////////////EGGS////////////////////////////////////////////
-
 /obj/item/reagent_containers/food/snacks/chocolateegg
 	name = "chocolate egg"
 	desc = "Such, sweet, fattening food."

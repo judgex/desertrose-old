@@ -1,5 +1,3 @@
-//this category is very little but I think that it has great potential to grow
-////////////////////////////////////////////SALAD////////////////////////////////////////////
 /obj/item/reagent_containers/food/snacks/salad
 	icon = 'icons/obj/food/soupsalad.dmi'
 	trash = /obj/item/reagent_containers/glass/bowl
@@ -115,4 +113,22 @@
 	icon_state = "eggbowl"
 	bonus_reagents = list("nutriment" = 4, "vitamin" = 4)
 	tastes = list("rice" = 1, "egg" = 1)
-	foodtype = GRAIN | MEAT //EGG = MEAT -NinjaNomNom 2017
+	foodtype = GRAIN | MEAT
+
+/obj/item/reagent_containers/food/snacks/salad/tatosalad
+	name = "tato salad"
+	desc = "Strips of fried brahmin meat and fried tato slices on a bed of razorgrain grits. It has grated xander root sprinkled on top."
+	icon_state = "Tato Salad"
+	bonus_reagents = list("vitamin" = 4, "vitamin" = 4)
+	list_reagents = list("nutriment" = 8, "vitamin" = 6)
+	tastes = list("leaves" = 1, "old ketchup" = 1, "fatty meat" = 1, "salty Turnip" = 1)
+	foodtype = VEGETABLES | MEAT | GRAIN
+
+/obj/item/reagent_containers/food/snacks/salad/desertsalad
+	name = "desert salad"
+	desc = "A tasty cactus salad topped with brahamin bits and roasted nuts."
+	icon_state = "Desert Salad"
+	bonus_reagents = list("vitamin" = 4)
+	list_reagents = list("nutriment" = 8, "vitamin" = 2)
+	tastes = list("tender meat" = 1, "acidic cactus" = 3, "crunchy nuts" = 1)
+	foodtype = VEGETABLES | FRUIT | MEAT

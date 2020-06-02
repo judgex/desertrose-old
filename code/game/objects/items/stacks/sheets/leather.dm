@@ -26,6 +26,12 @@ GLOBAL_LIST_INIT(human_recipes, list( \
 	singular_name = "skin piece"
 	novariants = FALSE
 
+/obj/item/stack/sheet/animalhide/ragstag
+	name = "radstag hide"
+	desc = "A raw pelt taken from a radstag."
+	singular_name = "ragstag hide piece"
+	icon_state = "sheet-hide"
+
 /obj/item/stack/sheet/animalhide/brahmin
 	name = "brahmin skin"
 	desc = "The by-product of brahmin farming."
