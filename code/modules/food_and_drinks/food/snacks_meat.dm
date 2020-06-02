@@ -1,8 +1,3 @@
-//Not only meat, actually, but also snacks that are almost meat, such as fish meat or tofu
-
-
-////////////////////////////////////////////FISH////////////////////////////////////////////
-
 /obj/item/reagent_containers/food/snacks/cubancarp
 	name = "\improper Cuban carp"
 	desc = "A grifftastic sandwich that burns your tongue and then leaves it numb!"
@@ -53,12 +48,20 @@
 	tastes = list("fish" = 1, "chips" = 1)
 	foodtype = MEAT | VEGETABLES | FRIED
 
-////////////////////////////////////////////MEATS AND ALIKE////////////////////////////////////////////
+/obj/item/reagent_containers/food/snacks/rawantbrain
+	name = "Raw Ant Brain"
+	desc = "Goppy reddish-grey flesh dug out of the brain case of a giant ant."
+	icon_state = "AntBrain"
+	bitesize = 3
+	filling_color = "#CD853F"
+	list_reagents = list("nutriment" = 3, "vitamin" = 2)
+	tastes = list("fat" = 4, "bitter meat" = 1)
+	foodtype = MEAT
 
 /obj/item/reagent_containers/food/snacks/rawbrahmintongue
 	name = "Raw Brahmin Tongue"
 	desc = "The raw tongue of a brahmin, a wastelander favorite"
-	icon_state = "brahmintongue"
+	icon_state = "BrahminTongue"
 	bitesize = 3
 	filling_color = "#CD853F"
 	list_reagents = list("nutriment" = 3, "vitamin" = 2)
