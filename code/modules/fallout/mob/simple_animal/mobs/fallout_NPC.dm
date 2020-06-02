@@ -707,7 +707,7 @@
 	if(stat)
 		return
 	var/chosen_sound = pick(abom_sounds)
-	playsound(src, chosen_sound, 100, TRUE)
+	playsound(src, chosen_sound, 80, TRUE)
 
 /mob/living/simple_animal/hostile/abomination/Life()
 	..()
