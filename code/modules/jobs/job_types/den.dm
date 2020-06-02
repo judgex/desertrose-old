@@ -3,6 +3,7 @@ Town access doors
 Sheriff/Deputy, Gatehouse etc: 62 ACCESS_GATEWAY
 General access: 25 ACCESS_BAR
 Clinic surgery/storage: 68 ACCESS_CLONING
+Shopkeeper: 34 ACCESS_CARGO_BOT
 here's a tip, go search DEFINES/access.dm
 */
 
@@ -24,8 +25,8 @@ Mayor
 	exp_type = EXP_TYPE_DEN
 
 	outfit = /datum/outfit/job/den/f13mayor
-	access = list(ACCESS_BAR, ACCESS_CLONING, ACCESS_GATEWAY)
-	minimal_access = list(ACCESS_BAR, ACCESS_CLONING, ACCESS_GATEWAY)
+	access = list(ACCESS_BAR, ACCESS_CLONING, ACCESS_GATEWAY, ACCESS_CARGO_BOT)
+	minimal_access = list(ACCESS_BAR, ACCESS_CLONING, ACCESS_GATEWAY, ACCESS_CARGO_BOT)
 
 /datum/outfit/job/den/f13mayor
 	name = "Mayor"
@@ -67,8 +68,8 @@ Sheriff
 	exp_type = EXP_TYPE_DEN
 
 	outfit = /datum/outfit/job/den/f13sheriff
-	access = list(ACCESS_BAR, ACCESS_CLONING, ACCESS_GATEWAY)
-	minimal_access = list(ACCESS_BAR, ACCESS_CLONING, ACCESS_GATEWAY)
+	access = list(ACCESS_BAR, ACCESS_CLONING, ACCESS_GATEWAY, ACCESS_CARGO_BOT)
+	minimal_access = list(ACCESS_BAR, ACCESS_CLONING, ACCESS_GATEWAY, ACCESS_CARGO_BOT)
 
 /datum/outfit/job/den/f13sheriff
 	name = "Sheriff"
