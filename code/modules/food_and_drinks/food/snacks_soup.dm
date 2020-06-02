@@ -180,7 +180,7 @@
 
 
 /obj/item/reagent_containers/food/snacks/soup/spacylibertyduff
-	name = "spacy liberty duff"
+	name = "liberty duff"
 	desc = "Jello gelatin, from Alfred Hubbard's cookbook."
 	icon_state = "spacylibertyduff"
 	bitesize = 3
@@ -234,3 +234,23 @@
 	bonus_reagents = list("nutriment" = 1, "omnizine" = 5, "vitamin" = 5)
 	tastes = list("Monkey" = 1)
 	foodtype = MEAT | VEGETABLES
+
+
+/obj/item/reagent_containers/food/snacks/soup/moleratstew
+	name = "molerat stew"
+	desc = "A nice and warm stew. Healthy and strong."
+	icon_state = "stew"
+	bonus_reagents = list("nutriment" = 1, "tomatojuice" = 5, "vitamin" = 5)
+	list_reagents = list("nutriment" = 10, "oculine" = 5, "tomatojuice" = 5, "vitamin" = 5)
+	bitesize = 7
+	volume = 100
+	tastes = list("gamey meat" = 1, "herbal notes" = 1, "filling stew" = 1)
+	foodtype = VEGETABLES | MEAT
+
+/obj/item/reagent_containers/food/snacks/grown/buffalogourd
+	name = "Buffalo gourd soup"
+	desc = "A tasty soup made with roasted gourd"
+	icon_state = "Gourd Soup"
+	bonus_reagents = list("nutriment" = 4, "vitamin" = 6)
+	tastes = list("buttery flesh" = 1, "creamy soup" = 1)
+	foodtype = VEGETABLES

@@ -253,6 +253,12 @@
 	damage = 26
 	armour_penetration = 30
 
+/obj/item/projectile/beam/laser/rcw //RCW
+	name = "rapidfire beam"
+	icon_state = "xray"
+	damage = 15
+	armour_penetration = 12
+
 /obj/item/projectile/plasma/alien
 	name = "alien projectile"
 	icon_state = "ion"

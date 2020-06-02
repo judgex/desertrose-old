@@ -1,6 +1,3 @@
-
-////////////////////////////////////////////OTHER////////////////////////////////////////////
-
 /obj/item/reagent_containers/food/snacks/store/cheesewheel
 	name = "cheese wheel"
 	desc = "A big wheel of delcious Cheddar."

@@ -8,9 +8,7 @@
 	mob_biotypes = list(MOB_ORGANIC, MOB_BEAST)
 	speak_chance = 0
 	turns_per_move = 5
-	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab/cazador_meat = 2,
-						/obj/item/stack/sheet/sinew = 2,
-						/obj/item/stack/sheet/animalhide/chitin = 3)
+	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab/cazador_meat = 2, /obj/item/stack/sheet/sinew = 2, /obj/item/stack/sheet/animalhide/chitin = 3)
 	response_help = "pets"
 	response_disarm = "gently pushes aside"
 	response_harm = "hits"
@@ -144,8 +142,7 @@
 	mob_biotypes = list(MOB_ORGANIC, MOB_BEAST)
 	speak_chance = 0
 	turns_per_move = 5
-	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab/gecko = 2,
-							/obj/item/stack/sheet/animalhide/geckohide = 1)
+	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab/gecko = 2, /obj/item/stack/sheet/animalhide/geckohide = 1)
 	response_help = "pets"
 	response_disarm = "gently pushes aside"
 	response_harm = "hits"
@@ -176,8 +173,7 @@
 	mob_biotypes = list(MOB_ORGANIC, MOB_BEAST)
 	speak_chance = 0
 	turns_per_move = 5
-	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab/radroach_meat = 2,
-							/obj/item/stack/sheet/sinew = 1)
+	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab/radroach_meat = 2, /obj/item/stack/sheet/sinew = 1)
 	response_help = "pets"
 	response_disarm = "gently pushes aside"
 	response_harm = "hits"
@@ -251,7 +247,7 @@
 	mob_biotypes = list(MOB_ORGANIC, MOB_BEAST)
 	speak_chance = 0
 	turns_per_move = 5
-	butcher_results = list(/obj/item/stack/sheet/sinew = 1, /obj/item/reagent_containers/food/snacks/meat/slab/ant_meat = 2)
+	butcher_results = list(/obj/item/stack/sheet/sinew = 1, /obj/item/reagent_containers/food/snacks/meat/slab/ant_meat = 2, /obj/item/reagent_containers/food/snacks/rawantbrain = 1)
 	response_help = "pets"
 	response_disarm = "gently pushes aside"
 	response_harm = "hits"
@@ -312,8 +308,7 @@
 	mob_biotypes = list(MOB_ORGANIC, MOB_BEAST)
 	speak_chance = 0
 	turns_per_move = 5
-	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 2,
-							/obj/item/stack/sheet/sinew = 1)
+	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 2, /obj/item/stack/sheet/sinew = 1)
 	response_help = "pets"
 	response_disarm = "gently pushes aside"
 	response_harm = "bites"
@@ -324,11 +319,11 @@
 	health = 100
 	harm_intent_damage = 10
 	obj_damage = 15
-	melee_damage_lower = 10
-	melee_damage_upper = 20
+	melee_damage_lower = 5
+	melee_damage_upper = 10
 	attacktext = "bites"
 	attack_sound = 'sound/creatures/nightstalker_bite.ogg'
-	speak_emote = list("chitters")
+	speak_emote = list("howls")
 	atmos_requirements = list("min_oxy" = 5, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 1, "min_co2" = 0, "max_co2" = 5, "min_n2" = 0, "max_n2" = 0)
 	faction = list("gecko")
 	gold_core_spawnable = HOSTILE_SPAWN
@@ -338,10 +333,10 @@
 	. = ..()
 	if(. && ishuman(target))
 		var/mob/living/carbon/human/H = target
-		H.reagents.add_reagent("cazador_venom", 3)
+		H.reagents.add_reagent("cazador_venom", 2)
 
 /datum/reagent/toxin/cazador_venom/on_mob_life(mob/living/M)
-	if(volume >= 12)
+	if(volume >= 6)
 		M.adjustToxLoss(5, 0)
 	..()
 
@@ -356,24 +351,22 @@
 	mob_biotypes = list(MOB_ORGANIC, MOB_BEAST)
 	speak_chance = 0
 	turns_per_move = 5
-	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 2,
-							/obj/item/stack/sheet/sinew = 1,
-							/obj/item/clothing/head/f13/stalkerpelt = 1,)
+	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 2, /obj/item/stack/sheet/sinew = 1, /obj/item/clothing/head/f13/stalkerpelt = 1)
 	response_help = "pets"
 	response_disarm = "gently pushes aside"
 	response_harm = "bites"
 	emote_taunt = list("growls")
 	taunt_chance = 30
 	speed = -1
-	maxHealth = 300
-	health = 300
+	maxHealth = 250
+	health = 250
 	harm_intent_damage = 30
 	obj_damage = 15
-	melee_damage_lower = 20
-	melee_damage_upper = 40
+	melee_damage_lower = 10
+	melee_damage_upper = 20
 	attacktext = "bites"
 	attack_sound = 'sound/creatures/nightstalker_bite.ogg'
-	speak_emote = list("chitters")
+	speak_emote = list("growls")
 	atmos_requirements = list("min_oxy" = 5, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 1, "min_co2" = 0, "max_co2" = 5, "min_n2" = 0, "max_n2" = 0)
 	faction = list("gecko")
 	gold_core_spawnable = HOSTILE_SPAWN
@@ -383,10 +376,10 @@
 	. = ..()
 	if(. && ishuman(target))
 		var/mob/living/carbon/human/H = target
-		H.reagents.add_reagent("cazador_venom", 7)
+		H.reagents.add_reagent("cazador_venom", 4)
 
 /datum/reagent/toxin/cazador_venom/on_mob_life(mob/living/M)
-	if(volume >= 9)
+	if(volume >= 12)
 		M.adjustToxLoss(5, 0)
 	..()
 
@@ -401,9 +394,7 @@
 	mob_biotypes = list(MOB_ORGANIC, MOB_BEAST)
 	speak_chance = 0
 	turns_per_move = 5
-	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 2,
-							/obj/item/stack/sheet/sinew = 1,
-							)
+	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 2, /obj/item/stack/sheet/sinew = 1)
 	response_help = "pets"
 	response_disarm = "gently pushes aside"
 	response_harm = "bites"
@@ -444,8 +435,7 @@
 	mob_biotypes = list(MOB_ORGANIC, MOB_BEAST)
 	speak_chance = 0
 	turns_per_move = 5
-	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab/molerat = 2,
-							/obj/item/stack/sheet/sinew = 1)
+	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab/molerat = 2, /obj/item/stack/sheet/sinew = 1)
 	response_help = "pets"
 	response_disarm = "gently pushes aside"
 	response_harm = "hits"

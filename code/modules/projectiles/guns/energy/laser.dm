@@ -276,3 +276,22 @@
 	cell_type = /obj/item/stock_parts/cell/ammo/alien //unchargeable, but removable
 	w_class = WEIGHT_CLASS_NORMAL
 	slot_flags = ITEM_SLOT_BELT
+
+/obj/item/gun/energy/laser/rcw
+	name = "laser RCW"
+	desc = "A rapid-fire laser rifle modeled after the familiar \"Thompson\" SMG. It features high-accuracy burst fire that will whittle down targets in a matter of seconds."
+	icon_state = "lasercw"
+	item_state = "rcw"
+	fire_delay = 3
+	burst_size = 2
+	burst_delay = 2
+	equipsound = 'sound/f13weapons/equipsounds/RCWequip.ogg'
+	ammo_type = list(/obj/item/ammo_casing/energy/laser/rcw)
+	cell_type = /obj/item/stock_parts/cell/ammo/ecp
+	w_class = WEIGHT_CLASS_BULKY
+	weapon_weight = WEAPON_HEAVY
+
+/obj/item/gun/energy/laser/rcw/afterattack()
+	. = ..()
+	empty_alarm()
+	return
