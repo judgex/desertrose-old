@@ -96,3 +96,8 @@
 	projectile_type = /obj/item/projectile/beam/laser/solar
 	e_cost = 30 //10 shots, self-charges
 	fire_sound = 'sound/f13weapons/laser_pistol.ogg'
+
+/obj/item/ammo_casing/energy/laser/rcw
+	projectile_type = /obj/item/projectile/beam/laser/rcw
+	e_cost = 75
+	fire_sound = 'sound/f13weapons/rcwfire.ogg'

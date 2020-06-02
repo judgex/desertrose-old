@@ -373,7 +373,7 @@ Paladin
 
 	loadout_options = list(
 	/datum/outfit/loadout/paladinb, //Carbine and aep7
-	/datum/outfit/loadout/paladine, //aer9 and n99
+	/datum/outfit/loadout/paladine, //rcw and n99
 	)
 
 	outfit = /datum/outfit/job/bos/f13paladin
@@ -412,9 +412,9 @@ Paladin
 /datum/outfit/loadout/paladine
 	name = "Paladin"
 	backpack_contents = list(
-		/obj/item/gun/energy/laser/aer9=1,
+		/obj/item/gun/energy/laser/rcw=1,
 		/obj/item/gun/ballistic/automatic/pistol/n99=1,
-		/obj/item/stock_parts/cell/ammo/mfc=2,
+		/obj/item/stock_parts/cell/ammo/ecp=2,
 		/obj/item/ammo_box/magazine/m10mm_adv=2,
 		/obj/item/clothing/accessory/bos/paladin=1
 
