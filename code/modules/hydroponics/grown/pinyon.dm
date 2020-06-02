@@ -20,7 +20,7 @@
 	reagents_add = list("nutriment" = 0.04)
 
 /obj/item/reagent_containers/food/snacks/grown/pinyon
-	seed = /obj/item/seeds/wheat
+	seed = /obj/item/seeds/pinyon
 	name = "pinyon nuts"
 	desc = "The seeds of the pinyon pine, known as pine nuts or piñóns, are an important food for settlers and tribes living in the mountains of the North American Southwest. All species of pine produce edible seeds, but in North America only the pinyon produces seeds large enough to be a major source of food."
 	gender = PLURAL
