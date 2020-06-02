@@ -442,7 +442,7 @@ Senior Scribe
 
 /datum/outfit/job/bos/f13seniorscribe
 	name = "Senior Scribe"
-	jobtype = /datum/job/bos/f13scribe
+	jobtype = /datum/job/bos/f13seniorscribe
 	chemwhiz = TRUE
 	uniform =		/obj/item/clothing/under/syndicate/brotherhood
 	shoes = 		/obj/item/clothing/shoes/combat
