@@ -1,4 +1,3 @@
-//goat
 /mob/living/simple_animal/hostile/retaliate/goat
 	name = "goat"
 	desc = "Not known for their pleasant disposition."
@@ -388,9 +387,7 @@
 	emote_hear = list("brays.")
 	var/obj/item/inventory_back
 	speak_chance = 0.4
-	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 5,
-							/obj/item/reagent_containers/food/snacks/rawbrahmintongue = 2,
-							/obj/item/stack/sheet/animalhide/brahmin = 3)
+	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 4, /obj/item/reagent_containers/food/snacks/rawbrahminliver = 1, /obj/item/reagent_containers/food/snacks/rawbrahmintongue = 2, /obj/item/stack/sheet/animalhide/brahmin = 3)
 
 /mob/living/simple_animal/hostile/retaliate/goat/bighorn
 	name = "big horner"
@@ -407,9 +404,7 @@
 	speak_chance = 1
 	turns_per_move = 5
 	see_in_dark = 6
-	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 6,
-							/obj/item/stack/sheet/sinew = 3,
-							/obj/item/stack/sheet/bone = 4)
+	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 6, /obj/item/stack/sheet/sinew = 3, /obj/item/stack/sheet/bone = 4)
 	response_help  = "pets"
 	response_disarm = "gently pushes aside"
 	response_harm   = "kicks"
@@ -635,7 +630,7 @@ mob/living/simple_animal/cow/brahmin/Topic(href, href_list)
 	mob_biotypes = list(MOB_ORGANIC, MOB_BEAST)
 	turns_per_move = 5
 	see_in_dark = 6
-	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 6)
+	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 6, /obj/item/stack/sheet/sinew = 2, /obj/item/stack/sheet/animalhide/ragstag = 2)
 	response_help  = "pets"
 	response_disarm = "gently pushes aside"
 	response_harm   = "kicks"
