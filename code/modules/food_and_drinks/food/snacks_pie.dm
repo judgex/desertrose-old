@@ -246,3 +246,12 @@
 	bonus_reagents = list("nutriment" = 4, "vitamin" = 6)
 	tastes = list("mint" = 1, "pie" = 1)
 	foodtype = GRAIN | FRUIT | SUGAR
+
+/obj/item/reagent_containers/food/snacks/pie/brahminpotpie
+	name = "Brahmin potpie"
+	icon_state = "Brahmin Pot Pie"
+	desc = "A pot pie is a type of pie with a top pie crust, sometimes a bottom pie crust, consisting of flaky pastry This is filled with stewed brahmin tongue"
+	bonus_reagents = list("nutriment" = 1, "vitamin" = 5)
+	tastes = list("pie" = 1, "meat" = 1, "gravy" = 1)
+	bitesize = 4
+	foodtype = GRAIN | MEAT
