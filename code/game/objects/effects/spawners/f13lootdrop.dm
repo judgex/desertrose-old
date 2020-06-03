@@ -779,9 +779,14 @@
 				/obj/item/stock_parts/cell/ammo/mfc,
 				""
 				)
+	var/loot10 = list(
+				/obj/item/gun/energy/ionrifle/carbine,
+				/obj/item/stock_parts/cell/ammo/mfc,
+				""
+				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/tier3/Initialize(mapload) //on mapload, pick what shit to spawn
-	loot = pick(loot1, loot2, loot3, loot4, loot5, loot6, loot7, loot8, loot9)
+	loot = pick(loot1, loot2, loot3, loot4, loot5, loot6, loot7, loot8, loot9, loot10)
 	. = ..()
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/tier4 //TIER 4 GUN
@@ -881,9 +886,9 @@
 				/obj/item/stock_parts/cell/ammo/ec,
 				)
 	var/loot16 = list(
-				/obj/item/gun/energy/ionrifle,
+				/obj/item/gun/energy/ionrifle/carbine,
 				/obj/item/stock_parts/cell/ammo/mfc,
-				""
+				/obj/item/stock_parts/cell/ammo/mfc,
 				)
 	var/loot17 = list(
 				/obj/item/gun/medbeam,
@@ -899,10 +904,12 @@
 	lootcount = 1
 
 	loot = list(
+				/obj/item/gun/energy/ionrifle,
 				/obj/item/gun/energy/laser/plasma,
 				/obj/item/gun/energy/laser/scatter,
 				/obj/item/gun/ballistic/revolver/sequoia/scoped,
-				/obj/item/gun/ballistic/automatic/bozar
+				/obj/item/gun/ballistic/automatic/bozar,
+				/obj/item/gun/ballistic/automatic/m72
 				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/unique //UNIQUE GUN
