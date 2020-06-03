@@ -161,8 +161,8 @@ Head Scribe
 	exp_type = EXP_TYPE_SCRIBE
 
 	loadout_options = list(
-	/datum/outfit/loadout/hsstand, //Needler, pen, and medbeam
-	/datum/outfit/loadout/hspract //AEP7 and hypospray
+	/datum/outfit/loadout/hsstand, //Pulse pistol, and medbeam
+	/datum/outfit/loadout/hspract //Needler and hypospray
 	)
 
 	outfit = /datum/outfit/job/bos/f13headscribe
@@ -188,7 +188,6 @@ Head Scribe
 
 /datum/outfit/loadout/hsstand
 	name = "Medicinal Expert"
-	l_hand = /obj/item/gun/ballistic/revolver/needler
 	backpack_contents = list(
 		/obj/item/gun/energy/ionrifle/carbine=1,
 		/obj/item/stock_parts/cell/ammo/mfc=2,

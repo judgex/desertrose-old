@@ -26,6 +26,7 @@
 	ammo_x_offset = 2
 	flight_x_offset = 18
 	flight_y_offset = 11
+	cell_type = /obj/item/stock_parts/cell/ammo/ec
 
 /obj/item/gun/energy/decloner
 	name = "biological demolecularisor"
