@@ -10,6 +10,7 @@
 	force = 20
 	var/auto_eject = 0
 	var/auto_eject_sound = null
+	equipsound = 'sound/f13weapons/equipsounds/riflequip.ogg'
 
 /obj/item/gun/ballistic/automatic/proto
 	name = "compact submachine gun"
@@ -837,7 +838,7 @@
 	zoom_out_amt = 13
 
 /obj/item/gun/ballistic/automatic/m72
-	name = "M72 gauss rifle"
+	name = "\improper M72 gauss rifle"
 	desc = "The M72 rifle is of German design. It uses an electromagnetic field to propel rounds at tremendous speed... and pierce almost any obstacle. Its range, accuracy and stopping power is almost unparalleled."
 	icon_state = "m72"
 	item_state = "shotgun"
@@ -845,7 +846,6 @@
 	mag_type = /obj/item/ammo_box/magazine/m2mm
 	fire_sound = 'sound/f13weapons/gauss_rifle.ogg'
 	can_suppress = FALSE
-	burst_size = 1
 	fire_delay = 10
 	zoomable = TRUE
 	zoom_amt = 10
