@@ -20,7 +20,6 @@
 					/obj/item/reagent_containers/food/snacks/f13/porknbeans = 3)
 	contraband = list(/obj/item/reagent_containers/food/snacks/f13/borscht = 6)
 	refill_canister = /obj/item/vending_refill/snack
-	var/chef_compartment_access = "28" //ACCESS_KITCHEN
 
 /obj/item/vending_refill/snack
 	machine_name = "Pure Patriot Treats"
