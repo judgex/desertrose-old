@@ -4,8 +4,8 @@
 #define EMITTER_WELDED 2
 
 /obj/machinery/power/emitter
-	name = "Siege-Laser"
-	desc = "A super-heavy fixed siege laser that fires in short intervals; though with devestating results."
+	name = "emitter"
+	desc = "A device used to charge certain objects and items from a distance using radiation."
 	icon = 'icons/obj/singularity.dmi'
 	icon_state = "emitter"
 
@@ -32,7 +32,7 @@
 
 	var/projectile_type = /obj/item/projectile/beam/emitter
 
-	var/projectile_sound = 'sound/weapons/marauder.ogg'
+	var/projectile_sound = 'sound/weapons/emitter.ogg'
 
 	var/datum/effect_system/spark_spread/sparks
 

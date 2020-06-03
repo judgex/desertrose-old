@@ -550,12 +550,15 @@
 		/obj/item/stock_parts/micro_laser = /obj/item/stock_parts/micro_laser/quadultra)
 
 /obj/item/circuitboard/machine/emitter
-	name = "Siege-Cannon (Machine Board)"
+	name = "Emitter (Machine Board)"
 	build_path = /obj/machinery/power/emitter
 	req_components = list(
 		/obj/item/stock_parts/micro_laser = 1,
 		/obj/item/stock_parts/manipulator = 1)
 	needs_anchored = FALSE
+
+/obj/item/circuitboard/machine/emitter/siege
+	name = "Siege Cannon (Machine Board)"
 
 /obj/item/circuitboard/machine/smes
 	name = "SMES (Machine Board)"
