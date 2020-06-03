@@ -680,7 +680,7 @@
 		/obj/item/stack/sheet/glass = 1)
 
 /obj/item/circuitboard/machine/chem_master
-	name = "ChemMaster 3000 (Machine Board)"
+	name = "Chemical Distillery (Machine Board)"
 	build_path = /obj/machinery/chem_master
 	desc = "You can turn the \"mode selection\" dial using a screwdriver."
 	req_components = list(
@@ -691,11 +691,11 @@
 
 /obj/item/circuitboard/machine/chem_master/attackby(obj/item/I, mob/user, params)
 	if(istype(I, /obj/item/screwdriver))
-		var/new_name = "ChemMaster"
+		var/new_name = "Distillery"
 		var/new_path = /obj/machinery/chem_master
 
 		if(build_path == /obj/machinery/chem_master)
-			new_name = "CondiMaster"
+			new_name = "Kitchen Distillery"
 			new_path = /obj/machinery/chem_master/condimaster
 
 		build_path = new_path
