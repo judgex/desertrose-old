@@ -846,6 +846,7 @@
 	mag_type = /obj/item/ammo_box/magazine/m2mm
 	fire_sound = 'sound/f13weapons/gauss_rifle.ogg'
 	can_suppress = FALSE
+	burst_size = 1
 	fire_delay = 10
 	zoomable = TRUE
 	zoom_amt = 10
