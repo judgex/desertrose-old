@@ -4,9 +4,9 @@
 	icon_state = "ionrifle"
 	item_state = null	//so the human update icon uses the icon_state instead.
 	can_flashlight = 1
-	w_class = WEIGHT_CLASS_HUGE
+	w_class = WEIGHT_CLASS_BULKY
 	flags_1 =  CONDUCT_1
-	slot_flags = 0
+	slot_flags = ITEM_SLOT_BACK
 	ammo_type = list(/obj/item/ammo_casing/energy/ion)
 	equipsound = 'sound/f13weapons/equipsounds/pulsequip.ogg'
 	ammo_x_offset = 3
