@@ -223,9 +223,9 @@
 							/obj/item/vending_refill/boozeomat = 3)
 
 	var/static/list/vending_names_paths = list(/obj/machinery/vending/boozeomat = "Booze-O-Mat",
-							/obj/machinery/vending/coffee = "Solar's Best Hot Drinks",
-							/obj/machinery/vending/snack = "Getmore Chocolate Corp",
-							/obj/machinery/vending/cola = "Robust Softdrinks",
+							/obj/machinery/vending/coffee = "Sicilian Espresso-Go",
+							/obj/machinery/vending/snack = "Pure Patriot treats",
+							/obj/machinery/vending/cola = "Soda Machine",
 							/obj/machinery/vending/cigarette = "ShadyCigs Deluxe",
 							/obj/machinery/vending/games = "\improper Good Clean Fun",
 							/obj/machinery/vending/autodrobe = "AutoDrobe",
