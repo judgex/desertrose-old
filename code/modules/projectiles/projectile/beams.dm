@@ -108,13 +108,20 @@
 	..()
 
 /obj/item/projectile/beam/emitter
+	name = "radiation beam"
+	icon_state = "emitter"
+	damage = 15
+	impact_effect_type = /obj/effect/temp_visual/impact_effect/green_laser
+	light_color = LIGHT_COLOR_GREEN
+
+/obj/item/projectile/beam/emitter/siege
 	name = "siege beam"
 	icon_state = "emitter"
 	damage = 100
 	impact_effect_type = /obj/effect/temp_visual/impact_effect/green_laser
 	light_color = LIGHT_COLOR_GREEN
 
-/obj/item/projectile/beam/emitter/on_hit(atom/target, blocked = FALSE)
+/obj/item/projectile/beam/emitter/siege/on_hit(atom/target, blocked = FALSE)
 	. = ..()
 	if (!QDELETED(target) && (isturf(target) || istype(target, /obj/structure/)))
 		target.ex_act(EXPLODE_HEAVY)
@@ -252,6 +259,12 @@
 /obj/item/projectile/plasma/scatter //Multiplas, fires 3 shots, will melt you
 	damage = 26
 	armour_penetration = 30
+
+/obj/item/projectile/beam/laser/rcw //RCW
+	name = "rapidfire beam"
+	icon_state = "xray"
+	damage = 15
+	armour_penetration = 12
 
 /obj/item/projectile/plasma/alien
 	name = "alien projectile"

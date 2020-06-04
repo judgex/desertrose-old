@@ -70,6 +70,7 @@
 	var/zoom_out_amt = 0
 	var/datum/action/toggle_scope_zoom/azoom
 	var/equipsound = null
+	var/isenergy = null
 /obj/item/gun/Initialize()
 	. = ..()
 	if(pin)
@@ -109,8 +110,12 @@
 	return TRUE
 
 /obj/item/gun/proc/shoot_with_empty_chamber(mob/living/user as mob|obj)
-	to_chat(user, "<span class='danger'>*click*</span>")
-	playsound(src, "gun_dry_fire", 30, 1)
+	if (isenergy == TRUE)
+		to_chat(user, "<span class='danger'>*power failure*</span>")
+		playsound(src, 'sound/f13weapons/noammoenergy.ogg', 30, 1)
+	else
+		to_chat(user, "<span class='danger'>*click*</span>")
+		playsound(src, "gun_dry_fire", 30, 1)
 
 
 /obj/item/gun/proc/shoot_live_shot(mob/living/user as mob|obj, pointblank = 0, mob/pbtarget = null, message = 1)

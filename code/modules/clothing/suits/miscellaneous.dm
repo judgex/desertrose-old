@@ -691,13 +691,14 @@
 	body_parts_covered = CHEST|ARMS|LEGS
 	armor = list("melee" = 15, "bullet" = 16, "laser" = 15, "energy" = 0, "bomb" = 16, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
 
-/obj/item/clothing/suit/f13/elder //Robes are made of finest cloth, so you won't be able to put sharp objects but pens in.
+/obj/item/clothing/suit/f13/elder
 	name = "Brotherhood Elder's robe"
 	desc = "A blue cloth robe with some scarlet red parts, traditionally worn by the Brotherhood of Steel Elder."
 	icon_state = "elder"
 	item_state = "elder"
 	body_parts_covered = CHEST|ARMS|LEGS
 	armor = list("melee" = 15, "bullet" = 16, "laser" = 15, "energy" = 0, "bomb" = 16, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
+	allowed = list(/obj/item/gun)
 
 /obj/item/clothing/suit/ghost_sheet
 	name = "ghost sheet"

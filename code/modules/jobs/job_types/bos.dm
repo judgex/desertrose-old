@@ -125,10 +125,11 @@ Sentinel
 /datum/outfit/loadout/sentvet
 	name = "Veteran Sentinel"
 	backpack_contents = list(
-		/obj/item/stock_parts/cell/ammo/ec = 2,
-		/obj/item/gun/ballistic/automatic/m72=1,
-		/obj/item/ammo_box/magazine/m2mm=1,
-		/obj/item/gun/energy/laser/pistol=1)
+		/obj/item/gun/energy/ionrifle=1,
+		/obj/item/stock_parts/cell/ammo/mfc=3,
+		/obj/item/ammo_box/magazine/m10mm_adv=2,
+		/obj/item/gun/ballistic/automatic/pistol/n99=1,
+		)
 
 /datum/outfit/loadout/sentshot
 	name = "Fire Support Sentinel"
@@ -160,8 +161,8 @@ Head Scribe
 	exp_type = EXP_TYPE_SCRIBE
 
 	loadout_options = list(
-	/datum/outfit/loadout/hsstand, //Needler, pen, and medbeam
-	/datum/outfit/loadout/hspract //AEP7 and hypospray
+	/datum/outfit/loadout/hsstand, //Pulse pistol, and medbeam
+	/datum/outfit/loadout/hspract //Needler and hypospray
 	)
 
 	outfit = /datum/outfit/job/bos/f13headscribe
@@ -186,17 +187,18 @@ Head Scribe
 
 
 /datum/outfit/loadout/hsstand
-	name = "Administrative Leader"
-	l_hand = /obj/item/gun/ballistic/revolver/needler
+	name = "Medicinal Expert"
 	backpack_contents = list(
-		/obj/item/ammo_box/needleap=2,
+		/obj/item/gun/energy/ionrifle/carbine=1,
+		/obj/item/stock_parts/cell/ammo/mfc=2,
 		/obj/item/gun/medbeam=1
 		)
 
 /datum/outfit/loadout/hspract
-	name = "Medicinal Expert"
+	name = "Administrative Leader"
 	backpack_contents = list(
-		/obj/item/gun/energy/laser/pistol=1,
+		/obj/item/gun/ballistic/revolver/needler=1,
+		/obj/item/ammo_box/needleap=2,
 		/obj/item/reagent_containers/hypospray/CMO=1
 		)
 
@@ -304,8 +306,7 @@ Senior Paladin
 	exp_requirements = 1200
 
 	loadout_options = list(
-		/datum/outfit/loadout/spaladina, //Super Sledge
-		/datum/outfit/loadout/spaladinb, //Goliath powerfist
+		/datum/outfit/loadout/spaladina, //M72 Gauss rifle
 		/datum/outfit/loadout/spaladinc, //Lasergatling. God help them.
 		)
 
@@ -324,28 +325,24 @@ Senior Paladin
 	uniform = 		/obj/item/clothing/under/f13/recon
 	mask =			/obj/item/clothing/mask/gas/sechailer/swat
 	belt = 			/obj/item/storage/belt/military/assault
-	suit_store = 	/obj/item/gun/energy/laser/plasma/glock
 	backpack_contents = list(
-		/obj/item/kitchen/knife/combat=1, \
+		/obj/item/melee/powerfist=1, \
 		/obj/item/stock_parts/cell/ammo/ec=2, \
 		)
 
 /datum/outfit/loadout/spaladina
-	name = "Promotee Senior-Paladin"
+	name = "Long-Range Support Senior-Paladin"
 	backpack_contents = list(
-		/obj/item/melee/powerfist=1,
-		)
-
-/datum/outfit/loadout/spaladinb
-	name = "Veteran Senior-Paladin"
-	backpack_contents = list(
-		/obj/item/twohanded/sledgehammer/supersledge=1,
+		/obj/item/gun/ballistic/automatic/m72=1,
+		/obj/item/ammo_box/magazine/m2mm=2,
+		/obj/item/gun/energy/laser/pistol=1
 		)
 
 /datum/outfit/loadout/spaladinc
 	name = "Heavy-Duty Senior-Paladin"
 	backpack_contents = list(
 		/obj/item/minigunpack=1,
+		/obj/item/gun/energy/laser/plasma/glock=1,
 		)
 
 /datum/job/bos/f13seniorpaladin/after_spawn(mob/living/carbon/human/H, mob/M)
@@ -373,7 +370,7 @@ Paladin
 
 	loadout_options = list(
 	/datum/outfit/loadout/paladinb, //Carbine and aep7
-	/datum/outfit/loadout/paladine, //aer9 and n99
+	/datum/outfit/loadout/paladine, //rcw and n99
 	)
 
 	outfit = /datum/outfit/job/bos/f13paladin
@@ -412,9 +409,9 @@ Paladin
 /datum/outfit/loadout/paladine
 	name = "Paladin"
 	backpack_contents = list(
-		/obj/item/gun/energy/laser/aer9=1,
+		/obj/item/gun/energy/laser/rcw=1,
 		/obj/item/gun/ballistic/automatic/pistol/n99=1,
-		/obj/item/stock_parts/cell/ammo/mfc=2,
+		/obj/item/stock_parts/cell/ammo/ecp=2,
 		/obj/item/ammo_box/magazine/m10mm_adv=2,
 		/obj/item/clothing/accessory/bos/paladin=1
 
@@ -442,7 +439,7 @@ Senior Scribe
 
 /datum/outfit/job/bos/f13seniorscribe
 	name = "Senior Scribe"
-	jobtype = /datum/job/bos/f13scribe
+	jobtype = /datum/job/bos/f13seniorscribe
 	chemwhiz = TRUE
 	uniform =		/obj/item/clothing/under/syndicate/brotherhood
 	shoes = 		/obj/item/clothing/shoes/combat

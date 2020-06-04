@@ -34,6 +34,11 @@
 	category = list ("Engineering Machinery")
 	departmental_flags = DEPARTMENTAL_FLAG_ENGINEERING
 
+/datum/design/board/emitter/siege
+	name = "Machine Design (Siege Cannon Board)"
+	build_path = /obj/item/circuitboard/machine/emitter/siege
+	desc = "The Ciruit Board for a powerful, immobile siege laser."
+
 /datum/design/board/power_compressor
 	name = "Machine Design (Power Compressor Board)"
 	desc = "The circuit board for a power compressor."
