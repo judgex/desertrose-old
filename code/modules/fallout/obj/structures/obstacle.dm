@@ -67,7 +67,7 @@
 	material = WOOD
 
 /obj/structure/barricade/wooden/attackby(obj/item/weapon/I, mob/living/user, params)
-	if(!istype(src, /obj/structure/barricade/wooden/planks) && !istype(src, /obj/structure/barricade/wooden/crude) && istype(I, /obj/item/stack/sheet/mineral/wood))
+	if(!istype(src, /obj/structure/barricade/wooden/planks) && !istype(src, /obj/structure/barricade/wooden/crude) && istype(I, /obj/item/stack/sheet/))
 		if(isfloorturf(loc) || isplatingturf(loc))
 			var/obj/item/stack/sheet/mineral/wood/W = I
 			var/obj/item/stack/sheet/cloth/C = I
