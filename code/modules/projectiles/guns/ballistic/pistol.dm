@@ -9,6 +9,7 @@
 	fire_delay = 0
 	actions_types = list()
 	slot_flags = ITEM_SLOT_BELT
+	equipsound = 'sound/f13weapons/equipsounds/pistolequip.ogg'
 
 /obj/item/gun/ballistic/automatic/pistol/update_icon()
 	..()
