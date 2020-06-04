@@ -7,8 +7,8 @@
 	product = /obj/item/reagent_containers/food/snacks/grown/xander
 	lifespan = 25
 	endurance = 10
-	yield = 3 //6 //Where did you get 6 from???
-	growthstages = 3
+	yield = 3
+	growthstages = 4
 	production = 1
 	maturation = 1
 	growing_icon = 'icons/obj/hydroponics/growing_vegetables.dmi'
@@ -27,3 +27,5 @@
 		reagents.add_reagent("antitoxin", 1 + round((seed.potency / 5), 1))
 		reagents.add_reagent("salglu_solution", 1 + round((seed.potency / 20), 1))
 		bitesize = 1 + round(reagents.total_volume / 3, 1)
+
+/*HRP*/

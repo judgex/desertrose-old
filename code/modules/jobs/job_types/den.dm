@@ -3,6 +3,7 @@ Town access doors
 Sheriff/Deputy, Gatehouse etc: 62 ACCESS_GATEWAY
 General access: 25 ACCESS_BAR
 Clinic surgery/storage: 68 ACCESS_CLONING
+Shopkeeper: 34 ACCESS_CARGO_BOT
 here's a tip, go search DEFINES/access.dm
 */
 
@@ -24,8 +25,8 @@ Mayor
 	exp_type = EXP_TYPE_DEN
 
 	outfit = /datum/outfit/job/den/f13mayor
-	access = list(ACCESS_BAR, ACCESS_CLONING, ACCESS_GATEWAY)
-	minimal_access = list(ACCESS_BAR, ACCESS_CLONING, ACCESS_GATEWAY)
+	access = list(ACCESS_BAR, ACCESS_CLONING, ACCESS_GATEWAY, ACCESS_CARGO_BOT)
+	minimal_access = list(ACCESS_BAR, ACCESS_CLONING, ACCESS_GATEWAY, ACCESS_CARGO_BOT)
 
 /datum/outfit/job/den/f13mayor
 	name = "Mayor"
@@ -67,8 +68,8 @@ Sheriff
 	exp_type = EXP_TYPE_DEN
 
 	outfit = /datum/outfit/job/den/f13sheriff
-	access = list(ACCESS_BAR, ACCESS_CLONING, ACCESS_GATEWAY)
-	minimal_access = list(ACCESS_BAR, ACCESS_CLONING, ACCESS_GATEWAY)
+	access = list(ACCESS_BAR, ACCESS_CLONING, ACCESS_GATEWAY, ACCESS_CARGO_BOT)
+	minimal_access = list(ACCESS_BAR, ACCESS_CLONING, ACCESS_GATEWAY, ACCESS_CARGO_BOT)
 
 /datum/outfit/job/den/f13sheriff
 	name = "Sheriff"
@@ -160,7 +161,7 @@ Farmer
 	selection_color = "#dcba97"
 
 
-	outfit = /datum/outfit/job/den/f13settler
+	outfit = /datum/outfit/job/den/f13farmer
 	access = list(ACCESS_BAR)
 	minimal_access = list(ACCESS_BAR)
 
@@ -296,8 +297,29 @@ Preacher
 
 	outfit = /datum/outfit/job/den/f13preacher
 
+	loadout_options = list(
+	/datum/outfit/loadout/standardpreacher, //Robes, Book
+	/datum/outfit/loadout/atompreacher, //Atoms Judgement, Followers Robes
+	)
+
 	access = list(ACCESS_BAR)
 	minimal_access = list(ACCESS_BAR)
+
+/datum/outfit/loadout/atompreacher
+	name = "Atom's Devout"
+	l_hand = /obj/item/twohanded/sledgehammer/atomsjudgement
+	backpack_contents = list(
+		/obj/item/clothing/under/f13/atombeliever=1,
+		/obj/item/clothing/under/f13/atomfaithful=3,
+		/obj/item/clothing/head/helmet/f13/atombeliever=1
+		)
+
+/datum/outfit/loadout/standardpreacher
+	name = "Protector of the Faith"
+	l_hand = /obj/item/nullrod
+	backpack_contents = list(
+		/obj/item/reagent_containers/hypospray/medipen/stimpak=2
+		)
 
 /datum/job/den/f13preacher/after_spawn(mob/living/H, mob/M)
 	if(H.mind)
@@ -426,3 +448,40 @@ Settler
 		/obj/item/clothing/under/f13/machinist, \
 		/obj/item/clothing/under/f13/lumberjack, \
 		/obj/item/clothing/under/f13/roving)
+
+/*
+Shopkeeper
+*/
+
+/datum/job/den/f13shopkeeper
+    title = "Shopkeeper"
+    flag = F13SHOPKEEPER
+    department_flag = DEN
+    faction = "Town"
+    total_positions = 2
+    spawn_positions = 2
+    supervisors = "the sheriff and the mayor"
+    description = "The capitalist economy of pre-war america survived alongside its people. Now it's your job to continue its survival so make some caps!"
+    selection_color = "#dcba97"
+    exp_requirements = 180
+    exp_type = EXP_TYPE_DEN
+
+    outfit = /datum/outfit/job/den/f13shopkeeper
+    access = list(ACCESS_BAR, ACCESS_CARGO_BOT)
+    minimal_access = list(ACCESS_BAR, ACCESS_CARGO_BOT)
+
+/datum/outfit/job/den/f13shopkeeper
+    name = "Shopkeeper"
+    jobtype = /datum/job/den/f13shopkeeper
+
+    id = /obj/item/card/id/dogtag/town
+    uniform = /obj/item/clothing/under/f13/roving
+    ears = /obj/item/radio/headset/headset_den
+    backpack = /obj/item/storage/backpack
+    satchel = /obj/item/storage/backpack/satchel
+    duffelbag = /obj/item/storage/backpack/duffelbag
+    gloves = /obj/item/clothing/gloves/fingerless
+    l_pocket = /obj/item/storage/bag/money/small/den
+    r_pocket = /obj/item/flashlight/flare
+    shoes = /obj/item/clothing/shoes/f13/explorer
+    backpack_contents = list()

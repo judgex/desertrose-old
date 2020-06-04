@@ -2,7 +2,7 @@
 	name = "laser gun"
 	desc = "A basic energy-based laser gun that fires concentrated beams of light which pass through glass and thin metal."
 	icon_state = "laser"
-	item_state = "laser-rifle9"
+	item_state = "retro"
 	w_class = WEIGHT_CLASS_BULKY
 	materials = list(MAT_METAL=2000)
 	ammo_type = list(/obj/item/ammo_casing/energy/lasergun)
@@ -137,24 +137,13 @@
 
 //Fallout
 
-/obj/item/gun/energy/laser/lasergatling
-	name = "H&K L30 gatling laser"
-	desc = "Designed specifically for military use, these were in the prototype stage at the beginning of the Great War. Multiple barrels allowed longer firing before overheating."
-	icon_state = "lasergatling"
-	burst_size = 8
-	fire_delay = 2
-	spread = 12
-	ammo_type = list(/obj/item/ammo_casing/energy/laser/scatter)
-	cell_type = /obj/item/stock_parts/cell/ammo/ecp
-	w_class = WEIGHT_CLASS_HUGE
-	weapon_weight = WEAPON_HEAVY
-
 /obj/item/gun/energy/laser/aer9
 	name = "AER9 laser rifle"
 	desc = "A sturdy and advanced military grade pre-war service laser rifle"
 	icon_state = "laser"
 	item_state = "laser-rifle9"
 	fire_delay = 3
+	equipsound = 'sound/f13weapons/equipsounds/aer9equip.ogg'
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/lasgun)
 	cell_type = /obj/item/stock_parts/cell/ammo/mfc
 	w_class = WEIGHT_CLASS_BULKY
@@ -165,6 +154,7 @@
 	desc = "A basic energy-based laser gun that fires concentrated beams of light."
 	icon_state = "AEP7"
 	item_state = "laser-pistol"
+	equipsound = 'sound/f13weapons/equipsounds/aep7equip.ogg'
 	w_class = WEIGHT_CLASS_NORMAL
 	fire_delay = 2
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/pistol)
@@ -178,6 +168,7 @@
 	item_state = "solarscorcher"
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/solar) //30 damage, 20 AP
 	cell_type = /obj/item/stock_parts/cell/ammo/ec //10 shots, self-charges
+	equipsound = 'sound/f13weapons/equipsounds/aep7equip.ogg'
 	can_charge = 0
 	selfcharge = 1
 	w_class = WEIGHT_CLASS_NORMAL
@@ -189,6 +180,7 @@
 	icon_state = "tribeam"
 	item_state = "laser-rifle9"
 	fire_delay = 3
+	equipsound = 'sound/f13weapons/equipsounds/tribeamequip.ogg'
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/scatter)
 	cell_type = /obj/item/stock_parts/cell/ammo/mfc
 	w_class = WEIGHT_CLASS_BULKY
@@ -202,6 +194,7 @@
 	desc = "A top of line miniaturized plasma caster built by REPCONN in the wake of the Z43-521P failure. It is supperior to all previous rifles to enter service in the USCC."
 	ammo_type = list(/obj/item/ammo_casing/energy/plasma)
 	cell_type = /obj/item/stock_parts/cell/ammo/mfc
+	equipsound = 'sound/f13weapons/equipsounds/plasequip.ogg'
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 
@@ -211,6 +204,7 @@
 	icon_state = "multiplas"
 	fire_delay = 3
 	desc = "A modified A3-20 plasma caster built by REPCONN equipped with a multicasting kit that creates multiple weaker clots."
+	equipsound = 'sound/f13weapons/equipsounds/plasequip.ogg'
 	ammo_type = list(/obj/item/ammo_casing/energy/plasma/scatter)
 	cell_type = /obj/item/stock_parts/cell/ammo/mfc
 	weapon_weight = WEAPON_HEAVY
@@ -223,6 +217,7 @@
 	ammo_type = list(/obj/item/ammo_casing/energy/plasma/pistol)
 	w_class = WEIGHT_CLASS_NORMAL
 	weapon_weight = WEAPON_LIGHT
+	equipsound = 'sound/f13weapons/equipsounds/pistolplasequip.ogg'
 	cell_type = /obj/item/stock_parts/cell/ammo/ec
 	slot_flags = ITEM_SLOT_BELT
 
@@ -234,6 +229,7 @@
 	ammo_type = list(/obj/item/ammo_casing/energy/plasma/pistol/glock)
 	w_class = WEIGHT_CLASS_NORMAL
 	weapon_weight = WEAPON_LIGHT
+	equipsound = 'sound/f13weapons/equipsounds/pistolplasequip.ogg'
 	cell_type = /obj/item/stock_parts/cell/ammo/ec
 	slot_flags = ITEM_SLOT_BELT
 
@@ -256,6 +252,7 @@
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/pistol/wattz)
 	w_class = WEIGHT_CLASS_NORMAL
 	weapon_weight = WEAPON_LIGHT
+	equipsound = 'sound/f13weapons/equipsounds/aep7equip.ogg'
 	cell_type = /obj/item/stock_parts/cell/ammo/ec
 	slot_flags = ITEM_SLOT_BELT
 
@@ -279,3 +276,22 @@
 	cell_type = /obj/item/stock_parts/cell/ammo/alien //unchargeable, but removable
 	w_class = WEIGHT_CLASS_NORMAL
 	slot_flags = ITEM_SLOT_BELT
+
+/obj/item/gun/energy/laser/rcw
+	name = "laser RCW"
+	desc = "A rapid-fire laser rifle modeled after the familiar \"Thompson\" SMG. It features high-accuracy burst fire that will whittle down targets in a matter of seconds."
+	icon_state = "lasercw"
+	item_state = "rcw"
+	fire_delay = 3
+	burst_size = 2
+	burst_delay = 2
+	equipsound = 'sound/f13weapons/equipsounds/RCWequip.ogg'
+	ammo_type = list(/obj/item/ammo_casing/energy/laser/rcw)
+	cell_type = /obj/item/stock_parts/cell/ammo/ecp
+	w_class = WEIGHT_CLASS_BULKY
+	weapon_weight = WEAPON_HEAVY
+
+/obj/item/gun/energy/laser/rcw/afterattack()
+	. = ..()
+	empty_alarm()
+	return

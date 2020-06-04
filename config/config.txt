@@ -27,10 +27,10 @@ STATIONNAME Mojave Wasteland
 HUB
 
 ## Uncomment and set the config in tools/discord/config.yml to enable sending stuff to discord's webhooks
-USING_DISCORD
+#USING_DISCORD
 
 ## Uncomment to allow users to send discord messages to ooc, requires a bot and a comms_key
-USING_DISCORD_OOC
+#USING_DISCORD_OOC
 
 ## Lobby time: This is the amount of time between rounds that players have to setup their characters and be ready.
 LOBBY_COUNTDOWN 160
@@ -229,7 +229,7 @@ ALLOW_WEBCLIENT
 DISCORDURL https://discord.gg/NGpP36m
 
 ## Wiki address
-WIKIURL https://wiki.fandom.com/wiki/Bad_Deathclaw_Wiki
+WIKIURL https://desert-rose-fallout-13.fandom.com/wiki/Desert_Rose_-_Fallout_13_Wiki
 
 ## Rules address
 RULESURL https://discord.gg/NGpP36m
@@ -473,3 +473,6 @@ BOT_IP 127.0.0.1:8081
 ##	For reference, Goonstation uses a resolution of 21x15 for it's widescreen mode.
 ##	Do note that changing this value will affect the title screen. The title screen will have to be updated manually if this is changed.
 DEFAULT_VIEW 15x15
+
+## Comment this out to enable clickable URLs from being posted in OOC
+BLOCKOOCURLS

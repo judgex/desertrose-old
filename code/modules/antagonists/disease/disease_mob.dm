@@ -110,6 +110,8 @@ the new instance inside the host to be updated to the template's stats.
 /mob/camera/disease/say(message, datum/language/language = null)
 	return
 
+
+
 /mob/camera/disease/Move(NewLoc, Dir = 0)
 	if(freemove)
 		forceMove(NewLoc)

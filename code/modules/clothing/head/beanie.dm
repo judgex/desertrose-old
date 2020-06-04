@@ -73,5 +73,3 @@
 	name = "green striped beanie"
 	icon_state = "beaniestripedgreen"
 	item_color = "beaniestripedgreen"
-
-//No dog fashion sprites yet :(  poor Ian can't be dope like the rest of us yet

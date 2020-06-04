@@ -4,7 +4,7 @@
 ////////////////////////////////////////////////BREAD////////////////////////////////////////////////
 
 /datum/crafting_recipe/food/meatbread
-	name = "Meat bread"
+	name = "meatloaf"
 	reqs = list(
 		/obj/item/reagent_containers/food/snacks/store/bread/plain = 1,
 		/obj/item/reagent_containers/food/snacks/meat/cutlet/plain = 3,
@@ -14,7 +14,7 @@
 	subcategory = CAT_BREAD
 
 /datum/crafting_recipe/food/xenomeatbread
-	name = "Xenomeat bread"
+	name = "Mutant meatloaf"
 	reqs = list(
 		/obj/item/reagent_containers/food/snacks/store/bread/plain = 1,
 		/obj/item/reagent_containers/food/snacks/meat/cutlet/xeno = 3,
@@ -24,7 +24,7 @@
 	subcategory = CAT_BREAD
 
 /datum/crafting_recipe/food/spidermeatbread
-	name = "Spidermeat bread"
+	name = "Spider meatload"
 	reqs = list(
 		/obj/item/reagent_containers/food/snacks/store/bread/plain = 1,
 		/obj/item/reagent_containers/food/snacks/meat/cutlet/spider = 3,

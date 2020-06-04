@@ -25,7 +25,7 @@
 //Chaplain
 /obj/item/clothing/suit/nun
 	name = "nun robe"
-	desc = "Maximum piety in this star system."
+	desc = "Maximum piety."
 	icon_state = "nun"
 	item_state = "nun"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS|HANDS
@@ -73,7 +73,7 @@
 //Detective
 /obj/item/clothing/suit/det_suit
 	name = "trenchcoat"
-	desc = "An 18th-century multi-purpose trenchcoat. Someone who wears this means serious business."
+	desc = "An 18th-y multi-purpose trenchcoat. Someone who wears this means serious business."
 	icon_state = "detective"
 	item_state = "det_suit"
 	blood_overlay_type = "coat"
@@ -165,12 +165,12 @@
 //Curator
 /obj/item/clothing/suit/curator
 	name = "treasure hunter's coat"
-	desc = "Both fashionable and lightly armoured, this jacket is favoured by treasure hunters the galaxy over."
+	desc = "Both fashionable and lightly armoured, this jacket is favoured by treasure hunters east of the colorado river."
 	icon_state = "curator"
 	item_state = "curator"
 	blood_overlay_type = "coat"
 	body_parts_covered = CHEST|ARMS
-	allowed = list(/obj/item/tank/internals, /obj/item/melee/curator_whip)
+	allowed = list(/obj/item/tank/internals, /obj/item/melee/curator_whip, /obj/item/gun)
 	armor = list("melee" = 25, "bullet" = 25, "laser" = 16, "energy" = 16, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 45)
 	cold_protection = CHEST|ARMS
 	heat_protection = CHEST|ARMS

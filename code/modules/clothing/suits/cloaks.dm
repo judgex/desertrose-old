@@ -8,7 +8,7 @@
 	item_state = "cloak"
 	w_class = WEIGHT_CLASS_SMALL
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	
+
 /obj/item/clothing/neck/cloak/grey
 	name = "dark cloak"
 	desc = "It's a cape that can be worn around your neck."
@@ -17,7 +17,7 @@
 	item_state = "cloak"
 	w_class = WEIGHT_CLASS_SMALL
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	color = "#4A4A4B" //Grey but it looks black
+	color = "#4A4A4B"
 
 /obj/item/clothing/head/cloakhood
 	name = "cloak hood"
@@ -31,6 +31,11 @@
 /obj/item/clothing/neck/cloak/suicide_act(mob/user)
 	user.visible_message("<span class='suicide'>[user] is strangling [user.p_them()]self with [src]! It looks like [user.p_theyre()] trying to commit suicide!</span>")
 	return(OXYLOSS)
+
+/obj/item/clothing/neck/cloak/overseer
+	name = "vault-tec overseer's cloak"
+	desc = "This is the overseers cloak.  Issued by the Vault-tec corporation to easily identify the overseer. This cloak has been passed down from overseer to overseer"
+	icon_state = "overseercloak"
 
 /obj/item/clothing/neck/cloak/hos
 	name = "head of security's cloak"
@@ -65,6 +70,11 @@
 	name = "head of personnel's cloak"
 	desc = "Worn by the Head of Personnel. It smells faintly of bureaucracy."
 	icon_state = "hopcloak"
+
+/obj/item/clothing/neck/cloak/chiefcloak
+	name = "wayfarer cloak"
+	desc = "A symbol of the authority of the Wayfarer Chief."
+	icon_state = "chiefcloak"
 
 /obj/item/clothing/suit/hooded/cloak/desert
 	name = "desert cloak"

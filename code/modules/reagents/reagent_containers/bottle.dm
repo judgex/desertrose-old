@@ -78,13 +78,13 @@
 	list_reagents = list("charcoal" = 30)
 
 /obj/item/reagent_containers/glass/bottle/FEV_solution
-	name = "unstable FEV solution bottle"
-	desc = "A small bottle of unstable FEV solution. Randomly changes the DNA structure of whoever comes in contact."
+	name = " FEV bottle"
+	desc = "A small vial of the Forced Evolutionary Virus. You think that consuming this would be a bad idea."
 	list_reagents = list("FEV_solution" = 30)
 
 /obj/item/reagent_containers/glass/bottle/plasma
-	name = "liquid plasma bottle"
-	desc = "A small bottle of liquid plasma. Extremely toxic and reacts with micro-organisms inside blood."
+	name = "liquid ultracite bottle"
+	desc = "A small bottle of liquid ultracite. Extremely toxic and reacts with micro-organisms inside blood."
 	list_reagents = list("plasma" = 30)
 
 /obj/item/reagent_containers/glass/bottle/synaptizine

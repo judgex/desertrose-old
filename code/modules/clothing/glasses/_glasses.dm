@@ -186,6 +186,13 @@
 	glass_colour_type = /datum/client_colour/glass_colour/gray
 	dog_fashion = /datum/dog_fashion/head
 
+/obj/item/clothing/glasses/sunglasses/fakeblindfold
+	name = "priestess blindfold"
+	desc = "The coverings used to restrict the sight of the world, but see with the Sight of Mars."
+	icon_state = "blindfold"
+	item_state = "blindfold"
+
+
 /obj/item/clothing/glasses/sunglasses/reagent
 	name = "beer goggles"
 	desc = "A pair of sunglasses outfitted with apparatus to scan reagents."
@@ -235,7 +242,7 @@
 
 /obj/item/clothing/glasses/welding
 	name = "welding goggles"
-	desc = "Protects the eyes from welders; approved by the mad scientist association."
+	desc = "Protects the eyes from welding burns."
 	icon_state = "welding-g"
 	item_state = "welding-g"
 	actions_types = list(/datum/action/item_action/toggle)

@@ -375,7 +375,7 @@
 
 /obj/item/stock_parts/cell/ammo/mfc
 	name = "microfusion cell"
-	desc = "A microfusion cell, typically used as ammunition for large energy weapons. YOU CAN RECHARGE THIS STUPID SON OF A BITCH FOR THE LOW RATE OF 0.99 NO SHIPPING AND HANDLING MOTHERFUCKER"
+	desc = "A microfusion cell, typically used as ammunition for large energy weapons."
 	icon_state = "mfc"
 	maxcharge = 1200
 	chargerate = 300

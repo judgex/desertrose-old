@@ -8,9 +8,7 @@
 	mob_biotypes = list(MOB_ORGANIC, MOB_BEAST)
 	speak_chance = 0
 	turns_per_move = 5
-	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab/cazador_meat = 2,
-						/obj/item/stack/sheet/sinew = 2,
-						/obj/item/stack/sheet/animalhide/chitin = 3)
+	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab/cazador_meat = 2, /obj/item/stack/sheet/sinew = 2, /obj/item/stack/sheet/animalhide/chitin = 3)
 	response_help = "pets"
 	response_disarm = "gently pushes aside"
 	response_harm = "hits"
@@ -32,6 +30,7 @@
 	atmos_requirements = list("min_oxy" = 5, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 1, "min_co2" = 0, "max_co2" = 5, "min_n2" = 0, "max_n2" = 0)
 	faction = list("cazador")
 	movement_type = FLYING
+	a_intent = INTENT_HARM
 	gold_core_spawnable = HOSTILE_SPAWN
 
 /mob/living/simple_animal/hostile/cazador/AttackingTarget()
@@ -76,7 +75,7 @@
 	toxpwr = 1
 	taste_description = "pain"
 	taste_mult = 1.3
-
+..
 /datum/reagent/toxin/cazador_venom/on_mob_life(mob/living/M)
 	if(volume >= 15)
 		M.adjustToxLoss(5, 0)
@@ -106,6 +105,7 @@
 	obj_damage = 20
 	melee_damage_lower = 35
 	melee_damage_upper = 35
+	a_intent = INTENT_HARM
 	attacktext = "stings"
 	attack_sound = 'sound/creatures/radscorpion_attack.ogg'
 	speak_emote = list("hisses")
@@ -142,8 +142,7 @@
 	mob_biotypes = list(MOB_ORGANIC, MOB_BEAST)
 	speak_chance = 0
 	turns_per_move = 5
-	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab/gecko = 2,
-							/obj/item/stack/sheet/animalhide/geckohide = 1)
+	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab/gecko = 2, /obj/item/stack/sheet/animalhide/geckohide = 1)
 	response_help = "pets"
 	response_disarm = "gently pushes aside"
 	response_harm = "hits"
@@ -160,6 +159,7 @@
 	speak_emote = list("hisses")
 	atmos_requirements = list("min_oxy" = 5, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 1, "min_co2" = 0, "max_co2" = 5, "min_n2" = 0, "max_n2" = 0)
 	faction = list("gecko")
+	a_intent = INTENT_HARM
 	gold_core_spawnable = HOSTILE_SPAWN
 
 /mob/living/simple_animal/hostile/radroach
@@ -173,8 +173,7 @@
 	mob_biotypes = list(MOB_ORGANIC, MOB_BEAST)
 	speak_chance = 0
 	turns_per_move = 5
-	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab/radroach_meat = 2,
-							/obj/item/stack/sheet/sinew = 1)
+	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab/radroach_meat = 2, /obj/item/stack/sheet/sinew = 1)
 	response_help = "pets"
 	response_disarm = "gently pushes aside"
 	response_harm = "hits"
@@ -193,6 +192,7 @@
 	speak_emote = list("skitters")
 	atmos_requirements = list("min_oxy" = 5, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 1, "min_co2" = 0, "max_co2" = 5, "min_n2" = 0, "max_n2" = 0)
 	faction = list("gecko")
+	a_intent = INTENT_HARM
 	gold_core_spawnable = HOSTILE_SPAWN
 
 /mob/living/simple_animal/hostile/giantant
@@ -206,7 +206,7 @@
 	mob_biotypes = list(MOB_ORGANIC, MOB_BEAST)
 	speak_chance = 0
 	turns_per_move = 5
-	butcher_results = list(/obj/item/stack/sheet/sinew = 1)
+	butcher_results = list(/obj/item/stack/sheet/sinew = 1, /obj/item/reagent_containers/food/snacks/meat/slab/ant_meat = 2)
 	response_help = "pets"
 	response_disarm = "gently pushes aside"
 	response_harm = "hits"
@@ -226,6 +226,7 @@
 	atmos_requirements = list("min_oxy" = 5, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 1, "min_co2" = 0, "max_co2" = 5, "min_n2" = 0, "max_n2" = 0)
 	faction = list("gecko")
 	gold_core_spawnable = HOSTILE_SPAWN
+	a_intent = INTENT_HARM
 	decompose = TRUE
 
 /mob/living/simple_animal/hostile/giantant/Initialize()
@@ -246,7 +247,7 @@
 	mob_biotypes = list(MOB_ORGANIC, MOB_BEAST)
 	speak_chance = 0
 	turns_per_move = 5
-	butcher_results = list(/obj/item/stack/sheet/sinew = 1)
+	butcher_results = list(/obj/item/stack/sheet/sinew = 1, /obj/item/reagent_containers/food/snacks/meat/slab/ant_meat = 2, /obj/item/reagent_containers/food/snacks/rawantbrain = 1)
 	response_help = "pets"
 	response_disarm = "gently pushes aside"
 	response_harm = "hits"
@@ -267,6 +268,7 @@
 	faction = list("gecko")
 	gold_core_spawnable = HOSTILE_SPAWN
 	decompose = TRUE
+	a_intent = INTENT_HARM
 
 /mob/living/simple_animal/hostile/fireant/Initialize()
 	. = ..()
@@ -281,6 +283,146 @@
 		var/mob/living/carbon/human/H = target
 		H.reagents.add_reagent("napalm", 0.1)
 
+/obj/item/clothing/head/f13/stalkerpelt
+	name = "nightstalker pelt"
+	desc = "A hat made from nightstalker pelt which makes the wearer feel both comfortable and elegant."
+	icon_state = "stalkerpelt"
+	item_state = "fedora"
+
+/obj/structure/stalkeregg
+	name = "nightstalker egg"
+	desc = "A shiny egg coming from a nightstalker."
+	icon = 'icons/mob/wastemobsdrops.dmi'
+	icon_state = "stalker-egg"
+	density = 1
+	anchored = 0
+
+/mob/living/simple_animal/hostile/stalkeryoung
+	name = "young nightstalker"
+	desc = "A juvenile crazed genetic hybrid of rattlesnake and coyote DNA."
+	icon = 'icons/mob/wastemobs.dmi'
+	icon_state = "nightstalker"
+	icon_living = "nightstalker"
+	icon_dead = "nightstalker_dead"
+	icon_gib = null
+	mob_biotypes = list(MOB_ORGANIC, MOB_BEAST)
+	speak_chance = 0
+	turns_per_move = 5
+	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 2, /obj/item/stack/sheet/sinew = 1)
+	response_help = "pets"
+	response_disarm = "gently pushes aside"
+	response_harm = "bites"
+	emote_taunt = list("growls")
+	taunt_chance = 30
+	speed = -1
+	maxHealth = 50
+	health = 100
+	harm_intent_damage = 10
+	obj_damage = 15
+	melee_damage_lower = 5
+	melee_damage_upper = 10
+	attacktext = "bites"
+	attack_sound = 'sound/creatures/nightstalker_bite.ogg'
+	speak_emote = list("howls")
+	atmos_requirements = list("min_oxy" = 5, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 1, "min_co2" = 0, "max_co2" = 5, "min_n2" = 0, "max_n2" = 0)
+	faction = list("gecko")
+	gold_core_spawnable = HOSTILE_SPAWN
+	a_intent = INTENT_HARM
+
+/mob/living/simple_animal/hostile/stalker/AttackingTarget()
+	. = ..()
+	if(. && ishuman(target))
+		var/mob/living/carbon/human/H = target
+		H.reagents.add_reagent("cazador_venom", 2)
+
+/datum/reagent/toxin/cazador_venom/on_mob_life(mob/living/M)
+	if(volume >= 6)
+		M.adjustToxLoss(5, 0)
+	..()
+
+/mob/living/simple_animal/hostile/stalker
+	name = "nightstalker"
+	desc = "A crazed genetic hybrid of rattlesnake and coyote DNA."
+	icon = 'icons/mob/wastemobslong.dmi'
+	icon_state = "nightstalker"
+	icon_living = "nightstalker"
+	icon_dead = "nightstalker-dead"
+	icon_gib = null
+	mob_biotypes = list(MOB_ORGANIC, MOB_BEAST)
+	speak_chance = 0
+	turns_per_move = 5
+	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 2, /obj/item/stack/sheet/sinew = 1, /obj/item/clothing/head/f13/stalkerpelt = 1)
+	response_help = "pets"
+	response_disarm = "gently pushes aside"
+	response_harm = "bites"
+	emote_taunt = list("growls")
+	taunt_chance = 30
+	speed = -1
+	maxHealth = 250
+	health = 250
+	harm_intent_damage = 30
+	obj_damage = 15
+	melee_damage_lower = 10
+	melee_damage_upper = 20
+	attacktext = "bites"
+	attack_sound = 'sound/creatures/nightstalker_bite.ogg'
+	speak_emote = list("growls")
+	atmos_requirements = list("min_oxy" = 5, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 1, "min_co2" = 0, "max_co2" = 5, "min_n2" = 0, "max_n2" = 0)
+	faction = list("gecko")
+	gold_core_spawnable = HOSTILE_SPAWN
+	a_intent = INTENT_HARM
+
+/mob/living/simple_animal/hostile/stalker/AttackingTarget()
+	. = ..()
+	if(. && ishuman(target))
+		var/mob/living/carbon/human/H = target
+		H.reagents.add_reagent("cazador_venom", 4)
+
+/datum/reagent/toxin/cazador_venom/on_mob_life(mob/living/M)
+	if(volume >= 12)
+		M.adjustToxLoss(5, 0)
+	..()
+
+/mob/living/simple_animal/hostile/bloatfly
+	name = "bloatfly"
+	desc = "A common mutated pest resembling an oversized blow-fly."
+	icon = 'icons/mob/wastemobs.dmi'
+	icon_state = "bloatfly"
+	icon_living = "bloatfly"
+	icon_dead = "bloatfly_dead"
+	icon_gib = null
+	mob_biotypes = list(MOB_ORGANIC, MOB_BEAST)
+	speak_chance = 0
+	turns_per_move = 5
+	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 2, /obj/item/stack/sheet/sinew = 1)
+	response_help = "pets"
+	response_disarm = "gently pushes aside"
+	response_harm = "bites"
+	emote_taunt = list("growls")
+	taunt_chance = 30
+	speed = -1
+	maxHealth = 40
+	health = 40
+	harm_intent_damage = 5
+	obj_damage = 15
+	melee_damage_lower = 5
+	melee_damage_upper = 8
+	attacktext = "bites"
+	attack_sound = 'sound/creatures/bloatfly_attack.ogg'
+	speak_emote = list("chitters")
+	atmos_requirements = list("min_oxy" = 5, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 1, "min_co2" = 0, "max_co2" = 5, "min_n2" = 0, "max_n2" = 0)
+	faction = list("gecko")
+	gold_core_spawnable = HOSTILE_SPAWN
+	a_intent = INTENT_HARM
+
+/mob/living/simple_animal/hostile/bloatfly/bullet_act(obj/item/projectile/Proj)
+	if(!Proj)
+		return
+	if(prob(50))
+		return ..()
+	else
+		visible_message("<span class='danger'>[src] dodges [Proj]!</span>")
+		return 0
 
 /mob/living/simple_animal/hostile/molerat
 	name = "molerat"
@@ -293,8 +435,7 @@
 	mob_biotypes = list(MOB_ORGANIC, MOB_BEAST)
 	speak_chance = 0
 	turns_per_move = 5
-	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab/molerat = 2,
-							/obj/item/stack/sheet/sinew = 1)
+	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab/molerat = 2, /obj/item/stack/sheet/sinew = 1)
 	response_help = "pets"
 	response_disarm = "gently pushes aside"
 	response_harm = "hits"
@@ -313,6 +454,7 @@
 	atmos_requirements = list("min_oxy" = 5, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 1, "min_co2" = 0, "max_co2" = 5, "min_n2" = 0, "max_n2" = 0)
 	faction = list("gecko")
 	gold_core_spawnable = HOSTILE_SPAWN
+	a_intent = INTENT_HARM
 
 /mob/living/simple_animal/hostile/radscorpion/black
 	name = "giant rad scorpion"

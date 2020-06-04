@@ -148,8 +148,8 @@
     minimize_when_attached = TRUE
 
 /obj/item/clothing/accessory/ncr/SPC
-    name = "(E-4) Specialist rank pins"
-    desc = "A Specialist should wear this."
+    name = "(E-4) Corporal rank pins"
+    desc = "A Corporal should wear this."
     icon_state = "ncrenlisted"
     item_color = "ncrenlisted"
     minimize_when_attached = TRUE
@@ -358,8 +358,8 @@
 	desc = "An extremely rare golden medal awarded only by CentCom. To receive such a medal is the highest honor and as such, very few exist. This medal is almost never awarded to anybody but commanders."
 
 /obj/item/clothing/accessory/medal/plasma
-	name = "plasma medal"
-	desc = "An eccentric medal made of plasma."
+	name = "ultracite medal"
+	desc = "An eccentric medal made of ultracite."
 	icon_state = "plasma"
 	item_color = "plasma"
 	medaltype = "medal-plasma"
@@ -392,6 +392,12 @@
 	desc = "A fancy armband!"
 	icon_state = "whiteband"
 	item_color = "whiteband"
+
+/obj/item/clothing/accessory/armband/black
+	name = "MP's armband"
+	desc = "An armband issued to NCR Military Police, signifying their alignment with NCROSI rather than the typical chain of command."
+	icon_state = "blackband"
+	item_color = "blackband"
 
 /obj/item/clothing/accessory/armband/deputy
 	name = "security deputy armband"
@@ -428,8 +434,8 @@
 	item_color = "medband"
 
 /obj/item/clothing/accessory/armband/medblue
-	name = "medical guard armband"
-	desc = "An armband, worn by the station's security forces to display which department they're assigned to. This one is white and blue."
+	name = "first aid armband"
+	desc = "An armband, worn NCR troopers who are trained in and can perform first aid."
 	icon_state = "medblueband"
 	item_color = "medblueband"
 

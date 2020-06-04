@@ -12,6 +12,14 @@
 	gloves =        /obj/item/clothing/gloves/f13/handwraps
 	id = null
 	box = null
+	ears = null
+
+/datum/outfit/job/tribal/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	..()
+	if(visualsOnly)
+		return
+	H.add_trait(TRAIT_TECHNOPHOBE, TRAIT_GENERIC)
+
 /*
 Tribal Chief
 */
@@ -23,7 +31,7 @@ Tribal Chief
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "The wellbeing of the tribe and every one of it's members."
-	description = "The leader and central political figure in the Wayfinder Tribe. It is your duty to preserve the culture of your people, including their historic aversion to pre-war weapons and technology. Meanwhile with outsiders you engage in diplomatic meetings with the powers present within the Region to ensure the village's safety and independence."
+	description = "The leader and central political figure in the Wayfarer Tribe. It is your duty to preserve the culture of your people, including their historic aversion to pre-war weapons and technology. Meanwhile with outsiders you engage in diplomatic meetings with the powers present within the Region to ensure the village's safety and independence. Additional material, lore and information for your faction: https://desert-rose-fallout-13.fandom.com/wiki/Wayfarer_Tribe_Lore"
 	selection_color = "#006666"
 	exp_requirements = 1080
 	exp_type = EXP_TYPE_TRIBAL
@@ -40,6 +48,7 @@ Tribal Chief
 	backpack = /obj/item/storage/backpack/explorer
 	uniform = /obj/item/clothing/under/f13/tribe_chief
 	belt = /obj/item/claymore/machete/warclub
+	neck = /obj/item/clothing/neck/cloak/chiefcloak
 	backpack_contents = list(
 		/obj/item/restraints/legcuffs/bola=1,
 		/obj/item/reagent_containers/pill/patch/healingpowder=2,
@@ -57,7 +66,7 @@ Tribal Shaman
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "Tribal Chief"
-	description = "The spiritual leader and cultural core of the Wayfinder Tribe. You aid villagers in their day to day lives by offering guidance and advice, while also acting as the direct aid to the chief. To you the breaking of cultural norms such as an aversion to pre-war weapons and technology is to be taken with the upmost seriousness."
+	description = "The spiritual leader and cultural core of the Wayfarer Tribe. You aid villagers in their day to day lives by offering guidance and advice, while also acting as the direct aid to the chief. To you the breaking of cultural norms such as an aversion to pre-war weapons and technology is to be taken with the upmost seriousness. Additional material, lore and information for your faction: https://desert-rose-fallout-13.fandom.com/wiki/Wayfarer_Tribe_Lore"
 	selection_color = "#006666"
 	exp_requirements = 1080
 	exp_type = EXP_TYPE_TRIBAL
@@ -71,9 +80,11 @@ Tribal Shaman
 	name = "Shaman"
 	jobtype = /datum/job/tribal/f13shaman
 
+	head = /obj/item/clothing/head/helmet/f13/shamanhead
 	backpack = /obj/item/storage/backpack/explorer
 	uniform = /obj/item/clothing/under/f13/tribe_shaman
-	belt = /obj/item/claymore/machete
+	r_pocket = /obj/item/kitchen/knife/ritualdagger
+	r_hand = /obj/item/twohanded/sledgehammer/shamanstaff
 	backpack_contents = list(
 		/obj/item/reagent_containers/pill/patch/healingpowder=2,
 		/obj/item/stack/medical/gauze=1,
@@ -86,10 +97,10 @@ Villager
 	flag = F13VILLAGER
 	department_flag = TRIBAL
 	faction = "Village"
-	total_positions = 4
-	spawn_positions = 4
+	total_positions = 8
+	spawn_positions = 8
 	supervisors = "Tribal Chief and Shaman"
-	description = "A proud member of the Wayfinder tribe, you do what needs to be done to ensure the survival of yourself and your people while following the laws of the tribe in regards to the historic aversion to pre-war weapons and technology."
+	description = "A proud member of the Wayfarer tribe, you do what needs to be done to ensure the survival of yourself and your people while following the laws of the tribe in regards to the historic aversion to pre-war weapons and technology. Additional material, lore and information for your faction: https://desert-rose-fallout-13.fandom.com/wiki/Wayfarer_Tribe_Lore"
 	selection_color = "#008080"
 	exp_type = EXP_TYPE_TRIBAL
 

@@ -488,6 +488,16 @@ update_label("John Doe", "Clowny")
 	desc = "A dog tag proving enlistment."
 	icon_state = "ncrdogtagrecruit"
 
+/obj/item/card/id/dogtag/ncrmp
+	name = "military police tags"
+	desc = "A dog tag that associates one with the NCROSI."
+	icon_state = "ncrdogtagrecruit"
+
+/obj/item/card/id/dogtag/ncrht
+	name = "heavy trooper's tags"
+	desc = "A dog tag proving the elite status of the heavy trooper."
+	icon_state = "ncrdogtagrecruit"
+
 /obj/item/card/id/dogtag/ncrsergeant
 	name = "sergeant's tags"
 	desc = "A chevron decorated dog tag showing NCO-ship."
@@ -532,6 +542,12 @@ update_label("John Doe", "Clowny")
 	icon_state = "legionmedallionprime"
 	id_type = "prime medallion"
 
+/obj/item/card/id/dogtag/legslavemaster
+	name = "slavemaster medallion"
+	desc = "A marked silver disc stamped with the Legion's Bull insignia. Belongs to the dreaded Slavemaster."
+	icon_state = "legionmedallionprime"
+	id_type = "slavemaster medallion"
+
 /obj/item/card/id/dogtag/legveteran
 	name = "veteran medallion"
 	desc = "A heavily marked silver disc stamped with the Legion's Bull insignia. Belongs to a veteran, and reeks of iron."
@@ -544,10 +560,19 @@ update_label("John Doe", "Clowny")
 	icon_state = "legionmedallioncent"
 	id_type = "centurion medallion"
 
+/obj/item/card/id/dogtag/legpriest
+	name = "priestess medallion"
+	desc = "A golden disc awarded to the trusted spiritual guide to the nearby Legion."
+	icon_state = "legionmedallioncent"
+	item_state = "legionmedallioncent"
+	item_color = ""
+	id_type = "priestess medallion"
+
 /obj/item/card/id/dogtag/legorator
 	name = "orator medallion"
-	desc = "A golden disc awarded to the trusted political advisor to the Centurion. When they're around, the Legion won't be far behind."
+	desc = "A golden disc awarded to the one who is a dedicated ambassador for Caesar's Legion."
 	icon_state = "legionmedallioncent"
+	item_state = "legionmedallioncent"
 	id_type = "orator medallion"
 
 /obj/item/card/id/legionbrand

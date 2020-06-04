@@ -113,6 +113,7 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	force = 35
 	throwforce = 25
 	block_chance = 10
+	armour_penetration = 5
 	sharpness = IS_BLUNT
 
 /obj/item/claymore/machete/pipe/tireiron
@@ -398,7 +399,7 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	item_state = "knife"
 	force = 20
 	throwforce = 20
-	embedding = list("embedded_pain_multiplier" = 4, "embed_chance" = 40, "embedded_fall_chance" = 10)
+	embedding = list("embedded_pain_multiplier" = 4, "embed_chance" = 51, "embedded_fall_chance" = 10)
 	w_class = WEIGHT_CLASS_SMALL
 
 /obj/item/throwing_star/spear/harpoon

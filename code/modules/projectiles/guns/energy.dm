@@ -20,6 +20,8 @@
 	var/charge_delay = 4
 	var/use_cyborg_cell = 0 //whether the gun's cell drains the cyborg user's cell to recharge
 	var/dead_cell = FALSE //set to true so the gun is given an empty cell
+	var/alarmed = 0
+	isenergy = TRUE
 
 /obj/item/gun/energy/emp_act(severity)
 	. = ..()
@@ -240,6 +242,7 @@
 		cell.update_icon()
 		cell = null
 		to_chat(user, "<span class='notice'>You pull the cell out of \the [src].</span>")
+		playsound(src, 'sound/f13weapons/equipsounds/laserreload.ogg', 50, 1)
 	else
 		to_chat(user, "<span class='notice'>There's no cell in \the [src].</span>")
 	return
@@ -265,3 +268,11 @@
 	..()
 	if(can_charge == 1)
 		to_chat(user, "<span class='notice'>Alt-click to eject the battery.</span>")
+
+/obj/item/gun/energy/proc/empty_alarm()
+	if(!chambered && !alarmed)
+		playsound(src.loc, 'sound/weapons/smg_empty_alarm.ogg', 40, 1)
+		update_icon()
+		alarmed = 1
+	return
+

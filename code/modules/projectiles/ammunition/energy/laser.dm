@@ -73,12 +73,12 @@
 	variance = 14
 	select_name = "scatter"
 	e_cost = 75
-	fire_sound = 'sound/f13weapons/laser_rifle.ogg'
+	fire_sound = 'sound/f13weapons/tribeamfire.ogg'
 
 /obj/item/ammo_casing/energy/laser/pistol
 	projectile_type = /obj/item/projectile/beam/laser/pistol
 	e_cost = 10
-	fire_sound = 'sound/f13weapons/laser_pistol.ogg'
+	fire_sound = 'sound/f13weapons/aep7fire.ogg'
 
 /obj/item/ammo_casing/energy/laser/pistol/wattz
 	projectile_type = /obj/item/projectile/beam/laser/pistol/wattz
@@ -90,9 +90,14 @@
 /obj/item/ammo_casing/energy/laser/lasgun
 	projectile_type = /obj/item/projectile/beam/laser/lasgun
 	e_cost = 50
-	fire_sound = 'sound/f13weapons/laser_rifle.ogg'
+	fire_sound = 'sound/f13weapons/aer9fire.ogg'
 
 /obj/item/ammo_casing/energy/laser/solar
 	projectile_type = /obj/item/projectile/beam/laser/solar
 	e_cost = 30 //10 shots, self-charges
 	fire_sound = 'sound/f13weapons/laser_pistol.ogg'
+
+/obj/item/ammo_casing/energy/laser/rcw
+	projectile_type = /obj/item/projectile/beam/laser/rcw
+	e_cost = 75
+	fire_sound = 'sound/f13weapons/rcwfire.ogg'

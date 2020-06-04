@@ -1,6 +1,3 @@
-
-////////////////////////////////////////////OTHER////////////////////////////////////////////
-
 /obj/item/reagent_containers/food/snacks/store/cheesewheel
 	name = "cheese wheel"
 	desc = "A big wheel of delcious Cheddar."
@@ -82,8 +79,8 @@
 	foodtype = VEGETABLES | DAIRY
 
 /obj/item/reagent_containers/food/snacks/fries
-	name = "space fries"
-	desc = "AKA: French Fries, Freedom Fries, etc."
+	name = "fries"
+	desc = "French fries are served hot, either soft or crispy, and are generally eaten as part of lunch or dinner or by themselves as a snack."
 	icon_state = "fries"
 	trash = /obj/item/trash/plate
 	list_reagents = list("nutriment" = 4)

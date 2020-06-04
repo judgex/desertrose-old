@@ -6,6 +6,7 @@
  *		Butcher's cleaver
  *		Combat Knife
  *		Rolling Pins
+ 		Ritual Dagger (Wayfarer Tribe)
  */
 
 /obj/item/kitchen
@@ -72,6 +73,7 @@
 	sharpness = IS_SHARP_ACCURATE
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 50)
 	var/bayonet = FALSE	//Can this be attached to a gun?
+	tool_behaviour = TOOL_KNIFE
 
 /obj/item/kitchen/knife/Initialize()
 	. = ..()
@@ -168,6 +170,15 @@
 	force = 20
 	throwforce = 20
 	materials = list()
+
+/obj/item/kitchen/knife/ritualdagger
+	name = "ritual dagger"
+	desc = "An ancient blade used to carry out the spiritual rituals of the Wayfarer people."
+	icon_state = "ritualdagger"
+	item_state = "crysknife"
+	force = 25
+	throwforce = 20
+	armour_penetration = 10
 
 /obj/item/kitchen/knife/combat/cyborg
 	name = "cyborg knife"

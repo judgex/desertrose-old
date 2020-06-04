@@ -72,8 +72,10 @@
 #define	TRAIT_LIFEGIVER			"lifegiver"
 
 #define	TRAIT_CHEMWHIZ			"chemwhiz"
+#define TRAIT_TECHNOPHOBE		"luddite" //Cannot use autolathes/biogens
 #define TRAIT_TECHNOPHREAK		"technophreak" //Is this even really used?
 #define TRAIT_PA_WEAR           "pa_wear"
+#define TRAIT_MEDICALEXPERT		"Medicinal Expert" //Can do revival surgery
 
 // fallout crafting traits
 #define TRAIT_GUNSMITH_ONE      "gunsmith_one"

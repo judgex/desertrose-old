@@ -226,7 +226,7 @@
 	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = ITEM_SLOT_BACK
 	force_unwielded = 10
-	force_wielded = 56
+	force_wielded = 50
 	attack_verb = list("axed", "chopped", "cleaved", "torn", "hacked")
 	hitsound = 'sound/weapons/bladeslice.ogg'
 	sharpness = IS_SHARP
@@ -563,7 +563,7 @@
 	inhand_y_dimension = 64
 	slot_flags = ITEM_SLOT_BACK
 	force = 10
-	var/force_on = 72
+	var/force_on = 60
 	w_class = WEIGHT_CLASS_BULKY
 	throwforce = 20
 	throw_speed = 2
@@ -827,7 +827,7 @@
 	icon_state = "bone_axe0"
 	name = "bone axe"
 	desc = "A large, vicious axe crafted out of several sharpened bone plates and crudely tied together. Made of monsters, by killing monsters, for killing monsters."
-	force_wielded = 56
+	force_wielded = 40
 
 /obj/item/twohanded/fireaxe/boneaxe/update_icon()
 	icon_state = "bone_axe[wielded]"
@@ -905,7 +905,7 @@
 	lefthand_file = 'icons/mob/inhands/weapons/polearms_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/polearms_righthand.dmi'
 	force_unwielded = 15
-	force_wielded = 48
+	force_wielded = 30
 	throwforce = 15
 	slot_flags = ITEM_SLOT_BACK
 	attack_verb = list("beat", "smacked", "clubbed", "clobbered")
@@ -916,6 +916,25 @@
 	icon_state = "baseball[wielded]"
 	return
 
+/obj/item/twohanded/baseball/spiked
+	name = "spiked baseball bat"
+	desc = "There ain't a skull in the league that can withstand a swatter, especially with large nails drilled through the top of it."
+	icon = 'icons/obj/items_and_weapons.dmi'
+	icon_state = "baseballspike0"
+	lefthand_file = 'icons/mob/inhands/weapons/polearms_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/weapons/polearms_righthand.dmi'
+	force_unwielded = 25
+	force_wielded = 40
+	throwforce = 20
+	slot_flags = ITEM_SLOT_BACK
+	attack_verb = list("beat", "smacked", "clubbed", "clobbered")
+	w_class = WEIGHT_CLASS_NORMAL
+	sharpness = IS_BLUNT
+
+/obj/item/twohanded/baseball/spiked/update_icon()  //Currently only here to fuck with the on-mob icons.
+	icon_state = "baseballspike[wielded]"
+	return
+
 /obj/item/twohanded/sledgehammer
 	name = "sledgehammer"
 	desc = "A heavy sledgehammer that lost most of its use besides caving in heads."
@@ -924,7 +943,7 @@
 	lefthand_file = 'icons/mob/inhands/weapons/polearms_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/polearms_righthand.dmi'
 	force_unwielded = 20
-	force_wielded = 56
+	force_wielded = 45
 	throwforce = 20
 	slot_flags = ITEM_SLOT_BACK
 	attack_verb = list("bashed", "pounded", "bludgeoned", "pummeled", "thrashed")
@@ -949,13 +968,63 @@
 
 /obj/item/twohanded/sledgehammer/supersledge
 	name = "super sledge"
-	desc = "A heavy sledgehammer manufacted from ultra-dense materials. It looks like it could crush someone's skull with ease."
+	desc = "A heavy sledgehammer manufacted from ultra-dense materials, developed by the Brotherhood of Steel. It looks like it could crush someone's skull with ease."
 	icon = 'icons/obj/items_and_weapons.dmi'
 	icon_state = "supersledge0"
 	lefthand_file = 'icons/mob/inhands/weapons/polearms_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/polearms_righthand.dmi'
-	force_unwielded = 35
-	force_wielded = 72
+	force_unwielded = 25
+	force_wielded = 60
+
 
 /obj/item/twohanded/sledgehammer/supersledge/update_icon()
 	icon_state = "supersledge[wielded]"
+
+/obj/item/twohanded/sledgehammer/atomsjudgement
+	name = "atom's judgement"
+	desc = "A heavy sledgehammer manufacted from ultra-dense materials. The head of this hammer seems to of been replaced with four fusion cores, shorted to discharge its fissle material."
+	icon = 'icons/obj/items_and_weapons.dmi'
+	icon_state = "atom_hammer0"
+	lefthand_file = 'icons/mob/inhands/weapons/polearms_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/weapons/polearms_righthand.dmi'
+	force_unwielded = 25
+	force_wielded = 60
+
+/obj/item/twohanded/sledgehammer/atomsjudgement/update_icon()
+	icon_state = "atom_hammer[wielded]"
+
+/obj/item/twohanded/sledgehammer/warmace
+	name = "war mace"
+	desc = "A heavy wooden club with a turquoise head."
+	icon = 'icons/obj/items_and_weapons.dmi'
+	icon_state = "warmace0"
+	lefthand_file = 'icons/mob/inhands/weapons/polearms_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/weapons/polearms_righthand.dmi'
+	force_unwielded = 20
+	force_wielded = 40
+	throwforce = 20
+	armour_penetration = 20
+	slot_flags = ITEM_SLOT_BACK
+	attack_verb = list("bashed", "pounded", "bludgeoned", "pummeled", "thrashed")
+	w_class = WEIGHT_CLASS_BULKY
+	sharpness = IS_BLUNT
+
+/obj/item/twohanded/sledgehammer/warmace/update_icon()
+	icon_state = "warmace[wielded]"
+
+/obj/item/twohanded/sledgehammer/shamanstaff
+	name = "shaman staff"
+	desc = "An intricate staff, carried for centuries by the shaman class of thw Wayfayer Tribe."
+	icon = 'icons/obj/items_and_weapons.dmi'
+	icon_state = "shamanstaff0"
+	lefthand_file = 'icons/mob/inhands/weapons/polearms_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/weapons/polearms_righthand.dmi'
+	force_unwielded = 15
+	force_wielded = 30
+	slot_flags = ITEM_SLOT_BACK
+	attack_verb = list("bashed", "pounded", "bludgeoned", "pummeled", "thrashed")
+	w_class = WEIGHT_CLASS_BULKY
+	sharpness = IS_BLUNT
+
+/obj/item/twohanded/sledgehammer/shamanstaff/update_icon()
+	icon_state = "shamanstaff[wielded]"

@@ -10,6 +10,7 @@
 	force = 20
 	var/auto_eject = 0
 	var/auto_eject_sound = null
+	equipsound = 'sound/f13weapons/equipsounds/riflequip.ogg'
 
 /obj/item/gun/ballistic/automatic/proto
 	name = "compact submachine gun"
@@ -346,7 +347,7 @@
 
 /obj/item/gun/ballistic/automatic/l6_saw/m38
 	name = "M38 LMG"
-	desc = "A special LMG used by elite legionaries to support regular infantry."
+	desc = "A special LMG generally used to lay down suppressive fire."
 	icon_state = "M38"
 	item_state = "M38"
 	slot_flags = 0
@@ -354,9 +355,9 @@
 	mag_type = /obj/item/ammo_box/magazine/mm762
 	fire_sound = 'sound/f13weapons/assaultrifle_fire.ogg'
 	can_suppress = FALSE
-	burst_size = 3
-	fire_delay = 2
-	burst_delay = 1.8
+	burst_size = 1
+	fire_delay = 3
+	burst_delay = 3
 	slowdown = 1.0
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
@@ -372,23 +373,23 @@
 	switch(select)
 		if(0)
 			select += 1
-			burst_size += 2
-			spread = 20
+			burst_size = 2
+			spread = 30
 			to_chat(user, "<span class='notice'>You switch to [burst_size]-rnd burst.</span>")
 		if(1)
 			select += 1
-			burst_size += 2
-			spread = 30
+			burst_size = 3
+			spread = 40
 			to_chat(user, "<span class='notice'>You switch to [burst_size]-rnd burst.</span>")
 		if(2)
 			select += 1
-			burst_size += 3
-			spread = 40
+			burst_size = 4
+			spread = 50
 			to_chat(user, "<span class='notice'>You switch to [burst_size]-rnd burst.</span>")
 		if(3)
 			select = 0
 			burst_size = 1
-			spread = 1
+			spread = 20
 			to_chat(user, "<span class='notice'>You switch to semi-automatic.</span>")
 	playsound(user, 'sound/weapons/empty.ogg', 100, 1)
 	update_icon()
@@ -426,8 +427,8 @@
 
 /obj/item/gun/ballistic/automatic/sniper_rifle/syndicate
 	name = "anti materiel rifle mark II"
-	desc = "An illegally modified .50 cal sniper rifle with suppression compatibility. Quickscoping still doesn't work."
-	pin = /obj/item/firing_pin/implant/pindicate
+	desc = "A modified .50 cal sniper rifle with suppression compatibility. Quickscoping still doesn't work."
+	fire_sound = 'sound/f13weapons/antimaterielfire.ogg'
 
 // Old Semi-Auto Rifle //
 
@@ -528,7 +529,7 @@
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 	fire_sound = 'sound/f13weapons/10mm_fire_03.ogg'
-	burst_size = 3
+	burst_size = 2
 	fire_delay = 2
 	burst_delay = 2
 	can_suppress = FALSE //we dont have sprites therefore cease
@@ -540,7 +541,7 @@
 	switch(select)
 		if(0)
 			select += 1
-			burst_size = 3
+			burst_size = 2
 			spread = 18
 			to_chat(user, "<span class='notice'>You switch to [burst_size]-rnd burst.</span>")
 		if(1)
@@ -563,8 +564,8 @@
 	fire_sound = 'sound/f13weapons/assault_carbine.ogg'
 	burst_size = 2
 	fire_delay = 3
-	burst_delay = 1.8
-	spread = 14
+	burst_delay = 2.0
+	spread = 16
 	automatic = 1
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
@@ -595,7 +596,7 @@
 	mag_type = /obj/item/ammo_box/magazine/m556/rifle
 	init_mag_type = /obj/item/ammo_box/magazine/m556/rifle/assault
 	fire_sound = 'sound/f13weapons/assaultrifle_fire.ogg'
-	burst_size = 3
+	burst_size = 2
 	automatic = 1
 	fire_delay = 3
 	spread = 8
@@ -607,7 +608,7 @@
 	switch(select)
 		if(0)
 			select += 1
-			burst_size = 3
+			burst_size = 2
 			spread = 8
 			to_chat(user, "<span class='notice'>You switch to [burst_size]-rnd burst.</span>")
 		if(1)
@@ -621,31 +622,27 @@
 
 /obj/item/gun/ballistic/automatic/assault_rifle/infiltrator
 	name = "infiltrator"
-	desc = "A customized R91 assault rifle, with a scope, integrated suppressor, cut down stock and polymer furniture."
+	desc = "A customized R91 assault rifle, with an integrated suppressor, cut down stock and polymer furniture."
 	icon_state = "infiltrator"
 	item_state = "fnfal"
 	init_mag_type = /obj/item/ammo_box/magazine/m556/rifle
 	suppressed = 1
+	burst_size = 1
 	fire_delay = 3
-	zoomable = TRUE
-	zoom_amt = 10
-	zoom_out_amt = 13
 	spread = 1
 	automatic = 1
 	fire_sound = 'sound/weapons/Gunshot_large_silenced.ogg'
 	weapon_weight = WEAPON_HEAVY
 	force = 15
 
-/obj/item/gun/ballistic/automatic/assault_rifle/infiltrator/burst_select()
+
+/obj/item/gun/ballistic/automatic/infiltrator/burst_select()
 	var/mob/living/carbon/human/user = usr
 	switch(select)
 		if(0)
-			select += 1
-			burst_size = 3
-			to_chat(user, "<span class='notice'>You switch to [burst_size]-rnd burst.</span>")
-		if(1)
 			select = 0
 			burst_size = 1
+			spread = 1
 			to_chat(user, "<span class='notice'>You switch to semi-automatic.</span>")
 	playsound(user, 'sound/weapons/empty.ogg', 100, 1)
 	update_icon()
@@ -661,7 +658,7 @@
 	mag_type = /obj/item/ammo_box/magazine/m556/rifle
 	init_mag_type = /obj/item/ammo_box/magazine/m556/rifle/assault
 	fire_sound = 'sound/f13weapons/assaultrifle_fire.ogg'
-	burst_size = 3
+	burst_size = 2
 	fire_delay = 3
 	spread = 10
 	weapon_weight = WEAPON_HEAVY
@@ -762,7 +759,7 @@
 	item_state = "cshotgun1"
 	fire_sound = 'sound/f13weapons/repeater_fire.ogg'
 	mag_type = /obj/item/ammo_box/magazine/d12g
-	burst_size = 2
+	burst_size = 1
 	automatic = 1
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
@@ -774,7 +771,7 @@
 	item_state = "cshotgun1"
 	fire_sound = 'sound/f13weapons/repeater_fire.ogg'
 	mag_type = /obj/item/ammo_box/magazine/d12g
-	burst_size = 2
+	burst_size = 1
 	fire_delay = 4
 	automatic = 1
 	w_class = WEIGHT_CLASS_BULKY
@@ -800,7 +797,7 @@
 	mag_type = /obj/item/ammo_box/magazine/greasegun
 	fire_sound = 'sound/f13weapons/greasegun.ogg'
 	can_suppress = FALSE
-	burst_size = 3
+	burst_size = 2
 	fire_delay = 3
 	burst_delay = 3
 	force = 15
@@ -811,7 +808,7 @@
 	switch(select)
 		if(0)
 			select += 1
-			burst_size = 3
+			burst_size = 2
 			spread = 18
 			to_chat(user, "<span class='notice'>You switch to [burst_size]-rnd burst.</span>")
 		if(1)
@@ -830,7 +827,7 @@
 	item_state = "sniper"
 	slot_flags = SLOT_BACK
 	mag_type = /obj/item/ammo_box/magazine/m556/rifle
-	burst_size = 2
+	burst_size = 1
 	fire_delay = 3
 	automatic = 1
 	w_class = WEIGHT_CLASS_BULKY
@@ -841,7 +838,7 @@
 	zoom_out_amt = 13
 
 /obj/item/gun/ballistic/automatic/m72
-	name = "M72 gauss rifle"
+	name = "\improper M72 gauss rifle"
 	desc = "The M72 rifle is of German design. It uses an electromagnetic field to propel rounds at tremendous speed... and pierce almost any obstacle. Its range, accuracy and stopping power is almost unparalleled."
 	icon_state = "m72"
 	item_state = "shotgun"
@@ -874,7 +871,7 @@
 
 /obj/item/gun/ballistic/automatic/lmg
 	name = "R84 LMG"
-	desc = "A post war lmg manufactured by the NCR. Issued to heavy troopers to support regular infantry."
+	desc = "A post war lmg, traditionally manufactured by NCR forces. It is designed as a suppressive support weapon, generally granted to Heavy Troopers to compliment their stripped power armor."
 	icon_state = "R84"
 	item_state = "R84"
 	slot_flags = 0
@@ -882,13 +879,13 @@
 	mag_type = /obj/item/ammo_box/magazine/lmg
 	fire_sound = 'sound/f13weapons/assaultrifle_fire.ogg'
 	can_suppress = FALSE
-	burst_size = 3
-	fire_delay = 2
-	burst_delay = 1.8
+	burst_size = 1
+	fire_delay = 3
+	burst_delay = 3
 	slowdown = 1.0
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
-	spread = 18
+	spread = 25
 	randomspread = 1
 
 /obj/item/gun/ballistic/automatic/lmg/burst_select()
@@ -896,23 +893,18 @@
 	switch(select)
 		if(0)
 			select += 1
-			burst_size += 2
-			spread = 18
+			burst_size = 2
+			spread = 35
 			to_chat(user, "<span class='notice'>You switch to [burst_size]-rnd burst.</span>")
 		if(1)
 			select += 1
-			burst_size += 2
-			spread = 26
+			burst_size = 3
+			spread = 45
 			to_chat(user, "<span class='notice'>You switch to [burst_size]-rnd burst.</span>")
 		if(2)
-			select += 1
-			burst_size += 3
-			spread = 34
-			to_chat(user, "<span class='notice'>You switch to [burst_size]-rnd burst.</span>")
-		if(3)
 			select = 0
 			burst_size = 1
-			spread = 1
+			spread = 25
 			to_chat(user, "<span class='notice'>You switch to semi-automatic.</span>")
 	playsound(user, 'sound/weapons/empty.ogg', 100, 1)
 	update_icon()
@@ -972,7 +964,7 @@
 	desc = "This rifle has been more widely used by armed forces than any other rifle in history. It's a reliable assault weapon for any terrain or tactical situation."
 	icon_state = "fnfal"
 	item_state = "fnfal"
-	burst_size = 3
+	burst_size = 2
 	automatic = 1
 	mag_type = /obj/item/ammo_box/magazine/m762
 	init_mag_type = /obj/item/ammo_box/magazine/m762

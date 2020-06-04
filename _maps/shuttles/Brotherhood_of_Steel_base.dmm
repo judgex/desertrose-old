@@ -45,6 +45,10 @@
 "h" = (
 /turf/template_noop,
 /area/template_noop)
+"i" = (
+/obj/item/flag/bos,
+/turf/open/floor/plasteel/dark,
+/area/shuttle/brotherhood_of_steel)
 "j" = (
 /obj/docking_port/mobile/bos{
 	dwidth = 1;
@@ -114,7 +118,7 @@ a
 "}
 (8,1,1) = {"
 a
-c
+i
 c
 c
 e

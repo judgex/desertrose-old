@@ -7,6 +7,7 @@
 	icon_dead = "deathclaw_dead"
 	icon_gib = "deathclaw_gib"
 	gender = MALE
+	a_intent = INTENT_HARM //So we can not move past them.
 	mob_biotypes = list(MOB_ORGANIC, MOB_BEAST)
 	robust_searching = 1
 	anchored = 1

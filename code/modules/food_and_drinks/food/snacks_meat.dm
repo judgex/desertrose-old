@@ -1,13 +1,7 @@
-//Not only meat, actually, but also snacks that are almost meat, such as fish meat or tofu
-
-
-////////////////////////////////////////////FISH////////////////////////////////////////////
-
 /obj/item/reagent_containers/food/snacks/cubancarp
 	name = "\improper Cuban carp"
 	desc = "A grifftastic sandwich that burns your tongue and then leaves it numb!"
 	icon_state = "cubancarp"
-	trash = /obj/item/trash/plate
 	bonus_reagents = list("nutriment" = 1, "vitamin" = 4)
 	bitesize = 3
 	filling_color = "#CD853F"
@@ -24,7 +18,6 @@
 	filling_color = "#FA8072"
 	tastes = list("fish" = 1)
 	foodtype = MEAT
-
 
 /obj/item/reagent_containers/food/snacks/carpmeat/Initialize()
 	. = ..()
@@ -55,7 +48,60 @@
 	tastes = list("fish" = 1, "chips" = 1)
 	foodtype = MEAT | VEGETABLES | FRIED
 
-////////////////////////////////////////////MEATS AND ALIKE////////////////////////////////////////////
+/obj/item/reagent_containers/food/snacks/rawantbrain
+	name = "Raw Ant Brain"
+	desc = "Goppy reddish-grey flesh dug out of the brain case of a giant ant."
+	icon_state = "AntBrain"
+	bitesize = 3
+	filling_color = "#CD853F"
+	list_reagents = list("nutriment" = 3, "vitamin" = 2)
+	tastes = list("fat" = 4, "bitter meat" = 1)
+	foodtype = MEAT
+
+/obj/item/reagent_containers/food/snacks/rawbrahmintongue
+	name = "Raw Brahmin Tongue"
+	desc = "The raw tongue of a brahmin, a wastelander favorite"
+	icon_state = "BrahminTongue"
+	bitesize = 3
+	filling_color = "#CD853F"
+	list_reagents = list("nutriment" = 3, "vitamin" = 2)
+	cooked_type = /obj/item/reagent_containers/food/snacks/cookedbrahmintongue
+	tastes = list("beef" = 4, "tender meat" = 1)
+	foodtype = MEAT
+
+/obj/item/reagent_containers/food/snacks/cookedbrahmintongue
+	name = "Brahmin Tongue"
+	desc = "A brahmin tongue slow roasted over an open fire and topped with a large amount of thick brown gravy"
+	icon_state = "stewedsoymeat"
+	bitesize = 3
+	filling_color = "#CD853F"
+	bonus_reagents = list("nutriment" = 1, "vitamin" = 4)
+	list_reagents = list("nutriment" = 5)
+	cooked_type = /obj/item/reagent_containers/food/snacks/cookedbrahmintongue
+	tastes = list("top quality beef" = 4, "tender meat" = 1, "tasty gravy" = 1)
+	foodtype = MEAT
+
+/obj/item/reagent_containers/food/snacks/rawbrahminliver
+	name = "Raw Brahmin Liver"
+	desc = "The raw tongue of a brahmin, a wastelander favorite"
+	icon_state = "Brahmin Liver"
+	bitesize = 3
+	filling_color = "#CD853F"
+	list_reagents = list("nutriment" = 3, "vitamin" = 2)
+	cooked_type = /obj/item/reagent_containers/food/snacks/cookedbrahminliver
+	tastes = list("beef" = 4, "tender meat" = 1)
+	foodtype = MEAT
+
+/obj/item/reagent_containers/food/snacks/cookedbrahminliver
+	name = "Charred Brahmin Liver"
+	desc = "A fatty brahmin liver roasted in a cast iron pan over mesquite wood."
+	icon_state = "Charred Brahmin Liver"
+	bitesize = 3
+	filling_color = "#CD853F"
+	bonus_reagents = list("nutriment" = 1, "vitamin" = 4)
+	list_reagents = list("nutriment" = 5)
+	tastes = list("slow cooked liver" = 4, "delicious crunch" = 1)
+	foodtype = MEAT
 
 /obj/item/reagent_containers/food/snacks/tofu
 	name = "tofu"
@@ -80,7 +126,6 @@
 	name = "corned beef and cabbage"
 	desc = "Now you can feel like a real tourist vacationing in Boston."
 	icon_state = "cornedbeef"
-	trash = /obj/item/trash/plate
 	bonus_reagents = list("nutriment" = 1, "vitamin" = 4)
 	list_reagents = list("nutriment" = 5)
 	tastes = list("meat" = 1, "cabbage" = 1)
@@ -90,16 +135,15 @@
 	name = "Filet migrawr"
 	desc = "Because eating bear wasn't manly enough."
 	icon_state = "bearsteak"
-	trash = /obj/item/trash/plate
 	bonus_reagents = list("nutriment" = 2, "vitamin" = 6)
 	list_reagents = list("nutriment" = 2, "vitamin" = 5, "manlydorf" = 5)
 	tastes = list("meat" = 1, "salmon" = 1)
 	foodtype = MEAT | ALCOHOL
 
-/obj/item/reagent_containers/food/snacks/faggot
+/obj/item/reagent_containers/food/snacks/meatball
 	name = "meatball"
 	desc = "It's exactly what you'd expect from the name."
-	icon_state = "faggot"
+	icon_state = "meatball"
 	list_reagents = list("nutriment" = 4, "vitamin" = 1)
 	filling_color = "#800000"
 	tastes = list("meat" = 1)
@@ -210,7 +254,6 @@
 	name = "stewed soy meat"
 	desc = "Even non-vegetarians will LOVE this!"
 	icon_state = "stewedsoymeat"
-	trash = /obj/item/trash/plate
 	bonus_reagents = list("nutriment" = 1)
 	list_reagents = list("nutriment" = 8)
 	filling_color = "#D2691E"
@@ -291,7 +334,7 @@
 	icon_state = "doubleratkebab"
 	tastes = list("rat meat" = 2, "metal" = 1)
 	bonus_reagents = list("nutriment" = 6, "vitamin" = 2)
-	
+
 /obj/item/reagent_containers/food/snacks/pemmican
 	name = "pemmican"
 	desc = "A well-known food in survivalist circles, pemmican is a mixture of fat and protein from the meat of an animal."
@@ -299,3 +342,35 @@
 	list_reagents = list("nutriment" = 2, "vitamin" = 4)
 	tastes = list("dried meat" = 8, "Sawdust" = 4, "Corn" = 1)
 	foodtype = MEAT
+
+/obj/item/reagent_containers/food/snacks/friedbrahminskin
+	name = "Brahmin cracklings"
+	desc = "Cracklings are the solid material which remains after rendering animal fat and skin to produce lard, tallow, or schmaltz. It is often eaten as a snack food or made into animal feed. It is also used in cooking."
+	icon_state = "Fried Brahmin Skin"
+	filling_color = "#CD5C5C"
+	bonus_reagents = list("nutriment" = 1, "vitamin" = 1)
+	list_reagents = list("nutriment" = 6, "vitamin" = 1)
+	tastes = list("crispy skin" = 1)
+	foodtype = MEAT
+
+/obj/item/reagent_containers/food/snacks/brahminwellington
+	name = "Brahmin wellington"
+	desc = "A pie made of fillet steak coated with pâté and duxelles, which is then wrapped in molerat ham and puff pastry"
+	icon_state = "Brahmin Wellington"
+	bonus_reagents = list("nutriment" = 1, "vitamin" = 2)
+	bitesize = 4
+	filling_color = "#FFA07A"
+	list_reagents = list("nutriment" = 8)
+	tastes = list("smokey meat" = 3, "cheese" = 1, "sour cream" = 1, "flaky crust" = 2)
+	foodtype = MEAT | GRAIN
+
+/obj/item/reagent_containers/food/snacks/deathclawwellington
+	name = "Deathclaw wellington"
+	desc = "A pie made of top grade steak coated with pâté and duxelles, which is then wrapped in molerat ham and buttery puff pastry"
+	icon_state = "Deathclaw Wellington"
+	bonus_reagents = list("nutriment" = 1, "vitamin" = 2)
+	bitesize = 4
+	filling_color = "#FFA07A"
+	list_reagents = list("nutriment" = 8)
+	tastes = list("high grade meat" = 2, "smokey meat" = 3, "cheese" = 1, "sour cream" = 1, "flaky crust" = 2)
+	foodtype = MEAT | GRAIN

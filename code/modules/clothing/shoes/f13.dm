@@ -66,7 +66,7 @@
 	strip_delay = 40
 	resistance_flags = 0
 
-/obj/item/clothing/shoes/f13/military/light //I'm a ninja!
+/obj/item/clothing/shoes/f13/military/light
 	name = "advanced combat boots"
 	desc = "High speed, no-drag combat boots designed for use by U.S. special forces before the Great War.<br>The soles are made of aerated rubber to silence the movement of the wearer."
 //	stepsound = FALSE
@@ -95,28 +95,24 @@
 	desc = "A pair of standard issue NCR brown boots, with a puttee."
 	icon_state = "ncr_boots"
 	item_state = "ncr"
-	armor = list(melee = 10, bullet = 10, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 0, fire = 10, acid = 0)
 
 /obj/item/clothing/shoes/f13/military/ncr_officer
 	name = "NCR officer boots"
 	desc = "A pair of calf high black, highly polished, leather boot that have been tightly laced. These definitely belong to a officer."
 	icon_state = "ncr_officer_boots"
 	item_state = "explorer"
-	armor = list(melee = 10, bullet = 10, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 0, fire = 10, acid = 0)
 
 /obj/item/clothing/shoes/f13/military/ncr_scout
 	name = "NCR scout boots"
 	desc = "A pair of thick-soled leather boots, well-worn by the wearer."
 	icon_state = "scoutboots"
 	item_state = "scoutboots"
-	armor = list(melee = 10, bullet = 10, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 0, fire = 10, acid = 0)
 
 /obj/item/clothing/shoes/f13/military/legionleather
 	name = "leather boots"
 	desc = "A pair of leather boots that appear to be mostly intact and lightly used. These belong to a Recruit Legionary of Caesar's Legion"
 	icon_state = "legionleather"
 	item_state = "legionleather"
-	armor = list(melee = 10, bullet = 10, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 0, fire = 10, acid = 0)
 
 /obj/item/clothing/shoes/f13/military/legionmetal
 	name = "plated metal boots"

@@ -66,6 +66,7 @@ Overseer
 	shoes = 		/obj/item/clothing/shoes/jackboots
 	glasses = 		/obj/item/clothing/glasses/sunglasses
 	ears = 			/obj/item/radio/headset/headset_overseer
+	neck = 			/obj/item/clothing/neck/cloak/overseer
 	backpack = /obj/item/storage/backpack/satchel/leather
 	backpack_contents = list(/obj/item/storage/box/ids = 1, /obj/item/melee/oldstyle = 1, /obj/item/gun/ballistic/automatic/pistol/n99/executive = 1, /obj/item/ammo_box/magazine/m10mm_adv = 3)
 
@@ -142,8 +143,8 @@ Medical Doctor
 	department_head = list("Overseer")
 	department_flag = VAULT
 	faction = "Vault"
-	total_positions = 2
-	spawn_positions = 2
+	total_positions = 1
+	spawn_positions = 1
 	forbids = "The vault forbids: Harming other Vault Dwellers. Dereliction of duty. Leaving the Vault unless there is no other choice."
 	enforces = "The vault expects: Obeying the Overseer. Adherence to VaultTec Corporate Regulations. Participation in special projects (the vaults experiment, which you wont know about.)"
 	description = "You answer directly to the Overseer, administering medical aid to your fellow vault dwellers, you also work around the clock to produce the vital medicines and compounds needed to keep your department running. "
@@ -170,6 +171,12 @@ Medical Doctor
 	backpack = 		/obj/item/storage/backpack/medic
 	satchel = 		/obj/item/storage/backpack/satchel/med
 	duffelbag = 	/obj/item/storage/backpack/duffelbag/med
+
+/datum/outfit/job/vault/f13doctor/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	..()
+	if(visualsOnly)
+		return
+	H.add_trait(TRAIT_MEDICALEXPERT, TRAIT_GENERIC)
 
 
 /*

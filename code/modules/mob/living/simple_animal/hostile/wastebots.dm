@@ -24,6 +24,7 @@
 	gold_core_spawnable = HOSTILE_SPAWN
 	del_on_death = 1
 	deathmessage = "blows apart!"
+	var/isrobot = 1
 	loot = list(/obj/effect/decal/cleanable/robot_debris, /obj/item/stack/crafting/electronicparts/three)
 
 /mob/living/simple_animal/hostile/handy/Initialize()
@@ -167,11 +168,12 @@
 	icon_state = "assaultron"
 	icon_living = "assaultron"
 	icon_dead = "gib7"
-	health = 200
-	maxHealth = 200
+	health = 450
+	maxHealth = 450
+	faction = list("wastebot", "enclave")
 	speed = 0
-	melee_damage_lower = 20
-	melee_damage_upper = 30
+	melee_damage_lower = 55
+	melee_damage_upper = 60
 	attacktext = "grinds their claws on"
 	faction = list("wastebot")
 	loot = list(/obj/effect/decal/cleanable/robot_debris, /obj/item/stack/crafting/electronicparts/three, /obj/item/stock_parts/cell/ammo/mfc)

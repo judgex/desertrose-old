@@ -466,6 +466,14 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 	name = "NCR Specialist"
 	icon_state = "NCR Trooper"
 
+/obj/effect/landmark/start/f13/ncrmp
+	name = "NCR Military Police"
+	icon_state = "NCR Trooper"
+
+/obj/effect/landmark/start/f13/ncrht
+	name = "NCR Heavy Trooper"
+	icon_state = "NCR Trooper"
+
 /obj/effect/landmark/start/f13/ncrtrooper
 	name = "NCR Trooper"
 	icon_state = "NCR Trooper"
@@ -496,6 +504,12 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 /obj/effect/landmark/start/f13/orator
 	name = "Legion Orator"
 
+/obj/effect/landmark/start/f13/slavemaster
+	name = "Legion Slavemaster"
+
+/obj/effect/landmark/start/f13/priestess
+	name = "Priestess of Mars"
+
 /obj/effect/landmark/start/f13/decanus
 	name = "Legion Decanus"
 	icon_state = "Decanus"
@@ -504,8 +518,12 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 	name = "Legion Vexillarius"
 	icon_state = "Vexillarius"
 
+/obj/effect/landmark/start/f13/vetlegionary
+	name = "Veteran Legionary"
+	icon_state = "Veteran Legionnaire"
+
 /obj/effect/landmark/start/f13/legionary
-	name = "Legionary"
+	name = "Prime Legionary"
 	icon_state = "Veteran Legionnaire"
 
 /obj/effect/landmark/start/f13/recleg
@@ -534,6 +552,10 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 	name = "Head Scribe"
 	icon_state = "Head Scribe"
 
+/obj/effect/landmark/start/f13/seniorscribe
+	name = "Senior Scribe"
+	icon_state = "Head Scribe"
+
 /obj/effect/landmark/start/f13/sentinel
 	name = "Sentinel"
 	icon_state = "Paladin"
@@ -541,6 +563,10 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 /obj/effect/landmark/start/f13/knightcap
 	name = "Knight-Captain"
 	icon_state = "Initiate Knight"
+
+/obj/effect/landmark/start/f13/seniorpaladin
+	name = "Senior Paladin"
+	icon_state = "Knight"
 
 /obj/effect/landmark/start/f13/paladin
 	name = "Paladin"
@@ -588,7 +614,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 	name = "Vault Dweller"
 	icon_state = "Vault Dweller"
 
-// Kebab
+// Kebab // Is not Kebab is Oasis REEEE
 
 /obj/effect/landmark/start/f13/mayor
 	name = "Mayor"
@@ -612,6 +638,10 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 
 /obj/effect/landmark/start/f13/dendoc
 	name = "Doctor"
+
+/obj/effect/landmark/start/f13/shopkeeper
+	name = "Shopkeeper"
+	icon_state = "Shopkeeper"
 
 // Wasteland
 

@@ -1,7 +1,7 @@
 // Chili
 /obj/item/seeds/chili
 	name = "pack of chili seeds"
-	desc = "These seeds grow into chili plants. HOT! HOT! HOT!"
+	desc = "These seeds grow into chili plants."
 	icon_state = "seed-chili"
 	species = "chili"
 	plantname = "Chili Plants"
@@ -21,7 +21,7 @@
 /obj/item/reagent_containers/food/snacks/grown/chili
 	seed = /obj/item/seeds/chili
 	name = "chili"
-	desc = "It's spicy! Wait... IT'S BURNING ME!!"
+	desc = "It's spicy!"
 	icon_state = "chilipepper"
 	filling_color = "#FF0000"
 	bitesize_mod = 2
@@ -56,7 +56,7 @@
 // Ghost Chili
 /obj/item/seeds/chili/ghost
 	name = "pack of ghost chili seeds"
-	desc = "These seeds grow into a chili said to be the hottest in the galaxy."
+	desc = "These seeds grow into a chili said to be the hottest in the wasteland."
 	icon_state = "seed-chilighost"
 	species = "chilighost"
 	plantname = "Ghost Chili Plants"
@@ -72,7 +72,7 @@
 /obj/item/reagent_containers/food/snacks/grown/ghost_chili
 	seed = /obj/item/seeds/chili/ghost
 	name = "ghost chili"
-	desc = "It seems to be vibrating gently."
+	desc = "It you can smell the sheer heat in this veggie."
 	icon_state = "ghostchilipepper"
 	var/mob/living/carbon/human/held_mob
 	filling_color = "#F8F8FF"
@@ -80,7 +80,7 @@
 	foodtype = FRUIT
 	wine_power = 50
 
-/obj/item/reagent_containers/food/snacks/grown/ghost_chili/attack_hand(mob/user)
+/*/obj/item/reagent_containers/food/snacks/grown/ghost_chili/attack_hand(mob/user)
 	. = ..()
 	if(.)
 		return
@@ -98,4 +98,4 @@
 				to_chat(held_mob, "<span class='warning'>Your hand holding [src] burns!</span>")
 	else
 		held_mob = null
-		..()
+		..()*/

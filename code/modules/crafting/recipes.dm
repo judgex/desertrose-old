@@ -33,6 +33,67 @@
 	time = 80
 	category = CAT_MISC
 
+/datum/crafting_recipe/stove
+	name = "cook stove"
+	result = /obj/machinery/microwave/stove
+	reqs = list(/obj/item/stack/crafting/electronicparts = 3,
+				/obj/item/stack/crafting/metalparts = 1,
+				/obj/item/stack/crafting/goodparts = 1,
+				/obj/item/stack/sheet/metal = 5,
+				/obj/item/stack/cable_coil = 2,
+				/obj/item/assembly/igniter = 1)
+	tools = list(TOOL_WELDER, TOOL_SCREWDRIVER)
+	time = 80
+	category = CAT_MISC
+
+/datum/crafting_recipe/bellystove
+	name = "pot belly stove"
+	result = /obj/structure/campfire/stove
+	reqs = list(/obj/item/stack/crafting/metalparts = 3,
+				/obj/item/stack/crafting/goodparts = 2,
+				/obj/item/stack/sheet/metal = 10)
+	tools = list(TOOL_WELDER, TOOL_WORKBENCH)
+	time = 80
+	category = CAT_MISC
+
+/datum/crafting_recipe/dildo_plastic
+    name = "plastic dildo"
+    result = /obj/item/dildo
+    reqs = list(/obj/item/stack/sheet/plastic)
+    time = 20
+    tools = list(TOOL_WELDER, TOOL_WORKBENCH)
+    category = CAT_MISC
+
+/datum/crafting_recipe/dildo_tribal
+    name = "wooden dildo"
+    result = /obj/item/dildo/wooden
+    reqs = list(/obj/item/stack/sheet/mineral/wood = 3)
+    tools = list(TOOL_KNIFE)
+    time = 85
+    category = CAT_MISC
+
+/datum/crafting_recipe/campfirekit
+	name = "campfire kit"
+	result = /obj/item/crafting/campfirekit
+	reqs = list(/obj/item/stack/sheet/mineral/wood = 15)
+	time = 80
+	category = CAT_MISC
+
+/datum/crafting_recipe/campfirekit
+	name = "set up campfire kit"
+	result = /obj/structure/campfire
+	reqs = list(/obj/item/crafting/campfirekit = 1)
+	time = 40
+	category = CAT_MISC
+
+/datum/crafting_recipe/barrelfire
+	name = "stoke barrel fire"
+	result = /obj/structure/campfire/barrel
+	reqs = list(/obj/item/stack/sheet/mineral/wood = 15,
+				/obj/item/stack/sheet/metal = 10)
+	time = 80
+	category = CAT_MISC
+
 /datum/crafting_recipe/pin_removal
 	name = "Pin Removal"
 	result = /obj/item/gun
@@ -785,7 +846,7 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
 
-/datum/crafting_recipe/chemical_payload2
+/*/datum/crafting_recipe/chemical_payload2
 	name = "Chemical Payload (Gibtonite)"
 	result = /obj/item/bombcore/chemical
 	reqs = list(
@@ -796,7 +857,7 @@
 	parts = list(/obj/item/stock_parts/matter_bin = 1, /obj/item/grenade/chem_grenade = 2)
 	time = 50
 	category = CAT_WEAPONRY
-	subcategory = CAT_WEAPON
+	subcategory = CAT_WEAPON*/
 
 /datum/crafting_recipe/bonearmor
 	name = "Bone Armor"
@@ -989,7 +1050,7 @@
 	category = CAT_MISC
 
 
-/datum/crafting_recipe/rcl
+/*/datum/crafting_recipe/rcl
 	name = "Makeshift Rapid Cable Layer"
 	result = /obj/item/twohanded/rcl/ghetto
 	time = 40
@@ -1005,7 +1066,7 @@
 		        /obj/item/stack/sheet/mineral/wood = 20,
 		        /obj/item/stack/cable_coil = 10)
 	tools = list(TOOL_SCREWDRIVER, TOOL_WRENCH, TOOL_WELDER)
-	category = CAT_MISC
+	category = CAT_MISC*/
 
 /datum/crafting_recipe/binoculars
 	name = "Binoculars"
@@ -1016,14 +1077,14 @@
 	tools = list(TOOL_SCREWDRIVER,TOOL_WORKBENCH)
 	category = CAT_MISC
 
-/datum/crafting_recipe/spooky_camera
+/*/datum/crafting_recipe/spooky_camera
 	name = "Camera Obscura"
 	result = /obj/item/camera/spooky
 	time = 15
 	reqs = list(/obj/item/camera = 1,
 				/datum/reagent/water/holywater = 10)
 	parts = list(/obj/item/camera = 1)
-	category = CAT_MISC
+	category = CAT_MISC*/
 
 //drugs
 /datum/crafting_recipe/jet
@@ -1038,7 +1099,7 @@
 	name = "Psycho"
 	result = /obj/item/reagent_containers/hypospray/medipen/psycho
 	time = 20
-	reqs = list(/obj/item/reagent_containers/syringe = 1, /obj/item/reagent_containers/food/snacks/grown/feracactus = 2, /obj/item/reagent_containers/food/snacks/grown/fungus = 2, /datum/reagent/consumable/nuka_cola = 10)
+	reqs = list(/obj/item/reagent_containers/syringe = 1, /obj/item/reagent_containers/food/snacks/grown/feracactus = 2, /obj/item/reagent_containers/food/snacks/grown/fungus = 2, /datum/reagent/consumable/nuka_cola = 1)
 	tools = list(TOOL_WORKBENCH)
 	category = CAT_DRUGS
 
@@ -1122,14 +1183,14 @@
 	time = 30
 	category = CAT_MISC
 
-/datum/crafting_recipe/reversebeartrap
+/*/datum/crafting_recipe/reversebeartrap
 	name = "Reverse Bear Trap"
 	result = /obj/item/reverse_bear_trap
 	reqs = list(/obj/item/stack/sheet/metal = 4,
 				/obj/item/crafting/timer = 1)
 	tools = list(TOOL_SCREWDRIVER, TOOL_WRENCH)
 	time = 60
-	category = CAT_ASSEM
+	category = CAT_ASSEM*/
 
 /datum/crafting_recipe/whip
 	name = "Leather whip"
@@ -1250,10 +1311,18 @@
 	time = 30
 	category = CAT_MEDICAL
 
+/datum/crafting_recipe/Bowl
+	name = "Glass Bowl"
+	result = /obj/item/reagent_containers/glass/bowl
+	reqs = list(/obj/item/stack/sheet/glass = 2)
+	tools = list(TOOL_WELDER)
+	time = 10
+	category = CAT_MISC
+
 /datum/crafting_recipe/spray
 	name = "Abraxo Cleaner"
 	result = /obj/item/reagent_containers/spray/cleaner
-	reqs = list(/obj/item/stack/sheet/plastic = 2,
+	reqs = list(/obj/item/stack/sheet/glass = 2,
 				/obj/item/crafting/abraxo = 1,
 				/datum/reagent/water = 50)
 	tools = list(TOOL_WELDER)
@@ -1717,6 +1786,16 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
 
+/datum/crafting_recipe/baseballspiked
+	name = "spiked baseball bat"
+	result = /obj/item/twohanded/baseball/spiked
+	time = 80
+	reqs = list(/obj/item/stack/sheet/metal = 4,
+				/obj/item/twohanded/baseball = 1)
+	tools = list(TOOL_WORKBENCH)
+	category = CAT_WEAPONRY
+	subcategory = CAT_WEAPON
+
 /datum/crafting_recipe/reinforcemachete
 	name = "Reinforce machete"
 	result = /obj/item/claymore/machete/reinforced
@@ -1836,5 +1915,75 @@
 	result = /obj/item/clothing/suit/armor/f13/tribe_armor
 	time = 80
 	reqs = list(/obj/item/stack/sheet/leather = 6)
+	tools = list(TOOL_WORKBENCH)
 	category = CAT_PRIMAL
 	subcategory = CAT_TRIBAL
+
+/datum/crafting_recipe/warmace
+	name = "Carve Wooden Warmace"
+	result = /obj/item/twohanded/sledgehammer/warmace
+	time = 100
+	reqs = list(/obj/item/stack/sheet/mineral/wood = 10,
+				/obj/item/stack/sheet/cloth = 3)
+	tools = list(TOOL_WORKBENCH)
+	category = CAT_PRIMAL
+	subcategory = CAT_TRIBAL
+
+/datum/crafting_recipe/spearquiver
+	name = "Spear Quiver"
+	result = /obj/item/storage/backpack/spearquiver
+	time = 60
+	reqs = list(/obj/item/stack/sheet/leather = 3,
+				/obj/item/stack/sheet/metal = 1)
+	category = CAT_PRIMAL
+	subcategory = CAT_TRIBAL
+
+/datum/crafting_recipe/arrowap
+	name = "Sturdy Arrow"
+	result = /obj/item/ammo_casing/caseless/arrow/ap
+	time = 40
+	reqs = list(/obj/item/stack/rods = 2,
+				/obj/item/stack/crafting/metalparts = 2)
+	tools = list(TOOL_WORKBENCH)
+	category = CAT_WEAPONRY
+	subcategory = CAT_AMMO
+
+/datum/crafting_recipe/arrowpoison
+	name = "Poison Arrow"
+	result = /obj/item/ammo_casing/caseless/arrow/poison
+	time = 30
+	reqs = list(/obj/item/ammo_casing/caseless/arrow = 1,
+				/obj/item/grown/nettle/basic = 5)
+	tools = list(TOOL_WORKBENCH)
+	category = CAT_WEAPONRY
+	subcategory = CAT_AMMO
+
+/datum/crafting_recipe/arrowburn
+	name = "Burn Posion Arrow"
+	result = /obj/item/ammo_casing/caseless/arrow/burning
+	time = 30
+	reqs = list(/obj/item/ammo_casing/caseless/arrow = 1,
+				/obj/item/reagent_containers/food/drinks/bottle = 1,
+				/obj/item/reagent_containers/food/snacks/meat/slab/human/ghoul = 4)
+	tools = list(TOOL_WORKBENCH)
+	category = CAT_WEAPONRY
+	subcategory = CAT_AMMO
+
+/datum/crafting_recipe/voodoo
+    name = "voodoo"
+    result = /obj/item/reagent_containers/pill/patch/voodoo
+    time = 20
+    reqs = list(/obj/item/reagent_containers/food/snacks/meat/slab/human/ghoul = 2,
+                /obj/item/reagent_containers/food/snacks/grown/feracactus = 2,
+                /obj/item/reagent_containers/food/snacks/grown/yucca = 1,
+                /datum/reagent/consumable/nuka_cola = 10)
+    tools = list(TOOL_WORKBENCH)
+    category = CAT_TRIBAL
+
+/datum/crafting_recipe/coyotechew
+	name = "coyote tobacco chew"
+	result = /obj/item/reagent_containers/pill/patch/coyotechew
+	time = 30
+	reqs = list(/obj/item/reagent_containers/food/snacks/grown/coyotetobacco = 2, /obj/item/reagent_containers/food/snacks/grown/feracactus = 1, /obj/item/reagent_containers/food/snacks/grown/yucca = 1)
+	tools = list(TOOL_WORKBENCH)
+	category = CAT_TRIBAL

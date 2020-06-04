@@ -79,20 +79,12 @@
 		if(prob(3))
 			M += pick(" Ravioli, ravioli, give me the formuoli!"," Mamma-mia!"," Mamma-mia! That's a spicy meat-ball!", " La la la la la funiculi funicula!")
 	return trim(M)
-
+/*
 /obj/item/clothing/mask/joy
 	name = "joy mask"
 	desc = "Express your happiness or hide your sorrows with this laughing face with crying tears of joy cutout."
 	icon_state = "joy"
-
-/obj/item/clothing/mask/joy/joyful
-	desc = "Express your happiness or hide your sorrows with this laughing face with crying tears of joy cutout. It seems happier than usual."
-
-/obj/item/clothing/mask/joy/joyful/equipped(mob/user, slot)
-	var/mob/living/carbon/C = user
-	if(C.wear_mask == src)
-		to_chat(user, "<span class='warning'><B>When you put [src] on, you feel nothing but Joy. Spread it to others.</B></span>")
-	return ..()
+*/
 
 /obj/item/clothing/mask/pig
 	name = "pig mask"
@@ -120,7 +112,7 @@
 	item_state = "pig"
 	flags_inv = HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	w_class = WEIGHT_CLASS_SMALL
-	var/voicechange = 1
+	var/voicechange = FALSE
 
 /obj/item/clothing/mask/spig/speechModification(message)
 	if(voicechange)
@@ -135,11 +127,12 @@
 	item_state = "frog"
 	flags_inv = HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	w_class = WEIGHT_CLASS_SMALL
-	var/voicechange = TRUE
-
+	var/voicechange = FALSE
+/*
 /obj/item/clothing/mask/frog/attack_self(mob/user)
 	voicechange = !voicechange
 	to_chat(user, "<span class='notice'>You turn the voice box [voicechange ? "on" : "off"]!</span>")
+
 
 /obj/item/clothing/mask/frog/speechModification(message) //whenever you speak
 	if(voicechange)
@@ -148,6 +141,7 @@
 		else
 			message = pick("Ree!!", "Reee!!","REEE!!","REEEEE!!") //but its usually just angry gibberish,
 	return message
+
 
 /obj/item/clothing/mask/frog/cursed
 
@@ -159,7 +153,7 @@
 	if(C.wear_mask == src)
 		to_chat(user, "<span class='warning'><B>[src] was cursed! Ree!!</B></span>")
 	return ..()
-
+*/
 
 /obj/item/clothing/mask/cowmask
 	name = "Cowface"
@@ -169,7 +163,7 @@
 	item_state = "cowmask"
 	flags_inv = HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	w_class = WEIGHT_CLASS_SMALL
-	var/voicechange = 1
+	var/voicechange = 0
 
 /obj/item/clothing/mask/cowmask/speechModification(message)
 	if(voicechange)
@@ -183,7 +177,7 @@
 	item_state = "horsehead"
 	flags_inv = HIDEFACE|HIDEHAIR|HIDEFACIALHAIR|HIDEEYES|HIDEEARS
 	w_class = WEIGHT_CLASS_SMALL
-	var/voicechange = 1
+	var/voicechange = 0
 
 /obj/item/clothing/mask/horsehead/speechModification(message)
 	if(voicechange)
@@ -255,8 +249,6 @@
 /obj/item/clothing/mask/bandana/attack_self(mob/user)
 	adjustmask(user)
 
-
-
 /obj/item/clothing/mask/bandana/attackby(obj/item/I, mob/user, params)
 	if(istype(I, /obj/item/wirecutters) || I.is_sharp())
 		var/obj/item/stack/sheet/cloth/C = new (get_turf(src), 2)
@@ -269,37 +261,37 @@
 
 /obj/item/clothing/mask/bandana/red
 	name = "red bandana"
-	desc = "A fine red bandana with nanotech lining."
+	desc = "A fine red bandana with linen lining."
 	icon_state = "bandred"
 
 /obj/item/clothing/mask/bandana/blue
 	name = "blue bandana"
-	desc = "A fine blue bandana with nanotech lining."
+	desc = "A fine blue bandana with linen lining."
 	icon_state = "bandblue"
 
 /obj/item/clothing/mask/bandana/green
 	name = "green bandana"
-	desc = "A fine green bandana with nanotech lining."
+	desc = "A fine green bandana with linen lining."
 	icon_state = "bandgreen"
 
 /obj/item/clothing/mask/bandana/gold
 	name = "gold bandana"
-	desc = "A fine gold bandana with nanotech lining."
+	desc = "A fine gold bandana with linen lining."
 	icon_state = "bandgold"
 
 /obj/item/clothing/mask/bandana/black
 	name = "black bandana"
-	desc = "A fine black bandana with nanotech lining."
+	desc = "A fine black bandana with linen lining."
 	icon_state = "bandblack"
 
 /obj/item/clothing/mask/bandana/white
 	name = "bandana"
-	desc = "A fine bandana with nanotech lining."
+	desc = "A fine bandana with linen lining."
 	icon_state = "bandwhite"
 
 /obj/item/clothing/mask/bandana/skull
 	name = "skull bandana"
-	desc = "A fine black bandana with nanotech lining and a skull emblem."
+	desc = "A fine black bandana with linen lining and a skull emblem."
 	icon_state = "bandskull"
 
 //Legion Bandanas - We make these as much like normal bandanas as possible without repathing them.
@@ -309,9 +301,7 @@
 	desc = "A fine recruit bandana."
 	icon_state = "legrecruit"
 	flags_inv = HIDEFACE
-	flags_cover = MASKCOVERSMOUTH
 	visor_flags_inv = HIDEFACE
-	visor_flags_cover = MASKCOVERSMOUTH
 	adjusted_flags = null
 	actions_types = list(/datum/action/item_action/adjust)
 
@@ -320,9 +310,7 @@
 	desc = "A fine decan bandana."
 	icon_state = "legdecan"
 	flags_inv = HIDEFACE
-	flags_cover = MASKCOVERSMOUTH
 	visor_flags_inv = HIDEFACE
-	visor_flags_cover = MASKCOVERSMOUTH
 	adjusted_flags = null
 	actions_types = list(/datum/action/item_action/adjust)
 
@@ -331,9 +319,7 @@
 	desc = "A fine centurion bandana."
 	icon_state = "legcenturion"
 	flags_inv = HIDEFACE
-	flags_cover = MASKCOVERSMOUTH
 	visor_flags_inv = HIDEFACE
-	visor_flags_cover = MASKCOVERSMOUTH
 	adjusted_flags = null
 	actions_types = list(/datum/action/item_action/adjust)
 
@@ -342,9 +328,7 @@
 	desc = "A fine veteran bandana."
 	icon_state = "legvet"
 	flags_inv = HIDEFACE
-	flags_cover = MASKCOVERSMOUTH
 	visor_flags_inv = HIDEFACE
-	visor_flags_cover = MASKCOVERSMOUTH
 	adjusted_flags = null
 	actions_types = list(/datum/action/item_action/adjust)
 
@@ -353,9 +337,7 @@
 	desc = "A fine prime bandana"
 	icon_state = "legdecan"
 	flags_inv = HIDEFACE
-	flags_cover = MASKCOVERSMOUTH
 	visor_flags_inv = HIDEFACE
-	visor_flags_cover = MASKCOVERSMOUTH
 	adjusted_flags = null
 	actions_types = list(/datum/action/item_action/adjust)
 
@@ -384,3 +366,14 @@
 	flags_cover = MASKCOVERSMOUTH
 	visor_flags_inv = HIDEFACE
 	visor_flags_cover = MASKCOVERSMOUTH
+
+//Society Mask
+
+/obj/item/clothing/mask/society
+	name = "golden facemask"
+	desc = "A burlap sack with eyeholes."
+	icon_state = "societymask"
+	item_state = "societymask"
+	flags_inv = HIDEFACE
+
+

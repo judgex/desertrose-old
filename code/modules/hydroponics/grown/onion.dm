@@ -59,7 +59,7 @@
 
 /obj/item/reagent_containers/food/snacks/onion_slice
 	name = "onion slices"
-	desc = "Rings, not for wearing."
+	desc = "Raw onion rings."
 	icon_state = "onionslice"
 	list_reagents = list("nutriment" = 5, "vitamin" = 2)
 	filling_color = "#C0C9A0"
@@ -72,3 +72,5 @@
 	icon_state = "onionslice_red"
 	filling_color = "#C29ACF"
 	list_reagents = list("nutriment" = 5, "vitamin" = 2, "tearjuice" = 2.5)
+
+/*HRP*/

@@ -1,7 +1,7 @@
 /datum/weather/acid_rain
 	name = "acid rain"
-	desc = "The planet's thunderstorms are by nature acidic, and will incinerate anyone standing beneath them without protection."
-	probability = 2
+	desc = "The planet's thunderstorms are by nature acidic, and will melt anyone standing beneath them without protection."
+	probability = 0
 
 	telegraph_duration = 400
 	telegraph_overlay = "snow_storm"
@@ -36,10 +36,10 @@
 			return
 		var/resist = L.getarmor(null, "acid")
 		if(prob(max(0, 100 - resist)))
-			L.acid_act(15, 10)
+			L.acid_act(7, 10)
 
 /datum/weather/acid_rain/weather_act_turf(turf/T)
-	for(var/O in T) 
+	for(var/O in T)
 		if(is_acidrain_cleanable(O)) //Clean cleanable decals and ammo casings in affected areas
 			qdel(O)
 
