@@ -293,7 +293,7 @@
 			return
 
 	var/dat = ""
-	dat += "AntiMatter Control Panel<BR>"
+	dat += "Nuclear Fission Reactor Control Panel<BR>"
 	dat += "<A href='?src=[REF(src)];close=1'>Close</A><BR>"
 	dat += "<A href='?src=[REF(src)];refresh=1'>Refresh</A><BR>"
 	dat += "<A href='?src=[REF(src)];refreshicons=1'>Force Shielding Update</A><BR><BR>"
