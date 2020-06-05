@@ -226,7 +226,7 @@
 							/obj/machinery/vending/coffee = "Sicilian Espresso-Go",
 							/obj/machinery/vending/snack = "Pure Patriot treats",
 							/obj/machinery/vending/cola = "Soda Machine",
-							/obj/machinery/vending/cigarette = "ShadyCigs Deluxe",
+							/obj/machinery/vending/cigarette = "Big Smokes",
 							/obj/machinery/vending/games = "\improper Good Clean Fun",
 							/obj/machinery/vending/autodrobe = "AutoDrobe",
 							/obj/machinery/vending/wardrobe/sec_wardrobe = "SecDrobe",
