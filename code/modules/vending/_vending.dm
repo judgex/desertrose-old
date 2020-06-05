@@ -421,6 +421,7 @@ IF YOU MODIFY THE PRODUCTS LIST OF A MACHINE, MAKE SURE TO UPDATE ITS RESUPPLY C
 		use_power(5)
 		if(icon_vend) //Show the vending animation if needed
 			flick(icon_vend,src)
+		playsound(src, 'sound/machines/machine_vend.ogg', 50, TRUE, extrarange = -3)
 		new R.product_path(get_turf(src))
 		SSblackbox.record_feedback("nested tally", "vending_machine_usage", 1, list("[type]", "[R.product_path]"))
 		vend_ready = 1
