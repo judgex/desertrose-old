@@ -151,7 +151,7 @@
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
 	armor = list(melee = 50, bullet = 30, laser = 30, energy = 30, bomb = 30, bio = 0, rad = 30, fire = 30, acid = 30)
 	strip_delay = 30
-	allowed = list(/obj/item/weapon)
+	allowed = list(/obj/item/gun)
 	icon = 'icons/fallout/clothing/suits.dmi'
 
 /obj/item/clothing/suit/armor/f13/battlecoat/vault
