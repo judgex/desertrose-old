@@ -13,7 +13,7 @@
 	return TRUE
 
 /obj/item/projectile/ion/weak
-	damage = 20
+	damage = 25
 	armour_penetration = 55
 
 /obj/item/projectile/ion/weak/on_hit(atom/target, blocked = FALSE)

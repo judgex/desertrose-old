@@ -6,7 +6,7 @@
 
 /obj/item/ammo_casing/energy/ion/pistol
 	projectile_type = /obj/item/projectile/ion/weak
-	e_cost = 150
+	e_cost = 50
 	fire_sound = 'sound/f13weapons/pulsepistolfire.ogg'
 
 /obj/item/ammo_casing/energy/declone
