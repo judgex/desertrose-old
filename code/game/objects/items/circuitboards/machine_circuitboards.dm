@@ -227,7 +227,7 @@
 							/obj/machinery/vending/snack = "Pure Patriot treats",
 							/obj/machinery/vending/cola = "Soda Machine",
 							/obj/machinery/vending/cigarette = "Big Smokes",
-							/obj/machinery/vending/games = "\improper Good Clean Fun",
+							/obj/machinery/vending/games = "\improper Ultra-Luxe Poker-Yourself",
 							/obj/machinery/vending/autodrobe = "AutoDrobe",
 							/obj/machinery/vending/wardrobe/sec_wardrobe = "SecDrobe",
 							/obj/machinery/vending/wardrobe/medi_wardrobe = "MediDrobe",
