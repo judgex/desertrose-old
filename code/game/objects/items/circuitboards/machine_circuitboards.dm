@@ -247,8 +247,8 @@
 							/obj/machinery/vending/wardrobe/gene_wardrobe = "GeneDrobe",
 							/obj/machinery/vending/wardrobe/viro_wardrobe = "ViroDrobe",
 							/obj/machinery/vending/clothing = "ClothesMate",
-							/obj/machinery/vending/medical = "Med-Tek Health Station",
-							/obj/machinery/vending/wallmed = "NanoMed-Tek")
+							/obj/machinery/vending/medical = "NanoMed Plus",
+							/obj/machinery/vending/wallmed = "NanoMed")
 	needs_anchored = FALSE
 
 /obj/item/circuitboard/machine/vendor/attackby(obj/item/I, mob/user, params)

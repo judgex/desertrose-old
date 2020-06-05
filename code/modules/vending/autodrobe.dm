@@ -1,6 +1,6 @@
 /obj/machinery/vending/autodrobe
 	name = "\improper AutoDrobe"
-	desc = "An automated pre-war clothes sales machine."
+	desc = "A vending machine for costumes."
 	icon_state = "theater"
 	icon_deny = "theater-deny"
 	req_access = list(ACCESS_THEATRE)
