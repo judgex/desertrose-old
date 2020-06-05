@@ -1,6 +1,6 @@
 /obj/machinery/power/am_control_unit
-	name = "antimatter control unit"
-	desc = "This device injects antimatter into connected shielding units, the more antimatter injected the more power produced.  Wrench the device to set it up."
+	name = "Nuclear Fission Reactor Control Unit"
+	desc = "This device monitors and controls the bombardment of fuel inside the nuclear fission reactor , the higher the bombardment the more power is produced at the risk of quicker depletion.  Wrench the device to set it up."
 	icon = 'icons/obj/machines/antimatter.dmi'
 	icon_state = "control"
 	anchored = FALSE
@@ -36,6 +36,9 @@
 	linked_shielding = list()
 	linked_cores = list()
 
+/obj/machinery/power/am_control_unit/ComponentInitialize()
+	. = ..()
+	AddComponent(/datum/component/simple_rotation,ROTATION_ALTCLICK | ROTATION_CLOCKWISE, CALLBACK(src, .proc/can_user_rotate),CALLBACK(src, .proc/can_be_rotated),null)
 
 /obj/machinery/power/am_control_unit/Destroy()//Perhaps damage and run stability checks rather than just del on the others
 	for(var/obj/machinery/am_shielding/AMS in linked_shielding)
