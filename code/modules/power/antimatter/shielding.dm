@@ -9,8 +9,8 @@
 	return things
 
 /obj/machinery/am_shielding
-	name = "antimatter reactor section"
-	desc = "This device was built using a plasma life-form that seems to increase plasma's natural ability to react with neutrinos while reducing the combustibility."
+	name = "Modular Nuclear Fission Reactor Section"
+	desc = "This reactor hull section is made from de-radiated uranium and lead compounds to stabilise the bombardment core."
 
 	icon = 'icons/obj/machines/antimatter.dmi'
 	icon_state = "shield"
@@ -231,8 +231,8 @@
 
 
 /obj/item/am_shielding_container
-	name = "packaged antimatter reactor section"
-	desc = "A small storage unit containing an antimatter reactor section.  To use place near an antimatter control unit or deployed antimatter reactor section and use a multitool to activate this package."
+	name = "Modular Nuclear Fission Reactor Section Part"
+	desc = "A small storage unit containing a Modular Nuclear Fission Reactor Section.  To use place near an Nuclear Fission Reactor Control Unit or deployed Modular Nuclear Fission Reactor Section and use a multitool device to activate."
 	icon = 'icons/obj/machines/antimatter.dmi'
 	icon_state = "box"
 	item_state = "electronic"

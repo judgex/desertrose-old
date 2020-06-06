@@ -1,6 +1,6 @@
 /obj/item/am_containment
-	name = "antimatter containment jar"
-	desc = "Holds antimatter."
+	name = "Deionised U-235"
+	desc = "Unstable, highly-reactive and radioactive Uranium Fuel."
 	icon = 'icons/obj/machines/antimatter.dmi'
 	icon_state = "jar"
 	density = FALSE
