@@ -1007,6 +1007,7 @@
 	item_state = "maxson_battlecoat"
 	body_parts_covered = CHEST
 	armor = list("melee" = 15, "bullet" = 10, "laser" = 15, "energy" = 0, "bomb" = 5, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
+	allowed = list(/obj/item/gun)
 
 /obj/item/clothing/suit/toggle/armor
 	allowed = null

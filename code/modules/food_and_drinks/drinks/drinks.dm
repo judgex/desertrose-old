@@ -517,3 +517,30 @@
 /obj/item/reagent_containers/food/drinks/soda_cans/f13nukacola/radioactive
 	desc = "The most popular flavored soft drink in the United States before the Great War.<br>It was preserved in a fairly pristine state.<br>The bottle is slightly glowing."
 	list_reagents = list("cola" = 15, "radium" = 5)
+
+/obj/item/reagent_containers/food/drinks/soda_cans/sunset
+	name = "Sunset Sarsparilla"
+	desc = "The most popular flavored root beer in the West!"
+	icon = 'icons/obj/f13vending.dmi'
+	icon_state = "sunset"
+	list_reagents = list("whiskey" = 1, "sunset" = 15, "salglu_solution" = 5)
+	foodtype = SUGAR
+	bottle = TRUE
+
+/obj/item/reagent_containers/food/drinks/soda_cans/bawls
+	name = "Balls Guarana"
+	desc = "To give you that Bounce!"
+	icon = 'icons/obj/f13vending.dmi'
+	icon_state = "bawls"
+	list_reagents = list("coffee" = 10, "bawls" = 15)
+	foodtype = SUGAR
+	bottle = TRUE
+
+/obj/item/reagent_containers/food/drinks/soda_cans/vim
+	name = "Vim"
+	desc = "You've got Vim!"
+	icon = 'icons/obj/f13vending.dmi'
+	icon_state = "vim"
+	list_reagents = list("sugar" = 5, "vim" = 15)
+	foodtype = SUGAR
+	bottle = TRUE

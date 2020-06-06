@@ -1,47 +1,24 @@
 /obj/machinery/vending/cigarette
-	name = "\improper Pyramid Deluxe"
-	desc = "If you want to get cancer, might as well do it in style."
-	product_slogans = "Pyramid cigs taste good like a cigarette should.;I'd rather toolbox than switch.;Smoke!;Don't believe the reports - smoke today!"
-	product_ads = "Probably not bad for you!;Don't believe the scientists!;It's good for you!;Don't quit, buy more!;Smoke!;Nicotine heaven.;Best cigarettes since 2150.;Award-winning cigs."
+	name = "\improper Big Smokes"
+	desc = "Pre-War Filter Cigarettes with Unfiltered Taste!"
+	product_slogans = "Big Boss tastes good like a cigarette should.;Smoke a Fresh Cigarette!;Smoke!"
+	product_ads = "Fresh Cigarettes!;Tastes good like a cigarette should!;It's good for you!;Buy more!;Smoke!;Nicotine heaven.;Best cigarettes since 1960.;Award-winning cigs."
 	icon_state = "cigs"
-	products = list(/obj/item/storage/fancy/cigarettes = 5,
-					/obj/item/storage/fancy/cigarettes/cigpack_uplift = 3,
-					/obj/item/storage/fancy/cigarettes/cigpack_robust = 3,
-					/obj/item/storage/fancy/cigarettes/cigpack_carp = 3,
-					/obj/item/storage/fancy/cigarettes/cigpack_midori = 3,
+	products = list(/obj/item/storage/fancy/cigarettes/cigpack_bigboss = 10,
+					/obj/item/storage/fancy/cigarettes/cigpack_pyramid = 10,
+					/obj/item/storage/fancy/cigarettes/cigpack_greytort = 10,
 					/obj/item/storage/box/matches = 10,
-					/obj/item/lighter/greyscale = 4,
-					/obj/item/storage/fancy/rollingpapers = 5)
-	contraband = list(/obj/item/lighter = 3)
-	premium = list(/obj/item/storage/fancy/cigarettes/cigpack_robustgold = 3,
-		           /obj/item/storage/fancy/cigarettes/cigars = 1,
-		           /obj/item/storage/fancy/cigarettes/cigars/havana = 1,
-		           /obj/item/storage/fancy/cigarettes/cigars/cohiba = 1)
+					/obj/item/lighter = 5,
+					/obj/item/clothing/mask/cigarette/pipe = 3,)
+	contraband = list(/obj/item/storage/fancy/rollingpapers = 5,
+	                  /obj/item/storage/fancy/cigarettes/cigars = 1)
 	refill_canister = /obj/item/vending_refill/cigarette
 
-/obj/machinery/vending/cigarette/beach //Used in the lavaland_biodome_beach.dmm ruin
-	name = "\improper ShadyCigs Ultra"
-	desc = "Now with extra premium products!"
-	product_ads = "Probably not bad for you!;Dope will get you through times of no money better than money will get you through times of no dope!;It's good for you!"
-	product_slogans = "Turn on, tune in, drop out!;Better living through chemistry!;Toke!;Don't forget to keep a smile on your lips and a song in your heart!"
-	products = list(/obj/item/storage/fancy/cigarettes = 5,
-					/obj/item/storage/fancy/cigarettes/cigpack_uplift = 3,
-					/obj/item/storage/fancy/cigarettes/cigpack_robust = 3,
-					/obj/item/storage/fancy/cigarettes/cigpack_carp = 3,
-					/obj/item/storage/fancy/cigarettes/cigpack_midori = 3,
-					/obj/item/storage/fancy/cigarettes/cigpack_cannabis = 5,
-					/obj/item/storage/box/matches = 10,
-					/obj/item/lighter/greyscale = 4,
-					/obj/item/storage/fancy/rollingpapers = 5)
-	premium = list(/obj/item/storage/fancy/cigarettes/cigpack_mindbreaker = 5,
-					/obj/item/clothing/mask/vape = 5,
-					/obj/item/lighter = 3)
-
 /obj/item/vending_refill/cigarette
-	machine_name = "ShadyCigs Deluxe"
+	machine_name = "Big Smokes"
 	icon_state = "refill_smoke"
-	charges = list(12, 3, 2)// of 36 standard, 9 contraband, 6 premium
-	init_charges = list(12, 3, 2)
+	charges = list(15, 2, 0)
+	init_charges = list(15, 2, 0)
 
 /obj/machinery/vending/cigarette/pre_throw(obj/item/I)
 	if(istype(I, /obj/item/lighter))
