@@ -1,6 +1,6 @@
 /obj/item/gun/energy/ionrifle
 	name = "\improper YK42B pulse rifle"
-	desc = "The YK42B is an electrical pulse weapon that was developed by the Yuma Flats Energy Consortium. It excels in damage against heavily armored opponents, especially power armor."
+	desc = "The YK42B rifle is an electrical pulse weapon that was developed by the Yuma Flats Energy Consortium. It excels in damage against heavily armored opponents, especially power armor."
 	icon_state = "ionrifle"
 	item_state = null	//so the human update icon uses the icon_state instead.
 	can_flashlight = 1
@@ -21,6 +21,7 @@
 	desc = "The YK32 Pulse Pistol is an electrical pulse weapon that was developed by the Yuma Flats Energy Consortium, specifically excelling against mechanical and armored targets. Though powerful, the YK32 was never considered a practical weapon due to its inefficient energy usage and bulky design."
 	icon_state = "ioncarbine"
 	w_class = WEIGHT_CLASS_NORMAL
+	equipsound = 'sound/f13weapons/equipsounds/pulsepistolequip.ogg'
 	slot_flags = ITEM_SLOT_BELT
 	ammo_type = list(/obj/item/ammo_casing/energy/ion/pistol)
 	ammo_x_offset = 2
@@ -30,7 +31,7 @@
 
 /obj/item/gun/energy/decloner
 	name = "biological demolecularisor"
-	desc = "A weapon developed by horrible third parties that makes use of an FEV retro-strain to physically rupture skin and organ cells."
+	desc = "A weapon developed by horrible third parties that makes use of an energized FEV retro-strain to physically rupture epidermis and organ cells."
 	icon_state = "decloner"
 	ammo_type = list(/obj/item/ammo_casing/energy/declone)
 	equipsound = 'sound/f13weapons/equipsounds/declonequip.ogg'
