@@ -9,6 +9,25 @@
 	ammo_x_offset = 1
 	shaded_charge = 1
 
+/obj/item/gun/energy/laser/rcw/ui_action_click()
+	burst_select()
+
+/obj/item/gun/energy/laser/proc/burst_select()
+	var/mob/living/carbon/human/user = usr
+	select = !select
+	if(!select)
+		burst_size = 1
+		to_chat(user, "<span class='notice'>You switch to a single stream laser.</span>")
+	else
+		burst_size = initial(burst_size)
+		to_chat(user, "<span class='notice'>You switch to [burst_size]-stream laser.</span>")
+
+	playsound(user, 'sound/f13weapons/laserswitch.ogg', 80, 1)
+	update_icon()
+	for(var/X in actions)
+		var/datum/action/A = X
+		A.UpdateButtonIcon()
+
 /obj/item/gun/energy/laser/practice
 	name = "practice laser gun"
 	desc = "A modified version of the basic laser gun, this one fires less concentrated energy bolts designed for target practice."
@@ -138,7 +157,7 @@
 //Fallout
 
 /obj/item/gun/energy/laser/aer9
-	name = "AER9 laser rifle"
+	name = "\improper AER9 laser rifle"
 	desc = "A sturdy and advanced military grade pre-war service laser rifle"
 	icon_state = "laser"
 	item_state = "laser-rifle9"
@@ -150,7 +169,7 @@
 	weapon_weight = WEAPON_HEAVY
 
 /obj/item/gun/energy/laser/pistol
-	name = "AEP7 laser pistol"
+	name = "\improper AEP7 laser pistol"
 	desc = "A basic energy-based laser gun that fires concentrated beams of light."
 	icon_state = "AEP7"
 	item_state = "laser-pistol"
@@ -291,7 +310,51 @@
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 
+/obj/item/gun/energy/laser/rcw/burst_select()
+	var/mob/living/carbon/human/user = usr
+	switch(select)
+		if(0)
+			select += 1
+			burst_size = 2
+			fire_delay = 3
+			to_chat(user, "<span class='notice'>You switch to a dual-stream laser.</span>")
+		if(1)
+			select = 0
+			burst_size = 1
+			fire_delay = 2.3
+			to_chat(user, "<span class='notice'>You switch to a singular stream laser.</span>")
+	playsound(user, 'sound/f13weapons/laserswitch.ogg', 80, 1)
+	update_icon()
+	return
+
+
 /obj/item/gun/energy/laser/rcw/afterattack()
 	. = ..()
 	empty_alarm()
 	return
+
+/obj/item/gun/energy/laser/laer
+	name = "\improper LAER"
+	desc = "The Laser Assister Energy Rifle is a powerful pre-war weapon developed just before the turn of the Great War. Due to its incredible rarity and unprecedented firepower, the weapon is coveted and nearly solely possesed by the Brotherhood of Steel; typically held by an Elder as a status symbol."
+	icon_state = "laer"
+	item_state = "laer"
+	fire_delay = 3
+	burst_size = 1
+	equipsound = 'sound/f13weapons/equipsounds/laerequip.ogg'
+	ammo_type = list(/obj/item/ammo_casing/energy/laser/laer)
+	cell_type = /obj/item/stock_parts/cell/ammo/mfc
+	w_class = WEIGHT_CLASS_BULKY
+	weapon_weight = WEAPON_HEAVY
+
+/obj/item/gun/energy/laser/aer14
+	name = "\improper AER14 laser rifle"
+	desc = "The AER14, a successor to the AER9 and AER12, was a prototype in development before the Great War. It features an orange trim and higher firepower at the cost of slower firing rate."
+	icon_state = "aer14"
+	item_state = "laser-rifle9"
+	fire_delay = 3.5
+	equipsound = 'sound/f13weapons/equipsounds/aer14equip.ogg'
+	ammo_type = list(/obj/item/ammo_casing/energy/laser/aer14)
+	cell_type = /obj/item/stock_parts/cell/ammo/mfc
+	w_class = WEIGHT_CLASS_BULKY
+	weapon_weight = WEAPON_HEAVY
+

@@ -34,5 +34,5 @@
 
 //2mm Electromagnetic
 /obj/item/projectile/bullet/c2mm
-	damage = 35
-	armour_penetration = 30
+	damage = 45
+	armour_penetration = 45
