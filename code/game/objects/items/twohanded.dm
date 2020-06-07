@@ -219,8 +219,8 @@
 	icon_state = "fireaxe0"
 	lefthand_file = 'icons/mob/inhands/weapons/axes_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/axes_righthand.dmi'
-	name = "fireaxe"
-	desc = "Truly, the weapon of a madman. Who would think to fight fire with an axe?"
+	name = "woodaxe"
+	desc = "The axe forgets what the tree remembers."
 	force = 5
 	throwforce = 15
 	w_class = WEIGHT_CLASS_BULKY
