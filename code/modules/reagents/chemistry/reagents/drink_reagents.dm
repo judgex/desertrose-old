@@ -309,6 +309,27 @@
 	..()
 	. = 1
 
+/datum/reagent/consumable/bawls
+	name = "Balls Guarana"
+	id = "bawls"
+	description = "For that Guarana Bounce!"
+	color = "#494A82"
+	taste_description = "insanely sweet coffee"
+	glass_icon_state = "bawlsglass"
+	glass_name = "glass of Balls Guarana"
+	glass_desc = "Beverage of the Balls Guarana Company."
+
+/datum/reagent/consumable/bawls/on_mob_life(mob/living/carbon/M)
+	M.dizziness = max(0,M.dizziness-5)
+	M.drowsyness = max(0,M.drowsyness-3)
+	M.AdjustSleeping(-40, FALSE)
+	//310.15 is the normal bodytemp.
+	M.adjust_bodytemperature(25 * TEMPERATURE_DAMAGE_COEFFICIENT, 0, BODYTEMP_NORMAL)
+	if(holder.has_reagent("frostoil"))
+		holder.remove_reagent("frostoil", 5)
+	..()
+	. = 1
+
 /datum/reagent/consumable/tea
 	name = "Tea"
 	id = "tea"
@@ -433,6 +454,26 @@
 	M.adjust_bodytemperature(-5 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
 	..()
 	. = 1
+
+/datum/reagent/consumable/sunset
+	name = "Sunset Sarsaparilla"
+	id = "sunset"
+	description = "Build Mass With Sass!"
+	color = "#994C00" // rgb: 153, 76, 0
+	taste_description = "root beer, vanilla and caramel"
+	glass_icon_state = "sunsetglass"
+	glass_name = "glass of Sunset Sarsaparilla"
+	glass_desc = "Beverage of the West Coast."
+
+/datum/reagent/consumable/sunset/on_mob_life(mob/living/carbon/M)
+	M.Jitter(20)
+	M.dizziness +=1.5
+	M.drowsyness = 0
+	M.AdjustSleeping(-40, FALSE)
+	M.adjust_bodytemperature(-5 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
+	..()
+	. = 1
+
 
 /datum/reagent/consumable/spacemountainwind
 	name = "SM Wind"
@@ -760,3 +801,27 @@
 	taste_description = "sweet pomegranates"
 	glass_name = "glass of grenadine"
 	glass_desc = "Delicious flavored syrup."
+
+/datum/reagent/consumable/vim
+	name = "Vim"
+	id = "vim"
+	description = "You've Got Vim!"
+	color = "#946B4A"
+	taste_description = "off-brand nuka-cola"
+	glass_icon_state = "glass_brown"
+	glass_name = "glass of Vim"
+	glass_desc = "Unrelated to Nuka-Cola, Vim trademark Circa 2077."
+
+/datum/reagent/consumable/vim/on_mob_life(mob/living/carbon/M)
+	M.Jitter(5)
+	M.adjustToxLoss(-0.5, 0)
+	M.adjustOxyLoss(0.5, 0)
+	M.dizziness = max(0,M.dizziness-5)
+	M.drowsyness = max(0,M.drowsyness-3)
+	M.AdjustSleeping(-40, FALSE)
+	//310.15 is the normal bodytemp.
+	M.adjust_bodytemperature(25 * TEMPERATURE_DAMAGE_COEFFICIENT, 0, BODYTEMP_NORMAL)
+	if(holder.has_reagent("frostoil"))
+		holder.remove_reagent("frostoil", 5)
+	..()
+	. = 1

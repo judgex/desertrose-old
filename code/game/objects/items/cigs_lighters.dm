@@ -266,6 +266,21 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 /obj/item/clothing/mask/cigarette/space_cigarette //space cigs
 	desc = "a Lucky Strikes brand cigarette."
 
+/obj/item/clothing/mask/cigarette/bigboss
+	name = "Big Boss Cigarette"
+	desc = "A Big Boss brand cigarette."
+	list_reagents = list("nicotine" = 15, "synaptizine" = 5)
+
+/obj/item/clothing/mask/cigarette/pyramid
+	name = "Pyramid Smokes Cigarette"
+	desc = "A Pyramid brand cigarette."
+	list_reagents = list("nicotine" = 15, "gold" = 3)
+
+/obj/item/clothing/mask/cigarette/greytort
+	name = "Grey Tortoise Cigarette"
+	desc = "A Grey Tortoise brand cigarette."
+	list_reagents = list("nicotine" = 15, "omnizine" = 5)
+
 /obj/item/clothing/mask/cigarette/dromedary //dromedary
 	desc = "A Winfield brand cigarette."
 
@@ -502,7 +517,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	var/overlay_list = list(
 		"plain",
 		"dame",
-		"thirteen",
+		"rust",
 		"snake"
 		)
 	heat = 1500
