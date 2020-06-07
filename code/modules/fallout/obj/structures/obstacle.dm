@@ -80,7 +80,7 @@
 					qdel(src)
 					return TRUE
 			if(C.amount >= 3)
-				to_chat(user, "<span class='notice'>You start building a interio wall...</span>")
+				to_chat(user, "<span class='notice'>You start building an interio wall...</span>")
 				if(do_after(user, 100, target = src) && C.use(3))
 					var/turf/open/T = loc
 					T.ChangeTurf(/turf/closed/wall/f13/wood/interior)
