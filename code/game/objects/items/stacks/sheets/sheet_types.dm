@@ -213,7 +213,7 @@ GLOBAL_LIST_INIT(wood_recipes, list ( \
 	new/datum/stack_recipe("loom", /obj/machinery/loom, 10, time = 15, one_per_turf = TRUE, on_floor = TRUE), \
 	new/datum/stack_recipe("grave marker", /obj/structure/statue/wood/headstonewood, 3, time = 15, one_per_turf = TRUE, on_floor = TRUE), \
 		new /datum/stack_recipe_list("racks", list( \
-		new/datum/stack_recipe("garden toolrack", /obj/machinery/smartfridge/bottlerack/gardentool, 20), \
+		new/datum/stack_recipe("bottle rack", /obj/machinery/smartfridge/bottlerack, 25), \
 		new/datum/stack_recipe("seed bin", /obj/machinery/smartfridge/bottlerack/seedbin, 15), \
 	)), \
 	null, \
