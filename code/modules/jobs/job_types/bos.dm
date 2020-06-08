@@ -59,7 +59,7 @@ Elder
 	pa_wear = TRUE
 	suit = 			/obj/item/clothing/suit/f13/elder
 	accessory = 	/obj/item/clothing/accessory/bos/elder
-	suit_store =	/obj/item/gun/energy/laser/plasma
+	suit_store =	/obj/item/gun/energy/laser/laer
 	backpack_contents = list(
 		/obj/item/stock_parts/cell/ammo/mfc=2, \
 		/obj/item/kitchen/knife/combat=1, \
@@ -298,7 +298,7 @@ Senior Paladin
 	faction = "BOS"
 	total_positions = 1
 	spawn_positions = 1
-	description = "As the Chapter's Senior offensive warrior, you have proven your service and dedication to the Brotherhood over your time as a Paladin. As your skills gained, however, you were deigned to be more useful as a commander and trainer. Now you have your trusty super-sledge, and were recently given a suit of T-51b power armor. Your job is to coordinate the Paladins and ensure they work as a team, instilling discipline as you go."
+	description = "As the Chapter's Senior offensive warrior, you have proven your service and dedication to the Brotherhood over your time as a Paladin. As your skills gained, however, you were deigned to be more useful as a commander and trainer. Now you have your trusty powerfist, and were recently given a suit of T-51b power armor. Your job is to coordinate the Paladins and ensure they work as a team, instilling discipline as you go."
 	forbids = "The Brotherhood of Steel Forbids: Unethical human experimentation. Violence beyond what is needed to accomplish Brotherhood goals."
 	enforces = "The Brotherhood of Steel Expects: Obeying the Chain That - Binds your direct superior. Collection and safeguarding of technology from the wasteland. Experimentation and research."
 	supervisors = "the Sentinel"
@@ -306,8 +306,8 @@ Senior Paladin
 	exp_requirements = 1200
 
 	loadout_options = list(
-		/datum/outfit/loadout/spaladina, //M72 Gauss rifle
-		/datum/outfit/loadout/spaladinc, //Lasergatling. God help them.
+		/datum/outfit/loadout/spaladina, //M72 Gauss rifle and Glock
+		/datum/outfit/loadout/spaladinc, //AER14 and N99. No more gatling. Sorry gamers; will balance it further and make it obtainable through other means.
 		)
 
 	outfit = /datum/outfit/job/bos/f13seniorpaladin
@@ -327,22 +327,24 @@ Senior Paladin
 	belt = 			/obj/item/storage/belt/military/assault
 	backpack_contents = list(
 		/obj/item/melee/powerfist=1, \
-		/obj/item/stock_parts/cell/ammo/ec=2, \
 		)
 
 /datum/outfit/loadout/spaladina
 	name = "Long-Range Support Senior-Paladin"
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/m72=1,
-		/obj/item/ammo_box/magazine/m2mm=2,
-		/obj/item/gun/energy/laser/pistol=1
+		/obj/item/ammo_box/magazine/m2mm=3,
+		/obj/item/gun/energy/laser/plasma/glock=1,
+		/obj/item/stock_parts/cell/ammo/ec=2,
 		)
 
 /datum/outfit/loadout/spaladinc
-	name = "Heavy-Duty Senior-Paladin"
+	name = "Mainline Senior-Paladin"
 	backpack_contents = list(
-		/obj/item/minigunpack=1,
-		/obj/item/gun/energy/laser/plasma/glock=1,
+		/obj/item/gun/energy/laser/aer14=1,
+		/obj/item/stock_parts/cell/ammo/mfc=2,
+		/obj/item/gun/ballistic/automatic/pistol/n99=1,
+		/obj/item/ammo_box/magazine/m10mm_adv=2
 		)
 
 /datum/job/bos/f13seniorpaladin/after_spawn(mob/living/carbon/human/H, mob/M)

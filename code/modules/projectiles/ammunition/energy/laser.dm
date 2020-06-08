@@ -101,3 +101,13 @@
 	projectile_type = /obj/item/projectile/beam/laser/rcw
 	e_cost = 75
 	fire_sound = 'sound/f13weapons/rcwfire.ogg'
+
+/obj/item/ammo_casing/energy/laser/laer
+	projectile_type = /obj/item/projectile/beam/laser/laer
+	e_cost = 100
+	fire_sound = 'sound/f13weapons/laerfire.ogg'
+
+/obj/item/ammo_casing/energy/laser/aer14
+	projectile_type = /obj/item/projectile/beam/laser/aer14
+	e_cost = 50
+	fire_sound = 'sound/f13weapons/aer14fire.ogg'

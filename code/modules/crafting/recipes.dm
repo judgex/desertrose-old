@@ -79,7 +79,7 @@
 	time = 80
 	category = CAT_MISC
 
-/datum/crafting_recipe/campfirekit
+/datum/crafting_recipe/setupcampfirekit
 	name = "set up campfire kit"
 	result = /obj/structure/campfire
 	reqs = list(/obj/item/crafting/campfirekit = 1)

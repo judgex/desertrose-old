@@ -223,11 +223,11 @@
 							/obj/item/vending_refill/boozeomat = 3)
 
 	var/static/list/vending_names_paths = list(/obj/machinery/vending/boozeomat = "Booze-O-Mat",
-							/obj/machinery/vending/coffee = "Solar's Best Hot Drinks",
-							/obj/machinery/vending/snack = "Getmore Chocolate Corp",
-							/obj/machinery/vending/cola = "Robust Softdrinks",
-							/obj/machinery/vending/cigarette = "ShadyCigs Deluxe",
-							/obj/machinery/vending/games = "\improper Good Clean Fun",
+							/obj/machinery/vending/coffee = "Sicilian Espresso-Go",
+							/obj/machinery/vending/snack = "Pure Patriot treats",
+							/obj/machinery/vending/cola = "Soda Machine",
+							/obj/machinery/vending/cigarette = "Big Smokes",
+							/obj/machinery/vending/games = "Ultra-Luxe Poker-Yourself",
 							/obj/machinery/vending/autodrobe = "AutoDrobe",
 							/obj/machinery/vending/wardrobe/sec_wardrobe = "SecDrobe",
 							/obj/machinery/vending/wardrobe/medi_wardrobe = "MediDrobe",
@@ -247,8 +247,8 @@
 							/obj/machinery/vending/wardrobe/gene_wardrobe = "GeneDrobe",
 							/obj/machinery/vending/wardrobe/viro_wardrobe = "ViroDrobe",
 							/obj/machinery/vending/clothing = "ClothesMate",
-							/obj/machinery/vending/medical = "NanoMed Plus",
-							/obj/machinery/vending/wallmed = "NanoMed")
+							/obj/machinery/vending/medical = "Med-Tek Health Station",
+							/obj/machinery/vending/wallmed = "NanoMed-Tek")
 	needs_anchored = FALSE
 
 /obj/item/circuitboard/machine/vendor/attackby(obj/item/I, mob/user, params)

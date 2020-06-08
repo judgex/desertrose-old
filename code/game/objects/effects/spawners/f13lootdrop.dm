@@ -715,7 +715,7 @@
 				/obj/item/ammo_box/a357
 	)
 	var/loot10 = list(
-				/obj/item/gun/energy/laser/pistol,
+				/obj/item/gun/energy/laser/wattz,
 				/obj/item/stock_parts/cell/ammo/ec,
 				""
 				)
@@ -752,7 +752,7 @@
 				)
 
 	var/loot5 = list(
-				/obj/item/gun/energy/laser/wattz,
+				/obj/item/gun/energy/laser/pistol,
 				/obj/item/stock_parts/cell/ammo/ec,
 				""
 				)
@@ -779,14 +779,9 @@
 				/obj/item/stock_parts/cell/ammo/mfc,
 				""
 				)
-	var/loot10 = list(
-				/obj/item/gun/energy/ionrifle/carbine,
-				/obj/item/stock_parts/cell/ammo/mfc,
-				""
-				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/tier3/Initialize(mapload) //on mapload, pick what shit to spawn
-	loot = pick(loot1, loot2, loot3, loot4, loot5, loot6, loot7, loot8, loot9, loot10)
+	loot = pick(loot1, loot2, loot3, loot4, loot5, loot6, loot7, loot8, loot9)
 	. = ..()
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/tier4 //TIER 4 GUN
@@ -823,7 +818,7 @@
 				)
 
 	var/loot6 = list(
-				/obj/item/gun/energy/laser/aer9,
+				/obj/item/gun/energy/laser/aer14,
 				/obj/item/stock_parts/cell/ammo/mfc,
 				""
 				)
@@ -887,8 +882,8 @@
 				)
 	var/loot16 = list(
 				/obj/item/gun/energy/ionrifle/carbine,
-				/obj/item/stock_parts/cell/ammo/mfc,
-				/obj/item/stock_parts/cell/ammo/mfc,
+				/obj/item/stock_parts/cell/ammo/ec,
+				/obj/item/stock_parts/cell/ammo/ec,
 				)
 	var/loot17 = list(
 				/obj/item/gun/medbeam,
@@ -921,7 +916,8 @@
 				/obj/item/gun/ballistic/automatic/pistol/ninemil/maria,
 				/obj/item/gun/ballistic/shotgun/remington/scoped/paciencia,
 				/obj/item/gun/energy/laser/solar,
-				/obj/item/gun/energy/laser/plasma/alien
+				/obj/item/gun/energy/laser/plasma/alien,
+				/obj/item/gun/energy/laser/laer
 				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/random
