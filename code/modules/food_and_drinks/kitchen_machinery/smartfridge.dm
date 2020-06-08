@@ -157,6 +157,10 @@
 	else
 		icon_state = "[startstate]-off"
 
+/obj/machinery/smartfridge/Initialize()
+	. = ..()
+	update_icon()
+
 /obj/machinery/smartfridge/proc/animate_dispenser()
 	//visually animate the smartfridge dispensing an item
 	if (supports_retrieval_state && !(stat & (NOPOWER|BROKEN)))
@@ -681,3 +685,49 @@
 	if(istype(O, /obj/item/seeds))
 		return TRUE
 	return FALSE
+
+// -------------------------
+// LOOTABLE RACKS - PREWAR SHELVES ETC
+// -------------------------------------------------------------------------
+
+///generic///bottles
+
+/obj/machinery/smartfridge/bottlerack/lootshelf
+	name = "shop shelf"
+	desc = "A rusted pre-war shelf, this one has a faded label about soft drinks. "
+	icon_state = "lootshelf"
+	max_n_of_items = 35
+
+/obj/machinery/smartfridge/bottlerack/lootshelf/accept_check(obj/item/O)
+	return FALSE
+
+/obj/machinery/smartfridge/bottlerack/lootshelf
+	initial_contents = list(
+		/obj/item/reagent_containers/food/drinks/bottle/lemonjuice = 1,
+		/obj/item/reagent_containers/food/drinks/bottle/limejuice = 3,
+		/obj/item/reagent_containers/food/drinks/bottle/tomatojuice = 4,
+		/obj/item/reagent_containers/food/drinks/bottle/orangejuice = 2,
+        /obj/item/reagent_containers/food/drinks/soda_cans/tonic = 3,
+		/obj/item/reagent_containers/food/drinks/soda_cans/sodawater = 2,
+		/obj/item/reagent_containers/food/drinks/soda_cans/lemon_lime = 1,
+		/obj/item/reagent_containers/food/drinks/soda_cans/f13nukacola = 4,
+		/obj/item/reagent_containers/food/drinks/soda_cans/bawls = 3,
+		/obj/item/reagent_containers/food/drinks/soda_cans/vim = 3,
+        /obj/item/reagent_containers/food/drinks/soda_cans/sunset = 3)
+
+////cans
+
+/obj/machinery/smartfridge/bottlerack/lootshelf/cans
+	desc = "A rusted pre-war shelf, this one has a faded label about canned goods. "
+
+/obj/machinery/smartfridge/bottlerack/lootshelf/cans
+	initial_contents = list(
+		/obj/item/reagent_containers/food/drinks/bottle/instacoffee = 5,
+		/obj/item/reagent_containers/food/drinks/bottle/instatea = 4,
+		/obj/item/reagent_containers/food/drinks/bottle/instacocoa = 4,
+		/obj/item/reagent_containers/food/drinks/soda_cans/cream = 3,
+		/obj/item/reagent_containers/food/snacks/f13/porknbeans = 3,
+	    /obj/item/reagent_containers/food/snacks/f13/borscht = 1,
+		/obj/item/reagent_containers/food/snacks/f13/dog = 3,
+		/obj/item/reagent_containers/food/snacks/beans = 3,)
+

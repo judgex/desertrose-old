@@ -1,5 +1,4 @@
 
-
 ///////////////////////////////////////////////Alchohol bottles! -Agouri //////////////////////////
 //Functionally identical to regular drinks. The only difference is that the default bottle size is 100. - Darem
 //Bottles now knockdown and break when smashed on people's heads. - Giacom
@@ -330,32 +329,19 @@
 	name = "orange juice"
 	desc = "Full of vitamins and deliciousness!"
 	icon_state = "orangejuice"
-	item_state = "carton"
 	lefthand_file = 'icons/mob/inhands/equipment/kitchen_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/kitchen_righthand.dmi'
-	isGlass = FALSE
+	isGlass = TRUE
 	list_reagents = list("orangejuice" = 100)
 	foodtype = FRUIT
-
-/obj/item/reagent_containers/food/drinks/bottle/cream
-	name = "milk cream"
-	desc = "It's cream. Made from milk. What else did you think you'd find in there?"
-	icon_state = "cream"
-	item_state = "carton"
-	lefthand_file = 'icons/mob/inhands/equipment/kitchen_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/kitchen_righthand.dmi'
-	isGlass = FALSE
-	list_reagents = list("cream" = 100)
-	foodtype = DAIRY
 
 /obj/item/reagent_containers/food/drinks/bottle/tomatojuice
 	name = "tomato juice"
 	desc = "Well, at least it LOOKS like tomato juice. You can't tell with all that redness."
 	icon_state = "tomatojuice"
-	item_state = "carton"
 	lefthand_file = 'icons/mob/inhands/equipment/kitchen_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/kitchen_righthand.dmi'
-	isGlass = FALSE
+	isGlass = TRUE
 	list_reagents = list("tomatojuice" = 100)
 	foodtype = VEGETABLES
 
@@ -363,10 +349,9 @@
 	name = "lime juice"
 	desc = "Sweet-sour goodness."
 	icon_state = "limejuice"
-	item_state = "carton"
 	lefthand_file = 'icons/mob/inhands/equipment/kitchen_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/kitchen_righthand.dmi'
-	isGlass = FALSE
+	isGlass = TRUE
 	list_reagents = list("limejuice" = 100)
 	foodtype = FRUIT
 
@@ -377,8 +362,26 @@
 	item_state = "carton"
 	lefthand_file = 'icons/mob/inhands/equipment/kitchen_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/kitchen_righthand.dmi'
-	isGlass = FALSE
+	isGlass = TRUE
 	list_reagents = list("menthol" = 100)
+
+/obj/item/reagent_containers/food/drinks/bottle/instacoffee
+	name = "Silician Instacoffee"
+	desc = "Pre-war powerdered canned coffee."
+	icon_state = "instacoffee"
+	list_reagents = list("coffeepowder" = 98, "radium" = 2)
+
+/obj/item/reagent_containers/food/drinks/bottle/instatea
+	name = "Silician Instatea"
+	desc = "Pre-war powerdered canned tea powder."
+	icon_state = "instatea"
+	list_reagents = list("teapowder" = 98, "radium" = 2)
+
+/obj/item/reagent_containers/food/drinks/bottle/instacocoa
+	name = "Silician Instacocoa"
+	desc = "Pre-war powerdered canned dried chocolate mix."
+	icon_state = "instachoc"
+	list_reagents = list("cocoa" = 98, "radium" = 2)
 
 /obj/item/reagent_containers/food/drinks/bottle/grenadine
 	name = "Jester Grenadine"
@@ -388,6 +391,15 @@
 	list_reagents = list("grenadine" = 100)
 	foodtype = FRUIT
 
+/obj/item/reagent_containers/food/drinks/bottle/lemonjuice
+	name = "lemon juice"
+	desc = "Whew! Thats some sour pre-war lemon juice! You know what they say about..."
+	icon_state = "lemonjuice"
+	lefthand_file = 'icons/mob/inhands/equipment/kitchen_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/equipment/kitchen_righthand.dmi'
+	isGlass = TRUE
+	list_reagents = list("limejuice" = 100)
+	foodtype = FRUIT
 
 ////////////////////////// MOLOTOV ///////////////////////
 /obj/item/reagent_containers/food/drinks/bottle/molotov

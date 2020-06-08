@@ -191,8 +191,8 @@
 //	Formatting is the same as food.
 
 /obj/item/reagent_containers/food/drinks/coffee
-	name = "robust coffee"
-	desc = "Careful, the beverage you're about to enjoy is extremely hot."
+	name = "silician coffee"
+	desc = "Imported pre-war beans, powder has never tasted so good!"
 	icon_state = "coffee"
 	list_reagents = list("coffee" = 30)
 	spillable = TRUE
@@ -427,28 +427,28 @@
 	foodtype = SUGAR
 
 /obj/item/reagent_containers/food/drinks/soda_cans/tonic
-	name = "T-Bills's tonic water"
-	desc = "Quinine tastes funny, but at least it'll keep that Malaria away."
+	name = "Tonic water"
+	desc = "A faded pre-war can of tonic water. A barely visible slogan sticker states - Wheres the GIN?."
 	icon_state = "tonic"
 	list_reagents = list("tonic" = 50)
 	foodtype = ALCOHOL
 
 /obj/item/reagent_containers/food/drinks/soda_cans/sodawater
 	name = "soda water"
-	desc = "A can of soda water. Why not make a scotch and soda?"
+	desc = "A faded can of pre-war soda water. A barely visible slogan sticker states - Why not make a scotch and soda?"
 	icon_state = "sodawater"
 	list_reagents = list("sodawater" = 50)
 
 /obj/item/reagent_containers/food/drinks/soda_cans/lemon_lime
-	name = "orange soda"
-	desc = "You wanted ORANGE. It gave you Lemon Lime."
+	name = "off-brand orange soda"
+	desc = "Something about this faded drink dosent taste right."
 	icon_state = "lemon-lime"
 	list_reagents = list("lemon_lime" = 30)
 	foodtype = FRUIT
 
 /obj/item/reagent_containers/food/drinks/soda_cans/lemon_lime/Initialize()
 	. = ..()
-	name = "lemon-lime soda"
+	name = "off-brand orange soda"
 
 /obj/item/reagent_containers/food/drinks/soda_cans/space_up
 	name = "Space-Up!"
@@ -498,6 +498,15 @@
 	list_reagents = list("shamblers" = 30)
 	foodtype = SUGAR | JUNKFOOD
 
+/obj/item/reagent_containers/food/drinks/soda_cans/cream
+	name = "canned cream"
+	desc = "It's a can of cream. Made from milk. What else did you think you'd find in there?"
+	icon_state = "cream"
+	lefthand_file = 'icons/mob/inhands/equipment/kitchen_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/equipment/kitchen_righthand.dmi'
+	list_reagents = list("cream" = 100)
+	foodtype = DAIRY
+
 /obj/item/reagent_containers/food/drinks/soda_cans/air
 	name = "canned air"
 	desc = "There is no air shortage. Do not drink."
@@ -513,6 +522,7 @@
 	list_reagents = list("cola" = 20, "nuka_cola" = 1, "radium" = 1)
 	foodtype = SUGAR
 	bottle = TRUE
+	isGlass = TRUE
 
 /obj/item/reagent_containers/food/drinks/soda_cans/f13nukacola/radioactive
 	desc = "The most popular flavored soft drink in the United States before the Great War.<br>It was preserved in a fairly pristine state.<br>The bottle is slightly glowing."
@@ -526,6 +536,7 @@
 	list_reagents = list("whiskey" = 1, "sunset" = 15, "salglu_solution" = 5)
 	foodtype = SUGAR
 	bottle = TRUE
+	isGlass = TRUE
 
 /obj/item/reagent_containers/food/drinks/soda_cans/bawls
 	name = "Balls Guarana"
@@ -535,6 +546,7 @@
 	list_reagents = list("coffee" = 10, "bawls" = 15)
 	foodtype = SUGAR
 	bottle = TRUE
+	isGlass = TRUE
 
 /obj/item/reagent_containers/food/drinks/soda_cans/vim
 	name = "Vim"
@@ -544,3 +556,4 @@
 	list_reagents = list("sugar" = 5, "vim" = 15)
 	foodtype = SUGAR
 	bottle = TRUE
+	isGlass = TRUE
