@@ -213,8 +213,8 @@
 	return
 
 /obj/item/am_shielding_container
-	name = "packaged fission reactor section"
-	desc = "A small storage unit containing a fission reactor section.  To use place near an fission control unit or deployed fission reactor section and use a multitool to activate this package."
+	name = "Modular Nuclear Fission Reactor Section Part"
+	desc = "A small storage unit containing a Modular Nuclear Fission Reactor Section. To use place near an fission control unit or deployed fission reactor section and use a multitool to activate this package."
 	icon = 'icons/obj/machines/antimatter.dmi'
 	icon_state = "box"
 	item_state = "electronic"

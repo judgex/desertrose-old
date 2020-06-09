@@ -36,6 +36,9 @@
 	linked_shielding = list()
 	linked_cores = list()
 
+/obj/machinery/power/am_control_unit/ComponentInitialize()
+	. = ..()
+	AddComponent(/datum/component/simple_rotation,ROTATION_ALTCLICK | ROTATION_CLOCKWISE, CALLBACK(src, .proc/can_user_rotate),CALLBACK(src, .proc/can_be_rotated),null)
 
 /obj/machinery/power/am_control_unit/proc/can_be_rotated(mob/user)
 	return TRUE
@@ -296,7 +299,7 @@
 			return
 
 	var/dat = ""
-	dat += "AntiMatter Control Panel<BR>"
+	dat += "Nuclear Fission Reactor Control Panel<BR>"
 	dat += "<A href='?src=[REF(src)];close=1'>Close</A><BR>"
 	dat += "<A href='?src=[REF(src)];refresh=1'>Refresh</A><BR>"
 	dat += "<A href='?src=[REF(src)];refreshicons=1'>Force Shielding Update</A><BR><BR>"
