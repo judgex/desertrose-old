@@ -38,21 +38,15 @@
 datum/bounty/reagent/simple_drink/New()
 	// Don't worry about making this comprehensive. It doesn't matter if some drinks are skipped.
 	var/static/list/possible_reagents = list(\
-		/datum/reagent/consumable/ethanol/antifreeze,\
-		/datum/reagent/consumable/ethanol/andalusia,\
 		/datum/reagent/consumable/tea/arnold_palmer,\
 		/datum/reagent/consumable/ethanol/b52,\
-		/datum/reagent/consumable/ethanol/bananahonk,\
-		/datum/reagent/consumable/ethanol/beepsky_smash,\
 		/datum/reagent/consumable/ethanol/between_the_sheets,\
 		/datum/reagent/consumable/ethanol/bilk,\
 		/datum/reagent/consumable/ethanol/black_russian,\
 		/datum/reagent/consumable/ethanol/bloody_mary,\
-		/datum/reagent/consumable/ethanol/brave_bull,\
 		/datum/reagent/consumable/ethanol/martini,\
 		/datum/reagent/consumable/ethanol/cuba_libre,\
 		/datum/reagent/consumable/ethanol/eggnog,\
-		/datum/reagent/consumable/ethanol/erikasurprise,\
 		/datum/reagent/consumable/ethanol/ginfizz,\
 		/datum/reagent/consumable/ethanol/gintonic,\
 		/datum/reagent/consumable/ethanol/grappa,\
@@ -62,23 +56,16 @@ datum/bounty/reagent/simple_drink/New()
 		/datum/reagent/consumable/ethanol/irishcarbomb,\
 		/datum/reagent/consumable/ethanol/manhattan,\
 		/datum/reagent/consumable/ethanol/margarita,\
-		/datum/reagent/consumable/ethanol/gargle_blaster,\
 		/datum/reagent/consumable/ethanol/rum_coke,\
 		/datum/reagent/consumable/ethanol/screwdrivercocktail,\
 		/datum/reagent/consumable/ethanol/snowwhite,\
 		/datum/reagent/consumable/soy_latte,\
 		/datum/reagent/consumable/cafe_latte,\
-		/datum/reagent/consumable/ethanol/syndicatebomb,\
 		/datum/reagent/consumable/ethanol/tequila_sunrise,\
-		/datum/reagent/consumable/ethanol/manly_dorf,\
-		/datum/reagent/consumable/ethanol/thirteenloko,\
 		/datum/reagent/consumable/triple_citrus,\
 		/datum/reagent/consumable/ethanol/vodkamartini,\
 		/datum/reagent/consumable/ethanol/whiskeysoda,\
 		/datum/reagent/consumable/ethanol/beer/green,\
-		/datum/reagent/consumable/ethanol/demonsblood,\
-		/datum/reagent/consumable/ethanol/crevice_spike,\
-		/datum/reagent/consumable/ethanol/singulo,\
 		/datum/reagent/consumable/ethanol/whiskey_sour)
 
 	var/reagent_type = pick(possible_reagents)
@@ -94,25 +81,11 @@ datum/bounty/reagent/simple_drink/New()
 datum/bounty/reagent/complex_drink/New()
 	// Don't worry about making this comprehensive. It doesn't matter if some drinks are skipped.
 	var/static/list/possible_reagents = list(\
-		/datum/reagent/consumable/ethanol/atomicbomb,\
-		/datum/reagent/consumable/ethanol/bacchus_blessing,\
-		/datum/reagent/consumable/ethanol/bastion_bourbon,\
-		/datum/reagent/consumable/ethanol/booger,\
-		/datum/reagent/consumable/ethanol/hippies_delight,\
-		/datum/reagent/consumable/ethanol/drunkenblumpkin,\
 		/datum/reagent/consumable/ethanol/fetching_fizz,\
 		/datum/reagent/consumable/ethanol/goldschlager,\
-		/datum/reagent/consumable/ethanol/hearty_punch,\
-		/datum/reagent/consumable/ethanol/manhattan_proj,\
-		/datum/reagent/consumable/ethanol/narsour,\
-		/datum/reagent/consumable/ethanol/neurotoxin,\
 		/datum/reagent/consumable/ethanol/patron,\
-		/datum/reagent/consumable/ethanol/quadruple_sec,\
-		/datum/reagent/consumable/ethanol/quintuple_sec,\
-		/datum/reagent/consumable/bluecherryshake,\
-		/datum/reagent/consumable/doctor_delight,\
-		/datum/reagent/consumable/ethanol/silencer)
-		
+		/datum/reagent/consumable/bluecherryshake)
+
 	var/reagent_type = pick(possible_reagents)
 	wanted_reagent = new reagent_type
 	name = wanted_reagent.name
