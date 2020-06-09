@@ -45,6 +45,13 @@
 		new /obj/item/reagent_containers/food/snacks/chocolatebar(location)
 	return
 
+/datum/chemical_reaction/cream
+	name = "milk cream"
+	id = "cream"
+	results = list("cream" = 1)
+	required_reagents = list("milk" = 1)
+	required_temp = 374
+
 /datum/chemical_reaction/hot_coco
 	name = "Hot Coco"
 	id = "hot_coco"
