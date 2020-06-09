@@ -173,8 +173,8 @@
 	foodtype = NONE
 
 /obj/item/reagent_containers/food/drinks/bottle/patron
-	name = "Wrapp Artiste Patron"
-	desc = "Silver laced tequila, served in space night clubs across the region."
+	name = "silver valley patron"
+	desc = "A pre-war bottle of silver laced tequila, for the fancy madman."
 	icon_state = "patronbottle"
 	list_reagents = list("patron" = 100)
 
@@ -202,15 +202,15 @@
 	list_reagents = list("champagne" = 90, "potass_iodide" = 10)
 
 /obj/item/reagent_containers/food/drinks/bottle/kahlua
-	name = "Coffee liqueur"
+	name = "coffee liqueur"
 	desc = "A widely known, Mexican coffee-flavoured liqueur. In production since 1936."
 	icon_state = "kahluabottle"
 	list_reagents = list("kahlua" = 100)
 	foodtype = VEGETABLES
 
 /obj/item/reagent_containers/food/drinks/bottle/goldschlager
-	name = "College Girl goldschlager"
-	desc = "Because they are the only ones who will drink 100 proof cinnamon schnapps."
+	name = "fancy lads brew"
+	desc = "A faded pre-war bottle of a faintly golden spirit."
 	icon_state = "goldschlagerbottle"
 	list_reagents = list("goldschlager" = 100)
 

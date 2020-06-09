@@ -340,7 +340,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	taste_description = "burning cinnamon"
 	glass_icon_state = "goldschlagerglass"
 	glass_name = "glass of goldschlager"
-	glass_desc = "100% proof that teen girls will drink anything with gold in it."
+	glass_desc = "An extremely sweet glittering beverage."
 	shot_glass_icon_state = "shotglassgold"
 
 /datum/reagent/consumable/ethanol/patron
@@ -352,7 +352,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	taste_description = "metallic and expensive"
 	glass_icon_state = "patronglass"
 	glass_name = "glass of patron"
-	glass_desc = "Drinking patron in the bar, with all the subpar ladies."
+	glass_desc = "Drinking patron in the bar, Boss of the World."
 	shot_glass_icon_state = "shotglassclear"
 
 /datum/reagent/consumable/ethanol/gintonic
