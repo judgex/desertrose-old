@@ -56,7 +56,7 @@
 	name = "wild horsenettle"
 	icon_state = "wild_mesquite"
 	desc = "The honey mesquite pod grows on a short tree with willow-like branches. Trees with pickable pods will appear bushier in foliage and have strings of pods on them, resembling a fern pattern. Pods can be eaten or used in recipes"
-	produce = /obj/item/reagent_containers/food/snacks/grown/mesquite
+//	produce = /obj/item/reagent_containers/food/snacks/grown/mesquite
 
 /obj/structure/flora/wasteplant/wild_pinyon
 	name = "wild pinyon pine"
@@ -68,13 +68,13 @@
 	name = "wild prickly pear"
 	icon_state = "wild_prickly"
 	desc = "Distinguished by having cylindrical, rather than flattened, stem segments with large barbed spines. The stem joints are very brittle on young stems, readily breaking off when the barbed spines stick to clothing or animal fur."
-	produce = /obj/item/reagent_containers/food/snacks/grown/pricklypear
+//	produce = /obj/item/reagent_containers/food/snacks/grown/pricklypear
 
 /obj/structure/flora/wasteplant/wild_datura
 	name = "wild datura"
 	icon_state = "wild_datura"
 	desc = "The sacred datura root, useful as an anesthetic for surgery and in healing salves, as well as for rites of passage rituals and ceremonies"
-	produce = /obj/item/reagent_containers/food/snacks/grown/datura
+//	produce = /obj/item/reagent_containers/food/snacks/grown/datura
 
 obj/structure/flora/wasteplant/wild_punga
 	name = "wild punga"
