@@ -1,4 +1,3 @@
-
 /obj/item/reagent_containers/food/snacks/spaghetti
 	name = "spaghetti"
 	desc = "Now that's a nic'e pasta!"
@@ -15,7 +14,6 @@
 	desc = "A plain dish of noodles, this needs more ingredients."
 	icon = 'icons/obj/food/pizzaspaghetti.dmi'
 	icon_state = "spaghettiboiled"
-	trash = /obj/item/trash/plate
 	bonus_reagents = list("nutriment" = 2)
 	list_reagents = list("nutriment" = 2, "vitamin" = 1)
 	custom_food_type = /obj/item/reagent_containers/food/snacks/customizable/pasta
@@ -28,7 +26,6 @@
 	desc = "Spaghetti and crushed tomatoes. Just like your abusive father used to make!"
 	icon = 'icons/obj/food/pizzaspaghetti.dmi'
 	icon_state = "pastatomato"
-	trash = /obj/item/trash/plate
 	bitesize = 4
 	bonus_reagents = list("nutriment" = 1, "tomatojuice" = 10, "vitamin" = 4)
 	list_reagents = list("nutriment" = 6, "tomatojuice" = 10, "vitamin" = 4)
@@ -41,7 +38,6 @@
 	desc = "You probably shouldn't try this, you always hear people talking about how bad it is..."
 	icon = 'icons/obj/food/pizzaspaghetti.dmi'
 	icon_state = "copypasta"
-	trash = /obj/item/trash/plate
 	bitesize = 4
 	bonus_reagents = list("nutriment" = 1, "vitamin" = 4)
 	list_reagents = list("nutriment" = 12, "tomatojuice" = 20, "vitamin" = 8)
@@ -54,7 +50,6 @@
 	desc = "Now that's a nic'e meatball!"
 	icon = 'icons/obj/food/pizzaspaghetti.dmi'
 	icon_state = "meatballspaghetti"
-	trash = /obj/item/trash/plate
 	bonus_reagents = list("nutriment" = 1, "vitamin" = 4)
 	list_reagents = list("nutriment" = 8, "vitamin" = 4)
 	filling_color = "#F0E68C"
@@ -66,7 +61,6 @@
 	desc = "A lawyers favourite."
 	icon = 'icons/obj/food/pizzaspaghetti.dmi'
 	icon_state = "spesslaw"
-	trash = /obj/item/trash/plate
 	bonus_reagents = list("nutriment" = 1, "vitamin" = 6)
 	list_reagents = list("nutriment" = 8, "vitamin" = 6)
 	filling_color = "#F0E68C"
@@ -78,7 +72,7 @@
 	desc = "A nice mix of noodles and fried vegetables."
 	icon = 'icons/obj/food/pizzaspaghetti.dmi'
 	icon_state = "chowmein"
-	trash = /obj/item/trash/plate
+	trash = /obj/item/reagent_containers/glass/bowl
 	bonus_reagents = list("nutriment" = 3, "vitamin" = 4)
 	list_reagents = list("nutriment" = 7, "vitamin" = 6)
 	tastes = list("noodle" = 1, "tomato" = 1)
@@ -99,7 +93,6 @@
 	desc = "Noodles covered in savory butter. Simple and slippery, but delicious."
 	icon = 'icons/obj/food/pizzaspaghetti.dmi'
 	icon_state = "butternoodles"
-	trash = /obj/item/trash/plate
 	bonus_reagents = list("nutriment" = 8, "vitamin" = 1)
 	tastes = list("noodle" = 1, "butter" = 1)
 	foodtype = GRAIN | DAIRY

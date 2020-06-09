@@ -16,6 +16,7 @@
 	fire_delay = 2
 	distro = 1
 	fire_sound = 'sound/f13weapons/shotgun.ogg'
+	equipsound = 'sound/f13weapons/equipsounds/shotgunequip.ogg'
 
 /obj/item/gun/ballistic/shotgun/attackby(obj/item/A, mob/user, params)
 	. = ..()

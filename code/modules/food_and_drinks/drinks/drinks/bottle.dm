@@ -1,5 +1,4 @@
 
-
 ///////////////////////////////////////////////Alchohol bottles! -Agouri //////////////////////////
 //Functionally identical to regular drinks. The only difference is that the default bottle size is 100. - Darem
 //Bottles now knockdown and break when smashed on people's heads. - Giacom
@@ -137,20 +136,20 @@
 	AddComponent(/datum/component/butchering, 200, 55)
 
 /obj/item/reagent_containers/food/drinks/bottle/gin
-	name = "Griffeater gin"
-	desc = "A bottle of high quality gin, produced in the New London Space Station."
+	name = "toxic gin"
+	desc = "A faded pre-war bottle of fermented berry gin."
 	icon_state = "ginbottle"
 	list_reagents = list("gin" = 100)
 
 /obj/item/reagent_containers/food/drinks/bottle/whiskey
-	name = "Uncle Git's special reserve"
-	desc = "A premium single-malt whiskey, gently matured inside the tunnels of a nuclear shelter. TUNNEL WHISKEY RULES."
+	name = "Uncle Sam's special reserve"
+	desc = "A premium faded pre-war bottle of /AMERICAN/ single-malt whiskey."
 	icon_state = "whiskeybottle"
 	list_reagents = list("whiskey" = 100)
 
 /obj/item/reagent_containers/food/drinks/bottle/vodka
-	name = "Tunguska triple distilled"
-	desc = "Aah, vodka. Prime choice of drink AND fuel by Russians worldwide."
+	name = "surkov vodka"
+	desc = "A imported faded bottle of pre-war russian vodka. A scratched label states - Made in the Soviet union."
 	icon_state = "vodkabottle"
 	list_reagents = list("vodka" = 100)
 
@@ -161,8 +160,8 @@
 	list_reagents = list("vodka" = 100)
 
 /obj/item/reagent_containers/food/drinks/bottle/tequila
-	name = "Caccavo guaranteed quality tequila"
-	desc = "Made from premium petroleum distillates, pure thalidomide and other fine quality ingredients!"
+	name = "tick blood tequila"
+	desc = "A faded pre-war bottle of a distilled beverage, Allegedly made from agave brewed using tick blood and pure crimson flux."
 	icon_state = "tequilabottle"
 	list_reagents = list("tequila" = 100)
 
@@ -174,16 +173,16 @@
 	foodtype = NONE
 
 /obj/item/reagent_containers/food/drinks/bottle/patron
-	name = "Wrapp Artiste Patron"
-	desc = "Silver laced tequila, served in space night clubs across the region."
+	name = "silver valley patron"
+	desc = "A pre-war bottle of silver laced tequila, for the fancy madman."
 	icon_state = "patronbottle"
 	list_reagents = list("patron" = 100)
 
 /obj/item/reagent_containers/food/drinks/bottle/rum
-	name = "Captain Pete's Cuban spiced rum"
-	desc = "This isn't just rum, oh no. It's practically GRIFF in a bottle."
+	name = "roentgen rum"
+	desc = "A faded pre-war bottle of rum. The insides seem to be glowing slightly."
 	icon_state = "rumbottle"
-	list_reagents = list("rum" = 100)
+	list_reagents = list("rum" = 90, "radium" = 10)
 
 /obj/item/reagent_containers/food/drinks/bottle/holywater
 	name = "flask of holy water"
@@ -197,132 +196,80 @@
 	list_reagents = list("hell_water" = 100)
 
 /obj/item/reagent_containers/food/drinks/bottle/vermouth
-	name = "Goldeneye vermouth"
-	desc = "Sweet, sweet dryness~"
+	name = "lead champagne"
+	desc = "A faded pre-war bottle of de-toxifying, tarberry champagne."
 	icon_state = "vermouthbottle"
-	list_reagents = list("vermouth" = 100)
+	list_reagents = list("champagne" = 90, "potass_iodide" = 10)
 
 /obj/item/reagent_containers/food/drinks/bottle/kahlua
-	name = "Robert Robust's coffee liqueur"
-	desc = "A widely known, Mexican coffee-flavoured liqueur. In production since 1936, HONK."
+	name = "coffee liqueur"
+	desc = "A widely known, Mexican coffee-flavoured liqueur. In production since 1936."
 	icon_state = "kahluabottle"
 	list_reagents = list("kahlua" = 100)
 	foodtype = VEGETABLES
 
 /obj/item/reagent_containers/food/drinks/bottle/goldschlager
-	name = "College Girl goldschlager"
-	desc = "Because they are the only ones who will drink 100 proof cinnamon schnapps."
+	name = "fancy lads brew"
+	desc = "A faded pre-war bottle of a faintly golden spirit."
 	icon_state = "goldschlagerbottle"
 	list_reagents = list("goldschlager" = 100)
 
 /obj/item/reagent_containers/food/drinks/bottle/cognac
-	name = "Chateau de Baton premium cognac"
-	desc = "A sweet and strongly alchoholic drink, made after numerous distillations and years of maturing. You might as well not scream 'SHITCURITY' this time."
+	name = "chateau de baton"
+	desc = "A faded pre-war bottle of a sweet smelling spirit. A warped label on the side claims - Matured for 50 Years!"
 	icon_state = "cognacbottle"
 	list_reagents = list("cognac" = 100)
 
 /obj/item/reagent_containers/food/drinks/bottle/wine
-	name = "Doublebeard's bearded special wine"
-	desc = "A faint aura of unease and asspainery surrounds the bottle."
+	name = "atomic claret wine"
+	desc = "A faded pre-war bottle of a particularily good vintage."
 	icon_state = "winebottle"
 	list_reagents = list("wine" = 100)
 	foodtype = FRUIT | ALCOHOL
 
 /obj/item/reagent_containers/food/drinks/bottle/absinthe
-	name = "extra-strong absinthe"
-	desc = "An strong alcoholic drink brewed and distributed by"
+	name = "wormwood absinthe"
+	desc = "An faded bright green bottle of wormwood mash spirit."
 	icon_state = "absinthebottle"
 	list_reagents = list("absinthe" = 100)
-
-/obj/item/reagent_containers/food/drinks/bottle/absinthe/Initialize()
-	. = ..()
-	redact()
-
-/obj/item/reagent_containers/food/drinks/bottle/absinthe/proc/redact()
-	// There was a large fight in the coderbus about a player reference
-	// in absinthe. Ergo, this is why the name generation is now so
-	// complicated. Judge us kindly.
-	var/shortname = pickweight(
-		list("T&T" = 1, "A&A" = 1, "Generic" = 1))
-	var/fullname
-	switch(shortname)
-		if("T&T")
-			fullname = "Teal and Tealer"
-		if("A&A")
-			fullname = "Ash and Asher"
-		if("Generic")
-			fullname = "Chinese Cheap Imitations"
-	var/removals = list("\[REDACTED\]", "\[EXPLETIVE DELETED\]",
-		"\[EXPUNGED\]", "\[INFORMATION ABOVE YOUR SECURITY CLEARANCE\]",
-		"\[MOVE ALONG CITIZEN\]", "\[NOTHING TO SEE HERE\]")
-	var/chance = 50
-
-	if(prob(chance))
-		shortname = pick_n_take(removals)
-
-	var/list/final_fullname = list()
-	for(var/word in splittext(fullname, " "))
-		if(prob(chance))
-			word = pick_n_take(removals)
-		final_fullname += word
-
-	fullname = jointext(final_fullname, " ")
-
-	// Actually finally setting the new name and desc
-	name = "[shortname] [name]"
-	desc = "[desc] [fullname] Inc."
-
 
 /obj/item/reagent_containers/food/drinks/bottle/absinthe/premium
 	name = "Gwyn's premium absinthe"
 	desc = "A potent alcoholic beverage, almost makes you forget the ash in your lungs."
 	icon_state = "absinthepremium"
 
-/obj/item/reagent_containers/food/drinks/bottle/absinthe/premium/redact()
-	return
-
 /obj/item/reagent_containers/food/drinks/bottle/lizardwine
-	name = "bottle of lizard wine"
-	desc = "An alcoholic beverage from China, made by infusing lizard tails in ethanol. Inexplicably popular among command staff."
+	name = "chateau montrose"
+	desc = "A faded pre-war bottled alcoholic beverage from what was once Europe."
 	icon_state = "lizardwine"
-	list_reagents = list("lizardwine" = 100)
+	list_reagents = list("wine" = 100)
 	foodtype = FRUIT | ALCOHOL
 
 /obj/item/reagent_containers/food/drinks/bottle/hcider
-	name = "Jian Hard Cider"
-	desc = "Apple juice for adults."
+	name = "hard yucca cider"
+	desc = "A small faded pre-war bottle of yellowish liquid. Smells sweet."
 	icon_state = "hcider"
 	volume = 50
 	list_reagents = list("hcider" = 50)
 
 /obj/item/reagent_containers/food/drinks/bottle/grappa
-	name = "Phillipes well-aged Grappa"
-	desc = "Bottle of Grappa."
+	name = "chateau lafayette"
+	desc = "A faded pre-war bottled alcoholic beverage from what was once Europe. This one has a citric scent."
 	icon_state = "grappabottle"
 	list_reagents = list("grappa" = 100)
 
 /obj/item/reagent_containers/food/drinks/bottle/sake
-	name = "Ryo's traditional sake"
-	desc = "Sweet as can be, and burns like fire going down."
+	name = "surkov sake"
+	desc = "A faded pre-war bottle of spirit. The faded symbol is unreadable."
 	icon_state = "sakebottle"
 	list_reagents = list("sake" = 100)
 
-/obj/item/reagent_containers/food/drinks/bottle/sake/Initialize()
-	. = ..()
-	if(prob(10))
-		name = "Fluffy Tail Sake"
-		desc += " On the bottle is a picture of a kitsune with nine touchable tails."
-		icon_state = "sakebottle_k"
-	else if(prob(10))
-		name = "Inubashiri's Home Brew"
-		desc += " Awoo."
-		icon_state = "sakebottle_i"
-
 /obj/item/reagent_containers/food/drinks/bottle/fernet
-	name = "Fernet Bronca"
-	desc = "A bottle of pure Fernet Bronca, produced in Cordoba."
+	name = "gamma gulp beer"
+	desc = "A small pre-war faded bottle of spiced glowing beer."
+	volume = 50
 	icon_state = "fernetbottle"
-	list_reagents = list("fernet" = 100)
+	list_reagents = list("fernet" = 50)
 
 //////////////////////////JUICES AND STUFF ///////////////////////
 
@@ -330,16 +277,15 @@
 	name = "orange juice"
 	desc = "Full of vitamins and deliciousness!"
 	icon_state = "orangejuice"
-	item_state = "carton"
 	lefthand_file = 'icons/mob/inhands/equipment/kitchen_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/kitchen_righthand.dmi'
-	isGlass = FALSE
+	isGlass = TRUE
 	list_reagents = list("orangejuice" = 100)
 	foodtype = FRUIT
 
 /obj/item/reagent_containers/food/drinks/bottle/cream
-	name = "milk cream"
-	desc = "It's cream. Made from milk. What else did you think you'd find in there?"
+	name = "canned cream"
+	desc = "It's a can of cream. Made from milk. What else did you think you'd find in there?"
 	icon_state = "cream"
 	item_state = "carton"
 	lefthand_file = 'icons/mob/inhands/equipment/kitchen_lefthand.dmi'
@@ -352,10 +298,9 @@
 	name = "tomato juice"
 	desc = "Well, at least it LOOKS like tomato juice. You can't tell with all that redness."
 	icon_state = "tomatojuice"
-	item_state = "carton"
 	lefthand_file = 'icons/mob/inhands/equipment/kitchen_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/kitchen_righthand.dmi'
-	isGlass = FALSE
+	isGlass = TRUE
 	list_reagents = list("tomatojuice" = 100)
 	foodtype = VEGETABLES
 
@@ -363,10 +308,9 @@
 	name = "lime juice"
 	desc = "Sweet-sour goodness."
 	icon_state = "limejuice"
-	item_state = "carton"
 	lefthand_file = 'icons/mob/inhands/equipment/kitchen_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/kitchen_righthand.dmi'
-	isGlass = FALSE
+	isGlass = TRUE
 	list_reagents = list("limejuice" = 100)
 	foodtype = FRUIT
 
@@ -377,8 +321,26 @@
 	item_state = "carton"
 	lefthand_file = 'icons/mob/inhands/equipment/kitchen_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/kitchen_righthand.dmi'
-	isGlass = FALSE
+	isGlass = TRUE
 	list_reagents = list("menthol" = 100)
+
+/obj/item/reagent_containers/food/drinks/bottle/instacoffee
+	name = "Silician Instacoffee"
+	desc = "Pre-war powerdered canned coffee."
+	icon_state = "instacoffee"
+	list_reagents = list("coffeepowder" = 98, "radium" = 2)
+
+/obj/item/reagent_containers/food/drinks/bottle/instatea
+	name = "Silician Instatea"
+	desc = "Pre-war powerdered canned tea powder."
+	icon_state = "instatea"
+	list_reagents = list("teapowder" = 98, "radium" = 2)
+
+/obj/item/reagent_containers/food/drinks/bottle/instacocoa
+	name = "Silician Instacocoa"
+	desc = "Pre-war powerdered canned dried chocolate mix."
+	icon_state = "instachoc"
+	list_reagents = list("cocoa" = 98, "radium" = 2)
 
 /obj/item/reagent_containers/food/drinks/bottle/grenadine
 	name = "Jester Grenadine"
@@ -388,6 +350,15 @@
 	list_reagents = list("grenadine" = 100)
 	foodtype = FRUIT
 
+/obj/item/reagent_containers/food/drinks/bottle/lemonjuice
+	name = "lemon juice"
+	desc = "Whew! Thats some sour pre-war lemon juice! You know what they say about..."
+	icon_state = "lemonjuice"
+	lefthand_file = 'icons/mob/inhands/equipment/kitchen_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/equipment/kitchen_righthand.dmi'
+	isGlass = TRUE
+	list_reagents = list("limejuice" = 100)
+	foodtype = FRUIT
 
 ////////////////////////// MOLOTOV ///////////////////////
 /obj/item/reagent_containers/food/drinks/bottle/molotov

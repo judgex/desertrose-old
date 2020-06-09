@@ -43,7 +43,7 @@
 	icon_state = "2mm"
 	ammo_type = /obj/item/ammo_casing/c2mm
 	caliber = "2mm"
-	max_ammo = 20
+	max_ammo = 10
 	multiple_sprites = 2
 
 /obj/item/ammo_box/magazine/w308

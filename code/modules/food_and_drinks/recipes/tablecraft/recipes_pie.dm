@@ -159,3 +159,14 @@
 	)
 	result = /obj/item/reagent_containers/food/snacks/pie/frostypie
 	subcategory = CAT_PIE
+
+/datum/crafting_recipe/food/brahminpotpie
+	name = "Brahmin potpie"
+	reqs = list(
+		/obj/item/reagent_containers/food/snacks/rawbrahmintongue = 2,
+		/obj/item/reagent_containers/food/snacks/grown/xander = 1,
+		/obj/item/reagent_containers/food/snacks/pie/plain = 1,
+		/obj/item/reagent_containers/food/snacks/cheesewedge = 1
+	)
+	result = /obj/item/reagent_containers/food/snacks/pie/brahminpotpie
+	subcategory = CAT_PIE

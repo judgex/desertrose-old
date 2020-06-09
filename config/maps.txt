@@ -17,6 +17,9 @@ map pahrump
 	default
 	votable
 endmap
-#map boxstation
-#	votable
-#endmap
+map StJeromesValley
+	votable
+endmap
+map sunnyvale
+	votable
+endmap

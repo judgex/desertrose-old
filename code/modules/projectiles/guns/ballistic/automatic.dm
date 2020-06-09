@@ -10,6 +10,7 @@
 	force = 20
 	var/auto_eject = 0
 	var/auto_eject_sound = null
+	equipsound = 'sound/f13weapons/equipsounds/riflequip.ogg'
 
 /obj/item/gun/ballistic/automatic/proto
 	name = "compact submachine gun"
@@ -415,6 +416,7 @@
 	slot_flags = ITEM_SLOT_BACK
 	actions_types = list()
 	force = 25
+	projectile_speed = 0
 
 
 /obj/item/gun/ballistic/automatic/sniper_rifle/update_icon()
@@ -428,6 +430,7 @@
 	name = "anti materiel rifle mark II"
 	desc = "A modified .50 cal sniper rifle with suppression compatibility. Quickscoping still doesn't work."
 	fire_sound = 'sound/f13weapons/antimaterielfire.ogg'
+	projectile_speed = 0
 
 // Old Semi-Auto Rifle //
 
@@ -837,7 +840,7 @@
 	zoom_out_amt = 13
 
 /obj/item/gun/ballistic/automatic/m72
-	name = "M72 gauss rifle"
+	name = "\improper M72 gauss rifle"
 	desc = "The M72 rifle is of German design. It uses an electromagnetic field to propel rounds at tremendous speed... and pierce almost any obstacle. Its range, accuracy and stopping power is almost unparalleled."
 	icon_state = "m72"
 	item_state = "shotgun"
@@ -846,12 +849,14 @@
 	fire_sound = 'sound/f13weapons/gauss_rifle.ogg'
 	can_suppress = FALSE
 	burst_size = 1
-	fire_delay = 10
+	fire_delay = 15
 	zoomable = TRUE
 	zoom_amt = 10
 	zoom_out_amt = 13
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
+	projectile_speed = 0
+	recoil = 2
 
 /obj/item/gun/ballistic/automatic/lsw
 	name = "L86A1 LSW"

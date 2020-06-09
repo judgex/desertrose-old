@@ -227,7 +227,7 @@ Raider
 
 /datum/outfit/loadout/raider_metal
 	name = "Metal Raider"
-	suit = /obj/item/clothing/suit/armor/f13/raidermetal
+	suit = /obj/item/clothing/suit/armor/f13/raider/raidermetal
 	head = /obj/item/clothing/head/helmet/f13/raidermetal
 	uniform = /obj/item/clothing/under/f13/raiderharness
 

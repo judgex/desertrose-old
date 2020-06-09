@@ -1,6 +1,6 @@
 /obj/machinery/power/am_control_unit
-	name = "antimatter control unit"
-	desc = "This device injects antimatter into connected shielding units, the more antimatter injected the more power produced.  Wrench the device to set it up."
+	name = "Fission Engine Control Unit"
+	desc = "This device injects the containment jar with neutrons, the more neutrons injected the more power produced.  Wrench the device to set it up."
 	icon = 'icons/obj/machines/antimatter.dmi'
 	icon_state = "control"
 	anchored = FALSE
@@ -36,6 +36,12 @@
 	linked_shielding = list()
 	linked_cores = list()
 
+
+/obj/machinery/power/am_control_unit/proc/can_be_rotated(mob/user)
+	return TRUE
+
+/obj/machinery/power/am_control_unit/proc/can_user_rotate(mob/user)
+	return TRUE
 
 /obj/machinery/power/am_control_unit/Destroy()//Perhaps damage and run stability checks rather than just del on the others
 	for(var/obj/machinery/am_shielding/AMS in linked_shielding)

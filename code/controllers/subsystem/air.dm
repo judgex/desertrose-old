@@ -12,7 +12,7 @@ SUBSYSTEM_DEF(air)
 	priority = FIRE_PRIORITY_AIR
 	wait = 5
 	flags = SS_BACKGROUND
-	runlevels = RUNLEVEL_GAME | RUNLEVEL_POSTGAME
+	runlevels = RUNLEVEL_LOBBY | RUNLEVEL_GAME | RUNLEVEL_POSTGAME
 
 	var/cost_turfs = 0
 	var/cost_groups = 0

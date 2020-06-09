@@ -47,6 +47,7 @@ GLOBAL_VAR_INIT(time_last_changed_position, 0)
 	"Knight-Captain",
 	"Knight",
 	"Head Scribe",
+	"Senior Scribe",
 	"Scribe",
 	"Initiate",
 	"Legate",

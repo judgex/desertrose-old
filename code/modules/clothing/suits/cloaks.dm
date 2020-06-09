@@ -32,6 +32,11 @@
 	user.visible_message("<span class='suicide'>[user] is strangling [user.p_them()]self with [src]! It looks like [user.p_theyre()] trying to commit suicide!</span>")
 	return(OXYLOSS)
 
+/obj/item/clothing/neck/cloak/overseer
+	name = "vault-tec overseer's cloak"
+	desc = "This is the overseers cloak.  Issued by the Vault-tec corporation to easily identify the overseer. This cloak has been passed down from overseer to overseer"
+	icon_state = "overseercloak"
+
 /obj/item/clothing/neck/cloak/hos
 	name = "head of security's cloak"
 	desc = "Worn by Securistan, ruling the station with an iron fist."

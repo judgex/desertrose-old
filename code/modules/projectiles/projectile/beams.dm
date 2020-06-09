@@ -108,13 +108,20 @@
 	..()
 
 /obj/item/projectile/beam/emitter
+	name = "radiation beam"
+	icon_state = "emitter"
+	damage = 15
+	impact_effect_type = /obj/effect/temp_visual/impact_effect/green_laser
+	light_color = LIGHT_COLOR_GREEN
+
+/obj/item/projectile/beam/emitter/siege
 	name = "siege beam"
 	icon_state = "emitter"
 	damage = 100
 	impact_effect_type = /obj/effect/temp_visual/impact_effect/green_laser
 	light_color = LIGHT_COLOR_GREEN
 
-/obj/item/projectile/beam/emitter/on_hit(atom/target, blocked = FALSE)
+/obj/item/projectile/beam/emitter/siege/on_hit(atom/target, blocked = FALSE)
 	. = ..()
 	if (!QDELETED(target) && (isturf(target) || istype(target, /obj/structure/)))
 		target.ex_act(EXPLODE_HEAVY)
@@ -225,7 +232,7 @@
 	name = "plasma bolt"
 	icon_state = "plasma_clot"
 	damage_type = BURN
-	damage = 38
+	damage = 35
 	armour_penetration = 25
 	flag = "laser" //checks vs. energy protection
 	eyeblur = 0
@@ -253,8 +260,32 @@
 	damage = 26
 	armour_penetration = 30
 
+/obj/item/projectile/beam/laser/rcw //RCW
+	name = "rapidfire beam"
+	icon_state = "xray"
+	damage = 15
+	armour_penetration = 12
+	impact_effect_type = /obj/effect/temp_visual/impact_effect/green_laser
+	light_color = LIGHT_COLOR_GREEN
+
 /obj/item/projectile/plasma/alien
 	name = "alien projectile"
 	icon_state = "ion"
 	damage = 85 //horrifyingly powerful, but very limited ammo
 	armour_penetration = 50
+
+/obj/item/projectile/beam/laser/laer //Elder's/Unique LAER
+	name = "advanced laser beam"
+	icon_state = "u_laser"
+	damage = 40
+	armour_penetration = 30
+	impact_effect_type = /obj/effect/temp_visual/impact_effect/blue_laser
+	light_color = LIGHT_COLOR_BLUE
+
+/obj/item/projectile/beam/laser/aer14 //AER14
+	name = "laser beam"
+	damage = 30
+	armour_penetration = 20
+	icon_state = "omnilaser"
+	impact_effect_type = /obj/effect/temp_visual/impact_effect/blue_laser
+	light_color = LIGHT_COLOR_BLUE

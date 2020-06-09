@@ -47,6 +47,8 @@ GLOBAL_PROTECT(admin_verbs_admin)
 	/client/proc/Getmob,				/*teleports a mob to our location*/
 	/client/proc/Getkey,				/*teleports a mob with a certain ckey to our location*/
 //	/client/proc/sendmob,				/*sends a mob somewhere*/ -Removed due to it needing two sorting procs to work, which were executed every time an admin right-clicked. ~Errorage
+	/client/proc/addbunkerbypass,
+	/client/proc/revokebunkerbypass,
 	/client/proc/jumptoarea,
 	/client/proc/jumptokey,				/*allows us to jump to the location of a mob with a certain ckey*/
 	/client/proc/jumptomob,				/*allows us to jump to a specific mob*/
@@ -214,7 +216,7 @@ GLOBAL_LIST_INIT(admin_verbs_hideable, list(
 	/client/proc/polymorph_all,
 	/client/proc/show_tip,
 	/client/proc/smite,
-	/datum/admins/proc/access_news_network,	
+	/datum/admins/proc/access_news_network,
 	/client/proc/cmd_admin_create_centcom_report,
 	/client/proc/cmd_change_command_name,
 	/client/proc/cmd_admin_world_narrate,
@@ -299,6 +301,8 @@ GLOBAL_LIST_INIT(admin_verbs_hideable, list(
 	/client/proc/jumptoarea,
 	/client/proc/jumptokey,
 	/client/proc/jumptoturf,
+	/client/proc/addbunkerbypass,
+	/client/proc/revokebunkerbypass,
 	/client/proc/stealth,
 	/datum/admins/proc/open_borgopanel
 	))
