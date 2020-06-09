@@ -9,9 +9,8 @@
 	return things
 
 /obj/machinery/am_shielding
-	name = "antimatter reactor section"
-	desc = "This device was built using a plasma life-form that seems to increase plasma's natural ability to react with neutrinos while reducing the combustibility."
-
+	name = "Fission engine reactor section"
+	desc = "This device was built using to safely gather the energy put off by active fission while reducing the chance of meltdown by 66.6% from previous models. WARNING: VAULT-TEC IS NOT LIABLE FOR IRRADIATION, LIMB LOSS, LIMB GAIN, BRAIN DAMAGE, OR BODILY HARM NOT OTHERWISE MENTIONED."
 	icon = 'icons/obj/machines/antimatter.dmi'
 	icon_state = "shield"
 	density = TRUE
@@ -19,14 +18,12 @@
 	use_power = NO_POWER_USE//Living things generally dont use power
 	idle_power_usage = 0
 	active_power_usage = 0
-
 	var/obj/machinery/power/am_control_unit/control_unit = null
 	var/processing = FALSE//To track if we are in the update list or not, we need to be when we are damaged and if we ever
 	var/stability = 100//If this gets low bad things tend to happen
 	var/efficiency = 1//How many cores this core counts for when doing power processing, plasma in the air and stability could affect this
 	var/coredirs = 0
 	var/dirs = 0
-
 
 /obj/machinery/am_shielding/Initialize()
 	. = ..()
@@ -69,7 +66,6 @@
 			return
 		collapse()
 
-
 /obj/machinery/am_shielding/Destroy()
 	if(control_unit)
 		control_unit.remove_shielding(src)
@@ -77,7 +73,6 @@
 		shutdown_core()
 	//Might want to have it leave a mess on the floor but no sprites for now
 	return ..()
-
 
 /obj/machinery/am_shielding/CanPass(atom/movable/mover, turf/target)
 	return 0
@@ -90,7 +85,6 @@
 	//TODO: think about checking the airmix for plasma and increasing power output
 	return
 
-
 /obj/machinery/am_shielding/emp_act()//Immune due to not really much in the way of electronics.
 	return
 
@@ -99,13 +93,11 @@
 	check_stability()
 	return
 
-
 /obj/machinery/am_shielding/bullet_act(obj/item/projectile/Proj)
 	. = ..()
 	if(Proj.flag != "bullet")
 		stability -= Proj.force/2
 		check_stability()
-
 
 /obj/machinery/am_shielding/update_icon()
 	dirs = 0
@@ -128,7 +120,6 @@
 					if(control == control_unit)
 						dirs |= direction
 
-
 	var/prefix = ""
 	var/icondirs=dirs
 
@@ -143,7 +134,6 @@
 			setup_core()
 	else if(processing)
 		shutdown_core()
-
 
 /obj/machinery/am_shielding/take_damage(damage_amount, damage_type = BRUTE, damage_flag = 0, sound_effect = 1)
 	switch(damage_type)
@@ -162,7 +152,6 @@
 		stability -= damage_amount/2
 		check_stability()
 
-
 //Call this to link a detected shilding unit to the controller
 /obj/machinery/am_shielding/proc/link_control(obj/machinery/power/am_control_unit/AMC)
 	if(!istype(AMC))
@@ -172,7 +161,6 @@
 	control_unit = AMC
 	control_unit.add_shielding(src,1)
 	return 1
-
 
 //Scans cards for shields or the control unit and if all there it
 /obj/machinery/am_shielding/proc/core_check()
@@ -188,7 +176,6 @@
 			return 0
 	return 1
 
-
 /obj/machinery/am_shielding/proc/setup_core()
 	processing = TRUE
 	GLOB.machines |= src
@@ -199,7 +186,6 @@
 	control_unit.reported_core_efficiency += efficiency
 	return
 
-
 /obj/machinery/am_shielding/proc/shutdown_core()
 	processing = FALSE
 	if(!control_unit)
@@ -207,7 +193,6 @@
 	control_unit.linked_cores.Remove(src)
 	control_unit.reported_core_efficiency -= efficiency
 	return
-
 
 /obj/machinery/am_shielding/proc/check_stability(injecting_fuel = 0)
 	if(stability > 0)
@@ -218,7 +203,6 @@
 		overheat()
 	return
 
-
 /obj/machinery/am_shielding/proc/recalc_efficiency(new_efficiency)//tbh still not 100% sure how I want to deal with efficiency so this is likely temp
 	if(!control_unit || !processing)
 		return
@@ -228,11 +212,9 @@
 	efficiency = new_efficiency
 	return
 
-
-
 /obj/item/am_shielding_container
-	name = "packaged antimatter reactor section"
-	desc = "A small storage unit containing an antimatter reactor section.  To use place near an antimatter control unit or deployed antimatter reactor section and use a multitool to activate this package."
+	name = "packaged fission reactor section"
+	desc = "A small storage unit containing a fission reactor section.  To use place near an fission control unit or deployed fission reactor section and use a multitool to activate this package."
 	icon = 'icons/obj/machines/antimatter.dmi'
 	icon_state = "box"
 	item_state = "electronic"
