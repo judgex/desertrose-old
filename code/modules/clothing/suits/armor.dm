@@ -269,7 +269,7 @@
 	icon_state = "combat_coat"
 	item_state = "combat_coat"
 	desc = "A combat leather jacket, outfitted with a special armored leather coat."
-	armor = list("melee" = 35, "bullet" = 35, "laser" = 25, "energy" = 25, "bomb" = 30, "bio" = 0, "rad" = 0, "fire" = 30, "acid" = 35)
+	armor = list("melee" = 40, "bullet" = 43, "laser" = 40, "energy" = 35, "bomb" = 45, "bio" = 30, "rad" = 5, "fire" = 50, "acid" = 35)
 
 /obj/item/clothing/suit/armor/f13/leather_jacket/combat/riotpolice
 	name = "combat body armor"
