@@ -299,12 +299,12 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	shot_glass_icon_state = "shotglassgold"
 
 /datum/reagent/consumable/ethanol/vermouth
-	name = "Vermouth"
-	id = "vermouth"
+	name = "Champagne"
+	id = "champagne"
 	description = "You suddenly feel a craving for a martini..."
 	color = "#91FF91" // rgb: 145, 255, 145
-	boozepwr = 45
-	taste_description = "dry alcohol"
+	boozepwr = 20
+	taste_description = "fizzy alcohol"
 	glass_icon_state = "vermouthglass"
 	glass_name = "glass of vermouth"
 	glass_desc = "You wonder why you're even drinking this straight."

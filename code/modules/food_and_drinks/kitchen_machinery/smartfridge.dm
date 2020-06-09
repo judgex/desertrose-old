@@ -70,6 +70,7 @@
 /obj/machinery/smartfridge/process()
 	if(stat & (BROKEN|NOPOWER))
 		return PROCESS_KILL
+	update_icon()
 
 	if(seconds_electrified > MACHINE_NOT_ELECTRIFIED)
 		seconds_electrified--
@@ -156,10 +157,6 @@
 				icon_state = "[startstate]-5"
 	else
 		icon_state = "[startstate]-off"
-
-/obj/machinery/smartfridge/Initialize()
-	. = ..()
-	update_icon()
 
 /obj/machinery/smartfridge/proc/animate_dispenser()
 	//visually animate the smartfridge dispensing an item
@@ -715,6 +712,8 @@
 		/obj/item/reagent_containers/food/drinks/soda_cans/vim = 3,
         /obj/item/reagent_containers/food/drinks/soda_cans/sunset = 3)
 
+
+
 ////cans
 
 /obj/machinery/smartfridge/bottlerack/lootshelf/cans
@@ -731,3 +730,23 @@
 		/obj/item/reagent_containers/food/snacks/f13/dog = 3,
 		/obj/item/reagent_containers/food/snacks/beans = 3,)
 
+///booze
+
+/obj/machinery/smartfridge/bottlerack/lootshelf/brews
+	desc = "A rusted pre-war shelf, this one has a faded label about alchohol. "
+
+/obj/machinery/smartfridge/bottlerack/lootshelf/brews
+	initial_contents = list(
+		/obj/item/reagent_containers/food/drinks/bottle/gin = 1,
+		/obj/item/reagent_containers/food/drinks/bottle/whiskey = 1,
+		/obj/item/reagent_containers/food/drinks/bottle/vodka = 1,
+		/obj/item/reagent_containers/food/drinks/bottle/tequila = 1,
+		/obj/item/reagent_containers/food/drinks/bottle/rum = 1,
+	    /obj/item/reagent_containers/food/drinks/bottle/vermouth = 1,
+		/obj/item/reagent_containers/food/drinks/bottle/cognac = 1,
+		/obj/item/reagent_containers/food/drinks/bottle/absinthe = 1,
+		/obj/item/reagent_containers/food/drinks/bottle/lizardwine = 1,
+		/obj/item/reagent_containers/food/drinks/bottle/hcider = 1,
+		/obj/item/reagent_containers/food/drinks/bottle/grappa = 1,
+		/obj/item/reagent_containers/food/drinks/bottle/sake = 1,
+		/obj/item/reagent_containers/food/drinks/bottle/fernet = 1,)
