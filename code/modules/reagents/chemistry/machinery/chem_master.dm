@@ -1,6 +1,6 @@
 /obj/machinery/chem_master
-	name = "ChemMaster 3000"
-	desc = "Used to separate chemicals and distribute them in a variety of forms."
+	name = "Chemical Distillery"
+	desc = "Used to distill chemicals and distribute them in a variety of forms."
 	density = TRUE
 	layer = BELOW_OBJ_LAYER
 	icon = 'icons/obj/chemical.dmi'
@@ -53,8 +53,6 @@
 
 /obj/machinery/chem_master/update_icon()
 	cut_overlays()
-	if (stat & BROKEN)
-		add_overlay("waitlight")
 	if(beaker)
 		icon_state = "mixer1"
 	else
@@ -365,6 +363,6 @@
 		AM.pixel_y = -8 + (round( . / 3)*8)
 
 /obj/machinery/chem_master/condimaster
-	name = "CondiMaster 3000"
+	name = "Kitchen Distillery"
 	desc = "Used to create condiments and other cooking supplies."
 	condi = TRUE

@@ -40,7 +40,7 @@
 	production = 10
 	mutatelist = list()
 	reagents_add = list("gold" = 0.2, "vitamin" = 0.04, "nutriment" = 0.1)
-	rarity = 40 // Alchemy!
+	rarity = 40
 
 /obj/item/reagent_containers/food/snacks/grown/apple/gold
 	seed = /obj/item/seeds/apple/gold

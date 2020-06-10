@@ -282,6 +282,8 @@
 	category = list("Weapons")
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
 */
+
+/*
 /datum/design/ioncarbine
 	name = "Ion Carbine"
 	desc = "How to dismantle a cyborg : The gun."
@@ -291,6 +293,7 @@
 	build_path = /obj/item/gun/energy/ionrifle/carbine
 	category = list("Weapons")
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+*/
 /*
 /datum/design/wormhole_projector
 	name = "Bluespace Wormhole Projector"

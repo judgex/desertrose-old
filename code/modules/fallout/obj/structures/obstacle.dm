@@ -67,9 +67,11 @@
 	material = WOOD
 
 /obj/structure/barricade/wooden/attackby(obj/item/weapon/I, mob/living/user, params)
-	if(!istype(src, /obj/structure/barricade/wooden/planks) && !istype(src, /obj/structure/barricade/wooden/crude) && istype(I, /obj/item/stack/sheet/mineral/wood))
+	if(!istype(src, /obj/structure/barricade/wooden/planks) && !istype(src, /obj/structure/barricade/wooden/crude) && istype(I, /obj/item/stack/sheet/))
 		if(isfloorturf(loc) || isplatingturf(loc))
 			var/obj/item/stack/sheet/mineral/wood/W = I
+			var/obj/item/stack/sheet/cloth/C = I
+			var/obj/item/stack/sheet/leather/L = I //???
 			if(W.amount >= 3)
 				to_chat(user, "<span class='notice'>You start building a wall...</span>")
 				if(do_after(user, 100, target = src) && W.use(3))
@@ -77,8 +79,22 @@
 					T.ChangeTurf(/turf/closed/wall/f13/wood)
 					qdel(src)
 					return TRUE
+			if(C.amount >= 3)
+				to_chat(user, "<span class='notice'>You start building an interior wall...</span>")
+				if(do_after(user, 100, target = src) && C.use(3))
+					var/turf/open/T = loc
+					T.ChangeTurf(/turf/closed/wall/f13/wood/interior)
+					qdel(src)
+					return TRUE
+			if(L.amount >= 3)
+				to_chat(user, "<span class='notice'>You start building a house wall...</span>")
+				if(do_after(user, 100, target = src) && L.use(3))
+					var/turf/open/T = loc
+					T.ChangeTurf(/turf/closed/wall/f13/wood/house)
+					qdel(src)
+					return TRUE
 			else
-				to_chat(user, "<span class='warning'>You need atleast 3 wooden planks to build a wall!</span>")
+				to_chat(user, "<span class='warning'>You need atleast 3 materials to build a wall!</span>")
 		else
 			to_chat(user, "<span class='warning'>You can only build a wall on a solid floor!</span>")
 	else

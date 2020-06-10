@@ -269,7 +269,7 @@
 	icon_state = "combat_coat"
 	item_state = "combat_coat"
 	desc = "A combat leather jacket, outfitted with a special armored leather coat."
-	armor = list("melee" = 35, "bullet" = 35, "laser" = 25, "energy" = 25, "bomb" = 30, "bio" = 0, "rad" = 0, "fire" = 30, "acid" = 35)
+	armor = list("melee" = 40, "bullet" = 43, "laser" = 40, "energy" = 35, "bomb" = 45, "bio" = 30, "rad" = 5, "fire" = 50, "acid" = 35)
 
 /obj/item/clothing/suit/armor/f13/leather_jacket/combat/riotpolice
 	name = "combat body armor"
@@ -414,6 +414,43 @@
 	item_state = "combat_armor"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list("melee" = 40, "bullet" = 45, "laser" = 40, "energy" = 40, "bomb" = 50, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20)
+
+/obj/item/clothing/suit/armor/f13/brahmin_leather_duster
+	name = "brahmin leather duster"
+	desc = "A duster fashioned with tanned brahmin hide. It appears to be more durable than a normal duster."
+	icon_state = "brahmin_leather_duster"
+	item_state = "brahmin_leather_duster"
+	armor = list("melee" = 20, "bullet" = 25, "laser" = 45, "energy" = 35, "bomb" = 35, "bio" = 40, "rad" = 10, "fire" = 60, "acid" = 10)
+
+/obj/item/clothing/suit/armor/f13/rustedcowboy
+	name = "rusted cowboy outfit"
+	desc = "A weather treated leather cowboy outfit.  Yeehaw Pard'!"
+	icon_state = "rusted_cowboy"
+	item_state = "rusted_cowboy"
+	armor = list("melee" = 22, "bullet" = 24, "laser" = 45, "energy" = 35, "bomb" = 35, "bio" = 40, "rad" = 10, "fire" = 60, "acid" = 10)
+
+/obj/item/clothing/suit/armor/f13/radier/raidercombat
+	name = "raider combat armor"
+	desc = "An old military grade pre war combat armor.It appears to be fitted with metal plates to replace the decaying ceramic plates"
+	icon_state = "raider_combat"
+	item_state = "raider_combat"
+	armor = list("melee" = 42, "bullet" = 40, "laser" = 35, "energy" = 30, "bomb" = 50, "bio" = 50, "rad" = 10, "fire" = 60, "acid" = 10)
+
+/obj/item/clothing/suit/armor/f13/raider/raidermetal
+	name = "raider metal armor"
+	desc = "A suit of welded, fused metal plates. Looks bulky, with great protection"
+	icon_state = "raider_metal"
+	item_state = "raider_metal"
+	armor = list("melee" = 40, "bullet" = 40, "laser" = 35, "energy" = 35, "bomb" = 50, "bio" = 50, "rad" = 10, "fire" = 60, "acid" = 10)
+	resistance_flags = FIRE_PROOF
+
+/obj/item/clothing/suit/armor/f13/combatrusted
+	name = "rusted combat armor"
+	desc = "An old military grade pre war combat armor.This set has seen better days, weathered by time. The composite plates look sound and intact still."
+	icon_state = "rusted_combat_armor"
+	item_state = "rusted_combat_armor"
+	armor = list("melee" = 38, "bullet" = 43, "laser" = 38, "energy" = 38, "bomb" = 48, "bio" = 58, "rad" = 10, "fire" = 58, "acid" = 18)
+
 
 /obj/item/clothing/suit/armor/f13/reconarmor
 	name = "recon armor"
@@ -970,6 +1007,7 @@
 	item_state = "maxson_battlecoat"
 	body_parts_covered = CHEST
 	armor = list("melee" = 15, "bullet" = 10, "laser" = 15, "energy" = 0, "bomb" = 5, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
+	allowed = list(/obj/item/gun)
 
 /obj/item/clothing/suit/toggle/armor
 	allowed = null

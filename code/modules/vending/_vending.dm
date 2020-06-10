@@ -71,8 +71,6 @@ IF YOU MODIFY THE PRODUCTS LIST OF A MACHINE, MAKE SURE TO UPDATE ITS RESUPPLY C
 	var/obj/item/coin/coin
 	var/obj/item/stack/spacecash/bill
 
-	var/dish_quants = list()  //used by the snack machine's custom compartment to count dishes.
-
 	var/obj/item/vending_refill/refill_canister = null		//The type of refill canisters used by this machine.
 	var/refill_count = 3		//The number of canisters the vending machine uses
 
@@ -334,15 +332,6 @@ IF YOU MODIFY THE PRODUCTS LIST OF A MACHINE, MAKE SURE TO UPDATE ITS RESUPPLY C
 			dat += "[(coin ? coin : "")][(bill ? bill : "")]&nbsp;&nbsp;<a href='byond://?src=[REF(src)];remove_coin=1'>Remove</a>"
 		else
 			dat += "<i>No money</i>&nbsp;&nbsp;<span class='linkOff'>Remove</span>"
-	if(istype(src, /obj/machinery/vending/snack))
-		dat += "<h3>Chef's Food Selection</h3>"
-		dat += "<div class='statusDisplay'>"
-		for (var/O in dish_quants)
-			if(dish_quants[O] > 0)
-				var/N = dish_quants[O]
-				dat += "<a href='byond://?src=[REF(src)];dispense=[sanitize(O)]'>Dispense</A> "
-				dat += "<B>[capitalize(O)]: [N]</B><br>"
-		dat += "</div>"
 
 	var/datum/browser/popup = new(user, "vending", (name))
 	popup.set_content(dat)
@@ -371,25 +360,6 @@ IF YOU MODIFY THE PRODUCTS LIST OF A MACHINE, MAKE SURE TO UPDATE ITS RESUPPLY C
 				bill.forceMove(get_turf(src))
 			to_chat(usr, "<span class='notice'>You remove [bill] from [src].</span>")
 			bill = null
-
-
-	usr.set_machine(src)
-
-	if((href_list["dispense"]) && (vend_ready))
-		var/N = href_list["dispense"]
-		if(dish_quants[N] <= 0) // Sanity check, there are probably ways to press the button when it shouldn't be possible.
-			return
-		vend_ready = 0
-		use_power(5)
-
-		dish_quants[N] = max(dish_quants[N] - 1, 0)
-		for(var/obj/O in contents)
-			if(O.name == N)
-				O.forceMove(drop_location())
-				break
-		vend_ready = 1
-		updateUsrDialog()
-		return
 
 	if((href_list["vend"]) && (vend_ready))
 		if(panel_open)
@@ -451,6 +421,7 @@ IF YOU MODIFY THE PRODUCTS LIST OF A MACHINE, MAKE SURE TO UPDATE ITS RESUPPLY C
 		use_power(5)
 		if(icon_vend) //Show the vending animation if needed
 			flick(icon_vend,src)
+		playsound(src, 'sound/machines/machine_vend.ogg', 50, TRUE, extrarange = -3)
 		new R.product_path(get_turf(src))
 		SSblackbox.record_feedback("nested tally", "vending_machine_usage", 1, list("[type]", "[R.product_path]"))
 		vend_ready = 1

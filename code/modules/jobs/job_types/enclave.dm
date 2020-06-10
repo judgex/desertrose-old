@@ -1,4 +1,4 @@
-/datum/outfit/job/enclave/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+/*/datum/outfit/job/enclave/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
 	if(visualsOnly)
 		return
@@ -162,3 +162,4 @@ Colonist
 
 	id = /obj/item/card/id/gold
 	uniform =  /obj/item/clothing/under/rank/captain
+*/
