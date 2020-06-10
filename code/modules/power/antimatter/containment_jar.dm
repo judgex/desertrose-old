@@ -1,6 +1,6 @@
 /obj/item/am_containment
-	name = "Fission containment jar"
-	desc = "Hold the power of fission at your fingertips! Warning: Do not swallow."
+	name = "antimatter containment jar"
+	desc = "Holds antimatter."
 	icon = 'icons/obj/machines/antimatter.dmi'
 	icon_state = "jar"
 	density = FALSE
