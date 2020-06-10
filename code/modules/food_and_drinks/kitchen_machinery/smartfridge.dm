@@ -623,7 +623,8 @@
 			if(isnull(amount))
 				amount = 1
 			for(var/i in 1 to amount)
-				load(new typekey(src))
+				if(prob(50))
+					load(new typekey(src))
 
 /obj/machinery/smartfridge/bottlerack/on_deconstruction()
 	new /obj/item/stack/sheet/mineral/wood(drop_location(), 10)
@@ -750,3 +751,4 @@
 		/obj/item/reagent_containers/food/drinks/bottle/grappa = 1,
 		/obj/item/reagent_containers/food/drinks/bottle/sake = 1,
 		/obj/item/reagent_containers/food/drinks/bottle/fernet = 1,)
+
