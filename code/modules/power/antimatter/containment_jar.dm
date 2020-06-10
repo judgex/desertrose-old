@@ -1,6 +1,6 @@
 /obj/item/am_containment
-	name = "Fission containment jar"
-	desc = "Hold the power of fission at your fingertips! Warning: Do not swallow."
+	name = "De-Ionised U-92"
+	desc = "Extremely unstable powerful and condensed Uranium extract. Capable of undergoing fusion at inane speeds."
 	icon = 'icons/obj/machines/antimatter.dmi'
 	icon_state = "jar"
 	density = FALSE
