@@ -196,11 +196,14 @@
 		try_to_crowbar(I, user)
 		return TRUE
 	else if(istype(src, /obj/machinery/door/unpowered) && istype(I, /obj/item/screwdriver) && density == FALSE)
-		to_chat(user, "<span class='notice'>You begin to take apart the [name].</span>")
-		if(do_after(user, 60, target = src))
-			var/turf/T = get_turf(src)
-			new /obj/item/stack/sheet/mineral/wood(T, 10)
-			qdel(src)
+		if (Lock)
+			to_chat(user, "<span class='notice'>You you cant take apart the [name] while it has a lock.</span>")
+		else
+			to_chat(user, "<span class='notice'>You begin to take apart the [name].</span>")
+			if(do_after(user, 60, target = src))
+				var/turf/T = get_turf(src)
+				new /obj/item/stack/sheet/mineral/wood(T, 10)
+				qdel(src)
 	else if(istype(I, /obj/item/weldingtool))
 		try_to_weld(I, user)
 		return TRUE
@@ -387,7 +390,7 @@
 /obj/machinery/door/proc/check_locked(mob/user)
 	if(Lock)
 		if(Lock.check_locked())
-			to_chat(user, "[src] is bolted [density ? "shut" : "open"]")
+			to_chat(user, "<span class='warning'>[src] is locked [density ? "shut" : "open"]</span>")
 			return TRUE
 	return FALSE
 

@@ -118,7 +118,7 @@
 	head = /obj/item/clothing/head/helmet/riot
 	//back = /obj/item/weapon/storage/backpack
 
-/*/mob/living/simple_animal/hostile/enclave
+/mob/living/simple_animal/hostile/enclave
 	name = "Enclave"
 	desc = ""
 	icon_state = "enclave_scientist"
@@ -237,7 +237,7 @@
 	attacktext = "pistol-whips"
 	projectiletype = /obj/item/projectile/bullet/c46x30mm
 	projectilesound = 'sound/weapons/gunshot_smg.ogg'
-*/
+
 /mob/living/simple_animal/hostile/bs
 	name = "BS"
 	desc = "the brotherhood never fails."
