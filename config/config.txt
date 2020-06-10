@@ -58,7 +58,7 @@ LOAD_LEGACY_RANKS_ONLY
 #BAN_LEGACY_SYSTEM
 
 ## Comment this out to stop locally connected clients from being given the almost full access !localhost! admin rank
-ENABLE_LOCALHOST_RANK
+#ENABLE_LOCALHOST_RANK
 
 ## Uncomment this entry to have certain jobs require your account to be at least a certain number of days old to select. You can configure the exact age requirement for different jobs by editing
 ## the minimal_player_age variable in the files in folder /code/game/jobs/job/.. for the job you want to edit. Set minimal_player_age to 0 to disable age requirement for that job.
@@ -68,7 +68,7 @@ ENABLE_LOCALHOST_RANK
 #USE_AGE_RESTRICTION_FOR_JOBS
 
 ## Uncomment the following line to enable the role whitelisting system.  You will also need the table from role_whitelist.sql in the SQL directory.
-#USE_ROLE_WHITELIST
+USE_ROLE_WHITELIST
 
 ## Uncomment the following line to enable the database custom items system.  You will also need the table from custom_items.sql in the SQL directory.
 USE_CUSTOM_ITEMS_FROM_DB
@@ -473,3 +473,6 @@ BOT_IP 127.0.0.1:8081
 ##	For reference, Goonstation uses a resolution of 21x15 for it's widescreen mode.
 ##	Do note that changing this value will affect the title screen. The title screen will have to be updated manually if this is changed.
 DEFAULT_VIEW 15x15
+
+## Comment this out to enable clickable URLs from being posted in OOC
+BLOCKOOCURLS
