@@ -33,7 +33,7 @@ Mayor
 	jobtype = /datum/job/den/f13mayor
 
 	ears = 			/obj/item/radio/headset/headset_den
-	id =            /obj/item/card/id/gold/mayor
+	id =            /obj/item/card/id/silver/mayor
 	backpack = /obj/item/storage/backpack/satchel/explorer
 	satchel = /obj/item/storage/backpack/satchel/explorer
 	l_pocket = /obj/item/storage/bag/money/small/settler
