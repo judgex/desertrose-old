@@ -272,6 +272,7 @@ Raider
 /datum/outfit/loadout/raider_bos
 	name = "Brotherhood Exile"
 	suit = /obj/item/clothing/suit/armor/f13/combat/brotherhood
+	id = /obj/item/card/id/rusted/brokenholodog
 	backpack_contents = list(
 		/obj/item/gun/energy/laser/pistol=1,
 		/obj/item/stock_parts/cell/ammo/ec=2)
@@ -279,6 +280,7 @@ Raider
 /datum/outfit/loadout/raider_ncr
 	name = "NCR Deserter"
 	suit = /obj/item/clothing/suit/armor/f13/ncrarmor/mantle
+	id = /obj/item/card/id/rusted
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/marksman/servicerifle=1,
 		/obj/item/ammo_box/magazine/m556/rifle=2)
@@ -286,6 +288,7 @@ Raider
 /datum/outfit/loadout/raider_legion
 	name = "Punished Legionnaire"
 	suit = /obj/item/clothing/suit/armor/f13/legion/prime
+	id = /obj/item/card/id/rusted/rustedmedallion
 	backpack_contents = list(
 		/obj/item/claymore/machete/gladius=1,
 		/obj/item/restraints/legcuffs/bola=2,
@@ -303,6 +306,7 @@ Raider
 	name = "Vault Outcast"
 	suit = /obj/item/clothing/suit/armor/f13/leatherarmor
 	uniform = /obj/item/clothing/under/f13/vault
+	id = /obj/item/card/id/rusted/fadedvaultid
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/pistol/n99=1,
 		/obj/item/ammo_box/magazine/m10mm_adv=2)
