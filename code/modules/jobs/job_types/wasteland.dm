@@ -119,7 +119,12 @@ Raider
 	/datum/outfit/loadout/raider_blast,
 	/datum/outfit/loadout/raider_sadist,
 	/datum/outfit/loadout/raider_painspike,
-	/datum/outfit/loadout/raider_badlands)
+	/datum/outfit/loadout/raider_badlands,
+	/datum/outfit/loadout/raider_bos,
+	/datum/outfit/loadout/raider_ncr,
+	/datum/outfit/loadout/raider_legion,
+	/datum/outfit/loadout/raider_sheriff,
+	/datum/outfit/loadout/raider_vault)
 
 /datum/outfit/job/wasteland/f13raider
 	name = "Raider"
@@ -175,6 +180,7 @@ Raider
 		/obj/item/restraints/handcuffs=2, \
 		/obj/item/claymore/machete/pipe=1, \
 		/obj/item/reagent_containers/hypospray/medipen/stimpak=1, \
+		/obj/item/reagent_containers/pill/patch/healingpowder=2, \
 		/obj/item/storage/bag/money/small/raider=1)
 
 	suit_store = pick(
@@ -199,31 +205,108 @@ Raider
 	name = "Supa-fly"
 	suit = /obj/item/clothing/suit/armor/f13/raider
 	head = /obj/item/clothing/head/helmet/f13/raider
+	backpack_contents = list(
+		/obj/item/gun/ballistic/shotgun/automatic/hunting/trail=1,
+		/obj/item/ammo_box/tube/m44=2,
+		/obj/item/kitchen/knife/combat=1,
+		/obj/item/storage/pill_bottle/dice=1,
+		/obj/item/storage/fancy/cigarettes/cigpack_cannabis=1)
 
 /datum/outfit/loadout/raider_yankee
 	name = "Yankee"
 	suit = /obj/item/clothing/suit/armor/f13/raider/yankee
 	head = /obj/item/clothing/head/helmet/f13/raider/yankee
+	backpack_contents = list(
+		/obj/item/twohanded/baseball/spiked=1,
+		/obj/item/gun/ballistic/shotgun/remington/scoped=1,
+		/obj/item/ammo_box/a308=2,
+		/obj/item/storage/fancy/cigarettes/cigpack_cannabis=1,
+		/obj/item/megaphone=1)
+
 
 /datum/outfit/loadout/raider_blast
 	name = "Blastmaster"
 	suit = /obj/item/clothing/suit/armor/f13/raider/blastmaster
 	head = /obj/item/clothing/head/helmet/f13/raider/blastmaster
+	backpack_contents = list(
+		/obj/item/twohanded/fireaxe=1,
+		/obj/item/gun/ballistic/revolver/colt6250=1,
+		/obj/item/grenade/iedcasing=2,
+		/obj/item/ammo_box/l10mm=2)
 
 /datum/outfit/loadout/raider_sadist
 	name = "Sadist"
 	suit = /obj/item/clothing/suit/armor/f13/raider/sadist
 	head = /obj/item/clothing/head/helmet/f13/raider/arclight
+	backpack_contents = list(
+		/obj/item/gun/ballistic/revolver/colt357=1,
+		/obj/item/ammo_box/a357=2,
+		/obj/item/clothing/mask/gas/explorer/folded=1,
+		/obj/item/throwing_star/spear=1,
+		/obj/item/grenade/chem_grenade/teargas=1,
+		/obj/item/dildo=1)
 
 /datum/outfit/loadout/raider_badlands
 	name = "Badlands"
 	suit = /obj/item/clothing/suit/armor/f13/badlands
 	head = /obj/item/clothing/head/helmet/f13/fiend
+	backpack_contents = list(
+		/obj/item/restraints/legcuffs/bola/tactical=1,
+		/obj/item/gun/ballistic/revolver/police=1,
+		/obj/item/ammo_box/a357=1,
+		/obj/item/reagent_containers/hypospray/medipen/psycho=1,
+		/obj/item/reagent_containers/pill/patch/turbo=1)
 
 /datum/outfit/loadout/raider_painspike
 	name = "Painspike"
 	suit = /obj/item/clothing/suit/armor/f13/raider/painspike
 	head = /obj/item/clothing/head/helmet/f13/raider/psychotic
+	backpack_contents = list(
+		/obj/item/gun/ballistic/shotgun/trench=1,
+		/obj/item/storage/box/lethalshot=1,
+		/obj/item/storage/box/beanbag=1,
+		/obj/item/claymore/machete/pipe/tireiron=1,
+		/obj/item/claymore/machete/pipe/pan=1,
+		/obj/item/reagent_containers/spray/cyborg_lube=1)
+
+/datum/outfit/loadout/raider_bos
+	name = "Brotherhood Exile"
+	suit = /obj/item/clothing/suit/armor/f13/combat/brotherhood
+	backpack_contents = list(
+		/obj/item/gun/energy/laser/pistol=1,
+		/obj/item/stock_parts/cell/ammo/ec=2)
+
+/datum/outfit/loadout/raider_ncr
+	name = "NCR Deserter"
+	suit = /obj/item/clothing/suit/armor/f13/ncrarmor/mantle
+	backpack_contents = list(
+		/obj/item/gun/ballistic/automatic/marksman/servicerifle=1,
+		/obj/item/ammo_box/magazine/m556/rifle=2)
+
+/datum/outfit/loadout/raider_legion
+	name = "Punished Legionnaire"
+	suit = /obj/item/clothing/suit/armor/f13/legion/prime
+	backpack_contents = list(
+		/obj/item/claymore/machete/gladius=1,
+		/obj/item/restraints/legcuffs/bola=2,
+		/obj/item/storage/backpack/spearquiver=1)
+
+/datum/outfit/loadout/raider_sheriff
+	name = "Dark Sheriff"
+	suit = /obj/item/clothing/suit/armor/vest/leather
+	uniform = /obj/item/clothing/under/syndicate/tacticool
+	backpack_contents = list(
+		/obj/item/gun/ballistic/revolver/m29/alt=1,
+		/obj/item/ammo_box/m44=2)
+
+/datum/outfit/loadout/raider_vault
+	name = "Vault Outcast"
+	suit = /obj/item/clothing/suit/armor/f13/leatherarmor
+	uniform = /obj/item/clothing/under/f13/vault
+	backpack_contents = list(
+		/obj/item/gun/ballistic/automatic/pistol/n99=1,
+		/obj/item/ammo_box/magazine/m10mm_adv=2)
+
 
 /datum/outfit/loadout/raider_metal
 	name = "Metal Raider"
