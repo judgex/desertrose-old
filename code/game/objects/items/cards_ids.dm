@@ -111,7 +111,7 @@
 
 /obj/item/card/id
 	name = "identification card"
-	desc = "A card used to provide ID and determine access across the Vault."
+	desc = "A card used to provide ID and determine access across the station."
 	var/id_type = "ID Card"
 	icon_state = "id"
 	item_state = "card-id"
