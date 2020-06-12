@@ -75,8 +75,7 @@
 #define F13RECRUITLEG	(1<<9)
 #define F13AUXILIA		(1<<10)
 #define F13LEGIONSLAVE	(1<<11)
-#define F13EXPLORER		(1<<12)
-#define F13SLAVEMASTER	(1<<13)
+#define F13SLAVEMASTER	(1<<12)
 
 #define BOS				(1<<5)
 
