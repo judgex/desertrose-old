@@ -429,7 +429,7 @@
 	item_state = "rusted_cowboy"
 	armor = list("melee" = 22, "bullet" = 24, "laser" = 45, "energy" = 35, "bomb" = 35, "bio" = 40, "rad" = 10, "fire" = 60, "acid" = 10)
 
-/obj/item/clothing/suit/armor/f13/raider/raidercombat
+/obj/item/clothing/suit/armor/f13/radier/raidercombat
 	name = "raider combat armor"
 	desc = "An old military grade pre war combat armor.It appears to be fitted with metal plates to replace the decaying ceramic plates"
 	icon_state = "raider_combat"
