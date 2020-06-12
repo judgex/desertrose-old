@@ -95,7 +95,7 @@
 					T.ChangeTurf(/turf/closed/wall/f13/wood/house)
 					qdel(src)
 					return TRUE
-		if(G.amount >= 3)
+			if(G.amount >= 3)
 				to_chat(user, "<span class='notice'>You start building a house window...</span>")
 				if(do_after(user, 100, target = src) && G.use(3))
 					var/turf/open/T = loc
