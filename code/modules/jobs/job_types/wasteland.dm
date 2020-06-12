@@ -271,7 +271,7 @@ Raider
 
 /datum/outfit/loadout/raider_bos
 	name = "Brotherhood Exile"
-	suit = /obj/item/clothing/suit/armor/f13/combat/brotherhood
+	suit = /obj/item/clothing/suit/armor/f13/exile/bosexile
 	id = /obj/item/card/id/rusted/brokenholodog
 	backpack_contents = list(
 		/obj/item/gun/energy/laser/pistol=1,
