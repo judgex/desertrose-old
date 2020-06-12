@@ -141,8 +141,8 @@
 
 /datum/crafting_recipe/blaster_reinforced
 	name = "reinforced blaster armor"
-	result = /obj/item/clothing/suit/armor/f13/leather_jacket/combat/coat
-	reqs = list(/obj/item/clothing/suit/armor/f13/raider/blastmaster/reinforced = 1,
+	result = /obj/item/clothing/suit/armor/f13/raider/blastmaster/reinforced
+	reqs = list(/obj/item/clothing/suit/armor/f13/raider/blastmaster = 1,
 				/obj/item/stack/crafting/goodparts = 2,
 				/obj/item/stack/sheet/metal = 5)
 	tools = list(TOOL_WORKBENCH)
@@ -163,8 +163,8 @@
 
 /datum/crafting_recipe/sadist_reinforced
 	name = "reinforced sadist armor"
-	result = /obj/item/clothing/suit/armor/f13/leather_jacket/combat/coat
-	reqs = list(/obj/item/clothing/suit/armor/f13/raider/sadist/reinforced = 1,
+	result = /obj/item/clothing/suit/armor/f13/raider/sadist/reinforced
+	reqs = list(/obj/item/clothing/suit/armor/f13/raider/sadist = 1,
 				/obj/item/stack/crafting/goodparts = 2,
 				/obj/item/stack/sheet/metal = 5)
 	tools = list(TOOL_WORKBENCH)
@@ -174,7 +174,7 @@
 
 /datum/crafting_recipe/fiendshelm_reinforced
 	name = "reinforced fiend helmet"
-	result = /obj/item/clothing/suit/armor/f13/leather_jacket/combat/coat
+	result = /obj/item/clothing/head/helmet/f13/fiend_reinforced
 	reqs = list(/obj/item/clothing/head/helmet/f13/fiend = 1,
 				/obj/item/stack/crafting/goodparts = 2,
 				/obj/item/stack/sheet/metal = 5)
@@ -210,6 +210,39 @@
 	name = "reinforced painspike armor"
 	result = /obj/item/clothing/suit/armor/f13/raider/painspike/reinforced
 	reqs = list(/obj/item/clothing/suit/armor/f13/raider/painspike = 1,
+				/obj/item/stack/crafting/goodparts = 2,
+				/obj/item/stack/sheet/metal = 5)
+	tools = list(TOOL_WORKBENCH)
+	time = 60
+	category = CAT_CLOTHING
+	subcategory = CAT_CLOTHING
+
+/datum/crafting_recipe/ncrexile_reinforced
+	name = "reinforced NCR deserter armor"
+	result = /obj/item/clothing/suit/armor/f13/exilereinforced
+	reqs = list(/obj/item/clothing/suit/armor/f13/exile = 1,
+				/obj/item/stack/crafting/goodparts = 2,
+				/obj/item/stack/sheet/metal = 5)
+	tools = list(TOOL_WORKBENCH)
+	time = 60
+	category = CAT_CLOTHING
+	subcategory = CAT_CLOTHING
+
+/datum/crafting_recipe/legion_reinforced
+	name = "reinforced punished Legion armor"
+	result = /obj/item/clothing/suit/armor/f13/exilereinforced/legion
+	reqs = list(/obj/item/clothing/suit/armor/f13/exile/legexile = 1,
+				/obj/item/stack/crafting/goodparts = 2,
+				/obj/item/stack/sheet/metal = 5)
+	tools = list(TOOL_WORKBENCH)
+	time = 60
+	category = CAT_CLOTHING
+	subcategory = CAT_CLOTHING
+
+/datum/crafting_recipe/bos_reinforced
+	name = "reinforced BoS exile armor"
+	result = /obj/item/clothing/suit/armor/f13/exilereinforced/bos
+	reqs = list(/obj/item/clothing/suit/armor/f13/exile/bosexile = 1,
 				/obj/item/stack/crafting/goodparts = 2,
 				/obj/item/stack/sheet/metal = 5)
 	tools = list(TOOL_WORKBENCH)
