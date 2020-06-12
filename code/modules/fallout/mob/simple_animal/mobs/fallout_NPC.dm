@@ -153,7 +153,7 @@
 
 /obj/effect/mob_spawn/human/corpse/enclavescientist
 	name = "enclave scientist"
-	/obj/item/clothing/under/syndicate/combat
+	uniform = /obj/item/clothing/under/syndicate/combat
 	suit = /obj/item/clothing/suit/radiation
 	shoes = /obj/item/clothing/shoes/f13/military
 	gloves = /obj/item/clothing/gloves/f13/military

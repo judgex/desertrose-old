@@ -11,7 +11,6 @@
 	. = ..()
 	icon_state = "alienpod[rand(1,9)]"
 
-
 /turf/open/floor/plating/abductor2
 	name = "alien plating"
 	icon_state = "alienplating"
@@ -85,7 +84,6 @@
 /turf/open/floor/plating/ashplanet/wateryrock/Initialize()
 	icon_state = "[icon_state][rand(1, 9)]"
 	. = ..()
-
 
 /turf/open/floor/plating/beach
 	name = "beach"
@@ -167,8 +165,9 @@
 /turf/open/floor/plating/ice/smooth
 	icon_state = "smooth"
 	smooth = SMOOTH_MORE | SMOOTH_BORDER
-	canSmoothWith = list(/turf/open/floor/plating/ice/smooth, /turf/open/floor/plating/ice)
-	/turf/open/floor/plating/ice/colder
+	canSmoothWith = list(/turf/open/floor/plating/ice/smooth,
+					/turf/open/floor/plating/ice,
+					/turf/open/floor/plating/ice/colder)
 
 /turf/open/floor/plating/ice/colder
 	temperature = 140
@@ -181,7 +180,6 @@
 
 /turf/open/floor/plating/ice/burn_tile()
 	return
-
 
 /turf/open/floor/plating/snowed
 	name = "snowed-over plating"
@@ -208,5 +206,3 @@
 
 /turf/open/floor/plating/snowed/temperatre
 	temperature = 255.37
-
-
