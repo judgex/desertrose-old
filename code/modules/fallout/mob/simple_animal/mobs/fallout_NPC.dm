@@ -118,8 +118,6 @@
 	head = /obj/item/clothing/head/helmet/riot
 	//back = /obj/item/weapon/storage/backpack
 
-
-
 /mob/living/simple_animal/hostile/enclave
 	name = "Enclave"
 	desc = ""
@@ -183,7 +181,6 @@
 	mask = /obj/item/clothing/mask/gas
 	//back = /obj/item/weapon/storage/backpack
 
-
 /mob/living/simple_animal/hostile/enclave/scientist
 	name = "enclave scientist"
 	desc = "An Enclave Scientist wearing an advanced radiation suit. While they may run from you, that does not exempt them from the evil they have committed."
@@ -219,7 +216,6 @@
 	projectiletype = /obj/item/projectile/plasma/repeater
 	projectilesound = 'sound/f13weapons/plasmarifle.ogg'
 
-
 /mob/living/simple_animal/hostile/enclave/soldier_ca
 	name = "Enclave Footsoldier"
 	desc = "An Enclave soldier in Enclave Combat Armor, wielding an assault rifle."
@@ -241,7 +237,6 @@
 	attacktext = "pistol-whips"
 	projectiletype = /obj/item/projectile/bullet/c46x30mm
 	projectilesound = 'sound/weapons/gunshot_smg.ogg'
-
 
 /mob/living/simple_animal/hostile/bs
 	name = "BS"
@@ -277,7 +272,6 @@
 	speak_emote = list("rushes")
 	speak_chance = 1
 
-
 /obj/effect/mob_spawn/human/corpse/bs
 	name = "Brotherhood Knight"
 	uniform = /obj/item/clothing/under/f13/bdu
@@ -288,7 +282,6 @@
 	//mask = /obj/item/clothing/mask/gas
 	head = /obj/item/clothing/head/helmet/f13/combat/brotherhood
 	//back = /obj/item/weapon/storage/backpack
-
 
 /mob/living/simple_animal/hostile/bs/knight
 	name = "Brotherhood Knight"
@@ -304,7 +297,6 @@
 	ranged = 1
 	projectiletype = /obj/item/projectile/beam
 	projectilesound = 'sound/weapons/resonator_fire.ogg'
-
 
 /mob/living/simple_animal/hostile/bs/paladin
 	name = "Brotherhood Paladin"
@@ -323,7 +315,6 @@
 	projectiletype = /obj/item/projectile/beam
 	projectilesound = 'sound/weapons/resonator_fire.ogg'
 
-
 /obj/effect/mob_spawn/human/corpse/bs/paladin
 	name = "Brotherhood Paladin"
 	uniform = /obj/item/clothing/under/f13/bdu
@@ -335,7 +326,6 @@
 	head = /obj/item/clothing/head/helmet/power_armor/t45d
 	//back = /obj/item/weapon/storage/backpack
 
-
 /mob/living/simple_animal/hostile/ncr
 	name = "NCR"
 	desc = "Just an NCR."
@@ -345,7 +335,6 @@
 	icon_gib = "ncr_trooper"
 	speak_chance = 0
 	turns_per_move = 5
-
 	response_help = "pokes"
 	response_disarm = "shoves"
 	response_harm = "hits"
@@ -371,7 +360,6 @@
 	speak_emote = list("says")
 	speak_chance = 1
 
-
 /obj/effect/mob_spawn/human/corpse/ncr
 	name = "NCR Trooper"
 	uniform = /obj/item/clothing/under/f13/ncr
@@ -382,7 +370,6 @@
 	//mask = /obj/item/clothing/mask/gas
 	head = /obj/item/clothing/head/f13/ncr/goggles
 	//back = /obj/item/weapon/storage/backpack
-
 
 /mob/living/simple_animal/hostile/ncr/trooper
 	name = "NCR Trooper"
@@ -399,7 +386,6 @@
 	projectiletype = /obj/item/projectile/bullet/F13/c308mmBullet
 	projectilesound = 'sound/weapons/garandshot.ogg'
 	casingtype = /obj/item/ammo_casing/F13/m308
-
 
 /mob/living/simple_animal/hostile/ncr/sergeant
 	name = "NCR Sergeant"
@@ -419,7 +405,6 @@
 	projectilesound = 'sound/f13weapons/assaultrifle_fire.ogg'
 	casingtype = /obj/item/ammo_casing/a556
 
-
 /obj/effect/mob_spawn/human/corpse/ncr/sergeant
 	name = "NCR Sergeant"
 	uniform = /obj/item/clothing/under/f13/ncr
@@ -430,7 +415,6 @@
 	//mask = /obj/item/clothing/mask/gas
 	head = /obj/item/clothing/head/f13/ncr/goggles
 	//back = /obj/item/weapon/storage/backpack
-
 
 /mob/living/simple_animal/hostile/legion
 	name = "Legion"
@@ -477,7 +461,6 @@
 	head = /obj/item/clothing/head/helmet/f13/legion/prime
 	//back = /obj/item/weapon/storage/backpack
 
-
 /mob/living/simple_animal/hostile/legion/prime
 	name = "Legion Prime"
 	desc = "Just a Legion Prime"
@@ -493,7 +476,6 @@
 	projectiletype = /obj/item/projectile/bullet/F13/c308mmBullet
 	projectilesound = 'sound/weapons/garandshot.ogg'
 	casingtype = /obj/item/ammo_casing/F13/m308
-
 
 /mob/living/simple_animal/hostile/legion/decan
 	name = "Legion Decan"
@@ -513,7 +495,6 @@
 	projectilesound = 'sound/weapons/garandshot.ogg'
 	casingtype = /obj/item/ammo_casing/F13/m308
 
-
 /obj/effect/mob_spawn/human/corpse/legion/decan
 	name = "Legion Decan"
 	uniform = /obj/item/clothing/under/f13/rag
@@ -525,7 +506,6 @@
 	head = /obj/item/clothing/head/helmet/f13/legion/prime/decan
 	//back = /obj/item/weapon/storage/backpack
 
-
 /mob/living/simple_animal/hostile/raider
 	name = "raiding npc"
 	desc = "this firefighter was once a man too."
@@ -534,7 +514,6 @@
 	icon_dead = "firefighter_raider"
 	icon_gib = "firefighter_raider"
 	turns_per_move = 5
-
 	response_help = "pokes"
 	response_disarm = "shoves"
 	response_harm = "hits"
@@ -570,7 +549,6 @@
 	//mask = /obj/item/clothing/mask/gas
 	head = /obj/item/clothing/head/helmet/f13/firefighter
 	//back = /obj/item/weapon/storage/backpack
-
 
 /mob/living/simple_animal/hostile/raider/Aggro()
 	..()
@@ -613,8 +591,6 @@
 	head = /obj/item/clothing/head/f13/headscarf
 	//back = /obj/item/weapon/storage/backpack
 
-
-
 /mob/living/simple_animal/hostile/raider/baseball
 	icon_state = "baseball_raider"
 	icon_living = "baseball_raider"
@@ -639,7 +615,6 @@
 	//mask = /obj/item/clothing/mask/gas
 	head = /obj/item/clothing/head/helmet/f13/yankee
 	//back = /obj/item/weapon/storage/backpack
-
 
 /mob/living/simple_animal/hostile/raider/biker
 	icon_state = "biker_raider"
@@ -697,7 +672,6 @@
 		var/choice = pick(1, 1, 1, 2, 3, 5)
 		H.reagents.add_reagent("FEV_solution", choice)
 
-
 /mob/living/simple_animal/hostile/abomination/Initialize()
 	. = ..()
 	abom_sounds = list('sound/voice/abomination1.ogg', 'sound/voice/abomscream.ogg', 'sound/voice/abommoan.ogg', 'sound/voice/abomscream2.ogg', 'sound/voice/abomscream3.ogg')
@@ -716,8 +690,6 @@
 	if(prob(10))
 		var/chosen_sound = pick(abom_sounds)
 		playsound(src, chosen_sound, 100, TRUE)
-
-
 
 /mob/living/simple_animal/hostile/abomhorror
 	name = "failed experiment"

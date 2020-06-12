@@ -23,7 +23,7 @@
 					/obj/item/reagent_containers/food/drinks/bottle/limejuice = 4,
 					/obj/item/reagent_containers/food/drinks/bottle/grenadine = 4,
 					/obj/item/reagent_containers/food/drinks/bottle/menthol = 4,
-					/obj/item/reagent_containers/food/drinks/bottle/cream = 4,
+					/obj/item/reagent_containers/food/drinks/soda_cans/cream = 4,
 					/obj/item/reagent_containers/food/drinks/soda_cans/tonic = 8,
 					/obj/item/reagent_containers/food/drinks/soda_cans/cola = 8,
 					/obj/item/reagent_containers/food/drinks/soda_cans/sodawater = 15,
@@ -42,7 +42,7 @@
 	products = list(/obj/item/reagent_containers/food/drinks/bottle/whiskey = 1,
 			/obj/item/reagent_containers/food/drinks/bottle/absinthe = 1,
 			/obj/item/reagent_containers/food/drinks/bottle/limejuice = 1,
-			/obj/item/reagent_containers/food/drinks/bottle/cream = 1,
+			/obj/item/reagent_containers/food/drinks/soda_cans/cream = 1,
 			/obj/item/reagent_containers/food/drinks/soda_cans/tonic = 1,
 			/obj/item/reagent_containers/food/drinks/drinkingglass = 10,
 			/obj/item/reagent_containers/food/drinks/ice = 3,
@@ -51,11 +51,11 @@
 	req_access = null
 
 /obj/machinery/vending/boozeomat/pubby_captain //Captain's quarters on Pubbystation
-	products = list(/obj/item/reagent_containers/food/drinks/bottle/rum = 1, 
-					/obj/item/reagent_containers/food/drinks/bottle/wine = 1, 
-					/obj/item/reagent_containers/food/drinks/ale = 1, 
-					/obj/item/reagent_containers/food/drinks/drinkingglass = 6, 
-					/obj/item/reagent_containers/food/drinks/ice = 1, 
+	products = list(/obj/item/reagent_containers/food/drinks/bottle/rum = 1,
+					/obj/item/reagent_containers/food/drinks/bottle/wine = 1,
+					/obj/item/reagent_containers/food/drinks/ale = 1,
+					/obj/item/reagent_containers/food/drinks/drinkingglass = 6,
+					/obj/item/reagent_containers/food/drinks/ice = 1,
 					/obj/item/reagent_containers/food/drinks/drinkingglass/shotglass = 4);
 	req_access = list(ACCESS_CAPTAIN)
 

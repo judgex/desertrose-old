@@ -168,8 +168,8 @@
 	foodtype = MEAT | GRAIN
 
 /obj/item/reagent_containers/food/snacks/beans
-	name = "tin of beans"
-	desc = "Musical fruit in a slightly less musical container."
+	name = "can of beans"
+	desc = "A faded pre-war can of Greasy's baked beans."
 	icon_state = "beans"
 	bonus_reagents = list("nutriment" = 1, "vitamin" = 1)
 	list_reagents = list("nutriment" = 10)
