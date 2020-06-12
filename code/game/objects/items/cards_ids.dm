@@ -187,6 +187,22 @@ update_label("John Doe", "Clowny")
 	assignment = "Reaper"
 	registered_name = "Thirteen"
 
+/obj/item/card/id/sec
+	name = "red identification card"
+	desc = "A red card which shows dedication to the Security department."
+	icon_state = "sec"
+	item_state = "sec_id"
+	lefthand_file = 'icons/mob/inhands/equipment/idcards_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/equipment/idcards_righthand.dmi'
+
+/obj/item/card/id/chief
+	name = "crimson identification card"
+	desc = "A red card which shows dedication and leadership to the Vaults safety and security."
+	icon_state = "chief"
+	item_state = "sec_id"
+	lefthand_file = 'icons/mob/inhands/equipment/idcards_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/equipment/idcards_righthand.d
+
 /obj/item/card/id/gold
 	name = "gold identification card"
 	desc = "A golden card which shows power and might."
