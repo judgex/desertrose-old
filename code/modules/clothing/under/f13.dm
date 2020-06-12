@@ -406,6 +406,30 @@
 	icon_state = "shamanrags"
 	item_state = "shamanrags"
 
+//Exiles
+
+/obj/item/clothing/under/f13/exile
+	name = "disheveled NCR fatigues"
+	desc = "A disheveled and modified duty uniform resembling NCR fatigues."
+	icon_state = "ncr_uniformexile"
+	item_state = "ncr_uniformexile"
+	item_color = "ncr_uniformexile"
+	armor = list("melee" = 10, "bullet" = 10, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 30, "fire" = 20, "acid" = 50)
+
+/obj/item/clothing/under/f13/exile/legion
+	name = "disheveled Legion fatigues"
+	desc = "A disheveled and modified uniform resembling Legion standard fatigues."
+	icon_state = "legion_uniformexile"
+	item_state = "legion_uniformexile"
+	item_color = "legion_uniformexile"
+
+/obj/item/clothing/under/f13/exile/vault
+	name = "disheveled Dweller jumpsuit"
+	desc = "A disheveled and torn uniform resembling a Vault-Tech standard Jumpsuit."
+	icon_state = "vault_exile"
+	item_state = "vault_exile"
+	item_color = "vault_exile"
+
 //Dust Devils
 
 //Boomers
@@ -1016,7 +1040,7 @@
 	item_color = "fprostitute"
 
 /obj/item/clothing/under/f13/mprostitute
-	name = "masuline prostitute outfit"
+	name = "masculine prostitute outfit"
 	desc = "A latex outfit for someone who sells their companionship. Or really likes the breeze."
 	icon_state = "mprostitute"
 	item_state = "mprostitute"
