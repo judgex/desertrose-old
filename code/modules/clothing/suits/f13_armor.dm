@@ -201,7 +201,7 @@
 	icon_state = "ncrexile"
 	item_state = "ncrexile"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
-	armor = list(melee = 30, bullet = 30, laser = 30, energy = 30, bomb = 10, bio = 20, rad = 20, fire = 30, acid = 30)
+	armor = list("melee" = 50, "bullet" = 35, "laser" = 15, "energy" = 15, "bomb" = 25, "bio" = 40, "rad" = 20, "fire" = 60, "acid" = 0)
 	strip_delay = 30
 	icon = 'icons/fallout/clothing/suits.dmi'
 
