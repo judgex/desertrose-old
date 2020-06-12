@@ -429,7 +429,7 @@
 	item_state = "rusted_cowboy"
 	armor = list("melee" = 22, "bullet" = 24, "laser" = 45, "energy" = 35, "bomb" = 35, "bio" = 40, "rad" = 10, "fire" = 60, "acid" = 10)
 
-/obj/item/clothing/suit/armor/f13/radier/raidercombat
+/obj/item/clothing/suit/armor/f13/raider/raidercombat
 	name = "raider combat armor"
 	desc = "An old military grade pre war combat armor.It appears to be fitted with metal plates to replace the decaying ceramic plates"
 	icon_state = "raider_combat"
@@ -693,7 +693,7 @@
 
 /obj/item/clothing/suit/armor/f13/brokenpa
 	w_class = WEIGHT_CLASS_HUGE
-	slowdown = 1.50
+	slowdown = 1.40 //+0.1 from helmet = 1.5 total
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
 	cold_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
 	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS
@@ -709,14 +709,21 @@
 	desc = "It's a set of T-45b power armor with a custom air conditioning module and stripped out servomotors."
 	icon_state = "t45bpowerarmor"
 	item_state = "t45bpowerarmor"
-	armor = list("melee" = 75, "bullet" = 60, "laser" = 30, "energy" = 50, "bomb" = 48, "bio" = 60, "rad" = 50, "fire" = 80, "acid" = 0)
+	armor = list("melee" = 75, "bullet" = 60, "laser" = 35, "energy" = 50, "bomb" = 48, "bio" = 60, "rad" = 50, "fire" = 80, "acid" = 0)
+
+/obj/item/clothing/suit/armor/f13/brokenpa/raiderpa
+	name = "raider T-45b power armor"
+	desc = "It's a set of T-45b power armor with a custom air conditioning module and stripped out servomotors.This set has seen better days, metal scrap has been spot welded to the chassis "
+	icon_state = "raiderpa"
+	item_state = "raiderpa"
+	armor = list("melee" = 75, "bullet" = 60, "laser" = 35, "energy" = 50, "bomb" = 48, "bio" = 60, "rad" = 50, "fire" = 80, "acid" = 0)
 
 /obj/item/clothing/suit/armor/f13/brokenpa/ncr
 	name = "salvaged NCR power armor"
 	desc = "It's a set of T-45b power armor with a air conditioning module installed, it however lacks servomotors to enhance the users strength. This one has brown paint trimmed along the edge and a two headed bear painted onto the chestplate."
 	icon_state = "ncrpowerarmor"
 	item_state = "ncrpowerarmor"
-	armor = list("melee" = 75, "bullet" = 60, "laser" = 30, "energy" = 50, "bomb" = 48, "bio" = 60, "rad" = 50, "fire" = 80, "acid" = 0)
+	armor = list("melee" = 75, "bullet" = 60, "laser" = 35, "energy" = 50, "bomb" = 48, "bio" = 60, "rad" = 50, "fire" = 80, "acid" = 0)
 
 /obj/item/clothing/suit/armor/f13/power_armor
 	w_class = WEIGHT_CLASS_HUGE
