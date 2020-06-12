@@ -607,6 +607,3 @@ update_label("John Doe", "Clowny")
 	desc = "A BoS issue holotag, it isnt working now though, kept as a reminder to something."
 	icon_state = "brokenholodog"
 	item_state = "brokenholodog"
-
-
-

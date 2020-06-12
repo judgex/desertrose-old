@@ -1,6 +1,6 @@
 /obj/item/am_containment
-	name = "Deionised U-235"
-	desc = "Unstable, highly-reactive and radioactive Uranium Fuel."
+	name = "De-Ionised U-92"
+	desc = "Extremely unstable powerful and condensed Uranium extract. Capable of undergoing fusion at inane speeds."
 	icon = 'icons/obj/machines/antimatter.dmi'
 	icon_state = "jar"
 	density = FALSE

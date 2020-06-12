@@ -269,7 +269,7 @@
 	icon_state = "combat_coat"
 	item_state = "combat_coat"
 	desc = "A combat leather jacket, outfitted with a special armored leather coat."
-	armor = list("melee" = 35, "bullet" = 35, "laser" = 25, "energy" = 25, "bomb" = 30, "bio" = 0, "rad" = 0, "fire" = 30, "acid" = 35)
+	armor = list("melee" = 40, "bullet" = 43, "laser" = 40, "energy" = 35, "bomb" = 45, "bio" = 30, "rad" = 5, "fire" = 50, "acid" = 35)
 
 /obj/item/clothing/suit/armor/f13/leather_jacket/combat/riotpolice
 	name = "combat body armor"
@@ -356,7 +356,7 @@
 
 /obj/item/clothing/suit/armor/f13/raider/reinforced
 	name = "reinforced supa-fly raider armor"
-	armor = list("melee" = 40, "bullet" = 40, "laser" = 30, "energy" = 25, "bomb" = 35, "bio" = 0, "rad" = 0, "fire" = 30, "acid" = 30)
+	armor = list("melee" = 40, "bullet" = 40, "laser" = 35, "energy" = 25, "bomb" = 35, "bio" = 0, "rad" = 0, "fire" = 30, "acid" = 30)
 
 /obj/item/clothing/suit/armor/f13/raider/sadist
 	name = "sadist raider armor"
@@ -365,7 +365,7 @@
 /obj/item/clothing/suit/armor/f13/raider/sadist/reinforced
 	name = "reinforced sadist raider armor"
 	icon_state = "sadist"
-	armor = list("melee" = 40, "bullet" = 40, "laser" = 30, "energy" = 25, "bomb" = 35, "bio" = 0, "rad" = 0, "fire" = 30, "acid" = 30)
+	armor = list("melee" = 40, "bullet" = 40, "laser" = 35, "energy" = 25, "bomb" = 35, "bio" = 0, "rad" = 0, "fire" = 30, "acid" = 30)
 
 /obj/item/clothing/suit/armor/f13/raider/blastmaster
 	name = "blastmaster raider armor"
@@ -375,7 +375,7 @@
 
 /obj/item/clothing/suit/armor/f13/raider/blastmaster/reinforced
 	name = "reinforced blastmaster raider armor"
-	armor = list("melee" = 40, "bullet" = 40, "laser" = 30, "energy" = 25, "bomb" = 35, "bio" = 0, "rad" = 0, "fire" = 30, "acid" = 30)
+	armor = list("melee" = 40, "bullet" = 40, "laser" = 35, "energy" = 25, "bomb" = 35, "bio" = 0, "rad" = 0, "fire" = 30, "acid" = 30)
 
 /obj/item/clothing/suit/armor/f13/raider/yankee
 	name = "yankee raider armor"
@@ -386,7 +386,7 @@
 
 /obj/item/clothing/suit/armor/f13/raider/yankee/reinforced
 	name = "reinforced yankee raider armor"
-	armor = list("melee" = 40, "bullet" = 40, "laser" = 30, "energy" = 25, "bomb" = 35, "bio" = 0, "rad" = 0, "fire" = 30, "acid" = 30)
+	armor = list("melee" = 40, "bullet" = 40, "laser" = 35, "energy" = 25, "bomb" = 35, "bio" = 0, "rad" = 0, "fire" = 30, "acid" = 30)
 
 /obj/item/clothing/suit/armor/f13/badlands
 	name = "badlands raider armor"
@@ -395,7 +395,7 @@
 
 /obj/item/clothing/suit/armor/f13/badlands/reinforced
 	name = "reinforced badlands raider armor"
-	armor = list("melee" = 40, "bullet" = 40, "laser" = 30, "energy" = 25, "bomb" = 35, "bio" = 0, "rad" = 0, "fire" = 30, "acid" = 30)
+	armor = list("melee" = 40, "bullet" = 40, "laser" = 35, "energy" = 25, "bomb" = 35, "bio" = 0, "rad" = 0, "fire" = 30, "acid" = 30)
 
 /obj/item/clothing/suit/armor/f13/raider/painspike
 	name = "painspike raider armor"
@@ -1007,6 +1007,7 @@
 	item_state = "maxson_battlecoat"
 	body_parts_covered = CHEST
 	armor = list("melee" = 15, "bullet" = 10, "laser" = 15, "energy" = 0, "bomb" = 5, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
+	allowed = list(/obj/item/gun)
 
 /obj/item/clothing/suit/toggle/armor
 	allowed = null

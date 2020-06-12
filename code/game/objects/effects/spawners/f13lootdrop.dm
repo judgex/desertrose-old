@@ -715,7 +715,7 @@
 				/obj/item/ammo_box/a357
 	)
 	var/loot10 = list(
-				/obj/item/gun/energy/laser/pistol,
+				/obj/item/gun/energy/laser/wattz,
 				/obj/item/stock_parts/cell/ammo/ec,
 				""
 				)
@@ -752,7 +752,7 @@
 				)
 
 	var/loot5 = list(
-				/obj/item/gun/energy/laser/wattz,
+				/obj/item/gun/energy/laser/pistol,
 				/obj/item/stock_parts/cell/ammo/ec,
 				""
 				)
@@ -818,7 +818,7 @@
 				)
 
 	var/loot6 = list(
-				/obj/item/gun/energy/laser/aer9,
+				/obj/item/gun/energy/laser/aer14,
 				/obj/item/stock_parts/cell/ammo/mfc,
 				""
 				)
@@ -881,9 +881,9 @@
 				/obj/item/stock_parts/cell/ammo/ec,
 				)
 	var/loot16 = list(
-				/obj/item/gun/energy/ionrifle,
-				/obj/item/stock_parts/cell/ammo/mfc,
-				""
+				/obj/item/gun/energy/ionrifle/carbine,
+				/obj/item/stock_parts/cell/ammo/ec,
+				/obj/item/stock_parts/cell/ammo/ec,
 				)
 	var/loot17 = list(
 				/obj/item/gun/medbeam,
@@ -899,10 +899,12 @@
 	lootcount = 1
 
 	loot = list(
+				/obj/item/gun/energy/ionrifle,
 				/obj/item/gun/energy/laser/plasma,
 				/obj/item/gun/energy/laser/scatter,
 				/obj/item/gun/ballistic/revolver/sequoia/scoped,
-				/obj/item/gun/ballistic/automatic/bozar
+				/obj/item/gun/ballistic/automatic/bozar,
+				/obj/item/gun/ballistic/automatic/m72
 				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/unique //UNIQUE GUN
@@ -914,7 +916,8 @@
 				/obj/item/gun/ballistic/automatic/pistol/ninemil/maria,
 				/obj/item/gun/ballistic/shotgun/remington/scoped/paciencia,
 				/obj/item/gun/energy/laser/solar,
-				/obj/item/gun/energy/laser/plasma/alien
+				/obj/item/gun/energy/laser/plasma/alien,
+				/obj/item/gun/energy/laser/laer
 				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/random

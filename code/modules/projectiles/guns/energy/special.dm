@@ -1,13 +1,14 @@
 /obj/item/gun/energy/ionrifle
-	name = "ion rifle"
-	desc = "A man-portable anti-armor weapon designed to disable mechanical threats at range."
+	name = "\improper YK42B pulse rifle"
+	desc = "The YK42B rifle is an electrical pulse weapon that was developed by the Yuma Flats Energy Consortium. It excels in damage against heavily armored opponents, especially power armor."
 	icon_state = "ionrifle"
 	item_state = null	//so the human update icon uses the icon_state instead.
 	can_flashlight = 1
-	w_class = WEIGHT_CLASS_HUGE
+	w_class = WEIGHT_CLASS_BULKY
 	flags_1 =  CONDUCT_1
 	slot_flags = ITEM_SLOT_BACK
 	ammo_type = list(/obj/item/ammo_casing/energy/ion)
+	equipsound = 'sound/f13weapons/equipsounds/pulsequip.ogg'
 	ammo_x_offset = 3
 	flight_x_offset = 17
 	flight_y_offset = 9
@@ -16,21 +17,24 @@
 	return
 
 /obj/item/gun/energy/ionrifle/carbine
-	name = "ion carbine"
-	desc = "The MK.II Prototype Ion Projector is a lightweight carbine version of the larger ion rifle, built to be ergonomic and efficient."
+	name = "\improper YK32 pulse pistol"
+	desc = "The YK32 Pulse Pistol is an electrical pulse weapon that was developed by the Yuma Flats Energy Consortium, specifically excelling against mechanical and armored targets. Though powerful, the YK32 was never considered a practical weapon due to its inefficient energy usage and bulky design."
 	icon_state = "ioncarbine"
 	w_class = WEIGHT_CLASS_NORMAL
+	equipsound = 'sound/f13weapons/equipsounds/pulsepistolequip.ogg'
 	slot_flags = ITEM_SLOT_BELT
-	pin = null
+	ammo_type = list(/obj/item/ammo_casing/energy/ion/pistol)
 	ammo_x_offset = 2
 	flight_x_offset = 18
 	flight_y_offset = 11
+	cell_type = /obj/item/stock_parts/cell/ammo/ec
 
 /obj/item/gun/energy/decloner
 	name = "biological demolecularisor"
-	desc = "A weapon developed by horrible third parties that makes use of an FEV retro-strain to physically rupture skin and organ cells."
+	desc = "A weapon developed by horrible third parties that makes use of an energized FEV retro-strain to physically rupture epidermis and organ cells."
 	icon_state = "decloner"
 	ammo_type = list(/obj/item/ammo_casing/energy/declone)
+	equipsound = 'sound/f13weapons/equipsounds/declonequip.ogg'
 	pin = null
 	ammo_x_offset = 1
 

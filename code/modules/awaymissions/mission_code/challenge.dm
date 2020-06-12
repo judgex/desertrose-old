@@ -23,6 +23,9 @@
 	anchored = TRUE
 	density = TRUE
 	resistance_flags = INDESTRUCTIBLE | FIRE_PROOF | ACID_PROOF
+	projectile_sound = 'sound/weapons/marauder.ogg'
+	circuit = /obj/item/circuitboard/machine/emitter/siege
+	projectile_type = /obj/item/projectile/beam/emitter/siege
 
 	use_power = NO_POWER_USE
 	idle_power_usage = 0

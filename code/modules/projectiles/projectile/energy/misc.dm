@@ -1,9 +1,9 @@
 /obj/item/projectile/energy/declone
 	name = "FEV stream"
 	icon_state = "declone"
-	damage = 35
+	damage = 30
 	damage_type = CLONE
-	irradiate = 15
+	irradiate = 20
 	impact_effect_type = /obj/effect/temp_visual/impact_effect/green_laser
 
 /obj/item/projectile/energy/dart //ninja throwing dart

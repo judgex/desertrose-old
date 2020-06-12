@@ -24,6 +24,7 @@
 	gold_core_spawnable = HOSTILE_SPAWN
 	del_on_death = 1
 	deathmessage = "blows apart!"
+	var/isrobot = 1
 	loot = list(/obj/effect/decal/cleanable/robot_debris, /obj/item/stack/crafting/electronicparts/three)
 
 /mob/living/simple_animal/hostile/handy/Initialize()
