@@ -607,3 +607,21 @@ update_label("John Doe", "Clowny")
 	desc = "A BoS issue holotag, it isnt working now though, kept as a reminder to something."
 	icon_state = "brokenholodog"
 	item_state = "brokenholodog"
+
+///sec tags///
+
+/obj/item/card/id/sec
+	name = "red identification card"
+	desc = "A red card which shows dedication to the Security department."
+	icon_state = "sec"
+	item_state = "sec_id"
+	lefthand_file = 'icons/mob/inhands/equipment/idcards_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/equipment/idcards_righthand.dmi'
+
+/obj/item/card/id/chief
+	name = "crimson identification card"
+	desc = "A red card which shows dedication and leadership to the Vaults safety and security."
+	icon_state = "chief"
+	item_state = "sec_id"
+	lefthand_file = 'icons/mob/inhands/equipment/idcards_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/equipment/idcards_righthand.dm
