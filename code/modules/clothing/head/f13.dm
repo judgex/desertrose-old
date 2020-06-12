@@ -73,6 +73,14 @@
 	armor = list("melee" = 40, "bullet" = 25, "laser" = 15, "energy" = 10, "bomb" = 16, "bio" = 20, "rad" = 0, "fire" = 50, "acid" = 0)
 	flags_inv = HIDEEARS|HIDEHAIR
 
+/obj/item/clothing/head/helmet/f13/fiend_reinforced
+	name = "reinforced fiend helmet"
+	desc = "A leather cap cobbled together adorned with a bighorner skull, perfect for any drug-fueled frenzy. This helmet has been reinforced with metal plates under its skull"
+	icon_state = "fiend"
+	item_state = "fiend"
+	armor = list("melee" = 45, "bullet" = 30, "laser" = 20, "energy" = 10, "bomb" = 16, "bio" = 20, "rad" = 0, "fire" = 50, "acid" = 0)
+	flags_inv = HIDEEARS|HIDEHAIR
+
 /obj/item/clothing/head/helmet/f13/vaquerohat
 	name = "vaquero hat"
 	desc = "An old sombrero worn by Vaqueros to keep off the harsh sun."

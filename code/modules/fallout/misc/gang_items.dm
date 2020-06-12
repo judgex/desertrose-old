@@ -183,7 +183,7 @@
 /datum/gang_item/equipment/emp
 	name = "EMP Grenade"
 	id = "EMP"
-	cost = 130
+	cost = 95
 	item_path = /obj/item/grenade/empgrenade
 
 /datum/gang_item/equipment/necklace
