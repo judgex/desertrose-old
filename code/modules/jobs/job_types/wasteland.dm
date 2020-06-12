@@ -124,7 +124,8 @@ Raider
 	/datum/outfit/loadout/raider_ncr,
 	/datum/outfit/loadout/raider_legion,
 	/datum/outfit/loadout/raider_sheriff,
-	/datum/outfit/loadout/raider_vault)
+	/datum/outfit/loadout/raider_vault,
+	/datum/outfit/loadout/raider_mafia)
 
 /datum/outfit/job/wasteland/f13raider
 	name = "Raider"
@@ -271,7 +272,7 @@ Raider
 
 /datum/outfit/loadout/raider_bos
 	name = "Brotherhood Exile"
-	suit = /obj/item/clothing/suit/armor/f13/combat/brotherhood
+	suit = /obj/item/clothing/suit/armor/f13/exile/bosexile
 	id = /obj/item/card/id/rusted/brokenholodog
 	backpack_contents = list(
 		/obj/item/gun/energy/laser/pistol=1,
@@ -279,7 +280,8 @@ Raider
 
 /datum/outfit/loadout/raider_ncr
 	name = "NCR Deserter"
-	suit = /obj/item/clothing/suit/armor/f13/ncrarmor/mantle
+	suit = /obj/item/clothing/suit/armor/f13/exile
+	uniform = /obj/item/clothing/under/f13/exile
 	id = /obj/item/card/id/rusted
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/marksman/servicerifle=1,
@@ -287,7 +289,8 @@ Raider
 
 /datum/outfit/loadout/raider_legion
 	name = "Punished Legionnaire"
-	suit = /obj/item/clothing/suit/armor/f13/legion/prime
+	suit = /obj/item/clothing/suit/armor/f13/exile/legexile
+	uniform = /obj/item/clothing/under/f13/exile/legion
 	id = /obj/item/card/id/rusted/rustedmedallion
 	backpack_contents = list(
 		/obj/item/claymore/machete/gladius=1,
@@ -298,14 +301,28 @@ Raider
 	name = "Dark Sheriff"
 	suit = /obj/item/clothing/suit/armor/vest/leather
 	uniform = /obj/item/clothing/under/syndicate/tacticool
+	head = /obj/item/clothing/head/helmet/f13/brahmincowboyhat
 	backpack_contents = list(
 		/obj/item/gun/ballistic/revolver/m29/alt=1,
-		/obj/item/ammo_box/m44=2)
+		/obj/item/ammo_box/m44=2,
+		/obj/item/gun/ballistic/shotgun/automatic/hunting/cowboy=1,
+		/obj/item/ammo_box/tube/a357=2)
+
+/datum/outfit/loadout/raider_mafia
+    name = "Town Mafia"
+    suit = /obj/item/clothing/suit/armor/f13/leather_jacket
+    uniform = /obj/item/clothing/under/f13/bennys
+    glasses = /obj/item/clothing/glasses/sunglasses
+    shoes =/obj/item/clothing/shoes/f13/fancy
+    backpack_contents = list(
+        /obj/item/gun/ballistic/automatic/pistol/ninemil/maria=1,
+        /obj/item/ammo_box/magazine/m9mm=2,
+        /obj/item/toy/cards/deck=1)
 
 /datum/outfit/loadout/raider_vault
 	name = "Vault Outcast"
 	suit = /obj/item/clothing/suit/armor/f13/leatherarmor
-	uniform = /obj/item/clothing/under/f13/vault
+	uniform = /obj/item/clothing/under/f13/exile/vault
 	id = /obj/item/card/id/rusted/fadedvaultid
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/pistol/n99=1,

@@ -356,7 +356,7 @@
 
 /obj/item/clothing/suit/armor/f13/raider/reinforced
 	name = "reinforced supa-fly raider armor"
-	armor = list("melee" = 40, "bullet" = 40, "laser" = 30, "energy" = 25, "bomb" = 35, "bio" = 0, "rad" = 0, "fire" = 30, "acid" = 30)
+	armor = list("melee" = 40, "bullet" = 40, "laser" = 35, "energy" = 25, "bomb" = 35, "bio" = 0, "rad" = 0, "fire" = 30, "acid" = 30)
 
 /obj/item/clothing/suit/armor/f13/raider/sadist
 	name = "sadist raider armor"
@@ -365,7 +365,7 @@
 /obj/item/clothing/suit/armor/f13/raider/sadist/reinforced
 	name = "reinforced sadist raider armor"
 	icon_state = "sadist"
-	armor = list("melee" = 40, "bullet" = 40, "laser" = 30, "energy" = 25, "bomb" = 35, "bio" = 0, "rad" = 0, "fire" = 30, "acid" = 30)
+	armor = list("melee" = 40, "bullet" = 40, "laser" = 35, "energy" = 25, "bomb" = 35, "bio" = 0, "rad" = 0, "fire" = 30, "acid" = 30)
 
 /obj/item/clothing/suit/armor/f13/raider/blastmaster
 	name = "blastmaster raider armor"
@@ -375,7 +375,7 @@
 
 /obj/item/clothing/suit/armor/f13/raider/blastmaster/reinforced
 	name = "reinforced blastmaster raider armor"
-	armor = list("melee" = 40, "bullet" = 40, "laser" = 30, "energy" = 25, "bomb" = 35, "bio" = 0, "rad" = 0, "fire" = 30, "acid" = 30)
+	armor = list("melee" = 40, "bullet" = 40, "laser" = 35, "energy" = 25, "bomb" = 35, "bio" = 0, "rad" = 0, "fire" = 30, "acid" = 30)
 
 /obj/item/clothing/suit/armor/f13/raider/yankee
 	name = "yankee raider armor"
@@ -386,7 +386,7 @@
 
 /obj/item/clothing/suit/armor/f13/raider/yankee/reinforced
 	name = "reinforced yankee raider armor"
-	armor = list("melee" = 40, "bullet" = 40, "laser" = 30, "energy" = 25, "bomb" = 35, "bio" = 0, "rad" = 0, "fire" = 30, "acid" = 30)
+	armor = list("melee" = 40, "bullet" = 40, "laser" = 35, "energy" = 25, "bomb" = 35, "bio" = 0, "rad" = 0, "fire" = 30, "acid" = 30)
 
 /obj/item/clothing/suit/armor/f13/badlands
 	name = "badlands raider armor"
@@ -395,7 +395,7 @@
 
 /obj/item/clothing/suit/armor/f13/badlands/reinforced
 	name = "reinforced badlands raider armor"
-	armor = list("melee" = 40, "bullet" = 40, "laser" = 30, "energy" = 25, "bomb" = 35, "bio" = 0, "rad" = 0, "fire" = 30, "acid" = 30)
+	armor = list("melee" = 40, "bullet" = 40, "laser" = 35, "energy" = 25, "bomb" = 35, "bio" = 0, "rad" = 0, "fire" = 30, "acid" = 30)
 
 /obj/item/clothing/suit/armor/f13/raider/painspike
 	name = "painspike raider armor"
