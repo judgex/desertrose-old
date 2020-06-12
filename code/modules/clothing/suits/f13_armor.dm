@@ -210,3 +210,9 @@
 	desc = "A modified detoriated armor kit consisting of Legion gear and scrap metal."
 	icon_state = "legexile"
 	item_state = "legexile"
+
+/obj/item/clothing/suit/armor/f13/exile/bosexile
+	name = "modified Brotherhood armor"
+	desc = "A modified detoriated armor kit consisting of brotherhood combat armor and scrap metal."
+	icon_state = "brotherhoodexile"
+	item_state = "brotherhoodexile"
