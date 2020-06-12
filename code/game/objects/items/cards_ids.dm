@@ -111,7 +111,7 @@
 
 /obj/item/card/id
 	name = "identification card"
-	desc = "A card used to provide ID and determine access across the station."
+	desc = "A card used to provide ID and determine access across the Vault."
 	var/id_type = "ID Card"
 	icon_state = "id"
 	item_state = "card-id"
@@ -201,6 +201,22 @@ update_label("John Doe", "Clowny")
 	icon_state = "silver"
 	item_state = "silver_id"
 	id_type = "mayoral permit"
+
+/obj/item/card/id/sec
+	name = "red identification card"
+	desc = "A red card which shows dedication to the Security department."
+	icon_state = "sec"
+	item_state = "sec_id"
+	lefthand_file = 'icons/mob/inhands/equipment/idcards_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/equipment/idcards_righthand.dmi'
+
+/obj/item/card/id/chief
+	name = "crimson identification card"
+	desc = "A red card which shows dedication and leadership to the Vaults safety and security."
+	icon_state = "chief"
+	item_state = "sec_id"
+	lefthand_file = 'icons/mob/inhands/equipment/idcards_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/equipment/idcards_righthand.dmi'
 
 /obj/item/card/id/dendoctor
 	name = "doctor's name badge"
