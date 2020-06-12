@@ -279,7 +279,8 @@ Raider
 
 /datum/outfit/loadout/raider_ncr
 	name = "NCR Deserter"
-	suit = /obj/item/clothing/suit/armor/f13/ncrarmor/mantle
+	suit = /obj/item/clothing/suit/armor/f13/exile
+	uniform = /obj/item/clothing/under/f13/exile
 	id = /obj/item/card/id/rusted
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/marksman/servicerifle=1,
@@ -287,7 +288,8 @@ Raider
 
 /datum/outfit/loadout/raider_legion
 	name = "Punished Legionnaire"
-	suit = /obj/item/clothing/suit/armor/f13/legion/prime
+	suit = /obj/item/clothing/suit/armor/f13/exile/legexile
+	uniform = /obj/item/clothing/under/f13/exile/legion
 	id = /obj/item/card/id/rusted/rustedmedallion
 	backpack_contents = list(
 		/obj/item/claymore/machete/gladius=1,
@@ -305,7 +307,7 @@ Raider
 /datum/outfit/loadout/raider_vault
 	name = "Vault Outcast"
 	suit = /obj/item/clothing/suit/armor/f13/leatherarmor
-	uniform = /obj/item/clothing/under/f13/vault
+	uniform = /obj/item/clothing/under/f13/exile/vault
 	id = /obj/item/card/id/rusted/fadedvaultid
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/pistol/n99=1,
