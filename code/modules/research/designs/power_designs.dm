@@ -46,6 +46,17 @@
 	category = list("Misc","Power Designs")
 	departmental_flags = DEPARTMENTAL_FLAG_SCIENCE | DEPARTMENTAL_FLAG_ENGINEERING
 
+/datum/design/inducer_cell
+	name = "Field Charger Power Cell"
+	desc = "A power cell that holds 15 MJ of energy."
+	id = "inducer_cell"
+	build_type = PROTOLATHE | MECHFAB
+	materials = list(MAT_METAL = 700, MAT_GOLD = 150, MAT_SILVER = 150, MAT_GLASS = 80)
+	construction_time=100
+	build_path = /obj/item/stock_parts/cell/inducer_supply
+	category = list("Misc","Power Designs")
+	departmental_flags = DEPARTMENTAL_FLAG_SCIENCE | DEPARTMENTAL_FLAG_ENGINEERING
+
 /datum/design/bluespace_cell
 	name = "Bluespace Power Cell"
 	desc = "A power cell that holds 40 MJ of energy."

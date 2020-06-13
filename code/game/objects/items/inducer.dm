@@ -73,7 +73,7 @@
 			opened = FALSE
 			update_icon()
 			return
-	if(istype(W, /obj/item/stock_parts/cell))
+	if(istype(W, /obj/item/stock_parts/cell/inducer_supply))
 		if(opened)
 			if(!cell)
 				if(!user.transferItemToLoc(W, src))
@@ -105,7 +105,7 @@
 	var/obj/O
 	var/coefficient = 1
 	if(istype(A, /obj/item/gun/energy))
-		to_chat(user,"Error unable to interface with device")
+		to_chat(user,"Error: unable to interface with device")
 		return FALSE
 	if(istype(A, /obj))
 		O = A

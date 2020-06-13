@@ -268,7 +268,7 @@ Raider
 		/obj/item/storage/box/beanbag=1,
 		/obj/item/claymore/machete/pipe/tireiron=1,
 		/obj/item/claymore/machete/pipe/pan=1,
-		/obj/item/reagent_containers/spray/cyborg_lube=1)
+		/obj/item/grenade/chem_grenade/cleaner=1)
 
 /datum/outfit/loadout/raider_bos
 	name = "Brotherhood Exile"

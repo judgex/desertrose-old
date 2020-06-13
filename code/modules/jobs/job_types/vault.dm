@@ -113,7 +113,7 @@ Head of Security
 	name = "Chief of Security"
 	jobtype = /datum/job/vault/f13hos
 
-	id = /obj/item/card/id/silver
+	id = /obj/item/card/id/chief
 	//pda
 	ears = 			/obj/item/radio/headset/headset_vault_hos/alt
 	uniform = 		/obj/item/clothing/under/f13/vault13
@@ -325,6 +325,7 @@ Security Officer
 	name = "Vault-tec Security"
 	jobtype = /datum/job/vault/f13officer
 
+	id = /obj/item/card/id/sec
 	//pda
 	ears = 			/obj/item/radio/headset/headset_vaultsec
 	uniform = 		/obj/item/clothing/under/f13/vault13
