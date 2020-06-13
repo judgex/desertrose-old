@@ -746,7 +746,7 @@
 	desc = "This power armor helmet is so decrepit and battle-worn that it have lost most of its capability to protect the wearer from harm, no longer acting as a power helmet it is no more than a heavy metal helmet."
 	icon_state = "brokenhelmet"
 	item_state = "brokenhelmet"
-	armor = list("melee" = 50, "bullet" = 39, "laser" = 25, "energy" = 25, "bomb" = 39, "bio" = 0, "rad" = 50, "fire" = 0, "acid" = 0)
+	armor = list("melee" = 50, "bullet" = 45, "laser" = 25, "energy" = 25, "bomb" = 39, "bio" = 0, "rad" = 50, "fire" = 0, "acid" = 0)
 	flash_protect = 0
 
 /obj/item/clothing/head/helmet/f13/brokenpa/t45b
@@ -754,9 +754,16 @@
 	desc = "This power armor helmet is so decrepit and battle-worn that it have lost most of its capability to protect the wearer from harm, no longer acting as a power helmet it is no more than a heavy metal helmet."
 	icon_state = "t45bhelmet"
 	item_state = "t45bhelmet"
-	armor = list("melee" = 50, "bullet" = 39, "laser" = 25, "energy" = 25, "bomb" = 39, "bio" = 0, "rad" = 50, "fire" = 0, "acid" = 0)
+	armor = list("melee" = 50, "bullet" = 45, "laser" = 25, "energy" = 25, "bomb" = 39, "bio" = 0, "rad" = 50, "fire" = 0, "acid" = 0)
 	flash_protect = 0
 
+/obj/item/clothing/head/helmet/f13/brokenpa/raiderpa_helm
+	name = "raider T-45b power helmet"
+	desc = "This power armor helmet is so decrepit and battle-worn that it have lost most of its capability to protect the wearer from harm. This helmet seems to be heavily modified, heavy metal banding fused to the helmet"
+	icon_state = "raiderpa_helm"
+	item_state = "raiderpa_helm"
+	armor = list("melee" = 50, "bullet" = 45, "laser" = 25, "energy" = 25, "bomb" = 39, "bio" = 0, "rad" = 50, "fire" = 0, "acid" = 0)
+	flash_protect = 0
 //Power armor helmets
 
 /obj/item/clothing/head/helmet/power_armor

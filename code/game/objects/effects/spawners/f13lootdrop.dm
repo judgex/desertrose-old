@@ -332,6 +332,10 @@
 				/obj/item/clothing/suit/armor/f13/combat/mk2,
 				/obj/item/clothing/head/helmet/f13/combat/mk2
 				)
+	var/loot4 = list(
+				/obj/item/clothing/suit/armor/f13/brokenpa/raiderpa,
+				/obj/item/clothing/head/helmet/f13/brokenpa/raiderpa_helm
+				)
 
 /obj/effect/spawner/lootdrop/f13/armor/tier4/Initialize(mapload) //on mapload, pick what shit to spawn
 	loot = pick(loot1, loot2, loot3)
