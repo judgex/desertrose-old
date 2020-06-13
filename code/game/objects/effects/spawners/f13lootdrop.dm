@@ -715,7 +715,7 @@
 				/obj/item/ammo_box/a357
 	)
 	var/loot10 = list(
-				/obj/item/gun/energy/laser/wattz,
+				/obj/item/gun/energy/laser/pistol,
 				/obj/item/stock_parts/cell/ammo/ec,
 				""
 				)
@@ -752,7 +752,7 @@
 				)
 
 	var/loot5 = list(
-				/obj/item/gun/energy/laser/pistol,
+				/obj/item/gun/energy/laser/wattz,
 				/obj/item/stock_parts/cell/ammo/ec,
 				""
 				)
@@ -818,7 +818,7 @@
 				)
 
 	var/loot6 = list(
-				/obj/item/gun/energy/laser/aer14,
+				/obj/item/gun/energy/laser/aer9,
 				/obj/item/stock_parts/cell/ammo/mfc,
 				""
 				)
@@ -881,9 +881,9 @@
 				/obj/item/stock_parts/cell/ammo/ec,
 				)
 	var/loot16 = list(
-				/obj/item/gun/energy/ionrifle/carbine,
-				/obj/item/stock_parts/cell/ammo/ec,
-				/obj/item/stock_parts/cell/ammo/ec,
+				/obj/item/gun/energy/ionrifle,
+				/obj/item/stock_parts/cell/ammo/mfc,
+				""
 				)
 	var/loot17 = list(
 				/obj/item/gun/medbeam,
@@ -899,12 +899,10 @@
 	lootcount = 1
 
 	loot = list(
-				/obj/item/gun/energy/ionrifle,
 				/obj/item/gun/energy/laser/plasma,
 				/obj/item/gun/energy/laser/scatter,
 				/obj/item/gun/ballistic/revolver/sequoia/scoped,
-				/obj/item/gun/ballistic/automatic/bozar,
-				/obj/item/gun/ballistic/automatic/m72
+				/obj/item/gun/ballistic/automatic/bozar
 				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/unique //UNIQUE GUN
@@ -916,8 +914,7 @@
 				/obj/item/gun/ballistic/automatic/pistol/ninemil/maria,
 				/obj/item/gun/ballistic/shotgun/remington/scoped/paciencia,
 				/obj/item/gun/energy/laser/solar,
-				/obj/item/gun/energy/laser/plasma/alien,
-				/obj/item/gun/energy/laser/laer
+				/obj/item/gun/energy/laser/plasma/alien
 				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/random
@@ -1057,30 +1054,24 @@
 				/obj/item/poster/random_official,
 				/obj/item/multitool,
 				/obj/item/cigbutt/cigarbutt,
-				/obj/item/trash/sosjerky,
 				/obj/item/razor,
 				/obj/item/candle,
 				/obj/item/rollingpaper,
 				/obj/item/trash/coal,
-				/obj/item/trash/pistachios,
 				/obj/item/soap/homemade,
 				/obj/item/bikehorn,
 				/obj/item/stack/cable_coil/random,
 				/obj/item/stack/medical/bruise_pack,
 				/obj/item/trash/popcorn,
-				/obj/item/trash/syndi_cakes,
 				/obj/item/valentine,
 				/obj/item/taperecorder,
-				/obj/item/trash/can,
 				/obj/item/bikehorn/airhorn,
 				/obj/item/tape/random,
-				/obj/item/trash/candy,
 				/obj/item/stack/medical/gauze,
 				/obj/item/trash/plate,
 				/obj/item/storage/box/snappops,
 				/obj/item/bikehorn/rubberducky,
 				/obj/item/stack/packageWrap,
-				/obj/item/dildo,
 				/obj/item/storage/box/matches,
 				/obj/item/reagent_containers/food/snacks/deadmouse,
 				/obj/item/toner,
@@ -1091,7 +1082,6 @@
 				/obj/item/storage/belt/fannypack/black,
 				/obj/item/camera,
 				/obj/item/bodypart/l_arm,
-				/obj/item/trash/can,
 				/obj/item/toy/dummy,
 				/obj/item/toy/eightball,
 				/obj/item/toy/cards/deck,
@@ -1120,6 +1110,19 @@
 
 	loot = list(
 				/obj/item/storage/box/ingredients/american,
+				/obj/item/reagent_containers/food/snacks/f13/crisps,
+				/obj/item/reagent_containers/food/snacks/f13/crisps,
+				/obj/item/reagent_containers/food/snacks/f13/bubblegum,
+				/obj/item/reagent_containers/food/snacks/f13/cram,
+				/obj/item/reagent_containers/food/snacks/f13/yumyum,
+				/obj/item/reagent_containers/food/snacks/f13/fancylads,
+				/obj/item/reagent_containers/food/snacks/f13/sugarbombs,
+				/obj/item/reagent_containers/food/snacks/cheesiehonkers,
+				/obj/item/reagent_containers/food/snacks/f13/steak,
+				/obj/item/reagent_containers/food/snacks/f13/dandyapples,
+				/obj/item/reagent_containers/food/snacks/f13/blamco,
+				/obj/item/reagent_containers/food/snacks/f13/instamash ,
+				/obj/item/reagent_containers/food/snacks/f13/porknbeans,
 				/obj/item/storage/box/ingredients/carnivore,
 				/obj/item/storage/box/ingredients/delights,
 				/obj/item/storage/box/ingredients/exotic,
@@ -1156,10 +1159,7 @@
 				/obj/item/reagent_containers/food/snacks/meat/slab/meatproduct,
 				/obj/item/reagent_containers/food/snacks/muffin/berry,
 				/obj/item/reagent_containers/food/snacks/muffin,
-				/obj/item/reagent_containers/food/snacks/no_raisin,
-				/obj/item/reagent_containers/food/snacks/popcorn,
 				/obj/item/reagent_containers/food/snacks/raisincookie,
-				/obj/item/reagent_containers/food/snacks/sosjerky,
 				/obj/item/reagent_containers/food/snacks/sausage,
 				/obj/item/reagent_containers/food/snacks/store/cheesewheel,
 				"" // a chance to spawn nothing
@@ -1198,22 +1198,17 @@
 	loot = list(
 				/obj/item/reagent_containers/food/drinks/beer,
 				/obj/item/reagent_containers/food/drinks/ale,
-				/obj/item/reagent_containers/food/drinks/soda_cans/thirteenloko,
 				/obj/item/reagent_containers/food/drinks/bottle/gin,
 				/obj/item/reagent_containers/food/drinks/bottle/hcider,
 				/obj/item/reagent_containers/food/drinks/bottle/whiskey,
 				/obj/item/reagent_containers/food/drinks/bottle/vodka,
-				/obj/item/reagent_containers/food/drinks/bottle/vodka/badminka,
 				/obj/item/reagent_containers/food/drinks/bottle/tequila,
-				/obj/item/reagent_containers/food/drinks/bottle/patron,
 				/obj/item/reagent_containers/food/drinks/bottle/rum,
 				/obj/item/reagent_containers/food/drinks/bottle/vermouth,
 				/obj/item/reagent_containers/food/drinks/bottle/kahlua,
-				/obj/item/reagent_containers/food/drinks/bottle/goldschlager,
 				/obj/item/reagent_containers/food/drinks/bottle/cognac,
 				/obj/item/reagent_containers/food/drinks/bottle/wine,
 				/obj/item/reagent_containers/food/drinks/bottle/absinthe,
-				/obj/item/reagent_containers/food/drinks/bottle/absinthe/premium,
 				/obj/item/reagent_containers/food/drinks/bottle/lizardwine,
 				/obj/item/reagent_containers/food/drinks/bottle/hcider,
 				/obj/item/reagent_containers/food/drinks/bottle/grappa,
@@ -1372,18 +1367,17 @@
 			)
 
 /obj/effect/spawner/lootdrop/f13/deadrodent_or_brainwashdisk
-	name = "98% chance of deceased rodent"
+	name = "100% chance of deceased rodent"
 	loot = list(
-		/obj/item/reagent_containers/food/snacks/deadmouse = 49,
-/obj/item/disk/surgery/brainwashing = 1)
+		/obj/item/reagent_containers/food/snacks/deadmouse = 50)
 
 /obj/effect/spawner/lootdrop/f13/traitbooks
 	name = "trait book spawner"
 	lootcount = 1
 	loot = list(/obj/item/book/granter/trait/chemistry = 10,
 	/obj/item/book/granter/trait/trekking = 10,
-	/obj/item/book/granter/trait/pa_wear = 5,
-	/obj/item/book/granter/trait/gunsmith_one = 35,
+	/obj/item/book/granter/trait/pa_wear = 1,
+	/obj/item/book/granter/trait/gunsmith_one = 50,
 	/obj/item/book/granter/trait/gunsmith_two = 20,
 	/obj/item/book/granter/trait/gunsmith_three = 10,
 	/obj/item/book/granter/trait/gunsmith_four = 10)
@@ -1404,3 +1398,4 @@
 		/obj/item/clothing/suit/armor/f13/power_armor/tesla,
 		/obj/item/clothing/suit/armor/f13/combat/mk2
 	)
+
