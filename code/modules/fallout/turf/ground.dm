@@ -191,6 +191,7 @@
 			(locate(/obj/structure) in src) || \
 			(locate(/obj/machinery) in src) ))
 		plantShrooms()
+	/* Sadly doesnt work. Will try to get it to work someday -JJPark
 	for(var/direction in GLOB.cardinals)
 		var/turf/turf_to_check = get_step(src, direction)
 		if(istype(turf_to_check, /turf/open/water))
@@ -205,6 +206,7 @@
 				if(WEST)
 					rock_side.pixel_x -= 32
 			overlays += rock_side
+	*/
 
 /turf/open/indestructible/ground/inside/mountain/proc/plantShrooms()
 	if(prob(SHROOM_SPAWN_GROUND))
@@ -221,6 +223,7 @@
 	icon_state = "railsnone"
 	icon = 'icons/fallout/turfs/ground.dmi'
 
+/* It doesnt work for some reason. Keeping it here if Ill ever fix it or someone else -JJPark
 /turf/open/indestructible/ground/inside/subway/Initialize()
 	. = ..()
 	for(var/direction in GLOB.cardinals)
@@ -237,3 +240,4 @@
 				if(WEST)
 					rock_side.pixel_x -= 32
 			overlays += rock_side
+*/
