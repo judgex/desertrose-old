@@ -72,6 +72,8 @@
 			var/obj/item/stack/sheet/mineral/wood/W = I
 			var/obj/item/stack/sheet/cloth/C = I
 			var/obj/item/stack/sheet/leather/L = I //???
+			var/obj/item/stack/sheet/glass/G = I
+			var/obj/item/stack/sheet/rglass/M = I
 			if(W.amount >= 3)
 				to_chat(user, "<span class='notice'>You start building a wall...</span>")
 				if(do_after(user, 100, target = src) && W.use(3))
@@ -93,10 +95,24 @@
 					T.ChangeTurf(/turf/closed/wall/f13/wood/house)
 					qdel(src)
 					return TRUE
+			if(G.amount >= 3)
+				to_chat(user, "<span class='notice'>You start building a house window...</span>")
+				if(do_after(user, 100, target = src) && G.use(3))
+					var/turf/open/T = loc
+					new /obj/structure/window/fulltile/house(T)
+					qdel(src)
+					return TRUE
+			if(M.amount >= 3)
+				to_chat(user, "<span class='notice'>You start building a wood framed window...</span>")
+				if(do_after(user, 100, target = src) && M.use(3))
+					var/turf/open/T = loc
+					new /obj/structure/window/fulltile/wood(T)
+					qdel(src)
+					return TRUE
 			else
-				to_chat(user, "<span class='warning'>You need atleast 3 materials to build a wall!</span>")
+				to_chat(user, "<span class='warning'>You need atleast 3 materials to build a structure!</span>")
 		else
-			to_chat(user, "<span class='warning'>You can only build a wall on a solid floor!</span>")
+			to_chat(user, "<span class='warning'>You can only build the structure on a solid floor!</span>")
 	else
 		return ..()
 

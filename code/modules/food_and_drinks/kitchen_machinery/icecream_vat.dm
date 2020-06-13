@@ -36,7 +36,7 @@
 		if(ICECREAM_STRAWBERRY)
 			return list("milk", "ice", "berryjuice")
 		if(ICECREAM_BLUE)
-			return list("milk", "ice", "")
+			return list("milk", "ice", "bawls")
 		if(CONE_WAFFLE)
 			return list("flour", "sugar")
 		if(CONE_CHOC)

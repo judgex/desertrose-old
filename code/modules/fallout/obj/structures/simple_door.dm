@@ -17,7 +17,7 @@
 	layer = CLOSED_DOOR_LAYER
 	explosion_block = 0.5
 	var/can_hold_padlock = FALSE
-	var/obj/item/lock/padlock
+	var/obj/item/lock_construct/padlock
 	var/door_type = "house"
 	var/opaque = 1
 	var/manual_opened = 0
@@ -43,15 +43,18 @@
 		padlock = null
 	return ..()
 
-/obj/structure/simple_door/proc/attach_padlock(var/obj/item/lock/P, force = FALSE)
-	if(!force && (!can_hold_padlock || !P || !P.open || !P.id))
+/obj/structure/simple_door/proc/attach_padlock(var/obj/item/lock_construct/P, force = FALSE, mob/user)
+	if(!force && (!can_hold_padlock || !P ))
+		return FALSE
+	if(padlock)
+		to_chat(user, "[src] already has \a [padlock] attached")
 		return FALSE
 	padlock = P
 	padlock.forceMove(src)
 	add_cached_overlay("padlock", "[initial(icon_state)]_padlock")
 
 /obj/structure/simple_door/proc/remove_padlock(force = FALSE)
-	if(!force && (!padlock || !padlock.open))
+	if(!force && (!padlock))
 		return FALSE
 	padlock.forceMove(get_turf(src))
 	padlock = null
@@ -95,10 +98,26 @@
 	moving = 0
 	layer = CLOSED_DOOR_LAYER
 
+/* can crowbar off a lock, to force a door open. This is overriden in airlock so shouldnt be an issue */
+/obj/structure/simple_door/proc/try_to_crowbar(obj/item/I, mob/user)
+	if(padlock) /* attempt to pry the lock off */
+		if(padlock.pry_off(user,src))
+			qdel(padlock)
+			padlock = null
+			src.desc = "[initial(desc)]"
+	return
+
 /obj/structure/simple_door/proc/SwitchState(animate)
 	if(density)
-		if(!padlock)
+		if(padlock)
+			if(!padlock.locked)
+				Open(animate)
+			else
+				playsound(src.loc, pick('sound/f13items/door_knock1.wav', 'sound/f13items/door_knock2.wav', 'sound/f13items/door_knock3.wav', 'sound/f13items/door_knock4.wav'), 80, 0, 0)
+
+		else
 			Open(animate)
+
 	else
 		var/turf/T = get_turf(src)
 		for(var/mob/living/L in T)
@@ -107,55 +126,60 @@
 	return 1
 
 /obj/structure/simple_door/attackby(obj/item/weapon/I, mob/living/user, params)
+	if(user.a_intent != INTENT_HARM && (istype(I, /obj/item/crowbar) || istype(I, /obj/item/twohanded/fireaxe)))
+		try_to_crowbar(I, user)
+		return TRUE
 	if(!istype(I, /obj/item/stack/sheet/mineral/wood))
 		for(var/obj/structure/barricade/wooden/planks/P in loc)
 			P.attackby(I, user, params)
 			return TRUE
-	if(istype(I, /obj/item/screwdriver) && can_disasemble && do_after(user, 5, target = src))
+	if(istype(I, /obj/item/screwdriver))
 		if(padlock)
 			to_chat(user, "<span class='warning'>Remove padlock before door dissasembling.</span>")
-		for(var/i = 1, i <= material_count, i++)
-			new material_type(get_turf(src))
-		to_chat(user,"<span class='notice'>You disassemble [name].</span>")
-		playsound(loc, 'sound/items/Screwdriver.ogg', 25, -3)
-		qdel(src)
-		return 1
-	if(istype(I, /obj/item/storage/keys_set))
+			return 1
+		else
+			if(can_disasemble && do_after(user, 60, target = src))
+				for(var/i = 1, i <= material_count, i++)
+					new material_type(get_turf(src))
+				to_chat(user,"<span class='notice'>You disassemble [name].</span>")
+				playsound(loc, 'sound/items/Screwdriver.ogg', 25, -3)
+				qdel(src)
+				return 1
+/*	if(istype(I, /obj/item/storage/keys_set))
 		var/obj/item/storage/keys_set/S = I
 		if(padlock)
-			var/obj/item/door_key/K = S.get_key_with_id(padlock.id)
+			var/obj/item/key/K = S.get_key_with_id(padlock.id)
 			if(istype(K))
 				I = K
 		if(istype(user.get_inactive_held_item(), /obj/item/lock))
 			var/obj/item/lock/L = user.get_inactive_held_item()
-			var/obj/item/door_key/K = S.get_key_with_id(L.id)
+			var/obj/item/key/K = S.get_key_with_id(L.id)
 			if(istype(K))
 				I = K
-	if(istype(I, /obj/item/lock) && can_hold_padlock)
-		var/obj/item/lock/P = I
-		P.forceMove(drop_location())
-		attach_padlock(P)
-		return 1
-	if(istype(I, /obj/item/door_key))
+				*/
+				//I'll deal with that shit later -harcourt
+	if(istype(I, /obj/item/lock_construct) && can_hold_padlock)
 		if(padlock)
-			var/obj/item/door_key/K = I
-			padlock.attackby(K, user, params)
-			if(padlock.open)
-				var/obj/item/P = padlock
-				remove_padlock(padlock)
-				user.put_in_hands(P)
-			return 1
-		if(ishuman(user))
-			var/mob/living/carbon/human/H = user
-			var/obj/item/lock/P = H.get_inactive_held_item()
-			if(istype(P))
-				P.forceMove(drop_location())
-				attach_padlock(P)
-				P.attackby(I, user, params)
-				return 1
+			to_chat(user, "[src] already has \a [padlock] attached")
+			return
+		else
+			if(user.transferItemToLoc(I, src))
+				user.visible_message("<span class='notice'>[user] adds [I] to [src].</span>", \
+								 "<span class='notice'>You add [I] to [src].</span>")
+				if (istype(I, /obj/item/lock_construct))
+					desc = "[src.desc] Has a lock."//Fuck it im not doing this bullshit tonight. This will do. :) -with love, harcourt
+				padlock = I
+	if(istype(I, /obj/item/key))
+		if(!padlock)
+			to_chat(user, "[src] has no lock attached")
+			return
+		else
+			return padlock.check_key(I,user)
 	if(user.a_intent == INTENT_HARM)
 		return ..()
 	attack_hand(user)
+
+
 
 /obj/structure/simple_door/proc/TryToSwitchState(atom/user, animate)
 	if(moving)
@@ -180,15 +204,6 @@
 	return 0
 
 /obj/structure/simple_door/attack_hand(mob/user)
-	if(padlock)
-		if(padlock.open)
-			var/obj/item/P = padlock
-			remove_padlock()
-			user.put_in_hands(P)
-		else
-			if(!istype(src, /obj/structure/simple_door/metal))
-				playsound(src.loc, pick('sound/f13items/door_knock1.wav', 'sound/f13items/door_knock2.wav', 'sound/f13items/door_knock3.wav', 'sound/f13items/door_knock4.wav'), 80, 0, 0)
-		return
 	if(TryToSwitchState(user, 1) && !density)
 		manual_opened = 1
 	user.changeNext_move(CLICK_CD_MELEE)
@@ -196,13 +211,6 @@
 
 
 /obj/structure/simple_door/attack_tk(mob/user)
-	if(padlock)
-		if(padlock.open)
-			remove_padlock()
-		else
-			if(!istype(src, /obj/structure/simple_door/metal))
-				playsound(src.loc, pick('sound/f13items/door_knock1.wav', 'sound/f13items/door_knock2.wav', 'sound/f13items/door_knock3.wav', 'sound/f13items/door_knock4.wav'), 80, 0, 0)
-		return
 	if(TryToSwitchState(user, 1) && !density)
 		manual_opened = 1
 	user.changeNext_move(CLICK_CD_MELEE)

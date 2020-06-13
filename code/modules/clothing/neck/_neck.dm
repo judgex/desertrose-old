@@ -189,6 +189,8 @@
 ////COLLARS///
 //////////////
 
+GLOBAL_VAR_INIT(collar_number, 0)
+
 /obj/item/clothing/neck/petcollar
 	name = "pet collar"
 	desc = "A sturdy brown leather dog collar. Kinky."
@@ -200,7 +202,6 @@
 	tagname = copytext(sanitize(input(user, "Would you like to change the name on the tag?", "Name your new pet", "Spot") as null|text),1,MAX_NAME_LEN)
 	name = "[initial(name)] - [tagname]"
 
-
 /obj/item/clothing/neck/petcollar/locked
 	name = "locked collar"
 	desc = "A collar that has a small lock on it to keep it from being removed."
@@ -208,7 +209,6 @@
 	body_parts_covered = NECK
 	var/lock = FALSE
 	var/collarID = 0
-	GLOBAL_VAR_INIT(collar_number, 0)
 
 /obj/item/clothing/neck/petcollar/locked/attackby(obj/item/K, mob/user, params)
 	if(istype(K, /obj/item/key/collar))

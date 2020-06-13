@@ -187,6 +187,22 @@ update_label("John Doe", "Clowny")
 	assignment = "Reaper"
 	registered_name = "Thirteen"
 
+/obj/item/card/id/sec
+	name = "red identification card"
+	desc = "A red card which shows dedication to the Security department."
+	icon_state = "sec"
+	item_state = "sec_id"
+	lefthand_file = 'icons/mob/inhands/equipment/idcards_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/equipment/idcards_righthand.dmi'
+
+/obj/item/card/id/chief
+	name = "crimson identification card"
+	desc = "A red card which shows dedication and leadership to the Vaults safety and security."
+	icon_state = "chief"
+	item_state = "sec_id"
+	lefthand_file = 'icons/mob/inhands/equipment/idcards_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/equipment/idcards_righthand.dmi'
+
 /obj/item/card/id/gold
 	name = "gold identification card"
 	desc = "A golden card which shows power and might."
@@ -195,13 +211,12 @@ update_label("John Doe", "Clowny")
 	lefthand_file = 'icons/mob/inhands/equipment/idcards_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/idcards_righthand.dmi'
 
-/obj/item/card/id/gold/mayor
+/obj/item/card/id/silver/mayor
 	name = "Mayor's mayoral permit"
-	desc = "A golden identification permit reserved for the Mayor of Oasis."
-	icon_state = "gold"
-	item_state = "gold_id"
+	desc = "A silver encrusted identification permit reserved for the Mayor of Oasis."
+	icon_state = "silver"
+	item_state = "silver_id"
 	id_type = "mayoral permit"
-	color = "yellow"
 
 /obj/item/card/id/dendoctor
 	name = "doctor's name badge"
@@ -268,7 +283,7 @@ update_label("John Doe", "Clowny")
 	access = list(ACCESS_SYNDICATE)
 
 /obj/item/card/id/captains_spare
-	name = "captain's spare ID"
+	name = "Overseer's spare ID"
 	desc = "The spare ID of the High Lord himself."
 	icon_state = "gold"
 	item_state = "gold_id"
@@ -468,7 +483,7 @@ update_label("John Doe", "Clowny")
 	access = list(ACCESS_BAR)
 
 /obj/item/card/id/dogtag/town/attackby(obj/item/W, mob/user, params)
-	if(istype(W, /obj/item/card/id/gold/mayor))
+	if(istype(W, /obj/item/card/id/silver/mayor))
 		var/newname = stripped_input(user, "Who do you want to grant citizenship to?", , "", MAX_NAME_LEN)
 		if(newname)
 			to_chat(user, "You scribble the [registered_name] for the name on the permit.")
@@ -478,9 +493,9 @@ update_label("John Doe", "Clowny")
 
 /obj/item/card/id/dogtag/ncrambassador
 	name = "ambassador's permit"
-	desc = "An ambassador's permit in a plastic holder."
-	icon_state = "doctor"
-	item_state = "card-doctor"
+	desc = "An silver encrusted ambassador's permit in a plastic holder."
+	icon_state = "silver"
+	item_state = "silver"
 	id_type = "ambassador's permit"
 
 /obj/item/card/id/dogtag/ncrtrooper
@@ -582,3 +597,31 @@ update_label("John Doe", "Clowny")
 	item_state = "slave"
 	id_type = "Slave brand"
 	item_flags = NODROP
+
+///OUTLAW TAGS////
+
+/obj/item/card/id/rusted
+	name = "rusted tags"
+	desc = "Decrepit uncared for NCR dogtags, kept as a reminder to something."
+	icon_state = "rustedncrtag"
+	item_state = "rustedncrtag"
+
+/obj/item/card/id/rusted/rustedmedallion
+	name = "rusted medallion"
+	desc = "A battered and unkempt legion medallion, kept as a reminder to something."
+	icon_state = "rustedmedallion"
+	item_state = "rustedmedallion"
+
+/obj/item/card/id/rusted/fadedvaultid
+	name = "faded id card"
+	desc = "A and worn Vault-Tech issued ID card, broken beyond use, kept as a reminder to something."
+	icon_state = "fadedvaultid"
+	item_state = "fadedvaultid"
+
+/obj/item/card/id/rusted/brokenholodog
+	name = "broken holotag"
+	desc = "A BoS issue holotag, it isnt working now though, kept as a reminder to something."
+	icon_state = "brokenholodog"
+	item_state = "brokenholodog"
+
+

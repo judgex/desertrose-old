@@ -9,7 +9,7 @@
 
 /obj/item/projectile/ion/on_hit(atom/target, blocked = FALSE)
 	..()
-	empulse(target, 0, 0)
+	empulse(target, 1, 0)
 	return TRUE
 
 /obj/item/projectile/ion/weak
@@ -18,5 +18,5 @@
 
 /obj/item/projectile/ion/weak/on_hit(atom/target, blocked = FALSE)
 	..()
-	empulse(target, 0, 0)
+	empulse(target, 0, 1)
 	return TRUE
