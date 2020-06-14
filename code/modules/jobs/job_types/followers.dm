@@ -35,7 +35,7 @@ Lead Practitioner
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "No one."
-	description = "As a FoA Practioner you answer directly to no one, but correspond with your peers as partners. Special circumstances may change this, but it is your responsibility to maintain working order in the hospital and to manage its staff. Every member is asked – not ordered – to help those in need when the opportunity arises. Any leaders in the FoA are typically informal and selected naturally, based on their deeds, expertise, and organizational skills. "
+	description = "As a Practitioner, you treat patients, manage the distribution of medicine, as well as manage the staff of the facility so that all is productive and in working order. Your reason for being here is to provide education and medical services to those in need, furthering research in non-military matters, as well as helping their communities get access to basic necessities. Though the FoA have parted ways with the Republic, they independently reside within the limits of the NCR boundaries by nature of circumstance, and maintain a working relationship with them."
 	selection_color = "#006666"
 	exp_requirements = 1080
 	exp_type = EXP_TYPE_FOLLOWERS
@@ -46,16 +46,20 @@ Lead Practitioner
 /datum/outfit/job/followers/f13leadpractitioner
 	name = "Lead Practitioner"
 	jobtype = /datum/job/followers/f13leadpractitioner
-
+	id = /obj/item/card/id/silver
+	chemwhiz = TRUE
 	backpack = /obj/item/storage/backpack/explorer
 	uniform = /obj/item/clothing/under/f13/followers
 	suit= /obj/item/clothing/suit/toggle/labcoat/cmo
 	shoes = /obj/item/clothing/shoes/f13/brownie
+	l_hand = /obj/item/storage/firstaid/fire
+	r_hand = /obj/item/storage/firstaid/toxin
+	belt = /obj/item/healthanalyzer/advanced
 	backpack_contents = list(
 		/obj/item/reagent_containers/glass/beaker/bluespace=1,
 		/obj/item/storage/firstaid/ancient=1,
 		/obj/item/reagent_containers/medspray/synthflesh=2,
-		/obj/item/healthanalyzer/advanced=1,
+		/obj/item/storage/firstaid/tactical=1,
 		/obj/item/clothing/glasses/hud/health/night=1)
 
 /*
@@ -88,6 +92,7 @@ Practitioner
 	jobtype = /datum/job/followers/f13practitioner
 	backpack = /obj/item/storage/backpack/explorer
 	uniform = /obj/item/clothing/under/f13/followers
+	id = /obj/item/card/id/silver
 	backpack_contents = list(
 		/obj/item/defibrillator/compact/loaded)
 
@@ -135,6 +140,7 @@ Follower Volunteer
 	name = "Follower Volunteer"
 	jobtype = /datum/job/followers/f13followervolunteer
 	backpack = /obj/item/storage/backpack/explorer
+	id = /obj/item/card/id/silver
 	backpack_contents =  list(
 		/obj/item/storage/firstaid/ancient=1)
 	uniform = /obj/item/clothing/under/f13/followers
@@ -153,7 +159,7 @@ Follower Guard
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "Practitioners"
-	description = "As a Guard for the Followers of Apocolypse, you are responsible for the safety and the maintenance of order in the hospital and among your peers. Your reason for being here is to make sure the other staff can provide education and medical services to those in need, furthering research in non-military matters, as well as helping their communities get access to basic necessities. Though the FoA have parted ways with the Republic, they independently reside within the limits of the NCR boundaries by nature of circumstance, and maintain a working relationship with them. They must follow NCR laws while within the city limits or face in-game consequences. The FoA forbids: Aligning oneself with a faction exclusively. Acting in an aggressive and violent way on the offensive, not in defense. Abandoning your facility, peers, and community."
+	description = "As a Guard for the Followers of Apocalypse, you are responsible for the safety and the maintenance of order in the hospital and among your peers. Your reason for being here is to make sure the other staff can provide education and medical services to those in need, furthering research in non-military matters, as well as helping their communities get access to basic necessities. Though the FoA have parted ways with the Republic, they independently reside within the limits of the NCR boundaries by nature of circumstance, and maintain a working relationship with them. They must follow NCR laws while within the city limits or face in-game consequences. The FoA forbids: Aligning oneself with a faction exclusively. Acting in an aggressive and violent way on the offensive, not in defense. Abandoning your facility, peers, and community."
 	selection_color = "#008080"
 	exp_type = EXP_TYPE_FOLLOWERS
 
@@ -164,6 +170,7 @@ Follower Guard
 	name = "Followers Guard"
 	jobtype = /datum/job/followers/f13followerguard
 	backpack = /obj/item/storage/backpack/explorer
+	id = /obj/item/card/id/silver
 	uniform = /obj/item/clothing/under/f13/bodyguard
 	suit = /obj/item/clothing/suit/armor/vest/old
 	suit_store = /obj/item/gun/ballistic/automatic/pistol/n99
