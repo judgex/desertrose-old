@@ -217,6 +217,17 @@
 	category = CAT_CLOTHING
 	subcategory = CAT_CLOTHING
 
+/datum/crafting_recipe/iconoclast_reinforced
+	name = "reinforced iconoclast armor"
+	result = /obj/item/clothing/suit/armor/f13/raider/iconoclast/reinforced
+	reqs = list(/obj/item/clothing/suit/armor/f13/raider/iconoclast/ = 1,
+				/obj/item/stack/crafting/goodparts = 2,
+				/obj/item/stack/sheet/metal = 5)
+	tools = list(TOOL_WORKBENCH)
+	time = 60
+	category = CAT_CLOTHING
+	subcategory = CAT_CLOTHING
+
 /datum/crafting_recipe/ncrexile_reinforced
 	name = "reinforced NCR deserter armor"
 	result = /obj/item/clothing/suit/armor/f13/exilereinforced
