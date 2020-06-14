@@ -60,6 +60,8 @@
 #define F13RECRUIT		(1<<9)
 #define F13VETRANGER	(1<<10)
 #define F13RANGER		(1<<11)
+#define F13NCRCITIZEN	(1<<12)
+#define	F13NCRADMIN		(1<<13)
 
 #define LEGION			(1<<4)
 
@@ -121,6 +123,7 @@
 #define F13RAIDER		(1<<2)
 #define F13PUSHER		(1<<3)
 #define F13PUNRAIDER	(1<<4)
+#define F13DETECTIVE	(1<<5)
 
 #define ENCLAVE			(1<<9)
 
@@ -136,6 +139,14 @@
 #define F13CHIEF		(1<<0)
 #define F13SHAMAN		(1<<1)
 #define F13VILLAGER		(1<<2)
+
+#define FOLLOWERS		(1<<11)
+
+#define	F13LEADPRACTITIONER	(1<<0)
+#define	F13PRACTITIONER	(1<<1)
+#define F13FOLLOWERGUARD	(1<<2)
+#define F13FOLLOWERVOLUNTEER	(1<<3)
+
 
 #define JOB_AVAILABLE 0
 #define JOB_UNAVAILABLE_GENERIC 1
