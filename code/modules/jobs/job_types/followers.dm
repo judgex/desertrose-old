@@ -46,16 +46,20 @@ Lead Practitioner
 /datum/outfit/job/followers/f13leadpractitioner
 	name = "Lead Practitioner"
 	jobtype = /datum/job/followers/f13leadpractitioner
-
+	id = /obj/item/card/id/silver
+	chemwhiz = TRUE
 	backpack = /obj/item/storage/backpack/explorer
 	uniform = /obj/item/clothing/under/f13/followers
 	suit= /obj/item/clothing/suit/toggle/labcoat/cmo
 	shoes = /obj/item/clothing/shoes/f13/brownie
+	l_hand = /obj/item/storage/firstaid/fire
+	r_hand = /obj/item/storage/firstaid/toxin
+	belt = /obj/item/healthanalyzer/advanced
 	backpack_contents = list(
 		/obj/item/reagent_containers/glass/beaker/bluespace=1,
 		/obj/item/storage/firstaid/ancient=1,
 		/obj/item/reagent_containers/medspray/synthflesh=2,
-		/obj/item/healthanalyzer/advanced=1,
+		/obj/item/storage/firstaid/tactical=1,
 		/obj/item/clothing/glasses/hud/health/night=1)
 
 /*
@@ -88,6 +92,7 @@ Practitioner
 	jobtype = /datum/job/followers/f13practitioner
 	backpack = /obj/item/storage/backpack/explorer
 	uniform = /obj/item/clothing/under/f13/followers
+	id = /obj/item/card/id/silver
 	backpack_contents = list(
 		/obj/item/defibrillator/compact/loaded)
 
@@ -135,6 +140,7 @@ Follower Volunteer
 	name = "Follower Volunteer"
 	jobtype = /datum/job/followers/f13followervolunteer
 	backpack = /obj/item/storage/backpack/explorer
+	id = /obj/item/card/id/silver
 	backpack_contents =  list(
 		/obj/item/storage/firstaid/ancient=1)
 	uniform = /obj/item/clothing/under/f13/followers
@@ -164,6 +170,7 @@ Follower Guard
 	name = "Followers Guard"
 	jobtype = /datum/job/followers/f13followerguard
 	backpack = /obj/item/storage/backpack/explorer
+	id = /obj/item/card/id/silver
 	uniform = /obj/item/clothing/under/f13/bodyguard
 	suit = /obj/item/clothing/suit/armor/vest/old
 	suit_store = /obj/item/gun/ballistic/automatic/pistol/n99
