@@ -15,7 +15,9 @@ GLOBAL_LIST_INIT(command_positions, list(
     "Sheriff",
     "Chief",
     "Shaman",
-    "Lead Practitioner"))
+    "Lead Practitioner",
+    "NCR Administrator"
+    ))
 
 
 GLOBAL_LIST_INIT(silicon_whitelist_positions, list(
@@ -33,6 +35,7 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 "Head Scribe",
 "Senior Paladin",
 "Paladin",
+"Senior Knight",
 "Knight",
 "Senior Scribe",
 "Scribe",
@@ -66,6 +69,7 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 GLOBAL_LIST_INIT(faction_player_positions, list(
 "Senior Paladin",
 "Paladin",
+"Senior Knight",
 "Knight",
 "Senior Scribe",
 "Scribe",
@@ -103,6 +107,7 @@ GLOBAL_LIST_INIT(brotherhood_command_positions, list(
 GLOBAL_LIST_INIT(brotherhood_positions, list(
 	"Senior Paladin",
 	"Paladin",
+	"Senior Knight",
 	"Knight",
 	"Senior Scribe",
 	"Scribe",
