@@ -207,21 +207,21 @@
 
 /obj/item/clothing/accessory/bos/knightcaptain
     name = "Knight-Captain pins"
-    desc = "A silver pin with one device, a silver sword centered on the blue coloring, and notches denoting the rank of the Knight-Captain."
+    desc = "A gold-plated, silver lined pin with one device and two outstretched wings on the side; a golden sword centered on blue-cloth. Worn by the Knight Captain."
     icon_state = "knight-captain"
     item_color = "knight-captain"
     minimize_when_attached = TRUE
 
 /obj/item/clothing/accessory/bos/seniorscribe
     name = "Senior Scribe pins"
-    desc = "A silver pin with one device, a silver sword centered on the red coloring, and notches denoting the rank of the Senior Scribe."
+    desc = "A silver pin with one device gilded in gold, little notches at the top end, and a golden sword in the center of red cloth; worn by the high-ranking Senior Scribe."
     icon_state = "seniorscribe"
     item_color = "seniorscribe"
     minimize_when_attached = TRUE
 
 /obj/item/clothing/accessory/bos/paladin
     name = "Paladin pins"
-    desc = "A silver pin with one device, a silver sword centered on the blue coloring, and notches denoting the rank of the Paladin."
+    desc = "A silver pin with one device, a silver sword centered on the purple coloring, and notches denoting the rank of the Paladin."
     icon_state = "paladin"
     item_color = "paladin"
     minimize_when_attached = TRUE
@@ -231,6 +231,27 @@
     desc = "A silver pin with one device gilded in gold, little notches at the top end, and a golden sword in the center of purple cloth; worn by the high-ranking Senior Paladin."
     icon_state = "seniorpaladin"
     item_color = "seniorpaladin"
+    minimize_when_attached = TRUE
+
+/obj/item/clothing/accessory/bos/seniorknight
+    name = "Senior Knight pins"
+    desc = "A silver pin with one device gilded in gold, little notches at the top end, and a golden sword in the center of purple cloth; worn by the high-ranking Senior Knight."
+    icon_state = "seniorknight"
+    item_color = "seniorknight"
+    minimize_when_attached = TRUE
+
+/obj/item/clothing/accessory/bos/juniorknight
+    name = "Junior Knight pins"
+    desc = "A silver pin with one device, and blue coloring. Worn by the Knight-in-Training of the Brotherhood."
+    icon_state = "juniorknight"
+    item_color = "juniorknight"
+    minimize_when_attached = TRUE
+
+/obj/item/clothing/accessory/bos/juniorscribe
+    name = "Junior Scribe pins"
+    desc = "A silver pin with one device, and red coloring. Worn by the Scribe-in-Training of the Brotherhood."
+    icon_state = "juniorscribe"
+    item_color = "juniorscribe"
     minimize_when_attached = TRUE
 
 /obj/item/clothing/accessory/bos/headscribe

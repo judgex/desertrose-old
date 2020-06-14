@@ -491,7 +491,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 	icon_state = "NCR Patrol Ranger"
 
 /obj/effect/landmark/start/f13/ncrcitizen
-	name = "NCR Citzen"
+	name = "NCR Citizen"
 	icon_state = "NCR Citizen"
 
 /obj/effect/landmark/start/f13/ncradmin
@@ -569,6 +569,10 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 
 /obj/effect/landmark/start/f13/knightcap
 	name = "Knight-Captain"
+	icon_state = "Initiate Knight"
+
+/obj/effect/landmark/start/f13/seniorknight
+	name = "Senior Knight"
 	icon_state = "Initiate Knight"
 
 /obj/effect/landmark/start/f13/seniorpaladin
