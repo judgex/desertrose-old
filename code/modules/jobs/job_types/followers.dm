@@ -89,11 +89,8 @@ Practitioner
 	backpack = /obj/item/storage/backpack/explorer
 	uniform = /obj/item/clothing/under/f13/followers
 	backpack_contents = list(
-		/obj/item/storage/firstaid/tactical=1,
-		/obj/item/storage/firstaid/regular=1,
-		/obj/item/storage/firstaid/toxin=1,
-		/obj/item/defibrillator/compact/loaded=1
-		)
+		/obj/item/defibrillator/compact/loaded)
+
 
 /datum/outfit/loadout/chemist
 	name = "Chemist"
@@ -105,6 +102,7 @@ Practitioner
 
 /datum/outfit/loadout/physician
 	name = "Physician"
+	l_hand = /obj/item/storage/firstaid/tactical
 	backpack_contents = list(
 		/obj/item/book/granter/trait/chemistry=1,
 		/obj/item/reagent_containers/medspray/synthflesh=2,

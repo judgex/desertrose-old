@@ -117,7 +117,7 @@ Detective
 	uniform = /obj/item/clothing/under/f13/detectivealt
 	head = /obj/item/clothing/head/f13/det_hat_alt
 	shoes =  /obj/item/clothing/shoes/laceup
-	id = /obj/item/card/id
+	id = /obj/item/card/id/silver
 	backpack = /obj/item/storage/backpack/satchel/explorer
 	satchel = /obj/item/storage/backpack/satchel/explorer
 	suit_store = /obj/item/gun/ballistic/revolver/police
