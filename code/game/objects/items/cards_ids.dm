@@ -201,7 +201,7 @@ update_label("John Doe", "Clowny")
 	icon_state = "chief"
 	item_state = "sec_id"
 	lefthand_file = 'icons/mob/inhands/equipment/idcards_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/idcards_righthand.d
+	righthand_file = 'icons/mob/inhands/equipment/idcards_righthand.dmi'
 
 /obj/item/card/id/gold
 	name = "gold identification card"
