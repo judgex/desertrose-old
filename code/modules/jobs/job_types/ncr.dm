@@ -557,9 +557,9 @@ Recruit
 	outfit = /datum/outfit/job/ncr/f13ncradmin
 
 /datum/outfit/job/ncr/f13ncradmin
-	name = "NCR Assistant"
-	jobtype = /datum/job/ncr/f13recruit
-	id = 			/obj/item/card/id/dogtag/ncrtrooper
+	name = "NCR Administrator"
+	jobtype = /datum/job/ncr/f13ncradmin
+	id = 			/obj/item/card/id/dogtag/ncradmin
 	uniform =  		/obj/item/clothing/under/suit_jacket/tan
 	glasses =		/obj/item/clothing/glasses/sunglasses
 	shoes = 		/obj/item/clothing/shoes/f13/fancy
@@ -624,7 +624,8 @@ Recruit
 		/obj/item/reagent_containers/glass/bucket=1,
 		/obj/item/cultivator=1,
 		/obj/item/shovel/spade=1,
-		/obj/item/reagent_containers/glass/bottle/nutrient/rh=2
+		/obj/item/reagent_containers/glass/bottle/nutrient/rh=2,
+		/obj/item/hatchet=1
 		)
 
 /datum/outfit/loadout/mechanic

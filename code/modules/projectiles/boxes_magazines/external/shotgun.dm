@@ -40,7 +40,7 @@
 	icon_state = "m12gb"
 	ammo_type = /obj/item/ammo_casing/shotgun/rubbershot
 
- /obj/item/ammo_box/magazine/m12g/beanslug
+/obj/item/ammo_box/magazine/m12g/beanslug
 	name = "shotgun drum magazine (12g beanbag slug)"
 	icon_state = "m12gb"
 	ammo_type = /obj/item/ammo_casing/shotgun/beanbag

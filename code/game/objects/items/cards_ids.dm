@@ -498,6 +498,12 @@ update_label("John Doe", "Clowny")
 	item_state = "silver"
 	id_type = "ambassador's permit"
 
+/obj/item/card/id/dogtag/ncradmin
+	name = "Administrators ID"
+	desc = "An silver encrusted admins ID in a plastic holder."
+	icon_state = "silver"
+	item_state = "silver"
+
 /obj/item/card/id/dogtag/ncrtrooper
 	name = "trooper's tags"
 	desc = "A dog tag proving enlistment."
