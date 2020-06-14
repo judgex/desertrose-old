@@ -14,7 +14,8 @@ GLOBAL_LIST_INIT(command_positions, list(
     "Mayor",
     "Sheriff",
     "Chief",
-    "Shaman"))
+    "Shaman",
+    "Lead Practitioner"))
 
 
 GLOBAL_LIST_INIT(silicon_whitelist_positions, list(
@@ -155,7 +156,9 @@ GLOBAL_LIST_INIT(ncr_positions, list(
     "NCR Corporal",
     "NCR Trooper",
     "NCR Assistant",
-    "NCR Ranger"
+    "NCR Ranger",
+    "NCR Citizen",
+    "NCR Administrator"
 ))
 
 GLOBAL_LIST_INIT(vault_command_positions, list(
@@ -175,7 +178,8 @@ GLOBAL_LIST_INIT(wasteland_positions, list(
     "Raider",
     "Great Khan",
     "Preacher",
-    "Wastelander"
+    "Wastelander",
+    "Detective"
 ))
 GLOBAL_LIST_INIT(security_positions, list(
     "Vault-tec Security",
@@ -189,6 +193,13 @@ GLOBAL_LIST_INIT(tribal_positions, list(
     "Chief",
     "Shaman",
     "Villager"
+))
+
+GLOBAL_LIST_INIT(followers_positions, list(
+    "Lead Practitioner",
+    "Practitioner",
+    "Followers Guard",
+    "Followers Volunteer"
 ))
 /*
 GLOBAL_LIST_INIT(engineering_positions, list(
@@ -259,6 +270,7 @@ GLOBAL_LIST_INIT(exp_jobsmap, list(
     EXP_TYPE_DECANUS       = list("titles" = list("Legion Decanus")),
     EXP_TYPE_TRIBAL        = list("titles" = tribal_positions),
     EXP_TYPE_TRIBALCOMMAND = list("titles" = list("Chief","Shaman")),
+    EXP_TYPE_FOLLOWERSCOMMAND = list("titles" = list("Lead Practitioner")),
     //EXP_TYPE_ENCLAVE = list("titles" = enclave_positions),
     // EXP_TYPE_CREW = list("titles" = command_positions | engineering_positions | medical_positions | science_positions | supply_positions | security_positions | civilian_positions | list("AI","Cyborg")), // crew positions
     // EXP_TYPE_COMMAND = list("titles" = command_positions),
