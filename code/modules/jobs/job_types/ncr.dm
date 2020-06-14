@@ -578,6 +578,7 @@ Recruit
 	faction = "NCR"
 	total_positions = 20
 	spawn_positions = 20
+	access = null
 	description = "As an NCR Citizen, you may believe that the potential for fortune out west has dried up and that the frontier holds abundant opportunities for you to encroach and take advantage of. Surrounded by the relative safety of the Republic, you are responsible for being a part of the cities community and maintaining the facilities within it in any capacity which will aid the greater good. You may correspond with the Administrator or other NCR leadership to help them achieve goals, or pursue your own individual goals as an independent agent of the NCR.."
 	supervisors = "NCR Administrator"
 	selection_color = "#fff5cc"
