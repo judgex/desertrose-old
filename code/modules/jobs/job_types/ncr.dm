@@ -541,6 +541,113 @@ Recruit
 		/obj/item/storage/bag/ore = 1,
 		/obj/item/storage/bag/money/small/ncrenlisted)
 
+//NCR Administrator
+/datum/job/ncr/f13ncradmin
+	title = "NCR Administrator"
+	flag = F13NCRADMIN
+	faction = "NCR"
+	total_positions = 1
+	spawn_positions = 1
+	description = "As an Administrator, you perform managerial duties for the facilities of the city as well as the people who occupy it, ensure that people are listened to and their needs are met, and assist the military in a civilian capacity by corresponding and delegating others to complete tasks. "
+	supervisors = "Ambassador or Captain"
+	selection_color = "#fff5cc"
+	exp_requirements = 300
+	exp_type = EXP_TYPE_CREW
+
+	outfit = /datum/outfit/job/ncr/f13ncradmin
+
+/datum/outfit/job/ncr/f13ncradmin
+	name = "NCR Assistant"
+	jobtype = /datum/job/ncr/f13recruit
+	id = 			/obj/item/card/id/dogtag/ncrtrooper
+	uniform =  		/obj/item/clothing/under/suit_jacket/tan
+	glasses =		/obj/item/clothing/glasses/sunglasses
+	shoes = 		/obj/item/clothing/shoes/f13/fancy
+	backpack_contents = list(
+		/obj/item/storage/secure/briefcase=1, \
+		/obj/item/pen/fountain=1, \
+		/obj/item/pen/fourcolor=1, \
+		/obj/item/clipboard=1, \
+		/obj/item/stamp=1, \
+		/obj/item/stamp/denied=1)
+
+//NCR Citizen
+/datum/job/ncr/f13ncrcitizen
+	title = "NCR Citizen"
+	flag = F13NCRCITIZEN
+	faction = "NCR"
+	total_positions = 20
+	spawn_positions = 20
+	description = "As an NCR Citizen, you may believe that the potential for fortune out west has dried up and that the frontier holds abundant opportunities for you to encroach and take advantage of. Surrounded by the relative safety of the Republic, you are responsible for being a part of the cities community and maintaining the facilities within it in any capacity which will aid the greater good. You may correspond with the Administrator or other NCR leadership to help them achieve goals, or pursue your own individual goals as an independent agent of the NCR.."
+	supervisors = "NCR Administrator"
+	selection_color = "#fff5cc"
+	exp_requirements = 300
+	exp_type = EXP_TYPE_CREW
+	outfit = /datum/outfit/job/ncr/f13ncrcitizen
+	loadout_options = list(
+	/datum/outfit/loadout/brahminbaron,
+	/datum/outfit/loadout/sharecropper,
+	/datum/outfit/loadout/mechanic,
+	/datum/outfit/loadout/offduty
+	)
+
+
+
+/datum/outfit/job/ncr/f13ncrcitizen
+	ears = /obj/item/radio/headset
+	uniform = /obj/item/clothing/under/f13/caravaneer
+	shoes = /obj/item/clothing/shoes/f13/tan
+	head = /obj/item/clothing/head/f13/cowboy
+	gloves = /obj/item/clothing/gloves/color/brown
+	glasses = /obj/item/clothing/glasses/orange
+	backpack_contents = list(
+		/obj/item/storage/bag/money/small/wastelander)
+
+
+/datum/outfit/loadout/brahminbaron
+	name = "Brahmin Baron"
+	backpack_contents = list(
+		/obj/item/clothing/under/f13/gentlesuit=1,
+		/obj/item/clothing/suit/jacket/leather=1,
+		/obj/item/clothing/head/collectable/tophat=1,
+		/obj/item/clothing/shoes/f13/fancy=1,
+		/obj/item/stack/f13Cash/ncr=1,
+		/obj/item/clothing/glasses/monocle=1,
+		/obj/item/staff/stick=1)
+
+/datum/outfit/loadout/sharecropper
+	name = "Sharecropper"
+	backpack_contents = list(
+		/obj/item/clothing/under/overalls=1,
+		/obj/item/clothing/suit/f13/vest=1,
+		/obj/item/clothing/head/f13/cowboy=1,
+		/obj/item/reagent_containers/glass/bucket=1,
+		/obj/item/cultivator=1,
+		/obj/item/shovel/spade=1,
+		/obj/item/reagent_containers/glass/bottle/nutrient/rh=2
+		)
+
+/datum/outfit/loadout/mechanic
+	name = "Mechanic"
+	backpack_contents = list(
+		/obj/item/clothing/under/f13/mechanic=1,
+		/obj/item/clothing/suit/apron/overalls=1,
+		/obj/item/clothing/head/hardhat/dblue=1,
+		/obj/item/clothing/shoes/workboots=1,
+		/obj/item/storage/belt/utility/full/engi=1,
+		/obj/item/clothing/glasses/welding=1
+		)
+
+/datum/outfit/loadout/offduty
+	name = "Off Duty"
+	backpack_contents = list(
+		/obj/item/clothing/under/f13/cowboyt=1,
+		/obj/item/clothing/suit/det_suit=1,
+		/obj/item/clothing/shoes/f13/military/ncr=1,
+		/obj/item/clothing/gloves/f13/ncr=1,
+		/obj/item/kitchen/knife/combat=1
+		)
+
 /*
 Veteran Ranger
 */

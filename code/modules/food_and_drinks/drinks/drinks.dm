@@ -471,13 +471,6 @@
 	list_reagents = list("spacemountainwind" = 30)
 	foodtype = SUGAR | JUNKFOOD
 
-/obj/item/reagent_containers/food/drinks/soda_cans/thirteenloko
-	name = "Thirteen Loko"
-	desc = "The WHO advised the population that consumption of Thirteen Loko may result in seizures, blindness, drunkenness, or even death. Please Drink Responsibly."
-	icon_state = "thirteen_loko"
-	list_reagents = list("thirteenloko" = 30)
-	foodtype = SUGAR | JUNKFOOD
-
 /obj/item/reagent_containers/food/drinks/soda_cans/dr_gibb
 	name = "Dr. Pepper"
 	desc = "A delicious mixture of 42 different flavors."
