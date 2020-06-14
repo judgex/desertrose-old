@@ -404,7 +404,7 @@
 		to_chat(user, "<span class='info'>You light [src] on fire. You're not sure this was a good idea.</span>")
 		add_overlay(GLOB.fire_overlay)
 
-		spawn(rand(10,50)) //Throw. And pray.
+		spawn(rand(50,80)) //Throw. And pray.
 			if(active)
 				var/counter
 				var/target = src.loc
