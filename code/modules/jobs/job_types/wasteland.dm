@@ -354,7 +354,7 @@ Raider
     glasses = /obj/item/clothing/glasses/sunglasses
     shoes =/obj/item/clothing/shoes/f13/fancy
     backpack_contents = list(
-        /obj/item/gun/ballistic/automatic/pistol/ninemil/maria=1,
+        /obj/item/gun/ballistic/automatic/pistol/ninemil=1,
         /obj/item/ammo_box/magazine/m9mm=2,
         /obj/item/toy/cards/deck=1)
 
@@ -455,6 +455,9 @@ Wastelander
 	gloves = /obj/item/pda
 	shoes = /obj/item/clothing/shoes/jackboots
 	gloves = /obj/item/clothing/gloves/fingerless
+	backpack_contents = list(
+		/obj/item/gun/ballistic/automatic/pistol/n99=1,
+		/obj/item/ammo_box/magazine/m10mm_adv=2)
 
 
 /datum/outfit/loadout/petro
@@ -464,6 +467,9 @@ Wastelander
 	uniform = /obj/item/clothing/under/f13/petrochico
 	shoes = /obj/item/clothing/shoes/f13/fancy
 	gloves = /obj/item/clothing/gloves/rifleman
+	backpack_contents = list(
+		/obj/item/gun/ballistic/revolver/colt357=2,
+		/obj/item/ammo_box/a357=2)
 
 /datum/outfit/loadout/follower
 	name = "Follower"
@@ -471,6 +477,9 @@ Wastelander
 	suit = /obj/item/clothing/suit/toggle/labcoat/f13/followers
 	shoes = /obj/item/clothing/shoes/f13/explorer
 	gloves = /obj/item/clothing/gloves/color/latex
+	l_hand = /obj/item/storage/firstaid/ancient
+	backpack_contents =  list(
+		/obj/item/gun/ballistic/automatic/pistol/m1911=1)
 
 /datum/outfit/loadout/merchant
 	name = "Roving Trader"
@@ -480,6 +489,11 @@ Wastelander
 	head = /obj/item/clothing/head/f13/stormchaser
 	gloves = /obj/item/clothing/gloves/color/brown
 	glasses = /obj/item/clothing/glasses/f13/biker
+	l_hand = /obj/item/gun/ballistic/revolver/caravan_shotgun
+	backpack_contents =  list(
+		/obj/item/storage/box/lethalshot=1)
+
+
 
 /datum/outfit/loadout/gambler
 	name = "Gambler"
@@ -490,15 +504,24 @@ Wastelander
 	shoes = /obj/item/clothing/shoes/f13/fancy
 	head = list(/obj/item/clothing/head/fedora,
  	/obj/item/clothing/head/f13/gambler)
+	l_hand = /obj/item/gun/ballistic/automatic/pistol/ninemil
+	backpack_contents =  list(
+		/obj/item/ammo_box/magazine/m9mm=2)
+
 
 /datum/outfit/loadout/citizen
-	name = "Legion Citizen"		//here I go showing my bias again
+	name = "Legion Citizen"
 	uniform = /obj/item/clothing/under/f13/doctor
 	shoes = /obj/item/clothing/shoes/f13/fancy
 	suit = /obj/item/clothing/suit/curator
 	head = /obj/item/clothing/head/scarecrow_hat
 	gloves = /obj/item/clothing/gloves/color/black
 	glasses = /obj/item/clothing/glasses/welding
+	l_hand = /obj/item/shield/legion/buckler
+	backpack_contents = list(
+        /obj/item/claymore/machete/reinforced=1)
+
+
 
 /datum/outfit/loadout/slave
 	name = "NCR Citizen"
@@ -507,6 +530,9 @@ Wastelander
 	head = /obj/item/clothing/head/f13/cowboy
 	gloves = /obj/item/clothing/gloves/color/brown
 	glasses = /obj/item/clothing/glasses/orange
+	l_hand = /obj/item/gun/ballistic/automatic/marksman/servicerifle/varmint
+	backpack_contents = list(
+		/obj/item/ammo_box/magazine/m556/rifle/small=2)
 
 /*
 Punished Raider

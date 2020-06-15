@@ -67,7 +67,8 @@
 	return
 
 /obj/item/onetankbomb/receive_signal()	//This is mainly called by the sensor through sense() to the holder, and from the holder to here.
-	audible_message("[icon2html(src, hearers(src))] *beep* *beep* *beep*")
+	audible_message("[icon2html(src, hearers(src))] *beep* *beep* *beep*",
+	runechat_popup = TRUE)
 	playsound(src, 'sound/machines/triple_beep.ogg', ASSEMBLY_BEEP_VOLUME, TRUE)
 	sleep(10)
 	if(QDELETED(src))
