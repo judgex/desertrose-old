@@ -386,29 +386,43 @@ Mayor
 	selection_color = "#dcba97"
 
 	outfit = /datum/outfit/job/den/f13settler
+
+	loadout_options = list(
+	/datum/outfit/loadout/me,
+	/datum/outfit/loadout/fuck, 
+	)
+
 	access = list(ACCESS_BAR)
 	minimal_access = list(ACCESS_BAR)
+
+/datum/outfit/loadout/fuck
+	name = "Atom's Devout"
+	l_hand = /obj/item/twohanded/sledgehammer/atomsjudgement
+	backpack_contents = list(
+		/obj/item/clothing/under/f13/atombeliever=1,
+		/obj/item/clothing/under/f13/atomfaithful=3,
+		/obj/item/clothing/head/helmet/f13/atombeliever=1
+		)
+
+/datum/outfit/loadout/me
+	name = "Protector of the Faith"
+	l_hand = /obj/item/nullrod
+	backpack_contents = list(
+		/obj/item/reagent_containers/hypospray/medipen/stimpak=2
+		)
 
 /datum/outfit/job/den/f13settler
 	name = "Citizen"
 	jobtype = /datum/job/den/f13settler
-
-	id = /obj/item/card/id/dogtag/town
-	ears = 			/obj/item/radio/headset/headset_den
+	ears = /obj/item/radio/headset/headset_den
 	belt = null
+	id = /obj/item/card/id/dogtag/town
+	ears = /obj/item/radio/headset/headset_den
+	uniform = /obj/item/clothing/under/f13/settler
+	shoes = /obj/item/clothing/shoes/jackboots
 	backpack = /obj/item/storage/backpack/satchel/explorer
-	satchel = /obj/item/storage/backpack/satchel/explorer
-	l_pocket = /obj/item/storage/bag/money/small/settler
 	r_pocket = /obj/item/flashlight/flare
-
-/datum/outfit/job/den/f13settler/pre_equip(mob/living/carbon/human/H)
-	..()
-	uniform = pick(
-		/obj/item/clothing/under/f13/settler, \
-		/obj/item/clothing/under/f13/brahminm, \
-		/obj/item/clothing/under/f13/machinist, \
-		/obj/item/clothing/under/f13/lumberjack, \
-		/obj/item/clothing/under/f13/roving)
+	backpack_contents = list(/obj/item/storage/bag/money/small/settler)
 
 /datum/job/den/f13shopkeeper
     title = "Shopkeeper"
