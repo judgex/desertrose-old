@@ -81,7 +81,8 @@
 		new prizeselect(src)
 
 	var/atom/movable/prize = pick(contents)
-	visible_message("<span class='notice'>[src] dispenses [prize]!</span>", "<span class='notice'>You hear a chime and a clunk.</span>")
+	visible_message("<span class='notice'>[src] dispenses [prize]!</span>", "<span class='notice'>You hear a chime and a clunk.</span>",
+	runechat_popup = TRUE)
 
 	prize.forceMove(get_turf(src))
 
@@ -544,7 +545,8 @@
 							playsound(loc, 'sound/effects/bang.ogg', 50, 1)
 					if(ORION_TRAIL_MALFUNCTION)
 						playsound(loc, 'sound/effects/empulse.ogg', 50, 1)
-						visible_message("<span class='danger'>[src] malfunctions, randomizing in-game stats!</span>")
+						visible_message("<span class='danger'>[src] malfunctions, randomizing in-game stats!</span>",
+						runechat_popup = TRUE)
 						var/oldfood = food
 						var/oldfuel = fuel
 						food = rand(10,80) / rand(1,2)
@@ -552,9 +554,11 @@
 						if(electronics)
 							sleep(10)
 							if(oldfuel > fuel && oldfood > food)
-								audible_message("<span class='danger'>[src] lets out a somehow reassuring chime.</span>")
+								audible_message("<span class='danger'>[src] lets out a somehow reassuring chime.</span>",
+								runechat_popup = TRUE)
 							else if(oldfuel < fuel || oldfood < food)
-								audible_message("<span class='danger'>[src] lets out a somehow ominous chime.</span>")
+								audible_message("<span class='danger'>[src] lets out a somehow ominous chime.</span>",
+								runechat_popup = TRUE)
 							food = oldfood
 							fuel = oldfuel
 							playsound(loc, 'sound/machines/chime.ogg', 50, 1)
@@ -1079,17 +1083,20 @@
 
 	to_chat(user, "<span class='warning'>You flip the switch on the underside of [src].</span>")
 	active = 1
-	visible_message("<span class='notice'>[src] softly beeps and whirs to life!</span>")
+	visible_message("<span class='notice'>[src] softly beeps and whirs to life!</span>",
+	runechat_popup = TRUE)
 	playsound(loc, 'sound/machines/defib_SaftyOn.ogg', 25, 1)
 	say("This is ship ID #[rand(1,1000)] to Orion Port Authority. We're coming in for landing, over.")
 	sleep(20)
-	visible_message("<span class='warning'>[src] begins to vibrate...</span>")
+	visible_message("<span class='warning'>[src] begins to vibrate...</span>",
+	runechat_popup = TRUE)
 	say("Uh, Port? Having some issues with our reactor, could you check it out? Over.")
 	sleep(30)
 	say("Oh, God! Code Eight! CODE EIGHT! IT'S GONNA BL-")
 	playsound(loc, 'sound/machines/buzz-sigh.ogg', 25, 1)
 	sleep(3.6)
-	visible_message("<span class='userdanger'>[src] explodes!</span>")
+	visible_message("<span class='userdanger'>[src] explodes!</span>",
+	runechat_popup = TRUE)
 	explosion(loc, 2,4,8, flame_range = 16)
 	qdel(src)
 

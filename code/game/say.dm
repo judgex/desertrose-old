@@ -24,12 +24,12 @@ GLOBAL_LIST_INIT(freqtospan, list(
 	"[FREQ_LEGION]" = "legionradio"
 	))
 
-/atom/movable/proc/say(message, datum/language/language = null)
+/atom/movable/proc/say(message, bubble_type, var/list/spans = list(), sanitize = TRUE, datum/language/language = null, ignore_spam = FALSE, forced = null)
 	if(!can_speak())
 		return
 	if(message == "" || !message)
 		return
-	var/list/spans = get_spans()
+	spans |= speech_span
 	if(!language)
 		language = get_default_language()
 	send_speech(message, 7, src, , spans, message_language=language)
@@ -40,11 +40,11 @@ GLOBAL_LIST_INIT(freqtospan, list(
 /atom/movable/proc/can_speak()
 	return 1
 
-/atom/movable/proc/send_speech(message, range = 7, obj/source = src, bubble_type, list/spans, datum/language/message_language = null, message_mode)
-	var/rendered = compose_message(src, message_language, message, , spans, message_mode)
+/atom/movable/proc/send_speech(message, range = 7, atom/movable/source = src, bubble_type, list/spans, datum/language/message_language = null, message_mode)
+	var/rendered = compose_message(src, message_language, message, , spans, message_mode, source)
 	for(var/_AM in get_hearers_in_view(range, source))
 		var/atom/movable/AM = _AM
-		AM.Hear(rendered, src, message_language, message, , spans, message_mode)
+		AM.Hear(rendered, src, message_language, message, , spans, message_mode, source)
 
 //To get robot span classes, stuff like that.
 /atom/movable/proc/get_spans()
@@ -103,21 +103,26 @@ GLOBAL_LIST_INIT(freqtospan, list(
 	var/spanned = attach_spans(input, spans)
 	return "[say_mod(input, message_mode)], \"[spanned]\""
 
-/atom/movable/proc/lang_treat(atom/movable/speaker, datum/language/language, raw_message, list/spans, message_mode)
+/// Quirky citadel proc for our custom sayverbs to strip the verb out. Snowflakey as hell, say rewrite 3.0 when?
+/atom/movable/proc/quoteless_say_quote(input, list/spans = list(speech_span), message_mode)
+	var/pos = findtext(input, "*")
+	return pos? copytext(input, pos + 1) : input
+
+/atom/movable/proc/lang_treat(atom/movable/speaker, datum/language/language, raw_message, list/spans, message_mode, no_quote = FALSE)
 	if(has_language(language))
 		var/atom/movable/AM = speaker.GetSource()
 		if(AM) //Basically means "if the speaker is virtual"
-			return AM.say_quote(raw_message, spans, message_mode)
+			return no_quote ? AM.quoteless_say_quote(raw_message, spans, message_mode) : AM.say_quote(raw_message, spans, message_mode)
 		else
-			return speaker.say_quote(raw_message, spans, message_mode)
+			return no_quote ? speaker.quoteless_say_quote(raw_message, spans, message_mode) : speaker.say_quote(raw_message, spans, message_mode)
 	else if(language)
 		var/atom/movable/AM = speaker.GetSource()
 		var/datum/language/D = GLOB.language_datum_instances[language]
 		raw_message = D.scramble(raw_message)
 		if(AM)
-			return AM.say_quote(raw_message, spans, message_mode)
+			return no_quote ? AM.quoteless_say_quote(raw_message, spans, message_mode) : AM.say_quote(raw_message, spans, message_mode)
 		else
-			return speaker.say_quote(raw_message, spans, message_mode)
+			return no_quote ? speaker.quoteless_say_quote(raw_message, spans, message_mode) : speaker.say_quote(raw_message, spans, message_mode)
 	else
 		return "makes a strange sound."
 

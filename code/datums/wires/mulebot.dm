@@ -20,12 +20,16 @@
 	var/mob/living/simple_animal/bot/mulebot/M = holder
 	switch(wire)
 		if(WIRE_POWER1, WIRE_POWER2)
-			holder.visible_message("<span class='notice'>[icon2html(M, viewers(holder))] The charge light flickers.</span>")
+			holder.visible_message("<span class='notice'>[icon2html(M, viewers(holder))] The charge light flickers.</span>",
+			runechat_popup = TRUE)
 		if(WIRE_AVOIDANCE)
-			holder.visible_message("<span class='notice'>[icon2html(M, viewers(holder))] The external warning lights flash briefly.</span>")
+			holder.visible_message("<span class='notice'>[icon2html(M, viewers(holder))] The external warning lights flash briefly.</span>",
+			runechat_popup = TRUE)
 		if(WIRE_LOADCHECK)
-			holder.visible_message("<span class='notice'>[icon2html(M, viewers(holder))] The load platform clunks.</span>")
+			holder.visible_message("<span class='notice'>[icon2html(M, viewers(holder))] The load platform clunks.</span>",
+			runechat_popup = TRUE)
 		if(WIRE_MOTOR1, WIRE_MOTOR2)
-			holder.visible_message("<span class='notice'>[icon2html(M, viewers(holder))] The drive motor whines briefly.</span>")
+			holder.visible_message("<span class='notice'>[icon2html(M, viewers(holder))] The drive motor whines briefly.</span>",
+			runechat_popup = TRUE)
 		else
 			holder.visible_message("<span class='notice'>[icon2html(M, viewers(holder))] You hear a radio crackle.</span>")

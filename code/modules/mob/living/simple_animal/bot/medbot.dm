@@ -245,7 +245,8 @@
 		declare_crit = 0
 		if(user)
 			to_chat(user, "<span class='notice'>You short out [src]'s reagent synthesis circuits.</span>")
-		audible_message("<span class='danger'>[src] buzzes oddly!</span>")
+		audible_message("<span class='danger'>[src] buzzes oddly!</span>",
+		runechat_popup = TRUE)
 		flick("medibot_spark", src)
 		playsound(src, "sparks", 75, 1)
 		if(user)

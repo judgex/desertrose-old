@@ -198,7 +198,8 @@ Auto Patrol[]"},
 		if(user)
 			to_chat(user, "<span class='warning'>You short out [src]'s target assessment circuits.</span>")
 			oldtarget_name = user.name
-		audible_message("<span class='danger'>[src] buzzes oddly!</span>")
+		audible_message("<span class='danger'>[src] buzzes oddly!</span>",
+		runechat_popup = TRUE)
 		declare_arrests = 0
 		icon_state = "[lasercolor]ed209[on]"
 		set_weapon()
