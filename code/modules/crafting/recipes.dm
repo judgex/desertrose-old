@@ -19,6 +19,7 @@
 ---Fallout 13 Crafting
 */
 
+
 /datum/crafting_recipe/workbench
 	name = "workbench"
 	result = /obj/machinery/workbench
@@ -32,6 +33,7 @@
 				/obj/item/stack/crafting/metalparts = 5)
 	time = 80
 	category = CAT_MISC
+	subcategory = CAT_MISC
 
 /datum/crafting_recipe/stove
 	name = "cook stove"
@@ -45,6 +47,7 @@
 	tools = list(TOOL_WELDER, TOOL_SCREWDRIVER)
 	time = 80
 	category = CAT_MISC
+	subcategory = CAT_MISC
 
 /datum/crafting_recipe/bellystove
 	name = "pot belly stove"
@@ -55,6 +58,7 @@
 	tools = list(TOOL_WELDER, TOOL_WORKBENCH)
 	time = 80
 	category = CAT_MISC
+	subcategory = CAT_MISC
 
 /datum/crafting_recipe/dildo_plastic
     name = "plastic dildo"
@@ -63,6 +67,7 @@
     time = 20
     tools = list(TOOL_WELDER, TOOL_WORKBENCH)
     category = CAT_MISC
+    subcategory = CAT_MISC
 
 /datum/crafting_recipe/dildo_tribal
     name = "wooden dildo"
@@ -71,6 +76,7 @@
     tools = list(TOOL_KNIFE)
     time = 85
     category = CAT_MISC
+    subcategory = CAT_MISC
 
 /datum/crafting_recipe/campfirekit
 	name = "campfire kit"
@@ -78,6 +84,7 @@
 	reqs = list(/obj/item/stack/sheet/mineral/wood = 15)
 	time = 80
 	category = CAT_MISC
+	subcategory = CAT_MISC
 
 /datum/crafting_recipe/setupcampfirekit
 	name = "set up campfire kit"
@@ -85,6 +92,7 @@
 	reqs = list(/obj/item/crafting/campfirekit = 1)
 	time = 40
 	category = CAT_MISC
+	subcategory = CAT_MISC
 
 /datum/crafting_recipe/barrelfire
 	name = "stoke barrel fire"
@@ -93,6 +101,7 @@
 				/obj/item/stack/sheet/metal = 10)
 	time = 80
 	category = CAT_MISC
+	subcategory = CAT_MISC
 
 /datum/crafting_recipe/pin_removal
 	name = "Pin Removal"
@@ -711,6 +720,7 @@
 	reqs = list(/obj/item/organ/tail/cat = 1,
 				/obj/item/organ/ears/cat = 1)
 	category = CAT_MISC
+	subcategory = CAT_MISC
 */
 /*
 /datum/crafting_recipe/skateboard
@@ -720,6 +730,7 @@
 	reqs = list(/obj/item/stack/sheet/metal = 5,
 				/obj/item/stack/rods = 10)
 	category = CAT_MISC
+	subcategory = CAT_MISC
 
 /datum/crafting_recipe/scooter
 	name = "Scooter"
@@ -728,6 +739,7 @@
 	reqs = list(/obj/item/stack/sheet/metal = 5,
 				/obj/item/stack/rods = 12)
 	category = CAT_MISC
+	subcategory = CAT_MISC
 */
 /datum/crafting_recipe/papersack
 	name = "Paper Sack"
@@ -735,6 +747,7 @@
 	time = 10
 	reqs = list(/obj/item/paper = 5)
 	category = CAT_MISC
+	subcategory = CAT_MISC
 
 
 /datum/crafting_recipe/flashlight_eyes
@@ -746,6 +759,7 @@
 		/obj/item/restraints/handcuffs/cable = 1
 	)
 	category = CAT_MISC
+	subcategory = CAT_MISC
 
 /datum/crafting_recipe/paperframes
 	name = "Paper Frames"
@@ -753,6 +767,7 @@
 	time = 10
 	reqs = list(/obj/item/stack/sheet/mineral/wood = 5, /obj/item/paper = 20)
 	category = CAT_MISC
+	subcategory = CAT_MISC
 
 /datum/crafting_recipe/naturalpaper
 	name = "Hand-Pressed Paper"
@@ -761,18 +776,21 @@
 	tools = list(/obj/item/hatchet)
 	result = /obj/item/paper_bin/bundlenatural
 	category = CAT_MISC
+	subcategory = CAT_MISC
 
 /datum/crafting_recipe/blackcarpet
 	name = "Black Carpet"
 	reqs = list(/obj/item/stack/tile/carpet = 50, /obj/item/toy/crayon/black = 1)
 	result = /obj/item/stack/tile/carpet/black/fifty
 	category = CAT_MISC
+	subcategory = CAT_MISC
 
 /datum/crafting_recipe/showercurtain
 	name = "Shower Curtains"
 	reqs = 	list(/obj/item/stack/sheet/cloth = 2, /obj/item/stack/sheet/plastic = 2, /obj/item/stack/rods = 1)
 	result = /obj/structure/curtain
 	category = CAT_MISC
+	subcategory = CAT_MISC
 
 /datum/crafting_recipe/chemical_payload
 	name = "Chemical Payload (C4)"
@@ -979,6 +997,7 @@
 	time = 10
 	reqs = list(/obj/item/stack/sheet/cardboard = 1)
 	category = CAT_MISC
+	subcategory = CAT_MISC
 
 /datum/crafting_recipe/pressureplate
 	name = "Pressure Plate"
@@ -989,6 +1008,7 @@
 				  /obj/item/stack/cable_coil = 2,
 				  /obj/item/assembly/igniter = 1)
 	category = CAT_MISC
+	subcategory = CAT_MISC
 
 
 /*/datum/crafting_recipe/rcl
@@ -998,6 +1018,7 @@
 	tools = list(TOOL_WELDER, TOOL_SCREWDRIVER, TOOL_WRENCH)
 	reqs = list(/obj/item/stack/sheet/metal = 15)
 	category = CAT_MISC
+	subcategory = CAT_MISC
 
 /datum/crafting_recipe/guillotine
 	name = "Guillotine"
@@ -1007,7 +1028,8 @@
 		        /obj/item/stack/sheet/mineral/wood = 20,
 		        /obj/item/stack/cable_coil = 10)
 	tools = list(TOOL_SCREWDRIVER, TOOL_WRENCH, TOOL_WELDER)
-	category = CAT_MISC*/
+	category = CAT_MISC
+	subcategory = CAT_MISC*/
 
 /datum/crafting_recipe/binoculars
 	name = "Binoculars"
@@ -1017,6 +1039,7 @@
 				/obj/item/stack/sheet/glass = 5)
 	tools = list(TOOL_SCREWDRIVER,TOOL_WORKBENCH)
 	category = CAT_MISC
+	subcategory = CAT_MISC
 
 /*/datum/crafting_recipe/spooky_camera
 	name = "Camera Obscura"
@@ -1025,7 +1048,8 @@
 	reqs = list(/obj/item/camera = 1,
 				/datum/reagent/water/holywater = 10)
 	parts = list(/obj/item/camera = 1)
-	category = CAT_MISC*/
+	category = CAT_MISC
+	subcategory = CAT_MISC*/
 
 //drugs
 /datum/crafting_recipe/jet
@@ -1058,6 +1082,7 @@
 	reqs = list(/obj/item/clothing/under = 1)
 	time = 20
 	category = CAT_MISC
+	subcategory = CAT_MISC
 
 /datum/crafting_recipe/healpowder
 	name = "Healing powder"
@@ -1115,6 +1140,7 @@
 				/obj/item/assembly/igniter =1)
 	time = 40
 	category = CAT_MISC
+	subcategory = CAT_MISC
 
 /datum/crafting_recipe/mop
 	name = "Mop"
@@ -1123,6 +1149,7 @@
 				/obj/item/reagent_containers/glass/rag = 1)
 	time = 30
 	category = CAT_MISC
+	subcategory = CAT_MISC
 
 /*/datum/crafting_recipe/reversebeartrap
 	name = "Reverse Bear Trap"
@@ -1259,6 +1286,7 @@
 	tools = list(TOOL_WELDER)
 	time = 10
 	category = CAT_MISC
+	subcategory = CAT_MISC
 
 /datum/crafting_recipe/spray
 	name = "Abraxo Cleaner"
@@ -1269,6 +1297,7 @@
 	tools = list(TOOL_WELDER)
 	time = 10
 	category = CAT_MISC
+	subcategory = CAT_MISC
 
 /datum/crafting_recipe/headset
 	name = "radio headset"
@@ -1278,6 +1307,7 @@
 	tools = list(TOOL_WORKBENCH)
 	time = 10
 	category = CAT_MISC
+	subcategory = CAT_MISC
 
 /datum/crafting_recipe/handheldradio
 	name = "handheld radio"
@@ -1286,6 +1316,7 @@
 				/obj/item/stack/crafting/electronicparts = 1)
 	time = 10
 	category = CAT_MISC
+	subcategory = CAT_MISC
 
 /datum/crafting_recipe/throwingknife
 	name = "Throwing Knife"
@@ -1782,6 +1813,7 @@
 	time = 30
 	reqs = list(/obj/item/stack/sheet/hay = 15)
 	category = CAT_MISC
+	subcategory = CAT_MISC
 
 /datum/crafting_recipe/Tallow
 	name = "Render Fat From Scraps"
@@ -1789,6 +1821,7 @@
 	time = 30
 	reqs = list(/obj/item/reagent_containers/food/snacks/meat/cutlet = 3)
 	category = CAT_MISC
+	subcategory = CAT_MISC
 
 /datum/crafting_recipe/TallowCandle
 	name = "Mold Tallow Candle"
@@ -1799,8 +1832,9 @@
 		/obj/item/stack/sheet/durathread = 3
 	)
 	category = CAT_MISC
+	subcategory = CAT_MISC
 
-/datum/crafting_recipe/SalvageCandle
+	/datum/crafting_recipe/SalvageCandle
 	name = "Salvage Wax"
 	result = /obj/item/candle
 	time = 80
@@ -1809,6 +1843,7 @@
 		/obj/item/stack/sheet/durathread = 3
 	)
 	category = CAT_MISC
+	subcategory = CAT_MISC
 
 /datum/crafting_recipe/warclub
 	name = "Carve Wooden Warclub"
@@ -1929,3 +1964,55 @@
 	tools = list(TOOL_WORKBENCH)
 	category = CAT_PRIMAL
 	subcategory = CAT_TRIBAL
+  
+//BOTTLING
+
+/datum/crafting_recipe/bottler
+	name = "bottle press"
+	result = /obj/machinery/workbench/bottler
+	reqs = list(/obj/item/stack/sheet/metal = 10,
+				/obj/item/stack/crafting/goodparts = 10,
+				/obj/item/stack/cable_coil = 10,
+				/obj/item/wrench = 1)
+	tools = list(TOOL_WRENCH, TOOL_SCREWDRIVER, TOOL_WIRECUTTER)
+	time = 80
+	category = CAT_MISC
+	subcategory = CAT_BOTTLE
+
+/datum/crafting_recipe/bottle
+	name = "brown bottle"
+	result = /obj/item/reagent_containers/food/drinks/bottle/brown
+	reqs = list(/obj/item/stack/sheet/glass = 3,
+				/obj/item/stack/f13Cash = 1)
+	tools = list(TOOL_BOTTLER)
+	time = 10
+	category = CAT_MISC
+	subcategory = CAT_BOTTLE
+
+/datum/crafting_recipe/bottle/darkbrown
+	name = "dark brown bottle"
+	result = /obj/item/reagent_containers/food/drinks/bottle/brown/darkbrown
+
+/datum/crafting_recipe/bottle/lightbrown
+	name = "light brown bottle"
+	result = /obj/item/reagent_containers/food/drinks/bottle/brown/lightbrown
+
+/datum/crafting_recipe/bottle/white
+	name = "white bottle"
+	result = /obj/item/reagent_containers/food/drinks/bottle/brown/white
+
+/datum/crafting_recipe/bottle/green
+	name = "green bottle"
+	result = /obj/item/reagent_containers/food/drinks/bottle/brown/green
+
+/datum/crafting_recipe/bottle/wine
+	name = "wine bottle"
+	result = /obj/item/reagent_containers/food/drinks/bottle/brown/wine
+
+/datum/crafting_recipe/bottle/greenwine
+	name = "green wine bottle"
+	result = /obj/item/reagent_containers/food/drinks/bottle/brown/greenwine
+
+/datum/crafting_recipe/bottle/beerbottle
+	name = "beer bottle"
+	result = /obj/item/reagent_containers/food/drinks/bottle/brown/beer
