@@ -1834,7 +1834,7 @@
 	category = CAT_MISC
 	subcategory = CAT_MISC
 
-/datum/crafting_recipe/SalvageCandle
+/datum/crafting_recipe/salvagecandle
 	name = "Salvage Wax"
 	result = /obj/item/candle
 	time = 80
