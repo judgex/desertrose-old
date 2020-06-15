@@ -382,21 +382,23 @@ Mayor
 	total_positions = 8
 	spawn_positions = 8
 	supervisors = "the sheriff and the mayor"
-	description = "Much of the wasteland is filled with conflict and strife, as a local settler to Pahrump you benefit in that you have a claim to the land and the opportunities that unfold. What destiny awaits you? Will you find your way? Or dissapear trying. Will you rise to glory or dissapear into obscurity?"
+	description = "Much of the wasteland is filled with conflict and strife, as a local settler to Yuma you benefit in that you have a claim to the land and the opportunities that unfold."
 	selection_color = "#dcba97"
 
 	outfit = /datum/outfit/job/den/f13settler
 
 	loadout_options = list(
-	/datum/outfit/loadout/me,
-	/datum/outfit/loadout/fuck, 
+	/datum/outfit/loadout/provisioner,
+    /datum/outfit/loadout/towndrunk,
+    /datum/outfit/loadout/properlady,
+    /datum/outfit/loadout/propergent,
+    /datum/outfit/loadout/hombre,
 	)
-
 	access = list(ACCESS_BAR)
 	minimal_access = list(ACCESS_BAR)
 
-/datum/outfit/loadout/fuck
-	name = "Atom's Devout"
+/datum/outfit/loadout/provisioner
+	name = "Provisioner"
 	l_hand = /obj/item/twohanded/sledgehammer/atomsjudgement
 	backpack_contents = list(
 		/obj/item/clothing/under/f13/atombeliever=1,
@@ -404,8 +406,29 @@ Mayor
 		/obj/item/clothing/head/helmet/f13/atombeliever=1
 		)
 
-/datum/outfit/loadout/me
-	name = "Protector of the Faith"
+/datum/outfit/loadout/towndrunk
+	name = "Town Drunk"
+	l_hand = /obj/item/nullrod
+	backpack_contents = list(
+		/obj/item/reagent_containers/hypospray/medipen/stimpak=2
+		)
+
+/datum/outfit/loadout/properlady
+	name = "Proper Lady"
+	l_hand = /obj/item/nullrod
+	backpack_contents = list(
+		/obj/item/reagent_containers/hypospray/medipen/stimpak=2
+		)
+
+/datum/outfit/loadout/propergent
+	name = "Proper Gent"
+	l_hand = /obj/item/nullrod
+	backpack_contents = list(
+		/obj/item/reagent_containers/hypospray/medipen/stimpak=2
+		)
+
+/datum/outfit/loadout/hombre
+	name = "Hombre"
 	l_hand = /obj/item/nullrod
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/stimpak=2
