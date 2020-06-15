@@ -94,7 +94,7 @@
 	icon = 'icons/mob/nest.dmi'
 	health = 1000
 	maxHealth = 1000
-	max_mobs = 5
+	max_mobs = 2
 	spawn_time = 150
 	mob_types = list(/mob/living/simple_animal/hostile/deathclaw, /mob/living/simple_animal/hostile/deathclaw/mother)
 	faction = list("deathclaw")
@@ -107,7 +107,7 @@
 	icon = 'icons/mob/nest.dmi'
 	health = 1000
 	maxHealth = 1000
-	max_mobs = 2
+	max_mobs = 5
 	spawn_time = 150
 	mob_types = list(/mob/living/simple_animal/hostile/radscorpion)
 	faction = list("radscorpion")
