@@ -110,7 +110,7 @@
 	subcategory = CAT_WASTEFOOD
 
 /datum/crafting_recipe/food/tatofries
-	name = "crunchy mutfruit"
+	name = "tato fries"
 	reqs = list(
     	/obj/item/reagent_containers/food/snacks/grown/tato = 2,
     	/obj/item/reagent_containers/food/snacks/butter = 1
