@@ -254,7 +254,7 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 	var/list/dead_away = list()
 	var/list/yellareas	//CIT CHANGE - adds the ability for yelling to penetrate walls and echo throughout areas
 	if(!eavesdrop_range && say_test(message) == "2")	//CIT CHANGE - ditto
-		yellareas = get_areas_in_range(message_range*0.5, source)	//CIT CHANGE - ditto
+		yellareas = get_areas_in_range(message_range*0, source)	//CIT CHANGE - ditto
 	for(var/_M in GLOB.player_list)
 		var/mob/M = _M
 		if(M.stat != DEAD) //not dead, not important
@@ -302,7 +302,7 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 			speech_bubble_recipients.Add(M.client)
 	var/image/I = image('icons/mob/talk.dmi', src, "[bubble_type][say_test(message)]", FLY_LAYER)
 	I.appearance_flags = APPEARANCE_UI_IGNORE_ALPHA
-	INVOKE_ASYNC(GLOBAL_PROC, /.proc/animate_speechbubble, I, speech_bubble_recipients, 30) //skyrat-edit 
+	INVOKE_ASYNC(GLOBAL_PROC, /.proc/animate_speechbubble, I, speech_bubble_recipients, 30) //skyrat-edit
 
 /mob/proc/binarycheck()
 	return FALSE
@@ -438,7 +438,7 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 	var/list/dead_away = list()
 	var/list/yellareas	//CIT CHANGE - adds the ability for yelling to penetrate walls and echo throughout areas
 	if(!eavesdrop_range && say_test(message) == "2")	//CIT CHANGE - ditto
-		yellareas = get_areas_in_range(message_range*0.5, source)	//CIT CHANGE - ditto
+		yellareas = get_areas_in_range(message_range*0, source)	//CIT CHANGE - ditto
 	for(var/_M in GLOB.player_list)
 		var/mob/M = _M
 		if(M.stat != DEAD) //not dead, not important
@@ -486,7 +486,7 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 			speech_bubble_recipients.Add(M.client)
 	var/image/I = image('icons/mob/talk.dmi', src, "[bubble_type][say_test(message)]", FLY_LAYER)
 	I.appearance_flags = APPEARANCE_UI_IGNORE_ALPHA
-	INVOKE_ASYNC(GLOBAL_PROC, /.proc/animate_speechbubble, I, speech_bubble_recipients, 30) //skyrat-edit 
+	INVOKE_ASYNC(GLOBAL_PROC, /.proc/animate_speechbubble, I, speech_bubble_recipients, 30) //skyrat-edit
 
 /proc/animate_speechbubble(image/I, list/show_to, duration)
 	var/matrix/M = matrix()
@@ -500,4 +500,4 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 	animate(I, alpha = 0, time = 5, easing = EASE_IN)
 	spawn(20)
 	for(var/client/C in show_to)
-		C.images -= I 
+		C.images -= I
