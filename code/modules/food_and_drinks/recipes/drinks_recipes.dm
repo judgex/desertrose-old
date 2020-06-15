@@ -48,7 +48,7 @@
 	required_catalysts = list("enzyme" = 5)
 
 /datum/chemical_reaction/spacebeer
-	name = "Space Beer"
+	name = "Beer"
 	id = "spacebeer"
 	results = list("beer" = 10)
 	required_reagents = list("flour" = 10)
