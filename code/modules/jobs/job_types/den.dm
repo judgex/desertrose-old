@@ -49,10 +49,6 @@ Mayor
 		/obj/item/ammo_box/a357=2, \
 		/obj/item/pen/fountain/captain)
 
-/*
-Sheriff
-*/
-
 /datum/job/den/f13sheriff
 	title = "Sheriff"
 	flag = F13SHERIFF
@@ -99,14 +95,6 @@ Sheriff
 /datum/job/den/f13sheriff/after_spawn(mob/living/carbon/human/H, mob/M)
 	H.add_quirk("Hard Yards")
 
-
-	//pick("grey", "white", "yellow", "purple", "brown", "whatever")
-	//var/item1_type = pick( /obj/item/stack/spacecash/c10, /obj/item/stack/spacecash/c100, /obj/item/stack/spacecash/c1000, /obj/item/stack/spacecash/c20, /obj/item/stack/spacecash/c200, /obj/item/stack/spacecash/c50, /obj/item/stack/spacecash/c500)
-
-/*
-Deputy
-*/
-
 /datum/job/den/f13deputy
 	title = "Deputy"
 	flag = F13DEPUTY
@@ -145,10 +133,6 @@ Deputy
 		/obj/item/ammo_box/tube/m44=2, \
 		/obj/item/restraints/handcuffs=1)
 
-/*
-Farmer
-*/
-
 /datum/job/den/f13farmer
 	title = "Farmer"
 	flag = F13FARMER
@@ -157,7 +141,7 @@ Farmer
 	total_positions = 4
 	spawn_positions = 4
 	supervisors = "the sheriff and the mayor"
-	description = "A local settler of Pahrump, you know a thing or two about cultivation and husbandry, making you a vital backbone of the town in growing medicines, crops and raising livestock in the service of the townsfolk."
+	description = "A local settler of Yuma, you know a thing or two about cultivation and husbandry, making you a vital backbone of the town in growing medicines, crops and raising livestock in the service of the townsfolk."
 	selection_color = "#dcba97"
 
 
@@ -191,10 +175,6 @@ Farmer
 		/obj/item/clothing/under/f13/machinist, \
 		/obj/item/clothing/under/f13/lumberjack, \
 		/obj/item/clothing/under/f13/roving)
-
-/*
-Prospector
-*/
 
 /datum/job/den/f13prospector
 	title = "Prospector"
@@ -237,10 +217,6 @@ Prospector
 		/obj/item/clothing/under/f13/roving, \
 		/obj/item/clothing/under/f13/cowboyt)
 
-/*
-Doctor
-*/
-
 /datum/job/den/f13dendoc
 	title = "Doctor"
 	flag = F13DENDOC
@@ -277,10 +253,6 @@ Doctor
 		/obj/item/storage/firstaid/regular,
 		/obj/item/clothing/accessory/armband/medblue  \
 		)
-
-/*
-Preacher
-*/
 
 /datum/job/den/f13preacher
 	title = "Preacher"
@@ -364,13 +336,6 @@ Preacher
 			B.name = "The Book of Lorgar"
 		if("imperium")
 			B.name = "Uplifting Primer"
-		if("toolboxia")
-			B.name = "Toolbox Manifesto"
-		if("homosexuality")
-			B.name = "Guys Gone Wild"
-		if("lol", "wtf", "gay", "penis", "ass", "poo", "badmin", "shitmin", "deadmin", "cock", "cocks", "meme", "memes")
-			B.name = pick("Woodys Got Wood: The Aftermath", "War of the Cocks", "Sweet Bro and Hella Jef: Expanded Edition")
-			H.adjustBrainLoss(100) // starts off stupid as fuck
 		if("science")
 			B.name = pick("Principle of Relativity", "Quantum Enigma: Physics Encounters Consciousness", "Programming the Universe", "Quantum Physics and Theology", "String Theory for Dummies", "How To: Build Your Own Warp Drive", "The Mysteries of Bluespace", "Playing God: Collector's Edition")
 		else
@@ -409,12 +374,8 @@ Preacher
 		/obj/item/storage/fancy/candle_box, \
 		/obj/item/storage/bag/money/small/settler)
 
-/*
-Settler
-*/
-
 /datum/job/den/f13settler
-	title = "Settler"
+	title = "Citizen"
 	flag = F13SETTLER
 	department_flag = DEN
 	faction = "Town"
@@ -429,7 +390,7 @@ Settler
 	minimal_access = list(ACCESS_BAR)
 
 /datum/outfit/job/den/f13settler
-	name = "Settler"
+	name = "Citizen"
 	jobtype = /datum/job/den/f13settler
 
 	id = /obj/item/card/id/dogtag/town
@@ -448,10 +409,6 @@ Settler
 		/obj/item/clothing/under/f13/machinist, \
 		/obj/item/clothing/under/f13/lumberjack, \
 		/obj/item/clothing/under/f13/roving)
-
-/*
-Shopkeeper
-*/
 
 /datum/job/den/f13shopkeeper
     title = "Shopkeeper"

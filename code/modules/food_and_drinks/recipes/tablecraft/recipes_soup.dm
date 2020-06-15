@@ -237,7 +237,6 @@
 	result = /obj/item/reagent_containers/food/snacks/soup/beet/red
 	subcategory = CAT_SOUP
 
-//UMA DELICIA UMA DELICIA FALLOUT13
 /datum/crafting_recipe/food/macaco
 	name = "Macaco soup"
 	reqs = list(

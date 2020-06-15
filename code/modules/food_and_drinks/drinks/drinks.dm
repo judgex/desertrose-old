@@ -126,14 +126,6 @@
 	transfer_fingerprints_to(B)
 	qdel(src)
 
-
-
-
-////////////////////////////////////////////////////////////////////////////////
-/// Drinks. END
-////////////////////////////////////////////////////////////////////////////////
-
-
 /obj/item/reagent_containers/food/drinks/trophy
 	name = "pewter cup"
 	desc = "Everyone gets a trophy."
@@ -172,7 +164,6 @@
 	amount_per_transfer_from_this = 15
 	materials = list(MAT_SILVER=800)
 	volume = 100
-
 
 /obj/item/reagent_containers/food/drinks/trophy/bronze_cup
 	name = "bronze cup"
@@ -227,12 +218,11 @@
 
 /obj/item/reagent_containers/food/drinks/mug/coco
 	name = "Dutch hot coco"
-	desc = "Made in Space South America."
+	desc = "Made in South America."
 	list_reagents = list("hot_coco" = 30, "sugar" = 5)
 	foodtype = SUGAR
 
 	resistance_flags = FREEZE_PROOF
-
 
 /obj/item/reagent_containers/food/drinks/dry_ramen
 	name = "cup ramen"
@@ -251,7 +241,7 @@
 
 /obj/item/reagent_containers/food/drinks/ale
 	name = "Magm-Ale"
-	desc = "A true miner's drink of choice."
+	desc = "A true man's drink of choice."
 	icon_state = "alebottle"
 	item_state = "beer"
 	list_reagents = list("ale" = 30)
@@ -276,7 +266,7 @@
 	name = "small carton"
 	desc = "A small carton, intended for holding drinks."
 	icon_state = "juicebox"
-	volume = 15 //I figure if you have to craft these it should at least be slightly better than something you can get for free from a watercooler
+	volume = 15
 
 /obj/item/reagent_containers/food/drinks/sillycup/smallcarton/smash(atom/target, mob/thrower, ranged = FALSE)
 	if(bartender_check(target) && ranged)
@@ -332,9 +322,6 @@
 		name = "small carton"
 		desc = "A small carton, intended for holding drinks."
 
-
-
-//////////////////////////drinkingglass and shaker//
 //Note by Darem: This code handles the mixing of drinks. New drinks go in three places: In Chemistry-Reagents.dm (for the drink
 //	itself), in Chemistry-Recipes.dm (for the reaction that changes the components into the drink), and here (for the drinking glass
 //	icon states.
@@ -377,9 +364,6 @@
 	volume = 30
 	spillable = TRUE
 
-//////////////////////////soda_cans//
-//These are in their own group to be used as IED's in /obj/item/grenade/ghettobomb.dm
-
 /obj/item/reagent_containers/food/drinks/soda_cans
 	name = "soda can"
 	lefthand_file = 'icons/mob/inhands/misc/food_lefthand.dmi'
@@ -404,7 +388,6 @@
 		crushed_can.icon_state = icon_state
 		qdel(src)
 	..()
-
 
 /obj/item/reagent_containers/food/drinks/soda_cans/attack_self(mob/user)
 	if(!is_drainable())
@@ -451,8 +434,8 @@
 	name = "off-brand orange soda"
 
 /obj/item/reagent_containers/food/drinks/soda_cans/space_up
-	name = "Space-Up!"
-	desc = "Tastes like a hull breach in your mouth."
+	name = "Seven-Up!"
+	desc = "Tastes like a blast of flavor in your mouth."
 	icon_state = "space-up"
 	list_reagents = list("space_up" = 30)
 	foodtype = SUGAR | JUNKFOOD
@@ -505,7 +488,6 @@
 	desc = "There is no air shortage. Do not drink."
 	icon_state = "air"
 	list_reagents = list("nitrogen" = 24, "oxygen" = 6)
-//F13 EDIT
 
 /obj/item/reagent_containers/food/drinks/soda_cans/f13nukacola
 	name = "Nuka-Cola"
