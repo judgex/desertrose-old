@@ -42,7 +42,7 @@
 /obj/item/reagent_containers/food/snacks/no_raisin
 	name = "4no raisins"
 	icon_state = "4no_raisins"
-	desc = "The best raisins in United States of American."
+	desc = "The best raisins in United States of America."
 	list_reagents = list("nutriment" = 2, "sugar" = 4)
 	junkiness = 25
 	filling_color = "#8B0000"
