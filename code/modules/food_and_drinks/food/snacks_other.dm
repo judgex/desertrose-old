@@ -575,3 +575,12 @@
 	filling_color = "#FFD700"
 	tastes = list("sickly fat" = 1)
 	foodtype = MEAT | JUNKFOOD | GROSS
+
+/obj/item/reagent_containers/food/snacks/crunchymutfruit	
+	name = "Crunchy Mutfruit"
+	desc = "Crunchy mutfruit is a fruit of a slight purple tinge that resembles an apple."
+	icon_state = "scotchegg"
+	list_reagents = list("nutriment" = 4, "vitamin" = 2)
+	filling_color = "#FFD700"
+	tastes = list("crunchy sweetness" = 1, "warm butter"=1)
+	foodtype = FRUIT

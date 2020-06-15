@@ -1,6 +1,3 @@
-//Wasteland food
-//Food made from mostly wasteland ingredients, hooray for immershun
-
 /datum/crafting_recipe/food/moleratwondermeat
 	name = "Molerat Wondermeat"
 	reqs = list(
@@ -98,5 +95,16 @@
     	/obj/item/reagent_containers/food/snacks/tallow = 1
 	)
 	result = /obj/item/reagent_containers/food/snacks/pemmican
+	category = CAT_FOOD
+	subcategory = CAT_WASTEFOOD
+
+/datum/crafting_recipe/food/crunchymutfruit	
+	name = "crunchy mutfruit"
+	reqs = list(
+    	/obj/item/reagent_containers/food/snacks/grown/mutfruit = 1,
+    	/obj/item/reagent_containers/food/snacks/butter = 1,
+    	/datum/reagent/consumable/sugar = 5
+	)
+	result = /obj/item/reagent_containers/food/snacks/crunchymutfruit	
 	category = CAT_FOOD
 	subcategory = CAT_WASTEFOOD
