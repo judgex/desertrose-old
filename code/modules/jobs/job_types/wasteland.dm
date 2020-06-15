@@ -130,8 +130,13 @@ Detective
 		/obj/item/storage/box/evidence=1,
 		/obj/item/ammo_box/a357=2)
 
+
+/*
+Raider
+*/
+
 /datum/job/wasteland/f13raider
-	title = "Outlaw"
+	title = "Raider"
 	flag = F13RAIDER
 	department_head = list("Captain")
 	head_announce = list("Security")
@@ -162,7 +167,7 @@ Detective
 	/datum/outfit/loadout/raider_mafia)
 
 /datum/outfit/job/wasteland/f13raider
-	name = "Outlaw"
+	name = "Raider"
 	jobtype = /datum/job/wasteland/f13raider
 
 	id = null
@@ -234,6 +239,8 @@ Detective
 	H.social_faction = "Raiders"
 	H.verbs |= /mob/living/proc/creategang
 
+
+
 /datum/outfit/loadout/raider_supafly
 	name = "Supa-fly"
 	suit = /obj/item/clothing/suit/armor/f13/raider
@@ -255,6 +262,7 @@ Detective
 		/obj/item/ammo_box/a308=2,
 		/obj/item/storage/fancy/cigarettes/cigpack_cannabis=1,
 		/obj/item/megaphone=1)
+
 
 /datum/outfit/loadout/raider_blast
 	name = "Blastmaster"
@@ -302,7 +310,7 @@ Detective
 		/obj/item/grenade/chem_grenade/cleaner=1)
 
 /datum/outfit/loadout/raider_bos
-	name = "Brotherhood Outcast"
+	name = "Brotherhood Exile"
 	suit = /obj/item/clothing/suit/armor/f13/exile/bosexile
 	id = /obj/item/card/id/rusted/brokenholodog
 	backpack_contents = list(
@@ -329,7 +337,7 @@ Detective
 		/obj/item/storage/backpack/spearquiver=1)
 
 /datum/outfit/loadout/raider_sheriff
-	name = "Bandit"
+	name = "Dark Sheriff"
 	suit = /obj/item/clothing/suit/armor/vest/leather
 	uniform = /obj/item/clothing/under/syndicate/tacticool
 	head = /obj/item/clothing/head/helmet/f13/brahmincowboyhat
@@ -346,12 +354,12 @@ Detective
     glasses = /obj/item/clothing/glasses/sunglasses
     shoes =/obj/item/clothing/shoes/f13/fancy
     backpack_contents = list(
-        /obj/item/gun/ballistic/automatic/pistol/ninemil/maria=1,
+        /obj/item/gun/ballistic/automatic/pistol/ninemil=1,
         /obj/item/ammo_box/magazine/m9mm=2,
         /obj/item/toy/cards/deck=1)
 
 /datum/outfit/loadout/raider_vault
-	name = "Vault Exile"
+	name = "Vault Outcast"
 	suit = /obj/item/clothing/suit/armor/f13/leatherarmor
 	uniform = /obj/item/clothing/under/f13/exile/vault
 	id = /obj/item/card/id/rusted/fadedvaultid
@@ -359,19 +367,37 @@ Detective
 		/obj/item/gun/ballistic/automatic/pistol/n99=1,
 		/obj/item/ammo_box/magazine/m10mm_adv=2)
 
+
+/datum/outfit/loadout/raider_metal
+	name = "Metal Raider"
+	suit = /obj/item/clothing/suit/armor/f13/raider/raidermetal
+	head = /obj/item/clothing/head/helmet/f13/raidermetal
+	uniform = /obj/item/clothing/under/f13/raiderharness
+
+	//This 0.2 weight will make the eyebot less common. Everything has a weight of 1 if not specified
+
+//As a subclass, this inherits the helmets from the raider_metal outfit
+/datum/outfit/loadout/raider_metal/chestplate
+	name = "Metal - Chest"
+	suit = /obj/item/clothing/suit/armor/f13/metalarmor
+
+/*
+Wastelander
+*/
+
 /datum/job/wasteland/f13wastelander
 	title = "Wastelander"
 	flag = F13WASTELANDER
 	faction = "Wastelander"
 	total_positions = -1
 	spawn_positions = -1
-	description = "You travelled far to arrive at the ruined town of Yuma, a bleak paradise far from the troubles of the Mojave Conflict - protected by Red Rock Canyon to the east, free of the many factions vying for control over Nevada. Here in Pahrump, your story and fate is your own."
+	description = "You travelled far to arrive at the ruined town of Pahrump, a bleak paradise far from the troubles of the Mojave Conflict - protected by Red Rock Canyon to the east, free of the many factions vying for control over Nevada. Here in Pahrump, your story and fate is your own."
 	supervisors = "no one"
 	selection_color = "#dddddd"
 
 	outfit = /datum/outfit/job/wasteland/f13wastelander
 
-	access = list()
+	access = list()		//we can expand on this and make alterations as people suggest different loadouts
 	minimal_access = list()
 	loadout_options = list(
 	/datum/outfit/loadout/vault_refugee,
@@ -429,6 +455,9 @@ Detective
 	gloves = /obj/item/pda
 	shoes = /obj/item/clothing/shoes/jackboots
 	gloves = /obj/item/clothing/gloves/fingerless
+	backpack_contents = list(
+		/obj/item/gun/ballistic/automatic/pistol/n99=1,
+		/obj/item/ammo_box/magazine/m10mm_adv=2)
 
 
 /datum/outfit/loadout/petro
@@ -438,6 +467,9 @@ Detective
 	uniform = /obj/item/clothing/under/f13/petrochico
 	shoes = /obj/item/clothing/shoes/f13/fancy
 	gloves = /obj/item/clothing/gloves/rifleman
+	backpack_contents = list(
+		/obj/item/gun/ballistic/revolver/colt357=2,
+		/obj/item/ammo_box/a357=2)
 
 /datum/outfit/loadout/follower
 	name = "Follower"
@@ -445,6 +477,9 @@ Detective
 	suit = /obj/item/clothing/suit/toggle/labcoat/f13/followers
 	shoes = /obj/item/clothing/shoes/f13/explorer
 	gloves = /obj/item/clothing/gloves/color/latex
+	l_hand = /obj/item/storage/firstaid/ancient
+	backpack_contents =  list(
+		/obj/item/gun/ballistic/automatic/pistol/m1911=1)
 
 /datum/outfit/loadout/merchant
 	name = "Roving Trader"
@@ -454,6 +489,11 @@ Detective
 	head = /obj/item/clothing/head/f13/stormchaser
 	gloves = /obj/item/clothing/gloves/color/brown
 	glasses = /obj/item/clothing/glasses/f13/biker
+	l_hand = /obj/item/gun/ballistic/revolver/caravan_shotgun
+	backpack_contents =  list(
+		/obj/item/storage/box/lethalshot=1)
+
+
 
 /datum/outfit/loadout/gambler
 	name = "Gambler"
@@ -464,6 +504,10 @@ Detective
 	shoes = /obj/item/clothing/shoes/f13/fancy
 	head = list(/obj/item/clothing/head/fedora,
  	/obj/item/clothing/head/f13/gambler)
+	l_hand = /obj/item/gun/ballistic/automatic/pistol/ninemil
+	backpack_contents =  list(
+		/obj/item/ammo_box/magazine/m9mm=2)
+
 
 /datum/outfit/loadout/citizen
 	name = "Legion Citizen"
@@ -473,6 +517,11 @@ Detective
 	head = /obj/item/clothing/head/scarecrow_hat
 	gloves = /obj/item/clothing/gloves/color/black
 	glasses = /obj/item/clothing/glasses/welding
+	l_hand = /obj/item/shield/legion/buckler
+	backpack_contents = list(
+        /obj/item/claymore/machete/reinforced=1)
+
+
 
 /datum/outfit/loadout/slave
 	name = "NCR Citizen"
@@ -481,3 +530,122 @@ Detective
 	head = /obj/item/clothing/head/f13/cowboy
 	gloves = /obj/item/clothing/gloves/color/brown
 	glasses = /obj/item/clothing/glasses/orange
+	l_hand = /obj/item/gun/ballistic/automatic/marksman/servicerifle/varmint
+	backpack_contents = list(
+		/obj/item/ammo_box/magazine/m556/rifle/small=2)
+
+/*
+Punished Raider
+*/
+
+/*
+/datum/job/wasteland/f13punraider
+	title = "Punished Raider"
+	flag = F13PUNRAIDER
+	department_head = list("Captain")
+	head_announce = list("Security")
+	req_admin_notify = 1
+//	faction = "Station"
+	total_positions = 0
+	spawn_positions = 0
+	supervisors = "no one"
+	selection_color = "#dddddd"
+	outfit = /datum/outfit/job/wasteland/f13punraider
+
+	access = list()
+	minimal_access = list()
+
+/datum/outfit/job/wasteland/f13punraider
+	name = "Punished Raider"
+	jobtype = /datum/job/wasteland/f13punraider
+
+	id = null
+	ears = null
+	belt = null
+	backpack = /obj/item/storage/backpack/satchel/explorer
+	satchel = /obj/item/storage/backpack/satchel/explorer
+
+/datum/outfit/job/wasteland/f13punraider/pre_equip(mob/living/carbon/human/H)
+	..()
+	uniform = pick(
+		/obj/item/clothing/under/kilt/highlander, \
+		/obj/item/clothing/under/sexymime, \
+		/obj/item/clothing/under/sundress, \
+		/obj/item/clothing/under/schoolgirl, \
+		/obj/item/clothing/under/rank/clown, \
+		null)
+	suit = pick(
+		/obj/item/clothing/suit/whitedress, \
+		/obj/item/clothing/suit/poncho/ponchoshame, \
+		/obj/item/clothing/suit/chickensuit, \
+		/obj/item/clothing/suit/straight_jacket, \
+		null)
+	head = pick(
+		/obj/item/clothing/head/sombrero/shamebrero, \
+		/obj/item/clothing/head/papersack, \
+		/obj/item/clothing/head/chicken,\
+		/obj/item/clothing/head/santa,\
+		/obj/item/clothing/head/festive,\
+		/obj/item/clothing/head/canada,\
+		/obj/item/clothing/head/bandana,\
+		/obj/item/clothing/head/collectable,\
+		/obj/item/clothing/head/rice_hat,\
+		/obj/item/clothing/head/jester,\
+		/obj/item/clothing/head/cone,\
+		/obj/item/clothing/head/hooded/carp_hood,\
+		/obj/item/clothing/head/fedora,\
+		/obj/item/clothing/head/lobsterhat,\
+		null)
+	mask = pick(
+		/obj/item/clothing/mask/joy,\
+		/obj/item/clothing/mask/spig,\
+		/obj/item/clothing/mask/joy/joyful,\
+		/obj/item/clothing/mask/cowmask,\
+		/obj/item/clothing/mask/frog/cursed,\
+		/obj/item/clothing/mask/horsehead,\
+		null)
+	r_pocket = pick(
+		/obj/item/organ/appendix, \
+		/obj/item/reagent_containers/food/snacks/grown/potato,\
+		null)
+	shoes = pick(
+		/obj/item/clothing/shoes/clown_shoes,\
+		null)
+	backpack_contents = pick(
+		/obj/item/restraints/handcuffs, \
+		/obj/item/gun/ballistic/revolver/russian, \
+		/obj/item/reagent_containers/food/snacks/grown/banana)
+	belt  = /obj/item/claymore/machete/pipe
+
+*/
+
+/*
+Trader
+*/
+
+/*
+/datum/job/wasteland/f13traider
+	title = "Traider"
+	flag = F13TRAIDER
+	department_head = list("Captain")
+	department_flag = WASTELAND
+	head_announce = list("Security")
+	faction = "Station"
+	total_positions = 2
+	spawn_positions = 2
+	supervisors = "no one"
+	selection_color = "#ffdddd"
+
+	outfit = /datum/outfit/job/wasteland/f13traider
+
+	access = list()
+	minimal_access = list()
+
+/datum/outfit/job/wasteland/f13traider
+	name = "Traider"
+	jobtype = /datum/job/wasteland/f13traider
+
+	id = /obj/item/card/id/gold
+	uniform =  /obj/item/clothing/under/rank/captain
+
+*/
