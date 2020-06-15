@@ -281,7 +281,7 @@
 	hitsound = 'sound/items/trayhit1.ogg'
 	flags_inv = HIDEHAIR
 
-/obj/item/clothing/head/f13/cowboy
+
 	name = "cowboy hat"
 	desc = "A high-crowned, wide-brimmed hat best known as the defining piece of attire for the North American cowboy."
 	icon_state = "cowboy"
