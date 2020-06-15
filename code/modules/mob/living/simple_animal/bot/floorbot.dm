@@ -176,7 +176,8 @@
 		return
 
 	if(prob(5))
-		audible_message("[src] makes an excited booping beeping sound!")
+		audible_message("[src] makes an excited booping beeping sound!",
+		runechat_popup = TRUE)
 
 	//Normal scanning procedure. We have tiles loaded, are not emagged.
 	if(!target && emagged < 2)
@@ -233,7 +234,8 @@
 				anchored = TRUE
 				mode = BOT_REPAIRING
 				F.ReplaceWithLattice()
-				audible_message("<span class='danger'>[src] makes an excited booping sound.</span>")
+				audible_message("<span class='danger'>[src] makes an excited booping sound.</span>",
+				runechat_popup = TRUE)
 				spawn(5)
 					anchored = FALSE
 					mode = BOT_IDLE

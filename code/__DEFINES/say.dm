@@ -64,3 +64,6 @@
 #define MAX_NAME_LEN			42
 #define MAX_BROADCAST_LEN		512
 #define MAX_CHARTER_LEN			80
+
+#define MSG_VISUAL (1<<0)
+#define MSG_AUDIBLE (1<<1)

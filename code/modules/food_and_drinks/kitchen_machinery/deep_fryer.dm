@@ -115,7 +115,8 @@ God bless America.
 		if(cook_time >= 30 && !frying_fried)
 			frying_fried = TRUE //frying... frying... fried
 			playsound(src.loc, 'sound/machines/ding.ogg', 50, 1)
-			audible_message("<span class='notice'>[src] dings!</span>")
+			audible_message("<span class='notice'>[src] dings!</span>",
+			runechat_popup = TRUE)
 		else if (cook_time >= 60 && !frying_burnt)
 			frying_burnt = TRUE
 			visible_message("<span class='warning'>[src] emits an acrid smell!</span>")

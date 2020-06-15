@@ -239,7 +239,8 @@
 	var/linelength = get_lines()
 
 	if(reels[1][2] + reels[2][2] + reels[3][2] + reels[4][2] + reels[5][2] == "[SEVEN][SEVEN][SEVEN][SEVEN][SEVEN]")
-		visible_message("<b>[src]</b> says, 'JACKPOT! You win [money] credits worth of coins!'")
+		visible_message("<b>[src]</b> says, 'JACKPOT! You win [money] credits worth of coins!'",
+		runechat_popup = TRUE)
 		priority_announce("Congratulations to [user ? user.real_name : usrname] for winning the jackpot at the slot machine in [get_area(src)]!")
 		jackpots += 1
 		balance += money - give_coins(JACKPOT)
@@ -256,11 +257,13 @@
 				random_step(C, 2, 50)
 
 	else if(linelength == 5)
-		visible_message("<b>[src]</b> says, 'Big Winner! You win a thousand credits worth of coins!'")
+		visible_message("<b>[src]</b> says, 'Big Winner! You win a thousand credits worth of coins!'",
+		runechat_popup = TRUE)
 		give_money(BIG_PRIZE)
 
 	else if(linelength == 4)
-		visible_message("<b>[src]</b> says, 'Winner! You win four hundred credits worth of coins!'")
+		visible_message("<b>[src]</b> says, 'Winner! You win four hundred credits worth of coins!'",
+		runechat_popup = TRUE)
 		give_money(SMALL_PRIZE)
 
 	else if(linelength == 3)
