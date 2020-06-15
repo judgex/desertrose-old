@@ -1,7 +1,3 @@
-
-
-////////////////////////////////////////////////KEBABS////////////////////////////////////////////////
-
 /datum/crafting_recipe/food/humankebab
 	name = "Human kebab"
 	reqs = list(
@@ -37,10 +33,6 @@
 	)
 	result = /obj/item/reagent_containers/food/snacks/kebab/tail
 	subcategory = CAT_MEAT
-
-// see code/module/crafting/table.dm
-
-////////////////////////////////////////////////FISH////////////////////////////////////////////////
 
 /datum/crafting_recipe/food/cubancarp
 	name = "Cuban carp"
