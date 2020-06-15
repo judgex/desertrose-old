@@ -108,3 +108,13 @@
 	result = /obj/item/reagent_containers/food/snacks/crunchymutfruit	
 	category = CAT_FOOD
 	subcategory = CAT_WASTEFOOD
+
+/datum/crafting_recipe/food/tatofries
+	name = "crunchy mutfruit"
+	reqs = list(
+    	/obj/item/reagent_containers/food/snacks/grown/tato = 2,
+    	/obj/item/reagent_containers/food/snacks/butter = 1
+	)
+	result = /obj/item/reagent_containers/food/snacks/tatofries	
+	category = CAT_FOOD
+	subcategory = CAT_WASTEFOOD

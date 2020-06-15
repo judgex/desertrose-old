@@ -81,8 +81,6 @@
 	result = /obj/item/reagent_containers/food/snacks/sashimi
 	subcategory = CAT_MEAT
 
-////////////////////////////////////////////////MR SPIDER////////////////////////////////////////////////
-
 /datum/crafting_recipe/food/spidereggsham
 	name = "Spider eggs ham"
 	reqs = list(
@@ -92,8 +90,6 @@
 	)
 	result = /obj/item/reagent_containers/food/snacks/spidereggsham
 	subcategory = CAT_MEAT
-
-////////////////////////////////////////////////MISC RECIPE's////////////////////////////////////////////////
 
 /datum/crafting_recipe/food/cornedbeef
 	name = "Corned beef"

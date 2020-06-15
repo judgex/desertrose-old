@@ -77,9 +77,27 @@
 	tastes = list("potato" = 1)
 	foodtype = VEGETABLES | DAIRY
 
+/obj/item/reagent_containers/food/snacks/tatofries
+	name = "tao fries"
+	desc = "Tato fries are served hot, either soft or crispy, and are generally eaten through out the wasteland as part of lunch or dinner or by themselves as a snack."
+	icon_state = "fries"
+	list_reagents = list("nutriment" = 4)
+	filling_color = "#FFD700"
+	tastes = list("fries" = 1, "salt" = 1, "spoiled ketchup"=2)
+	foodtype = VEGETABLES | GRAIN | FRIED
+
+/obj/item/reagent_containers/food/snacks/tatotoot
+	name = "tato toot"
+	desc = "A large fried tato nugget that may or may not try to valid you."
+	icon_state = "tatortot"
+	list_reagents = list("nutriment" = 4)
+	filling_color = "FFD700"
+	tastes = list("tato" = 1, "spoiled ketchup" = 2)
+	foodtype = FRIED | VEGETABLES
+
 /obj/item/reagent_containers/food/snacks/fries
 	name = "fries"
-	desc = "French fries are served hot, either soft or crispy, and are generally eaten as part of lunch or dinner or by themselves as a snack."
+	desc = "Freedom fries are served hot, either soft or crispy, and are generally eaten as part of lunch or dinner or by themselves as a snack."
 	icon_state = "fries"
 	list_reagents = list("nutriment" = 4)
 	filling_color = "#FFD700"
@@ -92,7 +110,7 @@
 	icon_state = "tatortot"
 	list_reagents = list("nutriment" = 4)
 	filling_color = "FFD700"
-	tastes = list("potato" = 3, "valids" = 1)
+	tastes = list("potato" = 3)
 	foodtype = FRIED | VEGETABLES
 
 /obj/item/reagent_containers/food/snacks/soydope
