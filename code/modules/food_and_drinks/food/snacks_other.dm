@@ -586,7 +586,7 @@
 
 /obj/item/reagent_containers/food/snacks/crunchymutfruit	
 	name = "Crunchy Mutfruit"
-	desc = "Crunchy mutfruit is a fruit of a slight purple tinge that resembles an apple."
+	desc = "A juicy mutfruit with a crispy exterior layer."
 	icon_state = "scotchegg"
 	list_reagents = list("nutriment" = 4, "vitamin" = 2)
 	filling_color = "#FFD700"
