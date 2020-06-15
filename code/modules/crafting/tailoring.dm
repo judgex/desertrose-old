@@ -217,6 +217,17 @@
 	category = CAT_CLOTHING
 	subcategory = CAT_CLOTHING
 
+/datum/crafting_recipe/iconoclast_reinforced
+	name = "reinforced iconoclast armor"
+	result = /obj/item/clothing/suit/armor/f13/raider/iconoclast/reinforced
+	reqs = list(/obj/item/clothing/suit/armor/f13/raider/iconoclast/ = 1,
+				/obj/item/stack/crafting/goodparts = 2,
+				/obj/item/stack/sheet/metal = 5)
+	tools = list(TOOL_WORKBENCH)
+	time = 60
+	category = CAT_CLOTHING
+	subcategory = CAT_CLOTHING
+
 /datum/crafting_recipe/ncrexile_reinforced
 	name = "reinforced NCR deserter armor"
 	result = /obj/item/clothing/suit/armor/f13/exilereinforced
@@ -244,6 +255,26 @@
 	result = /obj/item/clothing/suit/armor/f13/exilereinforced/bos
 	reqs = list(/obj/item/clothing/suit/armor/f13/exile/bosexile = 1,
 				/obj/item/stack/crafting/goodparts = 2,
+				/obj/item/stack/sheet/metal = 5)
+	tools = list(TOOL_WORKBENCH)
+	time = 60
+	category = CAT_CLOTHING
+	subcategory = CAT_CLOTHING
+
+/datum/crafting_recipe/raiderpaconversion
+	name = "salvaged power armor to raider power armor conversion"
+	result = /obj/item/clothing/suit/armor/f13/brokenpa/raiderpa
+	reqs = list(/obj/item/clothing/suit/armor/f13/brokenpa/t45b  = 1,
+				/obj/item/stack/sheet/metal = 5)
+	tools = list(TOOL_WORKBENCH)
+	time = 60
+	category = CAT_CLOTHING
+	subcategory = CAT_CLOTHING
+
+/datum/crafting_recipe/raiderpahelmconversion
+	name = "salvaged power armor helmet to raider power armor helmet conversion"
+	result = /obj/item/clothing/head/helmet/f13/brokenpa/raiderpa_helm
+	reqs = list(/obj/item/clothing/head/helmet/power_armor/t45b = 1,
 				/obj/item/stack/sheet/metal = 5)
 	tools = list(TOOL_WORKBENCH)
 	time = 60
