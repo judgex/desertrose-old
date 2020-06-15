@@ -57,7 +57,6 @@
 	name = "popcorn"
 	desc = "Now let's find some cinema."
 	icon_state = "popcorn"
-	trash = /obj/item/trash/popcorn
 	list_reagents = list("nutriment" = 2)
 	bitesize = 0.1 //this snack is supposed to be eating during looooong time. And this it not dinner food! --rastaf0
 	filling_color = "#FFEFD5"
@@ -82,7 +81,6 @@
 	name = "fries"
 	desc = "French fries are served hot, either soft or crispy, and are generally eaten as part of lunch or dinner or by themselves as a snack."
 	icon_state = "fries"
-	trash = /obj/item/trash/plate
 	list_reagents = list("nutriment" = 4)
 	filling_color = "#FFD700"
 	tastes = list("fries" = 3, "salt" = 1)
@@ -101,7 +99,6 @@
 	name = "soy dope"
 	desc = "Dope from a soy."
 	icon_state = "soydope"
-	trash = /obj/item/trash/plate
 	list_reagents = list("nutriment" = 2)
 	filling_color = "#DEB887"
 	tastes = list("soy" = 1)
@@ -111,7 +108,6 @@
 	name = "cheesy fries"
 	desc = "Fries. Covered in cheese. Duh."
 	icon_state = "cheesyfries"
-	trash = /obj/item/trash/plate
 	bonus_reagents = list("nutriment" = 1, "vitamin" = 2)
 	list_reagents = list("nutriment" = 6)
 	filling_color = "#FFD700"
@@ -130,7 +126,6 @@
 	name = "carrot fries"
 	desc = "Tasty fries from fresh Carrots."
 	icon_state = "carrotfries"
-	trash = /obj/item/trash/plate
 	list_reagents = list("nutriment" = 3, "oculine" = 3, "vitamin" = 2)
 	filling_color = "#FFA500"
 	tastes = list("carrots" = 3, "salt" = 1)
@@ -152,7 +147,6 @@
 	desc = "It is only wafer thin."
 	icon_state = "mint"
 	bitesize = 1
-	trash = /obj/item/trash/plate
 	list_reagents = list("minttoxin" = 1)
 	filling_color = "#800000"
 	foodtype = TOXIC | SUGAR
@@ -221,7 +215,6 @@
 	bonus_reagents = list("nutriment" = 1, "sugar" = 1)
 	list_reagents = list("nutriment" = 3, "cocoa" = 1)
 	filling_color = "#A0522D"
-	trash = /obj/item/dice/fudge
 	tastes = list("fudge" = 1)
 	foodtype = JUNKFOOD | SUGAR
 
@@ -239,7 +232,6 @@
 	name = "eggplant parmigiana"
 	desc = "The only good recipe for eggplant."
 	icon_state = "eggplantparm"
-	trash = /obj/item/trash/plate
 	bonus_reagents = list("nutriment" = 1, "vitamin" = 3)
 	list_reagents = list("nutriment" = 6, "vitamin" = 2)
 	filling_color = "#BA55D3"
@@ -300,7 +292,6 @@
 	name = "yaki imo"
 	desc = "Made with roasted sweet potatoes!"
 	icon_state = "yakiimo"
-	trash = /obj/item/trash/plate
 	list_reagents = list("nutriment" = 5, "vitamin" = 4)
 	filling_color = "#8B1105"
 	tastes = list("sweet potato" = 1)
@@ -310,7 +301,6 @@
 	name = "roast parsnip"
 	desc = "Sweet and crunchy."
 	icon_state = "roastparsnip"
-	trash = /obj/item/trash/plate
 	list_reagents = list("nutriment" = 3, "vitamin" = 4)
 	filling_color = "#FF5500"
 	tastes = list("parsnip" = 1)
