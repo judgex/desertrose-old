@@ -183,6 +183,7 @@ GLOBAL_LIST_INIT(wasteland_positions, list(
     "Raider",
     "Great Khan",
     "Preacher",
+	"Faithful",
     "Wastelander",
     "Detective"
 ))
