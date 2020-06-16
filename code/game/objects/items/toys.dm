@@ -1136,8 +1136,7 @@
 		user.visible_message("<span class='notice'>[user] pulls back the string on [src].</span>")
 		icon_state = "[initial(icon_state)]_used"
 		sleep(5)
-		audible_message("<span class='danger'>[icon2html(src, viewers(src))] Hiss!</span>",
-		runechat_popup = TRUE)
+		audible_message("<span class='danger'>[icon2html(src, viewers(src))] Hiss!</span>")
 		var/list/possible_sounds = list('sound/voice/hiss1.ogg', 'sound/voice/hiss2.ogg', 'sound/voice/hiss3.ogg', 'sound/voice/hiss4.ogg')
 		var/chosen_sound = pick(possible_sounds)
 		playsound(get_turf(src), chosen_sound, 50, 1)

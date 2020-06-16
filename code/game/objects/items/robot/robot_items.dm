@@ -321,8 +321,7 @@
 		return
 
 	if(safety == FALSE)
-		user.audible_message("<font color='red' size='7'>BZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZT</font>",
-		runechat_popup = TRUE)
+		user.audible_message("<font color='red' size='7'>BZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZT</font>")
 		for(var/mob/living/carbon/C in get_hearers_in_view(9, user))
 			var/bang_effect = C.soundbang_act(2, 0, 0, 5)
 			switch(bang_effect)

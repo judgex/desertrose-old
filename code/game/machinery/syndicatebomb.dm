@@ -200,12 +200,10 @@
 	if(alert(user,"Would you like to start the countdown now?",,"Yes","No") == "Yes" && in_range(src, user) && isliving(user))
 		if(defused || active)
 			if(defused)
-				visible_message("<span class='warning'>[icon2html(src, viewers(src))] Device error: User intervention required.</span>",
-				runechat_popup = TRUE)
+				visible_message("<span class='warning'>[icon2html(src, viewers(src))] Device error: User intervention required.</span>")
 			return
 		else
-			visible_message("<span class='danger'>[icon2html(src, viewers(loc))] [timer_set] seconds until detonation, please clear the area.</span>",
-			runechat_popup = TRUE)
+			visible_message("<span class='danger'>[icon2html(src, viewers(loc))] [timer_set] seconds until detonation, please clear the area.</span>")
 			activate()
 			update_icon()
 			add_fingerprint(user)
@@ -318,8 +316,7 @@
 	var/obj/machinery/syndicatebomb/holder = loc
 	if(istype(holder))
 		attempts++
-		holder.loc.visible_message("<span class='danger'>[icon2html(holder, viewers(holder))] Alert: Bomb has detonated. Your score is now [defusals] for [attempts]. Resetting wires...</span>",
-		runechat_popup = TRUE)
+		holder.loc.visible_message("<span class='danger'>[icon2html(holder, viewers(holder))] Alert: Bomb has detonated. Your score is now [defusals] for [attempts]. Resetting wires...</span>")
 		reset()
 	else
 		qdel(src)
@@ -329,8 +326,7 @@
 	if(istype(holder))
 		attempts++
 		defusals++
-		holder.loc.visible_message("<span class='notice'>[icon2html(holder, viewers(holder))] Alert: Bomb has been defused. Your score is now [defusals] for [attempts]! Resetting wires in 5 seconds...</span>",
-		runechat_popup = TRUE)
+		holder.loc.visible_message("<span class='notice'>[icon2html(holder, viewers(holder))] Alert: Bomb has been defused. Your score is now [defusals] for [attempts]! Resetting wires in 5 seconds...</span>")
 		sleep(50)	//Just in case someone is trying to remove the bomb core this gives them a little window to crowbar it out
 		if(istype(holder))
 			reset()

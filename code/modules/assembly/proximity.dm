@@ -67,8 +67,7 @@
 	if(!scanning || !secured || next_activate > world.time)
 		return FALSE
 	pulse(FALSE)
-	audible_message("[icon2html(src, hearers(src))] *beep* *beep* *beep*", null, hearing_range,
-	runechat_popup = TRUE)
+	audible_message("[icon2html(src, hearers(src))] *beep* *beep* *beep*", null, hearing_range)
 	for(var/CHM in get_hearers_in_view(hearing_range, src))
 		if(ismob(CHM))
 			var/mob/LM = CHM
