@@ -93,11 +93,50 @@ Great Khan
 		H.gang = GK
 
 /*
+Detective
+*/
+/datum/job/wasteland/f13detective
+	title = "Detective"
+	flag = F13WASTELANDER
+	faction = "Wastelander"
+	total_positions = 1
+	spawn_positions = 1
+	description = "As a Detective you are a private eye and investigator who assists law enforcement and private persons to gather evidence, conduct surveillance, find missing people, and verify information. As a private investigator you are not responsible for peacekeeping the wasteland, but by working with forces greater than yourself to resolve conflicts and bring order where it is not present."
+	supervisors = "no one"
+	selection_color = "#dddddd"
+	outfit = /datum/outfit/job/wasteland/f13detective
+
+	access = list()		//we can expand on this and make alterations as people suggest different loadouts
+	minimal_access = list()
+
+
+/datum/outfit/job/wasteland/f13detective
+	name = "Detective"
+	jobtype = /datum/job/wasteland/f13detective
+	suit = /obj/item/clothing/suit/det_suit/grey
+	uniform = /obj/item/clothing/under/f13/detectivealt
+	head = /obj/item/clothing/head/f13/det_hat_alt
+	shoes =  /obj/item/clothing/shoes/laceup
+	id = /obj/item/card/id/silver
+	backpack = /obj/item/storage/backpack/satchel/explorer
+	satchel = /obj/item/storage/backpack/satchel/explorer
+	suit_store = /obj/item/gun/ballistic/revolver/police
+	backpack_contents = list(
+		/obj/item/pda/detective=1,
+		/obj/item/camera/detective=1,
+		/obj/item/toy/crayon/white=1,
+		/obj/item/detective_scanner=1,
+		/obj/item/storage/box/gloves=1,
+		/obj/item/storage/box/evidence=1,
+		/obj/item/ammo_box/a357=2)
+
+
+/*
 Raider
 */
 
 /datum/job/wasteland/f13raider
-	title = "Raider"
+	title = "Outlaw"
 	flag = F13RAIDER
 	department_head = list("Captain")
 	head_announce = list("Security")
@@ -128,7 +167,7 @@ Raider
 	/datum/outfit/loadout/raider_mafia)
 
 /datum/outfit/job/wasteland/f13raider
-	name = "Raider"
+	name = "Outlaw"
 	jobtype = /datum/job/wasteland/f13raider
 
 	id = null
@@ -200,8 +239,6 @@ Raider
 	H.social_faction = "Raiders"
 	H.verbs |= /mob/living/proc/creategang
 
-
-
 /datum/outfit/loadout/raider_supafly
 	name = "Supa-fly"
 	suit = /obj/item/clothing/suit/armor/f13/raider
@@ -223,7 +260,6 @@ Raider
 		/obj/item/ammo_box/a308=2,
 		/obj/item/storage/fancy/cigarettes/cigpack_cannabis=1,
 		/obj/item/megaphone=1)
-
 
 /datum/outfit/loadout/raider_blast
 	name = "Blastmaster"
@@ -275,7 +311,7 @@ Raider
 	suit = /obj/item/clothing/suit/armor/f13/exile/bosexile
 	id = /obj/item/card/id/rusted/brokenholodog
 	backpack_contents = list(
-		/obj/item/gun/energy/laser/pistol=1,
+		/obj/item/gun/energy/laser/wattz=1,
 		/obj/item/stock_parts/cell/ammo/ec=2)
 
 /datum/outfit/loadout/raider_ncr
@@ -298,7 +334,7 @@ Raider
 		/obj/item/storage/backpack/spearquiver=1)
 
 /datum/outfit/loadout/raider_sheriff
-	name = "Dark Sheriff"
+	name = "Desperado"
 	suit = /obj/item/clothing/suit/armor/vest/leather
 	uniform = /obj/item/clothing/under/syndicate/tacticool
 	head = /obj/item/clothing/head/helmet/f13/brahmincowboyhat
@@ -315,7 +351,7 @@ Raider
     glasses = /obj/item/clothing/glasses/sunglasses
     shoes =/obj/item/clothing/shoes/f13/fancy
     backpack_contents = list(
-        /obj/item/gun/ballistic/automatic/pistol/ninemil/maria=1,
+        /obj/item/gun/ballistic/automatic/pistol/ninemil=1,
         /obj/item/ammo_box/magazine/m9mm=2,
         /obj/item/toy/cards/deck=1)
 
@@ -327,24 +363,6 @@ Raider
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/pistol/n99=1,
 		/obj/item/ammo_box/magazine/m10mm_adv=2)
-
-
-/datum/outfit/loadout/raider_metal
-	name = "Metal Raider"
-	suit = /obj/item/clothing/suit/armor/f13/raider/raidermetal
-	head = /obj/item/clothing/head/helmet/f13/raidermetal
-	uniform = /obj/item/clothing/under/f13/raiderharness
-
-	//This 0.2 weight will make the eyebot less common. Everything has a weight of 1 if not specified
-
-//As a subclass, this inherits the helmets from the raider_metal outfit
-/datum/outfit/loadout/raider_metal/chestplate
-	name = "Metal - Chest"
-	suit = /obj/item/clothing/suit/armor/f13/metalarmor
-
-/*
-Wastelander
-*/
 
 /datum/job/wasteland/f13wastelander
 	title = "Wastelander"
@@ -416,6 +434,9 @@ Wastelander
 	gloves = /obj/item/pda
 	shoes = /obj/item/clothing/shoes/jackboots
 	gloves = /obj/item/clothing/gloves/fingerless
+	backpack_contents = list(
+		/obj/item/gun/ballistic/automatic/pistol/n99=1,
+		/obj/item/ammo_box/magazine/m10mm_adv=2)
 
 
 /datum/outfit/loadout/petro
@@ -425,6 +446,9 @@ Wastelander
 	uniform = /obj/item/clothing/under/f13/petrochico
 	shoes = /obj/item/clothing/shoes/f13/fancy
 	gloves = /obj/item/clothing/gloves/rifleman
+	backpack_contents = list(
+		/obj/item/gun/ballistic/revolver/colt357=2,
+		/obj/item/ammo_box/a357=2)
 
 /datum/outfit/loadout/follower
 	name = "Follower"
@@ -432,6 +456,9 @@ Wastelander
 	suit = /obj/item/clothing/suit/toggle/labcoat/f13/followers
 	shoes = /obj/item/clothing/shoes/f13/explorer
 	gloves = /obj/item/clothing/gloves/color/latex
+	l_hand = /obj/item/storage/firstaid/ancient
+	backpack_contents =  list(
+		/obj/item/gun/ballistic/automatic/pistol/m1911=1)
 
 /datum/outfit/loadout/merchant
 	name = "Roving Trader"
@@ -441,6 +468,11 @@ Wastelander
 	head = /obj/item/clothing/head/f13/stormchaser
 	gloves = /obj/item/clothing/gloves/color/brown
 	glasses = /obj/item/clothing/glasses/f13/biker
+	l_hand = /obj/item/gun/ballistic/revolver/caravan_shotgun
+	backpack_contents =  list(
+		/obj/item/storage/box/lethalshot=1)
+
+
 
 /datum/outfit/loadout/gambler
 	name = "Gambler"
@@ -451,15 +483,24 @@ Wastelander
 	shoes = /obj/item/clothing/shoes/f13/fancy
 	head = list(/obj/item/clothing/head/fedora,
  	/obj/item/clothing/head/f13/gambler)
+	l_hand = /obj/item/gun/ballistic/automatic/pistol/ninemil
+	backpack_contents =  list(
+		/obj/item/ammo_box/magazine/m9mm=2)
+
 
 /datum/outfit/loadout/citizen
-	name = "Legion Citizen"		//here I go showing my bias again
+	name = "Legion Citizen"
 	uniform = /obj/item/clothing/under/f13/doctor
 	shoes = /obj/item/clothing/shoes/f13/fancy
 	suit = /obj/item/clothing/suit/curator
 	head = /obj/item/clothing/head/scarecrow_hat
 	gloves = /obj/item/clothing/gloves/color/black
 	glasses = /obj/item/clothing/glasses/welding
+	l_hand = /obj/item/shield/legion/buckler
+	backpack_contents = list(
+        /obj/item/claymore/machete/reinforced=1)
+
+
 
 /datum/outfit/loadout/slave
 	name = "NCR Citizen"
@@ -468,6 +509,9 @@ Wastelander
 	head = /obj/item/clothing/head/f13/cowboy
 	gloves = /obj/item/clothing/gloves/color/brown
 	glasses = /obj/item/clothing/glasses/orange
+	l_hand = /obj/item/gun/ballistic/automatic/marksman/servicerifle/varmint
+	backpack_contents = list(
+		/obj/item/ammo_box/magazine/m556/rifle/small=2)
 
 /*
 Punished Raider

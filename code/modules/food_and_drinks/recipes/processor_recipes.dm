@@ -24,6 +24,10 @@
 	input = /obj/item/reagent_containers/food/snacks/grown/potato
 	output = /obj/item/reagent_containers/food/snacks/tatortot
 
+/datum/food_processor_process/tato
+	input = /obj/item/reagent_containers/food/snacks/grown/tato
+	output = /obj/item/reagent_containers/food/snacks/tatotoot
+
 /datum/food_processor_process/carrot
 	input = /obj/item/reagent_containers/food/snacks/grown/carrot
 	output = /obj/item/reagent_containers/food/snacks/carrotfries

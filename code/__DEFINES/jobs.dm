@@ -60,6 +60,8 @@
 #define F13RECRUIT		(1<<9)
 #define F13VETRANGER	(1<<10)
 #define F13RANGER		(1<<11)
+#define F13NCRCITIZEN	(1<<12)
+#define	F13NCRADMIN		(1<<13)
 
 #define LEGION			(1<<4)
 
@@ -84,11 +86,12 @@
 #define F13SENIORPALADIN	(1<<2)
 #define F13PALADIN		(1<<3)
 #define F13KNIGHTCAPTAIN	(1<<4)
-#define F13KNIGHT		(1<<5)
-#define F13HEADSCRIBE	(1<<6)
-#define F13SENIORSCRIBE (1<<7)
-#define F13SCRIBE		(1<<8)
-#define F13INITIATE		(1<<9)
+#define F13SENIORKNIGHT	(1<<5)
+#define F13KNIGHT		(1<<6)
+#define F13HEADSCRIBE	(1<<7)
+#define F13SENIORSCRIBE (1<<8)
+#define F13SCRIBE		(1<<9)
+#define F13INITIATE		(1<<10)
 
 #define DEN				(1<<6)
 
@@ -100,7 +103,8 @@
 #define F13DEPUTY		(1<<5)
 #define F13MAYOR		(1<<6)
 #define F13PREACHER		(1<<7)
-#define F13SHOPKEEPER	(1<<8)// WHAT IS BITFLAG. WHAT DOES IT DO. WHERE IS THIS INFO USED.
+#define F13SHOPKEEPER	(1<<8)
+#define F13FAITHFUL		(1<<9)// WHAT IS BITFLAG. WHAT DOES IT DO. WHERE IS THIS INFO USED.
 
 #define VAULT			(1<<7)
 
@@ -121,6 +125,7 @@
 #define F13RAIDER		(1<<2)
 #define F13PUSHER		(1<<3)
 #define F13PUNRAIDER	(1<<4)
+#define F13DETECTIVE	(1<<5)
 
 #define ENCLAVE			(1<<9)
 
@@ -136,6 +141,14 @@
 #define F13CHIEF		(1<<0)
 #define F13SHAMAN		(1<<1)
 #define F13VILLAGER		(1<<2)
+
+#define FOLLOWERS		(1<<11)
+
+#define	F13LEADPRACTITIONER	(1<<0)
+#define	F13PRACTITIONER	(1<<1)
+#define F13FOLLOWERGUARD	(1<<2)
+#define F13FOLLOWERVOLUNTEER	(1<<3)
+
 
 #define JOB_AVAILABLE 0
 #define JOB_UNAVAILABLE_GENERIC 1

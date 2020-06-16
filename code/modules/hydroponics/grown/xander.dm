@@ -9,8 +9,8 @@
 	endurance = 10
 	yield = 3
 	growthstages = 4
-	production = 1
-	maturation = 1
+	production = 2
+	maturation = 2
 	growing_icon = 'icons/obj/hydroponics/growing_vegetables.dmi'
 	icon_grow = "potato-grow"
 	icon_dead = "potato-dead"

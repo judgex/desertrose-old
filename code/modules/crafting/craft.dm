@@ -17,7 +17,9 @@
 							CAT_WEAPON,
 							CAT_AMMO),
 						CAT_NONE, //Robot subcategories
-						CAT_NONE, //Misc subcategories
+						list(
+							CAT_MISC,
+							CAT_BOTTLE), //MISC Subcategories
 						list(
 							CAT_TRIBAL,
 							CAT_FORGE), //Tribal subcategories

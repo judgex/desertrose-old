@@ -404,7 +404,7 @@
 		to_chat(user, "<span class='info'>You light [src] on fire. You're not sure this was a good idea.</span>")
 		add_overlay(GLOB.fire_overlay)
 
-		spawn(rand(10,50)) //Throw. And pray.
+		spawn(rand(50,80)) //Throw. And pray.
 			if(active)
 				var/counter
 				var/target = src.loc
@@ -427,3 +427,47 @@
 		to_chat(user, "<span class='info'>You snuff out the flame on [src].</span>")
 		cut_overlay(GLOB.fire_overlay)
 		active = 0
+
+//CUSTOM BOTTLES//
+
+/obj/item/reagent_containers/food/drinks/bottle/brown
+	name = "brown bottle"
+	desc = "A homemade and hand-crafted brown glass bottle."
+	icon_state = "brownbottle"
+	list_reagents = FALSE
+	obj_flags = UNIQUE_RENAME
+
+/obj/item/reagent_containers/food/drinks/bottle/brown/darkbrown
+	name = "dark brown bottle"
+	desc = "A homemade and hand-crafted dark brown glass bottle."
+	icon_state = "darkbrownbottle"
+
+/obj/item/reagent_containers/food/drinks/bottle/brown/lightbrown
+	name = "light brown bottle"
+	desc = "A homemade and hand-crafted light brown glass bottle."
+	icon_state = "lightbrownbottle"
+
+/obj/item/reagent_containers/food/drinks/bottle/brown/white
+	name = "white bottle"
+	desc = "A homemade and hand-crafted white glass bottle."
+	icon_state = "whitebottle"
+
+/obj/item/reagent_containers/food/drinks/bottle/brown/green
+	name = "green bottle"
+	desc = "A homemade and hand-crafted green glass bottle."
+	icon_state = "greenbottle"
+
+/obj/item/reagent_containers/food/drinks/bottle/brown/wine
+	name = "wine bottle"
+	desc = "A homemade and hand-crafted wine glass bottle."
+	icon_state = "winebottle"
+
+/obj/item/reagent_containers/food/drinks/bottle/brown/greenwine
+	name = "wine bottle"
+	desc = "A homemade and hand-crafted green wine glass bottle."
+	icon_state = "greenwinebottle"
+
+/obj/item/reagent_containers/food/drinks/bottle/brown/beer
+	name = "beer bottle"
+	desc = "A homemade and hand-crafted authentic beer bottle."
+	icon_state = "beerbottle"

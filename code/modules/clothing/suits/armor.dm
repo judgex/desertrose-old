@@ -35,7 +35,6 @@
 	desc = "Older generation Type 1 armored vest. Due to degradation over time the vest is far less maneuverable to move in."
 	icon_state = "armor"
 	item_state = "armor"
-	slowdown = 1
 
 /obj/item/clothing/suit/armor/vest/blueshirt
 	icon_state = "blueshift"
@@ -406,6 +405,19 @@
 /obj/item/clothing/suit/armor/f13/raider/painspike/reinforced
 	name = "reinforced painspike raider armor"
 	armor = list("melee" = 40, "bullet" = 40, "laser" = 40, "energy" = 30, "bomb" = 35, "bio" = 0, "rad" = 0, "fire" = 30, "acid" = 30)
+
+
+/obj/item/clothing/suit/armor/f13/raider/iconoclast/
+	name = "iconoclast raider armor"
+	desc = "A rigid armor set that appears to be fashioned from a radiation suit, or a mining suit."
+	icon_state = "iconoclast"
+	item_state = "iconoclast"
+
+/obj/item/clothing/suit/armor/f13/raider/iconoclast/reinforced
+	name = "reinforced iconoclast raider armor"
+	desc = "A rigid armor set that appears to be fashioned from a radiation suit, or a mining suit. This suit has additional reinforcing"
+	armor = list("melee" = 40, "bullet" = 40, "laser" = 35, "energy" = 30, "bomb" = 35, "bio" = 0, "rad" = 0, "fire" = 30, "acid" = 30)
+
 
 /obj/item/clothing/suit/armor/f13/combat
 	name = "combat armor"

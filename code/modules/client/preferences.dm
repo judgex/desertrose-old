@@ -139,6 +139,10 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	var/job_tribal_med = 0
 	var/job_tribal_low = 0
 
+	var/job_followers_high = 0
+	var/job_followers_med = 0
+	var/job_followers_low = 0
+
 		// Return to lobby if preferences filled
 	var/joblessrole = RETURNTOLOBBY
 
@@ -829,6 +833,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 		job_wasteland_med |= job_wasteland_high
 		job_enclave_med |= job_enclave_high
 		job_tribal_med |= job_tribal_high
+		job_followers_med |= job_followers_high
 		job_civilian_high = 0
 		job_engsec_high = 0
 		job_medsci_high = 0
@@ -999,6 +1004,19 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				job_tribal_low |= job.flag
 
 		return 1
+	else if (job.department_flag == TRIBAL)
+		job_followers_low &= ~job.flag
+		job_followers_med &= ~job.flag
+		job_followers_high &= ~job.flag
+
+		switch(level)
+			if (1)
+				job_followers_high |= job.flag
+			if (2)
+				job_followers_med |= job.flag
+			if (3)
+				job_followers_low |= job.flag
+		return 1
 	return 0
 
 /datum/preferences/proc/UpdateJobPreference(mob/user, role, desiredLvl)
@@ -1074,6 +1092,10 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	job_tribal_high = 0
 	job_tribal_med = 0
 	job_tribal_high = 0
+
+	job_followers_high = 0
+	job_followers_med = 0
+	job_followers_high = 0
 
 /datum/preferences/proc/GetJobDepartment(datum/job/job, level)
 	if(!job || !level)
@@ -1167,6 +1189,15 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					return job_tribal_med
 				if(3)
 					return job_tribal_low
+
+		if(FOLLOWERS)
+			switch(level)
+				if(1)
+					return job_followers_high
+				if(2)
+					return job_followers_med
+				if(3)
+					return job_followers_low
 	return 0
 
 /datum/preferences/proc/SetQuirks(mob/user)

@@ -349,7 +349,7 @@
 
 /proc/get_all_jobs()
 	return list("Centurion", "NCR Captain", "Overseer", "Sheriff",
-				"Sentinel", "Senior Paladin", "Paladin", "Knight-Captain", "Knight", "Head Scribe", "Senior Scribe", "Scribe", "Initiate",
+				"Sentinel", "Senior Paladin", "Paladin", "Knight-Captain", "Senior Knight", "Knight", "Head Scribe", "Senior Scribe", "Scribe", "Initiate",
 				"Veteran Decanus", "Vexillarius", "Decanus", "Veteran Legionnaire", "Prime Legionary",
 				"NCR Lieutenant", "NCR Sergeant", "NCR Heavy Trooper", "NCR Military Police", "NCR Trooper", "NCR Recruit",
 				"NCR Veteran Ranger", "NCR Patrol Ranger", "NCR Recon Ranger",

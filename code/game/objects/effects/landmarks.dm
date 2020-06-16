@@ -490,6 +490,13 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 	name = "NCR Ranger"
 	icon_state = "NCR Patrol Ranger"
 
+/obj/effect/landmark/start/f13/ncrcitizen
+	name = "NCR Citizen"
+	icon_state = "NCR Citizen"
+
+/obj/effect/landmark/start/f13/ncradmin
+	name = "NCR Administrator"
+	icon_state = "NCR Administrator"
 
 // Legion
 
@@ -564,6 +571,10 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 	name = "Knight-Captain"
 	icon_state = "Initiate Knight"
 
+/obj/effect/landmark/start/f13/seniorknight
+	name = "Senior Knight"
+	icon_state = "Initiate Knight"
+
 /obj/effect/landmark/start/f13/seniorpaladin
 	name = "Senior Paladin"
 	icon_state = "Knight"
@@ -614,7 +625,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 	name = "Vault Dweller"
 	icon_state = "Vault Dweller"
 
-// Kebab // Is not Kebab is Oasis REEEE
+// Oasis
 
 /obj/effect/landmark/start/f13/mayor
 	name = "Mayor"
@@ -633,7 +644,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 	name = "Prospector"
 
 /obj/effect/landmark/start/f13/settler
-	name = "Settler"
+	name = "Citizen"
 	icon_state = "Settler"
 
 /obj/effect/landmark/start/f13/dendoc
@@ -663,6 +674,14 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 /obj/effect/landmark/start/f13/preacher
 	name = "Preacher"
 	icon_state = "Preacher"
+
+/obj/effect/landmark/start/f13/faithful
+	name = "Faithful"
+	icon_state = "Preacher"
+
+/obj/effect/landmark/start/f13/detective
+	name = "Detective"
+	icon_state = "Detective"
 
 // Enclave
 
@@ -697,3 +716,20 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 /obj/effect/landmark/start/f13/villager
 	name = "Villager"
 	icon_state = "Villager"
+
+//Followers of the Apocalypse
+/obj/effect/landmark/start/f13/leadpractitioner
+	name = "Lead Practitioner"
+	icon_state = "Lead_Practitioner"
+
+/obj/effect/landmark/start/f13/practitioner
+	name = "Practitioner"
+	icon_state = "Practitioner"
+
+/obj/effect/landmark/start/f13/followersguard
+	name = "Followers Guard"
+	icon_state = "Followers_Guard"
+
+/obj/effect/landmark/start/f13/followersvolunteer
+	name = "Followers Volunteer"
+	icon_state = "Followers_Volunteer"
