@@ -1,6 +1,5 @@
 /obj/item/reagent_containers/food/snacks/pie
 	icon = 'icons/obj/food/piecake.dmi'
-	trash = /obj/item/trash/plate
 	bitesize = 3
 	w_class = WEIGHT_CLASS_NORMAL
 	volume = 80
@@ -21,7 +20,6 @@
 	name = "banana cream pie"
 	desc = "Just like back home in the circus! HONK!"
 	icon_state = "pie"
-	trash = /obj/item/trash/plate
 	bonus_reagents = list("nutriment" = 2, "vitamin" = 2)
 	list_reagents = list("nutriment" = 6, "banana" = 5, "vitamin" = 2)
 	tastes = list("pie" = 1)

@@ -82,8 +82,7 @@
 /obj/throw_at(atom/target, range, speed, mob/thrower, spin=1, diagonals_first = 0, datum/callback/callback)
 	..()
 	if(obj_flags & FROZEN)
-		visible_message("<span class='danger'>[src] shatters into a million pieces!</span>",
-		runechat_popup = TRUE)
+		visible_message("<span class='danger'>[src] shatters into a million pieces!</span>")
 		qdel(src)
 
 

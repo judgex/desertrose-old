@@ -50,7 +50,7 @@
 	foodtype = GRAIN | MEAT
 
 /obj/item/reagent_containers/food/snacks/store/bread/xenomeat
-	name = "mutantmeatbread loaf"
+	name = "mutant meatloaf"
 	desc = "The culinary base of every self-respecting sandwich. Extra mutated."
 	icon_state = "xenomeatbread"
 	slice_path = /obj/item/reagent_containers/food/snacks/breadslice/xenomeat
@@ -60,7 +60,7 @@
 	foodtype = GRAIN | MEAT
 
 /obj/item/reagent_containers/food/snacks/breadslice/xenomeat
-	name = "mutantmeatbread slice"
+	name = "mutant meatloaf slice"
 	desc = "A slice of delicious meatbread. Extra mutated."
 	icon_state = "xenobreadslice"
 	filling_color = "#32CD32"
@@ -68,7 +68,7 @@
 	foodtype = GRAIN | MEAT
 
 /obj/item/reagent_containers/food/snacks/store/bread/spidermeat
-	name = "spider meat loaf"
+	name = "spider meatloaf"
 	desc = "Reassuringly green meatloaf made from spider meat."
 	icon_state = "spidermeatbread"
 	slice_path = /obj/item/reagent_containers/food/snacks/breadslice/spidermeat
@@ -78,7 +78,7 @@
 	foodtype = GRAIN | MEAT | TOXIC
 
 /obj/item/reagent_containers/food/snacks/breadslice/spidermeat
-	name = "spider meat bread slice"
+	name = "spider meatloaf slice"
 	desc = "A slice of meatloaf made from an animal that most likely still wants you dead."
 	icon_state = "xenobreadslice"
 	filling_color = "#7CFC00"
@@ -95,7 +95,6 @@
 	tastes = list("bread" = 10) // bananjuice will also flavour
 	foodtype = GRAIN | FRUIT
 
-
 /obj/item/reagent_containers/food/snacks/breadslice/banana
 	name = "banana-nut bread slice"
 	desc = "A slice of delicious banana bread."
@@ -106,7 +105,7 @@
 
 /obj/item/reagent_containers/food/snacks/store/bread/tofu
 	name = "Tofubread"
-	desc = "Like meatbread but for vegetarians. Not guaranteed to give superpowers."
+	desc = "Like meatloaf but for vegetarians."
 	icon_state = "tofubread"
 	slice_path = /obj/item/reagent_containers/food/snacks/breadslice/tofu
 	bonus_reagents = list("nutriment" = 5, "vitamin" = 10)

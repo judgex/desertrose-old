@@ -15,8 +15,7 @@ GLOBAL_LIST_INIT(command_positions, list(
     "Sheriff",
     "Chief",
     "Shaman",
-    "Lead Practitioner",
-    "NCR Administrator"
+	"NCR Administrator"
     ))
 
 
@@ -64,7 +63,9 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 "Sheriff",
 "Deputy",
 "Chief",
-"Shaman"
+"Shaman",
+"NCR Administrator",
+"Lead Practitioner"
 ))
 GLOBAL_LIST_INIT(faction_player_positions, list(
 "Senior Paladin",
@@ -88,8 +89,7 @@ GLOBAL_LIST_INIT(faction_player_positions, list(
 "NCR Heavy Trooper",
 "NCR Ranger",
 "NCR Trooper",
-"Deputy"
-
+"Deputy",
 ))
 //Whitelisted positions list FO13 anything that shows up here requires that the user have an entry in the 'role_whitelist' table of id,ckey,"antagonist"
 GLOBAL_LIST_INIT(antagonist_whitelist_positions, list(
@@ -183,6 +183,7 @@ GLOBAL_LIST_INIT(wasteland_positions, list(
     "Raider",
     "Great Khan",
     "Preacher",
+	"Faithful",
     "Wastelander",
     "Detective"
 ))
@@ -200,8 +201,10 @@ GLOBAL_LIST_INIT(tribal_positions, list(
     "Villager"
 ))
 
-GLOBAL_LIST_INIT(followers_positions, list(
+GLOBAL_LIST_INIT(followers_command_positions, list(
     "Lead Practitioner",
+))
+GLOBAL_LIST_INIT(followers_positions, list(
     "Practitioner",
     "Followers Guard",
     "Followers Volunteer"

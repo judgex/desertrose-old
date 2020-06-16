@@ -316,9 +316,7 @@
 				return
 
 			if(!dispenser_arm)
-				audible_message("<span class='warning'>\The [src] makes a loud clunk and the dispenser arm twitches slightly.</span>", 
-				"<span class='warning'>The dispenser arm on the [src] twitches slightly.</span>",
-				runechat_popup = TRUE)
+				audible_message("<span class='warning'>\The [src] makes a loud clunk and the dispenser arm twitches slightly.</span>", "<span class='warning'>The dispenser arm on the [src] twitches slightly.</span>")
 				return
 
 			if (params["amount"])

@@ -10,7 +10,6 @@
 
 /obj/item/reagent_containers/food/snacks/cakeslice
 	icon = 'icons/obj/food/piecake.dmi'
-	trash = /obj/item/trash/plate
 	list_reagents = list("nutriment" = 4, "vitamin" = 1)
 	customfoodfilling = 0 //to avoid infinite cake-ception
 	tastes = list("cake" = 1)
@@ -95,7 +94,6 @@
 	tastes = list("cake" = 4, "cream cheese" = 3)
 	foodtype = GRAIN | DAIRY
 
-
 /obj/item/reagent_containers/food/snacks/store/cake/orange
 	name = "orange cake"
 	desc = "A cake with added orange."
@@ -132,7 +130,6 @@
 	tastes = list("cake" = 5, "sweetness" = 2, "unbearable sourness" = 2)
 	foodtype = GRAIN | DAIRY | FRUIT | SUGAR
 
-
 /obj/item/reagent_containers/food/snacks/store/cake/lemon
 	name = "lemon cake"
 	desc = "A cake with added lemon."
@@ -143,7 +140,6 @@
 	tastes = list("cake" = 5, "sweetness" = 2, "sourness" = 2)
 	foodtype = GRAIN | DAIRY | FRUIT | SUGAR
 
-
 /obj/item/reagent_containers/food/snacks/cakeslice/lemon
 	name = "lemon cake slice"
 	desc = "Just a slice of cake, it is enough for everyone."
@@ -151,7 +147,6 @@
 	filling_color = "#FFEE00"
 	tastes = list("cake" = 5, "sweetness" = 2, "sourness" = 2)
 	foodtype = GRAIN | DAIRY | FRUIT | SUGAR
-
 
 /obj/item/reagent_containers/food/snacks/store/cake/chocolate
 	name = "chocolate cake"
@@ -163,7 +158,6 @@
 	tastes = list("cake" = 5, "sweetness" = 1, "chocolate" = 4)
 	foodtype = GRAIN | DAIRY | JUNKFOOD | SUGAR
 
-
 /obj/item/reagent_containers/food/snacks/cakeslice/chocolate
 	name = "chocolate cake slice"
 	desc = "Just a slice of cake, it is enough for everyone."
@@ -171,7 +165,6 @@
 	filling_color = "#A0522D"
 	tastes = list("cake" = 5, "sweetness" = 1, "chocolate" = 4)
 	foodtype = GRAIN | DAIRY | JUNKFOOD | SUGAR
-
 
 /obj/item/reagent_containers/food/snacks/store/cake/birthday
 	name = "birthday cake"
@@ -192,7 +185,6 @@
 	list_reagents = list("nutriment" = 4, "sprinkles" = 2, "vitamin" = 1)
 	tastes = list("cake" = 5, "sweetness" = 1)
 	foodtype = GRAIN | DAIRY | JUNKFOOD | SUGAR
-
 
 /obj/item/reagent_containers/food/snacks/store/cake/apple
 	name = "apple cake"
@@ -250,5 +242,4 @@
 	icon_state = "pumpkinspicecakeslice"
 	filling_color = "#FFD700"
 	tastes = list("cake" = 5, "sweetness" = 1, "pumpkin" = 1)
-
 	foodtype = GRAIN | DAIRY | VEGETABLES | SUGAR

@@ -337,8 +337,7 @@ GLOBAL_LIST(cachedbooks) // List of our cached book datums
 		var/obj/item/barcodescanner/scanner = W
 		scanner.computer = src
 		to_chat(user, "[scanner]'s associated machine has been set to [src].")
-		audible_message("[src] lets out a low, short blip.",
-		runechat_popup = TRUE)
+		audible_message("[src] lets out a low, short blip.")
 	else
 		return ..()
 
@@ -587,15 +586,13 @@ GLOBAL_LIST(cachedbooks) // List of our cached book datums
 	if(!user.transferItemToLoc(P, src))
 		return
 	user.visible_message("[user] loads some paper into [src].", "You load some paper into [src].")
-	audible_message("[src] begins to hum as it warms up its printing drums.",
-	runechat_popup = TRUE)
+	audible_message("[src] begins to hum as it warms up its printing drums.")
 	busy = TRUE
 	sleep(rand(200,400))
 	busy = FALSE
 	if(P)
 		if(!stat)
-			visible_message("[src] whirs as it prints and binds a new book.",
-			runechat_popup = TRUE)
+			visible_message("[src] whirs as it prints and binds a new book.")
 			var/obj/item/book/B = new(src.loc)
 			B.dat = P.info
 			B.name = "Print Job #" + "[rand(100, 999)]"
