@@ -206,6 +206,7 @@ Mayor
 
 	id = /obj/item/card/id/dogtag/town
 	ears = /obj/item/radio/headset/headset_den
+	suit = /obj/item/clothing/suit/armor/f13/raider/iconoclast/
 	backpack = /obj/item/storage/backpack/satchel/explorer
 	satchel = /obj/item/storage/backpack/satchel/explorer
 	l_pocket = /obj/item/storage/bag/money/small/settler
@@ -386,7 +387,7 @@ Mayor
 
 /*--------------------------------------------------------------*/
 
-/datum/job/den/f13faithful
+/*/datum/job/den/f13faithful
 	title = "Faithful"
 	flag = F13FAITHFUL
 	department_head = list("Captain")
@@ -418,7 +419,7 @@ Mayor
 	backpack_contents = list(
 		/obj/item/reagent_containers/food/drinks/flask=1, \
 		/obj/item/storage/fancy/candle_box, \
-		/obj/item/storage/bag/money/small/settler)
+		/obj/item/storage/bag/money/small/settler)*/
 
 /*--------------------------------------------------------------*/
 /datum/job/den/f13settler
@@ -471,7 +472,7 @@ Mayor
 	backpack_contents = list(/obj/item/reagent_containers/food/drinks/bottle/wine)
 
 /datum/outfit/loadout/propergent
-	name = "Proper Gent"
+	name = "Respectable Gent"
 	head = /obj/item/clothing/head/f13/beaver
 	suit = /obj/item/clothing/suit/fluff/cowboybvest
 	uniform = /obj/item/clothing/under/f13/bartenderalt
@@ -495,7 +496,7 @@ Mayor
 	id = /obj/item/card/id/dogtag/town
 	ears = /obj/item/radio/headset/headset_den
 	uniform = /obj/item/clothing/under/f13/settler
-	shoes = /obj/item/clothing/shoes/f13/rag
+	shoes = /obj/item/clothing/shoes/jackboots
 	backpack = /obj/item/storage/backpack/satchel/explorer
 	r_pocket = /obj/item/flashlight/flare
 	backpack_contents = list(/obj/item/storage/bag/money/small/settler)
