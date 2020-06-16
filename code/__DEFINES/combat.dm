@@ -97,7 +97,6 @@
 
 //the define for visible message range in combat
 #define COMBAT_MESSAGE_RANGE 3
-#define DEFAULT_MESSAGE_RANGE 7
 
 //Combat object defines
 

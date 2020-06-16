@@ -350,8 +350,7 @@
 		unattached_flesh.Cut()
 		mess = FALSE
 		new /obj/effect/gibspawner/generic(get_turf(src))
-		audible_message("<span class='italics'>You hear a splat.</span>",
-		runechat_popup = TRUE)
+		audible_message("<span class='italics'>You hear a splat.</span>")
 		icon_state = "pod_0"
 		return
 

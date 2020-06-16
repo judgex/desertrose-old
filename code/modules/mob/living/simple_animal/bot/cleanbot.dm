@@ -109,8 +109,7 @@
 				UnarmedAttack(src)
 
 	else if(prob(5))
-		audible_message("[src] makes an excited beeping booping sound!",
-		runechat_popup = TRUE)
+		audible_message("[src] makes an excited beeping booping sound!")
 
 	if(ismob(target))
 		if(!(target in view(DEFAULT_SCAN_RANGE, src)))

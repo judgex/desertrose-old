@@ -82,8 +82,7 @@
 	for(var/obj/item/I in view(4, src))
 		if(is_type_in_list(I, item_types) && I.loc != src && (!I.reagents || !I.reagents.total_volume))
 			if(I.Adjacent(src))
-				visible_message("<span class='notice'>[src] beams up [I]!</span>",
-				runechat_popup = TRUE)
+				visible_message("<span class='notice'>[src] beams up [I]!</span>")
 				I.forceMove(src)
 				playsound(src, 'sound/items/pshoom.ogg', 50, TRUE)
 				flick("synthesizer_beam", src)
@@ -106,15 +105,13 @@
 	var/obj/machinery/disposal/bin/bin = locate() in view(7, src)
 	if(!bin)
 		if(manual)
-			visible_message("<span class='warning'>[src] buzzes. There are no disposal bins in range!</span>",
-			runechat_popup = TRUE)
+			visible_message("<span class='warning'>[src] buzzes. There are no disposal bins in range!</span>")
 			playsound(src, 'sound/machines/buzz-sigh.ogg', 50, TRUE)
 		return
 	for(var/obj/item/I in contents)
 		I.forceMove(bin)
 		use_power(active_power_usage)
-	visible_message("<span class='notice'>[src] [pick("whooshes", "bwooms", "fwooms", "pshooms")] and beams its stored dishes into the nearby [bin.name].</span>",
-	runechat_popup = TRUE)
+	visible_message("<span class='notice'>[src] [pick("whooshes", "bwooms", "fwooms", "pshooms")] and beams its stored dishes into the nearby [bin.name].</span>")
 	playsound(src, 'sound/items/pshoom.ogg', 50, TRUE)
 	playsound(bin, 'sound/items/pshoom.ogg', 50, TRUE)
 	Beam(bin, icon_state = "rped_upgrade", time = 5)

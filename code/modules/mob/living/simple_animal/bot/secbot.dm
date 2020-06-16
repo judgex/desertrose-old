@@ -189,8 +189,7 @@ Auto Patrol: []"},
 		if(user)
 			to_chat(user, "<span class='danger'>You short out [src]'s target assessment circuits.</span>")
 			oldtarget_name = user.name
-		audible_message("<span class='danger'>[src] buzzes oddly!</span>",
-		runechat_popup = TRUE)
+		audible_message("<span class='danger'>[src] buzzes oddly!</span>")
 		declare_arrests = 0
 		icon_state = "secbot[on]"
 
