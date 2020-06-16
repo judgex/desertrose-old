@@ -63,8 +63,7 @@
 		return
 	if (QDELETED(com.target))
 		com.target = null
-		visible_message("<span class='alert'>Cannot authenticate locked on coordinates. Please reinstate coordinate matrix.</span>",
-		runechat_popup = TRUE)
+		visible_message("<span class='alert'>Cannot authenticate locked on coordinates. Please reinstate coordinate matrix.</span>")
 		return
 	if (ismovableatom(M))
 		if(do_teleport(M, com.target))

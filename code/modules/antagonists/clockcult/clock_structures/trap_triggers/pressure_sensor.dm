@@ -20,7 +20,6 @@
 		var/mob/living/L = AM
 		if(L.stat || L.m_intent == MOVE_INTENT_WALK || L.lying)
 			return
-		audible_message("<i>*click*</i>",
-		runechat_popup = TRUE)
+		audible_message("<i>*click*</i>")
 		playsound(src, 'sound/items/screwdriver2.ogg', 50, TRUE)
 		activate()

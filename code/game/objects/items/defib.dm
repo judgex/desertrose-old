@@ -151,13 +151,11 @@
 		return
 	if(safety)
 		safety = FALSE
-		visible_message("<span class='notice'>[src] beeps: Safety protocols disabled!</span>",
-		runechat_popup = TRUE)
+		visible_message("<span class='notice'>[src] beeps: Safety protocols disabled!</span>")
 		playsound(src, 'sound/machines/defib_saftyOff.ogg', 50, 0)
 	else
 		safety = TRUE
-		visible_message("<span class='notice'>[src] beeps: Safety protocols enabled!</span>",
-		runechat_popup = TRUE)
+		visible_message("<span class='notice'>[src] beeps: Safety protocols enabled!</span>")
 		playsound(src, 'sound/machines/defib_saftyOn.ogg', 50, 0)
 	update_icon()
 
@@ -320,8 +318,7 @@
 			to_chat(L, "<span class='warning'>[defib]'s paddles overextend and come out of your hands!</span>")
 			L.temporarilyRemoveItemFromInventory(src,TRUE)
 		else
-			visible_message("<span class='notice'>[src] snap back into [defib].</span>",
-			runechat_popup = TRUE)
+			visible_message("<span class='notice'>[src] snap back into [defib].</span>")
 			snap_back()
 
 /obj/item/twohanded/shockpaddles/proc/recharge(var/time)
@@ -331,8 +328,7 @@
 	update_icon()
 	sleep(time)
 	var/turf/T = get_turf(src)
-	T.audible_message("<span class='notice'>[src] beeps: Unit is recharged.</span>",
-	runechat_popup = TRUE)
+	T.audible_message("<span class='notice'>[src] beeps: Unit is recharged.</span>")
 	playsound(src, 'sound/machines/defib_ready.ogg', 50, 0)
 	cooldown = FALSE
 	update_icon()
@@ -492,11 +488,9 @@
 		var/turf/T = get_turf(defib)
 		playsound(src, 'sound/machines/defib_charge.ogg', 50, 0)
 		if(req_defib)
-			T.audible_message("<span class='warning'>\The [defib] lets out an urgent beep and lets out a steadily rising hum...</span>",
-			runechat_popup = TRUE)
+			T.audible_message("<span class='warning'>\The [defib] lets out an urgent beep and lets out a steadily rising hum...</span>")
 		else
-			user.audible_message("<span class='warning'>[src] let out an urgent beep.</span>",
-			runechat_popup = TRUE)
+			user.audible_message("<span class='warning'>[src] let out an urgent beep.</span>")
 		if(do_after(user, 30, target = H)) //Takes longer due to overcharging
 			if(!H)
 				busy = FALSE
@@ -553,8 +547,7 @@
 			for(var/obj/item/carried_item in H.contents)
 				if(istype(carried_item, /obj/item/clothing/suit/space))
 					if((!combat && !req_defib) || (req_defib && !defib.combat))
-						user.audible_message("<span class='warning'>[req_defib ? "[defib]" : "[src]"] buzzes: Patient's chest is obscured. Operation aborted.</span>",
-						runechat_popup = TRUE)
+						user.audible_message("<span class='warning'>[req_defib ? "[defib]" : "[src]"] buzzes: Patient's chest is obscured. Operation aborted.</span>")
 						playsound(src, 'sound/machines/defib_failed.ogg', 50, 0)
 						busy = FALSE
 						update_icon()
@@ -586,7 +579,7 @@
 						failed = "<span class='warning'>[req_defib ? "[defib]" : "[src]"] buzzes: Resuscitation failed - Patient's brain is missing or damaged beyond point of no return. Further attempts futile.</span>"
 
 				if(failed)
-					user.visible_message(failed, runechat_popup = TRUE)
+					user.visible_message(failed)
 					playsound(src, 'sound/machines/defib_failed.ogg', 50, 0)
 				else
 					//If the body has been fixed so that they would not be in crit when defibbed, give them oxyloss to put them back into crit
@@ -600,8 +593,7 @@
 						H.adjustFireLoss((mobhealth - HALFWAYCRITDEATH) * (total_burn / overall_damage), 0)
 						H.adjustBruteLoss((mobhealth - HALFWAYCRITDEATH) * (total_brute / overall_damage), 0)
 					H.updatehealth() // Previous "adjust" procs don't update health, so we do it manually.
-					user.visible_message("<span class='notice'>[req_defib ? "[defib]" : "[src]"] pings: Resuscitation successful.</span>",
-					runechat_popup = TRUE)
+					user.visible_message("<span class='notice'>[req_defib ? "[defib]" : "[src]"] pings: Resuscitation successful.</span>")
 					playsound(src, 'sound/machines/defib_success.ogg', 50, 0)
 					H.set_heartattack(FALSE)
 					H.revive()
@@ -619,19 +611,16 @@
 				else
 					recharge(60)
 			else if (!H.getorgan(/obj/item/organ/heart))
-				user.visible_message("<span class='warning'>[req_defib ? "[defib]" : "[src]"] buzzes: Patient's heart is missing. Operation aborted.</span>",
-				runechat_popup = TRUE)
+				user.visible_message("<span class='warning'>[req_defib ? "[defib]" : "[src]"] buzzes: Patient's heart is missing. Operation aborted.</span>")
 				playsound(src, 'sound/machines/defib_failed.ogg', 50, 0)
 			else if(H.undergoing_cardiac_arrest())
 				H.set_heartattack(FALSE)
-				user.visible_message("<span class='notice'>[req_defib ? "[defib]" : "[src]"] pings: Patient's heart is now beating again.</span>",
-				runechat_popup = TRUE)
+				user.visible_message("<span class='notice'>[req_defib ? "[defib]" : "[src]"] pings: Patient's heart is now beating again.</span>")
 				playsound(src, 'sound/machines/defib_zap.ogg', 50, 1, -1)
 
 
 			else
-				user.visible_message("<span class='warning'>[req_defib ? "[defib]" : "[src]"] buzzes: Patient is not in a valid state. Operation aborted.</span>",
-				runechat_popup = TRUE)
+				user.visible_message("<span class='warning'>[req_defib ? "[defib]" : "[src]"] buzzes: Patient is not in a valid state. Operation aborted.</span>")
 				playsound(src, 'sound/machines/defib_failed.ogg', 50, 0)
 	busy = FALSE
 	update_icon()
