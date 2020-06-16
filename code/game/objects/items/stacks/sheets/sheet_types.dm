@@ -682,8 +682,8 @@ new /datum/stack_recipe("paper frame door", /obj/structure/mineral_door/paperfra
  * Durathread (This is the best solution I could come up with to the retarded hierarchy problem porting this okay?)
  */
  //It'll be changed If we ever decide to add more fabric materials on f13 to just have cloth as the parent.
- GLOBAL_LIST_INIT(durathread_recipes, list(
- new /datum/stack_recipe("medical gauze", /obj/item/stack/medical/gauze, 1, 2, 6)))
+GLOBAL_LIST_INIT(durathread_recipes, list(
+new /datum/stack_recipe("medical gauze", /obj/item/stack/medical/gauze, 1, 2, 6)))
 
 /obj/item/stack/sheet/durathread
 	name = "durathread"
