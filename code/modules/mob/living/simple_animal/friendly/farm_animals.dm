@@ -8,7 +8,7 @@
 	speak_emote = list("brays")
 	emote_hear = list("brays.")
 	emote_see = list("shakes its head.", "stamps a foot.", "glares around.")
-	speak_chance = 0
+	speak_chance = 1
 	turns_per_move = 5
 	see_in_dark = 6
 	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 4)
@@ -113,7 +113,7 @@
 	speak_emote = list("moos","moos hauntingly")
 	emote_hear = list("brays.")
 	emote_see = list("shakes its head.")
-	speak_chance = 0
+	speak_chance = 1
 	turns_per_move = 5
 	see_in_dark = 6
 	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 6)
@@ -224,7 +224,7 @@
 	emote_hear = list("cheeps.")
 	emote_see = list("pecks at the ground.","flaps its tiny wings.")
 	density = FALSE
-	speak_chance = 0
+	speak_chance = 2
 	turns_per_move = 2
 	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 1)
 	response_help  = "pets"
@@ -272,7 +272,7 @@
 	emote_hear = list("clucks.")
 	emote_see = list("pecks at the ground.","flaps its wings viciously.")
 	density = FALSE
-	speak_chance = 0
+	speak_chance = 2
 	turns_per_move = 3
 	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 2)
 	response_help  = "pets"
@@ -386,7 +386,7 @@
 	young_type = /mob/living/simple_animal/cow/brahmin/calf
 	emote_hear = list("brays.")
 	var/obj/item/inventory_back
-	speak_chance = 0
+	speak_chance = 0.4
 	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 4, /obj/item/reagent_containers/food/snacks/rawbrahminliver = 1, /obj/item/reagent_containers/food/snacks/rawbrahmintongue = 2, /obj/item/stack/sheet/animalhide/brahmin = 3)
 
 /mob/living/simple_animal/hostile/retaliate/goat/bighorn
@@ -401,7 +401,7 @@
 	speak_emote = list("brays")
 	emote_hear = list("brays.")
 	emote_see = list("shakes its head.", "stamps a foot.", "glares around.", "grunts.")
-	speak_chance = 0
+	speak_chance = 1
 	turns_per_move = 5
 	see_in_dark = 6
 	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 6, /obj/item/stack/sheet/sinew = 3, /obj/item/stack/sheet/bone = 4)
