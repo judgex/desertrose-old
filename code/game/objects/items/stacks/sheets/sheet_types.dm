@@ -95,8 +95,8 @@ GLOBAL_LIST_INIT(metal_recipes, list ( \
 	new/datum/stack_recipe("button frame", /obj/item/wallframe/button, 1), \
 	null, \
 	new/datum/stack_recipe("iron door", /obj/structure/simple_door/metal/store, 10, one_per_turf = TRUE, on_floor = TRUE), \
-	new/datum/stack_recipe("lock", /obj/item/lock, 1), \
-	new/datum/stack_recipe("key", /obj/item/door_key, 1), \
+	new/datum/stack_recipe("lock", /obj/item/lock_construct, 1), \
+	new/datum/stack_recipe("key", /obj/item/key, 1), \
 	new/datum/stack_recipe("key chain", /obj/item/storage/keys_set, 1), \
 	new/datum/stack_recipe("metal parts", /obj/item/stack/crafting/metalparts, 5), \
 	null, \
@@ -682,8 +682,8 @@ new /datum/stack_recipe("paper frame door", /obj/structure/mineral_door/paperfra
  * Durathread (This is the best solution I could come up with to the retarded hierarchy problem porting this okay?)
  */
  //It'll be changed If we ever decide to add more fabric materials on f13 to just have cloth as the parent.
- GLOBAL_LIST_INIT(durathread_recipes, list(
- new /datum/stack_recipe("medical gauze", /obj/item/stack/medical/gauze, 1, 2, 6)))
+GLOBAL_LIST_INIT(durathread_recipes, list(
+new /datum/stack_recipe("medical gauze", /obj/item/stack/medical/gauze, 1, 2, 6)))
 
 /obj/item/stack/sheet/durathread
 	name = "durathread"
