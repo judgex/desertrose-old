@@ -15,7 +15,7 @@
 	speak_emote = list("growls", "roars")
 	emote_hear = list("grumbles.","grawls.")
 	emote_taunt = list("stares ferociously", "stomps")
-	speak_chance = 0
+	speak_chance = 10
 	taunt_chance = 25
 	speed = -1
 	see_in_dark = 8
