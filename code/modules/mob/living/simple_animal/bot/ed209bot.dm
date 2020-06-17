@@ -382,9 +382,7 @@ Auto Patrol[]"},
 	Sa.created_name = name
 	new /obj/item/assembly/prox_sensor(Tsec)
 
-	if(!lasercolor)
-		NULL
-	else if(lasercolor == "b")
+	if(lasercolor == "b")
 		var/obj/item/gun/energy/laser/bluetag/G = new (Tsec)
 		G.cell.charge = 0
 		G.update_icon()

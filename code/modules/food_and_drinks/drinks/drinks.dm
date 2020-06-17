@@ -403,14 +403,14 @@
 	return ..()
 
 /obj/item/reagent_containers/food/drinks/soda_cans/cola
-	name = "Coca-Cola"
-	desc = "The best around."
+	name = "off brand cola"
+	desc = "A faded pre-war can of just cola, one of those discount brands most likely."
 	icon_state = "cola"
 	list_reagents = list("cola" = 30)
 	foodtype = SUGAR
 
 /obj/item/reagent_containers/food/drinks/soda_cans/tonic
-	name = "Tonic water"
+	name = "tonic water"
 	desc = "A faded pre-war can of tonic water. A barely visible slogan sticker states - Wheres the GIN?."
 	icon_state = "tonic"
 	list_reagents = list("tonic" = 50)
