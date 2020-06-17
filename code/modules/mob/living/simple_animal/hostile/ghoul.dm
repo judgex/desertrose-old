@@ -28,7 +28,15 @@
 	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab/human/ghoul = 2,
 							/obj/item/stack/sheet/animalhide/human = 1,
 							/obj/item/stack/sheet/bone = 1)
+
 //	loot = list(/obj/effect/gibspawner/human, /obj/item/stack/f13Cash/random/bottle_cap/low)   // not quite ready for cap drops on ghouls
+
+	emote_taunt_sound = list('sound/f13npc/ghoul/taunt.ogg')
+	emote_taunt = list("gurgles", "stares")
+	taunt_chance = 30
+	aggrosound = list('sound/f13npc/ghoul/aggro1.ogg', 'sound/f13npc/ghoul/aggro2.ogg')
+	idlesound = list('sound/f13npc/ghoul/idle.ogg')
+	death_sound = 'sound/f13npc/ghoul/ghoul_death.ogg'
 
 /mob/living/simple_animal/hostile/ghoul/reaver
 	name = "feral ghoul reaver"
@@ -199,7 +207,7 @@
 	maxHealth = 80
 	health = 80
 	faction = list("scorched", "hostile")
-	death_sound = list('sound/f13npc/scor_d1.ogg','sound/f13npc/scor_d2.ogg','sound/f13npc/scor_d3.ogg','sound/f13npc/scor_d4.ogg','sound/f13npc/scor_d5.ogg')
+	death_sound = null
 	melee_damage_lower = 15
 	melee_damage_upper = 20
 	aggro_vision_range = 10

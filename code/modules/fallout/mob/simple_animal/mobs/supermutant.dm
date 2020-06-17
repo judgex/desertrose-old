@@ -14,9 +14,12 @@
 	stat_attack = UNCONSCIOUS
 	robust_searching = 1
 	environment_smash = ENVIRONMENT_SMASH_WALLS
+	emote_taunt_sound = list('sound/f13npc/supermutant/attack1.ogg', 'sound/f13npc/supermutant/attack2.ogg', 'sound/f13npc/supermutant/attack3.ogg')
+	emote_taunt = list("yells")
+	taunt_chance = 30
 	turns_per_move = 5
 	response_help = "touches"
-	response_disarm = "tries to perform a kung fu move, then suddenly remembers that it's actually"
+	response_disarm = "pushes"
 	response_harm = "hits"
 	maxHealth = 350
 	health = 350
@@ -28,11 +31,13 @@
 	anchored = TRUE //unpullable
 	attacktext = "smashes"
 	attack_sound = "punch"
+	idlesound = list('sound/f13npc/supermutant/idle1.ogg', 'sound/f13npc/supermutant/idle2.ogg', 'sound/f13npc/supermutant/idle3.ogg')
+	death_sound = list('sound/f13npc/supermutant/death1.ogg', 'sound/f13npc/supermutant/death2.ogg')
+	aggrosound = list('sound/f13npc/supermutant/alert1.ogg', 'sound/f13npc/supermutant/alert2.ogg', 'sound/f13npc/supermutant/alert3.ogg', 'sound/f13npc/supermutant/alert4.ogg')
 
 /mob/living/simple_animal/hostile/supermutant/Aggro()
 	..()
 	summon_backup(15)
-	say("HUMANS, ATTACK!!!")
 
 /mob/living/simple_animal/hostile/supermutant/bullet_act(obj/item/projectile/Proj)
 	if(!Proj)

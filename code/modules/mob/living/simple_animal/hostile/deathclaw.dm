@@ -40,6 +40,11 @@
 	gold_core_spawnable = HOSTILE_SPAWN
 	var/charging = FALSE
 
+	emote_taunt_sound = list('sound/f13npc/deathclaw/taunt.ogg')
+	aggrosound = list('sound/f13npc/deathclaw/aggro1.ogg', 'sound/f13npc/deathclaw/aggro2.ogg', )
+	idlesound = list('sound/f13npc/deathclaw/idle.ogg',)
+	death_sound = 'sound/f13npc/deathclaw/death.ogg'
+
 /mob/living/simple_animal/hostile/deathclaw/mother
 	name = "mother deathclaw"
 	desc = "A massive, reptilian creature with powerful muscles, razor-sharp claws, and aggression to match. This one is an angry mother."

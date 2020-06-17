@@ -13,11 +13,13 @@
 	response_disarm = "gently pushes aside"
 	response_harm = "hits"
 	emote_taunt = list("buzzes")
-	emote_taunt_sound = 'sound/creatures/cazador_buzz.ogg'
+	emote_taunt_sound = list('sound/f13npc/cazador/cazador_alert.ogg')
+	aggrosound = list('sound/f13npc/cazador/cazador_charge1.ogg', 'sound/f13npc/cazador/cazador_charge2.ogg', 'sound/f13npc/cazador/cazador_charge3.ogg')
+	idlesound = list('sound/creatures/cazador_buzz.ogg')
 	stat_attack = UNCONSCIOUS
 	robust_searching = 1
 	taunt_chance = 30
-	speed = 0
+	speed = -0.5
 	maxHealth = 40
 	health = 40
 	harm_intent_damage = 8
@@ -32,6 +34,7 @@
 	movement_type = FLYING
 	a_intent = INTENT_HARM
 	gold_core_spawnable = HOSTILE_SPAWN
+	death_sound = 'sound/f13npc/cazador/cazador_death.ogg'
 
 /mob/living/simple_animal/hostile/cazador/AttackingTarget()
 	. = ..()
@@ -95,8 +98,7 @@
 	response_help = "pets"
 	response_disarm = "gently pushes aside"
 	response_harm = "hits"
-	emote_taunt = list("snips")
-	emote_taunt_sound = 'sound/creatures/radscorpion_snip.ogg'
+
 	taunt_chance = 30
 	speed = 1.25
 	maxHealth = 150
@@ -114,6 +116,15 @@
 	gold_core_spawnable = HOSTILE_SPAWN
 	var/scorpion_color = "radscorpion" //holder for icon set
 	var/list/icon_sets = list("radscorpion", "radscorpion_blue", "radscorpion_black")
+
+	emote_taunt = list("snips")
+	emote_taunt_sound = list('sound/f13npc/scorpion/taunt1.ogg', 'sound/f13npc/scorpion/taunt2.ogg', 'sound/f13npc/scorpion/taunt3.ogg')
+
+	aggrosound = list('sound/f13npc/scorpion/aggro.ogg', )
+	idlesound = list('sound/creatures/radscorpion_snip.ogg', )
+
+	death_sound = 'sound/f13npc/scorpion/death.ogg'
+
 
 /mob/living/simple_animal/hostile/radscorpion/AttackingTarget()
 	. = ..()
@@ -146,7 +157,6 @@
 	response_help = "pets"
 	response_disarm = "gently pushes aside"
 	response_harm = "hits"
-	emote_taunt = list("screeches")
 	taunt_chance = 30
 	speed = 1
 	maxHealth = 40
@@ -161,6 +171,11 @@
 	faction = list("gecko")
 	a_intent = INTENT_HARM
 	gold_core_spawnable = HOSTILE_SPAWN
+
+	emote_taunt = list("screeches")
+	emote_taunt_sound = list('sound/f13npc/gecko/gecko_charge1.ogg', 'sound/f13npc/gecko/gecko_charge2.ogg', 'sound/f13npc/gecko/gecko_charge3.ogg',)
+	aggrosound = list('sound/f13npc/gecko/gecko_alert.ogg', )
+	death_sound = 'sound/f13npc/gecko/gecko_death.ogg'
 
 /mob/living/simple_animal/hostile/radroach
 	name = "radroach"
@@ -177,9 +192,7 @@
 	response_help = "pets"
 	response_disarm = "gently pushes aside"
 	response_harm = "hits"
-	emote_taunt = list("chitters")
-	emote_taunt_sound = 'sound/creatures/radroach_chitter.ogg'
-	taunt_chance = 30
+
 	speed = 1
 	maxHealth = 40
 	health = 40
@@ -187,13 +200,17 @@
 	obj_damage = 20
 	melee_damage_lower = 10
 	melee_damage_upper = 10
-	attacktext = "stings"
+	attacktext = "nips"
 	attack_sound = 'sound/creatures/radroach_attack.ogg'
 	speak_emote = list("skitters")
 	atmos_requirements = list("min_oxy" = 5, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 1, "min_co2" = 0, "max_co2" = 5, "min_n2" = 0, "max_n2" = 0)
 	faction = list("gecko")
 	a_intent = INTENT_HARM
 	gold_core_spawnable = HOSTILE_SPAWN
+
+	aggrosound = list('sound/creatures/radroach_chitter.ogg',)
+	idlesound = list('sound/f13npc/roach/idle1.ogg', 'sound/f13npc/roach/idle2.ogg', 'sound/f13npc/roach/idle3.ogg',)
+	death_sound = 'sound/f13npc/roach/roach_death.ogg'
 
 /mob/living/simple_animal/hostile/giantant
 	name = "fireant"
@@ -310,9 +327,8 @@
 	turns_per_move = 5
 	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 2, /obj/item/stack/sheet/sinew = 1)
 	response_help = "pets"
-	response_disarm = "gently pushes aside"
-	response_harm = "bites"
-	emote_taunt = list("growls")
+	response_disarm = "pushes aside"
+	response_harm = "kicks"
 	taunt_chance = 30
 	speed = -1
 	maxHealth = 50
@@ -322,12 +338,18 @@
 	melee_damage_lower = 5
 	melee_damage_upper = 10
 	attacktext = "bites"
-	attack_sound = 'sound/creatures/nightstalker_bite.ogg'
 	speak_emote = list("howls")
 	atmos_requirements = list("min_oxy" = 5, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 1, "min_co2" = 0, "max_co2" = 5, "min_n2" = 0, "max_n2" = 0)
 	faction = list("gecko")
 	gold_core_spawnable = HOSTILE_SPAWN
 	a_intent = INTENT_HARM
+
+	emote_taunt_sound = list('sound/f13npc/nightstalker/taunt1.ogg', 'sound/f13npc/nightstalker/taunt2.ogg')
+	emote_taunt = list("growls", "snarls")
+	aggrosound = list('sound/f13npc/nightstalker/aggro1.ogg', 'sound/f13npc/nightstalker/aggro2.ogg', 'sound/f13npc/nightstalker/aggro3.ogg')
+	idlesound = list('sound/f13npc/nightstalker/idle1.ogg')
+	death_sound = 'sound/f13npc/nightstalker/death.ogg'
+	attack_sound = 'sound/f13npc/nightstalker/attack1.ogg'
 
 /mob/living/simple_animal/hostile/stalker/AttackingTarget()
 	. = ..()
@@ -439,7 +461,6 @@
 	response_help = "pets"
 	response_disarm = "gently pushes aside"
 	response_harm = "hits"
-	emote_taunt = list("hisses")
 	taunt_chance = 30
 	speed = -1
 	maxHealth = 25
@@ -455,6 +476,13 @@
 	faction = list("gecko")
 	gold_core_spawnable = HOSTILE_SPAWN
 	a_intent = INTENT_HARM
+
+	emote_taunt_sound = list('sound/f13npc/molerat/taunt.ogg')
+	emote_taunt = list("hisses")
+	taunt_chance = 30
+	aggrosound = list('sound/f13npc/molerat/aggro1.ogg', 'sound/f13npc/molerat/aggro2.ogg',)
+	idlesound = list('sound/f13npc/molerat/idle.ogg')
+	death_sound = 'sound/f13npc/molerat/death.ogg'
 
 /mob/living/simple_animal/hostile/radscorpion/black
 	name = "giant rad scorpion"

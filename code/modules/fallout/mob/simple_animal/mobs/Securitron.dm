@@ -24,7 +24,7 @@
 	faction = list("neutral", "city", "ncr")
 	emote_hear = list("Beeps.")
 	speak = list("Stop Right There Criminal.")
-	death_sound = 'sound/f13npc/robot_death.ogg'
+	death_sound = null
 	harm_intent_damage = 5
 	melee_damage_lower = 5
 	melee_damage_upper = 10
