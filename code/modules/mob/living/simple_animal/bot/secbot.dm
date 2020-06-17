@@ -411,7 +411,6 @@ Auto Patrol: []"},
 	Sa.add_overlay("hs_hole")
 	Sa.created_name = name
 	new /obj/item/assembly/prox_sensor(Tsec)
-	drop_part(baton_type, Tsec)
 
 	if(prob(50))
 		drop_part(robot_arm, Tsec)
