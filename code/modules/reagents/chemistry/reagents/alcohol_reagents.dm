@@ -887,10 +887,14 @@ All effects don't start immediately, but rather get worse over time; the rate is
 
 /datum/reagent/consumable/ethanol/daturatea/on_mob_add(mob/living/M) //spiritual shizzle, also admemes getting booled on
 	M.add_trait(TRAIT_SPIRITUAL, id)
+	M.set_drugginess(15)
+	M.hallucination += 20
 	..()
 
-/datum/reagent/consumable/ethanol/daturatea/on_mob_life(mob/living/carbon/M)
-	M.hallucination += 20
+/datum/reagent/consumable/ethanol/daturatea/on_mob_delete(mob/living/M)
+	M.remove_trait(TRAIT_SPIRITUAL, id)
+	M.set_drugginess(0)
+	M.hallucination += 0
 	..()
 
 /datum/reagent/consumable/ethanol/pinkpulque
