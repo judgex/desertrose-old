@@ -614,8 +614,7 @@
 		qdel(src)
 
 /obj/item/relic/proc/rapidDupe(mob/user)
-	audible_message("[src] emits a loud pop!",
-	runechat_popup = TRUE)
+	audible_message("[src] emits a loud pop!")
 	var/list/dupes = list()
 	var/counter
 	var/max = rand(5,10)

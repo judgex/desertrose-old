@@ -128,7 +128,11 @@
 	max_integrity = 70
 	buildstacktype = /obj/item/stack/sheet/mineral/wood
 	buildstackamount = 3
-	item_chair = /obj/item/chair/wood
+	item_chair = /obj/item/chair/wood/settler
+
+/obj/item/chair/wood/settler
+	item_state = "wooden_chair_settler_toppled"
+	origin_type = /obj/structure/chair/wood
 
 /obj/structure/chair/wood/narsie_act()
 	return
@@ -143,16 +147,33 @@
 /obj/structure/chair/wood/modern
 	icon_state = "wooden_chair_new"
 	desc = "This chair is good as new.<br>Old is never too old to not be in fashion."
+	item_chair = /obj/item/chair/wood/modern
 
 /obj/structure/chair/wood/worn
 	icon_state = "wooden_chair_old"
 	desc = "The furnish has faded and it's not so shiny anymore.<br>Still a good chair though."
+	item_chair = /obj/item/chair/wood/worn
 
 /obj/structure/chair/wood/fancy
 	icon_state = "wooden_chair_fancy"
 	name = "fancy wooden chair"
 	desc = "An elegant chair made of luxurious wood."
+	item_chair = /obj/item/chair/wood/fancy
 
+/obj/item/chair/wood/fancy
+	icon_state = "wooden_chair_fancy_toppled"
+	item_state = "wooden_chair_fancy"
+	origin_type = /obj/structure/chair/wood/fancy
+
+/obj/item/chair/wood/worn
+	icon_state = "wooden_chair_generic_toppled"
+	item_state = "wooden_chair_old"
+	origin_type = /obj/structure/chair/wood/worn
+
+/obj/item/chair/wood/modern
+	icon_state = "wooden_chair_generic_toppled"
+	item_state = "wooden_chair_new"
+	origin_type = /obj/structure/chair/wood/modern
 
 /obj/structure/chair/comfy
 	name = "comfy chair"
@@ -264,6 +285,10 @@
 	icon_state = "bar"
 	item_chair = /obj/item/chair/stool/bar
 
+/obj/item/chair/stool/bar
+	item_state = "bar_toppled"
+	origin_type = /obj/structure/chair/stool/bar
+
 /obj/item/chair
 	name = "chair"
 	desc = "Bar brawl essential."
@@ -350,11 +375,45 @@
 	origin_type = /obj/structure/chair/stool
 	break_chance = 0 //It's too sturdy.
 
-/obj/item/chair/stool/bar
+/obj/structure/chair/stool/retro
 	name = "bar stool"
-	icon_state = "bar_toppled"
-	item_state = "stool_bar"
-	origin_type = /obj/structure/chair/stool/bar
+	icon_state = "nvbar_red"
+	item_chair = /obj/item/chair/stool/retro
+
+/obj/structure/chair/stool/retro/black
+	name = "bar stool"
+	icon_state = "nvbar_black"
+	item_chair = /obj/item/chair/stool/retro/black
+
+/obj/structure/chair/stool/retro/tan
+	name = "bar stool"
+	icon_state = "nvbar_tan"
+	item_chair = /obj/item/chair/stool/retro/tan
+
+/obj/structure/chair/stool/retro/backed
+	name = "bar stool"
+	icon_state = "nv_backed"
+	item_chair = /obj/item/chair/stool/retro/backed
+	
+/obj/item/chair/stool/retro
+	icon_state = "nvbar_red_toppled"
+	item_state = "nvbar_red"
+	origin_type = /obj/structure/chair/stool/retro
+
+/obj/item/chair/stool/retro/black
+	icon_state = "nvbar_black_toppled"
+	item_state = "nvbar_black"
+	origin_type = /obj/structure/chair/stool/retro/black
+
+/obj/item/chair/stool/retro/tan
+	icon_state = "nvbar_tan_toppled"
+	item_state = "nvbar_tan"
+	origin_type = /obj/structure/chair/stool/retro/tan
+
+/obj/item/chair/stool/retro/backed
+	icon_state = "nv_backed_toppled"
+	item_state = "nv_backed"
+	origin_type = /obj/structure/chair/stool/retro/backed
 
 /obj/item/chair/stool/narsie_act()
 	return //sturdy enough to ignore a god
@@ -457,3 +516,26 @@
 	desc = "It has some unsavory stains on it..."
 	icon_state = "f13stool"
 	item_chair = /obj/item/chair/stool/bar
+
+/obj/structure/chair/booth
+	name = "single booth"
+	desc = "A lone-some diner-styled booth."
+	icon_state = "booth_single"
+	resistance_flags = FLAMMABLE
+	max_integrity = 70
+	item_chair = null
+
+/obj/structure/chair/booth/right
+	name = "booth"
+	desc = "A diner-styled end booth."
+	icon_state = "booth_rightend"
+
+/obj/structure/chair/booth/middle
+	name = "booth"
+	desc = "A diner-styled middle booth."
+	icon_state = "booth_middle"
+
+/obj/structure/chair/booth/left
+	name = "booth"
+	desc = "A diner-styled end booth."
+	icon_state = "booth_leftend"

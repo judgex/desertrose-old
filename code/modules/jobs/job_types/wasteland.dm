@@ -136,7 +136,7 @@ Raider
 */
 
 /datum/job/wasteland/f13raider
-	title = "Raider"
+	title = "Outlaw"
 	flag = F13RAIDER
 	department_head = list("Captain")
 	head_announce = list("Security")
@@ -145,7 +145,7 @@ Raider
 	total_positions = 10
 	spawn_positions = 10
 	description = "You are an undesirable figure of some kind- perhaps a corrupt official, or a cannibalistic bartender, or a devious conman, to name a few examples. You have more freedom than anyone else in the wastes, and are not bound by the same moral code as others, but though you may only be interested in self-gain, you still have a responsibility to make your time here interesting, fun, and engaging for others- this means that whatever path you pursue should be more nuanced and flavorful than simple highway robbery or slavery. (Adminhelp if you require help setting up your character for the round.)"
-	supervisors = "your desire to make things interesting and fun"
+	supervisors = "Your desire to make things interesting and fun"
 	selection_color = "#ff4747"
 
 	outfit = /datum/outfit/job/wasteland/f13raider
@@ -167,7 +167,7 @@ Raider
 	/datum/outfit/loadout/raider_mafia)
 
 /datum/outfit/job/wasteland/f13raider
-	name = "Raider"
+	name = "Outlaw"
 	jobtype = /datum/job/wasteland/f13raider
 
 	id = null
@@ -239,8 +239,6 @@ Raider
 	H.social_faction = "Raiders"
 	H.verbs |= /mob/living/proc/creategang
 
-
-
 /datum/outfit/loadout/raider_supafly
 	name = "Supa-fly"
 	suit = /obj/item/clothing/suit/armor/f13/raider
@@ -262,7 +260,6 @@ Raider
 		/obj/item/ammo_box/a308=2,
 		/obj/item/storage/fancy/cigarettes/cigpack_cannabis=1,
 		/obj/item/megaphone=1)
-
 
 /datum/outfit/loadout/raider_blast
 	name = "Blastmaster"
@@ -337,7 +334,7 @@ Raider
 		/obj/item/storage/backpack/spearquiver=1)
 
 /datum/outfit/loadout/raider_sheriff
-	name = "Dark Sheriff"
+	name = "Desperado"
 	suit = /obj/item/clothing/suit/armor/vest/leather
 	uniform = /obj/item/clothing/under/syndicate/tacticool
 	head = /obj/item/clothing/head/helmet/f13/brahmincowboyhat
@@ -366,24 +363,6 @@ Raider
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/pistol/n99=1,
 		/obj/item/ammo_box/magazine/m10mm_adv=2)
-
-
-/datum/outfit/loadout/raider_metal
-	name = "Metal Raider"
-	suit = /obj/item/clothing/suit/armor/f13/raider/raidermetal
-	head = /obj/item/clothing/head/helmet/f13/raidermetal
-	uniform = /obj/item/clothing/under/f13/raiderharness
-
-	//This 0.2 weight will make the eyebot less common. Everything has a weight of 1 if not specified
-
-//As a subclass, this inherits the helmets from the raider_metal outfit
-/datum/outfit/loadout/raider_metal/chestplate
-	name = "Metal - Chest"
-	suit = /obj/item/clothing/suit/armor/f13/metalarmor
-
-/*
-Wastelander
-*/
 
 /datum/job/wasteland/f13wastelander
 	title = "Wastelander"

@@ -49,6 +49,8 @@ Mayor
 		/obj/item/ammo_box/a357=2, \
 		/obj/item/pen/fountain/captain)
 
+/*--------------------------------------------------------------*/
+
 /datum/job/den/f13sheriff
 	title = "Sheriff"
 	flag = F13SHERIFF
@@ -95,6 +97,8 @@ Mayor
 /datum/job/den/f13sheriff/after_spawn(mob/living/carbon/human/H, mob/M)
 	H.add_quirk("Hard Yards")
 
+/*--------------------------------------------------------------*/
+
 /datum/job/den/f13deputy
 	title = "Deputy"
 	flag = F13DEPUTY
@@ -133,6 +137,8 @@ Mayor
 		/obj/item/ammo_box/tube/m44=2, \
 		/obj/item/restraints/handcuffs=1)
 
+/*--------------------------------------------------------------*/
+
 /datum/job/den/f13farmer
 	title = "Farmer"
 	flag = F13FARMER
@@ -166,7 +172,6 @@ Mayor
 		/obj/item/shovel/spade=1)
 	shoes = 		/obj/item/clothing/shoes/workboots
 
-
 /datum/outfit/job/den/f13settler/pre_equip(mob/living/carbon/human/H)
 	..()
 	uniform = pick(
@@ -175,6 +180,8 @@ Mayor
 		/obj/item/clothing/under/f13/machinist, \
 		/obj/item/clothing/under/f13/lumberjack, \
 		/obj/item/clothing/under/f13/roving)
+
+/*--------------------------------------------------------------*/
 
 /datum/job/den/f13prospector
 	title = "Prospector"
@@ -199,6 +206,7 @@ Mayor
 
 	id = /obj/item/card/id/dogtag/town
 	ears = /obj/item/radio/headset/headset_den
+	suit = /obj/item/clothing/suit/armor/f13/raider/iconoclast/
 	backpack = /obj/item/storage/backpack/satchel/explorer
 	satchel = /obj/item/storage/backpack/satchel/explorer
 	l_pocket = /obj/item/storage/bag/money/small/settler
@@ -216,6 +224,8 @@ Mayor
 		/obj/item/clothing/under/f13/machinist, \
 		/obj/item/clothing/under/f13/roving, \
 		/obj/item/clothing/under/f13/cowboyt)
+
+/*--------------------------------------------------------------*/
 
 /datum/job/den/f13dendoc
 	title = "Doctor"
@@ -253,6 +263,8 @@ Mayor
 		/obj/item/storage/firstaid/regular,
 		/obj/item/clothing/accessory/armband/medblue  \
 		)
+
+/*--------------------------------------------------------------*/
 
 /datum/job/den/f13preacher
 	title = "Preacher"
@@ -315,7 +327,7 @@ Mayor
 	if(M.client && M.client.prefs.custom_names["religion"])
 		new_religion = M.client.prefs.custom_names["religion"]
 
-	var/new_deity = "Space Jesus"
+	var/new_deity = "Jesus"
 	if(M.client && M.client.prefs.custom_names["deity"])
 		new_deity = M.client.prefs.custom_names["deity"]
 
@@ -365,7 +377,6 @@ Mayor
 	shoes = 		/obj/item/clothing/shoes/jackboots
 	backpack = 		/obj/item/storage/backpack/cultpack
 	satchel = 		/obj/item/storage/backpack/cultpack
-	mask = 			/obj/item/clothing/mask/gas/syndicate
 	r_hand = 		/obj/item/gun/ballistic/revolver/m29/alt
 	r_pocket = /obj/item/flashlight/flare
 	backpack_contents = list(
@@ -374,6 +385,43 @@ Mayor
 		/obj/item/storage/fancy/candle_box, \
 		/obj/item/storage/bag/money/small/settler)
 
+/*--------------------------------------------------------------*/
+
+/*/datum/job/den/f13faithful
+	title = "Faithful"
+	flag = F13FAITHFUL
+	department_head = list("Captain")
+	department_flag = DEN
+	head_announce = list("Security")
+	faction = "Town"
+	total_positions = 3
+	spawn_positions = 3
+	supervisors = "The Preacher."
+	description = "You are a acolyte of the true faith in this godless Mojave wasteland, answering only to the Preacher and higher beings past the plain of the mortal realm. Spread the beliefs of your divine masters through this land by any means necessary."
+	selection_color = "#dcba97"
+
+	outfit = /datum/outfit/job/den/f13faithful
+
+	access = list(ACCESS_BAR)
+	minimal_access = list(ACCESS_BAR)
+
+/datum/outfit/job/den/f13faithful
+	name = "Faithful"
+	jobtype = /datum/job/den/f13faithful
+	ears = /obj/item/radio/headset/headset_den
+	belt = null
+	id = /obj/item/card/id/dogtag/town
+	uniform = /obj/item/clothing/under/f13/atombeliever
+	gloves = /obj/item/clothing/gloves/f13/handwraps
+	shoes = /obj/item/clothing/shoes/f13/rag
+	backpack = /obj/item/storage/backpack/satchel/explorer
+	r_pocket = /obj/item/flashlight/flare
+	backpack_contents = list(
+		/obj/item/reagent_containers/food/drinks/flask=1, \
+		/obj/item/storage/fancy/candle_box, \
+		/obj/item/storage/bag/money/small/settler)*/
+
+/*--------------------------------------------------------------*/
 /datum/job/den/f13settler
 	title = "Citizen"
 	flag = F13SETTLER
@@ -382,33 +430,78 @@ Mayor
 	total_positions = 8
 	spawn_positions = 8
 	supervisors = "the sheriff and the mayor"
-	description = "Much of the wasteland is filled with conflict and strife, as a local settler to Pahrump you benefit in that you have a claim to the land and the opportunities that unfold. What destiny awaits you? Will you find your way? Or dissapear trying. Will you rise to glory or dissapear into obscurity?"
+	description = "Much of the wasteland is filled with conflict and strife, as a local settler to Yuma you benefit in that you have a claim to the land and the opportunities that unfold."
 	selection_color = "#dcba97"
 
 	outfit = /datum/outfit/job/den/f13settler
+
+	loadout_options = list(
+	/datum/outfit/loadout/provisioner,
+    /datum/outfit/loadout/bum,
+    /datum/outfit/loadout/properlady,
+    /datum/outfit/loadout/propergent,
+    /datum/outfit/loadout/hombre,
+	)
 	access = list(ACCESS_BAR)
 	minimal_access = list(ACCESS_BAR)
+
+/datum/outfit/loadout/provisioner
+	name = "Provisioner"
+	neck = /obj/item/clothing/neck/scarf/cptpatriot
+	suit = /obj/item/clothing/suit/jacket/miljacket
+	uniform = /obj/item/clothing/under/f13/merca
+	gloves = /obj/item/clothing/gloves/f13/leather
+	shoes = /obj/item/clothing/shoes/f13/explorer
+	backpack_contents = list(/obj/item/reagent_containers/food/drinks/flask)
+
+/datum/outfit/loadout/bum
+	name = "Bum"
+	mask = /obj/item/clothing/mask/facewrap
+	suit = /obj/item/clothing/suit/poncho
+	uniform = /obj/item/clothing/under/f13/rag
+	gloves = /obj/item/clothing/gloves/f13/handwraps
+	shoes = /obj/item/clothing/shoes/f13/rag
+	backpack_contents = list(/obj/item/storage/bag/trash, /obj/item/reagent_containers/food/drinks/bottle/whiskey)
+
+/datum/outfit/loadout/properlady
+	name = "Proper Lady"
+	head = /obj/item/clothing/head/beret/black
+	suit = /obj/item/clothing/under/sailordress
+	gloves = /obj/item/clothing/gloves/f13/lace
+	shoes = /obj/item/clothing/shoes/f13/fancy
+	backpack_contents = list(/obj/item/reagent_containers/food/drinks/bottle/wine)
+
+/datum/outfit/loadout/propergent
+	name = "Respectable Gent"
+	head = /obj/item/clothing/head/f13/beaver
+	suit = /obj/item/clothing/suit/fluff/cowboybvest
+	uniform = /obj/item/clothing/under/f13/bartenderalt
+	shoes = /obj/item/clothing/shoes/f13/fancy
+	backpack_contents = list(/obj/item/storage/box/matches, /obj/item/storage/fancy/cigarettes/cigars)
+
+/datum/outfit/loadout/hombre
+	name = "Hombre"
+	head = /obj/item/clothing/head/f13/cowboy
+	suit = /obj/item/clothing/suit/f13/duster
+	uniform = /obj/item/clothing/under/f13/cowboyb
+	gloves = /obj/item/clothing/gloves/f13/leather
+	shoes = /obj/item/clothing/shoes/f13/cowboy
+	backpack_contents = list()
 
 /datum/outfit/job/den/f13settler
 	name = "Citizen"
 	jobtype = /datum/job/den/f13settler
-
-	id = /obj/item/card/id/dogtag/town
-	ears = 			/obj/item/radio/headset/headset_den
+	ears = /obj/item/radio/headset/headset_den
 	belt = null
+	id = /obj/item/card/id/dogtag/town
+	ears = /obj/item/radio/headset/headset_den
+	uniform = /obj/item/clothing/under/f13/settler
+	shoes = /obj/item/clothing/shoes/jackboots
 	backpack = /obj/item/storage/backpack/satchel/explorer
-	satchel = /obj/item/storage/backpack/satchel/explorer
-	l_pocket = /obj/item/storage/bag/money/small/settler
 	r_pocket = /obj/item/flashlight/flare
+	backpack_contents = list(/obj/item/storage/bag/money/small/settler)
 
-/datum/outfit/job/den/f13settler/pre_equip(mob/living/carbon/human/H)
-	..()
-	uniform = pick(
-		/obj/item/clothing/under/f13/settler, \
-		/obj/item/clothing/under/f13/brahminm, \
-		/obj/item/clothing/under/f13/machinist, \
-		/obj/item/clothing/under/f13/lumberjack, \
-		/obj/item/clothing/under/f13/roving)
+/*--------------------------------------------------------------*/
 
 /datum/job/den/f13shopkeeper
     title = "Shopkeeper"
