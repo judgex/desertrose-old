@@ -26,4 +26,4 @@
 	filling_color = "#008000"
 	bitesize_mod = 3
 	foodtype = FRUIT
-	wine_power = 40
+	distill_reagent = "buffalo"
