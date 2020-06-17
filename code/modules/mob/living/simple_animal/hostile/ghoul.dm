@@ -237,7 +237,6 @@
 	projectiletype = /obj/item/projectile/bullet/F13/c9mmBullet
 	projectilesound = 'sound/f13weapons/hunting_rifle.ogg'
 	faction = list("scorched", "hostile")
-	death_sound = list('sound/f13npc/scor_d1.ogg','sound/f13npc/scor_d2.ogg','sound/f13npc/scor_d3.ogg','sound/f13npc/scor_d4.ogg','sound/f13npc/scor_d5.ogg')
 	melee_damage_lower = 15
 	melee_damage_upper = 20
 	aggro_vision_range = 10

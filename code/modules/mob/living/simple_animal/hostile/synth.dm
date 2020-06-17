@@ -21,7 +21,6 @@
 	healable = 0
 
 	faction = list("hostile", "institute")
-	death_sound = list('sound/f13npc/synthdead.ogg','sound/f13npc/synthdead2.ogg','sound/f13npc/synthdead3.ogg')
 
 	harm_intent_damage = 5
 	melee_damage_lower = 10
