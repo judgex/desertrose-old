@@ -400,7 +400,7 @@
 
 /obj/structure/booth/proc/can_be_rotated(mob/user,rotation_type)
 	if(anchored)
-		to_chat(user, "<span class='warning'>[src] cannot be rotated while the spinning bolts are in place</span>")
+		to_chat(user, "<span class='warning'>[src] cannot be rotated while it is fastened to the floor!</span>")
 		return FALSE
 
 /obj/structure/booth/ComponentInitialize()
@@ -422,9 +422,6 @@
 	buildstack = /obj/item/stack/sheet/cloth
 	smooth = SMOOTH_FALSE
 
-/obj/structure/table/snooker/proc/deconstruction_hints(mob/user)
-	to_chat(user, "<span class='notice'>The top is panelled together and could likely be taken apart with a crowbar. The spinning mechanism is secured with bolts.</span>")
-
 /obj/structure/table/snooker/attackby(obj/item/I, mob/user, params)
 	if(!(flags_1 & NODECONSTRUCT_1))
 		if(istype(I, /obj/item/screwdriver) && deconstruction_ready)
@@ -433,7 +430,7 @@
 				deconstruct(TRUE)
 			return
 		if(istype(I, /obj/item/wrench))
-			to_chat(user, "<span class='notice'>You [anchored ? "unwrench" : "wrench"] the [src].</span>")
+			to_chat(user, "<span class='notice'>You begin to [anchored ? "unwrench" : "wrench"] [src].</span>")
 			anchored = !anchored
 		if(istype(I, /obj/item/crowbar) && deconstruction_ready)
 			to_chat(user, "<span class='notice'>You start deconstructing [src]...</span>")
@@ -444,7 +441,7 @@
 
 /obj/structure/table/snooker/proc/can_be_rotated(mob/user,rotation_type)
 	if(anchored)
-		to_chat(user, "<span class='warning'>[src] cannot be rotated while the spinning bolts are in place!</span>")
+		to_chat(user, "<span class='warning'>[src] cannot be rotated while it is fastened to the floor!</span>")
 		return FALSE
 
 /obj/structure/table/snooker/ComponentInitialize()
