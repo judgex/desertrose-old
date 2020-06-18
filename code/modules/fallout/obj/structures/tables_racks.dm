@@ -400,7 +400,7 @@
 
 /obj/structure/booth/proc/can_be_rotated(mob/user,rotation_type)
 	if(anchored)
-		to_chat(user, "<span class='warning'>[src] cannot be rotated while it is fastened to the floor!</span>")
+		to_chat(user, "<span class='warning'>[src] cannot be rotated while the spinning bolts are in place</span>")
 		return FALSE
 
 /obj/structure/booth/ComponentInitialize()
@@ -430,7 +430,7 @@
 				deconstruct(TRUE)
 			return
 		if(istype(I, /obj/item/wrench))
-			to_chat(user, "<span class='notice'>You begin to [anchored ? "unwrench" : "wrench"] [src].</span>")
+			to_chat(user, "<span class='notice'>You [anchored ? "unwrench" : "wrench"] the [src].</span>")
 			anchored = !anchored
 		if(istype(I, /obj/item/crowbar) && deconstruction_ready)
 			to_chat(user, "<span class='notice'>You start deconstructing [src]...</span>")
@@ -441,7 +441,7 @@
 
 /obj/structure/table/snooker/proc/can_be_rotated(mob/user,rotation_type)
 	if(anchored)
-		to_chat(user, "<span class='warning'>[src] cannot be rotated while it is fastened to the floor!</span>")
+		to_chat(user, "<span class='warning'>[src] cannot be rotated while the spinning bolts are in place!</span>")
 		return FALSE
 
 /obj/structure/table/snooker/ComponentInitialize()
