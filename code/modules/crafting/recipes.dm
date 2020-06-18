@@ -60,6 +60,19 @@
 	category = CAT_MISC
 	subcategory = CAT_MISC
 
+/datum/crafting_recipe/trading_machine
+	name = "vending machine"
+	result = /obj/machinery/trading_machine
+	reqs = list(/obj/item/stack/sheet/metal = 20,
+				/obj/item/stack/crafting/metalparts = 10,
+				/obj/item/stack/crafting/electronicparts = 5,
+				/obj/item/stack/crafting/goodparts = 10,
+				/obj/item/stack/cable_coil = 10)
+	tools = list(TOOL_WELDER, TOOL_WORKBENCH, TOOL_SCREWDRIVER)
+	time = 80
+	category = CAT_MISC
+	subcategory = CAT_MISC
+
 /datum/crafting_recipe/dildo_plastic
     name = "plastic dildo"
     result = /obj/item/dildo
