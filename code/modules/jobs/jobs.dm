@@ -14,7 +14,9 @@ GLOBAL_LIST_INIT(command_positions, list(
     "Mayor",
     "Sheriff",
     "Chief",
-    "Shaman"))
+    "Shaman",
+	"NCR Administrator"
+    ))
 
 
 GLOBAL_LIST_INIT(silicon_whitelist_positions, list(
@@ -32,6 +34,7 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 "Head Scribe",
 "Senior Paladin",
 "Paladin",
+"Senior Knight",
 "Knight",
 "Senior Scribe",
 "Scribe",
@@ -60,11 +63,14 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 "Sheriff",
 "Deputy",
 "Chief",
-"Shaman"
+"Shaman",
+"NCR Administrator",
+"Lead Practitioner"
 ))
 GLOBAL_LIST_INIT(faction_player_positions, list(
 "Senior Paladin",
 "Paladin",
+"Senior Knight",
 "Knight",
 "Senior Scribe",
 "Scribe",
@@ -83,12 +89,12 @@ GLOBAL_LIST_INIT(faction_player_positions, list(
 "NCR Heavy Trooper",
 "NCR Ranger",
 "NCR Trooper",
-"Deputy"
-
+"Deputy",
 ))
 //Whitelisted positions list FO13 anything that shows up here requires that the user have an entry in the 'role_whitelist' table of id,ckey,"antagonist"
 GLOBAL_LIST_INIT(antagonist_whitelist_positions, list(
-    "Raider" //Consider adding Great Khan to this list if people abuse it.
+    "Raider",
+	"Outlaw" //Consider adding Great Khan to this list if people abuse it.
 ))
 
 
@@ -102,6 +108,7 @@ GLOBAL_LIST_INIT(brotherhood_command_positions, list(
 GLOBAL_LIST_INIT(brotherhood_positions, list(
 	"Senior Paladin",
 	"Paladin",
+	"Senior Knight",
 	"Knight",
 	"Senior Scribe",
 	"Scribe",
@@ -155,7 +162,9 @@ GLOBAL_LIST_INIT(ncr_positions, list(
     "NCR Corporal",
     "NCR Trooper",
     "NCR Assistant",
-    "NCR Ranger"
+    "NCR Ranger",
+    "NCR Citizen",
+    "NCR Administrator"
 ))
 
 GLOBAL_LIST_INIT(vault_command_positions, list(
@@ -175,7 +184,9 @@ GLOBAL_LIST_INIT(wasteland_positions, list(
     "Raider",
     "Great Khan",
     "Preacher",
-    "Wastelander"
+	"Faithful",
+    "Wastelander",
+    "Detective"
 ))
 GLOBAL_LIST_INIT(security_positions, list(
     "Vault-tec Security",
@@ -189,6 +200,15 @@ GLOBAL_LIST_INIT(tribal_positions, list(
     "Chief",
     "Shaman",
     "Villager"
+))
+
+GLOBAL_LIST_INIT(followers_command_positions, list(
+    "Lead Practitioner",
+))
+GLOBAL_LIST_INIT(followers_positions, list(
+    "Practitioner",
+    "Followers Guard",
+    "Followers Volunteer"
 ))
 /*
 GLOBAL_LIST_INIT(engineering_positions, list(
@@ -259,6 +279,7 @@ GLOBAL_LIST_INIT(exp_jobsmap, list(
     EXP_TYPE_DECANUS       = list("titles" = list("Legion Decanus")),
     EXP_TYPE_TRIBAL        = list("titles" = tribal_positions),
     EXP_TYPE_TRIBALCOMMAND = list("titles" = list("Chief","Shaman")),
+    EXP_TYPE_FOLLOWERSCOMMAND = list("titles" = list("Lead Practitioner")),
     //EXP_TYPE_ENCLAVE = list("titles" = enclave_positions),
     // EXP_TYPE_CREW = list("titles" = command_positions | engineering_positions | medical_positions | science_positions | supply_positions | security_positions | civilian_positions | list("AI","Cyborg")), // crew positions
     // EXP_TYPE_COMMAND = list("titles" = command_positions),

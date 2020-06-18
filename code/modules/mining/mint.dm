@@ -2,8 +2,8 @@
 
 
 /obj/machinery/mineral/mint
-	name = "metal press"
-	desc = "A heavy metal pressing machine used for making coins and bottle caps. This one seems to come from a Nuka Cola plant."
+	name = "cap press"
+	desc = "A heavy metal pressing machine used for making bottle caps. This one seems to come from a Nuka Cola plant."
 	icon = 'icons/obj/economy.dmi'
 	icon_state = "coinpress0"
 	density = TRUE
@@ -16,7 +16,7 @@
 
 /obj/machinery/mineral/mint/Initialize()
 	. = ..()
-	AddComponent(/datum/component/material_container, list(MAT_METAL, MAT_PLASMA, MAT_SILVER, MAT_GOLD, MAT_URANIUM, MAT_DIAMOND, MAT_BANANIUM), MINERAL_MATERIAL_AMOUNT * 50, FALSE, list(/obj/item/stack))
+	AddComponent(/datum/component/material_container, list(MAT_METAL), MINERAL_MATERIAL_AMOUNT * 50, FALSE, list(/obj/item/stack))
 
 /obj/machinery/mineral/mint/process()
 	var/turf/T = get_step(src, input_dir)
@@ -48,12 +48,6 @@
 
 	if(M.name == "iron")
 		dat += "<br><br>Will press [coinsToProduce] bottle caps if enough materials are available.<br>"
-	else if(M.name == "gold")
-		dat += "<br><br>Will produce [coinsToProduce] gold Aureii if enough materials are available.<br>"
-	else if(M.name == "silver")
-		dat += "<br><br>Will produce [coinsToProduce] silver Denarii if enough materials are available.<br>"
-	else
-		dat += "<br><br>Will produce [coinsToProduce] [lowertext(M.name)] coins if enough materials are available.<br>"
 
 	dat += "<A href='?src=[REF(src)];chooseAmt=-10'>-10</A> "
 	dat += "<A href='?src=[REF(src)];chooseAmt=-5'>-5</A> "
@@ -84,7 +78,7 @@
 		var/temp_coins = coinsToProduce
 		processing = TRUE
 		icon_state = "coinpress1"
-		var/coin_mat = MINERAL_MATERIAL_AMOUNT * 0.2
+		var/coin_mat = MINERAL_MATERIAL_AMOUNT * 0.8
 		var/datum/material/M = materials.materials[chosen]
 		if(!M || !M.coin_type)
 			updateUsrDialog()

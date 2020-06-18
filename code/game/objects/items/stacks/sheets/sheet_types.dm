@@ -21,6 +21,13 @@ GLOBAL_LIST_INIT(metal_recipes, list ( \
 	new/datum/stack_recipe("chair", /obj/structure/chair, one_per_turf = TRUE, on_floor = TRUE), \
 	new/datum/stack_recipe("bed", /obj/structure/bed, 2, one_per_turf = TRUE, on_floor = TRUE), \
 	null, \
+	new/datum/stack_recipe_list("bar stools", list( \
+		new/datum/stack_recipe("classic bar stool", /obj/structure/chair/stool/bar, one_per_turf = TRUE, on_floor = TRUE), \
+		new/datum/stack_recipe("red bar stool", /obj/item/chair/stool/retro, one_per_turf = TRUE, on_floor = TRUE), \
+		new/datum/stack_recipe("black bar stool", /obj/item/chair/stool/retro/black, one_per_turf = TRUE, on_floor = TRUE), \
+		new/datum/stack_recipe("tan bar stool", /obj/item/chair/stool/retro/tan, one_per_turf = TRUE, on_floor = TRUE), \
+		new/datum/stack_recipe("backed red bar stool", /obj/item/chair/stool/retro/backed, one_per_turf = TRUE, on_floor = TRUE), \
+		)), \
 	new/datum/stack_recipe_list("office chairs", list( \
 		new/datum/stack_recipe("dark office chair", /obj/structure/chair/office/dark, 5, one_per_turf = TRUE, on_floor = TRUE), \
 		new/datum/stack_recipe("light office chair", /obj/structure/chair/office/light, 5, one_per_turf = TRUE, on_floor = TRUE), \
@@ -31,6 +38,12 @@ GLOBAL_LIST_INIT(metal_recipes, list ( \
 		new/datum/stack_recipe("brown comfy chair", /obj/structure/chair/comfy/brown, 2, one_per_turf = TRUE, on_floor = TRUE), \
 		new/datum/stack_recipe("lime comfy chair", /obj/structure/chair/comfy/lime, 2, one_per_turf = TRUE, on_floor = TRUE), \
 		new/datum/stack_recipe("teal comfy chair", /obj/structure/chair/comfy/teal, 2, one_per_turf = TRUE, on_floor = TRUE), \
+		)), \
+	new/datum/stack_recipe_list("diner chairs", list( \
+		new/datum/stack_recipe("single booth", /obj/structure/chair/booth, 2, one_per_turf = TRUE, on_floor = TRUE), \
+		new/datum/stack_recipe("right end booth", /obj/structure/chair/booth/right, 3, one_per_turf = TRUE, on_floor = TRUE), \
+		new/datum/stack_recipe("middle booth", /obj/structure/chair/booth/middle, 3, one_per_turf = TRUE, on_floor = TRUE), \
+		new/datum/stack_recipe("left end booth", /obj/structure/chair/booth/left, 3, one_per_turf = TRUE, on_floor = TRUE), \
 		)), \
 	null, \
 	new/datum/stack_recipe("shelf parts", /obj/item/rack_parts), \
@@ -82,8 +95,8 @@ GLOBAL_LIST_INIT(metal_recipes, list ( \
 	new/datum/stack_recipe("button frame", /obj/item/wallframe/button, 1), \
 	null, \
 	new/datum/stack_recipe("iron door", /obj/structure/simple_door/metal/store, 10, one_per_turf = TRUE, on_floor = TRUE), \
-	new/datum/stack_recipe("lock", /obj/item/lock, 1), \
-	new/datum/stack_recipe("key", /obj/item/door_key, 1), \
+	new/datum/stack_recipe("lock", /obj/item/lock_construct, 1), \
+	new/datum/stack_recipe("key", /obj/item/key, 1), \
 	new/datum/stack_recipe("key chain", /obj/item/storage/keys_set, 1), \
 	new/datum/stack_recipe("metal parts", /obj/item/stack/crafting/metalparts, 5), \
 	null, \
@@ -191,6 +204,7 @@ GLOBAL_LIST_INIT(wood_recipes, list ( \
 	new/datum/stack_recipe("rifle stock", /obj/item/weaponcrafting/stock, 10, time = 40), \
 	new/datum/stack_recipe("rolling pin", /obj/item/kitchen/rollingpin, 2, time = 30), \
 	new/datum/stack_recipe("wooden chair", /obj/structure/chair/wood/, 3, time = 10, one_per_turf = TRUE, on_floor = TRUE), \
+	new/datum/stack_recipe("fancy chair", /obj/structure/chair/wood/fancy, 3, one_per_turf = TRUE, on_floor = TRUE), \
 	new/datum/stack_recipe("winged wooden chair", /obj/structure/chair/wood/wings, 3, time = 10, one_per_turf = TRUE, on_floor = TRUE), \
 	new/datum/stack_recipe("wooden barricade", /obj/structure/barricade/wooden, 5, time = 50, one_per_turf = TRUE, on_floor = TRUE), \
 	new/datum/stack_recipe("wooden door", /obj/structure/simple_door/wood, 10, time = 20, one_per_turf = TRUE, on_floor = TRUE), \
@@ -212,6 +226,12 @@ GLOBAL_LIST_INIT(wood_recipes, list ( \
 	new/datum/stack_recipe("bonfire", /obj/structure/bonfire, 30, time = 300, one_per_turf = TRUE),\
 	new/datum/stack_recipe("loom", /obj/machinery/loom, 10, time = 15, one_per_turf = TRUE, on_floor = TRUE), \
 	new/datum/stack_recipe("grave marker", /obj/structure/statue/wood/headstonewood, 3, time = 15, one_per_turf = TRUE, on_floor = TRUE), \
+	null, \
+		new /datum/stack_recipe_list("booth tables", list( \
+		new/datum/stack_recipe("booth table end", /obj/structure/booth, 2, time = 10), \
+		new/datum/stack_recipe("booth table middle", /obj/structure/booth/middle, 2, time = 10), \
+		new/datum/stack_recipe("booth table solo", /obj/structure/booth/single, 2, time = 10), \
+	)), \
 		new /datum/stack_recipe_list("racks", list( \
 		new/datum/stack_recipe("bottle rack", /obj/machinery/smartfridge/bottlerack, 25), \
 		new/datum/stack_recipe("seed bin", /obj/machinery/smartfridge/bottlerack/seedbin, 15), \
@@ -232,7 +252,6 @@ GLOBAL_LIST_INIT(wood_recipes, list ( \
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 0)
 	resistance_flags = FLAMMABLE
 	merge_type = /obj/item/stack/sheet/mineral/wood
-	novariants = TRUE
 	grind_results = list("carbon" = 20)
 
 /obj/item/stack/sheet/mineral/wood/Initialize(mapload, new_amount, merge = TRUE)
@@ -663,8 +682,8 @@ new /datum/stack_recipe("paper frame door", /obj/structure/mineral_door/paperfra
  * Durathread (This is the best solution I could come up with to the retarded hierarchy problem porting this okay?)
  */
  //It'll be changed If we ever decide to add more fabric materials on f13 to just have cloth as the parent.
- GLOBAL_LIST_INIT(durathread_recipes, list(
- new /datum/stack_recipe("medical gauze", /obj/item/stack/medical/gauze, 1, 2, 6)))
+GLOBAL_LIST_INIT(durathread_recipes, list(
+new /datum/stack_recipe("medical gauze", /obj/item/stack/medical/gauze, 1, 2, 6)))
 
 /obj/item/stack/sheet/durathread
 	name = "durathread"

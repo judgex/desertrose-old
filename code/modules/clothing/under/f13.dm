@@ -316,10 +316,6 @@
 	icon_state = "xenon"
 	item_state = "xenon"
 
-//Minor Factions
-
-//Roving Traders
-
 /obj/item/clothing/under/f13/roving
 	name = "roving trader outfit "
 	desc = "It's an outfit commonly worn by the roving traders."
@@ -327,8 +323,6 @@
 	item_state = "roving"
 	item_color = "roving"
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 20, "fire" = 20, "acid" = 40)
-
-//Followers of the Apocalypse
 
 /obj/item/clothing/under/f13/follower
 	name = "follower volunteer uniform"
@@ -338,7 +332,6 @@
 	item_color = "follower"
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 20, "fire" = 20, "acid" = 40)
 
-//Gangs
 /obj/item/clothing/under/f13/raider_leather
 	name = "raider leathers"
 	desc = "Scraps of material thrown together and typically worn by raiders."
@@ -361,8 +354,6 @@
 	item_state = "raiderrags"
 	item_color = "raiderrags"
 
-//Great Khans
-
 /obj/item/clothing/under/f13/khan
 	name = "great khan uniform"
 	desc = "The uniform of the the Great Khans."
@@ -377,15 +368,11 @@
 	icon_state = "khan"
 	item_state = "khan"
 
-//Warriors
-
 /obj/item/clothing/suit/armor/warriors
 	name = "warriors armored vest"
 	desc = "The symbol of the greatest gangers."
 	icon_state = "warriors"
 	item_state = "warriors"
-
-//Tribals
 
 /obj/item/clothing/under/f13/tribe
 	name = "tribal rags"
@@ -405,6 +392,28 @@
 	desc = "Carefully hand wozen cloth robes with heavy turqoise jewelry drapped over top."
 	icon_state = "shamanrags"
 	item_state = "shamanrags"
+
+/obj/item/clothing/under/f13/exile
+	name = "disheveled NCR fatigues"
+	desc = "A disheveled and modified duty uniform resembling NCR fatigues."
+	icon_state = "ncr_uniformexile"
+	item_state = "ncr_uniformexile"
+	item_color = "ncr_uniformexile"
+	armor = list("melee" = 10, "bullet" = 10, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 30, "fire" = 20, "acid" = 50)
+
+/obj/item/clothing/under/f13/exile/legion
+	name = "disheveled Legion fatigues"
+	desc = "A disheveled and modified uniform resembling Legion standard fatigues."
+	icon_state = "legion_uniformexile"
+	item_state = "legion_uniformexile"
+	item_color = "legion_uniformexile"
+
+/obj/item/clothing/under/f13/exile/vault
+	name = "disheveled Dweller jumpsuit"
+	desc = "A disheveled and torn uniform resembling a Vault-Tech standard Jumpsuit."
+	icon_state = "vault_exile"
+	item_state = "vault_exile"
+	item_color = "vault_exile"
 
 //Dust Devils
 
@@ -441,8 +450,6 @@
 	item_state = "bl_suit"
 	item_color = "enclave_o"
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 20, "fire" = 20, "acid" = 40)
-
-//Fallout 13 general clothing directory
 
 /obj/item/clothing/under/f13/navy
 	name = "navy jumpsuit"
@@ -1016,7 +1023,7 @@
 	item_color = "fprostitute"
 
 /obj/item/clothing/under/f13/mprostitute
-	name = "masuline prostitute outfit"
+	name = "masculine prostitute outfit"
 	desc = "A latex outfit for someone who sells their companionship. Or really likes the breeze."
 	icon_state = "mprostitute"
 	item_state = "mprostitute"

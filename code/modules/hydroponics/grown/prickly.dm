@@ -27,7 +27,7 @@
 	foodtype = FRUIT
 	bitesize_mod = 2
 	tastes = list("sweet cactus" = 1)
-	wine_power = 40
+	distill_reagent = "pinkpulque"
 
 /obj/item/grown/pricklypear/pickup(mob/living/user)
 	..()

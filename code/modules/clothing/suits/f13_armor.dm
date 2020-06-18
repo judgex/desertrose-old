@@ -192,3 +192,48 @@
 	desc = "A set of plate armor with tabard for the user's high-visibility during combat."
 	icon_state = "knight_tabard"
 	item_state = "knight_tabard"
+
+//exiles
+
+/obj/item/clothing/suit/armor/f13/exile
+	name = "modified NCR armor"
+	desc = "A modified detoriated armor kit consisting of NCR gear and scrap metal."
+	icon_state = "ncrexile"
+	item_state = "ncrexile"
+	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
+	armor = list("melee" = 50, "bullet" = 30, "laser" = 20, "energy" = 20, "bomb" = 25, "bio" = 40, "rad" = 20, "fire" = 60, "acid" = 20)
+	strip_delay = 30
+	icon = 'icons/fallout/clothing/suits.dmi'
+
+/obj/item/clothing/suit/armor/f13/exile/legexile
+	name = "modified Legion armor"
+	desc = "A modified detoriated armor kit consisting of Legion gear and scrap metal."
+	icon_state = "legexile"
+	item_state = "legexile"
+
+/obj/item/clothing/suit/armor/f13/exile/bosexile
+	name = "modified Brotherhood armor"
+	desc = "A modified detoriated armor kit consisting of brotherhood combat armor and scrap metal."
+	icon_state = "brotherhoodexile"
+	item_state = "brotherhoodexile"
+
+/obj/item/clothing/suit/armor/f13/exilereinforced
+	name = "reinforced modified NCR armor"
+	desc = "A modified detoriated armor kit consisting of NCR gear and scrap metal.This set has been add additional protective plates fused inside of the armor, granting additional protection."
+	icon_state = "ncrexile"
+	item_state = "ncrexile"
+	armor = list("melee" = 55, "bullet" = 40, "laser" = 30, "energy" = 30, "bomb" = 25, "bio" = 40, "rad" = 20, "fire" = 60, "acid" = 20)
+	strip_delay = 30
+	icon = 'icons/fallout/clothing/suits.dmi'
+
+/obj/item/clothing/suit/armor/f13/exilereinforced/legion
+	name = "reinforced modified Legion armor"
+	desc = "A modified detoriated armor kit consisting of Legion gear and scrap metal.This set has been add additional protective plates fused inside of the armor, granting additional protection."
+	icon_state = "legexile"
+	item_state = "legexile"
+
+/obj/item/clothing/suit/armor/f13/exilereinforced/bos
+	name = "reinforced modified Brotherhood armor"
+	desc = "A modified detoriated armor kit consisting of brotherhood combat armor and scrap metal. This set has been add additional protective plates fused inside of the armor, granting additional protection."
+	icon_state = "brotherhoodexile"
+	item_state = "brotherhoodexile"

@@ -136,7 +136,7 @@
 	name = "\proper the Overseer's encryption key"
 	desc = "An encryption key for a radio headset.  Channels are as follows: :v - vault, :c - command, :s - security, :e - engineering, :m - medical, :n - science."
 	icon_state = "cap_cypherkey"
-	channels = list("Vault" = 1, "Command" = 1, "Security" = 1, "Engineering" = 0, "Science" = 0, "Medical" = 0)
+	channels = list("Vault" = 1, "Command" = 1, "Security" = 1)
 
 /obj/item/encryptionkey/headset_vault_hos
 	name = "\proper the Head of Security's encryption key"

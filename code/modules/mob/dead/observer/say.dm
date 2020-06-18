@@ -33,6 +33,9 @@
 		else
 			to_follow = V.source
 	var/link = FOLLOW_LINK(src, to_follow)
+		// Create map text prior to modifying message for goonchat //Skyrat change
+	if (client?.prefs.chat_on_map && (client.prefs.see_chat_non_mob || ismob(speaker))) //Skyrat change
+		create_chat_message(speaker, message_language, raw_message, spans, message_mode) //Skyrat change
 	// Recompose the message, because it's scrambled by default
 	message = compose_message(speaker, message_language, raw_message, radio_freq, spans, message_mode)
 	to_chat(src, "[link] [message]")

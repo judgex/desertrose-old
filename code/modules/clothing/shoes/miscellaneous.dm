@@ -348,6 +348,7 @@
 	resistance_flags = NONE
 	permeability_coefficient = 0.05 //Thick soles, and covers the ankle
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/shoes
+	slowdown = -0.05
 
 /obj/item/clothing/shoes/combat/swat //overpowered boots for death squads
 	name = "tactical boots"

@@ -19,20 +19,9 @@
 	robust_searching = 1
 	maxHealth = 70
 	health = 70
-//	self_weight = 50
 	healable = 0
 
 	faction = list("hostile", "enclave", "wastebot", "ghoul", "cazador", "supermutant", "bighorner")
-
-//	ambient_sound = 'sound/f13npc/eyebot_loop.ogg'
-
-//	sound_speak_chance = 5
-//	sound_speak = list('sound/machines/buzz-sigh.ogg','sound/misc/interference.ogg')
-
-//	aggro_sound_chance = 50
-//	aggro_sound = 'sound/misc/interference.ogg'
-
-	death_sound = 'sound/f13npc/robot_death.ogg'
 
 	harm_intent_damage = 10
 	melee_damage_lower = 2
@@ -47,10 +36,13 @@
 	status_flags = CANPUSH
 	vision_range = 7 //reduced from 13 to 7 because who needs that kind of shit in their life
 	aggro_vision_range = 7 //as above
-//	idle_vision_range = 7
 	ranged = 1
 	projectiletype = /obj/item/projectile/beam/laser/lasgun
 	projectilesound = 'sound/weapons/resonator_fire.ogg'
+
+	aggrosound = list('sound/f13npc/eyebot/aggro.ogg', )
+	idlesound = list('sound/f13npc/eyebot/idle1.ogg', 'sound/f13npc/eyebot/idle2.ogg')
+	death_sound = 'sound/f13npc/eyebot/robo_death.ogg'
 
 /mob/living/simple_animal/hostile/eyebot/New()
 	..()

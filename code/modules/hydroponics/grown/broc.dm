@@ -21,7 +21,7 @@
 	icon_state = "broc"
 	//slot_flags = SLOT_HEAD
 	filling_color = "#FF6347"
-	wine_power = 20
+	distill_reagent = "brocbrew"
 
 
 /obj/item/reagent_containers/food/snacks/grown/broc/add_juice()

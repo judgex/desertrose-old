@@ -26,7 +26,7 @@
 	bitesize = 100
 	foodtype = VEGETABLES
 	juice_results = list("tato" = 0)
-	wine_power = 40
+	distill_reagent = "tatovodka"
 
 /obj/item/reagent_containers/food/snacks/grown/tato/wedges
 	name = "tato wedges"

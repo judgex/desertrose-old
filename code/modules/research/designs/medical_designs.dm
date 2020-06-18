@@ -316,6 +316,8 @@
 	category = list("Misc", "Medical Designs")
 	departmental_flags = DEPARTMENTAL_FLAG_MEDICAL
 
+/*
+
 /datum/design/cyberimp_thermals
 	name = "Thermal Eyes"
 	desc = "These cybernetic eyes will give you Thermal vision. Vertical slit pupil included."
@@ -326,6 +328,8 @@
 	build_path = /obj/item/organ/eyes/robotic/thermals
 	category = list("Misc", "Medical Designs")
 	departmental_flags = DEPARTMENTAL_FLAG_MEDICAL
+
+*/
 
 /datum/design/cyberimp_antidrop
 	name = "Anti-Drop Implant"

@@ -84,6 +84,7 @@
 #define EXP_TYPE_SCRIBE         "Scribe"
 #define EXP_TYPE_DECANUS        "Decanus"
 #define EXP_TYPE_TRIBAL			"Tribal"
+#define EXP_TYPE_FOLLOWERS		"FoA"
 
 //Flags in the players table in the db
 #define DB_FLAG_EXEMPT 1

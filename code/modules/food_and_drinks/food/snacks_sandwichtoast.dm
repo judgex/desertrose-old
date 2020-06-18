@@ -63,7 +63,6 @@
 	desc = "Something seems to be wrong with this, you can't quite figure what. Maybe it's his moustache."
 	icon = 'icons/obj/food/burgerbread.dmi'
 	icon_state = "notasandwich"
-	trash = /obj/item/trash/plate
 	bonus_reagents = list("vitamin" = 6)
 	list_reagents = list("nutriment" = 6, "vitamin" = 6)
 	tastes = list("nothing suspicious" = 1)

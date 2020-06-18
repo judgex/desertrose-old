@@ -15,6 +15,7 @@
 #define TOOL_MSRELOADER     "makeshift reloading tool"
 #define TOOL_LUNCHBOX       "lunchbox"
 #define TOOL_WORKBENCH      "workbench"
+#define TOOL_BOTTLER		"bottler"
 #define TOOL_AWORKBENCH     "advanced workbench"
 #define TOOL_LOOM			"Loom"
 #define TOOL_GUNTIER1		"Guns and Bullets: Part 1"
