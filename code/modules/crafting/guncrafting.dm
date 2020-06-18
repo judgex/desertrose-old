@@ -36,6 +36,12 @@
 	desc = "A large and advanced pre-war workbench to tackle any project!"
 	machine_tool_behaviour = list(TOOL_AWORKBENCH, TOOL_WORKBENCH)
 
+/obj/machinery/workbench/bottler
+	name = "bottle press"
+	icon_state = "bottler"
+	desc = "A self-crafted all-in-one bottle making and pressing machine."
+	machine_tool_behaviour = list(TOOL_BOTTLER)
+
 /obj/item/weaponcrafting/receiver
 	name = "modular receiver"
 	desc = "A prototype modular receiver and trigger assembly for a firearm."

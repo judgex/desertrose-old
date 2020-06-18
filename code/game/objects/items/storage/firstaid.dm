@@ -151,12 +151,11 @@
 	if(empty)
 		return
 	new /obj/item/stack/medical/gauze(src)
-	new /obj/item/defibrillator/compact/combat/loaded(src)
 	new /obj/item/reagent_containers/hypospray/combat(src)
 	new /obj/item/reagent_containers/pill/patch/styptic(src)
 	new /obj/item/reagent_containers/pill/patch/silver_sulf(src)
-	new /obj/item/reagent_containers/syringe/lethal/choral(src)
-	new /obj/item/clothing/glasses/hud/health/night(src)
+	new /obj/item/clothing/glasses/hud/health(src)
+	new /obj/item/reagent_containers/hypospray/medipen/stimpack/traitor(src)
 
 /*
  * Pill Bottles

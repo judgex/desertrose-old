@@ -9,8 +9,8 @@
 	endurance = 10
 	yield = 3
 	growthstages = 4
-	production = 1
-	maturation = 1
+	production = 2
+	maturation = 2
 	growing_icon = 'icons/obj/hydroponics/growing_vegetables.dmi'
 	icon_grow = "potato-grow"
 	icon_dead = "potato-dead"
@@ -21,6 +21,7 @@
 	desc = "Xander roots are large, hardy, turnip-like roots with mild healing properties."
 	icon_state = "xander"
 	filling_color = "#FF6347"
+	distill_reagent = "salgam"
 
 /obj/item/reagent_containers/food/snacks/grown/xander/add_juice()
 	if(..())

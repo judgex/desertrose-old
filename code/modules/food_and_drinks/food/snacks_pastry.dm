@@ -129,7 +129,6 @@
 	name = "waffles"
 	desc = "Mmm, waffles."
 	icon_state = "waffles"
-	trash = /obj/item/trash/waffles
 	bonus_reagents = list("vitamin" = 1)
 	list_reagents = list("nutriment" = 8, "vitamin" = 1)
 	filling_color = "#D2691E"
@@ -140,7 +139,6 @@
 	name = "\improper Soylent Green"
 	desc = "Not made of people. Honest." //Totally people.
 	icon_state = "soylent_green"
-	trash = /obj/item/trash/waffles
 	bonus_reagents = list("vitamin" = 1)
 	list_reagents = list("nutriment" = 10, "vitamin" = 1)
 	filling_color = "#9ACD32"
@@ -151,7 +149,6 @@
 	name = "\improper Soylent Virdians"
 	desc = "Not made of people. Honest." //Actually honest for once.
 	icon_state = "soylent_yellow"
-	trash = /obj/item/trash/waffles
 	bonus_reagents = list("vitamin" = 1)
 	list_reagents = list("nutriment" = 10, "vitamin" = 1)
 	filling_color = "#9ACD32"
@@ -162,15 +159,12 @@
 	name = "roffle waffles"
 	desc = "Waffles from Roffle. Co."
 	icon_state = "rofflewaffles"
-	trash = /obj/item/trash/waffles
 	bitesize = 4
 	bonus_reagents = list("vitamin" = 2)
 	list_reagents = list("nutriment" = 8, "mushroomhallucinogen" = 2, "vitamin" = 2)
 	filling_color = "#00BFFF"
 	tastes = list("waffle" = 1, "mushrooms" = 1)
 	foodtype = GRAIN | VEGETABLES | TOXIC | SUGAR
-
-////////////////////////////////////////////OTHER////////////////////////////////////////////
 
 /obj/item/reagent_containers/food/snacks/cookie
 	name = "cookie"

@@ -129,18 +129,28 @@
 /datum/reagent/consumable/banana
 	name = "Banana Juice"
 	id = "banana"
-	description = "The raw essence of a banana. HONK"
+	description = "The raw essence of a banana."
 	color = "#863333" // rgb: 175, 175, 0
 	taste_description = "banana"
 	glass_icon_state = "banana"
 	glass_name = "glass of banana juice"
-	glass_desc = "The raw essence of a banana. HONK."
+	glass_desc = "The raw essence of a banana."
 
 /datum/reagent/consumable/banana/on_mob_life(mob/living/carbon/M)
 	if((ishuman(M) && M.job == "Clown") || ismonkey(M))
 		M.heal_bodypart_damage(1,1, 0)
 		. = 1
 	..()
+
+/datum/reagent/consumable/yuccajuice
+	name = "Yucca Juice"
+	id = "yuccajuice"
+	description = "The raw essence of a	banana yucca."
+	color = "#863333" // rgb: 175, 175, 0
+	taste_description = "sand and bunker-air"
+	glass_icon_state = "banana"
+	glass_name = "glass of yucca juice"
+	glass_desc = "A wastelanders favourite."
 
 /datum/reagent/consumable/nothing
 	name = "Nothing"
@@ -437,7 +447,7 @@
 
 /datum/reagent/consumable/nuka_cola
 	name = "Nuka Cola"
-	id = "nuka_cola"
+	id = "glass_brown2"
 	description = "Cola, cola never changes."
 	color = "#100800" // rgb: 16, 8, 0
 	taste_description = "the future"

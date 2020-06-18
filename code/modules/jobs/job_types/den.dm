@@ -33,7 +33,7 @@ Mayor
 	jobtype = /datum/job/den/f13mayor
 
 	ears = 			/obj/item/radio/headset/headset_den
-	id =            /obj/item/card/id/gold/mayor
+	id =            /obj/item/card/id/silver/mayor
 	backpack = /obj/item/storage/backpack/satchel/explorer
 	satchel = /obj/item/storage/backpack/satchel/explorer
 	l_pocket = /obj/item/storage/bag/money/small/settler
@@ -49,9 +49,7 @@ Mayor
 		/obj/item/ammo_box/a357=2, \
 		/obj/item/pen/fountain/captain)
 
-/*
-Sheriff
-*/
+/*--------------------------------------------------------------*/
 
 /datum/job/den/f13sheriff
 	title = "Sheriff"
@@ -99,13 +97,7 @@ Sheriff
 /datum/job/den/f13sheriff/after_spawn(mob/living/carbon/human/H, mob/M)
 	H.add_quirk("Hard Yards")
 
-
-	//pick("grey", "white", "yellow", "purple", "brown", "whatever")
-	//var/item1_type = pick( /obj/item/stack/spacecash/c10, /obj/item/stack/spacecash/c100, /obj/item/stack/spacecash/c1000, /obj/item/stack/spacecash/c20, /obj/item/stack/spacecash/c200, /obj/item/stack/spacecash/c50, /obj/item/stack/spacecash/c500)
-
-/*
-Deputy
-*/
+/*--------------------------------------------------------------*/
 
 /datum/job/den/f13deputy
 	title = "Deputy"
@@ -145,9 +137,7 @@ Deputy
 		/obj/item/ammo_box/tube/m44=2, \
 		/obj/item/restraints/handcuffs=1)
 
-/*
-Farmer
-*/
+/*--------------------------------------------------------------*/
 
 /datum/job/den/f13farmer
 	title = "Farmer"
@@ -157,7 +147,7 @@ Farmer
 	total_positions = 4
 	spawn_positions = 4
 	supervisors = "the sheriff and the mayor"
-	description = "A local settler of Pahrump, you know a thing or two about cultivation and husbandry, making you a vital backbone of the town in growing medicines, crops and raising livestock in the service of the townsfolk."
+	description = "A local settler of Yuma, you know a thing or two about cultivation and husbandry, making you a vital backbone of the town in growing medicines, crops and raising livestock in the service of the townsfolk."
 	selection_color = "#dcba97"
 
 
@@ -182,7 +172,6 @@ Farmer
 		/obj/item/shovel/spade=1)
 	shoes = 		/obj/item/clothing/shoes/workboots
 
-
 /datum/outfit/job/den/f13settler/pre_equip(mob/living/carbon/human/H)
 	..()
 	uniform = pick(
@@ -192,9 +181,7 @@ Farmer
 		/obj/item/clothing/under/f13/lumberjack, \
 		/obj/item/clothing/under/f13/roving)
 
-/*
-Prospector
-*/
+/*--------------------------------------------------------------*/
 
 /datum/job/den/f13prospector
 	title = "Prospector"
@@ -219,6 +206,7 @@ Prospector
 
 	id = /obj/item/card/id/dogtag/town
 	ears = /obj/item/radio/headset/headset_den
+	suit = /obj/item/clothing/suit/armor/f13/raider/iconoclast/
 	backpack = /obj/item/storage/backpack/satchel/explorer
 	satchel = /obj/item/storage/backpack/satchel/explorer
 	l_pocket = /obj/item/storage/bag/money/small/settler
@@ -237,9 +225,7 @@ Prospector
 		/obj/item/clothing/under/f13/roving, \
 		/obj/item/clothing/under/f13/cowboyt)
 
-/*
-Doctor
-*/
+/*--------------------------------------------------------------*/
 
 /datum/job/den/f13dendoc
 	title = "Doctor"
@@ -278,9 +264,7 @@ Doctor
 		/obj/item/clothing/accessory/armband/medblue  \
 		)
 
-/*
-Preacher
-*/
+/*--------------------------------------------------------------*/
 
 /datum/job/den/f13preacher
 	title = "Preacher"
@@ -343,7 +327,7 @@ Preacher
 	if(M.client && M.client.prefs.custom_names["religion"])
 		new_religion = M.client.prefs.custom_names["religion"]
 
-	var/new_deity = "Space Jesus"
+	var/new_deity = "Jesus"
 	if(M.client && M.client.prefs.custom_names["deity"])
 		new_deity = M.client.prefs.custom_names["deity"]
 
@@ -364,13 +348,6 @@ Preacher
 			B.name = "The Book of Lorgar"
 		if("imperium")
 			B.name = "Uplifting Primer"
-		if("toolboxia")
-			B.name = "Toolbox Manifesto"
-		if("homosexuality")
-			B.name = "Guys Gone Wild"
-		if("lol", "wtf", "gay", "penis", "ass", "poo", "badmin", "shitmin", "deadmin", "cock", "cocks", "meme", "memes")
-			B.name = pick("Woodys Got Wood: The Aftermath", "War of the Cocks", "Sweet Bro and Hella Jef: Expanded Edition")
-			H.adjustBrainLoss(100) // starts off stupid as fuck
 		if("science")
 			B.name = pick("Principle of Relativity", "Quantum Enigma: Physics Encounters Consciousness", "Programming the Universe", "Quantum Physics and Theology", "String Theory for Dummies", "How To: Build Your Own Warp Drive", "The Mysteries of Bluespace", "Playing God: Collector's Edition")
 		else
@@ -400,7 +377,6 @@ Preacher
 	shoes = 		/obj/item/clothing/shoes/jackboots
 	backpack = 		/obj/item/storage/backpack/cultpack
 	satchel = 		/obj/item/storage/backpack/cultpack
-	mask = 			/obj/item/clothing/mask/gas/syndicate
 	r_hand = 		/obj/item/gun/ballistic/revolver/m29/alt
 	r_pocket = /obj/item/flashlight/flare
 	backpack_contents = list(
@@ -409,49 +385,123 @@ Preacher
 		/obj/item/storage/fancy/candle_box, \
 		/obj/item/storage/bag/money/small/settler)
 
-/*
-Settler
-*/
+/*--------------------------------------------------------------*/
 
+/*/datum/job/den/f13faithful
+	title = "Faithful"
+	flag = F13FAITHFUL
+	department_head = list("Captain")
+	department_flag = DEN
+	head_announce = list("Security")
+	faction = "Town"
+	total_positions = 3
+	spawn_positions = 3
+	supervisors = "The Preacher."
+	description = "You are a acolyte of the true faith in this godless Mojave wasteland, answering only to the Preacher and higher beings past the plain of the mortal realm. Spread the beliefs of your divine masters through this land by any means necessary."
+	selection_color = "#dcba97"
+
+	outfit = /datum/outfit/job/den/f13faithful
+
+	access = list(ACCESS_BAR)
+	minimal_access = list(ACCESS_BAR)
+
+/datum/outfit/job/den/f13faithful
+	name = "Faithful"
+	jobtype = /datum/job/den/f13faithful
+	ears = /obj/item/radio/headset/headset_den
+	belt = null
+	id = /obj/item/card/id/dogtag/town
+	uniform = /obj/item/clothing/under/f13/atombeliever
+	gloves = /obj/item/clothing/gloves/f13/handwraps
+	shoes = /obj/item/clothing/shoes/f13/rag
+	backpack = /obj/item/storage/backpack/satchel/explorer
+	r_pocket = /obj/item/flashlight/flare
+	backpack_contents = list(
+		/obj/item/reagent_containers/food/drinks/flask=1, \
+		/obj/item/storage/fancy/candle_box, \
+		/obj/item/storage/bag/money/small/settler)*/
+
+/*--------------------------------------------------------------*/
 /datum/job/den/f13settler
-	title = "Settler"
+	title = "Citizen"
 	flag = F13SETTLER
 	department_flag = DEN
 	faction = "Town"
 	total_positions = 8
 	spawn_positions = 8
 	supervisors = "the sheriff and the mayor"
-	description = "Much of the wasteland is filled with conflict and strife, as a local settler to Pahrump you benefit in that you have a claim to the land and the opportunities that unfold. What destiny awaits you? Will you find your way? Or dissapear trying. Will you rise to glory or dissapear into obscurity?"
+	description = "Much of the wasteland is filled with conflict and strife, as a local settler to Yuma you benefit in that you have a claim to the land and the opportunities that unfold."
 	selection_color = "#dcba97"
 
 	outfit = /datum/outfit/job/den/f13settler
+
+	loadout_options = list(
+	/datum/outfit/loadout/provisioner,
+    /datum/outfit/loadout/bum,
+    /datum/outfit/loadout/properlady,
+    /datum/outfit/loadout/propergent,
+    /datum/outfit/loadout/hombre,
+	)
 	access = list(ACCESS_BAR)
 	minimal_access = list(ACCESS_BAR)
 
+/datum/outfit/loadout/provisioner
+	name = "Provisioner"
+	neck = /obj/item/clothing/neck/scarf/cptpatriot
+	suit = /obj/item/clothing/suit/jacket/miljacket
+	uniform = /obj/item/clothing/under/f13/merca
+	gloves = /obj/item/clothing/gloves/f13/leather
+	shoes = /obj/item/clothing/shoes/f13/explorer
+	backpack_contents = list(/obj/item/reagent_containers/food/drinks/flask)
+
+/datum/outfit/loadout/bum
+	name = "Bum"
+	mask = /obj/item/clothing/mask/facewrap
+	suit = /obj/item/clothing/suit/poncho
+	uniform = /obj/item/clothing/under/f13/rag
+	gloves = /obj/item/clothing/gloves/f13/handwraps
+	shoes = /obj/item/clothing/shoes/f13/rag
+	backpack_contents = list(/obj/item/storage/bag/trash, /obj/item/reagent_containers/food/drinks/bottle/whiskey)
+
+/datum/outfit/loadout/properlady
+	name = "Proper Lady"
+	head = /obj/item/clothing/head/beret/black
+	suit = /obj/item/clothing/under/sailordress
+	gloves = /obj/item/clothing/gloves/f13/lace
+	shoes = /obj/item/clothing/shoes/f13/fancy
+	backpack_contents = list(/obj/item/reagent_containers/food/drinks/bottle/wine)
+
+/datum/outfit/loadout/propergent
+	name = "Respectable Gent"
+	head = /obj/item/clothing/head/f13/beaver
+	suit = /obj/item/clothing/suit/fluff/cowboybvest
+	uniform = /obj/item/clothing/under/f13/bartenderalt
+	shoes = /obj/item/clothing/shoes/f13/fancy
+	backpack_contents = list(/obj/item/storage/box/matches, /obj/item/storage/fancy/cigarettes/cigars)
+
+/datum/outfit/loadout/hombre
+	name = "Hombre"
+	head = /obj/item/clothing/head/f13/cowboy
+	suit = /obj/item/clothing/suit/f13/duster
+	uniform = /obj/item/clothing/under/f13/cowboyb
+	gloves = /obj/item/clothing/gloves/f13/leather
+	shoes = /obj/item/clothing/shoes/f13/cowboy
+	backpack_contents = list()
+
 /datum/outfit/job/den/f13settler
-	name = "Settler"
+	name = "Citizen"
 	jobtype = /datum/job/den/f13settler
-
-	id = /obj/item/card/id/dogtag/town
-	ears = 			/obj/item/radio/headset/headset_den
+	ears = /obj/item/radio/headset/headset_den
 	belt = null
+	id = /obj/item/card/id/dogtag/town
+	ears = /obj/item/radio/headset/headset_den
+	uniform = /obj/item/clothing/under/f13/settler
+	shoes = /obj/item/clothing/shoes/jackboots
 	backpack = /obj/item/storage/backpack/satchel/explorer
-	satchel = /obj/item/storage/backpack/satchel/explorer
-	l_pocket = /obj/item/storage/bag/money/small/settler
 	r_pocket = /obj/item/flashlight/flare
+	backpack_contents = list(/obj/item/storage/bag/money/small/settler)
 
-/datum/outfit/job/den/f13settler/pre_equip(mob/living/carbon/human/H)
-	..()
-	uniform = pick(
-		/obj/item/clothing/under/f13/settler, \
-		/obj/item/clothing/under/f13/brahminm, \
-		/obj/item/clothing/under/f13/machinist, \
-		/obj/item/clothing/under/f13/lumberjack, \
-		/obj/item/clothing/under/f13/roving)
-
-/*
-Shopkeeper
-*/
+/*--------------------------------------------------------------*/
 
 /datum/job/den/f13shopkeeper
     title = "Shopkeeper"

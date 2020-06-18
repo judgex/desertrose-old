@@ -136,7 +136,7 @@
 	desc = "Because eating bear wasn't manly enough."
 	icon_state = "bearsteak"
 	bonus_reagents = list("nutriment" = 2, "vitamin" = 6)
-	list_reagents = list("nutriment" = 2, "vitamin" = 5, "manlydorf" = 5)
+	list_reagents = list("nutriment" = 2, "vitamin" = 5,)
 	tastes = list("meat" = 1, "salmon" = 1)
 	foodtype = MEAT | ALCOHOL
 
@@ -268,7 +268,6 @@
 	name = "boiled spider leg"
 	desc = "A giant spider's leg that's still twitching after being cooked. Gross!"
 	icon_state = "spiderlegcooked"
-	trash = /obj/item/trash/plate
 	bonus_reagents = list("nutriment" = 1, "capsaicin" = 2, "vitamin" = 2)
 	list_reagents = list("nutriment" = 3, "capsaicin" = 2)
 	filling_color = "#000000"
@@ -279,7 +278,6 @@
 	name = "green eggs and ham"
 	desc = "Would you eat them on a train? Would you eat them on a plane? Would you eat them on a state of the art corporate deathtrap floating through space?"
 	icon_state = "spidereggsham"
-	trash = /obj/item/trash/plate
 	bonus_reagents = list("nutriment" = 1, "vitamin" = 3)
 	list_reagents = list("nutriment" = 6)
 	bitesize = 4

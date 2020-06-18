@@ -89,6 +89,7 @@
 	reqs = list(/obj/item/stack/rods = 2,
 				/obj/item/clothing/under/rank/security = 1)
 	category = CAT_MISC
+	subcategory = CAT_MISC
 
 /obj/item/banner/medical
 	name = "meditopia banner"
@@ -110,6 +111,7 @@
 	reqs = list(/obj/item/stack/rods = 2,
 				/obj/item/clothing/under/rank/medical = 1)
 	category = CAT_MISC
+	subcategory = CAT_MISC
 
 /obj/item/banner/medical/special_inspiration(mob/living/carbon/human/H)
 	H.adjustToxLoss(-15)
@@ -136,6 +138,7 @@
 	reqs = list(/obj/item/stack/rods = 2,
 				/obj/item/clothing/under/rank/scientist = 1)
 	category = CAT_MISC
+	subcategory = CAT_MISC
 
 /obj/item/banner/cargo
 	name = "cargonia banner"
@@ -154,6 +157,7 @@
 	reqs = list(/obj/item/stack/rods = 2,
 				/obj/item/clothing/under/rank/cargotech = 1)
 	category = CAT_MISC
+	subcategory = CAT_MISC
 
 /obj/item/banner/engineering
 	name = "engitopia banner"
@@ -175,6 +179,7 @@
 	reqs = list(/obj/item/stack/rods = 2,
 				/obj/item/clothing/under/rank/engineer = 1)
 	category = CAT_MISC
+	subcategory = CAT_MISC
 
 /obj/item/banner/command
 	name = "command banner"
@@ -196,6 +201,7 @@
 	reqs = list(/obj/item/stack/rods = 2,
 				/obj/item/clothing/under/captainparade = 1)
 	category = CAT_MISC
+	subcategory = CAT_MISC
 
 /obj/item/banner/red
 	name = "red banner"

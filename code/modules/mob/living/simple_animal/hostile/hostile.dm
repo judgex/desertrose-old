@@ -288,7 +288,8 @@
 		emote("me", 1, "[pick(emote_taunt)] at [target].")
 		taunt_chance = max(taunt_chance-7,2)
 		if(emote_taunt_sound)
-			playsound(loc, emote_taunt_sound, 50, 0)
+			var/taunt_choice = pick(emote_taunt_sound)
+			playsound(loc, taunt_choice, 50, 0)
 
 /mob/living/simple_animal/hostile/proc/LoseAggro()
 	stop_automated_movement = 0
@@ -299,6 +300,13 @@
 	target = null
 	walk(src, 0)
 	LoseAggro()
+
+/mob/living/simple_animal/hostile/Aggro()
+	..()
+	if (!aggrosound)
+		return
+	var/aggro_sounds = pick(aggrosound)
+	playsound(src, aggro_sounds, 60, FALSE)
 
 //////////////END HOSTILE MOB TARGETTING AND AGGRESSION////////////
 

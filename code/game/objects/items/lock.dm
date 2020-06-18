@@ -13,7 +13,7 @@ GLOBAL_LIST_EMPTY(global_locks)
 	lock_data = lock_uid++
 	desc = "A heavy-duty lock for doors. It has [lock_data] engraved on it."
 	GLOB.global_locks += src
-	
+
 /obj/item/lock_construct/Destroy()
 	..()
 	GLOB.global_locks -= src
@@ -55,6 +55,8 @@ GLOBAL_LIST_EMPTY(global_locks)
 		user.visible_message("<span class='notice'>[user] starts prying [src] off [A].</span>", \
 							 "<span class='notice'>You start prying [src] off [A].</span>")
 		var/time_to_open = 50
+		if(locked)
+			time_to_open = 500
 		playsound(src, 'sound/machines/airlock_alien_prying.ogg',100,1) //is it aliens or just the CE being a dick?
 		prying = TRUE
 		var/result = do_after(user, time_to_open, target = A)

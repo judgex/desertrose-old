@@ -45,6 +45,7 @@ GLOBAL_VAR_INIT(time_last_changed_position, 0)
 	"Senior Paladin",
 	"Paladin",
 	"Knight-Captain",
+	"Senior Knight",
 	"Knight",
 	"Head Scribe",
 	"Senior Scribe",

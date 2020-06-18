@@ -191,6 +191,22 @@
 			(locate(/obj/structure) in src) || \
 			(locate(/obj/machinery) in src) ))
 		plantShrooms()
+	/* Sadly doesnt work. Will try to get it to work someday -JJPark
+	for(var/direction in GLOB.cardinals)
+		var/turf/turf_to_check = get_step(src, direction)
+		if(istype(turf_to_check, /turf/open/water))
+			var/image/rock_side = image(icon, "rockfloor1_side", dir = turn(direction, 180))
+			switch(direction)
+				if(NORTH)
+					rock_side.pixel_y += 32
+				if(SOUTH)
+					rock_side.pixel_y -= 32
+				if(EAST)
+					rock_side.pixel_x += 32
+				if(WEST)
+					rock_side.pixel_x -= 32
+			overlays += rock_side
+	*/
 
 /turf/open/indestructible/ground/inside/mountain/proc/plantShrooms()
 	if(prob(SHROOM_SPAWN_GROUND))
@@ -206,3 +222,22 @@
 	name = "subway tunnel"
 	icon_state = "railsnone"
 	icon = 'icons/fallout/turfs/ground.dmi'
+
+/* It doesnt work for some reason. Keeping it here if Ill ever fix it or someone else -JJPark
+/turf/open/indestructible/ground/inside/subway/Initialize()
+	. = ..()
+	for(var/direction in GLOB.cardinals)
+		var/turf/turf_to_check = get_step(src, direction)
+		if(istype(turf_to_check, /turf/open/water) || istype(turf_to_check, /turf/open/indestructible/ground/inside/mountain))
+			var/image/rock_side = image(icon, "railsnone_side", dir = turn(direction, 180))
+			switch(direction)
+				if(NORTH)
+					rock_side.pixel_y += 32
+				if(SOUTH)
+					rock_side.pixel_y -= 32
+				if(EAST)
+					rock_side.pixel_x += 32
+				if(WEST)
+					rock_side.pixel_x -= 32
+			overlays += rock_side
+*/

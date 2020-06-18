@@ -90,8 +90,7 @@ Sentinel
 
 	loadout_options = list(
 	/datum/outfit/loadout/sentstand, //Tribeam laser and 10mm pistol
-	/datum/outfit/loadout/sentvet, //Gauss rifle and AEP7
-	/datum/outfit/loadout/sentshot //nerfed combat rifle mk2 and laser pistol
+	/datum/outfit/loadout/sentvet, //Pulse rifle and AEP7
 	)
 
 
@@ -130,16 +129,6 @@ Sentinel
 		/obj/item/ammo_box/magazine/m10mm_adv=2,
 		/obj/item/gun/ballistic/automatic/pistol/n99=1,
 		)
-
-/datum/outfit/loadout/sentshot
-	name = "Fire Support Sentinel"
-	backpack_contents = list(
-		/obj/item/gun/ballistic/automatic/ar=1,
-		/obj/item/ammo_box/magazine/m556=2,
-		/obj/item/gun/energy/laser/pistol=1,
-		/obj/item/stock_parts/cell/ammo/ec=2
-		)
-
 
 /*
 Head Scribe
@@ -265,7 +254,7 @@ Knight-Captain
 /datum/outfit/loadout/capstand
 	name = "Knight-Captain"
 	backpack_contents = list(
-		/obj/item/gun/energy/laser/aer9=1,
+		/obj/item/gun/energy/laser/aer14=1,
 		/obj/item/gun/ballistic/automatic/pistol/n99=1,
 		/obj/item/stock_parts/cell/ammo/mfc=2,
 		/obj/item/ammo_box/magazine/m10mm_adv=2
@@ -274,8 +263,9 @@ Knight-Captain
 /datum/outfit/loadout/capsap
 	name = "Close Support"
 	backpack_contents = list(
+		/obj/item/gun/ballistic/automatic/ar=1,
+		/obj/item/ammo_box/magazine/m556=2,
 		/obj/item/gun/energy/laser/plasma/glock=1,
-		/obj/item/grenade/plastic/c4=2,
 		/obj/item/stock_parts/cell/ammo/ec=2
 		)
 
@@ -350,9 +340,6 @@ Senior Paladin
 /datum/job/bos/f13seniorpaladin/after_spawn(mob/living/carbon/human/H, mob/M)
 	H.add_quirk("Hard Yards")
 
-
-
-
 /*
 Paladin
 */
@@ -366,13 +353,15 @@ Paladin
 	description = "You answer directly to the Sentinel. You are this Chapter's main line of defense and offense; highly trained in combat and weaponry though with little practical field experience, you are eager to prove your worth to the Brotherhood. Your primary duties are defense and surface operations. You may also be assigned a trainee Initiate."
 	forbids = "The Brotherhood of Steel Forbids: Unethical human experimentation. Violence beyond what is needed to accomplish Brotherhood goals."
 	enforces = "The Brotherhood of Steel Expects: Obeying the Chain That - Binds your direct superior. Collection and safeguarding of technology from the wasteland. Experimentation and research."
-	supervisors = "the Sentinel"
+	supervisors = "the Sentinel, or Senior Paladin"
 	selection_color = "#95a5a6"
 	exp_requirements = 900
 
 	loadout_options = list(
-	/datum/outfit/loadout/paladinb, //Carbine and aep7
-	/datum/outfit/loadout/paladine, //rcw and n99
+	/datum/outfit/loadout/paladina, //Carbine and aep7
+	/datum/outfit/loadout/paladinb, //rcw and n99
+	/datum/outfit/loadout/paladinc,
+	/datum/outfit/loadout/paladind
 	)
 
 	outfit = /datum/outfit/job/bos/f13paladin
@@ -396,10 +385,8 @@ Paladin
 /datum/job/bos/f13paladin/after_spawn(mob/living/carbon/human/H, mob/M)
 	H.add_quirk("Hard Yards")
 
-
-
-/datum/outfit/loadout/paladinb
-	name = "Paladin-Junior"
+/datum/outfit/loadout/paladina
+	name = "Firesupport Junior Paladin"
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/assault_carbine=1,
 		/obj/item/gun/energy/laser/pistol=1,
@@ -408,16 +395,36 @@ Paladin
 		/obj/item/clothing/accessory/bos/juniorpaladin=1
 		)
 
-/datum/outfit/loadout/paladine
-	name = "Paladin"
+/datum/outfit/loadout/paladinb
+	name = "Frontline Junior Paladin"
+	backpack_contents = list(
+		/obj/item/gun/energy/laser/rcw=1,
+		/obj/item/gun/ballistic/automatic/pistol/n99=1,
+		/obj/item/stock_parts/cell/ammo/ecp=2,
+		/obj/item/ammo_box/magazine/m10mm_adv=2,
+		/obj/item/clothing/accessory/bos/juniorpaladin=1
+		)
+
+/datum/outfit/loadout/paladinc
+	name = "Firesupport Paladin"
+	backpack_contents = list(
+		/obj/item/gun/ballistic/automatic/assault_carbine=1,
+		/obj/item/gun/energy/laser/pistol=1,
+		/obj/item/stock_parts/cell/ammo/ec=2,
+		/obj/item/ammo_box/magazine/m556/rifle=2,
+		/obj/item/clothing/accessory/bos/paladin=1
+		)
+
+/datum/outfit/loadout/paladind
+	name = "Frontline Paladin"
 	backpack_contents = list(
 		/obj/item/gun/energy/laser/rcw=1,
 		/obj/item/gun/ballistic/automatic/pistol/n99=1,
 		/obj/item/stock_parts/cell/ammo/ecp=2,
 		/obj/item/ammo_box/magazine/m10mm_adv=2,
 		/obj/item/clothing/accessory/bos/paladin=1
-
 		)
+
 /*
 Senior Scribe
 */
@@ -477,6 +484,12 @@ Scribe
 	supervisors = "the Head Scribe"
 	selection_color = "#95a5a6"
 	exp_requirements = 600
+
+	loadout_options = list(
+	/datum/outfit/loadout/scribea,
+	/datum/outfit/loadout/scribeb,
+	)
+
 	outfit = /datum/outfit/job/bos/f13scribe
 
 	access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
@@ -489,7 +502,6 @@ Scribe
 	uniform =		/obj/item/clothing/under/syndicate/brotherhood
 	shoes = 		/obj/item/clothing/shoes/combat
 	belt = 			/obj/item/storage/belt/utility/full/engi
-	accessory = 	/obj/item/clothing/accessory/bos/scribe
 	suit = 			/obj/item/clothing/suit/f13/scribe
 	id = 			/obj/item/card/id/dogtag
 	glasses =		/obj/item/clothing/glasses/sunglasses/big
@@ -499,17 +511,84 @@ Scribe
 		/obj/item/gun/energy/laser/pistol=1, \
 		/obj/item/reagent_containers/hypospray/medipen/stimpak=2)
 
-/datum/outfit/loadout/scribeb
-	name = "Senior Scribe"
-	backpack_contents = list(
-		/obj/item/clothing/suit/f13/seniorscribe=1,
-		/obj/item/clothing/accessory/bos/seniorscribe=1
-		)
-
 /datum/job/bos/f13scribe/after_spawn(mob/living/carbon/human/H, mob/M)
 	H.add_quirk("Poor Aim")
 
+/datum/outfit/loadout/scribea
+	name = "Junior Scribe"
+	backpack_contents = list(
+		/obj/item/clothing/accessory/bos/juniorscribe=1,
+		)
 
+/datum/outfit/loadout/scribeb
+	name = "Scribe"
+	backpack_contents = list(
+		/obj/item/clothing/accessory/bos/scribe=1,
+		)
+
+/*
+Senior Knight
+*/
+
+datum/job/bos/f13seniorknight
+	title = "Senior Knight"
+	flag = F13SENIORKNIGHT
+	faction = "BOS"
+	total_positions = 1
+	spawn_positions = 1
+	description = "You report directly to the Knight-Captain. You are the Brotherhood Senior Knight. Having served the Knight Caste for some time now, you are versatile and experienced in both basic combat and repairs, and also a primary maintainer of the Bunker's facilities. As your seniormost Knight, you may be assigned initiates or Junior Knights to mentor."
+	forbids = "The Brotherhood of Steel Forbids: Unethical human experimentation. Violence beyond what is needed to accomplish Brotherhood goals."
+	enforces = "The Brotherhood of Steel Expects: Obeying the Chain That - Binds your direct superior. Collection and safeguarding of technology from the wasteland. Experimentation and research."
+	supervisors = "the Knight-Captain"
+	selection_color = "#95a5a6"
+	exp_requirements = 1800
+	exp_type = EXP_TYPE_CREW
+
+	loadout_options = list(
+	/datum/outfit/loadout/sknighta, //AER9
+	/datum/outfit/loadout/sknightb, //lever shotgun and teleshield
+	)
+
+	outfit = /datum/outfit/job/bos/f13seniorknight
+
+	access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
+	minimal_access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
+
+/datum/outfit/job/bos/f13seniorknight
+	name = "Senior Knight"
+	jobtype = /datum/job/bos/f13seniorknight
+	suit = 			/obj/item/clothing/suit/armor/f13/combat/brotherhood
+	accessory = 	/obj/item/clothing/accessory/bos/seniorknight
+	uniform =		/obj/item/clothing/under/syndicate/brotherhood
+	mask =			/obj/item/clothing/mask/gas/sechailer/swat
+	belt = 			/obj/item/storage/belt/military
+	head = 			/obj/item/clothing/head/helmet/f13/combat/brotherhood
+	id = 			/obj/item/card/id/dogtag
+	gunsmith_one = TRUE
+	gunsmith_two = TRUE
+	gunsmith_three = TRUE
+	gunsmith_four = TRUE
+	backpack_contents = list(
+		/obj/item/gun/energy/laser/plasma/glock=1, \
+		/obj/item/stock_parts/cell/ammo/ec=2)
+
+/datum/outfit/loadout/sknighta
+	name = "Footknight"
+	backpack_contents = list(
+		/obj/item/gun/energy/laser/rcw=1,
+		/obj/item/gun/ballistic/automatic/pistol/n99=1,
+		/obj/item/stock_parts/cell/ammo/ecp=2,
+		/obj/item/ammo_box/magazine/m10mm_adv=2,
+		)
+
+/datum/outfit/loadout/sknightb
+	name = "Knight-Defender"
+	backpack_contents = list(
+		/obj/item/gun/ballistic/shotgun/riot=1,
+		/obj/item/storage/box/lethalshot=2,
+		/obj/item/stock_parts/cell/ammo/ec=2,
+		/obj/item/gun/energy/laser/pistol=1
+		)
 
 /*
 Knight
@@ -519,12 +598,12 @@ Knight
 	title = "Knight"
 	flag = F13KNIGHT
 	faction = "BOS"
-	total_positions = 3
-	spawn_positions = 3
-	description = "You report directly to the Knight-Captain. You are the Brotherhood Knight, the veritable lifeblood of your organization. You are a versatile and adaptably trained person: from your primary duties of weapon & armor repair to basic combat, survival and stealth skills, the only thing you lack is proper experience. You are also in charge of Initiates."
-	forbids = "The Brotherhood of Steel Forbids: Unethical human experimentation. Violence beyond what is needed to accomplish Brotherhood goals."
+	total_positions = 2
+	spawn_positions = 2
+	description = " You are the Brotherhood Knight, the veritable lifeblood of your organization. You are a versatile and adaptably trained person: from your primary duties of weapon & armor repair to basic combat, survival and stealth skills, the only thing you lack is proper experience. You are also in charge of Initiates."
+	forbids = "TheBrotherhood of Steel Forbids: Unethical human experimentation. Violence beyond what is needed to accomplish Brotherhood goals."
 	enforces = "The Brotherhood of Steel Expects: Obeying the Chain That - Binds your direct superior. Collection and safeguarding of technology from the wasteland. Experimentation and research."
-	supervisors = "the Knight-Captain"
+	supervisors = "the Knight-Captain, or Senior Knight"
 	selection_color = "#95a5a6"
 	exp_requirements = 1800
 	exp_type = EXP_TYPE_CREW
@@ -532,6 +611,8 @@ Knight
 	loadout_options = list(
 	/datum/outfit/loadout/knighta, //AER9
 	/datum/outfit/loadout/knightb, //lever shotgun and teleshield
+	/datum/outfit/loadout/knightc,
+	/datum/outfit/loadout/knightd
 	)
 
 	outfit = /datum/outfit/job/bos/f13knight
@@ -543,7 +624,6 @@ Knight
 	name = "Knight"
 	jobtype = /datum/job/bos/f13knight
 	suit = 			/obj/item/clothing/suit/armor/f13/combat/brotherhood
-	accessory = 	/obj/item/clothing/accessory/bos/knight
 	uniform =		/obj/item/clothing/under/syndicate/brotherhood
 	mask =			/obj/item/clothing/mask/gas/sechailer/swat
 	belt = 			/obj/item/storage/belt/military
@@ -558,15 +638,34 @@ Knight
 		/obj/item/stock_parts/cell/ammo/ec=2)
 
 /datum/outfit/loadout/knighta
-	name = "Footknight"
+	name = "Junior Footknight"
 	backpack_contents = list(
+		/obj/item/clothing/accessory/bos/juniorknight=1,
 		/obj/item/gun/energy/laser/aer9=1,
-		/obj/item/stock_parts/cell/ammo/mfc=2,
+		/obj/item/stock_parts/cell/ammo/mfc=2
 		)
 
 /datum/outfit/loadout/knightb
+	name = "Junior Knight-Defender"
+	backpack_contents = list(
+		/obj/item/clothing/accessory/bos/juniorknight=1,
+		/obj/item/gun/ballistic/shotgun/trench=1,
+		/obj/item/storage/box/lethalshot=2,
+		/obj/item/
+		)
+
+/datum/outfit/loadout/knightc
+	name = "Footknight"
+	backpack_contents = list(
+		/obj/item/clothing/accessory/bos/knight=1,
+		/obj/item/gun/energy/laser/aer9=1,
+		/obj/item/stock_parts/cell/ammo/mfc=2
+		)
+
+/datum/outfit/loadout/knightd
 	name = "Knight-Defender"
 	backpack_contents = list(
+		/obj/item/clothing/accessory/bos/knight=1,
 		/obj/item/gun/ballistic/shotgun/trench=1,
 		/obj/item/storage/box/lethalshot=2,
 		/obj/item/shield/riot/tele=1

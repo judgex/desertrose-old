@@ -957,3 +957,64 @@
 	author = "Engineering Encyclopedia"
 	title = "Hacking"
 	page_link = "Hacking"
+
+//fallout books wtf
+
+/obj/item/book/manual/alcoholaddiction
+	name = "Alchohol Addiction"
+	icon_state = "alcoholaddiction"
+	author = "Bam Richter"
+	title = "Alchohol Addiction"
+	dat = {"<html>
+				<head>
+				<style>
+				h1 {font-size: 18px; margin: 15px 0px 5px;}
+				h2 {font-size: 15px; margin: 15px 0px 5px;}
+				li {margin: 2px 0px 2px 15px;}
+				ul {list-style: none; margin: 5px; padding: 0px;}
+				ol {margin: 5px; padding: 0px 15px;}
+				</style>
+				</head>
+				<body>
+
+				<h1>For the average brewster heres some basic tipperinos from your old man Bam.</h1>
+				Get yourself a goddamn barrel and throw the following in to get some hootin great shit.
+				From one legend to hopefully a nother.
+
+				<h2>Yucca Juice:</h2>
+				Easy stuff just throw one of them nanas in the tub and you got yourself some juice. Nothing crazy here unless you one of those looter bunker pendehos'.
+
+				<h2>Sahylgame:</h2>
+				No clue how to say this but its some root spirit, leaves you feelin good! Just like the plant probably, if not better..
+
+				<h2>Good ol Broc Brew:</h2>
+				Now this brews a classic, straight flowers in tha barrel and you got yourself some fine dandy (an infact fancy), broc brew! Heals you up jus like the flower too just less dumm nasty. Good for clearin yah throatums.
+
+				<h2>Purple Cider:</h2>
+				Just like that appel crap but real homebrew stuff here folks. Tasty and fillin. Straight from the mut of the fruit. Serve with mutfruit clump to garnish.
+
+				<h2>Pink Whoodiggity:</h2>
+				Throw some of that pink cactus in there and you'll get this shakily good brewski. Garnish with the cactoose cause why the hell not.
+
+				<h2>Yellow Whoodiggity:</h2>
+				Dont be mixing up your whoodiggities now, this one ain nothin like the other, insanely "refreshin" however thas a stretch this shit'll burn like hell and forget you was drinkin in the first place.
+
+				<h2>Buffalo:</h2>
+				Not sure what a damn buffalo is but the spirit that makes it WHOOBOY, goodbye insides!
+
+				<h2>Datura Tea:</h2>
+				Not a spirit but hotdamn this shitll take you to planes that jet aint even take you too. Saw them gods once, pretty lame folk. didn even speak jus ignored me.
+
+				<h2>Wastemead:</h2>
+				Throw that honey mesquite in tha barrel and you'll have some bonified meads, some sort of pun, ah done tried mead once, these really aint the same.
+
+				<h2>Deathroach:</h2>
+				Now as you mightve guess, im a goddamn smoker and a goddamn drinker, so this is like a blessing to me, prolly kill me one day but hotdamn two in one for yah. Summ coyote is all you need.
+
+				<h3>Welp thats all i see in my yard right now folks, catch me in the strip and buy summ o Bam richters Shine! (recipe not included)</h23>
+
+
+
+				</body>
+				</html>
+			"}
