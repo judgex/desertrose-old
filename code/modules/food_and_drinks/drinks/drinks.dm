@@ -404,7 +404,7 @@
 
 /obj/item/reagent_containers/food/drinks/soda_cans/cola
 	name = "off brand cola"
-	desc = "A faded pre-war can of just cola, unsweetend and fizzy."
+	desc = "A faded pre-war can of just cola, unsweetened and fizzy."
 	icon_state = "cola"
 	list_reagents = list("cola" = 30)
 	foodtype = SUGAR
