@@ -1413,7 +1413,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	glass_desc = "The Refined mans Soda, Fit for soda royalty."
 
 /datum/reagent/consumable/ethanol/nukafancy/on_mob_life(mob/living/carbon/M)
-	var/high_message = pick("<br>Maybe I too need some Slaves?</b>","<br>Mutfruit for All!</b>","<br>Time to Glorify my Wasteland Castle!</b>","<brNuked, not stirred.</b>")
+	var/high_message = pick("<br>Maybe I too need some Slaves?</b>","<br>Mutfruit for All!</b>","<br>Time to Glorify my Wasteland Castle!</b>","<br>Nuked, not stirred.</b>")
 	if(prob(20))
 		to_chat(M, "<span class='notice'>[high_message]</span>")
 	M.emote("clap")
