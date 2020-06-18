@@ -19,7 +19,7 @@
 	genes = list(/datum/plant_gene/trait/repeated_harvest)
 
 /obj/item/reagent_containers/food/snacks/grown/mesquite
-	seed = /obj/item/seeds/soya
+	seed = /obj/item/seeds/mesquite
 	name = "honey mesquite pods"
 	desc = "The honey mesquite pod grows on a short tree with willow-like branches. Trees with pickable pods will appear bushier in foliage and have strings of pods on them, resembling a fern pattern. Pods can be eaten or used in recipes"
 	gender = PLURAL
@@ -28,4 +28,4 @@
 	bitesize_mod = 2
 	foodtype = VEGETABLES
 	tastes = list("crunchy sweetness" = 1)
-	wine_power = 20
+	distill_reagent = "wastemead"

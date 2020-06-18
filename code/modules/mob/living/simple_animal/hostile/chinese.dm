@@ -46,7 +46,7 @@
 	icon_living = "chineseassault"
 	maxHealth = 200
 	health = 200
-	extra_projectiles = 3
+	extra_projectiles = 2
 	loot = list(/obj/effect/mob_spawn/human/corpse/chineseremnant/assault, /obj/item/gun/ballistic/automatic/type93, /obj/item/ammo_box/magazine/m556/rifle/assault)
 	projectiletype = /obj/item/projectile/bullet/a556/ap
 	projectilesound = 'sound/f13weapons/assaultrifle_fire.ogg'

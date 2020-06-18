@@ -681,7 +681,7 @@
 	if(stat)
 		return
 	var/chosen_sound = pick(abom_sounds)
-	playsound(src, chosen_sound, 80, TRUE)
+	playsound(src, chosen_sound, 50, TRUE)
 
 /mob/living/simple_animal/hostile/abomination/Life()
 	..()
@@ -689,7 +689,7 @@
 		return
 	if(prob(10))
 		var/chosen_sound = pick(abom_sounds)
-		playsound(src, chosen_sound, 100, TRUE)
+		playsound(src, chosen_sound, 70, TRUE)
 
 /mob/living/simple_animal/hostile/abomhorror
 	name = "failed experiment"
