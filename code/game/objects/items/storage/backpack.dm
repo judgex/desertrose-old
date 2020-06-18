@@ -178,6 +178,7 @@
 	desc = "A leather and iron quiver designed to hold throwing spears and bolas."
 	icon_state = "spearquiver"
 	item_state = "spearquiver"
+	slot_flags = ITEM_SLOT_BACK|ITEM_SLOW_BELT
 
 /obj/item/storage/backpack/spearquiver/ComponentInitialize()
 	. = ..()
