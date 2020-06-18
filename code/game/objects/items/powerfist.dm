@@ -169,7 +169,6 @@
 	righthand_file = 'icons/mob/inhands/weapons/melee_righthand.dmi'
 	force = 30
 	armour_penetration = 100 //there is no such thing as armor to the claws of death
-	armour_penetration = 20
 	attack_verb = list("slashed", "sliced", "torn", "ripped", "diced", "cut")
 	hitsound = 'sound/weapons/bladeslice.ogg'
 	sharpness = IS_SHARP
