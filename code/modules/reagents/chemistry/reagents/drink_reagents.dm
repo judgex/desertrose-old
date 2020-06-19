@@ -447,17 +447,16 @@
 
 /datum/reagent/consumable/nuka_cola
 	name = "Nuka Cola"
-	id = "glass_brown2"
+	id = "nuka_cola"
 	description = "Cola, cola never changes."
 	color = "#100800" // rgb: 16, 8, 0
 	taste_description = "the future"
-	glass_icon_state = "nuka_colaglass"
-	glass_name = "glass of Nuka Cola"
+	glass_icon_state = "nukacolaglass"
+	glass_name = "Nuka Cola"
 	glass_desc = "Don't cry, Don't raise your eye, It's only nuclear wasteland."
 
 /datum/reagent/consumable/nuka_cola/on_mob_life(mob/living/carbon/M)
 	M.Jitter(20)
-	M.set_drugginess(30)
 	M.dizziness +=1.5
 	M.drowsyness = 0
 	M.AdjustSleeping(-40, FALSE)
@@ -833,5 +832,242 @@
 	M.adjust_bodytemperature(25 * TEMPERATURE_DAMAGE_COEFFICIENT, 0, BODYTEMP_NORMAL)
 	if(holder.has_reagent("frostoil"))
 		holder.remove_reagent("frostoil", 5)
+	..()
+	. = 1
+
+//nuka bases
+
+/datum/reagent/consumable/nukacherry
+	name = "Nuka Cherry"
+	id = "nukacherry"
+	description = "Nuka-Cola with a Cherry Aftertaste."
+	color = "#9C1512"
+	taste_description = "fizzy cherry soda"
+	glass_icon_state = "nukacherryglass"
+	glass_name = "Nuka Cherry"
+	glass_desc = "Nuka-Cola with a Cherry Aftertaste."
+
+/datum/reagent/consumable/nukacherry/on_mob_life(mob/living/carbon/M)
+	M.Jitter(20)
+	M.adjustFireLoss(-1*REM, 0)
+	M.dizziness +=1.5
+	M.drowsyness = 0
+	M.AdjustSleeping(-40, FALSE)
+	M.adjust_bodytemperature(-5 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
+	..()
+	. = 1
+
+/datum/reagent/consumable/nukagrape
+	name = "Nuka Grape"
+	id = "nukagrape"
+	description = "Nuka-Cola with a Grape Aftertaste."
+	color = "#643B65"
+	taste_description = "fizzy grape soda"
+	glass_icon_state = "nukagrapeglass"
+	glass_name = "Nuka Grape"
+	glass_desc = "Nuka-Cola with a Grape Aftertaste."
+
+/datum/reagent/consumable/nukagrape/on_mob_life(mob/living/carbon/M)
+	M.Jitter(20)
+	M.adjustBruteLoss(-1*REM, 0)
+	M.dizziness +=1.5
+	M.drowsyness = 0
+	M.AdjustSleeping(-40, FALSE)
+	M.adjust_bodytemperature(-5 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
+	..()
+	. = 1
+
+/datum/reagent/consumable/nukaorange
+	name = "Nuka Orange"
+	id = "nukaorange"
+	description = "Nuka-Cola with a Orange Aftertaste."
+	color = "#FF7F00"
+	taste_description = "fizzy orange soda"
+	glass_icon_state = "nukaorangeglass"
+	glass_name = "Nuka Orange"
+	glass_desc = "Nuka-Cola with a Orange Aftertaste."
+
+/datum/reagent/consumable/nukaorange/on_mob_life(mob/living/carbon/M)
+	M.Jitter(20)
+	M.adjustToxLoss(-1*REM, 0)
+	M.dizziness +=1.5
+	M.drowsyness = 0
+	M.AdjustSleeping(-40, FALSE)
+	M.adjust_bodytemperature(-5 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
+	..()
+	. = 1
+
+/datum/reagent/consumable/nukaquartz
+	name = "Nuka Quartz"
+	id = "nukaquartz"
+	description = "An abomination of Americas favourite soda."
+	color = "#FFFFFF"
+	taste_description = "clear"
+	glass_icon_state = "nukaquartzglass"
+	glass_name = "Nuka Quartz"
+	glass_desc = "An abomination of Americas favourite soda."
+
+/datum/reagent/consumable/nukaquartz/on_mob_life(mob/living/carbon/M)
+	M.Jitter(20)
+	M.adjustOxyLoss(-1*REM, 0)
+	M.dizziness +=1.5
+	M.drowsyness = 0
+	M.AdjustSleeping(-40, FALSE)
+	M.adjust_bodytemperature(-5 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
+	..()
+	. = 1
+
+/datum/reagent/consumable/nukaice
+	name = "Iced Nuka"
+	id = "nukaice"
+	description = "Nuka. Stay frosty."
+	color = "#646A7B"
+	taste_description = "cold Nuka-Cola"
+	glass_icon_state = "nukaiceglass"
+	glass_name = "Iced Nuka"
+	glass_desc = "Nuka. Stay frosty."
+
+/datum/reagent/consumable/nukaice/on_mob_life(mob/living/carbon/M)
+	M.adjust_bodytemperature(-20 * TEMPERATURE_DAMAGE_COEFFICIENT, T0C) //310.15 is the normal bodytemp.
+	M.Jitter(20)
+	M.dizziness +=1.5
+	M.drowsyness = 0
+	M.AdjustSleeping(-40, FALSE)
+	M.adjust_bodytemperature(-5 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
+	..()
+	. = 1
+
+/datum/reagent/consumable/nukawild
+	name = "Nuka Wild"
+	id = "nukawild"
+	description = "A totally original concept of Nuka-Cola!"
+	color = "#734517"
+	taste_description = "Nuka and root-beer"
+	glass_icon_state = "nukawildglass"
+	glass_name = "Nuka Wild"
+	glass_desc = "A totally original concept of Nuka-Cola!"
+
+/datum/reagent/consumable/nukawild/on_mob_life(mob/living/carbon/M)
+	M.AdjustStun(-5, 0)
+	M.AdjustKnockdown(-5, 0)
+	M.AdjustUnconscious(-5, 0)
+	M.Jitter(40)
+	M.dizziness +=1.5
+	M.drowsyness = 0
+	M.AdjustSleeping(-40, FALSE)
+	M.adjust_bodytemperature(-5 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
+	..()
+	. = 1
+
+//nuka mixes
+
+/datum/reagent/consumable/nukanew
+	name = "Newka Cola"
+	id = "nukanew"
+	description = "The tastiest Hybridisation of Nuka-Colas."
+	color = "#75E11D"
+	taste_description = "impossibly tasty Nuka"
+	glass_icon_state = "nukanewglass"
+	glass_name = "Newka Cola"
+	glass_desc = "The tastiest Hybridisation of Nuka-Colas."
+
+/datum/reagent/consumable/nukanew/on_mob_life(mob/living/carbon/M)
+	M.adjustFireLoss(-2*REM, 0)
+	M.AdjustStun(-15, 0)
+	M.AdjustKnockdown(-15, 0)
+	M.AdjustUnconscious(-15, 0)
+	M.Jitter(20)
+	M.dizziness +=1.5
+	M.drowsyness = 0
+	M.AdjustSleeping(-40, FALSE)
+	M.adjust_bodytemperature(-5 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
+	..()
+	. = 1
+
+/datum/reagent/consumable/nukaberry
+	name = "Nuka Berry"
+	id = "nukaberry"
+	description = "Nuka-Cola with a Berry Aftertaste."
+	color = "#753453"
+	taste_description = "berry Nuka-Cola"
+	glass_icon_state = "nukaberryglass"
+	glass_name = "Nuka Berry"
+	glass_desc = "Nuka-Cola with a Berry Aftertaste."
+
+/datum/reagent/consumable/nukaberry/on_mob_life(mob/living/carbon/M)
+	M.adjustFireLoss(-2*REM, 0)
+	M.adjustBruteLoss(-2*REM, 0)
+	M.Jitter(20)
+	M.dizziness +=1.5
+	M.drowsyness = 0
+	M.AdjustSleeping(-40, FALSE)
+	M.adjust_bodytemperature(-5 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
+	..()
+	. = 1
+
+/datum/reagent/consumable/nukacooler
+	name = "Nuka Cooler"
+	id = "nukacooler"
+	description = "Insanely cold Nuka-Cola, Freezing the air that surrounds it."
+	color = "#B2B2B2"
+	taste_description = "insanely cold Nuka-Cola"
+	glass_icon_state = "nukacoolerglass"
+	glass_name = "Nuka Cooler"
+	glass_desc = "Insanely cold Nuka-Cola, Freezing the air that surrounds it."
+
+/datum/reagent/consumable/nukacooler/on_mob_life(mob/living/carbon/M)
+	M.adjust_bodytemperature(-60 * TEMPERATURE_DAMAGE_COEFFICIENT, T0C) //310.15 is the normal bodytemp.
+	M.Jitter(20)
+	M.dizziness +=1.5
+	M.drowsyness = 0
+	M.AdjustSleeping(-40, FALSE)
+	M.adjust_bodytemperature(-5 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
+	..()
+	. = 1
+
+/datum/reagent/consumable/nukafree
+	name = "Diet Nuka"
+	id = "nukafree"
+	description = "Nuka-Cola with no added sugars!"
+	color = "#663300"
+	taste_description = "watered down Nuka"
+	glass_icon_state = "nukafreeglass"
+	glass_name = "Diet Nuka"
+	glass_desc = "Nuka-Cola with no added sugars!"
+
+/datum/reagent/consumable/nukafree/on_mob_life(mob/living/carbon/M)
+	if(M.nutrition <= NUTRITION_LEVEL_STARVING)
+		M.adjustToxLoss(1*REM, 0)
+	M.nutrition = max(M.nutrition - 3, 0)
+	M.overeatduration = 0
+	M.Jitter(40)
+	M.set_drugginess(30)
+	M.dizziness +=1.5
+	M.drowsyness = 0
+	M.AdjustSleeping(-40, FALSE)
+	M.adjust_bodytemperature(-5 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
+	..()
+	. = 1
+
+/datum/reagent/consumable/nukafrutti
+	name = "Nuka Frutti"
+	id = "nukafrutti"
+	description = "The frutiest of Nukas."
+	color = "#FF9ABF"
+	taste_description = "fruity Nuka"
+	glass_icon_state = "nukafruttiglass"
+	glass_name = "Nuka Frutti"
+	glass_desc = "The frutiest of Nukas."
+
+/datum/reagent/consumable/nukafrutti/on_mob_life(mob/living/carbon/M)
+	M.adjustToxLoss(-3*REM, 0)
+	M.adjustFireLoss(-3*REM, 0)
+	M.adjustBruteLoss(-3*REM, 0)
+	M.Jitter(60)
+	M.set_drugginess(60)
+	M.dizziness +=3
+	M.drowsyness = 0
+	M.AdjustSleeping(-40, FALSE)
+	M.adjust_bodytemperature(-5 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
 	..()
 	. = 1

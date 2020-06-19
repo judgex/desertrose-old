@@ -16,13 +16,12 @@
  * Metal
  */
 GLOBAL_LIST_INIT(metal_recipes, list ( \
-	new/datum/stack_recipe("stool", /obj/structure/chair/stool, one_per_turf = TRUE, on_floor = TRUE), \
-	new/datum/stack_recipe("bar stool", /obj/structure/chair/stool/bar, one_per_turf = TRUE, on_floor = TRUE), \
+	new/datum/stack_recipe("stool", /obj/item/chair/stool, one_per_turf = TRUE, on_floor = TRUE), \
 	new/datum/stack_recipe("chair", /obj/structure/chair, one_per_turf = TRUE, on_floor = TRUE), \
 	new/datum/stack_recipe("bed", /obj/structure/bed, 2, one_per_turf = TRUE, on_floor = TRUE), \
 	null, \
 	new/datum/stack_recipe_list("bar stools", list( \
-		new/datum/stack_recipe("classic bar stool", /obj/structure/chair/stool/bar, one_per_turf = TRUE, on_floor = TRUE), \
+		new/datum/stack_recipe("classic bar stool", /obj/item/chair/stool/bar, one_per_turf = TRUE, on_floor = TRUE), \
 		new/datum/stack_recipe("red bar stool", /obj/item/chair/stool/retro, one_per_turf = TRUE, on_floor = TRUE), \
 		new/datum/stack_recipe("black bar stool", /obj/item/chair/stool/retro/black, one_per_turf = TRUE, on_floor = TRUE), \
 		new/datum/stack_recipe("tan bar stool", /obj/item/chair/stool/retro/tan, one_per_turf = TRUE, on_floor = TRUE), \
@@ -228,13 +227,13 @@ GLOBAL_LIST_INIT(wood_recipes, list ( \
 	new/datum/stack_recipe("grave marker", /obj/structure/statue/wood/headstonewood, 3, time = 15, one_per_turf = TRUE, on_floor = TRUE), \
 	null, \
 		new /datum/stack_recipe_list("booth tables", list( \
-		new/datum/stack_recipe("booth table end", /obj/structure/booth, 2, time = 10), \
-		new/datum/stack_recipe("booth table middle", /obj/structure/booth/middle, 2, time = 10), \
-		new/datum/stack_recipe("booth table solo", /obj/structure/booth/single, 2, time = 10), \
+		new/datum/stack_recipe("booth table end", /obj/structure/booth, 2, time = 10, one_per_turf = TRUE, on_floor = TRUE), \
+		new/datum/stack_recipe("booth table middle", /obj/structure/booth/middle, 2, time = 10, one_per_turf = TRUE, on_floor = TRUE), \
+		new/datum/stack_recipe("booth table solo", /obj/structure/booth/single, 2, time = 10, one_per_turf = TRUE, on_floor = TRUE), \
 	)), \
 		new /datum/stack_recipe_list("racks", list( \
-		new/datum/stack_recipe("bottle rack", /obj/machinery/smartfridge/bottlerack, 25), \
-		new/datum/stack_recipe("seed bin", /obj/machinery/smartfridge/bottlerack/seedbin, 15), \
+		new/datum/stack_recipe("bottle rack", /obj/machinery/smartfridge/bottlerack, 25, one_per_turf = TRUE, on_floor = TRUE), \
+		new/datum/stack_recipe("seed bin", /obj/machinery/smartfridge/bottlerack/seedbin, 15, one_per_turf = TRUE, on_floor = TRUE), \
 	)), \
 	null, \
 	new/datum/stack_recipe("seed extractor", /obj/structure/legion_extractor, 25, time = 40, one_per_turf = TRUE, on_floor = TRUE), \

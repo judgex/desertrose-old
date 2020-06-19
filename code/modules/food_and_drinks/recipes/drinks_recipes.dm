@@ -75,10 +75,10 @@
 	required_reagents = list("gin" = 2, "tonic" = 1)
 
 /datum/chemical_reaction/rum_coke
-	name = "Rum and Coke"
+	name = "Rum and Nuka"
 	id = "rumcoke"
 	results = list("rumcoke" = 3)
-	required_reagents = list("rum" = 2, "cola" = 1)
+	required_reagents = list("rum" = 2, "nuka_cola" = 1)
 
 /datum/chemical_reaction/cuba_libre
 	name = "Cuba Libre"
@@ -105,10 +105,10 @@
 	required_reagents = list("blackrussian" = 3, "cream" = 2)
 
 /datum/chemical_reaction/whiskey_cola
-	name = "Whiskey Cola"
+	name = "Whiskey Nuka"
 	id = "whiskeycola"
 	results = list("whiskeycola" = 3)
-	required_reagents = list("whiskey" = 2, "cola" = 1)
+	required_reagents = list("whiskey" = 2, "nuka_cola" = 1)
 
 /datum/chemical_reaction/screwdriver
 	name = "Screwdriver"
@@ -434,3 +434,135 @@
 	id = "mojito"
 	results = list("mojito" = 5)
 	required_reagents = list("rum" = 1, "sugar" = 1, "limejuice" = 1, "sodawater" = 1, "menthol" = 1)
+
+//all new fallout recipes at the bottom//
+
+//nuka bases
+
+/datum/chemical_reaction/nukacherry
+	name = "Nuka Cherry"
+	id = "nukacherry"
+	results = list("nukacherry" = 2)
+	required_reagents = list("nuka_cola" = 1, "cherryjelly" = 1)
+
+/datum/chemical_reaction/nukagrape
+	name = "Nuka Grape"
+	id = "nukagrape"
+	results = list("nukagrape" = 2)
+	required_reagents = list("nuka_cola" = 1, "grapejuice" = 1)
+
+/datum/chemical_reaction/nukadark
+	name = "Nuka Dark"
+	id = "nukadark"
+	results = list("nukadark" = 2)
+	required_reagents = list("nuka_cola" = 1, "buffalo" = 1)
+
+/datum/chemical_reaction/nukaorange
+	name = "Nuka Orange"
+	id = "nukaorange"
+	results = list("nukaorange" = 2)
+	required_reagents = list("nuka_cola" = 1, "orangejuice" = 1)
+
+/datum/chemical_reaction/nukaquartz
+	name = "Nuka Quartz"
+	id = "nukaquartz"
+	results = list("nukaquartz" = 3)
+	required_reagents = list("nuka_cola" = 1, "milk" = 1, "sugar" = 1)
+
+/datum/chemical_reaction/nukavictory
+	name = "Nuka Victory"
+	id = "nukavictory"
+	results = list("nukavictory" = 2)
+	required_reagents = list("nuka_cola" = 1, "alliescocktail" = 1)
+
+/datum/chemical_reaction/nukawild
+	name = "Nuka Wild"
+	id = "nukawild"
+	results = list("nukawild" = 2)
+	required_reagents = list("nuka_cola" = 1, "sunset" = 1)
+
+/datum/chemical_reaction/nukaice
+	name = "Iced Nuka"
+	id = "nukaice"
+	results = list("nukaice" = 2)
+	required_reagents = list("nuka_cola" = 1, "ice" = 1)
+
+/datum/chemical_reaction/nukaquantum
+	name = "Nuka Quantum"
+	id = "nukaquantum"
+	results = list("nukaquantum" = 3)
+	required_reagents = list("nuka_cola" = 1, "cleaner" = 1, "bluespace" = 1)
+
+//nuka mixes
+
+/datum/chemical_reaction/nukanew
+	name = "Newka Cola"
+	id = "nukanew"
+	results = list("nukanew" = 3)
+	required_reagents = list("nukacherry" = 1, "nukawild" = 1, "ice" = 1)
+
+/datum/chemical_reaction/nukaberry
+	name = "Nuka Berry"
+	id = "nukaberry"
+	results = list("nukaberry" = 3)
+	required_reagents = list("nukacherry" = 1, "nukagrape" = 1, "ice" = 1)
+
+/datum/chemical_reaction/nukabomb
+	name = "Nuka Bombdrop"
+	id = "nukabomb"
+	results = list("nukabomb" = 5)
+	required_reagents = list("nukadark" = 1, "rum" = 1, "vodka" = 1, "whiskey" = 1, "sugar" = 1)
+
+/datum/chemical_reaction/nukacide
+	name = "Nukacide"
+	id = "nukacide"
+	results = list("nukacide" = 3)
+	required_reagents = list("nukabomb" = 1, "nukaquantum" = 1, "ice" = 1)
+
+/datum/chemical_reaction/nukacooler
+	name = "Nuka Cooler"
+	id = "nukacooler"
+	results = list("nukacooler" = 3)
+	required_reagents = list("nukaice" = 1, "ice" = 1, "water" = 1)
+
+/datum/chemical_reaction/nukafancy
+	name = "Nuka Fancy"
+	id = "nukafancy"
+	results = list("nukafancy" = 3)
+	required_reagents = list("nuka_cola" = 1, "martini" = 1, "ice" = 1)
+
+/datum/chemical_reaction/nukafree
+	name = "Diet Nuka"
+	id = "nukafree"
+	results = list("nukafree" = 3)
+	required_reagents = list("nuka_cola" = 1, "sodiumchloride" = 1, "water" = 1)
+
+/datum/chemical_reaction/nukafrutti
+	name = "Nuka Frutti"
+	id = "nukafrutti"
+	results = list("nukafrutti" = 3)
+	required_reagents = list("nukaberry" = 1, "nukaorange" = 1, "ice" = 1)
+
+/datum/chemical_reaction/nukalove
+	name = "Nuka Love"
+	id = "nukalove"
+	results = list("nukalove" = 3)
+	required_reagents = list("nuka_cola" = 1, "between_the_sheets" = 1, "ice" = 1)
+
+/datum/chemical_reaction/nukapunch
+	name = "Nuka Punch"
+	id = "nukapunch"
+	results = list("nukapunch" = 3)
+	required_reagents = list("nukadark" = 1, "deathroach" = 1, "pungajuice" = 1)
+
+/datum/chemical_reaction/nukasunrise
+	name = "Nuka Sunrise"
+	id = "nukasunrise"
+	results = list("nukasunrise" = 5)
+	required_reagents = list("nukawild" = 2, "orangejuice" = 2, "grenadine" = 1)
+
+/datum/chemical_reaction/nukaxtreme
+	name = "Nuka X-Treme"
+	id = "nukaxtreme"
+	results = list("nukaxtreme" = 1)
+	required_reagents = list("nukacide" = 10, "nukaquantum" = 10, "ice" = 10)
