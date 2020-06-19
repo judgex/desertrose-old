@@ -5710,7 +5710,7 @@
 "cfQ" = (/obj/machinery/vending/wardrobe/medi_wardrobe,/turf/open/floor/plasteel/f13/vault_floor/misc/cmo,/area/f13/vault)
 "cfR" = (/obj/machinery/holopad,/obj/structure/cable,/turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,/area/f13/vault)
 "cfS" = (/obj/structure/table,/obj/structure/cable,/obj/effect/turf_decal/stripes/line{dir = 1; icon_state = "warningline"},/obj/item/paper_bin,/obj/machinery/camera/autoname{dir = 1; icon_state = "camera"},/turf/open/floor/plasteel/f13/vault_floor/red/whiteredfull,/area/f13/vault)
-"cfT" = (/obj/item/clothing/suit/armor/f13/raider/blastmaster/reinforced,/obj/item/clothing/head/helmet/f13/raider/blastmaster/reinforced,/turf/open/indestructible/ground/inside/mountain,/area/f13/tunnel)
+"cfT" = (/obj/item/clothing/suit/armor/f13/raider/r/blastmaster/,/obj/item/clothing/head/helmet/f13/raider/blastmaster/reinforced,/turf/open/indestructible/ground/inside/mountain,/area/f13/tunnel)
 "cfU" = (/obj/structure/closet/crate/bin,/obj/item/dildo,/turf/open/floor/plasteel/f13/vault_floor/floor,/area/f13/tunnel)
 "cfV" = (/obj/structure/bodycontainer/morgue{dir = 1; icon_state = "morgue1"},/turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,/area/f13/vault{dir = 1})
 "cfW" = (/obj/item/twohanded/required/kirbyplants/random,/turf/open/floor/f13,/area/f13/brotherhood)
