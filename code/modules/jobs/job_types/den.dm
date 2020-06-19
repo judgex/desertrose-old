@@ -423,7 +423,7 @@ Mayor
 
 /*--------------------------------------------------------------*/
 /datum/job/den/f13settler
-	title = "Settler"
+	title = "Citizen"
 	flag = F13SETTLER
 	department_flag = DEN
 	faction = "Town"
