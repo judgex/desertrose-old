@@ -20,11 +20,12 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 	name = "Wasteland Vending Machine"
 	desc = "Wasteland Vending Machine! Unlock with a key, load your goods, and profit!"
 
-	icon = 'icons/obj/vending.dmi'
-	icon_state = "sec"
-	var/idle_icon_state = "sec"
-	var/service_icon_state = "sec-broken"
-	var/lock_icon_state = "sec-broken"
+	icon = 'icons/WVM/machines.dmi'
+	icon_state = "custom_idle"
+	obj_flags = UNIQUE_RENAME
+	var/idle_icon_state = "custom_idle"
+	var/service_icon_state = "custom_service"
+	var/lock_icon_state = "custom_lock"
 
 	anchored = 1
 	density = 1

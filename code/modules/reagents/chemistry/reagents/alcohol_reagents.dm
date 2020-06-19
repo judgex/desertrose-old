@@ -153,6 +153,22 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	M.radiation = max(M.radiation-2,0)
 	return ..()
 
+/datum/reagent/consumable/ethanol/tatovodka
+	name = "Tato Vodka"
+	id = "tatovodka"
+	description = "A extremely powerful and disgusting spirit."
+	color = "#706A58"
+	boozepwr = 100
+	taste_description = "extremely powerful dirt"
+	glass_icon_state = "glass_brown"
+	glass_name = "glass of tato vodka"
+	glass_desc = "The glass contains actual swill tato vodka."
+
+/datum/reagent/consumable/ethanol/vodka/on_mob_life(mob/living/carbon/M)
+	M.vomit(10)
+	M.radiation = max(M.radiation-3,0)
+	return ..()
+
 /datum/reagent/consumable/ethanol/pungajuice
 	name = "punga juice"
 	id = "pungajuice"
@@ -160,12 +176,13 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	color = "#1B2E24"
 	boozepwr = 80
 	taste_description = "acidic slime"
-	glass_icon_state = "godlyblend"
+	glass_icon_state = "Space_mountain_wind_glass"
 	glass_name = "glass of punga juice"
 	glass_desc = "The glass contain punga juice, used to treat radiation sickness"
 
-/datum/reagent/consumable/ethanol/punga/on_mob_life(mob/living/carbon/M)
-	M.radiation = max(M.radiation-2,0)
+/datum/reagent/consumable/ethanol/pungajuice/on_mob_life(mob/living/carbon/M)
+	M.radiation = max(M.radiation-5,0)
+	M.hallucination += 5
 	return ..()
 
 /datum/reagent/consumable/ethanol/bilk
@@ -367,14 +384,14 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	glass_desc = "A mild but still great cocktail. Drink up, like a true Englishman."
 
 /datum/reagent/consumable/ethanol/rum_coke
-	name = "Rum and Coke"
+	name = "Rum and Nuka"
 	id = "rumcoke"
-	description = "Rum, mixed with cola."
-	taste_description = "cola"
+	description = "Rum, mixed with Nuka-Cola."
+	taste_description = "Nuka-Cola"
 	boozepwr = 40
 	color = "#3E1B00"
 	glass_icon_state = "whiskeycolaglass"
-	glass_name = "Rum and Coke"
+	glass_name = "Rum and Nuka"
 	glass_desc = "The classic go-to of fratboys."
 
 /datum/reagent/consumable/ethanol/cuba_libre
@@ -398,15 +415,15 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	return ..() || .
 
 /datum/reagent/consumable/ethanol/whiskey_cola
-	name = "Whiskey Cola"
+	name = "Whiskey Nuka"
 	id = "whiskeycola"
-	description = "Whiskey, mixed with cola. Surprisingly refreshing."
+	description = "Whiskey, mixed with Nuka-Cola. Surprisingly refreshing."
 	color = "#3E1B00" // rgb: 62, 27, 0
 	boozepwr = 70
-	taste_description = "cola"
+	taste_description = "Nuka Cola"
 	glass_icon_state = "whiskeycolaglass"
 	glass_name = "whiskey cola"
-	glass_desc = "An innocent-looking mixture of cola and Whiskey. Delicious."
+	glass_desc = "An innocent-looking mixture of Nuka-Cola and Whiskey."
 
 /datum/reagent/consumable/ethanol/martini
 	name = "Classic Martini"
@@ -688,6 +705,18 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	glass_name = "Mead"
 	glass_desc = "A Viking's Beverage, though a cheap one."
 
+/datum/reagent/consumable/ethanol/wastemead
+	name = "Waste Mead"
+	id = "wastemead"
+	description = "A True Wastelanders drink."
+	color = "#664300" // rgb: 102, 67, 0
+	nutriment_factor = 1 * REAGENTS_METABOLISM
+	boozepwr = 50
+	taste_description = "crispy sweetness and a lack of bees"
+	glass_icon_state = "meadglass"
+	glass_name = "Waste Mead"
+	glass_desc = "A True Wastelander's drink."
+
 /datum/reagent/consumable/ethanol/iced_beer
 	name = "Iced Beer"
 	id = "iced_beer"
@@ -761,6 +790,181 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	glass_desc = "Tastes like autumn... no wait, fall!"
 	shot_glass_icon_state = "shotglassbrown"
 
+/datum/reagent/consumable/ethanol/purplecider
+	name = "Purple Cider"
+	id = "purplecider"
+	description = "Refined a pressurised, Mutfruit Cider."
+	color = "#570197"
+	nutriment_factor = 1 * REAGENTS_METABOLISM
+	boozepwr = 25
+	taste_description = "sweetness and nuclear winter"
+	glass_icon_state = "mutfruitglass"
+	glass_name = "purple cider"
+	glass_desc = "Refined a pressurised, Mutfruit Cider."
+
+/datum/reagent/consumable/ethanol/purplecider/on_mob_life(mob/living/carbon/M)
+	if(M.getBruteLoss() && prob(10))
+		M.heal_bodypart_damage(1)
+		. = 1
+	return ..() || .
+
+/datum/reagent/consumable/ethanol/brocbrew
+	name = "Broc Brew"
+	id = "brocbrew"
+	description = "A potent healing beverage brewed from the Broc flower."
+	color = "#DFA866"
+	boozepwr = 50
+	taste_description = "dirt and roses"
+	glass_icon_state = "cognacglass"
+	glass_name = "broc brew"
+	glass_desc = "A potent healing beverage brewed from the Broc flower."
+	var/last_added = 0
+	var/maximum_reachable = BLOOD_VOLUME_NORMAL - 10
+
+/datum/reagent/consumable/ethanol/brocbrew/on_mob_life(mob/living/carbon/M)
+	M.adjustOxyLoss(-5*REM, 0)
+	..()
+	. = 1
+
+/datum/reagent/consumable/ethanol/brocbrew/on_mob_life(mob/living/carbon/M)
+	if(last_added)
+		M.blood_volume -= last_added
+		last_added = 0
+	if(M.blood_volume < maximum_reachable)	//Can only up to double your effective blood level.
+		var/amount_to_add = min(M.blood_volume, volume*5)
+		var/new_blood_level = min(M.blood_volume + amount_to_add, maximum_reachable)
+		last_added = new_blood_level - M.blood_volume
+		M.blood_volume = new_blood_level
+	if(prob(33))
+		M.adjustBruteLoss(-0.5*REM, 0)
+		M.adjustFireLoss(-0.5*REM, 0)
+		. = TRUE
+	..()
+
+/datum/reagent/consumable/ethanol/buffalo
+	name = "Buffalo"
+	id = "buffalo"
+	description = "An insaneley strong spirit that hits you like whatever the hell a buffalo was."
+	color = "#DFA866"
+	boozepwr = 150
+	taste_description = "a stampede"
+	glass_icon_state = "buffaloglass"
+	glass_name = "buffalo"
+	glass_desc = "An insaneley strong spirit that hits you like whatever the hell a buffalo was."
+
+/datum/reagent/consumable/ethanol/deathroach
+	name = "Deathroach"
+	id = "deathroach"
+	description = "Distilled tobacco, for that two in one cancer blast!"
+	color = "#0C0704"
+	boozepwr = 100
+	taste_description = "tobacco and hatred"
+	glass_icon_state = "irishcarbomb"
+	glass_name = "death roach"
+	glass_desc = "Distilled tobacco, for that two in one cancer blast!"
+
+/datum/reagent/consumable/ethanol/deathroach/on_mob_life(mob/living/carbon/M)
+	if(prob(10))
+		var/drink_message = pick("You feel rugged.", "You feel manly.","You feel wastern.","You feel like a madman.")
+		to_chat(M, "<span class='notice'>[drink_message]</span>")
+	M.AdjustStun(-20, 0)
+	M.AdjustKnockdown(-20, 0)
+	M.AdjustUnconscious(-20, 0)
+	M.adjustStaminaLoss(-0.5*REM, 0)
+	..()
+	. = 1
+
+/datum/reagent/consumable/ethanol/daturatea
+	name = "Datura Tea"
+	id = "daturatea"
+	description = "A potent tea well used for rites of passage rituals and ceremonies."
+	color = "#E5E2D4"
+	boozepwr = 10
+	taste_description = "divine intervention"
+	glass_icon_state = "daturatea"
+	glass_name = "datura tea"
+	glass_desc = "A potent tea well used for rites of passage rituals and ceremonies."
+
+/datum/reagent/consumable/ethanol/daturatea/on_mob_add(mob/living/M) //spiritual shizzle, also admemes getting booled on
+	M.add_trait(TRAIT_SPIRITUAL, id)
+	M.set_drugginess(15)
+	M.hallucination += 20
+	..()
+
+/datum/reagent/consumable/ethanol/daturatea/on_mob_delete(mob/living/M)
+	M.remove_trait(TRAIT_SPIRITUAL, id)
+	M.set_drugginess(0)
+	M.hallucination += 0
+	..()
+
+/datum/reagent/consumable/ethanol/pinkpulque
+	name = "Pink Pulque"
+	id = "pinkpulque"
+	description = "An alchoholic prickly pear cactus mash spirit."
+	color = "#D0007C"
+	boozepwr = 30
+	taste_description = "sweetness and pulp"
+	glass_icon_state = "pinkpulqueglass"
+	glass_name = "pink pulque"
+	glass_desc = "An alchoholic prickly pear cactus mash spirit."
+
+/datum/reagent/consumable/ethanol/pinkpulque/on_mob_life(mob/living/carbon/M)
+	if(prob(33))
+		M.Dizzy(2)
+		M.Jitter(2)
+	..()
+
+/datum/reagent/consumable/ethanol/yellowpulque
+	name = "Yellow Pulque"
+	id = "yellowpulque"
+	description = "An sobering and extremely bitter barrel cactus mash spirit."
+	color = "#FEFCE7"
+	boozepwr = -10
+	taste_description = "sweetness and pulp"
+	glass_icon_state = "yellowpulqueglass"
+	glass_name = "yellow pulque"
+	glass_desc = "An sobering and extremely bitter barrel cactus mash spirit."
+
+/datum/reagent/consumable/ethanol/yellowpulque/on_mob_life(mob/living/carbon/M)
+	if(prob(80))
+		M.Dizzy(-2)
+		M.Jitter(-2)
+	for(var/datum/reagent/R in M.reagents.reagent_list)
+		if(R != src)
+			M.reagents.remove_reagent(R.id,2.5)
+	if(M.health > 20)
+		M.adjustToxLoss(0.5*REM, 0)
+		. = 1
+	M.radiation += 0.1
+	return
+	..()
+
+
+
+/datum/reagent/consumable/ethanol/salgam
+	name = "Şalgam"
+	id = "salgam"
+	description = "A spirit brewed from xander roots."
+	color = "#591F24"
+	boozepwr = 80
+	taste_description = "sour turnips"
+	glass_icon_state = "salgamglass"
+	glass_name = "şalgam"
+	glass_desc = "A powerful spirit brewed from the xander root."
+
+/datum/reagent/consumable/ethanol/salgam/on_mob_life(mob/living/carbon/M)
+	if(prob(33))
+		M.adjustBruteLoss(-1*REM, 0)
+		M.adjustFireLoss(-1*REM, 0)
+		. = TRUE
+	..()
+
+/datum/reagent/consumable/ethanol/salgam/on_mob_life(mob/living/carbon/M)
+	M.adjustToxLoss(-2*REM, 0)
+	for(var/datum/reagent/toxin/R in M.reagents.reagent_list)
+		M.reagents.remove_reagent(R.id,1)
+	..()
+	. = 1
 
 /datum/reagent/consumable/ethanol/fetching_fizz //A reference to one of my favorite games of all time. Pulls nearby ores to the imbiber!
 	name = "Fetching Fizz"
@@ -1095,3 +1299,317 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	taste_description = flavor
 	if(holder.my_atom)
 		holder.my_atom.on_reagent_change()
+
+//nuka
+
+
+/datum/reagent/consumable/ethanol/nukadark
+	name = "Nuka Dark"
+	id = "nukadark"
+	description = "Nuka Cola with a alcoholic twist."
+	color = "#1C2118"
+	boozepwr = 80
+	taste_description = "bitter and toxic cola"
+	glass_icon_state = "nukadarkglass"
+	glass_name = "Nuka Dark"
+	glass_desc = "Nuka Cola with a alcoholic twist."
+
+/datum/reagent/consumable/ethanol/nukadark/on_mob_life(mob/living/carbon/M)
+	M.Jitter(20)
+	M.set_drugginess(30)
+	M.dizziness +=1.5
+	M.drowsyness = 0
+	M.AdjustSleeping(-40, FALSE)
+	M.adjust_bodytemperature(-5 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
+	..()
+	. = 1
+
+/datum/reagent/consumable/ethanol/nukavictory
+	name = "Nuka Victory"
+	id = "nukavictory"
+	description = "Nuka Cola with an <BIG>AMERICAN<BIG> twist."
+	color = "#FAEBD7"
+	boozepwr = 45
+	taste_description = "freedom"
+	glass_icon_state = "nukavictoryglass"
+	glass_name = "Nuka Victory"
+	glass_desc = "Nuka Cola with an <BIG>AMERICAN<BIG> twist."
+
+/datum/reagent/consumable/ethanol/nukavictory/on_mob_life(mob/living/carbon/M)
+	M.Jitter(20)
+	M.add_trait(TRAIT_BIG_LEAGUES, id)
+	M.dizziness +=1.5
+	M.adjustBruteLoss(-2.5*REM, 0)
+	M.drowsyness = 0
+	M.AdjustSleeping(-40, FALSE)
+	M.adjust_bodytemperature(-5 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
+	..()
+	. = 1
+
+/datum/reagent/consumable/ethanol/nukavictory/on_mob_delete(mob/living/M)
+	M.remove_trait(TRAIT_BIG_LEAGUES, id)
+	..()
+
+/datum/reagent/consumable/ethanol/nukabomb
+	name = "Nuka Bombdrop"
+	id = "nukabomb"
+	description = "More spirit than Nuka at this Rate."
+	color = "#FAEBD7"
+	boozepwr = 200
+	taste_description = "pure alcohol"
+	glass_icon_state = "nukabombglass"
+	glass_name = "Nuka Bombdrop"
+	glass_desc = "More spirit than Nuka at this Rate."
+
+/datum/reagent/consumable/ethanol/nukabomb/on_mob_life(mob/living/carbon/M)
+	var/high_message = pick("<br><font color='#FF0000'><b>You hear the /SIRENS BLAZING/</b></font>, <br><font color='#FF0000'><b>You feel the /RADIOACTIVE HELLFIRE/</b></font>")
+	if(prob(50))
+		to_chat(M, "<span class='notice'>[high_message]</span>")
+	M.Jitter(100)
+	M.adjustBruteLoss(-6*REM, 0)
+	M.dizziness +=1.5
+	M.drowsyness = 0
+	M.AdjustSleeping(-40, FALSE)
+	M.adjust_bodytemperature(-5 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
+	..()
+	. = 1
+
+/datum/reagent/consumable/ethanol/nukabomb/on_mob_delete(mob/living/M)
+	M.playsound_local(M, 'sound/f13effects/explosion_2.ogg', 100, 0)
+	M.Knockdown(10, 0)
+	..()
+
+/datum/reagent/consumable/ethanol/nukacide
+	name = "Nukacide"
+	id = "nukacide"
+	description = "The drink of a goddamn madman, say your sorrows when you drink this."
+	color = "#000000"
+	boozepwr = 300
+	taste_description = "nuclear annihilation"
+	glass_icon_state = "nukacideglass"
+	glass_name = "Nukacide"
+	glass_desc = "The drink of a goddamn madman, say your sorrows when you drink this."
+
+/datum/reagent/consumable/ethanol/nukacide/on_mob_life(mob/living/carbon/M)
+	M.vomit(100)
+	M.Jitter(100)
+	M.set_drugginess(30)
+	M.dizziness +=1.5
+	M.drowsyness = 0
+	M.AdjustSleeping(-40, FALSE)
+	M.adjust_bodytemperature(-5 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
+	..()
+	. = 1
+
+/datum/reagent/consumable/ethanol/nukafancy
+	name = "Nuka Fancy"
+	id = "nukafancy"
+	description = "The Refined mans Soda, Fit for soda royalty."
+	color = "#11111E"
+	boozepwr = 30
+	taste_description = "refined soda"
+	glass_icon_state = "nukafancyglass"
+	glass_name = "Nuka Fancy"
+	glass_desc = "The Refined mans Soda, Fit for soda royalty."
+
+/datum/reagent/consumable/ethanol/nukafancy/on_mob_life(mob/living/carbon/M)
+	var/high_message = pick("<br>Maybe I too need some Slaves?</b>","<br>Mutfruit for All!</b>","<br>Time to Glorify my Wasteland Castle!</b>","<br>Nuked, not stirred.</b>")
+	if(prob(20))
+		to_chat(M, "<span class='notice'>[high_message]</span>")
+	M.emote("clap")
+	M.adjustBruteLoss(-0.5*REM, 0)
+	M.dizziness +=1.5
+	M.drowsyness = 0
+	M.AdjustSleeping(-40, FALSE)
+	M.adjust_bodytemperature(-5 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
+	..()
+	. = 1
+
+/datum/reagent/consumable/ethanol/nukalove
+	name = "Nuka Love"
+	id = "nukalove"
+	description = "A Nuka-Cola twist on a passionate classic."
+	color = "#8F4096"
+	boozepwr = 60
+	taste_description = "passion and bliss"
+	glass_icon_state = "nukaloveglass"
+	glass_name = "Nuka Love"
+	glass_desc = "A Nuka-Cola twist on a passionate classic."
+
+/datum/reagent/consumable/ethanol/nukalove/on_mob_life(mob/living/carbon/M)
+	M.adjustBruteLoss(-2*REM, 0)
+	M.dizziness +=1.5
+	M.emote("laugh")
+	M.emote("smile")
+	M.emote("cry")
+	M.drowsyness = 0
+	M.AdjustSleeping(-40, FALSE)
+	M.adjust_bodytemperature(-5 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
+	..()
+	. = 1
+
+/datum/reagent/consumable/ethanol/nukapunch
+	name = "Nuka Punch"
+	id = "nukapunch"
+	description = "The drink of a Madman."
+	color = "#4A261B"
+	boozepwr = 150
+	taste_description = "pain"
+	glass_icon_state = "nukapunchglass"
+	glass_name = "Nuka Punch"
+	glass_desc = "The drink of a Madman."
+
+/datum/reagent/consumable/ethanol/nukapunch/on_mob_life(mob/living/carbon/M)
+	M.adjustBruteLoss(-4*REM)
+	M.adjustFireLoss(-4*REM)
+	M.adjustOxyLoss(-4*REM)
+	M.adjustToxLoss(-4*REM, 0)
+	M.adjustStaminaLoss(-4*REM, 0)
+	M.vomit(20)
+	M.Jitter(20)
+	M.set_drugginess(30)
+	M.dizziness +=1.5
+	M.drowsyness = 0
+	M.AdjustSleeping(-40, FALSE)
+	M.adjust_bodytemperature(-5 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
+	..()
+	. = 1
+
+/datum/reagent/consumable/ethanol/nukasunrise
+	name = "Nuka Sunrise"
+	id = "nukasunrise"
+	description = "A Nuka-Cola original drink, totally original and first of its kind!"
+	color = "#D82E04"
+	boozepwr = 30
+	taste_description = "sweetness and funshine"
+	glass_icon_state = "nukasunriseglass"
+	glass_name = "Nuka Sunrise"
+	glass_desc = "A Nuka-Cola original drink, totally original and first of its kind!"
+
+/datum/reagent/consumable/ethanol/nukasunrise/on_mob_life(mob/living/carbon/M)
+	M.Jitter(20)
+	M.emote("laugh")
+	M.dizziness +=1.5
+	M.adjustFireLoss(-2.5*REM, 0)
+	M.drowsyness = 0
+	M.AdjustSleeping(-40, FALSE)
+	M.adjust_bodytemperature(-5 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
+	..()
+	. = 1
+
+/datum/reagent/consumable/ethanol/nukaquantum
+	name = "Nuka Quantum"
+	id = "nukaquantum"
+	description = "An extremely blue and glowing combination of Nuka-Cola and (REDACTED)."
+	color = "#6AFFFF"
+	boozepwr = 10
+	taste_description = "the eighteenth flavour"
+	glass_icon_state = "nukaquantumglass"
+	glass_name = "Nuka Quantum"
+	glass_desc = "An extremely blue and glowing combination of Nuka-Cola and (REDACTED)"
+	var/datum/brain_trauma/special/psychotic_brawling/bath_salts/rage
+
+/datum/reagent/consumable/ethanol/nukaquantum/on_mob_life(mob/living/carbon/M)
+	M.Jitter(40)
+	M.set_drugginess(60)
+	M.dizziness +=1.5
+	M.drowsyness = 0
+	M.AdjustSleeping(-40, FALSE)
+	M.adjust_bodytemperature(-5 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
+	M.adjustBrainLoss(rand(1,0))
+	M.AdjustStun(-20, 0)
+	M.adjustToxLoss(1, 0)
+	M.AdjustKnockdown(-20, 0)
+	M.AdjustUnconscious(-20, 0)
+	M.adjustStaminaLoss(-3, 0)
+	M.hallucination += 20
+	M.Jitter(2)
+	M.add_trait(TRAIT_SLEEPIMMUNE, id)
+	if(iscarbon(M))
+		var/mob/living/carbon/C = M
+		rage = new()
+		C.gain_trauma(rage, TRAUMA_RESILIENCE_ABSOLUTE)
+	..()
+	. = 1
+
+/datum/reagent/consumable/ethanol/nukaquantum/on_mob_delete(mob/living/M)
+	M.remove_trait(TRAIT_SLEEPIMMUNE, id)
+	var/obj/item/organ/liver/L = M.getorganslot(ORGAN_SLOT_LIVER)
+	if(L)
+		L.damage += 20
+	if(rage)
+		QDEL_NULL(rage)
+	if(iscarbon(M))
+		var/mob/living/carbon/C = M
+		C.cure_trauma_type(rage, TRAUMA_RESILIENCE_ABSOLUTE)
+	..()
+
+/datum/reagent/consumable/ethanol/nukaxtreme //this is hell
+	name = "Nuka X-Treme"
+	id = "nukaxtreme"
+	description = "Like Quantum, but <BIG>EXTREME<BIG>."
+	color = "#72E070"
+	boozepwr = 50
+	taste_description = "THE EXTREME"
+	glass_icon_state = "nukaxtremeglass"
+	glass_name = "Nuka X-Treme"
+	glass_desc = "Like Quantum, but <BIG>EXTREME<BIG>."
+	var/datum/brain_trauma/special/psychotic_brawling/bath_salts/rage
+
+/datum/reagent/consumable/ethanol/nukaxtreme/on_mob_life(mob/living/carbon/M)
+	var/high_message = pick("<br><font color='#FF0000'><b>EXTREME</b></font>", "<br><font color='#FF0000'><b>RAAAAR!</b></font>", "<br><font color='#FF0000'><b>BRING IT!</b></font>")
+	if(prob(100))
+		to_chat(M, "<span class='notice'>[high_message]</span>")
+	M.Jitter(40)
+	M.set_drugginess(60)
+	M.dizziness +=1.5
+	M.drowsyness = 0
+	M.AdjustSleeping(-40, FALSE)
+	M.adjust_bodytemperature(-5 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
+	M.adjustBrainLoss(4,0)
+	M.adjustToxLoss(4, 0)
+	M.AdjustStun(-30, 0)
+	M.AdjustKnockdown(-30, 0)
+	M.AdjustUnconscious(-30, 0)
+	M.adjustStaminaLoss(-5, 0)
+	M.hallucination += 20
+	M.Jitter(2)
+	M.add_trait(TRAIT_IRONFIST, id)
+	M.add_trait(TRAIT_SLEEPIMMUNE, id)
+	if(iscarbon(M))
+		var/mob/living/carbon/C = M
+		rage = new()
+		C.gain_trauma(rage, TRAUMA_RESILIENCE_ABSOLUTE)
+	..()
+	. = 1
+
+/datum/reagent/consumable/ethanol/nukaxtreme/on_mob_life(mob/living/carbon/M)
+	if(M.hud_used)
+		if(current_cycle >= 5 && current_cycle % 3 == 0)
+			var/list/screens = list(M.hud_used.plane_masters["[FLOOR_PLANE]"], M.hud_used.plane_masters["[GAME_PLANE]"])
+			var/matrix/skew = matrix()
+			var/intensity = 8
+			skew.set_skew(rand(-intensity,intensity), rand(-intensity,intensity))
+			var/matrix/newmatrix = skew
+
+			for(var/whole_screen in screens)
+				animate(whole_screen, transform = newmatrix, time = 5, easing = QUAD_EASING, loop = -1)
+				animate(transform = -newmatrix, time = 5, easing = QUAD_EASING)
+	return ..()
+
+/datum/reagent/consumable/ethanol/nukaxtreme/on_mob_delete(mob/living/M)
+	M.remove_trait(TRAIT_IRONFIST, id)
+	M.remove_trait(TRAIT_SLEEPIMMUNE, id)
+	var/obj/item/organ/liver/L = M.getorganslot(ORGAN_SLOT_LIVER)
+	if(L)
+		L.damage += 400
+	if(M && M.hud_used)
+		var/list/screens = list(M.hud_used.plane_masters["[FLOOR_PLANE]"], M.hud_used.plane_masters["[GAME_PLANE]"], M.hud_used.plane_masters["[LIGHTING_PLANE]"])
+		for(var/whole_screen in screens)
+			animate(whole_screen, transform = matrix(), time = 5, easing = QUAD_EASING)
+	if(rage)
+		QDEL_NULL(rage)
+	if(iscarbon(M))
+		var/mob/living/carbon/C = M
+		C.cure_trauma_type(rage, TRAUMA_RESILIENCE_ABSOLUTE)
+	..()

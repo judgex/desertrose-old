@@ -32,7 +32,15 @@
 							/obj/item/stack/sheet/animalhide/human = 2,
 							/obj/item/stack/sheet/bone = 2)
 	projectiletype = /obj/item/projectile/neurotox
-	projectilesound = 'sound/weapons/pierce.ogg'
+	projectilesound = 'sound/f13npc/centaur/spit.ogg'
+
+	emote_taunt_sound = list('sound/f13npc/centaur/taunt.ogg')
+	emote_taunt = list("grunts")
+	taunt_chance = 30
+	aggrosound = list('sound/f13npc/centaur/aggro1.ogg', )
+	idlesound = list('sound/f13npc/centaur/idle1.ogg', 'sound/f13npc/centaur/idle2.ogg')
+	death_sound = 'sound/f13npc/centaur/centaur_death.ogg'
+	attack_sound = 'sound/f13npc/centaur/lash.ogg'
 
 /obj/item/projectile/neurotox
 	name = "spit"

@@ -24,8 +24,6 @@
 //	aggro_sound_chance = 50
 //	aggro_sound = list('sound/f13npc/dog_alert1.ogg','sound/f13npc/dog_alert2.ogg','sound/f13npc/dog_alert3.ogg')
 
-	death_sound = 'sound/f13npc/dog_death.ogg'
-
 	environment_smash = 0
 	butcher_results = list(/obj/item/stack/sheet/animalhide/wolf = 1, \
 	/obj/item/reagent_containers/food/snacks/meat/slab/wolf = 1)
@@ -36,6 +34,13 @@
 	attacktext = "bites"
 	attack_sound = 'sound/weapons/bite.ogg'
 	move_to_delay = 2
+
+	emote_taunt_sound = list('sound/f13npc/dog/dog_charge1.ogg', 'sound/f13npc/dog/dog_charge2.ogg', 'sound/f13npc/dog/dog_charge3.ogg', 'sound/f13npc/dog/dog_charge4.ogg', 'sound/f13npc/dog/dog_charge5.ogg', 'sound/f13npc/dog/dog_charge6.ogg', 'sound/f13npc/dog/dog_charge7.ogg',)
+	emote_taunt = list("growls", "barks", "snarls")
+	taunt_chance = 30
+	aggrosound = list('sound/f13npc/dog/dog_alert1.ogg', 'sound/f13npc/dog/dog_alert2.ogg', 'sound/f13npc/dog/dog_alert3.ogg')
+	idlesound = list('sound/f13npc/dog/dog_bark1.ogg', 'sound/f13npc/dog/dog_bark2.ogg', 'sound/f13npc/dog/dog_bark3.ogg')
+	death_sound = 'sound/f13npc/centaur/centaur_death.ogg'
 
 /mob/living/simple_animal/hostile/wolf/alpha
 	name = "alpha feral dog"

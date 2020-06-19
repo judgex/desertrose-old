@@ -293,6 +293,159 @@
 	max_integrity = 50
 	canSmoothWith = list(/obj/structure/table/wood/settler)
 
+/obj/structure/booth
+	name = "booth table"
+	desc = "A diner style booth table."
+	icon = 'icons/obj/structures.dmi'
+	icon_state = "booth_table_end"
+	density = TRUE
+	anchored = TRUE
+	layer = TABLE_LAYER
+	climbable = TRUE
+	pass_flags = LETPASSTHROW
+	max_integrity = 100
+	integrity_failure = 30
+	var/deconstruction_ready = 1
+
+/obj/structure/booth/examine(mob/user)
+	..()
+	deconstruction_hints(user)
+
+/obj/structure/booth/proc/deconstruction_hints(mob/user)
+	to_chat(user, "<span class='notice'>The top is panelled together and could likely be taken apart with a crowbar. The spinning mechanism is secured with bolts.</span>")
+
+/obj/structure/booth/CanPass(atom/movable/mover, turf/target)
+	if(istype(mover) && (mover.pass_flags & PASSTABLE))
+		return 1
+	if(mover.throwing)
+		return 1
+	if(locate(/obj/structure/table) in get_turf(mover))
+		return 1
+	else
+		return !density
+
+/obj/structure/booth/proc/tableplace(mob/living/user, mob/living/pushed_mob)
+	pushed_mob.forceMove(src.loc)
+	pushed_mob.resting = TRUE
+	pushed_mob.update_canmove()
+	pushed_mob.visible_message("<span class='notice'>[user] places [pushed_mob] onto [src].</span>", \
+								"<span class='notice'>[user] places [pushed_mob] onto [src].</span>")
+	add_logs(user, pushed_mob, "placed")
+
+/obj/structure/booth/proc/tablepush(mob/living/user, mob/living/pushed_mob)
+	var/added_passtable = FALSE
+	if(!pushed_mob.pass_flags & PASSTABLE)
+		added_passtable = TRUE
+		pushed_mob.pass_flags |= PASSTABLE
+	pushed_mob.Move(src.loc)
+	if(added_passtable)
+		pushed_mob.pass_flags &= ~PASSTABLE
+	if(pushed_mob.loc != loc) //Something prevented the tabling
+		return
+	pushed_mob.Knockdown(40)
+	pushed_mob.visible_message("<span class='danger'>[user] pushes [pushed_mob] onto [src].</span>", \
+								"<span class='userdanger'>[user] pushes [pushed_mob] onto [src].</span>")
+	add_logs(user, pushed_mob, "pushed")
+	if(!ishuman(pushed_mob))
+		return
+	var/mob/living/carbon/human/H = pushed_mob
+	SEND_SIGNAL(H, COMSIG_ADD_MOOD_EVENT, "table", /datum/mood_event/table)
+
+
+/obj/structure/booth/attack_paw(mob/user)
+	return attack_hand(user)
+
+
+/obj/structure/booth/attack_hand(mob/living/user)
+	if(Adjacent(user) && user.pulling && isliving(user.pulling))
+		var/mob/living/pushed_mob = user.pulling
+		if(pushed_mob.buckled)
+			to_chat(user, "<span class='warning'>[pushed_mob] is buckled to [pushed_mob.buckled]!</span>")
+			return
+		if(user.a_intent == INTENT_GRAB)
+			if(user.grab_state < GRAB_AGGRESSIVE)
+				to_chat(user, "<span class='warning'>You need a better grip to do that!</span>")
+				return
+			tablepush(user, pushed_mob)
+		if(user.a_intent == INTENT_HELP)
+			pushed_mob.visible_message("<span class='notice'>[user] begins to place [pushed_mob] onto [src]...</span>", \
+								"<span class='userdanger'>[user] begins to place [pushed_mob] onto [src]...</span>")
+			if(do_after(user, 35, target = pushed_mob))
+				tableplace(user, pushed_mob)
+			else
+				return
+		user.stop_pulling()
+	return ..()
+
+/obj/structure/booth/attack_tk()
+	return FALSE
+
+/obj/structure/booth/CanAStarPass(ID, dir, caller)
+	. = !density
+	if(ismovableatom(caller))
+		var/atom/movable/mover = caller
+		. = . || (mover.pass_flags & PASSTABLE)
+
+/obj/structure/booth/attackby(obj/item/I, mob/user, params)
+	if(!(flags_1 & NODECONSTRUCT_1))
+		if(istype(I, /obj/item/wrench))
+			to_chat(user, "<span class='notice'>You [anchored ? "unwrench" : "wrench"] the [src].</span>")
+			anchored = !anchored
+		if(istype(I, /obj/item/crowbar) && deconstruction_ready)
+			to_chat(user, "<span class='notice'>You start deconstructing [src]...</span>")
+			if(I.use_tool(src, user, 40, volume=50))
+				playsound(src.loc, 'sound/items/deconstruct.ogg', 50, 1)
+				deconstruct(TRUE, 1)
+			return
+
+/obj/structure/booth/proc/can_be_rotated(mob/user,rotation_type)
+	if(anchored)
+		to_chat(user, "<span class='warning'>[src] cannot be rotated while the spinning bolts are in place</span>")
+		return FALSE
+
+/obj/structure/booth/ComponentInitialize()
+	AddComponent(/datum/component/simple_rotation, ROTATION_ALTCLICK | ROTATION_CLOCKWISE)
+
+/obj/structure/booth/middle
+	icon_state = "booth_table_middle"
+
+/obj/structure/booth/single
+	icon_state = "booth_table_solo"
+
+/obj/structure/table/snooker
+	name = "pool table"
+	desc = "A cloth surfaced pool table for that bar themed aesthetic! Bring over the brews! Pool not included."
+	icon = 'icons/obj/structures.dmi'
+	icon_state = "nv_pooltable"
+	anchored = TRUE
+	framestack = /obj/item/stack/sheet/mineral/wood
+	buildstack = /obj/item/stack/sheet/cloth
+	smooth = SMOOTH_FALSE
+
+/obj/structure/table/snooker/attackby(obj/item/I, mob/user, params)
+	if(!(flags_1 & NODECONSTRUCT_1))
+		if(istype(I, /obj/item/screwdriver) && deconstruction_ready)
+			to_chat(user, "<span class='notice'>You start disassembling [src]...</span>")
+			if(I.use_tool(src, user, 20, volume=50))
+				deconstruct(TRUE)
+			return
+		if(istype(I, /obj/item/wrench))
+			to_chat(user, "<span class='notice'>You [anchored ? "unwrench" : "wrench"] the [src].</span>")
+			anchored = !anchored
+		if(istype(I, /obj/item/crowbar) && deconstruction_ready)
+			to_chat(user, "<span class='notice'>You start deconstructing [src]...</span>")
+			if(I.use_tool(src, user, 40, volume=50))
+				playsound(src.loc, 'sound/items/deconstruct.ogg', 50, 1)
+				deconstruct(TRUE, 1)
+			return
+
+/obj/structure/table/snooker/proc/can_be_rotated(mob/user,rotation_type)
+	if(anchored)
+		to_chat(user, "<span class='warning'>[src] cannot be rotated while the spinning bolts are in place!</span>")
+		return FALSE
+
+/obj/structure/table/snooker/ComponentInitialize()
+	AddComponent(/datum/component/simple_rotation, ROTATION_ALTCLICK | ROTATION_EIGHTDIR)
 
 /*
 /*
