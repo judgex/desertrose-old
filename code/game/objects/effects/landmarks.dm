@@ -644,7 +644,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 	name = "Prospector"
 
 /obj/effect/landmark/start/f13/settler
-	name = "Settler"
+	name = "Citizen"
 	icon_state = "Settler"
 
 /obj/effect/landmark/start/f13/dendoc
