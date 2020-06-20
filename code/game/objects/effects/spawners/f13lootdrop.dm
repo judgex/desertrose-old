@@ -213,7 +213,7 @@
 				""
 				)
 	var/loot3 = list(
-				/obj/item/clothing/suit/armor/f13/raider,
+				/obj/item/clothing/suit/armor/f13/raider/supafly,
 				/obj/item/clothing/head/helmet/f13/raider
 				)
 	var/loot4 = list(
@@ -229,7 +229,7 @@
 				/obj/item/clothing/head/helmet/f13/raider/yankee
 				)
 	var/loot7 = list(
-				/obj/item/clothing/suit/armor/f13/badlands,
+				/obj/item/clothing/suit/armor/f13/raider/badlands,
 				/obj/item/clothing/head/helmet/f13/fiend
 				)
 	var/loot8 = list(
@@ -237,7 +237,7 @@
 				/obj/item/clothing/head/helmet/f13/raider/psychotic
 				)
 	var/loot9 = list(
-				/obj/item/clothing/suit/armor/f13/raider,
+				/obj/item/clothing/suit/armor/f13/raider/supafly,
 				/obj/item/clothing/head/helmet/f13/raider
 				)
 	var/loot10 = list(
@@ -369,7 +369,7 @@
     loot = list(
             /obj/effect/spawner/lootdrop/f13/armor/tier1 = 80,
             /obj/effect/spawner/lootdrop/f13/armor/tier2 = 19,
-            /obj/effect/spawner/lootdrop/f13/armor/tier3 = 1,
+            /obj/effect/spawner/lootdrop/f13/armor/tier3 = 1
             )
 
 /obj/effect/spawner/lootdrop/f13/armor/random_high

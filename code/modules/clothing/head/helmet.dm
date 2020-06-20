@@ -294,17 +294,19 @@
 
 //Raider
 /obj/item/clothing/head/helmet/f13/raider
+	name = "base raider helmet"
+	desc = "for testing"
+	icon_state = "supafly"
+	item_state = "supafly"
+	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
+	armor = list("melee" = 35, "bullet" = 25, "laser" = 25, "energy" = 25, "bomb" = 30, "bio" = 20, "rad" = 0, "fire" = 50, "acid" = 0)
+	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+
+/obj/item/clothing/head/helmet/f13/raider/supafly
 	name = "supa-fly raider helmet"
 	desc = "It's a makeshift raider helmet, made of leather. It heavily smells with chems and sweat."
 	icon_state = "supafly"
 	item_state = "supafly"
-	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
-	armor = list("melee" = 40, "bullet" = 25, "laser" = 15, "energy" = 10, "bomb" = 16, "bio" = 20, "rad" = 0, "fire" = 50, "acid" = 0)
-	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
-
-/obj/item/clothing/head/helmet/f13/raider/reinforced
-	name = "reinforced supa-fly raider helmet"
-	armor = list("melee" = 40, "bullet" = 30, "laser" = 25, "energy" = 15, "bomb" = 16, "bio" = 20, "rad" = 0, "fire" = 50, "acid" = 0)
 
 /obj/item/clothing/head/helmet/f13/raider/arclight
 	name = "raider arclight helmet"
@@ -314,20 +316,12 @@
 	dynamic_hair_suffix = ""
 	visor_flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE
 
-/obj/item/clothing/head/helmet/f13/raider/arclight/reinforced
-	name = "reinforced raider arclight helmet"
-	armor = list("melee" = 40, "bullet" = 30, "laser" = 25, "energy" = 15, "bomb" = 16, "bio" = 20, "rad" = 0, "fire" = 50, "acid" = 0)
-
-/obj/item/clothing/head/helmet/f13/raider/blastmaster
+	/obj/item/clothing/head/helmet/f13/raider/blastmaster
 	name = "raider blastmaster helmet"
 	icon_state = "blastmaster"
 	item_state = "blastmaster"
 	dynamic_hair_suffix = ""
 	dynamic_fhair_suffix = ""
-
-/obj/item/clothing/head/helmet/f13/raider/blastmaster/reinforced
-	name = "reinforced raider blastmaster helmet"
-	armor = list("melee" = 40, "bullet" = 30, "laser" = 15, "energy" = 15, "bomb" = 30, "bio" = 20, "rad" = 0, "fire" = 50, "acid" = 0)
 
 /obj/item/clothing/head/helmet/f13/raider/yankee
 	name = "yankee raider helmet"
@@ -336,26 +330,17 @@
 	item_state = "yankee"
 	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE
 
-/obj/item/clothing/head/helmet/f13/raider/yankee/reinforced
-	name = "reinforced yankee raider helmet"
-	armor = list("melee" = 45, "bullet" = 30, "laser" = 20, "energy" = 15, "bomb" = 16, "bio" = 20, "rad" = 0, "fire" = 50, "acid" = 0)
-
-/obj/item/clothing/head/helmet/f13/eyebot
+/obj/item/clothing/head/helmet/f13/raider/eyebot
 	name = "eyebot helmet"
 	desc = "It is a dismantled eyebot, hollowed out to accommodate for a humanoid head."
 	icon_state = "eyebot"
 	item_state = "eyebot"
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
-	armor = list("melee" = 40, "bullet" = 25, "laser" = 15, "energy" = 10, "bomb" = 16, "bio" = 20, "rad" = 0, "fire" = 50, "acid" = 0)
 	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	strip_delay = 50
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
 	dynamic_hair_suffix = ""
 	dynamic_fhair_suffix = ""
-
-/obj/item/clothing/head/helmet/f13/eyebot/reinforced
-	name = "reinforced eyebot helmet"
-	armor = list("melee" = 45, "bullet" = 30, "laser" = 20, "energy" = 15, "bomb" = 16, "bio" = 20, "rad" = 0, "fire" = 50, "acid" = 0)
 
 /obj/item/clothing/head/helmet/f13/raider/psychotic
 	name = "psycho-tic raider helmet"
@@ -365,10 +350,28 @@
 	flags_cover = HEADCOVERSEYES
 	flags_inv = HIDEEARS|HIDEEYES|HIDEHAIR
 
-/obj/item/clothing/head/helmet/f13/raider/psychotic/reinforced
+/obj/item/clothing/head/helmet/f13/raider/r
+	name = "reinforced base raider helmet"
+	armor = list("melee" = 40, "bullet" = 35, "laser" = 35, "energy" = 35, "bomb" = 40, "bio" = 20, "rad" = 0, "fire" = 50, "acid" = 0)
+
+/obj/item/clothing/head/helmet/f13/raider/r/supafly
+	name = "reinforced supa-fly raider helmet"
+
+/obj/item/clothing/head/helmet/f13/raider/r/arclight
+	name = "reinforced raider arclight helmet"
+
+/obj/item/clothing/head/helmet/f13/raider/r/blastmaster
+	name = "reinforced raider blastmaster helmet"
+
+/obj/item/clothing/head/helmet/f13/raider/r/yankee
+	name = "reinforced yankee raider helmet"
+
+/obj/item/clothing/head/helmet/f13/raider/r/eyebot
+	name = "reinforced eyebot helmet"
+
+/obj/item/clothing/head/helmet/f13/raider/r/psychotic/
 	name = "reinforced psycho-tic raider helmet"
 	desc = "A leather skullcap with tufts of Yaoguai hair sticking from each side."
-	armor = list("melee" = 45, "bullet" = 30, "laser" = 20, "energy" = 5, "bomb" = 16, "bio" = 20, "rad" = 0, "fire" = 50, "acid" = 0)
 
 //Combat armor
 
