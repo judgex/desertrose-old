@@ -10,7 +10,7 @@
 
 /obj/structure/timeddoor/Initialize()
 	. = ..()
-	addtimer(CALLBACK(src, .proc/timeddeletedoor), 15000) // 15000 = 25 minutes, 21000 = 35 minutes
+	addtimer(CALLBACK(src, .proc/timeddeletedoor), 18000) // 15000 = 25 minutes, 21000 = 35 minutes
 
 /obj/structure/timeddoor/proc/timeddeletedoor()
 	playsound(loc, 'sound/f13machines/doorhidden_open.ogg', 50, TRUE, -1)
