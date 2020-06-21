@@ -27,4 +27,4 @@
 	icon_state = "Bannana Yucca"
 	icon = 'icons/obj/hydroponics/harvest.dmi'
 	bitesize = 100
-	wine_power = 40
+	distill_reagent = "yuccajuice"

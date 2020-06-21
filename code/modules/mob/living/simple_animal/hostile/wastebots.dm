@@ -15,8 +15,7 @@
 	melee_damage_lower = 28 //halved this on req
 	melee_damage_upper = 28 //as above
 	robust_searching = 1
-	attacktext = "slaps"
-	attack_sound = 'sound/weapons/circsawhit.ogg'
+	attacktext = "saws"
 	faction = list("wastebot")
 	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
 	minbodytemp = 0
@@ -26,6 +25,17 @@
 	deathmessage = "blows apart!"
 	var/isrobot = 1
 	loot = list(/obj/effect/decal/cleanable/robot_debris, /obj/item/stack/crafting/electronicparts/three)
+	taunt_chance = 30
+
+	emote_taunt_sound = list('sound/f13npc/handy/taunt1.ogg', 'sound/f13npc/handy/taunt2.ogg')
+	emote_taunt = list("raises a saw")
+
+	aggrosound = list('sound/f13npc/handy/aggro1.ogg', 'sound/f13npc/handy/aggro2.ogg')
+	idlesound = list('sound/f13npc/handy/idle1.wav', 'sound/f13npc/handy/idle2.ogg', 'sound/f13npc/handy/idle3.ogg')
+
+	death_sound = 'sound/f13npc/handy/robo_death.ogg'
+	attack_sound = 'sound/f13npc/handy/attack.wav'
+
 
 /mob/living/simple_animal/hostile/handy/Initialize()
 	. = ..()
@@ -52,6 +62,13 @@
 	check_friendly_fire = TRUE
 	loot = list(/obj/effect/decal/cleanable/robot_debris, /obj/item/stack/crafting/electronicparts/three, /obj/item/stock_parts/cell/ammo/mfc)
 
+	emote_taunt_sound = list('sound/f13npc/gutsy/taunt1.ogg', 'sound/f13npc/gutsy/taunt2.ogg', 'sound/f13npc/gutsy/taunt3.ogg', 'sound/f13npc/gutsy/taunt4.ogg')
+	emote_taunt = list("raises a flamer")
+
+	aggrosound = list('sound/f13npc/gutsy/aggro1.ogg', 'sound/f13npc/gutsy/aggro2.ogg', 'sound/f13npc/gutsy/aggro3.ogg', 'sound/f13npc/gutsy/aggro4.ogg', 'sound/f13npc/gutsy/aggro5.ogg', 'sound/f13npc/gutsy/aggro6.ogg')
+	idlesound = list('sound/f13npc/gutsy/idle1.ogg', 'sound/f13npc/gutsy/idle2.ogg', 'sound/f13npc/gutsy/idle3.ogg')
+
+
 /mob/living/simple_animal/hostile/handy/gutsy/AttackingTarget()
 	. = ..()
 
@@ -77,6 +94,12 @@
 	faction = list("wastebot")
 	check_friendly_fire = TRUE
 	loot = list(/obj/effect/decal/cleanable/robot_debris, /obj/item/stack/crafting/electronicparts/five)
+
+	emote_taunt_sound = list('sound/f13npc/protectron/taunt1.ogg', 'sound/f13npc/protectron/taunt2.ogg', 'sound/f13npc/protectron/taunt3.ogg')
+	emote_taunt = list("raises a laser")
+
+	aggrosound = list('sound/f13npc/protectron/aggro1.ogg', 'sound/f13npc/protectron/aggro2.ogg', 'sound/f13npc/protectron/aggro3.ogg', 'sound/f13npc/protectron/aggro4.ogg')
+	idlesound = list('sound/f13npc/protectron/idle1.ogg', 'sound/f13npc/protectron/idle2.ogg', 'sound/f13npc/protectron/idle3.ogg', 'sound/f13npc/protectron/idle4.ogg',)
 
 /mob/living/simple_animal/pet/dog/protectron //Not an actual dog
 	name = "Trading Protectron"
@@ -123,6 +146,14 @@
 	faction = list("wastebot")
 	check_friendly_fire = TRUE
 	loot = list(/obj/effect/decal/cleanable/robot_debris, /obj/item/stack/crafting/electronicparts/five, /obj/item/stock_parts/cell/ammo/mfc)
+	var/warned = FALSE
+
+	emote_taunt_sound = list('sound/f13npc/sentry/taunt1.ogg', 'sound/f13npc/sentry/taunt2.ogg', 'sound/f13npc/sentry/taunt3.ogg', 'sound/f13npc/sentry/taunt4.ogg', 'sound/f13npc/sentry/taunt5.ogg', 'sound/f13npc/sentry/taunt6.ogg')
+	emote_taunt = list("spins its barrels")
+
+	aggrosound = list('sound/f13npc/sentry/aggro1.ogg', 'sound/f13npc/sentry/aggro2.ogg', 'sound/f13npc/sentry/aggro3.ogg', 'sound/f13npc/sentry/aggro4.ogg', 'sound/f13npc/sentry/aggro5.ogg')
+	idlesound = list('sound/f13npc/sentry/idle1.ogg', 'sound/f13npc/sentry/idle2.ogg', 'sound/f13npc/sentry/idle3.ogg', 'sound/f13npc/sentry/idle4.ogg')
+
 
 /obj/item/projectile/beam/laser/pistol/ultraweak
 	damage = 10 //quantity over quality
@@ -151,16 +182,19 @@
 	explosion(src,1,2,4,4)
 	qdel(src)
 
+/mob/living/simple_animal/hostile/handy/sentrybot/Life()
+	..()
+	if (!warned)
+		if (health <= 50)
+			warned = TRUE
+			playsound(src, 'sound/f13npc/sentry/systemfailure.ogg', 75, FALSE)
+
 /mob/living/simple_animal/hostile/handy/sentrybot/death()
 	do_sparks(3, TRUE, src)
 	for(var/i in 1 to 3)
 		addtimer(CALLBACK(src, .proc/do_death_beep), i * 1 SECONDS)
 	addtimer(CALLBACK(src, .proc/self_destruct), 4 SECONDS)
 	return ..()
-
-/mob/living/simple_animal/hostile/handy/sentrybot/Aggro()
-	. = ..()
-	summon_backup(15)
 
 /mob/living/simple_animal/hostile/handy/assaultron
 	name = "assaultron"

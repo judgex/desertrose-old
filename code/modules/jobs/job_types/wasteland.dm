@@ -145,7 +145,7 @@ Raider
 	total_positions = 10
 	spawn_positions = 10
 	description = "You are an undesirable figure of some kind- perhaps a corrupt official, or a cannibalistic bartender, or a devious conman, to name a few examples. You have more freedom than anyone else in the wastes, and are not bound by the same moral code as others, but though you may only be interested in self-gain, you still have a responsibility to make your time here interesting, fun, and engaging for others- this means that whatever path you pursue should be more nuanced and flavorful than simple highway robbery or slavery. (Adminhelp if you require help setting up your character for the round.)"
-	supervisors = "your desire to make things interesting and fun"
+	supervisors = "Your desire to make things interesting and fun"
 	selection_color = "#ff4747"
 
 	outfit = /datum/outfit/job/wasteland/f13raider
@@ -188,11 +188,11 @@ Raider
 		/obj/item/clothing/under/pants/f13/ghoul, \
 		/obj/item/clothing/under/jabroni)
 	suit = pick(
-		/obj/item/clothing/suit/armor/f13/raider,\
+		/obj/item/clothing/suit/armor/f13/raider/supafly,\
 		/obj/item/clothing/suit/armor/f13/raider/yankee, \
 		/obj/item/clothing/suit/armor/f13/raider/sadist, \
 		/obj/item/clothing/suit/armor/f13/raider/blastmaster, \
-		/obj/item/clothing/suit/armor/f13/badlands, \
+		/obj/item/clothing/suit/armor/f13/raider/badlands, \
 		/obj/item/clothing/suit/armor/f13/raider/painspike)
 	if(prob(10))
 		mask = pick(
@@ -205,7 +205,7 @@ Raider
 	head = pick(
 		/obj/item/clothing/head/sombrero,\
 		/obj/item/clothing/head/helmet/f13/raider,\
-		/obj/item/clothing/head/helmet/f13/eyebot,\
+		/obj/item/clothing/head/helmet/f13/raider/eyebot,\
 		/obj/item/clothing/head/helmet/f13/raider/arclight,\
 		/obj/item/clothing/head/helmet/f13/raider/blastmaster,\
 		/obj/item/clothing/head/helmet/f13/raider/yankee,\
@@ -241,7 +241,7 @@ Raider
 
 /datum/outfit/loadout/raider_supafly
 	name = "Supa-fly"
-	suit = /obj/item/clothing/suit/armor/f13/raider
+	suit = /obj/item/clothing/suit/armor/f13/raider/supafly
 	head = /obj/item/clothing/head/helmet/f13/raider
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/mini_uzi=1,
@@ -285,7 +285,7 @@ Raider
 
 /datum/outfit/loadout/raider_badlands
 	name = "Badlands"
-	suit = /obj/item/clothing/suit/armor/f13/badlands
+	suit = /obj/item/clothing/suit/armor/f13/raider/badlands
 	head = /obj/item/clothing/head/helmet/f13/fiend
 	backpack_contents = list(
 		/obj/item/restraints/legcuffs/bola/tactical=1,
@@ -311,7 +311,7 @@ Raider
 	suit = /obj/item/clothing/suit/armor/f13/exile/bosexile
 	id = /obj/item/card/id/rusted/brokenholodog
 	backpack_contents = list(
-		/obj/item/gun/energy/laser/wattz=1,
+		/obj/item/gun/energy/laser/pistol=1,
 		/obj/item/stock_parts/cell/ammo/ec=2)
 
 /datum/outfit/loadout/raider_ncr

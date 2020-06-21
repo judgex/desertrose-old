@@ -213,7 +213,7 @@
 				""
 				)
 	var/loot3 = list(
-				/obj/item/clothing/suit/armor/f13/raider,
+				/obj/item/clothing/suit/armor/f13/raider/supafly,
 				/obj/item/clothing/head/helmet/f13/raider
 				)
 	var/loot4 = list(
@@ -229,7 +229,7 @@
 				/obj/item/clothing/head/helmet/f13/raider/yankee
 				)
 	var/loot7 = list(
-				/obj/item/clothing/suit/armor/f13/badlands,
+				/obj/item/clothing/suit/armor/f13/raider/badlands,
 				/obj/item/clothing/head/helmet/f13/fiend
 				)
 	var/loot8 = list(
@@ -237,7 +237,7 @@
 				/obj/item/clothing/head/helmet/f13/raider/psychotic
 				)
 	var/loot9 = list(
-				/obj/item/clothing/suit/armor/f13/raider,
+				/obj/item/clothing/suit/armor/f13/raider/supafly,
 				/obj/item/clothing/head/helmet/f13/raider
 				)
 	var/loot10 = list(
@@ -369,7 +369,7 @@
     loot = list(
             /obj/effect/spawner/lootdrop/f13/armor/tier1 = 80,
             /obj/effect/spawner/lootdrop/f13/armor/tier2 = 19,
-            /obj/effect/spawner/lootdrop/f13/armor/tier3 = 1,
+            /obj/effect/spawner/lootdrop/f13/armor/tier3 = 1
             )
 
 /obj/effect/spawner/lootdrop/f13/armor/random_high
@@ -522,6 +522,8 @@
 				/obj/item/instrument/saxophone,
 				/obj/item/claymore/machete/pipe,
 				/obj/item/kitchen/knife/cosmicdirty,
+				/obj/item/melee/unarmed/brass,
+				/obj/item/melee/unarmed/brass/spiked,
 				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/melee/tier3 //TIER 3 MELEE WEAPON
@@ -538,6 +540,9 @@
 				/obj/item/claymore/machete,
 				/obj/item/claymore/machete/reinforced,
 				/obj/item/shield/legion/buckler,
+				/obj/item/melee/unarmed/sappers,
+				/obj/item/melee/unarmed/tigerclaw,
+				/obj/item/melee/unarmed/bladed,
 				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/melee/tier4 //TIER 4 MELEE WEAPON
@@ -548,7 +553,10 @@
 				/obj/item/twohanded/fireaxe,
 				/obj/item/twohanded/sledgehammer,
 				/obj/item/twohanded/fireaxe/bmprsword,
-				/obj/item/shield/riot
+				/obj/item/shield/riot,
+				/obj/item/melee/unarmed/lacerator,
+				/obj/item/melee/unarmed/maceglove,
+				/obj/item/melee/unarmed/punchdagger,
 				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/melee/tier5 //TIER 5 MELEE WEAPON
@@ -564,7 +572,9 @@
 				/obj/item/melee/transforming/energy/axe,
 				/obj/item/gun/ballistic/revolver/ballisticfist,
 				/obj/item/twohanded/sledgehammer/supersledge,
-				/obj/item/shishkebabpack
+				/obj/item/shishkebabpack,
+				/obj/item/melee/unarmed/deathclawgauntlet,
+				/obj/item/melee/powerfist/moleminer,
 				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/melee/random

@@ -583,7 +583,7 @@
 
 /obj/effect/mob_spawn/human/corpse/raider/tribal
 	uniform = /obj/item/clothing/under/f13/rag
-	suit = /obj/item/clothing/suit/armor/f13/raider/sadist/reinforced
+	suit = /obj/item/clothing/suit/armor/f13/raider/r/sadist
 	shoes = /obj/item/clothing/shoes/f13/rag
 	//gloves = /obj/item/clothing/gloves/f13/doom
 	//radio = /obj/item/device/radio/headset
@@ -608,7 +608,7 @@
 
 /obj/effect/mob_spawn/human/corpse/raider/baseball
 	uniform = /obj/item/clothing/under/f13/rag
-	suit = /obj/item/clothing/suit/armor/f13/raider/yankee/reinforced
+	suit = /obj/item/clothing/suit/armor/f13/raider/r/yankee
 	shoes = /obj/item/clothing/shoes/f13/rag
 	//gloves = /obj/item/clothing/gloves/f13/doom
 	//radio = /obj/item/device/radio/headset
@@ -681,7 +681,7 @@
 	if(stat)
 		return
 	var/chosen_sound = pick(abom_sounds)
-	playsound(src, chosen_sound, 80, TRUE)
+	playsound(src, chosen_sound, 50, TRUE)
 
 /mob/living/simple_animal/hostile/abomination/Life()
 	..()
@@ -689,7 +689,7 @@
 		return
 	if(prob(10))
 		var/chosen_sound = pick(abom_sounds)
-		playsound(src, chosen_sound, 100, TRUE)
+		playsound(src, chosen_sound, 70, TRUE)
 
 /mob/living/simple_animal/hostile/abomhorror
 	name = "failed experiment"

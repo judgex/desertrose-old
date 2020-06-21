@@ -403,14 +403,14 @@
 	return ..()
 
 /obj/item/reagent_containers/food/drinks/soda_cans/cola
-	name = "Coca-Cola"
-	desc = "The best around."
+	name = "off brand cola"
+	desc = "A faded pre-war can of just cola, unsweetened and fizzy."
 	icon_state = "cola"
 	list_reagents = list("cola" = 30)
 	foodtype = SUGAR
 
 /obj/item/reagent_containers/food/drinks/soda_cans/tonic
-	name = "Tonic water"
+	name = "tonic water"
 	desc = "A faded pre-war can of tonic water. A barely visible slogan sticker states - Wheres the GIN?."
 	icon_state = "tonic"
 	list_reagents = list("tonic" = 50)
@@ -491,17 +491,17 @@
 
 /obj/item/reagent_containers/food/drinks/soda_cans/f13nukacola
 	name = "Nuka-Cola"
-	desc = "The most popular flavored soft drink in the United States before the Great War.<br>It was preserved in a fairly pristine state."
+	desc = "The most popular flavored soft drink in the United States before the Great War."
 	icon = 'icons/obj/f13vending.dmi'
 	icon_state = "nukacola"
-	list_reagents = list("cola" = 20, "nuka_cola" = 1, "radium" = 1)
+	list_reagents = list("nuka_cola" = 25, "radium" = 5)
 	foodtype = SUGAR
 	bottle = TRUE
 	isGlass = TRUE
 
 /obj/item/reagent_containers/food/drinks/soda_cans/f13nukacola/radioactive
 	desc = "The most popular flavored soft drink in the United States before the Great War.<br>It was preserved in a fairly pristine state.<br>The bottle is slightly glowing."
-	list_reagents = list("cola" = 15, "radium" = 5)
+	list_reagents = list("nuka_cola" = 15, "radium" = 5)
 
 /obj/item/reagent_containers/food/drinks/soda_cans/sunset
 	name = "Sunset Sarsparilla"
