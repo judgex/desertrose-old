@@ -1,5 +1,3 @@
-GLOBAL_VAR_INIT(timeddoordelete, rand(15000, 21000))
-
 /obj/structure/timeddoor
 	name = "mysterious door"
 	desc = "A weird clicking can be heard coming from within the door"
@@ -9,12 +7,10 @@ GLOBAL_VAR_INIT(timeddoordelete, rand(15000, 21000))
 	anchored = TRUE
 	opacity = TRUE
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
-	// NOTE: Changing this var does nothing! However, it does give us the opportunity to know how much time it started with.
-	var/timedeletion = GLOB.timeddoordelete
 
 /obj/structure/timeddoor/Initialize()
 	. = ..()
-	addtimer(CALLBACK(src, .proc/timeddeletedoor), timedeletion) // 15000 = 25 minutes, 21000 = 35 minutes
+	addtimer(CALLBACK(src, .proc/timeddeletedoor), 15000) // 15000 = 25 minutes, 21000 = 35 minutes
 
 /obj/structure/timeddoor/proc/timeddeletedoor()
 	playsound(loc, 'sound/f13machines/doorhidden_open.ogg', 50, TRUE, -1)
