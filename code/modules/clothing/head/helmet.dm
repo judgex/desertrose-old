@@ -316,7 +316,7 @@
 	dynamic_hair_suffix = ""
 	visor_flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE
 
-	/obj/item/clothing/head/helmet/f13/raider/blastmaster
+/obj/item/clothing/head/helmet/f13/raider/blastmaster
 	name = "raider blastmaster helmet"
 	icon_state = "blastmaster"
 	item_state = "blastmaster"
