@@ -383,7 +383,7 @@
 	icon_state = "badlands"
 	item_state = "badlands"
 
-	/obj/item/clothing/suit/armor/f13/raider/painspike
+/obj/item/clothing/suit/armor/f13/raider/painspike
 	name = "painspike raider armor"
 	desc = "A particularly unhuggable armor, even by raider standards."
 	icon_state = "painspike"

@@ -229,7 +229,7 @@
 
 /datum/crafting_recipe/ncrexile_reinforced
 	name = "reinforced NCR deserter armor"
-	/obj/item/clothing/suit/armor/f13/exile/r/ncr
+	result = /obj/item/clothing/suit/armor/f13/exile/r/ncr
 	reqs = list(/obj/item/clothing/suit/armor/f13/exile/ncrexile = 1,
 				/obj/item/stack/crafting/goodparts = 2,
 				/obj/item/stack/sheet/metal = 5)
