@@ -32,7 +32,7 @@
 
 /mob/living/simple_animal/hostile/spawner/Life()
 	. = ..()
-	if(!.) // dead
+	if(!.) //dead
 		return
 	spawn_mob()
 

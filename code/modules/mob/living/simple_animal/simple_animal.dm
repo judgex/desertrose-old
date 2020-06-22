@@ -593,8 +593,8 @@
 		SSidlenpcpool.idle_mobs_by_zlevel[old_z] -= src
 		toggle_ai(initial(AIStatus))
 
-/mob/living/simple_animal/Life() //Generates idle sounds if there are any.
-	..()
+/mob/living/simple_animal/Life()
+	. = ..()
 	if(stat)
 		return
 	if (idlesound)
