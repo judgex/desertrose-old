@@ -32,8 +32,6 @@
 
 /mob/living/simple_animal/hostile/spawner/Life()
 	. = ..()
-	if(!.) // dead
-		return
 	spawn_mob()
 
 /mob/living/simple_animal/hostile/spawner/proc/spawn_mob()
