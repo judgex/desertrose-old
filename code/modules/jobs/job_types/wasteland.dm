@@ -188,11 +188,11 @@ Raider
 		/obj/item/clothing/under/pants/f13/ghoul, \
 		/obj/item/clothing/under/jabroni)
 	suit = pick(
-		/obj/item/clothing/suit/armor/f13/raider,\
+		/obj/item/clothing/suit/armor/f13/raider/supafly,\
 		/obj/item/clothing/suit/armor/f13/raider/yankee, \
 		/obj/item/clothing/suit/armor/f13/raider/sadist, \
 		/obj/item/clothing/suit/armor/f13/raider/blastmaster, \
-		/obj/item/clothing/suit/armor/f13/badlands, \
+		/obj/item/clothing/suit/armor/f13/raider/badlands, \
 		/obj/item/clothing/suit/armor/f13/raider/painspike)
 	if(prob(10))
 		mask = pick(
@@ -205,7 +205,7 @@ Raider
 	head = pick(
 		/obj/item/clothing/head/sombrero,\
 		/obj/item/clothing/head/helmet/f13/raider,\
-		/obj/item/clothing/head/helmet/f13/eyebot,\
+		/obj/item/clothing/head/helmet/f13/raider/eyebot,\
 		/obj/item/clothing/head/helmet/f13/raider/arclight,\
 		/obj/item/clothing/head/helmet/f13/raider/blastmaster,\
 		/obj/item/clothing/head/helmet/f13/raider/yankee,\
@@ -241,7 +241,7 @@ Raider
 
 /datum/outfit/loadout/raider_supafly
 	name = "Supa-fly"
-	suit = /obj/item/clothing/suit/armor/f13/raider
+	suit = /obj/item/clothing/suit/armor/f13/raider/supafly
 	head = /obj/item/clothing/head/helmet/f13/raider
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/mini_uzi=1,
@@ -285,7 +285,7 @@ Raider
 
 /datum/outfit/loadout/raider_badlands
 	name = "Badlands"
-	suit = /obj/item/clothing/suit/armor/f13/badlands
+	suit = /obj/item/clothing/suit/armor/f13/raider/badlands
 	head = /obj/item/clothing/head/helmet/f13/fiend
 	backpack_contents = list(
 		/obj/item/restraints/legcuffs/bola/tactical=1,

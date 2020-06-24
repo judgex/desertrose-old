@@ -86,8 +86,8 @@
 
 /datum/crafting_recipe/supaflyhelm_reinforced
 	name = "reinforced supafly helmet"
-	result = /obj/item/clothing/head/helmet/f13/raider/reinforced
-	reqs = list(/obj/item/clothing/head/helmet/f13/raider = 1,
+	result = /obj/item/clothing/head/helmet/f13/raider/r/supafly
+	reqs = list(/obj/item/clothing/head/helmet/f13/raider/supafly = 1,
 				/obj/item/stack/crafting/goodparts = 2,
 				/obj/item/stack/sheet/metal = 5)
 	tools = list(TOOL_WORKBENCH)
@@ -97,8 +97,8 @@
 
 /datum/crafting_recipe/supafly_reinforced
 	name = "reinforced supafly armor"
-	result = /obj/item/clothing/suit/armor/f13/raider/reinforced
-	reqs = list(/obj/item/clothing/suit/armor/f13/raider = 1,
+	result = /obj/item/clothing/suit/armor/f13/raider/r/supafly
+	reqs = list(/obj/item/clothing/suit/armor/f13/raider/supafly = 1,
 				/obj/item/stack/crafting/goodparts = 2,
 				/obj/item/stack/sheet/metal = 5)
 	tools = list(TOOL_WORKBENCH)
@@ -108,7 +108,7 @@
 
 /datum/crafting_recipe/yankeehelm_reinforced
 	name = "reinforced yankee helmet"
-	result = /obj/item/clothing/head/helmet/f13/raider/yankee/reinforced
+	result = /obj/item/clothing/head/helmet/f13/raider/r/yankee/
 	reqs = list(/obj/item/clothing/head/helmet/f13/raider/yankee = 1,
 				/obj/item/stack/crafting/goodparts = 2,
 				/obj/item/stack/sheet/metal = 5)
@@ -119,7 +119,7 @@
 
 /datum/crafting_recipe/yankee_reinforced
 	name = "reinforced yankee armor"
-	result = /obj/item/clothing/suit/armor/f13/raider/yankee/reinforced
+	result = /obj/item/clothing/suit/armor/f13/raider/r/yankee
 	reqs = list(/obj/item/clothing/suit/armor/f13/raider/yankee = 1,
 				/obj/item/stack/crafting/goodparts = 2,
 				/obj/item/stack/sheet/metal = 5)
@@ -130,7 +130,7 @@
 
 /datum/crafting_recipe/blasterhelm_reinforced
 	name = "reinforced blaster helmet"
-	result = /obj/item/clothing/head/helmet/f13/raider/blastmaster/reinforced
+	result = /obj/item/clothing/head/helmet/f13/raider/r/blastmaster
 	reqs = list(/obj/item/clothing/head/helmet/f13/raider/blastmaster = 1,
 				/obj/item/stack/crafting/goodparts = 2,
 				/obj/item/stack/sheet/metal = 5)
@@ -141,7 +141,7 @@
 
 /datum/crafting_recipe/blaster_reinforced
 	name = "reinforced blaster armor"
-	result = /obj/item/clothing/suit/armor/f13/raider/blastmaster/reinforced
+	result = /obj/item/clothing/suit/armor/f13/raider/r/blastmaster
 	reqs = list(/obj/item/clothing/suit/armor/f13/raider/blastmaster = 1,
 				/obj/item/stack/crafting/goodparts = 2,
 				/obj/item/stack/sheet/metal = 5)
@@ -152,7 +152,7 @@
 
 /datum/crafting_recipe/sadisthelm_reinforced
 	name = "reinforced sadist helmet"
-	result = /obj/item/clothing/head/helmet/f13/raider/arclight/reinforced
+	result = /obj/item/clothing/head/helmet/f13/raider/r/arclight
 	reqs = list(/obj/item/clothing/head/helmet/f13/raider/arclight = 1,
 				/obj/item/stack/crafting/goodparts = 2,
 				/obj/item/stack/sheet/metal = 5)
@@ -163,7 +163,7 @@
 
 /datum/crafting_recipe/sadist_reinforced
 	name = "reinforced sadist armor"
-	result = /obj/item/clothing/suit/armor/f13/raider/sadist/reinforced
+	result = /obj/item/clothing/suit/armor/f13/raider/r/sadist
 	reqs = list(/obj/item/clothing/suit/armor/f13/raider/sadist = 1,
 				/obj/item/stack/crafting/goodparts = 2,
 				/obj/item/stack/sheet/metal = 5)
@@ -185,8 +185,8 @@
 
 /datum/crafting_recipe/badlands_reinforced
 	name = "reinforced badlands armor"
-	result = /obj/item/clothing/suit/armor/f13/badlands/reinforced
-	reqs = list(/obj/item/clothing/suit/armor/f13/badlands = 1,
+	result = /obj/item/clothing/suit/armor/f13/raider/r/badlands
+	reqs = list(/obj/item/clothing/suit/armor/f13/raider/badlands = 1,
 				/obj/item/stack/crafting/goodparts = 2,
 				/obj/item/stack/sheet/metal = 5)
 	tools = list(TOOL_WORKBENCH)
@@ -194,10 +194,9 @@
 	category = CAT_CLOTHING
 	subcategory = CAT_CLOTHING
 
-
 /datum/crafting_recipe/painspikehelm_reinforced
 	name = "reinforced painspike helmet"
-	result = /obj/item/clothing/head/helmet/f13/raider/psychotic/reinforced
+	result = /obj/item/clothing/head/helmet/f13/raider/r/psychotic
 	reqs = list(/obj/item/clothing/head/helmet/f13/raider/psychotic = 1,
 				/obj/item/stack/crafting/goodparts = 2,
 				/obj/item/stack/sheet/metal = 5)
@@ -208,7 +207,7 @@
 
 /datum/crafting_recipe/painspike_reinforced
 	name = "reinforced painspike armor"
-	result = /obj/item/clothing/suit/armor/f13/raider/painspike/reinforced
+	result = /obj/item/clothing/suit/armor/f13/raider/r/painspike
 	reqs = list(/obj/item/clothing/suit/armor/f13/raider/painspike = 1,
 				/obj/item/stack/crafting/goodparts = 2,
 				/obj/item/stack/sheet/metal = 5)
@@ -219,8 +218,8 @@
 
 /datum/crafting_recipe/iconoclast_reinforced
 	name = "reinforced iconoclast armor"
-	result = /obj/item/clothing/suit/armor/f13/raider/iconoclast/reinforced
-	reqs = list(/obj/item/clothing/suit/armor/f13/raider/iconoclast/ = 1,
+	result = /obj/item/clothing/suit/armor/f13/raider/r/iconoclast
+	reqs = list(/obj/item/clothing/suit/armor/f13/raider/iconoclast = 1,
 				/obj/item/stack/crafting/goodparts = 2,
 				/obj/item/stack/sheet/metal = 5)
 	tools = list(TOOL_WORKBENCH)
@@ -230,8 +229,8 @@
 
 /datum/crafting_recipe/ncrexile_reinforced
 	name = "reinforced NCR deserter armor"
-	result = /obj/item/clothing/suit/armor/f13/exilereinforced
-	reqs = list(/obj/item/clothing/suit/armor/f13/exile = 1,
+	result = /obj/item/clothing/suit/armor/f13/exile/r/ncr
+	reqs = list(/obj/item/clothing/suit/armor/f13/exile/ncrexile = 1,
 				/obj/item/stack/crafting/goodparts = 2,
 				/obj/item/stack/sheet/metal = 5)
 	tools = list(TOOL_WORKBENCH)
@@ -241,7 +240,7 @@
 
 /datum/crafting_recipe/legion_reinforced
 	name = "reinforced punished Legion armor"
-	result = /obj/item/clothing/suit/armor/f13/exilereinforced/legion
+	result = /obj/item/clothing/suit/armor/f13/exile/r/legion
 	reqs = list(/obj/item/clothing/suit/armor/f13/exile/legexile = 1,
 				/obj/item/stack/crafting/goodparts = 2,
 				/obj/item/stack/sheet/metal = 5)
@@ -252,7 +251,7 @@
 
 /datum/crafting_recipe/bos_reinforced
 	name = "reinforced BoS exile armor"
-	result = /obj/item/clothing/suit/armor/f13/exilereinforced/bos
+	result = /obj/item/clothing/suit/armor/f13/exile/r/bos
 	reqs = list(/obj/item/clothing/suit/armor/f13/exile/bosexile = 1,
 				/obj/item/stack/crafting/goodparts = 2,
 				/obj/item/stack/sheet/metal = 5)

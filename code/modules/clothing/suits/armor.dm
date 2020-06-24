@@ -345,56 +345,43 @@
     color = "#625E5B"
 
 /obj/item/clothing/suit/armor/f13/raider
+	name = "base raider armor"
+	desc = "for testing"
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
+	armor = list("melee" = 40, "bullet" = 35, "laser" = 35, "energy" = 35, "bomb" = 30, "bio" = 0, "rad" = 0, "fire" = 25, "acid" = 25)
+	strip_delay = 40
+
+/obj/item/clothing/suit/armor/f13/raider/supafly
 	name = "supa-fly raider armor"
 	desc = "Fabulous mutant powers were revealed to me the day I held aloft my bumper sword and said...<br>BY THE POWER OF NUKA-COLA, I AM RAIDER MAN!"
 	icon_state = "supafly"
 	item_state = "supafly"
-	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	armor = list("melee" = 30, "bullet" = 30, "laser" = 20, "energy" = 20, "bomb" = 30, "bio" = 0, "rad" = 0, "fire" = 25, "acid" = 25)
-	strip_delay = 40
-
-/obj/item/clothing/suit/armor/f13/raider/reinforced
-	name = "reinforced supa-fly raider armor"
-	armor = list("melee" = 40, "bullet" = 40, "laser" = 35, "energy" = 25, "bomb" = 35, "bio" = 0, "rad" = 0, "fire" = 30, "acid" = 30)
 
 /obj/item/clothing/suit/armor/f13/raider/sadist
 	name = "sadist raider armor"
+	desc = "a bunch of metal chaps adorned with severed hands at the waist with a leather plate worn on the left shoulder"
 	icon_state = "sadist"
-
-/obj/item/clothing/suit/armor/f13/raider/sadist/reinforced
-	name = "reinforced sadist raider armor"
-	icon_state = "sadist"
-	armor = list("melee" = 40, "bullet" = 40, "laser" = 35, "energy" = 25, "bomb" = 35, "bio" = 0, "rad" = 0, "fire" = 30, "acid" = 30)
+	item_state = "sadist"
 
 /obj/item/clothing/suit/armor/f13/raider/blastmaster
 	name = "blastmaster raider armor"
+	desc = "A bunch of leather straped around the torso that support a tire worn on the left shoulder. "
 	icon_state = "blastmaster"
+	item_state = "blastmaster"
 	max_heat_protection_temperature = ARMOR_MAX_TEMP_PROTECT
 	flash_protect = 2
-
-/obj/item/clothing/suit/armor/f13/raider/blastmaster/reinforced
-	name = "reinforced blastmaster raider armor"
-	armor = list("melee" = 40, "bullet" = 40, "laser" = 35, "energy" = 25, "bomb" = 35, "bio" = 0, "rad" = 0, "fire" = 30, "acid" = 30)
 
 /obj/item/clothing/suit/armor/f13/raider/yankee
 	name = "yankee raider armor"
 	desc = "A set of armor made from football player protective wear. Together we play."
 	icon_state = "yankee"
 	item_state = "yankee"
-	strip_delay = 40
 
-/obj/item/clothing/suit/armor/f13/raider/yankee/reinforced
-	name = "reinforced yankee raider armor"
-	armor = list("melee" = 40, "bullet" = 40, "laser" = 35, "energy" = 25, "bomb" = 35, "bio" = 0, "rad" = 0, "fire" = 30, "acid" = 30)
-
-/obj/item/clothing/suit/armor/f13/badlands
+/obj/item/clothing/suit/armor/f13/raider/badlands
 	name = "badlands raider armor"
+	desc = "A leather top with a bandolier over it and a straps that cover the arms"
 	icon_state = "badlands"
 	item_state = "badlands"
-
-/obj/item/clothing/suit/armor/f13/badlands/reinforced
-	name = "reinforced badlands raider armor"
-	armor = list("melee" = 40, "bullet" = 40, "laser" = 35, "energy" = 25, "bomb" = 35, "bio" = 0, "rad" = 0, "fire" = 30, "acid" = 30)
 
 /obj/item/clothing/suit/armor/f13/raider/painspike
 	name = "painspike raider armor"
@@ -402,22 +389,59 @@
 	icon_state = "painspike"
 	item_state = "painspike"
 
-/obj/item/clothing/suit/armor/f13/raider/painspike/reinforced
-	name = "reinforced painspike raider armor"
-	armor = list("melee" = 40, "bullet" = 40, "laser" = 40, "energy" = 30, "bomb" = 35, "bio" = 0, "rad" = 0, "fire" = 30, "acid" = 30)
-
-
 /obj/item/clothing/suit/armor/f13/raider/iconoclast/
 	name = "iconoclast raider armor"
 	desc = "A rigid armor set that appears to be fashioned from a radiation suit, or a mining suit."
 	icon_state = "iconoclast"
 	item_state = "iconoclast"
 
-/obj/item/clothing/suit/armor/f13/raider/iconoclast/reinforced
-	name = "reinforced iconoclast raider armor"
-	desc = "A rigid armor set that appears to be fashioned from a radiation suit, or a mining suit. This suit has additional reinforcing"
-	armor = list("melee" = 40, "bullet" = 40, "laser" = 35, "energy" = 30, "bomb" = 35, "bio" = 0, "rad" = 0, "fire" = 30, "acid" = 30)
+/obj/item/clothing/suit/armor/f13/raider/r/
+	name = "reinforced base raider armor"
+	armor = list("melee" = 40, "bullet" = 45, "laser" = 45, "energy" = 45, "bomb" = 45, "bio" = 0, "rad" = 0, "fire" = 30, "acid" = 30)
 
+/obj/item/clothing/suit/armor/f13/raider/r/supafly
+	name = "reinforced supa-fly raider armor"
+	desc = "Fabulous mutant powers were revealed to me the day I held aloft my bumper sword and said...<br>BY THE POWER OF NUKA-COLA, I AM RAIDER MAN!"
+	icon_state = "supafly"
+	item_state = "supafly"
+
+/obj/item/clothing/suit/armor/f13/raider/r/sadist
+	name = "reinforced sadist raider armor"
+	desc = "a bunch of metal chaps adorned with severed hands at the waist with a leather plate worn on the left shoulder"
+	icon_state = "sadist"
+	item_state = "sadist"
+
+/obj/item/clothing/suit/armor/f13/raider/r/blastmaster
+	name = "reinforced blastmaster raider armor"
+	desc = "A bunch of leather straped around the torso that support a tire worn on the left shoulder. "
+	icon_state = "blastmaster"
+	item_state = "blastmaster"
+	max_heat_protection_temperature = ARMOR_MAX_TEMP_PROTECT
+	flash_protect = 2
+
+/obj/item/clothing/suit/armor/f13/raider/r/yankee
+	name = "yankee raider armor"
+	desc = "A set of armor made from football player protective wear. Together we play."
+	icon_state = "yankee"
+	item_state = "yankee"
+
+/obj/item/clothing/suit/armor/f13/raider/r/badlands
+	name = "badlands raider armor"
+	desc = "A leather top with a bandolier over it and a straps that cover the arms"
+	icon_state = "badlands"
+	item_state = "badlands"
+
+/obj/item/clothing/suit/armor/f13/raider/r/painspike
+	name = "painspike raider armor"
+	desc = "A particularly unhuggable armor, even by raider standards."
+	icon_state = "painspike"
+	item_state = "painspike"
+
+/obj/item/clothing/suit/armor/f13/raider/r/iconoclast/
+	name = "iconoclast raider armor"
+	desc = "A rigid armor set that appears to be fashioned from a radiation suit, or a mining suit."
+	icon_state = "iconoclast"
+	item_state = "iconoclast"
 
 /obj/item/clothing/suit/armor/f13/combat
 	name = "combat armor"
@@ -643,7 +667,7 @@
 
 /obj/item/clothing/suit/armor/f13/chitinarmor
 	name = "insect chitin armor"
-	desc = "A set of light armor made of insect chitin.<br> Tough and light, it provides some moderate protection from trauma while allowing the user to remain mobile and protected from the elements."
+	desc = "A set of light armor made of insect chitin. Tough and light, it provides some moderate protection from trauma while allowing the user to remain mobile and protected from the elements."
 	icon_state = "insect_armor"
 	item_state = "insect_armor"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
