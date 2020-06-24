@@ -84,6 +84,16 @@
 	category = CAT_CLOTHING
 	subcategory = CAT_CLOTHING
 
+/datum/crafting_recipe/combat_coat
+	name = "combat coat"
+	result = /obj/item/clothing/suit/armor/f13/leather_jacket/combat/coat
+	reqs = list(/obj/item/clothing/suit/armor/f13/leather_jacket/combat = 1,
+				/obj/item/stack/sheet/animalhide/deathclaw  = 1)
+	tools = list(TOOL_WORKBENCH)
+	time = 60
+	category = CAT_CLOTHING
+	subcategory = CAT_CLOTHING
+
 /datum/crafting_recipe/supaflyhelm_reinforced
 	name = "reinforced supafly helmet"
 	result = /obj/item/clothing/head/helmet/f13/raider/r/supafly
