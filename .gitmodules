@@ -1,0 +1,3 @@
+[submodule "interactions/lewd"]
+	path = interactions/lewd
+	url = git@gitlab.com:desert-rose-sm
