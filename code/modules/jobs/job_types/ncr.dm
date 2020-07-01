@@ -32,6 +32,12 @@ Colonel
 
 	outfit = /datum/outfit/job/ncr/f13colonel
 
+/datum/outfit/job/ncr/f13colonel/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	..()
+	if(visualsOnly)
+		return
+	H.add_trait(TRAIT_TECHNOPHREAK)
+
 /datum/outfit/job/ncr/f13colonel
 	name 		= "NCR Colonel"
 	jobtype 	= /datum/job/ncr/f13colonel
@@ -75,6 +81,12 @@ Captain
 	/datum/outfit/loadout/Captmarksman, //FN FAL and Deagle
 	/datum/outfit/loadout/Captheavy //Heavy service rifle and Deagle
 	)
+
+/datum/outfit/job/ncr/f13captain/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	..()
+	if(visualsOnly)
+		return
+	H.add_trait(TRAIT_TECHNOPHREAK)
 
 /datum/outfit/job/ncr/f13captain
 	name = "NCR Captain"
@@ -181,6 +193,12 @@ Lieutenant
 	/datum/outfit/loadout/ltcombat, //Mantle vest, 5.56 assault carbine
 	/datum/outfit/loadout/ltscout //Scout armor, .308 DKS sniper rifle
 	)
+
+/datum/outfit/job/ncr/f13lieutenant/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	..()
+	if(visualsOnly)
+		return
+	H.add_trait(TRAIT_TECHNOPHREAK)
 
 /datum/outfit/job/ncr/f13lieutenant
 	name		= "NCR Lieutenant"
@@ -351,7 +369,8 @@ Corporal
 		/obj/item/grenade/plastic=1,
 		/obj/item/stack/sheet/metal/fifty=2,
 		/obj/item/stack/sheet/glass/fifty=1,
-		/obj/item/ammo_box/magazine/m556/rifle=2
+		/obj/item/ammo_box/magazine/m556/rifle=2,
+		/obj/item/book/granter/trait/techno
 		)
 
 /datum/outfit/loadout/specscout
@@ -596,6 +615,7 @@ Recruit
 
 /datum/outfit/job/ncr/f13ncrcitizen
 	ears = /obj/item/radio/headset
+	id = /obj/item/card/id/dogtag/town
 	uniform = /obj/item/clothing/under/f13/caravaneer
 	shoes = /obj/item/clothing/shoes/f13/tan
 	head = /obj/item/clothing/head/f13/cowboy
@@ -637,7 +657,8 @@ Recruit
 		/obj/item/clothing/head/hardhat/dblue=1,
 		/obj/item/clothing/shoes/workboots=1,
 		/obj/item/storage/belt/utility/full/engi=1,
-		/obj/item/clothing/glasses/welding=1
+		/obj/item/clothing/glasses/welding=1,
+		/obj/item/book/granter/trait/techno
 		)
 
 /datum/outfit/loadout/offduty
@@ -678,6 +699,11 @@ Veteran Ranger
 	H.add_quirk("Lifegiver")
 	H.add_quirk("Iron Fist")
 
+/datum/outfit/job/ncr/f13vetranger/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	..()
+	if(visualsOnly)
+		return
+	H.add_trait(TRAIT_TECHNOPHREAK)
 
 /datum/outfit/job/ncr/f13vetranger
 	name = "NCR Veteran Ranger"
@@ -740,6 +766,11 @@ Ranger
 /datum/job/ncr/f13ranger/after_spawn(mob/living/carbon/human/H, mob/M)
 	H.add_quirk("Hard Yards")
 
+/datum/outfit/job/ncr/f13ranger/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	..()
+	if(visualsOnly)
+		return
+	H.add_trait(TRAIT_TECHNOPHREAK)
 
 /datum/outfit/job/ncr/f13ranger
 	name = "NCR Ranger"

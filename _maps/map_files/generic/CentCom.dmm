@@ -7924,7 +7924,7 @@
 "vh" = (
 /obj/structure/table/reinforced,
 /obj/item/reagent_containers/food/snacks/mint,
-/obj/item/reagent_containers/food/condiment/enzyme{
+/obj/item/reagent_containers/food/condiment/yeast{
 	pixel_y = 5
 	},
 /turf/open/floor/plasteel/vault{
@@ -13057,7 +13057,7 @@
 /turf/open/indestructible/ground/outside/desert,
 /area/f13/underground/mountain)
 "YJ" = (
-/obj/item/reagent_containers/food/condiment/enzyme,
+/obj/item/reagent_containers/food/condiment/yeast,
 /obj/item/reagent_containers/food/drinks/shaker,
 /obj/item/book/manual/barman_recipes,
 /obj/item/book/granter/action/drink_fling,

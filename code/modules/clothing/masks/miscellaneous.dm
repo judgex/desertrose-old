@@ -53,7 +53,7 @@
 	adjustmask(user)
 
 /obj/item/clothing/mask/fakemoustache
-	name = "fake moustache"
+	name = "moustache"
 	desc = "Warning: moustache is fake."
 	icon_state = "fake-moustache"
 	flags_inv = HIDEFACE

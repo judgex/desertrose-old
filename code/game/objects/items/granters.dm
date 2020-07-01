@@ -125,12 +125,12 @@
 	remarks = list("Always have a safe working environment...", "Don't give chems to strangers...", "Never drink any chemicals straight from the dispenser...", "Always wear your labcoat...", "Never forget your goggles...")
 
 /obj/item/book/granter/trait/techno
-	name = "Technology How-To Manual"
-	desc = "A book on how to operate advanced technology. It's pretty complicated."
+	name = "Craftsmanship Monthly"
+	desc = "A book on how to use advanced tools and production machinery. It's pretty complicated."
 	oneuse = TRUE
 	granted_trait = TRAIT_TECHNOPHREAK
-	traitname = "technology"
-	remarks = list("Try turning it off and on again...", "Don't forget to compile before pushing...", "Always include a changelog...", "It's not a bug, it's a feature...", "Couldn't replicate it on my machine...", "Always use tabs, never use spaces...", "A rubber duck is critical for fixing problems...")
+	traitname = "craftsman"
+	remarks = list("Try turning it off and on again...","Alwyas craft in good form.", "Dont forget PPE.", "Keep your mechanisms OILED.", "Stay organised.")
 
 /obj/item/book/granter/trait/pa_wear
 	name = "Advanced Armor and You"

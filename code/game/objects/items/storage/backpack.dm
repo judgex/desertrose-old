@@ -16,6 +16,7 @@
 	item_state = "backpack"
 	lefthand_file = 'icons/mob/inhands/equipment/backpack_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/backpack_righthand.dmi'
+	layer = ABOVE_MOB_LAYER
 	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = ITEM_SLOT_BACK	//ERROOOOO
 	resistance_flags = NONE

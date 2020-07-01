@@ -57,7 +57,7 @@
 // For base materials, see materials.dm
 
 /datum/export/stack/plasteel
-	cost = 155 // 2000u of plasma + 2000u of metal.
+	cost = 15 // 2000u of plasma + 2000u of metal.
 	message = "of plasteel"
 	export_types = list(/obj/item/stack/sheet/plasteel)
 
@@ -73,7 +73,7 @@
 	export_types = list(/obj/item/stack/sheet/bluespace_crystal)
 
 /datum/export/stack/wood
-	cost = 30
+	cost = 5
 	unit_name = "wood plank"
 	export_types = list(/obj/item/stack/sheet/mineral/wood)
 

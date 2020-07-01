@@ -1073,7 +1073,7 @@
 		"Uranium"				= IC_PINTYPE_NUMBER,
 		"Bananium"				= IC_PINTYPE_NUMBER,
 		"Titanium"		= IC_PINTYPE_NUMBER,
-		"Bluespace Mesh"		= IC_PINTYPE_NUMBER,
+		"Quantum Mesh"		= IC_PINTYPE_NUMBER,
 		"Biomass"				= IC_PINTYPE_NUMBER,
 		)
 	activators = list(

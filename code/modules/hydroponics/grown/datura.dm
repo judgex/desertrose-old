@@ -24,4 +24,4 @@
 	filling_color = "#FFA500"
 	bitesize_mod = 2
 	foodtype = VEGETABLES
-	distill_reagent = "daturatea"
+	juice_results = "daturatea"
