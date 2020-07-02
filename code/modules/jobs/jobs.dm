@@ -181,7 +181,7 @@ GLOBAL_LIST_INIT(vault_positions, list(
 ))
 
 GLOBAL_LIST_INIT(wasteland_positions, list(
-    "Raider",
+    "Outlaw",
     "Great Khan",
     "Preacher",
 	"Faithful",
