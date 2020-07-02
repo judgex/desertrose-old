@@ -1294,7 +1294,7 @@
 	cost = 10000
 	contains = list(/obj/item/banner/command/mundane,
 					/obj/item/banner/engineering/mundane,
-					/obj/item/banner/cargo,
+					/obj/item/banner/cargo/mundane,
 					/obj/item/banner/science/mundane,
 					/obj/item/banner/medical/mundane,
 					/obj/item/banner/security/mundane)
