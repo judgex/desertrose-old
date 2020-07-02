@@ -414,7 +414,6 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	smoketime = 0
 	chem_volume = 100
 	list_reagents = null
-	var/obj/item/reagent_containers/food/snacks/grown/G = null
 	var/packeditem = 0
 
 /obj/item/clothing/mask/cigarette/pipe/Initialize()
@@ -448,7 +447,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 
 /obj/item/clothing/mask/cigarette/pipe/attackby(obj/item/O, mob/user, params)
 	if(istype(O, /obj/item/reagent_containers/food/snacks/grown))
-		G = O
+		var/obj/item/reagent_containers/food/snacks/grown/G = O
 		if(!packeditem)
 			if(G.dry == 1)
 				to_chat(user, "<span class='notice'>You stuff [O] into [src].</span>")
@@ -476,10 +475,6 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	var/turf/location = get_turf(user)
 	if(lit)
 		user.visible_message("<span class='notice'>[user] puts out [src].</span>", "<span class='notice'>You put out [src].</span>")
-		if(packeditem)
-			name = "[G.name]-packed [initial(name)]"
-		else
-			name = "empty [initial(name)]"
 		lit = 0
 		icon_state = icon_off
 		item_state = icon_off
