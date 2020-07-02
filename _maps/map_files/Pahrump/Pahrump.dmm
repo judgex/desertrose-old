@@ -5825,7 +5825,7 @@
 "cig" = (/turf/open/floor/plasteel/dark/telecomms/mainframe,/area/f13/tcoms)
 "cih" = (/obj/machinery/light{dir = 1},/turf/open/floor/circuit/telecomms/mainframe,/area/f13/tcoms)
 "cii" = (/obj/machinery/telecomms/server/presets/den,/turf/open/floor/plasteel/dark/telecomms/mainframe,/area/f13/tcoms)
-"cij" = (/obj/machinery/light,/turf/open/floor/plating,/area/f13/brotherhood)
+"cij" = (/obj/machinery/light,/obj/structure/rack,/obj/item/storage/toolbox/emergency,/turf/open/floor/plating,/area/f13/brotherhood)
 "cik" = (/obj/item/stack/sheet/mineral/uranium{amount = 25},/obj/structure/rack,/turf/open/floor/plating,/area/f13/brotherhood)
 "cil" = (/obj/machinery/door/airlock/hatch{req_access_txt = "120"},/turf/open/floor/plasteel/vault,/area/f13/brotherhood)
 "cim" = (/turf/closed/indestructible/f13/matrix,/area/f13/brotherhood)
