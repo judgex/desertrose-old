@@ -213,7 +213,7 @@
 				""
 				)
 	var/loot3 = list(
-				/obj/item/clothing/suit/armor/f13/raider,
+				/obj/item/clothing/suit/armor/f13/raider/supafly,
 				/obj/item/clothing/head/helmet/f13/raider
 				)
 	var/loot4 = list(
