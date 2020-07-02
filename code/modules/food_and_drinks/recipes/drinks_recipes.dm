@@ -579,7 +579,7 @@
 /datum/chemical_reaction/alcoholz
 	name = "Alcohol-Z"
 	id = "alcoholz"
-	results = list("alchoholz" = 1)
+	results = list("alcoholz" = 1)
 	required_reagents = list("whiskey" = 1, "vodka" = 1, "rum" = 1)
 
 /datum/chemical_reaction/bbock
