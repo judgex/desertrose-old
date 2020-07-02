@@ -129,7 +129,7 @@
 	desc = "A book on how to use advanced tools and production machinery. It's pretty complicated."
 	oneuse = TRUE
 	granted_trait = TRAIT_TECHNOPHREAK
-	traitname = "craftsman"
+	traitname = "craftsmanship"
 	remarks = list("Try turning it off and on again...","Alwyas craft in good form.", "Dont forget PPE.", "Keep your mechanisms OILED.", "Stay organised.")
 
 /obj/item/book/granter/trait/pa_wear
