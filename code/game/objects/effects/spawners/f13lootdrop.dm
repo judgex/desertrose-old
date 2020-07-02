@@ -236,7 +236,7 @@
 				/obj/item/clothing/head/helmet/f13/raider/psychotic
 				)
 	var/loot9 = list(
-				/obj/item/clothing/suit/armor/f13/raider,
+				/obj/item/clothing/suit/armor/f13/raider/supafly,
 				/obj/item/clothing/head/helmet/f13/raider
 				)
 	var/loot10 = list(
@@ -537,6 +537,7 @@
 				/obj/item/claymore/machete,
 				/obj/item/claymore/machete/reinforced,
 				/obj/item/shield/legion/buckler,
+				/obj/item/melee/unarmed/sappers
 				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/melee/tier4 //TIER 4 MELEE WEAPON
@@ -563,7 +564,9 @@
 				/obj/item/melee/transforming/energy/axe,
 				/obj/item/gun/ballistic/revolver/ballisticfist,
 				/obj/item/twohanded/sledgehammer/supersledge,
-				/obj/item/shishkebabpack
+				/obj/item/shishkebabpack,
+				/obj/item/melee/unarmed/deathclawgauntlet,
+				/obj/item/melee/powerfist/moleminer
 				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/melee/random
