@@ -20,3 +20,10 @@
 	projectile_type = /obj/item/projectile/beam/laser/gatling
 	variance = 0.8
 	click_cooldown_override = 1
+
+/obj/item/ammo_casing/caseless/bb
+	desc = "A bb"
+	caliber = "bb"
+	projectile_type = /obj/item/projectile/bullet/F13/bbBullet
+	randomspread = 1
+	variance = 1

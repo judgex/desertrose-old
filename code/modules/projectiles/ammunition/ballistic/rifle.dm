@@ -98,4 +98,3 @@
 
 /obj/item/ammo_casing/F13/a556/fire
 	projectile_type = /obj/item/projectile/bullet/F13/c556Bullet/fire
-

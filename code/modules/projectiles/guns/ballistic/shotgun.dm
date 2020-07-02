@@ -12,6 +12,7 @@
 	var/recentpump = 0 // to prevent spammage
 	weapon_weight = WEAPON_HEAVY
 	var/pump_sound = 'sound/weapons/shotgunpump.ogg'
+	var/nocase = FALSE
 	randomspread = 0
 	fire_delay = 2
 	distro = 1
@@ -62,6 +63,11 @@
 
 /obj/item/gun/ballistic/shotgun/proc/pump_unload(mob/M)
 	if(chambered)//We have a shell in the chamber
+
+		if(nocase) //if bb no ejection
+			chambered = null
+			return
+
 		chambered.forceMove(drop_location())//Eject casing
 		chambered.bounce_away()
 		chambered = null
@@ -109,6 +115,22 @@
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 	fire_sound = 'sound/f13weapons/hunting_rifle.ogg'
+
+/obj/item/gun/ballistic/shotgun/bb
+	name = "BB gun"
+	desc = "Shoots tiny pebbles that tickle the enemy"
+	icon_state = "bb_gun"
+	item_state = "bb_gun"
+	slot_flags = 0 //no ITEM_SLOT_BACK sprite, alas
+	mag_type = /obj/item/ammo_box/magazine/internal/bb
+	nocase = TRUE
+	var/bolt_open = FALSE
+	can_bayonet = FALSE
+	pump_sound = 'sound/f13weapons/BBgun_pump.ogg'
+	fire_delay = 3
+	w_class = WEIGHT_CLASS_BULKY
+	weapon_weight = WEAPON_HEAVY
+	fire_sound = 'sound/f13weapons/BBgun_fire.ogg'
 
 /obj/item/gun/ballistic/shotgun/boltaction/enchanted
 	name = "enchanted bolt action rifle"
