@@ -799,4 +799,4 @@
 
 
 /obj/item/projectile/bullet/F13/bbBullet
-	damage = 1000
+	damage = 3
