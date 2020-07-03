@@ -27,3 +27,12 @@
 	projectile_type = /obj/item/projectile/bullet/F13/bbBullet
 	randomspread = 1
 	variance = 1
+
+/obj/item/ammo_casing/caseless/lasermusket
+ 	name = "Battery"
+ 	desc = "A single use battery for the Lasmusket"
+ 	caliber = "lasmusket"
+ 	icon_state = "lasmusketbat"
+ 	projectile_type = /obj/item/projectile/beam/laser/musket
+ 	fire_sound = 'sound/weapons/laser.ogg'
+ 	firing_effect_type = /obj/effect/temp_visual/dir_setting/firing_effect/energy

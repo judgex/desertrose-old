@@ -1730,7 +1730,7 @@
 
 /datum/crafting_recipe/lasmusket
 	name = "Laser Musket"
-	result = /obj/item/gun/energy/laser/musket
+	result = /obj/item/gun/ballistic/shotgun/lasmusket
 	reqs = list(/obj/item/stock_parts/cell/ammo/mfc = 1,
 				/obj/item/stack/crafting/electronicparts = 2,
 				 /obj/item/gun/ballistic/revolver/pipe_rifle = 1,

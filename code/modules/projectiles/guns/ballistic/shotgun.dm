@@ -116,6 +116,7 @@
 	weapon_weight = WEAPON_HEAVY
 	fire_sound = 'sound/f13weapons/hunting_rifle.ogg'
 
+    //bb gun
 /obj/item/gun/ballistic/shotgun/bb
 	name = "BB gun"
 	desc = "Shoots tiny pebbles that tickle the enemy"
@@ -131,6 +132,23 @@
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 	fire_sound = 'sound/f13weapons/BBgun_fire.ogg'
+
+	//laser musket v2
+/obj/item/gun/ballistic/shotgun/lasmusket
+	name = "Laser Musket"
+	desc = "Shoots powerful, but inefficient lasers using one time use batteries"
+	icon_state = "las_musket"
+	item_state = "las_musket"
+	slot_flags = 0 //no ITEM_SLOT_BACK sprite, alas
+	mag_type = /obj/item/ammo_box/magazine/internal/lasmusket
+	nocase = TRUE
+	var/bolt_open = FALSE
+	can_bayonet = FALSE
+	pump_sound = 'sound/f13weapons/equipsounds/aep7equip.ogg'
+	fire_delay = 20
+	w_class = WEIGHT_CLASS_BULKY
+	weapon_weight = WEAPON_HEAVY
+	fire_sound = 'sound/f13weapons/laser_rifle.ogg'
 
 /obj/item/gun/ballistic/shotgun/boltaction/enchanted
 	name = "enchanted bolt action rifle"

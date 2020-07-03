@@ -200,7 +200,7 @@
 /obj/item/projectile/beam/laser/musket //musket
 	name = "laser beam"
 	damage = 40
-	armour_penetration = 20
+	armour_penetration = 25
 
 /obj/item/projectile/beam/laser/lasgun //AER9
 	name = "laser beam"
