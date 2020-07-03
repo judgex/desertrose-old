@@ -144,11 +144,13 @@
 	nocase = TRUE
 	var/bolt_open = FALSE
 	can_bayonet = FALSE
-	pump_sound = 'sound/f13weapons/equipsounds/aep7equip.ogg'
 	fire_delay = 20
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
-	fire_sound = 'sound/f13weapons/laser_rifle.ogg'
+	isenergy = TRUE
+	fire_sound = 'sound/f13weapons/lasmusket_fire.ogg'
+	pump_sound = 'sound/f13weapons/lasmusket_crank.ogg'
+	equipsound = 'sound/f13weapons/equipsounds/aep7equip.ogg'
 
 /obj/item/gun/ballistic/shotgun/boltaction/enchanted
 	name = "enchanted bolt action rifle"

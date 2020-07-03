@@ -224,8 +224,8 @@
 	name = "Battery Box (Musket)"
 	icon_state = "Batbox"
 	ammo_type = /obj/item/ammo_casing/caseless/lasermusket
-	max_ammo = 6
-	materials = list(MAT_METAL = 3000)
+	max_ammo = 18
+	materials = list(MAT_METAL = 1000)
 	w_class = WEIGHT_CLASS_NORMAL
 
 
