@@ -306,10 +306,6 @@
 					shoot_live_shot(user, 0, target, message)
 		else
 			shoot_with_empty_chamber(user)
-				//testing
-			semicd = TRUE
-			addtimer(CALLBACK(src, .proc/reset_semicd), fire_delay)
-				//testing
 			return
 		process_chamber()
 		update_icon()
