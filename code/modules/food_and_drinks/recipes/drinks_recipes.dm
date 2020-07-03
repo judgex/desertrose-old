@@ -726,7 +726,7 @@
 	name = "Corporate"
 	id = "corporate"
 	results = list("corporate" = 4)
-	required_reagents = list("vim" = 1, "nuka_cola" = 1, "bawls" = 1, "sunset" = 1)
+	required_reagents = list("vim" = 1, "nukawild" = 1, "bawls" = 1)
 
 /datum/chemical_reaction/ranchwhiskey
 	name = "Ranchers Whiskey"
