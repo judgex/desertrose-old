@@ -1734,8 +1734,9 @@
 	reqs = list(/obj/item/stock_parts/cell/ammo/mfc = 1,
 				/obj/item/stack/crafting/electronicparts = 2,
 				 /obj/item/gun/ballistic/revolver/pipe_rifle = 1,
-				 /obj/item/reagent_containers/food/drinks/bottle/nukacola = 1)
-	tools = list(TOOL_WORKBENCH)
+				 /obj/item/reagent_containers/food/drinks/bottle/nukacola = 1,
+				 /obj/item/stack/cable_coil)
+	tools = list(TOOL_WORKBENCH, TOOL_MULTITOOL)
 	time = 120
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON

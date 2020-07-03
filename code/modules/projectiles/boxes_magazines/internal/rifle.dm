@@ -11,7 +11,7 @@
 	desc = "Oh god, this shouldn't be here"
 	ammo_type = /obj/item/ammo_casing/caseless/bb
 	caliber = "bb"
-	max_ammo = 10
+	max_ammo = 50
 	multiload = 1
 
 /obj/item/ammo_box/magazine/internal/boltaction/enchanted
