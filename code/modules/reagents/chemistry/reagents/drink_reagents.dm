@@ -231,10 +231,6 @@
 	glass_name = "glass of tato juice"
 	glass_desc = "Juice of the tato. Smells like bad eggs"
 
-/datum/reagent/consumable/tato_juice/on_mob_life(mob/living/carbon/M)
-	M.vomit(1)
-	return ..()
-
 /datum/reagent/consumable/grapejuice
 	name = "Grape Juice"
 	id = "grapejuice"
