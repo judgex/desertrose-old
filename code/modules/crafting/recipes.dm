@@ -73,24 +73,6 @@
 	category = CAT_MISC
 	subcategory = CAT_MISC
 
-/datum/crafting_recipe/dildo_plastic
-    name = "plastic dildo"
-    result = /obj/item/dildo
-    reqs = list(/obj/item/stack/sheet/plastic)
-    time = 20
-    tools = list(TOOL_WELDER, TOOL_WORKBENCH)
-    category = CAT_MISC
-    subcategory = CAT_MISC
-
-/datum/crafting_recipe/dildo_tribal
-    name = "wooden dildo"
-    result = /obj/item/dildo/wooden
-    reqs = list(/obj/item/stack/sheet/mineral/wood = 3)
-    tools = list(TOOL_KNIFE)
-    time = 85
-    category = CAT_MISC
-    subcategory = CAT_MISC
-
 /datum/crafting_recipe/campfirekit
 	name = "campfire kit"
 	result = /obj/item/crafting/campfirekit
