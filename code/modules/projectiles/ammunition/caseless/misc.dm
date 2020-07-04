@@ -39,5 +39,4 @@
  	caliber = "lasmusket"
  	icon_state = "lasmusketbat"
  	projectile_type = /obj/item/projectile/beam/laser/musket
- 	fire_sound = 'sound/weapons/laser.ogg'
  	firing_effect_type = /obj/effect/temp_visual/dir_setting/firing_effect/energy
