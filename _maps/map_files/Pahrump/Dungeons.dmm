@@ -1150,7 +1150,7 @@
 "Rs" = (/obj/structure/rack,/obj/item/pen,/obj/item/pen,/obj/item/pen,/obj/item/pen,/obj/item/pen,/obj/item/pen,/turf/open/floor/f13{icon_state = "darkdirty"},/area/f13/bunker)
 "Rt" = (/obj/structure/table/wood,/obj/item/trash/plate,/obj/item/kitchen/fork,/turf/open/floor/f13{icon_state = "bar"},/area/f13/bunker)
 "Ru" = (/obj/structure/rack,/obj/item/clothing/suit/radiation,/obj/item/clothing/head/radiation,/obj/item/storage/pill_bottle/chem_tin/radx,/obj/item/storage/pill_bottle/chem_tin/radx,/turf/open/floor/plasteel/barber{icon = 'icons/turf/f13floors2.dmi'; icon_state = "bluerustychess2"; tag = "icon-bluerustychess2"},/area/f13/bunker)
-"RL" = (/obj/structure/table/wood,/obj/item/kitchen/rollingpin,/obj/item/reagent_containers/food/condiment/enzyme{layer = 5},/obj/item/kitchen/knife,/turf/open/floor/f13{icon_state = "bar"},/area/f13/bunker)
+"RL" = (/obj/structure/table/wood,/obj/item/kitchen/rollingpin,/obj/item/reagent_containers/food/condiment/yeast{layer = 5},/obj/item/kitchen/knife,/turf/open/floor/f13{icon_state = "bar"},/area/f13/bunker)
 "RM" = (/obj/structure/toilet{dir = 8},/obj/structure/window/reinforced{color = "#000000"; dir = 1; layer = 2.9},/turf/open/floor/f13{icon_state = "bluedirtychess2"; tag = "icon-bluedirtychess2"},/area/f13/bunker)
 "RN" = (/obj/effect/decal/remains/human,/turf/open/floor/plasteel/barber{icon_state = "platingdmg2"; tag = "icon-platingdmg2"},/area/f13/bunker)
 "RU" = (/obj/structure/spider/stickyweb,/turf/open/floor/plasteel/barber{icon = 'icons/turf/f13floors2.dmi'; icon_state = "bluerustychess2"; tag = "icon-bluerustychess2"},/area/f13/bunker)
