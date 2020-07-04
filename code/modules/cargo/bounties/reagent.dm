@@ -38,6 +38,7 @@
 datum/bounty/reagent/simple_drink/New()
 	// Don't worry about making this comprehensive. It doesn't matter if some drinks are skipped.
 	var/static/list/possible_reagents = list(\
+		/datum/reagent/consumable/tea/arnold_palmer,\
 		/datum/reagent/consumable/ethanol/b52,\
 		/datum/reagent/consumable/ethanol/between_the_sheets,\
 		/datum/reagent/consumable/ethanol/bilk,\

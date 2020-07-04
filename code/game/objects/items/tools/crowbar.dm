@@ -1,6 +1,6 @@
 /obj/item/crowbar
-	name = "pre-war crowbar"
-	desc = "A small pre-war industrial grade crowbar. This handy tool is useful for lots of things, such as prying floor tiles or opening unpowered doors."
+	name = "pocket crowbar"
+	desc = "A small crowbar. This handy tool is useful for lots of things, such as prying floor tiles or opening unpowered doors."
 	icon = 'icons/obj/tools.dmi'
 	icon_state = "crowbar"
 	lefthand_file = 'icons/mob/inhands/equipment/tools_lefthand.dmi'
@@ -86,25 +86,3 @@
 	to_chat(user, "<span class='notice'>You attach the cutting jaws to [src].</span>")
 	qdel(src)
 	user.put_in_active_hand(cutjaws)
-
-//DR2 TOOLS
-
-/obj/item/crowbar/crude
-	name = "crude crowbar"
-	desc = "A flattened piece of rusted pipe, barely enough to squeeze under most things, but helps get a firm grip."
-	icon_state = "crudebar"
-	toolspeed = 6
-
-/obj/item/crowbar/basic
-	name = "basic crowbar"
-	desc = "A flattened and reinforced piece of rebar, bent a to a firm point and pretty flat."
-	icon_state = "basicbar"
-	toolspeed = 2
-
-/obj/item/crowbar/hightech
-	name = "advanced prying device"
-	desc = "A mechanically assited prying device, capable of dislodging basically anything."
-	icon_state = "advancedbar"
-	item_state = "crowbaradvance"
-	usesound = 'sound/items/jaws_pry.ogg'
-	toolspeed = 0.1

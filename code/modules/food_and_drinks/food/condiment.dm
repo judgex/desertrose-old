@@ -14,13 +14,13 @@
 	var/list/possible_states = list(
 	 "ketchup" = list("ketchup", "ketchup bottle", "You feel more American already."),
 	 "capsaicin" = list("hotsauce", "hotsauce bottle", "You can almost TASTE the stomach ulcers now!"),
-	 "yeast" = list("yeast", "yeast container", "A can of yeast extract used, in the of cooking various dishes."),
-	 "soysauce" = list("soysauce", "soy sauce bottle", "A salty soy-based flavoring."),
+	 "enzyme" = list("enzyme", "universal enzyme bottle", "Used in cooking various dishes"),
+	 "soysauce" = list("soysauce", "soy sauce bottle", "A salty soy-based flavoring"),
 	 "frostoil" = list("coldsauce", "coldsauce bottle", "Leaves the tongue numb in its passage"),
 	 "sodiumchloride" = list("saltshakersmall", "salt shaker", "Salt. From oceans, presumably"),
 	 "blackpepper" = list("peppermillsmall", "pepper mill", "Often used to flavor food or make people sneeze"),
 	 "cornoil" = list("oliveoil", "corn oil bottle", "A delicious oil used in cooking. Made from corn"),
-	 "sugar" = list("sugar", "sugar container", "A pre-war sugar container, tightly sealed and preserved."),
+	 "sugar" = list("emptycondiment", "sugar bottle", "Tasty sugar!"),
 	 "mayonnaise" = list("mayonnaise", "mayonnaise jar", "An oily condiment made from egg yolks."))
 	var/originalname = "condiment" //Can't use initial(name) for this. This stores the name set by condimasters.
 
@@ -107,16 +107,15 @@
 		desc = "An empty condiment bottle."
 		return
 
-/obj/item/reagent_containers/food/condiment/yeast
-	name = "yeast"
-	desc = "A can of yeast extract used, in the of cooking various dishes."
-	icon_state = "yeast"
-	list_reagents = list("yeast" = 50)
+/obj/item/reagent_containers/food/condiment/enzyme
+	name = "universal enzyme"
+	desc = "Used in cooking various dishes."
+	icon_state = "enzyme"
+	list_reagents = list("enzyme" = 50)
 
 /obj/item/reagent_containers/food/condiment/sugar
-	name = "sugar container"
-	desc = "A pre-war sugar container, tightly sealed and preserved."
-	icon_state = "sugar"
+	name = "sugar bottle"
+	desc = "Tasty sugar!"
 	list_reagents = list("sugar" = 50)
 
 /obj/item/reagent_containers/food/condiment/saltshaker		//Separate from above since it's a small shaker rather then
@@ -185,7 +184,7 @@
 
 /obj/item/reagent_containers/food/condiment/flour
 	name = "flour sack"
-	desc = "A big bag of pre-war flour. Good for baking!"
+	desc = "A big bag of flour. Good for baking!"
 	icon_state = "flour"
 	item_state = "flour"
 	list_reagents = list("flour" = 30)
@@ -203,7 +202,7 @@
 
 /obj/item/reagent_containers/food/condiment/rice
 	name = "rice sack"
-	desc = "A big bag of pre-war rice. Good for cooking!"
+	desc = "A big bag of rice. Good for cooking!"
 	icon_state = "rice"
 	item_state = "flour"
 	list_reagents = list("rice" = 30)
@@ -214,13 +213,6 @@
 	desc = "A salty soy-based flavoring."
 	icon_state = "soysauce"
 	list_reagents = list("soysauce" = 50)
-	possible_states = list()
-
-/obj/item/reagent_containers/food/condiment/ketchup
-	name = "Ketchup"
-	desc = "A classic American Sauce."
-	icon_state = "ketchup"
-	list_reagents = list("ketchup" = 50)
 	possible_states = list()
 
 /obj/item/reagent_containers/food/condiment/mayonnaise

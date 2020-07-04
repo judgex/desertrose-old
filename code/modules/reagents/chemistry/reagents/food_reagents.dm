@@ -442,10 +442,10 @@
 		T.assume_air(lowertemp)
 		qdel(hotspot)
 
-/datum/reagent/consumable/yeast
-	name = "Yeast"
-	id = "yeast"
-	description = "Yeast is used for the speeding of growth, rising and maturation in a wide variety of foods."
+/datum/reagent/consumable/enzyme
+	name = "Universal Enzyme"
+	id = "enzyme"
+	description = "A universal enzyme used in the preperation of certain chemicals and foods."
 	color = "#365E30" // rgb: 54, 94, 48
 	taste_description = "sweetness"
 
@@ -687,13 +687,3 @@
 	nutriment_factor = 5 * REAGENTS_METABOLISM
 	color = "#eef442" // rgb: 238, 244, 66
 	taste_description = "mournful honking"
-
-/datum/reagent/consumable/char
-	name = "Char"
-	description = "Essence of the grill."
-	reagent_state = LIQUID
-	nutriment_factor = 5 * REAGENTS_METABOLISM
-	color = "#C8C8C8"
-	taste_mult = 6
-	taste_description = "smoke"
-	overdose_threshold = 25

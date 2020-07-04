@@ -32,8 +32,8 @@
 				/obj/item/wirecutters = 1,
 				/obj/item/stack/crafting/metalparts = 5)
 	time = 80
-	category = CAT_ASSEM
-	subcategory = CAT_MACHINES
+	category = CAT_MISC
+	subcategory = CAT_MISC
 
 /datum/crafting_recipe/stove
 	name = "cook stove"
@@ -46,8 +46,8 @@
 				/obj/item/assembly/igniter = 1)
 	tools = list(TOOL_WELDER, TOOL_SCREWDRIVER)
 	time = 80
-	category = CAT_ASSEM
-	subcategory = CAT_MACHINES
+	category = CAT_MISC
+	subcategory = CAT_MISC
 
 /datum/crafting_recipe/bellystove
 	name = "pot belly stove"
@@ -57,8 +57,8 @@
 				/obj/item/stack/sheet/metal = 10)
 	tools = list(TOOL_WELDER, TOOL_WORKBENCH)
 	time = 80
-	category = CAT_ASSEM
-	subcategory = CAT_MACHINES
+	category = CAT_MISC
+	subcategory = CAT_MISC
 
 /datum/crafting_recipe/trading_machine
 	name = "vending machine"
@@ -70,8 +70,8 @@
 				/obj/item/stack/cable_coil = 10)
 	tools = list(TOOL_WELDER, TOOL_WORKBENCH, TOOL_SCREWDRIVER)
 	time = 80
-	category = CAT_ASSEM
-	subcategory = CAT_MACHINES
+	category = CAT_MISC
+	subcategory = CAT_MISC
 
 /datum/crafting_recipe/dildo_plastic
     name = "plastic dildo"
@@ -107,35 +107,14 @@
 	category = CAT_MISC
 	subcategory = CAT_MISC
 
-/datum/crafting_recipe/shower
-	name = "shower"
-	result = /obj/machinery/shower
-	reqs = list(/obj/item/stack/sheet/metal = 10,
-				/obj/item/stack/crafting/metalparts = 10)
-	tools = list(TOOL_WRENCH, TOOL_SCREWDRIVER)
-	time = 80
-	category = CAT_ASSEM
-	subcategory = CAT_MACHINES
-
-/datum/crafting_recipe/grill
-	name = "grill"
-	result = /obj/machinery/grill
-	reqs = list(/obj/item/stack/sheet/metal = 10,
-				/obj/item/stack/crafting/metalparts = 10,
-				/obj/item/stack/crafting/goodparts = 5)
-	tools = list(TOOL_WELDER, TOOL_SCREWDRIVER)
-	time = 80
-	category = CAT_ASSEM
-	subcategory = CAT_MACHINES
-
 /datum/crafting_recipe/barrelfire
 	name = "stoke barrel fire"
 	result = /obj/structure/campfire/barrel
 	reqs = list(/obj/item/stack/sheet/mineral/wood = 15,
 				/obj/item/stack/sheet/metal = 10)
 	time = 80
-	category = CAT_ASSEM
-	subcategory = CAT_MACHINES
+	category = CAT_MISC
+	subcategory = CAT_MISC
 
 /datum/crafting_recipe/pin_removal
 	name = "Pin Removal"
@@ -735,6 +714,17 @@
 	time = 40
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
+
+/datum/crafting_recipe/throwing_spear
+	name = "Throwing Spear"
+	result = /obj/item/throwing_star/spear
+	reqs = list(/obj/item/stack/ore/iron = 1,
+				/obj/item/stack/rods = 3,
+				/obj/item/stack/sheet/sinew = 1)
+	tools = list(TOOL_WORKBENCH)
+	time = 50
+	category= CAT_WEAPONRY
+	subcategory = CAT_WEAPON
 /*
 /datum/crafting_recipe/kittyears
 	name = "Kitty Ears"
@@ -771,6 +761,7 @@
 	reqs = list(/obj/item/paper = 5)
 	category = CAT_MISC
 	subcategory = CAT_MISC
+
 
 /datum/crafting_recipe/flashlight_eyes
 	name = "Flashlight Eyes"
@@ -811,8 +802,8 @@
 	name = "Shower Curtains"
 	reqs = 	list(/obj/item/stack/sheet/cloth = 2, /obj/item/stack/sheet/plastic = 2, /obj/item/stack/rods = 1)
 	result = /obj/structure/curtain
-	category = CAT_ASSEM
-	subcategory = CAT_MACHINES
+	category = CAT_MISC
+	subcategory = CAT_MISC
 
 /datum/crafting_recipe/chemical_payload
 	name = "Chemical Payload (C4)"
@@ -839,20 +830,6 @@
 	time = 50
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON*/
-
-/datum/crafting_recipe/scavengerod
-	name = "Scavenge For Rods"
-	result = /obj/item/stack/rods
-	time = 600
-	category = CAT_PRIMAL
-	subcategory = CAT_TRIBAL
-
-/datum/crafting_recipe/scavengemetal
-	name = "Scavenge For Plating"
-	result = /obj/item/stack/sheet/metal
-	time = 600
-	category = CAT_PRIMAL
-	subcategory = CAT_TRIBAL
 
 /datum/crafting_recipe/bonearmor
 	name = "Bone Armor"
@@ -1043,8 +1020,8 @@
 				  /obj/item/stack/tile/plasteel = 1,
 				  /obj/item/stack/cable_coil = 2,
 				  /obj/item/assembly/igniter = 1)
-	category = CAT_ASSEM
-	subcategory = CAT_MACHINES
+	category = CAT_MISC
+	subcategory = CAT_MISC
 
 
 /*/datum/crafting_recipe/rcl
@@ -1982,7 +1959,7 @@
 	subcategory = CAT_AMMO
 
 /datum/crafting_recipe/voodoo
-    name = "Voodoo"
+    name = "voodoo"
     result = /obj/item/reagent_containers/pill/patch/voodoo
     time = 20
     reqs = list(/obj/item/reagent_containers/food/snacks/meat/slab/human/ghoul = 2,
@@ -1993,7 +1970,7 @@
     subcategory = CAT_TRIBAL
 
 /datum/crafting_recipe/coyotechew
-	name = "Coyote Tobacco Chew"
+	name = "coyote tobacco chew"
 	result = /obj/item/reagent_containers/pill/patch/coyotechew
 	time = 30
 	reqs = list(/obj/item/reagent_containers/food/snacks/grown/coyotetobacco = 2, /obj/item/reagent_containers/food/snacks/grown/feracactus = 1, /obj/item/reagent_containers/food/snacks/grown/yucca = 1)
@@ -2004,7 +1981,7 @@
 //BOTTLING
 
 /datum/crafting_recipe/bottler
-	name = "Bottle Press"
+	name = "bottle press"
 	result = /obj/machinery/workbench/bottler
 	reqs = list(/obj/item/stack/sheet/metal = 10,
 				/obj/item/stack/crafting/goodparts = 10,
@@ -2012,8 +1989,8 @@
 				/obj/item/wrench = 1)
 	tools = list(TOOL_WRENCH, TOOL_SCREWDRIVER, TOOL_WIRECUTTER)
 	time = 80
-	category = CAT_ASSEM
-	subcategory = CAT_MACHINES
+	category = CAT_MISC
+	subcategory = CAT_BOTTLE
 
 /datum/crafting_recipe/bottle
 	name = "brown bottle"
@@ -2052,102 +2029,3 @@
 /datum/crafting_recipe/bottle/beerbottle
 	name = "beer bottle"
 	result = /obj/item/reagent_containers/food/drinks/bottle/brown/beer
-
-//tools
-
-/datum/crafting_recipe/crudewire
-    name = "Crude Cutters"
-    result = /obj/item/wirecutters/crude
-    time = 80
-    reqs = list(/obj/item/stack/rods = 2)
-    category = CAT_ASSEM
-    subcategory = CAT_TOOLS
-
-/datum/crafting_recipe/crudeweld
-    name = "Crude Welder"
-    result = /obj/item/weldingtool/crude
-    time = 80
-    reqs = list(/obj/item/stack/sheet/metal = 2,
-				/obj/item/stack/rods = 2)
-    category = CAT_ASSEM
-    subcategory = CAT_TOOLS
-
-/datum/crafting_recipe/crudewrench
-    name = "Crude Wrench"
-    result = /obj/item/wrench/crude
-    time = 80
-    reqs = list(/obj/item/stack/rods = 2)
-    category = CAT_ASSEM
-    subcategory = CAT_TOOLS
-
-/datum/crafting_recipe/crudebar
-    name = "Crude Crowbar"
-    result = /obj/item/crowbar/crude
-    time = 80
-    reqs = list(/obj/item/stack/rods = 1,
-				/obj/item/stack/sheet/metal = 1)
-    category = CAT_ASSEM
-    subcategory = CAT_TOOLS
-
-/datum/crafting_recipe/crudescrew
-    name = "Crude Screwdriver"
-    result = /obj/item/screwdriver/crude
-    time = 80
-    reqs = list(/obj/item/stack/sheet/metal = 2)
-    category = CAT_ASSEM
-    subcategory = CAT_TOOLS
-
-/datum/crafting_recipe/basicvolt
-    name = "Crude Voltage Scanner"
-    result = /obj/item/multitool/basic
-    time = 80
-    reqs = list(/obj/item/stack/sheet/metal = 2,
-				/obj/item/stack/sheet/glass = 1)
-    tools = list(TOOL_WORKBENCH)
-    category = CAT_ASSEM
-    subcategory = CAT_TOOLS
-
-/datum/crafting_recipe/basicwire
-    name = "Basic Cutters"
-    result = /obj/item/wirecutters/basic
-    time = 80
-    reqs = list(/obj/item/stack/sheet/metal = 4)
-    tools = list(TOOL_WORKBENCH)
-    category = CAT_ASSEM
-    subcategory = CAT_TOOLS
-
-/datum/crafting_recipe/basicweld
-    name = "Basic Welder"
-    result = /obj/item/weldingtool/basic
-    time = 80
-    reqs = list(/obj/item/stack/sheet/metal = 5)
-    tools = list(TOOL_WORKBENCH)
-    category = CAT_ASSEM
-    subcategory = CAT_TOOLS
-
-/datum/crafting_recipe/basicwrench
-    name = "Basic Wrench"
-    result = /obj/item/wrench/basic
-    time = 80
-    reqs = list(/obj/item/stack/sheet/metal = 3)
-    tools = list(TOOL_WORKBENCH)
-    category = CAT_ASSEM
-    subcategory = CAT_TOOLS
-
-/datum/crafting_recipe/basicbar
-    name = "Basic Crowbar"
-    result = /obj/item/crowbar/basic
-    time = 80
-    reqs = list(/obj/item/stack/sheet/metal = 1)
-    tools = list(TOOL_WORKBENCH)
-    category = CAT_ASSEM
-    subcategory = CAT_TOOLS
-
-/datum/crafting_recipe/basicscrew
-    name = "Basic Screwdriver"
-    result = /obj/item/screwdriver/basic
-    time = 80
-    reqs = list(/obj/item/stack/sheet/metal = 5)
-    tools = list(TOOL_WORKBENCH)
-    category = CAT_ASSEM
-    subcategory = CAT_TOOLS

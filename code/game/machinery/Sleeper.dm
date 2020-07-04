@@ -99,25 +99,16 @@
 		return
 	return ..()
 
-/obj/machinery/sleeper/ui_interact(mob/living/user, ui_key = "main", datum/tgui/ui = null, force_open = FALSE, \
+/obj/machinery/sleeper/ui_interact(mob/user, ui_key = "main", datum/tgui/ui = null, force_open = FALSE, \
 									datum/tgui/master_ui = null, datum/ui_state/state = GLOB.notcontained_state)
+
+	if(controls_inside && state == GLOB.notcontained_state)
+		state = GLOB.default_state // If it has a set of controls on the inside, make it actually controllable by the mob in it.
+
 	ui = SStgui.try_update_ui(user, src, ui_key, ui, force_open)
-	if(istype(user, /mob/dead/observer))
-		if(!ui)
-			ui = new(user, src, ui_key, "sleeper", name, 375, 550, master_ui, state)
-			ui.open()
-	else
-		if(controls_inside && state == GLOB.notcontained_state)
-			state = GLOB.default_state // If it has a set of controls on the inside, make it actually controllable by the mob in it.
-		if(!user.has_trait(TRAIT_CHEMWHIZ))
-			to_chat(user, "<span class='warning'>Try as you might, you have no clue how to work this thing.</span>")
-			return
-		if(!user.IsAdvancedToolUser())
-			to_chat(user, "<span class='warning'>The legion has no use for drugs! Better to destroy it.</span>")
-			return
-		if(!ui)
-			ui = new(user, src, ui_key, "sleeper", name, 375, 550, master_ui, state)
-			ui.open()
+	if(!ui)
+		ui = new(user, src, ui_key, "sleeper", name, 375, 550, master_ui, state)
+		ui.open()
 
 /obj/machinery/sleeper/ui_data()
 	var/list/data = list()

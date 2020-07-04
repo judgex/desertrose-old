@@ -452,7 +452,7 @@
 	id = "exp_tools"
 	display_name = "Experimental Tools"
 	description = "Highly advanced construction tools."
-	design_ids = list("ad_wrench", "ad_wirecutters", "ad_screwdriver", "ad_crowbar", "ad_welder", "ad_multitool")
+	design_ids = list("exwelder", "handdrill")
 	prereq_ids = list("adv_engi")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 	export_price = 5000
@@ -777,7 +777,7 @@
 	design_ids = list("alien_scalpel", "alien_hemostat", "alien_retractor", "alien_saw", "alien_drill", "alien_cautery")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 	export_price = 20000
-/*
+
 /datum/techweb_node/alien_engi
 	id = "alien_engi"
 	display_name = "Advanced Engineering"
@@ -786,7 +786,7 @@
 	design_ids = list("alien_wrench", "alien_wirecutters", "alien_screwdriver", "alien_crowbar", "alien_welder", "alien_multitool")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 	export_price = 20000
-*/
+
 /datum/techweb_node/syndicate_basic
 	id = "syndicate_basic"
 	display_name = "Very Dangerous Technology"

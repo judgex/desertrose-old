@@ -634,14 +634,6 @@
 	body_parts_covered = CHEST|GROIN
 	armor = list("melee" = 10, "bullet" = 16, "laser" = 0, "energy" = 0, "bomb" = 16, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
 
-/obj/item/clothing/suit/fluff/westender
-	name = "bartenders vest"
-	desc = "A grey vest, adorned with bartenders arm cuffs, a classic western look."
-	icon_state = "westender"
-	item_state = "lb_suit"
-	body_parts_covered = CHEST|GROIN|ARMS
-	armor = list("melee" = 30, "bullet" = 30, "laser" = 0, "energy" = 0, "bomb" = 16, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
-
 /obj/item/clothing/suit/fluff/cowboygvest
 	name = "grey vest"
 	desc = "A grey vest, typically worn by wannabe cowboys and prospectors. It has a few pockets for tiny items."

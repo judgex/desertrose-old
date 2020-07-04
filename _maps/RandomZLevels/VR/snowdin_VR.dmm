@@ -1532,7 +1532,7 @@
 /area/awaymission/snowdin/post/kitchen)
 "dT" = (
 /obj/structure/table,
-/obj/item/reagent_containers/food/condiment/yeast,
+/obj/item/reagent_containers/food/condiment/enzyme,
 /turf/open/floor/plating,
 /area/awaymission/snowdin/post/kitchen)
 "dU" = (

@@ -25,7 +25,7 @@
 	foodtype = FRUIT
 	grind_results = list("ketchup" = 0)
 	juice_results = list("tomatojuice" = 0)
-	distill_reagent = "yeast"
+	distill_reagent = "enzyme"
 
 // Blood Tomato
 /obj/item/seeds/tomato/blood

@@ -11,8 +11,8 @@
 
 
 /obj/item/multitool
-	name = "pre-war voltage scanner"
-	desc = "A pre-war device used for testing and pulsing electrical devices for faults and voltage checks."
+	name = "multitool"
+	desc = "Used for pulsing wires to test which to cut. Not recommended by doctors."
 	icon = 'icons/obj/device.dmi'
 	icon_state = "multitool"
 	item_state = "multitool"
@@ -230,20 +230,4 @@
 	desc = "An omni-technological interface."
 	icon = 'icons/obj/abductor.dmi'
 	icon_state = "multitool"
-	toolspeed = 0.1
-
-//DR2 TOOLS
-
-/obj/item/multitool/basic
-	name = "crude voltage scanner"
-	desc = "A mechanically scrapped together device that barely works, a small wired and broken screen state voltages and pulse-ometer levels."
-	icon_state = "basicvolt"
-	item_state = "basicvolt"
-	toolspeed = 6
-
-/obj/item/multitool/hightech
-	name = "advanced computational hacker"
-	desc = "An advanced piece of equipment, capable of not only measuring voltages but also of completely mapping an objects current flow."
-	icon_state = "advancedvolt"
-	item_state = "advancedvolt"
 	toolspeed = 0.1

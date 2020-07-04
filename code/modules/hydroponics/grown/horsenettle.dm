@@ -24,6 +24,6 @@
 	filling_color = "#FF00FF"
 	bitesize_mod = 2
 	foodtype = FRUIT
-	juice_results = list("yeast" = 1)
+	juice_results = list("enzyme" = 1)
 	tastes = list("searing pain" = 1)
-	distill_reagent = "yeast"
+	distill_reagent = "enzyme"

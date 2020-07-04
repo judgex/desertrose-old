@@ -55,7 +55,7 @@
 "as" = (
 /obj/structure/table,
 /obj/item/reagent_containers/glass/beaker,
-/obj/item/reagent_containers/food/condiment/yeast,
+/obj/item/reagent_containers/food/condiment/enzyme,
 /turf/open/indestructible,
 /area/awaymission/centcomAway/cafe)
 "at" = (

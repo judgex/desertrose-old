@@ -213,7 +213,7 @@ If you create T5+ please take a pass at gene_modder.dm [L40]. Max_values MUST fi
 	materials = list(MAT_METAL=10, MAT_GLASS=20)
 
 /obj/item/stock_parts/matter_bin/bluespace
-	name = "Quantum matter bin"
+	name = "bluespace matter bin"
 	desc = "A container designed to hold compressed matter awaiting reconstruction."
 	icon_state = "bluespace_matter_bin"
 	rating = 4

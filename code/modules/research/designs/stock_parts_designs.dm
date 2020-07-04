@@ -13,8 +13,8 @@
 	departmental_flags = DEPARTMENTAL_FLAG_ENGINEERING | DEPARTMENTAL_FLAG_SCIENCE
 
 /datum/design/BS_RPED
-	name = "Quantum RPED"
-	desc = "Powered by quantum technology, this RPED variant can upgrade buildings from a distance, without needing to remove the panel first."
+	name = "Bluespace RPED"
+	desc = "Powered by bluespace technology, this RPED variant can upgrade buildings from a distance, without needing to remove the panel first."
 	id = "bs_rped"
 	build_type = PROTOLATHE
 	materials = list(MAT_METAL = 15000, MAT_GLASS = 5000, MAT_SILVER = 2500) //hardcore
@@ -236,7 +236,7 @@
 	departmental_flags = DEPARTMENTAL_FLAG_ENGINEERING | DEPARTMENTAL_FLAG_SCIENCE
 
 /datum/design/bluespace_matter_bin
-	name = "Quantum Matter Bin"
+	name = "Bluespace Matter Bin"
 	desc = "A stock part used in the construction of various devices."
 	id = "bluespace_matter_bin"
 	build_type = PROTOLATHE

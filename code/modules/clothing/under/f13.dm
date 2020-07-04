@@ -152,14 +152,6 @@
 	item_color = "vest_and_slacks"
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 30, "fire" = 20, "acid" = 50)
 
-/obj/item/clothing/under/f13/sleazeball
-	name = "loanshark outfit"
-	desc = "The symbol of profit and corruption, a black vest over a well starched white shirt."
-	icon_state = "vest_and_slacks"
-	item_state = "vest_and_slacks"
-	item_color = "vest_and_slacks"
-	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 30, "fire" = 20, "acid" = 50)
-
 /obj/item/clothing/under/f13/follower
 	name = "citzen outfit"
 	desc = "A civilized well cared for outfit that good citzens wear."
@@ -592,13 +584,6 @@
 	icon_state = "bodyguard"
 	item_state = "sl_suit"
 	item_color = "bodyguard"
-
-/obj/item/clothing/under/f13/westender
-	name = "classic tender outfit"
-	desc = "A refined bartenders suit, adorned with a classic frontiersmen western tie."
-	icon_state = "westender"
-	item_state = "sl_suit"
-	item_color = "westender"
 
 /obj/item/clothing/under/f13/rag
 	name = "torn rags"

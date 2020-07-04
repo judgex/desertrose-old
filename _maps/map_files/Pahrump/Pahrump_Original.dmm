@@ -26865,7 +26865,7 @@
 /area/f13/vault)
 "bGz" = (
 /obj/structure/closet/fridge/standard,
-/obj/item/reagent_containers/food/condiment/yeast,
+/obj/item/reagent_containers/food/condiment/enzyme,
 /obj/effect/spawner/lootdrop/f13/alcoholspawner,
 /obj/effect/spawner/lootdrop/f13/foodspawner,
 /obj/effect/spawner/lootdrop/f13/foodspawner,
@@ -31394,7 +31394,7 @@
 "bRo" = (
 /obj/structure/table/wood,
 /obj/item/kitchen/rollingpin,
-/obj/item/reagent_containers/food/condiment/yeast{
+/obj/item/reagent_containers/food/condiment/enzyme{
 	layer = 5
 	},
 /obj/item/kitchen/knife,

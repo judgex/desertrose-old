@@ -100,11 +100,9 @@
 			var/mob/living/silicon/robot/R = D.thrower
 			if(!R.emagged)
 				hurt = FALSE
-	if(hit_atom.density	&& (hit_atom))
+	if(hit_atom.density && isturf(hit_atom))
 		if(hurt)
 			take_bodypart_damage(10)
-			Knockdown(2 SECONDS)
-			playsound(src,'sound/f13effects/wallslam.ogg',60,1)
 	if(iscarbon(hit_atom) && hit_atom != src)
 		var/mob/living/carbon/victim = hit_atom
 		if(victim.movement_type & FLYING)

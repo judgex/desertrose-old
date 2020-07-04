@@ -43,10 +43,3 @@
 	mid_length = 10
 	end_sound = 'sound/machines/microwave/microwave-end.ogg'
 	volume = 90
-
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-/datum/looping_sound/grill
-	mid_length = 2
-	mid_sounds = list('sound/f13effects/grill.ogg' = 1)
-	volume = 30

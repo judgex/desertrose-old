@@ -36,7 +36,7 @@
 	build_type = AUTOLATHE
 	materials = list(MAT_METAL = 40000)
 	build_path = /obj/item/golem_shell
-	category = list("Misc")
+	category = list("Imported")
 
 /obj/item/golem_shell
 	name = "incomplete free golem shell"

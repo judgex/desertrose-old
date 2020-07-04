@@ -7,11 +7,6 @@
 	bound_width = 96
 	var/list/opacity_objects = list() //FUCK BYOND
 
-/obj/machinery/door/poddoor/gate/preopen
-	icon_state = "open"
-	density = FALSE
-	opacity = 0
-
 /obj/machinery/door/poddoor/gate/New()
 	..()
 	var/atom/movable/S = new (locate(x+1,y,z))

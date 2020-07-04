@@ -187,66 +187,6 @@
 	category = list("Equipment")
 	departmental_flags = DEPARTMENTAL_FLAG_SCIENCE
 
-/datum/design/adwrench
-	name = "Advanced Locking Device"
-	desc = "An advanced wrench obtained through Advanced technology."
-	id = "ad_wrench"
-	build_path = /obj/item/wrench/hightech
-	build_type = PROTOLATHE
-	materials = list(MAT_METAL = 5000, MAT_SILVER = 2500, MAT_PLASMA = 1000, MAT_TITANIUM = 2000, MAT_DIAMOND = 2000)
-	category = list("Equipment")
-	departmental_flags = DEPARTMENTAL_FLAG_ENGINEERING
-
-/datum/design/adwirecutters
-	name = "Advanced Snapping Device"
-	desc = "Advanced wirecutters obtained through Advanced technology."
-	id = "ad_wirecutters"
-	build_path = /obj/item/wirecutters/hightech
-	build_type = PROTOLATHE
-	materials = list(MAT_METAL = 5000, MAT_SILVER = 2500, MAT_PLASMA = 1000, MAT_TITANIUM = 2000, MAT_DIAMOND = 2000)
-	category = list("Equipment")
-	departmental_flags = DEPARTMENTAL_FLAG_ENGINEERING
-
-/datum/design/adscrewdriver
-	name = "Advanced Drill"
-	desc = "An advanced drill obtained through Advanced technology."
-	id = "ad_screwdriver"
-	build_path = /obj/item/screwdriver/hightech
-	build_type = PROTOLATHE
-	materials = list(MAT_METAL = 5000, MAT_SILVER = 2500, MAT_PLASMA = 1000, MAT_TITANIUM = 2000, MAT_DIAMOND = 2000)
-	category = list("Equipment")
-	departmental_flags = DEPARTMENTAL_FLAG_ENGINEERING
-
-/datum/design/adcrowbar
-	name = "Advanced Prying Device"
-	desc = "An advanced crowbar obtained through Advanced technology."
-	id = "ad_crowbar"
-	build_path = /obj/item/crowbar/hightech
-	build_type = PROTOLATHE
-	materials = list(MAT_METAL = 5000, MAT_SILVER = 2500, MAT_PLASMA = 1000, MAT_TITANIUM = 2000, MAT_DIAMOND = 2000)
-	category = list("Equipment")
-	departmental_flags = DEPARTMENTAL_FLAG_ENGINEERING
-
-/datum/design/adwelder
-	name = "Advanced Welding Tool"
-	desc = "An advanced welding tool obtained through Advanced technology."
-	id = "ad_welder"
-	build_path = /obj/item/weldingtool/hightech
-	build_type = PROTOLATHE
-	materials = list(MAT_METAL = 5000, MAT_SILVER = 2500, MAT_PLASMA = 5000, MAT_TITANIUM = 2000, MAT_DIAMOND = 2000)
-	category = list("Equipment")
-	departmental_flags = DEPARTMENTAL_FLAG_ENGINEERING
-
-/datum/design/admultitool
-	name = "Advanced Computational Hacker"
-	desc = "An advanced multitool obtained through Advanced technology."
-	id = "ad_multitool"
-	build_path = /obj/item/multitool/hightech
-	build_type = PROTOLATHE
-	materials = list(MAT_METAL = 5000, MAT_SILVER = 2500, MAT_PLASMA = 5000, MAT_TITANIUM = 2000, MAT_DIAMOND = 2000)
-	category = list("Equipment")
-	departmental_flags = DEPARTMENTAL_FLAG_ENGINEERING
-/*
 /datum/design/handdrill
 	name = "Hand Drill"
 	desc = "A small electric hand drill with an interchangeable screwdriver and bolt bit"
@@ -326,7 +266,7 @@
 	materials = list(MAT_METAL = 5000, MAT_SILVER = 2500, MAT_PLASMA = 5000, MAT_TITANIUM = 2000, MAT_DIAMOND = 2000)
 	category = list("Equipment")
 	departmental_flags = DEPARTMENTAL_FLAG_ENGINEERING
-*/
+
 /datum/design/diskplantgene
 	name = "Plant Data Disk"
 	desc = "A disk for storing plant genetic data."

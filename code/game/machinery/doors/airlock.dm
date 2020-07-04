@@ -1012,7 +1012,7 @@
 		else
 			INVOKE_ASYNC(src, (density ? .proc/open : .proc/close), 2)
 
-	if(istype(I, /obj/item/crowbar/hightech))
+	if(istype(I, /obj/item/crowbar/power))
 		if(isElectrified())
 			shock(user,100)//it's like sticking a forck in a power socket
 			return
