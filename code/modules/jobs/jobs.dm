@@ -93,7 +93,8 @@ GLOBAL_LIST_INIT(faction_player_positions, list(
 ))
 //Whitelisted positions list FO13 anything that shows up here requires that the user have an entry in the 'role_whitelist' table of id,ckey,"antagonist"
 GLOBAL_LIST_INIT(antagonist_whitelist_positions, list(
-    "Outlaw" //Consider adding Great Khan to this list if people abuse it.
+    "Raider",
+	"Outlaw" //Consider adding Great Khan to this list if people abuse it.
 ))
 
 
