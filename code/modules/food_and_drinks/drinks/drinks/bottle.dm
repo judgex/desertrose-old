@@ -136,19 +136,19 @@
 	AddComponent(/datum/component/butchering, 200, 55)
 
 /obj/item/reagent_containers/food/drinks/bottle/gin
-	name = "toxic gin"
+	name = "Toxic Gin"
 	desc = "A faded pre-war bottle of fermented berry gin."
 	icon_state = "ginbottle"
 	list_reagents = list("gin" = 100)
 
 /obj/item/reagent_containers/food/drinks/bottle/whiskey
-	name = "Uncle Sam's special reserve"
+	name = "Uncle Sam's Special Reserve"
 	desc = "A premium faded pre-war bottle of /AMERICAN/ single-malt whiskey."
 	icon_state = "whiskeybottle"
 	list_reagents = list("whiskey" = 100)
 
 /obj/item/reagent_containers/food/drinks/bottle/vodka
-	name = "surkov vodka"
+	name = "Surkov Vodka"
 	desc = "A imported faded bottle of pre-war russian vodka. A scratched label states - Made in the Soviet union."
 	icon_state = "vodkabottle"
 	list_reagents = list("vodka" = 100)
@@ -160,7 +160,7 @@
 	list_reagents = list("vodka" = 100)
 
 /obj/item/reagent_containers/food/drinks/bottle/tequila
-	name = "tick blood tequila"
+	name = "Tick Blood Tequila"
 	desc = "A faded pre-war bottle of a distilled beverage, Allegedly made from agave brewed using tick blood and pure crimson flux."
 	icon_state = "tequilabottle"
 	list_reagents = list("tequila" = 100)
@@ -173,13 +173,13 @@
 	foodtype = NONE
 
 /obj/item/reagent_containers/food/drinks/bottle/patron
-	name = "silver valley patron"
+	name = "Silver Valley"
 	desc = "A pre-war bottle of silver laced tequila, for the fancy madman."
 	icon_state = "patronbottle"
 	list_reagents = list("patron" = 100)
 
 /obj/item/reagent_containers/food/drinks/bottle/rum
-	name = "roentgen rum"
+	name = "Roentgen Rum"
 	desc = "A faded pre-war bottle of rum. The insides seem to be glowing slightly."
 	icon_state = "rumbottle"
 	list_reagents = list("rum" = 90, "radium" = 10)
@@ -196,39 +196,39 @@
 	list_reagents = list("hell_water" = 100)
 
 /obj/item/reagent_containers/food/drinks/bottle/vermouth
-	name = "lead champagne"
+	name = "Lead Champagne"
 	desc = "A faded pre-war bottle of de-toxifying, tarberry champagne."
 	icon_state = "vermouthbottle"
 	list_reagents = list("champagne" = 90, "potass_iodide" = 10)
 
 /obj/item/reagent_containers/food/drinks/bottle/kahlua
-	name = "coffee liqueur"
-	desc = "A widely known, Mexican coffee-flavoured liqueur. In production since 1936."
+	name = "Coffee Liqueur"
+	desc = "A widely known, Mexican coffee-flavoured liqueur. A faded label on the side states - Kahlua! - In production since 1936."
 	icon_state = "kahluabottle"
 	list_reagents = list("kahlua" = 100)
 	foodtype = VEGETABLES
 
 /obj/item/reagent_containers/food/drinks/bottle/goldschlager
-	name = "fancy lads brew"
+	name = "Fancy Lads Brew"
 	desc = "A faded pre-war bottle of a faintly golden spirit."
 	icon_state = "goldschlagerbottle"
 	list_reagents = list("goldschlager" = 100)
 
 /obj/item/reagent_containers/food/drinks/bottle/cognac
-	name = "chateau de baton"
-	desc = "A faded pre-war bottle of a sweet smelling spirit. A warped label on the side claims - Matured for 50 Years!"
+	name = "Chateau de Baton"
+	desc = "A faded pre-war bottle of a sweet smelling cognac spirit. A warped label on the side claims - Matured for 50 Years!"
 	icon_state = "cognacbottle"
 	list_reagents = list("cognac" = 100)
 
 /obj/item/reagent_containers/food/drinks/bottle/wine
-	name = "atomic claret wine"
+	name = "Atomic Claret Wine"
 	desc = "A faded pre-war bottle of a particularily good vintage."
 	icon_state = "winebottle"
 	list_reagents = list("wine" = 100)
 	foodtype = FRUIT | ALCOHOL
 
 /obj/item/reagent_containers/food/drinks/bottle/absinthe
-	name = "wormwood absinthe"
+	name = "Wormwood Absinthe"
 	desc = "An faded bright green bottle of wormwood mash spirit."
 	icon_state = "absinthebottle"
 	list_reagents = list("absinthe" = 100)
@@ -239,34 +239,40 @@
 	icon_state = "absinthepremium"
 
 /obj/item/reagent_containers/food/drinks/bottle/lizardwine
-	name = "chateau montrose"
+	name = "Chateau Montrose"
 	desc = "A faded pre-war bottled alcoholic beverage from what was once Europe."
 	icon_state = "lizardwine"
 	list_reagents = list("wine" = 100)
 	foodtype = FRUIT | ALCOHOL
 
 /obj/item/reagent_containers/food/drinks/bottle/hcider
-	name = "hard yucca cider"
+	name = "Hard Yucca Cider"
 	desc = "A small faded pre-war bottle of yellowish liquid. Smells sweet."
 	icon_state = "hcider"
 	volume = 50
 	list_reagents = list("hcider" = 50)
 
 /obj/item/reagent_containers/food/drinks/bottle/grappa
-	name = "chateau lafayette"
+	name = "Chateau Lafayette"
 	desc = "A faded pre-war bottled alcoholic beverage from what was once Europe. This one has a citric scent."
 	icon_state = "grappabottle"
 	list_reagents = list("grappa" = 100)
 
+/obj/item/reagent_containers/food/drinks/bottle/triplesec
+	name = "Tick Blood Triple"
+	desc = "A faded pre-war bottle of orange liqueur. This one has a citric scent."
+	icon_state = "kahluabottle"
+	list_reagents = list("triple_sec" = 100)
+
 /obj/item/reagent_containers/food/drinks/bottle/sake
-	name = "surkov sake"
+	name = "Surkov Sake"
 	desc = "A faded pre-war bottle of spirit. The faded symbol is unreadable."
 	icon_state = "sakebottle"
 	list_reagents = list("sake" = 100)
 
 /obj/item/reagent_containers/food/drinks/bottle/fernet
-	name = "gamma gulp beer"
-	desc = "A small pre-war faded bottle of spiced glowing beer."
+	name = "Gamma Gulp Spiced Beer"
+	desc = "A small pre-war faded bottle of spiced glowing beer and fernet."
 	volume = 50
 	icon_state = "fernetbottle"
 	list_reagents = list("fernet" = 50)
@@ -274,7 +280,7 @@
 //////////////////////////JUICES AND STUFF ///////////////////////
 
 /obj/item/reagent_containers/food/drinks/bottle/orangejuice
-	name = "orange juice"
+	name = "Orange Juice"
 	desc = "Full of vitamins and deliciousness!"
 	icon_state = "orangejuice"
 	lefthand_file = 'icons/mob/inhands/equipment/kitchen_lefthand.dmi'
@@ -284,7 +290,7 @@
 	foodtype = FRUIT
 
 /obj/item/reagent_containers/food/drinks/bottle/cream
-	name = "canned cream"
+	name = "Canned Cream"
 	desc = "It's a can of cream. Made from milk. What else did you think you'd find in there?"
 	icon_state = "cream"
 	item_state = "carton"
@@ -295,7 +301,7 @@
 	foodtype = DAIRY
 
 /obj/item/reagent_containers/food/drinks/bottle/tomatojuice
-	name = "tomato juice"
+	name = "Tomato Juice"
 	desc = "Well, at least it LOOKS like tomato juice. You can't tell with all that redness."
 	icon_state = "tomatojuice"
 	lefthand_file = 'icons/mob/inhands/equipment/kitchen_lefthand.dmi'
@@ -305,7 +311,7 @@
 	foodtype = VEGETABLES
 
 /obj/item/reagent_containers/food/drinks/bottle/limejuice
-	name = "lime juice"
+	name = "Lime Juice"
 	desc = "Sweet-sour goodness."
 	icon_state = "limejuice"
 	lefthand_file = 'icons/mob/inhands/equipment/kitchen_lefthand.dmi'
@@ -315,7 +321,7 @@
 	foodtype = FRUIT
 
 /obj/item/reagent_containers/food/drinks/bottle/menthol
-	name = "menthol"
+	name = "Menthol"
 	desc = "Tastes naturally minty, and imparts a very mild numbing sensation."
 	icon_state = "mentholbox"
 	item_state = "carton"
@@ -343,15 +349,15 @@
 	list_reagents = list("cocoa" = 98, "radium" = 2)
 
 /obj/item/reagent_containers/food/drinks/bottle/grenadine
-	name = "Jester Grenadine"
-	desc = "Contains 0% real cherries!"
+	name = "Grenadine Syrup"
+	desc = "A faded pre-war bottle of straight cherry syrup, useful for drink making."
 	icon_state = "grenadine"
 	isGlass = TRUE
 	list_reagents = list("grenadine" = 100)
 	foodtype = FRUIT
 
 /obj/item/reagent_containers/food/drinks/bottle/lemonjuice
-	name = "lemon juice"
+	name = "Lemon Juice"
 	desc = "Whew! Thats some sour pre-war lemon juice! You know what they say about..."
 	icon_state = "lemonjuice"
 	lefthand_file = 'icons/mob/inhands/equipment/kitchen_lefthand.dmi'
@@ -429,6 +435,18 @@
 		active = 0
 
 //CUSTOM BOTTLES//
+
+/obj/item/reagent_containers/food/drinks/bottle/moonshine
+	name = "Moonshine"
+	desc = "You've really hit rock bottom now... yet theres nothing like homebrew shine in times like these!"
+	icon_state = "moonshine"
+	list_reagents = list("moonshine" = 100)
+
+/obj/item/reagent_containers/food/drinks/bottle/nukashine
+	name = "Nukashine"
+	desc = "You've really hit rock bottom now... yet theres nothing like homebrew nukashine in times like these!"
+	icon_state = "nukashine"
+	list_reagents = list("nukashine" = 100)
 
 /obj/item/reagent_containers/food/drinks/bottle/brown
 	name = "brown bottle"

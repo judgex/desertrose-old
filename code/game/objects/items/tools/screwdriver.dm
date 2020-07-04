@@ -1,5 +1,5 @@
 /obj/item/screwdriver
-	name = "screwdriver"
+	name = "pre-war screwdriver"
 	desc = "You can be totally screwy with this."
 	icon = 'icons/obj/tools.dmi'
 	icon_state = "screwdriver_map"
@@ -22,13 +22,9 @@
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 30)
 	var/random_color = TRUE //if the screwdriver uses random coloring
 	var/static/list/screwdriver_colors = list(
-		"blue" = rgb(24, 97, 213),
-		"red" = rgb(255, 0, 0),
-		"pink" = rgb(213, 24, 141),
-		"brown" = rgb(160, 82, 18),
-		"green" = rgb(14, 127, 27),
-		"cyan" = rgb(24, 162, 213),
-		"yellow" = rgb(255, 165, 0)
+		"blue" = "#43426B",
+		"red" = "#B3495D",
+		"white" = "#a7a08a"
 	)
 
 /obj/item/screwdriver/suicide_act(mob/user)
@@ -136,3 +132,30 @@
 	desc = "An electrical screwdriver, designed to be both precise and quick."
 	usesound = 'sound/items/drill_use.ogg'
 	toolspeed = 0.5
+
+//DR2 TOOLS
+
+/obj/item/screwdriver/crude
+	name = "crude screwdriver"
+	desc = "A piece of junk metal sharpened to a point, worthwile as a shiv or crude turning device."
+	icon_state = "crudescrew"
+	item_state = "crudescrew"
+	toolspeed = 6
+	random_color = FALSE
+
+/obj/item/screwdriver/basic
+	name = "basic screwdriver"
+	desc = "A refined tip of a jerry-rigged screwdriver, pretty accurate."
+	icon_state = "basicscrew"
+	item_state = "basicscrew"
+	toolspeed = 2
+	random_color = FALSE
+
+/obj/item/screwdriver/hightech
+	name = "advanced drill"
+	desc = "An extremely precise micro-mechanised saturnite drill, capable of infinite force and pressure."
+	icon_state = "advancedscrew"
+	item_state = "advancedscrew"
+	usesound = 'sound/items/pshoom.ogg'
+	toolspeed = 0.1
+	random_color = FALSE
