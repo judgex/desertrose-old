@@ -117,7 +117,7 @@
 	fire_sound = 'sound/f13weapons/hunting_rifle.ogg'
 
 
-//TODO sprite, ignore for now
+/*TODO sprite, ignore for now
 /obj/item/gun/ballistic/shotgun/musket
 	name = "Musket"
 	desc = "An antique looking musket."
@@ -134,7 +134,7 @@
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 	fire_sound = 'sound/f13weapons/hunting_rifle.ogg'
-//TODO sprite, ignore for now
+TODO sprite, ignore for now*/
 
 //BB gun
 /obj/item/gun/ballistic/shotgun/bb
