@@ -116,6 +116,8 @@
 	weapon_weight = WEAPON_HEAVY
 	fire_sound = 'sound/f13weapons/hunting_rifle.ogg'
 
+
+//TODO sprite, ignore for now
 /obj/item/gun/ballistic/shotgun/musket
 	name = "Musket"
 	desc = "An antique looking musket."
@@ -132,8 +134,9 @@
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 	fire_sound = 'sound/f13weapons/hunting_rifle.ogg'
+//TODO sprite, ignore for now
 
-    //bb gun
+//BB gun
 /obj/item/gun/ballistic/shotgun/bb
 	name = "BB gun"
 	desc = "Shoots tiny pebbles that tickle the enemy"
@@ -150,7 +153,7 @@
 	weapon_weight = WEAPON_HEAVY
 	fire_sound = 'sound/f13weapons/BBgun_fire.ogg'
 
-	//laser musket v2
+//laser musket v2, ballistic edition
 /obj/item/gun/ballistic/shotgun/lasmusket
 	name = "Laser Musket"
 	desc = "Shoots powerful, but inefficient lasers using one time use batteries"
