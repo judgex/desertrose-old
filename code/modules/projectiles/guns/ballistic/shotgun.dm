@@ -116,6 +116,23 @@
 	weapon_weight = WEAPON_HEAVY
 	fire_sound = 'sound/f13weapons/hunting_rifle.ogg'
 
+/obj/item/gun/ballistic/shotgun/musket
+	name = "Musket"
+	desc = "An antique looking musket."
+	icon_state = "moistnugget"
+	item_state = "moistnugget"
+	slot_flags = 0 //no ITEM_SLOT_BACK sprite, alas
+	mag_type = /obj/item/ammo_box/magazine/internal/musket
+	var/bolt_open = FALSE
+	can_bayonet = TRUE
+	nocase = TRUE
+	knife_x_offset = 27
+	knife_y_offset = 13
+	fire_delay = 100
+	w_class = WEIGHT_CLASS_BULKY
+	weapon_weight = WEAPON_HEAVY
+	fire_sound = 'sound/f13weapons/hunting_rifle.ogg'
+
     //bb gun
 /obj/item/gun/ballistic/shotgun/bb
 	name = "BB gun"

@@ -28,9 +28,14 @@
 	randomspread = 1
 	variance = 1
 
+/obj/item/ammo_casing/caseless/musketball
+	desc = "A musket ball"
+	caliber = "musketball"
+	projectile_type = /obj/item/projectile/bullet/F13/musketball
+
 /obj/item/ammo_casing/caseless/lasermusket
  	name = "Battery"
- 	desc = "A single use battery for the Lasmusket"
+ 	desc = "A single use battery for the lasmusket"
  	caliber = "lasmusket"
  	icon_state = "lasmusketbat"
  	projectile_type = /obj/item/projectile/beam/laser/musket
