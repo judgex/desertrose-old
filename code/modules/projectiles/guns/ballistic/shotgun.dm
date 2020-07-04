@@ -156,7 +156,7 @@ TODO sprite, ignore for now*/
 //laser musket v2, ballistic edition
 /obj/item/gun/ballistic/shotgun/lasmusket
 	name = "Laser Musket"
-	desc = "Shoots powerful, but inefficient lasers using one time use batteries"
+	desc = "In the wasteland, one must make do. And making do is what the creator of this weapon does. Made from metal scraps, electronic parts. an old rifle stock and a Nuka Cola bottle and some dreams, the Laser Musket is sure to stop anything in their tracks and make those surely raiders think twice."
 	icon_state = "las_musket"
 	item_state = "las_musket"
 	slot_flags = 0 //no ITEM_SLOT_BACK sprite, alas
