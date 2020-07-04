@@ -12,6 +12,7 @@
 	var/recentpump = 0 // to prevent spammage
 	weapon_weight = WEAPON_HEAVY
 	var/pump_sound = 'sound/weapons/shotgunpump.ogg'
+	var/nocase = FALSE
 	randomspread = 0
 	fire_delay = 2
 	distro = 1
@@ -62,6 +63,11 @@
 
 /obj/item/gun/ballistic/shotgun/proc/pump_unload(mob/M)
 	if(chambered)//We have a shell in the chamber
+
+		if(nocase) //if bb no ejection
+			chambered = null
+			return
+
 		chambered.forceMove(drop_location())//Eject casing
 		chambered.bounce_away()
 		chambered = null
@@ -109,6 +115,62 @@
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 	fire_sound = 'sound/f13weapons/hunting_rifle.ogg'
+
+
+/*TODO sprite, ignore for now
+/obj/item/gun/ballistic/shotgun/musket
+	name = "Musket"
+	desc = "An antique looking musket."
+	icon_state = "moistnugget"
+	item_state = "moistnugget"
+	slot_flags = 0 //no ITEM_SLOT_BACK sprite, alas
+	mag_type = /obj/item/ammo_box/magazine/internal/musket
+	var/bolt_open = FALSE
+	can_bayonet = TRUE
+	nocase = TRUE
+	knife_x_offset = 27
+	knife_y_offset = 13
+	fire_delay = 100
+	w_class = WEIGHT_CLASS_BULKY
+	weapon_weight = WEAPON_HEAVY
+	fire_sound = 'sound/f13weapons/hunting_rifle.ogg'
+TODO sprite, ignore for now*/
+
+//BB gun
+/obj/item/gun/ballistic/shotgun/bb
+	name = "BB gun"
+	desc = "Shoots tiny pebbles that tickle the enemy"
+	icon_state = "bb_gun"
+	item_state = "bb_gun"
+	slot_flags = 0 //no ITEM_SLOT_BACK sprite, alas
+	mag_type = /obj/item/ammo_box/magazine/internal/bb
+	nocase = TRUE
+	var/bolt_open = FALSE
+	can_bayonet = FALSE
+	pump_sound = 'sound/f13weapons/BBgun_pump.ogg'
+	fire_delay = 3
+	w_class = WEIGHT_CLASS_BULKY
+	weapon_weight = WEAPON_HEAVY
+	fire_sound = 'sound/f13weapons/BBgun_fire.ogg'
+
+//laser musket v2, ballistic edition
+/obj/item/gun/ballistic/shotgun/lasmusket
+	name = "Laser Musket"
+	desc = "In the wasteland, one must make do. And making do is what the creator of this weapon does. Made from metal scraps, electronic parts. an old rifle stock and a Nuka Cola bottle full of dreams, the Laser Musket is sure to stop anything in their tracks and make those raiders think twice."
+	icon_state = "las_musket"
+	item_state = "las_musket"
+	slot_flags = 0 //no ITEM_SLOT_BACK sprite, alas
+	mag_type = /obj/item/ammo_box/magazine/internal/lasmusket
+	nocase = TRUE
+	var/bolt_open = FALSE
+	can_bayonet = FALSE
+	fire_delay = 20
+	w_class = WEIGHT_CLASS_BULKY
+	weapon_weight = WEAPON_HEAVY
+	isenergy = TRUE
+	fire_sound = 'sound/f13weapons/lasmusket_fire.ogg'
+	pump_sound = 'sound/f13weapons/lasmusket_crank.ogg'
+	equipsound = 'sound/f13weapons/equipsounds/aep7equip.ogg'
 
 /obj/item/gun/ballistic/shotgun/boltaction/enchanted
 	name = "enchanted bolt action rifle"
