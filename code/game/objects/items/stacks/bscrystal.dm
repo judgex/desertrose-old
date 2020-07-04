@@ -1,7 +1,7 @@
 //Bluespace crystals, used in telescience and when crushed it will blink you to a random turf.
 /obj/item/stack/ore/bluespace_crystal
-	name = "Quantum Mesh"
-	desc = "A glowing blue crystal, allegedly linked to research of quantum entanglement. It looks very delicate."
+	name = "strange crystal"
+	desc = "A glowing blue crystal, not much is known about how they work. It looks very delicate."
 	icon = 'icons/obj/telescience.dmi'
 	icon_state = "bluespace_crystal"
 	singular_name = "bluespace crystal"
@@ -13,7 +13,7 @@
 	grind_results = list("bluespace" = 20)
 
 /obj/item/stack/ore/bluespace_crystal/refined
-	name = "refined Quantum Mesh"
+	name = "refined bluespace crystal"
 	points = 0
 	refined_type = null
 
@@ -45,7 +45,7 @@
 
 //Artifical bluespace crystal, doesn't give you much research.
 /obj/item/stack/ore/bluespace_crystal/artificial
-	name = "artificial Quantum Mesh"
+	name = "artificial strange crystal"
 	desc = "An artificially made blue crystal, it looks delicate."
 	materials = list(MAT_BLUESPACE=MINERAL_MATERIAL_AMOUNT*0.5)
 	blink_range = 4 // Not as good as the organic stuff
@@ -55,20 +55,20 @@
 
 //Polycrystals, aka stacks
 /obj/item/stack/sheet/bluespace_crystal
-	name = "Quantum Mesh"
+	name = "bluespace polycrystal"
 	icon = 'icons/obj/telescience.dmi'
 	icon_state = "polycrystal"
 	item_state = "sheet-polycrystal"
 	singular_name = "bluespace polycrystal"
-	desc = "A stable polycrystal, made of Quantum Mesh."
+	desc = "A stable polycrystal, made of fused-together strange crystals."
 	materials = list(MAT_BLUESPACE=MINERAL_MATERIAL_AMOUNT)
-	attack_verb = list("quantum polybashed", "quantum polybattered", "quantum polybludgeoned", "quantum polythrashed", "quantum polysmashed")
+	attack_verb = list("bluespace polybashed", "bluespace polybattered", "bluespace polybludgeoned", "bluespace polythrashed", "bluespace polysmashed")
 	novariants = TRUE
 	grind_results = list("bluespace" = 20)
 	/*var/crystal_type = /obj/item/stack/ore/bluespace_crystal/refined*/
 
 /obj/item/stack/sheet/bluespace_crystal/attack_self(mob/user)// to prevent the construction menu from ever happening
-	to_chat(user, "<span class='warning'>You cannot crush the mesh in-hand, try breaking one off.</span>")
+	to_chat(user, "<span class='warning'>You cannot crush the polycrystal in-hand, try breaking one off.</span>")
 
 /*//ATTACK HAND IGNORING PARENT RETURN VALUE
 /obj/item/stack/sheet/bluespace_crystal/attack_hand(mob/user)

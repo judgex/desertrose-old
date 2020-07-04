@@ -87,8 +87,6 @@
 #define CAT_ROBOT	"Robots"
 #define CAT_MISC	"Misc"
 #define CAT_BOTTLE "Bottling"
-#define CAT_TOOLS "Tools"
-#define CAT_MACHINES "Machines/Objects"
 #define CAT_PRIMAL  "Tribal"
 #define CAT_TRIBAL  "Tribal"
 #define CAT_FORGE   "Forge"

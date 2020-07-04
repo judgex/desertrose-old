@@ -242,7 +242,7 @@
 	list_reagents = list("gluttonytoxin" = 1)
 
 /obj/item/reagent_containers/syringe/bluespace
-	name = "Quantum syringe"
+	name = "bluespace syringe"
 	desc = "An advanced syringe that can hold 60 units of chemicals."
 	amount_per_transfer_from_this = 20
 	volume = 60

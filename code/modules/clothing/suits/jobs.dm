@@ -57,7 +57,7 @@
 	gas_transfer_coefficient = 0.9
 	permeability_coefficient = 0.5
 	body_parts_covered = CHEST|GROIN|ARMS
-	allowed = list(/obj/item/kitchen, /obj/item/gun)
+	allowed = list(/obj/item/kitchen)
 	togglename = "sleeves"
 
 //Cook

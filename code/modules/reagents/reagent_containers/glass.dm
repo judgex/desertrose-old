@@ -203,9 +203,9 @@
 	reagents.set_reacting(FALSE)
 
 /obj/item/reagent_containers/glass/beaker/bluespace
-	name = "Quantum beaker"
-	desc = "A quantum beaker, powered by experimental quantum realm entanglement \
-		Can hold up to \
+	name = "bluespace beaker"
+	desc = "A bluespace beaker, powered by experimental bluespace technology \
+		and Element Cuban combined with the Compound Pete. Can hold up to \
 		300 units."
 	icon_state = "beakerbluespace"
 	materials = list(MAT_GLASS=3000)

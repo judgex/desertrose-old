@@ -225,7 +225,6 @@ update_label("John Doe", "Clowny")
 	item_state = "card-doctor"
 	id_type = "name badge"
 
-
 /obj/item/card/id/syndicate
 	name = "agent card"
 	access = list(ACCESS_MAINT_TUNNELS, ACCESS_SYNDICATE)
@@ -481,16 +480,6 @@ update_label("John Doe", "Clowny")
 	icon_state = "doctor"
 	item_state = "card-doctor"
 	id_type = "citizenship permit"
-	access = list(ACCESS_BAR)
-
-/obj/item/card/id/dogtag/town/mafia
-	name = "citizenship permit"
-	desc = "A permit identifying the holder as a citizen of a nearby town."
-	icon_state = "doctor"
-	item_state = "card-doctor"
-	id_type = "citizenship permit"
-	assignment = "Settler"
-	obj_flags = UNIQUE_RENAME
 	access = list(ACCESS_BAR)
 
 /obj/item/card/id/dogtag/town/attackby(obj/item/W, mob/user, params)

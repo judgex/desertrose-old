@@ -58,7 +58,6 @@ Overseer
 /datum/outfit/job/vault/f13overseer
 	name = "Overseer"
 	jobtype = /datum/job/vault/f13overseer
-	chemwhiz = TRUE
 
 	implants = list(/obj/item/implant/mindshield)
 
@@ -144,8 +143,8 @@ Medical Doctor
 	department_head = list("Overseer")
 	department_flag = VAULT
 	faction = "Vault"
-	total_positions = 2
-	spawn_positions = 2
+	total_positions = 1
+	spawn_positions = 1
 	forbids = "The vault forbids: Harming other Vault Dwellers. Dereliction of duty. Leaving the Vault unless there is no other choice."
 	enforces = "The vault expects: Obeying the Overseer. Adherence to VaultTec Corporate Regulations. Participation in special projects (the vaults experiment, which you wont know about.)"
 	description = "You answer directly to the Overseer, administering medical aid to your fellow vault dwellers, you also work around the clock to produce the vital medicines and compounds needed to keep your department running. "
@@ -206,7 +205,6 @@ Scientist
 /datum/outfit/job/vault/f13vaultscientist
 	name = "Scientist"
 	jobtype = /datum/job/vault/f13vaultscientist
-	chemwhiz = TRUE
 
 	//pda
 	uniform = 		/obj/item/clothing/under/f13/vault13

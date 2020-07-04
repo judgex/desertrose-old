@@ -35,38 +35,38 @@
 	message = "cm3 of bananium"
 
 /datum/export/material/diamond
-	cost = 50
+	cost = 500
 	material_id = MAT_DIAMOND
 	message = "cm3 of diamonds"
 
 /datum/export/material/plasma
-	cost = 5
+	cost = 200
 	k_elasticity = 0
 	material_id = MAT_PLASMA
 	message = "cm3 of plasma"
 
 /datum/export/material/uranium
-	cost = 10
+	cost = 100
 	material_id = MAT_URANIUM
 	message = "cm3 of uranium"
 
 /datum/export/material/gold
-	cost = 5
+	cost = 125
 	material_id = MAT_GOLD
 	message = "cm3 of gold"
 
 /datum/export/material/silver
-	cost = 5
+	cost = 50
 	material_id = MAT_SILVER
 	message = "cm3 of silver"
 
 /datum/export/material/titanium
-	cost = 5
+	cost = 125
 	material_id = MAT_TITANIUM
 	message = "cm3 of titanium"
 
 /datum/export/material/plastitanium
-	cost = 10 // plasma + titanium costs
+	cost = 325 // plasma + titanium costs
 	material_id = MAT_TITANIUM // code can only check for one material_id; plastitanium is half plasma, half titanium
 	message = "cm3 of plastitanium"
 

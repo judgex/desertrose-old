@@ -797,7 +797,7 @@
 	initial_contents = list(
 		/obj/item/reagent_containers/food/condiment/flour = 1,
 		/obj/item/reagent_containers/food/condiment/rice = 1,
-		/obj/item/reagent_containers/food/condiment/yeast = 1,
+		/obj/item/reagent_containers/food/condiment/enzyme = 1,
 		/obj/item/reagent_containers/food/condiment/saltshaker = 1,
 		/obj/item/reagent_containers/food/condiment/peppermill = 1,
 		/obj/item/reagent_containers/food/condiment/soysauce = 1)

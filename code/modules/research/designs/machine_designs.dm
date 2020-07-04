@@ -368,8 +368,8 @@
 	departmental_flags = DEPARTMENTAL_FLAG_ALL
 
 /datum/design/board/autolathe/constructionlathe
-	name = "Machine Design (Workshop Board)"
-	desc = "The circuit board for a workshop."
+	name = "Machine Design (Construction Lathe Board)"
+	desc = "The circuit board for a constructionlathe."
 	id = "constructionlathe"
 	build_path = /obj/item/circuitboard/machine/autolathe/constructionlathe
 	category = list ("Misc. Machinery")

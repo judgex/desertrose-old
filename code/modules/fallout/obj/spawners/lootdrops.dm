@@ -21,6 +21,7 @@
 	/obj/item/crafting/wonderglue = 5,
 	/obj/item/crafting/turpentine = 5,
 	/obj/item/crafting/abraxo = 5,
+	/obj/item/crafting/reloader = 5,
 	/obj/item/crafting/igniter = 5,
 	/obj/item/crafting/timer = 5,
 	/obj/item/crafting/sensor = 5)

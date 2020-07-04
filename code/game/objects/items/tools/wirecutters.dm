@@ -1,6 +1,6 @@
 /obj/item/wirecutters
-	name = "pre-war cutters"
-	desc = "A pre-war high quality set of industrial grade cutters, used from cutting wires to fences and more!"
+	name = "wirecutters"
+	desc = "This cuts wires."
 	icon = 'icons/obj/tools.dmi'
 	icon_state = "cutters_map"
 	item_state = "cutters"
@@ -22,9 +22,13 @@
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 30)
 	var/random_color = TRUE
 	var/static/list/wirecutter_colors = list(
-		"blue" = "#43426B",
-		"red" = "#B3495D",
-		"white" = "#a7a08a"
+		"blue" = "#1861d5",
+		"red" = "#951710",
+		"pink" = "#d5188d",
+		"brown" = "#a05212",
+		"green" = "#0e7f1b",
+		"cyan" = "#18a2d5",
+		"yellow" = "#d58c18"
 	)
 
 
@@ -115,30 +119,3 @@
 		return
 	else
 		..()
-
-//DR2 TOOLS
-
-/obj/item/wirecutters/crude
-	name = "crude cutters"
-	desc = "Literally just a piece of bent and scraped junk metal, enough to cut something, but extremly unwieldly and worthless. Mainly just ripping with weight behind it."
-	item_state = "crudewire"
-	icon_state = "crudewire"
-	toolspeed = 6
-	random_color = FALSE
-
-/obj/item/wirecutters/basic
-	name = "basic cutters"
-	desc = "Almost sharpened cutters, maded of sharpened rusted metal and multiple parts."
-	icon_state = "basicwire"
-	item_state = "basicwire"
-	toolspeed = 2
-	random_color = FALSE
-
-/obj/item/wirecutters/hightech
-	name = "advanced snapping device"
-	desc = "A mechanically assisted snapping device, capable of cutting anything."
-	icon_state = "advancedwire"
-	item_state = "advancedwire"
-	toolspeed = 0.1
-	sharpness = IS_SHARP
-	random_color = FALSE

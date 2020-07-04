@@ -289,7 +289,7 @@
 	result = /obj/item/reagent_containers/food/snacks/stuffedlegion
 	subcategory = CAT_MISCFOOD*/
 
-/*/datum/crafting_recipe/food/lizardwine
+/datum/crafting_recipe/food/lizardwine
 	name = "Lizard wine"
 	time = 40
 	reqs = list(
@@ -297,7 +297,7 @@
 		/datum/reagent/consumable/ethanol = 100
 	)
 	result = /obj/item/reagent_containers/food/drinks/bottle/lizardwine
-	subcategory = CAT_MISCFOOD*/
+	subcategory = CAT_MISCFOOD
 
 /*/datum/crafting_recipe/food/powercrepe
 	name = "Powercrepe"

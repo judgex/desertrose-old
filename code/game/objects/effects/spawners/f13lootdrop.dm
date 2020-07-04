@@ -229,6 +229,7 @@
 				/obj/item/clothing/head/helmet/f13/raider/yankee
 				)
 	var/loot7 = list(
+				/obj/item/clothing/suit/armor/f13/raider/badlands,
 				/obj/item/clothing/head/helmet/f13/fiend
 				)
 	var/loot8 = list(
@@ -368,7 +369,7 @@
     loot = list(
             /obj/effect/spawner/lootdrop/f13/armor/tier1 = 80,
             /obj/effect/spawner/lootdrop/f13/armor/tier2 = 19,
-            /obj/effect/spawner/lootdrop/f13/armor/tier3 = 1,
+            /obj/effect/spawner/lootdrop/f13/armor/tier3 = 1
             )
 
 /obj/effect/spawner/lootdrop/f13/armor/random_high
@@ -522,7 +523,7 @@
 				/obj/item/claymore/machete/pipe,
 				/obj/item/kitchen/knife/cosmicdirty,
 				/obj/item/melee/unarmed/brass,
-				/obj/item/melee/unarmed/brass/spiked
+				/obj/item/melee/unarmed/brass/spiked,
 				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/melee/tier3 //TIER 3 MELEE WEAPON
@@ -539,9 +540,9 @@
 				/obj/item/claymore/machete,
 				/obj/item/claymore/machete/reinforced,
 				/obj/item/shield/legion/buckler,
+				/obj/item/melee/unarmed/sappers,
 				/obj/item/melee/unarmed/tigerclaw,
 				/obj/item/melee/unarmed/bladed,
-				/obj/item/melee/unarmed/sappers
 				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/melee/tier4 //TIER 4 MELEE WEAPON
@@ -552,10 +553,10 @@
 				/obj/item/twohanded/fireaxe,
 				/obj/item/twohanded/sledgehammer,
 				/obj/item/twohanded/fireaxe/bmprsword,
+				/obj/item/shield/riot,
 				/obj/item/melee/unarmed/lacerator,
 				/obj/item/melee/unarmed/maceglove,
 				/obj/item/melee/unarmed/punchdagger,
-				/obj/item/shield/riot
 				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/melee/tier5 //TIER 5 MELEE WEAPON
@@ -573,7 +574,7 @@
 				/obj/item/twohanded/sledgehammer/supersledge,
 				/obj/item/shishkebabpack,
 				/obj/item/melee/unarmed/deathclawgauntlet,
-				/obj/item/melee/powerfist/moleminer
+				/obj/item/melee/powerfist/moleminer,
 				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/melee/random
@@ -1150,19 +1151,35 @@
 				/obj/item/storage/box/ingredients/sweets,
 				/obj/item/storage/box/ingredients/vegetarian,
 				/obj/item/storage/box/ingredients/wildcard,
+				/obj/item/storage/box/donkpockets,
 				/obj/item/reagent_containers/food/condiment/flour,
 				/obj/item/reagent_containers/food/condiment/rice,
-				/obj/item/reagent_containers/food/condiment/yeast,
+				/obj/item/reagent_containers/food/condiment/enzyme,
 				/obj/item/reagent_containers/food/condiment/soymilk,
-				/obj/item/reagent_containers/food/condiment/ketchup,
-				/obj/item/reagent_containers/food/condiment/sugar,
 				/obj/item/reagent_containers/food/condiment/milk,
 				/obj/item/reagent_containers/food/condiment/saltshaker,
 				/obj/item/reagent_containers/food/condiment/peppermill,
+				/obj/item/reagent_containers/food/condiment/mayonnaise,
 				/obj/item/reagent_containers/food/condiment/soysauce,
 				/obj/item/reagent_containers/food/snacks/beans,
+				/obj/item/reagent_containers/food/snacks/baguette,
+				/obj/item/reagent_containers/food/snacks/bun,
+				/obj/item/reagent_containers/food/snacks/butter,
+				/obj/item/reagent_containers/food/snacks/cheesewedge,
+				/obj/item/reagent_containers/food/snacks/chips,
+				/obj/item/reagent_containers/food/snacks/chocolatebar,
 				/obj/item/reagent_containers/food/snacks/cracker,
+				/obj/item/reagent_containers/food/snacks/icecream,
 				/obj/item/reagent_containers/food/snacks/lollipop,
+				/obj/item/reagent_containers/food/snacks/meat/rawbacon,
+				/obj/item/reagent_containers/food/snacks/meat/slab/human,
+				/obj/item/reagent_containers/food/snacks/meat/slab/pug,
+				/obj/item/reagent_containers/food/snacks/meat/slab/meatproduct,
+				/obj/item/reagent_containers/food/snacks/muffin/berry,
+				/obj/item/reagent_containers/food/snacks/muffin,
+				/obj/item/reagent_containers/food/snacks/raisincookie,
+				/obj/item/reagent_containers/food/snacks/sausage,
+				/obj/item/reagent_containers/food/snacks/store/cheesewheel,
 				"" // a chance to spawn nothing
 				)
 
@@ -1184,9 +1201,7 @@
 				/obj/item/stack/crafting/goodparts/five,
 				/obj/item/stack/crafting/electronicparts/three,
 				/obj/item/stack/crafting/electronicparts/five,
-				/obj/item/reagent_containers/glass/bottle/blackpowder,
-				/obj/item/crafting/wonderglue,
-				/obj/item/crafting/duct_tape)
+				/obj/item/reagent_containers/glass/bottle/blackpowder)
 
 /obj/effect/spawner/lootdrop/f13/crafting/Initialize(mapload) //on mapload, pick how many shit to spawn
 	lootcount = pick(1, 2)

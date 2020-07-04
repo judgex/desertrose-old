@@ -10,6 +10,14 @@
 	build_path = /obj/item/reagent_containers/glass/bucket
 	category = list("initial","Tools")
 
+/datum/design/crowbar
+	name = "Pocket Crowbar"
+	id = "crowbar"
+	build_type = AUTOLATHE
+	materials = list(MAT_METAL = 50)
+	build_path = /obj/item/crowbar
+	category = list("initial","Tools")
+
 /datum/design/flashlight
 	name = "Flashlight"
 	id = "flashlight"
@@ -24,6 +32,14 @@
 	build_type = AUTOLATHE
 	materials = list(MAT_METAL = 90)
 	build_path = /obj/item/extinguisher
+	category = list("initial","Tools")
+
+/datum/design/multitool
+	name = "Multitool"
+	id = "multitool"
+	build_type = AUTOLATHE
+	materials = list(MAT_METAL = 50, MAT_GLASS = 20)
+	build_path = /obj/item/multitool
 	category = list("initial","Tools")
 
 /datum/design/analyzer
@@ -42,32 +58,24 @@
 	build_path = /obj/item/t_scanner
 	category = list("initial","Tools")
 
-/datum/design/multitool
-	name = "Pre-War Voltage Scanner"
-	id = "multitool"
-	build_type = AUTOLATHE
-	materials = list(MAT_METAL = 50, MAT_GLASS = 20)
-	build_path = /obj/item/multitool
-	category = list("initial","Tools")
-
-/datum/design/crowbar
-	name = "Pre-War Crowbar"
-	id = "crowbar"
-	build_type = AUTOLATHE
-	materials = list(MAT_METAL = 50)
-	build_path = /obj/item/crowbar
-	category = list("initial","Tools")
-
 /datum/design/weldingtool
-	name = "Pre-War Welding Tool"
+	name = "Welding Tool"
 	id = "welding_tool"
 	build_type = AUTOLATHE
 	materials = list(MAT_METAL = 70, MAT_GLASS = 20)
 	build_path = /obj/item/weldingtool
 	category = list("initial","Tools")
 
+/datum/design/mini_weldingtool
+	name = "Emergency Welding Tool"
+	id = "mini_welding_tool"
+	build_type = AUTOLATHE
+	materials = list(MAT_METAL = 30, MAT_GLASS = 10)
+	build_path = /obj/item/weldingtool/mini
+	category = list("initial","Tools")
+
 /datum/design/screwdriver
-	name = "Pre-War Screwdriver"
+	name = "Screwdriver"
 	id = "screwdriver"
 	build_type = AUTOLATHE
 	materials = list(MAT_METAL = 75)
@@ -75,7 +83,7 @@
 	category = list("initial","Tools")
 
 /datum/design/wirecutters
-	name = "Pre-War Cutters"
+	name = "Wirecutters"
 	id = "wirecutters"
 	build_type = AUTOLATHE
 	materials = list(MAT_METAL = 80)
@@ -83,7 +91,7 @@
 	category = list("initial","Tools")
 
 /datum/design/wrench
-	name = "Pre-war Wrench"
+	name = "Wrench"
 	id = "wrench"
 	build_type = AUTOLATHE
 	materials = list(MAT_METAL = 150)
@@ -668,7 +676,7 @@
 	materials = list(MAT_METAL = 5000)
 	build_path = /obj/item/weaponcrafting/receiver
 	category = list("hacked", "Security")
-/*
+
 /datum/design/shotgun_slug
 	name = "Shotgun Slug"
 	id = "shotgun_slug"
@@ -861,7 +869,7 @@
 	materials = list(MAT_METAL = 16000)
 	build_path = /obj/item/ammo_box/a50MG/AP
 	category = list("initial", "Security")*/
-*/
+
 /datum/design/cleaver
 	name = "Butcher's Cleaver"
 	id = "cleaver"
