@@ -25,7 +25,7 @@
 		GET_COMPONENT_FROM(mood, /datum/component/mood, quirk_holder)
 		if(mood)
 			mood.mood_modifier = 1 //Change this once/if species get their own mood modifiers.
-/*
+
 /datum/quirk/bigleagues
 	name = "Big Leagues"
 	desc = "Swing for the fences! You deal additional damage with melee weapons."
@@ -33,7 +33,7 @@
 	mob_trait = TRAIT_BIG_LEAGUES
 	gain_text = "<span class='notice'>You feel like swinging for the fences!</span>"
 	lose_text = "<span class='danger'>You feel like bunting.</span>"
-*/
+
 /*
 /datum/quirk/chemwhiz
 	name = "Chem Whiz"
