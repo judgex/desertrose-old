@@ -879,7 +879,7 @@
 		buckle_mob(target,TRUE,TRUE)
 	. = ..()
 		
-
+/*
 /mob/living/carbon/human/ShiftMiddleClickOn(mob/over)
 	. = ..()
 	if(ishuman(over))
@@ -1039,7 +1039,7 @@
 			src.pixel_y = 0 //position reset
 
 			src.is_busy = FALSE
-
+*/
 //Can C try to piggyback at all.
 /mob/living/carbon/human/proc/can_piggyback(mob/living/carbon/C)
 	if(istype(C) && C.stat == CONSCIOUS)
