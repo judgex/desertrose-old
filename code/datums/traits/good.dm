@@ -68,7 +68,7 @@
 	mob_trait = TRAIT_FREERUNNING
 	gain_text = "<span class='notice'>You feel lithe on your feet!</span>"
 	lose_text = "<span class='danger'>You feel clumsy again.</span>"
-/*
+
 /datum/quirk/iron_fist
 	name = "Iron Fist"
 	desc = "You have fists of kung-fury! Increases unarmed damage."
@@ -81,7 +81,7 @@
 	var/mob/living/carbon/human/mob_tar = quirk_holder
 	mob_tar.dna.species.punchdamagelow = 3
 	mob_tar.dna.species.punchdamagehigh = 10
-*/
+
 /datum/quirk/jolly
 	name = "Jolly"
 	desc = "You sometimes just feel happy, for no reason at all."
