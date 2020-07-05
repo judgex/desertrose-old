@@ -72,7 +72,7 @@
 /datum/quirk/iron_fist
 	name = "Iron Fist"
 	desc = "You have fists of kung-fury! Increases unarmed damage."
-	value = 2
+	value = 3
 	mob_trait = TRAIT_IRONFIST
 	gain_text = "<span class='notice'>Your fists feel furious!</span>"
 	lose_text = "<span class='danger'>Your fists feel calm again.</span>"
