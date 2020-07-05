@@ -250,7 +250,7 @@
 /datum/chemical_reaction/stimpak
 	name = "Stimpak Fluid"
 	id = "stimpak"
-	results = list("stimpak" = 4)
-	required_reagents = list("blood" = 2, "spaceacillin" = 3, "modafinil" = 3)
-	required_temp = 500
+	results = list("stimpak" = 2)
+	required_reagents = list("blood" = 2, "spaceacillin" = 2) //- Review at later date
+	required_temp = 300
 
