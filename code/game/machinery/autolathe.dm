@@ -61,10 +61,10 @@
 	return ..()
 
 /obj/machinery/autolathe/ui_interact(mob/living/user)
-	. = ..()
+	. = ..()/*
 	if(!user.has_trait(TRAIT_TECHNOPHREAK))
 		to_chat(user, "<span class='warning'>The tools here are too complicated for someone without years of training to use effectively...</span>")
-		return
+		return*/ //the community will accept this whether hell or high water, were fucking rebasing to bay, so from now till then I guess, one day you goddamn tgheads.
 	if(!user.IsAdvancedToolUser())
 		to_chat(user, "<span class='warning'>You stare at the modern tools, fascinated.</span>")
 		return
