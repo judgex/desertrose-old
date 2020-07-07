@@ -188,6 +188,18 @@
 	time = 40
 	category = CAT_ROBOT
 
+
+/datum/crafting_recipe/batterybox //lasmusket ammo
+	name = "Laser Musket battery pack"
+	result = /obj/item/ammo_box/lasmusket
+	reqs = list(/obj/item/stack/crafting/electronicparts = 3,
+				/obj/item/stack/sheet/glass = 6,
+				/obj/item/stack/sheet/metal = 6)
+	tools = list(TOOL_WORKBENCH, TOOL_MULTITOOL)
+	time = 20
+	category = CAT_WEAPONRY
+	subcategory = CAT_AMMO
+
 /datum/crafting_recipe/needlerammo
 	name = "needler stripper clip (needle darts)"
 	result = /obj/item/ammo_box/needle
@@ -1747,6 +1759,19 @@
 				/obj/item/stack/crafting/electronicparts = 2)
 	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER2)
 	traits = list(TRAIT_GUNSMITH_TWO)
+	time = 120
+	category = CAT_WEAPONRY
+	subcategory = CAT_WEAPON
+
+/datum/crafting_recipe/lasmusket
+	name = "Laser Musket"
+	result = /obj/item/gun/ballistic/shotgun/lasmusket
+	reqs = list(///obj/item/stock_parts/cell/ammo/mfc = 1, //removed since it uses one use batteries now
+				/obj/item/stack/crafting/electronicparts = 2,
+				 /obj/item/gun/ballistic/revolver/pipe_rifle = 1,
+				 /obj/item/reagent_containers/food/drinks/bottle/nukacola = 1,
+				 /obj/item/stack/cable_coil = 3)
+	tools = list(TOOL_WORKBENCH, TOOL_MULTITOOL)
 	time = 120
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON

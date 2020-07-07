@@ -20,3 +20,23 @@
 	projectile_type = /obj/item/projectile/beam/laser/gatling
 	variance = 0.8
 	click_cooldown_override = 1
+
+/obj/item/ammo_casing/caseless/bb
+	desc = "A bb"
+	caliber = "bb"
+	projectile_type = /obj/item/projectile/bullet/F13/bbBullet
+	randomspread = 1
+	variance = 1
+
+/obj/item/ammo_casing/caseless/musketball
+	desc = "A musket ball"
+	caliber = "musketball"
+	projectile_type = /obj/item/projectile/bullet/F13/musketball
+
+/obj/item/ammo_casing/caseless/lasermusket
+ 	name = "Battery"
+ 	desc = "A single use battery for the lasmusket"
+ 	caliber = "lasmusket"
+ 	icon_state = "lasmusketbat"
+ 	projectile_type = /obj/item/projectile/beam/laser/musket
+ 	firing_effect_type = /obj/effect/temp_visual/dir_setting/firing_effect/energy

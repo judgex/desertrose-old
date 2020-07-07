@@ -792,6 +792,15 @@
 		M.adjust_fire_stacks(1)
 		M.IgniteMob()
 
+//other
 
 /obj/item/projectile/bullet/F13/c38mmBullet
 	damage = 4
+
+
+/obj/item/projectile/bullet/F13/bbBullet
+	damage = 9
+
+/obj/item/projectile/bullet/F13/musketball
+	damage = 60
+	armour_penetration = 25
