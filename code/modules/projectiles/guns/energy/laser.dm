@@ -156,6 +156,24 @@
 
 //Fallout
 
+//six shots with the laser musket, stronger than a regular laser rifle,
+//need electronics,
+//a pipe rifle and a nuka cola bottle.
+//Then you need makeshift energy cells, so empty MF cells. and electronics
+//make the musket laser have like a 2 second delay after each shot
+
+///obj/item/gun/energy/laser/musket
+//	name = "Homemade Laser Musket"
+//	desc = "A crudely made laser Musket, inneficient but powerful enough"
+//	icon_state = "las_musket"
+//	item_state = "las_musket"
+//	fire_delay = 80
+//	equipsound = 'sound/f13weapons/equipsounds/aer9equip.ogg'
+//	ammo_type = list(/obj/item/ammo_casing/energy/laser/musket)
+//	cell_type = /obj/item/stock_parts/cell/ammo/mfc
+//	w_class = WEIGHT_CLASS_BULKY
+//	weapon_weight = WEAPON_HEAVY
+
 /obj/item/gun/energy/laser/aer9
 	name = "\improper AER9 laser rifle"
 	desc = "A sturdy and advanced military grade pre-war service laser rifle"

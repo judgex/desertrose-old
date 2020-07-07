@@ -92,6 +92,14 @@
 	e_cost = 50
 	fire_sound = 'sound/f13weapons/aer9fire.ogg'
 
+//musket
+
+/obj/item/ammo_casing/energy/laser/musket
+	projectile_type = /obj/item/projectile/beam/laser/musket
+	e_cost = 250
+	fire_sound = 'sound/f13weapons/aer9fire.ogg'
+//
+
 /obj/item/ammo_casing/energy/laser/solar
 	projectile_type = /obj/item/projectile/beam/laser/solar
 	e_cost = 30 //10 shots, self-charges
