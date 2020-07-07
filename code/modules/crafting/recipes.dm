@@ -1769,7 +1769,7 @@
 	reqs = list(///obj/item/stock_parts/cell/ammo/mfc = 1, //removed since it uses one use batteries now
 				/obj/item/stack/crafting/electronicparts = 2,
 				 /obj/item/gun/ballistic/revolver/pipe_rifle = 1,
-				 /obj/item/reagent_containers/food/drinks/bottle/nukacola = 1,
+				 /obj/item/reagent_containers/food/drinks/soda_cans/f13nukacola = 1,
 				 /obj/item/stack/cable_coil = 3)
 	tools = list(TOOL_WORKBENCH, TOOL_MULTITOOL)
 	time = 120
