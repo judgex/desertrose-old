@@ -316,7 +316,7 @@ Raider
 
 /datum/outfit/loadout/raider_ncr
 	name = "NCR Deserter"
-	suit = /obj/item/clothing/suit/armor/f13/exile
+	suit = /obj/item/clothing/suit/armor/f13/exile/ncrexile
 	uniform = /obj/item/clothing/under/f13/exile
 	id = /obj/item/card/id/rusted
 	backpack_contents = list(

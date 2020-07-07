@@ -1794,6 +1794,16 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
 
+/datum/crafting_recipe/baseballbat
+	name = "baseball bat"
+	result = /obj/item/twohanded/baseball
+	time = 80
+	reqs = list(/obj/item/stack/sheet/mineral/wood=10,
+				/obj/item/stack/sheet/metal = 1)
+	tools = list(TOOL_WORKBENCH)
+	category = CAT_WEAPONRY
+	subcategory = CAT_WEAPON
+
 /datum/crafting_recipe/baseballspiked
 	name = "spiked baseball bat"
 	result = /obj/item/twohanded/baseball/spiked
@@ -2000,7 +2010,7 @@
 	tools = list(TOOL_WORKBENCH)
 	category = CAT_PRIMAL
 	subcategory = CAT_TRIBAL
-  
+
 //BOTTLING
 
 /datum/crafting_recipe/bottler
