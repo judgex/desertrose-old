@@ -52,10 +52,7 @@
 	frequency = add_radio(src, new_frequency)
 
 /obj/item/radio/proc/recalculateChannels()
-	channels = list()
-	translate_binary = FALSE
-	syndie = FALSE
-	independent = FALSE
+	resetChannels()
 
 	if(keyslot)
 		for(var/ch_name in keyslot.channels)
@@ -71,6 +68,12 @@
 
 	for(var/ch_name in channels)
 		secure_radio_connections[ch_name] = add_radio(src, GLOB.radiochannels[ch_name])
+
+/obj/item/radio/proc/resetChannels()// this is a TG port yogs did on june 2020 by "Jumps0"
+	channels = list()
+	translate_binary = FALSE
+	syndie = FALSE
+	independent = FALSE
 
 /obj/item/radio/proc/make_syndie() // Turns normal radios into Syndicate radios!
 	qdel(keyslot)
@@ -376,8 +379,15 @@
 	subspace_switchable = TRUE
 	dog_fashion = null
 
-/obj/item/radio/borg/Initialize(mapload)
+/obj/item/radio/borg/resetChannels()
 	. = ..()
+
+/obj/item/radio/borg/resetChannels()//I took this from yogstation *kisses yogstation*
+	. = ..()						//Improvisation is key - Jando
+	var/mob/living/silicon/robot/R = loc
+	if(istype(R))
+		for(var/ch_name in R.module.radio_channels)
+			channels[ch_name] = 1
 
 /obj/item/radio/borg/syndicate
 	syndie = 1
