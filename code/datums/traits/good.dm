@@ -33,6 +33,7 @@
 	mob_trait = TRAIT_BIG_LEAGUES
 	gain_text = "<span class='notice'>You feel like swinging for the fences!</span>"
 	lose_text = "<span class='danger'>You feel like bunting.</span>"
+
 /*
 /datum/quirk/chemwhiz
 	name = "Chem Whiz"

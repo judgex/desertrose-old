@@ -91,8 +91,8 @@
 	min_cold_protection_temperature = SHOES_MIN_TEMP_PROTECT
 
 /obj/item/clothing/shoes/f13/military/ncr
-	name = "NCR patrol boots"
-	desc = "A pair of standard issue NCR brown boots, with a puttee."
+	name = "patrol boots"
+	desc = "A pair of standard issue brown boots, with a puttee."
 	icon_state = "ncr_boots"
 	item_state = "ncr"
 

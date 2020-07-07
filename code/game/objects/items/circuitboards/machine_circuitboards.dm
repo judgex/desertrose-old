@@ -24,7 +24,7 @@
 		/obj/item/stack/sheet/glass = 1)
 
 /obj/item/circuitboard/machine/autolathe
-	name = "Autolathe (Machine Board)"
+	name = "Workshop (Machine Board)"
 	build_path = /obj/machinery/autolathe
 	req_components = list(
 		/obj/item/stock_parts/matter_bin = 3,
@@ -32,7 +32,7 @@
 		/obj/item/stack/sheet/glass = 1)
 
 /obj/item/circuitboard/machine/autolathe/constructionlathe
-	name = "Constructionlathe (Machine Board)"
+	name = "Workshop (Machine Board)"
 	build_path = /obj/machinery/autolathe/constructionlathe
 
 /obj/item/circuitboard/machine/clonepod

@@ -3,8 +3,8 @@
 #define AUTOLATHE_SEARCH_MENU     3
 
 /obj/machinery/autolathe
-	name = "autolathe"
-	desc = "It produces items using metal and glass."
+	name = "Workshop"
+	desc = "Contains an array of custom made and skilled tools for professional craftsmen."
 	icon_state = "autolathe"
 	density = TRUE
 	use_power = IDLE_POWER_USE
@@ -46,7 +46,6 @@
 							"Medical",
 							"Misc",
 							"Dinnerware",
-							"Imported"
 							)
 
 /obj/machinery/autolathe/Initialize()
@@ -61,10 +60,13 @@
 	QDEL_NULL(wires)
 	return ..()
 
-/obj/machinery/autolathe/ui_interact(mob/user)
-	. = ..()
+/obj/machinery/autolathe/ui_interact(mob/living/user)
+	. = ..()/*
+	if(!user.has_trait(TRAIT_TECHNOPHREAK))
+		to_chat(user, "<span class='warning'>The tools here are too complicated for someone without years of training to use effectively...</span>")
+		return*/ //the community will accept this whether hell or high water, were fucking rebasing to bay, so from now till then I guess, one day you goddamn tgheads.
 	if(!user.IsAdvancedToolUser())
-		to_chat(user, "<span class='warning'>You stare at the blinking lights, fascinated.</span>")
+		to_chat(user, "<span class='warning'>You stare at the modern tools, fascinated.</span>")
 		return
 	if(!is_operational())
 		return
@@ -92,7 +94,7 @@
 
 /obj/machinery/autolathe/attackby(obj/item/O, mob/user, params)
 	if (busy)
-		to_chat(user, "<span class=\"alert\">The autolathe is busy. Please wait for completion of previous operation.</span>")
+		to_chat(user, "<span class=\"alert\">The workshop is already in use.</span>")
 		return TRUE
 
 	if(default_deconstruction_screwdriver(user, "autolathe_t", "autolathe", O))
@@ -228,7 +230,7 @@
 	prod_coeff = min(1,max(0.1,T)) // Coeff going 1 -> 0,8 -> 0,6 -> 0,4
 
 /obj/machinery/autolathe/proc/main_win(mob/user)
-	var/dat = "<div class='statusDisplay'><h3>Autolathe Menu:</h3><br>"
+	var/dat = "<div class='statusDisplay'><h3>Workshop Menu:</h3><br>"
 	dat += materials_printout()
 
 	dat += "<form name='search' action='?src=[REF(src)]'>\
@@ -392,8 +394,8 @@
 	return
 
 /obj/machinery/autolathe/constructionlathe
-	name = "Construction Lathe"
-	desc = "An autolathe that has had Vault-Tec DRM poorly added to it to prevent it from producing weaponry."
+	name = "Workshop"
+	desc = "Contains an array of custom made and skilled tools for professional craftsmen."
 	circuit = /obj/item/circuitboard/machine/autolathe/constructionlathe
 	super_advanced_technology = FALSE
 	resistance_flags = NONE
@@ -404,11 +406,11 @@
 							"Electronics",
 							"Construction",
 							"T-Comm",
+							"Security",
 							"Machinery",
 							"Medical",
 							"Misc",
 							"Dinnerware",
-							"Imported"
 							)
 
 /obj/machinery/autolathe/constructionlathe/attackby(obj/item/O, mob/user, params)
@@ -443,11 +445,10 @@
 							"Medical",
 							"Misc",
 							"Dinnerware",
-							"Imported"
 							)
 				hacked = TRUE
-				name = "modified construction lathe"
-				desc = "An autolathe that has been modified to have Vault-Tec DRM, and then modified again to have the DRM bypassed. Do what you want, 'cause a pirate is free."
+				name = "Workshop"
+				desc = "Contains an array of custom made and skilled tools for professional craftsmen."
 				qdel(O)
 	if(panel_open)
 		default_deconstruction_crowbar(O)

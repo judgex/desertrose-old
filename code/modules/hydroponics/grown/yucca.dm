@@ -27,4 +27,5 @@
 	icon_state = "Bannana Yucca"
 	icon = 'icons/obj/hydroponics/harvest.dmi'
 	bitesize = 100
+	juice_results = list("yuccajuice" = 0)
 	distill_reagent = "yuccajuice"
