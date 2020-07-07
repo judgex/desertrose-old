@@ -1763,6 +1763,7 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
 
+/*
 /datum/crafting_recipe/lasmusket
 	name = "Laser Musket"
 	result = /obj/item/gun/ballistic/shotgun/lasmusket
@@ -1775,6 +1776,7 @@
 	time = 120
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
+*/
 
 /datum/crafting_recipe/glock86a
 	name = "(Upgrade) Glock 86a"
