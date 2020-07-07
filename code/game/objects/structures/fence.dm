@@ -1,7 +1,6 @@
 //Chain link fences
 //Sprites ported from /VG/
 
-
 #define CUT_TIME 100
 #define CLIMB_TIME 150
 
@@ -15,7 +14,6 @@
 	desc = "A chain link fence. Not as effective as a wall, but generally it keeps people out."
 	density = TRUE
 	anchored = TRUE
-
 	icon = 'icons/obj/fence.dmi'
 	icon_state = "straight"
 	barricade = TRUE
@@ -273,11 +271,36 @@
 	can_hold_padlock = TRUE
 	icon = 'icons/obj/fence.dmi'
 
-
 #undef CUT_TIME
 #undef CLIMB_TIME
-
 #undef NO_HOLE
 #undef MEDIUM_HOLE
 #undef LARGE_HOLE
 #undef MAX_HOLE_SIZE
+
+/obj/structure/fence/wooden
+	name = "wooden fence"
+	desc = "A fence fashioned out of wood planks. Designed to keep animals in and vagrants out"
+	icon = 'icons/obj/fence.dmi'
+	icon_state = "straight_wood"
+	cuttable = FALSE
+	climbable = TRUE
+
+/obj/structure/fence/end/wooden
+	icon_state = "end_wood"
+	cuttable = FALSE
+
+/obj/structure/fence/corner/wooden
+	icon_state = "corner_wood"
+	cuttable = FALSE
+
+/obj/structure/simple_door/metal/fence/wooden
+	name = "wood fence gate"
+	desc = "A wooden gate for a wood fence."
+	icon_state = "fence_wooden"
+	door_type = "fence_wooden"
+	open_sound = "sound/f13machines/doorchainlink_open.ogg"
+	close_sound = "sound/f13machines/doorchainlink_close.ogg"
+	opaque = 0
+	can_hold_padlock = TRUE
+	icon = 'icons/obj/fence.dmi'
