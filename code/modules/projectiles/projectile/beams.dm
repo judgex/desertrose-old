@@ -195,6 +195,13 @@
 		M.visible_message("<span class='danger'>[M] explodes into a shower of gibs!</span>")
 		M.gib()
 
+
+//musket
+/obj/item/projectile/beam/laser/musket //musket
+	name = "laser beam"
+	damage = 40
+	armour_penetration = 25
+
 /obj/item/projectile/beam/laser/lasgun //AER9
 	name = "laser beam"
 	damage = 26

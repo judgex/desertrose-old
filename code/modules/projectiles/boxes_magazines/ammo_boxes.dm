@@ -210,6 +210,32 @@
 	name = "ammo box (.45 JHP)"
 	ammo_type = /obj/item/ammo_casing/c45/jhp
 
+// bb gun
+/obj/item/ammo_box/bbs
+	name = "ammo box (BBs)"
+	icon_state = "BBbox"
+	ammo_type = /obj/item/ammo_casing/caseless/bb
+	max_ammo = 100
+	materials = list(MAT_METAL = 5000)
+	w_class = WEIGHT_CLASS_NORMAL
+
+//lasmusket
+/obj/item/ammo_box/lasmusket
+	name = "Battery Box (Musket)"
+	icon_state = "Batbox"
+	ammo_type = /obj/item/ammo_casing/caseless/lasermusket
+	max_ammo = 18
+	materials = list(MAT_METAL = 1000)
+	w_class = WEIGHT_CLASS_NORMAL
+
+/obj/item/ammo_box/musketball//TODO
+	name = "Musket Balls box"
+	icon_state = "Batbox"
+	ammo_type = /obj/item/ammo_casing/caseless/musketball
+	max_ammo = 10
+	materials = list(MAT_METAL = 1000)
+	w_class = WEIGHT_CLASS_NORMAL
+
 //.44 Magnum
 /obj/item/ammo_box/m44box
 	name = "ammo box (.44 Magnum FMJ)"
