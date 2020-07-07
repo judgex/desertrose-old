@@ -193,7 +193,7 @@
 /obj/item/reagent_containers/food/drinks/ice
 	name = "ice cup"
 	desc = "Careful, cold ice, do not chew."
-	icon_state = "coffee"
+	icon_state = "shaker"
 	list_reagents = list("ice" = 30)
 	spillable = TRUE
 	isGlass = FALSE

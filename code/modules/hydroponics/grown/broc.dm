@@ -21,6 +21,7 @@
 	icon_state = "broc"
 	//slot_flags = SLOT_HEAD
 	filling_color = "#FF6347"
+	juice_results = list("broctea" = 0)
 	distill_reagent = "brocbrew"
 
 

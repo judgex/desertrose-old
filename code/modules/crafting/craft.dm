@@ -24,7 +24,10 @@
 							CAT_TRIBAL,
 							CAT_FORGE), //Tribal subcategories
 						CAT_NONE,//Medical subcategories
-						CAT_NONE, //Assemblies subcategories
+						list(
+							CAT_MACHINES,
+							CAT_TOOLS,
+							CAT_ASSEM), //Assemblies subcategories
 						list(	//Food subcategories
 							CAT_BREAD,
 							CAT_BURGER,

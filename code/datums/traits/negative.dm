@@ -97,7 +97,6 @@
 
 
 
-
 /datum/quirk/insanity
 	name = "Reality Dissociation Syndrome"
 	desc = "You suffer from a severe disorder that causes very vivid hallucinations. Mindbreaker toxin can suppress its effects, and you are immune to mindbreaker's hallucinogenic properties. <b>This is not a license to grief.</b>"

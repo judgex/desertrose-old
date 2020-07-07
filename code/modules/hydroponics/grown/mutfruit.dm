@@ -22,6 +22,7 @@
 	icon_state = "mutfruit"
 	filling_color = "#FF6347"
 	distill_reagent = "purplecider"
+	juice_results = list("mutjuice" = 0)
 
 /obj/item/reagent_containers/food/snacks/grown/mutfruit/add_juice()
 	if(..())
