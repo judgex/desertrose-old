@@ -826,9 +826,9 @@
 			GG.reagents.add_reagent("uranium", reac_volume)
 
 /datum/reagent/bluespace
-	name = "Bluespace Dust"
+	name = "Quantum Sauce"
 	id = "bluespace"
-	description = "A dust composed of microscopic bluespace crystals, with minor space-warping properties."
+	description = "A sauce composed of microscopic quantum mesh, known as a potential flavor enhancer and alleged quantum entanglement enhancer."
 	reagent_state = SOLID
 	color = "#0000CC"
 	taste_description = "fizzling blue"

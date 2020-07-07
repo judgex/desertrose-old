@@ -27,5 +27,6 @@
 	filling_color = "#F0E68C"
 	bitesize_mod = 2
 	foodtype = VEGETABLES
+	juice_results = list("honey" = 0)
 	tastes = list("crunchy sweetness" = 1)
 	distill_reagent = "wastemead"

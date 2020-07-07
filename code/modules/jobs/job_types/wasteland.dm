@@ -142,8 +142,8 @@ Raider
 	head_announce = list("Security")
 	faction = "Wastelander"
 	social_faction = "Raiders"
-	total_positions = 14
-	spawn_positions = 14
+	total_positions = 15
+	spawn_positions = 15
 	description = "You are an undesirable figure of some kind- perhaps a corrupt official, or a cannibalistic bartender, or a devious conman, to name a few examples. You have more freedom than anyone else in the wastes, and are not bound by the same moral code as others, but though you may only be interested in self-gain, you still have a responsibility to make your time here interesting, fun, and engaging for others- this means that whatever path you pursue should be more nuanced and flavorful than simple highway robbery or slavery. (Adminhelp if you require help setting up your character for the round.)"
 	supervisors = "Your desire to make things interesting and fun"
 	selection_color = "#ff4747"
@@ -349,10 +349,11 @@ Raider
     suit = /obj/item/clothing/suit/armor/f13/leather_jacket
     uniform = /obj/item/clothing/under/f13/bennys
     glasses = /obj/item/clothing/glasses/sunglasses
-    shoes =/obj/item/clothing/shoes/f13/fancy
+    shoes = /obj/item/clothing/shoes/f13/fancy
     backpack_contents = list(
         /obj/item/gun/ballistic/automatic/pistol/ninemil=1,
         /obj/item/ammo_box/magazine/m9mm=2,
+		/obj/item/card/id/dogtag/town/mafia=1,
         /obj/item/toy/cards/deck=1)
 
 /datum/outfit/loadout/raider_vault
