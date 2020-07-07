@@ -908,9 +908,12 @@
 
 	loot = list(
 				/obj/item/gun/energy/laser/plasma,
+				/obj/item/gun/ballistic/automatic/tommygun,
+				/obj/item/gun/ballistic/automatic/shotgun/riot
 				/obj/item/gun/energy/laser/scatter,
 				/obj/item/gun/ballistic/revolver/sequoia/scoped,
 				/obj/item/gun/ballistic/automatic/bozar
+
 				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/unique //UNIQUE GUN
@@ -930,8 +933,8 @@
     lootcount = 1
 
     loot = list(
-            /obj/effect/spawner/lootdrop/f13/weapon/gun/tier1 = 84,
-            /obj/effect/spawner/lootdrop/f13/weapon/gun/tier2 = 10,
+            /obj/effect/spawner/lootdrop/f13/weapon/gun/tier1 = 80,
+            /obj/effect/spawner/lootdrop/f13/weapon/gun/tier2 = 14,
             /obj/effect/spawner/lootdrop/f13/weapon/gun/tier3 = 3,
             /obj/effect/spawner/lootdrop/f13/weapon/gun/tier4 = 2,
             /obj/effect/spawner/lootdrop/f13/weapon/gun/tier5 = 1,
