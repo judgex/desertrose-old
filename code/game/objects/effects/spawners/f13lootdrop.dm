@@ -935,8 +935,7 @@
             /obj/effect/spawner/lootdrop/f13/weapon/gun/tier2 = 14,
             /obj/effect/spawner/lootdrop/f13/weapon/gun/tier3 = 3,
             /obj/effect/spawner/lootdrop/f13/weapon/gun/tier4 = 2,
-            /obj/effect/spawner/lootdrop/f13/weapon/gun/tier5 = 1,
-
+            /obj/effect/spawner/lootdrop/f13/weapon/gun/tier5 = 1
             )
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/random_high
@@ -948,9 +947,8 @@
             /obj/effect/spawner/lootdrop/f13/weapon/gun/tier3 = 35,
             /obj/effect/spawner/lootdrop/f13/weapon/gun/tier4 = 5,
             /obj/effect/spawner/lootdrop/f13/weapon/gun/tier5 = 4,
-            /obj/effect/spawner/lootdrop/f13/weapon/gun/unique = 1,
+            /obj/effect/spawner/lootdrop/f13/weapon/gun/unique = 1
             )
-
 
 /* ------------------------------------------------
    ------------WEAPON AMMO SPAWNERS----------------

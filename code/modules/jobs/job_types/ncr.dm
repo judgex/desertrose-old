@@ -133,8 +133,6 @@ Captain
 	backpack_contents = list(
 	/obj/item/ammo_box/magazine/m556/rifle/assault=2)
 
-
-
 /*
 Ambassador
 */
@@ -170,11 +168,10 @@ Ambassador
 		/obj/item/storage/bag/money/small/ncr=1,
 		/obj/item/megaphone=1)
 
-
-
 /*
 Lieutenant
 */
+
 /datum/job/ncr/f13lieutenant
 	title = "NCR Lieutenant"
 	flag = F13LIEUTENANT
@@ -249,7 +246,6 @@ Lieutenant
 		/obj/item/ammo_box/magazine/w308=3,
 		/obj/item/book/granter/trait/trekking=1)
 
-
 /*
 Sergeant
 */
@@ -308,6 +304,7 @@ Sergeant
 /*
 Corporal
 */
+
 /datum/job/ncr/f13specialist
 	title = "NCR Corporal"
 	flag = F13SPECIALIST
@@ -344,7 +341,6 @@ Corporal
 		/obj/item/stack/medical/gauze=1, \
 		/obj/item/storage/bag/money/small/ncrenlisted, \
 		/obj/item/clothing/mask/ncr_facewrap)
-
 
 /datum/outfit/loadout/specmedic
 	name = "Field Medic"
@@ -403,7 +399,6 @@ NCR Heavy Trooper
 	/datum/outfit/loadout/heavysgt,
 	)
 
-
 /datum/outfit/job/ncr/f13ncrht
 	name = "NCR Heavy Trooper"
 	jobtype = /datum/job/ncr/f13ncrht
@@ -434,11 +429,10 @@ NCR Heavy Trooper
 		/obj/item/clothing/accessory/ncr/SGT=1,
 		)
 
-
-
 /*
 NCR Military Police
 */
+
 /datum/job/ncr/f13ncrmp
 	title = "NCR Military Police"
 	flag = F13NCRMP
@@ -476,6 +470,7 @@ NCR Military Police
 /*
 Trooper
 */
+
 /datum/job/ncr/f13trooper
 	title = "NCR Trooper"
 	flag = F13TROOPER
@@ -527,6 +522,7 @@ Trooper
 /*
 Recruit
 */
+
 /datum/job/ncr/f13recruit
 	title = "NCR Assistant"
 	flag = F13RECRUIT
@@ -551,7 +547,7 @@ Recruit
 	suit_store = 	/obj/item/gun/ballistic/automatic/pistol/ninemil
 	ears = 			/obj/item/radio/headset //no NCR comms
 	belt =			/obj/item/pickaxe
-	gloves = null
+	gloves = 		null
 	glasses = 		null
 	backpack_contents = list(
 		/obj/item/kitchen/knife/combat/survival=1, \
@@ -611,8 +607,6 @@ Recruit
 	/datum/outfit/loadout/offduty
 	)
 
-
-
 /datum/outfit/job/ncr/f13ncrcitizen
 	ears = /obj/item/radio/headset
 	id = /obj/item/card/id/dogtag/town
@@ -623,7 +617,6 @@ Recruit
 	glasses = /obj/item/clothing/glasses/orange
 	backpack_contents = list(
 		/obj/item/storage/bag/money/small/wastelander)
-
 
 /datum/outfit/loadout/brahminbaron
 	name = "Brahmin Baron"
@@ -674,6 +667,7 @@ Recruit
 /*
 Veteran Ranger
 */
+
 /datum/job/ncr/f13vetranger
 	title = "NCR Veteran Ranger"
 	flag = F13VETRANGER
@@ -743,6 +737,7 @@ Veteran Ranger
 /*
 Ranger
 */
+
 /datum/job/ncr/f13ranger
 	title = "NCR Ranger"
 	flag = F13RANGER
