@@ -271,7 +271,7 @@
 	build_path = /obj/item/organ/cyberimp/arm/surgery
 	category = list("Misc", "Medical Designs")
 	departmental_flags = DEPARTMENTAL_FLAG_MEDICAL
-/*
+
 /datum/design/cyberimp_toolset
 	name = "Toolset Arm Implant"
 	desc = "A stripped-down version of engineering cyborg toolset, designed to be installed on subject's arm."
@@ -282,7 +282,6 @@
 	build_path = /obj/item/organ/cyberimp/arm/toolset
 	category = list("Misc", "Medical Designs")
 	departmental_flags = DEPARTMENTAL_FLAG_MEDICAL
-*/
 
 /datum/design/cyberimp_medical_hud
 	name = "Medical HUD Implant"

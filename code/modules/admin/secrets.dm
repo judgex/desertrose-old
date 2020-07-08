@@ -49,6 +49,7 @@
 			<A href='?src=[REF(src)];[HrefToken()];secrets=virus'>Trigger a Virus Outbreak</A><BR>
 			<A href='?src=[REF(src)];[HrefToken()];secrets=monkey'>Turn all humans into monkeys</A><BR>
 			<A href='?src=[REF(src)];[HrefToken()];secrets=allspecies'>Change the species of all humans</A><BR>
+			<A href='?src=[REF(src)];[HrefToken()];secrets=anime'>Chinese Cartoons</A><BR>
 			<A href='?src=[REF(src)];[HrefToken()];secrets=power'>Make all areas powered</A><BR>
 			<A href='?src=[REF(src)];[HrefToken()];secrets=unpower'>Make all areas unpowered</A><BR>
 			<A href='?src=[REF(src)];[HrefToken()];secrets=quickpower'>Power all SMES</A><BR>
@@ -71,6 +72,8 @@
 			<A href='?src=[REF(src)];[HrefToken()];secrets=resetmovement'>Reset movement directions to default</A><BR>
 			<BR>
 			<A href='?src=[REF(src)];[HrefToken()];secrets=changebombcap'>Change bomb cap</A><BR>
+			<A href='?src=[REF(src)];[HrefToken()];secrets=masspurrbation'>Mass Purrbation</A><BR>
+			<A href='?src=[REF(src)];[HrefToken()];secrets=massremovepurrbation'>Mass Remove Purrbation</A><BR>
 			"}
 
 	dat += "<BR>"
@@ -572,6 +575,20 @@
 			if(!check_rights(R_ADMIN))
 				return
 			toggle_all_ctf(usr)
+		if("masspurrbation")
+			if(!check_rights(R_FUN))
+				return
+			mass_purrbation()
+			message_admins("[key_name_admin(usr)] has put everyone on \
+				purrbation!")
+			log_admin("[key_name(usr)] has put everyone on purrbation.")
+		if("massremovepurrbation")
+			if(!check_rights(R_FUN))
+				return
+			mass_remove_purrbation()
+			message_admins("[key_name_admin(usr)] has removed everyone from \
+				purrbation.")
+			log_admin("[key_name(usr)] has removed everyone from purrbation.")
 
 		if("flipmovement")
 			if(!check_rights(R_FUN))

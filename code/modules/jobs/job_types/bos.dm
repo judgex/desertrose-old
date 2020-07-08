@@ -48,10 +48,17 @@ Elder
 	exp_requirements = 2700
 	total_positions = 0
 	spawn_positions = 0
+
 	outfit = /datum/outfit/job/bos/f13elder
 
 	access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_MINERAL_STOREROOM, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
 	minimal_access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_MINERAL_STOREROOM, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
+
+/datum/outfit/job/bos/f13elder/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	..()
+	if(visualsOnly)
+		return
+	H.add_trait(TRAIT_CHEMWHIZ)
 
 /datum/outfit/job/bos/f13elder
 	name = "Elder"
@@ -83,16 +90,21 @@ Sentinel
 	selection_color = "#7f8c8d"
 	exp_requirements = 1800
 
-	outfit = /datum/outfit/job/bos/f13sentinel
-
-	access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
-	minimal_access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
-
 	loadout_options = list(
 	/datum/outfit/loadout/sentstand, //Tribeam laser and 10mm pistol
 	/datum/outfit/loadout/sentvet, //Pulse rifle and AEP7
 	)
 
+	outfit = /datum/outfit/job/bos/f13sentinel
+
+	access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
+	minimal_access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
+
+/datum/outfit/job/bos/f13sentinel/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	..()
+	if(visualsOnly)
+		return
+	H.add_trait(TRAIT_CHEMWHIZ)
 
 /datum/outfit/job/bos/f13sentinel
 	name = "Sentinel"
@@ -159,6 +171,12 @@ Head Scribe
 	access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
 	minimal_access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
 
+/datum/outfit/job/bos/f13headscribe/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	..()
+	if(visualsOnly)
+		return
+	H.add_trait(TRAIT_MEDICALEXPERT, TRAIT_GENERIC, TRAIT_CHEMWHIZ)
+
 /datum/outfit/job/bos/f13headscribe
 	name = "Head Scribe"
 	jobtype = /datum/job/bos/f13headscribe
@@ -173,7 +191,6 @@ Head Scribe
 		/obj/item/kitchen/knife/combat=1, \
 		/obj/item/reagent_containers/hypospray/medipen/stimpak/super=2 \
 		)
-
 
 /datum/outfit/loadout/hsstand
 	name = "Medicinal Expert"
@@ -190,13 +207,6 @@ Head Scribe
 		/obj/item/ammo_box/needleap=2,
 		/obj/item/reagent_containers/hypospray/CMO=1
 		)
-
-
-/datum/outfit/job/bos/f13headscribe/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
-	..()
-	if(visualsOnly)
-		return
-	H.add_trait(TRAIT_MEDICALEXPERT, TRAIT_GENERIC)
 
 /*
 Knight-Captain
@@ -227,6 +237,12 @@ Knight-Captain
 	access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
 	minimal_access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
 
+/datum/outfit/job/bos/f13knightcap/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	..()
+	if(visualsOnly)
+		return
+	H.add_trait(TRAIT_CHEMWHIZ)
+
 /datum/outfit/job/bos/f13knightcap
 	name = "Knight-Captain"
 	jobtype = /datum/job/bos/f13knightcap
@@ -245,11 +261,8 @@ Knight-Captain
 		/obj/item/kitchen/knife/combat=1, \
 		)
 
-
 /datum/job/bos/f13knightcap/after_spawn(mob/living/carbon/human/H, mob/M)
 	H.add_quirk("Hard Yards")
-
-
 
 /datum/outfit/loadout/capstand
 	name = "Knight-Captain"
@@ -441,10 +454,17 @@ Senior Scribe
 	supervisors = "the Head Scribe"
 	selection_color = "#95a5a6"
 	exp_requirements = 600
+
 	outfit = /datum/outfit/job/bos/f13seniorscribe
 
 	access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
 	minimal_access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
+
+/datum/outfit/job/bos/f13seniorscribe/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	..()
+	if(visualsOnly)
+		return
+	H.add_trait(TRAIT_CHEMWHIZ)
 
 /datum/outfit/job/bos/f13seniorscribe
 	name = "Senior Scribe"
@@ -494,6 +514,12 @@ Scribe
 
 	access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
 	minimal_access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
+
+/datum/outfit/job/bos/f13scribe/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	..()
+	if(visualsOnly)
+		return
+	H.add_trait(TRAIT_CHEMWHIZ)
 
 /datum/outfit/job/bos/f13scribe
 	name = "Scribe"

@@ -1245,6 +1245,37 @@
 			if(!check_rights(NONE))
 				return
 
+		else if(href_list["purrbation"])
+			if(!check_rights(R_FUN))
+				return
+
+			var/mob/living/carbon/human/H = locate(href_list["purrbation"]) in GLOB.mob_list
+			if(!istype(H))
+				to_chat(usr, "This can only be done to instances of type /mob/living/carbon/human")
+				return
+			if(!ishumanbasic(H))
+				to_chat(usr, "This can only be done to the basic human species at the moment.")
+				return
+
+			if(!H)
+				to_chat(usr, "Mob doesn't exist anymore")
+				return
+
+			var/success = purrbation_toggle(H)
+			if(success)
+				to_chat(usr, "Put [H] on purrbation.")
+				log_admin("[key_name(usr)] has put [key_name(H)] on purrbation.")
+				var/msg = "<span class='notice'>[key_name_admin(usr)] has put [key_name(H)] on purrbation.</span>"
+				message_admins(msg)
+				admin_ticket_log(H, msg)
+
+			else
+				to_chat(usr, "Removed [H] from purrbation.")
+				log_admin("[key_name(usr)] has removed [key_name(H)] from purrbation.")
+				var/msg = "<span class='notice'>[key_name_admin(usr)] has removed [key_name(H)] from purrbation.</span>"
+				message_admins(msg)
+				admin_ticket_log(H, msg)
+
 			var/mob/living/L = locate(href_list["mobToDamage"]) in GLOB.mob_list
 			if(!istype(L))
 				return

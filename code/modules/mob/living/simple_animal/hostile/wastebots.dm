@@ -156,7 +156,7 @@
 
 
 /obj/item/projectile/beam/laser/pistol/ultraweak
-	damage = 10 //quantity over quality
+	damage = 15 //quantity over quality
 
 /mob/living/simple_animal/hostile/handy/sentrybot/bullet_act(obj/item/projectile/Proj)
 	if(!Proj)
@@ -211,3 +211,9 @@
 	attacktext = "grinds their claws on"
 	faction = list("wastebot")
 	loot = list(/obj/effect/decal/cleanable/robot_debris, /obj/item/stack/crafting/electronicparts/three, /obj/item/stock_parts/cell/ammo/mfc)
+
+	emote_taunt_sound = FALSE
+	emote_taunt = FALSE
+
+	aggrosound = FALSE
+	idlesound = FALSE

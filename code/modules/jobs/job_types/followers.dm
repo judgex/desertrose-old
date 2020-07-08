@@ -46,7 +46,7 @@ Lead Practitioner
 	..()
 	if(visualsOnly)
 		return
-	H.add_trait(TRAIT_TECHNOPHREAK)
+	H.add_trait(TRAIT_TECHNOPHREAK, TRAIT_CHEMWHIZ)
 
 /datum/outfit/job/followers/f13leadpractitioner
 	name = "Lead Practitioner"
@@ -91,7 +91,6 @@ Practitioner
 	/datum/outfit/loadout/emt
 	)
 
-
 /datum/outfit/job/followers/f13practitioner
 	name = "Practitioner"
 	jobtype = /datum/job/followers/f13practitioner
@@ -101,14 +100,13 @@ Practitioner
 	backpack_contents = list(
 		/obj/item/defibrillator/compact/loaded)
 
-
 /datum/outfit/loadout/chemist
 	name = "Chemist"
 	backpack_contents = list(
-	/obj/item/book/granter/trait/chemistry=1,
-	/obj/item/reagent_containers/glass/beaker/meta=2,
-	/obj/item/clothing/glasses/science=1,
-	/obj/item/clothing/suit/toggle/labcoat/f13/followers=1)
+		/obj/item/book/granter/trait/chemistry=1,
+		/obj/item/reagent_containers/glass/beaker/meta=2,
+		/obj/item/clothing/glasses/science=1,
+		/obj/item/clothing/suit/toggle/labcoat/f13/followers=1)
 
 /datum/outfit/loadout/physician
 	name = "Physician"
@@ -140,7 +138,6 @@ Follower Volunteer
 	exp_type = EXP_TYPE_FOLLOWERS
 	outfit = /datum/outfit/job/followers/f13followervolunteer
 
-
 /datum/outfit/job/followers/f13followervolunteer
 	name = "Follower Volunteer"
 	jobtype = /datum/job/followers/f13followervolunteer
@@ -150,8 +147,6 @@ Follower Volunteer
 		/obj/item/storage/firstaid/ancient=1)
 	uniform = /obj/item/clothing/under/f13/followers
 	shoes = /obj/item/clothing/shoes/f13/explorer
-
-
 
 /*
 Follower Guard
@@ -170,7 +165,6 @@ Follower Guard
 
 	outfit = /datum/outfit/job/followers/f13followerguard
 
-
 /datum/outfit/job/followers/f13followerguard
 	name = "Followers Guard"
 	jobtype = /datum/job/followers/f13followerguard
@@ -184,4 +178,3 @@ Follower Guard
 		/obj/item/melee/classic_baton/telescopic=1,
 		/obj/item/ammo_box/magazine/m10mm_adv=2,
 		/obj/item/flashlight/flare/torch=1)
-
