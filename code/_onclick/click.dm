@@ -381,17 +381,16 @@
 	Unused except for AI
 */
 /mob/proc/CtrlShiftClickOn(atom/A)
-	src.pointed(A)
 	A.CtrlShiftClick(src)
 	return
 
 /mob/proc/ShiftMiddleClickOn(atom/A)
+	src.pointed(A)
 	return
 
 /atom/proc/CtrlShiftClick(mob/user)
 	SEND_SIGNAL(src, COMSIG_CLICK_CTRL_SHIFT)
 	return
-
 /*
 	Misc helpers
 
