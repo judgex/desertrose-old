@@ -25,12 +25,12 @@
 	response_help  = "pets"
 	response_disarm = "gently pushes aside"
 	response_harm   = "hits"
-	maxHealth = 500
-	health = 500
+	maxHealth = 550
+	health = 550
 	obj_damage = 60
-	armour_penetration = 30
-	melee_damage_lower = 56
-	melee_damage_upper = 56
+	armour_penetration = 40
+	melee_damage_lower = 60
+	melee_damage_upper = 65
 	attacktext = "claws"
 	attack_sound = 'sound/weapons/bladeslice.ogg'
 	friendly = "hugs"
@@ -52,9 +52,9 @@
 	maxHealth = 750
 	health = 750
 	stat_attack = UNCONSCIOUS
-	melee_damage_lower = 72
-	melee_damage_upper = 72
-	armour_penetration = 30
+	melee_damage_lower = 76
+	melee_damage_upper = 78
+	armour_penetration = 45
 	color = rgb(95,104,94)
 	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab/deathclaw = 6,
 							/obj/item/stack/sheet/animalhide/deathclaw = 3)
@@ -66,7 +66,7 @@
 		visible_message("<span class='danger'>\The [src] growls, enraged!</span>")
 		sleep(3)
 		Charge()
-	if(prob(85) || Proj.damage > 26) //prob(x) = chance for proj to actually do something, adjust depending on how OP you want deathclaws to be
+	if(prob(85) || Proj.damage > 30) //prob(x) = chance for proj to actually do something, adjust depending on how OP you want deathclaws to be
 		return ..()
 	else
 		visible_message("<span class='danger'>\The [Proj] bounces off \the [src]'s thick hide!</span>")
