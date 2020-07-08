@@ -908,11 +908,10 @@
 	loot = list(
 				/obj/item/gun/energy/laser/plasma,
 				/obj/item/gun/ballistic/automatic/tommygun,
-				/obj/item/gun/ballistic/automatic/shotgun/riot
+				/obj/item/gun/ballistic/automatic/shotgun/riot,
 				/obj/item/gun/energy/laser/scatter,
 				/obj/item/gun/ballistic/revolver/sequoia/scoped,
 				/obj/item/gun/ballistic/automatic/bozar
-
 				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/unique //UNIQUE GUN
