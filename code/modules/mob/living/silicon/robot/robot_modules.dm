@@ -15,6 +15,8 @@
 	var/list/added_modules = list() //modules not inherient to the robot module, are kept when the module changes
 	var/list/storages = list()
 
+	var/list/radio_channels = list()//this is a TG port yogs did on june 2020 by "Jumps0"
+									//I tried to err, adapt it to code that is from 2016
 	var/cyborg_base_icon = "robot" //produces the icon for the borg and, if no special_light_key is set, the lights
 	var/special_light_key //if we want specific lights, use this instead of copying lights in the dmi
 
@@ -179,7 +181,7 @@
 	if(R.hud_used)
 		R.hud_used.update_robot_modules_display()
 
-/obj/item/robot_module/proc/transform_to(new_module_type)
+/obj/item/robot_module/proc/transform_to(new_module_type)//aaah so, new_module_type(R) is what updates stuff
 	var/mob/living/silicon/robot/R = loc
 	var/obj/item/robot_module/RM = new new_module_type(R)
 	if(!RM.be_transformed_to(src))
@@ -188,6 +190,8 @@
 	R.module = RM
 	R.update_module_innate()
 	RM.rebuild_modules()
+	R.radio.recalculateChannels()//new_module_type(R) gives the radio to each module and shit!!
+
 	INVOKE_ASYNC(RM, .proc/do_transform_animation)
 	qdel(src)
 	return RM
@@ -249,6 +253,7 @@
 		/obj/item/restraints/handcuffs/cable/zipties,
 		/obj/item/soap/nanotrasen,
 		/obj/item/borg/cyborghug)
+	radio_channels = list("Vault" = 1)
 	emag_modules = list(/obj/item/melee/transforming/energy/sword/cyborg)
 	ratvar_modules = list(
 		/obj/item/clockwork/slab/cyborg,
@@ -279,6 +284,7 @@
 		/obj/item/stack/medical/gauze/cyborg,
 		/obj/item/organ_storage,
 		/obj/item/borg/lollipop)
+	radio_channels = list("Vault" = 1, "Medical"  = 1)
 	emag_modules = list(/obj/item/reagent_containers/borghypo/hacked)
 	ratvar_modules = list(
 		/obj/item/clockwork/slab/cyborg/medical,
@@ -314,6 +320,7 @@
 		/obj/item/stack/rods/cyborg,
 		/obj/item/stack/tile/plasteel/cyborg,
 		/obj/item/stack/cable_coil/cyborg)
+	radio_channels = list("Vault" = 1, "Engineering" = 1)
 	emag_modules = list(/obj/item/borg/stun)
 	ratvar_modules = list(
 		/obj/item/clockwork/slab/cyborg/engineer,
@@ -331,6 +338,7 @@
 		/obj/item/melee/baton/loaded,
 		/obj/item/gun/energy/disabler/cyborg,
 		/obj/item/clothing/mask/gas/sechailer/cyborg)
+	radio_channels = list("Vault" = 1, "Security" = 1)
 	emag_modules = list(/obj/item/gun/energy/laser/cyborg)
 	ratvar_modules = list(/obj/item/clockwork/slab/cyborg/security,
 		/obj/item/clockwork/weapon/ratvarian_spear)
@@ -366,6 +374,7 @@
 		/obj/item/borg/cyborghug/peacekeeper,
 		/obj/item/extinguisher,
 		/obj/item/borg/projectile_dampen)
+	radio_channels = list("Vault" = 1, "Security" = 1)
 	emag_modules = list(/obj/item/reagent_containers/borghypo/peace/hacked)
 	ratvar_modules = list(
 		/obj/item/clockwork/slab/cyborg/peacekeeper,
@@ -394,6 +403,7 @@
 		/obj/item/lightreplacer/cyborg,
 		/obj/item/holosign_creator,
 		/obj/item/reagent_containers/spray/cyborg_drying)
+	radio_channels = list("Vault" = 1, "Service" = 1)
 	emag_modules = list(/obj/item/reagent_containers/spray/cyborg_lube)
 	ratvar_modules = list(
 		/obj/item/clockwork/slab/cyborg/janitor,
@@ -447,6 +457,7 @@
 		/obj/item/picket_sign/cyborg,
 		/obj/item/reagent_containers/borghypo/clown,
 		/obj/item/extinguisher/mini)
+	radio_channels = list("Vault" = 1, "Service" = 1)
 	emag_modules = list(
 		/obj/item/reagent_containers/borghypo/clown/hacked,
 		/obj/item/reagent_containers/spray/waterflower/cyborg/hacked)
@@ -463,7 +474,7 @@
 	basic_modules = list(
 		/obj/item/assembly/flash/cyborg,
 		/obj/item/reagent_containers/food/drinks/drinkingglass,
-		/obj/item/reagent_containers/food/condiment/enzyme,
+		/obj/item/reagent_containers/food/condiment/yeast,
 		/obj/item/pen,
 		/obj/item/toy/crayon/spraycan/borg,
 		/obj/item/extinguisher/mini,
@@ -477,6 +488,7 @@
 		/obj/item/storage/bag/tray,
 		/obj/item/reagent_containers/borghypo/borgshaker,
 		/obj/item/borg/lollipop)
+	radio_channels = list("Vault" = 1, "Service" = 1)
 	emag_modules = list(/obj/item/reagent_containers/borghypo/borgshaker/hacked)
 	ratvar_modules = list(/obj/item/clockwork/slab/cyborg/service,
 		/obj/item/borg/sight/xray/truesight_lens)
@@ -486,9 +498,9 @@
 
 /obj/item/robot_module/butler/respawn_consumable(mob/living/silicon/robot/R, coeff = 1)
 	..()
-	var/obj/item/reagent_containers/O = locate(/obj/item/reagent_containers/food/condiment/enzyme) in basic_modules
+	var/obj/item/reagent_containers/O = locate(/obj/item/reagent_containers/food/condiment/yeast) in basic_modules
 	if(O)
-		O.reagents.add_reagent("enzyme", 2 * coeff)
+		O.reagents.add_reagent("yeast", 2 * coeff)
 
 /obj/item/robot_module/butler/be_transformed_to(obj/item/robot_module/old_module)
 	var/mob/living/silicon/robot/R = loc
@@ -528,6 +540,7 @@
 		/obj/item/gun/energy/kinetic_accelerator/cyborg,
 		/obj/item/gps/cyborg,
 		/obj/item/stack/marker_beacon)
+	radio_channels = list("Vault" = 1, "Science" = 1)
 	emag_modules = list(/obj/item/borg/stun)
 	ratvar_modules = list(
 		/obj/item/clockwork/slab/cyborg/miner,
@@ -602,6 +615,7 @@
 	basic_modules = list(
 		/obj/item/dildo/cyborg,
 		/obj/item/reagent_containers/spray/sexborg_oil)
+	radio_channels = list("Vault" = 1, "Service" = 1)
 	emag_modules = list(/obj/item/reagent_containers/spray/cyborg_lube)
 	ratvar_modules = list(/obj/item/clockwork/weapon/ratvarian_spear)
 	cyborg_base_icon = "protectron"
@@ -614,6 +628,7 @@
 	basic_modules = list(
 		/obj/item/dildo/cyborg,
 		/obj/item/reagent_containers/spray/sexborg_oil)
+	radio_channels = list("Vault" = 1, "Service" = 1)
 	emag_modules = list(/obj/item/reagent_containers/spray/cyborg_lube)
 	ratvar_modules = list(/obj/item/clockwork/weapon/ratvarian_spear)
 	cyborg_base_icon = "pleasure"
@@ -626,7 +641,6 @@
 	list_reagents = list("cooking_oil" = 250)
 
 //module end
-
 
 /datum/robot_energy_storage
 	var/name = "Generic energy storage"

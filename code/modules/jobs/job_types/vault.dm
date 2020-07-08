@@ -21,16 +21,10 @@ here's a tip, go search DEFINES/access.dm
 		return
 	H.add_trait(TRAIT_TECHNOPHREAK, TRAIT_GENERIC)
 
-
-/datum/outfit/job/vault/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
-	..()
-	if(visualsOnly)
-		return
-	H.add_trait(TRAIT_TECHNOPHREAK, TRAIT_GENERIC)
-
 /*
 Overseer
 */
+
 /datum/job/vault/f13overseer
 	title = "Overseer"
 	flag = F13OVERSEER
@@ -58,6 +52,7 @@ Overseer
 /datum/outfit/job/vault/f13overseer
 	name = "Overseer"
 	jobtype = /datum/job/vault/f13overseer
+	chemwhiz = TRUE
 
 	implants = list(/obj/item/implant/mindshield)
 
@@ -133,7 +128,6 @@ Head of Security
 
 	implants = list(/obj/item/implant/mindshield)
 
-
 /*
 Medical Doctor
 */
@@ -143,8 +137,8 @@ Medical Doctor
 	department_head = list("Overseer")
 	department_flag = VAULT
 	faction = "Vault"
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 2
+	spawn_positions = 2
 	forbids = "The vault forbids: Harming other Vault Dwellers. Dereliction of duty. Leaving the Vault unless there is no other choice."
 	enforces = "The vault expects: Obeying the Overseer. Adherence to VaultTec Corporate Regulations. Participation in special projects (the vaults experiment, which you wont know about.)"
 	description = "You answer directly to the Overseer, administering medical aid to your fellow vault dwellers, you also work around the clock to produce the vital medicines and compounds needed to keep your department running. "
@@ -205,6 +199,7 @@ Scientist
 /datum/outfit/job/vault/f13vaultscientist
 	name = "Scientist"
 	jobtype = /datum/job/vault/f13vaultscientist
+	chemwhiz = TRUE
 
 	//pda
 	uniform = 		/obj/item/clothing/under/f13/vault13

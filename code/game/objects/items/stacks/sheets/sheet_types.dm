@@ -40,9 +40,9 @@ GLOBAL_LIST_INIT(metal_recipes, list ( \
 		)), \
 	new/datum/stack_recipe_list("diner chairs", list( \
 		new/datum/stack_recipe("single booth", /obj/structure/chair/booth, 2, one_per_turf = TRUE, on_floor = TRUE), \
-		new/datum/stack_recipe("right end booth", /obj/structure/chair/booth/right, 3, one_per_turf = TRUE, on_floor = TRUE), \
-		new/datum/stack_recipe("middle booth", /obj/structure/chair/booth/middle, 3, one_per_turf = TRUE, on_floor = TRUE), \
-		new/datum/stack_recipe("left end booth", /obj/structure/chair/booth/left, 3, one_per_turf = TRUE, on_floor = TRUE), \
+		new/datum/stack_recipe("right end booth", /obj/structure/chair/right, 3, one_per_turf = TRUE, on_floor = TRUE), \
+		new/datum/stack_recipe("middle booth", /obj/structure/chair/middle, 3, one_per_turf = TRUE, on_floor = TRUE), \
+		new/datum/stack_recipe("left end booth", /obj/structure/chair/left, 3, one_per_turf = TRUE, on_floor = TRUE), \
 		)), \
 	null, \
 	new/datum/stack_recipe("shelf parts", /obj/item/rack_parts), \
@@ -631,6 +631,7 @@ GLOBAL_LIST_INIT(plastic_recipes, list(
 	new /datum/stack_recipe("plastic flaps", /obj/structure/plasticflaps, 5, one_per_turf = TRUE, on_floor = TRUE, time = 40), \
 	new /datum/stack_recipe("water bottle", /obj/item/reagent_containers/glass/beaker/waterbottle/empty), \
 	new /datum/stack_recipe("large water bottle", /obj/item/reagent_containers/glass/beaker/waterbottle/large/empty,3), \
+	new /datum/stack_recipe("pill bottle", /obj/item/storage/pill_bottle, 2), \
 	new /datum/stack_recipe("plastic bucket",  /obj/item/reagent_containers/glass/bucket,5), \
 	new /datum/stack_recipe("wet floor sign", /obj/item/caution, 2)))
 

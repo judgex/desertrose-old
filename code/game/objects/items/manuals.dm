@@ -1011,8 +1011,168 @@
 				<h2>Deathroach:</h2>
 				Now as you mightve guess, im a goddamn smoker and a goddamn drinker, so this is like a blessing to me, prolly kill me one day but hotdamn two in one for yah. Summ coyote is all you need.
 
-				<h3>Welp thats all i see in my yard right now folks, catch me in the strip and buy summ o Bam richters Shine! (recipe not included)</h23>
+				<h3>Welp thats all i see in my yard right now folks, catch me in the strip and buy summ o Bam richters Shine! (recipe not included)</h3>
 
+
+
+				</body>
+				</html>
+			"}
+
+/obj/item/book/manual/partyboy
+	name = "Party Boys Mixing Guide"
+	icon_state = "partyboy"
+	author = "Party Boy"
+	title = "Party Boys Mixing Guide"
+	dat = {"<html>
+				<head>
+				<style>
+				h1 {font-size: 18px; margin: 15px 0px 5px;}
+				h2 {font-size: 15px; margin: 15px 0px 5px;}
+				li {margin: 2px 0px 2px 15px;}
+				ul {list-style: none; margin: 5px; padding: 0px;}
+				ol {margin: 5px; padding: 0px 15px;}
+				</style>
+				</head>
+				<body>
+
+				<h1>What is popping folks its your boy, Party Boy! Here to dish you with the latest Bartenders /MUST/ have drinks, these are STRIP QUALITY RECIPES, straight from my own club! If you aint serving these you aint shit! Party On!</h1>
+				(Listing these in good old alphabetical fashion for quick reference, yeah yeah, youre inept, too bad, you bought the book, get learning spirit server.)
+				
+				<h2>Basic Cocktails</h2>
+				<h2>Alright so lets say youre a complete chump to mixing, well! Lets start you off with the classics and turn your joint from straight bottle brewing to cocktail city!</h2>
+				
+				<li>Allies Cocktail - Matini and Vodka 50/50
+				<li>Alcohol-Z - Whiskey, Vodka and Rum 30/30/30
+
+				<li>B52 - Irish Cream, Kahlua and Cognac 30/30/30
+				<li>Ballistic Bock - Blackpowder, Radium and Water 30/30/30
+				<li>Battle Brew - Med-X and Vodka 50/50 
+				<li>Bahama Mama - Rum, OJ, Limejuice, On the Rocks 20/20/10 With Ice
+				<li>Brave Bull - Tequila and Kahlua 60/30 
+				<li>Blackwater Brew - Water, Charcoal and Beer 30/30/30 
+				<li>Black Russian - Vodka and Kahlua 60/40
+				<li>Bloody Mary - Vodka, Tomato Juice and Limejuice 25/50/25 
+
+				<li>Classic Martini - Gin and Champagne 60/30 
+
+				<li>Dirty Wastelander - Mutfruitjuice, Whiskey and Water 30/30/30
+
+				<li>Fire Belly - Vodka, Salt and Soysauce 30/30/30
+				<li>Firecracker - Salgam (Xanderrootwine) and Yucca Juice 50/50
+
+				<li>Gin Fizz - Gin, Sodawater and Limejuice 50/25/25
+				<li>Gin and Tonic - Gin and Tonic 60/30
+				<li>Goldschlager - Vodka and Gold 50/50
+
+				<li>Hooch - Ethanol and WeldingFuel 60/30
+				<li>Hard Lemonade - Lemonade, Vodka and Radium 30/30/30
+
+				<li>Irish Cream - Whiskey and Cream 60/30
+				<li>Irish Coffee - Irish Cream and Coffee 50/50
+
+				<li>Jake Juice - Whiskey, Beer and Radium 30/30/30 
+
+				<li>Long Island Iced Tea - Vodka, Gin, Tequila and Nuka Libre 25/25/25/25
+
+				<li>Margarita - Tequila and Limejuice 60/30
+				<li>Manhattan - Whiskey and Champagne 60/30
+
+				<li>Nuka Libre - RumNuka and Limejuice 75/25
+
+				<li>Ol' Flakey - Whiskey, Lemonjuice and Cream 30/30/30
+				<li>Old Possum - Beer, Flour and Mutjuice 30/30/30
+
+				<li>Patron - Tequila and Silver 50/50
+
+				<li>Rum and Nuka - Rum and Nuka Cola 50/50
+
+				<li>Screwdriver - Vodka and OJ 60/30
+				<li>Sweet Water - Wastemead, Sugar Water 30/30/30
+
+				<li>Resilient Sludge - Radium, Sugar and Water 30/30/30
+				<li>Strong Sludge - Sludge, Uranium 75/25 
+
+				<li>Tequila Sunrise - Tequila, OJ and Grenadine 40/40/20
+
+				<li>Vodka Martini - Vodka and Champagne 60/30 
+				<li>Vodka Tonic - Vodka and Tonic 60/30 
+
+				<li>Wasteland Tequila - Tequila and Mutjuice 50/50
+				<li>White Russian - Black and Cream 60/40
+				<li>Whiskey Nuka - Whiskey and Nuka 60/30
+				<li>Whiskey Sour - Whiskey, Lemon Juice and Sugar 30/30/30
+				<li>Whiskey Soda - Whiskey and Sodawater 60/30
+
+				<li>XXXXXXBeer - Beer and Ethanol 50/50
+				
+				<h2>And those are the classics, yes theres a lot but now you have this book! You can throw your shitty little pamphlet of 5 unrealistic drinks away! Get some real business in.</h2>
+
+				<h2>Advanced Cocktails</h2>
+				<h2>Alright so say you got some nobility in your party shack, they probably gonna order something like this, charge extra, CHARGE EXTRA, if they want the service, THE SKILL, they paying MORE, DO IT.</h2>
+				
+				<li>Atom Bomb - Sludge and B52 50/50
+				<li>Alexander - Cognac, CremedeCacao and Cream 30/30/30
+
+				<li>Between the Sheets - Rum and Sidecar 20/80
+				
+				<li>Corporate - Vim, Nuka Cola, Sunset Sass and Bawls 25/25/25/25
+				
+				<li>Fernet Nuka - Fernet and Nuka Cola 50/50
+
+				<li>Henessey - Hooch and Battle Brew 50/50
+
+				<li>Kamikaze - Vodka, TripleSec and Limejuice 30/30/30
+				
+				<li>Mojitos - Rum, Sugar, Limejuice, Sodawater and goddamn Triple Sec 20/20/20/20/20
+				<li>Moonshine-Z - AlchoholZ and Moonshine 50/50
+
+				<li>Ranchers Whiskey - Fera Cactus Tea and Whiskey 50/50
+
+				<li>Sidecar - Cognac, TripleSec and Lemonjuice 50/25/25
+				
+				<li>Spirit Cleanser - Datura Tea and Punga Juice 50/50
+
+				<li>Vault-Tech Brew - Kamikaze and Bawls 50/50
+				<li>Vault-Tech Boy - Vault-Tech Brew and Beer 50/50
+				<li>Vault-Tech Girl - Vault-Tech Brew and Between the Sheets 50/50
+		
+
+				<h2>And boom, the rich mans stuff, sell it all, higher remember, you toil with the bottles and they toil with their pockets, dont you forget that.</h2>
+
+				
+				<h2>Non Brews</h2>
+				<h2>Not sure whyd you serve non brews in a bar but hey, some people are crazy, so anyway, good stuff, charge high for wasting your time (mine included) here we go.</h2>
+				
+				<li>Arnold Palmer - Tea and Lemonade 50/50
+
+				<li>Bawls Shake - Bawls Gunga, Milk and Cream 30/30/30
+				<li>Blue Cherry Shake - Blue Cherry Jelly, Ice and Cream 30/30/30
+
+				<li>Cherry Shake - Cherry Jelly, Ice and Cream 30/30/30
+
+				<li>Eggnog - Rum, Cream and Egg 30/30/30
+
+				<li>Grape Soda - Grape Jelly and Soda 50/50
+
+				<li>Jake Shake - Jake Juice, Milk and Cream 30/30/30
+
+				<li>Lemonade - Lemon Juice, Water, Sugar and Ice 30/30/15/15
+
+				<li>Nuka Float - Nuka Cola, Ice and Cream 30/30/30 
+
+				<li>Sunset Float - Sunset Sass, Ice and Cream 30/30/30 
+				<li>Sweetwater Float - Sweetwater, Water and Sugar 30/30/30 
+				<li>Sunsetter - Sunset Sass and Tequila Sunrise 50/50 
+
+				<li>Triple Citrus - Lemon, Lime and Orange Juice 30/30/30 
+
+				<li>Yucca Shake - Yucca Juice, Milk and Cream 30/30/30 
+
+				Pretty good things, not bad I say, but not brews, remember that.
+				
+				</h2>Alright folks, thats all from me, your Boy, Party Boy, lets hope these get published and spread the word of the Party Boy, Party house, all drinks, all the time!</h2>
+				</h2>This book is not for individual resale and only for bartendering purposes only as per party boy TM trademark 2260.</h2>
 
 
 				</body>

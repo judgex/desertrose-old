@@ -73,7 +73,7 @@
 
 #define	TRAIT_CHEMWHIZ			"chemwhiz"
 #define TRAIT_TECHNOPHOBE		"luddite" //Cannot use autolathes/biogens
-#define TRAIT_TECHNOPHREAK		"technophreak" //Is this even really used?
+#define TRAIT_TECHNOPHREAK		"technophreak" //Is this even really used?//needed to use the autolathe, renamed and sprited 30/06/2020
 #define TRAIT_PA_WEAR           "pa_wear"
 #define TRAIT_MEDICALEXPERT		"Medicinal Expert" //Can do revival surgery
 

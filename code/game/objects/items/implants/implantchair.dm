@@ -164,7 +164,6 @@
 	H.dna.remove_all_mutations()//hulks out
 	return 1
 
-
 /obj/machinery/implantchair/brainwash
 	name = "Neural Imprinter"
 	desc = "Used to <s>indoctrinate</s> rehabilitate hardened recidivists."

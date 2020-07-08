@@ -359,13 +359,13 @@
 	coin_type = /obj/item/coin/uranium
 
 /datum/material/plasma
-	name = "Solid Plasma"
+	name = "Graphite"
 	id = MAT_PLASMA
 	sheet_type = /obj/item/stack/sheet/mineral/plasma
 	coin_type = /obj/item/coin/plasma
 
 /datum/material/bluespace
-	name = "Bluespace Mesh"
+	name = "Quantum Mesh"
 	id = MAT_BLUESPACE
 	sheet_type = /obj/item/stack/sheet/bluespace_crystal
 
