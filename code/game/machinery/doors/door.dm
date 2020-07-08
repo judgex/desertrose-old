@@ -214,6 +214,8 @@
 	else if(!(I.item_flags & NOBLUDGEON) && user.a_intent != INTENT_HARM)
 		try_to_activate_door(user)
 		return TRUE
+	if(Lock)
+		add_logs(user, src, "attacked", src)
 	return ..()
 
 /obj/machinery/door/run_obj_armor(damage_amount, damage_type, damage_flag = 0, attack_dir)

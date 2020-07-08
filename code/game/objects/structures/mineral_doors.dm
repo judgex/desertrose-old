@@ -175,6 +175,8 @@
 			deconstruct(TRUE)
 	else if(user.a_intent != INTENT_HARM)
 		return attack_hand(user)
+	if(Lock)
+		add_logs(user, src, "attacked", src)
 	else
 		return ..()
 
