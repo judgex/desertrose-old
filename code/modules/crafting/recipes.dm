@@ -257,6 +257,18 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
 
+
+/datum/crafting_recipe/batterybox //lasmusket ammo
+	name = "Laser Musket battery pack"
+	result = /obj/item/ammo_box/lasmusket
+	reqs = list(/obj/item/stack/crafting/electronicparts = 3,
+				/obj/item/stack/sheet/glass = 6,
+				/obj/item/stack/sheet/metal = 6)
+	tools = list(TOOL_WORKBENCH, TOOL_MULTITOOL)
+	time = 20
+	category = CAT_WEAPONRY
+	subcategory = CAT_AMMO
+
 /datum/crafting_recipe/tube357
 	name = "empty speed loader tube (.357)"
 	result = /obj/item/ammo_box/tube/a357/empty
