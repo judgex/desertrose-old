@@ -6,6 +6,30 @@
 	max_ammo = 5
 	multiload = 1
 
+/obj/item/ammo_box/magazine/internal/musket
+	name = "musket internal magazine"
+	desc = "Oh god, this shouldn't be here"
+	ammo_type = /obj/item/ammo_casing/caseless/musketball
+	caliber = "musketball"
+	max_ammo = 1
+	multiload = 1
+
+/obj/item/ammo_box/magazine/internal/bb
+	name = "bb gun magazine"
+	desc = "Oh god, this shouldn't be here"
+	ammo_type = /obj/item/ammo_casing/caseless/bb
+	caliber = "bb"
+	max_ammo = 50
+	multiload = 1
+
+/obj/item/ammo_box/magazine/internal/lasmusket
+	name = "lasmusket magazine"
+	desc = "Oh god, this shouldn't be here"
+	ammo_type = /obj/item/ammo_casing/caseless/lasermusket
+	caliber = "lasmusket"
+	max_ammo = 6
+	multiload = 1
+
 /obj/item/ammo_box/magazine/internal/boltaction/enchanted
 	max_ammo = 1
 	ammo_type = /obj/item/ammo_casing/a762

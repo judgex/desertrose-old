@@ -52,10 +52,7 @@
 	frequency = add_radio(src, new_frequency)
 
 /obj/item/radio/proc/recalculateChannels()
-	channels = list()
-	translate_binary = FALSE
-	syndie = FALSE
-	independent = FALSE
+	resetChannels()
 
 	if(keyslot)
 		for(var/ch_name in keyslot.channels)
@@ -71,6 +68,12 @@
 
 	for(var/ch_name in channels)
 		secure_radio_connections[ch_name] = add_radio(src, GLOB.radiochannels[ch_name])
+
+/obj/item/radio/proc/resetChannels()// this is a TG port yogs did on june 2020 by "Jumps0"
+	channels = list()
+	translate_binary = FALSE
+	syndie = FALSE
+	independent = FALSE
 
 /obj/item/radio/proc/make_syndie() // Turns normal radios into Syndicate radios!
 	qdel(keyslot)
@@ -196,6 +199,25 @@
 	INVOKE_ASYNC(src, .proc/talk_into_impl, M, message, channel, spans.Copy(), language)
 	return ITALICS | REDUCE_RANGE
 
+/obj/item/radio/talk_into(mob/living/M, message, channel, list/spans,datum/language/language, direct=TRUE)
+	// DR doesnt have mobility flags...? So this is here because adding mobility flags would be a whole PR
+	var/stat_softcrit = M.stat == SOFT_CRIT
+	var/stat_conscious = (M.stat == CONSCIOUS) || stat_softcrit
+
+	var/conscious = !M.IsUnconscious() && stat_conscious
+
+	var/has_arms = M.get_num_arms()
+	var/stun = M.IsStun()
+	var/paralyze = M.IsParalyze()
+	var/knockdown = M.IsKnockdown()
+
+	var/chokehold = M.pulledby && M.pulledby.grab_state >= GRAB_NECK
+	var/restrained = M.restrained()
+
+	var/canitem_general = !paralyze && !stun && conscious && !(stat_softcrit) && !chokehold && !restrained && has_arms && !knockdown
+	if (!direct || canitem_general) // if can't use items, you can't press the button
+		return ..()
+
 /obj/item/radio/proc/talk_into_impl(atom/movable/M, message, channel, list/spans, datum/language/language)
 	if(!on)
 		return // the device has to be on
@@ -298,7 +320,7 @@
 			if (idx && (idx % 2) == (message_mode == MODE_L_HAND))
 				return
 
-	talk_into(speaker, raw_message, , spans, language=message_language)
+	talk_into(speaker, raw_message, , spans, language=message_language, direct=FALSE)
 
 // Checks if this radio can receive on the given frequency.
 /obj/item/radio/proc/can_receive(freq, level)
@@ -376,8 +398,15 @@
 	subspace_switchable = TRUE
 	dog_fashion = null
 
-/obj/item/radio/borg/Initialize(mapload)
+/obj/item/radio/borg/resetChannels()
 	. = ..()
+
+/obj/item/radio/borg/resetChannels()//I took this from yogstation *kisses yogstation*
+	. = ..()						//Improvisation is key - Jando
+	var/mob/living/silicon/robot/R = loc
+	if(istype(R))
+		for(var/ch_name in R.module.radio_channels)
+			channels[ch_name] = 1
 
 /obj/item/radio/borg/syndicate
 	syndie = 1

@@ -260,6 +260,14 @@
 		user.visible_message("<span class='notice'>[user] [anchored ? "anchored" : "unanchored"] \the [src] [anchored ? "to" : "from"] the ground.</span>", \
 						"<span class='notice'>You [anchored ? "anchored" : "unanchored"] \the [src] [anchored ? "to" : "from"] the ground.</span>", \
 						"<span class='italics'>You hear a ratchet.</span>")
+
+	if(anchored)
+		storage_capacity = 30
+	else if(!anchored)
+		storage_capacity = 6
+	if(contents.len >= storage_capacity)
+		bust_open()
+
 	else if(user.a_intent != INTENT_HARM && !(W.item_flags & NOBLUDGEON))
 		if(W.GetID() || !toggle(user))
 			togglelock(user)
