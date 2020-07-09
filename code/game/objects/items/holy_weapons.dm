@@ -588,11 +588,11 @@
 		used_blessing = TRUE
 
 /obj/item/nullrod/claymore/bostaff //May as well make it a "claymore" and inherit the blocking
-	name = "monk's staff"
-	desc = "A long, tall staff made of polished wood. Traditionally used in ancient old-Earth martial arts, it is now used to harass the clown."
+	name = "quarterstaff"
+	desc = "A long, tall staff made of polished wood. Fitted with heavy metal ends. Traditionally used in ancient old-Earth martial arts."
 	w_class = WEIGHT_CLASS_BULKY
-	force = 15
-	block_chance = 40
+	force = 20
+	block_chance = 70
 	slot_flags = ITEM_SLOT_BACK
 	sharpness = IS_BLUNT
 	hitsound = "swing_hit"

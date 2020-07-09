@@ -42,6 +42,14 @@
 	desc = "A self-crafted all-in-one bottle making and pressing machine."
 	machine_tool_behaviour = list(TOOL_BOTTLER)
 
+/obj/machinery/workbench/forge
+	name = "metalworking forge"
+	desc = "A large furnace used for forging metal items such as swords, spears and shields. You can imagine yourself making iron daggers here for a long time."
+	icon = 'icons/fallout/machines/64x32.dmi'
+	icon_state = "forge"
+	bound_width = 64
+	machine_tool_behaviour = list(TOOL_FORGE)
+
 /obj/item/weaponcrafting/receiver
 	name = "modular receiver"
 	desc = "A prototype modular receiver and trigger assembly for a firearm."

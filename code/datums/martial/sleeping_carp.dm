@@ -157,21 +157,21 @@
 	to_chat(usr, "<span class='notice'>Elbow Drop</span>: Harm Disarm Harm Disarm Harm. Opponent must be on the ground. Deals huge damage, instantly kills anyone in critical condition.")
 
 /obj/item/twohanded/bostaff
-	name = "bo staff"
+	name = "quarterstaggstaff"
 	desc = "A long, tall staff made of polished wood. Traditionally used in ancient old-Earth martial arts. Can be wielded to both kill and incapacitate."
 	force = 10
 	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = ITEM_SLOT_BACK
 	force_unwielded = 10
-	force_wielded = 30
-	throwforce = 20
+	force_wielded = 20
+	throwforce = 5
 	throw_speed = 2
 	attack_verb = list("smashed", "slammed", "whacked", "thwacked")
 	icon = 'icons/obj/items_and_weapons.dmi'
 	icon_state = "bostaff0"
 	lefthand_file = 'icons/mob/inhands/weapons/staves_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/staves_righthand.dmi'
-	block_chance = 30
+	block_chance = 60
 
 /obj/item/twohanded/bostaff/update_icon()
 	icon_state = "bostaff[wielded]"
@@ -216,13 +216,6 @@
 			H.visible_message("<span class='warning'>[H] collapses!</span>", \
 								   "<span class='userdanger'>Your legs give out!</span>")
 			H.Knockdown(80)
-		if(H.staminaloss && !H.IsSleeping())
-			var/total_health = (H.health - H.staminaloss)
-			if(total_health <= HEALTH_THRESHOLD_CRIT && !H.stat)
-				H.visible_message("<span class='warning'>[user] delivers a heavy hit to [H]'s head, knocking [H.p_them()] out cold!</span>", \
-									   "<span class='userdanger'>[user] knocks you unconscious!</span>")
-				H.SetSleeping(600)
-				H.adjustBrainLoss(15, 150)
 	else
 		return ..()
 
