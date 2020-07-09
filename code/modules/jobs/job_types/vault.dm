@@ -21,16 +21,10 @@ here's a tip, go search DEFINES/access.dm
 		return
 	H.add_trait(TRAIT_TECHNOPHREAK, TRAIT_GENERIC)
 
-
-/datum/outfit/job/vault/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
-	..()
-	if(visualsOnly)
-		return
-	H.add_trait(TRAIT_TECHNOPHREAK, TRAIT_GENERIC)
-
 /*
 Overseer
 */
+
 /datum/job/vault/f13overseer
 	title = "Overseer"
 	flag = F13OVERSEER
@@ -133,7 +127,6 @@ Head of Security
 	backpack_contents = list(/obj/item/melee/classic_baton/telescopic = 1, /obj/item/restraints/handcuffs = 2, /obj/item/ammo_box/l10mm = 2)
 
 	implants = list(/obj/item/implant/mindshield)
-
 
 /*
 Medical Doctor
