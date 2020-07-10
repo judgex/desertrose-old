@@ -592,7 +592,7 @@
 	desc = "A long, tall staff made of polished wood. Fitted with heavy metal ends. Traditionally used in ancient old-Earth martial arts."
 	w_class = WEIGHT_CLASS_BULKY
 	force = 20
-	block_chance = 70
+	block_chance = 50
 	slot_flags = ITEM_SLOT_BACK
 	sharpness = IS_BLUNT
 	hitsound = "swing_hit"
