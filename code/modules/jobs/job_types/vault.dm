@@ -187,7 +187,7 @@ Scientist
 	forbids = "The Vault forbids: Disobeying the Overseer. Deserting the Vault unless it is rendered unhospitable. Killing fellow Vault Dwellers. Betraying the Vault and its people."
 	enforces = "The Vault expects: Contributing to Vault society. Adherence to Vault-tec Corporate Regulations. Participation in special projects, as ordered by the Overseer."
 	description = "You answer directly to the Overseer. You are tasked with researching new technologies, conducting mining expeditions (with the approval of Security or the Overseer), and upgrading the machinery of the Vault."
-	supervisors = "the overseer"
+	supervisors = "the Overseer"
 	selection_color = "#ddffdd"
 	exp_requirements = 360
 
@@ -376,8 +376,8 @@ Vault Engineer
 	spawn_positions = 2
 	forbids = "The Vault forbids: Disobeying the Overseer. Deserting the Vault unless it is rendered unhospitable. Killing fellow Vault Dwellers. Betraying the Vault and its people."
 	enforces = "The Vault expects: Contributing to Vault society. Adherence to Vault-tec Corporate Regulations. Participation in special projects, as ordered by the Overseer."
-	description = "You answer directly to the Overseer. You are tasked with overseeing the Reactor, maintaining of Vault defenses and machinery, and engaging in construction projects to improve the Vault as a whole."
-	supervisors = "the overseer"
+	description = "You answer directly to the Overseer. You are tasked with overseeing the Reactor, maintaining Vault defenses and machinery, and engaging in construction projects to improve the Vault as a whole."
+	supervisors = "the Overseer"
 	selection_color = "#ddffdd"
 	exp_requirements = 180
 
