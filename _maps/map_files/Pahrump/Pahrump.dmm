@@ -3925,7 +3925,7 @@
 "bxy" = (/obj/structure/simple_door/metal/fence,/turf/open/floor/f13/wood,/area/f13/city)
 "bxz" = (/obj/structure/fence/corner{dir = 5; icon_state = "corner"},/turf/open/floor/f13/wood,/area/f13/city)
 "bxA" = (/obj/machinery/light/small{dir = 4},/turf/open/floor/f13{icon_state = "darkdirtysolid"},/area/f13/city)
-"bxB" = (/obj/structure/rack,/obj/effect/spawner/lootdrop/f13/blueprint,/obj/effect/spawner/lootdrop/f13/blueprint,/turf/open/floor/f13{icon_state = "floorrusty"; tag = "icon-floorrusty"},/area/f13/city)
+"bxB" = (/obj/structure/rack,/obj/item/blueprint/weapon/r91,/obj/item/blueprint/weapon/uzi,/turf/open/floor/f13{icon_state = "floorrusty"; tag = "icon-floorrusty"},/area/f13/city)
 "bxC" = (/obj/item/storage/trash_stack,/turf/open/floor/f13{icon_state = "darkdirtysolid"},/area/f13/city)
 "bxD" = (/obj/structure/rack,/obj/item/pickaxe,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/city)
 "bxE" = (/obj/structure/decoration/vent/rusty,/turf/closed/wall/f13/supermart,/area/f13/clinic)
