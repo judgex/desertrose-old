@@ -96,6 +96,11 @@
 	desc = "Important notices from the Captain."
 	req_access = list(ACCESS_CAPTAIN)
 
+/obj/structure/noticeboard/menu
+	name = "Bar Menu"
+	desc = "A specials of the day bartender bar/cafe menu for pinning menus too."
+	icon_state = "menu"
+
 /obj/structure/noticeboard/hop
 	name = "Head of Personnel's Notice Board"
 	desc = "Important notices from the Head of Personnel."

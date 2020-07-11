@@ -463,6 +463,7 @@
 	force_unwielded = 25
 	force_wielded = 40
 	throwforce = 25
+	reach = 2
 	throw_speed = 4
 	embedding = list("embedded_impact_pain_multiplier" = 3)
 	armour_penetration = 0
@@ -707,11 +708,12 @@
 	righthand_file = 'icons/mob/inhands/weapons/polearms_righthand.dmi'
 	name = "pitchfork"
 	desc = "A simple tool used for moving hay."
-	force = 7
-	throwforce = 15
+	force = 20
+	throwforce = 20
 	w_class = WEIGHT_CLASS_BULKY
-	force_unwielded = 7
-	force_wielded = 15
+	reach = 2
+	force_unwielded = 20
+	force_wielded = 30
 	attack_verb = list("attacked", "impaled", "pierced", "perforated")
 	hitsound = 'sound/weapons/bladeslice.ogg'
 	sharpness = IS_SHARP
