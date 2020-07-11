@@ -163,7 +163,7 @@ TODO sprite, ignore for now*/
 	mag_type = /obj/item/ammo_box/magazine/internal/lasmusket
 	nocase = TRUE
 	var/bolt_open = FALSE
-	can_bayonet = FALSE
+	can_bayonet = TRUE
 	fire_delay = 20
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
