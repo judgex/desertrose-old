@@ -668,7 +668,7 @@
 	materials = list(MAT_METAL = 5000)
 	build_path = /obj/item/weaponcrafting/receiver
 	category = list("hacked", "Security")
-/*
+
 /datum/design/shotgun_slug
 	name = "Shotgun Slug"
 	id = "shotgun_slug"
@@ -685,6 +685,7 @@
 	build_path = /obj/item/ammo_casing/shotgun/buckshot
 	category = list("hacked", "Security")
 
+/*
 /datum/design/shotgun_dart
 	name = "Shotgun Dart"
 	id = "shotgun_dart"
@@ -718,7 +719,6 @@
 	build_path = /obj/item/ammo_box/foambox/riot
 	category = list("hacked", "Security")
 
-/*
 /datum/design/a357
 	name = "Speed Loader (.357)"
 	id = "a357"
@@ -726,7 +726,6 @@
 	materials = list(MAT_METAL = 4000)
 	build_path = /obj/item/ammo_box/a357
 	category = list("initial", "Security")
-*/
 
 /datum/design/c10mm
 	name = "Ammo Box (10mm)"
