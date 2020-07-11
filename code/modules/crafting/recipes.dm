@@ -1412,6 +1412,36 @@
 	category  = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
 
+//TODO testing
+/datum/crafting_recipe/uzi
+	name = "Mini uzi"
+	result = /obj/item/gun/ballistic/automatic/mini_uzi
+	reqs = list(/obj/item/stack/sheet/metal = 10,
+				/obj/item/advanced_crafting_components/reciever = 1,
+				/datum/reagent/blackpowder = 60,
+				/obj/item/stack/crafting/goodparts = 5
+				)
+	tools = list(TOOL_WORKBENCH, /obj/item/blueprint/weapon/uzi)
+	time = 120
+	category = CAT_WEAPONRY
+	subcategory = CAT_WEAPON
+
+/datum/crafting_recipe/r91
+	name = "R91 assault rifle"
+	result = /obj/item/gun/ballistic/automatic/assault_rifle
+	reqs = list(/obj/item/stack/sheet/metal = 10,
+				/obj/item/advanced_crafting_components/reciever = 1,
+				/obj/item/advanced_crafting_components/assembly = 1,
+				/datum/reagent/blackpowder = 60,
+				/obj/item/stack/sheet/mineral/wood = 10,
+				/obj/item/stack/crafting/goodparts = 5
+				)
+	tools = list(TOOL_WORKBENCH, /obj/item/blueprint/weapon/r91)
+	time = 120
+	category = CAT_WEAPONRY
+	subcategory = CAT_WEAPON
+	//yep
+
 /datum/crafting_recipe/zipgun
 	name = "zip gun"
 	result = /obj/item/gun/ballistic/revolver/zipgun
@@ -2004,7 +2034,7 @@
 	tools = list(TOOL_WORKBENCH)
 	category = CAT_PRIMAL
 	subcategory = CAT_TRIBAL
-  
+
 //BOTTLING
 
 /datum/crafting_recipe/bottler
@@ -2435,7 +2465,7 @@
 
 /datum/crafting_recipe/
 	name = "Pickaxe"
-	result = /obj/item/pickaxe 
+	result = /obj/item/pickaxe
 	time = 300
 	reqs = list(/obj/item/stack/sheet/metal = 5,
 				/obj/item/stack/sheet/mineral/wood = 1)
@@ -2446,7 +2476,7 @@
 
 /datum/crafting_recipe/
 	name = "Compact Pickaxe"
-	result = /obj/item/pickaxe/mini 
+	result = /obj/item/pickaxe/mini
 	time = 300
 	reqs = list(/obj/item/stack/sheet/metal = 5,
 				/obj/item/stack/sheet/mineral/wood = 1)
@@ -2457,7 +2487,7 @@
 
 /datum/crafting_recipe/
 	name = "Shovel"
-	result = /obj/item/shovel 
+	result = /obj/item/shovel
 	time = 300
 	reqs = list(/obj/item/stack/sheet/metal = 5,
 				/obj/item/stack/sheet/mineral/wood = 1)
@@ -2468,7 +2498,7 @@
 
 /datum/crafting_recipe/
 	name = "Hatchet"
-	result = /obj/item/hatchet 
+	result = /obj/item/hatchet
 	time = 300
 	reqs = list(/obj/item/stack/sheet/metal = 5,
 				/obj/item/stack/sheet/mineral/wood = 1)
@@ -2643,7 +2673,7 @@
 	tools = list(TOOL_FORGE)
 	category = CAT_FORGE
 	subcategory = CAT_FORGEARMOR
-	
+
 /datum/crafting_recipe/plate
 	name = "Plate Armor"
 	result = /obj/item/clothing/suit/armor/plate/crusader/plate
@@ -2654,7 +2684,7 @@
 	tools = list(TOOL_FORGE)
 	category = CAT_FORGE
 	subcategory = CAT_FORGEARMOR
-	
+
 /datum/crafting_recipe/thejugg
 	name = "Juggernaut Armor"
 	result = /obj/item/clothing/suit/armor/plate/crusader/jugger
@@ -2727,7 +2757,7 @@
 
 /datum/crafting_recipe/tallglass
 	name = "Tall Glass"
-	result = /obj/item/reagent_containers/food/drinks/drinkingglass 
+	result = /obj/item/reagent_containers/food/drinks/drinkingglass
 	time = 100
 	reqs = list(/obj/item/stack/sheet/glass = 1)
 	traits = list(TRAIT_TECHNOPHOBE)
@@ -2747,7 +2777,7 @@
 
 /datum/crafting_recipe/igniter2
 	name = "Igniter"
-	result = /obj/item/crafting/igniter 
+	result = /obj/item/crafting/igniter
 	time = 100
 	reqs = list(/obj/item/stack/sheet/metal = 5)
 	traits = list(TRAIT_TECHNOPHOBE)
