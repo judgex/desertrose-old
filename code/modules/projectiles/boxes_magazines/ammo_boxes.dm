@@ -228,6 +228,14 @@
 	materials = list(MAT_METAL = 1000)
 	w_class = WEIGHT_CLASS_NORMAL
 
+/obj/item/ammo_box/plasmacaster //TODO
+	name = "Battery Box (Plasma)"
+	icon_state = "Batbox"
+	ammo_type = /obj/item/ammo_casing/caseless/plasmacaster
+	max_ammo = 5
+	materials = list(MAT_METAL = 1000)
+	w_class = WEIGHT_CLASS_NORMAL
+
 /obj/item/ammo_box/musketball//TODO
 	name = "Musket Balls box"
 	icon_state = "Batbox"

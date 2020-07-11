@@ -141,7 +141,7 @@ TODO sprite, ignore for now*/
 	name = "BB gun"
 	desc = "Shoots tiny pebbles that tickle the enemy"
 	icon_state = "bb_gun"
-	item_state = "bb_gun"
+	item_state = "varmintrifle"
 	slot_flags = 0 //no ITEM_SLOT_BACK sprite, alas
 	mag_type = /obj/item/ammo_box/magazine/internal/bb
 	nocase = TRUE
@@ -171,6 +171,27 @@ TODO sprite, ignore for now*/
 	fire_sound = 'sound/f13weapons/lasmusket_fire.ogg'
 	pump_sound = 'sound/f13weapons/lasmusket_crank.ogg'
 	equipsound = 'sound/f13weapons/equipsounds/aep7equip.ogg'
+
+//ignore for now
+/*
+/obj/item/gun/ballistic/shotgun/plasmacaster
+	name = "Plasma Caster"
+	desc = "Test"
+	icon_state = "las_musket"
+	item_state = "las_musket"
+	slot_flags = 0 //no ITEM_SLOT_BACK sprite, alas
+	mag_type = /obj/item/ammo_box/magazine/internal/plasmacaster
+	nocase = TRUE
+	var/bolt_open = FALSE
+	can_bayonet = FALSE
+	fire_delay = 200
+	w_class = WEIGHT_CLASS_BULKY
+	weapon_weight = WEAPON_HEAVY
+	isenergy = TRUE
+	fire_sound = 'sound/f13weapons/lasmusket_fire.ogg'
+	pump_sound = 'sound/f13weapons/lasmusket_crank.ogg'
+	equipsound = 'sound/f13weapons/equipsounds/aep7equip.ogg'
+*/
 
 /obj/item/gun/ballistic/shotgun/boltaction/enchanted
 	name = "enchanted bolt action rifle"
