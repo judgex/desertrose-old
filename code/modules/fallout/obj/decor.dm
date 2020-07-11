@@ -68,4 +68,58 @@
 	name = "road reflector"
 	desc = "An ancient road safety device.<br>Here's how it works:<br>A reflective plate is reflecting the street and car lights ensuring the visibility of the road median separating the lanes.<br>The steel part makes a small regular bump along the median to wake the driver if he/she drifts across."
 	icon = 'icons/fallout/objects/decals.dmi'
-	icon_state = "reflectorvertical" //reflectorhorizontal
+	icon_state = "reflectorvertical"
+
+/obj/structure/decoration/smokeold
+	name = "old no-smoking sign"
+	desc = "A old pre-war sign indicating for the user not to smoke in the area."
+	icon = 'icons/fallout/objects/decals.dmi'
+	icon_state = "smokeold"
+
+/obj/structure/decoration/fire
+	name = "fire hazard sign"
+	desc = "A sign indicating for the user to be wary of flammable material in the area."
+	icon = 'icons/fallout/objects/decals.dmi'
+	icon_state = "fire"
+
+/obj/structure/decoration/warning
+	name = "warning sign"
+	desc = "A sign indicating for the user to be wary of something dangerous in the area."
+	icon = 'icons/fallout/objects/decals.dmi'
+	icon_state = "warn"
+
+/obj/structure/decoration/hazard
+	name = "bio-hazard sign"
+	desc = "A sign indicating for the user to be wary of something organically dangerous in the area."
+	icon = 'icons/fallout/objects/decals.dmi'
+	icon_state = "hazard"
+
+/obj/structure/decoration/rads
+	name = "radiation sign"
+	desc = "A sign indicating for the user to be wary of something radiation and uranium fever in the area."
+	icon = 'icons/fallout/objects/decals.dmi'
+	icon_state = "radiation"
+
+/obj/structure/decoration/cctv
+	name = "cctv sign"
+	desc = "An old pre-war sign indicating the use of Security Cameras. Doubt they work now though."
+	icon = 'icons/fallout/objects/decals.dmi'
+	icon_state = "cctv"
+
+/obj/structure/decoration/train
+	name = "train sign"
+	desc = "An old pre-war sign indicating trains in the area. Definitely doubt they still work these days."
+	icon = 'icons/fallout/objects/decals.dmi'
+	icon_state = "train"
+
+/obj/structure/decoration/shock
+	name = "shock sign"
+	desc = "A sign indicating high current in objects in the area."
+	icon = 'icons/fallout/objects/decals.dmi'
+	icon_state = "shock"
+
+/obj/structure/decoration/cells
+	name = "cell block sign"
+	desc = "A sign indicating which cell block you are in prisoner."
+	icon = 'icons/fallout/objects/decals.dmi'
+	icon_state = "cells"
