@@ -124,6 +124,11 @@
 	attack_verb = list("slashed", "stabbed", "sliced", "shanked", "ripped", "lacerated")
 	bayonet = TRUE
 
+/obj/item/kitchen/knife/combat/scrap
+	name = "scrapper combat knife"
+	icon_state = "scrapknife"
+	desc = "A forged combat utility survival knife."
+
 /obj/item/kitchen/knife/combat/survival
 	name = "survival knife"
 	icon_state = "survivalknife"

@@ -202,6 +202,17 @@
 	damage = 40
 	armour_penetration = 25
 
+//plasma caster
+/obj/item/projectile/plasmacaster //Plasma rifle
+	name = "plasma bolt"
+	icon_state = "plasma_clot"
+	damage_type = BURN
+	damage = 50
+	armour_penetration = 30
+	flag = "laser" //checks vs. energy protection
+	eyeblur = 0
+	is_reflectable = TRUE
+
 /obj/item/projectile/beam/laser/lasgun //AER9
 	name = "laser beam"
 	damage = 26

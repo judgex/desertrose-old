@@ -260,7 +260,7 @@
 	build_path = /obj/item/organ/cyberimp/mouth/breathing_tube
 	category = list("Misc", "Medical Designs")
 	departmental_flags = DEPARTMENTAL_FLAG_MEDICAL
-
+/*
 /datum/design/cyberimp_surgical
 	name = "Surgical Arm Implant"
 	desc = "A set of surgical tools hidden behind a concealed panel on the user's arm."
@@ -282,6 +282,7 @@
 	build_path = /obj/item/organ/cyberimp/arm/toolset
 	category = list("Misc", "Medical Designs")
 	departmental_flags = DEPARTMENTAL_FLAG_MEDICAL
+*/
 
 /datum/design/cyberimp_medical_hud
 	name = "Medical HUD Implant"
