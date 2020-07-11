@@ -48,7 +48,6 @@
 	M.verbs -= /mob/proc/select_loadout //Remove the verb
 	M.RemoveComponentByType(/datum/component/loadout_selector) //Remove component
 
-
 /****************
 	Object
 ****************/
@@ -94,7 +93,6 @@
 				var/datum/outfit/o = a
 				loadout_options[initial(o.name)] = a
 				data_names.Add(list(list("name" = initial(o.name))))
-
 			return ..()
 
 	//If they don't have a job they cant use this
@@ -159,10 +157,6 @@
 			selected_direction = turn(selected_direction, 90 * text2num(params["direction"]))
 			. = TRUE
 
-
-
-
-
 //Selects an outfit and loads the preview of it
 /datum/component/loadout_selector/proc/select_outfit(var/newname)
 	//First of all, lets not do unnecessary work.
@@ -182,8 +176,6 @@
 	//We do this after the cleanup so that we can pass null to deselect if desired
 	if (!ispath(loadout_options[newname]))
 		return
-
-
 
 	//Ok we know we're selecting this, so
 	selected_name = newname
@@ -207,7 +199,6 @@
 	if (!M.client)
 		return
 
-
 	if (preview_images[selected_datum.name])
 		return //The images have already been generated
 
@@ -229,7 +220,6 @@
 
 		preview.Scale(preview.Width() * 2.5, preview.Height() * 2.5)
 
-
 		//If randomisation is involved, we use the datum ref instead of the mob ref, so it will change every time we select the outfit and make a new datum
 		if (selected_datum.contains_randomisation)
 			cached_icons[dir2text(direction)] = "\ref[selected_datum]_[selected_datum.name]_[direction].png"
@@ -237,7 +227,6 @@
 			cached_icons[dir2text(direction)] = "\ref[M]_[selected_datum.name]_[direction].png"
 		//Use send_asset with verify = true, to load it to the client, this will sleep until it arrives, preventing missing images
 		send_asset(M.client, cached_icons[dir2text(direction)], TRUE, preview)
-
 
 	preview_images[selected_datum.name] = cached_icons
 
