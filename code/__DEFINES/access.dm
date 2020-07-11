@@ -86,10 +86,10 @@
 #define ACCESS_LEGION		123	//general legion access
 #define ACCESS_FOLLOWER		124	//general followers access
 #define ACCESS_KHAN			125	//general khan access
-#define ACCESS_VAULT		126	//general vault access
+#define ACCESS_VAULT_F13	126	//general vault access
 #define ACCESS_RESTRICT		127	//general restricted access
 #define ACCESS_MILITARY		128	//general military access
-#define ACCESS_MEDICAL		129	//general medical access
+#define ACCESS_MEDICAL_F13	129	//general medical access
 #define ACCESS_COMMAND		130	//general command access
 
 	//The Syndicate
