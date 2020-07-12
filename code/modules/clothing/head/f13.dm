@@ -414,5 +414,5 @@
 	desc = ""
 	icon_state = "militiacap"
 	item_state = "militiacap"
-	armor = list(melee = 30, bullet = 10, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 0, fire = 0, acid = 0)
+	armor = list("melee" = 20, "bullet" = 20, "laser" = 10, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
 	flags_inv = HIDEHAIR
