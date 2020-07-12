@@ -172,7 +172,6 @@ Medical Doctor
 		return
 	H.add_trait(TRAIT_MEDICALEXPERT, TRAIT_GENERIC)
 
-
 /*
 Scientist
 */
