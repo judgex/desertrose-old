@@ -410,8 +410,8 @@
 	armor = list("melee" = 60, "bullet" = 50, "laser" = 30, "energy" = 40, "bomb" = 25, "bio" = 40, "rad" = 40, "fire" = 80, "acid" = 0)
 
 /obj/item/clothing/head/f13/militiacap
-	name = "town tricorn"
-	desc = "Why are there tricorns in the desert again?"
+	name = "Militia cap"
+	desc = ""
 	icon_state = "militiacap"
 	item_state = "militiacap"
 	armor = list(melee = 30, bullet = 10, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 0, fire = 0, acid = 0)
