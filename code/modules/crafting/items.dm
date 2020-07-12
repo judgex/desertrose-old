@@ -34,25 +34,25 @@
 //ballistics
 
 /obj/item/blueprint/weapon/r91
-    name = "r91 assault rifle blueprint"
+    name = "R91 assault rifle blueprint"
 
 /obj/item/blueprint/weapon/infiltrator
-    name = "infiltrator blueprint"
+    name = "Infiltrator blueprint"
 
 /obj/item/blueprint/weapon/uzi
     name = "UZI blueprint"
 
 /obj/item/blueprint/weapon/breacher
-    name = "breacher shotgun blueprint"
+    name = "Breacher shotgun blueprint"
 
 /obj/item/blueprint/weapon/killer
-    name = "city-killer shotgun blueprint"
+    name = "City-killer shotgun blueprint"
 
 /obj/item/blueprint/weapon/marksmanrifle
-    name = "marksman rifle blueprint"
+    name = "Marksman rifle blueprint"
 
 /obj/item/blueprint/weapon/fnfal
-    name = "fn fal blueprint"
+    name = "FN fal blueprint"
 
 //energy
 /obj/item/blueprint/weapon/AER9
