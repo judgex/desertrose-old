@@ -583,8 +583,8 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 	name = "Caravan Network Access"
 	icon_state = "generic_idle"
 	prize_list = list(
-		new /datum/data/wasteland_equipment("Advanced Reciever",				/obj/item/advanced_crafting_components/reciever,					200),
-		new /datum/data/wasteland_equipment("Weapon Assembly",					/obj/item/advanced_crafting_components/assembly,					200)
+		new /datum/data/wasteland_equipment("Advanced Reciever",				/obj/item/advanced_crafting_components/reciever,					400),
+		new /datum/data/wasteland_equipment("Weapon Assembly",					/obj/item/advanced_crafting_components/assembly,					400)
 		)
 
 /datum/data/wasteland_equipment
