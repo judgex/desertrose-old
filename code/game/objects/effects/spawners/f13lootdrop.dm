@@ -1372,8 +1372,8 @@
 	/obj/item/book/granter/trait/pa_wear = 1,
 	/obj/item/book/granter/trait/gunsmith_one = 50,
 	/obj/item/book/granter/trait/gunsmith_two = 20,
-	/obj/item/book/granter/trait/gunsmith_three = 19,
-	/obj/item/book/granter/trait/gunsmith_four = 1)
+	/obj/item/book/granter/trait/gunsmith_three = 10,
+	/obj/item/book/granter/trait/gunsmith_four = 10)
 
 /obj/effect/spawner/lootdrop/f13/blueprint //ballistics only for now
 	name = "blueprint-tier item spawner"
