@@ -322,7 +322,7 @@
 	item_state = "militarywebbing"
 
 //General's
-/obj/item/storage/belt/military/militiabelt
+/obj/item/storage/belt/military/generalbelt
 	name = "Militia belt"
 	desc = ""
 	icon_state = "militiabelt"

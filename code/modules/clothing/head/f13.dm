@@ -409,7 +409,7 @@
 	icon_state = "sheriffhat"
 	armor = list("melee" = 60, "bullet" = 50, "laser" = 30, "energy" = 40, "bomb" = 25, "bio" = 40, "rad" = 40, "fire" = 80, "acid" = 0)
 
-/obj/item/clothing/head/f13/militiacap
+/obj/item/clothing/head/f13/generalcap
 	name = "Militia cap"
 	desc = ""
 	icon_state = "militiacap"
