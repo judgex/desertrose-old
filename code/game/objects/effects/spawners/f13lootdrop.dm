@@ -1375,20 +1375,35 @@
 	/obj/item/book/granter/trait/gunsmith_three = 10,
 	/obj/item/book/granter/trait/gunsmith_four = 10)
 
-/obj/effect/spawner/lootdrop/f13/blueprint
+/obj/effect/spawner/lootdrop/f13/blueprint //ballistics only for now
 	name = "blueprint-tier item spawner"
 	icon_state = "blueprint_loot"
 	lootcount = 1
 	loot = list(
-		/obj/item/gun/ballistic/revolver/thatgun,
-		/obj/item/gun/ballistic/automatic/m1garand,
-		/obj/item/gun/ballistic/automatic/assault_rifle,
-		/obj/item/gun/ballistic/automatic/assault_rifle/infiltrator,
-		/obj/item/gun/ballistic/automatic/marksman,
-		/obj/item/gun/ballistic/automatic/fnfal,
-		/obj/item/gun/ballistic/automatic/shotgun/caws,
-		/obj/item/gun/ballistic/revolver/needler,
-		/obj/item/clothing/suit/armor/f13/power_armor/tesla,
-		/obj/item/clothing/suit/armor/f13/combat/mk2
+		///obj/item/blueprint/misc/stim,
+		///obj/item/blueprint/misc/superstims,
+		/obj/item/blueprint/weapon/r91,
+	//	/obj/item/blueprint/weapon/infiltrator,
+		/obj/item/blueprint/weapon/uzi,
+	//	/obj/item/blueprint/weapon/breacher,
+	//	/obj/item/blueprint/weapon/killer,
+	//	/obj/item/blueprint/weapon/marksmanrifle,
+	//	/obj/item/blueprint/weapon/AER9,
+	//	/obj/item/blueprint/weapon/plasma,
+	//	/obj/item/blueprint/armor/combat
+	)
+
+/obj/effect/spawner/lootdrop/f13/advcrafting
+	name = "advanced_crafting"
+	lootcount = 1
+	lootdoubles = FALSE
+	loot = list(
+	//	/obj/item/advanced_crafting_components/flux,
+	//	/obj/item/advanced_crafting_components/lenses,
+	//	/obj/item/advanced_crafting_components/conductors,
+		/obj/item/advanced_crafting_components/reciever,
+		/obj/item/advanced_crafting_components/assembly,
+	//	/obj/item/advanced_crafting_components/shotgun,
+	//	/obj/item/advanced_crafting_components/alloys
 	)
 

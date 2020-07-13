@@ -100,7 +100,7 @@
 	time = 40
 	reqs = list(/datum/reagent/consumable/sodiumchloride = 1,
 				/datum/reagent/consumable/blackpepper = 1,
-				/obj/item/reagent_containers/food/snacks/pastrybase = 2
+				/obj/item/reagent_containers/food/snacks/doughslice = 2
 	)
 	result = /obj/item/reagent_containers/food/snacks/baguette
 	subcategory = CAT_MISCFOOD
@@ -132,6 +132,16 @@
 		/obj/item/reagent_containers/food/snacks/breadslice/plain = 2
 	)
 	result = /obj/item/reagent_containers/food/snacks/twobread
+	subcategory = CAT_MISCFOOD
+
+/datum/crafting_recipe/food/cracker
+	time = 15
+	name = "Cracker"
+	reqs = list(
+		/datum/reagent/consumable/sodiumchloride = 1,
+		/obj/item/reagent_containers/food/snacks/doughslice = 1,
+	)
+	result = /obj/item/reagent_containers/food/snacks/cracker
 	subcategory = CAT_MISCFOOD
 
 /datum/crafting_recipe/food/tortilla
