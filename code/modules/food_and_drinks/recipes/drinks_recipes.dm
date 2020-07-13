@@ -27,6 +27,18 @@
 	id = "icecoffee"
 	results = list("icecoffee" = 4)
 	required_reagents = list("ice" = 1, "coffee" = 3)
+	
+/datum/chemical_reaction/mocha
+	name = "Mocha"
+	id = "mocha"
+	results = list("mocha" = 5)
+	required_reagents = list("cafe_latte" = 3, "hot_coco" = 2)
+	
+/datum/chemical_reaction/icemocha
+	name = "Iced Mocha"
+	id = "icemocha"
+	results = list("icemocha" = 5)
+	required_reagents = list("ice" = 1, "mocha" = 5)
 
 /datum/chemical_reaction/nuka_cola
 	name = "Nuka Cola"
@@ -492,7 +504,7 @@
 	name = "Nuka Bombdrop"
 	id = "nukabomb"
 	results = list("nukabomb" = 5)
-	required_reagents = list("nukadark" = 1, "rum" = 1, "vodka" = 1, "whiskey" = 1, "sugar" = 1)
+	required_reagents = list("nukadark" = 1, "alcoholz" = 1, "sugar" = 1)
 
 /datum/chemical_reaction/nukacide
 	name = "Nukacide"
