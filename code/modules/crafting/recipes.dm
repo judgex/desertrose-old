@@ -1423,6 +1423,35 @@
 	category  = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
 
+//TODO testing
+/datum/crafting_recipe/uzi
+	name = "Mini uzi"
+	result = /obj/item/gun/ballistic/automatic/mini_uzi
+	reqs = list(/obj/item/stack/sheet/metal = 10,
+				/obj/item/advanced_crafting_components/reciever = 1,
+				/datum/reagent/blackpowder = 60,
+				/obj/item/stack/crafting/goodparts = 5
+				)
+	tools = list(TOOL_WORKBENCH, /obj/item/blueprint/weapon/uzi)
+	time = 120
+	category = CAT_WEAPONRY
+	subcategory = CAT_WEAPON
+
+/datum/crafting_recipe/r91
+	name = "R91 assault rifle"
+	result = /obj/item/gun/ballistic/automatic/assault_rifle
+	reqs = list(/obj/item/stack/sheet/metal = 10,
+				/obj/item/advanced_crafting_components/assembly = 1,
+				/datum/reagent/blackpowder = 60,
+				/obj/item/stack/sheet/mineral/wood = 10,
+				/obj/item/stack/crafting/goodparts = 5
+				)
+	tools = list(TOOL_WORKBENCH, /obj/item/blueprint/weapon/r91)
+	time = 120
+	category = CAT_WEAPONRY
+	subcategory = CAT_WEAPON
+	//yep
+
 /datum/crafting_recipe/zipgun
 	name = "zip gun"
 	result = /obj/item/gun/ballistic/revolver/zipgun
