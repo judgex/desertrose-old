@@ -391,7 +391,6 @@ GLOBAL_LIST_INIT(cardboard_recipes, list ( \
 	new/datum/stack_recipe("shotgun buckshot box", /obj/item/storage/box/lethalshot, ), \
 	new/datum/stack_recipe("shotgun rubbershot box", /obj/item/storage/box/rubbershot, ), \
 	new/datum/stack_recipe("shotgun beanbag box", /obj/item/storage/box/beanbag, ), \
-	new/datum/stack_recipe("shotgun tech box", /obj/item/storage/box/techshot, ), \
 	null, \
 	new/datum/stack_recipe("large box", /obj/structure/closet/cardboard, 4), \
 	new/datum/stack_recipe("cardboard cutout", /obj/item/cardboard_cutout, 5), \

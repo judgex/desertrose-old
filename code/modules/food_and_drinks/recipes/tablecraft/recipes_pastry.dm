@@ -185,27 +185,6 @@
 
 ////////////////////////////////////////////OTHER////////////////////////////////////////////
 
-/datum/crafting_recipe/food/hotdog
-	name = "Hot dog"
-	reqs = list(
-		/datum/reagent/consumable/ketchup = 5,
-		/obj/item/reagent_containers/food/snacks/bun = 1,
-		/obj/item/reagent_containers/food/snacks/sausage = 1
-	)
-	result = /obj/item/reagent_containers/food/snacks/hotdog
-	subcategory = CAT_PASTRY
-
-/datum/crafting_recipe/food/meatbun
-	name = "Meat bun"
-	reqs = list(
-		/datum/reagent/consumable/soysauce = 5,
-		/obj/item/reagent_containers/food/snacks/bun = 1,
-		/obj/item/reagent_containers/food/snacks/meatball = 1,
-		/obj/item/reagent_containers/food/snacks/grown/cabbage = 1
-	)
-	result = /obj/item/reagent_containers/food/snacks/meatbun
-	subcategory = CAT_PASTRY
-
 /datum/crafting_recipe/food/khachapuri
 	name = "Khachapuri"
 	reqs = list(
@@ -257,16 +236,6 @@
 		/obj/item/reagent_containers/food/snacks/grown/mushroom/plumphelmet = 1
 	)
 	result = /obj/item/reagent_containers/food/snacks/plumphelmetbiscuit
-	subcategory = CAT_PASTRY
-
-/datum/crafting_recipe/food/cracker
-	time = 15
-	name = "Cracker"
-	reqs = list(
-		/datum/reagent/consumable/sodiumchloride = 1,
-		/obj/item/reagent_containers/food/snacks/pastrybase = 1,
-	)
-	result = /obj/item/reagent_containers/food/snacks/cracker
 	subcategory = CAT_PASTRY
 
 /datum/crafting_recipe/food/chococornet

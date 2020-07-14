@@ -87,6 +87,18 @@
 		return
 	close_machine(target)
 
+/obj/machinery/sleeper/AltClick(mob/user)
+	if(!user.canUseTopic(src, !issilicon(user)))
+		return
+	if(state_open)
+		close_machine()
+	else
+		open_machine()
+
+/obj/machinery/sleeper/examine(mob/user)
+	.=..()
+	. += "<span class='notice'>Alt-click [src] to [state_open ? "close" : "open"] it.</span>"
+
 /obj/machinery/sleeper/attackby(obj/item/I, mob/user, params)
 	if(!state_open && !occupant)
 		if(default_deconstruction_screwdriver(user, "[initial(icon_state)]-o", initial(icon_state), I))
@@ -214,7 +226,6 @@
 	var/list/av_chem = available_chems.Copy()
 	for(var/chem in av_chem)
 		chem_buttons[chem] = pick_n_take(av_chem) //no dupes, allow for random buttons to still be correct
-
 
 /obj/machinery/sleeper/syndie
 	icon_state = "sleeper_s"
