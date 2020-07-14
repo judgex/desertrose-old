@@ -334,6 +334,53 @@
 	..()
 	. = 1
 
+/datum/reagent/consumable/mocha
+	name = "Mocha"
+	id = "mocha"
+	description = "A delicious mix of coffee and chocolate. Also known as a caffe mocha or mochaccino."
+	color = "#482000" // rgb: 72, 32, 0
+	nutriment_factor = 0
+	overdose_threshold = 80
+	taste_description = "creamy chocolate and strong coffee"
+	glass_icon_state = "chocolateglass"
+	glass_name = "mocha"
+	glass_desc = "A delicious mix of coffee and chocolate. Also known as a caffe mocha or mochaccino."
+
+/datum/reagent/consumable/mocha/overdose_process(mob/living/M)
+	M.Jitter(5)
+	..()
+
+/datum/reagent/consumable/mocha/on_mob_life(mob/living/carbon/M)
+	M.dizziness = max(0,M.dizziness-5)
+	M.drowsyness = max(0,M.drowsyness-3)
+	M.AdjustSleeping(-40, FALSE)
+	//310.15 is the normal bodytemp.
+	M.adjust_bodytemperature(25 * TEMPERATURE_DAMAGE_COEFFICIENT, 0, BODYTEMP_NORMAL)
+	if(holder.has_reagent("frostoil"))
+		holder.remove_reagent("frostoil", 5)
+	..()
+	. = 1
+	
+/datum/reagent/consumable/icemocha
+	name = "Iced Mocha"
+	id = "icemocha"
+	description = "Chilled mocha, refreshing and invigorating."
+	color = "#102838" // rgb: 16, 40, 56
+	nutriment_factor = 0
+	taste_description = "smooth chocolate and icy coffee"
+	glass_icon_state = "chocolateglass"
+	glass_name = "iced mocha"
+	glass_desc = "Chilled mocha, refreshing and invigorating."
+
+/datum/reagent/consumable/icecoffee/on_mob_life(mob/living/carbon/M)
+	M.dizziness = max(0,M.dizziness-5)
+	M.drowsyness = max(0,M.drowsyness-3)
+	M.AdjustSleeping(-40, FALSE)
+	M.adjust_bodytemperature(-5 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
+	M.Jitter(5)
+	..()
+	. = 1
+
 /datum/reagent/consumable/bawls
 	name = "Balls Guarana"
 	id = "bawls"

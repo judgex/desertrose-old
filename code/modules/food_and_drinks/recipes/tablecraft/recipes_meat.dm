@@ -122,6 +122,27 @@
 	result = /obj/item/reagent_containers/food/snacks/sausage
 	subcategory = CAT_MEAT
 
+/datum/crafting_recipe/food/hotdog
+	name = "Hot dog"
+	reqs = list(
+		/datum/reagent/consumable/ketchup = 5,
+		/obj/item/reagent_containers/food/snacks/bun = 1,
+		/obj/item/reagent_containers/food/snacks/sausage = 1
+	)
+	result = /obj/item/reagent_containers/food/snacks/hotdog
+	subcategory = CAT_MEAT
+
+/datum/crafting_recipe/food/meatbun
+	name = "Meat bun"
+	reqs = list(
+		/datum/reagent/consumable/soysauce = 5,
+		/obj/item/reagent_containers/food/snacks/bun = 1,
+		/obj/item/reagent_containers/food/snacks/meatball = 1,
+		/obj/item/reagent_containers/food/snacks/grown/cabbage = 1
+	)
+	result = /obj/item/reagent_containers/food/snacks/meatbun
+	subcategory = CAT_MEAT
+
 /datum/crafting_recipe/food/nugget
 	name = "Chicken nugget"
 	reqs = list(
