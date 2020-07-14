@@ -722,10 +722,10 @@
 	results = list("vaultgirl" = 2)
 	required_reagents = list("vaulttech" = 1, "between_the_sheets" = 1)
 
-/datum/chemical_reaction/fernetnuka
-	name = "Fernet Nuka"
-	id = "fernetnuka"
-	results = list("fernetnuka" = 2)
+/datum/chemical_reaction/fernetcola
+	name = "Fernet Cola"
+	id = "fernetcola"
+	results = list("fernetcola" = 2)
 	required_reagents = list("fernet" = 1, "nuka_cola" = 1)
 
 /datum/chemical_reaction/moonshinez
