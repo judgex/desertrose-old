@@ -68,7 +68,7 @@ Mayor
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "the mayor"
-	description = "Seems like you're Johnny Law these days. Outside of the more obvious day to day tasks in dealing with local disputes and keeping the peace, your main trade is in corpses - dead or alive... doesn't matter much to the town. Whether you obtain these bounties yourself or through the means of notorious gunslingers is up to you, just as long as you keep the road safe and your people alive."
+	description = "Seems like you're Johnny Law these days. Outside of the more obvious day to day tasks in dealing with local disputes and keeping the peace, you're main trade is in corpses - dead or alive... doesn't matter much to the town. Whether you obtain these bounties yourself or through the means of notorious gunslingers is up to you, just as long as you keep the road safe and your people alive."
 	selection_color = "#d7b088"
 	exp_requirements = 720
 	exp_type = EXP_TYPE_DEN
@@ -92,39 +92,18 @@ Mayor
 	suit = 			/obj/item/clothing/suit/armor/f13/town/sheriff
 	head = 			/obj/item/clothing/head/f13/town/sheriff
 	glasses =		/obj/item/clothing/glasses/sunglasses
+	l_hand = 		/obj/item/gun/ballistic/shotgun/automatic/hunting/brush
 	l_pocket =		/obj/item/storage/bag/money/small/den
 	backpack_contents = list(
 		/obj/item/storage/box/deputy_badges=1, \
-		/obj/item/ammo_box/m44=2 \
-		/obj/item/restraints/handcuffs=2) 
-		/obj/item/kitchen/knife/combat
-		/obj/item/melee/classic_baton
+		/obj/item/ammo_box/tube/c4570=2, \
+		/obj/item/ammo_box/m44=2, \
+		/obj/item/restraints/handcuffs=1)
 	r_pocket = /obj/item/flashlight/flare
 	belt = /obj/item/gun/ballistic/revolver/m29/peacekeeper
 
 /datum/job/den/f13sheriff/after_spawn(mob/living/carbon/human/H, mob/M)
 	H.add_quirk("Hard Yards")
-
-loadout_options = list(
-	/datum/outfit/loadout/standardsheriff, //Brush, Peacekeeper, Baton
-	/datum/outfit/loadout/gentlerapproach, //Lever Action, Beanbags
-	)
-
-/datum/outfit/loadout/standardsheriff
-	name = "Old Western"
-	l_hand = /obj/item/gun/ballistic/shotgun/automatic/hunting/brush/scoped
-	backpack_contents = list(
-		/obj/item/ammo_box/tube/c4570=2
-
-		)
-
-/datum/outfit/loadout/gentlerapproach
-	name = "A Different Approach"
-	l_hand = /obj/item/gun/ballistic/shotgun/trench
-	backpack_contents = list(
-		/obj/item/storage/box/beanbag=2
-		)
-
 
 /*--------------------------------------------------------------*/
 
@@ -165,7 +144,6 @@ loadout_options = list(
 		/obj/item/ammo_box/a357=2, \
 		/obj/item/ammo_box/tube/m44=2, \
 		/obj/item/restraints/handcuffs=1)
-		/obj/item/melee/classic_baton
 
 /*--------------------------------------------------------------*/
 
