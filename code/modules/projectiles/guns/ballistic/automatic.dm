@@ -597,10 +597,6 @@
 	slot_flags = 0
 	mag_type = /obj/item/ammo_box/magazine/m556/rifle
 	init_mag_type = /obj/item/ammo_box/magazine/m556/rifle/assault
-	can_bayonet = TRUE
-	state = "bayonet"
-	knife_x_offset = 27
-	knife_y_offset = 9//12
 	fire_sound = 'sound/f13weapons/assaultrifle_fire.ogg'
 	burst_size = 2
 	automatic = 1

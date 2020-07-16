@@ -180,10 +180,6 @@
 	icon_state = "laser"
 	item_state = "laser-rifle9"
 	fire_delay = 3
-	can_bayonet = TRUE
-	state = "bayonetAER"
-	knife_x_offset = 30
-	knife_y_offset = 8
 	equipsound = 'sound/f13weapons/equipsounds/aer9equip.ogg'
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/lasgun)
 	cell_type = /obj/item/stock_parts/cell/ammo/mfc

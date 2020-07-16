@@ -109,8 +109,8 @@
 	mag_type = /obj/item/ammo_box/magazine/internal/boltaction
 	var/bolt_open = FALSE
 	can_bayonet = TRUE
-	knife_x_offset = 25
-	knife_y_offset = 11
+	knife_x_offset = 27
+	knife_y_offset = 13
 	fire_delay = 5
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
@@ -164,9 +164,6 @@ TODO sprite, ignore for now*/
 	nocase = TRUE
 	var/bolt_open = FALSE
 	can_bayonet = TRUE
-	state = "bayonetMusket"
-	knife_x_offset = 26
-	knife_y_offset = 27
 	fire_delay = 20
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
