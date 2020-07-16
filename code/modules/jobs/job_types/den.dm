@@ -88,17 +88,19 @@ Mayor
 
 	ears = 			/obj/item/radio/headset/headset_den
 	uniform =  		/obj/item/clothing/under/f13/sheriff
+	neck =			/obj/item/storage/belt/holster
 	shoes = 		/obj/item/clothing/shoes/f13/cowboy
 	suit = 			/obj/item/clothing/suit/armor/f13/town/sheriff
 	head = 			/obj/item/clothing/head/f13/town/sheriff
 	glasses =		/obj/item/clothing/glasses/sunglasses
-	l_hand = 		/obj/item/gun/ballistic/shotgun/automatic/hunting/brush
+	l_hand = 		/obj/item/gun/ballistic/shotgun/automatic/hunting/brush/scoped
 	l_pocket =		/obj/item/storage/bag/money/small/den
 	backpack_contents = list(
 		/obj/item/storage/box/deputy_badges=1, \
-		/obj/item/ammo_box/tube/c4570=2, \
+		/obj/item/ammo_box/tube/c4570=3, \
 		/obj/item/ammo_box/m44=2, \
-		/obj/item/restraints/handcuffs=1)
+		/obj/item/restraints/handcuffs=1, \
+		/obj/item/melee/classic_baton=1)
 	r_pocket = /obj/item/flashlight/flare
 	belt = /obj/item/gun/ballistic/revolver/m29/peacekeeper
 
@@ -428,12 +430,12 @@ Mayor
 	name = "Barkeep"
 	jobtype = /datum/job/den/f13barkeep
 
-	uniform = /obj/item/clothing/under/f13/bartenderalt 
+	uniform = /obj/item/clothing/under/f13/bartenderalt
 	id = /obj/item/card/id/dogtag/town
 	ears = /obj/item/radio/headset/headset_den
 	belt = /obj/item/gun/ballistic/revolver/caravan_shotgun
-	shoes = /obj/item/clothing/shoes/workboots/mining 
-	backpack = /obj/item/storage/backpack/satchel/leather 
+	shoes = /obj/item/clothing/shoes/workboots/mining
+	backpack = /obj/item/storage/backpack/satchel/leather
 	backpack_contents = list(
 		/obj/item/storage/bag/money/small/settler,
 		/obj/item/storage/box/beanbag,
@@ -442,38 +444,38 @@ Mayor
 
 /datum/outfit/loadout/rugged
 	name = "Rugged"
-	head = /obj/item/clothing/head/helmet/f13/brahmincowboyhat 
+	head = /obj/item/clothing/head/helmet/f13/brahmincowboyhat
 	uniform = /obj/item/clothing/under/f13/cowboyb
 	suit = /obj/item/clothing/suit/f13/cowboybvest
-	gloves = /obj/item/clothing/gloves/color/brown 
-	shoes = /obj/item/clothing/shoes/f13/brownie 
+	gloves = /obj/item/clothing/gloves/color/brown
+	shoes = /obj/item/clothing/shoes/f13/brownie
 
 /datum/outfit/loadout/frontier
 	name = "Frontier"
-	head = /obj/item/clothing/head/bowler 
-	mask = /obj/item/clothing/mask/fakemoustache  
+	head = /obj/item/clothing/head/bowler
+	mask = /obj/item/clothing/mask/fakemoustache
 	uniform = /obj/item/clothing/under/f13/westender
 	suit = /obj/item/clothing/suit/fluff/westender
-	gloves = /obj/item/clothing/gloves/fingerless 
+	gloves = /obj/item/clothing/gloves/fingerless
 	shoes = /obj/item/clothing/shoes/f13/fancy
 
 /datum/outfit/loadout/richmantender
 	name = "Fancy"
-	head = /obj/item/clothing/head/fedora 
-	glasses = /obj/item/clothing/glasses/sunglasses 
-	uniform = /obj/item/clothing/under/rank/bartender 
-	suit = /obj/item/clothing/suit/toggle/lawyer/black 
-	gloves = /obj/item/clothing/gloves/fingerless 
-	shoes = /obj/item/clothing/shoes/f13/fancy 
-	neck = /obj/item/clothing/neck/tie/black 
+	head = /obj/item/clothing/head/fedora
+	glasses = /obj/item/clothing/glasses/sunglasses
+	uniform = /obj/item/clothing/under/rank/bartender
+	suit = /obj/item/clothing/suit/toggle/lawyer/black
+	gloves = /obj/item/clothing/gloves/fingerless
+	shoes = /obj/item/clothing/shoes/f13/fancy
+	neck = /obj/item/clothing/neck/tie/black
 
 /datum/outfit/loadout/diner
 	name = "Diner"
 	head = /obj/item/clothing/head/soft/mime
-	glasses = /obj/item/clothing/glasses/orange 
-	uniform = /obj/item/clothing/under/f13/brahminf 
-	suit = /obj/item/clothing/suit/apron/chef 
-	gloves = /obj/item/clothing/gloves/color/white 
+	glasses = /obj/item/clothing/glasses/orange
+	uniform = /obj/item/clothing/under/f13/brahminf
+	suit = /obj/item/clothing/suit/apron/chef
+	gloves = /obj/item/clothing/gloves/color/white
 	shoes = /obj/item/clothing/shoes/f13/military/ncr
 
 /*--------------------------------------------------------------*/
@@ -602,8 +604,8 @@ Mayor
 	glasses = /obj/item/clothing/glasses/monocle
 	uniform = /obj/item/clothing/under/suit_jacket/charcoal
 	suit = /obj/item/clothing/suit/f13/banker
-	gloves = /obj/item/clothing/gloves/color/white/redcoat 
-	shoes = /obj/item/clothing/shoes/laceup 
+	gloves = /obj/item/clothing/gloves/color/white/redcoat
+	shoes = /obj/item/clothing/shoes/laceup
 	backpack_contents = list(
 	/obj/item/cane=1,
 	/obj/item/gun/ballistic/revolver/zipgun=1,
@@ -626,14 +628,14 @@ Mayor
 	)
 
 /datum/outfit/loadout/investor
-	name = "Investor" 
+	name = "Investor"
 	glasses = /obj/item/clothing/glasses/sunglasses
 	suit = /obj/item/clothing/suit/toggle/lawyer/black
 	uniform = /obj/item/clothing/under/f13/bennys
 	gloves = /obj/item/clothing/gloves/fingerless
 	shoes = /obj/item/clothing/shoes/laceup
 	backpack_contents = list(
-		/obj/item/gun/ballistic/revolver/colt357=1, 
+		/obj/item/gun/ballistic/revolver/colt357=1,
 		/obj/item/storage/fancy/cigarettes/cigpack_bigboss=1,
 		/obj/item/storage/box/matches=1
 		)
