@@ -18,6 +18,7 @@
 	attack_verb = list("struck", "hit", "bashed")
 	item_flags = SLOWS_WHILE_IN_HAND
 
+	var/state = "bayonet"
 	var/fire_sound = "gunshot"
 	var/suppressed = null					//whether or not a message is displayed when fired
 	var/can_suppress = FALSE
@@ -367,7 +368,6 @@
 				return
 			to_chat(user, "<span class='notice'>You attach \the [K] to the front of \the [src].</span>")
 			bayonet = K
-			var/state = "bayonet"							//Generic state.
 			if(bayonet.icon_state in icon_states('icons/obj/guns/bayonets.dmi'))		//Snowflake state?
 				state = bayonet.icon_state
 			var/icon/bayonet_icons = 'icons/obj/guns/bayonets.dmi'
