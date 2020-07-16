@@ -15,8 +15,7 @@ GLOBAL_LIST_INIT(command_positions, list(
     "Sheriff",
     "Chief",
     "Shaman",
-	"NCR Administrator",
-	"Lead Practitioner"
+	"NCR Administrator"
     ))
 
 GLOBAL_LIST_INIT(silicon_whitelist_positions, list(
