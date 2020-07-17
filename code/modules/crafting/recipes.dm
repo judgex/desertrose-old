@@ -1459,7 +1459,7 @@
 	result = /obj/item/gun/ballistic/automatic/mini_uzi
 	reqs = list(/obj/item/stack/sheet/metal = 10,
 				/obj/item/advanced_crafting_components/reciever = 1,
-				/datum/reagent/blackpowder = 60,
+				/datum/reagent/blackpowder = 30,
 				/obj/item/stack/crafting/goodparts = 5
 				)
 	tools = list(TOOL_WORKBENCH, /obj/item/blueprint/weapon/uzi)
@@ -1472,7 +1472,7 @@
 	result = /obj/item/gun/ballistic/automatic/assault_rifle
 	reqs = list(/obj/item/stack/sheet/metal = 10,
 				/obj/item/advanced_crafting_components/assembly = 1,
-				/datum/reagent/blackpowder = 60,
+				/datum/reagent/blackpowder = 30,
 				/obj/item/stack/sheet/mineral/wood = 10,
 				/obj/item/stack/crafting/goodparts = 5
 				)

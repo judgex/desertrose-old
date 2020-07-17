@@ -103,13 +103,13 @@
 //general ballistics
 /obj/item/advanced_crafting_components/reciever
 	name = "Advanced modular reciever"
-	desc = "Ballistics"
+	desc = "A ballistic weapon part, a crafstman might want to have this."
 	icon_state = "reciever"
 
 //rifles
 /obj/item/advanced_crafting_components/assembly
 	name = "Pre-war weapon assembly"
-	desc = "Ballistics"
+	desc = "A ballistic weapon part, a crafstman might want to have this."
 	icon_state = "weapon_parts_1"
 
 //shotgun
