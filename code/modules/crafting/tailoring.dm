@@ -95,6 +95,7 @@
 	category = CAT_CLOTHING
 	subcategory = CAT_CLOTHING
 
+/*
 /datum/crafting_recipe/supaflyhelm_reinforced
 	name = "reinforced supafly helmet"
 	result = /obj/item/clothing/head/helmet/f13/raider/r/supafly
@@ -270,6 +271,7 @@
 	time = 60
 	category = CAT_CLOTHING
 	subcategory = CAT_CLOTHING
+*/
 
 /datum/crafting_recipe/raiderpaconversion
 	name = "salvaged power armor to raider power armor conversion"
