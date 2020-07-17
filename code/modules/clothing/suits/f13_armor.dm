@@ -199,7 +199,7 @@
 	name = "base faction exile armor"
 	desc = "this is for testing."
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
-	armor = list("melee" = 50, "bullet" = 30, "laser" = 20, "energy" = 20, "bomb" = 40, "bio" = 40, "rad" = 20, "fire" = 60, "acid" = 20)
+	armor = list("melee" = 40, "bullet" = 25, "laser" = 20, "energy" = 20, "bomb" = 40, "bio" = 40, "rad" = 20, "fire" = 60, "acid" = 20)
 	strip_delay = 30
 	icon = 'icons/fallout/clothing/suits.dmi'
 
@@ -209,11 +209,19 @@
 	icon_state = "ncrexile"
 	item_state = "ncrexile"
 
+/obj/item/clothing/suit/armor/f13/exile/ncrexile/Initialize()
+	. = ..()
+	AddComponent(/datum/component/armor_plate)
+
 /obj/item/clothing/suit/armor/f13/exile/legexile
 	name = "modified Legion armor"
 	desc = "A modified detoriated armor kit consisting of Legion gear and scrap metal."
 	icon_state = "legexile"
 	item_state = "legexile"
+
+/obj/item/clothing/suit/armor/f13/exile/legexile/Initialize()
+	. = ..()
+	AddComponent(/datum/component/armor_plate)
 
 /obj/item/clothing/suit/armor/f13/exile/bosexile
 	name = "modified Brotherhood armor"
@@ -221,6 +229,11 @@
 	icon_state = "brotherhoodexile"
 	item_state = "brotherhoodexile"
 
+/obj/item/clothing/suit/armor/f13/exile/bosexile/Initialize()
+	. = ..()
+	AddComponent(/datum/component/armor_plate)
+
+/*
 /obj/item/clothing/suit/armor/f13/exile/r
 	name = "reinforced base faction exile armor"
 	desc = "this is for testing"
@@ -243,4 +256,4 @@
 	name = "reinforced modified Brotherhood armor"
 	desc = "A modified detoriated armor kit consisting of brotherhood combat armor and scrap metal. This set has been add additional protective plates fused inside of the armor, granting additional protection."
 	icon_state = "brotherhoodexile"
-	item_state = "brotherhoodexile"
+	item_state = "brotherhoodexile" */
