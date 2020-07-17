@@ -583,7 +583,7 @@
 
 /obj/effect/mob_spawn/human/corpse/raider/tribal
 	uniform = /obj/item/clothing/under/f13/rag
-	suit = /obj/item/clothing/suit/armor/f13/raider/r/sadist
+	suit = /obj/item/clothing/suit/armor/f13/raider/sadist
 	shoes = /obj/item/clothing/shoes/f13/rag
 	//gloves = /obj/item/clothing/gloves/f13/doom
 	//radio = /obj/item/device/radio/headset
@@ -608,7 +608,7 @@
 
 /obj/effect/mob_spawn/human/corpse/raider/baseball
 	uniform = /obj/item/clothing/under/f13/rag
-	suit = /obj/item/clothing/suit/armor/f13/raider/r/yankee
+	suit = /obj/item/clothing/suit/armor/f13/raider/yankee
 	shoes = /obj/item/clothing/shoes/f13/rag
 	//gloves = /obj/item/clothing/gloves/f13/doom
 	//radio = /obj/item/device/radio/headset

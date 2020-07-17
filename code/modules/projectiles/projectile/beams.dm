@@ -202,19 +202,30 @@
 	damage = 40
 	armour_penetration = 25
 
+//plasma caster
+/obj/item/projectile/plasmacaster //Plasma rifle
+	name = "plasma bolt"
+	icon_state = "plasma_clot"
+	damage_type = BURN
+	damage = 50
+	armour_penetration = 30
+	flag = "laser" //checks vs. energy protection
+	eyeblur = 0
+	is_reflectable = TRUE
+
 /obj/item/projectile/beam/laser/lasgun //AER9
 	name = "laser beam"
-	damage = 26
+	damage = 30
 	armour_penetration = 15
 
 /obj/item/projectile/beam/laser/pistol //AEP7
 	name = "laser beam"
-	damage = 21
+	damage = 23
 	armour_penetration = 10
 
 /obj/item/projectile/beam/laser/gatling //Gatling Laser Projectile
 	name = "rapid-fire laser beam"
-	damage = 12
+	damage = 10
 	armour_penetration = 50
 
 /obj/item/projectile/beam/laser/pistol/wattz //Wattz pistol
@@ -232,8 +243,8 @@
 
 /obj/item/projectile/beam/laser/tribeam //Tribeam laser, fires 3 shots, will melt you
 	name = "tribeam laser"
-	damage = 22
-	armour_penetration = 12
+	damage = 21
+	armour_penetration = 10
 
 /obj/item/projectile/plasma //Plasma rifle
 	name = "plasma bolt"
@@ -256,10 +267,10 @@
 	is_reflectable = FALSE
 
 /obj/item/projectile/plasma/pistol //Plasma pistol
-	damage = 28
+	damage = 35
 	armour_penetration = 20
 
-/obj/item/projectile/plasma/pistol/glock //Glock (upgraded plasma pistol)
+/obj/item/projectile/plasma/pistol/glock //Glock (streamlined plasma pistol)
 	damage = 28
 	armour_penetration = 15
 
@@ -270,7 +281,7 @@
 /obj/item/projectile/beam/laser/rcw //RCW
 	name = "rapidfire beam"
 	icon_state = "xray"
-	damage = 15
+	damage = 22
 	armour_penetration = 12
 	impact_effect_type = /obj/effect/temp_visual/impact_effect/green_laser
 	light_color = LIGHT_COLOR_GREEN
@@ -278,20 +289,20 @@
 /obj/item/projectile/plasma/alien
 	name = "alien projectile"
 	icon_state = "ion"
-	damage = 85 //horrifyingly powerful, but very limited ammo
+	damage = 90 //horrifyingly powerful, but very limited ammo
 	armour_penetration = 50
 
 /obj/item/projectile/beam/laser/laer //Elder's/Unique LAER
 	name = "advanced laser beam"
 	icon_state = "u_laser"
-	damage = 40
-	armour_penetration = 30
+	damage = 45
+	armour_penetration = 50
 	impact_effect_type = /obj/effect/temp_visual/impact_effect/blue_laser
 	light_color = LIGHT_COLOR_BLUE
 
 /obj/item/projectile/beam/laser/aer14 //AER14
 	name = "laser beam"
-	damage = 30
+	damage = 35
 	armour_penetration = 20
 	icon_state = "omnilaser"
 	impact_effect_type = /obj/effect/temp_visual/impact_effect/blue_laser

@@ -348,7 +348,7 @@
 	name = "base raider armor"
 	desc = "for testing"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	armor = list("melee" = 40, "bullet" = 35, "laser" = 35, "energy" = 35, "bomb" = 30, "bio" = 0, "rad" = 0, "fire" = 25, "acid" = 25)
+	armor = list("melee" = 35, "bullet" = 30, "laser" = 35, "energy" = 35, "bomb" = 30, "bio" = 0, "rad" = 0, "fire" = 25, "acid" = 25)
 	strip_delay = 40
 
 /obj/item/clothing/suit/armor/f13/raider/supafly
@@ -357,11 +357,19 @@
 	icon_state = "supafly"
 	item_state = "supafly"
 
+/obj/item/clothing/suit/armor/f13/raider/supafly/Initialize() //HQ parts reinforcement
+	. = ..()
+	AddComponent(/datum/component/armor_plate)
+
 /obj/item/clothing/suit/armor/f13/raider/sadist
 	name = "sadist raider armor"
 	desc = "a bunch of metal chaps adorned with severed hands at the waist with a leather plate worn on the left shoulder"
 	icon_state = "sadist"
 	item_state = "sadist"
+
+/obj/item/clothing/suit/armor/f13/raider/sadist/Initialize()
+	. = ..()
+	AddComponent(/datum/component/armor_plate)
 
 /obj/item/clothing/suit/armor/f13/raider/blastmaster
 	name = "blastmaster raider armor"
@@ -371,11 +379,19 @@
 	max_heat_protection_temperature = ARMOR_MAX_TEMP_PROTECT
 	flash_protect = 2
 
+/obj/item/clothing/suit/armor/f13/raider/blastmaster/Initialize()
+	. = ..()
+	AddComponent(/datum/component/armor_plate)
+
 /obj/item/clothing/suit/armor/f13/raider/yankee
 	name = "yankee raider armor"
 	desc = "A set of armor made from football player protective wear. Together we play."
 	icon_state = "yankee"
 	item_state = "yankee"
+
+/obj/item/clothing/suit/armor/f13/raider/yankee/Initialize()
+	. = ..()
+	AddComponent(/datum/component/armor_plate)
 
 /obj/item/clothing/suit/armor/f13/raider/badlands
 	name = "badlands raider armor"
@@ -383,11 +399,19 @@
 	icon_state = "badlands"
 	item_state = "badlands"
 
+/obj/item/clothing/suit/armor/f13/raider/badlands/Initialize()
+	. = ..()
+	AddComponent(/datum/component/armor_plate)
+
 /obj/item/clothing/suit/armor/f13/raider/painspike
 	name = "painspike raider armor"
 	desc = "A particularly unhuggable armor, even by raider standards."
 	icon_state = "painspike"
 	item_state = "painspike"
+
+/obj/item/clothing/suit/armor/f13/raider/painspike/Initialize()
+	. = ..()
+	AddComponent(/datum/component/armor_plate)
 
 /obj/item/clothing/suit/armor/f13/raider/iconoclast/
 	name = "iconoclast raider armor"
@@ -395,6 +419,11 @@
 	icon_state = "iconoclast"
 	item_state = "iconoclast"
 
+/obj/item/clothing/suit/armor/f13/raider/iconoclast/Initialize()
+	. = ..()
+	AddComponent(/datum/component/armor_plate)
+
+/*
 /obj/item/clothing/suit/armor/f13/raider/r/
 	name = "reinforced base raider armor"
 	armor = list("melee" = 40, "bullet" = 45, "laser" = 45, "energy" = 45, "bomb" = 45, "bio" = 0, "rad" = 0, "fire" = 30, "acid" = 30)
@@ -442,6 +471,7 @@
 	desc = "A rigid armor set that appears to be fashioned from a radiation suit, or a mining suit."
 	icon_state = "iconoclast"
 	item_state = "iconoclast"
+*/
 
 /obj/item/clothing/suit/armor/f13/combat
 	name = "combat armor"

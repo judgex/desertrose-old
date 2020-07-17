@@ -321,7 +321,7 @@
 	item_state = "rcw"
 	fire_delay = 3
 	burst_size = 2
-	burst_delay = 2
+	burst_delay = 2.5
 	equipsound = 'sound/f13weapons/equipsounds/RCWequip.ogg'
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/rcw)
 	cell_type = /obj/item/stock_parts/cell/ammo/ecp

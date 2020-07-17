@@ -116,13 +116,13 @@
 
 /obj/item/clothing/shoes/f13/military/legionmetal
 	name = "plated metal boots"
-	desc = "A pair of leather boots that have been patched heavily and reinforced with light metal plates around the heel and ankles to protect the user. These belong to a Veteran of Caesar's Legion."
+	desc = "A pair of leather boots that have been patched heavily and reinforced with light metal plates around the heel and ankles to protect the user."
 	icon_state = "legionmetal"
 	item_state = "legionmetal"
 	armor = list(melee = 20, bullet = 20, laser = 10, energy = 10, bomb = 20, bio = 0, rad = 0, fire = 20, acid = 0)
 
 /obj/item/clothing/shoes/f13/military/legionlegate
-	name = "legion legate boots"
+	name = "heavy metal boots"
 	desc = "A pair of heavy leather boots with overlapping steel plates affixed to the front, sides, and back of them, in size 14. These belong to a Legatus of Caesar's Legion."
 	icon_state = "legionlegate"
 	item_state = "legionlegate"
@@ -169,3 +169,9 @@
 	armor = list(melee = 20, bullet = 0, laser = 0, energy = 0, bomb = 20, bio = 0, rad = 0, fire = 0, acid = 0)
 	cold_protection = FEET
 	min_cold_protection_temperature = SHOES_MIN_TEMP_PROTECT
+
+/obj/item/clothing/shoes/f13/military/generalboot
+	name = "Militia Boots"
+	desc = ""
+	icon_state = "militiaboots"
+	item_state = "diesel_m"
