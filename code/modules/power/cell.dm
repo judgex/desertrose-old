@@ -381,6 +381,8 @@
 	icon_state = "mfc"
 	maxcharge = 1200
 
+
+
 /obj/item/stock_parts/cell/ammo/ecp
 	name = "electron charge pack"
 	desc = "An electron charge pack, typically used as ammunition for rapidly-firing energy weapons."
@@ -390,8 +392,13 @@
 /obj/item/stock_parts/cell/ammo/ec
 	name = "energy cell"
 	desc = "An energy cell, typically used as ammunition for small-arms energy weapons."
-	icon_state = "ec"
+	icon_state = "ec_full"
 	maxcharge = 600
+
+/obj/item/stock_parts/cell/ammo/mfc/empty/Initialize()
+	. = ..()
+	if (charge < 60)
+		icon_state = "ec_twothirds"
 
 /obj/item/stock_parts/cell/ammo/alien
 	name = "alien weapon cell"
