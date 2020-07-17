@@ -15,7 +15,8 @@ GLOBAL_LIST_INIT(command_positions, list(
     "Sheriff",
     "Chief",
     "Shaman",
-	"NCR Administrator"
+	"NCR Administrator",
+	"Lead Practitioner"
     ))
 
 GLOBAL_LIST_INIT(silicon_whitelist_positions, list(
@@ -37,6 +38,7 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 "Knight",
 "Senior Scribe",
 "Scribe",
+"Off-Duty",
 "Legion Centurion",
 "Legion Orator",
 "Priestess of Mars",
@@ -74,6 +76,7 @@ GLOBAL_LIST_INIT(faction_player_positions, list(
 "Knight",
 "Senior Scribe",
 "Scribe",
+"Off-Duty",
 "Legion Decanus",
 "Veteran Legionary",
 "Prime Legionary",
@@ -112,7 +115,7 @@ GLOBAL_LIST_INIT(brotherhood_positions, list(
 	"Knight",
 	"Senior Scribe",
 	"Scribe",
-	"Initiate"
+	"Off-Duty",
 ))
 
 GLOBAL_LIST_INIT(den_command_positions, list(
@@ -270,7 +273,7 @@ GLOBAL_LIST_INIT(exp_jobsmap, list(
     EXP_TYPE_WASTELAND     = list("titles" = wasteland_positions),
 	EXP_TYPE_TRIBAL        = list("titles" = tribal_positions),
 	EXP_TYPE_FOLLOWERS     = list("titles" = followers_positions),
-	
+
     EXP_TYPE_RANGER        = list("titles" = list("NCR Veteran Ranger","NCR Ranger")),
     EXP_TYPE_SCRIBE        = list("titles" = list("Scribe")),
     EXP_TYPE_DECANUS       = list("titles" = list("Legion Decanus")),
