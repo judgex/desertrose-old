@@ -238,15 +238,17 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
 
+
 /datum/crafting_recipe/ecp
 	name = "Electron Charge Pack"
-	result = /obj/item/stock_parts/cell/ammo/mfc
+	result = /obj/item/stock_parts/cell/ammo/ecp
 	reqs = list(/obj/item/stock_parts/capacitor=2, /obj/item/stock_parts/cell/ammo/mfc=2)
 	traits = list(TRAIT_GUNSMITH_FOUR)
 	tools = list(TOOL_AWORKBENCH, TOOL_GUNTIER4)
 	time = 30
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
+
 
 /datum/crafting_recipe/speedloader10mm
 	name = "empty speed loader (10mm)"
