@@ -18,6 +18,7 @@
 	var/rigged = FALSE	// true if rigged to explode
 	var/chargerate = 100 //how much power is given every tick in a recharger
 	var/self_recharge = 0 //does it self recharge, over time, or not?
+	var/cancharge = 1 //set to 0 if you do not want this battery to be able to charge
 	var/ratingdesc = TRUE
 	var/grown_battery = FALSE // If it's a grown that acts as a battery, add a wire overlay to it.
 	container_type = INJECTABLE|DRAINABLE
@@ -33,7 +34,7 @@
 		maxcharge = override_maxcharge
 	charge = maxcharge
 	if(ratingdesc)
-		desc += " This one has a rating of [DisplayEnergy(maxcharge)], and you should not swallow it."
+		desc += " This one has a rating of [DisplayEnergy(maxcharge)]."
 	update_icon()
 
 /obj/item/stock_parts/cell/Destroy()
@@ -364,6 +365,7 @@
 /obj/item/stock_parts/cell/ammo
 	name = "ammo cell"
 	desc = "You shouldn't be holding this."
+	cancharge = 0
 	w_class = WEIGHT_CLASS_TINY
 
 /obj/item/stock_parts/cell/ammo/New()
@@ -378,21 +380,18 @@
 	desc = "A microfusion cell, typically used as ammunition for large energy weapons."
 	icon_state = "mfc"
 	maxcharge = 1200
-	chargerate = 300
 
 /obj/item/stock_parts/cell/ammo/ecp
 	name = "electron charge pack"
 	desc = "An electron charge pack, typically used as ammunition for rapidly-firing energy weapons."
 	icon_state = "icell"
 	maxcharge = 2400
-	chargerate = 400
 
 /obj/item/stock_parts/cell/ammo/ec
 	name = "energy cell"
 	desc = "An energy cell, typically used as ammunition for small-arms energy weapons."
 	icon_state = "ec"
-	maxcharge = 300
-	chargerate = 300
+	maxcharge = 600
 
 /obj/item/stock_parts/cell/ammo/alien
 	name = "alien weapon cell"
@@ -400,4 +399,3 @@
 	icon_state = "aliencell"
 	ratingdesc = FALSE
 	maxcharge = 4000
-	chargerate = 0
