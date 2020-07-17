@@ -391,7 +391,7 @@
 		if(0)
 			select += 1
 			burst_size = 3 //fan the hammer
-			spread = 7
+			spread = 15
 			extra_penetration = 0
 			fire_delay = 1
 			to_chat(user, "<span class='notice'>You prepare to fan the hammer for a rapid burst of shots.</span>")
