@@ -72,12 +72,12 @@
 	pellets = 3
 	variance = 14
 	select_name = "scatter"
-	e_cost = 75
+	e_cost = 100
 	fire_sound = 'sound/f13weapons/tribeamfire.ogg'
 
 /obj/item/ammo_casing/energy/laser/pistol
 	projectile_type = /obj/item/projectile/beam/laser/pistol
-	e_cost = 10
+	e_cost = 50
 	fire_sound = 'sound/f13weapons/aep7fire.ogg'
 
 /obj/item/ammo_casing/energy/laser/pistol/wattz
@@ -89,7 +89,7 @@
 
 /obj/item/ammo_casing/energy/laser/lasgun
 	projectile_type = /obj/item/projectile/beam/laser/lasgun
-	e_cost = 50
+	e_cost = 75
 	fire_sound = 'sound/f13weapons/aer9fire.ogg'
 
 //musket
@@ -107,15 +107,15 @@
 
 /obj/item/ammo_casing/energy/laser/rcw
 	projectile_type = /obj/item/projectile/beam/laser/rcw
-	e_cost = 75
+	e_cost = 150
 	fire_sound = 'sound/f13weapons/rcwfire.ogg'
 
 /obj/item/ammo_casing/energy/laser/laer
 	projectile_type = /obj/item/projectile/beam/laser/laer
-	e_cost = 100
+	e_cost = 150
 	fire_sound = 'sound/f13weapons/laerfire.ogg'
 
 /obj/item/ammo_casing/energy/laser/aer14
 	projectile_type = /obj/item/projectile/beam/laser/aer14
-	e_cost = 50
+	e_cost = 100
 	fire_sound = 'sound/f13weapons/aer14fire.ogg'
