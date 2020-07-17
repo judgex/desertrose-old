@@ -326,7 +326,7 @@
 	name = "Militia belt"
 	desc = ""
 	icon_state = "militiabelt"
-	item_state = "security"
+	item_state = "militiabelt"
 
 
 /obj/item/storage/belt/military/alt
