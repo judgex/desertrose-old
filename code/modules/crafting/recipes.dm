@@ -218,6 +218,36 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
 
+/datum/crafting_recipe/ec
+	name = "Small Energy Cell"
+	result = /obj/item/stock_parts/cell/ammo/ec
+	reqs = list(/obj/item/stack/sheet/metal = 1, /obj/item/stock_parts/cell=2)
+	traits = list(TRAIT_GUNSMITH_TWO)
+	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER2)
+	time = 10
+	category = CAT_WEAPONRY
+	subcategory = CAT_AMMO
+
+/datum/crafting_recipe/mfc
+	name = "Microfusion Cell"
+	result = /obj/item/stock_parts/cell/ammo/mfc
+	reqs = list(/obj/item/stock_parts/capacitor=1, /obj/item/stock_parts/cell/ammo/ec=2)
+	traits = list(TRAIT_GUNSMITH_THREE)
+	tools = list(TOOL_AWORKBENCH, TOOL_GUNTIER3)
+	time = 20
+	category = CAT_WEAPONRY
+	subcategory = CAT_AMMO
+
+/datum/crafting_recipe/ecp
+	name = "Electron Charge Pack"
+	result = /obj/item/stock_parts/cell/ammo/mfc
+	reqs = list(/obj/item/stock_parts/capacitor=2, /obj/item/stock_parts/cell/ammo/mfc=2)
+	traits = list(TRAIT_GUNSMITH_FOUR)
+	tools = list(TOOL_AWORKBENCH, TOOL_GUNTIER4)
+	time = 30
+	category = CAT_WEAPONRY
+	subcategory = CAT_AMMO
+
 /datum/crafting_recipe/speedloader10mm
 	name = "empty speed loader (10mm)"
 	result = /obj/item/ammo_box/l10mm/empty

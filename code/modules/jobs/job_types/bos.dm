@@ -19,7 +19,6 @@ Main doors: ACCESS_CAPTAIN 20
 	uniform =		/obj/item/clothing/under/syndicate/brotherhood
 	shoes = /obj/item/clothing/shoes/combat/swat
 	gloves = /obj/item/clothing/gloves/combat
-	glasses = /obj/item/clothing/glasses/night
 	id = /obj/item/card/id/dogtag
 
 /datum/outfit/job/bos/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -93,6 +92,7 @@ Sentinel
 	loadout_options = list(
 	/datum/outfit/loadout/sentstand, //Tribeam laser and 10mm pistol
 	/datum/outfit/loadout/sentvet, //Pulse rifle and AEP7
+	/datum/outfit/loadout/sentheavy //Gatling laser
 	)
 
 	outfit = /datum/outfit/job/bos/f13sentinel
@@ -141,6 +141,13 @@ Sentinel
 		/obj/item/ammo_box/magazine/m10mm_adv=2,
 		/obj/item/gun/ballistic/automatic/pistol/n99=1,
 		)
+
+/datum/outfit/loadout/sentheavy
+	name = "Heavy Sentinel"
+	backpack_contents = list(
+		/obj/item/minigunpack=1,
+		)
+
 
 /*
 Head Scribe
@@ -755,4 +762,173 @@ Initiate
 		/obj/item/reagent_containers/hypospray/medipen/stimpak=2,
 		/obj/item/book/granter/trait/chemistry=1,
 		/obj/item/clothing/accessory/bos/initiateS=1
+		)
+
+/*
+Off-Duty
+*/
+
+/datum/job/bos/f13offdutybos
+	title = "Off-Duty"
+	flag = F13OFFDUTYBOS
+	faction = "BOS"
+	total_positions = 8
+	spawn_positions = 8
+	description = "Whether operating in disguise or simply enjoying time from the off-shift, you are still a member of the Brotherhood and must abide by the Codex and follow the orders of your superiors. That being said, while off-duty your orders do not take precedence and you should resist issuing them when another of your rank is currently on duty, and if one does not exist, commit to going on-duty. You have a duty to safeguard what equipment you are given, especially your holotags. Ideally, you should be paired with one or more fellow off-duty members; and you would know where the bunker in the region is."
+	forbids = "The Brotherhood of Steel Forbids: Unethical human experimentation. Violence beyond what is needed to accomplish Brotherhood goals."
+	enforces = "The Brotherhood of Steel Expects: Obeying the Chain That - Binds your direct superior. Collection and safeguarding of technology from the wasteland. Experimentation and research."
+	supervisors = "your superior rank."
+	selection_color = "#95a5a6"
+	exp_requirements = 1800
+	exp_type = EXP_TYPE_CREW
+
+	loadout_options = list(
+	/datum/outfit/loadout/offa, //Junior Knight
+	/datum/outfit/loadout/offb, //Knight
+	/datum/outfit/loadout/offc, //Senior Knight
+	/datum/outfit/loadout/offd, //Knight-Captain
+	/datum/outfit/loadout/offe, //Junior Scribe
+	/datum/outfit/loadout/offf, //Scribe
+	/datum/outfit/loadout/offg, //Senior Scribe
+	/datum/outfit/loadout/offh, //Head Scribe
+	/datum/outfit/loadout/offi, //Junior Paladin
+	/datum/outfit/loadout/offj, //Paladin
+	/datum/outfit/loadout/offk, //Senior Paladin
+	/datum/outfit/loadout/offl, //Sentinel
+	)
+
+	outfit = /datum/outfit/job/bos/f13offdutybos
+
+	access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
+	minimal_access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
+
+/datum/outfit/job/bos/f13offdutybos
+	name = "Off-Duty"
+	jobtype = /datum/job/bos/f13offdutybos
+	backpack = /obj/item/storage/backpack
+	ears = 			/obj/item/radio/headset
+	uniform =		/obj/item/clothing/under/syndicate
+	belt = 			/obj/item/storage/belt/military/army
+	shoes = 		/obj/item/clothing/shoes/combat
+	gloves = 		/obj/item/clothing/gloves/combat
+	id = 			/obj/item/card/id/dogtag
+	backpack_contents = list(
+		/obj/item/reagent_containers/hypospray/medipen/stimpak=2,
+		/obj/item/encryptionkey/headset_bos=1,
+		)
+
+/datum/outfit/loadout/offa
+	name = "Junior Knight"
+	head = /obj/item/clothing/head/helmet/f13/combat
+	suit = /obj/item/clothing/suit/armor/f13/combat
+	backpack_contents = list(
+		/obj/item/gun/ballistic/automatic/pistol/n99=1,
+		/obj/item/stock_parts/cell/ammo/ec=2,
+		/obj/item/clothing/accessory/bos/juniorknight=1
+		)
+
+/datum/outfit/loadout/offb
+	name = "Knight"
+	head = /obj/item/clothing/head/helmet/f13/combat
+	suit = /obj/item/clothing/suit/armor/f13/combat
+	backpack_contents = list(
+		/obj/item/gun/ballistic/automatic/pistol/n99=1,
+		/obj/item/ammo_box/magazine/m10mm_adv=2,
+		/obj/item/clothing/accessory/bos/knight=1
+		)
+
+/datum/outfit/loadout/offc
+	name = "Senior Knight"
+	head = /obj/item/clothing/head/helmet/f13/combat
+	suit = /obj/item/clothing/suit/armor/f13/combat
+	backpack_contents = list(
+		/obj/item/gun/ballistic/automatic/pistol/n99=1,
+		/obj/item/ammo_box/magazine/m10mm_adv=2,
+		/obj/item/clothing/accessory/bos/seniorknight=1
+		)
+
+/datum/outfit/loadout/offd
+	name = "Knight-Captain"
+	head = /obj/item/clothing/head/helmet/f13/combat/mk2
+	suit = /obj/item/clothing/suit/armor/f13/combat/mk2
+	backpack_contents = list(
+		/obj/item/gun/ballistic/automatic/pistol/deagle/camo=1,
+		/obj/item/ammo_box/magazine/a50=2,
+		/obj/item/clothing/accessory/bos/knightcaptain=1
+		)
+
+/datum/outfit/loadout/offe
+	name = "Junior Scribe"
+	suit = /obj/item/clothing/suit/armor/f13/battlecoat
+	backpack_contents = list(
+		/obj/item/gun/energy/laser/wattz/magneto=1,
+		/obj/item/stock_parts/cell/ammo/ec=2,
+		/obj/item/clothing/accessory/bos/juniorscribe=1
+		)
+
+/datum/outfit/loadout/offf
+	name = "Scribe"
+	suit = /obj/item/clothing/suit/armor/f13/battlecoat
+	backpack_contents = list(
+		/obj/item/gun/energy/laser/wattz/magneto=1,
+		/obj/item/stock_parts/cell/ammo/ec=2,
+		/obj/item/clothing/accessory/bos/scribe=1
+		)
+
+/datum/outfit/loadout/offg
+	name = "Senior Scribe"
+	suit = /obj/item/clothing/suit/armor/f13/battlecoat
+	backpack_contents = list(
+		/obj/item/gun/energy/laser/wattz/magneto=1,
+		/obj/item/stock_parts/cell/ammo/ec=2,
+		/obj/item/clothing/accessory/bos/seniorscribe=1
+		)
+
+/datum/outfit/loadout/offh
+	name = "Head Scribe"
+	suit = /obj/item/clothing/suit/armor/f13/battlecoat
+	backpack_contents = list(
+		/obj/item/gun/energy/ionrifle/carbine=1,
+		/obj/item/stock_parts/cell/ammo/ec=2,
+		/obj/item/clothing/accessory/bos/headscribe=1
+		)
+
+/datum/outfit/loadout/offi
+	name = "Junior Paladin"
+	suit = /obj/item/clothing/suit/armor/f13/leather_jacket/combat/coat
+	head = /obj/item/clothing/head/helmet/knight/fluff/metal
+	backpack_contents = list(
+		/obj/item/gun/energy/laser/pistol=1,
+		/obj/item/stock_parts/cell/ammo/ec=2,
+		/obj/item/clothing/accessory/bos/juniorpaladin=1
+		)
+
+/datum/outfit/loadout/offj
+	name = "Paladin"
+	suit = /obj/item/clothing/suit/armor/f13/leather_jacket/combat/coat
+	head = /obj/item/clothing/head/helmet/knight/fluff/metal
+	backpack_contents = list(
+		/obj/item/gun/energy/laser/pistol=1,
+		/obj/item/stock_parts/cell/ammo/ec=2,
+		/obj/item/clothing/accessory/bos/paladin=1
+		)
+
+/datum/outfit/loadout/offk
+	name = "Senior Paladin"
+	suit = /obj/item/clothing/suit/armor/f13/leather_jacket/combat/coat
+	head = /obj/item/clothing/head/helmet/knight/fluff/metal
+	backpack_contents = list(
+		/obj/item/gun/energy/laser/pistol=1,
+		/obj/item/stock_parts/cell/ammo/ec=2,
+		/obj/item/clothing/accessory/bos/seniorpaladin=1
+		)
+
+/datum/outfit/loadout/offl
+	name = "Sentinel"
+	suit = /obj/item/clothing/suit/armor/f13/leather_jacket/combat/riotpolice
+	head = /obj/item/clothing/head/helmet/knight/fluff/metal/reinforced
+	backpack_contents = list(
+		/obj/item/gun/energy/laser/plasma/glock=1,
+		/obj/item/stock_parts/cell/ammo/ec=2,
+		/obj/item/clothing/accessory/bos/sentinel=1
 		)
