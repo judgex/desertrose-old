@@ -379,7 +379,7 @@
 	name = "microfusion cell"
 	desc = "A microfusion cell, typically used as ammunition for large energy weapons."
 	icon_state = "mfc"
-	maxcharge = 1200
+	maxcharge = 2000
 
 /obj/item/stock_parts/cell/ammo/ecp
 	name = "electron charge pack"
@@ -391,7 +391,7 @@
 	name = "energy cell"
 	desc = "An energy cell, typically used as ammunition for small-arms energy weapons."
 	icon_state = "ec"
-	maxcharge = 600
+	maxcharge = 1600
 
 /obj/item/stock_parts/cell/ammo/alien
 	name = "alien weapon cell"
