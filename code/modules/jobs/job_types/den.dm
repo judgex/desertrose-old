@@ -68,12 +68,13 @@ Mayor
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "the mayor"
-	description = "Seems like you're Johnny Law these days. Outside of the more obvious day to day tasks in dealing with local disputes and keeping the peace, you're main trade is in corpses - dead or alive... doesn't matter much to the town. Whether you obtain these bounties yourself or through the means of notorious gunslingers is up to you, just as long as you keep the road safe and your people alive."
+	description = "Seems like you're Johnny Law these days. Outside of the more obvious day to day tasks in dealing with local disputes and keeping the peace, your main trade is in corpses - dead or alive... doesn't matter much to the town. Whether you obtain these bounties yourself or through the means of notorious gunslingers is up to you, just as long as you keep the road safe and your people alive."
 	selection_color = "#d7b088"
 	exp_requirements = 720
 	exp_type = EXP_TYPE_DEN
 
 	outfit = /datum/outfit/job/den/f13sheriff
+
 	access = list(ACCESS_BAR, ACCESS_CLONING, ACCESS_GATEWAY, ACCESS_CARGO_BOT, ACCESS_MINT_VAULT, ACCESS_KITCHEN)
 	minimal_access = list(ACCESS_BAR, ACCESS_CLONING, ACCESS_GATEWAY, ACCESS_CARGO_BOT, ACCESS_MINT_VAULT, ACCESS_KITCHEN)
 
@@ -100,7 +101,8 @@ Mayor
 		/obj/item/ammo_box/tube/c4570=3, \
 		/obj/item/ammo_box/m44=2, \
 		/obj/item/restraints/handcuffs=1, \
-		/obj/item/melee/classic_baton=1)
+		/obj/item/melee/classic_baton=1, \
+		/obj/item/kitchen/knife/combat)
 	r_pocket = /obj/item/flashlight/flare
 	belt = /obj/item/gun/ballistic/revolver/m29/peacekeeper
 
@@ -145,7 +147,11 @@ Mayor
 	backpack_contents = list(
 		/obj/item/ammo_box/a357=2, \
 		/obj/item/ammo_box/tube/m44=2, \
-		/obj/item/restraints/handcuffs=1)
+		/obj/item/restraints/handcuffs=1, \
+		/obj/item/kitchen/knife/combat)
+
+/datum/job/den/f13deputy/after_spawn(mob/living/carbon/human/H, mob/M)
+	H.add_quirk("Hard Yards")
 
 /*--------------------------------------------------------------*/
 
@@ -200,7 +206,7 @@ Mayor
 	total_positions = 4
 	spawn_positions = 4
 	supervisors = "law and order"
-	description = "Prospecting is a complicated business, some call it scrounging or looting but there is more to it then sifting through rubble - few can boast the skills you posess in mining and delving through the ruins of pre-war America. Not many survive this line of business and the pay has always been uncertain, but perhaps today you'll find strike gold."
+	description = "Prospecting is a complicated business, some call it scrounging or looting, but there is more to it then sifting through rubble - few can boast the skills you posess in mining and delving through the ruins of pre-war America. Not many survive this line of business and the pay has always been uncertain, but perhaps today you'll find strike gold."
 	selection_color = "#dcba97"
 	exp_requirements = 180
 	exp_type = EXP_TYPE_DEN
@@ -225,7 +231,8 @@ Mayor
 	shoes = /obj/item/clothing/shoes/workboots
 	backpack_contents = list(
 		/obj/item/mining_scanner=1, \
-		/obj/item/shovel=1)
+		/obj/item/shovel=1, \
+		/obj/item/kitchen/knife/combat)
 
 /datum/outfit/job/den/f13settler/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -250,7 +257,7 @@ Mayor
 	total_positions = 2
 	spawn_positions = 2
 	supervisors = "law and order"
-	description = "Handy with a scalpel and a scanner, your expertise in the practice of medicine makes you an indespesnbile asset to the town. How you play your trade and whether it be for profit or the fortune of others rests entirely upon your shoulders."
+	description = "Handy with a scalpel and scanner, your expertise in the practice of medicine makes you an indispensible asset to the Town. Just remember - medicine doesn't come free, and you aren't here out of the kindness of your heart. Be sure to turn a profit, or the Mayor might reconsider your position!"
 	selection_color = "#dcba97"
 	exp_requirements = 540
 	exp_type = EXP_TYPE_DEN
@@ -291,7 +298,7 @@ Mayor
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "Your Master(s)."
-	description = "You are a beacon of faith in this godless Mojave wasteland, answering only to the higher beings past the plain of the mortal realm. Spread the beliefs of your divine masters through this land by any means necessary."
+	description = "You are a beacon of faith in this godless Mojave wasteland, answering only to the higher beings past the plane of the mortal realm. Spread the beliefs of your divine masters through this land by any means necessary."
 	selection_color = "#dcba97"
 
 	outfit = /datum/outfit/job/den/f13preacher
@@ -410,7 +417,7 @@ Mayor
 	total_positions = 2
 	spawn_positions = 2
 	supervisors = "law and order"
-	description = "As a Barkeep, you believe that the frontier holds abundant profiteering for bartending and service. Enshrouded in safety by the walls of Oasis, you enact out your skills of mixing the finest drinks and serving the best grub in the wasteland. As per your terms of agreement you should follow the law and order of the town, however the Blue Oyster is your private business, working in corporate harmony with the plantation next door to supply you with crop and goods to keep you running and thriving to profit in this desolate, thristy wasteland..."
+	description = "As a Barkeep, you believe that the frontier holds abundant opportunity for bartending and service. Hidden safely away behind the walls of Oasis, you enact out your skills of mixing the finest drinks and serving the best grub in the wasteland. As per your terms of agreement you should follow the law and order of the town. However the Blue Oyster is your private business, working in harmony with the farm next door to supply you with crop and goods to keep you in profit."
 	selection_color = "#dcba97"
 	exp_requirements = 180
 	exp_type = EXP_TYPE_DEN
@@ -487,7 +494,7 @@ Mayor
 	total_positions = 8
 	spawn_positions = 8
 	supervisors = "law and order"
-	description = "As a Settler, you believe that the frontier holds abundant opportunities for you to encroach and take advantage of. Enshrouded in safety by the walls of Oasis, you enact out your claim to a stake of land in the town as per your citizenship permit, focusing on thriving and profiting off of this for your own intrinsic goals. But be aware that other Citizens need you to work in harmony and for the progression of the town. As per your terms of agreement you should follow the law and order of the town, maintaining a distinct amount of peace from the wild wasteland that civilisation hopes to outrun..."
+	description = "You are a Settler living within the Town of Oasis - as the name suggests, it is a slightly more civilised place amidst the chaos of the Wasteland. Treat it as such, be sure to follow the laws of the land and do not associate with those who have a tendency not to, or you are likely to face exile. Remember that Oasis is your home, and that you should not be leaving to explore the Wastes."
 	selection_color = "#dcba97"
 
 	outfit = /datum/outfit/job/den/f13settler
@@ -556,7 +563,12 @@ Mayor
 	shoes = /obj/item/clothing/shoes/jackboots
 	backpack = /obj/item/storage/backpack/satchel/explorer
 	r_pocket = /obj/item/flashlight/flare
-	backpack_contents = list(/obj/item/storage/bag/money/small/settler)
+	backpack_contents = list(
+			/obj/item/storage/bag/money/small/settler, \
+			/obj/item/kitchen/knife/combat, \
+			/obj/item/gun/ballistic/automatic/pistol/n99, \
+			/obj/item/ammo_box/magazine/m10mm_adv=2)
+
 
 /*--------------------------------------------------------------*/
 
@@ -568,11 +580,11 @@ Mayor
 	total_positions = 2
 	spawn_positions = 2
 	supervisors = "law and order"
-	description = "No matter where society lurks profit and fortune are there to be made! Luckily for you, you made that a long time ago, now its up to you to distribute wealth and earn interest while safekeeping items of value for the wastelands denizens! Ensure you make a profit and make your money back no matter the cost."
+	description = "No matter where society lurks, profit and fortune are there to be made! It is up to you to distribute caps and earn interest while safekeeping items of value for the wastelands denizens! Ensure you make a profit and make your money back no matter the cost. You are to work alongside the Town, and should not be attempting to harm the residents of Oasis."
 	selection_color = "#dcba97"
 	exp_requirements = 180
 	exp_type = EXP_TYPE_DEN
-	enforces = "You are in a Job meant for encouraging roleplay with others, do not abandon your post or hoard money unless absolutely necessary."
+	enforces = "You are in a Job meant for encouraging roleplay with others, do not abandon your post or hoard money unless absolutely necessary. Do not use the caps provided for yourself."
 
 	outfit = /datum/outfit/job/den/f13banker
 
@@ -650,7 +662,7 @@ Mayor
     total_positions = 2
     spawn_positions = 2
     supervisors = "law and order"
-    description = "The capitalist economy of pre-war america survived alongside its people. Now it's your job to continue its survival so make some caps!"
+    description = "The capitalist economy of pre-war america survived alongside its people. Now it's your job to continue its survival, so make some caps!"
     selection_color = "#dcba97"
     exp_requirements = 180
     exp_type = EXP_TYPE_DEN

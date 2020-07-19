@@ -59,6 +59,17 @@
 	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab/deathclaw = 6,
 							/obj/item/stack/sheet/animalhide/deathclaw = 3)
 
+/mob/living/simple_animal/hostile/deathclaw/legendary
+	name = "legendary deathclaw"
+	desc = "A massive, reptilian creature with powerful muscles, razor-sharp claws, and aggression to match. This one is a legendary enemy."
+	maxHealth = 1300
+	health = 1300
+	color = "#FFFF00"
+	stat_attack = UNCONSCIOUS
+	melee_damage_lower = 80
+	melee_damage_upper = 85
+	armour_penetration = 65
+
 /mob/living/simple_animal/hostile/deathclaw/bullet_act(obj/item/projectile/Proj)
 	if(!Proj)
 		return
