@@ -965,6 +965,7 @@
 #include "code\game\objects\structures\janicart.dm"
 #include "code\game\objects\structures\kitchen_spike.dm"
 #include "code\game\objects\structures\ladders.dm"
+#include "code\game\objects\structures\lamp_post.dm"
 #include "code\game\objects\structures\lattice.dm"
 #include "code\game\objects\structures\life_candle.dm"
 #include "code\game\objects\structures\loom.dm"

@@ -28,6 +28,7 @@ SUBSYSTEM_DEF(nightcycle)
 	var/currentColumn
 	var/working = 3
 	var/doColumns //number of columns to do at a time
+	var/newTime
 
 /datum/controller/subsystem/nightcycle/fire(resumed = FALSE)
 	if (working)
@@ -36,11 +37,19 @@ SUBSYSTEM_DEF(nightcycle)
 	if (nextBracket())
 		working = 1
 		currentColumn = 1
-
+	if(newTime == "MORNING" || newTime == "DAYTIME" || newTime == "AFTERNOON")
+		for(var/obj/structure/lamp_post/LP in GLOB.lamppost)
+			LP.icon_state = "[initial(LP.icon_state)]"
+			LP.light_power = 0.7
+			LP.light_range = 5
+	else
+		for(var/obj/structure/lamp_post/LP in GLOB.lamppost)
+			LP.icon_state = "[initial(LP.icon_state)]-on"
+			LP.light_power = 0
+			LP.light_range = 0
 
 /datum/controller/subsystem/nightcycle/proc/nextBracket()
 	var/Time = station_time()
-	var/newTime
 
 	switch (Time)
 		if (CYCLE_SUNRISE 	to CYCLE_MORNING - 1)
