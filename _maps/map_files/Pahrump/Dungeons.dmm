@@ -1217,7 +1217,7 @@
 "xy" = (/obj/structure/fireaxecabinet,/turf/closed/wall/mineral/wood,/area/f13/city)
 "xz" = (/obj/structure/rack,/obj/item/defibrillator,/obj/item/defibrillator,/turf/open/floor/f13{icon_state = "freezerfloor"},/area/f13/city)
 "xA" = (/obj/item/radio/intercom{dir = 4},/turf/open/floor/f13/wood{icon_state = "housewood2"; tag = "icon-housewood2"},/area/f13/bunker)
-"xB" = (/obj/machinery/door/airlock/hatch{req_access_txt = "120"},/obj/machinery/door/firedoor/heavy,/turf/open/space/basic,/area/f13/brotherhood)
+"xB" = (/obj/machinery/door/airlock/hatch{req_access_txt = "120"},/obj/machinery/door/firedoor/heavy,/turf/open/floor/f13{icon_state = "darkdirtysolid"},/area/f13/brotherhood)
 "xD" = (/obj/machinery/chem_heater,/turf/open/floor/f13{icon_state = "freezerfloor"},/area/f13/city)
 "xE" = (/obj/structure/table/wood,/obj/item/paper_bin,/obj/item/reagent_containers/pill/patch/jet,/turf/open/floor/f13/wood{icon_state = "housewood2"; tag = "icon-housewood2"},/area/f13/bunker)
 "xF" = (/obj/machinery/chem_dispenser,/turf/open/floor/f13{icon_state = "freezerfloor"},/area/f13/city)
