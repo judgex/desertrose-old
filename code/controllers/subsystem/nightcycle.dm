@@ -40,13 +40,13 @@ SUBSYSTEM_DEF(nightcycle)
 	if(newTime == "MORNING" || newTime == "DAYTIME" || newTime == "AFTERNOON")
 		for(var/obj/structure/lamp_post/LP in GLOB.lamppost)
 			LP.icon_state = "[initial(LP.icon_state)]"
-			LP.light_power = 0.7
-			LP.light_range = 5
+			LP.light_power = 0
+			LP.light_range = 0
 	else
 		for(var/obj/structure/lamp_post/LP in GLOB.lamppost)
 			LP.icon_state = "[initial(LP.icon_state)]-on"
-			LP.light_power = 0
-			LP.light_range = 0
+			LP.light_power = 0.7
+			LP.light_range = 5
 
 /datum/controller/subsystem/nightcycle/proc/nextBracket()
 	var/Time = station_time()
