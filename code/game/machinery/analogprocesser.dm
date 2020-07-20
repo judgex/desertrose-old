@@ -74,6 +74,9 @@
 	density = FALSE
 	circuit = null
 
+/obj/machinery/processor/chopping_block/Initialize()
+	. = ..()
+
 /obj/machinery/processor/chopping_block/Destroy()
 	var/turf/T = get_turf(src)
 	if(!T)
@@ -82,7 +85,7 @@
 	new /obj/item/kitchen/rollingpin(T)
 	new /obj/item/reagent_containers/glass/bowl(T)
 	new /obj/item/kitchen/knife/butcher(T)
-	QDEL_NULL(src)
+	. = ..()
 
 /obj/machinery/processor/chopping_block/attackby(obj/item/O, mob/user, params)
 	if(processing)
