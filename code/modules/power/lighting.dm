@@ -875,6 +875,19 @@
 	bulb_colour = "#00FFFF"
 	light_color = "#00FFFF"
 
+/obj/machinery/light/fo13colored/Red
+	name = "Red Light"
+	icon = 'icons/obj/lighting.dmi'
+	icon_state = "bulb"
+	desc = "A lighting fixture with red lighting."
+	nightshift_allowed = FALSE
+	no_emergency = TRUE
+	brightness = 5
+	density = 0
+	layer = WALL_OBJ_LAYER
+	bulb_colour = "#FF0000"
+	light_color = "#FF0000"
+
 //Flickering Ported From Hippiestation. credits to yoyobatty
 /obj/machinery/light/take_damage(damage_amount, damage_type = BRUTE, damage_flag = 0, sound_effect = 1)
 	. = ..()
