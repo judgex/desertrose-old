@@ -217,8 +217,8 @@ Security Officer
 	department_head = list("Chief of Security")
 	department_flag = VAULT
 	faction = "Vault"
-	total_positions = 2 //Handled in /datum/controller/occupations/proc/setup_officer_positions()
-	spawn_positions = 2 //Handled in /datum/controller/occupations/proc/setup_officer_positions()
+	total_positions = 3 //Handled in /datum/controller/occupations/proc/setup_officer_positions()
+	spawn_positions = 3 //Handled in /datum/controller/occupations/proc/setup_officer_positions()
 	forbids = "The Vault forbids: Disobeying the Overseer. Deserting the Vault unless it is rendered unhospitable. Killing fellow Vault Dwellers. Betraying the Vault and its people."
 	enforces = "The Vault expects: Contributing to Vault society. Adherence to Vault-tec Corporate Regulations. Participation in special projects, as ordered by the Overseer."
 	description = "You answer directly to the Chief of Security, and in their absence, the Overseer. You are the first line of defense against civil unrest and outside intrusion. It is your duty to enforce the laws created by the Overseer and proactively seek out potential threats to the safety of Vault residents."

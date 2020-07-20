@@ -256,7 +256,7 @@
 		if(TRUE)
 			density = FALSE
 			icon_state = "door_opened"
-			
+
 /obj/structure/fence/door/proc/can_open(mob/user)
 	return TRUE
 
