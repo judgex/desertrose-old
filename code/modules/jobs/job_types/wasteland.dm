@@ -93,45 +93,6 @@ Great Khan
 		H.gang = GK
 
 /*
-Detective
-*/
-/datum/job/wasteland/f13detective
-	title = "Detective"
-	flag = F13WASTELANDER
-	faction = "Wastelander"
-	total_positions = 1
-	spawn_positions = 1
-	description = "As a Detective you are a private eye and investigator who assists law enforcement and private persons to gather evidence, conduct surveillance, find missing people, and verify information. As a private investigator you are not responsible for peacekeeping the wasteland, but by working with forces greater than yourself to resolve conflicts and bring order where it is not present."
-	supervisors = "no one"
-	selection_color = "#dddddd"
-	outfit = /datum/outfit/job/wasteland/f13detective
-
-	access = list()		//we can expand on this and make alterations as people suggest different loadouts
-	minimal_access = list()
-
-
-/datum/outfit/job/wasteland/f13detective
-	name = "Detective"
-	jobtype = /datum/job/wasteland/f13detective
-	suit = /obj/item/clothing/suit/det_suit/grey
-	uniform = /obj/item/clothing/under/f13/detectivealt
-	head = /obj/item/clothing/head/f13/det_hat_alt
-	shoes =  /obj/item/clothing/shoes/laceup
-	id = /obj/item/card/id/silver
-	backpack = /obj/item/storage/backpack/satchel/explorer
-	satchel = /obj/item/storage/backpack/satchel/explorer
-	suit_store = /obj/item/gun/ballistic/revolver/police
-	backpack_contents = list(
-		/obj/item/pda/detective=1,
-		/obj/item/camera/detective=1,
-		/obj/item/toy/crayon/white=1,
-		/obj/item/detective_scanner=1,
-		/obj/item/storage/box/gloves=1,
-		/obj/item/storage/box/evidence=1,
-		/obj/item/ammo_box/a357=2)
-
-
-/*
 Raider
 */
 
