@@ -539,6 +539,7 @@
 #include "code\game\machinery\_machinery.dm"
 #include "code\game\machinery\ai_slipper.dm"
 #include "code\game\machinery\airlock_control.dm"
+#include "code\game\machinery\analogprocesser.dm"
 #include "code\game\machinery\announcement_system.dm"
 #include "code\game\machinery\aug_manipulator.dm"
 #include "code\game\machinery\autolathe.dm"
