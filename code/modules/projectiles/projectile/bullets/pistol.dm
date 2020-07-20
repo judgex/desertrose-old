@@ -15,7 +15,7 @@
 //9x19mm
 /obj/item/projectile/bullet/c9mm
 	damage = 29 //30
-	armour_penetration = 0
+	armour_penetration = -5
 
 /obj/item/projectile/bullet/c9mm/ap
 	damage = 23 //25
@@ -27,20 +27,16 @@
 
 //10mm
 /obj/item/projectile/bullet/c10mm
-	damage = 33 //old 35
-	armour_penetration = -5 //old 0 
+	damage = 36 //35
+	armour_penetration = -5 //0
 
 /obj/item/projectile/bullet/c10mm/ap
-	//damage = 30
-	//armour_penetration = 20
-	damage = 28
-	armour_penetration = 25
+	damage = 25 //30
+	armour_penetration = 30 //20
 
 /obj/item/projectile/bullet/c10mm/hp
-	//damage = 40
-	//armour_penetration = -20
-	damage = 45
-	armour_penetration = -22
+	damage = 47 //40
+	armour_penetration = -30 //-20
 
 // Needler
 /obj/item/projectile/bullet/needle
