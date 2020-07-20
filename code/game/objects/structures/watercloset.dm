@@ -10,12 +10,60 @@
 	var/w_items = 0			//the combined w_class of all the items in the cistern
 	var/mob/living/swirlie = null	//the mob being given a swirlie
 
+	can_buckle = 1
+	buckle_lying = 0 //you sit in a chair, not lay
+
+	var/hunger = 0
+	var/timer = 0
+
 
 /obj/structure/toilet/Initialize()
 	. = ..()
 	open = round(rand(0, 1))
 	update_icon()
 
+/obj/structure/toilet/Destroy()
+	STOP_PROCESSING(SSobj, src)
+	. = ..()
+
+/obj/structure/toilet/post_buckle_mob(mob/living/M)
+	. = ..()
+	START_PROCESSING(SSobj, src)
+
+/obj/structure/toilet/post_unbuckle_mob(mob/living/M)
+	. = ..()
+	STOP_PROCESSING(SSobj, src)
+	hunger = 0
+	
+/obj/structure/toilet/process()
+	if(world.time <= timer)
+		return
+	timer = world.time + 10 SECONDS
+	if(!buckled_mobs)
+		return
+	switch(hunger)
+		if(0)
+			visible_message("A drop of water can be heard within the toilet.")
+		if(1)
+			visible_message("Splashing water can be heard now within the toilet")
+		if(2)
+			visible_message("A low guttural growling can be heard within the toilet")
+		if(3)
+			visible_message("A large fish monster appears and drags someone down the toilet!")
+			for(var/mob/living/L in buckled_mobs)
+				L.unbuckle_mob()
+				L.forceMove(get_turf(locate(/obj/effect/toilet_drop)))
+				L.blind_eyes(5)
+				L.Stun(5)
+			return
+	hunger++
+	
+/obj/effect/toilet_drop
+	name = "toilet drop"
+	desc = "used to drop people from toilets. You shouldnt be able to see this, so report it."
+	alpha = 0
+	opacity = 0
+	density = 0
 
 /obj/structure/toilet/attack_hand(mob/living/user)
 	. = ..()
