@@ -72,12 +72,14 @@ Cyborg
 */
 /datum/job/cyborg
 	title = "Cyborg"
-	flag = CYBORG
-	department_flag = ENGSEC
-	//faction = "Station"
-	total_positions = 0
-	spawn_positions = 1
-	supervisors = "your laws and the AI"	//Nodrak
+	flag = F13CYBORG
+	department_flag = VAULT
+	faction = "Vault"
+	total_positions = 2
+	spawn_positions = 2
+	forbids = "The Vault forbids: Disobeying the Overseer. Deserting the Vault unless it is rendered unhospitable. Killing fellow Vault Dwellers. Betraying the Vault and its people."
+	enforces = "The Vault expects: Contributing to Vault society. Adherence to Vault-tec Corporate Regulations. Participation in special projects, as ordered by the Overseer."
+	supervisors = "Overseer/Vault"	//Nodrak
 	selection_color = "#ddffdd"
 	minimal_player_age = 21
 	exp_requirements = 120

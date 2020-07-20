@@ -17,8 +17,12 @@
 
 /obj/machinery/processor/RefreshParts()
 	for(var/obj/item/stock_parts/matter_bin/B in component_parts)
+		if(!B)
+			break
 		rating_amount = B.rating
 	for(var/obj/item/stock_parts/manipulator/M in component_parts)
+		if(!M)
+			break
 		rating_speed = M.rating
 
 /obj/machinery/processor/proc/process_food(datum/food_processor_process/recipe, atom/movable/what)
