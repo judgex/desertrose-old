@@ -1083,6 +1083,16 @@
 	category = CAT_PRIMAL
 	subcategory = CAT_TRIBAL
 
+/datum/crafting_recipe/tatteredredcloak
+	name = "tattered red cloak"
+	result = /obj/item/clothing/suit/hooded/cloak/goliath/tatteredred
+	time = 50
+	reqs = list(/obj/item/stack/sheet/leather = 1,
+				/obj/item/stack/sheet/sinew = 1,
+				/obj/item/stack/sheet/cloth = 2)
+	category = CAT_PRIMAL
+	subcategory = CAT_TRIBAL
+
 /datum/crafting_recipe/smallcarton
 	name = "Small Carton"
 	result = /obj/item/reagent_containers/food/drinks/sillycup/smallcarton
