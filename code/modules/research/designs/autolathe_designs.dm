@@ -357,7 +357,7 @@
 	category = list("initial", "Medical")
 
 /datum/design/circular_saw
-	name = "Saw"
+	name = "Circular Saw"
 	id = "circular_saw"
 	build_type = AUTOLATHE
 	materials = list(MAT_METAL = 10000, MAT_GLASS = 6000)
