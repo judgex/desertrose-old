@@ -590,10 +590,13 @@ Detective
 	name = "Detective"
 	jobtype = /datum/job/wasteland/f13detective
 	suit = /obj/item/clothing/suit/det_suit/grey
+	ears = /obj/item/radio/headset/headset_den
 	uniform = /obj/item/clothing/under/f13/detectivealt
 	head = /obj/item/clothing/head/f13/det_hat_alt
 	shoes =  /obj/item/clothing/shoes/laceup
 	id = /obj/item/card/id/silver
+	l_pocket = /obj/item/storage/bag/money/small/settler
+	r_pocket = /obj/item/flashlight/flare
 	backpack = /obj/item/storage/backpack/satchel/explorer
 	satchel = /obj/item/storage/backpack/satchel/explorer
 	suit_store = /obj/item/gun/ballistic/revolver/police
