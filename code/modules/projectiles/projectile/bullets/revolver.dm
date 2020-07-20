@@ -30,11 +30,11 @@
 // .44 Magnum
 /obj/item/projectile/bullet/m44
 	damage = 41 //35
-	armour_penetration = 0 //5
+	armour_penetration = -5 //5
 
 /obj/item/projectile/bullet/m44/jhp
 	damage = 60 //40
-	armour_penetration = -30 //-15
+	armour_penetration = -40 //-15
 
 /obj/item/projectile/bullet/m44/swc
 	damage = 40
