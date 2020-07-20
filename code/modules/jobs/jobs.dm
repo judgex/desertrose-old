@@ -66,7 +66,9 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 "Chief",
 "Shaman",
 "NCR Administrator",
-"Lead Practitioner"
+"Lead Practitioner",
+"Cyborg",
+"Vault-tec Security"
 ))
 
 GLOBAL_LIST_INIT(faction_player_positions, list(
@@ -180,7 +182,8 @@ GLOBAL_LIST_INIT(vault_positions, list(
     "Vault-tec Scientist",
     "Vault-tec Security",
     "Vault-tec Engineer",
-    "Vault Dweller"
+    "Vault Dweller",
+    "Cyborg"
 ))
 
 GLOBAL_LIST_INIT(wasteland_positions, list(
