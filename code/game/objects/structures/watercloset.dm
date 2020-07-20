@@ -38,7 +38,7 @@
 /obj/structure/toilet/process()
 	if(world.time <= timer)
 		return
-	timer = world.time + 10 SECONDS
+	timer = world.time + 1 MINUTES
 	if(!buckled_mobs)
 		return
 	switch(hunger)
