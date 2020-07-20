@@ -878,14 +878,14 @@
 /obj/machinery/light/fo13colored/Red
 	name = "Red Light"
 	icon = 'icons/obj/lighting.dmi'
-	icon_state = "bulb"
+	icon_state = "tube"
 	desc = "A lighting fixture with red lighting."
 	nightshift_allowed = FALSE
 	no_emergency = TRUE
-	brightness = 5
+	brightness = 4
 	density = 0
 	layer = WALL_OBJ_LAYER
-	bulb_colour = "#FF0000"
+	bulb_colour = "#8B0000"
 	light_color = "#FF0000"
 
 //Flickering Ported From Hippiestation. credits to yoyobatty
