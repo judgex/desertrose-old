@@ -1,7 +1,7 @@
 //.45-70 Gov't
 /obj/item/projectile/bullet/c4570
 	damage = 50
-	armour_penetration = 10
+	armour_penetration = 15//10
 
 /obj/item/projectile/bullet/c4570/jhp
 	damage = 55
@@ -13,12 +13,12 @@
 
 // .357 Magnum, .38 Special
 /obj/item/projectile/bullet/a357
-	damage = 30
-	armour_penetration = 5
+	damage = 35 //30
+	armour_penetration = 0 //5
 
 /obj/item/projectile/bullet/a357/jhp
-	damage = 35
-	armour_penetration = -15
+	damage = 40 //35
+	armour_penetration = -25 //-15
 
 /obj/item/projectile/bullet/a357/swc
 	damage = 35
@@ -29,12 +29,12 @@
 
 // .44 Magnum
 /obj/item/projectile/bullet/m44
-	damage = 35
-	armour_penetration = 5
+	damage = 41 //35
+	armour_penetration = 0 //5
 
 /obj/item/projectile/bullet/m44/jhp
-	damage = 40
-	armour_penetration = -15
+	damage = 60 //40
+	armour_penetration = -30 //-15
 
 /obj/item/projectile/bullet/m44/swc
 	damage = 40
