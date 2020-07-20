@@ -139,16 +139,16 @@
 
 
 /obj/item/circular_saw
-	name = "saw"
-	desc = "For heavy duty sawing."
+	name = "circular saw"
+	desc = "For heavy duty cutting."
 	icon = 'icons/obj/surgery.dmi'
 	icon_state = "saw"
 	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
-	hitsound = 'sound/weapons/bladeslice.ogg'
+	hitsound = 'sound/weapons/circsawhit.ogg'
 	throwhitsound =  'sound/weapons/pierce.ogg'
 	flags_1 = CONDUCT_1
-	force = 10
+	force = 25
 	w_class = WEIGHT_CLASS_NORMAL
 	throwforce = 10
 	throw_speed = 2
