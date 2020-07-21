@@ -70,6 +70,12 @@
 	melee_damage_upper = 85
 	armour_penetration = 65
 
+/mob/living/simple_animal/hostile/deathclaw/legendary/death(gibbed)
+	var/turf/T = get_turf(src)
+	if(prob(60))
+		new /obj/item/melee/unarmed/deathclawgauntlet(T)
+	. = ..()
+
 /mob/living/simple_animal/hostile/deathclaw/bullet_act(obj/item/projectile/Proj)
 	if(!Proj)
 		return
