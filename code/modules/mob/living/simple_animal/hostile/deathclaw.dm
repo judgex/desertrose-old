@@ -62,8 +62,8 @@
 /mob/living/simple_animal/hostile/deathclaw/legendary
 	name = "legendary deathclaw"
 	desc = "A massive, reptilian creature with powerful muscles, razor-sharp claws, and aggression to match. This one is a legendary enemy."
-	maxHealth = 1300
-	health = 1300
+	maxHealth = 1500
+	health = 1500
 	color = "#FFFF00"
 	stat_attack = UNCONSCIOUS
 	melee_damage_lower = 80
