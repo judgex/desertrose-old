@@ -358,7 +358,7 @@
 		H.reagents.add_reagent("cazador_venom", 2)
 
 /datum/reagent/toxin/cazador_venom/on_mob_life(mob/living/M)
-	if(volume >= 6)
+	if(volume >= 20)
 		M.adjustToxLoss(5, 0)
 	..()
 
@@ -401,7 +401,7 @@
 		H.reagents.add_reagent("cazador_venom", 4)
 
 /datum/reagent/toxin/cazador_venom/on_mob_life(mob/living/M)
-	if(volume >= 12)
+	if(volume >= 16)
 		M.adjustToxLoss(5, 0)
 	..()
 

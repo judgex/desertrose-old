@@ -376,7 +376,7 @@
 	icon_state = "m29peace"
 	extra_damage = 15
 	extra_penetration = 5
-	fire_delay = 15
+	fire_delay = 10
 	burst_size = 1
 	burst_delay = 1
 	var/select = 0
@@ -390,9 +390,8 @@
 	switch(select)
 		if(0)
 			select += 1
-			burst_size = 6 //fan the hammer
-			spread = 45
-			extra_damage = -10 //25 damage, 5 AP - equivalent to a .38 round. Sounds weak, but it's six-round-burst!
+			burst_size = 3 //fan the hammer
+			spread = 15
 			extra_penetration = 0
 			fire_delay = 1
 			to_chat(user, "<span class='notice'>You prepare to fan the hammer for a rapid burst of shots.</span>")
@@ -402,7 +401,6 @@
 			spread = 0
 			extra_damage = 15 //50 damage, 10 AP - equivalent to a .45-70 Govt round. Strong, but slow.
 			extra_penetration = 5
-			fire_delay = 10 //pace your shots
 			to_chat(user, "<span class='notice'>You switch to single-shot fire.</span>")
 	update_icon()
 

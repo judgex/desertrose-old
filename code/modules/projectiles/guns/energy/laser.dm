@@ -227,13 +227,14 @@
 	name ="plasma rifle"
 	item_state = "plasma"
 	icon_state = "plasma"
-	fire_delay = 3
+	fire_delay = 3.5
 	desc = "A top of line miniaturized plasma caster built by REPCONN in the wake of the Z43-521P failure. It is supperior to all previous rifles to enter service in the USCC."
 	ammo_type = list(/obj/item/ammo_casing/energy/plasma)
 	cell_type = /obj/item/stock_parts/cell/ammo/mfc
 	equipsound = 'sound/f13weapons/equipsounds/plasequip.ogg'
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
+	projectile_speed = 1.1
 
 /obj/item/gun/energy/laser/plasma/scatter
 	name = "multiplas Rifle"
@@ -245,6 +246,7 @@
 	ammo_type = list(/obj/item/ammo_casing/energy/plasma/scatter)
 	cell_type = /obj/item/stock_parts/cell/ammo/mfc
 	weapon_weight = WEAPON_HEAVY
+	projectile_speed = 1.2
 
 /obj/item/gun/energy/laser/plasma/pistol
 	name ="plasma pistol"
@@ -257,6 +259,7 @@
 	equipsound = 'sound/f13weapons/equipsounds/pistolplasequip.ogg'
 	cell_type = /obj/item/stock_parts/cell/ammo/ec
 	slot_flags = ITEM_SLOT_BELT
+	projectile_speed = 1.1
 
 /obj/item/gun/energy/laser/plasma/glock
 	name = "glock 86"
@@ -269,6 +272,7 @@
 	equipsound = 'sound/f13weapons/equipsounds/pistolplasequip.ogg'
 	cell_type = /obj/item/stock_parts/cell/ammo/ec
 	slot_flags = ITEM_SLOT_BELT
+	projectile_speed = 1.1
 
 /obj/item/gun/energy/laser/plasma/glock/extended
 	name ="glock 86a"
@@ -321,7 +325,7 @@
 	item_state = "rcw"
 	fire_delay = 3
 	burst_size = 2
-	burst_delay = 2
+	burst_delay = 2.5
 	equipsound = 'sound/f13weapons/equipsounds/RCWequip.ogg'
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/rcw)
 	cell_type = /obj/item/stock_parts/cell/ammo/ecp

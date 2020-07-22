@@ -202,6 +202,7 @@ GLOBAL_LIST_INIT(wood_recipes, list ( \
 	new/datum/stack_recipe("wood table frame", /obj/structure/table_frame/wood, 2, time = 10), \
 	new/datum/stack_recipe("rifle stock", /obj/item/weaponcrafting/stock, 10, time = 40), \
 	new/datum/stack_recipe("rolling pin", /obj/item/kitchen/rollingpin, 2, time = 30), \
+	new/datum/stack_recipe("chopping block", /obj/item/chopping_block, 2, time = 30), \
 	new/datum/stack_recipe("wooden chair", /obj/structure/chair/wood/, 3, time = 10, one_per_turf = TRUE, on_floor = TRUE), \
 	new/datum/stack_recipe("fancy chair", /obj/structure/chair/wood/fancy, 3, one_per_turf = TRUE, on_floor = TRUE), \
 	new/datum/stack_recipe("winged wooden chair", /obj/structure/chair/wood/wings, 3, time = 10, one_per_turf = TRUE, on_floor = TRUE), \
@@ -391,7 +392,6 @@ GLOBAL_LIST_INIT(cardboard_recipes, list ( \
 	new/datum/stack_recipe("shotgun buckshot box", /obj/item/storage/box/lethalshot, ), \
 	new/datum/stack_recipe("shotgun rubbershot box", /obj/item/storage/box/rubbershot, ), \
 	new/datum/stack_recipe("shotgun beanbag box", /obj/item/storage/box/beanbag, ), \
-	new/datum/stack_recipe("shotgun tech box", /obj/item/storage/box/techshot, ), \
 	null, \
 	new/datum/stack_recipe("large box", /obj/structure/closet/cardboard, 4), \
 	new/datum/stack_recipe("cardboard cutout", /obj/item/cardboard_cutout, 5), \

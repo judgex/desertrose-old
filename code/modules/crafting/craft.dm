@@ -4,30 +4,34 @@
 	var/viewing_subcategory = 1
 	var/list/categories = list(
 				CAT_WEAPONRY,
-				CAT_ROBOT,
+				CAT_FORGE,
 				CAT_MISC,
 				CAT_PRIMAL,
 				CAT_MEDICAL,
 				CAT_ASSEM,
 				CAT_FOOD,
-				CAT_CLOTHING,
-				CAT_DRUGS)
+				CAT_CLOTHING)
 	var/list/subcategories = list(
 						list(	//Weapon subcategories
 							CAT_WEAPON,
 							CAT_AMMO),
-						CAT_NONE, //Robot subcategories
+						list(	//forge subcatergories
+							CAT_FORGEWEAPON,
+							CAT_FORGEARMOR,
+							CAT_FORGEMISC),
 						list(
 							CAT_MISC,
 							CAT_BOTTLE), //MISC Subcategories
 						list(
-							CAT_TRIBAL,
-							CAT_FORGE), //Tribal subcategories
-						CAT_NONE,//Medical subcategories
+							CAT_TRIBAL), //Tribal subcategories
+						list(
+							CAT_MEDS,
+							CAT_DRUGS),//Ghetto Chem subcategories
 						list(
 							CAT_MACHINES,
 							CAT_TOOLS,
-							CAT_ASSEM), //Assemblies subcategories
+							CAT_ASSEMBLIES,
+							CAT_ROBOT), //Assemblies subcategories
 						list(	//Food subcategories
 							CAT_BREAD,
 							CAT_BURGER,
@@ -46,8 +50,7 @@
 						list(	//Clothing subcategories
 							CAT_CLOTHING,
 							CAT_WASTELAND,
-							CAT_BELTS),
-						CAT_NONE)
+							CAT_BELTS))
 
 	var/datum/action/innate/crafting/button
 	var/display_craftable_only = FALSE
