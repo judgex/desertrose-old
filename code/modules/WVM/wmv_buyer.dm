@@ -92,7 +92,7 @@
 		src.ui_interact(usr)
 	else if(istype(I, /obj/item/stack/ore/iron))
 		var/obj/item/stack/ore/iron/sellable = I
-		var/price = 0.5
+		var/price = 0.7
 		var/inserted_value = FLOOR(sellable.amount * price, 1)
 		stored_caps += inserted_value
 		I.Destroy()
@@ -101,7 +101,7 @@
 		src.ui_interact(usr)
 	else if(istype(I, /obj/item/stack/sheet/leather))
 		var/obj/item/stack/sheet/leather/sellable = I
-		var/price = 2
+		var/price = 5
 		var/inserted_value = FLOOR(sellable.amount * price, 1)
 		stored_caps += inserted_value
 		I.Destroy()
