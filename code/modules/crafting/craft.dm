@@ -10,7 +10,8 @@
 				CAT_MEDICAL,
 				CAT_ASSEM,
 				CAT_FOOD,
-				CAT_CLOTHING)
+				CAT_CLOTHING,
+				CAT_BLUEPRINTS)
 	var/list/subcategories = list(
 						list(	//Weapon subcategories
 							CAT_WEAPON,
@@ -50,7 +51,9 @@
 						list(	//Clothing subcategories
 							CAT_CLOTHING,
 							CAT_WASTELAND,
-							CAT_BELTS))
+							CAT_BELTS),
+						list( //bp
+							CAT_BPWEAPON))
 
 	var/datum/action/innate/crafting/button
 	var/display_craftable_only = FALSE
