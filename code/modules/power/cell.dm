@@ -386,12 +386,13 @@
 	maxcharge = 2000
 
 /obj/item/stock_parts/cell/ammo/mfc/process()//works half, full and empty
-	if (charge > 50)
-		icon_state = "mfc-full"
-	else if (charge > 1)
-		icon_state = "mfc-half"
-	else 
-		icon_state = "mfc-empty"
+	switch(charge)
+		if (1001 to 2000)
+			icon_state = "mfc-full"
+		if (51 to 1000)
+			icon_state = "mfc-half"
+		if (0 to 50)
+			icon_state = "mfc-empty"
 	. = ..()
 
 /obj/item/stock_parts/cell/ammo/ecp
@@ -407,14 +408,15 @@
 	maxcharge = 1600
 
 /obj/item/stock_parts/cell/ammo/ec/process()//works half, full and empty
-	if (charge > 66)
-		icon_state = "ec-full"
-	else if (charge > 33)
-		icon_state = "ec-twothirds"
-	else if (charge > 1)
-		icon_state = "ec-onethirds"
-	else
-		icon_state = "ec-empty"
+	switch(charge)
+		if (1101 to 1600)
+			icon_state = "ec-full"
+		if (551 to 1100)
+			icon_state = "ec-twothirds"
+		if (51 to 550)
+			icon_state = "ec-onethirds"
+		if (0 to 50)
+			icon_state = "ec-empty"
 	. = ..()
 
 /obj/item/stock_parts/cell/ammo/alien
