@@ -368,6 +368,13 @@
 	cancharge = 0
 	w_class = WEIGHT_CLASS_TINY
 
+/obj/item/stock_parts/cell/ammo/process()
+	if(charge > 1)
+		name = "[initial(name)]"
+	else
+		name = "used [initial(name)]"
+	. = ..()
+
 /obj/item/stock_parts/cell/ammo/New()
 	..()
 	return
