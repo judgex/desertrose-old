@@ -385,7 +385,7 @@
 	icon_state = "mfc-full"
 	maxcharge = 2000
 
-/obj/item/stock_parts/cell/ammo/mfc/process()//works half, full and empty
+/obj/item/stock_parts/cell/ammo/mfc/process()
 	switch(charge)
 		if (1001 to 2000)
 			icon_state = "mfc-full"
@@ -407,7 +407,7 @@
 	icon_state = "ec-full"
 	maxcharge = 1600
 
-/obj/item/stock_parts/cell/ammo/ec/process()//works half, full and empty
+/obj/item/stock_parts/cell/ammo/ec/process()
 	switch(charge)
 		if (1101 to 1600)
 			icon_state = "ec-full"
