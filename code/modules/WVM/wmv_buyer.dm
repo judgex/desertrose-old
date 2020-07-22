@@ -92,7 +92,8 @@
 		src.ui_interact(usr)
 	else if(istype(I, /obj/item/stack/ore/iron))
 		var/obj/item/stack/ore/iron/sellable = I
-		var/inserted_value = FLOOR(sellable.amount * 0.5, 1)
+		var/price = 0.5
+		var/inserted_value = FLOOR(sellable.amount * price, 1)
 		stored_caps += inserted_value
 		I.Destroy()
 		playsound(src, 'sound/items/change_jaws.ogg', 60, 1)
@@ -100,7 +101,8 @@
 		src.ui_interact(usr)
 	else if(istype(I, /obj/item/stack/sheet/leather))
 		var/obj/item/stack/sheet/leather/sellable = I
-		var/inserted_value = FLOOR(sellable.amount * 2, 1)
+		var/price = 2
+		var/inserted_value = FLOOR(sellable.amount * price, 1)
 		stored_caps += inserted_value
 		I.Destroy()
 		playsound(src, 'sound/items/change_jaws.ogg', 60, 1)
