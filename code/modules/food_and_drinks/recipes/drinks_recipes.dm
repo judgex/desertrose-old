@@ -492,7 +492,7 @@
 	name = "Jack Rose"
 	id = "jack_rose"
 	results = list("jack_rose" = 4)
-	required_reagents = list("grenadine" = 1, "applejack" = 2, "limejuice" = 1)
+	required_reagents = list("grenadine" = 1, "applejuice" = 2, "limejuice" = 1)
 	mix_message = "As the grenadine incorporates, the beverage takes on a mellow, red-orange glow."
 
 /datum/chemical_reaction/old_timer
