@@ -54,6 +54,7 @@
 	icon_state = "parsnip"
 	bitesize_mod = 2
 	foodtype = VEGETABLES
+	juice_results = list(/datum/reagent/consumable/parsnipjuice = 0)
 	wine_power = 35
 
 // White-Beet
@@ -80,6 +81,7 @@
 	filling_color = "#F4A460"
 	bitesize_mod = 2
 	foodtype = VEGETABLES
+	juice_results = list(/datum/reagent/consumable/whitebeetjuice = 0)
 	wine_power = 40
 
 // Red Beet

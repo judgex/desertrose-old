@@ -183,6 +183,7 @@
 		. = 1
 	..()
 
+/* Begone, foul meme chemical
 /datum/reagent/consumable/laughter
 	name = "Laughter"
 	id = "laughter"
@@ -190,6 +191,7 @@
 	metabolization_rate = INFINITY
 	color = "#FF4DD2"
 	taste_description = "laughter"
+*/
 
 /datum/reagent/consumable/laughter/on_mob_life(mob/living/carbon/M)
 	M.emote("laugh")
@@ -315,9 +317,9 @@
 	nutriment_factor = 0
 	overdose_threshold = 80
 	taste_description = "bitterness"
-	glass_icon_state = "glass_brown"
-	glass_name = "glass of coffee"
-	glass_desc = "Don't drop it, or you'll send scalding liquid and glass shards everywhere."
+	glass_icon_state = "coffee"
+	glass_name = "mug of coffee"
+	glass_desc = "Don't drop it, or you'll send scalding liquid and ceramic shards everywhere."
 
 /datum/reagent/consumable/coffee/overdose_process(mob/living/M)
 	M.Jitter(5)
@@ -360,7 +362,7 @@
 		holder.remove_reagent("frostoil", 5)
 	..()
 	. = 1
-	
+
 /datum/reagent/consumable/icemocha
 	name = "Iced Mocha"
 	id = "icemocha"
@@ -856,6 +858,42 @@
 	glass_name = "glass of grenadine"
 	glass_desc = "Delicious flavored syrup."
 
+/datum/reagent/consumable/parsnipjuice
+	name = "Parsnip Juice"
+	id = "parsnipjuice"
+	description = "Why..."
+	color = "#FFA500"
+	taste_description = "parsnip"
+	glass_name = "glass of parsnip juice"
+
+/datum/reagent/consumable/whitebeetjuice
+	name = "White Beet Juice"
+	id = "whitebeetjuice"
+	description = "Why..."
+	color = "#f5f2d0"
+	taste_description = "white beets"
+	glass_name = "glass of white beet juice"
+	glass_desc = "Why..."
+
+/datum/reagent/consumable/pineapplejuice
+	name = "Pineapple Juice"
+	description = "Tart, tropical, and hotly debated."
+	color = "#F7D435"
+	taste_description = "tangy pineapple"
+	glass_name = "glass of pineapple juice"
+	glass_desc = "Tart, tropical, and hotly debated."
+
+/datum/reagent/consumable/cream_soda
+	name = "Cream Soda"
+	id = "creamsoda"
+	description = "A classic space-American vanilla flavored soft drink."
+	color = "#dcb137"
+	quality = DRINK_VERYGOOD
+	taste_description = "fizzy vanilla"
+	glass_icon_state = "cream_soda"
+	glass_name = "Cream Soda"
+	glass_desc = "A classic space-American vanilla flavored soft drink."
+
 /datum/reagent/consumable/vim
 	name = "Vim"
 	id = "vim"
@@ -942,14 +980,14 @@
 
 /datum/reagent/consumable/vimice/on_mob_life(mob/living/carbon/M)
 	M.Jitter(20)
-	M.adjust_bodytemperature(-40 * TEMPERATURE_DAMAGE_COEFFICIENT, T0C) 
+	M.adjust_bodytemperature(-40 * TEMPERATURE_DAMAGE_COEFFICIENT, T0C)
 	M.adjustFireLoss(-2*REM, 0)
 	M.adjustOxyLoss(1, 0)
 	M.dizziness = max(0,M.dizziness-5)
 	M.drowsyness = max(0,M.drowsyness-3)
 	M.AdjustSleeping(-40, FALSE)
 	//310.15 is the normal bodytemp.
-	
+
 	..()
 	. = 1
 
