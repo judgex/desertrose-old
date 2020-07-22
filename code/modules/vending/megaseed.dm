@@ -12,6 +12,7 @@
 		            /obj/item/seeds/poppy/broc = 3,
 					/obj/item/seeds/cabbage = 3,
 					/obj/item/seeds/carrot = 3,
+					/obj/item/seeds/carrot/parsnip = 3,
 					/obj/item/seeds/cherry = 3,
 					/obj/item/seeds/chanter = 3,
 					/obj/item/seeds/chili = 3,
