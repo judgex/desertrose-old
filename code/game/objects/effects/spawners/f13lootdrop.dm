@@ -623,7 +623,7 @@
 	var/loot3 = list(
 				/obj/item/gun/ballistic/shotgun/boltaction,
 				/obj/item/ammo_box/a762,
-				/obj/item/ammo_box/a762
+				//obj/item/ammo_box/a762
 				)
 
 	var/loot4 = list(
@@ -641,36 +641,36 @@
 	var/loot6 = list(
 				/obj/item/gun/ballistic/shotgun/remington,
 				/obj/item/ammo_box/a308,
-				/obj/item/ammo_box/a308
+				//obj/item/ammo_box/a308
 				)
 
 	var/loot7 = list(
 				/obj/item/gun/ballistic/automatic/pistol/n99,
 				/obj/item/ammo_box/magazine/m10mm_adv,
-				/obj/item/ammo_box/magazine/m10mm_adv
+				//obj/item/ammo_box/magazine/m10mm_adv
 				)
 
 	var/loot8 = list(
 				/obj/item/gun/ballistic/automatic/pistol/m1911,
 				/obj/item/ammo_box/magazine/m45,
-				/obj/item/ammo_box/magazine/m45
+				//obj/item/ammo_box/magazine/m45
 				)
 
 	var/loot9 = list(
 				/obj/item/gun/ballistic/automatic/pistol/ninemil,
 				/obj/item/ammo_box/magazine/m9mm,
-				/obj/item/ammo_box/magazine/m9mm
+				//obj/item/ammo_box/magazine/m9mm
 				)
 
 	var/loot10 = list(
 				/obj/item/gun/ballistic/revolver/colt6250,
 				/obj/item/ammo_box/l10mm,
-				/obj/item/ammo_box/l10mm
+				//obj/item/ammo_box/l10mm
 				)
 
 	var/loot11 = list(
 				/obj/item/gun/ballistic/automatic/marksman/servicerifle/varmint,
-				/obj/item/ammo_box/magazine/m556/rifle/small,
+				//obj/item/ammo_box/magazine/m556/rifle/small,
 				/obj/item/ammo_box/magazine/m556/rifle/small)
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/tier1/Initialize(mapload) //on mapload, pick what shit to spawn
@@ -690,45 +690,45 @@
 	var/loot2 = list(
 				/obj/item/gun/ballistic/revolver/m29,
 				/obj/item/ammo_box/m44,
-				/obj/item/ammo_box/m44
+				//obj/item/ammo_box/m44
 				)
 
 	var/loot3 = list(
 				/obj/item/gun/ballistic/shotgun/remington/scoped,
-				/obj/item/ammo_box/a308,
+				//obj/item/ammo_box/a308,
 				/obj/item/ammo_box/a308
 				)
 
 	var/loot4 = list(
 				/obj/item/gun/ballistic/revolver/m29/scoped,
-				/obj/item/ammo_box/m44,
+				//obj/item/ammo_box/m44,
 				/obj/item/ammo_box/m44
 				)
 
 	var/loot5 = list(/obj/item/gun/ballistic/shotgun/automatic/hunting/cowboy,
-				/obj/item/ammo_box/tube/a357,
+				//obj/item/ammo_box/tube/a357,
 				/obj/item/ammo_box/tube/a357
 				)
 
 	var/loot6 = list(/obj/item/gun/ballistic/shotgun/automatic/hunting/cowboy/scoped,
-				/obj/item/ammo_box/tube/a357,
+				//obj/item/ammo_box/tube/a357,
 				/obj/item/ammo_box/tube/a357
 				)
 
 	var/loot7 = list(/obj/item/gun/ballistic/revolver/colt357,
-				/obj/item/ammo_box/a357,
+				//obj/item/ammo_box/a357,
 				/obj/item/ammo_box/a357
 				)
 
 	var/loot8 = list(
 				/obj/item/gun/ballistic/automatic/marksman/servicerifle,
-				/obj/item/ammo_box/magazine/m556/rifle,
+				//obj/item/ammo_box/magazine/m556/rifle,
 				/obj/item/ammo_box/magazine/m556/rifle
 				)
 
 	var/loot9 = list(
 				/obj/item/gun/ballistic/revolver/police,
-				/obj/item/ammo_box/a357,
+				//obj/item/ammo_box/a357,
 				/obj/item/ammo_box/a357
 	)
 	var/loot10 = list(
@@ -748,18 +748,18 @@
 	var/loot1 = list(
 				/obj/item/gun/ballistic/automatic/mini_uzi,
 				/obj/item/ammo_box/magazine/uzim9mm,
-				/obj/item/ammo_box/magazine/uzim9mm
+				//obj/item/ammo_box/magazine/uzim9mm
 				)
 
 	var/loot2 = list(
 				/obj/item/gun/ballistic/automatic/smg10mm,
-				/obj/item/ammo_box/magazine/m10mm_auto,
+				//obj/item/ammo_box/magazine/m10mm_auto,
 				/obj/item/ammo_box/magazine/m10mm_auto
 				)
 
 	var/loot3 = list(
 				/obj/item/gun/ballistic/automatic/greasegun,
-				/obj/item/ammo_box/magazine/greasegun,
+				//obj/item/ammo_box/magazine/greasegun,
 				/obj/item/ammo_box/magazine/greasegun
 				)
 
@@ -776,19 +776,19 @@
 
 	var/loot6 = list(
 				/obj/item/gun/ballistic/revolver/needler,
-				/obj/item/ammo_box/needle,
+				//obj/item/ammo_box/needle,
 				/obj/item/ammo_box/needle
 				)
 
 	var/loot7 = list(
 				/obj/item/gun/ballistic/shotgun/automatic/hunting/trail,
-			    /obj/item/ammo_box/tube/m44,
+			    //obj/item/ammo_box/tube/m44,
 				/obj/item/ammo_box/tube/m44
 				)
 
 	var/loot8 = list(
 				/obj/item/gun/ballistic/shotgun/automatic/hunting/trail/scoped,
-				/obj/item/ammo_box/tube/m44,
+				//obj/item/ammo_box/tube/m44,
 				/obj/item/ammo_box/tube/m44
 				)
 	var/loot9 = list(
@@ -806,20 +806,20 @@
 	lootcount = 3
 	var/loot1 = list(
 				/obj/item/gun/ballistic/automatic/assault_rifle,
-				/obj/item/ammo_box/magazine/m556/rifle/assault,
+				//obj/item/ammo_box/magazine/m556/rifle/assault,
 				/obj/item/ammo_box/magazine/m556/rifle/assault
 				)
 
 	var/loot2 = list(
 				/obj/item/gun/ballistic/automatic/marksman,
-				/obj/item/ammo_box/magazine/m556/rifle,
+				//obj/item/ammo_box/magazine/m556/rifle,
 				/obj/item/ammo_box/magazine/m556/rifle
 				)
 
 	var/loot3 = list(
 				/obj/item/gun/ballistic/automatic/pistol/deagle,
 				/obj/item/ammo_box/magazine/a50,
-				/obj/item/ammo_box/magazine/a50
+				//obj/item/ammo_box/magazine/a50
 				)
 
 	var/loot4 = list(
@@ -842,40 +842,40 @@
 
 	var/loot7 = list(
 				/obj/item/gun/ballistic/automatic/assault_rifle/infiltrator,
-				/obj/item/ammo_box/magazine/m556/rifle,
+				//obj/item/ammo_box/magazine/m556/rifle,
 				/obj/item/ammo_box/magazine/m556/rifle
 				)
 
 	var/loot8 = list(
 				 /obj/item/gun/ballistic/shotgun/automatic/hunting/brush,
-				 /obj/item/ammo_box/tube/c4570,
+				 //obj/item/ammo_box/tube/c4570,
 				 /obj/item/ammo_box/tube/c4570
 				 )
 
 	var/loot9 = list(
 				/obj/item/gun/ballistic/shotgun/automatic/hunting/brush/scoped,
 				/obj/item/ammo_box/tube/c4570,
-				/obj/item/ammo_box/tube/c4570,
+				//obj/item/ammo_box/tube/c4570,
 				""
 				)
 
 	var/loot10 = list(
 				/obj/item/gun/ballistic/shotgun/antimateriel,
-				/obj/item/ammo_box/a50MG,
+				//obj/item/ammo_box/a50MG,
 				/obj/item/ammo_box/a50MG,
 				""
 				)
 
 	var/loot11 = list(
 				/obj/item/gun/ballistic/automatic/rangemaster,
-				/obj/item/ammo_box/magazine/m762,
+				//obj/item/ammo_box/magazine/m762,
 				/obj/item/ammo_box/magazine/m762,
 				""
 				)
 
 	var/loot12 = list(
 				/obj/item/gun/ballistic/automatic/shotgun/riot,
-				/obj/item/ammo_box/magazine/d12g,
+				//obj/item/ammo_box/magazine/d12g,
 				/obj/item/ammo_box/magazine/d12g,
 				""
 				)
@@ -888,7 +888,7 @@
 
 	var/loot14 = list(
 				/obj/item/gun/energy/laser/plasma/glock,
-				/obj/item/stock_parts/cell/ammo/ec,
+				//obj/item/stock_parts/cell/ammo/ec,
 				/obj/item/stock_parts/cell/ammo/ec,
 				)
 
@@ -1375,20 +1375,35 @@
 	/obj/item/book/granter/trait/gunsmith_three = 10,
 	/obj/item/book/granter/trait/gunsmith_four = 10)
 
-/obj/effect/spawner/lootdrop/f13/blueprint
+/obj/effect/spawner/lootdrop/f13/blueprint //ballistics only for now
 	name = "blueprint-tier item spawner"
 	icon_state = "blueprint_loot"
 	lootcount = 1
 	loot = list(
-		/obj/item/gun/ballistic/revolver/thatgun,
-		/obj/item/gun/ballistic/automatic/m1garand,
-		/obj/item/gun/ballistic/automatic/assault_rifle,
-		/obj/item/gun/ballistic/automatic/assault_rifle/infiltrator,
-		/obj/item/gun/ballistic/automatic/marksman,
-		/obj/item/gun/ballistic/automatic/fnfal,
-		/obj/item/gun/ballistic/automatic/shotgun/caws,
-		/obj/item/gun/ballistic/revolver/needler,
-		/obj/item/clothing/suit/armor/f13/power_armor/tesla,
-		/obj/item/clothing/suit/armor/f13/combat/mk2
+		///obj/item/blueprint/misc/stim,
+		///obj/item/blueprint/misc/superstims,
+		/obj/item/blueprint/weapon/r91,
+	//	/obj/item/blueprint/weapon/infiltrator,
+		/obj/item/blueprint/weapon/uzi,
+	//	/obj/item/blueprint/weapon/breacher,
+	//	/obj/item/blueprint/weapon/killer,
+	//	/obj/item/blueprint/weapon/marksmanrifle,
+	//	/obj/item/blueprint/weapon/AER9,
+	//	/obj/item/blueprint/weapon/plasma,
+	//	/obj/item/blueprint/armor/combat
+	)
+
+/obj/effect/spawner/lootdrop/f13/advcrafting
+	name = "advanced_crafting"
+	lootcount = 1
+	lootdoubles = FALSE
+	loot = list(
+	//	/obj/item/advanced_crafting_components/flux,
+	//	/obj/item/advanced_crafting_components/lenses,
+	//	/obj/item/advanced_crafting_components/conductors,
+		/obj/item/advanced_crafting_components/reciever,
+		/obj/item/advanced_crafting_components/assembly,
+	//	/obj/item/advanced_crafting_components/shotgun,
+	//	/obj/item/advanced_crafting_components/alloys
 	)
 

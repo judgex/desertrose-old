@@ -213,7 +213,7 @@ or something covering your eyes."
 	desc = "Whoa man, you're tripping balls! Careful you don't get addicted... if you aren't already."
 	icon_state = "high"
 
-/obj/screen/alert/drunk //Not implemented
+/obj/screen/alert/drunk
 	name = "Drunk"
 	desc = "All that alcohol you've been drinking is impairing your speech, motor skills, and mental cognition. Make sure to act like it."
 	icon_state = "drunk"

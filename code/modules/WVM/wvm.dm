@@ -579,6 +579,14 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		new /datum/data/wasteland_equipment("???",								/obj/item/toy/syndicateballoon,									3000)
 		)
 
+/obj/machinery/mineral/wasteland_vendor/advcomponents
+	name = "Caravan Network Access"
+	icon_state = "generic_idle"
+	prize_list = list(
+		new /datum/data/wasteland_equipment("Advanced Reciever",				/obj/item/advanced_crafting_components/reciever,					300),
+		new /datum/data/wasteland_equipment("Weapon Assembly",					/obj/item/advanced_crafting_components/assembly,					300)
+		)
+
 /datum/data/wasteland_equipment
 	var/equipment_name = "generic"
 	var/equipment_path = null
