@@ -892,7 +892,8 @@
 					A.create_reagents(amount)
 
 			if(A.reagents)
-				var/chosen_id = choose_reagent_id(usr)
+				var/datum/reagent/chosen_reagent = choose_reagent_id(usr)
+				var/chosen_id = initial(chosen_reagent.id)
 				if(chosen_id)
 					var/amount = input(usr, "Choose the amount to add.", "Choose the amount.", A.reagents.maximum_volume) as num
 					if(amount)
