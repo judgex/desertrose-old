@@ -10,8 +10,8 @@
 	var/spawn_delay = 0
 	//make spawn_time's multiples of 10. The SS runs on 10 seconds.
 	var/spawn_time = 30 SECONDS
+	var/coverable = TRUE
 	var/covered = FALSE
-	var/uncover_chance = 0
 	var/obj/covertype
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
 	var/spawn_text = "emerges from"
@@ -28,12 +28,6 @@
 
 /obj/structure/nest/proc/spawn_mob()
 	if(covered)
-		if(prob(uncover_chance))
-			covertype = null
-			covered = FALSE
-			cut_overlays()
-			uncover_chance = 0
-		uncover_chance++
 		return FALSE
 	if(world.time < spawn_delay)
 		return 0
@@ -53,6 +47,9 @@
 		return
 
 	if(istype(I, /obj/item/stack/rods))
+		if(!coverable)
+			to_chat(user, "<span class='warning'>The hole is unable to be covered!</span>")
+			return
 		if(covered)
 			to_chat(user, "<span class='warning'>The hole is already covered!</span>")
 			return
@@ -71,6 +68,9 @@
 		return
 
 	if(istype(I, /obj/item/stack/sheet/mineral/wood))
+		if(!coverable)
+			to_chat(user, "<span class='warning'>The hole is unable to be covered!</span>")
+			return
 		if(covered)
 			to_chat(user, "<span class='warning'>The hole is already covered!</span>")
 			return
