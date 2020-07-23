@@ -128,6 +128,12 @@
 	item_state = "legionlegate"
 	armor = list(melee = 30, bullet = 30, laser = 20, energy = 20, bomb = 30, bio = 0, rad = 10, fire = 30, acid = 10)
 
+/obj/item/clothing/shoes/f13/military/generalboot
+	name = "Militia Boots"
+	desc = "testing"
+	icon_state = "militiaboots"
+	item_state = "militiaboots"
+
 //Fluff
 
 /obj/item/clothing/shoes/f13/swimfins
@@ -169,9 +175,3 @@
 	armor = list(melee = 20, bullet = 0, laser = 0, energy = 0, bomb = 20, bio = 0, rad = 0, fire = 0, acid = 0)
 	cold_protection = FEET
 	min_cold_protection_temperature = SHOES_MIN_TEMP_PROTECT
-
-/obj/item/clothing/shoes/f13/military/generalboot
-	name = "Militia Boots"
-	desc = ""
-	icon_state = "militiaboots"
-	item_state = "diesel_m"
