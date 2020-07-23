@@ -428,7 +428,9 @@
 		"cream",
 		"tea",
 		"icetea",
-		"cola",
+		"nuka_cola",
+		"sunset",
+		"bawls",
 		"spacemountainwind",
 		"dr_gibb",
 		"space_up",
@@ -474,6 +476,7 @@
 		"hcider",
 		"creme_de_menthe",
 		"creme_de_cacao",
+		"creme_de_coconut",
 		"triple_sec",
 		"sake",
 		"fernet"

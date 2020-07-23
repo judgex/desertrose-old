@@ -13,11 +13,29 @@
 	taste_description = "generic food"
 	taste_mult = 4
 	var/nutriment_factor = 1 * REAGENTS_METABOLISM
+	var/quality = 0	//affects mood, typically higher for mixed drinks with more complex recipes
 
 /datum/reagent/consumable/on_mob_life(mob/living/carbon/M)
 	current_cycle++
 	M.nutrition += nutriment_factor
 	holder.remove_reagent(src.id, metabolization_rate)
+
+
+/datum/reagent/consumable/reaction_mob(mob/living/M, method=TOUCH, reac_volume)
+	if(method == INGEST)
+		if (quality && !M.has_trait(TRAIT_AGEUSIA))
+			switch(quality)
+				if (DRINK_NICE)
+					SEND_SIGNAL(M, COMSIG_ADD_MOOD_EVENT, "quality_drink", /datum/mood_event/quality_nice)
+				if (DRINK_GOOD)
+					SEND_SIGNAL(M, COMSIG_ADD_MOOD_EVENT, "quality_drink", /datum/mood_event/quality_good)
+				if (DRINK_VERYGOOD)
+					SEND_SIGNAL(M, COMSIG_ADD_MOOD_EVENT, "quality_drink", /datum/mood_event/quality_verygood)
+				if (DRINK_FANTASTIC)
+					SEND_SIGNAL(M, COMSIG_ADD_MOOD_EVENT, "quality_drink", /datum/mood_event/quality_fantastic)
+				if (FOOD_AMAZING)
+					SEND_SIGNAL(M, COMSIG_ADD_MOOD_EVENT, "quality_food", /datum/mood_event/amazingtaste)
+	return ..()
 
 /datum/reagent/consumable/nutriment
 	name = "Nutriment"
@@ -442,10 +460,10 @@
 		T.assume_air(lowertemp)
 		qdel(hotspot)
 
-/datum/reagent/consumable/enzyme
-	name = "Universal Enzyme"
-	id = "enzyme"
-	description = "A universal enzyme used in the preperation of certain chemicals and foods."
+/datum/reagent/consumable/yeast
+	name = "Yeast"
+	id = "yeast"
+	description = "Yeast is used for the speeding of growth, rising and maturation in a wide variety of foods."
 	color = "#365E30" // rgb: 54, 94, 48
 	taste_description = "sweetness"
 
@@ -687,3 +705,13 @@
 	nutriment_factor = 5 * REAGENTS_METABOLISM
 	color = "#eef442" // rgb: 238, 244, 66
 	taste_description = "mournful honking"
+
+/datum/reagent/consumable/char
+	name = "Char"
+	description = "Essence of the grill."
+	reagent_state = LIQUID
+	nutriment_factor = 5 * REAGENTS_METABOLISM
+	color = "#C8C8C8"
+	taste_mult = 6
+	taste_description = "smoke"
+	overdose_threshold = 25

@@ -84,6 +84,7 @@
 	category = CAT_CLOTHING
 	subcategory = CAT_CLOTHING
 
+
 /datum/crafting_recipe/combat_coat
 	name = "combat coat"
 	result = /obj/item/clothing/suit/armor/f13/leather_jacket/combat/coat
@@ -94,6 +95,7 @@
 	category = CAT_CLOTHING
 	subcategory = CAT_CLOTHING
 
+/*
 /datum/crafting_recipe/supaflyhelm_reinforced
 	name = "reinforced supafly helmet"
 	result = /obj/item/clothing/head/helmet/f13/raider/r/supafly
@@ -269,6 +271,7 @@
 	time = 60
 	category = CAT_CLOTHING
 	subcategory = CAT_CLOTHING
+*/
 
 /datum/crafting_recipe/raiderpaconversion
 	name = "salvaged power armor to raider power armor conversion"
@@ -428,8 +431,18 @@
 	subcategory = CAT_WASTELAND
 
 /datum/crafting_recipe/cowboyhat
-	name = "wide brim cowboy hat"
+	name = "light leather cowboy hat"
 	result = /obj/item/clothing/head/f13/cowboy
+	reqs = list(/obj/item/stack/sheet/leather = 2,
+				/obj/item/stack/sheet/cloth = 1)
+	tools = list(TOOL_WORKBENCH)
+	time = 15
+	category = CAT_CLOTHING
+	subcategory = CAT_WASTELAND
+
+/datum/crafting_recipe/cowboyhatrustic
+	name = "rustic leather cowboy hat"
+	result = /obj/item/clothing/head/helmet/f13/brahmincowboyhat
 	reqs = list(/obj/item/stack/sheet/leather = 2,
 				/obj/item/stack/sheet/cloth = 1)
 	tools = list(TOOL_WORKBENCH)
@@ -442,6 +455,16 @@
 	result = /obj/item/clothing/shoes/f13/cowboy
 	reqs = list(/obj/item/stack/sheet/leather = 2,
 				/obj/item/stack/sheet/cloth = 2)
+	tools = list(TOOL_WORKBENCH)
+	time = 15
+	category = CAT_CLOTHING
+	subcategory = CAT_WASTELAND
+
+/datum/crafting_recipe/mantle
+	name = "hide mantle"
+	result = /obj/item/clothing/suit/f13/mantle_liz
+	reqs = list(/obj/item/stack/sheet/leather = 3,
+				/obj/item/stack/sheet/hay = 2)
 	tools = list(TOOL_WORKBENCH)
 	time = 15
 	category = CAT_CLOTHING

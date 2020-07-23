@@ -21,11 +21,16 @@
 	mix_message = "The mixture dries into a pale blue powder."
 	required_temp = 380
 
+/datum/chemical_reaction/methamphetamine
+	results = list("methamphetamine" = 4)
+	required_reagents = list("ephedrine" = 1, "iodine" = 1, "phosphorus" = 1, "hydrogen" = 1)
+	required_temp = 374
+
 /datum/chemical_reaction/bath_salts
 	name = "bath_salts"
 	id = "bath_salts"
 	results = list("bath_salts" = 7)
-	required_reagents = list("bad_food" = 1, "saltpetre" = 1, "nutriment" = 1, "cleaner" = 1, "enzyme" = 1, "tea" = 1, "mercury" = 1)
+	required_reagents = list("bad_food" = 1, "saltpetre" = 1, "nutriment" = 1, "cleaner" = 1, "yeast" = 1, "tea" = 1, "mercury" = 1)
 	required_temp = 374
 
 /datum/chemical_reaction/aranesp

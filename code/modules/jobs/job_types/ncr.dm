@@ -32,6 +32,12 @@ Colonel
 
 	outfit = /datum/outfit/job/ncr/f13colonel
 
+/datum/outfit/job/ncr/f13colonel/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	..()
+	if(visualsOnly)
+		return
+	H.add_trait(TRAIT_TECHNOPHREAK)
+
 /datum/outfit/job/ncr/f13colonel
 	name 		= "NCR Colonel"
 	jobtype 	= /datum/job/ncr/f13colonel
@@ -75,6 +81,12 @@ Captain
 	/datum/outfit/loadout/Captmarksman, //FN FAL and Deagle
 	/datum/outfit/loadout/Captheavy //Heavy service rifle and Deagle
 	)
+
+/datum/outfit/job/ncr/f13captain/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	..()
+	if(visualsOnly)
+		return
+	H.add_trait(TRAIT_TECHNOPHREAK)
 
 /datum/outfit/job/ncr/f13captain
 	name = "NCR Captain"
@@ -121,8 +133,6 @@ Captain
 	backpack_contents = list(
 	/obj/item/ammo_box/magazine/m556/rifle/assault=2)
 
-
-
 /*
 Ambassador
 */
@@ -158,11 +168,10 @@ Ambassador
 		/obj/item/storage/bag/money/small/ncr=1,
 		/obj/item/megaphone=1)
 
-
-
 /*
 Lieutenant
 */
+
 /datum/job/ncr/f13lieutenant
 	title = "NCR Lieutenant"
 	flag = F13LIEUTENANT
@@ -181,6 +190,12 @@ Lieutenant
 	/datum/outfit/loadout/ltcombat, //Mantle vest, 5.56 assault carbine
 	/datum/outfit/loadout/ltscout //Scout armor, .308 DKS sniper rifle
 	)
+
+/datum/outfit/job/ncr/f13lieutenant/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	..()
+	if(visualsOnly)
+		return
+	H.add_trait(TRAIT_TECHNOPHREAK)
 
 /datum/outfit/job/ncr/f13lieutenant
 	name		= "NCR Lieutenant"
@@ -230,7 +245,6 @@ Lieutenant
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/w308=3,
 		/obj/item/book/granter/trait/trekking=1)
-
 
 /*
 Sergeant
@@ -290,6 +304,7 @@ Sergeant
 /*
 Corporal
 */
+
 /datum/job/ncr/f13specialist
 	title = "NCR Corporal"
 	flag = F13SPECIALIST
@@ -327,7 +342,6 @@ Corporal
 		/obj/item/storage/bag/money/small/ncrenlisted, \
 		/obj/item/clothing/mask/ncr_facewrap)
 
-
 /datum/outfit/loadout/specmedic
 	name = "Field Medic"
 	glasses = /obj/item/clothing/glasses/hud/health
@@ -351,7 +365,8 @@ Corporal
 		/obj/item/grenade/plastic=1,
 		/obj/item/stack/sheet/metal/fifty=2,
 		/obj/item/stack/sheet/glass/fifty=1,
-		/obj/item/ammo_box/magazine/m556/rifle=2
+		/obj/item/ammo_box/magazine/m556/rifle=2,
+		/obj/item/book/granter/trait/techno
 		)
 
 /datum/outfit/loadout/specscout
@@ -384,7 +399,6 @@ NCR Heavy Trooper
 	/datum/outfit/loadout/heavysgt,
 	)
 
-
 /datum/outfit/job/ncr/f13ncrht
 	name = "NCR Heavy Trooper"
 	jobtype = /datum/job/ncr/f13ncrht
@@ -415,11 +429,10 @@ NCR Heavy Trooper
 		/obj/item/clothing/accessory/ncr/SGT=1,
 		)
 
-
-
 /*
 NCR Military Police
 */
+
 /datum/job/ncr/f13ncrmp
 	title = "NCR Military Police"
 	flag = F13NCRMP
@@ -457,6 +470,7 @@ NCR Military Police
 /*
 Trooper
 */
+
 /datum/job/ncr/f13trooper
 	title = "NCR Trooper"
 	flag = F13TROOPER
@@ -508,6 +522,7 @@ Trooper
 /*
 Recruit
 */
+
 /datum/job/ncr/f13recruit
 	title = "NCR Assistant"
 	flag = F13RECRUIT
@@ -532,7 +547,7 @@ Recruit
 	suit_store = 	/obj/item/gun/ballistic/automatic/pistol/ninemil
 	ears = 			/obj/item/radio/headset //no NCR comms
 	belt =			/obj/item/pickaxe
-	gloves = null
+	gloves = 		null
 	glasses = 		null
 	backpack_contents = list(
 		/obj/item/kitchen/knife/combat/survival=1, \
@@ -592,10 +607,9 @@ Recruit
 	/datum/outfit/loadout/offduty
 	)
 
-
-
 /datum/outfit/job/ncr/f13ncrcitizen
 	ears = /obj/item/radio/headset
+	id = /obj/item/card/id/dogtag/town
 	uniform = /obj/item/clothing/under/f13/caravaneer
 	shoes = /obj/item/clothing/shoes/f13/tan
 	head = /obj/item/clothing/head/f13/cowboy
@@ -603,7 +617,6 @@ Recruit
 	glasses = /obj/item/clothing/glasses/orange
 	backpack_contents = list(
 		/obj/item/storage/bag/money/small/wastelander)
-
 
 /datum/outfit/loadout/brahminbaron
 	name = "Brahmin Baron"
@@ -637,7 +650,8 @@ Recruit
 		/obj/item/clothing/head/hardhat/dblue=1,
 		/obj/item/clothing/shoes/workboots=1,
 		/obj/item/storage/belt/utility/full/engi=1,
-		/obj/item/clothing/glasses/welding=1
+		/obj/item/clothing/glasses/welding=1,
+		/obj/item/book/granter/trait/techno
 		)
 
 /datum/outfit/loadout/offduty
@@ -653,6 +667,7 @@ Recruit
 /*
 Veteran Ranger
 */
+
 /datum/job/ncr/f13vetranger
 	title = "NCR Veteran Ranger"
 	flag = F13VETRANGER
@@ -678,6 +693,11 @@ Veteran Ranger
 	H.add_quirk("Lifegiver")
 	H.add_quirk("Iron Fist")
 
+/datum/outfit/job/ncr/f13vetranger/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	..()
+	if(visualsOnly)
+		return
+	H.add_trait(TRAIT_TECHNOPHREAK)
 
 /datum/outfit/job/ncr/f13vetranger
 	name = "NCR Veteran Ranger"
@@ -717,6 +737,7 @@ Veteran Ranger
 /*
 Ranger
 */
+
 /datum/job/ncr/f13ranger
 	title = "NCR Ranger"
 	flag = F13RANGER
@@ -740,6 +761,11 @@ Ranger
 /datum/job/ncr/f13ranger/after_spawn(mob/living/carbon/human/H, mob/M)
 	H.add_quirk("Hard Yards")
 
+/datum/outfit/job/ncr/f13ranger/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	..()
+	if(visualsOnly)
+		return
+	H.add_trait(TRAIT_TECHNOPHREAK)
 
 /datum/outfit/job/ncr/f13ranger
 	name = "NCR Ranger"

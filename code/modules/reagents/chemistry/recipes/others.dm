@@ -558,11 +558,13 @@
 	results = list("royal_bee_jelly" = 5)
 	required_reagents = list("stablemutationtoxin" = 10, "honey" = 40)
 
+/*
 /datum/chemical_reaction/laughter
 	name = "laughter"
 	id = "laughter"
-	results = list("laughter" = 10) // Fuck it. I'm not touching this one.
+	results = list("laughter" = 10) // Fuck it. I'm not touching this one. //Well, I am.
 	required_reagents = list("sugar" = 1, "banana" = 1)
+*/
 
 /datum/chemical_reaction/plastic_polymers
 	name = "plastic polymers"

@@ -102,6 +102,11 @@
 	new /obj/item/stack/f13Cash/random/bottle_cap/med(src)
 	new /obj/item/stack/f13Cash/random/ncr/low(src)
 
+// Standard Banker money bag. They are insanely wealthy, Caps only and only for RP purposes.
+/obj/item/storage/bag/money/small/banker/PopulateContents()
+	// ~162 worth of non legion money
+	new /obj/item/stack/f13Cash/random/bottle_cap/banker(src)
+
 // Standard Raider money bag. They blew it all on chems and armor mods.
 /obj/item/storage/bag/money/small/raider/PopulateContents()
 	// ~12 worth of caps

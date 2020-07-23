@@ -305,6 +305,10 @@
 	icon_state = "supafly"
 	item_state = "supafly"
 
+/obj/item/clothing/head/helmet/f13/raider/supafly/Initialize() //HQ parts reinforcement
+	. = ..()
+	AddComponent(/datum/component/armor_plate)
+
 /obj/item/clothing/head/helmet/f13/raider/arclight
 	name = "raider arclight helmet"
 	desc = "This will protect you against flashes."
@@ -313,6 +317,10 @@
 	dynamic_hair_suffix = ""
 	visor_flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE
 
+/obj/item/clothing/head/helmet/f13/raider/arclight/Initialize()
+	. = ..()
+	AddComponent(/datum/component/armor_plate)
+
 /obj/item/clothing/head/helmet/f13/raider/blastmaster
 	name = "raider blastmaster helmet"
 	icon_state = "blastmaster"
@@ -320,12 +328,20 @@
 	dynamic_hair_suffix = ""
 	dynamic_fhair_suffix = ""
 
+/obj/item/clothing/head/helmet/f13/raider/blastmaster/Initialize()
+	. = ..()
+	AddComponent(/datum/component/armor_plate)
+
 /obj/item/clothing/head/helmet/f13/raider/yankee
 	name = "yankee raider helmet"
 	desc = "Long time ago, it has belonged to a football player, now it belongs to wasteland."
 	icon_state = "yankee"
 	item_state = "yankee"
 	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE
+
+/obj/item/clothing/head/helmet/f13/raider/yankee/Initialize()
+	. = ..()
+	AddComponent(/datum/component/armor_plate)
 
 /obj/item/clothing/head/helmet/f13/raider/eyebot
 	name = "eyebot helmet"
@@ -339,6 +355,10 @@
 	dynamic_hair_suffix = ""
 	dynamic_fhair_suffix = ""
 
+/obj/item/clothing/head/helmet/f13/raider/eyebot/Initialize()
+	. = ..()
+	AddComponent(/datum/component/armor_plate)
+
 /obj/item/clothing/head/helmet/f13/raider/psychotic
 	name = "psycho-tic raider helmet"
 	desc = "A leather skullcap with tufts of hair sticking from each side."
@@ -347,6 +367,11 @@
 	flags_cover = HEADCOVERSEYES
 	flags_inv = HIDEEARS|HIDEEYES|HIDEHAIR
 
+/obj/item/clothing/head/helmet/f13/raider/psychotic/Initialize()
+	. = ..()
+	AddComponent(/datum/component/armor_plate)
+
+/*
 /obj/item/clothing/head/helmet/f13/raider/r
 	name = "reinforced base raider helmet"
 	armor = list("melee" = 40, "bullet" = 35, "laser" = 35, "energy" = 35, "bomb" = 40, "bio" = 20, "rad" = 0, "fire" = 50, "acid" = 0)
@@ -369,6 +394,7 @@
 /obj/item/clothing/head/helmet/f13/raider/r/psychotic/
 	name = "reinforced psycho-tic raider helmet"
 	desc = "A leather skullcap with tufts of Yaoguai hair sticking from each side."
+*/
 
 //Combat armor
 

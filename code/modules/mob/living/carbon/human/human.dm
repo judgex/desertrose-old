@@ -879,7 +879,168 @@
 	if(user == target && can_piggyback(target) && pulling == target && grab_state >= GRAB_AGGRESSIVE && stat == CONSCIOUS)
 		buckle_mob(target,TRUE,TRUE)
 	. = ..()
+		
+/*
+/mob/living/carbon/human/ShiftMiddleClickOn(mob/over)
+	. = ..()
+	if(ishuman(over))
+		var/mob/living/carbon/human/T = over  
+		if(src.is_busy || src.a_intent == INTENT_HELP || get_turf(src) != get_turf(T) || !T.lying || !T )
+			return
+		if(src.zone_selected == BODY_ZONE_HEAD || src.zone_selected == BODY_ZONE_PRECISE_GROIN || src.zone_selected ==	BODY_ZONE_L_ARM || src.zone_selected == BODY_ZONE_R_ARM || src.zone_selected ==	BODY_ZONE_L_LEG || src.zone_selected == BODY_ZONE_R_LEG ) //all the stars align, time to curbstomp
+			src.is_busy = TRUE
 
+			T.Knockdown(1.5 SECONDS)
+
+			if (!do_mob(src, T, 1.5 SECONDS) || get_turf(src) != get_turf(T) || src.a_intent == INTENT_HELP || src == T)
+				src.is_busy = FALSE
+				return
+
+			if(src.zone_selected == BODY_ZONE_HEAD) //curbstomp specific code
+
+				var/increment = (T.lying/90)-2
+				setDir(increment > 0 ? WEST : EAST)
+				for(var/i in 1 to 5)
+					src.pixel_y += 8-i
+					src.pixel_x -= increment
+					sleep(0.2)
+				for(var/i in 1 to 5)
+					src.pixel_y -= 8-i
+					src.pixel_x -= increment
+					sleep(0.2)
+
+				playsound(src, 'sound/effects/hit_kick.ogg', 80, 1, -1)
+				playsound(src, 'sound/weapons/punch2.ogg', 80, 1, -1)
+
+				var/obj/item/bodypart/BP = T.get_bodypart(BODY_ZONE_HEAD)
+				if(BP)
+					BP.receive_damage(50)
+
+				T.visible_message("<span class='warning'>[src] curbstomps [T]!</span>", "<span class='warning'>[src] curbstomps you!</span>")
+
+			else if(src.zone_selected == BODY_ZONE_PRECISE_GROIN) //groinkick specific code
+
+				var/increment = (T.lying/90)-2
+				setDir(increment > 0 ? WEST : EAST)
+				for(var/i in 1 to 5)
+					src.pixel_y += 2-i
+					src.pixel_x -= increment
+					sleep(0.2)
+				for(var/i in 1 to 5)
+					src.pixel_y -= 2-i
+					src.pixel_x -= increment
+					sleep(0.2)
+
+				playsound(src, 'sound/effects/hit_kick.ogg', 80, 1, -1)
+				playsound(src, 'sound/effects/hit_punch.ogg', 80, 1, -1)
+
+				var/obj/item/bodypart/BP = T.get_bodypart(BODY_ZONE_CHEST)
+				if(BP)
+					if(T.gender == MALE)
+						BP.receive_damage(25)
+					else
+						BP.receive_damage(15)
+
+				T.visible_message("<span class='warning'>[src] kicks [T] in the groin!</span>", "<span class='warning'>[src] kicks you in the groin!</span")
+
+			else if(src.zone_selected == BODY_ZONE_L_ARM)
+
+				var/increment = (T.lying/90)-2
+				setDir(increment > 0 ? WEST : EAST)
+				for(var/i in 1 to 5)
+					src.pixel_y += 2-i
+					src.pixel_x -= increment
+					sleep(0.2)
+				for(var/i in 1 to 5)
+					src.pixel_y -= 2-i
+					src.pixel_x -= increment
+					sleep(0.2)
+
+				playsound(src, 'sound/effects/hit_kick.ogg', 80, 1, -1)
+				playsound(src, 'sound/f13effects/bonesnap.ogg', 80, 1, -1)
+
+				var/obj/item/bodypart/BP = T.get_bodypart(BODY_ZONE_L_ARM)
+				if(BP)
+					BP.receive_damage(50)
+
+				T.visible_message("<span class='warning'>[src] snaps [T]'s left arm!</span>", "<span class='warning'>[src] snaps your limb!</span>")
+
+			else if(src.zone_selected == BODY_ZONE_R_ARM)
+
+				var/increment = (T.lying/90)-2
+				setDir(increment > 0 ? WEST : EAST)
+				for(var/i in 1 to 5)
+					src.pixel_y += 2-i
+					src.pixel_x -= increment
+					sleep(0.2)
+				for(var/i in 1 to 5)
+					src.pixel_y -= 2-i
+					src.pixel_x -= increment
+					sleep(0.2)
+
+				playsound(src, 'sound/effects/hit_kick.ogg', 80, 1, -1)
+				playsound(src, 'sound/f13effects/bonesnap.ogg', 80, 1, -1)
+
+				var/obj/item/bodypart/BP = T.get_bodypart(BODY_ZONE_R_ARM)
+				if(BP)
+					BP.receive_damage(50)
+
+				T.visible_message("<span class='warning'>[src] snaps [T]'s right arm!</span>", "<span class='warning'>[src] snaps your limb!</span>")
+
+			else if(src.zone_selected == BODY_ZONE_L_LEG)
+
+				var/increment = (T.lying/90)-2
+				setDir(increment > 0 ? WEST : EAST)
+				for(var/i in 1 to 5)
+					src.pixel_y += 2-i
+					src.pixel_x -= increment
+					sleep(0.2)
+				for(var/i in 1 to 5)
+					src.pixel_y -= 2-i
+					src.pixel_x -= increment
+					sleep(0.2)
+
+				playsound(src, 'sound/effects/hit_kick.ogg', 80, 1, -1)
+				playsound(src, 'sound/f13effects/bonesnap.ogg', 80, 1, -1)
+
+				var/obj/item/bodypart/BP = T.get_bodypart(BODY_ZONE_L_LEG)
+				if(BP)
+					BP.receive_damage(50)
+
+				T.visible_message("<span class='warning'>[src] snaps [T]'s left leg!</span>", "<span class='warning'>[src] snaps your limb!</span>")
+
+			else if(src.zone_selected == BODY_ZONE_R_LEG)
+
+				var/increment = (T.lying/90)-2
+				setDir(increment > 0 ? WEST : EAST)
+				for(var/i in 1 to 5)
+					src.pixel_y += 2-i
+					src.pixel_x -= increment
+					sleep(0.2)
+				for(var/i in 1 to 5)
+					src.pixel_y -= 2-i
+					src.pixel_x -= increment
+					sleep(0.2)
+
+				playsound(src, 'sound/effects/hit_kick.ogg', 80, 1, -1)
+				playsound(src, 'sound/f13effects/bonesnap.ogg', 80, 1, -1)
+
+				var/obj/item/bodypart/BP = T.get_bodypart(BODY_ZONE_R_LEG)
+				if(BP)
+					BP.receive_damage(50)
+
+				T.visible_message("<span class='warning'>[src] snaps [T]'s right leg!</span>", "<span class='warning'>[src] snaps your limb!</span>")
+
+			var/increment = (T.lying/90)-2
+			for(var/i in 1 to 10)
+				src.pixel_x = src.pixel_x + increment
+				sleep(0.1)
+
+			src.pixel_x = 0
+			src.pixel_y = 0 //position reset
+
+			src.is_busy = FALSE
+*/
 //Can C try to piggyback at all.
 /mob/living/carbon/human/proc/can_piggyback(mob/living/carbon/C)
 	if(istype(C) && C.stat == CONSCIOUS)

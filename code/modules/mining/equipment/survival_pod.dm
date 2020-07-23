@@ -290,7 +290,6 @@
 						/obj/item/lava_staff,
 						/obj/item/energy_katana,
 						/obj/item/hierophant_club,
-						/obj/item/his_grace,
 						/obj/item/gun/ballistic/minigun,
 						/obj/item/gun/ballistic/automatic/l6_saw,
 						/obj/item/gun/magic/staff/chaos,

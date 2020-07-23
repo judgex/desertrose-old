@@ -91,6 +91,21 @@
 	color = "#ECFF56" // rgb: 236, 255, 86
 	taste_description = "apples"
 
+/datum/reagent/consumable/mutjuice
+	name = "Mutfruit Juice"
+	id = "mutjuice"
+	description = "The sweet-salty juice of the mutfruit."
+	color = "#660099"
+	taste_description = "sweet and salty"
+	glass_name = "glass of mutfruit juice"
+	glass_desc = "A glass of sweet-salty mutfruit juice."
+
+/datum/reagent/consumable/mutjuice/on_mob_life(mob/living/carbon/M)
+	if(M.getBruteLoss() && prob(50))
+		M.heal_bodypart_damage(0,1, 0)
+		. = 1
+	..()
+
 /datum/reagent/consumable/poisonberryjuice
 	name = "Poison Berry Juice"
 	id = "poisonberryjuice"
@@ -168,6 +183,7 @@
 		. = 1
 	..()
 
+/* Begone, foul meme chemical
 /datum/reagent/consumable/laughter
 	name = "Laughter"
 	id = "laughter"
@@ -175,6 +191,7 @@
 	metabolization_rate = INFINITY
 	color = "#FF4DD2"
 	taste_description = "laughter"
+*/
 
 /datum/reagent/consumable/laughter/on_mob_life(mob/living/carbon/M)
 	M.emote("laugh")
@@ -196,7 +213,7 @@
 
 /datum/reagent/consumable/potato_juice
 	name = "Potato Juice"
-	id = "potato"
+	id = "tato"
 	description = "Juice of the potato. Bleh."
 	nutriment_factor = 2 * REAGENTS_METABOLISM
 	color = "#302000" // rgb: 48, 32, 0
@@ -206,10 +223,10 @@
 	glass_desc = "Bleh..."
 
 /datum/reagent/consumable/tato_juice
-	name = "tato Juice"
-	id = "potato"
+	name = "Tato Juice"
+	id = "tatojuice"
 	description = "Juice of the tato. Smells like bad eggs"
-	nutriment_factor = 2 * REAGENTS_METABOLISM
+	nutriment_factor = 3 * REAGENTS_METABOLISM
 	color = "#302000" // rgb: 48, 32, 0
 	taste_description = "rotten ketchup"
 	glass_icon_state = "glass_brown"
@@ -300,9 +317,9 @@
 	nutriment_factor = 0
 	overdose_threshold = 80
 	taste_description = "bitterness"
-	glass_icon_state = "glass_brown"
-	glass_name = "glass of coffee"
-	glass_desc = "Don't drop it, or you'll send scalding liquid and glass shards everywhere."
+	glass_icon_state = "coffee"
+	glass_name = "mug of coffee"
+	glass_desc = "Don't drop it, or you'll send scalding liquid and ceramic shards everywhere."
 
 /datum/reagent/consumable/coffee/overdose_process(mob/living/M)
 	M.Jitter(5)
@@ -316,6 +333,53 @@
 	M.adjust_bodytemperature(25 * TEMPERATURE_DAMAGE_COEFFICIENT, 0, BODYTEMP_NORMAL)
 	if(holder.has_reagent("frostoil"))
 		holder.remove_reagent("frostoil", 5)
+	..()
+	. = 1
+
+/datum/reagent/consumable/mocha
+	name = "Mocha"
+	id = "mocha"
+	description = "A delicious mix of coffee and chocolate. Also known as a caffe mocha or mochaccino."
+	color = "#482000" // rgb: 72, 32, 0
+	nutriment_factor = 0
+	overdose_threshold = 80
+	taste_description = "creamy chocolate and strong coffee"
+	glass_icon_state = "chocolateglass"
+	glass_name = "mocha"
+	glass_desc = "A delicious mix of coffee and chocolate. Also known as a caffe mocha or mochaccino."
+
+/datum/reagent/consumable/mocha/overdose_process(mob/living/M)
+	M.Jitter(5)
+	..()
+
+/datum/reagent/consumable/mocha/on_mob_life(mob/living/carbon/M)
+	M.dizziness = max(0,M.dizziness-5)
+	M.drowsyness = max(0,M.drowsyness-3)
+	M.AdjustSleeping(-40, FALSE)
+	//310.15 is the normal bodytemp.
+	M.adjust_bodytemperature(25 * TEMPERATURE_DAMAGE_COEFFICIENT, 0, BODYTEMP_NORMAL)
+	if(holder.has_reagent("frostoil"))
+		holder.remove_reagent("frostoil", 5)
+	..()
+	. = 1
+
+/datum/reagent/consumable/icemocha
+	name = "Iced Mocha"
+	id = "icemocha"
+	description = "Chilled mocha, refreshing and invigorating."
+	color = "#102838" // rgb: 16, 40, 56
+	nutriment_factor = 0
+	taste_description = "smooth chocolate and icy coffee"
+	glass_icon_state = "chocolateglass"
+	glass_name = "iced mocha"
+	glass_desc = "Chilled mocha, refreshing and invigorating."
+
+/datum/reagent/consumable/icecoffee/on_mob_life(mob/living/carbon/M)
+	M.dizziness = max(0,M.dizziness-5)
+	M.drowsyness = max(0,M.drowsyness-3)
+	M.AdjustSleeping(-40, FALSE)
+	M.adjust_bodytemperature(-5 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
+	M.Jitter(5)
 	..()
 	. = 1
 
@@ -371,23 +435,6 @@
 	glass_icon_state = "lemonpitcher"
 	glass_name = "pitcher of lemonade"
 	glass_desc = "This drink leaves you feeling nostalgic for some reason."
-
-/datum/reagent/consumable/tea/arnold_palmer
-	name = "Arnold Palmer"
-	id = "arnold_palmer"
-	description = "Encourages the patient to go golfing."
-	color = "#FFB766"
-	nutriment_factor = 2
-	taste_description = "bitter tea"
-	glass_icon_state = "arnold_palmer"
-	glass_name = "Arnold Palmer"
-	glass_desc = "You feel like taking a few golf swings after a few swigs of this."
-
-/datum/reagent/consumable/tea/arnold_palmer/on_mob_life(mob/living/carbon/M)
-	if(prob(5))
-		to_chat(M, "<span class = 'notice'>[pick("You remember to square your shoulders.","You remember to keep your head down.","You can't decide between squaring your shoulders and keeping your head down.","You remember to relax.","You think about how someday you'll get two strokes off your golf game.")]</span>")
-	..()
-	. = 1
 
 /datum/reagent/consumable/icecoffee
 	name = "Iced Coffee"
@@ -803,13 +850,49 @@
 	glass_desc = "Tastes naturally minty, and imparts a very mild numbing sensation."
 
 /datum/reagent/consumable/grenadine
-	name = "Grenadine"
+	name = "Gustov Grenadine"
 	id = "grenadine"
-	description = "Not cherry flavored!"
+	description = "A sticky pre-war bottle of fruit syrup, Also known as grenadine."
 	color = "#EA1D26"
 	taste_description = "sweet pomegranates"
 	glass_name = "glass of grenadine"
 	glass_desc = "Delicious flavored syrup."
+
+/datum/reagent/consumable/parsnipjuice
+	name = "Parsnip Juice"
+	id = "parsnipjuice"
+	description = "Why..."
+	color = "#FFA500"
+	taste_description = "parsnip"
+	glass_name = "glass of parsnip juice"
+
+/datum/reagent/consumable/whitebeetjuice
+	name = "White Beet Juice"
+	id = "whitebeetjuice"
+	description = "Why..."
+	color = "#f5f2d0"
+	taste_description = "white beets"
+	glass_name = "glass of white beet juice"
+	glass_desc = "Why..."
+
+/datum/reagent/consumable/pineapplejuice
+	name = "Pineapple Juice"
+	description = "Tart, tropical, and hotly debated."
+	color = "#F7D435"
+	taste_description = "tangy pineapple"
+	glass_name = "glass of pineapple juice"
+	glass_desc = "Tart, tropical, and hotly debated."
+
+/datum/reagent/consumable/cream_soda
+	name = "Cream Soda"
+	id = "creamsoda"
+	description = "A classic space-American vanilla flavored soft drink."
+	color = "#dcb137"
+	quality = DRINK_VERYGOOD
+	taste_description = "fizzy vanilla"
+	glass_icon_state = "cream_soda"
+	glass_name = "Cream Soda"
+	glass_desc = "A classic space-American vanilla flavored soft drink."
 
 /datum/reagent/consumable/vim
 	name = "Vim"
@@ -817,7 +900,7 @@
 	description = "You've Got Vim!"
 	color = "#946B4A"
 	taste_description = "off-brand nuka-cola"
-	glass_icon_state = "glass_brown"
+	glass_icon_state = "vimglass"
 	glass_name = "glass of Vim"
 	glass_desc = "Unrelated to Nuka-Cola, Vim trademark Circa 2077."
 
@@ -832,6 +915,79 @@
 	M.adjust_bodytemperature(25 * TEMPERATURE_DAMAGE_COEFFICIENT, 0, BODYTEMP_NORMAL)
 	if(holder.has_reagent("frostoil"))
 		holder.remove_reagent("frostoil", 5)
+	..()
+	. = 1
+
+/datum/reagent/consumable/vimquartz
+	name = "Vim Quartz"
+	id = "vimquartz"
+	description = "You've Got Vim! Quartz edition, worse than the Imitation."
+	color = "#946B4A"
+	taste_description = "off-brand nuka-cola but fucking worse"
+	glass_icon_state = "vimquartzglass"
+	glass_name = "Vim Quartz"
+	glass_desc = "You've Got Vim! Quartz edition, worse than the Imitation."
+
+/datum/reagent/consumable/vimquartz/on_mob_life(mob/living/carbon/M)
+	M.Jitter(5)
+	M.vomit(50)
+	M.adjustToxLoss(-2, 0)
+	M.adjustOxyLoss(4, 0)
+	M.dizziness = max(0,M.dizziness-5)
+	M.drowsyness = max(0,M.drowsyness-3)
+	M.AdjustSleeping(-40, FALSE)
+	//310.15 is the normal bodytemp.
+	M.adjust_bodytemperature(25 * TEMPERATURE_DAMAGE_COEFFICIENT, 0, BODYTEMP_NORMAL)
+	if(holder.has_reagent("frostoil"))
+		holder.remove_reagent("frostoil", 5)
+	..()
+	. = 1
+
+/datum/reagent/consumable/vimrefresh
+	name = "Vim Refresh"
+	id = "vimrefresh"
+	description = "You've Got Vim Refresh! Ooooh!"
+	color = "#BFAC9C"
+	taste_description = "off-brand nuka-cola and refreshment"
+	glass_icon_state = "grasshopper"
+	glass_name = "Vim Refresh"
+	glass_desc = "You've Got Vim Refresh! Ooooh!"
+
+/datum/reagent/consumable/vimrefresh/on_mob_life(mob/living/carbon/M)
+	M.Jitter(5)
+	M.adjustFireLoss(-1.5*REM, 0)
+	M.adjustToxLoss(-1.5, 0)
+	M.adjustOxyLoss(1, 0)
+	M.dizziness = max(0,M.dizziness-5)
+	M.drowsyness = max(0,M.drowsyness-3)
+	M.AdjustSleeping(-40, FALSE)
+	//310.15 is the normal bodytemp.
+	M.adjust_bodytemperature(25 * TEMPERATURE_DAMAGE_COEFFICIENT, 0, BODYTEMP_NORMAL)
+	if(holder.has_reagent("frostoil"))
+		holder.remove_reagent("frostoil", 5)
+	..()
+	. = 1
+
+/datum/reagent/consumable/vimice
+	name = "Vim Ice"
+	id = "vimice"
+	description = "You've Got Vim! Cold as the East."
+	color = "#DFECED"
+	taste_description = "cold off-brand nuka-cola"
+	glass_icon_state = "vimiceglass"
+	glass_name = "Iced Vim"
+	glass_desc = "You've Got Vim! Cold as the East."
+
+/datum/reagent/consumable/vimice/on_mob_life(mob/living/carbon/M)
+	M.Jitter(20)
+	M.adjust_bodytemperature(-40 * TEMPERATURE_DAMAGE_COEFFICIENT, T0C)
+	M.adjustFireLoss(-2*REM, 0)
+	M.adjustOxyLoss(1, 0)
+	M.dizziness = max(0,M.dizziness-5)
+	M.drowsyness = max(0,M.drowsyness-3)
+	M.AdjustSleeping(-40, FALSE)
+	//310.15 is the normal bodytemp.
+
 	..()
 	. = 1
 
@@ -1069,5 +1225,369 @@
 	M.drowsyness = 0
 	M.AdjustSleeping(-40, FALSE)
 	M.adjust_bodytemperature(-5 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
+	..()
+	. = 1
+
+//fallout teas
+
+/datum/reagent/consumable/agavetea
+	name = "Agave Tea"
+	id = "agavetea"
+	description = "A soothing herbal rememedy steeped from the Agave Plant. Inhibits increased healing of burns and sores."
+	color = "#FFFF91"
+	nutriment_factor = 0
+	taste_description = "bitterness"
+	glass_icon_state = "tea"
+	glass_name = "Agave Tea"
+	glass_desc = "A soothing herbal rememedy steeped from the Agave Plant. Inhibits increased healing of burns and sores."
+
+/datum/reagent/consumable/agavetea/on_mob_life(mob/living/carbon/M)
+	M.adjustFireLoss(-3*REM, 0)
+	M.nutrition = max(M.nutrition - 3, 0)
+	M.dizziness = max(0,M.dizziness-2)
+	M.drowsyness = max(0,M.drowsyness-1)
+	M.jitteriness = max(0,M.jitteriness-3)
+	M.AdjustSleeping(-20, FALSE)
+	if(M.getToxLoss() && prob(20))
+		M.adjustToxLoss(-1, 0)
+	M.adjust_bodytemperature(20 * TEMPERATURE_DAMAGE_COEFFICIENT, 0, BODYTEMP_NORMAL)
+	..()
+	. = 1
+
+/datum/reagent/consumable/broctea
+	name = "Broc Tea"
+	id = "broctea"
+	description = "A soothing herbal rememedy steeped from the Broc Flower. Increases the clearance and flow of airways."
+	color = "#FF6347"
+	nutriment_factor = 0
+	taste_description = "bitterness"
+	glass_icon_state = "tea"
+	glass_name = "Broc Tea"
+	glass_desc = "A soothing herbal rememedy steeped from the Broc Flower. Increases the clearance and flow of airways."
+
+/datum/reagent/consumable/broctea/on_mob_life(mob/living/carbon/M)
+	M.adjustOxyLoss(-4*REM, 0)
+	M.nutrition = max(M.nutrition - 3, 0)
+	M.dizziness = max(0,M.dizziness-2)
+	M.drowsyness = max(0,M.drowsyness-1)
+	M.jitteriness = max(0,M.jitteriness-3)
+	M.AdjustSleeping(-20, FALSE)
+	if(M.getToxLoss() && prob(20))
+		M.adjustToxLoss(-1, 0)
+	M.adjust_bodytemperature(20 * TEMPERATURE_DAMAGE_COEFFICIENT, 0, BODYTEMP_NORMAL)
+	..()
+	. = 1
+
+/datum/reagent/consumable/broctea
+	name = "Broc Tea"
+	id = "broctea"
+	description = "A soothing herbal rememedy steeped from the Broc Flower. Increases the clearance and flow of airways."
+	color = "#FF6347"
+	nutriment_factor = 0
+	taste_description = "bitterness"
+	glass_icon_state = "tea"
+	glass_name = "Broc Tea"
+	glass_desc = "A soothing herbal rememedy steeped from the Broc Flower. Increases the clearance and flow of airways."
+
+/datum/reagent/consumable/broctea/on_mob_life(mob/living/carbon/M)
+	M.adjustOxyLoss(-4*REM, 0)
+	M.nutrition = max(M.nutrition - 3, 0)
+	M.dizziness = max(0,M.dizziness-2)
+	M.drowsyness = max(0,M.drowsyness-1)
+	M.jitteriness = max(0,M.jitteriness-3)
+	M.AdjustSleeping(-20, FALSE)
+	if(M.getToxLoss() && prob(20))
+		M.adjustToxLoss(-1, 0)
+	M.adjust_bodytemperature(20 * TEMPERATURE_DAMAGE_COEFFICIENT, 0, BODYTEMP_NORMAL)
+	..()
+	. = 1
+
+/datum/reagent/consumable/coyotetea
+	name = "Coyote Tea"
+	id = "coyotetea"
+	description = "A smokey herbal rememedy steeped from coyote tobacco stems. Natural caffeines keep the drinker alert and awake while numbing the senses."
+	color = "#008000"
+	nutriment_factor = 0
+	taste_description = "smoke"
+	glass_icon_state = "coyotetea"
+	glass_name = "Coyote Tea"
+	glass_desc = "A smokey herbal rememedy steeped from coyote tobacco stems. Natural caffeines keep the drinker alert and awake while numbing the senses."
+
+/datum/reagent/consumable/coyotetea/on_mob_life(mob/living/carbon/M)
+	if(prob(10))
+		var/smoke_message = pick("You feel relaxed.", "You feel calmed.","You feel alert.","You feel rugged.")
+		to_chat(M, "<span class='notice'>[smoke_message]</span>")
+	M.AdjustStun(-40, 0)
+	M.AdjustKnockdown(-40, 0)
+	M.AdjustUnconscious(-40, 0)
+	M.adjustStaminaLoss(-1*REM, 0)
+	M.dizziness = max(0,M.dizziness-2)
+	M.drowsyness = max(0,M.drowsyness-1)
+	M.jitteriness = max(0,M.jitteriness-3)
+	M.AdjustSleeping(-20, FALSE)
+	if(M.getToxLoss() && prob(20))
+		M.adjustToxLoss(-1, 0)
+	M.adjust_bodytemperature(20 * TEMPERATURE_DAMAGE_COEFFICIENT, 0, BODYTEMP_NORMAL)
+	..()
+	. = 1
+
+/datum/reagent/consumable/coyotetea
+	name = "Coyote Tea"
+	id = "coyotetea"
+	description = "A smokey herbal rememedy steeped from coyote tobacco stems. Natural caffeines keep the drinker alert and awake while numbing the senses."
+	color = "#008000"
+	nutriment_factor = 0
+	taste_description = "smoke"
+	glass_icon_state = "chocolateglass"
+	glass_name = "Coyote Tea"
+	glass_desc = "A smokey herbal rememedy steeped from coyote tobacco stems. Natural caffeines keep the drinker alert and awake while numbing the senses."
+
+/datum/reagent/consumable/coyotetea/on_mob_life(mob/living/carbon/M)
+	if(prob(10))
+		var/smoke_message = pick("You feel relaxed.", "You feel calmed.","You feel alert.","You feel rugged.")
+		to_chat(M, "<span class='notice'>[smoke_message]</span>")
+	M.AdjustStun(-40, 0)
+	M.AdjustKnockdown(-40, 0)
+	M.AdjustUnconscious(-40, 0)
+	M.adjustStaminaLoss(-1*REM, 0)
+	M.dizziness = max(0,M.dizziness-2)
+	M.drowsyness = max(0,M.drowsyness-1)
+	M.jitteriness = max(0,M.jitteriness-3)
+	M.AdjustSleeping(-20, FALSE)
+	if(M.getToxLoss() && prob(20))
+		M.adjustToxLoss(-1, 0)
+	M.adjust_bodytemperature(20 * TEMPERATURE_DAMAGE_COEFFICIENT, 0, BODYTEMP_NORMAL)
+	..()
+	. = 1
+
+/datum/reagent/consumable/feratea
+	name = "Barrel Tea"
+	id = "feratea"
+	description = "A sour and dry rememedy steeped from barrel cactus fruit. Detoxifies the user through natural filteration and dehydration."
+	color = "#FF6347"
+	nutriment_factor = 0
+	taste_description = "bitterness"
+	glass_icon_state = "tea"
+	glass_name = "Barrel Tea"
+	glass_desc = "A sour and dry rememedy steeped from barrel cactus fruit. Detoxifies the user through natural filteration and dehydration."
+
+/datum/reagent/consumable/feratea/on_mob_life(mob/living/carbon/M)
+	if(prob(80))
+		M.Dizzy(-2)
+		M.Jitter(-2)
+	for(var/datum/reagent/R in M.reagents.reagent_list)
+		if(R != src)
+			M.reagents.remove_reagent(R.id,2.5)
+	if(M.health > 20)
+		M.adjustToxLoss(-3*REM, 0)
+		. = 1
+	M.radiation += 0.1
+	M.dizziness = max(0,M.dizziness-2)
+	M.drowsyness = max(0,M.drowsyness-1)
+	M.jitteriness = max(0,M.jitteriness-3)
+	M.AdjustSleeping(-20, FALSE)
+	if(M.getToxLoss() && prob(20))
+		M.adjustToxLoss(-1, 0)
+	M.adjust_bodytemperature(20 * TEMPERATURE_DAMAGE_COEFFICIENT, 0, BODYTEMP_NORMAL)
+	..()
+	. = 1
+
+/datum/reagent/consumable/pricklytea
+	name = "Prickly Tea"
+	id = "pricklytea"
+	description = "A sweet and fruitfel rememedy steeped from barrel cactus fruit. Keeps you on edge."
+	color = "#FF6347"
+	nutriment_factor = 0
+	taste_description = "sweetness"
+	glass_icon_state = "cafe_latte"
+	glass_name = "Prickly Tea"
+	glass_desc = "A sour and dry rememedy steeped from barrel cactus fruit. Keeps you on edge."
+
+/datum/reagent/consumable/pricklytea/on_mob_life(mob/living/carbon/M)
+	if(prob(33))
+		M.Dizzy(2)
+		M.Jitter(2)
+	..()
+	M.dizziness = max(0,M.dizziness-2)
+	M.drowsyness = max(0,M.drowsyness-1)
+	M.jitteriness = max(0,M.jitteriness-3)
+	M.AdjustSleeping(-20, FALSE)
+	if(M.getToxLoss() && prob(20))
+		M.adjustToxLoss(-1, 0)
+	M.adjust_bodytemperature(20 * TEMPERATURE_DAMAGE_COEFFICIENT, 0, BODYTEMP_NORMAL)
+	..()
+	. = 1
+
+/datum/reagent/consumable/xandertea
+	name = "Xander Tea"
+	id = "xandertea"
+	description = "A engaging herbal rememedy steeped from blitzed Xander root. Detoxifies and replenishes the bodies blood supply."
+	color = "#FF6347"
+	nutriment_factor = 0
+	taste_description = "earthy"
+	glass_icon_state = "coffee"
+	glass_name = "Xander Tea"
+	glass_desc = "A engaging herbal rememedy steeped from blitzed Xander root. Detoxifies and replenishes the bodies blood supply."
+
+/datum/reagent/consumable/xandertea/on_mob_life(mob/living/carbon/M)
+	if(M.blood_volume < BLOOD_VOLUME_NORMAL)
+		M.blood_volume = min(BLOOD_VOLUME_NORMAL, M.blood_volume + 3)
+	M.adjustToxLoss(-4*REM, 0)
+	M.dizziness = max(0,M.dizziness-2)
+	M.drowsyness = max(0,M.drowsyness-1)
+	M.jitteriness = max(0,M.jitteriness-3)
+	M.AdjustSleeping(-20, FALSE)
+	if(M.getToxLoss() && prob(20))
+		M.adjustToxLoss(-1, 0)
+	M.adjust_bodytemperature(20 * TEMPERATURE_DAMAGE_COEFFICIENT, 0, BODYTEMP_NORMAL)
+	..()
+	. = 1
+
+//shake shack royal rumble
+
+/datum/reagent/consumable/nukafloat
+	name = "Nuka Float"
+	id = "nukafloat"
+	description = "A delicious blend of ice-cream and classic Nuka-Cola!"
+	color = "#11111E"
+	nutriment_factor = 10
+	taste_description = "creamy Nuka"
+	glass_icon_state = "nukafloatglass"
+	glass_name = "Nuka Float"
+	glass_desc = "A delicious blend of ice-cream and classic Nuka-Cola!"
+
+/datum/reagent/consumable/nukafloat/on_mob_life(mob/living/carbon/M)
+	M.Jitter(20)
+	M.adjustOxyLoss(-3*REM, 0)
+	M.dizziness +=1.5
+	M.drowsyness = 0
+	M.AdjustSleeping(-40, FALSE)
+	M.adjust_bodytemperature(-10 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
+	..()
+	. = 1
+
+/datum/reagent/consumable/sunsetfloat
+	name = "Sunset Float"
+	id = "sunsetfloat"
+	description = "A delicious blend of ice-cream and classic Sunset Sass!"
+	color = "#734517"
+	nutriment_factor = 10
+	taste_description = "creamy root beer"
+	glass_icon_state = "sunsetfloatglass"
+	glass_name = "Sunset Float"
+	glass_desc = "A delicious blend of ice-cream and classic Sunset Sass!"
+
+/datum/reagent/consumable/sunsetfloat/on_mob_life(mob/living/carbon/M)
+	M.Jitter(20)
+	M.adjustOxyLoss(-3*REM, 0)
+	M.dizziness +=1.5
+	M.drowsyness = 0
+	M.AdjustSleeping(-40, FALSE)
+	M.adjust_bodytemperature(-10 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
+	..()
+	. = 1
+
+/datum/reagent/consumable/bawlsshake
+	name = "Bawls Shake"
+	id = "bawlsshake"
+	description = "A blended shake consumed by those on high energy blitz-lifestyles."
+	color = "#0070E1"
+	nutriment_factor = 10
+	taste_description = "creamy sugar"
+	glass_icon_state = "bawlsshakeglass"
+	glass_name = "Bawls Shake"
+	glass_desc = "A blended shake consumed by those on high energy blitz-lifestyles."
+
+/datum/reagent/consumable/bawlsshake/on_mob_life(mob/living/carbon/M)
+	M.Jitter(20)
+	M.adjustOxyLoss(-3*REM, 0)
+	M.dizziness +=1.5
+	M.drowsyness = 0
+	M.AdjustSleeping(-40, FALSE)
+	M.adjust_bodytemperature(-10 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
+	..()
+	. = 1
+
+/datum/reagent/consumable/jakeshake
+	name = "Jake Shake"
+	id = "jakeshake"
+	description = "Jakes patented shake of Jake."
+	color = "#7ABB5F"
+	nutriment_factor = 10
+	taste_description = "creamy patented juice"
+	glass_icon_state = "jakeshakeglass"
+	glass_name = "Jake Shake"
+	glass_desc ="Jakes patented shake of Jake."
+
+/datum/reagent/consumable/jakeshake/on_mob_life(mob/living/carbon/M)
+	M.Jitter(20)
+	M.adjustOxyLoss(-3*REM, 0)
+	M.dizziness +=1.5
+	M.drowsyness = 0
+	M.AdjustSleeping(-40, FALSE)
+	M.adjust_bodytemperature(-10 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
+	..()
+	. = 1
+
+/datum/reagent/consumable/sweetwaterfloat
+	name = "Sweetwater Float"
+	id = "sweetwaterfloat"
+	description = "The sweetest water."
+	color = "#FAFAF8"
+	nutriment_factor = 10
+	taste_description = "the sweetest water"
+	glass_icon_state = "sweetwaterfloatglass"
+	glass_name = "Sweetwater Float"
+	glass_desc = "The sweetest water."
+
+/datum/reagent/consumable/sweetwaterfloat/on_mob_life(mob/living/carbon/M)
+	M.Jitter(20)
+	M.adjustOxyLoss(-3*REM, 0)
+	M.dizziness +=1.5
+	M.drowsyness = 0
+	M.AdjustSleeping(-40, FALSE)
+	M.adjust_bodytemperature(-10 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
+	..()
+	. = 1
+
+/datum/reagent/consumable/sunsetter
+	name = "Sunsetter"
+	id = "sunsetter"
+	description = "For when the days dawn, lest brings a brighter tommorrow."
+	color = "#B06A24"
+	nutriment_factor = 10
+	taste_description = "days gone by"
+	glass_icon_state = "sunsetterglass"
+	glass_name = "Sunsetter"
+	glass_desc = "For when the days dawn, lest brings a brighter tommorrow."
+
+/datum/reagent/consumable/sunsetter/on_mob_life(mob/living/carbon/M)
+	M.Jitter(20)
+	M.adjustOxyLoss(-3*REM, 0)
+	M.dizziness +=1.5
+	M.drowsyness = 0
+	M.AdjustSleeping(-40, FALSE)
+	M.adjust_bodytemperature(-10 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
+	..()
+	. = 1
+
+/datum/reagent/consumable/yuccashake
+	name = "Yucca Shake"
+	id = "yuccashake"
+	description = "A blended shake consisting of yucca and creamy goodness."
+	color = "#FFD24A"
+	nutriment_factor = 10
+	taste_description = "bannanas and cream"
+	glass_icon_state = "yuccashakeglass"
+	glass_name = "Yucca Shake"
+	glass_desc = "A blended shake consisting of yucca and creamy goodness."
+
+/datum/reagent/consumable/yuccashake/on_mob_life(mob/living/carbon/M)
+	M.Jitter(20)
+	M.adjustOxyLoss(-3*REM, 0)
+	M.dizziness +=1.5
+	M.drowsyness = 0
+	M.AdjustSleeping(-40, FALSE)
+	M.adjust_bodytemperature(-10 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
 	..()
 	. = 1
