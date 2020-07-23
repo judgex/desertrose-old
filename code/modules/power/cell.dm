@@ -379,14 +379,21 @@
 	..()
 	return
 
-/obj/item/stock_parts/cell/ammo/update_icon()
-	return
-
 /obj/item/stock_parts/cell/ammo/mfc
 	name = "microfusion cell"
 	desc = "A microfusion cell, typically used as ammunition for large energy weapons."
-	icon_state = "mfc"
+	icon_state = "mfc-full"
 	maxcharge = 2000
+
+/obj/item/stock_parts/cell/ammo/mfc/process()
+	switch(charge)
+		if (1001 to 2000)
+			icon_state = "mfc-full"
+		if (51 to 1000)
+			icon_state = "mfc-half"
+		if (0 to 50)
+			icon_state = "mfc-empty"
+	. = ..()
 
 /obj/item/stock_parts/cell/ammo/ecp
 	name = "electron charge pack"
@@ -397,8 +404,20 @@
 /obj/item/stock_parts/cell/ammo/ec
 	name = "energy cell"
 	desc = "An energy cell, typically used as ammunition for small-arms energy weapons."
-	icon_state = "ec"
+	icon_state = "ec-full"
 	maxcharge = 1600
+
+/obj/item/stock_parts/cell/ammo/ec/process()
+	switch(charge)
+		if (1101 to 1600)
+			icon_state = "ec-full"
+		if (551 to 1100)
+			icon_state = "ec-twothirds"
+		if (51 to 550)
+			icon_state = "ec-onethirds"
+		if (0 to 50)
+			icon_state = "ec-empty"
+	. = ..()
 
 /obj/item/stock_parts/cell/ammo/alien
 	name = "alien weapon cell"
