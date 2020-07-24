@@ -3,7 +3,7 @@
 
 /obj/effect/landmark/map_load_mark
 	name = "map loader landmark"
-	var/list/templates	//list of template types to pick from -- this is weighted!!! Ie. template = "100",
+	var/list/templates	//list of template types to pick from
 
 /obj/effect/landmark/map_load_mark/Initialize()
 	. = ..()
