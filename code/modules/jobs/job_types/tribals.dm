@@ -33,8 +33,6 @@ Tribal Chief
 	supervisors = "The wellbeing of the tribe and every one of it's members."
 	description = "The leader and central political figure in the Wayfarer Tribe. It is your duty to preserve the culture of your people, including their historic aversion to pre-war weapons and technology. Meanwhile with outsiders you engage in diplomatic meetings with the powers present within the Region to ensure the village's safety and independence. Additional material, lore and information for your faction: https://desert-rose-fallout-13.fandom.com/wiki/Wayfarer_Tribe_Lore"
 	selection_color = "#006666"
-	exp_requirements = 1080
-	exp_type = EXP_TYPE_TRIBAL
 
 	outfit = /datum/outfit/job/tribal/f13chief
 
@@ -68,8 +66,6 @@ Tribal Shaman
 	supervisors = "Tribal Chief"
 	description = "The spiritual leader and cultural core of the Wayfarer Tribe. You aid villagers in their day to day lives by offering guidance and advice, while also acting as the direct aid to the chief. To you the breaking of cultural norms such as an aversion to pre-war weapons and technology is to be taken with the upmost seriousness. Additional material, lore and information for your faction: https://desert-rose-fallout-13.fandom.com/wiki/Wayfarer_Tribe_Lore"
 	selection_color = "#006666"
-	exp_requirements = 1080
-	exp_type = EXP_TYPE_TRIBAL
 
 	outfit = /datum/outfit/job/tribal/f13shaman
 
@@ -102,7 +98,8 @@ Villager
 	supervisors = "Tribal Chief and Shaman"
 	description = "A proud member of the Wayfarer tribe, you do what needs to be done to ensure the survival of yourself and your people while following the laws of the tribe in regards to the historic aversion to pre-war weapons and technology. Additional material, lore and information for your faction: https://desert-rose-fallout-13.fandom.com/wiki/Wayfarer_Tribe_Lore"
 	selection_color = "#008080"
-	exp_type = EXP_TYPE_TRIBAL
+	exp_requirements = 12
+	exp_type = EXP_TYPE_CREW
 
 	outfit = /datum/outfit/job/tribal/f13villager
 

@@ -10,7 +10,6 @@ here's a tip, go search DEFINES/access.dm
 // I swear to god stop copy-pasting you damn snowflakes
 /datum/job/vault
 	department_flag = VAULT
-	exp_type = EXP_TYPE_VAULT
 
 /datum/outfit/job/vault
 	gloves = /obj/item/pda
@@ -39,7 +38,6 @@ Overseer
 	supervisors = "Vault-tec"
 	selection_color = "#ccffcc"
 	req_admin_notify = 1
-	exp_requirements = 2160
 
 	outfit = /datum/outfit/job/vault/f13overseer
 
@@ -92,8 +90,6 @@ Head of Security
 	supervisors = "the Overseer"
 	selection_color = "#ccffcc"
 	req_admin_notify = 1
-	exp_requirements = 960
-	exp_type = EXP_TYPE_SECURITY
 
 	outfit = /datum/outfit/job/vault/f13hos
 
@@ -144,7 +140,6 @@ Medical Doctor
 	description = "You answer directly to the Overseer. You are tasked with providing medical care to Vault Dwellers and ensuring the medical well-being of everyone in the Vault."
 	supervisors = "the Overseer"
 	selection_color = "#ddffdd"
-	exp_requirements = 540
 
 	outfit = /datum/outfit/job/vault/f13doctor
 
@@ -188,7 +183,8 @@ Scientist
 	description = "You answer directly to the Overseer. You are tasked with researching new technologies, conducting mining expeditions (with the approval of Security or the Overseer), and upgrading the machinery of the Vault."
 	supervisors = "the Overseer"
 	selection_color = "#ddffdd"
-	exp_requirements = 360
+	exp_requirements = 12
+	exp_type = EXP_TYPE_VAULT
 
 	outfit = /datum/outfit/job/vault/f13vaultscientist
 
@@ -224,13 +220,11 @@ Security Officer
 	description = "You answer directly to the Chief of Security, and in their absence, the Overseer. You are the first line of defense against civil unrest and outside intrusion. It is your duty to enforce the laws created by the Overseer and proactively seek out potential threats to the safety of Vault residents."
 	supervisors = "the head of security"
 	selection_color = "#ddffdd"
-	exp_requirements = 480
 
 	outfit = /datum/outfit/job/vault/f13security
 
 	access = list(ACCESS_CARGO, ACCESS_SECURITY, ACCESS_SEC_DOORS, ACCESS_BRIG, ACCESS_MORGUE, ACCESS_WEAPONS, ACCESS_FORENSICS_LOCKERS, ACCESS_MINERAL_STOREROOM)
 	minimal_access = list(ACCESS_CARGO, ACCESS_SECURITY, ACCESS_SEC_DOORS, ACCESS_BRIG, ACCESS_WEAPONS, ACCESS_MINERAL_STOREROOM) //BUT SEE /DATUM/JOB/WARDEN/GET_ACCESS()
-
 
 /datum/job/vault/f13officer/get_access()
 	var/list/L = list()
@@ -313,8 +307,6 @@ Security Officer
 	else
 		to_chat(M, "<b>You have not been assigned to any department. Patrol the halls and help where needed.</b>")
 
-
-
 /datum/outfit/job/vault/f13security
 	name = "Vault-tec Security"
 	jobtype = /datum/job/vault/f13officer
@@ -338,7 +330,6 @@ Security Officer
 	backpack_contents = list(/obj/item/melee/classic_baton/telescopic = 1, /obj/item/restraints/handcuffs = 1, /obj/item/ammo_box/magazine/m10mm_adv = 2)
 
 	implants = list(/obj/item/implant/mindshield)
-
 
 /obj/item/radio/headset/headset_sec/alt/department/Initialize()
 	. = ..()
@@ -378,7 +369,8 @@ Vault Engineer
 	description = "You answer directly to the Overseer. You are tasked with overseeing the Reactor, maintaining Vault defenses and machinery, and engaging in construction projects to improve the Vault as a whole."
 	supervisors = "the Overseer"
 	selection_color = "#ddffdd"
-	exp_requirements = 180
+	exp_requirements = 12
+	exp_type = EXP_TYPE_VAULT
 
 	outfit = /datum/outfit/job/vault/f13vaultengineer
 
@@ -401,8 +393,6 @@ Vault Engineer
 	duffelbag = 	/obj/item/storage/backpack/duffelbag/engineering
 	box = 			/obj/item/storage/box/engineer
 
-
-
 /datum/job/vault/f13vaultDweller
 	title = "Vault Dweller"
 	flag = ASSISTANT
@@ -417,7 +407,7 @@ Vault Engineer
 	selection_color = "#ddffdd"
 	access = list()			//See /datum/job/vault/assistant/get_access()
 	minimal_access = list()	//See /datum/job/vault/assistant/get_access()
-	exp_requirements = 900
+	exp_requirements = 12
 	exp_type = EXP_TYPE_CREW
 
 	outfit = /datum/outfit/job/vault/f13vaultDweller
@@ -440,7 +430,6 @@ Vault Engineer
 		uniform = /obj/item/clothing/under/f13/vault13
 		ears = /obj/item/radio/headset/headset_vault
 		shoes = /obj/item/clothing/shoes/jackboots
-
 
 /datum/job/vault/New()
 	..()

@@ -639,7 +639,7 @@ SUBSYSTEM_DEF(job)
 			. |= player.mind
 
 ////////////////////////////////////////
-//Keeps track of all  security members// this needs to be phased out with something eventually
+//Keeps track of all security members// this needs to be phased out with something eventually
 ////////////////////////////////////////
 /datum/controller/subsystem/job/proc/get_all_sec()
 	. = list()

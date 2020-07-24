@@ -87,7 +87,10 @@
 
 #define CAMERA_STATIC_PLANE 18
 #define CAMERA_STATIC_LAYER 18
+
 //HUD layer defines
+
+#define CHAT_LAYER 12.1
 
 #define FULLSCREEN_PLANE 19
 #define FLASH_LAYER 19
@@ -105,4 +108,3 @@
 #define SPLASHSCREEN_LAYER 22
 #define SPLASHSCREEN_PLANE 22
 
-#define CHAT_LAYER 12.1

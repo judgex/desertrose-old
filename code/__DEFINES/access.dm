@@ -64,7 +64,6 @@
 #define ACCESS_WEAPONS 66 //Weapon authorization for secbots
 #define ACCESS_NETWORK 67 //NTnet diagnostics/monitoring software
 #define ACCESS_CLONING 68 //Cloning room and clone pod ejection
-
 	//BEGIN CENTCOM ACCESS
 	/*Should leave plenty of room if we need to add more access levels.
 	Mostly for admin fun times.*/
@@ -87,15 +86,17 @@
 #define ACCESS_FOLLOWER		124	//general followers access
 #define ACCESS_KHAN			125	//general khan access
 #define ACCESS_VAULT_F13	126	//general vault access
+
 #define ACCESS_RESTRICT		127	//general restricted access
 #define ACCESS_MILITARY		128	//general military access
 #define ACCESS_MEDICAL_F13	129	//general medical access
 #define ACCESS_COMMAND		130	//general command access
 
+#define ACCESS_BAR_F13		131 //general bar access. Look, I am not happy but the town needs it
+#define ACCESS_BANK			132	//general bank access. Look, I am not happy but the town needs it
 	//The Syndicate
 #define ACCESS_SYNDICATE 150//General Syndicate Access. Includes Syndicate mechs and ruins.
 #define ACCESS_SYNDICATE_LEADER 151//Nuke Op Leader Access
-
 	//Away Missions or Ruins
 	/*For generic away-mission/ruin access. Why would normal crew have access to a long-abandoned derelict
 	or a 2000 year-old temple? */
@@ -108,7 +109,6 @@
 #define ACCESS_AWAY_GENERIC2 206
 #define ACCESS_AWAY_GENERIC3 207
 #define ACCESS_AWAY_GENERIC4 208
-
 	//Special, for anything that's basically internal
 #define ACCESS_BLOODCULT 250
 #define ACCESS_CLOCKCULT 251
