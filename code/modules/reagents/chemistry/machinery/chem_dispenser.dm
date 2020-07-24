@@ -476,6 +476,7 @@
 		"hcider",
 		"creme_de_menthe",
 		"creme_de_cacao",
+		"creme_de_coconut",
 		"triple_sec",
 		"sake",
 		"fernet"

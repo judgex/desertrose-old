@@ -118,6 +118,8 @@
 #define CAT_DRUGS     "Drugs"
 #define CAT_WASTEFOOD "Wasteland Food"
 #define CAT_BELTS	"Belts"
+#define CAT_BLUEPRINTS	"Blueprints"
+#define CAT_BPWEAPON	"Weapons"
 
 #define RCD_FLOORWALL 1
 #define RCD_AIRLOCK 2
