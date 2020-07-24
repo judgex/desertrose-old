@@ -87,32 +87,13 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 	))
 
 GLOBAL_LIST_INIT(faction_player_positions, list(
-"Senior Paladin",
-"Paladin",
-"Senior Knight",
-"Knight",
-"Senior Scribe",
-"Scribe",
-"Off-Duty",
-"Legion Decanus",
-"Veteran Legionary",
-"Prime Legionary",
-"Legion Vexillarius",
-"Legion Scout",
-"Legion Slavemaster",
-"Legion Explorer",
-"Auxilia",
-"NCR Lieutenant",
-"NCR Sergeant",
-"NCR Corporal",
-"NCR Military Police",
-"NCR Heavy Trooper",
-"NCR Ranger",
-"NCR Trooper",
-"Deputy",
-"Cyborg",
-"Vault-tec Security"
-))
+	"Senior Paladin",
+	"Paladin",
+	"Senior Knight",
+	"Knight",
+	"Senior Scribe",
+	"Scribe",
+	"Off-Duty",
 
 	"Legion Decanus",
 	"Veteran Legionary",
@@ -132,7 +113,9 @@ GLOBAL_LIST_INIT(faction_player_positions, list(
 	"NCR Trooper",
 
 	"Deputy"
-	
+	"Cyborg",
+	"Vault-tec Security"
+	))
 //Whitelisted positions list FO13 anything that shows up here requires that the user have an entry in the 'role_whitelist' table of id,ckey,"antagonist"
 GLOBAL_LIST_INIT(antagonist_whitelist_positions, list(
     "Raider",
