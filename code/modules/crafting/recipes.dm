@@ -2014,7 +2014,7 @@
 
 /datum/crafting_recipe/tribaloutfit
 	name = "Male Tribal Outfit"
-	result = /obj/item/clothing/suit/armor/f13/tribal
+	result = /obj/item/clothing/under/f13/tribal
 	time = 20
 	reqs = list(/obj/item/stack/sheet/animalhide/geckohide = 2)
 	tools = list(TOOL_WORKBENCH)
@@ -2023,7 +2023,7 @@
 
 /datum/crafting_recipe/tribaloutfit
 	name = "Female Tribal Outfit"
-	result = /obj/item/clothing/suit/armor/f13/female/tribal
+	result = /obj/item/clothing/under/f13/female/tribal
 	time = 20
 	reqs = list(/obj/item/stack/sheet/animalhide/geckohide = 2)
 	tools = list(TOOL_WORKBENCH)
@@ -2909,7 +2909,7 @@
 	result = /obj/item/gun/ballistic/automatic/marksman
 	reqs = list(/obj/item/stack/sheet/metal = 10,
 				/obj/item/advanced_crafting_components/assembly = 1,
-				/datum/reagent/blackpowder = 30,	
+				/datum/reagent/blackpowder = 30,
 				/obj/item/stack/crafting/goodparts = 3
 				)
 	tools = list(TOOL_WORKBENCH, /obj/item/blueprint/weapon/marksmanrifle)
