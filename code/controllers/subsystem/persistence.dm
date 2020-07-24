@@ -24,6 +24,7 @@ SUBSYSTEM_DEF(persistence)
 	LoadRecentModes()
 	if(CONFIG_GET(flag/use_antag_rep))
 		LoadAntagReputation()
+	SSmapping.load_marks() //Why is this here? because there's no misc late init subsystem in tg. sigh
 	..()
 
 /datum/controller/subsystem/persistence/proc/LoadSatchels()

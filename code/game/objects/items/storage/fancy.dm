@@ -418,7 +418,7 @@
 /obj/item/storage/box/rubbershot/ComponentInitialize()
 	. = ..()
 	GET_COMPONENT(STR, /datum/component/storage)
-	STR.max_items = 8
+	STR.max_items = 14
 	STR.can_hold = typecacheof(list(/obj/item/ammo_casing/shotgun/rubbershot))
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -435,7 +435,7 @@
 /obj/item/storage/box/rubbershot/beanbag/ComponentInitialize()
 	. = ..()
 	GET_COMPONENT(STR, /datum/component/storage)
-	STR.max_items = 8
+	STR.max_items = 14
 	STR.can_hold = typecacheof(list(/obj/item/ammo_casing/shotgun/beanbag))
 
 /obj/item/storage/box/lethalshot
@@ -485,7 +485,7 @@
 /obj/item/storage/box/lethalshot/ComponentInitialize()
 	. = ..()
 	GET_COMPONENT(STR, /datum/component/storage)
-	STR.max_items = 8
+	STR.max_items = 14
 	STR.can_hold = typecacheof(list(/obj/item/ammo_casing/shotgun/buckshot))
 
 /obj/item/storage/box/magnumshot
@@ -535,7 +535,7 @@
 /obj/item/storage/box/magnumshot/ComponentInitialize()
 	. = ..()
 	GET_COMPONENT(STR, /datum/component/storage)
-	STR.max_items = 8
+	STR.max_items = 14
 	STR.can_hold = typecacheof(list(/obj/item/ammo_casing/shotgun/buckshot))
 
 
@@ -584,7 +584,7 @@
 /obj/item/storage/box/slugshot/ComponentInitialize()
 	. = ..()
 	GET_COMPONENT(STR, /datum/component/storage)
-	STR.max_items = 8
+	STR.max_items = 14
 	STR.can_hold = typecacheof(list(/obj/item/ammo_casing/shotgun))
 
 /obj/item/storage/box/beanbag
@@ -634,5 +634,5 @@
 /obj/item/storage/box/beanbag/ComponentInitialize()
 	. = ..()
 	GET_COMPONENT(STR, /datum/component/storage)
-	STR.max_items = 8
+	STR.max_items = 14
 	STR.can_hold = typecacheof(list(/obj/item/ammo_casing/shotgun/beanbag))
