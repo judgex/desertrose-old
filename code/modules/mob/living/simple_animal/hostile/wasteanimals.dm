@@ -36,15 +36,6 @@
 	gold_core_spawnable = HOSTILE_SPAWN
 	death_sound = 'sound/f13npc/cazador/cazador_death.ogg'
 
-/mob/living/simple_animal/hostile/cazador/playable
-	emote_taunt_sound = null
-	emote_taunt = null
-	aggrosound = null
-	idlesound = null
-	see_in_dark = 8
-	wander = 0
-	anchored = FALSE
-
 /mob/living/simple_animal/hostile/cazador/AttackingTarget()
 	. = ..()
 	if(. && ishuman(target))
@@ -73,21 +64,6 @@
 	melee_damage_lower = 5
 	melee_damage_upper = 10
 	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab/cazador_meat = 1, /obj/item/stack/sheet/animalhide/chitin = 1, /obj/item/stack/sheet/sinew = 1)
-
-/mob/living/simple_animal/hostile/cazador/young/playable
-	emote_taunt_sound = null
-	emote_taunt = null
-	aggrosound = null
-	idlesound = null
-	see_in_dark = 8
-	wander = 0
-	anchored = FALSE
-	health = 150
-	maxHealth = 150
-	melee_damage_lower = 15
-	melee_damage_upper = 25
-	speed = 0
-
 
 /mob/living/simple_animal/hostile/cazador/young/Initialize()
 	. = ..()
@@ -200,20 +176,6 @@
 	emote_taunt_sound = list('sound/f13npc/gecko/gecko_charge1.ogg', 'sound/f13npc/gecko/gecko_charge2.ogg', 'sound/f13npc/gecko/gecko_charge3.ogg',)
 	aggrosound = list('sound/f13npc/gecko/gecko_alert.ogg', )
 	death_sound = 'sound/f13npc/gecko/gecko_death.ogg'
-
-/mob/living/simple_animal/hostile/gecko/playable
-	health = 200
-	maxHealth = 200
-	speed = 0
-	emote_taunt_sound = null
-	emote_taunt = null
-	aggrosound = null
-	idlesound = null
-	see_in_dark = 8
-	wander = 0
-	anchored = FALSE
-	melee_damage_lower = 20
-	melee_damage_upper = 45
 
 /mob/living/simple_animal/hostile/radroach
 	name = "radroach"
@@ -389,19 +351,6 @@
 	death_sound = 'sound/f13npc/nightstalker/death.ogg'
 	attack_sound = 'sound/f13npc/nightstalker/attack1.ogg'
 
-/mob/living/simple_animal/hostile/stalkeryoung/playable
-	health = 250
-	maxHealth = 250
-	emote_taunt_sound = null
-	emote_taunt = null
-	aggrosound = null
-	idlesound = null
-	see_in_dark = 8
-	wander = 0
-	anchored = FALSE
-	melee_damage_lower = 20
-	melee_damage_upper = 45
-
 /mob/living/simple_animal/hostile/stalker/AttackingTarget()
 	. = ..()
 	if(. && ishuman(target))
@@ -444,19 +393,6 @@
 	faction = list("gecko")
 	gold_core_spawnable = HOSTILE_SPAWN
 	a_intent = INTENT_HARM
-
-/mob/living/simple_animal/hostile/stalker/playable
-	health = 300
-	maxHealth = 300
-	emote_taunt_sound = null
-	emote_taunt = null
-	aggrosound = null
-	idlesound = null
-	see_in_dark = 8
-	wander = 0
-	anchored = FALSE
-	melee_damage_lower = 20
-	melee_damage_upper = 45
 
 /mob/living/simple_animal/hostile/stalker/AttackingTarget()
 	. = ..()
