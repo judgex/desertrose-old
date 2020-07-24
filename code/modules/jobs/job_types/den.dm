@@ -21,7 +21,7 @@ Mayor
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "the people of the town"
-	description = "The liason for the town for the deputies and land owners, you pass laws, policies based around the law and commerce that effect those local or passing through. Meanwhile with outsiders you engage in diplomatic meetings and make deals with the powers present within the Region."
+	description = "You are the head honcho of Oasis, and the people look to you for leadership. Pass laws to protect your Citizens, engage in diplomacy with outsiders and make deals with the powers present within the Region to better the people - or exploit them for your own personal gain."
 	selection_color = "#d7b088"
 
 	outfit = /datum/outfit/job/den/f13mayor
@@ -326,7 +326,7 @@ Mayor
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "Your Master(s)."
-	description = "You are a beacon of faith in this godless Mojave wasteland, answering only to the higher beings past the plane of the mortal realm. Spread the beliefs of your divine masters through this land by any means necessary."
+	description = "You are a beacon of faith in the wasteland. Guide the Town and any others who wish to be led on spiritual matters, and try to build your flock. Remember, the Oasis Oak and the Church are the centre of your religion - protect them at all costs."
 	selection_color = "#dcba97"
 	exp_requirements = 12
 	exp_type = EXP_TYPE_CREW
