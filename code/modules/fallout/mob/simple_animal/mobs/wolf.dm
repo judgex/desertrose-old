@@ -42,6 +42,18 @@
 	idlesound = list('sound/f13npc/dog/dog_bark1.ogg', 'sound/f13npc/dog/dog_bark2.ogg', 'sound/f13npc/dog/dog_bark3.ogg')
 	death_sound = 'sound/f13npc/centaur/centaur_death.ogg'
 
+/mob/living/simple_animal/hostile/wolf/playable
+	health = 150
+	maxHealth = 150
+	emote_taunt_sound = null
+	emote_taunt = null
+	aggrosound = null
+	idlesound = null
+	see_in_dark = 8
+	wander = 0
+	anchored = FALSE
+	possible_a_intents = list(INTENT_HELP, INTENT_HARM)
+
 /mob/living/simple_animal/hostile/wolf/alpha
 	name = "alpha feral dog"
 	desc = "The dogs that survived the Great War are a larger, and tougher breed, size of a wolf.<br>Wait... This one's a wolf!"
@@ -53,6 +65,18 @@
 	health = 100
 	melee_damage_lower = 25
 	melee_damage_upper = 35
+
+/mob/living/simple_animal/hostile/wolf/alpha/playable
+	health = 150
+	maxHealth = 150
+	emote_taunt_sound = null
+	emote_taunt = null
+	aggrosound = null
+	idlesound = null
+	see_in_dark = 8
+	wander = 0
+	anchored = FALSE
+	possible_a_intents = list(INTENT_HELP, INTENT_HARM)
 
 /mob/living/simple_animal/hostile/wolf/cold
 	name = "cold feral dog"
