@@ -816,6 +816,23 @@
 	light_type = /obj/item/light/bulb
 	fitting = "bulb"
 
+/obj/machinery/light/floor/update_icon()
+	cut_overlays()
+	switch(status)		// set icon_states
+		if(LIGHT_OK)
+			icon_state = "[base_state]"
+			if(on)
+				var/mutable_appearance/glowybit = mutable_appearance(overlayicon, base_state, BELOW_OBJ_LAYER, GAME_PLANE)
+				glowybit.alpha = CLAMP(light_power*250, 30, 200)
+				add_overlay(glowybit)
+		if(LIGHT_EMPTY)
+			icon_state = "[base_state]-empty"
+		if(LIGHT_BURNED)
+			icon_state = "[base_state]-burned"
+		if(LIGHT_BROKEN)
+			icon_state = "[base_state]-broken"
+	return
+
 //F13 EDIT
 /obj/machinery/light/lampost
 	name = "light post"

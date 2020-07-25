@@ -16,7 +16,7 @@
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
 	var/spawn_text = "emerges from"
 	anchored = TRUE
-	layer = BELOW_MOB_LAYER
+	layer = BELOW_OBJ_LAYER
 
 /obj/structure/nest/Initialize()
 	. = ..()

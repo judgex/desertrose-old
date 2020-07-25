@@ -1382,12 +1382,10 @@
 	loot = list(
 		///obj/item/blueprint/misc/stim,
 		///obj/item/blueprint/misc/superstims,
-		/obj/item/blueprint/weapon/r91,
-	//	/obj/item/blueprint/weapon/infiltrator,
+		/obj/item/blueprint/weapon/R91,
 		/obj/item/blueprint/weapon/uzi,
-	//	/obj/item/blueprint/weapon/breacher,
-	//	/obj/item/blueprint/weapon/killer,
-	//	/obj/item/blueprint/weapon/marksmanrifle,
+		/obj/item/blueprint/weapon/marksmanrifle,
+		/obj/item/blueprint/weapon/smg10mm,
 	//	/obj/item/blueprint/weapon/AER9,
 	//	/obj/item/blueprint/weapon/plasma,
 	//	/obj/item/blueprint/armor/combat
@@ -1401,9 +1399,8 @@
 	//	/obj/item/advanced_crafting_components/flux,
 	//	/obj/item/advanced_crafting_components/lenses,
 	//	/obj/item/advanced_crafting_components/conductors,
-		/obj/item/advanced_crafting_components/reciever,
+		/obj/item/advanced_crafting_components/receiver,
 		/obj/item/advanced_crafting_components/assembly,
-	//	/obj/item/advanced_crafting_components/shotgun,
-	//	/obj/item/advanced_crafting_components/alloys
+	    /obj/item/advanced_crafting_components/alloys
 	)
 
