@@ -144,7 +144,6 @@
 	name = "\improper Unica 6 auto-revolver"
 	desc = "A retro high-powered autorevolver typically used by officers of the New Russia military. Uses .357 ammo."
 	icon_state = "mateba"
-	w_class = WEIGHT_CLASS_NORMAL
 
 /obj/item/gun/ballistic/revolver/golden
 	name = "\improper Golden revolver"
@@ -153,7 +152,6 @@
 	fire_sound = 'sound/weapons/resonator_blast.ogg'
 	recoil = 8
 	pin = /obj/item/firing_pin
-	w_class = WEIGHT_CLASS_NORMAL
 
 // A gun to play Russian Roulette!
 // You can spin the chamber to randomize the position of the bullet.
@@ -335,10 +333,7 @@
 	desc = "A single-shot shotgun. Better not miss."
 	icon_state = "ishotgun"
 	item_state = "sawnshotgun"
-	w_class = WEIGHT_CLASS_NORMAL
 	sawn_off = TRUE
-	slot_flags = ITEM_SLOT_BELT
-
 
 /obj/item/gun/ballistic/revolver/reverse //Fires directly at its user... unless the user is a clown, of course.
 	clumsy_check = 0
@@ -361,13 +356,17 @@
 	icon_state = "m29"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev44
 	fire_sound = 'sound/f13weapons/44mag.ogg'
-	w_class = WEIGHT_CLASS_NORMAL
 	fire_delay = 3
 
 /obj/item/gun/ballistic/revolver/m29/alt
 	item_state = "44magnum"
 	icon_state = "mysterious_m29"
-	w_class = WEIGHT_CLASS_NORMAL
+
+/obj/item/gun/ballistic/revolver/m29/coltwalker
+	name = "Colt Walker 1847"
+	desc = "A legendary gun of the west. The Colt Walker bears a fearsome reputation for a very good reason, finding itself in the hands of everyone from ancient army officials to outlaws throughout the years. An antique when the bombs dropped, the weapon is now incredibly outdated. Still, that doesn't make it any less lethal."
+	item_state = "coltwalker"
+	icon_state = "coltwalker"
 
 /obj/item/gun/ballistic/revolver/m29/peacekeeper
 	name = "Peacekeeper"
@@ -411,7 +410,6 @@
 	zoomable = TRUE
 	zoom_amt = 10
 	zoom_out_amt = 13
-	w_class = WEIGHT_CLASS_NORMAL
 
 /obj/item/gun/ballistic/revolver/colt357
 	name = "\improper .357 magnum revolver"
@@ -419,7 +417,6 @@
 	item_state = "colt357"
 	icon_state = "colt357"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev357
-	w_class = WEIGHT_CLASS_NORMAL
 	fire_delay = 5
 
 /obj/item/gun/ballistic/revolver/colt357/lucky
@@ -427,7 +424,6 @@
 	desc = "Just holding this gun makes you feel like an ace. This .357 revolver has been decorated with a polished ivory handle and a smooth black barrel, and seems just a little quicker on the draw than most guns."
 	item_state = "lucky"
 	icon_state = "lucky"
-	w_class = WEIGHT_CLASS_SMALL
 	fire_delay = 0
 	block_chance = 20 //Do you feel lucky? Well, do you, punk?
 
@@ -445,7 +441,6 @@
 	icon_state = "needler"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/revneedler
 	fire_sound = 'sound/weapons/gunshot_silenced.ogg'
-	w_class = WEIGHT_CLASS_SMALL
 
 /obj/item/gun/ballistic/revolver/colt6250
 	name = "colt 6250"
@@ -453,7 +448,6 @@
 	icon_state = "colt6250"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev6250
 	fire_sound = 'sound/f13weapons/10mm_fire_02.ogg'
-	w_class = WEIGHT_CLASS_NORMAL
 	fire_delay = 3
 
 /obj/item/gun/ballistic/revolver/sequoia
@@ -463,7 +457,6 @@
 	item_state = "sequoia"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev4570
 	fire_sound = 'sound/f13weapons/sequoia.ogg'
-	w_class = WEIGHT_CLASS_NORMAL
 	fire_delay = 4
 
 /obj/item/gun/ballistic/revolver/sequoia/scoped
@@ -473,7 +466,6 @@
 	zoomable = TRUE
 	zoom_amt = 10
 	zoom_out_amt = 13
-	w_class = WEIGHT_CLASS_NORMAL
 
 /obj/item/gun/ballistic/revolver/zipgun
 	name = "zipgun"
@@ -509,7 +501,6 @@
 	icon_state = "thatgun"
 	fire_sound = 'sound/f13weapons/magnum_fire.ogg'
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/thatgun
-	w_class = WEIGHT_CLASS_NORMAL
 
 /obj/item/gun/ballistic/revolver/zhurong
 	name = "Zhu-Rong v417"
