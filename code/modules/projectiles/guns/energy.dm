@@ -253,7 +253,7 @@
 	else 
 		return
 
-/obj/item/gun/energy/attackby(obj/item/A, mob/living/user, params)
+/obj/item/gun/energy/attackby(obj/item/A, mob/user, params)
 	..()
 	if (istype(A, /obj/item/stock_parts/cell/ammo))
 		var/obj/item/stock_parts/cell/ammo/AM = A
