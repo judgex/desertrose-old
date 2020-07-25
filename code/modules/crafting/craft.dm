@@ -50,6 +50,9 @@
 						    CAT_WASTEFOOD),
 						list(	//Clothing subcategories
 							CAT_CLOTHING,
+							CAT_SHOES,
+							CAT_MISCCLOTHING,
+							CAT_ARMOR,
 							CAT_WASTELAND,
 							CAT_BELTS),
 						list( //bp

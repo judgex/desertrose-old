@@ -363,7 +363,7 @@ TODO sprite, ignore for now*/
 //Remington 700
 /obj/item/gun/ballistic/shotgun/remington
 	name = "hunting rifle"
-	desc = "A sturdy hunting rifle, chambered in 308. and in use before the war."
+	desc = "A sturdy hunting rifle, chambered in .308 and in use before the war."
 	icon_state = "308"
 	item_state = "308"
 	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/remington
