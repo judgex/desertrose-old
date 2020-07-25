@@ -234,7 +234,7 @@
 
 
 /obj/item/gun/energy/AltClick(mob/living/user)
-	if (!iscarbon(user))
+	if (!ishuman(user))
 		return
 	if (get_dist(src, user)<2)
 		if(cell)
