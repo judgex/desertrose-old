@@ -2,7 +2,7 @@
 /obj/structure/nest
 	name = "monster nest"
 	desc = "A horrible nest full of monsters."
-	icon = 'icons/mob/nest.dmi'
+	icon = 'icons/mob/nest_new.dmi'
 	icon_state = "hole"
 	var/list/spawned_mobs = list()
 	var/max_mobs = 5

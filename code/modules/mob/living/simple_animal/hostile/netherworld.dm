@@ -64,3 +64,43 @@
 	melee_damage_upper = 10
 	attacktext = "punches"
 	deathmessage = "falls apart into a fine dust."
+/*
+/mob/living/simple_animal/hostile/spawner/nether
+	name = "netherworld link"
+	desc = "A direct link to another dimension full of creatures not very happy to see you. <span class='warning'>Entering the link would be a very bad idea.</span>"
+	icon_state = "nether"
+	icon_living = "nether"
+	health = 50
+	maxHealth = 50
+	spawn_time = 600 //1 minute
+	max_mobs = 15
+	mob_biotypes = list(MOB_INORGANIC)
+	icon = 'icons/mob/nest.dmi'
+	spawn_text = "crawls through"
+	mob_types = list(/mob/living/simple_animal/hostile/netherworld/migo, /mob/living/simple_animal/hostile/netherworld, /mob/living/simple_animal/hostile/netherworld/blankbody)
+	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
+	faction = list("nether")
+	deathmessage = "shatters into oblivion."
+	del_on_death = TRUE
+
+/mob/living/simple_animal/hostile/spawner/nether/attack_hand(mob/user)
+		user.visible_message("<span class='warning'>[user] is violently pulled into the link!</span>", \
+						  "<span class='userdanger'>Touching the portal, you are quickly pulled through into a world of unimaginable horror!</span>")
+		contents.Add(user)
+
+/mob/living/simple_animal/hostile/spawner/nether/Life()
+	..()
+	var/list/C = src.get_contents()
+	for(var/mob/living/M in C)
+		if(M)
+			playsound(src, 'sound/magic/demon_consume.ogg', 50, 1)
+			M.adjustBruteLoss(60)
+			new /obj/effect/gibspawner/generic(get_turf(M))
+			if(M.stat == DEAD)
+				var/mob/living/simple_animal/hostile/netherworld/blankbody/blank
+				blank = new(loc)
+				blank.name = "[M]"
+				blank.desc = "It's [M], but [M.p_their()] flesh has an ashy texture, and [M.p_their()] face is featureless save an eerie smile."
+				src.visible_message("<span class='warning'>[M] reemerges from the link!</span>")
+				qdel(M)
+*/
