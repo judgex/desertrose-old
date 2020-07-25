@@ -233,7 +233,7 @@
 			. = "<span class='danger'>[user] casually lights their [A.name] with [src]. Damn.</span>"
 
 
-/obj/item/gun/energy/AltClick(mob/living/user)
+/obj/item/gun/energy/AltClick(mob/user)
 	if (!ishuman(user))
 		return
 	if (get_dist(src, user)<2)
