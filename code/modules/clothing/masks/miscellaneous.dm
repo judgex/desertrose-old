@@ -358,8 +358,8 @@
 //Desert facewrap
 
 /obj/item/clothing/mask/facewrap
-	name = "desert facewrap"
-	desc = "A facewrap to help shield the face from sand and other dirt."
+	name = "desert headwrap"
+	desc = "A headwrap to help shield the face from sand and other dirt."
 	icon_state = "facewrap"
 	item_state = "facewrap"
 	flags_inv = HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
