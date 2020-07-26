@@ -1047,3 +1047,9 @@
 	icon_state = "mprostitute"
 	item_state = "mprostitute"
 	item_color = "mprostitute"
+
+/obj/item/clothing/under/f13/ravenharness
+	name = "raven harness"
+	desc = "A harness made out of a number of black belts sewn together end on end to form a coiling piece of clothing. A symbol in red has been painted on the front, and a pair of hide pants go with it."
+	icon_state = "raven_harness"
+	item_state = "raven_harness"
