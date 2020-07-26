@@ -186,6 +186,10 @@
 	playsound(src.loc, 'sound/weapons/batonextend.ogg', 50, 1)
 	add_fingerprint(user)
 
+/obj/item/melee/oldstyle/attack(mob/living/target, mob/living/user)
+	if(on && user.zone_selected ==	BODY_ZONE_L_LEG || user.zone_selected == BODY_ZONE_R_LEG)
+		target.Knockdown(3 SECONDS)
+		return ..()
 
 /obj/item/melee/classic_baton
 	name = "police baton"
@@ -200,6 +204,13 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	var/cooldown = 0
 	var/on = TRUE
+
+/obj/item/melee/classic_baton/attack(mob/living/target, mob/living/user)
+	if(on && !user.a_intent == INTENT_HARM && user.zone_selected ==	BODY_ZONE_L_LEG || user.zone_selected == BODY_ZONE_R_LEG)
+		target.Knockdown(3 SECONDS)
+		target.visible_message("<span class ='danger'>[user] hits [target] with [src]!</span>", \
+				"<span class ='userdanger'>[user] hits [target] with [src]!</span>")
+		return ..()
 
 /obj/item/melee/classic_baton/attack(mob/living/target, mob/living/user)
 	if(!on)
@@ -229,7 +240,7 @@
 		if(cooldown <= world.time)
 			if(target.getStaminaLoss() > 120)
 				return
-			if(ishuman(target))
+			if(ishuman(target) && !user.zone_selected ==	BODY_ZONE_L_LEG || !user.zone_selected == BODY_ZONE_R_LEG)
 				var/mob/living/carbon/human/H = target
 				if (H.check_shields(src, 0, "[user]'s [name]", MELEE_ATTACK))
 					return

@@ -124,6 +124,11 @@
 	attack_verb = list("slashed", "stabbed", "sliced", "shanked", "ripped", "lacerated")
 	bayonet = TRUE
 
+/obj/item/kitchen/knife/combat/scrap
+	name = "scrapper combat knife"
+	icon_state = "scrapknife"
+	desc = "A forged combat utility survival knife."
+
 /obj/item/kitchen/knife/combat/survival
 	name = "survival knife"
 	icon_state = "survivalknife"
@@ -146,7 +151,7 @@
 	desc = "A high-quality kitchen knife made from Saturnite alloy, this one seems to be in better condition."
 	icon_state = "cosmic_knife"
 	item_state = "knife"
-	force = 20
+	force = 25
 	throwforce = 15
 	armour_penetration = 10
 
@@ -156,9 +161,9 @@
 	icon_state = "cosmic_knife_heated"
 	item_state = "knife"
 	damtype = BURN
-	force = 25
+	force = 35
 	throwforce = 20
-	armour_penetration = 10
+	armour_penetration = 20
 
 /obj/item/kitchen/knife/combat/bone
 	name = "bone dagger"

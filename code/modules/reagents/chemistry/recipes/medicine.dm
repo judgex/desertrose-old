@@ -112,6 +112,11 @@
 	results = list("salbutamol" = 5)
 	required_reagents = list("sal_acid" = 1, "lithium" = 1, "aluminium" = 1, "bromine" = 1, "ammonia" = 1)
 
+/datum/chemical_reaction/ephedrine
+	results = list("ephedrine" = 4)
+	required_reagents = list("sugar" = 1, "oil" = 1, "hydrogen" = 1, "diethylamine" = 1)
+	mix_message = "The solution fizzes and gives off toxic fumes."
+
 /datum/chemical_reaction/perfluorodecalin
 	name = "Perfluorodecalin"
 	id = "perfluorodecalin"
@@ -251,7 +256,6 @@
 	name = "Stimpak Fluid"
 	id = "stimpak"
 	results = list("stimpak" = 2)
-	required_reagents = list("blood" = 2, "spaceacillin" = 3)
+	required_reagents = list("blood" = 2, "spaceacillin" = 2) //- Review at later date
 	required_temp = 300
-
 

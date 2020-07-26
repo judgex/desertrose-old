@@ -93,45 +93,6 @@ Great Khan
 		H.gang = GK
 
 /*
-Detective
-*/
-/datum/job/wasteland/f13detective
-	title = "Detective"
-	flag = F13WASTELANDER
-	faction = "Wastelander"
-	total_positions = 1
-	spawn_positions = 1
-	description = "As a Detective you are a private eye and investigator who assists law enforcement and private persons to gather evidence, conduct surveillance, find missing people, and verify information. As a private investigator you are not responsible for peacekeeping the wasteland, but by working with forces greater than yourself to resolve conflicts and bring order where it is not present."
-	supervisors = "no one"
-	selection_color = "#dddddd"
-	outfit = /datum/outfit/job/wasteland/f13detective
-
-	access = list()		//we can expand on this and make alterations as people suggest different loadouts
-	minimal_access = list()
-
-
-/datum/outfit/job/wasteland/f13detective
-	name = "Detective"
-	jobtype = /datum/job/wasteland/f13detective
-	suit = /obj/item/clothing/suit/det_suit/grey
-	uniform = /obj/item/clothing/under/f13/detectivealt
-	head = /obj/item/clothing/head/f13/det_hat_alt
-	shoes =  /obj/item/clothing/shoes/laceup
-	id = /obj/item/card/id/silver
-	backpack = /obj/item/storage/backpack/satchel/explorer
-	satchel = /obj/item/storage/backpack/satchel/explorer
-	suit_store = /obj/item/gun/ballistic/revolver/police
-	backpack_contents = list(
-		/obj/item/pda/detective=1,
-		/obj/item/camera/detective=1,
-		/obj/item/toy/crayon/white=1,
-		/obj/item/detective_scanner=1,
-		/obj/item/storage/box/gloves=1,
-		/obj/item/storage/box/evidence=1,
-		/obj/item/ammo_box/a357=2)
-
-
-/*
 Raider
 */
 
@@ -142,8 +103,8 @@ Raider
 	head_announce = list("Security")
 	faction = "Wastelander"
 	social_faction = "Raiders"
-	total_positions = 14
-	spawn_positions = 14
+	total_positions = 15
+	spawn_positions = 15
 	description = "You are an undesirable figure of some kind- perhaps a corrupt official, or a cannibalistic bartender, or a devious conman, to name a few examples. You have more freedom than anyone else in the wastes, and are not bound by the same moral code as others, but though you may only be interested in self-gain, you still have a responsibility to make your time here interesting, fun, and engaging for others- this means that whatever path you pursue should be more nuanced and flavorful than simple highway robbery or slavery. (Adminhelp if you require help setting up your character for the round.)"
 	supervisors = "Your desire to make things interesting and fun"
 	selection_color = "#ff4747"
@@ -316,7 +277,7 @@ Raider
 
 /datum/outfit/loadout/raider_ncr
 	name = "NCR Deserter"
-	suit = /obj/item/clothing/suit/armor/f13/exile
+	suit = /obj/item/clothing/suit/armor/f13/exile/ncrexile
 	uniform = /obj/item/clothing/under/f13/exile
 	id = /obj/item/card/id/rusted
 	backpack_contents = list(
@@ -349,10 +310,11 @@ Raider
     suit = /obj/item/clothing/suit/armor/f13/leather_jacket
     uniform = /obj/item/clothing/under/f13/bennys
     glasses = /obj/item/clothing/glasses/sunglasses
-    shoes =/obj/item/clothing/shoes/f13/fancy
+    shoes = /obj/item/clothing/shoes/f13/fancy
     backpack_contents = list(
         /obj/item/gun/ballistic/automatic/pistol/ninemil=1,
         /obj/item/ammo_box/magazine/m9mm=2,
+		/obj/item/card/id/dogtag/town/mafia=1,
         /obj/item/toy/cards/deck=1)
 
 /datum/outfit/loadout/raider_vault

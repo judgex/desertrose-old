@@ -28,7 +28,7 @@
 	var/dense_when_open = FALSE //if it's dense when open or not
 	var/max_mob_size = MOB_SIZE_HUMAN //Biggest mob_size accepted by the container
 	var/mob_storage_capacity = 3 // how many human sized mob/living can fit together inside a closet.
-	var/storage_capacity = 30 //This is so that someone can't pack hundreds of items in a locker/crate then open it in a populated area to crash clients.
+	var/storage_capacity = 6 //This is so that someone can't pack hundreds of items in a locker/crate then open it in a populated area to crash clients.
 	var/cutting_tool = /obj/item/weldingtool
 	var/open_sound = 'sound/machines/click.ogg'
 	var/close_sound = 'sound/machines/click.ogg'
@@ -260,6 +260,14 @@
 		user.visible_message("<span class='notice'>[user] [anchored ? "anchored" : "unanchored"] \the [src] [anchored ? "to" : "from"] the ground.</span>", \
 						"<span class='notice'>You [anchored ? "anchored" : "unanchored"] \the [src] [anchored ? "to" : "from"] the ground.</span>", \
 						"<span class='italics'>You hear a ratchet.</span>")
+
+	if(anchored)
+		storage_capacity = 30
+	else if(!anchored)
+		storage_capacity = 6
+	if(contents.len >= storage_capacity)
+		bust_open()
+
 	else if(user.a_intent != INTENT_HARM && !(W.item_flags & NOBLUDGEON))
 		if(W.GetID() || !toggle(user))
 			togglelock(user)

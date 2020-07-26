@@ -282,7 +282,7 @@
 /datum/plant_gene/trait/teleport
 	// Makes plant teleport people when squashed or slipped on.
 	// Teleport radius is calculated as max(round(potency*rate), 1)
-	name = "Bluespace Activity"
+	name = "Quantum Activity"
 	rate = 0.1
 
 /datum/plant_gene/trait/teleport/on_squash(obj/item/reagent_containers/food/snacks/grown/G, atom/target)
@@ -295,7 +295,7 @@
 /datum/plant_gene/trait/teleport/on_slip(obj/item/reagent_containers/food/snacks/grown/G, mob/living/carbon/C)
 	var/teleport_radius = max(round(G.seed.potency / 10), 1)
 	var/turf/T = get_turf(C)
-	to_chat(C, "<span class='warning'>You slip through spacetime!</span>")
+	to_chat(C, "<span class='warning'>You slip through the quantum realm!</span>")
 	do_teleport(C, T, teleport_radius)
 	if(prob(50))
 		do_teleport(G, T, teleport_radius)

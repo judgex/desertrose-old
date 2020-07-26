@@ -43,10 +43,29 @@
 	aggrosound = list('sound/f13npc/eyebot/aggro.ogg', )
 	idlesound = list('sound/f13npc/eyebot/idle1.ogg', 'sound/f13npc/eyebot/idle2.ogg')
 	death_sound = 'sound/f13npc/eyebot/robo_death.ogg'
+	speak_emote = list("states")
 
 /mob/living/simple_animal/hostile/eyebot/New()
 	..()
 	name = "ED-[rand(1,99)]"
+
+/mob/living/simple_animal/hostile/eyebot/playable
+	ranged = FALSE
+	health = 200
+	maxHealth = 200
+	attacktext = "zaps"
+	emote_taunt_sound = null
+	emote_taunt = null
+	aggrosound = null
+	idlesound = null
+	see_in_dark = 8
+	wander = 0
+	force_threshold = 10
+	anchored = FALSE
+	del_on_death = FALSE
+	dextrous = TRUE
+	possible_a_intents = list(INTENT_HELP, INTENT_HARM)
+	speed = -1
 
 /mob/living/simple_animal/hostile/eyebot/floatingeye
 	name = "floating eyebot"
@@ -81,7 +100,7 @@
 	mob_biotypes = list(MOB_ROBOTIC)
 	faction = list("hostile", "enclave", "wastebot", "ghoul", "cazador", "supermutant", "bighorner")
 	speak = list("America will never fall to communist invasion.", "Democracy is truth. Communism is death.", "Communism is the very definition of failure!", "Freedom is always worth fighting for.", "Memorial site recognized. Patriotism subroutines engaged. Honoring the fallen is the duty of every red blooded American.", "Cultural database accessed. Quoting New England poet Robert Frost: 'Freedom lies in being bold.'", "Defending Life, Liberty, and the pursuit of Happiness.")
-	speak_emote = list()
+	speak_emote = list("states")
 	emote_hear = list()
 	emote_see = list()
 	response_help  = "shakes the radio of"
@@ -89,3 +108,19 @@
 	response_harm   = "punches"
 	attack_sound = 'sound/voice/liveagain.ogg'
 	butcher_results = list(/obj/effect/gibspawner/robot = 1)
+
+/mob/living/simple_animal/pet/dog/eyebot/playable
+	health = 200
+	maxHealth = 200
+	attacktext = "zaps"
+	aggrosound = null
+	speak_chance = 0
+	idlesound = null
+	see_in_dark = 8
+	wander = 0
+	force_threshold = 10
+	anchored = FALSE
+	del_on_death = FALSE
+	dextrous = TRUE
+	possible_a_intents = list(INTENT_HELP, INTENT_HARM)
+	speed = -1

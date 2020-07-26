@@ -3,7 +3,7 @@
 /obj/item/ammo_casing/shotgun
 	name = "12 gauge slug"
 	desc = "A 12 gauge lead slug."
-	icon_state = "blshell"
+	icon_state = "bbshell"
 	caliber = "shotgun"
 	projectile_type = /obj/item/projectile/bullet/shotgun_slug
 	materials = list(MAT_METAL=1000)
@@ -11,7 +11,7 @@
 /obj/item/ammo_casing/shotgun/beanbag
 	name = "12 gauge beanbag slug"
 	desc = "A weak beanbag slug for riot control."
-	icon_state = "bshell"
+	icon_state = "stunshell"
 	projectile_type = /obj/item/projectile/bullet/shotgun_beanbag
 
 /obj/item/ammo_casing/shotgun/incendiary

@@ -321,6 +321,14 @@
 	icon_state = "militarywebbing"
 	item_state = "militarywebbing"
 
+//General's
+/obj/item/storage/belt/military/generalbelt
+	name = "Militia belt"
+	desc = ""
+	icon_state = "militiabelt"
+	item_state = "militiabelt"
+
+
 /obj/item/storage/belt/military/alt
 	icon_state = "explorer2"
 	item_state = "explorer2"
