@@ -194,11 +194,6 @@
 	item_state = "fedora"
 	desc = "A really cool hat if you're a mobster. A really lame hat if you're not."
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/small
-	
-/obj/item/clothing/head/fedora/armored
-	name = "armored fedora"
-    desc = "A disappointing hat worn only by disappointing people. This one has bits of scrap metal sewn on the inside of it."
-    armor = list("melee" = 25, "bullet" = 25, "laser" = 16,"energy" = 16, "bomb" = 25, "bio" = 0, "rad" = 20, "fire" = 100, "acid" = 50)
 
 /obj/item/clothing/head/fedora/suicide_act(mob/user)
 	if(user.gender == FEMALE)
