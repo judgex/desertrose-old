@@ -1,3 +1,4 @@
+/*
 /mob/living/simple_animal/hostile/spawner
 	name = "monster nest"
 	icon = 'icons/mob/animal.dmi'
@@ -163,3 +164,4 @@
 	name = "wumborian fugu den"
 	desc = "A den housing a nest of wumborian fugus, how do they all even fit in there?"
 	mob_types = list(/mob/living/simple_animal/hostile/asteroid/fugu)
+*/

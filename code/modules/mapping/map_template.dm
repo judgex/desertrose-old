@@ -1,5 +1,6 @@
 /datum/map_template
 	var/name = "Default Template Name"
+	var/id = null
 	var/width = 0
 	var/height = 0
 	var/mappath = null
@@ -7,12 +8,18 @@
 	var/static/datum/maploader/maploader = new
 
 /datum/map_template/New(path = null, rename = null)
-	if(path)
+	if(path && !mappath)
 		mappath = path
+	if(!path && mappath)
+		path = mappath
 	if(mappath)
 		preload_size(mappath)
 	if(rename)
 		name = rename
+	if(!name && id)
+		name = id
+	if(!id && name)
+		id = name
 
 /datum/map_template/proc/preload_size(path)
 	var/datum/parsed_map/parsed = maploader.load_map(file(path), 1, 1, 1, cropMap=FALSE, measureOnly=TRUE)

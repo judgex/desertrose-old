@@ -247,10 +247,14 @@
 	required_reagents = list("vodka" = 2, "cream" = 1, "ice" = 1)
 
 /datum/chemical_reaction/barefoot
+	name = "Barefoot"
+	id = "barefoot"
 	results = list("barefoot" = 3)
 	required_reagents = list("berryjuice" = 1, "cream" = 1, "vermouth" = 1)
 
 /datum/chemical_reaction/painkiller
+	name = "Painkiller"
+	id = "painkiller"
 	results = list("painkiller" = 10)
 	required_reagents = list("creme_de_coconut" = 5, "pineapplejuice" = 4, "orangejuice" = 1)
 

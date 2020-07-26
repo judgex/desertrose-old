@@ -1,6 +1,14 @@
 //Landmarks and other helpers which speed up the mapping process and reduce the number of unique instances/subtypes of items/turf/ect
 
 
+/obj/effect/landmark/map_load_mark
+	name = "map loader landmark"
+	var/list/templates	//list of template types to pick from
+
+/obj/effect/landmark/map_load_mark/Initialize()
+	. = ..()
+	LAZYADD(SSmapping.map_load_marks,src)
+
 
 /obj/effect/baseturf_helper //Set the baseturfs of every turf in the /area/ it is placed.
 	name = "baseturf editor"
