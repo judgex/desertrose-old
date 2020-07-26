@@ -395,10 +395,10 @@
 	icon_state = "mountainrock"
 	smooth = SMOOTH_MORE|SMOOTH_BORDER
 	canSmoothWith = list (/turf/closed)
-	baseturfs = /turf/open/floor/plating/asteroid/snow
-	initial_gas_mix = "o2=22;n2=82;TEMP=180"
+	baseturfs = /turf/open/indestructible/ground/outside/snow
+	initial_gas_mix = "o2=22;n2=82;TEMP=285"
 	environment_type = "snow"
-	turf_type = /turf/open/floor/plating/asteroid/snow
+	turf_type = /turf/open/indestructible/ground/outside/snow
 	defer_change = TRUE
 
 /turf/closed/mineral/snowmountain/cavern
