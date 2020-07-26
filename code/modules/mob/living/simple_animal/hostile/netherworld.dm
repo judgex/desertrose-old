@@ -64,7 +64,7 @@
 	melee_damage_upper = 10
 	attacktext = "punches"
 	deathmessage = "falls apart into a fine dust."
-
+/*
 /mob/living/simple_animal/hostile/spawner/nether
 	name = "netherworld link"
 	desc = "A direct link to another dimension full of creatures not very happy to see you. <span class='warning'>Entering the link would be a very bad idea.</span>"
@@ -103,3 +103,4 @@
 				blank.desc = "It's [M], but [M.p_their()] flesh has an ashy texture, and [M.p_their()] face is featureless save an eerie smile."
 				src.visible_message("<span class='warning'>[M] reemerges from the link!</span>")
 				qdel(M)
+*/
