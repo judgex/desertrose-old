@@ -95,6 +95,8 @@ GLOBAL_LIST_INIT(faction_player_positions, list(
 "NCR Ranger",
 "NCR Trooper",
 "Deputy",
+"Cyborg",
+"Vault-tec Security"
 ))
 
 //Whitelisted positions list FO13 anything that shows up here requires that the user have an entry in the 'role_whitelist' table of id,ckey,"antagonist"
@@ -274,17 +276,16 @@ GLOBAL_LIST_INIT(exp_jobsmap, list(
     EXP_TYPE_NCR           = list("titles" = ncr_positions),
     EXP_TYPE_VAULT         = list("titles" = vault_positions),
     EXP_TYPE_WASTELAND     = list("titles" = wasteland_positions),
-	EXP_TYPE_TRIBAL        = list("titles" = tribal_positions),
-	EXP_TYPE_FOLLOWERS     = list("titles" = followers_positions),
-
+  	EXP_TYPE_TRIBAL        = list("titles" = tribal_positions),
+  	EXP_TYPE_FOLLOWERS     = list("titles" = followers_positions),
     EXP_TYPE_RANGER        = list("titles" = list("NCR Veteran Ranger","NCR Ranger")),
     EXP_TYPE_SCRIBE        = list("titles" = list("Scribe")),
     EXP_TYPE_DECANUS       = list("titles" = list("Legion Decanus")),
 
     EXP_TYPE_TRIBALCOMMAND = list("titles" = list("Chief","Shaman")),
     EXP_TYPE_FOLLOWERSCOMMAND = list("titles" = list("Lead Practitioner")),
-	EXP_TYPE_NCRCOMMAND    = list("titles" = list("NCR Lieutenant","NCR Sergeant","NCR Captain","NCR Ambassador"))
-	// EXP_TYPE_ENCLAVE = list("titles" = enclave_positions),
+  	EXP_TYPE_NCRCOMMAND    = list("titles" = list("NCR Lieutenant","NCR Sergeant","NCR Captain","NCR Ambassador"))
+  	// EXP_TYPE_ENCLAVE = list("titles" = enclave_positions),
     // EXP_TYPE_CREW = list("titles" = command_positions | engineering_positions | medical_positions | science_positions | supply_positions | security_positions | civilian_positions | list("AI","Cyborg")), // crew positions
     // EXP_TYPE_COMMAND = list("titles" = command_positions),
     // EXP_TYPE_ENGINEERING = list("titles" = engineering_positions),

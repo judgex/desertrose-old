@@ -877,6 +877,7 @@
 
 /datum/reagent/consumable/pineapplejuice
 	name = "Pineapple Juice"
+	id = "pineapplejuice"
 	description = "Tart, tropical, and hotly debated."
 	color = "#F7D435"
 	taste_description = "tangy pineapple"

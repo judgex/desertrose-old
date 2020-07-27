@@ -921,7 +921,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/red/whiteredfull,
 /area/f13/vault/security)
 "acP" = (
-/mob/living/simple_animal/hostile/spawner/ghoul,
+/obj/structure/nest/ghoul,
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/sewer)
 "acQ" = (
@@ -1000,9 +1000,9 @@
 /area/shuttle/vault113_elevator)
 "adf" = (
 /obj/machinery/power/apc{
+	areastring = "/area/ai_monitored/turret_protected/ai";
 	dir = 1;
 	name = "AI Chamber APC";
-	areastring = "/area/ai_monitored/turret_protected/ai";
 	pixel_y = 24
 	},
 /obj/structure/cable{
@@ -1104,9 +1104,9 @@
 /area/f13/vault/security)
 "adq" = (
 /obj/machinery/power/apc/highcap/five_k{
+	areastring = "/area/ai_monitored/security/armory";
 	dir = 2;
 	name = "Armory APC";
-	areastring = "/area/ai_monitored/security/armory";
 	pixel_x = 1;
 	pixel_y = -24
 	},
@@ -1837,9 +1837,9 @@
 /area/f13/vault/medical)
 "afL" = (
 /obj/machinery/power/apc{
+	areastring = "/area/medical/storage";
 	dir = 2;
 	name = "Medbay Storage APC";
-	areastring = "/area/medical/storage";
 	pixel_y = -24
 	},
 /obj/structure/cable{
@@ -2003,9 +2003,9 @@
 /area/f13/vault/medical/surgery)
 "agk" = (
 /obj/machinery/power/apc{
+	areastring = "/area/medical/surgery";
 	dir = 4;
 	name = "Surgery APC";
-	areastring = "/area/medical/surgery";
 	pixel_x = 26
 	},
 /obj/structure/cable{
@@ -2354,9 +2354,9 @@
 	},
 /obj/item/twohanded/required/kirbyplants/random,
 /obj/machinery/power/apc{
+	areastring = "/area/medical/medbay/central";
 	dir = 1;
 	name = "Medbay Central APC";
-	areastring = "/area/medical/medbay/central";
 	pixel_y = 24
 	},
 /obj/structure/cable{
@@ -2438,9 +2438,9 @@
 "ahF" = (
 /obj/structure/table,
 /obj/machinery/power/apc{
+	areastring = "/area/medical/chemistry";
 	dir = 8;
 	name = "Chemistry APC";
-	areastring = "/area/medical/chemistry";
 	pixel_x = -24
 	},
 /obj/structure/cable{
@@ -2717,9 +2717,9 @@
 /area/f13/vault/diner)
 "aiq" = (
 /obj/machinery/power/apc{
+	areastring = "/area/crew_quarters/kitchen";
 	dir = 2;
 	name = "Kitchen APC";
-	areastring = "/area/crew_quarters/kitchen";
 	pixel_y = -24
 	},
 /obj/structure/cable{
@@ -4042,9 +4042,9 @@
 "alT" = (
 /obj/structure/closet/crate/bin,
 /obj/machinery/power/apc{
+	areastring = "/area/science/server";
 	dir = 1;
 	name = "Research Division Server Room APC";
-	areastring = "/area/science/server";
 	pixel_y = 25
 	},
 /turf/open/floor/plasteel/f13/vault_floor/purple,
@@ -5134,9 +5134,9 @@
 "apB" = (
 /obj/structure/dresser,
 /obj/machinery/power/apc{
+	areastring = "/area/crew_quarters/dorms";
 	dir = 1;
 	name = "Dormitories APC";
-	areastring = "/area/crew_quarters/dorms";
 	pixel_y = 24
 	},
 /obj/structure/cable{
@@ -5302,9 +5302,9 @@
 	dir = 8
 	},
 /obj/machinery/power/apc{
+	areastring = "/area/security/checkpoint/engineering";
 	dir = 8;
 	name = "Engineering Security APC";
-	areastring = "/area/security/checkpoint/engineering";
 	pixel_x = -24
 	},
 /obj/structure/cable{
@@ -7066,10 +7066,6 @@
 	icon_state = "dark"
 	},
 /area/f13/brotherhood)
-"avi" = (
-/obj/machinery/vending/cola/shamblers,
-/turf/open/floor/wood,
-/area/f13/city)
 "avj" = (
 /obj/machinery/light,
 /obj/effect/turf_decal/bot,
@@ -7176,8 +7172,8 @@
 /area/f13/wasteland)
 "avz" = (
 /turf/open/floor/f13{
-	tag = "icon-stagestairs";
-	icon_state = "stagestairs"
+	icon_state = "stagestairs";
+	tag = "icon-stagestairs"
 	},
 /area/f13/brotherhood)
 "avA" = (
@@ -8129,8 +8125,8 @@
 	req_access_txt = "120"
 	},
 /turf/open/floor/f13{
-	tag = "icon-stagestairs";
-	icon_state = "stagestairs"
+	icon_state = "stagestairs";
+	tag = "icon-stagestairs"
 	},
 /area/f13/brotherhood)
 "ayB" = (
@@ -8143,8 +8139,8 @@
 	obj_integrity = 1000
 	},
 /turf/open/floor/f13{
-	tag = "icon-stagestairs";
-	icon_state = "stagestairs"
+	icon_state = "stagestairs";
+	tag = "icon-stagestairs"
 	},
 /area/f13/brotherhood)
 "ayC" = (
@@ -10069,17 +10065,17 @@
 "aFl" = (
 /obj/structure/barricade/sandbags,
 /turf/open/indestructible/ground/outside/dirt{
-	tag = "icon-dirt (NORTHWEST)";
+	dir = 9;
 	icon_state = "dirt";
-	dir = 9
+	tag = "icon-dirt (NORTHWEST)"
 	},
 /area/f13/underground/mountain)
 "aFm" = (
 /obj/structure/barricade/sandbags,
 /turf/open/indestructible/ground/outside/dirt{
-	tag = "icon-dirt (NORTH)";
+	dir = 1;
 	icon_state = "dirt";
-	dir = 1
+	tag = "icon-dirt (NORTH)"
 	},
 /area/f13/underground/mountain)
 "aFn" = (
@@ -10093,9 +10089,9 @@
 "aFp" = (
 /obj/structure/barricade/sandbags,
 /turf/open/indestructible/ground/outside/dirt{
-	tag = "icon-dirt (NORTHEAST)";
+	dir = 5;
 	icon_state = "dirt";
-	dir = 5
+	tag = "icon-dirt (NORTHEAST)"
 	},
 /area/f13/underground/mountain)
 "aFq" = (
@@ -10165,8 +10161,8 @@
 /area/f13/klamat)
 "aFD" = (
 /obj/structure/simple_door/house{
-	tag = "icon-interior";
-	icon_state = "interior"
+	icon_state = "interior";
+	tag = "icon-interior"
 	},
 /turf/open/floor/carpet/black,
 /area/f13/casino)
@@ -10336,9 +10332,9 @@
 /area/f13/klamat)
 "aGn" = (
 /turf/open/indestructible/ground/outside/dirt{
-	tag = "icon-dirt (NORTH)";
+	dir = 1;
 	icon_state = "dirt";
-	dir = 1
+	tag = "icon-dirt (NORTH)"
 	},
 /area/f13/wasteland)
 "aGo" = (
@@ -10566,18 +10562,11 @@
 /area/f13/wasteland)
 "aHd" = (
 /turf/open/indestructible/ground/outside/dirt{
-	tag = "icon-dirt (NORTHEAST)";
+	dir = 5;
 	icon_state = "dirt";
-	dir = 5
+	tag = "icon-dirt (NORTHEAST)"
 	},
 /area/f13/underground/mountain)
-"aHe" = (
-/obj/structure/flora/tree/tall{
-	icon_state = "tree_3";
-	tag = "icon-tree_3"
-	},
-/turf/open/floor/grass/snow,
-/area/f13/wasteland)
 "aHf" = (
 /turf/open/indestructible/ground/outside/sidewalk{
 	dir = 1;
@@ -10787,9 +10776,9 @@
 "aHO" = (
 /obj/structure/barricade/sandbags,
 /turf/open/indestructible/ground/outside/dirt{
-	tag = "icon-dirt (SOUTHWEST)";
+	dir = 10;
 	icon_state = "dirt";
-	dir = 10
+	tag = "icon-dirt (SOUTHWEST)"
 	},
 /area/f13/underground/mountain)
 "aHP" = (
@@ -10801,8 +10790,8 @@
 /area/f13/underground/mountain)
 "aHQ" = (
 /obj/structure/window/fulltile/house{
-	tag = "icon-housewindowbrokenvertical (NORTHEAST)";
-	icon_state = "housewindowbrokenvertical"
+	icon_state = "housewindowbrokenvertical";
+	tag = "icon-housewindowbrokenvertical (NORTHEAST)"
 	},
 /obj/structure/barricade/wooden/planks/pregame,
 /turf/open/indestructible/ground/outside/dirt,
@@ -10891,8 +10880,8 @@
 /area/f13/wasteland)
 "aIf" = (
 /obj/structure/window/fulltile/house{
-	tag = "icon-housewindowvertical (NORTHEAST)";
-	icon_state = "housewindowvertical"
+	icon_state = "housewindowvertical";
+	tag = "icon-housewindowvertical (NORTHEAST)"
 	},
 /obj/structure/barricade/wooden/planks/pregame,
 /turf/open/indestructible/ground/outside/dirt,
@@ -10975,15 +10964,15 @@
 /area/f13/casino)
 "aIv" = (
 /obj/structure/simple_door/house{
-	tag = "icon-interior";
-	icon_state = "interior"
+	icon_state = "interior";
+	tag = "icon-interior"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/cmo,
 /area/f13/casino)
 "aIw" = (
 /obj/structure/simple_door/house{
-	tag = "icon-interior";
-	icon_state = "interior"
+	icon_state = "interior";
+	tag = "icon-interior"
 	},
 /turf/open/floor/plasteel/dark,
 /area/f13/casino)
@@ -10995,9 +10984,9 @@
 /area/f13/casino)
 "aIy" = (
 /obj/structure/window/fulltile/house{
-	tag = "icon-housewindowbroken";
+	dir = 2;
 	icon_state = "housewindowbroken";
-	dir = 2
+	tag = "icon-housewindowbroken"
 	},
 /obj/structure/barricade/wooden/planks/pregame,
 /turf/open/indestructible/ground/outside/dirt,
@@ -11518,8 +11507,8 @@
 /area/f13/klamat)
 "aKg" = (
 /obj/structure/simple_door/house{
-	tag = "icon-interior";
-	icon_state = "interior"
+	icon_state = "interior";
+	tag = "icon-interior"
 	},
 /turf/open/floor/carpet,
 /area/f13/casino)
@@ -12173,9 +12162,9 @@
 /area/f13/wasteland)
 "aMe" = (
 /obj/structure/window/fulltile/house{
-	tag = "icon-housewindowbrokenvertical";
+	dir = 2;
 	icon_state = "housewindowbrokenvertical";
-	dir = 2
+	tag = "icon-housewindowbrokenvertical"
 	},
 /obj/structure/barricade/wooden/planks/pregame,
 /turf/open/indestructible/ground/outside/dirt,
@@ -12245,9 +12234,9 @@
 /area/f13/underground/mountain)
 "aMq" = (
 /obj/structure/toilet{
-	tag = "icon-toilet00 (WEST)";
+	dir = 8;
 	icon_state = "toilet00";
-	dir = 8
+	tag = "icon-toilet00 (WEST)"
 	},
 /turf/open/floor/f13{
 	icon_state = "whitegreenrustychess"
@@ -12306,8 +12295,8 @@
 /area/f13/wasteland)
 "aMD" = (
 /obj/structure/window/fulltile/house{
-	tag = "icon-housewindowvertical (NORTHEAST)";
-	icon_state = "housewindowvertical"
+	icon_state = "housewindowvertical";
+	tag = "icon-housewindowvertical (NORTHEAST)"
 	},
 /turf/open/floor/f13/wood,
 /area/f13/underground/mountain)
@@ -12405,9 +12394,9 @@
 /area/f13/underground/mountain)
 "aMW" = (
 /obj/structure/chair/wood{
-	tag = "icon-wooden_chair_settler (EAST)";
+	dir = 4;
 	icon_state = "wooden_chair_settler";
-	dir = 4
+	tag = "icon-wooden_chair_settler (EAST)"
 	},
 /turf/open/floor/f13/wood,
 /area/f13/underground/mountain)
@@ -12437,9 +12426,9 @@
 /area/f13/underground/mountain)
 "aNc" = (
 /obj/structure/chair/wood{
-	tag = "icon-wooden_chair_settler (NORTH)";
+	dir = 1;
 	icon_state = "wooden_chair_settler";
-	dir = 1
+	tag = "icon-wooden_chair_settler (NORTH)"
 	},
 /turf/open/floor/f13/wood,
 /area/f13/underground/mountain)
@@ -13063,16 +13052,16 @@
 "aPq" = (
 /obj/structure/barricade/wooden,
 /obj/structure/decoration/rag{
-	tag = "icon-skin";
-	icon_state = "skin"
+	icon_state = "skin";
+	tag = "icon-skin"
 	},
 /turf/open/floor/grass/snow,
 /area/f13/wasteland)
 "aPr" = (
 /obj/structure/simple_door/interior,
 /obj/structure/decoration/rag{
-	tag = "icon-skulls";
-	icon_state = "skulls"
+	icon_state = "skulls";
+	tag = "icon-skulls"
 	},
 /turf/open/floor/f13/wood,
 /area/f13/wasteland)
@@ -13127,8 +13116,8 @@
 "aPz" = (
 /obj/structure/barricade/wooden,
 /obj/structure/decoration/rag{
-	tag = "icon-skulls";
-	icon_state = "skulls"
+	icon_state = "skulls";
+	tag = "icon-skulls"
 	},
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland)
@@ -13181,8 +13170,8 @@
 "aPK" = (
 /obj/structure/barricade/wooden,
 /obj/structure/decoration/rag{
-	tag = "icon-skulls";
-	icon_state = "skulls"
+	icon_state = "skulls";
+	tag = "icon-skulls"
 	},
 /turf/open/floor/grass/snow,
 /area/f13/wasteland)
@@ -13203,8 +13192,8 @@
 /area/f13/city)
 "aPO" = (
 /obj/structure/simple_door/house{
-	tag = "icon-interior";
-	icon_state = "interior"
+	icon_state = "interior";
+	tag = "icon-interior"
 	},
 /obj/structure/barricade/wooden/crude,
 /turf/open/floor/f13/wood,
@@ -13282,13 +13271,13 @@
 /area/f13/city)
 "aQb" = (
 /obj/structure/window/fulltile/house{
-	tag = "icon-housewindowbrokenvertical";
+	dir = 2;
 	icon_state = "housewindowbrokenvertical";
-	dir = 2
+	tag = "icon-housewindowbrokenvertical"
 	},
 /obj/structure/decoration/rag{
-	tag = "icon-skulls";
-	icon_state = "skulls"
+	icon_state = "skulls";
+	tag = "icon-skulls"
 	},
 /turf/open/floor/f13/wood,
 /area/f13/wasteland)
@@ -13302,11 +13291,11 @@
 /area/f13/underground/mountain)
 "aQe" = (
 /obj/structure/toilet{
-	tag = "icon-toilet00 (EAST)";
-	icon_state = "toilet00";
 	dir = 4;
+	icon_state = "toilet00";
 	pixel_x = -3;
-	pixel_y = 0
+	pixel_y = 0;
+	tag = "icon-toilet00 (EAST)"
 	},
 /turf/open/floor/f13/wood,
 /area/f13/wasteland)
@@ -13323,16 +13312,16 @@
 "aQh" = (
 /obj/structure/barricade/wooden,
 /obj/structure/decoration/rag{
-	tag = "icon-skulls";
-	icon_state = "skulls"
+	icon_state = "skulls";
+	tag = "icon-skulls"
 	},
 /turf/open/floor/f13/wood,
 /area/f13/wasteland)
 "aQi" = (
 /obj/structure/barricade/wooden,
 /obj/structure/decoration/rag{
-	tag = "icon-skin";
-	icon_state = "skin"
+	icon_state = "skin";
+	tag = "icon-skin"
 	},
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland)
@@ -13666,8 +13655,8 @@
 	})
 "aRh" = (
 /turf/open/indestructible/ground/outside/sidewalk{
-	tag = "icon-horizontaloutermain1";
-	icon_state = "horizontaloutermain1"
+	icon_state = "horizontaloutermain1";
+	tag = "icon-horizontaloutermain1"
 	},
 /area/f13/city{
 	name = "museum"
@@ -13761,9 +13750,9 @@
 /area/f13/vault/garden)
 "aRu" = (
 /obj/machinery/power/apc{
+	areastring = "/area/hydroponics";
 	dir = 2;
 	name = "Hydroponics APC";
-	areastring = "/area/hydroponics";
 	pixel_y = -28
 	},
 /obj/structure/cable,
@@ -13878,16 +13867,16 @@
 	})
 "aRO" = (
 /turf/open/indestructible/ground/outside/dirt{
-	tag = "icon-dirt (NORTHWEST)";
+	dir = 9;
 	icon_state = "dirt";
-	dir = 9
+	tag = "icon-dirt (NORTHWEST)"
 	},
 /area/f13/wasteland)
 "aRP" = (
 /turf/open/indestructible/ground/outside/dirt{
-	tag = "icon-dirt (NORTHEAST)";
+	dir = 5;
 	icon_state = "dirt";
-	dir = 5
+	tag = "icon-dirt (NORTHEAST)"
 	},
 /area/f13/wasteland)
 "aRQ" = (
@@ -13937,9 +13926,9 @@
 "aRV" = (
 /obj/structure/flora/wasteplant/wild_xander,
 /turf/open/indestructible/ground/outside/dirt{
-	tag = "icon-dirt (NORTH)";
+	dir = 1;
 	icon_state = "dirt";
-	dir = 1
+	tag = "icon-dirt (NORTH)"
 	},
 /area/f13/wasteland)
 "aRW" = (
@@ -14049,15 +14038,6 @@
 /area/f13/city{
 	name = "museum"
 	})
-"aSl" = (
-/obj/structure/table/wood,
-/obj/item/reagent_containers/food/drinks/bottle/sunset,
-/turf/open/floor/f13{
-	icon_state = "floordirty"
-	},
-/area/f13/city{
-	name = "museum"
-	})
 "aSm" = (
 /obj/structure/sign/poster/official/random,
 /turf/closed/wall/f13/store,
@@ -14123,9 +14103,9 @@
 	})
 "aSu" = (
 /turf/open/indestructible/ground/outside/dirt{
-	tag = "icon-dirt (SOUTHWEST)";
+	dir = 10;
 	icon_state = "dirt";
-	dir = 10
+	tag = "icon-dirt (SOUTHWEST)"
 	},
 /area/f13/wasteland)
 "aSv" = (
@@ -14277,30 +14257,13 @@
 	})
 "aSP" = (
 /obj/structure/toilet{
-	tag = "icon-toilet00 (WEST)";
+	dir = 8;
 	icon_state = "toilet00";
-	dir = 8
+	tag = "icon-toilet00 (WEST)"
 	},
 /turf/open/floor/f13{
 	icon_state = "whitegreenrustychess"
 	},
-/area/f13/city{
-	name = "museum"
-	})
-"aSQ" = (
-/obj/item/reagent_containers/food/drinks/bottle/sunset,
-/obj/item/reagent_containers/food/drinks/bottle/nukacola{
-	pixel_x = 4;
-	pixel_y = 6
-	},
-/obj/item/reagent_containers/food/drinks/bottle/nukacola{
-	pixel_x = 4;
-	pixel_y = 6
-	},
-/obj/item/reagent_containers/food/drinks/bottle/sunset,
-/obj/item/reagent_containers/food/drinks/bottle/sunset,
-/obj/structure/table/wood,
-/turf/open/floor/f13/wood,
 /area/f13/city{
 	name = "museum"
 	})
@@ -14442,8 +14405,8 @@
 	})
 "aTi" = (
 /obj/structure/flora/tree/tall{
-	tag = "icon-tree_3";
-	icon_state = "tree_3"
+	icon_state = "tree_3";
+	tag = "icon-tree_3"
 	},
 /turf/open/floor/grass/snow,
 /area/f13/city{
@@ -15071,9 +15034,9 @@
 "aUH" = (
 /obj/structure/flora/wasteplant/wild_broc,
 /turf/open/indestructible/ground/outside/dirt{
-	tag = "icon-dirt (NORTH)";
+	dir = 1;
 	icon_state = "dirt";
-	dir = 1
+	tag = "icon-dirt (NORTH)"
 	},
 /area/f13/wasteland)
 "aUI" = (
@@ -16327,14 +16290,6 @@
 	tag = "icon-housewood2"
 	},
 /area/f13/city)
-"aXZ" = (
-/obj/structure/table/wood,
-/obj/item/clothing/head/helmet/f13/eyebot,
-/turf/open/floor/f13/wood{
-	icon_state = "housewood2";
-	tag = "icon-housewood2"
-	},
-/area/f13/city)
 "aYa" = (
 /obj/effect/spawner/lootdrop/trash,
 /turf/open/indestructible/ground/outside/desert,
@@ -17434,8 +17389,8 @@
 "bbO" = (
 /obj/structure/simple_door/bunker/glass,
 /turf/open/indestructible/ground/outside/sidewalk{
-	tag = "icon-horizontaloutermain1";
-	icon_state = "horizontaloutermain1"
+	icon_state = "horizontaloutermain1";
+	tag = "icon-horizontaloutermain1"
 	},
 /area/shuttle/bunker_elevator)
 "bbP" = (
@@ -18042,9 +17997,9 @@
 /area/construction/mining)
 "bdc" = (
 /obj/machinery/power/apc{
+	areastring = "/area/science/robotics/mechbay";
 	dir = 4;
 	name = "Mech Bay APC";
-	areastring = "/area/science/robotics/mechbay";
 	pixel_x = 28
 	},
 /obj/structure/cable{
@@ -18217,8 +18172,8 @@
 /area/f13/ahs)
 "bdG" = (
 /obj/structure/flora/tree/tall{
-	tag = "icon-tree_3";
-	icon_state = "tree_3"
+	icon_state = "tree_3";
+	tag = "icon-tree_3"
 	},
 /turf/open/floor/grass/snow,
 /area/f13/wasteland)
@@ -18346,8 +18301,8 @@
 	pixel_y = 21
 	},
 /turf/open/floor/f13/wood{
-	tag = "icon-housewood2";
-	icon_state = "housewood2"
+	icon_state = "housewood2";
+	tag = "icon-housewood2"
 	},
 /area/f13/shack)
 "bed" = (
@@ -18388,8 +18343,8 @@
 /area/f13/shack)
 "bel" = (
 /obj/structure/window/fulltile/house{
-	tag = "icon-housewindowvertical (NORTHEAST)";
-	icon_state = "housewindowvertical"
+	icon_state = "housewindowvertical";
+	tag = "icon-housewindowvertical (NORTHEAST)"
 	},
 /obj/structure/barricade/wooden/crude/snow,
 /turf/open/floor/f13/wood,
@@ -18419,8 +18374,8 @@
 	dir = 4
 	},
 /turf/open/floor/f13/wood{
-	tag = "icon-housewood2";
-	icon_state = "housewood2"
+	icon_state = "housewood2";
+	tag = "icon-housewood2"
 	},
 /area/f13/shack)
 "beq" = (
@@ -18429,9 +18384,9 @@
 /area/f13/shack)
 "ber" = (
 /obj/structure/chair{
-	tag = "icon-chair (EAST)";
+	dir = 4;
 	icon_state = "chair";
-	dir = 4
+	tag = "icon-chair (EAST)"
 	},
 /obj/effect/decal/cleanable/blood/old,
 /obj/item/clothing/under/pants/f13/ghoul,
@@ -18474,11 +18429,11 @@
 /area/f13/shack)
 "bew" = (
 /obj/item/ammo_casing/caseless{
-	tag = "icon-sS-casing (SOUTHWEST)";
-	icon_state = "sS-casing";
 	dir = 10;
+	icon_state = "sS-casing";
 	pixel_x = 0;
-	pixel_y = 0
+	pixel_y = 0;
+	tag = "icon-sS-casing (SOUTHWEST)"
 	},
 /turf/open/floor/f13/wood,
 /area/f13/shack)
@@ -20108,9 +20063,9 @@
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc{
+	areastring = "/area/security/checkpoint/engineering";
 	dir = 8;
 	name = "Engineering Security APC";
-	areastring = "/area/security/checkpoint/engineering";
 	pixel_x = -24
 	},
 /turf/open/floor/plasteel/f13/vault_floor/yellow/whiteyellowfull,
@@ -20822,9 +20777,9 @@
 /area/f13/city)
 "blZ" = (
 /obj/structure/toilet{
-	tag = "icon-toilet00 (WEST)";
+	dir = 8;
 	icon_state = "toilet00";
-	dir = 8
+	tag = "icon-toilet00 (WEST)"
 	},
 /turf/open/floor/plasteel/cmo,
 /area/f13/city)
@@ -20865,9 +20820,9 @@
 /area/f13/city)
 "bmg" = (
 /obj/structure/toilet{
-	tag = "icon-toilet00 (WEST)";
+	dir = 8;
 	icon_state = "toilet00";
-	dir = 8
+	tag = "icon-toilet00 (WEST)"
 	},
 /turf/open/floor/f13/wood,
 /area/f13/city)
@@ -20961,9 +20916,9 @@
 /area/f13/shack)
 "bmz" = (
 /obj/item/ammo_casing/caseless{
-	tag = "icon-sS-casing (EAST)";
+	dir = 4;
 	icon_state = "sS-casing";
-	dir = 4
+	tag = "icon-sS-casing (EAST)"
 	},
 /turf/open/floor/f13/wood,
 /area/f13/shack)
@@ -121449,7 +121404,7 @@ aQY
 aQx
 aQN
 aRS
-aSl
+aRS
 aSr
 aRS
 aRS
@@ -123065,7 +123020,7 @@ aQx
 aQx
 aQN
 aRX
-aSl
+aRS
 aSd
 aRS
 aST
@@ -123267,7 +123222,7 @@ aQx
 aQx
 aQN
 aSc
-aSl
+aRS
 aSd
 aRS
 aRS
@@ -126915,7 +126870,7 @@ aTp
 aTs
 aRX
 aSd
-aSl
+aRS
 aSd
 aQN
 aRU
@@ -127107,7 +127062,7 @@ aQN
 aQU
 aQU
 aSI
-aSQ
+aRN
 aQN
 aQx
 aTf
@@ -138463,7 +138418,7 @@ asO
 asO
 asO
 asO
-aHe
+bdG
 asO
 asO
 aYd
@@ -140679,7 +140634,7 @@ aEz
 asO
 asO
 asO
-aHe
+bdG
 asO
 asO
 asO
@@ -153678,7 +153633,7 @@ asO
 avY
 asO
 asO
-aHe
+bdG
 asO
 asO
 aEz
@@ -153903,7 +153858,7 @@ asO
 asO
 asO
 asO
-aHe
+bdG
 asO
 asO
 asO
@@ -154519,7 +154474,7 @@ asO
 asO
 asO
 asO
-aHe
+bdG
 asO
 asO
 asO
@@ -155728,7 +155683,7 @@ asO
 aEz
 asO
 asO
-aHe
+bdG
 asO
 asO
 aEz
@@ -157324,7 +157279,7 @@ avC
 avC
 aHg
 aMc
-aHe
+bdG
 asO
 asO
 asO
@@ -158747,7 +158702,7 @@ asO
 asO
 asO
 asO
-aHe
+bdG
 asO
 asO
 asO
@@ -162952,7 +162907,7 @@ asj
 asn
 asP
 asp
-avi
+asx
 awc
 asp
 asW
@@ -172944,7 +172899,7 @@ bbg
 bbg
 bbg
 aTW
-aXZ
+aUb
 aYs
 aOr
 asl

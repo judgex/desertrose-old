@@ -35,6 +35,20 @@
 	death_sound = list('sound/f13npc/supermutant/death1.ogg', 'sound/f13npc/supermutant/death2.ogg')
 	aggrosound = list('sound/f13npc/supermutant/alert1.ogg', 'sound/f13npc/supermutant/alert2.ogg', 'sound/f13npc/supermutant/alert3.ogg', 'sound/f13npc/supermutant/alert4.ogg')
 
+/mob/living/simple_animal/hostile/supermutant/playable
+	health = 500
+	maxHealth = 500
+	emote_taunt_sound = null
+	emote_taunt = null
+	aggrosound = null
+	idlesound = null
+	see_in_dark = 8
+	wander = 0
+	anchored = FALSE
+	dextrous = TRUE
+	possible_a_intents = list(INTENT_HELP, INTENT_HARM)
+
+
 /mob/living/simple_animal/hostile/supermutant/Aggro()
 	..()
 	summon_backup(15)
