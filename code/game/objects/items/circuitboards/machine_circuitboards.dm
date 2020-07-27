@@ -664,6 +664,10 @@
 	name = "Booze Dispenser (Machine Board)"
 	build_path = /obj/machinery/chem_dispenser/drinks/beer
 
+/obj/item/circuitboard/machine/chem_dispenser/neutered
+	name = "Neutered Chem Dispenser (Machine Board)"
+	build_path = /obj/machinery/chem_dispenser/neutered
+
 /obj/item/circuitboard/machine/smoke_machine
 	name = "Smoke Machine (Machine Board)"
 	build_path = /obj/machinery/smoke_machine

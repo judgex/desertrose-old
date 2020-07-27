@@ -530,3 +530,19 @@
 	component_parts += new /obj/item/stack/sheet/glass(null)
 	component_parts += new /obj/item/stock_parts/cell/bluespace(null)
 	RefreshParts()
+
+/obj/machinery/chem_dispenser/neutered
+	name = "neutered chem dispenser"
+	circuit = /obj/item/circuitboard/machine/chem_dispenser/neutered
+	dispensable_reagents = list(
+		"hydrogen",
+		"carbon",
+		"nitrogen",
+		"oxygen",
+		"sodium",
+		"potassium",
+		"sugar",
+		"iodine",
+		"aluminium",
+		"sacid"
+	)
