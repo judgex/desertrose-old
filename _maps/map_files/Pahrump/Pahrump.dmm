@@ -2654,7 +2654,7 @@
 "bam" = (/obj/structure/window/fulltile/house{dir = 2; icon_state = "housewindowbrokenvertical"; tag = "icon-housewindowbrokenvertical"},/obj/structure/barricade/wooden/planks/pregame,/turf/open/floor/f13/wood,/area/f13/building)
 "ban" = (/obj/structure/legion_extractor,/turf/open/indestructible/ground/outside/desert,/area/f13/farm)
 "bao" = (/obj/structure/chair/bench,/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
-"bap" = (/obj/machinery/light,/obj/item/flag/oasis,/obj/structure/flora/grass/wasteland{icon_state = "tall_grass_4"; layer = 6; tag = "icon-tall_grass_4"},/turf/open/indestructible/ground/outside/sidewalk{icon_state = "verticalrightborderrightbottom"; tag = "icon-verticalrightborderrightbottom"},/area/f13/city)
+"bap" = (/obj/machinery/light,/obj/item/flag/oasis,/obj/structure/flora/grass/wasteland{icon_state = "tall_grass_4"; layer = 6; tag = "icon-tall_grass_4"},/turf/open/indestructible/ground/outside/sidewalk{icon_state = "verticalrightborderrightbottom"; tag = "icon-verticalrightborderrightbottom"},/area/f13/wasteland)
 "bar" = (/obj/machinery/iv_drip,/turf/open/indestructible/ground/outside/dirt{dir = 1; icon_state = "dirt"; tag = "icon-dirt (NORTH)"},/area/f13/ncr)
 "bat" = (/obj/structure/bed,/turf/open/indestructible/ground/outside/dirt{dir = 1; icon_state = "dirt"; tag = "icon-dirt (NORTH)"},/area/f13/ncr)
 "bau" = (/obj/structure/decoration/clock/old{pixel_y = 32},/obj/machinery/light/small{dir = 1},/turf/open/floor/f13/wood,/area/f13/village)
