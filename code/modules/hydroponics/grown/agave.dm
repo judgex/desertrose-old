@@ -1,3 +1,4 @@
+
 /obj/item/seeds/agave
 	name = "pack of agave seeds"
 	desc = "These seeds grow into an agave plant."
@@ -25,4 +26,5 @@
 	desc = "A strange kind of fleshy grass often used as a primitive burn medication that rapidly depletes stored nutrients in the body."
 	icon_state = "Agave Leaf"
 	icon = 'icons/obj/flora/wastelandflora.dmi'
+	juice_results = list("agavetea" = 0)
 	distill_reagent = "tequila"

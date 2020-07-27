@@ -113,7 +113,7 @@
 		if(H.dna.species.id != "human")
 			H.set_species(/datum/species/human)
 			H.apply_pref_name("human", H.client)
-		purrbation_remove(H, silent=TRUE)
+			purrbation_remove(H, silent=TRUE)
 	// F13 EDIT: GHOULS CANNOT BE LEGION
 	if((title in GLOB.legion_positions) || (title in GLOB.vault_positions) || (title in GLOB.brotherhood_positions))
 		if(H.dna.species.id == "ghoul")

@@ -1,8 +1,8 @@
 /datum/component/armor_plate
 	var/amount = 0
 	var/maxamount = 3
-	var/upgrade_item = /obj/item/stack/sheet/animalhide/goliath_hide
-	var/datum/armor/added_armor = list("melee" = 10)
+	var/upgrade_item = /obj/item/stack/crafting/goodparts
+	var/datum/armor/added_armor = list("melee" = 5, "bullet" = 5)
 	var/upgrade_name
 
 /datum/component/armor_plate/Initialize(_maxamount,obj/item/_upgrade_item,datum/armor/_added_armor)
@@ -34,16 +34,16 @@
 	if(ismecha(parent))
 		if(amount)
 			if(amount < maxamount)
-				to_chat(user, "<span class='notice'>Its armor is enhanced with [amount] [upgrade_name].</span>")
+				to_chat(user, "<span class='notice'>Its armor is reinforced with [amount] [upgrade_name].</span>")
 			else
-				to_chat(user, "<span class='notice'>It's wearing a fearsome carapace entirely composed of [upgrade_name] - its pilot must be an experienced monster hunter.</span>")
+				to_chat(user, "<span class='notice'>It's wearing a fearsome carapace entirely composed of [upgrade_name] - its pilot must be an experienced engineer.</span>")
 		else
-			to_chat(user, "<span class='notice'>It has attachment points for strapping monster hide on for added protection.</span>")
+			to_chat(user, "<span class='notice'>You could probably use high-quality metal parts to reinforce it.</span>")
 	else
 		if(amount)
-			to_chat(user, "<span class='notice'>It has been strengthened with [amount]/[maxamount] [upgrade_name].</span>")
+			to_chat(user, "<span class='notice'>It has been reinforced with [amount]/[maxamount] [upgrade_name].</span>")
 		else
-			to_chat(user, "<span class='notice'>It can be strengthened with up to [maxamount] [upgrade_name].</span>")
+			to_chat(user, "<span class='notice'>It can be reinforced with up to [maxamount] [upgrade_name].</span>")
 
 /datum/component/armor_plate/proc/applyplate(obj/item/I, mob/user, params)
 	if(!istype(I,upgrade_item))
@@ -61,7 +61,9 @@
 		qdel(I)
 
 	var/obj/O = parent
-	amount++
+	if(!amount)
+		O.name = "reinforced [O.name]"
+//	amount++
 	O.armor = O.armor.attachArmor(added_armor)
 
 	if(ismecha(O))
@@ -69,8 +71,8 @@
 		R.update_icon()
 		to_chat(user, "<span class='info'>You strengthen [R], improving its resistance against melee, bullet and laser damage.</span>")
 	else
-		to_chat(user, "<span class='info'>You strengthen [O], improving its resistance against melee attacks.</span>")
-
+		to_chat(user, "<span class='info'>You strengthen [O], improving its resistance against melee attacks and bullets.</span>")
+	amount++
 
 /datum/component/armor_plate/proc/dropplates(force)
 	if(ismecha(parent)) //items didn't drop the plates before and it causes erroneous behavior for the time being with collapsible helmets

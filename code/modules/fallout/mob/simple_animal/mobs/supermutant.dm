@@ -21,19 +21,33 @@
 	response_help = "touches"
 	response_disarm = "pushes"
 	response_harm = "hits"
-	maxHealth = 350
-	health = 350
+	maxHealth = 300
+	health = 300
 	force_threshold = 15
 	faction = list("hostile", "supermutant")
-	melee_damage_lower = 55
-	melee_damage_upper = 75
+	melee_damage_lower = 45
+	melee_damage_upper = 65
 	mob_size = MOB_SIZE_LARGE
 	anchored = TRUE //unpullable
 	attacktext = "smashes"
 	attack_sound = "punch"
-	idlesound = list('sound/f13npc/supermutant/idle1.ogg', 'sound/f13npc/supermutant/idle2.ogg', 'sound/f13npc/supermutant/idle3.ogg')
+	idlesound = list('sound/f13npc/supermutant/idle1.ogg', 'sound/f13npc/supermutant/idle2.ogg', 'sound/f13npc/supermutant/idle3.ogg', 'sound/f13npc/supermutant/idle4.ogg' )
 	death_sound = list('sound/f13npc/supermutant/death1.ogg', 'sound/f13npc/supermutant/death2.ogg')
 	aggrosound = list('sound/f13npc/supermutant/alert1.ogg', 'sound/f13npc/supermutant/alert2.ogg', 'sound/f13npc/supermutant/alert3.ogg', 'sound/f13npc/supermutant/alert4.ogg')
+
+/mob/living/simple_animal/hostile/supermutant/playable
+	health = 500
+	maxHealth = 500
+	emote_taunt_sound = null
+	emote_taunt = null
+	aggrosound = null
+	idlesound = null
+	see_in_dark = 8
+	wander = 0
+	anchored = FALSE
+	dextrous = TRUE
+	possible_a_intents = list(INTENT_HELP, INTENT_HARM)
+
 
 /mob/living/simple_animal/hostile/supermutant/Aggro()
 	..()
@@ -96,6 +110,25 @@
 	projectiletype = /obj/item/projectile/bullet/F13/c308mmBullet
 	projectilesound = 'sound/f13weapons/hunting_rifle.ogg'
 	loot = list(/obj/item/ammo_box/a308)
+
+/mob/living/simple_animal/hostile/supermutant/legendary
+	name = "legendary super mutant"
+	desc = "A huge and ugly mutant humanoid.He has a faint yellow glow to him, scars adorn his body. This super mutant is a grizzled vetern of combat. Look out!"
+	color = "#FFFF00"
+	icon_state = "hulk_113_s"
+	icon_living = "hulk_113_s"
+	icon_dead = "hulk_113_s"
+	melee_damage_lower = 55
+	melee_damage_upper = 70
+	maxHealth = 950
+	health = 950
+	mob_size = 5
+
+/mob/living/simple_animal/hostile/supermutant/legendary/death(gibbed)
+	icon = 'icons/fallout/mobs/supermutant_dead.dmi'
+	icon_state = icon_dead
+	anchored = FALSE
+	..()
 
 /mob/living/simple_animal/hostile/supermutant/rangedmutant/death(gibbed)
 	icon = 'icons/fallout/mobs/supermutant_dead.dmi'

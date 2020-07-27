@@ -165,6 +165,7 @@
 	addiction_threshold = 10
 	metabolization_rate = 0.75 * REAGENTS_METABOLISM
 
+/* This is waaay too overpowered
 /datum/reagent/drug/methamphetamine/on_mob_add(mob/living/L)
 	..()
 	L.add_trait(TRAIT_GOTTAGOREALLYFAST, id)
@@ -172,6 +173,7 @@
 /datum/reagent/drug/methamphetamine/on_mob_delete(mob/living/L)
 	L.remove_trait(TRAIT_GOTTAGOREALLYFAST, id)
 	..()
+*/
 
 /datum/reagent/drug/methamphetamine/on_mob_life(mob/living/carbon/M)
 	var/high_message = pick("You feel hyper.", "You feel like you need to go faster.", "You feel like you can run the world.")

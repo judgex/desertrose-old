@@ -1,18 +1,3 @@
-/obj/machinery/forge
-	name = "metalworking forge"
-	desc = "A large furnace used for forging metal items such as swords, spears and shields. You can imagine yourself making iron daggers here for a long time."
-	icon = 'icons/obj/cult.dmi'
-	icon_state = "forge"
-	resistance_flags = INDESTRUCTIBLE
-	density = TRUE
-	layer = BELOW_OBJ_LAYER
-	anchored = TRUE
-	machine_tool_behaviour = list(TOOL_FORGE)
-
-/obj/machinery/forge/wrench_act(mob/living/user, obj/item/I)
-	default_unfasten_wrench(user, I, 10)
-	return TRUE
-
 /datum/crafting_recipe/machete
 	name = "Machete"
 	result = /obj/item/claymore/machete

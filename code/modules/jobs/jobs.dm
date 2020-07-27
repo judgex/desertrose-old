@@ -15,9 +15,9 @@ GLOBAL_LIST_INIT(command_positions, list(
     "Sheriff",
     "Chief",
     "Shaman",
-	"NCR Administrator"
+	"NCR Administrator",
+	"Lead Practitioner"
     ))
-
 
 GLOBAL_LIST_INIT(silicon_whitelist_positions, list(
 "Mr. Handy"))
@@ -38,6 +38,7 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 "Knight",
 "Senior Scribe",
 "Scribe",
+"Off-Duty",
 "Legion Centurion",
 "Legion Orator",
 "Priestess of Mars",
@@ -65,8 +66,11 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 "Chief",
 "Shaman",
 "NCR Administrator",
-"Lead Practitioner"
+"Lead Practitioner",
+"Cyborg",
+"Vault-tec Security"
 ))
+
 GLOBAL_LIST_INIT(faction_player_positions, list(
 "Senior Paladin",
 "Paladin",
@@ -74,6 +78,7 @@ GLOBAL_LIST_INIT(faction_player_positions, list(
 "Knight",
 "Senior Scribe",
 "Scribe",
+"Off-Duty",
 "Legion Decanus",
 "Veteran Legionary",
 "Prime Legionary",
@@ -90,13 +95,15 @@ GLOBAL_LIST_INIT(faction_player_positions, list(
 "NCR Ranger",
 "NCR Trooper",
 "Deputy",
+"Cyborg",
+"Vault-tec Security"
 ))
+
 //Whitelisted positions list FO13 anything that shows up here requires that the user have an entry in the 'role_whitelist' table of id,ckey,"antagonist"
 GLOBAL_LIST_INIT(antagonist_whitelist_positions, list(
     "Raider",
 	"Outlaw" //Consider adding Great Khan to this list if people abuse it.
 ))
-
 
 GLOBAL_LIST_INIT(brotherhood_command_positions, list(
 	"Elder",
@@ -112,7 +119,7 @@ GLOBAL_LIST_INIT(brotherhood_positions, list(
 	"Knight",
 	"Senior Scribe",
 	"Scribe",
-	"Initiate"
+	"Off-Duty",
 ))
 
 GLOBAL_LIST_INIT(den_command_positions, list(
@@ -120,11 +127,11 @@ GLOBAL_LIST_INIT(den_command_positions, list(
     "Sheriff"
 ))
 
-
 GLOBAL_LIST_INIT(den_positions, list(
     "Doctor",
     "Settler",
     "Deputy",
+	"Banker",
     "Farmer",
     "Prospector"
 ))
@@ -177,11 +184,12 @@ GLOBAL_LIST_INIT(vault_positions, list(
     "Vault-tec Scientist",
     "Vault-tec Security",
     "Vault-tec Engineer",
-    "Vault Dweller"
+    "Vault Dweller",
+    "Cyborg"
 ))
 
 GLOBAL_LIST_INIT(wasteland_positions, list(
-    "Raider",
+    "Outlaw",
     "Great Khan",
     "Preacher",
 	"Faithful",
@@ -216,7 +224,6 @@ GLOBAL_LIST_INIT(engineering_positions, list(
     "Station Engineer",
     "Atmospheric Technician"))
 
-
 GLOBAL_LIST_INIT(medical_positions, list(
     "Chief Medical Officer",
     "Medical Doctor",
@@ -224,19 +231,16 @@ GLOBAL_LIST_INIT(medical_positions, list(
     "Virologist",
     "Chemist"))
 
-
 GLOBAL_LIST_INIT(science_positions, list(
     "Research Director",
     "Scientist",
     "Roboticist"))
-
 
 GLOBAL_LIST_INIT(supply_positions, list(
     "Head of Personnel",
     "Quartermaster",
     "Cargo Technician",
     "Shaft Miner"))
-
 
 GLOBAL_LIST_INIT(civilian_positions, list(
     "Bartender",
@@ -250,13 +254,11 @@ GLOBAL_LIST_INIT(civilian_positions, list(
     "Mime",
     "Assistant"))
 
-
 GLOBAL_LIST_INIT(security_positions, list(
     "Head of Security",
     "Warden",
     "Detective",
     "Security Officer"))
-
 
 GLOBAL_LIST_INIT(nonhuman_positions, list(
     "AI",
@@ -265,22 +267,25 @@ GLOBAL_LIST_INIT(nonhuman_positions, list(
 */
 GLOBAL_LIST_INIT(exp_jobsmap, list(
     EXP_TYPE_CREW          = list("titles" = command_positions | brotherhood_positions | den_positions | legion_positions | ncr_positions | vault_positions | wasteland_positions),
-    EXP_TYPE_COMMAND       = list("titles" = command_positions  ),
-    EXP_TYPE_BROTHERHOOD   = list("titles" = brotherhood_positions),
-    EXP_TYPE_DEN           = list("titles" = den_positions      ),
-    EXP_TYPE_LEGION        = list("titles" = legion_positions       ),
-    EXP_TYPE_NCR           = list("titles" = ncr_positions      ),
-    EXP_TYPE_VAULT         = list("titles" = vault_positions        ),
-    EXP_TYPE_WASTELAND     = list("titles" = wasteland_positions    ),
+    EXP_TYPE_COMMAND       = list("titles" = command_positions),
     EXP_TYPE_SECURITY      = list("titles" = security_positions),
-    EXP_TYPE_NCRCOMMAND    = list("titles" = list("NCR Lieutenant","NCR Sergeant","NCR Captain","NCR Ambassador")),
+
+    EXP_TYPE_BROTHERHOOD   = list("titles" = brotherhood_positions),
+    EXP_TYPE_DEN           = list("titles" = den_positions ),
+    EXP_TYPE_LEGION        = list("titles" = legion_positions),
+    EXP_TYPE_NCR           = list("titles" = ncr_positions),
+    EXP_TYPE_VAULT         = list("titles" = vault_positions),
+    EXP_TYPE_WASTELAND     = list("titles" = wasteland_positions),
+  	EXP_TYPE_TRIBAL        = list("titles" = tribal_positions),
+  	EXP_TYPE_FOLLOWERS     = list("titles" = followers_positions),
     EXP_TYPE_RANGER        = list("titles" = list("NCR Veteran Ranger","NCR Ranger")),
     EXP_TYPE_SCRIBE        = list("titles" = list("Scribe")),
     EXP_TYPE_DECANUS       = list("titles" = list("Legion Decanus")),
-    EXP_TYPE_TRIBAL        = list("titles" = tribal_positions),
+
     EXP_TYPE_TRIBALCOMMAND = list("titles" = list("Chief","Shaman")),
     EXP_TYPE_FOLLOWERSCOMMAND = list("titles" = list("Lead Practitioner")),
-    //EXP_TYPE_ENCLAVE = list("titles" = enclave_positions),
+  	EXP_TYPE_NCRCOMMAND    = list("titles" = list("NCR Lieutenant","NCR Sergeant","NCR Captain","NCR Ambassador"))
+  	// EXP_TYPE_ENCLAVE = list("titles" = enclave_positions),
     // EXP_TYPE_CREW = list("titles" = command_positions | engineering_positions | medical_positions | science_positions | supply_positions | security_positions | civilian_positions | list("AI","Cyborg")), // crew positions
     // EXP_TYPE_COMMAND = list("titles" = command_positions),
     // EXP_TYPE_ENGINEERING = list("titles" = engineering_positions),
@@ -296,14 +301,15 @@ GLOBAL_LIST_INIT(exp_specialmap, list(
     EXP_TYPE_ANTAG = list(),
     EXP_TYPE_SPECIAL = list("Lifebringer","Ash Walker","Exile","Servant Golem","Free Golem","Hermit","Translocated Vet","Escaped Prisoner","Hotel Staff","SuperFriend","Space Syndicate","Ancient Crew","Space Doctor","Space Bartender","Beach Bum","Skeleton","Zombie","Space Bar Patron","Lavaland Syndicate","Ghost Role"), // Ghost roles
     EXP_TYPE_GHOST = list() // dead people, observers
-))*/
+))
+*/
+
 GLOBAL_PROTECT(exp_jobsmap)
+
 //GLOBAL_PROTECT(exp_specialmap)
 
 /proc/guest_jobbans(job)
     return ((job in GLOB.command_positions)) // || (job in GLOB.nonhuman_positions) || (job in GLOB.security_positions))
-
-
 
 //this is necessary because antags happen before job datums are handed out, but NOT before they come into existence
 //so I can't simply use job datum.department_head straight from the mind datum, laaaaame.

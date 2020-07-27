@@ -51,7 +51,7 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	return SHAME
 
 /obj/item/claymore
-	name = "claymore"
+	name = "shortsword"
 	desc = "What are you standing around staring at this for? Get to killing!"
 	icon_state = "claymore"
 	item_state = "claymore"
@@ -86,7 +86,7 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	throwforce = 25
 
 /obj/item/claymore/machete/gladius
-	name = "machete gladius"
+	name = "gladius"
 	desc = "A forged steel machete, the blade has been laborously sharpened and the weight has been evenly distributed for maximum killing power. An image of a bull is burned into the wooden handle."
 	icon_state = "machete"
 	item_state = "machete"
@@ -146,10 +146,10 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	item_state = "pan"
 	hitsound = 'sound/f13weapons/pan.ogg'
 	slot_flags = SLOT_BELT
-	force = 15 //Just try to swing a frying pan
+	force = 25 //Just try to swing a frying pan//BONK
 	throw_speed = 1
 	throw_range = 2
-	throwforce = 10
+	throwforce = 20
 	w_class = 2
 
 /obj/item/claymore/machete/pipe/pan/suicide_act(mob/user)
@@ -290,14 +290,14 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 
 /obj/item/katana
 	name = "katana"
-	desc = "Woefully underpowered in D20."
+	desc = "A blade of extremely dense, masterfully forged metal."
 	icon_state = "katana"
 	item_state = "katana"
 	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
 	flags_1 = CONDUCT_1
 	slot_flags = ITEM_SLOT_BELT | ITEM_SLOT_BACK
-	force = 25
+	force = 40
 	throwforce = 10
 	w_class = WEIGHT_CLASS_HUGE
 	hitsound = 'sound/weapons/bladeslice.ogg'
@@ -308,11 +308,17 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 100, "acid" = 50)
 	resistance_flags = FIRE_PROOF
 
+/obj/item/katana/scrap
+	name = "longsword"
+	desc = "A long, steel-forged blade. It has keen edge that could slice your guts open."
+	icon_state = "scraptana"
+	item_state = "claymore"
+
 /obj/item/katana/cursed
 	slot_flags = null
 
 /obj/item/katana/suicide_act(mob/user)
-	user.visible_message("<span class='suicide'>[user] is slitting [user.p_their()] stomach open with [src]! It looks like [user.p_theyre()] trying to commit seppuku!</span>")
+	user.visible_message("<span class='suicide'>[user] is falling on [user.p_their()] own [src]! It looks like [user.p_theyre()] trying to commit suicide!</span>")
 	return(BRUTELOSS)
 
 
@@ -384,6 +390,7 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	item_state = "tribalspear"
 	force = 20
 	throwforce = 35
+	reach = 2
 	item_flags = SLOWS_WHILE_IN_HAND
 	slowdown = 0.3
 	embedding = list("embedded_pain_multiplier" = 2, "embed_chance" = 60, "embedded_fall_chance" = 20)
@@ -410,6 +417,7 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = SLOT_BACK
 	throwforce = 20
+	reach = 2
 	throw_speed = 4
 	armour_penetration = 5
 	materials = list(MAT_METAL=1150, MAT_WOOD=2075)

@@ -87,6 +87,18 @@
 		return
 	close_machine(target)
 
+/obj/machinery/sleeper/AltClick(mob/user)
+	if(!user.canUseTopic(src, !issilicon(user)))
+		return
+	if(state_open)
+		close_machine()
+	else
+		open_machine()
+
+/obj/machinery/sleeper/examine(mob/user)
+	.=..()
+	. += "<span class='notice'>Alt-click [src] to [state_open ? "close" : "open"] it.</span>"
+
 /obj/machinery/sleeper/attackby(obj/item/I, mob/user, params)
 	if(!state_open && !occupant)
 		if(default_deconstruction_screwdriver(user, "[initial(icon_state)]-o", initial(icon_state), I))
@@ -99,16 +111,25 @@
 		return
 	return ..()
 
-/obj/machinery/sleeper/ui_interact(mob/user, ui_key = "main", datum/tgui/ui = null, force_open = FALSE, \
+/obj/machinery/sleeper/ui_interact(mob/living/user, ui_key = "main", datum/tgui/ui = null, force_open = FALSE, \
 									datum/tgui/master_ui = null, datum/ui_state/state = GLOB.notcontained_state)
-
-	if(controls_inside && state == GLOB.notcontained_state)
-		state = GLOB.default_state // If it has a set of controls on the inside, make it actually controllable by the mob in it.
-
 	ui = SStgui.try_update_ui(user, src, ui_key, ui, force_open)
-	if(!ui)
-		ui = new(user, src, ui_key, "sleeper", name, 375, 550, master_ui, state)
-		ui.open()
+	if(istype(user, /mob/dead/observer))
+		if(!ui)
+			ui = new(user, src, ui_key, "sleeper", name, 375, 550, master_ui, state)
+			ui.open()
+	else
+		if(controls_inside && state == GLOB.notcontained_state)
+			state = GLOB.default_state // If it has a set of controls on the inside, make it actually controllable by the mob in it.
+		if(!user.has_trait(TRAIT_CHEMWHIZ))
+			to_chat(user, "<span class='warning'>Try as you might, you have no clue how to work this thing.</span>")
+			return
+		if(!user.IsAdvancedToolUser())
+			to_chat(user, "<span class='warning'>The legion has no use for drugs! Better to destroy it.</span>")
+			return
+		if(!ui)
+			ui = new(user, src, ui_key, "sleeper", name, 375, 550, master_ui, state)
+			ui.open()
 
 /obj/machinery/sleeper/ui_data()
 	var/list/data = list()
@@ -205,7 +226,6 @@
 	var/list/av_chem = available_chems.Copy()
 	for(var/chem in av_chem)
 		chem_buttons[chem] = pick_n_take(av_chem) //no dupes, allow for random buttons to still be correct
-
 
 /obj/machinery/sleeper/syndie
 	icon_state = "sleeper_s"

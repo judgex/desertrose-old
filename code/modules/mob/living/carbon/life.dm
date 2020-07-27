@@ -426,12 +426,17 @@ GLOBAL_LIST_INIT(ballmer_windows_me_msg, list("Yo man, what if, we like, uh, put
 	if(drunkenness)
 		drunkenness = max(drunkenness - (drunkenness * 0.04), 0)
 		if(drunkenness >= 6)
+			SEND_SIGNAL(src, COMSIG_ADD_MOOD_EVENT, "drunk", /datum/mood_event/drunk)
 			if(prob(25))
 				slurring += 2
 			jitteriness = max(jitteriness - 3, 0)
+			throw_alert("drunk", /obj/screen/alert/drunk)
 			if(has_trait(TRAIT_DRUNK_HEALING))
 				adjustBruteLoss(-0.12, FALSE)
 				adjustFireLoss(-0.06, FALSE)
+		else
+			SEND_SIGNAL(src, COMSIG_CLEAR_MOOD_EVENT, "drunk")
+			clear_alert("drunk")
 
 		if(drunkenness >= 11 && slurring < 5)
 			slurring += 1.2

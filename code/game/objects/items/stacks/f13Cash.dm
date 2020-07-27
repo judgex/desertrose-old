@@ -21,13 +21,17 @@
 #define HIGH_MIN 100
 #define HIGH_MAX 500
 
+// The Bankers Vault-Stash, done like this make it so it only spawns on his person to stop metarushing. Average 8500.
+#define BANKER_MIN 2000
+#define BANKER_MAX 15000
+
 /obj/item/stack/f13Cash
 	name = "bottle cap"
 	singular_name = "cap"
 	icon = 'icons/obj/economy.dmi'
 	icon_state = "bottle_cap"
 	amount = 1
-	max_amount = 2000
+	max_amount = 15000
 	throwforce = 0
 	throw_speed = 2
 	throw_range = 2
@@ -110,6 +114,10 @@
 /obj/item/stack/f13Cash/random/bottle_cap/high
 	min_qty = HIGH_MIN / CASH_CAP
 	max_qty = HIGH_MAX / CASH_CAP
+
+/obj/item/stack/f13Cash/random/bottle_cap/banker
+	min_qty = BANKER_MIN / CASH_CAP
+	max_qty = BANKER_MAX / CASH_CAP
 
 /obj/item/stack/f13Cash/denarius
 	name = "Denarius"
@@ -237,3 +245,5 @@
 #undef MED_MAX
 #undef HIGH_MIN
 #undef HIGH_MAX
+#undef BANKER_MIN 
+#undef BANKER_MAX 

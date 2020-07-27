@@ -12,7 +12,7 @@
 
 /obj/item/clothing/under/pants/mustangjeans
 	name = "Must Hang jeans"
-	desc = "Made in the finest space jeans factory this side of Alpha Centauri."
+	desc = "Made in the finest jeans factory this side of Alpha Centauri."
 	icon_state = "jeansmustang"
 	item_color = "jeansmustang"
 
@@ -23,8 +23,8 @@
 	item_color = "jeansblack"
 
 /obj/item/clothing/under/pants/youngfolksjeans
-	name = "Young Folks jeans"
-	desc = "For those tired of boring old jeans. Relive the passion of your youth!"
+	name = "denim jeans"
+	desc = "Classic blue denim jeans. Guaranteed to last a hundred years!"
 	icon_state = "jeansyoungfolks"
 	item_color = "jeansyoungfolks"
 
@@ -72,6 +72,6 @@
 
 /obj/item/clothing/under/pants/camo
 	name = "camo pants"
-	desc = "A pair of woodland camouflage pants. Probably not the best choice for a space station."
+	desc = "A pair of woodland camouflage pants. Probably not the best choice for the desert."
 	icon_state = "camopants"
 	item_color = "camopants"

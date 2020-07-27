@@ -176,6 +176,18 @@
 	if(try_clean(W, user, T) || try_wallmount(W, user, T) || try_decon(W, user, T) || try_destroy(W, user, T))
 		return
 
+	if(istype(W, /obj/item/reagent_containers/glass/rag) || istype(W, /obj/item/soap))
+		if(!do_after(user, 5 SECONDS, FALSE, src))
+			return
+		if(istype(src, /turf/closed/wall/rust))
+			ChangeTurf(/turf/closed/wall)
+		if(istype(src, /turf/closed/wall/r_wall/rust))
+			ChangeTurf(/turf/closed/wall/r_wall)
+		if(istype(src, /turf/closed/wall/f13/wood/house))
+			if(istype(src, /turf/closed/wall/f13/wood/house/broken))
+				return
+			ChangeTurf(/turf/closed/wall/f13/wood/house/clean)
+
 	return ..()
 
 /turf/closed/wall/proc/try_clean(obj/item/W, mob/user, turf/T)

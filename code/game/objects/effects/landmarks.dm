@@ -187,6 +187,8 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 /obj/effect/landmark/start/cyborg
 	name = "Cyborg"
 	icon_state = "Cyborg"
+	jobspawn_override = TRUE
+	delete_after_roundstart = FALSE
 
 /obj/effect/landmark/start/ai
 	name = "AI"
@@ -653,6 +655,14 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 /obj/effect/landmark/start/f13/shopkeeper
 	name = "Shopkeeper"
 	icon_state = "Shopkeeper"
+
+/obj/effect/landmark/start/f13/banker
+	name = "Banker"
+	icon_state = "Banker"
+
+/obj/effect/landmark/start/f13/barkeep
+	name = "Barkeep"
+	icon_state = "Barkeep"
 
 // Wasteland
 

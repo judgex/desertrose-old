@@ -48,8 +48,8 @@
 	departmental_flags = DEPARTMENTAL_FLAG_MEDICAL | DEPARTMENTAL_FLAG_SCIENCE
 
 /datum/design/bluespacebeaker
-	name = "Bluespace Beaker"
-	desc = "A bluespace beaker, powered by experimental bluespace technology and Element Cuban combined with the Compound Pete. Can hold up to 300 units."
+	name = "Quantum Beaker"
+	desc = "A quantum beaker, powered by experimental quantum technology. Can hold up to 300 units."
 	id = "bluespacebeaker"
 	build_type = PROTOLATHE
 	materials = list(MAT_GLASS = 3000, MAT_PLASMA = 3000, MAT_DIAMOND = 250, MAT_BLUESPACE = 250)
@@ -86,7 +86,7 @@
 	category = list("Medical Designs")
 
 /datum/design/bluespacesyringe
-	name = "Bluespace Syringe"
+	name = "Quantum Syringe"
 	desc = "An advanced syringe that can hold 60 units of chemicals"
 	id = "bluespacesyringe"
 	build_type = PROTOLATHE
@@ -126,8 +126,8 @@
 	departmental_flags = DEPARTMENTAL_FLAG_MEDICAL
 
 /datum/design/bluespacebodybag
-	name = "Bluespace Body Bag"
-	desc = "A bluespace body bag, powered by experimental bluespace technology. It can hold loads of bodies and the largest of creatures."
+	name = "Quantum Body Bag"
+	desc = "A quantum body bag, powered by experimental quantum realm technology. It can hold loads of bodies and the largest of creatures."
 	id = "bluespacebodybag"
 	build_type = PROTOLATHE
 	materials = list(MAT_METAL = 3000, MAT_PLASMA = 2000, MAT_DIAMOND = 500, MAT_BLUESPACE = 500)
@@ -260,7 +260,7 @@
 	build_path = /obj/item/organ/cyberimp/mouth/breathing_tube
 	category = list("Misc", "Medical Designs")
 	departmental_flags = DEPARTMENTAL_FLAG_MEDICAL
-
+/*
 /datum/design/cyberimp_surgical
 	name = "Surgical Arm Implant"
 	desc = "A set of surgical tools hidden behind a concealed panel on the user's arm."
@@ -282,6 +282,7 @@
 	build_path = /obj/item/organ/cyberimp/arm/toolset
 	category = list("Misc", "Medical Designs")
 	departmental_flags = DEPARTMENTAL_FLAG_MEDICAL
+*/
 
 /datum/design/cyberimp_medical_hud
 	name = "Medical HUD Implant"
