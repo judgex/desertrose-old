@@ -249,7 +249,6 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
 
-
 /datum/crafting_recipe/ecp
 	name = "Electron Charge Pack"
 	result = /obj/item/stock_parts/cell/ammo/ecp
@@ -259,7 +258,6 @@
 	time = 30
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
-
 
 /datum/crafting_recipe/speedloader10mm
 	name = "empty speed loader (10mm)"
@@ -299,7 +297,6 @@
 	time = 10
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
-
 
 /datum/crafting_recipe/batterybox //lasmusket ammo
 	name = "Laser Musket battery pack"
@@ -343,8 +340,18 @@
 	subcategory = CAT_AMMO
 
 /datum/crafting_recipe/greasegunmag
-	name = "empty .45 submachine gun magazine (9mm)"
+	name = "empty grease submachine gun magazine (.45)"
 	result = /obj/item/ammo_box/magazine/greasegun/empty
+	reqs = list(/obj/item/stack/sheet/metal = 2)
+	traits = list(TRAIT_GUNSMITH_TWO)
+	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER2)
+	time = 10
+	category = CAT_WEAPONRY
+	subcategory = CAT_AMMO
+
+/datum/crafting_recipe/mini_uzimag
+	name = "empty mini uzi magazine (9mm)"
+	result = /obj/item/ammo_box/magazine/uzim9mm
 	reqs = list(/obj/item/stack/sheet/metal = 2)
 	traits = list(TRAIT_GUNSMITH_TWO)
 	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER2)
@@ -1635,14 +1642,14 @@
 	name = "scoped hunting rifle"
 	result = /obj/item/gun/ballistic/shotgun/remington/scoped
 	reqs = list(/obj/item/gun/ballistic/shotgun/remington = 1,
-				/obj/item/stack/sheet/glass = 2,
-				/datum/reagent/blackpowder = 20,
+				/obj/item/twohanded/binocs,
 				/obj/item/stack/crafting/metalparts = 1)
-	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER3)
-	traits = list(TRAIT_GUNSMITH_THREE)
+	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER2)
+	traits = list(TRAIT_GUNSMITH_TWO)
 	time = 120
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
+
 /* CRAFT rework: removed for balance
 /datum/crafting_recipe/m1garand
 	name = "M1 Garand"
@@ -2008,6 +2015,24 @@
 	result = /obj/item/clothing/suit/armor/f13/tribe_armor
 	time = 80
 	reqs = list(/obj/item/stack/sheet/leather = 6)
+	tools = list(TOOL_WORKBENCH)
+	category = CAT_PRIMAL
+	subcategory = CAT_TRIBAL
+
+/datum/crafting_recipe/tribaloutfit
+	name = "Male Tribal Outfit"
+	result = /obj/item/clothing/under/f13/tribal
+	time = 20
+	reqs = list(/obj/item/stack/sheet/animalhide/geckohide = 2)
+	tools = list(TOOL_WORKBENCH)
+	category = CAT_PRIMAL
+	subcategory = CAT_TRIBAL
+
+/datum/crafting_recipe/tribaloutfit
+	name = "Female Tribal Outfit"
+	result = /obj/item/clothing/under/f13/female/tribal
+	time = 20
+	reqs = list(/obj/item/stack/sheet/animalhide/geckohide = 2)
 	tools = list(TOOL_WORKBENCH)
 	category = CAT_PRIMAL
 	subcategory = CAT_TRIBAL
@@ -2892,7 +2917,7 @@
 	result = /obj/item/gun/ballistic/automatic/marksman
 	reqs = list(/obj/item/stack/sheet/metal = 10,
 				/obj/item/advanced_crafting_components/assembly = 1,
-				/datum/reagent/blackpowder = 30,	
+				/datum/reagent/blackpowder = 30,
 				/obj/item/stack/crafting/goodparts = 3
 				)
 	tools = list(TOOL_WORKBENCH, /obj/item/blueprint/weapon/marksmanrifle)

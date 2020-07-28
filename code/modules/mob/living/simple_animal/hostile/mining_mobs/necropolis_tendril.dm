@@ -1,4 +1,5 @@
 //Necropolis Tendrils, which spawn lavaland monsters and break into a chasm when killed
+/*
 /obj/effect/light_emitter/tendril
 	set_luminosity = 4
 	set_cap = 2.5
@@ -93,3 +94,4 @@
 		if(!T.density)
 			T.TerraformTurf(/turf/open/chasm/lavaland, /turf/open/chasm/lavaland)
 	qdel(src)
+*/

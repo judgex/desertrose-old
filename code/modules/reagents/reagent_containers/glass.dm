@@ -487,7 +487,7 @@
 	else
 		to_chat(user, SPAN_NOTICE("You crush [grinded].")) // man, idk what to do with this, just crush it
 	grinded.reagents?.trans_to(src, grinded.reagents.total_volume)
-	user.adjustStaminaLoss(40)
+	user.adjustStaminaLoss(3)
 	QDEL_NULL(grinded)
 
 /obj/item/reagent_containers/glass/mortar/attackby(obj/item/I, mob/living/carbon/human/user)

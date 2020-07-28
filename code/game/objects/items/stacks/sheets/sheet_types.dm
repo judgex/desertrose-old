@@ -205,6 +205,7 @@ GLOBAL_LIST_INIT(wood_recipes, list ( \
 	new/datum/stack_recipe("chopping block", /obj/item/chopping_block, 2, time = 30), \
 	new/datum/stack_recipe("wooden chair", /obj/structure/chair/wood/, 3, time = 10, one_per_turf = TRUE, on_floor = TRUE), \
 	new/datum/stack_recipe("fancy chair", /obj/structure/chair/wood/fancy, 3, one_per_turf = TRUE, on_floor = TRUE), \
+	new/datum/stack_recipe("wooden bench", /obj/structure/chair/bench, 4, one_per_turf = TRUE, on_floor = TRUE), \
 	new/datum/stack_recipe("winged wooden chair", /obj/structure/chair/wood/wings, 3, time = 10, one_per_turf = TRUE, on_floor = TRUE), \
 	new/datum/stack_recipe("wooden barricade", /obj/structure/barricade/wooden, 5, time = 50, one_per_turf = TRUE, on_floor = TRUE), \
 	new/datum/stack_recipe("wooden door", /obj/structure/simple_door/wood, 10, time = 20, one_per_turf = TRUE, on_floor = TRUE), \

@@ -286,6 +286,10 @@
 	armor = list("melee" = 20, "bullet" = 15, "laser" = 15, "energy" = 15, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 10, "acid" = 0)
 	strip_delay = 30
 
+/obj/item/clothing/suit/armor/f13/kit/Initialize()
+	. = ..()
+	AddComponent(/datum/component/armor_plate)
+
 /obj/item/clothing/suit/armor/f13/leatherarmor
 	name = "leather armor"
 	desc = "Your basic all leather apparel. Finely crafted from tanned brahmin hide."
@@ -311,7 +315,6 @@
 	armor = list("melee" = 45, "bullet" = 40, "laser" = 45, "energy" = 40, "bomb" = 40, "bio" = 30, "rad" = 15, "fire" = 60, "acid" = 0)
 	slowdown = 0.25
 	strip_delay = 10
-	color = "#625E5B"
 
 /obj/item/clothing/suit/armor/fluff/chestplate/Initialize()
 	. = ..()
@@ -331,7 +334,6 @@
     armor = list("melee" = 45, "bullet" = 45, "laser" = 55, "energy" = 50, "bomb" = 40, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
     slowdown = 0
     strip_delay = 10
-    color = "#625E5B"
 
 /obj/item/clothing/suit/armor/f13/metalarmor/strange
     name = "strange metal armor"
@@ -342,7 +344,6 @@
     armor = list("melee" = 45, "bullet" = 50, "laser" = 50, "energy" = 40, "bomb" = 40, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
     slowdown = 0
     strip_delay = 10
-    color = "#625E5B"
 
 /obj/item/clothing/suit/armor/f13/raider
 	name = "base raider armor"
