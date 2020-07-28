@@ -2859,7 +2859,7 @@
 
 
 //Blueprints
-/datum/crafting_recipe/uzi
+/*/datum/crafting_recipe/uzi
 	name = "Mini uzi"
 	result = /obj/item/gun/ballistic/automatic/mini_uzi
 	reqs = list(/obj/item/stack/sheet/metal = 10,
@@ -2869,15 +2869,16 @@
 	tools = list(TOOL_WORKBENCH, /obj/item/blueprint/weapon/uzi)
 	time = 120
 	category = CAT_BLUEPRINTS
-	subcategory = CAT_BPWEAPON
+	subcategory = CAT_BPWEAPON*/
 
 /datum/crafting_recipe/r91
 	name = "R91 assault rifle"
 	result = /obj/item/gun/ballistic/automatic/assault_rifle
-	reqs = list(/obj/item/stack/sheet/metal = 10,
+	reqs = list(/obj/item/stack/sheet/metal = 5,
 				/obj/item/advanced_crafting_components/assembly = 1,
+				/obj/item/advanced_crafting_components/receiver = 1,
 				/datum/reagent/blackpowder = 30,
-				/obj/item/stack/sheet/mineral/wood = 10,
+				/obj/item/stack/sheet/mineral/wood = 5,
 				/obj/item/stack/crafting/goodparts = 5
 				)
 	tools = list(TOOL_WORKBENCH, /obj/item/blueprint/weapon/R91)
@@ -2932,9 +2933,79 @@
 				/obj/item/advanced_crafting_components/alloys = 1,
 				/obj/item/advanced_crafting_components/receiver = 1,
 				/datum/reagent/blackpowder = 30,
-				/obj/item/stack/crafting/goodparts = 10
+				/obj/item/stack/crafting/goodparts = 5
 				)
 	tools = list(TOOL_WORKBENCH, /obj/item/blueprint/weapon/R91, /obj/item/blueprint/weapon/marksmanrifle)
+	time = 120
+	category = CAT_BLUEPRINTS
+	subcategory = CAT_BPWEAPON
+
+/datum/crafting_recipe/AEP7
+	name = "AEP7"
+	result = /obj/item/gun/energy/laser/pistol
+	reqs = list(/obj/item/stack/sheet/metal = 5,
+				/obj/item/advanced_crafting_components/lenses = 1,
+				/obj/item/stack/crafting/metalparts = 3,
+				/obj/item/stack/crafting/electronicparts = 3
+				)
+	tools = list(TOOL_WORKBENCH, /obj/item/blueprint/weapon/AEP7)
+	time = 120
+	category = CAT_BLUEPRINTS
+	subcategory = CAT_BPWEAPON
+
+/datum/crafting_recipe/AER9
+	name = "AER9"
+	result = /obj/item/gun/energy/laser/aer9
+	reqs = list(/obj/item/stack/sheet/metal = 15,
+				/obj/item/advanced_crafting_components/lenses = 1,
+				/obj/item/advanced_crafting_components/alloys = 1,
+				/obj/item/stack/crafting/goodparts = 3,
+				/obj/item/stack/crafting/electronicparts = 3
+				)
+	tools = list(TOOL_WORKBENCH, /obj/item/blueprint/weapon/AER9)
+	time = 120
+	category = CAT_BLUEPRINTS
+	subcategory = CAT_BPWEAPON
+
+/datum/crafting_recipe/PlasmaPistol
+	name = "Plasma Pistol"
+	result = /obj/item/gun/energy/laser/plasma/pistol
+	reqs = list(/obj/item/stack/sheet/metal = 5,
+				/obj/item/advanced_crafting_components/flux = 1,
+				/obj/item/stack/crafting/metalparts = 3,
+				/obj/item/stack/crafting/electronicparts = 3
+				)
+	tools = list(TOOL_WORKBENCH, /obj/item/blueprint/weapon/plasmapistol)
+	time = 120
+	category = CAT_BLUEPRINTS
+	subcategory = CAT_BPWEAPON
+
+/datum/crafting_recipe/PlasmaRifle
+	name = "Plasma Rifle"
+	result = /obj/item/gun/energy/laser/plasma
+	reqs = list(/obj/item/stack/sheet/metal = 15,
+				/obj/item/advanced_crafting_components/flux = 1,
+				/obj/item/advanced_crafting_components/conductors = 1,
+				/obj/item/advanced_crafting_components/alloys = 1,
+				/obj/item/stack/crafting/metalparts = 3,
+				/obj/item/stack/crafting/electronicparts = 3
+				)
+	tools = list(TOOL_WORKBENCH, /obj/item/blueprint/weapon/AER9, /obj/item/blueprint/weapon/plasmapistol)
+	time = 120
+	category = CAT_BLUEPRINTS
+	subcategory = CAT_BPWEAPON
+
+/datum/crafting_recipe/tribeam
+	name = "Tribeam Laser Rifle"
+	result = /obj/item/gun/energy/laser/scatter
+	reqs = list(/obj/item/stack/sheet/metal = 15,
+				/obj/item/advanced_crafting_components/conductors = 1,
+				/obj/item/advanced_crafting_components/alloys = 1,
+				/obj/item/advanced_crafting_components/lenses = 1,
+				/obj/item/stack/crafting/goodparts = 3,
+				/obj/item/stack/crafting/electronicparts = 3
+				)
+	tools = list(TOOL_WORKBENCH, /obj/item/blueprint/weapon/AER9, /obj/item/blueprint/weapon/AEP7)
 	time = 120
 	category = CAT_BLUEPRINTS
 	subcategory = CAT_BPWEAPON
