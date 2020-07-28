@@ -249,7 +249,6 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
 
-
 /datum/crafting_recipe/ecp
 	name = "Electron Charge Pack"
 	result = /obj/item/stock_parts/cell/ammo/ecp
@@ -259,7 +258,6 @@
 	time = 30
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
-
 
 /datum/crafting_recipe/speedloader10mm
 	name = "empty speed loader (10mm)"
@@ -299,7 +297,6 @@
 	time = 10
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
-
 
 /datum/crafting_recipe/batterybox //lasmusket ammo
 	name = "Laser Musket battery pack"
@@ -343,8 +340,18 @@
 	subcategory = CAT_AMMO
 
 /datum/crafting_recipe/greasegunmag
-	name = "empty .45 submachine gun magazine (9mm)"
+	name = "empty grease submachine gun magazine (.45)"
 	result = /obj/item/ammo_box/magazine/greasegun/empty
+	reqs = list(/obj/item/stack/sheet/metal = 2)
+	traits = list(TRAIT_GUNSMITH_TWO)
+	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER2)
+	time = 10
+	category = CAT_WEAPONRY
+	subcategory = CAT_AMMO
+
+/datum/crafting_recipe/mini_uzimag
+	name = "empty mini uzi magazine (9mm)"
+	result = /obj/item/ammo_box/magazine/uzim9mm
 	reqs = list(/obj/item/stack/sheet/metal = 2)
 	traits = list(TRAIT_GUNSMITH_TWO)
 	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER2)
