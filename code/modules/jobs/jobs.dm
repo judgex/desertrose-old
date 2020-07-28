@@ -284,7 +284,7 @@ GLOBAL_LIST_INIT(nonhuman_positions, list(
     ROLE_PAI))
 */
 GLOBAL_LIST_INIT(exp_jobsmap, list(
-    EXP_TYPE_CREW          = list("titles" = command_positions | brotherhood_positions | den_positions | legion_positions | ncr_positions | vault_positions | wasteland_positions),
+    EXP_TYPE_CREW          = list("titles" = command_positions | brotherhood_positions | den_positions | legion_positions | ncr_positions | vault_positions | wasteland_positions | tribal_positions | followers_positions),
     EXP_TYPE_COMMAND       = list("titles" = command_positions),
     EXP_TYPE_SECURITY      = list("titles" = security_positions),
 
