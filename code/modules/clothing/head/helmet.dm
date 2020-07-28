@@ -258,20 +258,17 @@
 	item_state = "metalhelmet"
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	armor = list("melee" = 40, "bullet" = 25, "laser" = 25, "energy" = 20, "bomb" = 16, "bio" = 0, "rad" = 0)
-	color = "#514E4E" // Light Grey
 
 /obj/item/clothing/head/helmet/knight/fluff/metal/reinforced
 	name = "reinforced metal helmet"
 	icon_state = "metalhelmet_r"
 	item_state = "metalhelmet_r"
 	armor = list("melee" = 45, "bullet" = 35, "laser" = 40, "energy" = 25, "bomb" = 16, "bio" = 0, "rad" = 0)
-	color = "#514E4E" // Light Grey
 
 /obj/item/clothing/head/helmet/knight/fluff/metal/strange
 	name = "strange helmet"
 	desc = "A steel helmet forged by tribal warriors, with additional plating to protect again projectile and laser fire."
 	armor = list("melee" = 40, "bullet" = 40, "laser" = 40, "energy" = 25, "bomb" = 16, "bio" = 0, "rad" = 0)
-	color = "#514E4E" // Light Grey
 
 /obj/item/clothing/head/helmet/knight/fluff/rider
 	name = "rider helmet" //Not raider. Rider.
