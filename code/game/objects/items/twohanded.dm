@@ -567,6 +567,7 @@
 	var/force_on = 60
 	w_class = WEIGHT_CLASS_BULKY
 	throwforce = 20
+	reach = 2
 	throw_speed = 2
 	throw_range = 4
 	materials = list(MAT_METAL=13000)

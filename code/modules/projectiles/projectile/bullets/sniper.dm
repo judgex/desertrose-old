@@ -3,8 +3,8 @@
 /obj/item/projectile/bullet/p50
 	name =".50 bullet"
 	speed = 0.4
-	damage = 55
-	knockdown = 100
+	damage = 60
+	knockdown = 0
 	dismemberment = 30
 	armour_penetration = 25
 	var/breakthings = TRUE
