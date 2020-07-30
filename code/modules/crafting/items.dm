@@ -114,3 +114,8 @@
 	name = "Superlight alloys"
 	desc = "A general crafting part, a crafstman might want to have this."
 	icon_state = "alloys"
+
+/obj/item/advanced_crafting_components/scope
+	name = "Weapon Optics"
+	desc = "A long-range scope, attach to a compatible weapon."
+	icon_state = "scope"

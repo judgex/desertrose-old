@@ -194,6 +194,10 @@
 	equipsound = 'sound/f13weapons/equipsounds/aep7equip.ogg'
 	w_class = WEIGHT_CLASS_NORMAL
 	fire_delay = 2
+	can_scope = TRUE
+	scopestate = "AEP7_scope"
+	scope_x_offset = 8
+	scope_y_offset = 23
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/pistol)
 	cell_type = /obj/item/stock_parts/cell/ammo/ec
 	slot_flags = ITEM_SLOT_BELT
