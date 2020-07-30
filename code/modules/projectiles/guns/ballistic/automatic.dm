@@ -829,7 +829,7 @@
 	item_state = "sniper"
 	slot_flags = SLOT_BACK
 	mag_type = /obj/item/ammo_box/magazine/m556/rifle
-	burst_size = 1
+	burst_size = 2
 	fire_delay = 3
 	automatic = 1
 	w_class = WEIGHT_CLASS_BULKY
