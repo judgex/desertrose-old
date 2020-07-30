@@ -179,6 +179,10 @@
 	desc = "A sturdy and advanced military grade pre-war service laser rifle"
 	icon_state = "laser"
 	item_state = "laser-rifle9"
+	can_scope = TRUE
+	scopestate = "AEP7_scope"
+	scope_x_offset = 14
+	scope_y_offset = 21
 	fire_delay = 3
 	equipsound = 'sound/f13weapons/equipsounds/aer9equip.ogg'
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/lasgun)
