@@ -1549,9 +1549,6 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	glass_desc = "Nuka Cola with a alcoholic twist."
 
 /datum/reagent/consumable/ethanol/nukadark/on_mob_life(mob/living/carbon/M)
-	M.Jitter(20)
-	M.set_drugginess(30)
-	M.dizziness +=1.5
 	M.drowsyness = 0
 	M.AdjustSleeping(-40, FALSE)
 	M.adjust_bodytemperature(-5 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
@@ -1570,9 +1567,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	glass_desc = "Nuka Cola with an <BIG>AMERICAN<BIG> twist."
 
 /datum/reagent/consumable/ethanol/nukavictory/on_mob_life(mob/living/carbon/M)
-	M.Jitter(20)
 	M.add_trait(TRAIT_BIG_LEAGUES, id)
-	M.dizziness +=1.5
 	M.adjustBruteLoss(-2.5*REM, 0)
 	M.drowsyness = 0
 	M.AdjustSleeping(-40, FALSE)
@@ -1599,9 +1594,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	var/high_message = pick("<br><font color='#FF0000'><b>You hear the /SIRENS BLAZING/</b></font>, <br><font color='#FF0000'><b>You feel the /RADIOACTIVE HELLFIRE/</b></font>")
 	if(prob(50))
 		to_chat(M, "<span class='notice'>[high_message]</span>")
-	M.Jitter(100)
 	M.adjustBruteLoss(-6*REM, 0)
-	M.dizziness +=1.5
 	M.drowsyness = 0
 	M.AdjustSleeping(-40, FALSE)
 	M.adjust_bodytemperature(-5 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
@@ -1625,11 +1618,8 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	glass_desc = "The drink of a goddamn madman, say your sorrows when you drink this."
 
 /datum/reagent/consumable/ethanol/nukacide/on_mob_life(mob/living/carbon/M)
-	if(prob(95))
+	if(prob(30))
 		M.vomit(100)
-	M.Jitter(100)
-	M.set_drugginess(30)
-	M.dizziness +=1.5
 	M.drowsyness = 0
 	M.AdjustSleeping(-40, FALSE)
 	M.adjust_bodytemperature(-5 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
@@ -1651,9 +1641,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	var/high_message = pick("<br>Maybe I too need some Slaves?</b>","<br>Mutfruit for All!</b>","<br>Time to Glorify my Wasteland Castle!</b>","<brNuked, not stirred.</b>")
 	if(prob(20))
 		to_chat(M, "<span class='notice'>[high_message]</span>")
-	M.emote("clap")
 	M.adjustBruteLoss(-0.5*REM, 0)
-	M.dizziness +=1.5
 	M.drowsyness = 0
 	M.AdjustSleeping(-40, FALSE)
 	M.adjust_bodytemperature(-5 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
@@ -1673,10 +1661,6 @@ All effects don't start immediately, but rather get worse over time; the rate is
 
 /datum/reagent/consumable/ethanol/nukalove/on_mob_life(mob/living/carbon/M)
 	M.adjustBruteLoss(-2*REM, 0)
-	M.dizziness +=1.5
-	M.emote("laugh")
-	M.emote("smile")
-	M.emote("cry")
 	M.drowsyness = 0
 	M.AdjustSleeping(-40, FALSE)
 	M.adjust_bodytemperature(-5 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
@@ -1700,11 +1684,8 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	M.adjustOxyLoss(-4*REM)
 	M.adjustToxLoss(-4*REM, 0)
 	M.adjustStaminaLoss(-4*REM, 0)
-	if(prob(50))
+	if(prob(10))
 		M.vomit(20)
-	M.Jitter(20)
-	M.set_drugginess(30)
-	M.dizziness +=1.5
 	M.drowsyness = 0
 	M.AdjustSleeping(-40, FALSE)
 	M.adjust_bodytemperature(-5 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
@@ -1723,9 +1704,6 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	glass_desc = "A Nuka-Cola original drink, totally original and first of its kind!"
 
 /datum/reagent/consumable/ethanol/nukasunrise/on_mob_life(mob/living/carbon/M)
-	M.Jitter(20)
-	M.emote("laugh")
-	M.dizziness +=1.5
 	M.adjustFireLoss(-2.5*REM, 0)
 	M.drowsyness = 0
 	M.AdjustSleeping(-40, FALSE)
@@ -1746,9 +1724,6 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	var/datum/brain_trauma/special/psychotic_brawling/bath_salts/rage
 
 /datum/reagent/consumable/ethanol/nukaquantum/on_mob_life(mob/living/carbon/M)
-	M.Jitter(40)
-	M.set_drugginess(60)
-	M.dizziness +=1.5
 	M.drowsyness = 0
 	M.AdjustSleeping(-40, FALSE)
 	M.adjust_bodytemperature(-5 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
@@ -1772,7 +1747,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	M.remove_trait(TRAIT_SLEEPIMMUNE, id)
 	var/obj/item/organ/liver/L = M.getorganslot(ORGAN_SLOT_LIVER)
 	if(L)
-		L.damage += 20
+		L.damage += 5
 	if(rage)
 		QDEL_NULL(rage)
 	if(iscarbon(M))
@@ -1796,20 +1771,15 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	var/high_message = pick("<br><font color='#FF0000'><b>EXTREME</b></font>", "<br><font color='#FF0000'><b>RAAAAR!</b></font>", "<br><font color='#FF0000'><b>BRING IT!</b></font>")
 	if(prob(100))
 		to_chat(M, "<span class='notice'>[high_message]</span>")
-	M.Jitter(40)
-	M.set_drugginess(60)
-	M.dizziness +=1.5
 	M.drowsyness = 0
 	M.AdjustSleeping(-40, FALSE)
 	M.adjust_bodytemperature(-5 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
-	M.adjustBrainLoss(4,0)
-	M.adjustToxLoss(4, 0)
+	M.adjustBrainLoss(3,0)
+	M.adjustToxLoss(3, 0)
 	M.AdjustStun(-30, 0)
 	M.AdjustKnockdown(-30, 0)
 	M.AdjustUnconscious(-30, 0)
 	M.adjustStaminaLoss(-5, 0)
-	M.hallucination += 20
-	M.Jitter(2)
 	M.add_trait(TRAIT_IRONFIST, id)
 	M.add_trait(TRAIT_SLEEPIMMUNE, id)
 	if(iscarbon(M))
@@ -1836,9 +1806,6 @@ All effects don't start immediately, but rather get worse over time; the rate is
 /datum/reagent/consumable/ethanol/nukaxtreme/on_mob_delete(mob/living/M)
 	M.remove_trait(TRAIT_IRONFIST, id)
 	M.remove_trait(TRAIT_SLEEPIMMUNE, id)
-	var/obj/item/organ/liver/L = M.getorganslot(ORGAN_SLOT_LIVER)
-	if(L)
-		L.damage += 400
 	if(M && M.hud_used)
 		var/list/screens = list(M.hud_used.plane_masters["[FLOOR_PLANE]"], M.hud_used.plane_masters["[GAME_PLANE]"], M.hud_used.plane_masters["[LIGHTING_PLANE]"])
 		for(var/whole_screen in screens)
@@ -1864,9 +1831,6 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	glass_desc = "A glass of special vim holding the taste of the sea, Far from here."
 
 /datum/reagent/consumable/ethanol/vimcap/on_mob_life(mob/living/carbon/M)
-	M.Jitter(40)
-	M.set_drugginess(60)
-	M.dizziness +=1.5
 	M.drowsyness = 0
 	M.AdjustSleeping(-40, FALSE)
 	M.adjust_bodytemperature(-5 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
