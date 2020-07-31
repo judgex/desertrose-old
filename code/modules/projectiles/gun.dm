@@ -49,8 +49,11 @@
 	var/obj/item/flashlight/gun_light
 	var/can_flashlight = 0
 	var/obj/item/kitchen/knife/bayonet
+	var/obj/item/advanced_crafting_components/scope
 	var/mutable_appearance/knife_overlay
+	var/mutable_appearance/scope_overlay
 	var/can_bayonet = FALSE
+	var/can_scope = FALSE
 	var/datum/action/item_action/toggle_gunlight/alight
 	var/mutable_appearance/flashlight_overlay
 
@@ -62,6 +65,11 @@
 	var/flight_y_offset = 0
 	var/knife_x_offset = 0
 	var/knife_y_offset = 0
+	var/scope_x_offset = 0
+	var/scope_y_offset = 0
+
+	var/scopestate = "scope"
+	var/bayonetstate = "bayonet"
 
 	//Zooming
 	var/zoomable = FALSE //whether the gun generates a Zoom action on creation
@@ -367,14 +375,33 @@
 				return
 			to_chat(user, "<span class='notice'>You attach \the [K] to the front of \the [src].</span>")
 			bayonet = K
-			var/state = "bayonet"							//Generic state.
 			if(bayonet.icon_state in icon_states('icons/obj/guns/bayonets.dmi'))		//Snowflake state?
-				state = bayonet.icon_state
+				bayonetstate = bayonet.icon_state
 			var/icon/bayonet_icons = 'icons/obj/guns/bayonets.dmi'
-			knife_overlay = mutable_appearance(bayonet_icons, state)
+			knife_overlay = mutable_appearance(bayonet_icons, bayonetstate)
 			knife_overlay.pixel_x = knife_x_offset
 			knife_overlay.pixel_y = knife_y_offset
 			add_overlay(knife_overlay, TRUE)
+	else if(istype(I, /obj/item/advanced_crafting_components/scope))
+		if(!can_scope)
+			return ..()
+		var/obj/item/advanced_crafting_components/scope/C = I
+		if(!scope)
+			if(!user.transferItemToLoc(I, src))
+				return
+			to_chat(user, "<span class='notice'>You attach \the [C] to the top of \the [src].</span>")
+			scope = C
+			src.zoomable = TRUE
+			src.zoom_amt = 10
+			src.zoom_out_amt = 13
+			src.build_zooming()
+			if(scope.icon_state in icon_states('icons/obj/guns/scopes.dmi'))
+				scope_overlay = scope.icon_state
+			var/icon/scope_icons = 'icons/obj/guns/scopes.dmi'
+			scope_overlay = mutable_appearance(scope_icons, scopestate)
+			scope_overlay.pixel_x = scope_x_offset
+			scope_overlay.pixel_y = scope_y_offset
+			add_overlay(scope_overlay, TRUE)
 	else if(istype(I, /obj/item/screwdriver))
 		if(gun_light)
 			var/obj/item/flashlight/seclite/S = gun_light
@@ -391,8 +418,17 @@
 			bayonet = null
 			cut_overlay(knife_overlay, TRUE)
 			knife_overlay = null
-	else
-		return ..()
+		if(scope)
+			to_chat(user, "<span class='notice'>You unscrew the scope from \the [src].</span>")
+			var/obj/item/advanced_crafting_components/scope/C = scope
+			C.forceMove(get_turf(user))
+			src.zoomable = FALSE
+			azoom.Remove(user)
+			scope = null
+			cut_overlay(scope_overlay, TRUE)
+			scope_overlay = null
+		else
+			return ..()
 
 /obj/item/gun/proc/toggle_gunlight()
 	if(!gun_light)
