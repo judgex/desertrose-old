@@ -1401,6 +1401,7 @@
 		/obj/item/advanced_crafting_components/conductors,
 		/obj/item/advanced_crafting_components/receiver,
 		/obj/item/advanced_crafting_components/assembly,
-	    /obj/item/advanced_crafting_components/alloys
+	    /obj/item/advanced_crafting_components/alloys,
+		/obj/item/advanced_crafting_components/scope
 	)
 
