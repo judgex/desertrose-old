@@ -258,20 +258,17 @@
 	item_state = "metalhelmet"
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	armor = list("melee" = 40, "bullet" = 25, "laser" = 25, "energy" = 20, "bomb" = 16, "bio" = 0, "rad" = 0)
-	color = "#514E4E" // Light Grey
 
 /obj/item/clothing/head/helmet/knight/fluff/metal/reinforced
 	name = "reinforced metal helmet"
 	icon_state = "metalhelmet_r"
 	item_state = "metalhelmet_r"
 	armor = list("melee" = 45, "bullet" = 35, "laser" = 40, "energy" = 25, "bomb" = 16, "bio" = 0, "rad" = 0)
-	color = "#514E4E" // Light Grey
 
 /obj/item/clothing/head/helmet/knight/fluff/metal/strange
 	name = "strange helmet"
 	desc = "A steel helmet forged by tribal warriors, with additional plating to protect again projectile and laser fire."
 	armor = list("melee" = 40, "bullet" = 40, "laser" = 40, "energy" = 25, "bomb" = 16, "bio" = 0, "rad" = 0)
-	color = "#514E4E" // Light Grey
 
 /obj/item/clothing/head/helmet/knight/fluff/rider
 	name = "rider helmet" //Not raider. Rider.
@@ -690,6 +687,13 @@
 	icon_state = "elite_riot"
 	item_state = "elite_riot"
 	armor = list("melee" = 70, "bullet" = 60, "laser" = 40, "energy" = 60, "bomb" = 55, "bio" = 60, "rad" = 60, "fire" = 40, "acid" = 0)
+
+/obj/item/clothing/head/helmet/f13/rangercombat/eliteriot/decomissioned
+	name = "decomissioned elite riot gear helmet"
+	desc = "An old combat helmet seen in the divide, repurposed for higher ranking Rangers.This set appears to be stripped of a majority of its protective kevlar and plating, a shell mostly remaining."
+	icon_state = "desert_ranger"
+	item_state = "desert_ranger"
+	armor = list("melee" = 30, "bullet" = 30, "laser" = 30, "energy" = 30, "bomb" = 30, "bio" = 30, "rad" = 30, "fire" = 30, "acid" = 0)
 
 //Metal masks
 

@@ -59,6 +59,9 @@
 
 	var/list/saved_recipes = list()
 
+/obj/machinery/chem_dispenser/low_power
+	cell_type = /obj/item/stock_parts/cell/upgraded
+
 /obj/machinery/chem_dispenser/Initialize()
 	. = ..()
 	cell = new cell_type

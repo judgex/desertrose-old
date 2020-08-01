@@ -6,7 +6,7 @@ Main doors: ACCESS_CAPTAIN 20
 /datum/job/bos //do NOT use this for anything, it's just to store faction datums.
 	department_flag = BOS
 	selection_color = "#95a5a6"
-	exp_type = EXP_TYPE_BROTHERHOOD
+
 	access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
 	minimal_access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
 	outfit = /datum/outfit/job/bos/
@@ -44,7 +44,7 @@ Elder
 	supervisors = "the high elders"
 	selection_color = "#7f8c8d"
 	req_admin_notify = 1
-	exp_requirements = 2700
+
 	total_positions = 0
 	spawn_positions = 0
 
@@ -87,7 +87,6 @@ Sentinel
 	enforces = "The Brotherhood of Steel Expects: Obeying the Chain That - Binds your direct superior. Collection and safeguarding of technology from the wasteland. Experimentation and research."
 	supervisors = "the elder"
 	selection_color = "#7f8c8d"
-	exp_requirements = 1800
 
 	loadout_options = list(
 	/datum/outfit/loadout/sentstand, //Tribeam laser and 10mm pistol
@@ -165,8 +164,6 @@ Head Scribe
 	enforces = "The Brotherhood of Steel Expects: Obeying the Chain That - Binds your direct superior. Collection and safeguarding of technology from the wasteland. Experimentation and research."
 	supervisors = "the elder"
 	selection_color = "#7f8c8d"
-	exp_requirements = 600
-	exp_type = EXP_TYPE_SCRIBE
 
 	loadout_options = list(
 	/datum/outfit/loadout/hsstand, //Pulse pistol, and medbeam
@@ -231,7 +228,6 @@ Knight-Captain
 	enforces = "The Brotherhood of Steel Expects: Obeying the Chain That - Binds your direct superior. Collection and safeguarding of technology from the wasteland. Experimentation and research."
 	supervisors = "the Sentinel"
 	selection_color = "#7f8c8d"
-	exp_requirements = 600
 
 	loadout_options = list(
 	/datum/outfit/loadout/capstand, //AER9 and 10mm pistol
@@ -313,7 +309,6 @@ Senior Paladin
 	enforces = "The Brotherhood of Steel Expects: Obeying the Chain That - Binds your direct superior. Collection and safeguarding of technology from the wasteland. Experimentation and research."
 	supervisors = "the Sentinel"
 	selection_color = "#95a5a6"
-	exp_requirements = 1200
 
 	loadout_options = list(
 		/datum/outfit/loadout/spaladina, //M72 Gauss rifle and Glock
@@ -375,7 +370,6 @@ Paladin
 	enforces = "The Brotherhood of Steel Expects: Obeying the Chain That - Binds your direct superior. Collection and safeguarding of technology from the wasteland. Experimentation and research."
 	supervisors = "the Sentinel, or Senior Paladin"
 	selection_color = "#95a5a6"
-	exp_requirements = 900
 
 	loadout_options = list(
 	/datum/outfit/loadout/paladina, //Carbine and aep7
@@ -460,7 +454,6 @@ Senior Scribe
 	enforces = "The Brotherhood of Steel Expects: Obeying the Chain That - Binds your direct superior. Collection and safeguarding of technology from the wasteland. Experimentation and research."
 	supervisors = "the Head Scribe"
 	selection_color = "#95a5a6"
-	exp_requirements = 600
 
 	outfit = /datum/outfit/job/bos/f13seniorscribe
 
@@ -491,10 +484,6 @@ Senior Scribe
 		/obj/item/reagent_containers/hypospray/medipen/stimpak=2, \
 		/obj/item/reagent_containers/hypospray/CMO=1)
 
-
-/datum/job/bos/f13seniorscribe/after_spawn(mob/living/carbon/human/H, mob/M)
-	H.add_quirk("Poor Aim")
-
 /*
 Scribe
 */
@@ -510,7 +499,6 @@ Scribe
 	enforces = "The Brotherhood of Steel Expects: Obeying the Chain That - Binds your direct superior. Collection and safeguarding of technology from the wasteland. Experimentation and research."
 	supervisors = "the Head Scribe"
 	selection_color = "#95a5a6"
-	exp_requirements = 600
 
 	loadout_options = list(
 	/datum/outfit/loadout/scribea,
@@ -544,9 +532,6 @@ Scribe
 		/obj/item/gun/energy/laser/pistol=1, \
 		/obj/item/reagent_containers/hypospray/medipen/stimpak=2)
 
-/datum/job/bos/f13scribe/after_spawn(mob/living/carbon/human/H, mob/M)
-	H.add_quirk("Poor Aim")
-
 /datum/outfit/loadout/scribea
 	name = "Junior Scribe"
 	backpack_contents = list(
@@ -574,8 +559,6 @@ datum/job/bos/f13seniorknight
 	enforces = "The Brotherhood of Steel Expects: Obeying the Chain That - Binds your direct superior. Collection and safeguarding of technology from the wasteland. Experimentation and research."
 	supervisors = "the Knight-Captain"
 	selection_color = "#95a5a6"
-	exp_requirements = 1800
-	exp_type = EXP_TYPE_CREW
 
 	loadout_options = list(
 	/datum/outfit/loadout/sknighta, //AER9
@@ -638,8 +621,6 @@ Knight
 	enforces = "The Brotherhood of Steel Expects: Obeying the Chain That - Binds your direct superior. Collection and safeguarding of technology from the wasteland. Experimentation and research."
 	supervisors = "the Knight-Captain, or Senior Knight"
 	selection_color = "#95a5a6"
-	exp_requirements = 1800
-	exp_type = EXP_TYPE_CREW
 
 	loadout_options = list(
 	/datum/outfit/loadout/knighta, //AER9
@@ -718,7 +699,7 @@ Initiate
 	enforces = "The Brotherhood of Steel Expects: Obeying the Chain That - Binds your direct superior. Collection and safeguarding of technology from the wasteland. Experimentation and research."
 	supervisors = "the scribes, knights, or Paladins"
 	selection_color = "#95a5a6"
-	exp_requirements = 1800
+	exp_requirements = 12
 	exp_type = EXP_TYPE_CREW
 
 	loadout_options = list(
@@ -772,15 +753,13 @@ Off-Duty
 	title = "Off-Duty"
 	flag = F13OFFDUTYBOS
 	faction = "BOS"
-	total_positions = 8
-	spawn_positions = 8
+	total_positions = 0
+	spawn_positions = 0
 	description = "Whether operating in disguise or simply enjoying time from the off-shift, you are still a member of the Brotherhood and must abide by the Codex and follow the orders of your superiors. That being said, while off-duty your orders do not take precedence and you should resist issuing them when another of your rank is currently on duty, and if one does not exist, commit to going on-duty. You have a duty to safeguard what equipment you are given, especially your holotags. Ideally, you should be paired with one or more fellow off-duty members; and you would know where the bunker in the region is."
 	forbids = "The Brotherhood of Steel Forbids: Unethical human experimentation. Violence beyond what is needed to accomplish Brotherhood goals."
 	enforces = "The Brotherhood of Steel Expects: Obeying the Chain That - Binds your direct superior. Collection and safeguarding of technology from the wasteland. Experimentation and research."
 	supervisors = "your superior rank."
 	selection_color = "#95a5a6"
-	exp_requirements = 1800
-	exp_type = EXP_TYPE_CREW
 
 	loadout_options = list(
 	/datum/outfit/loadout/offa, //Junior Knight

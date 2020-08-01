@@ -114,7 +114,7 @@
 	melee_damage_lower = 30
 	melee_damage_upper = 35
 	mob_size = 5
-
+	faction = list("hostile")
 
 /mob/living/simple_animal/hostile/ghoul/glowing/Initialize()
 	. = ..()
