@@ -688,9 +688,9 @@
 	item_state = "elite_riot"
 	armor = list("melee" = 70, "bullet" = 60, "laser" = 40, "energy" = 60, "bomb" = 55, "bio" = 60, "rad" = 60, "fire" = 40, "acid" = 0)
 
-/obj/item/clothing/head/helmet/f13/rangercombat/eliteriot/decomissioned
-	name = "decomissioned elite riot gear helmet"
-	desc = "An old combat helmet seen in the divide, repurposed for higher ranking Rangers.This set appears to be stripped of a majority of its protective kevlar and plating, a shell mostly remaining."
+/obj/item/clothing/head/helmet/f13/rangercombat/eliteriot/reclaimed
+	name = "reclaimed desert ranger gear"
+	desc = "A refurbished and personalized set of pre-unification desert ranger gear."
 	icon_state = "desert_ranger"
 	item_state = "desert_ranger"
 	armor = list("melee" = 30, "bullet" = 30, "laser" = 30, "energy" = 30, "bomb" = 30, "bio" = 30, "rad" = 30, "fire" = 30, "acid" = 0)

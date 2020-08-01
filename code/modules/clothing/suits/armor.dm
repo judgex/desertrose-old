@@ -696,9 +696,9 @@
 	armor = list("melee" = 65, "bullet" = 60, "laser" = 60, "energy" = 60, "bomb" = 70, "bio" = 60, "rad" = 60, "fire" = 90, "acid" = 50)
 	icon = 'icons/fallout/clothing_w/suit.dmi'
 
-/obj/item/clothing/suit/armor/f13/rangercombat/eliteriot/decomissioned
-	name = "decomissioned elite riot gear"
-	desc = "A heavily reinforced set of military grade armor, commonly seen in the Divide now repurposed and reissued to Chief Rangers. This set appears to be stripped of a majority of its protective kevlar and plating, a shell mostly remaining."
+/obj/item/clothing/suit/armor/f13/rangercombat/eliteriot/reclaimed
+	name = "reclaimed desert ranger helmet"
+	desc = "A refurbished and personalized set of pre-unification desert ranger gear."
 	icon_state = "desert_ranger"
 	item_state = "desert_ranger"
 	armor = list("melee" = 30, "bullet" = 30, "laser" = 30, "energy" = 30, "bomb" = 30, "bio" = 30, "rad" = 30, "fire" = 30, "acid" = 30)
