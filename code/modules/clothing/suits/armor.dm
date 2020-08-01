@@ -696,9 +696,17 @@
 	armor = list("melee" = 65, "bullet" = 60, "laser" = 60, "energy" = 60, "bomb" = 70, "bio" = 60, "rad" = 60, "fire" = 90, "acid" = 50)
 	icon = 'icons/fallout/clothing_w/suit.dmi'
 
+/obj/item/clothing/suit/armor/f13/rangercombat/eliteriot/decomissioned
+	name = "decomissioned elite riot gear"
+	desc = "A heavily reinforced set of military grade armor, commonly seen in the Divide now repurposed and reissued to Chief Rangers."
+	icon_state = "elite_riot"
+	item_state = "elite_riot"
+	armor = list("melee" = 30, "bullet" = 30, "laser" = 30, "energy" = 30, "bomb" = 30, "bio" = 30, "rad" = 30, "fire" = 30, "acid" = 30)
+	icon = 'icons/fallout/clothing_w/suit.dmi'
+
 /obj/item/clothing/suit/armor/f13/chitinarmor
 	name = "insect chitin armor"
-	desc = "A set of light armor made of insect chitin. Tough and light, it provides some moderate protection from trauma while allowing the user to remain mobile and protected from the elements."
+	desc = "A set of light armor made of insect chitin. Tough and light, it provides some moderate protection from trauma while allowing the user to remain mobile and protected from the elements. This set appears to be stripped of a majority of its protective kevlar and plating, a shell mostly remaining."
 	icon_state = "insect_armor"
 	item_state = "insect_armor"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS

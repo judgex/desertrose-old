@@ -179,16 +179,12 @@ Orator
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13orator
 	name = "Legion Orator"
 	suit = 	/obj/item/clothing/suit/armor/f13/legion/vet/orator
-	jobtype = /datum/job/CaesarsLegion/f13orator
 	id = /obj/item/card/id/dogtag/legorator
 	backpack_contents = list(
 		/obj/item/reagent_containers/pill/patch/healingpowder=3, \
 		/obj/item/flashlight/lantern=1,
 		/obj/item/storage/box/ids/follower=1
 		)
-
-/datum/job/CaesarsLegion/f13orator/after_spawn(mob/living/carbon/human/H, mob/M)
-	H.add_quirk("Poor Aim")
 
 /*
 Priestess of Mars
@@ -231,7 +227,6 @@ Priestess of Mars
 			L.update_label()
 
 /datum/job/CaesarsLegion/f13priestess/after_spawn(mob/living/carbon/human/H, mob/M)
-	H.add_quirk("Poor Aim")
 	H.add_quirk("Spiritual")
 
 /*
@@ -515,7 +510,6 @@ Prime Legionairy
 
 /datum/job/CaesarsLegion/Legionnaire/f13legionary/after_spawn(mob/living/carbon/human/H, mob/M)
 	H.add_quirk("Big Leagues")
-	H.add_quirk("Poor Aim")
 /*
 Recruit Legionary
 */
@@ -548,9 +542,6 @@ Recruit Legionary
 		/obj/item/kitchen/knife/butcher, \
 		/obj/item/flashlight/flare/torch=1,
 		/obj/item/radio)
-
-/datum/job/CaesarsLegion/Legionnaire/f13recruitleg/after_spawn(mob/living/carbon/human/H, mob/M)
-	H.add_quirk("Poor Aim")
 
 /*
 Explorer
@@ -664,10 +655,6 @@ Auxilia
 		/obj/item/stack/sheet/plasteel/five=1,
 		/obj/item/stack/sheet/leather/twenty=1,
 		/obj/item/stack/sheet/mineral/wood/fifty=1)
-
-
-/datum/job/CaesarsLegion/f13auxilia/after_spawn(mob/living/carbon/human/H, mob/M)
-	H.add_quirk("Poor Aim")
 
 /*
 Camp Follower
@@ -827,6 +814,3 @@ Slave
 	backpack_contents = list(
 		/obj/item/pickaxe=1, \
 		/obj/item/radio=1)
-
-/datum/job/CaesarsLegion/f13slave/after_spawn(mob/living/carbon/human/H, mob/M)
-	H.add_quirk("Poor Aim")
