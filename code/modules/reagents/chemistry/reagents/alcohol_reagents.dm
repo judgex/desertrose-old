@@ -1747,7 +1747,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	M.remove_trait(TRAIT_SLEEPIMMUNE, id)
 	var/obj/item/organ/liver/L = M.getorganslot(ORGAN_SLOT_LIVER)
 	if(L)
-		L.damage += 5
+		L.damage += 1
 	if(rage)
 		QDEL_NULL(rage)
 	if(iscarbon(M))
@@ -1775,7 +1775,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	M.AdjustSleeping(-40, FALSE)
 	M.adjust_bodytemperature(-5 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
 	M.adjustBrainLoss(3,0)
-	M.adjustToxLoss(3, 0)
+	M.adjustToxLoss(2, 0)
 	M.AdjustStun(-30, 0)
 	M.AdjustKnockdown(-30, 0)
 	M.AdjustUnconscious(-30, 0)
