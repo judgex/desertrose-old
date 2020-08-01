@@ -6,3 +6,4 @@
 	icon_state = "church"
 	icon = 'icons/obj/objects2.dmi'
 	item_chair = null
+	buildstacktype = /obj/item/stack/sheet/mineral/wood
