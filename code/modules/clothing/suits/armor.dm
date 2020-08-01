@@ -698,9 +698,9 @@
 
 /obj/item/clothing/suit/armor/f13/rangercombat/eliteriot/decomissioned
 	name = "decomissioned elite riot gear"
-	desc = "A heavily reinforced set of military grade armor, commonly seen in the Divide now repurposed and reissued to Chief Rangers."
-	icon_state = "elite_riot"
-	item_state = "elite_riot"
+	desc = "A heavily reinforced set of military grade armor, commonly seen in the Divide now repurposed and reissued to Chief Rangers. This set appears to be stripped of a majority of its protective kevlar and plating, a shell mostly remaining."
+	icon_state = "desert_ranger"
+	item_state = "desert_ranger"
 	armor = list("melee" = 30, "bullet" = 30, "laser" = 30, "energy" = 30, "bomb" = 30, "bio" = 30, "rad" = 30, "fire" = 30, "acid" = 30)
 	icon = 'icons/fallout/clothing_w/suit.dmi'
 
