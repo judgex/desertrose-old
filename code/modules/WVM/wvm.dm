@@ -580,7 +580,7 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		)
 
 /obj/machinery/mineral/wasteland_vendor/advcomponents
-	name = "Caravan Network Access"
+	name = "Wasteland Vending Machine - Components"
 	icon_state = "generic_idle"
 	prize_list = list(
 		new /datum/data/wasteland_equipment("Advanced Modular Receiver",		/obj/item/advanced_crafting_components/receiver,					200),
@@ -588,7 +588,17 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		new /datum/data/wasteland_equipment("Superconductor Coils",				/obj/item/advanced_crafting_components/conductors,					200),
 		new /datum/data/wasteland_equipment("Focused crystal lenses",			/obj/item/advanced_crafting_components/lenses,						200),
 		new /datum/data/wasteland_equipment("Flux capacitator",					/obj/item/advanced_crafting_components/flux,						200),
-		new /datum/data/wasteland_equipment("Superlight Alloys",				/obj/item/advanced_crafting_components/alloys,						200),
+		new /datum/data/wasteland_equipment("Superlight Alloys",				/obj/item/advanced_crafting_components/alloys,						200)
+		)
+
+/obj/machinery/mineral/wasteland_vendor/attachments
+	name = "Wasteland Vending Machine - Attachments"
+	icon_state = "generic_idle"
+	prize_list = list(
+		new /datum/data/wasteland_equipment("Weapon Optics",				/obj/item/attachments/scope,									150),
+		new /datum/data/wasteland_equipment("Recoil Compensator",			/obj/item/attachments/recoil_decrease,							100),
+		new /datum/data/wasteland_equipment("Improved Barrel",				/obj/item/attachments/bullet_speed,								100),
+		new /datum/data/wasteland_equipment("Burst Cam",					/obj/item/attachments/burst_improvement,						200)
 		)
 
 /datum/data/wasteland_equipment

@@ -1402,6 +1402,16 @@
 		/obj/item/advanced_crafting_components/receiver,
 		/obj/item/advanced_crafting_components/assembly,
 	    /obj/item/advanced_crafting_components/alloys,
-		/obj/item/advanced_crafting_components/scope
+	)
+
+/obj/effect/spawner/lootdrop/f13/attachments
+	name = "attachments"
+	lootcount = 1
+	lootdoubles = FALSE
+	loot = list(
+		/obj/item/attachments/scope,
+		/obj/item/attachments/bullet_speed,
+		/obj/item/attachments/burst_improvement,
+		/obj/item/attachments/recoil_decrease
 	)
 
