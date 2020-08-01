@@ -491,10 +491,6 @@ Senior Scribe
 		/obj/item/reagent_containers/hypospray/medipen/stimpak=2, \
 		/obj/item/reagent_containers/hypospray/CMO=1)
 
-
-/datum/job/bos/f13seniorscribe/after_spawn(mob/living/carbon/human/H, mob/M)
-	H.add_quirk("Poor Aim")
-
 /*
 Scribe
 */
@@ -543,9 +539,6 @@ Scribe
 		/obj/item/kitchen/knife/combat=1, \
 		/obj/item/gun/energy/laser/pistol=1, \
 		/obj/item/reagent_containers/hypospray/medipen/stimpak=2)
-
-/datum/job/bos/f13scribe/after_spawn(mob/living/carbon/human/H, mob/M)
-	H.add_quirk("Poor Aim")
 
 /datum/outfit/loadout/scribea
 	name = "Junior Scribe"
