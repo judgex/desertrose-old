@@ -351,7 +351,7 @@
 
 /datum/crafting_recipe/mini_uzimag
 	name = "empty mini uzi magazine (9mm)"
-	result = /obj/item/ammo_box/magazine/uzim9mm
+	result = /obj/item/ammo_box/magazine/uzim9mm/empty
 	reqs = list(/obj/item/stack/sheet/metal = 2)
 	traits = list(TRAIT_GUNSMITH_TWO)
 	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER2)

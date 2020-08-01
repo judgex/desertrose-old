@@ -90,6 +90,7 @@
 	mag_type = /obj/item/ammo_box/magazine/m10mm_adv
 	fire_sound = 'sound/f13weapons/10mm_fire_02.ogg'
 	w_class = WEIGHT_CLASS_NORMAL
+	can_attachments = TRUE
 	fire_delay = 2
 	can_suppress = TRUE
 
