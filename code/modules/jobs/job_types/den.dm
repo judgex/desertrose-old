@@ -163,6 +163,8 @@ Mayor
 	supervisors = "law and order"
 	description = "As a Farmer, you believe that the frontier holds abundant opportunities for you to encroach and take advantage of. Enshrouded in safety by the walls of Oasis, you enact out your skills of cultivation and husbandry, making you a vital backbone business of the town in growing medicines, crops and livestock, focusing on thriving and profiting off of this for your own intrinsic goals. As per your terms of agreement you should follow the law and order of the town, maintaining a distinct amount of peace from the wild wasteland that civilisation hopes to outrun..."
 	selection_color = "#dcba97"
+	exp_requirements = 2
+	exp_type = EXP_TYPE_CREW
 
 	outfit = /datum/outfit/job/den/f13farmer
 
@@ -505,7 +507,9 @@ Mayor
 	supervisors = "law and order"
 	description = "You are a Settler living within the Town of Oasis - as the name suggests, it is a slightly more civilised place amidst the chaos of the Wasteland. Treat it as such, be sure to follow the laws of the land and do not associate with those who have a tendency not to, or you are likely to face exile. Remember that Oasis is your home, and that you should not be leaving to explore the Wastes."
 	selection_color = "#dcba97"
-
+	exp_requirements = 2
+	exp_type = EXP_TYPE_CREW
+	
 	outfit = /datum/outfit/job/den/f13settler
 
 	loadout_options = list(
