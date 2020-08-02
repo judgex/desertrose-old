@@ -363,3 +363,7 @@
 	if(hud_used && hud_used.static_inventory)
 		for(var/obj/screen/mov_intent/selector in hud_used.static_inventory)
 			selector.toggle(src)
+
+/mob/Moved(atom/OldLoc, Dir, Forced = FALSE)
+	. = ..()
+	set_typing_indicator(FALSE)
