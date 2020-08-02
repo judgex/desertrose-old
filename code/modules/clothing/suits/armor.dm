@@ -696,11 +696,12 @@
 	armor = list("melee" = 65, "bullet" = 60, "laser" = 60, "energy" = 60, "bomb" = 70, "bio" = 60, "rad" = 60, "fire" = 90, "acid" = 50)
 	icon = 'icons/fallout/clothing_w/suit.dmi'
 
-/obj/item/clothing/suit/armor/f13/rangercombat/eliteriot/decomissioned
-	name = "decomissioned elite riot gear"
-	desc = "A heavily reinforced set of military grade armor, commonly seen in the Divide now repurposed and reissued to Chief Rangers. This set appears to be stripped of a majority of its protective kevlar and plating, a shell mostly remaining."
-	icon_state = "desert_ranger"
-	item_state = "desert_ranger"
+
+/obj/item/clothing/suit/armor/f13/rangercombat/eliteriot/reclaimed
+	name = "reclaimed desert ranger helmet"
+	desc = "A refurbished and personalized set of pre-unification desert ranger gear."
+	icon_state = "reclaimed_desert_ranger"
+	item_state = "reclaimed_desert_ranger"
 	armor = list("melee" = 30, "bullet" = 30, "laser" = 30, "energy" = 30, "bomb" = 30, "bio" = 30, "rad" = 30, "fire" = 30, "acid" = 30)
 	icon = 'icons/fallout/clothing_w/suit.dmi'
 
@@ -864,6 +865,12 @@
 	item_state = "t45dpowerarmor"
 	armor = list("melee" = 65, "bullet" = 60, "laser" = 50, "energy" = 60, "bomb" = 62, "bio" = 100, "rad" = 90, "fire" = 90, "acid" = 0)
 
+/obj/item/clothing/suit/armor/f13/power_armor/t45d/sierra
+	name = "sierra power armor"
+	desc = "A captured set of T-45d power armor put into use by the NCR, it's been heavily modified and decorated with the head of a bear and intricate gold trimming. A two headed bear is scorched into the breastplate."
+	icon_state = "sierra"
+	item_state = "sierra"
+
 /obj/item/clothing/suit/armor/f13/power_armor/t60
 	name = "T-60a power armor"
 	desc = "Developed in early 2077 after the Anchorage Reclamation, the T-60 series of power armor was designed to eventually replace the T-51b as the pinnacle of powered armor technology in the U.S. military arsenal."
@@ -880,11 +887,6 @@
 	slowdown = 0.15 //+0.1 from helmet = total 0.25
 	armor = list("melee" = 70, "bullet" = 65, "laser" = 55, "energy" = 65, "bomb" = 62, "bio" = 100, "rad" = 99, "fire" = 90, "acid" = 0)
 
-/obj/item/clothing/suit/armor/f13/power_armor/t51b/sierra
-	name = "sierra power armor"
-	desc = "A captured set of T-51b power armor put into use by the NCR, it's been heavily modified and decorated with the head of a bear and intricate gold trimming. A two headed bear is scorched into the breastplate."
-	icon_state = "sierra"
-	item_state = "sierra"
 
 /obj/item/clothing/suit/armor/f13/power_armor/advanced
 	name = "advanced power armor"
