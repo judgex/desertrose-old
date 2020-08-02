@@ -1,13 +1,42 @@
 //Speech verbs.
-/mob/verb/say_verb(message as text)
-	set name = "Say"
+/mob/verb/say_typing_indicator()
+	set name = "say_indicator"
+	set hidden = TRUE
 	set category = "IC"
+	display_typing_indicator()
+	var/message = input(usr, "", "say") as text|null
+	// If they don't type anything just drop the message.
+	clear_typing_indicator()		// clear it immediately!
+	if(!length(message))
+		return
+	return say_verb(message)
+
+/mob/verb/me_typing_indicator()
+	set name = "me_indicator"
+	set hidden = TRUE
+	set category = "IC"
+	display_typing_indicator()
+	var/message = input(usr, "", "me") as message|null
+	// If they don't type anything just drop the message.
+	clear_typing_indicator()		// clear it immediately!
+	if(!length(message))
+		return
+	return me_verb(message)
+
+/mob/verb/say_verb(message as text)
+	set name = "say"
+	set category = "IC"
+	if(!length(message))
+		return
 	if(GLOB.say_disabled)	//This is here to try to identify lag problems
 		to_chat(usr, "<span class='danger'>Speech is currently admin-disabled.</span>")
 		return
+	//SKYRAT EDIT
+	set_typing_indicator(FALSE)
+	//END OF SKYRAT EDIT
 	if(message)
 		say(message)
-
+	clear_typing_indicator()
 
 /mob/verb/whisper_verb(message as text)
 	set name = "Whisper"
@@ -28,6 +57,11 @@
 		return
 
 	message = trim(copytext(sanitize(message), 1, MAX_MESSAGE_LEN))
+
+	//SKYRAT EDIT
+	set_typing_indicator(FALSE)
+	//END OF SKYRAT EDIT
+	clear_typing_indicator()		// clear it immediately! //Skyrat edit
 
 	usr.emote("me",1,message,TRUE)
 
