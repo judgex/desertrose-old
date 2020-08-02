@@ -688,6 +688,7 @@
 	item_state = "elite_riot"
 	armor = list("melee" = 70, "bullet" = 60, "laser" = 40, "energy" = 60, "bomb" = 55, "bio" = 60, "rad" = 60, "fire" = 40, "acid" = 0)
 
+
 /obj/item/clothing/head/helmet/f13/rangercombat/eliteriot/reclaimed
 	name = "reclaimed desert ranger gear"
 	desc = "A refurbished and personalized set of pre-unification desert ranger gear."

@@ -3,19 +3,25 @@ GLOBAL_LIST_INIT(command_positions, list(
     "Head Scribe",
     "Sentinel",
     "Knight-Captain",
+
     "Legion Centurion",
     "Legion Orator",
     "Priestess of Mars",
+
     "NCR Captain",
     "NCR Veteran Ranger",
     "NCR Ambassador",
+	"NCR Administrator",
+
     "Overseer",
     "Chief of Security",
+
     "Mayor",
     "Sheriff",
+
     "Chief",
     "Shaman",
-	"NCR Administrator",
+	
 	"Lead Practitioner"
     ))
 
@@ -26,8 +32,6 @@ GLOBAL_LIST_INIT(silicon_whitelist_positions, list(
 
 GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 "Head Scribe",
-"Chief of Security",
-"Overseer",
 "Elder",
 "Sentinel",
 "Knight-Captain",
@@ -39,6 +43,7 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 "Senior Scribe",
 "Scribe",
 "Off-Duty",
+
 "Legion Centurion",
 "Legion Orator",
 "Priestess of Mars",
@@ -50,8 +55,10 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 "Legion Slavemaster",
 "Legion Explorer",
 "Auxilia",
+
 "NCR Captain",
 "NCR Ambassador",
+"NCR Administrator",
 "NCR Lieutenant",
 "NCR Sergeant",
 "NCR Military Police",
@@ -60,15 +67,21 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 "NCR Veteran Ranger",
 "NCR Ranger",
 "NCR Trooper",
+
 "Mayor",
 "Sheriff",
 "Deputy",
+"Shopkeeper",
+
 "Chief",
 "Shaman",
-"NCR Administrator",
+
 "Lead Practitioner",
+
 "Cyborg",
-"Vault-tec Security"
+"Vault-tec Security",
+"Chief of Security",
+"Overseer"
 ))
 
 GLOBAL_LIST_INIT(faction_player_positions, list(
@@ -79,6 +92,7 @@ GLOBAL_LIST_INIT(faction_player_positions, list(
 "Senior Scribe",
 "Scribe",
 "Off-Duty",
+
 "Legion Decanus",
 "Veteran Legionary",
 "Prime Legionary",
@@ -87,6 +101,7 @@ GLOBAL_LIST_INIT(faction_player_positions, list(
 "Legion Slavemaster",
 "Legion Explorer",
 "Auxilia",
+
 "NCR Lieutenant",
 "NCR Sergeant",
 "NCR Corporal",
@@ -94,7 +109,10 @@ GLOBAL_LIST_INIT(faction_player_positions, list(
 "NCR Heavy Trooper",
 "NCR Ranger",
 "NCR Trooper",
+
 "Deputy",
+"Shopkeeper",
+
 "Cyborg",
 "Vault-tec Security"
 ))
@@ -129,11 +147,12 @@ GLOBAL_LIST_INIT(den_command_positions, list(
 
 GLOBAL_LIST_INIT(den_positions, list(
     "Doctor",
-    "Settler",
+    "Citizen",
     "Deputy",
 	"Banker",
     "Farmer",
-    "Prospector"
+    "Prospector",
+	"Detective"
 ))
 
 GLOBAL_LIST_INIT(legion_command_positions, list(
@@ -194,7 +213,6 @@ GLOBAL_LIST_INIT(wasteland_positions, list(
     "Preacher",
 	"Faithful",
     "Wastelander",
-    "Detective"
 ))
 GLOBAL_LIST_INIT(security_positions, list(
     "Vault-tec Security",
@@ -266,7 +284,7 @@ GLOBAL_LIST_INIT(nonhuman_positions, list(
     ROLE_PAI))
 */
 GLOBAL_LIST_INIT(exp_jobsmap, list(
-    EXP_TYPE_CREW          = list("titles" = command_positions | brotherhood_positions | den_positions | legion_positions | ncr_positions | vault_positions | wasteland_positions),
+    EXP_TYPE_CREW          = list("titles" = command_positions | brotherhood_positions | den_positions | legion_positions | ncr_positions | vault_positions | wasteland_positions | tribal_positions | followers_positions),
     EXP_TYPE_COMMAND       = list("titles" = command_positions),
     EXP_TYPE_SECURITY      = list("titles" = security_positions),
 

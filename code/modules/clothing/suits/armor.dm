@@ -696,6 +696,7 @@
 	armor = list("melee" = 65, "bullet" = 60, "laser" = 60, "energy" = 60, "bomb" = 70, "bio" = 60, "rad" = 60, "fire" = 90, "acid" = 50)
 	icon = 'icons/fallout/clothing_w/suit.dmi'
 
+
 /obj/item/clothing/suit/armor/f13/rangercombat/eliteriot/reclaimed
 	name = "reclaimed desert ranger helmet"
 	desc = "A refurbished and personalized set of pre-unification desert ranger gear."
