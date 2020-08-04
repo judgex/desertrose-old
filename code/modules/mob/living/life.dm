@@ -58,7 +58,7 @@
 	if(environment)
 		handle_environment(environment)
 
-	handle_typing_indicator()
+	//handle_typing_indicator()
 
 	handle_fire()
 
