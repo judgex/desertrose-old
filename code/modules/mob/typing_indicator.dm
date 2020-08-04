@@ -85,5 +85,4 @@ GLOBAL_LIST_EMPTY(typing_indicator_overlays)
 		set_typing_indicator(TRUE)
 		return
 	if(!hud_typing)
-		set_typing_indicator(FALSE)
-		clear_typing_indicator()
+		set_typing_indicator(FALSE) 
