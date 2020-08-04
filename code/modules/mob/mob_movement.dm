@@ -366,4 +366,4 @@
 
 /mob/Moved(atom/OldLoc, Dir, Forced = FALSE)
 	. = ..()
-	clear_typing_indicator()
+	set_typing_indicator(FALSE)
