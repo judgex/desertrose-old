@@ -45,6 +45,16 @@
 	idlesound = list('sound/f13npc/deathclaw/idle.ogg',)
 	death_sound = 'sound/f13npc/deathclaw/death.ogg'
 
+/mob/living/simple_animal/hostile/deathclaw/playable
+	emote_taunt_sound = null
+	emote_taunt = null
+	aggrosound = null
+	idlesound = null
+	see_in_dark = 8
+	environment_smash = 2 //can smash walls
+	wander = 0
+	anchored = FALSE
+
 /mob/living/simple_animal/hostile/deathclaw/mother
 	name = "mother deathclaw"
 	desc = "A massive, reptilian creature with powerful muscles, razor-sharp claws, and aggression to match. This one is an angry mother."
@@ -58,6 +68,23 @@
 	color = rgb(95,104,94)
 	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab/deathclaw = 6,
 							/obj/item/stack/sheet/animalhide/deathclaw = 3)
+
+/mob/living/simple_animal/hostile/deathclaw/legendary
+	name = "legendary deathclaw"
+	desc = "A massive, reptilian creature with powerful muscles, razor-sharp claws, and aggression to match. This one is a legendary enemy."
+	maxHealth = 1500
+	health = 1500
+	color = "#FFFF00"
+	stat_attack = UNCONSCIOUS
+	melee_damage_lower = 80
+	melee_damage_upper = 85
+	armour_penetration = 65
+
+/mob/living/simple_animal/hostile/deathclaw/legendary/death(gibbed)
+	var/turf/T = get_turf(src)
+	if(prob(60))
+		new /obj/item/melee/unarmed/deathclawgauntlet(T)
+	. = ..()
 
 /mob/living/simple_animal/hostile/deathclaw/bullet_act(obj/item/projectile/Proj)
 	if(!Proj)

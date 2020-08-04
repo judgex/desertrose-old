@@ -168,6 +168,10 @@ TODO sprite, ignore for now*/
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 	isenergy = TRUE
+	can_scope = TRUE
+	scopestate = "lasmusket_scope"
+	scope_x_offset = 9
+	scope_y_offset = 20
 	fire_sound = 'sound/f13weapons/lasmusket_fire.ogg'
 	pump_sound = 'sound/f13weapons/lasmusket_crank.ogg'
 	equipsound = 'sound/f13weapons/equipsounds/aep7equip.ogg'
@@ -324,6 +328,14 @@ TODO sprite, ignore for now*/
 	desc = "A lever action hunting shotgun with a five-shell capacity underneath plus one in chamber."
 	icon_state = "trenchgun"
 	item_state = "trenchgun"
+	can_scope = TRUE
+	scopestate = "AEP7_scope"
+	scope_x_offset = 8
+	scope_y_offset = 19
+	can_bayonet = TRUE	
+	bayonetstate = "trenchgun"
+	knife_x_offset = 23
+	knife_y_offset = 14
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/trench
 	w_class = WEIGHT_CLASS_NORMAL
 	weapon_weight = WEAPON_LIGHT
@@ -363,7 +375,7 @@ TODO sprite, ignore for now*/
 //Remington 700
 /obj/item/gun/ballistic/shotgun/remington
 	name = "hunting rifle"
-	desc = "A sturdy hunting rifle, chambered in 308. and in use before the war."
+	desc = "A sturdy hunting rifle, chambered in .308 and in use before the war."
 	icon_state = "308"
 	item_state = "308"
 	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/remington

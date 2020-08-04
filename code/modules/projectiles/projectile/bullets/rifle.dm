@@ -8,8 +8,8 @@
 	armour_penetration = 40
 
 /obj/item/projectile/bullet/a762/jhp
-	damage = 45
-	armour_penetration = 0
+	damage = 65 //45
+	armour_penetration = -35 //0
 
 /obj/item/projectile/bullet/a762/sport //.308 Winchester
 	damage = 40
@@ -17,16 +17,16 @@
 
 //5.56x45mm
 /obj/item/projectile/bullet/a556
-	damage = 35
-	armour_penetration = 5
+	damage = 37 //35
+	armour_penetration = 0 //5
 
 /obj/item/projectile/bullet/a556/ap
 	damage = 25
-	armour_penetration = 30
+	armour_penetration = 33 //30
 
 /obj/item/projectile/bullet/a556/jhp
-	damage = 45
-	armour_penetration = -5
+	damage = 55 //45
+	armour_penetration = -20//-5
 
 /obj/item/projectile/bullet/a556/sport
 	damage = 30
@@ -34,5 +34,5 @@
 
 //2mm Electromagnetic
 /obj/item/projectile/bullet/c2mm
-	damage = 45
-	armour_penetration = 45
+	damage = 55
+	armour_penetration = 50

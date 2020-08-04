@@ -144,7 +144,7 @@
 	name = "\improper Unica 6 auto-revolver"
 	desc = "A retro high-powered autorevolver typically used by officers of the New Russia military. Uses .357 ammo."
 	icon_state = "mateba"
-	w_class = WEIGHT_CLASS_NORMAL
+
 
 /obj/item/gun/ballistic/revolver/golden
 	name = "\improper Golden revolver"
@@ -153,7 +153,7 @@
 	fire_sound = 'sound/weapons/resonator_blast.ogg'
 	recoil = 8
 	pin = /obj/item/firing_pin
-	w_class = WEIGHT_CLASS_NORMAL
+
 
 // A gun to play Russian Roulette!
 // You can spin the chamber to randomize the position of the bullet.
@@ -335,7 +335,6 @@
 	desc = "A single-shot shotgun. Better not miss."
 	icon_state = "ishotgun"
 	item_state = "sawnshotgun"
-	w_class = WEIGHT_CLASS_NORMAL
 	sawn_off = TRUE
 	slot_flags = ITEM_SLOT_BELT
 
@@ -361,13 +360,17 @@
 	icon_state = "m29"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev44
 	fire_sound = 'sound/f13weapons/44mag.ogg'
-	w_class = WEIGHT_CLASS_NORMAL
 	fire_delay = 3
 
 /obj/item/gun/ballistic/revolver/m29/alt
 	item_state = "44magnum"
 	icon_state = "mysterious_m29"
-	w_class = WEIGHT_CLASS_NORMAL
+
+/obj/item/gun/ballistic/revolver/m29/coltwalker
+    name = "Colt Walker 1847"
+    desc = "A legendary gun of the west. The Colt Walker bears a fearsome reputation for a very good reason, finding itself in the hands of everyone from ancient army officials to outlaws throughout the years. An antique when the bombs dropped, the weapon is now incredibly outdated. Still, that doesn't make it any less lethal."
+    item_state = "coltwalker"
+    icon_state = "coltwalker"
 
 /obj/item/gun/ballistic/revolver/m29/peacekeeper
 	name = "Peacekeeper"
@@ -376,7 +379,7 @@
 	icon_state = "m29peace"
 	extra_damage = 15
 	extra_penetration = 5
-	fire_delay = 15
+	fire_delay = 10
 	burst_size = 1
 	burst_delay = 1
 	var/select = 0
@@ -390,9 +393,8 @@
 	switch(select)
 		if(0)
 			select += 1
-			burst_size = 6 //fan the hammer
-			spread = 45
-			extra_damage = -10 //25 damage, 5 AP - equivalent to a .38 round. Sounds weak, but it's six-round-burst!
+			burst_size = 3 //fan the hammer
+			spread = 15
 			extra_penetration = 0
 			fire_delay = 1
 			to_chat(user, "<span class='notice'>You prepare to fan the hammer for a rapid burst of shots.</span>")
@@ -402,7 +404,6 @@
 			spread = 0
 			extra_damage = 15 //50 damage, 10 AP - equivalent to a .45-70 Govt round. Strong, but slow.
 			extra_penetration = 5
-			fire_delay = 10 //pace your shots
 			to_chat(user, "<span class='notice'>You switch to single-shot fire.</span>")
 	update_icon()
 
@@ -413,7 +414,6 @@
 	zoomable = TRUE
 	zoom_amt = 10
 	zoom_out_amt = 13
-	w_class = WEIGHT_CLASS_NORMAL
 
 /obj/item/gun/ballistic/revolver/colt357
 	name = "\improper .357 magnum revolver"
@@ -421,7 +421,6 @@
 	item_state = "colt357"
 	icon_state = "colt357"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev357
-	w_class = WEIGHT_CLASS_NORMAL
 	fire_delay = 5
 
 /obj/item/gun/ballistic/revolver/colt357/lucky
@@ -455,7 +454,6 @@
 	icon_state = "colt6250"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev6250
 	fire_sound = 'sound/f13weapons/10mm_fire_02.ogg'
-	w_class = WEIGHT_CLASS_NORMAL
 	fire_delay = 3
 
 /obj/item/gun/ballistic/revolver/sequoia
@@ -465,7 +463,6 @@
 	item_state = "sequoia"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev4570
 	fire_sound = 'sound/f13weapons/sequoia.ogg'
-	w_class = WEIGHT_CLASS_NORMAL
 	fire_delay = 4
 
 /obj/item/gun/ballistic/revolver/sequoia/scoped
@@ -475,7 +472,6 @@
 	zoomable = TRUE
 	zoom_amt = 10
 	zoom_out_amt = 13
-	w_class = WEIGHT_CLASS_NORMAL
 
 /obj/item/gun/ballistic/revolver/zipgun
 	name = "zipgun"
@@ -511,7 +507,6 @@
 	icon_state = "thatgun"
 	fire_sound = 'sound/f13weapons/magnum_fire.ogg'
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/thatgun
-	w_class = WEIGHT_CLASS_NORMAL
 
 /obj/item/gun/ballistic/revolver/zhurong
 	name = "Zhu-Rong v417"

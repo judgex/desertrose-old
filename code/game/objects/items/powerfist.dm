@@ -117,7 +117,7 @@
 
 /obj/item/melee/unarmed/lacerator
 	name = "lacerator"
-	desc = "Leahter gloves with razor blades built into the back of the hand."
+	desc = "Leather gloves with razor blades built into the back of the hand."
 	icon_state = "lacerator"
 	item_state = "lacerator"
 	lefthand_file = 'icons/mob/inhands/weapons/melee_lefthand.dmi'
@@ -177,7 +177,7 @@
 
 /obj/item/melee/powerfist/moleminer
 	name = "mole miner gauntlet"
-	desc = "A metal gauntlet with a piston-powered ram on top for that extra 'oomph' in your punch."
+	desc = "A hand-held mining and cutting implement, repurposed into a deadly melee weapon.  Its name origins are a mystery..."
 	icon_state = "mole_miner_g"
 	item_state = "mole_miner_g"
 	lefthand_file = 'icons/mob/inhands/weapons/melee_lefthand.dmi'

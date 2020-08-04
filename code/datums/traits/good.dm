@@ -25,7 +25,7 @@
 		GET_COMPONENT_FROM(mood, /datum/component/mood, quirk_holder)
 		if(mood)
 			mood.mood_modifier = 1 //Change this once/if species get their own mood modifiers.
-/*
+
 /datum/quirk/bigleagues
 	name = "Big Leagues"
 	desc = "Swing for the fences! You deal additional damage with melee weapons."
@@ -33,7 +33,7 @@
 	mob_trait = TRAIT_BIG_LEAGUES
 	gain_text = "<span class='notice'>You feel like swinging for the fences!</span>"
 	lose_text = "<span class='danger'>You feel like bunting.</span>"
-
+	locked = TRUE
 
 /datum/quirk/chemwhiz
 	name = "Chem Whiz"
@@ -42,8 +42,7 @@
 	mob_trait = TRAIT_CHEMWHIZ
 	gain_text = "<span class='notice'>The mysteries of chemistry are revealed to you.</span>"
 	lose_text = "<span class='danger'>You forget how the periodic table works.</span>"
-*/
-/*
+	locked = TRUE
 /datum/quirk/pa_wear
 	name = "PA Wear"
 	desc = "You've being around the wastes and have learned the importance of defense."
@@ -51,7 +50,8 @@
 	mob_trait = TRAIT_PA_WEAR
 	gain_text = "<span class='notice'>You realize how to use Power Armor.</span>"
 	lose_text = "<span class='danger'>You forget how Power Armor works.</span>"
-*/
+	locked = TRUE
+
 /datum/quirk/drunkhealing
 	name = "Drunken Resilience"
 	desc = "Nothing like a good drink to make you feel on top of the world. Whenever you're drunk, you slowly recover from injuries."
@@ -68,7 +68,7 @@
 	mob_trait = TRAIT_FREERUNNING
 	gain_text = "<span class='notice'>You feel lithe on your feet!</span>"
 	lose_text = "<span class='danger'>You feel clumsy again.</span>"
-/*
+
 /datum/quirk/iron_fist
 	name = "Iron Fist"
 	desc = "You have fists of kung-fury! Increases unarmed damage."
@@ -76,12 +76,13 @@
 	mob_trait = TRAIT_IRONFIST
 	gain_text = "<span class='notice'>Your fists feel furious!</span>"
 	lose_text = "<span class='danger'>Your fists feel calm again.</span>"
+	locked = TRUE
 
 /datum/quirk/iron_fist/on_spawn()
 	var/mob/living/carbon/human/mob_tar = quirk_holder
 	mob_tar.dna.species.punchdamagelow = 3
 	mob_tar.dna.species.punchdamagehigh = 10
-*/
+
 /datum/quirk/jolly
 	name = "Jolly"
 	desc = "You sometimes just feel happy, for no reason at all."
@@ -93,10 +94,10 @@
 	name = "Hard Yards"
 	desc = "You've put them in, now reap the rewards."
 	value = 3
-	locked = TRUE
 	mob_trait = TRAIT_HARD_YARDS
 	gain_text = "<span class='notice'>Rain or shine, nothing slows you down.</span>"
 	lose_text = "<span class='danger'>You walk with a less sure gait, the ground seeming less firm somehow.</span>"
+	locked = TRUE
 
 /datum/quirk/lifegiver
 	name = "Lifegiver"

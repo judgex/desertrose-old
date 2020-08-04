@@ -233,20 +233,25 @@
 			. = "<span class='danger'>[user] casually lights their [A.name] with [src]. Damn.</span>"
 
 
-/obj/item/gun/energy/AltClick(mob/living/user)
-	if(cell)
-		if(can_charge == 0)
-			to_chat(user, "<span class='notice'>You can't remove the cell from \the [src].</span>")
-			return
-		cell.forceMove(drop_location())
-		user.put_in_hands(cell)
-		cell.update_icon()
-		cell = null
-		to_chat(user, "<span class='notice'>You pull the cell out of \the [src].</span>")
-		playsound(src, 'sound/f13weapons/equipsounds/laserreload.ogg', 50, 1)
-	else
-		to_chat(user, "<span class='notice'>There's no cell in \the [src].</span>")
-	return
+/obj/item/gun/energy/AltClick(mob/user)
+	if (!ishuman(user))
+		return
+	if (get_dist(src, user)<2)
+		if(cell)
+			if(can_charge == 0)
+				to_chat(user, "<span class='notice'>You can't remove the cell from \the [src].</span>")
+				return
+			cell.forceMove(drop_location())
+			user.put_in_hands(cell)
+			cell.update_icon()
+			cell = null
+			to_chat(user, "<span class='notice'>You pull the cell out of \the [src].</span>")
+			playsound(src, 'sound/f13weapons/equipsounds/laserreload.ogg', 50, 1)
+		else
+			to_chat(user, "<span class='notice'>There's no cell in \the [src].</span>")
+		return
+	else 
+		return
 
 /obj/item/gun/energy/attackby(obj/item/A, mob/user, params)
 	..()

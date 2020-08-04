@@ -482,11 +482,16 @@
 	icon_state = "mini-uzi"
 	mag_type = /obj/item/ammo_box/magazine/uzim9mm
 	w_class = WEIGHT_CLASS_NORMAL
+	can_scope = TRUE
+	scopestate = "AEP7_scope"
+	scope_x_offset = 9
+	scope_y_offset = 21
 	burst_size = 2
 	burst_delay = 2
 	fire_delay = 2
 	force = 15
 	spread = 10
+	can_attachments = TRUE
 
 /obj/item/gun/ballistic/automatic/mini_uzi/burst_select()
 	var/mob/living/carbon/human/user = usr
@@ -495,11 +500,17 @@
 			select += 1
 			burst_size = 2
 			spread = 18
+			if (burst_improvement)
+				burst_size = 3
+			if (recoil_decrease)
+				spread = 10
 			to_chat(user, "<span class='notice'>You switch to [burst_size]-rnd burst.</span>")
 		if(1)
 			select = 0
 			burst_size = 1
 			spread = 1
+			if (recoil_decrease)
+				spread = 0
 			to_chat(user, "<span class='notice'>You switch to semi-automatic.</span>")
 	playsound(user, 'sound/weapons/empty.ogg', 100, 1)
 	update_icon()
@@ -602,6 +613,7 @@
 	automatic = 1
 	fire_delay = 3
 	spread = 8
+	can_attachments = TRUE
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 
@@ -612,11 +624,17 @@
 			select += 1
 			burst_size = 2
 			spread = 8
+			if (recoil_decrease)
+				spread = 0
+			if (burst_improvement)
+				burst_size = 3
 			to_chat(user, "<span class='notice'>You switch to [burst_size]-rnd burst.</span>")
 		if(1)
 			select = 0
 			burst_size = 1
 			spread = 1
+			if (recoil_decrease)
+				spread = 0
 			to_chat(user, "<span class='notice'>You switch to semi-automatic.</span>")
 	playsound(user, 'sound/weapons/empty.ogg', 100, 1)
 	update_icon()
@@ -728,6 +746,7 @@
 	desc = "A low powered 5.56, easy to use rifle."
 	icon_state = "varmint_rifle"
 	item_state = "varmintrifle"
+	can_attachments = TRUE
 	fire_delay = 8
 	init_mag_type = /obj/item/ammo_box/magazine/m556/rifle/small
 	mag_type = /obj/item/ammo_box/magazine/m556/rifle
@@ -829,7 +848,7 @@
 	item_state = "sniper"
 	slot_flags = SLOT_BACK
 	mag_type = /obj/item/ammo_box/magazine/m556/rifle
-	burst_size = 1
+	burst_size = 2
 	fire_delay = 3
 	automatic = 1
 	w_class = WEIGHT_CLASS_BULKY

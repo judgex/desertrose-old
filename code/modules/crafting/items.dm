@@ -33,7 +33,7 @@
 
 //ballistics
 
-/obj/item/blueprint/weapon/r91
+/obj/item/blueprint/weapon/R91
     name = "R91 assault rifle blueprint"
 
 /obj/item/blueprint/weapon/infiltrator
@@ -42,24 +42,21 @@
 /obj/item/blueprint/weapon/uzi
     name = "UZI blueprint"
 
-/obj/item/blueprint/weapon/breacher
-    name = "Breacher shotgun blueprint"
-
-/obj/item/blueprint/weapon/killer
-    name = "City-killer shotgun blueprint"
+/obj/item/blueprint/weapon/smg10mm
+    name = "10mm SMG blueprint"
 
 /obj/item/blueprint/weapon/marksmanrifle
     name = "Marksman rifle blueprint"
 
-/obj/item/blueprint/weapon/fnfal
-    name = "FN fal blueprint"
-
 //energy
+/obj/item/blueprint/weapon/AEP7
+    name = "AEP7 blueprint"
+
 /obj/item/blueprint/weapon/AER9
     name = "AER9 blueprint"
 
-/obj/item/blueprint/weapon/plasma
-    name = "Plasma rifle blueprint"
+/obj/item/blueprint/weapon/plasmapistol
+    name = "Plasma pistol blueprint"
 
 /obj/item/blueprint/weapon/RCW
     name = "Laser RCW blueprint"
@@ -85,26 +82,26 @@
 //plasma
 /obj/item/advanced_crafting_components/flux
 	name = "Flux capacitator"
-	desc = ""
+	desc = "An energy weapon part, a crafstman might want to have this."
 	icon_state = "flux"
 
 //lasers
 /obj/item/advanced_crafting_components/lenses
 	name = "Focused crystal lenses"
-	desc = "Laser"
+	desc = "An energy weapon part, a crafstman might want to have this."
 	icon_state = "lenses"
 
 //general energy
 /obj/item/advanced_crafting_components/conductors
 	name = "Superconductor coil"
-	desc = "Both"
+	desc = "An energy weapon part, a crafstman might want to have this."
 	icon_state = "conductor"
 
 //general ballistics
-/obj/item/advanced_crafting_components/reciever
-	name = "Advanced modular reciever"
+/obj/item/advanced_crafting_components/receiver
+	name = "Advanced modular receiver"
 	desc = "A ballistic weapon part, a crafstman might want to have this."
-	icon_state = "reciever"
+	icon_state = "receiver"
 
 //rifles
 /obj/item/advanced_crafting_components/assembly
@@ -112,14 +109,34 @@
 	desc = "A ballistic weapon part, a crafstman might want to have this."
 	icon_state = "weapon_parts_1"
 
-//shotgun
-/obj/item/advanced_crafting_components/shotgun
-	name = "Shotgun barrel assembly"
-	desc = "Ballistics"
-	icon_state = "ishotgunstep1"
-
-//armor
+//general
 /obj/item/advanced_crafting_components/alloys
 	name = "Superlight alloys"
-	desc = "Armor"
+	desc = "A general crafting part, a crafstman might want to have this."
 	icon_state = "alloys"
+
+/obj/item/attachments
+    name = "attachment"
+    icon = 'icons/fallout/objects/crafting.dmi'
+    icon_state = "alloys"
+    w_class = WEIGHT_CLASS_TINY
+
+/obj/item/attachments/scope
+	name = "Weapon Optics"
+	desc = "A long-range scope, attach to a compatible weapon. Remove with a screwdriver. Makes the weapon slightly slower to fire."
+	icon_state = "scope"
+
+/obj/item/attachments/recoil_decrease
+	name = "Recoil Compensator"
+	desc = "Improves stability and recoil, attach to a compatible weapon. Cannot be removed."
+	icon_state = "recoilcomp"
+
+/obj/item/attachments/bullet_speed
+	name = "Improved Barrel"
+	desc = "Improves bullet speed, attach to a compatible weapon. Cannot be removed."
+	icon_state = "barrel"
+
+/obj/item/attachments/burst_improvement
+	name = "Burst Cam"
+	desc = "Increases burst size, attach to a compatible weapon. Cannot be removed."
+	icon_state = "burstcam"

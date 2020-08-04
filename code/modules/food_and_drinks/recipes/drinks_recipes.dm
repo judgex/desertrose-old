@@ -27,13 +27,13 @@
 	id = "icecoffee"
 	results = list("icecoffee" = 4)
 	required_reagents = list("ice" = 1, "coffee" = 3)
-	
+
 /datum/chemical_reaction/mocha
 	name = "Mocha"
 	id = "mocha"
 	results = list("mocha" = 5)
 	required_reagents = list("cafe_latte" = 3, "hot_coco" = 2)
-	
+
 /datum/chemical_reaction/icemocha
 	name = "Iced Mocha"
 	id = "icemocha"
@@ -236,6 +236,29 @@
 	results = list("alliescocktail" = 2)
 	required_reagents = list("martini" = 1, "vodka" = 1)
 
+/datum/chemical_reaction/booger
+	results = list("booger" = 4)
+	required_reagents = list("cream" = 1, "banana" = 1, "rum" = 1, "watermelonjuice" = 1)
+
+/datum/chemical_reaction/antifreeze
+	name = "Anti-freeze"
+	id = "antifreeze"
+	results = list("antifreeze = 4")
+	required_reagents = list("vodka" = 2, "cream" = 1, "ice" = 1)
+
+/datum/chemical_reaction/barefoot
+	name = "Barefoot"
+	id = "barefoot"
+	results = list("barefoot" = 3)
+	required_reagents = list("berryjuice" = 1, "cream" = 1, "vermouth" = 1)
+
+/datum/chemical_reaction/painkiller
+	name = "Painkiller"
+	id = "painkiller"
+	results = list("painkiller" = 10)
+	required_reagents = list("creme_de_coconut" = 5, "pineapplejuice" = 4, "orangejuice" = 1)
+
+
 ////DRINKS THAT REQUIRED IMPROVED SPRITES BELOW:: -Agouri/////
 
 /datum/chemical_reaction/sbiten
@@ -269,11 +292,37 @@
 	results = list("grog" = 2)
 	required_reagents = list("rum" = 1, "water" = 1)
 
+/datum/chemical_reaction/aloe
+	name = "Aloe"
+	id = "aloe"
+	results = list("aloe" = 2)
+	required_reagents = list("watermelonjuice" = 3, "cream" = 1, "whiskey" = 2)
+
+/datum/chemical_reaction/andalusia
+	name = "Andalusia"
+	id = "andalusia"
+	results = list("andalusia" = 3)
+	required_reagents = list ("rum" = 1, "whiskey" = 1, "lemonjuice" = 1)
+
+/datum/chemical_reaction/snowwhite
+	results = list("snowwhite" = 2)
+	required_reagents = list("beer" = 1, "lemon_lime" = 1)
+
+/datum/chemical_reaction/devilskiss
+	results = list("devilskiss" = 3)
+	required_reagents = list("blood" = 1, "kahlua" = 1, "rum" = 1)
+
 /datum/chemical_reaction/soy_latte
 	name = "Soy Latte"
 	id = "soy_latte"
 	results = list("soy_latte" = 2)
 	required_reagents = list("coffee" = 1, "soymilk" = 1)
+
+/datum/chemical_reaction/amasec
+	name = "Amasec"
+	id = "amasec"
+	results = list("amasec" = 10)
+	required_reagents = list("iron" = 1, "wine" = 5, "vodka" = 5)
 
 /datum/chemical_reaction/cafe_latte
 	name = "Cafe Latte"
@@ -316,6 +365,10 @@
 	id = "pumpkin_latte"
 	results = list("pumpkin_latte" = 15)
 	required_reagents = list("pumpkinjuice" = 5, "coffee" = 5, "cream" = 5)
+
+/datum/chemical_reaction/gibbfloats
+	results = list("gibbfloats" = 15)
+	required_reagents = list("dr_gibb" = 5, "ice" = 5, "cream" = 5)
 
 /datum/chemical_reaction/triple_citrus
 	name = "triple_citrus"
@@ -383,6 +436,11 @@
 	results = list("stinger" = 15)
 	required_reagents = list("whiskey" = 10, "creme_de_menthe" = 5 )
 
+/datum/chemical_reaction/sugar_rush
+	results = list("sugar_rush" = 4)
+	required_reagents = list("sugar" = 2, "lemonjuice" = 1, "wine" = 1) //2 adelhyde (sweet), 1 powdered delta (sour), 1 karmotrine (alcohol)
+	mix_message = "The mixture bubbles and brightens into a girly pink."
+
 /datum/chemical_reaction/sake
 	name = "sake"
 	id = "sake"
@@ -416,6 +474,12 @@
 	results = list("between_the_sheets" = 5)
 	required_reagents = list("rum" = 1, "sidecar" = 4)
 
+/datum/chemical_reaction/hephaestion
+	name = "The Hephaestion"
+	id = "hephaestion"
+	results = list("hephaestion" = 2)
+	required_reagents = list("alexander" = 1, "between_the_sheets" = 1)
+
 /datum/chemical_reaction/kamikaze
 	name = "Kamikaze"
 	id = "kamikaze"
@@ -427,6 +491,17 @@
 	id = "mojito"
 	results = list("mojito" = 5)
 	required_reagents = list("rum" = 1, "sugar" = 1, "limejuice" = 1, "sodawater" = 1, "menthol" = 1)
+
+/datum/chemical_reaction/jack_rose
+	name = "Jack Rose"
+	id = "jack_rose"
+	results = list("jack_rose" = 4)
+	required_reagents = list("grenadine" = 1, "applejuice" = 2, "limejuice" = 1)
+	mix_message = "As the grenadine incorporates, the beverage takes on a mellow, red-orange glow."
+
+/datum/chemical_reaction/old_timer
+	results = list(/datum/reagent/consumable/ethanol/old_timer = 6)
+	required_reagents = list("whiskeysoda" = 3, "parsnipjuice" = 2, "alexander" = 1)
 
 //all new fallout recipes at the bottom//
 
@@ -722,10 +797,10 @@
 	results = list("vaultgirl" = 2)
 	required_reagents = list("vaulttech" = 1, "between_the_sheets" = 1)
 
-/datum/chemical_reaction/fernetnuka
-	name = "Fernet Nuka"
-	id = "fernetnuka"
-	results = list("fernetnuka" = 2)
+/datum/chemical_reaction/fernet_cola
+	name = "Fernet Cola"
+	id = "fernet_cola"
+	results = list("fernet_cola" = 2)
 	required_reagents = list("fernet" = 1, "nuka_cola" = 1)
 
 /datum/chemical_reaction/moonshinez
