@@ -56,7 +56,7 @@ GLOBAL_LIST_EMPTY(typing_indicator_overlays)
 
 /mob/proc/set_typing_indicator(var/state)
 	if(!typing_indicator)
-		typing_indicator = mutable_appearance('icons/mob/talk.dmi', "normal_typing", FLY_LAYER)
+		typing_indicator = mutable_appearance('icons/mob/talk.dmi', "default0", FLY_LAYER)
 	if(client && !stat)
 		if(state)
 			if(!typing)
@@ -69,7 +69,6 @@ GLOBAL_LIST_EMPTY(typing_indicator_overlays)
 		return state
 
 /mob/proc/handle_typing_indicator()
-	to_chat(usr,"test")
 	if(!client)
 		return
 	var/temp = winget(client, "input", "text")
