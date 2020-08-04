@@ -4,7 +4,7 @@
 	set hidden = TRUE
 	set category = "IC"
 	display_typing_indicator()
-	var/message = input(usr, "", "say") as text|null
+	var/message = input(usr, "", "Say") as text|null
 	// If they don't type anything just drop the message.
 	clear_typing_indicator()		// clear it immediately!
 	if(!length(message))
@@ -16,7 +16,7 @@
 	set hidden = TRUE
 	set category = "IC"
 	display_typing_indicator()
-	var/message = input(usr, "", "me") as message|null
+	var/message = input(usr, "", "Me") as text|null
 	// If they don't type anything just drop the message.
 	clear_typing_indicator()		// clear it immediately!
 	if(!length(message))
@@ -24,7 +24,7 @@
 	return me_verb(message)
 
 /mob/verb/say_verb(message as text)
-	set name = "say"
+	set name = "Say"
 	set category = "IC"
 	if(!length(message))
 		return
