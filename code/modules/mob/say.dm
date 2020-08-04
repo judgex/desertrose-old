@@ -4,9 +4,12 @@
 	set hidden = TRUE
 	set category = "IC"
 	display_typing_indicator()
+	hud_typing = TRUE
 	var/message = input(usr, "", "Say") as text|null
 	// If they don't type anything just drop the message.
 	clear_typing_indicator()		// clear it immediately!
+	hud_typing = FALSE
+
 	if(!length(message))
 		return
 	return say_verb(message)
@@ -16,9 +19,11 @@
 	set hidden = TRUE
 	set category = "IC"
 	display_typing_indicator()
+	hud_typing = TRUE
 	var/message = input(usr, "", "Me") as text|null
 	// If they don't type anything just drop the message.
 	clear_typing_indicator()		// clear it immediately!
+	hud_typing = FALSE
 	if(!length(message))
 		return
 	return me_verb(message)
