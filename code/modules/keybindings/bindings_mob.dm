@@ -87,4 +87,6 @@
 			src.set_typing_indicator(TRUE)
 		if("M")
 			src.set_typing_indicator(TRUE)
+		if("C")
+			src/living.toggle_combat_mode()
 	return ..()

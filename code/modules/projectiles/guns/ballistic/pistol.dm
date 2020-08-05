@@ -28,6 +28,7 @@
 	mag_type = /obj/item/ammo_box/magazine/m45
 	can_suppress = FALSE
 	fire_delay = 2
+	can_attachments = TRUE
 
 /obj/item/gun/ballistic/automatic/pistol/deagle
 	name = "desert eagle"
@@ -37,6 +38,7 @@
 	mag_type = /obj/item/ammo_box/magazine/a50
 	can_suppress = FALSE
 	w_class = WEIGHT_CLASS_NORMAL
+	can_attachments = TRUE
 
 /obj/item/gun/ballistic/automatic/pistol/deagle/update_icon()
 	..()
@@ -111,6 +113,7 @@
 	fire_delay = 2
 	can_suppress = FALSE
 	fire_sound = 'sound/f13weapons/ninemil.ogg'
+	can_attachments = TRUE
 
 /obj/item/gun/ballistic/automatic/pistol/type17
 	name = "type 17"
@@ -129,3 +132,4 @@
 	fire_delay = 0
 	extra_damage = 10 //40 damage, 20 AP- hits like a 7.62 and fires faster
 	extra_penetration = 20
+	can_attachments = TRUE
