@@ -39,8 +39,10 @@
 	dat += "<br>"
 	dat +="<div class='statusDisplay'>"
 	dat += "<b>Accepted goods and prices:</b><br>"
-	dat += "Iron ore : 0.5 caps<br>"
-	dat += "Leather : 2 caps<br>"
+	dat += "Iron ore : 0.7 caps<br>"
+	dat += "Silver : 3 caps<br>"
+	dat += "Gold : 10 caps<br>"
+	dat += "Leather : 5 caps<br>"
 	dat += ""
 	dat += "</div>"
 
@@ -71,28 +73,32 @@
 	return
 
 /obj/machinery/mineral/wasteland_trader/attackby(obj/item/I, mob/user, params)
-	if(istype(I, /obj/item/stack/f13Cash))
-		add_caps(I)
-	else if (istype(I, /obj/item/stack/ore/iron))
-		add_caps(I)
-	else if (istype(I, /obj/item/stack/sheet/leather))
-		add_caps(I)
-	else
-		attack_hand(user)
+	add_caps(I)
+ //not sure why anything else was here anyways?
 
 /* Adding a caps to caps storage and release vending item. */
 /obj/machinery/mineral/wasteland_trader/proc/add_caps(obj/item/I)
-	if(istype(I, /obj/item/stack/f13Cash/bottle_cap))
-		var/obj/item/stack/f13Cash/bottle_cap/currency = I
-		var/inserted_value = FLOOR(currency.amount, 1)
-		stored_caps += inserted_value
-		I.use(currency.amount)
-		playsound(src, 'sound/items/change_jaws.ogg', 60, 1)
-		to_chat(usr, "You put [inserted_value] bottle caps value to a vending machine.")
-		src.ui_interact(usr)
-	else if(istype(I, /obj/item/stack/ore/iron))
+	if(istype(I, /obj/item/stack/ore/iron))
 		var/obj/item/stack/ore/iron/sellable = I
 		var/price = 0.7
+		var/inserted_value = FLOOR(sellable.amount * price, 1)
+		stored_caps += inserted_value
+		I.Destroy()
+		playsound(src, 'sound/items/change_jaws.ogg', 60, 1)
+		to_chat(usr, "You sell [inserted_value] bottle caps value to a vending machine.")
+		src.ui_interact(usr)
+	else if(istype(I, /obj/item/stack/ore/gold))
+		var/obj/item/stack/ore/gold/sellable = I
+		var/price = 10
+		var/inserted_value = FLOOR(sellable.amount * price, 1)
+		stored_caps += inserted_value
+		I.Destroy()
+		playsound(src, 'sound/items/change_jaws.ogg', 60, 1)
+		to_chat(usr, "You sell [inserted_value] bottle caps value to a vending machine.")
+		src.ui_interact(usr)
+	else if(istype(I, /obj/item/stack/ore/silver))
+		var/obj/item/stack/ore/silver/sellable = I
+		var/price = 3
 		var/inserted_value = FLOOR(sellable.amount * price, 1)
 		stored_caps += inserted_value
 		I.Destroy()
@@ -109,8 +115,8 @@
 		to_chat(usr, "You sell [inserted_value] bottle caps value to a vending machine.")
 		src.ui_interact(usr)
 	else
-		to_chat(usr, "Invalid currency!")
 		return
+		
 
 /* Spawn all caps on world and clear caps storage */
 /obj/machinery/mineral/wasteland_trader/proc/remove_all_caps()
