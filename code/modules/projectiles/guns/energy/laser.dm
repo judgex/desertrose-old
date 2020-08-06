@@ -175,6 +175,32 @@
 //	w_class = WEIGHT_CLASS_BULKY
 //	weapon_weight = WEAPON_HEAVY
 
+/obj/item/gun/energy/laser/attackby(obj/item/A, mob/user, params)
+	. = ..()
+	if(.)
+		return
+	if(istype(A, /obj/item/stock_parts/cell/ammo))
+		var/obj/item/stock_parts/cell/ammo/AM = A
+		if(istype(AM, cell_type))
+			var/obj/item/stock_parts/cell/ammo/oldcell = cell
+			if(user.transferItemToLoc(AM, src))
+				cell = AM
+				if(oldcell)
+					to_chat(user, "<span class='notice'>You perform a tactical reload on \the [src], replacing the cell.</span>")
+					oldcell.dropped()
+					oldcell.forceMove(get_turf(src.loc))
+					oldcell.update_icon()
+				//else
+				//	to_chat(user, "<span class='notice'>You insert the cell into \the [src].</span>")
+
+				//playsound(src, 'sound/weapons/autoguninsert.ogg', 60, TRUE)
+				//chamber_round()
+				A.update_icon()
+				update_icon()
+				return 1
+			else
+				to_chat(user, "<span class='warning'>You cannot seem to get \the [src] out of your hands!</span>")
+
 /obj/item/gun/energy/laser/aer9
 	name = "\improper AER9 laser rifle"
 	desc = "A sturdy and advanced military grade pre-war service laser rifle"
