@@ -162,7 +162,7 @@
 	desc = "A feral ghoul that has absorbed massive amounts of cold and Radiates Cold Air.."
 	icon_state = "hot_glowing_one"
 	icon_living = "hot_glowing_one"
-	icon_dead = "hot_glowing_one"
+	icon_dead = "hot_glowing_one_dead"
 	maxHealth = 80
 	health = 80
 	speed = 2

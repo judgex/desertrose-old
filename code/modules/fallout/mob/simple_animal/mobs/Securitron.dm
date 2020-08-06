@@ -21,7 +21,7 @@
 	health = 300
 	del_on_death = 1
 	healable = 0
-	faction = list("neutral", "city", "ncr")
+	faction = list("wastebot")
 	emote_hear = list("Beeps.")
 	speak = list("Stop Right There Criminal.")
 	death_sound = null
