@@ -731,6 +731,14 @@
 	armor = list("melee" = 45, "bullet" = 50, "laser" = 45, "energy" = 45, "bomb" = 55, "bio" = 60, "rad" = 15, "fire" = 60, "acid" = 30)
 	flags_inv = HIDEJUMPSUIT
 
+/obj/item/clothing/suit/armor/f13/sulphitearmor
+	name = "Sulphite Armor"
+	desc = "An combination of what seems to be raider metal armor with a jerry-rigged flame-exhaust system and ceramic plating"
+	icon_state = "sulphitearmor"
+	item_state = "sulphitearmor"
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
+	armor = list("melee" = 40, "bullet" = 45, "laser" = 40, "energy" = 40, "bomb" = 50, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20)
+
 /*
 /obj/item/clothing/suit/armor/f13/bmetalarmor
 	name = "metal armor"
@@ -792,6 +800,13 @@
 	desc = "It's a set of T-45b power armor with a custom air conditioning module and stripped out servomotors.This set has seen better days, metal scrap has been spot welded to the chassis "
 	icon_state = "raiderpa"
 	item_state = "raiderpa"
+	armor = list("melee" = 75, "bullet" = 60, "laser" = 35, "energy" = 50, "bomb" = 48, "bio" = 60, "rad" = 50, "fire" = 80, "acid" = 0)
+
+/obj/item/clothing/suit/armor/f13/brokenpa/t45bhotrod
+	name = "salvaged T-45b power armor"
+	desc = "It's a set of T-45b power armor with a custom air conditioning module and stripped out servomotors. This set has exhaust pipes piped to the pauldrons, flames erupting from them."
+	icon_state = "t45hotrod"
+	item_state = "t45hotrod"
 	armor = list("melee" = 75, "bullet" = 60, "laser" = 35, "energy" = 50, "bomb" = 48, "bio" = 60, "rad" = 50, "fire" = 80, "acid" = 0)
 
 /obj/item/clothing/suit/armor/f13/brokenpa/ncr

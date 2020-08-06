@@ -389,3 +389,13 @@
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 
+/obj/item/gun/energy/gammagun
+	name = "Gamma gun"
+	desc = "A very crude weapon overall and appears to have been built from scavenged junk found throughout the wasteland."
+	icon_state = "gammagun"
+	item_state = "gammagun"
+	ammo_type = list(/obj/item/ammo_casing/energy/gammagun)
+	cell_type = /obj/item/stock_parts/cell/ammo/mfc
+	ammo_x_offset = 3
+	w_class = WEIGHT_CLASS_NORMAL
+	slot_flags = ITEM_SLOT_BELT
