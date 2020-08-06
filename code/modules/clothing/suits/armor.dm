@@ -803,7 +803,7 @@
 	armor = list("melee" = 75, "bullet" = 60, "laser" = 35, "energy" = 50, "bomb" = 48, "bio" = 60, "rad" = 50, "fire" = 80, "acid" = 0)
 
 /obj/item/clothing/suit/armor/f13/brokenpa/t45bhotrod
-	name = "salvaged T-45b power armor"
+	name = "salvaged hotrod T-45b power armor"
 	desc = "It's a set of T-45b power armor with a custom air conditioning module and stripped out servomotors. This set has exhaust pipes piped to the pauldrons, flames erupting from them."
 	icon_state = "t45hotrod"
 	item_state = "t45hotrod"
