@@ -529,7 +529,10 @@
 	icon_state = "sulphite_helm"
 	item_state = "sulphite_helm"
 	armor = list("melee" = 50, "bullet" = 45, "laser" = 35, "energy" = 25, "bomb" = 39, "bio" = 0, "rad" = 50, "fire" = 0, "acid" = 20)
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 
+	
 //Legion
 /obj/item/clothing/head/helmet/f13/legion
 	name = "legion helmet"

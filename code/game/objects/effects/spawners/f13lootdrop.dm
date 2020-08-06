@@ -196,7 +196,7 @@
 				)
 
 /obj/effect/spawner/lootdrop/f13/armor/costumes/Initialize(mapload) //on mapload, pick what shit to spawn
-	loot = pick(loot1, loot2, loot3, loot4, loot5, loot6, loot7, loot8, loot9, loot10)
+	loot = pick(loot1, loot2, loot3, loot4, loot5, loot6, loot7, loot8, loot9, loot10, loot11, loot12, loot13, loot14)
 	. = ..()
 
 
@@ -249,7 +249,7 @@
 				)
 
 /obj/effect/spawner/lootdrop/f13/armor/tier1/Initialize(mapload) //on mapload, pick what shit to spawn
-	loot = pick(loot1, loot2, loot3, loot4, loot5, loot6, loot7, loot8, loot9, loot10)
+	loot = pick(loot1, loot2, loot3, loot4, loot5, loot6, loot7, loot8, loot9, loot10, loot11)
 	. = ..()
 
 /obj/effect/spawner/lootdrop/f13/armor/tier2 //TIER 2 ARMOR
@@ -321,7 +321,7 @@
 				)
 
 /obj/effect/spawner/lootdrop/f13/armor/tier3/Initialize(mapload) //on mapload, pick what shit to spawn
-	loot = pick(loot1, loot2, loot3, loot4, loot5, loot6, loot7, loot8)
+	loot = pick(loot1, loot2, loot3, loot4, loot5, loot6, loot7, loot8, loot9)
 	. = ..()
 
 /obj/effect/spawner/lootdrop/f13/armor/tier4 //TIER 4 ARMOR
@@ -349,7 +349,7 @@
 				)
 
 /obj/effect/spawner/lootdrop/f13/armor/tier4/Initialize(mapload) //on mapload, pick what shit to spawn
-	loot = pick(loot1, loot2, loot3)
+	loot = pick(loot1, loot2, loot3, loot4, loot5)
 	. = ..()
 
 
