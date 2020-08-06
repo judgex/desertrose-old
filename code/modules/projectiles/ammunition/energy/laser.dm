@@ -112,6 +112,11 @@
 	e_cost = 80 //25 shots
 	fire_sound = 'sound/f13weapons/aer14fire.ogg'
 
+/obj/item/ammo_casing/energy/gammagun
+	projectile_type = /obj/item/projectile/beam/gamma
+	e_cost = 75
+	fire_sound = 'sound/weapons/laser3.ogg'
+
 //musket
 
 /obj/item/ammo_casing/energy/laser/musket

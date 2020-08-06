@@ -997,6 +997,12 @@
 /obj/item/twohanded/sledgehammer/atomsjudgement/update_icon()
 	icon_state = "atom_hammer[wielded]"
 
+/obj/item/twohanded/sledgehammer/atomsjudgement/attack(mob/living/M, mob/living/user)
+    . = ..()
+    if(!istype(M))
+        return
+    M.apply_effect(300, EFFECT_IRRADIATE, 0)
+
 /obj/item/twohanded/sledgehammer/warmace
 	name = "war mace"
 	desc = "A heavy wooden club with a turquoise head."
