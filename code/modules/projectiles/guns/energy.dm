@@ -267,8 +267,8 @@
 			else
 				to_chat(user, "<span class='warning'>You cannot seem to get \the [src] out of your hands!</span>")
 				return
-		else if (cell)
-			to_chat(user, "<span class='notice'>There's already a cell in \the [src].</span>")
+		//else if (cell)
+			//to_chat(user, "<span class='notice'>There's already a cell in \the [src].</span>")
 
 /obj/item/gun/energy/examine(mob/user)
 	..()
