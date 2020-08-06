@@ -190,8 +190,8 @@
 					oldcell.dropped()
 					oldcell.forceMove(get_turf(src.loc))
 					oldcell.update_icon()
-				else
-					to_chat(user, "<span class='notice'>You insert the cell into \the [src].</span>")
+				//else
+				//	to_chat(user, "<span class='notice'>You insert the cell into \the [src].</span>")
 
 				//playsound(src, 'sound/weapons/autoguninsert.ogg', 60, TRUE)
 				//chamber_round()
