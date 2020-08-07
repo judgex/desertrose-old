@@ -66,7 +66,7 @@ SUBSYSTEM_DEF(nightcycle)
 		else if(newTime == "SUNSET")
 			for(var/obj/structure/lamp_post/LP in GLOB.lamppost)
 				LP.icon_state = "[initial(LP.icon_state)]-on"
-				LP.set_light(LP.on_power,LP.on_range)
+				LP.set_light(LP.on_range,LP.on_power,LP.light_color)
 		. = TRUE
 
 /datum/controller/subsystem/nightcycle/proc/doWork()
