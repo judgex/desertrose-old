@@ -2605,7 +2605,7 @@
 "Ye" = (/obj/item/radio/intercom{frequency = 1361; name = "Vault Intercom"; pixel_x = -32},/turf/open/floor/plasteel/f13{icon_state = "rampdowntop"},/area/f13/vault)
 "Yf" = (/obj/effect/decal/cleanable/dirt,/obj/machinery/camera/autoname{dir = 9; icon_state = "camera"},/turf/open/floor/plasteel/f13{icon_state = "rampdowntop"},/area/f13/vault)
 "Yg" = (/obj/structure/barricade/wooden,/obj/structure/barricade/wooden/planks,/turf/open/indestructible/ground/inside/mountain,/area/f13/tunnel)
-"Yh" = (/obj/structure/ladder/unbreakable{height = 1; id = "V1"},/turf/open/floor/plating/tunnel,/area/f13/tunnel)
+"Yh" = (/obj/structure/ladder/unbreakable{height = 1; id = "Vault1"},/turf/open/floor/plating/tunnel,/area/f13/tunnel)
 "Yi" = (/obj/machinery/light{dir = 8},/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,/area/f13/vault)
 "Yj" = (/obj/structure/rack,/obj/item/target,/obj/item/target,/obj/item/target,/obj/item/target,/obj/item/target,/obj/item/target,/obj/item/target,/turf/open/floor/f13{icon_state = "darkdirty"},/area/f13/bunker)
 "Yk" = (/obj/machinery/holopad,/obj/structure/cable,/obj/effect/decal/cleanable/dirt,/turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,/area/f13/vault)

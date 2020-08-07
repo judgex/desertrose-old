@@ -4289,7 +4289,7 @@
 "bEy" = (/obj/structure/table/reinforced,/obj/structure/window/reinforced{dir = 8},/obj/item/storage/fancy/donut_box,/obj/machinery/door/firedoor/border_only{dir = 8; icon_state = "door_open"},/turf/open/floor/plasteel/dark,/area/f13/brotherhood)
 "bEz" = (/obj/structure/table/reinforced,/obj/machinery/recharger,/turf/open/floor/plasteel/dark,/area/f13/brotherhood)
 "bEA" = (/obj/structure/table/reinforced,/obj/machinery/cell_charger,/turf/open/floor/plasteel/dark,/area/f13/brotherhood)
-"bEB" = (/obj/structure/ladder/unbreakable{height = 1; id = "V1"},/turf/open/floor/plating/tunnel,/area/f13/tunnel)
+"bEB" = (/obj/structure/ladder/unbreakable{height = 2; id = "Vault1"},/turf/open/floor/plating/tunnel,/area/f13/tunnel)
 "bEC" = (/obj/machinery/light/fo13colored/Red,/turf/open/floor/plating/tunnel,/area/f13/tunnel)
 "bED" = (/obj/machinery/light/fo13colored/Red{dir = 8},/turf/open/floor/plating/tunnel,/area/f13/tunnel)
 "bEE" = (/obj/structure/closet/crate/secure/weapon,/obj/item/grenade/barrier,/obj/item/grenade/barrier,/obj/item/grenade/barrier,/obj/item/grenade/flashbang,/obj/item/grenade/flashbang,/obj/item/grenade/chem_grenade/teargas,/obj/effect/turf_decal/bot,/turf/open/floor/plasteel/dark,/area/f13/brotherhood)
