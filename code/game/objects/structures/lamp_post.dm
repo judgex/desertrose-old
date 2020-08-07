@@ -4,9 +4,11 @@
 	icon = 'icons/fallout/objects/96x160_street_decore.dmi'
 	icon_state = "nvlamp-singles"
 
-	light_color = "#95a502"
+	light_color = "#a8a582"
 	light_power = 0
 	light_range = 0
+	var/on_power = 0.8
+	var/on_range = 4.5
 
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
 	layer = GASFIRE_LAYER
@@ -33,7 +35,7 @@
 	GLOB.lamppost += src
 
 /obj/structure/lamp_post/Destroy()
-	GLOB.lamppost += src
+	GLOB.lamppost -= src
 	. = ..()
 
 /obj/effect/lamp_post/traffic_light
