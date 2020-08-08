@@ -17,7 +17,8 @@ GLOBAL_LIST_INIT(nightcycle_turfs, typecacheof(list(
 
 SUBSYSTEM_DEF(nightcycle)
 	name = "Day/Night Cycle"
-	wait = 4
+	wait = 20 //20 ticks in between checks, this thing doesn't need to fire so fast, as it's tied to gameclock not its own ticker
+	//This will also give the game time to light up the columns and not choke
 	//var/flags = 0			//see MC.dm in __DEFINES Most flags must be set on world start to take full effect. (You can also restart the mc to force them to process again
 	can_fire = TRUE
 	//var/list/timeBrackets = list("SUNRISE" = , "MORNING" = , "DAYTIME" = , "EVENING" = , "" = ,)
@@ -37,16 +38,6 @@ SUBSYSTEM_DEF(nightcycle)
 	if (nextBracket())
 		working = 1
 		currentColumn = 1
-	if(newTime == "MORNING" || newTime == "DAYTIME" || newTime == "AFTERNOON")
-		for(var/obj/structure/lamp_post/LP in GLOB.lamppost)
-			LP.icon_state = "[initial(LP.icon_state)]"
-			LP.light_power = 0
-			LP.light_range = 0
-	else
-		for(var/obj/structure/lamp_post/LP in GLOB.lamppost)
-			LP.icon_state = "[initial(LP.icon_state)]-on"
-			LP.light_power = 0.7
-			LP.light_range = 5
 
 /datum/controller/subsystem/nightcycle/proc/nextBracket()
 	var/Time = station_time()
@@ -68,13 +59,21 @@ SUBSYSTEM_DEF(nightcycle)
 	if (newTime != currentTime)
 		currentTime = newTime
 		updateLight(currentTime)
+		if(newTime == "MORNING") //Only change lamps when we need to
+			for(var/obj/structure/lamp_post/LP in GLOB.lamppost)
+				LP.icon_state = "[initial(LP.icon_state)]"
+				LP.set_light(0)
+		else if(newTime == "SUNSET")
+			for(var/obj/structure/lamp_post/LP in GLOB.lamppost)
+				LP.icon_state = "[initial(LP.icon_state)]-on"
+				LP.set_light(LP.on_range,LP.on_power,LP.light_color)
 		. = TRUE
 
 /datum/controller/subsystem/nightcycle/proc/doWork()
 	var/list/currentTurfs = list()
 	var/x = min(currentColumn + doColumns, world.maxx)
 	for (var/z in SSmapping.levels_by_trait(ZTRAIT_STATION))
-		currentTurfs += block(locate(currentColumn,1,z), locate(x,world.maxy,z))
+		currentTurfs += block(locate(currentColumn,1,z), locate(x,world.maxy,z)) //this is probably brutal on the overhead
 	for (var/t in currentTurfs)
 		var/turf/T = t
 		if(T.type in GLOB.nightcycle_turfs)

@@ -521,6 +521,18 @@
 	icon_state = "swatsyndie"
 	item_state = "swatsyndie"
 
+//Sulphite Helm
+
+/obj/item/clothing/head/helmet/f13/sulphitehelm
+	name = "Sulphite Helmet"
+	desc = "A sulphite raider helmet, affixed with thick anti-ballistic glass over the eyes."
+	icon_state = "sulphite_helm"
+	item_state = "sulphite_helm"
+	armor = list("melee" = 50, "bullet" = 45, "laser" = 35, "energy" = 25, "bomb" = 39, "bio" = 0, "rad" = 50, "fire" = 0, "acid" = 20)
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
+
+	
 //Legion
 /obj/item/clothing/head/helmet/f13/legion
 	name = "legion helmet"
@@ -796,6 +808,14 @@
 	desc = "This power armor helmet is so decrepit and battle-worn that it have lost most of its capability to protect the wearer from harm. This helmet seems to be heavily modified, heavy metal banding fused to the helmet"
 	icon_state = "raiderpa_helm"
 	item_state = "raiderpa_helm"
+	armor = list("melee" = 50, "bullet" = 45, "laser" = 25, "energy" = 25, "bomb" = 39, "bio" = 0, "rad" = 50, "fire" = 0, "acid" = 0)
+	flash_protect = 0
+
+/obj/item/clothing/head/helmet/f13/brokenpa/hotrod
+	name = "hotrod T-45b power helmet"
+	desc = "This power armor helmet is so decrepit and battle-worn that it have lost most of its capability to protect the wearer from harm."
+	icon_state = "t45hotrod_helm"
+	item_state = "t45hotrod_helm"
 	armor = list("melee" = 50, "bullet" = 45, "laser" = 25, "energy" = 25, "bomb" = 39, "bio" = 0, "rad" = 50, "fire" = 0, "acid" = 0)
 	flash_protect = 0
 //Power armor helmets

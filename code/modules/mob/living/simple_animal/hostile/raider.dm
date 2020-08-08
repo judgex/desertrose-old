@@ -72,6 +72,16 @@
 	projectiletype = /obj/item/projectile/bullet/c9mm
 	projectilesound = 'sound/f13weapons/ninemil.ogg'
 
+/mob/living/simple_animal/hostile/raider/ranged/sulphiteranged
+	icon_state = "ranged_sulphitemob"
+	icon_living = "ranged_sulphitemob"
+	loot = list(/obj/effect/mob_spawn/human/corpse/raiderrangedsulphite, /obj/item/gun/ballistic/automatic/pistol/m1911 )
+	ranged = 1
+	maxHealth = 180
+	health = 180
+	projectiletype = /obj/item/projectile/bullet/c45
+	projectilesound = 'sound/weapons/gunshot.ogg'
+	
 /mob/living/simple_animal/hostile/raider/ranged/boss
 	name = "Raider Boss"
 	icon_state = "raiderboss"

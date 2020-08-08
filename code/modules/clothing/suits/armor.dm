@@ -420,6 +420,15 @@
 	icon_state = "iconoclast"
 	item_state = "iconoclast"
 
+/obj/item/clothing/suit/armor/f13/harbingermantle
+	name = "Harbinger's Mantle"
+	desc = "An eerie, silken cloth that seems to be dripping with a thick mist. It is in truth a high-tech stealth device that allows for psionic amplification. The capacitors and manipulators in it utilise quantum technology and are highly volatile."
+	icon_state = "scloak"
+	item_state = "scloak"
+	body_parts_covered = CHEST|GROIN|ARMS|LEGS
+	armor = list("melee" = 55, "bullet" = 55, "laser" = 55, "energy" = 55, "bomb" = 45, "bio" = 45, "rad" = 45, "fire" = 45, "acid" = 0)
+
+
 /obj/item/clothing/suit/armor/f13/raider/iconoclast/Initialize()
 	. = ..()
 	AddComponent(/datum/component/armor_plate)
@@ -731,6 +740,14 @@
 	armor = list("melee" = 45, "bullet" = 50, "laser" = 45, "energy" = 45, "bomb" = 55, "bio" = 60, "rad" = 15, "fire" = 60, "acid" = 30)
 	flags_inv = HIDEJUMPSUIT
 
+/obj/item/clothing/suit/armor/f13/sulphitearmor
+	name = "Sulphite Armor"
+	desc = "An combination of what seems to be raider metal armor with a jerry-rigged flame-exhaust system and ceramic plating"
+	icon_state = "sulphitearmor"
+	item_state = "sulphitearmor"
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
+	armor = list("melee" = 40, "bullet" = 45, "laser" = 40, "energy" = 40, "bomb" = 50, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20)
+
 /*
 /obj/item/clothing/suit/armor/f13/bmetalarmor
 	name = "metal armor"
@@ -792,6 +809,13 @@
 	desc = "It's a set of T-45b power armor with a custom air conditioning module and stripped out servomotors.This set has seen better days, metal scrap has been spot welded to the chassis "
 	icon_state = "raiderpa"
 	item_state = "raiderpa"
+	armor = list("melee" = 75, "bullet" = 60, "laser" = 35, "energy" = 50, "bomb" = 48, "bio" = 60, "rad" = 50, "fire" = 80, "acid" = 0)
+
+/obj/item/clothing/suit/armor/f13/brokenpa/t45bhotrod
+	name = "salvaged hotrod T-45b power armor"
+	desc = "It's a set of T-45b power armor with a custom air conditioning module and stripped out servomotors. This set has exhaust pipes piped to the pauldrons, flames erupting from them."
+	icon_state = "t45hotrod"
+	item_state = "t45hotrod"
 	armor = list("melee" = 75, "bullet" = 60, "laser" = 35, "energy" = 50, "bomb" = 48, "bio" = 60, "rad" = 50, "fire" = 80, "acid" = 0)
 
 /obj/item/clothing/suit/armor/f13/brokenpa/ncr
@@ -870,6 +894,14 @@
 	desc = "A captured set of T-45d power armor put into use by the NCR, it's been heavily modified and decorated with the head of a bear and intricate gold trimming. A two headed bear is scorched into the breastplate."
 	icon_state = "sierra"
 	item_state = "sierra"
+
+/obj/item/clothing/suit/armor/f13/power_armor/t45d/knightcaptain
+	name = "Knight-Captain's T-45d Power Armour"
+	desc = "A classic set of T-45d Power Armour only to be used in armed combat, it signifies the Knight Captain and their place in the Brotherhood. A leader, and a beacon of structure in a place where chaos reigns. All must rally to his call, for he is the Knight Captain and your safety is his duty."
+	icon_state = "t45dkc"
+	item_state = "t45dkc"
+	slowdown = 0.16
+	armor = list("melee" = 65, "bullet" = 60, "laser" = 50, "energy" = 60, "bomb" = 62, "bio" = 100, "rad" = 90, "fire" = 90, "acid" = 0)
 
 /obj/item/clothing/suit/armor/f13/power_armor/t60
 	name = "T-60a power armor"
