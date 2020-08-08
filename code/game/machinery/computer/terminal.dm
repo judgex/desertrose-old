@@ -111,7 +111,7 @@
 // Notekeeper
 
 			if ("Edit")
-				var/n = stripped_multiline_input(U, "Please enter message", name, note)
+				var/n = stripped_multiline_input(U, "Please enter message", name, note, max_length=MAX_MESSAGE_LEN * 4) //Probably not abusable?? I'd be surprised if anyone managed to crash anything with this
 				if (in_range(src, U))
 					if (mode == 1 && n)
 						note = n
