@@ -420,6 +420,15 @@
 	icon_state = "iconoclast"
 	item_state = "iconoclast"
 
+/obj/item/clothing/suit/armor/f13/harbingermantle
+	name = "Harbinger's Mantle"
+	desc = "An eerie, silken cloth that seems to be dripping with a thick mist. It is in truth a high-tech stealth device that allows for psionic amplification. The capacitors and manipulators in it utilise quantum technology and are highly volatile."
+	icon_state = "scloak"
+	item_state = "scloak"
+	body_parts_covered = CHEST|GROIN|ARMS|LEGS
+	armor = list("melee" = 55, "bullet" = 55, "laser" = 55, "energy" = 55, "bomb" = 45, "bio" = 45, "rad" = 45, "fire" = 45, "acid" = 0)
+
+
 /obj/item/clothing/suit/armor/f13/raider/iconoclast/Initialize()
 	. = ..()
 	AddComponent(/datum/component/armor_plate)
@@ -885,6 +894,14 @@
 	desc = "A captured set of T-45d power armor put into use by the NCR, it's been heavily modified and decorated with the head of a bear and intricate gold trimming. A two headed bear is scorched into the breastplate."
 	icon_state = "sierra"
 	item_state = "sierra"
+
+/obj/item/clothing/suit/armor/f13/power_armor/t45d/knightcaptain
+	name = "Knight-Captain's T-45d Power Armour"
+	desc = "A classic set of T-45d Power Armour only to be used in armed combat, it signifies the Knight Captain and their place in the Brotherhood. A leader, and a beacon of structure in a place where chaos reigns. All must rally to his call, for he is the Knight Captain and your safety is his duty."
+	icon_state = "t45dkc"
+	item_state = "t45dkc"
+	slowdown = 0.16
+	armor = list("melee" = 65, "bullet" = 60, "laser" = 50, "energy" = 60, "bomb" = 62, "bio" = 100, "rad" = 90, "fire" = 90, "acid" = 0)
 
 /obj/item/clothing/suit/armor/f13/power_armor/t60
 	name = "T-60a power armor"
