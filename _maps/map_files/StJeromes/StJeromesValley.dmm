@@ -52,7 +52,7 @@
 "aaZ" = (/obj/structure/table,/turf/open/floor/plasteel/showroomfloor,/area/f13/brotherhood)
 "aba" = (/obj/machinery/door/poddoor/incinerator_syndicatelava_main{id = 506; name = "Brotherhood Blast Door"; obj_integrity = 1000},/obj/machinery/door/airlock/hatch{req_access_txt = "120"},/turf/open/floor/f13{icon_state = "dark"},/area/f13/brotherhood)
 "abb" = (/obj/structure/rack,/obj/effect/turf_decal/bot,/obj/item/pda,/obj/item/pda,/obj/item/pda,/obj/item/pda,/obj/item/pda,/obj/item/pda,/obj/item/pda,/turf/open/floor/plasteel/darkred,/area/f13/brotherhood)
-"abc" = (/obj/structure/closet/secure_closet/contraband/armory{req_access_txt = "120"},/obj/item/pda/warden,/obj/item/clothing/suit/bomb_suit/security,/obj/item/clothing/head/bomb_hood/security,/obj/effect/turf_decal/bot,/turf/open/floor/plasteel/darkred,/area/f13/brotherhood)
+"abc" = (/obj/structure/closet/secure_closet/contraband/armory{req_access_txt = "120"},/obj/item/pda/warden,/obj/item/clothing/suit/bomb_suit/security,/obj/item/clothing/head/bomb_hood/security,/obj/effect/turf_decal/bot,/obj/item/clothing/suit/armor/f13/power_armor/t45d/knightcaptain,/obj/item/clothing/head/helmet/power_armor/t45d,/turf/open/floor/plasteel/darkred,/area/f13/brotherhood)
 "abd" = (/turf/open/floor/plasteel/f13/vault_floor/plating,/area/f13/vault/vents)
 "abe" = (/obj/effect/spawner/lootdrop/maintenance{lootcount = 2; name = "2maintenance loot spawner"},/turf/open/floor/plasteel/f13/vault_floor/plating,/area/f13/vault/vents)
 "abf" = (/obj/structure/chair/office/dark,/obj/effect/landmark/start/f13/headscribe,/turf/open/floor/plasteel/grimy,/area/f13/brotherhood)
