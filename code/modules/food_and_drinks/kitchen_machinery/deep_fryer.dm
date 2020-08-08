@@ -89,6 +89,9 @@ God bless America.
 	if(istype(I, /obj/item/reagent_containers/food/snacks/deepfryholder))
 		to_chat(user, "<span class='userdanger'>Your cooking skills are not up to the legendary Doublefry technique.</span>")
 		return
+	if(I.w_class > WEIGHT_CLASS_NORMAL)
+		to_chat(user, "<span class='userdanger'>You try to jam [I] into the deep frier, but it won't fit!</span>")
+		return
 	if(default_unfasten_wrench(user, I))
 		return
 	else if(default_deconstruction_screwdriver(user, "fryer_off", "fryer_off" ,I))	//where's the open maint panel icon?!

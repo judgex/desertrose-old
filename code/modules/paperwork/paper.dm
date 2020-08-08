@@ -253,7 +253,7 @@
 		return
 	if(href_list["write"])
 		var/id = href_list["write"]
-		var/t =  stripped_multiline_input("Enter what you want to write:", "Write", no_trim=TRUE)
+		var/t =  stripped_multiline_input(usr,"Enter what you want to write:", "Write", max_length=MAX_MESSAGE_LEN*3,no_trim=TRUE) //triple text limit shouldn't break here, default is max /me size. hard to abuse on paper
 		if(!t || !usr.canUseTopic(src, BE_CLOSE, literate))
 			return
 		var/obj/item/i = usr.get_active_held_item()	//Check to see if he still got that darn pen, also check if he's using a crayon or pen.
