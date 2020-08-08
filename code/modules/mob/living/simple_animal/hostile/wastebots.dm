@@ -109,6 +109,162 @@
 /mob/living/simple_animal/hostile/handy/gutsy/AttackingTarget()
 	. = ..()
 
+/mob/living/simple_animal/hostile/handy/securitron
+	name = "Securitron"
+	desc = "A private security robot created and mass-produced by the H&H Tools Factory"
+	icon_state = "securitron"
+	icon_living = "securitron"
+	icon_dead = "gib7"
+	health = 250
+	maxHealth = 250
+	melee_damage_lower = 40
+	melee_damage_upper = 50
+	attack_sound = 'sound/items/welder.ogg'
+	attacktext = "shoots a burst of flame at"
+	projectilesound = 'sound/f13weapons/varmint_rifle.ogg'
+	projectiletype = /obj/item/projectile/bullet/F13/c556Bullet/heap
+	extra_projectiles = 3
+	ranged = TRUE
+	retreat_distance = 2
+	minimum_distance = 2
+	check_friendly_fire = TRUE
+	loot = list(/obj/effect/decal/cleanable/robot_debris, /obj/item/stack/crafting/electronicparts/three, /obj/item/stock_parts/cell/ammo/mfc)
+	emote_taunt_sound = null
+	emote_taunt = list("readies its arm gun")
+	aggrosound = null
+	idlesound = null
+	death_sound = null
+	attack_sound = null
+
+
+
+/mob/living/simple_animal/hostile/handy/securitron/AttackingTarget()
+	. = ..()
+
+/mob/living/simple_animal/hostile/handy/liberator
+	name = "liberator"
+	desc = "A small pre-War droned used by the People's Liberation Army."
+	icon_state = "liberator"
+	icon_living = "leberator"
+	icon_dead = "liberator_d"
+	icon_gib = "liberator_g"
+	health = 80
+	maxHealth = 80
+	melee_damage_lower = 5
+	melee_damage_upper = 10
+	attacktext = "slaps"
+	attack_sound = 'sound/weapons/punch1.ogg'
+	projectilesound = 'sound/weapons/laser.ogg'
+	projectiletype = /obj/item/projectile/beam/laser/pistol
+	extra_projectiles = 1
+	ranged = TRUE
+	retreat_distance = 2
+	minimum_distance = 2
+	check_friendly_fire = TRUE
+	loot = list(/obj/effect/decal/cleanable/robot_debris, /obj/item/stack/crafting/electronicparts/three, /obj/item/stock_parts/cell/ammo/mfc)
+	emote_taunt_sound = null
+	emote_taunt = list("levels its laser")
+	aggrosound = null
+	idlesound = null
+	death_sound = null
+	attack_sound = null
+
+/mob/living/simple_animal/hostile/handy/liberator_yellow
+	name = "liberator"
+	desc = "A small pre-War droned used by the People's Liberation Army."
+	icon_state = "liberator_y"
+	icon_living = "leberator_y"
+	icon_dead = "liberator_y_d"
+	health = 80
+	maxHealth = 80
+	melee_damage_lower = 5
+	melee_damage_upper = 10
+	attacktext = "slaps"
+	attack_sound = 'sound/weapons/punch1.ogg'
+	projectilesound = 'sound/weapons/laser.ogg'
+	projectiletype = /obj/item/projectile/beam/laser/pistol
+	extra_projectiles = 1
+	ranged = TRUE
+	retreat_distance = 2
+	minimum_distance = 2
+	check_friendly_fire = TRUE
+	loot = list(/obj/effect/decal/cleanable/robot_debris, /obj/item/stack/crafting/electronicparts/three, /obj/item/stock_parts/cell/ammo/mfc)
+	emote_taunt_sound = null
+	emote_taunt = list("levels its laser")
+	aggrosound = null
+	idlesound = null
+	death_sound = null
+	attack_sound = null
+
+
+
+/mob/living/simple_animal/hostile/handy/liberator_yellow/AttackingTarget()
+	. = ..()
+
+/mob/living/simple_animal/hostile/handy/robobrain
+	name = "robobrain"
+	desc = "A next-gen cybor developed by General Atomic International"
+	icon_state = "robobrain"
+	icon_living = "robobrain"
+	icon_dead = "robobrain_d"
+	health = 200
+	maxHealth = 200
+	melee_damage_lower = 30
+	melee_damage_upper = 45
+	attacktext = "slaps"
+	attack_sound = 'sound/weapons/punch1.ogg'
+	projectilesound = 'sound/weapons/laser.ogg'
+	projectiletype = /obj/item/projectile/beam/laser
+	extra_projectiles = 1
+	ranged = TRUE
+	retreat_distance = 2
+	minimum_distance = 2
+	check_friendly_fire = TRUE
+	loot = list(/obj/effect/decal/cleanable/robot_debris, /obj/item/stack/crafting/electronicparts/three, /obj/item/stock_parts/cell/ammo/mfc)
+	emote_taunt_sound = null
+	emote_taunt = list("levels its laser")
+	aggrosound = null
+	idlesound = null
+	death_sound = null
+	attack_sound = null
+
+
+
+/mob/living/simple_animal/hostile/handy/robobrain/AttackingTarget()
+	. = ..()
+
+/mob/living/simple_animal/hostile/handy/securitron
+	name = "Securitron"
+	desc = "A pre-war combat robot based commonly"
+	icon_state = "Securitron"
+	icon_living = "Securitron"
+	icon_dead = "gib7"
+	health = 250
+	maxHealth = 250
+	melee_damage_lower = 72
+	melee_damage_upper = 72
+	attack_sound = 'sound/items/welder.ogg'
+	attacktext = "shoots a burst of flame at"
+	projectilesound = 'sound/f13weapons/varmint_rifle.ogg'
+	projectiletype = /obj/item/projectile/bullet/F13/c556Bullet/heap
+	extra_projectiles = 3
+	ranged = TRUE
+	retreat_distance = 2
+	minimum_distance = 2
+	check_friendly_fire = TRUE
+	loot = list(/obj/effect/decal/cleanable/robot_debris, /obj/item/stack/crafting/electronicparts/three, /obj/item/stock_parts/cell/ammo/mfc)
+	emote_taunt_sound = null
+	emote_taunt = list("readies its arm gun")
+	aggrosound = null
+	idlesound = null
+	death_sound = null
+	attack_sound = null
+
+
+
+/mob/living/simple_animal/hostile/handy/securitron/AttackingTarget()
+	. = ..()
+
 /mob/living/simple_animal/hostile/handy/protectron
 	name = "protectron"
 	desc = "A pre-war security robot armed with deadly lasers."

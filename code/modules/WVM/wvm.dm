@@ -601,6 +601,13 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		new /datum/data/wasteland_equipment("Burst Cam",					/obj/item/attachments/burst_improvement,						200)
 		)
 
+/obj/machinery/mineral/wasteland_vendor/crafting
+	name = "Wasteland Vending Machine - Crafting"
+	icon_state = "generic_idle"
+	prize_list = list(
+		new /datum/data/wasteland_equipment("High Quality Parts",				/obj/item/stack/crafting/goodparts,									25)
+		)
+
 /datum/data/wasteland_equipment
 	var/equipment_name = "generic"
 	var/equipment_path = null
