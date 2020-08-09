@@ -76,6 +76,7 @@ Needs whitelist
 	suit = 			/obj/item/clothing/suit/armor/f13/legion/legate
 	head = 			/obj/item/clothing/head/helmet/f13/legion/legate
 	glasses = 		/obj/item/clothing/glasses/sunglasses/big
+	ears =			/obj/item/radio/headset/headset_legion
 	suit_store = 	/obj/item/gun/ballistic/automatic/marksman
 	backpack_contents = list(
 		/obj/item/restraints/legcuffs/bola=2, \
@@ -121,7 +122,7 @@ Centurion
 	id =			/obj/item/card/id/dogtag/legcenturion
 	mask =			/obj/item/clothing/mask/bandana/legcenturion
 	glasses = 		/obj/item/clothing/glasses/sunglasses/big
-	ears = 			/obj/item/radio/headset
+	ears = 			/obj/item/radio/headset/headset_legion
 	r_pocket =      /obj/item/restraints/handcuffs
 	backpack_contents = list(
 		/obj/item/restraints/legcuffs/bola=1, \
@@ -179,6 +180,7 @@ Orator
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13orator
 	name = "Legion Orator"
 	suit = 	/obj/item/clothing/suit/armor/f13/legion/vet/orator
+	ears =	/obj/item/radio/headset/headset_legion
 	id = /obj/item/card/id/dogtag/legorator
 	backpack_contents = list(
 		/obj/item/reagent_containers/pill/patch/healingpowder=3, \
@@ -205,6 +207,7 @@ Priestess of Mars
 	name = "Priestess of Mars"
 	uniform = /obj/item/clothing/under/f13/priestess
 	glasses = /obj/item/clothing/glasses/sunglasses/fakeblindfold
+	ears	= /obj/item/radio/headset/headset_legion
 	jobtype = /datum/job/CaesarsLegion/f13priestess
 	id = /obj/item/card/id/dogtag/legpriest
 	shoes = /obj/item/clothing/shoes/roman
@@ -261,7 +264,7 @@ Decanus
 	id = 			/obj/item/card/id/dogtag/legveteran
 	mask =			/obj/item/clothing/mask/bandana/legdecan
 	glasses = 		/obj/item/clothing/glasses/sunglasses/big
-	ears = 			/obj/item/radio/headset
+	ears = 			/obj/item/radio/headset/headset_legion
 	backpack_contents = list(
 		/obj/item/restraints/legcuffs/bola=1, \
 		/obj/item/throwing_star/spear, \
@@ -333,7 +336,7 @@ Vexillarius
 	mask =			/obj/item/clothing/mask/bandana/legvet
 	suit = 			/obj/item/clothing/suit/armor/f13/legion/vet/vexil
 	glasses = 		/obj/item/clothing/glasses/sunglasses/big
-	ears = 			/obj/item/radio/headset
+	ears = 			/obj/item/radio/headset/headset_legion
 	backpack_contents = list(
 		/obj/item/throwing_star/spear, \
 		/obj/item/claymore/machete/gladius=1, \
@@ -384,6 +387,7 @@ datum/job/CaesarsLegion/Legionnaire/f13slavemaster
 	belt = 			/obj/item/melee/curator_whip
 	head = 			/obj/item/clothing/head/helmet/gladiator
 	glasses = 		/obj/item/clothing/glasses/sunglasses
+	ears	=		/obj/item/radio/headset/headset_legion
 	backpack_contents = list(
 		/obj/item/claymore/machete/reinforced=1, \
 		/obj/item/reagent_containers/pill/patch/healingpowder=2, \
@@ -487,6 +491,7 @@ Prime Legionairy
 	head = 			/obj/item/clothing/head/helmet/f13/legion/prime
 	suit = 			/obj/item/clothing/suit/armor/f13/legion/prime
 	glasses = 		/obj/item/clothing/glasses/sunglasses
+	ears	=		/obj/item/radio/headset/headset_legion
 	backpack_contents = list(
 		/obj/item/restraints/legcuffs/bola=1, \
 		/obj/item/throwing_star/spear, \
@@ -574,7 +579,8 @@ Explorer
 	id = 		/obj/item/card/id/dogtag/legprime
 	suit = 		/obj/item/clothing/suit/armor/f13/legion/vet/explorer
 	head = 		/obj/item/clothing/head/helmet/f13/legion/vet/explorer
-	glasses = null
+	glasses = 	null
+	ears	=	/obj/item/radio/headset/headset_legion
 	backpack_contents = list(
 		/obj/item/restraints/legcuffs/bola=1, \
 		/obj/item/claymore/machete/reinforced=1, \
@@ -625,6 +631,7 @@ Auxilia
 	id =			/obj/item/card/id/dogtag/legauxilia
 	shoes = 		/obj/item/clothing/shoes/roman
 	uniform = 		/obj/item/clothing/under/f13/legskirt
+	ears	=		/obj/item/radio/headset/headset_legion
 	gloves =		null
 	belt =			null
 	backpack = /obj/item/storage/backpack/satchel/explorer
