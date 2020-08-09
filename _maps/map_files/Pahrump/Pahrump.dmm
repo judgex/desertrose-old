@@ -3929,7 +3929,7 @@
 "byJ" = (/obj/machinery/door/unpowered/wooddoor{autoclose = 1; req_one_access_txt = "48"},/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,/area/f13/city)
 "byK" = (/obj/structure/chair/booth{dir = 4},/turf/open/floor/carpet/black,/area/f13/city)
 "byL" = (/obj/machinery/light{dir = 1},/obj/machinery/vending/engivend,/turf/open/floor/plasteel/barber{icon = 'icons/turf/f13floors2.dmi'; icon_state = "bluerustychess2"; tag = "icon-bluerustychess2"},/area/f13/building)
-"byM" = (/obj/machinery/door/airlock/security/glass{name = "Armory"; req_access_txt = "19"},/turf/open/floor/plasteel/f13/vault_floor/dark,/area/f13/ncr)
+"byM" = (/obj/machinery/door/airlock/security/glass{name = "Armory"; req_access_txt = "121"},/turf/open/floor/plasteel/f13/vault_floor/dark,/area/f13/ncr)
 "byO" = (/obj/structure/chair/wood{dir = 8},/turf/open/indestructible/ground/outside/dirt,/area/f13/village)
 "byP" = (/obj/structure/simple_door/wood,/turf/open/indestructible/ground/inside/mountain,/area/f13/village)
 "byR" = (/obj/structure/chair/bench,/turf/open/indestructible/ground/inside/mountain,/area/f13/village)
