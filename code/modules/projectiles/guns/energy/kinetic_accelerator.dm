@@ -43,6 +43,12 @@
 	else
 		to_chat(user, "<span class='notice'>There are no modifications currently installed.</span>")
 
+/obj/item/gun/energy/kinetic_accelerator/AltClick(mob/user)
+	return
+
+/obj/item/gun/energy/attack_self(mob/living/user)
+	return
+	
 /obj/item/gun/energy/kinetic_accelerator/attackby(obj/item/I, mob/user)
 	if(istype(I, /obj/item/borg/upgrade/modkit))
 		var/obj/item/borg/upgrade/modkit/MK = I
