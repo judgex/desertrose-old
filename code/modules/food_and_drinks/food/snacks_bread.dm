@@ -209,14 +209,20 @@
 		trash = fried
 
 /obj/item/reagent_containers/food/snacks/deepfryholder/Destroy()
-	if(trash)
-		QDEL_NULL(trash)
+	drop_trash()
 	. = ..()
 
 /obj/item/reagent_containers/food/snacks/deepfryholder/On_Consume(mob/living/eater)
-	if(trash)
-		QDEL_NULL(trash)
+	drop_trash()
 	..()
+
+/obj/item/reagent_containers/food/snacks/deepfryholder/proc/drop_trash()
+	if(trash)
+		var/obj/item/original_obj = trash
+		if(istype(original_obj))
+			original_obj.forceMove(get_turf(src))
+			visible_message("<span class='danger'>[original_obj] falls to the ground as the fried batter crumbles off!</span>")
+			trash = null
 
 /obj/item/reagent_containers/food/snacks/deepfryholder/proc/fry(cook_time = 30)
 	switch(cook_time)

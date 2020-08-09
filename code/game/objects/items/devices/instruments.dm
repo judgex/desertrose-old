@@ -49,6 +49,7 @@
 	item_state = "violin"
 	hitsound = "swing_hit"
 	instrumentId = "violin"
+	instrumentExt = "mid"
 
 /obj/item/instrument/violin/golden
 	name = "golden violin"
@@ -98,6 +99,7 @@
 	icon_state = "glockenspiel"
 	item_state = "glockenspiel"
 	instrumentId = "glockenspiel"
+	instrumentExt = "mid"
 
 /obj/item/instrument/accordion
 	name = "accordion"
@@ -105,6 +107,7 @@
 	icon_state = "accordion"
 	item_state = "accordion"
 	instrumentId = "accordion"
+	instrumentExt = "mid"
 
 /obj/item/instrument/trumpet
 	name = "trumpet"
@@ -112,6 +115,7 @@
 	icon_state = "trumpet"
 	item_state = "trombone"
 	instrumentId = "trombone"
+	instrumentExt = "mid"
 
 /obj/item/instrument/trumpet/spectral
 	name = "spectral trumpet"
@@ -136,6 +140,7 @@
 	icon_state = "saxophone"
 	item_state = "saxophone"
 	instrumentId = "saxophone"
+	instrumentExt = "mid"
 
 /obj/item/instrument/saxophone/spectral
 	name = "spectral saxophone"
@@ -160,6 +165,7 @@
 	icon_state = "trombone"
 	item_state = "trombone"
 	instrumentId = "trombone"
+	instrumentExt = "mid"
 
 /obj/item/instrument/trombone/spectral
 	name = "spectral trombone"
@@ -185,6 +191,7 @@
 	icon_state = "recorder"
 	item_state = "recorder"
 	instrumentId = "recorder"
+	instrumentExt = "mid"
 
 /obj/item/instrument/harmonica
 	name = "harmonica"
@@ -192,10 +199,12 @@
 	icon_state = "harmonica"
 	item_state = "harmonica"
 	instrumentId = "harmonica"
+	instrumentExt = "mid"
 	slot_flags = ITEM_SLOT_MASK
 	force = 5
 	w_class = WEIGHT_CLASS_SMALL
 	actions_types = list(/datum/action/item_action/instrument)
+
 
 /obj/item/instrument/harmonica/speechModification(message)
 	if(song.playing && ismob(loc))
