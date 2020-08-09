@@ -253,7 +253,7 @@
 	icon_state = "sec_headset"
 	keyslot = new /obj/item/encryptionkey/headset_legion
 
-/obj/item/radio/headset/headset_ncr/ComponentInitialize()
+/obj/item/radio/headset/headset_legion/ComponentInitialize()
 	. = ..()
 	AddComponent(/datum/component/wearertargeting/earprotection, list(SLOT_EARS))
 
