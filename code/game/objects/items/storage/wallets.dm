@@ -60,11 +60,9 @@
 /obj/item/storage/wallet/update_icon()
 	var/new_state = "wallet"
 	if(front_id)
-		if(front_id.icon_state in special_ids)
-			new_state = "wallet"
-		else
-			new_state = "wallet_[front_id.icon_state]"
-	if(new_state != icon_state)		//avoid so many icon state changes.
+		new_state = "wallet_id" //We have so many ids and no proper sprites for them, this is way easier.  icons/obj/storage.dmi
+
+	if(new_state != icon_state)
 		icon_state = new_state
 
 /obj/item/storage/wallet/GetID()
