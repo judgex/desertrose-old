@@ -254,11 +254,13 @@
 			if (istype(A, /turf/closed/wall/f13/wood))
 				if (prob(penetrating-0))
 					passthrough = 1
-					visible_message("goes thru wood wall@-0%chance")
+					//visible_message("goes thru wood wall@-0%chance")
+					return
 			if (istype(A, /turf/closed/wall/f13/supermart))
 				if (prob(penetrating-20))
 					passthrough = 1
-					visible_message("goes thru concrete wall@-20%chance")
+					//visible_message("goes thru concrete wall@-20%chance")
+					return
 		penetrating = 0
 
 	//the bullet passes through a dense object!
@@ -266,7 +268,7 @@
 		//move ourselves onto A so we can continue on our way.
 		var/turf/T = get_turf(A)
 		if(T)
-			visible_message("goes thru wall2")
+			//visible_message("goes thru wall2")
 			forceMove(T)
 		permutated.Add(A)
 		bumped = 0 //reset bumped variable!
