@@ -539,6 +539,38 @@
 	speak_emote = list("rushes")
 	speak_chance = 2
 
+/mob/living/simple_animal/hostile/raider/sulphite
+	name = "Sulphite Brawler"
+	desc = "A raider with low military grade armor and a shishkebab"
+	icon_state = "melee_sulphitemob"
+	icon_living = "melee_sulphitemob"
+	turns_per_move = 5
+	response_help = "pokes"
+	response_disarm = "shoves"
+	response_harm = "hits"
+	speed = 1
+	stat_attack = 1
+	robust_searching = 1
+	maxHealth = 220
+	health = 220
+	harm_intent_damage = 5
+	melee_damage_lower = 40
+	melee_damage_upper = 55
+	attacktext = "attacks"
+	attack_sound = 'sound/weapons/punch1.ogg'
+	a_intent = INTENT_HARM
+	loot = list(/obj/effect/mob_spawn/human/corpse/raider)
+	atmos_requirements = list("min_oxy" = 5, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 1, "min_co2" = 0, "max_co2" = 5, "min_n2" = 0, "max_n2" = 0)
+	loot = list(/obj/effect/mob_spawn/human/corpse/raidermelee, /obj/effect/spawner/lootdrop/f13/cash_random_low)
+	unsuitable_atmos_damage = 15
+	faction = list("raiders")
+	check_friendly_fire = 1
+	status_flags = CANPUSH
+	del_on_death = 1
+	speak = "Yes!"
+	speak_emote = list("rushes")
+	speak_chance = 2
+
 /obj/effect/mob_spawn/human/corpse/raider
 	name = "Raider"
 	uniform = /obj/item/clothing/under/f13/rag
@@ -583,7 +615,7 @@
 
 /obj/effect/mob_spawn/human/corpse/raider/tribal
 	uniform = /obj/item/clothing/under/f13/rag
-	suit = /obj/item/clothing/suit/armor/f13/raider/r/sadist
+	suit = /obj/item/clothing/suit/armor/f13/raider/sadist
 	shoes = /obj/item/clothing/shoes/f13/rag
 	//gloves = /obj/item/clothing/gloves/f13/doom
 	//radio = /obj/item/device/radio/headset
@@ -608,7 +640,7 @@
 
 /obj/effect/mob_spawn/human/corpse/raider/baseball
 	uniform = /obj/item/clothing/under/f13/rag
-	suit = /obj/item/clothing/suit/armor/f13/raider/r/yankee
+	suit = /obj/item/clothing/suit/armor/f13/raider/yankee
 	shoes = /obj/item/clothing/shoes/f13/rag
 	//gloves = /obj/item/clothing/gloves/f13/doom
 	//radio = /obj/item/device/radio/headset

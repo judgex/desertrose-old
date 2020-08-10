@@ -255,11 +255,13 @@
 /obj/item/clothing/suit/armor/plate/crusader/jugger
 	name = "Juggernaut Armour" // the beefmeister is in town
 	desc = "A monstrous construction of scrap metal and concrete, stacked and masterfully reinforced to create an impervious beast of armor."
-	slowdown = 6.0
+	slowdown = 4.0
+	drag_delay = 5.0
 	flags_inv = HIDEHAIR|HIDEEARS|HIDEFACE|HIDEJUMPSUIT|HIDESHOES|HIDEMASK|HIDEFACIALHAIR|HIDEGLOVES
-	item_flags = SLOWS_WHILE_IN_HAND //no cheese big boy
 	w_class = WEIGHT_CLASS_HUGE
 	body_parts_covered = FULL_BODY
+	item_flags = SLOWS_WHILE_IN_HAND
+	throw_range = 1
 	icon_state = "juggernaut"
 	armor = list("melee" = 70, "bullet" = 50, "laser" = 50, "energy" = 40, "bomb" = 60, "bio" = 0, "rad" = 0, "fire" = 60, "acid" = 60)
 
@@ -267,6 +269,10 @@
 	name = "Juggernaut Helmet Armour" // the beefmeister is in town
 	desc = "A monstrous construction of scrap metal and concrete, stacked and masterfully reinforced to create an impervious beast of armor."
 	w_class = WEIGHT_CLASS_HUGE
+	drag_delay = 5.0
+	slowdown = 1.0
+	throw_range = 1
+	item_flags = SLOWS_WHILE_IN_HAND
 	icon_state = "juggernaut"
 	armor = list("melee" = 70, "bullet" = 50, "laser" = 50, "energy" = 40, "bomb" = 60, "bio" = 0, "rad" = 0, "fire" = 60, "acid" = 60)
 

@@ -40,6 +40,17 @@
 	projectiletype = /obj/item/projectile/beam
 	projectilesound = 'sound/f13weapons/laser_pistol.ogg'
 
+/mob/living/simple_animal/hostile/synth/playable
+	emote_taunt_sound = null
+	emote_taunt = null
+	aggrosound = null
+	idlesound = null
+	see_in_dark = 8
+	environment_smash = 2 //can smash walls
+	wander = 0
+	anchored = FALSE
+	dextrous = TRUE
+
 /mob/living/simple_animal/hostile/synth/mk2
 	name = "synth mk2"
 	icon_state = "synthmk2"
@@ -48,3 +59,14 @@
 	icon_gib = "synthmk2_d"
 	projectiletype = /obj/item/projectile/beam
 	projectilesound = 'sound/f13weapons/laser_rifle.ogg'
+
+/mob/living/simple_animal/hostile/synth/mk2/playable
+	emote_taunt_sound = null
+	emote_taunt = null
+	aggrosound = null
+	idlesound = null
+	see_in_dark = 8
+	environment_smash = 2 //can smash walls
+	wander = 0
+	anchored = FALSE
+	dextrous = TRUE

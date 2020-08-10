@@ -36,6 +36,15 @@
 	gold_core_spawnable = HOSTILE_SPAWN
 	death_sound = 'sound/f13npc/cazador/cazador_death.ogg'
 
+/mob/living/simple_animal/hostile/cazador/playable
+	emote_taunt_sound = null
+	emote_taunt = null
+	aggrosound = null
+	idlesound = null
+	see_in_dark = 8
+	wander = 0
+	anchored = FALSE
+
 /mob/living/simple_animal/hostile/cazador/AttackingTarget()
 	. = ..()
 	if(. && ishuman(target))
@@ -64,6 +73,21 @@
 	melee_damage_lower = 5
 	melee_damage_upper = 10
 	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab/cazador_meat = 1, /obj/item/stack/sheet/animalhide/chitin = 1, /obj/item/stack/sheet/sinew = 1)
+
+/mob/living/simple_animal/hostile/cazador/young/playable
+	emote_taunt_sound = null
+	emote_taunt = null
+	aggrosound = null
+	idlesound = null
+	see_in_dark = 8
+	wander = 0
+	anchored = FALSE
+	health = 150
+	maxHealth = 150
+	melee_damage_lower = 15
+	melee_damage_upper = 25
+	speed = 0
+
 
 /mob/living/simple_animal/hostile/cazador/young/Initialize()
 	. = ..()
@@ -176,6 +200,20 @@
 	emote_taunt_sound = list('sound/f13npc/gecko/gecko_charge1.ogg', 'sound/f13npc/gecko/gecko_charge2.ogg', 'sound/f13npc/gecko/gecko_charge3.ogg',)
 	aggrosound = list('sound/f13npc/gecko/gecko_alert.ogg', )
 	death_sound = 'sound/f13npc/gecko/gecko_death.ogg'
+
+/mob/living/simple_animal/hostile/gecko/playable
+	health = 200
+	maxHealth = 200
+	speed = 0
+	emote_taunt_sound = null
+	emote_taunt = null
+	aggrosound = null
+	idlesound = null
+	see_in_dark = 8
+	wander = 0
+	anchored = FALSE
+	melee_damage_lower = 20
+	melee_damage_upper = 45
 
 /mob/living/simple_animal/hostile/radroach
 	name = "radroach"
@@ -314,6 +352,14 @@
 	density = 1
 	anchored = 0
 
+/obj/structure/mirelurkegg
+	name = "mirelurk eggs"
+	desc = "A fresh clutch of mirelurk eggs."
+	icon = 'icons/mob/wastemobsdrops.dmi'
+	icon_state = "mirelurkeggs"
+	density = 1
+	anchored = 0
+
 /mob/living/simple_animal/hostile/stalkeryoung
 	name = "young nightstalker"
 	desc = "A juvenile crazed genetic hybrid of rattlesnake and coyote DNA."
@@ -351,6 +397,19 @@
 	death_sound = 'sound/f13npc/nightstalker/death.ogg'
 	attack_sound = 'sound/f13npc/nightstalker/attack1.ogg'
 
+/mob/living/simple_animal/hostile/stalkeryoung/playable
+	health = 250
+	maxHealth = 250
+	emote_taunt_sound = null
+	emote_taunt = null
+	aggrosound = null
+	idlesound = null
+	see_in_dark = 8
+	wander = 0
+	anchored = FALSE
+	melee_damage_lower = 20
+	melee_damage_upper = 45
+
 /mob/living/simple_animal/hostile/stalker/AttackingTarget()
 	. = ..()
 	if(. && ishuman(target))
@@ -358,7 +417,7 @@
 		H.reagents.add_reagent("cazador_venom", 2)
 
 /datum/reagent/toxin/cazador_venom/on_mob_life(mob/living/M)
-	if(volume >= 6)
+	if(volume >= 20)
 		M.adjustToxLoss(5, 0)
 	..()
 
@@ -394,6 +453,19 @@
 	gold_core_spawnable = HOSTILE_SPAWN
 	a_intent = INTENT_HARM
 
+/mob/living/simple_animal/hostile/stalker/playable
+	health = 300
+	maxHealth = 300
+	emote_taunt_sound = null
+	emote_taunt = null
+	aggrosound = null
+	idlesound = null
+	see_in_dark = 8
+	wander = 0
+	anchored = FALSE
+	melee_damage_lower = 20
+	melee_damage_upper = 45
+
 /mob/living/simple_animal/hostile/stalker/AttackingTarget()
 	. = ..()
 	if(. && ishuman(target))
@@ -401,7 +473,7 @@
 		H.reagents.add_reagent("cazador_venom", 4)
 
 /datum/reagent/toxin/cazador_venom/on_mob_life(mob/living/M)
-	if(volume >= 12)
+	if(volume >= 16)
 		M.adjustToxLoss(5, 0)
 	..()
 
@@ -497,3 +569,70 @@
 	melee_damage_upper = 30
 	move_to_delay = 4
 	gold_core_spawnable = HOSTILE_SPAWN
+
+/mob/living/simple_animal/hostile/mirelurk
+	name = "mirelurk"
+	desc = "A giant mutated crustacean, with a hardened exo-skeleton."
+	icon_state = "mirelurk"
+	icon_living = "mirelurk"
+	icon_dead = "mirelurk_d"
+	speed = 1
+	icon_gib = "gib"
+	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 2, /obj/item/stack/sheet/sinew = 1)
+	maxHealth = 150
+	health = 150
+	melee_damage_lower = 10
+	melee_damage_upper = 20
+	gold_core_spawnable = HOSTILE_SPAWN
+
+/mob/living/simple_animal/hostile/fireant/Initialize()
+	. = ..()
+
+/mob/living/simple_animal/hostile/fireant/Aggro()
+	..()
+	summon_backup(10)
+
+/mob/living/simple_animal/hostile/mirelurk/hunter
+	name = "mirelurk hunter"
+	desc = "A giant mutated crustacean, with a hardened exoskeleton. Its appearance makes you shudder in fear. This one has giant, razor sharp claw pincers."
+	icon_state = "mirelurkhunter"
+	icon_living = "mirelurkhunter"
+	speed = 1
+	icon_dead = "mirelurkhunter_d"
+	icon_gib = "gib"
+	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 4, /obj/item/stack/sheet/sinew = 2)
+	maxHealth = 250
+	health = 250
+	melee_damage_lower = 30
+	melee_damage_upper = 45
+	gold_core_spawnable = HOSTILE_SPAWN
+
+/mob/living/simple_animal/hostile/fireant/Initialize()
+	. = ..()
+
+/mob/living/simple_animal/hostile/fireant/Aggro()
+	..()
+	summon_backup(10)
+
+/mob/living/simple_animal/hostile/mirelurk/baby
+	name = "mirelurk baby"
+	desc = "A neophyte mirelurk baby, mostly harmless."
+	icon_state = "mirelurkbaby"
+	icon_living = "mirelurkbaby"
+	icon_dead = "mirelurkbaby_d"
+	icon_gib = "gib"
+	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 1)
+	speed = 1
+	maxHealth = 50
+	health = 50
+	melee_damage_lower = 5
+	melee_damage_upper = 10
+	gold_core_spawnable = HOSTILE_SPAWN
+
+/mob/living/simple_animal/hostile/mirelurk/baby/Initialize()
+	. = ..()
+
+/mob/living/simple_animal/hostile/mirelurk/baby/Aggro()
+	..()
+	summon_backup(10)
+	

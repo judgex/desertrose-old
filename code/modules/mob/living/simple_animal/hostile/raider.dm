@@ -29,6 +29,37 @@
 	status_flags = CANPUSH
 	del_on_death = 1
 
+/mob/living/simple_animal/hostile/raider/thief
+
+/mob/living/simple_animal/hostile/raider/thief/movement_delay()
+	return -2
+
+/mob/living/simple_animal/hostile/raider/thief/AttackingTarget()
+	if(ishuman(target))
+		var/mob/living/carbon/human/H = target
+		var/back_target = H.back
+		if(back_target)
+			H.dropItemToGround(back_target, TRUE)
+			src.transferItemToLoc(back_target, src, TRUE)
+		var/belt_target = H.belt
+		if(belt_target)
+			H.dropItemToGround(belt_target, TRUE)
+			src.transferItemToLoc(belt_target, src, TRUE)
+		var/shoe_target = H.shoes
+		if(shoe_target)
+			H.dropItemToGround(shoe_target, TRUE)
+			src.transferItemToLoc(shoe_target, src, TRUE)
+	retreat_distance = 50
+	addtimer(CALLBACK(src, .proc/undo_retreat), 5 MINUTES)
+
+/mob/living/simple_animal/hostile/raider/thief/proc/undo_retreat()
+	retreat_distance = null
+
+/mob/living/simple_animal/hostile/raider/thief/death(gibbed)
+	for(var/obj/I in contents)
+		src.dropItemToGround(I)
+	. = ..()
+
 /mob/living/simple_animal/hostile/raider/ranged
 	icon_state = "raiderranged"
 	icon_living = "raiderranged"
@@ -41,6 +72,16 @@
 	projectiletype = /obj/item/projectile/bullet/c9mm
 	projectilesound = 'sound/f13weapons/ninemil.ogg'
 
+/mob/living/simple_animal/hostile/raider/ranged/sulphiteranged
+	icon_state = "ranged_sulphitemob"
+	icon_living = "ranged_sulphitemob"
+	loot = list(/obj/effect/mob_spawn/human/corpse/raiderrangedsulphite, /obj/item/gun/ballistic/automatic/pistol/m1911 )
+	ranged = 1
+	maxHealth = 180
+	health = 180
+	projectiletype = /obj/item/projectile/bullet/c45
+	projectilesound = 'sound/weapons/gunshot.ogg'
+	
 /mob/living/simple_animal/hostile/raider/ranged/boss
 	name = "Raider Boss"
 	icon_state = "raiderboss"

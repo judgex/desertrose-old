@@ -7,7 +7,7 @@
 	tools = list(TOOL_WORKBENCH)
 	time = 120
 	category = CAT_CLOTHING
-	subcategory = CAT_CLOTHING
+	subcategory = CAT_ARMOR
 
 /datum/crafting_recipe/metalarmormk2
 	name = "metal armor mark 2"
@@ -29,7 +29,7 @@
 	tools = list(TOOL_WORKBENCH)
 	time = 60
 	category = CAT_CLOTHING
-	subcategory = CAT_CLOTHING
+	subcategory = CAT_ARMOR
 
 /datum/crafting_recipe/metalmaskmk2
 	name = "metal mask mk2"
@@ -39,7 +39,7 @@
 	tools = list(TOOL_WORKBENCH)
 	time = 60
 	category = CAT_CLOTHING
-	subcategory = CAT_CLOTHING
+	subcategory = CAT_ARMOR
 
 /datum/crafting_recipe/leatherarmor
 	name = "leather armor"
@@ -49,7 +49,7 @@
 	tools = list(TOOL_WORKBENCH)
 	time = 60
 	category = CAT_CLOTHING
-	subcategory = CAT_CLOTHING
+	subcategory = CAT_ARMOR
 
 /datum/crafting_recipe/leatherarmor2
 	name = "reinforced leather armor"
@@ -60,7 +60,7 @@
 	tools = list(TOOL_WORKBENCH)
 	time = 60
 	category = CAT_CLOTHING
-	subcategory = CAT_CLOTHING
+	subcategory = CAT_ARMOR
 
 /datum/crafting_recipe/leather_jacket
 	name = "leather jacket"
@@ -70,7 +70,7 @@
 	tools = list(TOOL_WORKBENCH)
 	time = 60
 	category = CAT_CLOTHING
-	subcategory = CAT_CLOTHING
+	subcategory = CAT_ARMOR
 
 /datum/crafting_recipe/combat_jacket
 	name = "combat jacket"
@@ -82,7 +82,7 @@
 	tools = list(TOOL_WORKBENCH)
 	time = 60
 	category = CAT_CLOTHING
-	subcategory = CAT_CLOTHING
+	subcategory = CAT_ARMOR
 
 
 /datum/crafting_recipe/combat_coat
@@ -93,8 +93,9 @@
 	tools = list(TOOL_WORKBENCH)
 	time = 60
 	category = CAT_CLOTHING
-	subcategory = CAT_CLOTHING
+	subcategory = CAT_ARMOR
 
+/*
 /datum/crafting_recipe/supaflyhelm_reinforced
 	name = "reinforced supafly helmet"
 	result = /obj/item/clothing/head/helmet/f13/raider/r/supafly
@@ -270,6 +271,7 @@
 	time = 60
 	category = CAT_CLOTHING
 	subcategory = CAT_CLOTHING
+*/
 
 /datum/crafting_recipe/raiderpaconversion
 	name = "salvaged power armor to raider power armor conversion"
@@ -279,7 +281,7 @@
 	tools = list(TOOL_WORKBENCH)
 	time = 60
 	category = CAT_CLOTHING
-	subcategory = CAT_CLOTHING
+	subcategory = CAT_ARMOR
 
 /datum/crafting_recipe/raiderpahelmconversion
 	name = "salvaged power armor helmet to raider power armor helmet conversion"
@@ -289,7 +291,7 @@
 	tools = list(TOOL_WORKBENCH)
 	time = 60
 	category = CAT_CLOTHING
-	subcategory = CAT_CLOTHING
+	subcategory = CAT_ARMOR
 
 /datum/crafting_recipe/armorkit
 	name = "armor kit"
@@ -300,7 +302,8 @@
 	tools = list(TOOL_WORKBENCH)
 	time = 60
 	category = CAT_CLOTHING
-	subcategory = CAT_CLOTHING
+	subcategory = CAT_ARMOR
+
 /*CRAFT rework: removed for balance
 /datum/crafting_recipe/tesla_armor
 	name = "tesla armor"
@@ -496,12 +499,11 @@
 	category = CAT_CLOTHING
 	subcategory = CAT_WASTELAND
 
-/datum/crafting_recipe/facewrap
-	name = "desert facewrap"
-	result = /obj/item/clothing/mask/facewrap
+/datum/crafting_recipe/rag
+	name = "slave rags"
+	result = /obj/item/clothing/under/f13/rag
 	reqs = list(/obj/item/stack/sheet/cloth = 2)
-	tools = list(TOOL_WORKBENCH)
-	time = 10
+	time = 5
 	category = CAT_CLOTHING
 	subcategory = CAT_WASTELAND
 
@@ -513,6 +515,429 @@
 	time = 25
 	category = CAT_CLOTHING
 	subcategory = CAT_WASTELAND
+
+//General clothing
+
+/datum/crafting_recipe/jeans
+	name = "denim jeans"
+	result = /obj/item/clothing/under/pants/youngfolksjeans
+	reqs = list(/obj/item/stack/sheet/cloth = 2)
+	tools = list(TOOL_WORKBENCH)
+	time = 10
+	category = CAT_CLOTHING
+	subcategory = CAT_CLOTHING
+
+/datum/crafting_recipe/warboy
+	name = "war boy pants"
+	result = /obj/item/clothing/under/pants/f13/warboy
+	reqs = list(/obj/item/stack/sheet/cloth = 2)
+	tools = list(TOOL_WORKBENCH)
+	time = 10
+	category = CAT_CLOTHING
+	subcategory = CAT_CLOTHING
+
+/datum/crafting_recipe/khaki
+	name = "khaki pants"
+	result = /obj/item/clothing/under/pants/khaki
+	reqs = list(/obj/item/stack/sheet/cloth = 2)
+	tools = list(TOOL_WORKBENCH)
+	time = 10
+	category = CAT_CLOTHING
+	subcategory = CAT_CLOTHING
+
+/datum/crafting_recipe/cowboyg
+	name = "grey prospector outfit"
+	result = /obj/item/clothing/under/f13/cowboyg
+	reqs = list(/obj/item/stack/sheet/cloth = 4)
+	tools = list(TOOL_WORKBENCH)
+	time = 15
+	category = CAT_CLOTHING
+	subcategory = CAT_CLOTHING
+
+/datum/crafting_recipe/cowboyb
+	name = "brown prospector outfit"
+	result = /obj/item/clothing/under/f13/cowboyb
+	reqs = list(/obj/item/stack/sheet/cloth = 4)
+	tools = list(TOOL_WORKBENCH)
+	time = 15
+	category = CAT_CLOTHING
+	subcategory = CAT_CLOTHING
+
+/datum/crafting_recipe/cowboyt
+	name = "tan prospector outfit"
+	result = /obj/item/clothing/under/f13/cowboyt
+	reqs = list(/obj/item/stack/sheet/cloth = 4)
+	tools = list(TOOL_WORKBENCH)
+	time = 15
+	category = CAT_CLOTHING
+	subcategory = CAT_CLOTHING
+
+/datum/crafting_recipe/cowboyg
+	name = "grey prospector outfit"
+	result = /obj/item/clothing/under/f13/cowboyg
+	reqs = list(/obj/item/stack/sheet/cloth = 4)
+	tools = list(TOOL_WORKBENCH)
+	time = 15
+	category = CAT_CLOTHING
+	subcategory = CAT_CLOTHING
+
+/datum/crafting_recipe/westender
+	name = "bartender outfit"
+	result = /obj/item/clothing/under/f13/westender
+	reqs = list(/obj/item/stack/sheet/cloth = 4)
+	tools = list(TOOL_WORKBENCH)
+	time = 15
+	category = CAT_CLOTHING
+	subcategory = CAT_CLOTHING
+
+/datum/crafting_recipe/westendervest
+	name = "bartender vest"
+	result = /obj/item/clothing/suit/fluff/westender
+	reqs = list(/obj/item/stack/sheet/cloth = 2)
+	tools = list(TOOL_WORKBENCH)
+	time = 10
+	category = CAT_CLOTHING
+	subcategory = CAT_CLOTHING
+
+/datum/crafting_recipe/sleazeball
+	name = "loanshark outfit"
+	result = /obj/item/clothing/under/f13/sleazeball
+	reqs = list(/obj/item/stack/sheet/cloth = 4)
+	tools = list(TOOL_WORKBENCH)
+	time = 15
+	category = CAT_CLOTHING
+	subcategory = CAT_CLOTHING
+
+/datum/crafting_recipe/greendress
+	name = "green dress"
+	result = /obj/item/clothing/under/f13/greendress
+	reqs = list(/obj/item/stack/sheet/cloth = 3)
+	tools = list(TOOL_WORKBENCH)
+	time = 15
+	category = CAT_CLOTHING
+	subcategory = CAT_CLOTHING
+
+/datum/crafting_recipe/bluedress
+	name = "blue dress"
+	result = /obj/item/clothing/under/f13/bluedress
+	reqs = list(/obj/item/stack/sheet/cloth = 3)
+	tools = list(TOOL_WORKBENCH)
+	time = 15
+	category = CAT_CLOTHING
+	subcategory = CAT_CLOTHING
+
+/datum/crafting_recipe/pinkdress
+	name = "green dress"
+	result = /obj/item/clothing/under/f13/pinkdress
+	reqs = list(/obj/item/stack/sheet/cloth = 3)
+	tools = list(TOOL_WORKBENCH)
+	time = 15
+	category = CAT_CLOTHING
+	subcategory = CAT_CLOTHING
+
+/datum/crafting_recipe/relaxedwear
+	name = "sweatervest"
+	result = /obj/item/clothing/under/f13/relaxedwear
+	reqs = list(/obj/item/stack/sheet/cloth = 4)
+	tools = list(TOOL_WORKBENCH)
+	time = 15
+	category = CAT_CLOTHING
+	subcategory = CAT_CLOTHING
+
+/datum/crafting_recipe/roving
+	name = "roving trader outfit"
+	result = /obj/item/clothing/under/f13/roving
+	reqs = list(/obj/item/stack/sheet/cloth = 4)
+	tools = list(TOOL_WORKBENCH)
+	time = 15
+	category = CAT_CLOTHING
+	subcategory = CAT_CLOTHING
+
+/datum/crafting_recipe/bennys
+	name = "fancy suit"
+	result = /obj/item/clothing/under/f13/bennys
+	reqs = list(/obj/item/stack/sheet/cloth = 4)
+	tools = list(TOOL_WORKBENCH)
+	time = 15
+	category = CAT_CLOTHING
+	subcategory = CAT_CLOTHING
+
+/datum/crafting_recipe/mercadv
+	name = "merc adventurer outfit"
+	result = /obj/item/clothing/under/f13/mercadv
+	reqs = list(/obj/item/stack/sheet/cloth = 3)
+	tools = list(TOOL_WORKBENCH)
+	time = 15
+	category = CAT_CLOTHING
+	subcategory = CAT_CLOTHING
+
+/datum/crafting_recipe/fmercadv
+	name = "female merc adventurer outfit"
+	result = /obj/item/clothing/under/f13/female/mercadv
+	reqs = list(/obj/item/stack/sheet/cloth = 2)
+	tools = list(TOOL_WORKBENCH)
+	time = 15
+	category = CAT_CLOTHING
+	subcategory = CAT_CLOTHING
+
+/datum/crafting_recipe/brahmin
+	name = "male brahmin-skin outfit"
+	result = /obj/item/clothing/under/f13/mercadv
+	reqs = list(/obj/item/stack/sheet/animalhide/brahmin = 1)
+	tools = list(TOOL_WORKBENCH)
+	time = 15
+	category = CAT_CLOTHING
+	subcategory = CAT_CLOTHING
+
+/datum/crafting_recipe/fbrahmin
+	name = "female brahmin-skin outfit"
+	result = /obj/item/clothing/under/f13/female/brahmin
+	reqs = list(/obj/item/stack/sheet/animalhide/brahmin = 1)
+	tools = list(TOOL_WORKBENCH)
+	time = 15
+	category = CAT_CLOTHING
+	subcategory = CAT_CLOTHING
+
+/datum/crafting_recipe/flapper
+	name = "flapper dress"
+	result = /obj/item/clothing/under/f13/female/flapper
+	reqs = list(/obj/item/stack/sheet/cloth = 2)
+	tools = list(TOOL_WORKBENCH)
+	time = 15
+	category = CAT_CLOTHING
+	subcategory = CAT_CLOTHING
+
+//Shoes
+
+/datum/crafting_recipe/laceup
+	name = "laceup shoes"
+	result = /obj/item/clothing/shoes/laceup
+	reqs = list(/obj/item/stack/sheet/cloth = 2)
+	tools = list(TOOL_WORKBENCH)
+	time = 10
+	category = CAT_CLOTHING
+	subcategory = CAT_SHOES
+
+/datum/crafting_recipe/sneakers
+	name = "black sneakers"
+	result = /obj/item/clothing/shoes/sneakers/black
+	reqs = list(/obj/item/stack/sheet/cloth = 2)
+	tools = list(TOOL_WORKBENCH)
+	time = 10
+	category = CAT_CLOTHING
+	subcategory = CAT_SHOES
+
+/datum/crafting_recipe/footcloths
+	name = "footcloths"
+	result = /obj/item/clothing/shoes/f13/rag
+	reqs = list(/obj/item/stack/sheet/cloth = 1)
+	tools = list(TOOL_WORKBENCH)
+	time = 5
+	category = CAT_CLOTHING
+	subcategory = CAT_SHOES
+
+/datum/crafting_recipe/cowboy
+	name = "cowboy boots"
+	result = /obj/item/clothing/shoes/f13/cowboy
+	reqs = list(/obj/item/stack/sheet/leather = 1)
+	tools = list(TOOL_WORKBENCH)
+	time = 10
+	category = CAT_CLOTHING
+	subcategory = CAT_SHOES
+
+/datum/crafting_recipe/explorer
+	name = "work boots"
+	result = /obj/item/clothing/shoes/f13/explorer
+	reqs = list(/obj/item/stack/sheet/leather = 1)
+	tools = list(TOOL_WORKBENCH)
+	time = 10
+	category = CAT_CLOTHING
+	subcategory = CAT_SHOES
+
+/datum/crafting_recipe/fancy
+	name = "black shoes"
+	result = /obj/item/clothing/shoes/f13/fancy
+	reqs = list(/obj/item/stack/sheet/leather = 1)
+	tools = list(TOOL_WORKBENCH)
+	time = 15
+	category = CAT_CLOTHING
+	subcategory = CAT_SHOES
+
+/datum/crafting_recipe/brownie
+	name = "brown shoes"
+	result = /obj/item/clothing/shoes/f13/brownie
+	reqs = list(/obj/item/stack/sheet/leather = 1)
+	tools = list(TOOL_WORKBENCH)
+	time = 10
+	category = CAT_CLOTHING
+	subcategory = CAT_SHOES
+
+/datum/crafting_recipe/tan
+	name = "tan shoes"
+	result = /obj/item/clothing/shoes/f13/tan
+	reqs = list(/obj/item/stack/sheet/leather = 1)
+	tools = list(TOOL_WORKBENCH)
+	time = 10
+	category = CAT_CLOTHING
+	subcategory = CAT_SHOES
+
+//Misc clothes
+
+/datum/crafting_recipe/facewrap
+	name = "headwrap"
+	result = /obj/item/clothing/mask/facewrap
+	reqs = list(/obj/item/stack/sheet/cloth = 2)
+	tools = list(TOOL_WORKBENCH)
+	time = 10
+	category = CAT_CLOTHING
+	subcategory = CAT_WASTELAND
+
+/datum/crafting_recipe/ncr_facewrap
+	name = "facewrap"
+	result = /obj/item/clothing/mask/facewrap
+	reqs = list(/obj/item/stack/sheet/cloth = 2)
+	tools = list(TOOL_WORKBENCH)
+	time = 10
+	category = CAT_CLOTHING
+	subcategory = CAT_WASTELAND
+
+//Misc clothes
+
+/datum/crafting_recipe/headscarf
+	name = "headscarf"
+	result = /obj/item/clothing/head/f13/headscarf
+	reqs = list(/obj/item/stack/sheet/cloth = 2)
+	tools = list(TOOL_WORKBENCH)
+	time = 5
+	category = CAT_CLOTHING
+	subcategory = CAT_MISCCLOTHING
+
+/datum/crafting_recipe/scarf
+	name = "white scarf"
+	result = /obj/item/clothing/neck/scarf
+	reqs = list(/obj/item/stack/sheet/cloth = 1)
+	tools = list(TOOL_WORKBENCH)
+	time = 5
+	category = CAT_CLOTHING
+	subcategory = CAT_MISCCLOTHING
+
+/datum/crafting_recipe/scarfb
+	name = "black scarf"
+	result = /obj/item/clothing/neck/scarf/black
+	reqs = list(/obj/item/stack/sheet/cloth = 1)
+	tools = list(TOOL_WORKBENCH)
+	time = 5
+	category = CAT_CLOTHING
+	subcategory = CAT_MISCCLOTHING
+
+/datum/crafting_recipe/scarfr
+	name = "red scarf"
+	result = /obj/item/clothing/neck/scarf/red
+	reqs = list(/obj/item/stack/sheet/cloth = 1)
+	tools = list(TOOL_WORKBENCH)
+	time = 5
+	category = CAT_CLOTHING
+	subcategory = CAT_MISCCLOTHING
+
+/datum/crafting_recipe/scarfblu
+	name = "blue scarf"
+	result = /obj/item/clothing/neck/scarf/darkblue
+	reqs = list(/obj/item/stack/sheet/cloth = 1)
+	tools = list(TOOL_WORKBENCH)
+	time = 5
+	category = CAT_CLOTHING
+	subcategory = CAT_MISCCLOTHING
+
+/datum/crafting_recipe/scarfg
+	name = "green scarf"
+	result = /obj/item/clothing/neck/scarf/green
+	reqs = list(/obj/item/stack/sheet/cloth = 1)
+	tools = list(TOOL_WORKBENCH)
+	time = 5
+	category = CAT_CLOTHING
+	subcategory = CAT_MISCCLOTHING
+
+/datum/crafting_recipe/scarfy
+	name = "yellow scarf"
+	result = /obj/item/clothing/neck/scarf/yellow
+	reqs = list(/obj/item/stack/sheet/cloth = 1)
+	tools = list(TOOL_WORKBENCH)
+	time = 5
+	category = CAT_CLOTHING
+	subcategory = CAT_MISCCLOTHING
+
+/datum/crafting_recipe/scarfo
+	name = "orange scarf"
+	result = /obj/item/clothing/neck/scarf/orange
+	reqs = list(/obj/item/stack/sheet/cloth = 1)
+	tools = list(TOOL_WORKBENCH)
+	time = 5
+	category = CAT_CLOTHING
+	subcategory = CAT_MISCCLOTHING
+
+/datum/crafting_recipe/scarfpurp
+	name = "purple scarf"
+	result = /obj/item/clothing/neck/scarf/purple
+	reqs = list(/obj/item/stack/sheet/cloth = 1)
+	tools = list(TOOL_WORKBENCH)
+	time = 5
+	category = CAT_CLOTHING
+	subcategory = CAT_MISCCLOTHING
+
+/datum/crafting_recipe/scarfpink
+	name = "pink scarf"
+	result = /obj/item/clothing/neck/scarf/pink
+	reqs = list(/obj/item/stack/sheet/cloth = 1)
+	tools = list(TOOL_WORKBENCH)
+	time = 5
+	category = CAT_CLOTHING
+	subcategory = CAT_MISCCLOTHING
+
+/datum/crafting_recipe/scarfcyan
+	name = "white scarf"
+	result = /obj/item/clothing/neck/scarf/cyan
+	reqs = list(/obj/item/stack/sheet/cloth = 1)
+	tools = list(TOOL_WORKBENCH)
+	time = 5
+	category = CAT_CLOTHING
+	subcategory = CAT_MISCCLOTHING
+
+/datum/crafting_recipe/scarfstripedred
+	name = "striped red scarf"
+	result = /obj/item/clothing/neck/stripedredscarf
+	reqs = list(/obj/item/stack/sheet/cloth = 1)
+	tools = list(TOOL_WORKBENCH)
+	time = 5
+	category = CAT_CLOTHING
+	subcategory = CAT_MISCCLOTHING
+
+/datum/crafting_recipe/scarfstripedblue
+	name = "striped blue scarf"
+	result = /obj/item/clothing/neck/stripedbluescarf
+	reqs = list(/obj/item/stack/sheet/cloth = 1)
+	tools = list(TOOL_WORKBENCH)
+	time = 5
+	category = CAT_CLOTHING
+	subcategory = CAT_MISCCLOTHING
+
+/datum/crafting_recipe/stripedgreenscarf
+	name = "striped green scarf"
+	result = /obj/item/clothing/neck/stripedgreenscarf
+	reqs = list(/obj/item/stack/sheet/cloth = 1)
+	tools = list(TOOL_WORKBENCH)
+	time = 5
+	category = CAT_CLOTHING
+	subcategory = CAT_MISCCLOTHING
+
+/datum/crafting_recipe/pot
+	name = "cooking pot"
+	result = /obj/item/clothing/head/fluff/pot
+	reqs = list(/obj/item/stack/sheet/metal = 5)
+	tools = list(TOOL_WORKBENCH)
+	time = 20
+	category = CAT_CLOTHING
+	subcategory = CAT_MISCCLOTHING
+
 /*
 /datum/crafting_recipe/durathread_vest
 	name = "Makeshift Vest"

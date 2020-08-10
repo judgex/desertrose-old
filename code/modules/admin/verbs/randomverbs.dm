@@ -1290,7 +1290,15 @@ GLOBAL_LIST_EMPTY(custom_outfits) //Admin created outfits
 	if(!check_rights(R_FUN))
 		return
 
-	var/list/punishment_list = list(ADMIN_PUNISHMENT_LIGHTNING, ADMIN_PUNISHMENT_BRAINDAMAGE, ADMIN_PUNISHMENT_GIB, ADMIN_PUNISHMENT_BSA, ADMIN_PUNISHMENT_FIREBALL, ADMIN_PUNISHMENT_ROD, ADMIN_PUNISHMENT_SUPPLYPOD)
+	var/list/punishment_list = list(ADMIN_PUNISHMENT_LIGHTNING, 
+									ADMIN_PUNISHMENT_BRAINDAMAGE, 
+									ADMIN_PUNISHMENT_GIB, 
+									ADMIN_PUNISHMENT_BSA, 
+									ADMIN_PUNISHMENT_FIREBALL, 
+									ADMIN_PUNISHMENT_ROD, 
+									ADMIN_PUNISHMENT_SUPPLYPOD,
+									ADMIN_PUNISHMENT_PIE,
+									ADMIN_PUNISHMENT_CUSTOM_PIE)
 
 	var/punishment = input("Choose a punishment", "DIVINE SMITING") as null|anything in punishment_list
 
@@ -1336,6 +1344,24 @@ GLOBAL_LIST_EMPTY(custom_outfits) //Admin created outfits
 			if(iscarbon(target))
 				target.Stun(10)//takes 0.53 seconds for CentCom pod to land
 			new /obj/effect/DPtarget(get_turf(target), delivery, POD_CENTCOM)
+		if(ADMIN_PUNISHMENT_PIE)
+			var/obj/item/reagent_containers/food/snacks/pie/cream/nostun/creamy = new(get_turf(target))
+			creamy.splat(target)
+		if(ADMIN_PUNISHMENT_CUSTOM_PIE)
+			var/obj/item/reagent_containers/food/snacks/pie/cream/nostun/A = new()
+			if(!A.reagents)
+				var/amount = input(usr, "Specify the reagent size of [A]", "Set Reagent Size", 50) as null|num
+				if(amount)
+					A.create_reagents(amount)
+			if(A.reagents)
+				var/chosen_id = choose_reagent_id(usr)
+				var/datum/reagent/R = chosen_id
+				chosen_id = initial(R.id)
+				if(chosen_id)
+					var/ramount = input(usr, "Choose the amount to add.", "Choose the amount.", A.reagents.maximum_volume) as null|num
+					if(ramount)
+						A.reagents.add_reagent(chosen_id, ramount)
+						A.splat(target)
 
 	var/msg = "[key_name_admin(usr)] punished [key_name_admin(target)] with [punishment]."
 	message_admins(msg)

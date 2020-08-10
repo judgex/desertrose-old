@@ -524,10 +524,10 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		new /datum/data/wasteland_equipment("survival knife",				/obj/item/kitchen/knife/combat/survival, 							70),
 		new /datum/data/wasteland_equipment("9mm pistol",					/obj/item/gun/ballistic/automatic/pistol/ninemil,					150),
 		new /datum/data/wasteland_equipment("M1911",						/obj/item/gun/ballistic/automatic/pistol/m1911,						170),
-		new /datum/data/wasteland_equipment("Guns and Bullets, Part 1",		/obj/item/book/granter/trait/gunsmith_one, 							200),
-		new /datum/data/wasteland_equipment("Guns and Bullets, Part 2",		/obj/item/book/granter/trait/gunsmith_two,							300),
-		new /datum/data/wasteland_equipment("Guns and Bullets, Part 3",		/obj/item/book/granter/trait/gunsmith_three, 						400),
-		new /datum/data/wasteland_equipment("Guns and Bullets, Part 4",		/obj/item/book/granter/trait/gunsmith_four, 							500)
+		new /datum/data/wasteland_equipment("Guns and Bullets, Part 1",		/obj/item/book/granter/trait/gunsmith_one, 							100),
+		new /datum/data/wasteland_equipment("Guns and Bullets, Part 2",		/obj/item/book/granter/trait/gunsmith_two,							200),
+		new /datum/data/wasteland_equipment("Guns and Bullets, Part 3",		/obj/item/book/granter/trait/gunsmith_three, 						300),
+		new /datum/data/wasteland_equipment("Guns and Bullets, Part 4",		/obj/item/book/granter/trait/gunsmith_four, 							400)
 		)
 
 /obj/machinery/mineral/wasteland_vendor/ammo
@@ -541,7 +541,7 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		new /datum/data/wasteland_equipment("Speed loader (.44)",			/obj/item/ammo_box/m44,												70),
 		new /datum/data/wasteland_equipment("Speed loader (.38)",			/obj/item/ammo_box/c38,												70),
 		new /datum/data/wasteland_equipment("small rifle magazine (5.56mm)",/obj/item/ammo_box/magazine/m556/rifle/small,						100),
-		new /datum/data/wasteland_equipment("Blackpowder",					/obj/item/reagent_containers/glass/bottle/blackpowder,				65)
+		new /datum/data/wasteland_equipment("Blackpowder",					/obj/item/reagent_containers/glass/bottle/blackpowder,				50)
 		)
 
 /obj/machinery/mineral/wasteland_vendor/clothing
@@ -577,6 +577,41 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		new /datum/data/wasteland_equipment("Music box",						/obj/item/holodisk/musicbox,									400),
 		new /datum/data/wasteland_equipment("Advanced Armor and You",			/obj/item/book/granter/trait/pa_wear,							600),
 		new /datum/data/wasteland_equipment("???",								/obj/item/toy/syndicateballoon,									3000)
+		)
+
+/obj/machinery/mineral/wasteland_vendor/advcomponents
+	name = "Wasteland Vending Machine - Components"
+	icon_state = "generic_idle"
+	prize_list = list(
+		new /datum/data/wasteland_equipment("Advanced Modular Receiver",		/obj/item/advanced_crafting_components/receiver,					200),
+		new /datum/data/wasteland_equipment("Weapon Assembly",					/obj/item/advanced_crafting_components/assembly,					200),
+		new /datum/data/wasteland_equipment("Superconductor Coils",				/obj/item/advanced_crafting_components/conductors,					200),
+		new /datum/data/wasteland_equipment("Focused crystal lenses",			/obj/item/advanced_crafting_components/lenses,						200),
+		new /datum/data/wasteland_equipment("Flux capacitator",					/obj/item/advanced_crafting_components/flux,						200),
+		new /datum/data/wasteland_equipment("Superlight Alloys",				/obj/item/advanced_crafting_components/alloys,						200)
+		)
+
+/obj/machinery/mineral/wasteland_vendor/attachments
+	name = "Wasteland Vending Machine - Attachments"
+	icon_state = "generic_idle"
+	prize_list = list(
+		new /datum/data/wasteland_equipment("Weapon Optics",				/obj/item/attachments/scope,									150),
+		new /datum/data/wasteland_equipment("Recoil Compensator",			/obj/item/attachments/recoil_decrease,							100),
+		new /datum/data/wasteland_equipment("Improved Barrel",				/obj/item/attachments/bullet_speed,								100),
+		new /datum/data/wasteland_equipment("Burst Cam",					/obj/item/attachments/burst_improvement,						200)
+		)
+
+/obj/machinery/mineral/wasteland_vendor/crafting
+	name = "Wasteland Vending Machine - Crafting"
+	icon_state = "generic_idle"
+	prize_list = list(
+		new /datum/data/wasteland_equipment("High Quality Parts",				/obj/item/stack/crafting/goodparts,									25)
+		new /datum/data/wasteland_equipment("Metal Parts",						/obj/item/stack/crafting/metalparts,								10)
+		new /datum/data/wasteland_equipment("Electronic Parts",					/obj/item/stack/crafting/electronicparts,							5)
+		new /datum/data/wasteland_equipment("Metal Sheets x 20",				/obj/item/stack/sheet/metal/twenty,									50)
+		new /datum/data/wasteland_equipment("Metal Sheets x 50",				/obj/item/stack/sheet/metal/fifty,									115)
+		new /datum/data/wasteland_equipment("Glass Sheets x 10",				/obj/item/stack/sheet/glass/ten,									30)
+		new /datum/data/wasteland_equipment("Glass Sheets x 50",				/obj/item/stack/sheet/glass/fifty,									90)
 		)
 
 /datum/data/wasteland_equipment

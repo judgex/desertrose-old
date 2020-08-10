@@ -104,8 +104,6 @@
 	item_state = "oldranger"
 	armor = list(melee = 40, bullet = 20, laser = 20, energy = 20, bomb = 20, bio = 0, rad = 30, fire = 30, acid = 10)
 	glass_colour_type = /datum/client_colour/glass_colour/lightgreen
-	lighting_alpha = LIGHTING_PLANE_ALPHA_LOWLIGHT_VISION
-	darkness_view = 128
 
 /obj/item/clothing/head/f13/strange
 	name = "strange helmet"
@@ -408,3 +406,11 @@
 	desc = "A black cowboy hat with a snakeskin band."
 	icon_state = "sheriffhat"
 	armor = list("melee" = 60, "bullet" = 50, "laser" = 30, "energy" = 40, "bomb" = 25, "bio" = 40, "rad" = 40, "fire" = 80, "acid" = 0)
+
+/obj/item/clothing/head/f13/generalcap
+	name = "Militia cap"
+	desc = ""
+	icon_state = "militiacap"
+	item_state = "militiacap"
+	armor = list("melee" = 20, "bullet" = 20, "laser" = 10, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
+	flags_inv = HIDEHAIR

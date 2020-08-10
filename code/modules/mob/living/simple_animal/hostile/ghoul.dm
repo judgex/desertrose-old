@@ -89,7 +89,7 @@
 
 /mob/living/simple_animal/hostile/ghoul/glowing
 	name = "glowing feral ghoul"
-	desc = "A feral ghoul that has absorbed massive amounts of radiation, causing them to glow in the dark and radiate constantly.."
+	desc = "A feral ghoul that has absorbed massive amounts of radiation, causing them to glow in the dark and radiate constantly."
 	icon_state = "glowinghoul"
 	icon_living = "glowinghoul"
 	icon_dead = "glowinghoul_dead"
@@ -99,6 +99,22 @@
 	harm_intent_damage = 10
 	melee_damage_lower = 20
 	melee_damage_upper = 20
+
+/mob/living/simple_animal/hostile/ghoul/legendary
+	name = "legendary ghoul"
+	desc = "A ghoul that has lost it's mind and become aggressive. This one is exceptionally large, bulging muscles. It looks quite strong."
+	icon_state = "glowinghoul"
+	icon_living = "glowinghoul"
+	icon_dead = "glowinghoul_dead"
+	color = "#FFFF00"
+	maxHealth = 600
+	health = 600
+	speed = 2.5
+	harm_intent_damage = 20
+	melee_damage_lower = 30
+	melee_damage_upper = 35
+	mob_size = 5
+	faction = list("hostile")
 
 /mob/living/simple_animal/hostile/ghoul/glowing/Initialize()
 	. = ..()
@@ -146,7 +162,7 @@
 	desc = "A feral ghoul that has absorbed massive amounts of cold and Radiates Cold Air.."
 	icon_state = "hot_glowing_one"
 	icon_living = "hot_glowing_one"
-	icon_dead = "hot_glowing_one"
+	icon_dead = "hot_glowing_one_dead"
 	maxHealth = 80
 	health = 80
 	speed = 2

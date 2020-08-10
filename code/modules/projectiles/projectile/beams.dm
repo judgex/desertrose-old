@@ -64,6 +64,21 @@
 	muzzle_type = /obj/effect/projectile/muzzle/xray
 	impact_type = /obj/effect/projectile/impact/xray
 
+/obj/item/projectile/beam/gamma
+	name = "gamma beam"
+	icon_state = "xray"
+	damage = 5
+	damage_type = "clone"
+	irradiate = 200
+	range = 15
+	pass_flags = PASSTABLE | PASSGLASS | PASSGRILLE | PASSCLOSEDTURF
+
+	impact_effect_type = /obj/effect/temp_visual/impact_effect/green_laser
+	light_color = LIGHT_COLOR_GREEN
+	tracer_type = /obj/effect/projectile/tracer/xray
+	muzzle_type = /obj/effect/projectile/muzzle/xray
+	impact_type = /obj/effect/projectile/impact/xray
+
 /obj/item/projectile/beam/disabler
 	name = "disabler beam"
 	icon_state = "omnilaser"
@@ -203,55 +218,55 @@
 	armour_penetration = 25
 
 //plasma caster
-/obj/item/projectile/plasmacaster //Plasma rifle
+/obj/item/projectile/plasmacaster
 	name = "plasma bolt"
 	icon_state = "plasma_clot"
 	damage_type = BURN
 	damage = 50
 	armour_penetration = 30
-	flag = "laser" //checks vs. energy protection
+	flag = "laser"
 	eyeblur = 0
 	is_reflectable = TRUE
 
 /obj/item/projectile/beam/laser/lasgun //AER9
 	name = "laser beam"
-	damage = 26
-	armour_penetration = 15
+	damage = 33
+	armour_penetration = 20
 
 /obj/item/projectile/beam/laser/pistol //AEP7
 	name = "laser beam"
-	damage = 21
-	armour_penetration = 10
+	damage = 28
+	armour_penetration = 15
 
 /obj/item/projectile/beam/laser/gatling //Gatling Laser Projectile
 	name = "rapid-fire laser beam"
 	damage = 12
-	armour_penetration = 50
+	armour_penetration = 40
 
 /obj/item/projectile/beam/laser/pistol/wattz //Wattz pistol
-	damage = 18
+	damage = 24
 
 /obj/item/projectile/beam/laser/pistol/wattz/magneto //upgraded Wattz
 	name = "penetrating laser beam"
-	damage = 20
-	armour_penetration = 10
+	damage = 25
+	armour_penetration = 15
 
 /obj/item/projectile/beam/laser/solar //Solar Scorcher
 	name = "solar scorcher beam"
-	damage = 20
+	damage = 28
 	armour_penetration = 20
 
 /obj/item/projectile/beam/laser/tribeam //Tribeam laser, fires 3 shots, will melt you
 	name = "tribeam laser"
-	damage = 22
-	armour_penetration = 12
+	damage = 21
+	armour_penetration = 10
 
 /obj/item/projectile/plasma //Plasma rifle
 	name = "plasma bolt"
 	icon_state = "plasma_clot"
 	damage_type = BURN
-	damage = 35
-	armour_penetration = 25
+	damage = 42
+	armour_penetration = 12
 	flag = "laser" //checks vs. energy protection
 	eyeblur = 0
 	is_reflectable = TRUE
@@ -267,43 +282,43 @@
 	is_reflectable = FALSE
 
 /obj/item/projectile/plasma/pistol //Plasma pistol
-	damage = 28
-	armour_penetration = 20
+	damage = 45
+	armour_penetration = 3
 
-/obj/item/projectile/plasma/pistol/glock //Glock (upgraded plasma pistol)
-	damage = 28
+/obj/item/projectile/plasma/pistol/glock //Glock (streamlined plasma pistol)
+	damage = 30
 	armour_penetration = 15
 
 /obj/item/projectile/plasma/scatter //Multiplas, fires 3 shots, will melt you
-	damage = 26
-	armour_penetration = 30
+	damage = 31
+	armour_penetration = 10
 
 /obj/item/projectile/beam/laser/rcw //RCW
 	name = "rapidfire beam"
 	icon_state = "xray"
-	damage = 15
-	armour_penetration = 12
+	damage = 24
+	armour_penetration = 15
 	impact_effect_type = /obj/effect/temp_visual/impact_effect/green_laser
 	light_color = LIGHT_COLOR_GREEN
 
 /obj/item/projectile/plasma/alien
 	name = "alien projectile"
 	icon_state = "ion"
-	damage = 85 //horrifyingly powerful, but very limited ammo
+	damage = 90 //horrifyingly powerful, but very limited ammo
 	armour_penetration = 50
 
 /obj/item/projectile/beam/laser/laer //Elder's/Unique LAER
 	name = "advanced laser beam"
 	icon_state = "u_laser"
-	damage = 40
-	armour_penetration = 30
+	damage = 45
+	armour_penetration = 50
 	impact_effect_type = /obj/effect/temp_visual/impact_effect/blue_laser
 	light_color = LIGHT_COLOR_BLUE
 
 /obj/item/projectile/beam/laser/aer14 //AER14
 	name = "laser beam"
-	damage = 30
-	armour_penetration = 20
+	damage = 33
+	armour_penetration = 34
 	icon_state = "omnilaser"
 	impact_effect_type = /obj/effect/temp_visual/impact_effect/blue_laser
 	light_color = LIGHT_COLOR_BLUE

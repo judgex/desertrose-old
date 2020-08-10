@@ -77,7 +77,7 @@
 	name = "brahmin skin outfit"
 	desc = "A basic outfit consisting of a white shirt and patched trousers with Y-shaped suspenders"
 	icon_state = "brahmin_f"
-	item_state = "brahmin_f"
+	item_state = "brahmin_f_s"
 	item_color = "brahmin_f"
 
 /obj/item/clothing/under/f13/doctorm
@@ -683,10 +683,11 @@
 	name = "male merc charmer outfit"
 	desc = "A blue and gray outfit resembling a three piece suit, heavily stitched and reinforced with a small metal cup on the groin area.<br>Fitted for male wastelanders."
 	icon_state = "mercc_m"
-	item_state = "bl_suit"
+	item_state = "mercc_f"
 	item_color = "mercc_m"
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 20, "fire" = 20, "acid" = 40)
 
+/* Missing a worn sprite
 /obj/item/clothing/under/f13/female/merccharm //Female version
 	name = "female merc charmer outfit"
 	desc = "A ripped and torn blue female business suit, it still gives ladies a rather sexy look.<br>Fitted for female wastelanders."
@@ -694,6 +695,7 @@
 	item_state = "bl_suit"
 	item_color = "mercc_f"
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 20, "fire" = 20, "acid" = 40)
+*/
 
 /obj/item/clothing/under/f13/mechanic
 	name = "worn blue jumpsuit"
@@ -719,6 +721,7 @@
 	item_color = "caravaneer"
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 10, "fire" = 10, "acid" = 40)
 
+/* Same as /obj/item/clothing/under/f13/roving but with a sprite that doesn't work
 /obj/item/clothing/under/f13/trader
 	name = "roving trader outfit "
 	desc = "An outfit commonly worn by various wastelanders, but it still looks pretty badass!"
@@ -726,6 +729,7 @@
 	item_state = "bl_suit"
 	item_color = "trader"
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 20, "fire" = 20, "acid" = 40)
+*/
 
 /obj/item/clothing/under/f13/merchant
 	name = "merchant outfit "
@@ -1043,3 +1047,9 @@
 	icon_state = "mprostitute"
 	item_state = "mprostitute"
 	item_color = "mprostitute"
+
+/obj/item/clothing/under/f13/ravenharness
+	name = "raven harness"
+	desc = "A harness made out of a number of black belts sewn together end on end to form a coiling piece of clothing. A symbol in red has been painted on the front, and a pair of hide pants go with it."
+	icon_state = "raven_harness"
+	item_state = "raven_harness"

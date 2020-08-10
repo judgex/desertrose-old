@@ -36,6 +36,25 @@
 	death_sound = 'sound/f13npc/handy/robo_death.ogg'
 	attack_sound = 'sound/f13npc/handy/attack.wav'
 
+	damage_coeff = list(BRUTE = 1, BURN = 1, TOX = 0, CLONE = 0, STAMINA = 0, OXY = 0)
+
+/mob/living/simple_animal/hostile/handy/playable
+	ranged = FALSE
+	health = 300
+	maxHealth = 300
+	attacktext = "shoots a burst of flame at"
+	emote_taunt_sound = null
+	emote_taunt = null
+	aggrosound = null
+	idlesound = null
+	see_in_dark = 8
+	environment_smash = 1
+	wander = 0
+	force_threshold = 10
+	anchored = FALSE
+	del_on_death = FALSE
+	dextrous = TRUE
+	possible_a_intents = list(INTENT_HELP, INTENT_HARM)
 
 /mob/living/simple_animal/hostile/handy/Initialize()
 	. = ..()
@@ -68,8 +87,182 @@
 	aggrosound = list('sound/f13npc/gutsy/aggro1.ogg', 'sound/f13npc/gutsy/aggro2.ogg', 'sound/f13npc/gutsy/aggro3.ogg', 'sound/f13npc/gutsy/aggro4.ogg', 'sound/f13npc/gutsy/aggro5.ogg', 'sound/f13npc/gutsy/aggro6.ogg')
 	idlesound = list('sound/f13npc/gutsy/idle1.ogg', 'sound/f13npc/gutsy/idle2.ogg', 'sound/f13npc/gutsy/idle3.ogg')
 
+/mob/living/simple_animal/hostile/handy/gutsy/playable
+	ranged = FALSE
+	health = 340
+	maxHealth = 340
+	speed = 1
+	attacktext = "shoots a burst of flame at"
+	emote_taunt_sound = null
+	emote_taunt = null
+	aggrosound = null
+	idlesound = null
+	see_in_dark = 8
+	environment_smash = 2 //can break lockers, but not walls
+	wander = 0
+	force_threshold = 10
+	anchored = FALSE
+	del_on_death = FALSE
+	possible_a_intents = list(INTENT_HELP, INTENT_HARM)
+	dextrous = TRUE
 
 /mob/living/simple_animal/hostile/handy/gutsy/AttackingTarget()
+	. = ..()
+
+/mob/living/simple_animal/hostile/handy/securitron
+	name = "Securitron"
+	desc = "A private security robot created and mass-produced by the H&H Tools Factory"
+	icon_state = "securitron"
+	icon_living = "securitron"
+	icon_dead = "gib7"
+	health = 250
+	maxHealth = 250
+	melee_damage_lower = 40
+	melee_damage_upper = 50
+	attack_sound = 'sound/items/welder.ogg'
+	attacktext = "shoots a burst of flame at"
+	projectilesound = 'sound/f13weapons/varmint_rifle.ogg'
+	projectiletype = /obj/item/projectile/bullet/F13/c556Bullet/heap
+	extra_projectiles = 3
+	ranged = TRUE
+	retreat_distance = 2
+	minimum_distance = 2
+	check_friendly_fire = TRUE
+	loot = list(/obj/effect/decal/cleanable/robot_debris, /obj/item/stack/crafting/electronicparts/three, /obj/item/stock_parts/cell/ammo/mfc)
+	emote_taunt_sound = null
+	emote_taunt = list("readies its arm gun")
+	aggrosound = null
+	idlesound = null
+	death_sound = null
+	attack_sound = null
+
+
+
+/mob/living/simple_animal/hostile/handy/securitron/AttackingTarget()
+	. = ..()
+
+/mob/living/simple_animal/hostile/handy/liberator
+	name = "liberator"
+	desc = "A small pre-War droned used by the People's Liberation Army."
+	icon_state = "liberator"
+	icon_living = "leberator"
+	icon_dead = "liberator_d"
+	icon_gib = "liberator_g"
+	health = 80
+	maxHealth = 80
+	melee_damage_lower = 5
+	melee_damage_upper = 10
+	attacktext = "slaps"
+	attack_sound = 'sound/weapons/punch1.ogg'
+	projectilesound = 'sound/weapons/laser.ogg'
+	projectiletype = /obj/item/projectile/beam/laser/pistol
+	extra_projectiles = 1
+	ranged = TRUE
+	retreat_distance = 2
+	minimum_distance = 2
+	check_friendly_fire = TRUE
+	loot = list(/obj/effect/decal/cleanable/robot_debris, /obj/item/stack/crafting/electronicparts/three, /obj/item/stock_parts/cell/ammo/mfc)
+	emote_taunt_sound = null
+	emote_taunt = list("levels its laser")
+	aggrosound = null
+	idlesound = null
+	death_sound = null
+	attack_sound = null
+
+/mob/living/simple_animal/hostile/handy/liberator_yellow
+	name = "liberator"
+	desc = "A small pre-War droned used by the People's Liberation Army."
+	icon_state = "liberator_y"
+	icon_living = "leberator_y"
+	icon_dead = "liberator_y_d"
+	health = 80
+	maxHealth = 80
+	melee_damage_lower = 5
+	melee_damage_upper = 10
+	attacktext = "slaps"
+	attack_sound = 'sound/weapons/punch1.ogg'
+	projectilesound = 'sound/weapons/laser.ogg'
+	projectiletype = /obj/item/projectile/beam/laser/pistol
+	extra_projectiles = 1
+	ranged = TRUE
+	retreat_distance = 2
+	minimum_distance = 2
+	check_friendly_fire = TRUE
+	loot = list(/obj/effect/decal/cleanable/robot_debris, /obj/item/stack/crafting/electronicparts/three, /obj/item/stock_parts/cell/ammo/mfc)
+	emote_taunt_sound = null
+	emote_taunt = list("levels its laser")
+	aggrosound = null
+	idlesound = null
+	death_sound = null
+	attack_sound = null
+
+
+
+/mob/living/simple_animal/hostile/handy/liberator_yellow/AttackingTarget()
+	. = ..()
+
+/mob/living/simple_animal/hostile/handy/robobrain
+	name = "robobrain"
+	desc = "A next-gen cybor developed by General Atomic International"
+	icon_state = "robobrain"
+	icon_living = "robobrain"
+	icon_dead = "robobrain_d"
+	health = 200
+	maxHealth = 200
+	melee_damage_lower = 30
+	melee_damage_upper = 45
+	attacktext = "slaps"
+	attack_sound = 'sound/weapons/punch1.ogg'
+	projectilesound = 'sound/weapons/laser.ogg'
+	projectiletype = /obj/item/projectile/beam/laser
+	extra_projectiles = 1
+	ranged = TRUE
+	retreat_distance = 2
+	minimum_distance = 2
+	check_friendly_fire = TRUE
+	loot = list(/obj/effect/decal/cleanable/robot_debris, /obj/item/stack/crafting/electronicparts/three, /obj/item/stock_parts/cell/ammo/mfc)
+	emote_taunt_sound = null
+	emote_taunt = list("levels its laser")
+	aggrosound = null
+	idlesound = null
+	death_sound = null
+	attack_sound = null
+
+
+
+/mob/living/simple_animal/hostile/handy/robobrain/AttackingTarget()
+	. = ..()
+
+/mob/living/simple_animal/hostile/handy/securitron
+	name = "Securitron"
+	desc = "A pre-war combat robot based commonly"
+	icon_state = "Securitron"
+	icon_living = "Securitron"
+	icon_dead = "gib7"
+	health = 250
+	maxHealth = 250
+	melee_damage_lower = 72
+	melee_damage_upper = 72
+	attack_sound = 'sound/items/welder.ogg'
+	attacktext = "shoots a burst of flame at"
+	projectilesound = 'sound/f13weapons/varmint_rifle.ogg'
+	projectiletype = /obj/item/projectile/bullet/F13/c556Bullet/heap
+	extra_projectiles = 3
+	ranged = TRUE
+	retreat_distance = 2
+	minimum_distance = 2
+	check_friendly_fire = TRUE
+	loot = list(/obj/effect/decal/cleanable/robot_debris, /obj/item/stack/crafting/electronicparts/three, /obj/item/stock_parts/cell/ammo/mfc)
+	emote_taunt_sound = null
+	emote_taunt = list("readies its arm gun")
+	aggrosound = null
+	idlesound = null
+	death_sound = null
+	attack_sound = null
+
+
+
+/mob/living/simple_animal/hostile/handy/securitron/AttackingTarget()
 	. = ..()
 
 /mob/living/simple_animal/hostile/handy/protectron
@@ -100,6 +293,26 @@
 
 	aggrosound = list('sound/f13npc/protectron/aggro1.ogg', 'sound/f13npc/protectron/aggro2.ogg', 'sound/f13npc/protectron/aggro3.ogg', 'sound/f13npc/protectron/aggro4.ogg')
 	idlesound = list('sound/f13npc/protectron/idle1.ogg', 'sound/f13npc/protectron/idle2.ogg', 'sound/f13npc/protectron/idle3.ogg', 'sound/f13npc/protectron/idle4.ogg',)
+
+/mob/living/simple_animal/hostile/handy/protectron/playable
+	ranged = FALSE
+	melee_damage_lower = 35
+	melee_damage_upper = 45
+	health = 400
+	maxHealth = 400
+	speed = 2
+	attacktext = "clamps"
+	emote_taunt_sound = null
+	emote_taunt = null
+	aggrosound = null
+	idlesound = null
+	see_in_dark = 8
+	environment_smash = 1 //can break lockers, but not walls
+	wander = 0
+	force_threshold = 10
+	anchored = FALSE
+	del_on_death = FALSE
+	possible_a_intents = list(INTENT_HELP, INTENT_HARM)
 
 /mob/living/simple_animal/pet/dog/protectron //Not an actual dog
 	name = "Trading Protectron"
@@ -154,6 +367,22 @@
 	aggrosound = list('sound/f13npc/sentry/aggro1.ogg', 'sound/f13npc/sentry/aggro2.ogg', 'sound/f13npc/sentry/aggro3.ogg', 'sound/f13npc/sentry/aggro4.ogg', 'sound/f13npc/sentry/aggro5.ogg')
 	idlesound = list('sound/f13npc/sentry/idle1.ogg', 'sound/f13npc/sentry/idle2.ogg', 'sound/f13npc/sentry/idle3.ogg', 'sound/f13npc/sentry/idle4.ogg')
 
+/mob/living/simple_animal/hostile/handy/sentrybot/playable
+	ranged = FALSE
+	health = 750   //El Beef
+	maxHealth = 750
+	speed = 1
+	attacktext = "clamps"
+	emote_taunt_sound = null
+	emote_taunt = null
+	aggrosound = null
+	idlesound = null
+	see_in_dark = 8
+	environment_smash = 2 //can smash walls
+	wander = 0
+	force_threshold = 15
+	anchored = FALSE
+	del_on_death = FALSE
 
 /obj/item/projectile/beam/laser/pistol/ultraweak
 	damage = 15 //quantity over quality
@@ -196,18 +425,22 @@
 	addtimer(CALLBACK(src, .proc/self_destruct), 4 SECONDS)
 	return ..()
 
+/mob/living/simple_animal/hostile/handy/sentrybot/playable/death()
+	return ..()
+
 /mob/living/simple_animal/hostile/handy/assaultron
 	name = "assaultron"
-	desc = "A deadly close combat robot developed by RobCo.  Their head laser is absolutely devastating."
+	desc = "A deadly close combat robot developed by RobCo in a vaguely feminine, yet ominous chassis."
 	icon_state = "assaultron"
 	icon_living = "assaultron"
+	gender = FEMALE //Pffffffffffffffffffffff
 	icon_dead = "gib7"
 	health = 450
 	maxHealth = 450
-	faction = list("wastebot", "enclave")
 	speed = 0
 	melee_damage_lower = 55
 	melee_damage_upper = 60
+	environment_smash = 2 //can smash walls
 	attacktext = "grinds their claws on"
 	faction = list("wastebot")
 	loot = list(/obj/effect/decal/cleanable/robot_debris, /obj/item/stack/crafting/electronicparts/three, /obj/item/stock_parts/cell/ammo/mfc)
@@ -217,3 +450,12 @@
 
 	aggrosound = FALSE
 	idlesound = FALSE
+
+/mob/living/simple_animal/hostile/handy/assaultron/playable
+	see_in_dark = 8
+	force_threshold = 15
+	wander = 0
+	anchored = FALSE
+	del_on_death = FALSE
+	possible_a_intents = list(INTENT_HELP, INTENT_HARM)
+	dextrous = TRUE

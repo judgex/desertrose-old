@@ -687,6 +687,7 @@
 	throw_speed = 4
 	attack_verb = list("gored")
 
+/* Im not removing it, but commenting it out. Its a good example of stuff, but it isnt really good for the server, no?
 /obj/item/twohanded/spear/grey_tide/afterattack(atom/movable/AM, mob/living/user, proximity)
 	. = ..()
 	if(!proximity)
@@ -701,6 +702,7 @@
 			M.faction = user.faction.Copy()
 			M.Copy_Parent(user, 100, user.health/2.5, 12, 30)
 			M.GiveTarget(L)
+*/
 
 /obj/item/twohanded/pitchfork
 	icon_state = "pitchfork0"
@@ -994,6 +996,12 @@
 
 /obj/item/twohanded/sledgehammer/atomsjudgement/update_icon()
 	icon_state = "atom_hammer[wielded]"
+
+/obj/item/twohanded/sledgehammer/atomsjudgement/attack(mob/living/M, mob/living/user)
+    . = ..()
+    if(!istype(M))
+        return
+    M.apply_effect(300, EFFECT_IRRADIATE, 0)
 
 /obj/item/twohanded/sledgehammer/warmace
 	name = "war mace"

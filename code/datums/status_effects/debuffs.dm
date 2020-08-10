@@ -93,26 +93,6 @@
 	icon_state = "asleep"
 
 //OTHER DEBUFFS
-/datum/status_effect/his_wrath //does minor damage over time unless holding His Grace
-	id = "his_wrath"
-	duration = -1
-	tick_interval = 4
-	alert_type = /obj/screen/alert/status_effect/his_wrath
-
-/obj/screen/alert/status_effect/his_wrath
-	name = "His Wrath"
-	desc = "You fled from His Grace instead of feeding Him, and now you suffer."
-	icon_state = "his_grace"
-	alerttooltipstyle = "hisgrace"
-
-/datum/status_effect/his_wrath/tick()
-	for(var/obj/item/his_grace/HG in owner.held_items)
-		qdel(src)
-		return
-	owner.adjustBruteLoss(0.1)
-	owner.adjustFireLoss(0.1)
-	owner.adjustToxLoss(0.2, TRUE, TRUE)
-
 /datum/status_effect/belligerent
 	id = "belligerent"
 	duration = 70

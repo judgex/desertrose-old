@@ -11,6 +11,8 @@
 	anchored = 1
 */
 
+
+/* Commented out due to unknown errors
 //Metal fence
 /obj/structure/fence/fencenormal
 	name = "metal fence"
@@ -250,6 +252,23 @@
 	else
 		return 0
 
+/obj/structure/handrail/b_central/CanPass(atom/movable/mover, turf/target)
+    if(istype(mover) && (mover.pass_flags & PASSGLASS))
+        return 1
+    if(get_dir(loc, target) == dir)
+        return !density
+    if(istype(mover, /obj/structure/handrail/b_central))
+        var/obj/structure/window/W = mover
+        if(!valid_window_location(loc, W.ini_dir))
+            return FALSE
+    else if(istype(mover, /obj/structure/windoor_assembly))
+        var/obj/structure/windoor_assembly/W = mover
+        if(!valid_window_location(loc, W.ini_dir))
+            return FALSE
+    else if(istype(mover, /obj/machinery/door/window) && !valid_window_location(loc, mover.dir))
+        return FALSE
+    return 1
+
 /obj/structure/handrail/b_intersect
 	name = "handrails"
 	desc = "Heavy-duty metal handrails. They are painted blue."
@@ -371,5 +390,103 @@
 
 /obj/structure/handrail/y_end/New()
 	if (dir>2)
-		layer = 4.2
+		layer = 4.2 */
 
+//Green
+/obj/structure/handrail/g_central
+	name = "handrail"
+	desc = "Old, rusted metal handrails. The green paint is chipping off in spots."
+	icon = 'icons/obj/obstacles.dmi'
+	icon_state = "g_handrail"
+	density = 0
+	anchored = 1
+	pixel_y = 0
+
+/obj/structure/handrail/g_central/New()
+	layer = 4.2
+
+/obj/structure/handrail/g_central/Initialize() //window hack to make collision work
+    . = ..()
+    switch(dir)
+        if(NORTH)
+            pixel_y = 23
+        if(SOUTH)
+            pixel_y = -16
+        if(EAST)
+            pixel_x = 20
+        if(WEST)
+            pixel_x = -20
+    var/obj/structure/window/W = new /obj/structure/window(get_turf(src))
+    W.alpha = 0
+    W.anchored = 1
+    W.resistance_flags = INDESTRUCTIBLE
+    W.dir = src.dir
+
+/* obsoleted by the window hack
+/obj/structure/handrail/g_central/CanPass(atom/movable/mover, turf/target, height=0)
+	if (dir!=SOUTH)
+		return 0
+	if(istype(mover) && mover.checkpass(PASSTABLE))
+		return 1
+	if(get_dir(loc, target) != SOUTH)
+		return 1
+	else
+		return 0
+
+/obj/structure/handrail/g_central/CheckExit(atom/movable/O as mob|obj, target)
+	if (dir!=SOUTH)
+		return 0
+	if(istype(O) && O.checkpass(PASSTABLE))
+		return 1
+	if(get_dir(O.loc, target) != SOUTH)
+		return 1
+	else
+		return 0
+*/
+
+/* g_intersect is not sprited yet
+/obj/structure/handrail/g_intersect
+	name = "handrails"
+	desc = "Old, rusted metal handrails. The green paint is chipping off in spots."
+	icon = 'icons/obj/obstacles.dmi'
+	icon_state = "y_handrail_intersect"
+	density = 0
+	anchored = 1
+	pixel_y = -9
+
+/obj/structure/handrail/g_intersect/New()
+	layer = 4.2
+
+/obj/structure/handrail/g_intersect/CanPass(atom/movable/mover, turf/target, height=0)
+	if (dir!=SOUTH)
+		return 0
+	if(istype(mover) && mover.checkpass(PASSTABLE))
+		return 1
+	if(get_dir(loc, target) != SOUTH)
+		return 1
+	else
+		return 0
+
+/obj/structure/handrail/y_intersect/CheckExit(atom/movable/O as mob|obj, target)
+	if (dir!=SOUTH)
+		return 0
+	if(istype(O) && O.checkpass(PASSTABLE))
+		return 1
+	if(get_dir(O.loc, target) != SOUTH)
+		return 1
+	else
+		return 0
+*/
+
+/obj/structure/handrail/g_end
+	name = "handrail end"
+	desc = "Heavy-duty metal handrail ends here.<br>You can pass now!"
+	icon = 'icons/obj/obstacles.dmi'
+	icon_state = "g_handrail_end"
+	density = 0
+	anchored = 1
+	pixel_y = -9
+
+/obj/structure/handrail/g_end/New()
+	if (dir>2)
+		layer = 4.2

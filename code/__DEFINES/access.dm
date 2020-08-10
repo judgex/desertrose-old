@@ -78,9 +78,19 @@
 #define ACCESS_CENT_CAPTAIN 109//Captain's office/ID comp/AI.
 #define ACCESS_CENT_BAR 110 // The non-existent CentCom Bar
 
-	//F13 special access meme
-#define ACCESS_BOS 120 //general bos access
-#define ACCESS_NCR 121 //NCR access
+	//Desert Rose 2 Custom access
+
+#define ACCESS_BOS			120 //general BOS access
+#define ACCESS_NCR			121 //general NCR access
+#define ACCESS_DEN			122	//general den access
+#define ACCESS_LEGION		123	//general legion access
+#define ACCESS_FOLLOWER		124	//general followers access
+#define ACCESS_KHAN			125	//general khan access
+#define ACCESS_VAULT_F13	126	//general vault access
+#define ACCESS_RESTRICT		127	//general restricted access
+#define ACCESS_MILITARY		128	//general military access
+#define ACCESS_MEDICAL_F13	129	//general medical access
+#define ACCESS_COMMAND		130	//general command access
 
 	//The Syndicate
 #define ACCESS_SYNDICATE 150//General Syndicate Access. Includes Syndicate mechs and ruins.

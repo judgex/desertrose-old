@@ -67,6 +67,8 @@
 		to_chat(user, "<span class='notice'>You switch to semi-automatic.</span>")
 	else
 		burst_size = initial(burst_size)
+		if (burst_improvement)
+			burst_size = 1 + initial(burst_size)
 		to_chat(user, "<span class='notice'>You switch to [burst_size]-rnd burst.</span>")
 
 	playsound(user, 'sound/weapons/empty.ogg', 100, 1)
@@ -482,11 +484,16 @@
 	icon_state = "mini-uzi"
 	mag_type = /obj/item/ammo_box/magazine/uzim9mm
 	w_class = WEIGHT_CLASS_NORMAL
+	can_scope = TRUE
+	scopestate = "AEP7_scope"
+	scope_x_offset = 9
+	scope_y_offset = 21
 	burst_size = 2
 	burst_delay = 2
 	fire_delay = 2
 	force = 15
 	spread = 10
+	can_attachments = TRUE
 
 /obj/item/gun/ballistic/automatic/mini_uzi/burst_select()
 	var/mob/living/carbon/human/user = usr
@@ -495,11 +502,17 @@
 			select += 1
 			burst_size = 2
 			spread = 18
+			if (burst_improvement)
+				burst_size = 3
+			if (recoil_decrease)
+				spread = 10
 			to_chat(user, "<span class='notice'>You switch to [burst_size]-rnd burst.</span>")
 		if(1)
 			select = 0
 			burst_size = 1
 			spread = 1
+			if (recoil_decrease)
+				spread = 0
 			to_chat(user, "<span class='notice'>You switch to semi-automatic.</span>")
 	playsound(user, 'sound/weapons/empty.ogg', 100, 1)
 	update_icon()
@@ -520,6 +533,7 @@
 	fire_delay = 2
 	burst_delay = 2
 	automatic = 1
+	can_attachments = TRUE
 
 /obj/item/gun/ballistic/automatic/smg10mm
 	name = "10mm submachine gun"
@@ -537,6 +551,7 @@
 	can_suppress = FALSE //we dont have sprites therefore cease
 	force = 15
 	spread = 18
+	can_attachments = TRUE
 
 /obj/item/gun/ballistic/automatic/smg10mm/burst_select()
 	var/mob/living/carbon/human/user = usr
@@ -544,12 +559,18 @@
 		if(0)
 			select += 1
 			burst_size = 2
-			spread = 18
+			spread = 18			
+			if (recoil_decrease)
+				spread = 10
+			if (burst_improvement)
+				burst_size = 3
 			to_chat(user, "<span class='notice'>You switch to [burst_size]-rnd burst.</span>")
 		if(1)
 			select = 0
-			burst_size = 1
+			burst_size = 1			
 			spread = 1
+			if (recoil_decrease)
+				spread = 0
 			to_chat(user, "<span class='notice'>You switch to semi-automatic.</span>")
 	playsound(user, 'sound/weapons/empty.ogg', 100, 1)
 	update_icon()
@@ -571,6 +592,7 @@
 	automatic = 1
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
+	can_attachments = TRUE
 
 /obj/item/gun/ballistic/automatic/assault_carbine/burst_select()
 	var/mob/living/carbon/human/user = usr
@@ -579,11 +601,17 @@
 			select += 1
 			burst_size = 2
 			spread = 14
+			if (recoil_decrease)
+				spread = 6
+			if (burst_improvement)
+				burst_size = 3
 			to_chat(user, "<span class='notice'>You switch to [burst_size]-rnd burst.</span>")
 		if(1)
 			select = 0
 			burst_size = 1
 			spread = 1
+			if (recoil_decrease)
+				spread = 0
 			to_chat(user, "<span class='notice'>You switch to semi-automatic.</span>")
 	playsound(user, 'sound/weapons/empty.ogg', 100, 1)
 	update_icon()
@@ -604,6 +632,7 @@
 	spread = 8
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
+	can_attachments = TRUE
 
 /obj/item/gun/ballistic/automatic/assault_rifle/burst_select()
 	var/mob/living/carbon/human/user = usr
@@ -612,11 +641,17 @@
 			select += 1
 			burst_size = 2
 			spread = 8
+			if (recoil_decrease)
+				spread = 0
+			if (burst_improvement)
+				burst_size = 3
 			to_chat(user, "<span class='notice'>You switch to [burst_size]-rnd burst.</span>")
 		if(1)
 			select = 0
 			burst_size = 1
 			spread = 1
+			if (recoil_decrease)
+				spread = 0
 			to_chat(user, "<span class='notice'>You switch to semi-automatic.</span>")
 	playsound(user, 'sound/weapons/empty.ogg', 100, 1)
 	update_icon()
@@ -645,6 +680,8 @@
 			select = 0
 			burst_size = 1
 			spread = 1
+			if (recoil_decrease)
+				spread = 0
 			to_chat(user, "<span class='notice'>You switch to semi-automatic.</span>")
 	playsound(user, 'sound/weapons/empty.ogg', 100, 1)
 	update_icon()
@@ -683,6 +720,7 @@
 	weapon_weight = WEAPON_HEAVY
 	actions_types = null
 	select = 0
+	can_attachments = TRUE
 
 /obj/item/gun/ballistic/automatic/marksman/sniper
 	name = "sniper rifle"
@@ -804,6 +842,7 @@
 	burst_delay = 3
 	force = 15
 	spread = 10
+	can_attachments = TRUE
 
 /obj/item/gun/ballistic/automatic/greasegun/burst_select()
 	var/mob/living/carbon/human/user = usr
@@ -812,11 +851,17 @@
 			select += 1
 			burst_size = 2
 			spread = 18
+			if (recoil_decrease)
+				spread = 10
+			if (burst_improvement)
+				burst_size = 3
 			to_chat(user, "<span class='notice'>You switch to [burst_size]-rnd burst.</span>")
 		if(1)
 			select = 0
 			burst_size = 1
 			spread = 1
+			if (recoil_decrease)
+				spread = 0
 			to_chat(user, "<span class='notice'>You switch to semi-automatic.</span>")
 	playsound(user, 'sound/weapons/empty.ogg', 100, 1)
 	update_icon()
@@ -829,7 +874,7 @@
 	item_state = "sniper"
 	slot_flags = SLOT_BACK
 	mag_type = /obj/item/ammo_box/magazine/m556/rifle
-	burst_size = 1
+	burst_size = 2
 	fire_delay = 3
 	automatic = 1
 	w_class = WEIGHT_CLASS_BULKY
@@ -838,6 +883,7 @@
 	zoomable = TRUE
 	zoom_amt = 10
 	zoom_out_amt = 13
+	can_attachments = TRUE
 
 /obj/item/gun/ballistic/automatic/m72
 	name = "\improper M72 gauss rifle"
@@ -952,6 +998,7 @@
 	weapon_weight = WEAPON_HEAVY
 	burst_size = 1
 	fire_delay = 3
+	can_attachments = TRUE
 
 /obj/item/gun/ballistic/automatic/rangemaster/scoped
 	name = "Scoped Colt Rangemaster"

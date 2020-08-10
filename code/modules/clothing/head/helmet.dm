@@ -258,20 +258,17 @@
 	item_state = "metalhelmet"
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	armor = list("melee" = 40, "bullet" = 25, "laser" = 25, "energy" = 20, "bomb" = 16, "bio" = 0, "rad" = 0)
-	color = "#514E4E" // Light Grey
 
 /obj/item/clothing/head/helmet/knight/fluff/metal/reinforced
 	name = "reinforced metal helmet"
 	icon_state = "metalhelmet_r"
 	item_state = "metalhelmet_r"
 	armor = list("melee" = 45, "bullet" = 35, "laser" = 40, "energy" = 25, "bomb" = 16, "bio" = 0, "rad" = 0)
-	color = "#514E4E" // Light Grey
 
 /obj/item/clothing/head/helmet/knight/fluff/metal/strange
 	name = "strange helmet"
 	desc = "A steel helmet forged by tribal warriors, with additional plating to protect again projectile and laser fire."
 	armor = list("melee" = 40, "bullet" = 40, "laser" = 40, "energy" = 25, "bomb" = 16, "bio" = 0, "rad" = 0)
-	color = "#514E4E" // Light Grey
 
 /obj/item/clothing/head/helmet/knight/fluff/rider
 	name = "rider helmet" //Not raider. Rider.
@@ -308,6 +305,10 @@
 	icon_state = "supafly"
 	item_state = "supafly"
 
+/obj/item/clothing/head/helmet/f13/raider/supafly/Initialize() //HQ parts reinforcement
+	. = ..()
+	AddComponent(/datum/component/armor_plate)
+
 /obj/item/clothing/head/helmet/f13/raider/arclight
 	name = "raider arclight helmet"
 	desc = "This will protect you against flashes."
@@ -316,6 +317,10 @@
 	dynamic_hair_suffix = ""
 	visor_flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE
 
+/obj/item/clothing/head/helmet/f13/raider/arclight/Initialize()
+	. = ..()
+	AddComponent(/datum/component/armor_plate)
+
 /obj/item/clothing/head/helmet/f13/raider/blastmaster
 	name = "raider blastmaster helmet"
 	icon_state = "blastmaster"
@@ -323,12 +328,20 @@
 	dynamic_hair_suffix = ""
 	dynamic_fhair_suffix = ""
 
+/obj/item/clothing/head/helmet/f13/raider/blastmaster/Initialize()
+	. = ..()
+	AddComponent(/datum/component/armor_plate)
+
 /obj/item/clothing/head/helmet/f13/raider/yankee
 	name = "yankee raider helmet"
 	desc = "Long time ago, it has belonged to a football player, now it belongs to wasteland."
 	icon_state = "yankee"
 	item_state = "yankee"
 	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE
+
+/obj/item/clothing/head/helmet/f13/raider/yankee/Initialize()
+	. = ..()
+	AddComponent(/datum/component/armor_plate)
 
 /obj/item/clothing/head/helmet/f13/raider/eyebot
 	name = "eyebot helmet"
@@ -342,6 +355,10 @@
 	dynamic_hair_suffix = ""
 	dynamic_fhair_suffix = ""
 
+/obj/item/clothing/head/helmet/f13/raider/eyebot/Initialize()
+	. = ..()
+	AddComponent(/datum/component/armor_plate)
+
 /obj/item/clothing/head/helmet/f13/raider/psychotic
 	name = "psycho-tic raider helmet"
 	desc = "A leather skullcap with tufts of hair sticking from each side."
@@ -350,6 +367,11 @@
 	flags_cover = HEADCOVERSEYES
 	flags_inv = HIDEEARS|HIDEEYES|HIDEHAIR
 
+/obj/item/clothing/head/helmet/f13/raider/psychotic/Initialize()
+	. = ..()
+	AddComponent(/datum/component/armor_plate)
+
+/*
 /obj/item/clothing/head/helmet/f13/raider/r
 	name = "reinforced base raider helmet"
 	armor = list("melee" = 40, "bullet" = 35, "laser" = 35, "energy" = 35, "bomb" = 40, "bio" = 20, "rad" = 0, "fire" = 50, "acid" = 0)
@@ -372,6 +394,7 @@
 /obj/item/clothing/head/helmet/f13/raider/r/psychotic/
 	name = "reinforced psycho-tic raider helmet"
 	desc = "A leather skullcap with tufts of Yaoguai hair sticking from each side."
+*/
 
 //Combat armor
 
@@ -498,6 +521,18 @@
 	icon_state = "swatsyndie"
 	item_state = "swatsyndie"
 
+//Sulphite Helm
+
+/obj/item/clothing/head/helmet/f13/sulphitehelm
+	name = "Sulphite Helmet"
+	desc = "A sulphite raider helmet, affixed with thick anti-ballistic glass over the eyes."
+	icon_state = "sulphite_helm"
+	item_state = "sulphite_helm"
+	armor = list("melee" = 50, "bullet" = 45, "laser" = 35, "energy" = 25, "bomb" = 39, "bio" = 0, "rad" = 50, "fire" = 0, "acid" = 20)
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
+
+	
 //Legion
 /obj/item/clothing/head/helmet/f13/legion
 	name = "legion helmet"
@@ -605,7 +640,7 @@
 
 /obj/item/clothing/head/helmet/f13/legion/rangercent
 	name = "ranger-hunter centurion helmet"
-	desc = "The helmet of an NCR ranger, repurposed to fit the needs of the Ranger Hunter Centurion. It features a large red plume of horehair, denoting rank."
+	desc = "The helmet of an NCR ranger, repurposed to fit the needs of the Ranger Hunter Centurion. It features a large plume of dyed-red donkey hair, denoting rank."
 	icon_state = "rangercent"
 	item_state = "rangercent"
 	armor = list("melee" = 60, "bullet" = 45, "laser" = 30, "energy" = 35, "bomb" = 39, "bio" = 60, "rad" = 20, "fire" = 80, "acid" = 0)
@@ -664,6 +699,14 @@
 	icon_state = "elite_riot"
 	item_state = "elite_riot"
 	armor = list("melee" = 70, "bullet" = 60, "laser" = 40, "energy" = 60, "bomb" = 55, "bio" = 60, "rad" = 60, "fire" = 40, "acid" = 0)
+
+
+/obj/item/clothing/head/helmet/f13/rangercombat/eliteriot/reclaimed
+	name = "reclaimed desert ranger gear"
+	desc = "A refurbished and personalized set of pre-unification desert ranger gear."
+	icon_state = "desert_ranger"
+	item_state = "desert_ranger"
+	armor = list("melee" = 30, "bullet" = 30, "laser" = 30, "energy" = 30, "bomb" = 30, "bio" = 30, "rad" = 30, "fire" = 30, "acid" = 0)
 
 //Metal masks
 
@@ -765,6 +808,14 @@
 	desc = "This power armor helmet is so decrepit and battle-worn that it have lost most of its capability to protect the wearer from harm. This helmet seems to be heavily modified, heavy metal banding fused to the helmet"
 	icon_state = "raiderpa_helm"
 	item_state = "raiderpa_helm"
+	armor = list("melee" = 50, "bullet" = 45, "laser" = 25, "energy" = 25, "bomb" = 39, "bio" = 0, "rad" = 50, "fire" = 0, "acid" = 0)
+	flash_protect = 0
+
+/obj/item/clothing/head/helmet/f13/brokenpa/hotrod
+	name = "hotrod T-45b power helmet"
+	desc = "This power armor helmet is so decrepit and battle-worn that it have lost most of its capability to protect the wearer from harm."
+	icon_state = "t45hotrod_helm"
+	item_state = "t45hotrod_helm"
 	armor = list("melee" = 50, "bullet" = 45, "laser" = 25, "energy" = 25, "bomb" = 39, "bio" = 0, "rad" = 50, "fire" = 0, "acid" = 0)
 	flash_protect = 0
 //Power armor helmets

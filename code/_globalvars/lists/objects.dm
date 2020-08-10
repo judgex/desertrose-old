@@ -38,6 +38,9 @@ GLOBAL_LIST_EMPTY(wire_name_directory)
 GLOBAL_LIST_EMPTY(ai_status_displays)
 
 GLOBAL_LIST_EMPTY(mob_spawners)						//list of all mob_spawn objects
-GLOBAL_LIST_EMPTY(alert_consoles)					//list of station alert consoles, /obj/machinery/computer/station_alert
+GLOBAL_LIST_EMPTY(mob_nests)						//list of all nests, 				/obj/structure/nest
+GLOBAL_LIST_EMPTY(alert_consoles)					//list of station alert consoles, 	/obj/machinery/computer/station_alert
 
 GLOBAL_LIST_EMPTY(trash_piles)						//list of all trash_piles
+
+GLOBAL_LIST_EMPTY(lamppost)							//list of all lampposts

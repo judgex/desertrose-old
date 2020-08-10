@@ -100,6 +100,9 @@
 #define CAT_ASSEM  	"Assembling"
 #define CAT_ASSEMBLIES  "Assemblies"
 #define CAT_CLOTHING	"Clothing"
+#define CAT_SHOES "Shoes"
+#define CAT_MISCCLOTHING "Misc Clothing"
+#define CAT_ARMOR "Armor"
 #define CAT_WASTELAND	"Wasteland Clothing"
 #define CAT_FOOD	"Foods"
 #define CAT_BREAD	"Breads"
@@ -118,6 +121,8 @@
 #define CAT_DRUGS     "Drugs"
 #define CAT_WASTEFOOD "Wasteland Food"
 #define CAT_BELTS	"Belts"
+#define CAT_BLUEPRINTS	"Blueprints"
+#define CAT_BPWEAPON	"Weapons"
 
 #define RCD_FLOORWALL 1
 #define RCD_AIRLOCK 2
