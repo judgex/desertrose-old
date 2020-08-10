@@ -44,6 +44,8 @@
 	var/ricochets = 0
 	var/ricochets_max = 2
 	var/ricochet_chance = 30
+	var/penetrating = 0
+	var/bumped = 0
 
 	//Hitscan
 	var/hitscan = FALSE		//Whether this is hitscan. If it is, speed is basically ignored.
@@ -145,7 +147,6 @@
 			new impact_effect_type(target_loca, hitx, hity)
 
 		W.add_dent(WALL_DENT_SHOT, hitx, hity)
-
 		return 0
 
 	if(!isliving(target))
@@ -208,6 +209,9 @@
 	beam_index = pcache
 	beam_segments[beam_index] = null
 
+/obj/item/projectile/proc/check_penetrate(var/atom/A)
+	return 1
+
 /obj/item/projectile/Bump(atom/A)
 	var/datum/point/pcache = trajectory.copy_to()
 	if(check_ricochet(A) && check_ricochet_flag(A) && ricochets < ricochets_max)
@@ -226,6 +230,7 @@
 			trajectory_ignore_forcemove = FALSE
 			return FALSE
 
+	var/passthrough = 0 //if the projectile should continue flying
 	var/distance = get_dist(get_turf(A), starting) // Get the distance between the turf shot from and the mob we hit and use that for the calculations.
 	def_zone = ran_zone(def_zone, max(100-(7*distance), 5)) //Lower accurancy/longer range tradeoff. 7 is a balanced number to use.
 
@@ -243,6 +248,29 @@
 			forceMove(target_turf)
 			trajectory_ignore_forcemove = FALSE
 		return FALSE
+
+	if(!passthrough && penetrating > 0)
+		if(check_penetrate(A))//TODO wall types
+			if (istype(A, /turf/closed/wall/f13/wood))
+				if (prob(penetrating-0))
+					passthrough = 1
+					visible_message("goes thru wood wall@-0%chance")
+			if (istype(A, /turf/closed/wall/f13/supermart))
+				if (prob(penetrating-20))
+					passthrough = 1
+					visible_message("goes thru concrete wall@-20%chance")
+		penetrating = 0
+
+	//the bullet passes through a dense object!
+	if(passthrough)
+		//move ourselves onto A so we can continue on our way.
+		var/turf/T = get_turf(A)
+		if(T)
+			visible_message("goes thru wall2")
+			forceMove(T)
+		permutated.Add(A)
+		bumped = 0 //reset bumped variable!
+		return 0
 
 	var/permutation = A.bullet_act(src, def_zone) // searches for return value, could be deleted after run so check A isn't null
 	if(permutation == -1 || forcedodge)// the bullet passes through a dense object!
