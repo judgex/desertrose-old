@@ -559,7 +559,7 @@
 		if(0)
 			select += 1
 			burst_size = 2
-			spread = 18			
+			spread = 18
 			if (recoil_decrease)
 				spread = 10
 			if (burst_improvement)
@@ -567,7 +567,7 @@
 			to_chat(user, "<span class='notice'>You switch to [burst_size]-rnd burst.</span>")
 		if(1)
 			select = 0
-			burst_size = 1			
+			burst_size = 1
 			spread = 1
 			if (recoil_decrease)
 				spread = 0
@@ -967,7 +967,7 @@
 	item_state = "rifle"
 	mag_type = /obj/item/ammo_box/magazine/garand308
 	fire_sound = 'sound/f13weapons/hunting_rifle.ogg'
-	fire_delay = 3
+	fire_delay = 6
 	burst_size = 1
 	en_bloc = 1
 	auto_eject = 1
