@@ -423,6 +423,28 @@
 	item_state = "vault_exile"
 	item_color = "vault_exile"
 
+//stuff ported from WW2
+/obj/item/clothing/under/f13/bride
+	name = "Wedding Gown"
+	desc = "An intricate white wedding gown"
+	icon_state = "bride_white"
+	item_state = "bride_white"
+	item_color = "bride_white"
+
+/obj/item/clothing/under/f13/ncr_formal_uniform
+	name = "NCR Pre-war Uniform"
+	desc = "An old pre-war uniform repurposed for the NCR armed forces"
+	icon_state = "USuni"
+	item_state = "USuni"
+	item_color = "USuni"
+
+/obj/item/clothing/under/f13/ncr_camo
+	name = "NCR Pre-war Camo"
+	desc = "Old pre-war camo repurposed for the NCR armed forces"
+	icon_state = "nato_uniform"
+	item_state = "nato_uniform"
+	item_color = "nato_uniform"
+
 //Dust Devils
 
 //Boomers
