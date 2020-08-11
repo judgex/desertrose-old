@@ -476,6 +476,10 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 	name = "NCR Heavy Trooper"
 	icon_state = "NCR Trooper"
 
+/obj/effect/landmark/start/f13/ncrcorporal
+	name = "NCR Corporal"
+	icon_state = "NCR Trooper"
+
 /obj/effect/landmark/start/f13/ncrtrooper
 	name = "NCR Trooper"
 	icon_state = "NCR Trooper"
@@ -488,8 +492,12 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 	name = "NCR Veteran Ranger"
 	icon_state = "NCR Veteran Ranger"
 
-/obj/effect/landmark/start/f13/ncrranger
-	name = "NCR Ranger"
+/obj/effect/landmark/start/f13/ncrrangerpatrol
+	name = "NCR Patrol Ranger"
+	icon_state = "NCR Patrol Ranger"
+
+/obj/effect/landmark/start/f13/ncrrangerscout
+	name = "NCR Scout Ranger"
 	icon_state = "NCR Patrol Ranger"
 
 /obj/effect/landmark/start/f13/ncrcitizen
@@ -519,8 +527,8 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 /obj/effect/landmark/start/f13/priestess
 	name = "Priestess of Mars"
 
-/obj/effect/landmark/start/f13/decanus
-	name = "Legion Decanus"
+/obj/effect/landmark/start/f13/decanvet
+	name = "Legion Veteran Decanus"
 	icon_state = "Decanus"
 
 /obj/effect/landmark/start/f13/vexillarius
@@ -531,9 +539,17 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 	name = "Veteran Legionary"
 	icon_state = "Veteran Legionnaire"
 
+/obj/effect/landmark/start/f13/decan
+	name = "Legion Prime Decanus"
+	icon_state = "Decanus"
+
 /obj/effect/landmark/start/f13/legionary
 	name = "Prime Legionary"
 	icon_state = "Veteran Legionnaire"
+
+/obj/effect/landmark/start/f13/decanrec
+	name = "Legion Recruit Decanus"
+	icon_state = "Decanus"
 
 /obj/effect/landmark/start/f13/recleg
 	name = "Recruit Legionary"
@@ -541,15 +557,22 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 
 /obj/effect/landmark/start/f13/explorer
 	name = "Legion Explorer"
+	icon_state = "Legionary"
+
+/obj/effect/landmark/start/f13/venator
+	name = "Legion Venator"
+	icon_state = "Legionary"
 
 /obj/effect/landmark/start/f13/auxilia
 	name = "Auxilia"
+	icon_state = "Wastelander"
 
 /obj/effect/landmark/start/f13/campfollower
 	name = "Camp Follower"
 
 /obj/effect/landmark/start/f13/slave
 	name = "Legion Slave"
+	icon_state = "Wastelander"
 
 // Brotherhood of Steel
 
