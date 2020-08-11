@@ -673,6 +673,60 @@ Recruit Legionary
 		/obj/item/radio)
 
 /*
+Venator
+*/
+/datum/job/CaesarsLegion/Legionnaire/f13venator
+	title = "Legion Venator"
+	flag = F13VENATOR
+	faction = "Legion"
+	total_positions = 1
+	spawn_positions = 1
+	description = "You are the Venator -- the Hunter. With your powerful rifle and your many years of experience, you are a formidable killing machine, capable of taking down even the most formidable targets. Note that you are not a rank-and-file legionary, and you should not be operating as such -- your job is special operations, not fighting alongside the hordes of the Legion."
+	supervisors = "the Centurion"
+	selection_color = "#ffdddd"
+
+	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13venator
+
+	loadout_options = list(
+	/datum/outfit/loadout/vensniper, //.308 sniper and gladius
+	/datum/outfit/loadout/venassault //Bulldog assault shotgun and C4
+	)
+
+/datum/job/CaesarsLegion/Legionnaire/f13venator/after_spawn(mob/living/carbon/human/H, mob/M)
+	H.add_quirk("Hard Yards")
+
+/datum/outfit/job/CaesarsLegion/Legionnaire/f13venator
+	name = "Legion Explorer"
+	jobtype 	= /datum/job/CaesarsLegion/Legionnaire/f13explorer
+	id 			= 	/obj/item/card/id/dogtag/legvenator
+	suit 		= 	/obj/item/clothing/suit/armor/f13/legion/venator
+	head 		= 	/obj/item/clothing/head/helmet/f13/legion/venator
+	mask		=	/obj/item/clothing/mask/bandana/black
+	glasses 	=	/obj/item/clothing/glasses/night
+	ears		=	/obj/item/radio/headset/headset_legion
+	r_pocket 	= 	/obj/item/twohanded/binocs
+	backpack_contents = list(
+		/obj/item/restraints/legcuffs/bola=1, \
+		/obj/item/reagent_containers/pill/patch/healpoultice=2, \
+		/obj/item/flashlight/flare/torch=1, \
+		/obj/item/storage/bag/money/small/legenlisted,
+		/obj/item/radio)
+
+/datum/outfit/loadout/vensniper
+	name = "Venator Assassin"
+	suit_store	=	/obj/item/gun/ballistic/automatic/marksman/sniper
+	backpack_contents = list(
+		/obj/item/ammo_box/magazine/w308=1,
+		/obj/item/claymore/machete/gladius=1)
+
+/datum/outfit/loadout/venassault
+	name = "Venator Assault"
+	suit_store	=	/obj/item/gun/ballistic/automatic/shotgun/bulldog
+	backpack_contents = list(
+		/obj/item/ammo_box/magazine/m12g=1,
+		/obj/item/grenade/plastic=1)
+
+/*
 Explorer
 */
 
@@ -703,7 +757,7 @@ Explorer
 	id = 		/obj/item/card/id/dogtag/legprime
 	suit = 		/obj/item/clothing/suit/armor/f13/legion/vet/explorer
 	head = 		/obj/item/clothing/head/helmet/f13/legion/vet/explorer
-	glasses = 	null
+	glasses = 	/obj/item/clothing/glasses/legiongoggles
 	ears	=	/obj/item/radio/headset/headset_legion
 	backpack_contents = list(
 		/obj/item/restraints/legcuffs/bola=1, \
@@ -728,44 +782,6 @@ Explorer
 	suit_store = /obj/item/gun/ballistic/shotgun/automatic/hunting/trail/scoped
 	backpack_contents = list(
 		/obj/item/ammo_box/tube/m44=2)
-
-/*
-Venator
-*/
-/datum/job/CaesarsLegion/Legionnaire/f13venator
-	title = "Legion Venator"
-	flag = F13VENATOR
-	faction = "Legion"
-	total_positions = 1
-	spawn_positions = 1
-	description = "You are the Venator -- the Hunter. With your powerful rifle and your many years of experience, you are a formidable killing machine, capable of taking down even the most formidable targets."
-	supervisors = "the Centurion"
-	selection_color = "#ffdddd"
-
-	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13venator
-
-/datum/job/CaesarsLegion/Legionnaire/f13venator/after_spawn(mob/living/carbon/human/H, mob/M)
-	H.add_quirk("Hard Yards")
-
-/datum/outfit/job/CaesarsLegion/Legionnaire/f13venator
-	name = "Legion Explorer"
-	jobtype 	= /datum/job/CaesarsLegion/Legionnaire/f13explorer
-	id 			= 	/obj/item/card/id/dogtag/legvenator
-	suit 		= 	/obj/item/clothing/suit/armor/f13/legion/venator
-	head 		= 	/obj/item/clothing/head/helmet/f13/legion/venator
-	mask		=	/obj/item/clothing/mask/bandana/skull
-	glasses 	=	/obj/item/clothing/glasses/sunglasses
-	ears		=	/obj/item/radio/headset/headset_legion
-	r_pocket 	= 	/obj/item/twohanded/binocs
-	suit_store	=	/obj/item/gun/ballistic/automatic/marksman/sniper
-	backpack_contents = list(
-		/obj/item/restraints/legcuffs/bola=1, \
-		/obj/item/claymore/machete/gladius=1, \
-		/obj/item/reagent_containers/pill/patch/healpoultice=2, \
-		/obj/item/ammo_box/magazine/w308=2,	\
-		/obj/item/flashlight/flare/torch=1, \
-		/obj/item/storage/bag/money/small/legenlisted,
-		/obj/item/radio)
 
 /*
 Auxilia
