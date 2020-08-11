@@ -592,6 +592,12 @@ update_label("John Doe", "Clowny")
 	icon_state = "legionmedallioncent"
 	id_type = "centurion medallion"
 
+/obj/item/card/id/dogtag/legvenator
+	name = "venator medallion"
+	desc = "A golden disc awarded to the elite hunters of the legion. If you are close enough to read the insignia you won't be alive much longer."
+	icon_state = "legionmedallioncent"
+	id_type = "venator medallion"
+
 /obj/item/card/id/dogtag/legpriest
 	name = "priestess medallion"
 	desc = "A golden disc awarded to the trusted spiritual guide to the nearby Legion."

@@ -304,6 +304,53 @@ Decanus
 		/obj/item/storage/box/slugshot=1,
 		/obj/item/shield/riot/roman=1)
 
+
+
+/datum/job/CaesarsLegion/Legionnaire/f13decanrec
+	title = "Legion Recruit Decanus"
+	flag = F13DECANREC
+	faction = "Legion"
+	total_positions = 3
+	spawn_positions = 3
+	description = "You answer directly to the Centurion, working with them to organize the Legionaries. You lead the Recruit Legionaries on patrols, raids and scouting missions on behalf of your Centurion."
+	supervisors = "the Prime Decanus and the Centurion"
+
+	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13decan
+
+	loadout_options = list(
+	/datum/outfit/loadout/decancharger, //greasegun and bumper sword
+	/datum/outfit/loadout/decanspec, //nerfed infiltrator and machete gladius
+	/datum/outfit/loadout/decanprotec //lever-action shotgun, roman shield and ballistic fist
+	)
+
+/datum/job/CaesarsLegion/Legionnaire/f13decanrec/after_spawn(mob/living/carbon/human/H, mob/M)
+	H.add_quirk("Big Leagues")
+	H.add_quirk("Iron Fist")
+
+/datum/outfit/job/CaesarsLegion/Legionnaire/f13decanrec
+	name = "Legion Recruit Decanus"
+	jobtype = /datum/job/CaesarsLegion/Legionnaire/f13decanrec
+	id = 			/obj/item/card/id/dogtag/legveteran
+	suit = 			/obj/item/clothing/suit/armor/f13/legion/vet
+	head = 			/obj/item/clothing/head/helmet/f13/legion/recruit/decan
+	mask =			/obj/item/clothing/mask/bandana/legdecan
+	glasses = 		/obj/item/clothing/glasses/sunglasses/big
+	ears = 			/obj/item/radio/headset/headset_legion
+	suit_store = 	/obj/item/gun/ballistic/automatic/greasegun
+	backpack_contents = list(
+		/obj/item/twohanded/fireaxe/bmprsword=1, \
+		/obj/item/ammo_box/magazine/greasegun=1, \
+		/obj/item/restraints/legcuffs/bola=1, \
+		/obj/item/throwing_star/spear, \
+		/obj/item/reagent_containers/pill/patch/healingpowder=2, \
+		/obj/item/storage/box/handcuffs=1, \
+		/obj/item/flashlight/lantern=1, \
+		/obj/item/key/scollar=1, \
+		/obj/item/assembly/signaler/electropack/shockcollar=1, \
+		/obj/item/storage/bag/money/small/legofficers)
+
+
+
 /*
 Vexillarius
 */
@@ -604,6 +651,44 @@ Explorer
 	suit_store = /obj/item/gun/ballistic/shotgun/automatic/hunting/trail
 	backpack_contents = list(
 		/obj/item/ammo_box/tube/m44=2)
+
+/*
+Venator
+*/
+/datum/job/CaesarsLegion/Legionnaire/f13venator
+	title = "Legion Venator"
+	flag = F13VENATOR
+	faction = "Legion"
+	total_positions = 1
+	spawn_positions = 1
+	description = "You are the Venator -- the Hunter. With your powerful rifle and your many years of experience, you are a formidable killing machine, capable of taking down even the most formidable targets."
+	supervisors = "the Decani and Centurion"
+	selection_color = "#ffdddd"
+
+	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13venator
+
+/datum/job/CaesarsLegion/Legionnaire/f13venator/after_spawn(mob/living/carbon/human/H, mob/M)
+	H.add_quirk("Hard Yards")
+
+/datum/outfit/job/CaesarsLegion/Legionnaire/f13venator
+	name = "Legion Explorer"
+	jobtype 	= /datum/job/CaesarsLegion/Legionnaire/f13explorer
+	id 			= 	/obj/item/card/id/dogtag/legvenator
+	suit 		= 	/obj/item/clothing/suit/armor/f13/legion/venator
+	head 		= 	/obj/item/clothing/head/helmet/f13/legion/venator
+	mask		=	/obj/item/clothing/mask/bandana/skull
+	glasses 	=	/obj/item/clothing/glasses/sunglasses
+	ears		=	/obj/item/radio/headset/headset_legion
+	r_pocket 	= 	/obj/item/twohanded/binocs
+	suit_store	=	/obj/item/gun/ballistic/automatic/marksman/sniper
+	backpack_contents = list(
+		/obj/item/restraints/legcuffs/bola=1, \
+		/obj/item/claymore/machete/reinforced=1, \
+		/obj/item/reagent_containers/pill/patch/healingpowder=2, \
+		/obj/item/ammo_box/magazine/w308=2,	\
+		/obj/item/flashlight/flare/torch=1, \
+		/obj/item/storage/bag/money/small/legenlisted,
+		/obj/item/radio)
 
 /*
 Auxilia

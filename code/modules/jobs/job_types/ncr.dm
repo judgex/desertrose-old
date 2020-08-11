@@ -700,6 +700,7 @@ Veteran Ranger
 	head = 			/obj/item/clothing/head/helmet/f13/ncr/rangercombat
 	gloves =		/obj/item/clothing/gloves/rifleman
 	shoes =			/obj/item/clothing/shoes/laced
+	glasses = 		/obj/item/clothing/glasses/orange
 	backpack_contents = list(
 		/obj/item/gun/ballistic/revolver/sequoia=1, \
 		/obj/item/ammo_box/c4570=3, \
@@ -726,8 +727,7 @@ Veteran Ranger
 		/obj/item/ammo_box/tube/c4570=3)
 
 /*
-Ranger
-*/
+Ranger -- Split into Patrol and Scout
 
 /datum/job/ncr/f13ranger
 	title = "NCR Ranger"
@@ -743,7 +743,7 @@ Ranger
 
 	loadout_options = list(
 	/datum/outfit/loadout/prclassic, //Scoped Sniper rifle and .44,
-	/datum/outfit/loadout/prlite, //Assault carbine and .44,
+	/datum/outfit/loadout/prlite, //Marksman carbine and .44,
 	/datum/outfit/loadout/prtrail //Scoped Trail carbine and .44
 	)
 
@@ -776,8 +776,8 @@ Ranger
 
 /datum/outfit/loadout/prclassic
 	name = "Classic Ranger"
-	head = 			/obj/item/clothing/head/f13/ranger
 	suit = /obj/item/clothing/suit/armor/f13/combat/ncr
+	head = /obj/item/clothing/head/f13/ranger
 	suit_store = /obj/item/gun/ballistic/automatic/marksman/sniper
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/w308=3)
@@ -786,7 +786,7 @@ Ranger
 	name = "Light Ranger"
 	suit = /obj/item/clothing/suit/armor/f13/combat/ncr
 	head = /obj/item/clothing/head/f13/ranger
-	suit_store = /obj/item/gun/ballistic/automatic/assault_carbine
+	suit_store = /obj/item/gun/ballistic/automatic/marksman
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/m556/rifle=3)
 
@@ -801,3 +801,93 @@ Ranger
 		/obj/item/gun/ballistic/revolver/m29/alt=1,
 		/obj/item/ammo_box/m44=2
 		)
+*/
+
+//Patrol Ranger
+/datum/job/ncr/f13rangerpatrol
+	title = "NCR Patrol Ranger"
+	flag = F13RANGERPATROL
+	faction = "NCR"
+	total_positions = 2
+	spawn_positions = 2
+	description = "As a Patrol Ranger, you perform reconnaissance, seize or destroy assets, and capture or recover designated targets in service to the Republic. Your reason for being sent here is to find and exploit local assets within the Region in order to prepare the area for the Republic's eventual arrival."
+	supervisors = "Veteran Ranger"
+	selection_color = "#fff5cc"
+
+	outfit = /datum/outfit/job/ncr/f13rangerpatrol
+
+/datum/job/ncr/f13ranger/after_spawn(mob/living/carbon/human/H, mob/M)
+	H.add_quirk("Hard Yards")
+
+/datum/outfit/job/ncr/f13ranger/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	..()
+	if(visualsOnly)
+		return
+	H.add_trait(TRAIT_TECHNOPHREAK)
+
+/datum/outfit/job/ncr/f13rangerpatrol
+	name = "NCR Patrol Ranger"
+	jobtype = /datum/job/ncr/f13rangerpatrol
+	id = 			/obj/item/card/id/dogtag/ncrranger
+	uniform =  		/obj/item/clothing/under/f13/patrolranger
+	suit =			/obj/item/clothing/suit/armor/f13/combat/ncr
+	head =			/obj/item/clothing/head/f13/ranger
+	belt =			/obj/item/storage/belt/military/assault/ncr
+	gloves =		/obj/item/clothing/gloves/patrol
+	shoes =			/obj/item/clothing/shoes/laced
+	glasses = 		/obj/item/clothing/glasses/orange
+	suit_store =	/obj/item/gun/ballistic/automatic/marksman
+	r_pocket = /obj/item/twohanded/binocs
+	backpack_contents = list(
+		/obj/item/gun/ballistic/revolver/m29/alt,
+		/obj/item/ammo_box/m44=2, \
+		/obj/item/ammo_box/magazine/m556/rifle=2, \
+		/obj/item/restraints/handcuffs=1, \
+		/obj/item/kitchen/knife/combat=1, \
+		/obj/item/reagent_containers/hypospray/medipen/stimpak=1, \
+		/obj/item/storage/bag/money/small/ncrofficers)
+
+
+//Scout Ranger
+/datum/job/ncr/f13rangerscout
+	title = "NCR Scout Ranger"
+	flag = F13RANGERSCOUT
+	faction = "NCR"
+	total_positions = 2
+	spawn_positions = 2
+	description = "As a Ranger, you perform reconnaissance, seize or destroy assets, and capture or recover designated targets in service to the Republic. Your reason for being sent here is to find and exploit local assets within the Region in order to prepare the area for the Republic's eventual arrival."
+	supervisors = "Veteran Ranger"
+	selection_color = "#fff5cc"
+
+	outfit = /datum/outfit/job/ncr/f13rangerscout
+
+/datum/job/ncr/f13ranger/after_spawn(mob/living/carbon/human/H, mob/M)
+	H.add_quirk("Hard Yards")
+
+/datum/outfit/job/ncr/f13ranger/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	..()
+	if(visualsOnly)
+		return
+	H.add_trait(TRAIT_TECHNOPHREAK)
+
+/datum/outfit/job/ncr/f13rangerscout
+	name = "NCR Scout Ranger"
+	jobtype = /datum/job/ncr/f13rangerscout
+	id = 			/obj/item/card/id/dogtag/ncrranger
+	uniform = 		/obj/item/clothing/under/f13/trailranger
+	suit = 			/obj/item/clothing/suit/armor/f13/trailranger
+	head = 			/obj/item/clothing/head/f13/trailranger
+	belt =			/obj/item/storage/belt/military/assault/ncr
+	gloves =		/obj/item/clothing/gloves/patrol
+	shoes =			/obj/item/clothing/shoes/laced
+	glasses = 		/obj/item/clothing/glasses/sunglasses
+	suit_store =	/obj/item/gun/ballistic/shotgun/automatic/hunting/trail/scoped
+	r_pocket = /obj/item/twohanded/binocs
+	backpack_contents = list(
+		/obj/item/gun/ballistic/revolver/m29/alt,
+		/obj/item/ammo_box/m44=2, \
+		/obj/item/ammo_box/tube/m44=2, \
+		/obj/item/restraints/handcuffs=1, \
+		/obj/item/kitchen/knife/combat=1, \
+		/obj/item/reagent_containers/hypospray/medipen/stimpak=1, \
+		/obj/item/storage/bag/money/small/ncrofficers)

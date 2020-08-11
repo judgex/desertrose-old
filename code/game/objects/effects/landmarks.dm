@@ -488,8 +488,12 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 	name = "NCR Veteran Ranger"
 	icon_state = "NCR Veteran Ranger"
 
-/obj/effect/landmark/start/f13/ncrranger
-	name = "NCR Ranger"
+/obj/effect/landmark/start/f13/ncrrangerpatrol
+	name = "NCR Patrol Ranger"
+	icon_state = "NCR Patrol Ranger"
+
+/obj/effect/landmark/start/f13/ncrrangerscout
+	name = "NCR Scout Ranger"
 	icon_state = "NCR Patrol Ranger"
 
 /obj/effect/landmark/start/f13/ncrcitizen
@@ -541,6 +545,9 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 
 /obj/effect/landmark/start/f13/explorer
 	name = "Legion Explorer"
+
+/obj/effect/landmark/start/f13/venator
+	name = "Legion Venator"
 
 /obj/effect/landmark/start/f13/auxilia
 	name = "Auxilia"
