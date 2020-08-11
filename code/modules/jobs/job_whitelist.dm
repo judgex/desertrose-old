@@ -42,6 +42,11 @@
 	if(!whitelists["leadership"])					// if they do not have leadership whitelist, remove leadership whitelist positions
 		for(var/rtypeWL in GLOB.command_positions)
 			play_records[rtypeWL] = 0
+
+	if(!whitelists["ranger"])
+		for(var/rtypeWL in GLOB.ncr_ranger_positions)	// if they do not have ranger whitelist, remove ranger whitelist positions
+			play_records[rtypeWL] = 0
+
 	/*
 	if(!whitelists["leadership_bos"])					// if they do not have leadership_bos whitelist, remove leadership_bos whitelist positions
 		for(var/rtypeWL in GLOB.brotherhood_command_positions)

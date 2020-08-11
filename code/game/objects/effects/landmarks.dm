@@ -523,8 +523,8 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 /obj/effect/landmark/start/f13/priestess
 	name = "Priestess of Mars"
 
-/obj/effect/landmark/start/f13/decanus
-	name = "Legion Decanus"
+/obj/effect/landmark/start/f13/decanvet
+	name = "Legion Veteran Decanus"
 	icon_state = "Decanus"
 
 /obj/effect/landmark/start/f13/vexillarius
@@ -535,9 +535,17 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 	name = "Veteran Legionary"
 	icon_state = "Veteran Legionnaire"
 
+/obj/effect/landmark/start/f13/decan
+	name = "Legion Prime Decanus"
+	icon_state = "Decanus"
+
 /obj/effect/landmark/start/f13/legionary
 	name = "Prime Legionary"
 	icon_state = "Veteran Legionnaire"
+
+/obj/effect/landmark/start/f13/decanrec
+	name = "Legion Recruit Decanus"
+	icon_state = "Decanus"
 
 /obj/effect/landmark/start/f13/recleg
 	name = "Recruit Legionary"

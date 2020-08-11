@@ -667,7 +667,7 @@ Veteran Ranger
 	faction = "NCR"
 	total_positions = 1
 	spawn_positions = 1
-	description = "You answer directly to the Captain, working either independently or in a team to complete your mission objectives however required, operating either alone, in a squad or with the NCR Army. As a Veteran Ranger you work closely with the Captain in planning special operations with your team while also carrying out those orders in the field by any means necessary."
+	description = "You answer directly to the Captain, working either independently or in a team to complete your mission objectives however required, operating either alone, in a squad or with the NCR Army. Your primary mission is to improve general opinion of the Republic and to neutralize slavers and raiders operating in the area."
 	supervisors = "Captain and above"
 	selection_color = "#ffeeaa"
 
@@ -701,6 +701,7 @@ Veteran Ranger
 	gloves =		/obj/item/clothing/gloves/rifleman
 	shoes =			/obj/item/clothing/shoes/laced
 	glasses = 		/obj/item/clothing/glasses/orange
+	r_pocket = 		/obj/item/twohanded/binocs
 	backpack_contents = list(
 		/obj/item/gun/ballistic/revolver/sequoia=1, \
 		/obj/item/ammo_box/c4570=3, \
@@ -716,7 +717,7 @@ Veteran Ranger
 
 /datum/outfit/loadout/vrlite
 	name = "Light Veteran Ranger"
-	suit_store = /obj/item/gun/ballistic/automatic/rangemaster
+	suit_store = /obj/item/gun/ballistic/automatic/rangemaster/scoped
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/m762=3)
 
@@ -810,7 +811,7 @@ Ranger -- Split into Patrol and Scout
 	faction = "NCR"
 	total_positions = 2
 	spawn_positions = 2
-	description = "As a Patrol Ranger, you perform reconnaissance, seize or destroy assets, and capture or recover designated targets in service to the Republic. Your reason for being sent here is to find and exploit local assets within the Region in order to prepare the area for the Republic's eventual arrival."
+	description = "As a Patrol Ranger, you patrol the wasteland, aid those in need, and capture, recover, or neutralize designated targets in service to the Republic. Your reason for being sent here is to improve public opinion of the Republic through acts of service to the community, and by putting down slavers and raiders in the region."
 	supervisors = "Veteran Ranger"
 	selection_color = "#fff5cc"
 
@@ -855,14 +856,20 @@ Ranger -- Split into Patrol and Scout
 	faction = "NCR"
 	total_positions = 2
 	spawn_positions = 2
-	description = "As a Ranger, you perform reconnaissance, seize or destroy assets, and capture or recover designated targets in service to the Republic. Your reason for being sent here is to find and exploit local assets within the Region in order to prepare the area for the Republic's eventual arrival."
+	description = "As a Scout Ranger, you perform reconnaissance and assist in special operations for the Republic. Your reason for being sent here is to identify and neutralize threats to the Republic and to assist Patrol Rangers in identifying slavers and raiders so that they can be brought to justice."
 	supervisors = "Veteran Ranger"
 	selection_color = "#fff5cc"
 
 	outfit = /datum/outfit/job/ncr/f13rangerscout
 
+	loadout_options = list(
+	/datum/outfit/loadout/rangerrecon, //Scoped .308 Sniper rifle and .44,
+	/datum/outfit/loadout/rangertrail //M1 Garand and .44,
+	)
+
 /datum/job/ncr/f13ranger/after_spawn(mob/living/carbon/human/H, mob/M)
 	H.add_quirk("Hard Yards")
+	H.add_quirk("Light Step")
 
 /datum/outfit/job/ncr/f13ranger/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
@@ -875,14 +882,10 @@ Ranger -- Split into Patrol and Scout
 	jobtype = /datum/job/ncr/f13rangerscout
 	id = 			/obj/item/card/id/dogtag/ncrranger
 	uniform = 		/obj/item/clothing/under/f13/trailranger
-	suit = 			/obj/item/clothing/suit/armor/f13/trailranger
-	head = 			/obj/item/clothing/head/f13/trailranger
-	belt =			/obj/item/storage/belt/military/assault/ncr
 	gloves =		/obj/item/clothing/gloves/patrol
 	shoes =			/obj/item/clothing/shoes/laced
 	glasses = 		/obj/item/clothing/glasses/sunglasses
-	suit_store =	/obj/item/gun/ballistic/shotgun/automatic/hunting/trail/scoped
-	r_pocket = /obj/item/twohanded/binocs
+	r_pocket = 		/obj/item/twohanded/binocs
 	backpack_contents = list(
 		/obj/item/gun/ballistic/revolver/m29/alt,
 		/obj/item/ammo_box/m44=2, \
@@ -891,3 +894,21 @@ Ranger -- Split into Patrol and Scout
 		/obj/item/kitchen/knife/combat=1, \
 		/obj/item/reagent_containers/hypospray/medipen/stimpak=1, \
 		/obj/item/storage/bag/money/small/ncrofficers)
+
+/datum/outfit/loadout/rangerrecon
+	name = "Recon Ranger"
+	suit =	/obj/item/clothing/suit/toggle/armor/f13/rangerrecon
+	head =	/obj/item/clothing/head/beret/ncr_recon_ranger
+	belt =	/obj/item/storage/belt/military/reconbandolier
+	suit_store = /obj/item/gun/ballistic/automatic/marksman/sniper
+	backpack_contents = list(
+		/obj/item/ammo_box/magazine/w308=3)
+
+/datum/outfit/loadout/rangertrail
+	name = "Trail Ranger"
+	suit =	/obj/item/clothing/suit/armor/f13/trailranger
+	head =	/obj/item/clothing/head/f13/trailranger
+	belt =	/obj/item/storage/belt/military/assault/ncr
+	suit_store = /obj/item/gun/ballistic/automatic/m1garand
+	backpack_contents = list(
+		/obj/item/ammo_box/magazine/garand308=3)

@@ -72,7 +72,7 @@
 #define F13PRIESTESS 	(1<<3)
 #define F13DECANREC		(1<<4)
 #define F13DECAN		(1<<5)
-#define F13DECANVET		(1<<6
+#define F13DECANVET		(1<<6)
 #define F13VEXILLARIUS	(1<<7)
 #define F13EXPLORER		(1<<8)
 #define F13VENATOR		(1<<9)

@@ -232,10 +232,8 @@ Priestess of Mars
 /datum/job/CaesarsLegion/f13priestess/after_spawn(mob/living/carbon/human/H, mob/M)
 	H.add_quirk("Spiritual")
 
-/*
-Decanus
-*/
 
+/* Decanus
 /datum/job/CaesarsLegion/Legionnaire/f13decan
 	title = "Legion Decanus"
 	flag = F13DECAN
@@ -304,24 +302,103 @@ Decanus
 		/obj/item/storage/box/slugshot=1,
 		/obj/item/shield/riot/roman=1)
 
+*/
+
+/*
+Decanii
+*/
 
 
+//Veteran Decanus
+/datum/job/CaesarsLegion/Legionnaire/f13decanvet
+	title = "Legion Veteran Decanus"
+	flag = F13DECANVET
+	faction = "Legion"
+	total_positions = 1
+	spawn_positions = 1
+	description = "You answer directly to the Centurion, working with them to organize the Legionaries. You lead the Veteran Legionaries on patrols, raids and scouting missions on behalf of your Centurion."
+	supervisors = "the Centurion"
+
+	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13decanvet
+
+/datum/job/CaesarsLegion/Legionnaire/f13decanvet/after_spawn(mob/living/carbon/human/H, mob/M)
+	H.add_quirk("Big Leagues")
+	H.add_quirk("Iron Fist")
+
+/datum/outfit/job/CaesarsLegion/Legionnaire/f13decanvet
+	name = "Legion Veteran Decanus"
+	jobtype = /datum/job/CaesarsLegion/Legionnaire/f13decanvet
+	id = 			/obj/item/clothing/suit/armor/f13/legion/heavy
+	suit = 			/obj/item/clothing/suit/armor/f13/legion/heavy
+	head = 			/obj/item/clothing/head/helmet/f13/legion/recruit/decan
+	mask =			/obj/item/clothing/head/helmet/f13/legion/heavy
+	glasses = 		/obj/item/clothing/glasses/sunglasses/big
+	ears = 			/obj/item/radio/headset/headset_legion
+	suit_store = 	/obj/item/gun/ballistic/revolver/ballisticfist
+	r_pocket =		/obj/item/flashlight/lantern
+	backpack_contents = list(
+		/obj/item/storage/box/lethalshot=1,	\
+		/obj/item/storage/box/slugshot=1, \
+		/obj/item/shield/riot/roman=1, \
+		/obj/item/restraints/legcuffs/bola=1, \
+		/obj/item/throwing_star/spear, \
+		/obj/item/reagent_containers/pill/patch/healingpowder=2, \
+		/obj/item/storage/box/handcuffs=1, \
+		/obj/item/key/scollar=1, \
+		/obj/item/assembly/signaler/electropack/shockcollar=1, \
+		/obj/item/storage/bag/money/small/legofficers)
+
+
+//Prime Decanus
+/datum/job/CaesarsLegion/Legionnaire/f13decan
+	title = "Legion Prime Decanus"
+	flag = F13DECAN
+	faction = "Legion"
+	total_positions = 1
+	spawn_positions = 1
+	description = "You answer directly to the Centurion, working with them to organize the Legionaries. You lead the Prime Legionaries on patrols, raids and scouting missions on behalf of your Centurion."
+	supervisors = "the Veteran Decanus and the Centurion"
+
+	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13decan
+
+/datum/job/CaesarsLegion/Legionnaire/f13decanrec/after_spawn(mob/living/carbon/human/H, mob/M)
+	H.add_quirk("Big Leagues")
+	H.add_quirk("Iron Fist")
+
+/datum/outfit/job/CaesarsLegion/Legionnaire/f13decan
+	name = "Prime Decanus"
+	jobtype = /datum/job/CaesarsLegion/Legionnaire/f13decan
+	id = 			/obj/item/card/id/dogtag/legveteran
+	suit =			/obj/item/clothing/suit/armor/f13/legion/vet
+	head =			/obj/item/clothing/head/helmet/f13/legion/prime/decan
+	mask =			/obj/item/clothing/mask/bandana/legdecan
+	glasses = 		/obj/item/clothing/glasses/sunglasses/big
+	ears = 			/obj/item/radio/headset/headset_legion
+	suit_store =	/obj/item/gun/ballistic/automatic/assault_rifle/infiltrator
+	r_pocket =		/obj/item/flashlight/lantern
+	backpack_contents = list(
+		/obj/item/ammo_box/magazine/m556/rifle=1, \
+		/obj/item/restraints/legcuffs/bola=1, \
+		/obj/item/throwing_star/spear, \
+		/obj/item/claymore/machete/gladius, \
+		/obj/item/reagent_containers/pill/patch/healingpowder=2, \
+		/obj/item/storage/box/handcuffs=1, \
+		/obj/item/key/scollar=1, \
+		/obj/item/assembly/signaler/electropack/shockcollar=1, \
+		/obj/item/storage/bag/money/small/legofficers)
+
+
+//Recruit Decanus
 /datum/job/CaesarsLegion/Legionnaire/f13decanrec
 	title = "Legion Recruit Decanus"
 	flag = F13DECANREC
 	faction = "Legion"
-	total_positions = 3
-	spawn_positions = 3
+	total_positions = 1
+	spawn_positions = 1
 	description = "You answer directly to the Centurion, working with them to organize the Legionaries. You lead the Recruit Legionaries on patrols, raids and scouting missions on behalf of your Centurion."
 	supervisors = "the Prime Decanus and the Centurion"
 
-	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13decan
-
-	loadout_options = list(
-	/datum/outfit/loadout/decancharger, //greasegun and bumper sword
-	/datum/outfit/loadout/decanspec, //nerfed infiltrator and machete gladius
-	/datum/outfit/loadout/decanprotec //lever-action shotgun, roman shield and ballistic fist
-	)
+	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13decanrec
 
 /datum/job/CaesarsLegion/Legionnaire/f13decanrec/after_spawn(mob/living/carbon/human/H, mob/M)
 	H.add_quirk("Big Leagues")
@@ -337,6 +414,7 @@ Decanus
 	glasses = 		/obj/item/clothing/glasses/sunglasses/big
 	ears = 			/obj/item/radio/headset/headset_legion
 	suit_store = 	/obj/item/gun/ballistic/automatic/greasegun
+	r_pocket =		/obj/item/flashlight/lantern
 	backpack_contents = list(
 		/obj/item/twohanded/fireaxe/bmprsword=1, \
 		/obj/item/ammo_box/magazine/greasegun=1, \
@@ -344,11 +422,9 @@ Decanus
 		/obj/item/throwing_star/spear, \
 		/obj/item/reagent_containers/pill/patch/healingpowder=2, \
 		/obj/item/storage/box/handcuffs=1, \
-		/obj/item/flashlight/lantern=1, \
 		/obj/item/key/scollar=1, \
 		/obj/item/assembly/signaler/electropack/shockcollar=1, \
 		/obj/item/storage/bag/money/small/legofficers)
-
 
 
 /*
@@ -606,7 +682,7 @@ Explorer
 	total_positions = 2
 	spawn_positions = 2
 	description = "Acting as the eyes and ears of the Legion, you are in the region to scout it out for potential conquest. Make note of your surroundings and above all, survive to report back."
-	supervisors = "the Decani and Centurion"
+	supervisors = "the Venator and Centurion"
 
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13explorer
 
@@ -662,7 +738,7 @@ Venator
 	total_positions = 1
 	spawn_positions = 1
 	description = "You are the Venator -- the Hunter. With your powerful rifle and your many years of experience, you are a formidable killing machine, capable of taking down even the most formidable targets."
-	supervisors = "the Decani and Centurion"
+	supervisors = "the Centurion"
 	selection_color = "#ffdddd"
 
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13venator
