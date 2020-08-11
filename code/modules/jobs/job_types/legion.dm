@@ -724,7 +724,7 @@ Explorer
 
 /datum/outfit/loadout/explscout
 	name = "Scout Explorer"
-	suit_store = /obj/item/gun/ballistic/shotgun/automatic/hunting/trail
+	suit_store = /obj/item/gun/ballistic/shotgun/automatic/hunting/trail/scoped
 	backpack_contents = list(
 		/obj/item/ammo_box/tube/m44=2)
 
@@ -759,8 +759,8 @@ Venator
 	suit_store	=	/obj/item/gun/ballistic/automatic/marksman/sniper
 	backpack_contents = list(
 		/obj/item/restraints/legcuffs/bola=1, \
-		/obj/item/claymore/machete/reinforced=1, \
-		/obj/item/reagent_containers/pill/patch/healingpowder=2, \
+		/obj/item/claymore/machete/gladius=1, \
+		/obj/item/reagent_containers/pill/patch/healpoultice=2, \
 		/obj/item/ammo_box/magazine/w308=2,	\
 		/obj/item/flashlight/flare/torch=1, \
 		/obj/item/storage/bag/money/small/legenlisted,
