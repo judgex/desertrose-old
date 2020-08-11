@@ -1,7 +1,7 @@
 /proc/job_is_whitelist_locked(jobtitle)
-	if(!CONFIG_GET(flag/use_role_whitelist) && jobtitle in (GLOB.faction_whitelist_positions | GLOB.antagonist_whitelist_positions | GLOB.faction_player_positions | GLOB.command_positions | list("AI")))
+	if(!CONFIG_GET(flag/use_role_whitelist) && jobtitle in (GLOB.faction_whitelist_positions | GLOB.antagonist_whitelist_positions | GLOB.faction_player_positions | GLOB.command_positions | GLOB.ncr_ranger_positions | list("AI")))
 		return FALSE
-	if(!CONFIG_GET(flag/use_role_whitelist) && !(jobtitle in (GLOB.faction_whitelist_positions | GLOB.antagonist_whitelist_positions | GLOB.faction_player_positions | GLOB.command_positions | list("AI"))))
+	if(!CONFIG_GET(flag/use_role_whitelist) && !(jobtitle in (GLOB.faction_whitelist_positions | GLOB.antagonist_whitelist_positions | GLOB.faction_player_positions | GLOB.command_positions | GLOB.ncr_ranger_positions | list("AI"))))
 		return FALSE
 	return TRUE
 
@@ -113,5 +113,8 @@
 		for(var/rtypeWL in GLOB.faction_player_positions)
 			play_records[rtypeWL] = rtypeWL
 
+	if(!whitelists["ranger"])
+		for(var/rtypeWL in GLOB.ncr_ranger_positions)
+			play_records[rtypeWL] = rtypeWL
 
 	prefs.job_whitelists = play_records

@@ -328,10 +328,10 @@ Decanii
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13decanvet
 	name = "Legion Veteran Decanus"
 	jobtype = /datum/job/CaesarsLegion/Legionnaire/f13decanvet
-	id = 			/obj/item/clothing/suit/armor/f13/legion/heavy
+	id = 			/obj/item/card/id/dogtag/legveteran
 	suit = 			/obj/item/clothing/suit/armor/f13/legion/heavy
-	head = 			/obj/item/clothing/head/helmet/f13/legion/recruit/decan
-	mask =			/obj/item/clothing/head/helmet/f13/legion/heavy
+	head = 			/obj/item/clothing/head/helmet/f13/legion/heavy
+	mask =			/obj/item/clothing/mask/bandana/legdecan
 	glasses = 		/obj/item/clothing/glasses/sunglasses/big
 	ears = 			/obj/item/radio/headset/headset_legion
 	suit_store = 	/obj/item/gun/ballistic/revolver/ballisticfist
@@ -716,14 +716,15 @@ Venator
 	name = "Venator Assassin"
 	suit_store	=	/obj/item/gun/ballistic/automatic/marksman/sniper
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/w308=1,
+		/obj/item/ammo_box/magazine/w308=2,
 		/obj/item/claymore/machete/gladius=1)
 
 /datum/outfit/loadout/venassault
 	name = "Venator Assault"
 	suit_store	=	/obj/item/gun/ballistic/automatic/shotgun/bulldog
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m12g=1,
+		/obj/item/ammo_box/magazine/m12g=2,
+		/obj/item/claymore/machete/gladius=1,
 		/obj/item/grenade/plastic=1)
 
 /*
