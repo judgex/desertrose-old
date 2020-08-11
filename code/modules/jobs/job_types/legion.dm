@@ -551,6 +551,7 @@ Veteran Legionary
 	head = 			/obj/item/clothing/head/helmet/f13/legion/vet
 	suit = 			/obj/item/clothing/suit/armor/f13/legion/vet
 	glasses = 		/obj/item/clothing/glasses/sunglasses
+	ears	=		/obj/item/radio/headset/headset_legion
 	backpack_contents = list(
 		/obj/item/restraints/legcuffs/bola=1, \
 		/obj/item/throwing_star/spear, \
