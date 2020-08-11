@@ -476,6 +476,10 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 	name = "NCR Heavy Trooper"
 	icon_state = "NCR Trooper"
 
+/obj/effect/landmark/start/f13/ncrcorporal
+	name = "NCR Corporal"
+	icon_state = "NCR Trooper"
+
 /obj/effect/landmark/start/f13/ncrtrooper
 	name = "NCR Trooper"
 	icon_state = "NCR Trooper"
@@ -553,18 +557,22 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 
 /obj/effect/landmark/start/f13/explorer
 	name = "Legion Explorer"
+	icon_state = "Legionary"
 
 /obj/effect/landmark/start/f13/venator
 	name = "Legion Venator"
+	icon_state = "Legionary"
 
 /obj/effect/landmark/start/f13/auxilia
 	name = "Auxilia"
+	icon_state = "Wastelander"
 
 /obj/effect/landmark/start/f13/campfollower
 	name = "Camp Follower"
 
 /obj/effect/landmark/start/f13/slave
 	name = "Legion Slave"
+	icon_state = "Wastelander"
 
 // Brotherhood of Steel
 
