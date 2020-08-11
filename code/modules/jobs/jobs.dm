@@ -114,8 +114,6 @@ GLOBAL_LIST_INIT(faction_player_positions, list(
 "NCR Corporal",
 "NCR Military Police",
 "NCR Heavy Trooper",
-"NCR Patrol Ranger",
-"NCR Scout Ranger",
 "NCR Trooper",
 
 "Deputy",
@@ -145,6 +143,7 @@ GLOBAL_LIST_INIT(brotherhood_positions, list(
 	"Knight",
 	"Senior Scribe",
 	"Scribe",
+	"Initiate",
 	"Off-Duty",
 ))
 
@@ -158,6 +157,7 @@ GLOBAL_LIST_INIT(den_positions, list(
     "Citizen",
     "Deputy",
 	"Banker",
+	"Shopkeeper",
     "Farmer",
     "Prospector",
 	"Detective"
@@ -194,7 +194,7 @@ GLOBAL_LIST_INIT(ncr_command_positions, list(
 GLOBAL_LIST_INIT(ncr_ranger_positions, list(
 	"NCR Veteran Ranger",
 	"NCR Patrol Ranger",
-	"NCR Scout Ranger",
+	"NCR Scout Ranger"
 ))
 
 GLOBAL_LIST_INIT(ncr_positions, list(
@@ -204,6 +204,8 @@ GLOBAL_LIST_INIT(ncr_positions, list(
     "NCR Heavy Trooper",
     "NCR Corporal",
     "NCR Trooper",
+    "NCR Patrol Ranger",
+	"NCR Scout Ranger",
     "NCR Assistant",
     "NCR Citizen",
     "NCR Administrator"
