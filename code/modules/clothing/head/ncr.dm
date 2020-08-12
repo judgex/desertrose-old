@@ -97,6 +97,13 @@
 	item_state = "scoutberet"
 	armor = list("melee" = 40, "bullet" = 40, "laser" = 30, "energy" = 20, "bomb" = 25, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
 
+/obj/item/clothing/head/beret/ncr_recon_ranger
+	name = "NCR Ranger scout beret"
+	desc = "A brown beret, issued to members of the NCR Recon Rangers."
+	icon_state = "scoutberet"
+	item_state = "scoutberet"
+	armor = list("melee" = 35, "bullet" = 30, "laser" = 30, "energy" = 20, "bomb" = 25, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
+
 /obj/item/clothing/head/beret/ncr_scout_lt
 	name = "NCR Third Scout officer beret"
 	desc = "A brown beret, issued to officers of the NCR Third Scout Battallion."
@@ -116,3 +123,4 @@
 	desc = "A rustic, homely style cowboy hat worn by NCR trail rangers. Yeehaw!"
 	icon_state = "cowboyrang"
 	item_state = "cowboyrang"
+	armor = list("melee" = 40, "bullet" = 30, "laser" = 20, "energy" = 30, "bomb" = 25, "bio" = 40, "rad" = 40, "fire" = 80, "acid" = 0)
