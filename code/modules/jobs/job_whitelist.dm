@@ -1,7 +1,7 @@
 /proc/job_is_whitelist_locked(jobtitle)
-	if(!CONFIG_GET(flag/use_role_whitelist) && jobtitle in (GLOB.faction_whitelist_positions | GLOB.antagonist_whitelist_positions | GLOB.faction_player_positions | GLOB.command_positions | GLOB.ncr_ranger_positions | list("AI")))
+	if(!CONFIG_GET(flag/use_role_whitelist) && jobtitle in (GLOB.faction_whitelist_positions | GLOB.antagonist_whitelist_positions | GLOB.faction_player_positions | GLOB.command_positions | GLOB.ncr_ranger_positions | GLOB.ncr_rangervet_positions | list("AI")))
 		return FALSE
-	if(!CONFIG_GET(flag/use_role_whitelist) && !(jobtitle in (GLOB.faction_whitelist_positions | GLOB.antagonist_whitelist_positions | GLOB.faction_player_positions | GLOB.command_positions | GLOB.ncr_ranger_positions | list("AI"))))
+	if(!CONFIG_GET(flag/use_role_whitelist) && !(jobtitle in (GLOB.faction_whitelist_positions | GLOB.antagonist_whitelist_positions | GLOB.faction_player_positions | GLOB.command_positions | GLOB.ncr_ranger_positions | GLOB.ncr_rangervet_positions | list("AI"))))
 		return FALSE
 	return TRUE
 
@@ -47,7 +47,7 @@
 		for(var/rtypeWL in GLOB.ncr_ranger_positions)	// if they do not have ranger whitelist, remove ranger whitelist positions
 			play_records[rtypeWL] = 0
 
-	if(!whitelists["ranger"])
+	if(!whitelists["vetranger"])
 		for(var/rtypeWL in GLOB.ncr_rangervet_positions)	// if they do not have ranger whitelist, remove ranger whitelist positions
 			play_records[rtypeWL] = 0
 
