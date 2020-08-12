@@ -708,7 +708,6 @@ Venator
 	backpack_contents = list(
 		/obj/item/restraints/legcuffs/bola=1, \
 		/obj/item/reagent_containers/pill/patch/healpoultice=2, \
-		/obj/item/flashlight/flare/torch=1, \
 		/obj/item/storage/bag/money/small/legenlisted,
 		/obj/item/radio)
 
