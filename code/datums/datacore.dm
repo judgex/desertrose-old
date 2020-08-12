@@ -163,12 +163,12 @@
 			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[den[name]]</td></tr>"
 			even = !even
 	if(leg.len > 0)
-		dat += "<tr><th colspan=3>Legion</th></tr>"
+		dat += "<tr><th colspan=3>Caesar's Legion</th></tr>"
 		for(var/name in leg)
 			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[leg[name]]</td></tr>"
 			even = !even
 	if(ncr.len > 0)
-		dat += "<tr><th colspan=3>NCR</th></tr>"
+		dat += "<tr><th colspan=3>New California Republic</th></tr>"
 		for(var/name in ncr)
 			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[ncr[name]]</td></tr>"
 			even = !even
