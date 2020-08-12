@@ -696,7 +696,7 @@ Venator
 	H.add_quirk("Hard Yards")
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13venator
-	name = "Legion Explorer"
+	name = "Legion Venator"
 	jobtype 	= /datum/job/CaesarsLegion/Legionnaire/f13explorer
 	id 			= 	/obj/item/card/id/dogtag/legvenator
 	suit 		= 	/obj/item/clothing/suit/armor/f13/legion/venator
@@ -708,7 +708,6 @@ Venator
 	backpack_contents = list(
 		/obj/item/restraints/legcuffs/bola=1, \
 		/obj/item/reagent_containers/pill/patch/healpoultice=2, \
-		/obj/item/flashlight/flare/torch=1, \
 		/obj/item/storage/bag/money/small/legenlisted,
 		/obj/item/radio)
 
