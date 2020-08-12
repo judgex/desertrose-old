@@ -423,6 +423,21 @@
 	item_state = "vault_exile"
 	item_color = "vault_exile"
 
+//stuff ported from WW2
+/obj/item/clothing/under/f13/ncr_formal_uniform
+	name = "NCR pre-war uniform"
+	desc = "An old pre-war uniform repurposed for the NCR armed forces"
+	icon_state = "us_uniform"
+	item_state = "us_uniform"
+	item_color = "us_uniform"
+
+/obj/item/clothing/under/f13/ncr_camo
+	name = "NCR pre-war camo"
+	desc = "Old pre-war camo repurposed for the NCR armed forces"
+	icon_state = "nato_uniform"
+	item_state = "nato_uniform"
+	item_color = "nato_uniform"
+
 //Dust Devils
 
 //Boomers

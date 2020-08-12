@@ -319,6 +319,12 @@
 	fitted = FEMALE_UNIFORM_TOP
 	can_adjust = FALSE
 
+/obj/item/clothing/under/bride
+	name = "wedding gown"
+	desc = "An intricate white wedding gown"
+	icon_state = "bride_white"
+	item_state = "bride_white"
+	item_color = "bride_white"
 
 /obj/item/clothing/under/schoolgirl
 	name = "blue schoolgirl uniform"
