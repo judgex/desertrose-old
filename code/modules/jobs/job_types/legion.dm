@@ -696,7 +696,7 @@ Venator
 	H.add_quirk("Hard Yards")
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13venator
-	name = "Legion Explorer"
+	name = "Legion Venator"
 	jobtype 	= /datum/job/CaesarsLegion/Legionnaire/f13explorer
 	id 			= 	/obj/item/card/id/dogtag/legvenator
 	suit 		= 	/obj/item/clothing/suit/armor/f13/legion/venator
