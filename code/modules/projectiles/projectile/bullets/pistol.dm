@@ -29,7 +29,6 @@
 /obj/item/projectile/bullet/c10mm
 	damage = 36 //35
 	armour_penetration = -5 //0
-	penetrating = 29
 
 /obj/item/projectile/bullet/c10mm/ap
 	damage = 25 //30

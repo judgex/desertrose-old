@@ -7,7 +7,6 @@
 	knockdown = 100
 	dismemberment = 30
 	armour_penetration = 25
-	penetrating = 75
 	var/breakthings = TRUE
 
 /obj/item/projectile/bullet/p50/on_hit(atom/target, blocked = 0)
