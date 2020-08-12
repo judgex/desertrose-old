@@ -99,6 +99,8 @@
 	var/dismemberment = 0 //The higher the number, the greater the bonus to dismembering. 0 will not dismember at all.
 	var/impact_effect_type //what type of impact effect to show when hitting something
 	var/log_override = FALSE //is this type spammed enough to not log? (KAs)
+	var/penetrating = 0
+	var/bumped = 0
 
 /obj/item/projectile/Initialize()
 	. = ..()
@@ -208,6 +210,11 @@
 	beam_index = pcache
 	beam_segments[beam_index] = null
 
+/obj/item/projectile/proc/check_penetrate(var/atom/A)
+	return 1
+
+/var/passthrough = 0
+
 /obj/item/projectile/Bump(atom/A)
 	var/datum/point/pcache = trajectory.copy_to()
 	if(check_ricochet(A) && check_ricochet_flag(A) && ricochets < ricochets_max)
@@ -259,6 +266,18 @@
 					passthrough = 1
 					return
 			if (istype(A, /obj/structure/barricade/sandbags))
+				if (prob(penetrating-25))
+					passthrough = 1
+					return
+			if (istype(A, /turf/closed/wall/mineral/sandstone))
+				if (prob(penetrating-25))
+					passthrough = 1
+					return
+			if (istype(A, /turf/closed/wall))
+				if (prob(penetrating-25))
+					passthrough = 1
+					return
+			if (istype(A, /turf/closed/wall/rust))
 				if (prob(penetrating-25))
 					passthrough = 1
 					return
