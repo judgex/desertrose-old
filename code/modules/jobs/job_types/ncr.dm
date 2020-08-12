@@ -713,8 +713,7 @@ Veteran Ranger
 	name = "Classic Veteran Ranger"
 	suit_store = /obj/item/gun/ballistic/shotgun/antimateriel
 	backpack_contents = list(
-		/obj/item/ammo_box/a50MG=2,
-		/obj/item/ammo_box/magazine/sniper_rounds/soporific=1)
+		/obj/item/ammo_box/a50MG=3)
 
 /datum/outfit/loadout/vrlite
 	name = "Light Veteran Ranger"
