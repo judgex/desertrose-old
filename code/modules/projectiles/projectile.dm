@@ -244,6 +244,37 @@
 			trajectory_ignore_forcemove = FALSE
 		return FALSE
 
+	if(!passthrough && penetrating > 0)
+		if(check_penetrate(A))//TODO me wall types
+			if (istype(A, /turf/closed/wall/f13/tentwall))
+				if (prob(penetrating-0))
+					passthrough = 1
+					return
+			if (istype(A, /turf/closed/wall/f13/wood))
+				if (prob(penetrating-25))
+					passthrough = 1
+					return
+			if (istype(A, /turf/closed/wall/f13/wood/house))
+				if (prob(penetrating-25))
+					passthrough = 1
+					return
+			if (istype(A, /obj/structure/barricade/sandbags))
+				if (prob(penetrating-25))
+					passthrough = 1
+					return
+		penetrating = 0
+
+	//the bullet passes through a dense object!
+	if(passthrough)
+		//move ourselves onto A so we can continue on our way.
+		var/turf/T = get_turf(A)
+		if(T)
+			//visible_message("goes thru wall2")
+			forceMove(T)
+		permutated.Add(A)
+		bumped = 0 //reset bumped variable!
+		return 0
+
 	var/permutation = A.bullet_act(src, def_zone) // searches for return value, could be deleted after run so check A isn't null
 	if(permutation == -1 || forcedodge)// the bullet passes through a dense object!
 		trajectory_ignore_forcemove = TRUE
