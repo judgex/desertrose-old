@@ -818,7 +818,7 @@ Ranger -- Split into Patrol and Scout
 
 	outfit = /datum/outfit/job/ncr/f13rangerpatrol
 
-/datum/job/ncr/f13ranger/after_spawn(mob/living/carbon/human/H, mob/M)
+/datum/job/ncr/f13rangerpatrol/after_spawn(mob/living/carbon/human/H, mob/M)
 	H.add_quirk("Hard Yards")
 
 /datum/outfit/job/ncr/f13ranger/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -868,7 +868,7 @@ Ranger -- Split into Patrol and Scout
 	/datum/outfit/loadout/rangertrail //M1 Garand and .44,
 	)
 
-/datum/job/ncr/f13ranger/after_spawn(mob/living/carbon/human/H, mob/M)
+/datum/job/ncr/f13rangerscout/after_spawn(mob/living/carbon/human/H, mob/M)
 	H.add_quirk("Hard Yards")
 	H.add_quirk("Light Step")
 
