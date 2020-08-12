@@ -113,7 +113,7 @@
 		for(var/rtypeWL in GLOB.faction_player_positions)
 			play_records[rtypeWL] = rtypeWL
 
-	if(!whitelists["ranger"])
+	if(whitelists["ranger"])
 		for(var/rtypeWL in GLOB.ncr_ranger_positions)
 			play_records[rtypeWL] = rtypeWL
 

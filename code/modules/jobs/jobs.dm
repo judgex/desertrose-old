@@ -160,7 +160,9 @@ GLOBAL_LIST_INIT(den_positions, list(
 	"Shopkeeper",
     "Farmer",
     "Prospector",
-	"Detective"
+	"Detective",
+	"Preacher",
+	"Barkeep"
 ))
 
 GLOBAL_LIST_INIT(legion_command_positions, list(
@@ -228,7 +230,6 @@ GLOBAL_LIST_INIT(vault_positions, list(
 GLOBAL_LIST_INIT(wasteland_positions, list(
     "Outlaw",
     "Great Khan",
-    "Preacher",
 	"Faithful",
     "Wastelander",
 ))
