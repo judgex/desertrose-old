@@ -2,6 +2,7 @@
 /obj/item/projectile/bullet/a762
 	damage = 40
 	armour_penetration = 20
+	penetrating = 65
 
 /obj/item/projectile/bullet/a762/ap
 	damage = 35
@@ -19,6 +20,7 @@
 /obj/item/projectile/bullet/a556
 	damage = 37 //35
 	armour_penetration = 0 //5
+	penetrating = 42
 
 /obj/item/projectile/bullet/a556/ap
 	damage = 25
