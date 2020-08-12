@@ -10,7 +10,6 @@ GLOBAL_LIST_INIT(command_positions, list(
     "Priestess of Mars",
 
     "NCR Captain",
-    "NCR Veteran Ranger",
     "NCR Ambassador",
 	"NCR Administrator",
 
