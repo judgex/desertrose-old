@@ -876,6 +876,9 @@
 	icon_state = "raiderpa_helm"
 	item_state = "raiderpa_helm"
 	ispowerarmor = 0
+	armor = list("melee" = 50, "bullet" = 45, "laser" = 25, "energy" = 25, "bomb" = 39, "bio" = 0, "rad" = 50, "fire" = 0, "acid" = 0)
+	strip_delay = 200
+	equip_delay_self = 20
 
 
 /obj/item/clothing/head/helmet/f13/power_armor/t45b/hotrod
@@ -884,6 +887,9 @@
 	icon_state = "t45hotrod_helm"
 	item_state = "t45hotrod_helm"
 	ispowerarmor = 0
+	armor = list("melee" = 50, "bullet" = 45, "laser" = 25, "energy" = 25, "bomb" = 39, "bio" = 0, "rad" = 50, "fire" = 0, "acid" = 0)
+	strip_delay = 200
+	equip_delay_self = 20
 
 /obj/item/clothing/head/helmet/power_armor/advanced
 	name = "advanced power helmet"
