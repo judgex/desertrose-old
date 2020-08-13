@@ -769,44 +769,9 @@
 	if (prob(hit_reflect_chance))
 		return 1
 
-//Busted/salvaged power armor helmets, does not require PA training
-
-/obj/item/clothing/head/helmet/f13/brokenpa
-	cold_protection = HEAD
-	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT
-	heat_protection = HEAD
-	max_heat_protection_temperature = SPACE_HELM_MAX_TEMP_PROTECT
-	ispowerarmor = 1 //TRUE
-	strip_delay = 200
-	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR|HIDEMASK
-	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
-	clothing_flags = THICKMATERIAL
-	resistance_flags = LAVA_PROOF | FIRE_PROOF | ACID_PROOF
-	flash_protect = 2
-	dynamic_hair_suffix = ""
-	dynamic_fhair_suffix = ""
-	speechspan = SPAN_ROBOT //makes you sound like a robot
-
-/obj/item/clothing/head/helmet/f13/brokenpa/t45d
-	name = "broken T-45d power helmet"
-	desc = "This power armor helmet is so decrepit and battle-worn that it have lost most of its capability to protect the wearer from harm, no longer acting as a power helmet it is no more than a heavy metal helmet."
-	icon_state = "brokenhelmet"
-	item_state = "brokenhelmet"
-	armor = list("melee" = 50, "bullet" = 45, "laser" = 25, "energy" = 25, "bomb" = 39, "bio" = 0, "rad" = 50, "fire" = 0, "acid" = 0)
-	flash_protect = 0
-
-/obj/item/clothing/head/helmet/f13/brokenpa/t45b
-	name = "broken T-45b power helmet"
-	desc = "This power armor helmet is so decrepit and battle-worn that it have lost most of its capability to protect the wearer from harm, no longer acting as a power helmet it is no more than a heavy metal helmet."
-	icon_state = "t45bhelmet"
-	item_state = "t45bhelmet"
-	armor = list("melee" = 50, "bullet" = 45, "laser" = 25, "energy" = 25, "bomb" = 39, "bio" = 0, "rad" = 50, "fire" = 0, "acid" = 0)
-	flash_protect = 0
-
-
 //Power armor helmets
 
-/obj/item/clothing/head/helmet/power_armor
+/obj/item/clothing/head/helmet/f13/power_armor/
 	cold_protection = HEAD
 	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT
 	heat_protection = HEAD
@@ -827,19 +792,20 @@
 	lighting_alpha = LIGHTING_PLANE_ALPHA_LOWLIGHT_VISION
 	speechspan = SPAN_ROBOT //makes you sound like a robot
 	var/emped = 0
+	var/requires_training = TRUE
 
-/obj/item/clothing/head/helmet/power_armor/mob_can_equip(mob/user, mob/equipper, slot, disable_warning = 1)
+/obj/item/clothing/head/helmet/f13/power_armor/mob_can_equip(mob/user, mob/equipper, slot, disable_warning = 1)
 	var/mob/living/carbon/human/H = user
 	if(src == H.head) //Suit is already equipped
 		return ..()
-	if (!H.has_trait(TRAIT_PA_WEAR) && !istype(src, /obj/item/clothing/head/helmet/power_armor/t45b) && slot == SLOT_HEAD)
+	if (!H.has_trait(TRAIT_PA_WEAR) && !istype(src, /obj/item/clothing/head/helmet/f13/power_armor/t45b) && slot == SLOT_HEAD && requires_training)
 		to_chat(user, "<span class='warning'>You don't have the proper training to operate the power armor!</span>")
 		return 0
 	if(slot == SLOT_HEAD)
 		return ..()
 	return
 
-/obj/item/clothing/head/helmet/power_armor/emp_act(mob/living/carbon/human/owner, severity)
+/obj/item/clothing/head/helmet/f13/power_armor/emp_act(mob/living/carbon/human/owner, severity)
 	. = ..()
 	if(. & EMP_PROTECT_SELF)
 		return
@@ -861,101 +827,67 @@
 				armor = armor.modifyRating(melee = 20, bullet = 20, laser = 20)
 				emped = 0
 
-/obj/item/clothing/head/helmet/power_armor/t45b
+/obj/item/clothing/head/helmet/f13/power_armor/t45b
 	name = "salvaged T-45b helmet"
-	desc = "It's a salvaged power armor helmet."
+	desc = "It's a salvaged T-45b power armor helmet."
 	icon_state = "t45bhelmet"
 	item_state = "t45bhelmet"
 	armor = list("melee" = 75, "bullet" = 60, "laser" = 30, "energy" = 50, "bomb" = 48, "bio" = 60, "rad" = 50, "fire" = 80, "acid" = 0)
 	darkness_view = 0
 	lighting_alpha = null
+	requires_training = FALSE
 
-/obj/item/clothing/head/helmet/f13/power_armor/t45b/raiderpa_helm
+/obj/item/clothing/head/helmet/f13/power_armor/raiderpa_helm
 	name = "raider T-45b power helmet"
 	desc = "This power armor helmet is so decrepit and battle-worn that it have lost most of its capability to protect the wearer from harm. This helmet seems to be heavily modified, heavy metal banding fused to the helmet"
 	icon_state = "raiderpa_helm"
 	item_state = "raiderpa_helm"
-	ispowerarmor = 0
-	armor = list("melee" = 50, "bullet" = 45, "laser" = 25, "energy" = 25, "bomb" = 39, "bio" = 0, "rad" = 50, "fire" = 0, "acid" = 0)
-	cold_protection = HEAD
-	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT
-	heat_protection = HEAD
-	max_heat_protection_temperature = SPACE_HELM_MAX_TEMP_PROTECT
-	ispowerarmor = 1 //TRUE
-	strip_delay = 200
-	equip_delay_self = 20
-	slowdown = 0.1
-	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR|HIDEMASK|HIDEJUMPSUIT
-	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
-	clothing_flags = THICKMATERIAL
-	resistance_flags = LAVA_PROOF | FIRE_PROOF | ACID_PROOF
-	item_flags = SLOWS_WHILE_IN_HAND
-	flash_protect = 2
-	dynamic_hair_suffix = ""
-	dynamic_fhair_suffix = ""
-	darkness_view = 128
-	speechspan = SPAN_ROBOT //makes you sound like a robot
-	var/emped = 0
+	armor = list("melee" = 50, "bullet" = 45, "laser" = 30, "energy" = 25, "bomb" = 39, "bio" = 0, "rad" = 50, "fire" = 0, "acid" = 0)
+	lighting_alpha = null
+	requires_training = FALSE
 
-
-/obj/item/clothing/head/helmet/f13/power_armor/t45b/hotrod
+/obj/item/clothing/head/helmet/f13/power_armor/hotrod
 	name = "hotrod T-45b power helmet"
 	desc = "This power armor helmet is so decrepit and battle-worn that it have lost most of its capability to protect the wearer from harm."
 	icon_state = "t45hotrod_helm"
 	item_state = "t45hotrod_helm"
-	ispowerarmor = 1
-	armor = list("melee" = 50, "bullet" = 45, "laser" = 25, "energy" = 25, "bomb" = 39, "bio" = 0, "rad" = 50, "fire" = 0, "acid" = 0)
-	strip_delay = 200
-	equip_delay_self = 20
-	cold_protection = HEAD
-	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT
-	heat_protection = HEAD
-	max_heat_protection_temperature = SPACE_HELM_MAX_TEMP_PROTECT
-	ispowerarmor = 1 //TRUE
-	strip_delay = 200
-	equip_delay_self = 20
-	slowdown = 0.1
-	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR|HIDEMASK|HIDEJUMPSUIT
-	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
-	clothing_flags = THICKMATERIAL
-	resistance_flags = LAVA_PROOF | FIRE_PROOF | ACID_PROOF
-	item_flags = SLOWS_WHILE_IN_HAND
-	flash_protect = 2
-	dynamic_hair_suffix = ""
-	dynamic_fhair_suffix = ""
-	darkness_view = 128
-	speechspan = SPAN_ROBOT //makes you sound like a robot
-	var/emped = 0
+	armor = list("melee" = 50, "bullet" = 45, "laser" = 30, "energy" = 25, "bomb" = 39, "bio" = 0, "rad" = 50, "fire" = 0, "acid" = 0)
+	lighting_alpha = null
+	requires_training = FALSE
 
-/obj/item/clothing/head/helmet/power_armor/advanced
+/obj/item/clothing/head/helmet/f13/power_armor/advanced
 	name = "advanced power helmet"
 	desc = "It's an advanced power armor Mk I helmet, typically used by the Enclave. It looks somewhat threatening."
 	icon_state = "advhelmet1"
 	item_state = "advhelmet1"
 	armor = list("melee" = 80, "bullet" = 80, "laser" = 50, "energy" = 75, "bomb" = 72, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 0)
+	requires_training = TRUE
 
-/obj/item/clothing/head/helmet/power_armor/advanced/mk2
+/obj/item/clothing/head/helmet/f13/power_armor/advanced/mk2
 	name = "advanced power helmet MK2"
 	desc = "It's an improved model of advanced power armor used exclusively by the Enclave military forces, developed after the Great War.<br>Like its older brother, the standard advanced power armor, it's matte black with a menacing appearance, but with a few significant differences - it appears to be composed entirely of lightweight ceramic composites rather than the usual combination of metal and ceramic plates.<br>Additionally, like the T-51b power armor, it includes a recycling system that can convert human waste into drinkable water, and an air conditioning system for it's user's comfort."
 	icon_state = "advhelmet2"
 	item_state = "advhelmet2"
 	armor = list("melee" = 90, "bullet" = 90, "laser" = 60, "energy" = 90, "bomb" = 72, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 0)
+	requires_training = TRUE
 
-/obj/item/clothing/head/helmet/power_armor/tesla
+/obj/item/clothing/head/helmet/f13/power_armor/tesla
 	name = "tesla power helmet"
 	desc = "A helmet typically used by Enclave special forces.<br>There are three orange energy capacitors on the side."
 	icon_state = "tesla"
 	item_state = "tesla"
 	armor = list("melee" = 90, "bullet" = 50, "laser" = 95, "energy" = 95, "bomb" = 62, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 0)
+	requires_training = TRUE
 
-/obj/item/clothing/head/helmet/power_armor/t51b
+/obj/item/clothing/head/helmet/f13/power_armor/t51b
 	name = "T-51b power helmet"
 	desc = "It's a T-51b power helmet, typically used by the Brotherhood. It looks somewhat charming."
 	icon_state = "t51bhelmet"
 	item_state = "t51bhelmet"
 	armor = list("melee" = 70, "bullet" = 65, "laser" = 55, "energy" = 65, "bomb" = 62, "bio" = 100, "rad" = 99, "fire" = 90, "acid" = 0)
+	requires_training = TRUE
 
-/obj/item/clothing/head/helmet/power_armor/t60
+/obj/item/clothing/head/helmet/f13/power_armor/t60
 	name = "T-60a power helmet"
 	desc = "The T-60 powered helmet, equipped with targetting software suite, Friend-or-Foe identifiers, dynamic HuD, and an internal music player."
 	icon_state = "t60helmet"
@@ -963,11 +895,9 @@
 	armor = list("melee" = 75, "bullet" = 70, "laser" = 60, "energy" = 70, "bomb" = 82, "bio" = 100, "rad" = 100, "fire" = 95, "acid" = 0)
 	var/brightness_on = 4 //luminosity when the light is on
 	var/on = 0
-	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
-	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
-	dynamic_hair_suffix = ""
+	requires_training = TRUE
 
-/obj/item/clothing/head/helmet/power_armor/t45d
+/obj/item/clothing/head/helmet/f13/power_armor/t45d
 	name = "T-45d power helmet"
 	desc = "It's an old pre-War power armor helmet. It's pretty hot inside of it."
 	icon_state = "t45dhelmet"
@@ -975,11 +905,9 @@
 	armor = list("melee" = 65, "bullet" = 60, "laser" = 50, "energy" = 60, "bomb" = 62, "bio" = 100, "rad" = 90, "fire" = 90, "acid" = 0)
 	var/brightness_on = 4 //luminosity when the light is on
 	var/on = 0
-	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
-	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
-	dynamic_hair_suffix = ""
+	requires_training = TRUE
 
-/obj/item/clothing/head/helmet/power_armor/excavator
+/obj/item/clothing/head/helmet/f13/power_armor/excavator
 	name = "excavator power helmet"
 	desc = "The helmet of the excavator power armor suit."
 	icon_state = "excavator"
@@ -987,9 +915,7 @@
 	armor = list("melee" = 60, "bullet" = 55, "laser" = 45, "energy" = 60, "bomb" = 62, "bio" = 100, "rad" = 90, "fire" = 90, "acid" = 0)
 	var/brightness_on = 4 //luminosity when the light is on
 	var/on = 0
-	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
-	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
-	dynamic_hair_suffix = ""
+	requires_training = TRUE
 
 //LightToggle
 

@@ -58,6 +58,9 @@
 /obj/item/blueprint/weapon/plasmapistol
     name = "Plasma pistol blueprint"
 
+/obj/item/blueprint/weapon/plasmarifle
+    name = "Plasma Rifle blueprint"
+
 /obj/item/blueprint/weapon/RCW
     name = "Laser RCW blueprint"
 
