@@ -10,7 +10,6 @@ GLOBAL_LIST_INIT(command_positions, list(
     "Priestess of Mars",
 
     "NCR Captain",
-    "NCR Veteran Ranger",
     "NCR Ambassador",
 	"NCR Administrator",
 
@@ -189,12 +188,15 @@ GLOBAL_LIST_INIT(legion_positions, list(
 
 GLOBAL_LIST_INIT(ncr_command_positions, list(
     "NCR Captain",
-    "NCR Veteran Ranger",
-    "NCR Ambassador"
+    "NCR Ambassador",
+    "NCR Veteran Ranger"
+))
+
+GLOBAL_LIST_INIT(ncr_rangervet_positions, list(
+	"NCR Veteran Ranger"
 ))
 
 GLOBAL_LIST_INIT(ncr_ranger_positions, list(
-	"NCR Veteran Ranger",
 	"NCR Patrol Ranger",
 	"NCR Scout Ranger"
 ))
