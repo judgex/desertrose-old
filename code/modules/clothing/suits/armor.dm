@@ -810,20 +810,6 @@
 	item_state = "t45bpowerarmor"
 	armor = list("melee" = 75, "bullet" = 60, "laser" = 35, "energy" = 50, "bomb" = 48, "bio" = 60, "rad" = 50, "fire" = 80, "acid" = 0)
 
-/obj/item/clothing/suit/armor/f13/brokenpa/raiderpa
-	name = "raider T-45b power armor"
-	desc = "It's a set of T-45b power armor with a custom air conditioning module and stripped out servomotors.This set has seen better days, metal scrap has been spot welded to the chassis "
-	icon_state = "raiderpa"
-	item_state = "raiderpa"
-	armor = list("melee" = 75, "bullet" = 60, "laser" = 35, "energy" = 50, "bomb" = 48, "bio" = 60, "rad" = 50, "fire" = 80, "acid" = 0)
-
-/obj/item/clothing/suit/armor/f13/brokenpa/t45bhotrod
-	name = "salvaged hotrod T-45b power armor"
-	desc = "It's a set of T-45b power armor with a custom air conditioning module and stripped out servomotors. This set has exhaust pipes piped to the pauldrons, flames erupting from them."
-	icon_state = "t45hotrod"
-	item_state = "t45hotrod"
-	armor = list("melee" = 75, "bullet" = 60, "laser" = 35, "energy" = 50, "bomb" = 48, "bio" = 60, "rad" = 50, "fire" = 80, "acid" = 0)
-
 /obj/item/clothing/suit/armor/f13/brokenpa/ncr
 	name = "salvaged NCR power armor"
 	desc = "It's a set of T-45b power armor with a air conditioning module installed, it however lacks servomotors to enhance the users strength. This one has brown paint trimmed along the edge and a two headed bear painted onto the chestplate."
@@ -879,6 +865,48 @@
 				slowdown -= 15
 				armor = armor.modifyRating(melee = 20, bullet = 20, laser = 20)
 				emped = 0
+
+/obj/item/clothing/suit/armor/f13/t45b/raiderpa
+	name = "raider T-45b power armor"
+	desc = "It's a set of T-45b power armor with some of its plating heavily reconditioned. This set has seen better days, metal scrap has been spot welded to the chassis "
+	icon_state = "raiderpa"
+	item_state = "raiderpa"
+	armor = list("melee" = 60, "bullet" = 60, "laser" = 35, "energy" = 50, "bomb" = 48, "bio" = 60, "rad" = 50, "fire" = 80, "acid" = 0)
+	w_class = WEIGHT_CLASS_HUGE
+	slowdown = 0.4
+	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
+	cold_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
+	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
+	flags_inv = HIDEJUMPSUIT
+	item_flags = SLOWS_WHILE_IN_HAND
+	clothing_flags = THICKMATERIAL
+	equip_delay_self = 50
+	equip_delay_other = 60
+	strip_delay = 200
+	resistance_flags = LAVA_PROOF | FIRE_PROOF | ACID_PROOF
+	var/emped = 0
+
+
+/obj/item/clothing/suit/armor/f13/t45b/hotrod
+	name = "hotrod T-45b power armor"
+	desc = "It's a set of T-45b power armor with a with some of its plating removed. This set has exhaust pipes piped to the pauldrons, flames erupting from them."
+	icon_state = "t45hotrod"
+	item_state = "t45hotrod"
+	armor = list("melee" = 60, "bullet" = 60, "laser" = 35, "energy" = 50, "bomb" = 48, "bio" = 60, "rad" = 50, "fire" = 80, "acid" = 0)
+	ispowerarmor = 0
+	w_class = WEIGHT_CLASS_HUGE
+	slowdown = 0.4
+	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
+	cold_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
+	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
+	flags_inv = HIDEJUMPSUIT
+	item_flags = SLOWS_WHILE_IN_HAND
+	clothing_flags = THICKMATERIAL
+	equip_delay_self = 50
+	equip_delay_other = 60
+	strip_delay = 200
+	resistance_flags = LAVA_PROOF | FIRE_PROOF | ACID_PROOF
+	var/emped = 0
 
 /obj/item/clothing/suit/armor/f13/power_armor/excavator
 	name = "excavator power armor"
