@@ -340,12 +340,12 @@
 				/obj/item/clothing/head/helmet/f13/combat/mk2
 				)
 	var/loot4 = list(
-				/obj/item/clothing/suit/armor/f13/brokenpa/raiderpa,
-				/obj/item/clothing/head/helmet/f13/brokenpa/raiderpa_helm
+				/obj/item/clothing/suit/armor/f13/t45b/raiderpa,
+				/obj/item/clothing/head/helmet/f13/power_armor/t45b/raiderpa_helm
 				)
 	var/loot5 = list(
-				/obj/item/clothing/suit/armor/f13/brokenpa/t45bhotrod,
-				/obj/item/clothing/head/helmet/f13/brokenpa/hotrod
+				/obj/item/clothing/suit/armor/f13/t45b/hotrod,
+				/obj/item/clothing/head/helmet/f13/power_armor/t45b/hotrod
 				)
 
 /obj/effect/spawner/lootdrop/f13/armor/tier4/Initialize(mapload) //on mapload, pick what shit to spawn

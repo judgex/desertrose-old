@@ -803,21 +803,7 @@
 	armor = list("melee" = 50, "bullet" = 45, "laser" = 25, "energy" = 25, "bomb" = 39, "bio" = 0, "rad" = 50, "fire" = 0, "acid" = 0)
 	flash_protect = 0
 
-/obj/item/clothing/head/helmet/f13/brokenpa/raiderpa_helm
-	name = "raider T-45b power helmet"
-	desc = "This power armor helmet is so decrepit and battle-worn that it have lost most of its capability to protect the wearer from harm. This helmet seems to be heavily modified, heavy metal banding fused to the helmet"
-	icon_state = "raiderpa_helm"
-	item_state = "raiderpa_helm"
-	armor = list("melee" = 50, "bullet" = 45, "laser" = 25, "energy" = 25, "bomb" = 39, "bio" = 0, "rad" = 50, "fire" = 0, "acid" = 0)
-	flash_protect = 0
 
-/obj/item/clothing/head/helmet/f13/brokenpa/hotrod
-	name = "hotrod T-45b power helmet"
-	desc = "This power armor helmet is so decrepit and battle-worn that it have lost most of its capability to protect the wearer from harm."
-	icon_state = "t45hotrod_helm"
-	item_state = "t45hotrod_helm"
-	armor = list("melee" = 50, "bullet" = 45, "laser" = 25, "energy" = 25, "bomb" = 39, "bio" = 0, "rad" = 50, "fire" = 0, "acid" = 0)
-	flash_protect = 0
 //Power armor helmets
 
 /obj/item/clothing/head/helmet/power_armor
@@ -883,6 +869,21 @@
 	armor = list("melee" = 75, "bullet" = 60, "laser" = 30, "energy" = 50, "bomb" = 48, "bio" = 60, "rad" = 50, "fire" = 80, "acid" = 0)
 	darkness_view = 0
 	lighting_alpha = null
+
+/obj/item/clothing/head/helmet/f13/power_armor/t45b/raiderpa_helm
+	name = "raider T-45b power helmet"
+	desc = "This power armor helmet is so decrepit and battle-worn that it have lost most of its capability to protect the wearer from harm. This helmet seems to be heavily modified, heavy metal banding fused to the helmet"
+	icon_state = "raiderpa_helm"
+	item_state = "raiderpa_helm"
+	ispowerarmor = 0
+
+
+/obj/item/clothing/head/helmet/f13/power_armor/t45b/hotrod
+	name = "hotrod T-45b power helmet"
+	desc = "This power armor helmet is so decrepit and battle-worn that it have lost most of its capability to protect the wearer from harm."
+	icon_state = "t45hotrod_helm"
+	item_state = "t45hotrod_helm"
+	ispowerarmor = 0
 
 /obj/item/clothing/head/helmet/power_armor/advanced
 	name = "advanced power helmet"
