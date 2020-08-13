@@ -877,8 +877,25 @@
 	item_state = "raiderpa_helm"
 	ispowerarmor = 0
 	armor = list("melee" = 50, "bullet" = 45, "laser" = 25, "energy" = 25, "bomb" = 39, "bio" = 0, "rad" = 50, "fire" = 0, "acid" = 0)
+	cold_protection = HEAD
+	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT
+	heat_protection = HEAD
+	max_heat_protection_temperature = SPACE_HELM_MAX_TEMP_PROTECT
+	ispowerarmor = 1 //TRUE
 	strip_delay = 200
 	equip_delay_self = 20
+	slowdown = 0.1
+	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR|HIDEMASK|HIDEJUMPSUIT
+	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
+	clothing_flags = THICKMATERIAL
+	resistance_flags = LAVA_PROOF | FIRE_PROOF | ACID_PROOF
+	item_flags = SLOWS_WHILE_IN_HAND
+	flash_protect = 2
+	dynamic_hair_suffix = ""
+	dynamic_fhair_suffix = ""
+	darkness_view = 128
+	speechspan = SPAN_ROBOT //makes you sound like a robot
+	var/emped = 0
 
 
 /obj/item/clothing/head/helmet/f13/power_armor/t45b/hotrod
@@ -886,10 +903,29 @@
 	desc = "This power armor helmet is so decrepit and battle-worn that it have lost most of its capability to protect the wearer from harm."
 	icon_state = "t45hotrod_helm"
 	item_state = "t45hotrod_helm"
-	ispowerarmor = 0
+	ispowerarmor = 1
 	armor = list("melee" = 50, "bullet" = 45, "laser" = 25, "energy" = 25, "bomb" = 39, "bio" = 0, "rad" = 50, "fire" = 0, "acid" = 0)
 	strip_delay = 200
 	equip_delay_self = 20
+	cold_protection = HEAD
+	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT
+	heat_protection = HEAD
+	max_heat_protection_temperature = SPACE_HELM_MAX_TEMP_PROTECT
+	ispowerarmor = 1 //TRUE
+	strip_delay = 200
+	equip_delay_self = 20
+	slowdown = 0.1
+	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR|HIDEMASK|HIDEJUMPSUIT
+	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
+	clothing_flags = THICKMATERIAL
+	resistance_flags = LAVA_PROOF | FIRE_PROOF | ACID_PROOF
+	item_flags = SLOWS_WHILE_IN_HAND
+	flash_protect = 2
+	dynamic_hair_suffix = ""
+	dynamic_fhair_suffix = ""
+	darkness_view = 128
+	speechspan = SPAN_ROBOT //makes you sound like a robot
+	var/emped = 0
 
 /obj/item/clothing/head/helmet/power_armor/advanced
 	name = "advanced power helmet"
