@@ -67,9 +67,6 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 "NCR Military Police",
 "NCR Heavy Trooper",
 "NCR Corporal",
-"NCR Veteran Ranger",
-"NCR Patrol Ranger",
-"NCR Scout Ranger",
 "NCR Trooper",
 
 "Mayor",
