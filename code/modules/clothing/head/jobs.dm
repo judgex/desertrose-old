@@ -86,6 +86,13 @@
 	dog_fashion = /datum/dog_fashion/head/beret
 	dynamic_hair_suffix = ""
 
+/obj/item/clothing/head/beret/militia
+	name = "ODF beret"
+	desc = "A green beret issued to members of the Oasis Defense Force."
+	icon_state = "ncr_officer_beret"
+	item_state = "ncr_officer_beret"
+	dynamic_hair_suffix = ""
+
 /obj/item/clothing/head/beret/black
 	name = "black beret"
 	desc = "A black beret, perfect for war veterans and dark, brooding, anti-hero mimes."
