@@ -357,6 +357,13 @@
 	item_state = "orangeglasses"
 	glass_colour_type = /datum/client_colour/glass_colour/lightorange
 
+/obj/item/clothing/glasses/green
+	name = "green glasses"
+	desc = "A sweet pair of green shades."
+	icon_state = "greenglasses"
+	item_state = "greenglasses"
+	glass_colour_type = /datum/client_colour/glass_colour/lightgreen
+
 /obj/item/clothing/glasses/red
 	name = "red glasses"
 	desc = "Hey, you're looking good, senpai!"

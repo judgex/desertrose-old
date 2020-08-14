@@ -316,6 +316,12 @@
 	slowdown = 0.25
 	strip_delay = 10
 
+/obj/item/clothing/suit/armor/f13/metalarmor/militia
+	name = "ODF armor"
+	desc = "A suit of metal armor issued to members of the Oasis Defense Force."
+	item_color = "#5D4037"
+	color = "#5D4037"
+
 /obj/item/clothing/suit/armor/fluff/chestplate/Initialize()
 	. = ..()
 	AddComponent(/datum/component/spraycan_paintable)

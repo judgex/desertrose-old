@@ -121,6 +121,9 @@
 		if(rank in GLOB.command_positions)
 			command[name] = rank
 			department = 1
+		if(rank in GLOB.ncr_rangervet_positions)
+			command[name] = rank
+			department = 1
 		if(rank in GLOB.brotherhood_positions)
 			bos[name] = rank
 			department = 1
