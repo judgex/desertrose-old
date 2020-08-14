@@ -438,6 +438,15 @@
 	item_state = "nato_uniform"
 	item_color = "nato_uniform"
 
+//promp dress
+
+/obj/item/clothing/under/f13/prom_dress
+	name = "purple prom dress"
+	desc = "This purple dress has miraculously survived the war, and seems mostly undamaged, except for a few loose ends from wear and tear. The dress is made from a soft fabric, likely a marbled velvet."
+	icon_state = "promdress"
+	item_state = "promdress"
+	item_color = "promdress"
+
 //Dust Devils
 
 //Boomers
