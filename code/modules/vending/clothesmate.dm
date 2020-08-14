@@ -60,6 +60,7 @@
 		            /obj/item/clothing/under/sundress = 2,
 		            /obj/item/clothing/under/stripeddress = 1,
 		            /obj/item/clothing/under/sailordress = 1,
+					/obj/item/clothing/under/f13/prom_dress = 1,
 		            /obj/item/clothing/under/redeveninggown = 1,
 		            /obj/item/clothing/under/blacktango = 1,
 		            /obj/item/clothing/under/plaid_skirt = 1,
