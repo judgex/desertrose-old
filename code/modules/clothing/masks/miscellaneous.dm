@@ -279,6 +279,11 @@
 	desc = "A fine gold bandana with linen lining."
 	icon_state = "bandgold"
 
+/obj/item/clothing/mask/bandana/brown
+	name = "brown bandana"
+	desc = "A fine brown bandana with linen lining."
+	icon_state = "bandbrown"
+
 /obj/item/clothing/mask/bandana/black
 	name = "black bandana"
 	desc = "A fine black bandana with linen lining."
