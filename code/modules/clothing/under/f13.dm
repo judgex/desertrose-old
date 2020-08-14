@@ -438,7 +438,7 @@
 	item_state = "nato_uniform"
 	item_color = "nato_uniform"
 
-//promp dress
+//Prom Dress
 
 /obj/item/clothing/under/f13/prom_dress
 	name = "purple prom dress"
