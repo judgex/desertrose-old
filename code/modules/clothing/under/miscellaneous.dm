@@ -639,6 +639,121 @@
 	item_color = "sailor"
 	can_adjust = FALSE
 
+/obj/item/clothing/under/saloon_dress
+	name = "saloon dress"
+	desc = "A saloon girls outfit"
+	icon_state = "dress_saloon_s"
+	item_state = "dress_saloon_s"
+	item_color = "dress_saloon_s"
+	can_adjust = FALSE
+
+/obj/item/clothing/under/weddingdress_blue
+	name = "blue wedding dress"
+	desc = "An ornate pre-war wedding dress made out of precious materials.  This one is blue."
+	icon_state = "bride_blue_s"
+	item_state = "bride_blue_s"
+	item_color = "bride_blue_s"
+	can_adjust = FALSE
+
+/obj/item/clothing/under/weddingdress_orange
+	name = "orange wedding dress"
+	desc = "An ornate pre-war wedding dress made out of precious materials.  This one is orange."
+	icon_state = "bride_orange_s"
+	item_state = "bride_orange_s"
+	item_color = "bride_orange_s"
+	can_adjust = FALSE
+
+/obj/item/clothing/under/weddingdress_purple
+	name = "purple wedding dress"
+	desc = "An ornate pre-war wedding dress made out of precious materials.  This one is purple."
+	icon_state = "bride_purple_s"
+	item_state = "bride_purple_s"
+	item_color = "bride_purple_s"
+	can_adjust = FALSE
+
+/obj/item/clothing/under/weddingdress_red
+	name = "red wedding dress"
+	desc = "An ornate pre-war wedding dress made out of precious materials.  This one is red."
+	icon_state = "bride_red_s"
+	item_state = "bride_red_s"
+	item_color = "bride_red_s"
+	can_adjust = FALSE
+
+/obj/item/clothing/under/orange_dress
+	name = "orange dress"
+	desc = "An orange pre-war dress. This one has a short-cut."
+	icon_state = "dress_orange_s"
+	item_state = "dress_orange_s"
+	item_color = "dress_orange_s"
+	can_adjust = FALSE
+
+/obj/item/clothing/under/yellow_dress
+	name = "yellow dress"
+	desc = "A yellow pre-war dress. It appears to go below the knees"
+	icon_state = "dress_yellow_s"
+	item_state = "dress_yellow_s"
+	item_color = "dress_yellow_s"
+	can_adjust = FALSE
+
+/obj/item/clothing/under/formalblack_dress
+	name = "black dress"
+	desc = "A formal black dress."
+	icon_state = "dress_black"
+	item_state = "dress_black"
+	item_color = "dress_black"
+	fitted = FEMALE_UNIFORM_TOP
+	can_adjust = TRUE
+	alt_covers_chest = TRUE
+
+/obj/item/clothing/under/cheongsam_dress
+	name = "cheongsam"
+	desc = "A traditional, form fitting oriental dress."
+	icon_state = "cheongsam_s"
+	item_state = "cheongsam_s"
+	item_color = "cheongsam_s"
+	can_adjust = FALSE
+
+/obj/item/clothing/under/orange_skirt
+	name = "orange skirt"
+	desc = "A formal, orange skirt with blouse."
+	icon_state = "huresource_s"
+	item_state = "huresource_s"
+	item_color = "huresource_s"
+	can_adjust = FALSE
+
+/obj/item/clothing/under/brown_skirt
+	name = "brown skirt"
+	desc = "A formal, brown skirt with blouse."
+	icon_state = "dress_rd_s"
+	item_state = "dress_rd_s"
+	item_color = "dress_rd_s"
+	can_adjust = FALSE
+
+/obj/item/clothing/under/businessattire_tanned
+	name = "tanned business outfit"
+	desc = "A tanned looking outfit with a tie and slacks."
+	icon_state = "rdalt_s"
+	item_state = "rdalt_s"
+	item_color = "rdalt_s"
+	can_adjust = FALSE
+
+/obj/item/clothing/under/businessattire_manager
+	name = "managers business outfit"
+	desc = "A typical outfit worn by a manager pre-war.  This set comes with a long-sleeved shirt with no cuff buttons, slacks, belt, and a clip-on tie."
+	icon_state = "manager"
+	item_state = "manager"
+	item_color = "manager"
+	can_adjust = TRUE
+	alt_covers_chest = TRUE
+
+/obj/item/clothing/under/emr_dispatch
+	name = "emr dispatcher"
+	desc = "An emergency medical responder dispatchers outfit. With kahkis and a blue collared shirt."
+	icon_state = "dispatch_s"
+	item_state = "dispatch_s"
+	item_color = "dispatch_s"
+	can_adjust = FALSE
+
 /obj/item/clothing/under/plasmaman
 	name = "plasma envirosuit"
 	desc = "A special containment suit that allows plasma-based lifeforms to exist safely in an oxygenated environment, and automatically extinguishes them in a crisis. Despite being airtight, it's not spaceworthy."

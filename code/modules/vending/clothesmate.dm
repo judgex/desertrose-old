@@ -7,6 +7,10 @@
 	product_slogans = "Dress for success!;Prepare to look swagalicious!;Look at all this free swag!;Why leave style up to fate? Use the ClothesMate!"
 	vend_reply = "Thank you for using the ClothesMate!"
 	products = list(/obj/item/clothing/under/bride = 2,
+					/obj/item/clothing/under/weddingdress_blue = 2,
+					/obj/item/clothing/under/weddingdress_orange = 2,
+					/obj/item/clothing/under/weddingdress_purple = 2,
+					/obj/item/clothing/under/weddingdress_red = 2,
 					/obj/item/clothing/head/that = 2,
 		            /obj/item/clothing/head/fedora = 1,
 		            /obj/item/clothing/glasses/monocle = 1,
@@ -60,8 +64,16 @@
 		            /obj/item/clothing/under/sundress = 2,
 		            /obj/item/clothing/under/stripeddress = 1,
 		            /obj/item/clothing/under/sailordress = 1,
+					/obj/item/clothing/under/f13/prom_dress = 1,
+					/obj/item/clothing/under/saloon_dress = 1,
 		            /obj/item/clothing/under/redeveninggown = 1,
 		            /obj/item/clothing/under/blacktango = 1,
+					/obj/item/clothing/under/orange_dress = 1,
+					/obj/item/clothing/under/yellow_dress = 1,
+					/obj/item/clothing/under/cheongsam_dress = 1,
+					/obj/item/clothing/under/orange_skirt = 1,
+					/obj/item/clothing/under/brown_skirt = 1,
+					/obj/item/clothing/under/formalblack_dress = 1,
 		            /obj/item/clothing/under/plaid_skirt = 1,
 		            /obj/item/clothing/under/plaid_skirt/blue = 1,
 		            /obj/item/clothing/under/plaid_skirt/purple = 1,
@@ -98,7 +110,13 @@
 		            /obj/item/clothing/suit/jacket/letterman_red = 1,
 		            /obj/item/clothing/ears/headphones = 10,
 		            /obj/item/clothing/suit/apron/purple_bartender = 2,
-		            /obj/item/clothing/under/rank/bartender/purple = 2)
+		            /obj/item/clothing/under/rank/bartender/purple = 2,
+					/obj/item/clothing/under/f13/psychologist = 1,
+					/obj/item/clothing/under/businessattire_tanned = 1,
+					/obj/item/clothing/under/f13/detectivealt = 1,
+					/obj/item/clothing/under/businessattire_manager = 1,
+					/obj/item/clothing/under/emr_dispatch = 1)
+
 	contraband = list(/obj/item/clothing/under/syndicate/tacticool = 1,
 		              /obj/item/clothing/mask/balaclava = 1,
 		              /obj/item/clothing/head/ushanka = 1,
