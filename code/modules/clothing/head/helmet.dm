@@ -861,7 +861,6 @@
 	icon_state = "advhelmet1"
 	item_state = "advhelmet1"
 	armor = list("melee" = 80, "bullet" = 80, "laser" = 50, "energy" = 75, "bomb" = 72, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 0)
-	requires_training = TRUE
 
 /obj/item/clothing/head/helmet/f13/power_armor/advanced/mk2
 	name = "advanced power helmet MK2"
@@ -869,7 +868,6 @@
 	icon_state = "advhelmet2"
 	item_state = "advhelmet2"
 	armor = list("melee" = 90, "bullet" = 90, "laser" = 60, "energy" = 90, "bomb" = 72, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 0)
-	requires_training = TRUE
 
 /obj/item/clothing/head/helmet/f13/power_armor/tesla
 	name = "tesla power helmet"
@@ -877,7 +875,6 @@
 	icon_state = "tesla"
 	item_state = "tesla"
 	armor = list("melee" = 90, "bullet" = 50, "laser" = 95, "energy" = 95, "bomb" = 62, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 0)
-	requires_training = TRUE
 
 /obj/item/clothing/head/helmet/f13/power_armor/t51b
 	name = "T-51b power helmet"
@@ -885,7 +882,6 @@
 	icon_state = "t51bhelmet"
 	item_state = "t51bhelmet"
 	armor = list("melee" = 70, "bullet" = 65, "laser" = 55, "energy" = 65, "bomb" = 62, "bio" = 100, "rad" = 99, "fire" = 90, "acid" = 0)
-	requires_training = TRUE
 
 /obj/item/clothing/head/helmet/f13/power_armor/t60
 	name = "T-60a power helmet"
@@ -895,7 +891,6 @@
 	armor = list("melee" = 75, "bullet" = 70, "laser" = 60, "energy" = 70, "bomb" = 82, "bio" = 100, "rad" = 100, "fire" = 95, "acid" = 0)
 	var/brightness_on = 4 //luminosity when the light is on
 	var/on = 0
-	requires_training = TRUE
 
 /obj/item/clothing/head/helmet/f13/power_armor/t45d
 	name = "T-45d power helmet"
@@ -905,7 +900,6 @@
 	armor = list("melee" = 65, "bullet" = 60, "laser" = 50, "energy" = 60, "bomb" = 62, "bio" = 100, "rad" = 90, "fire" = 90, "acid" = 0)
 	var/brightness_on = 4 //luminosity when the light is on
 	var/on = 0
-	requires_training = TRUE
 
 /obj/item/clothing/head/helmet/f13/power_armor/excavator
 	name = "excavator power helmet"
@@ -915,7 +909,6 @@
 	armor = list("melee" = 60, "bullet" = 55, "laser" = 45, "energy" = 60, "bomb" = 62, "bio" = 100, "rad" = 90, "fire" = 90, "acid" = 0)
 	var/brightness_on = 4 //luminosity when the light is on
 	var/on = 0
-	requires_training = TRUE
 
 //LightToggle
 
