@@ -328,8 +328,8 @@
 	name = "tier 4 armor"
 	lootcount = 2
 	var/loot1 = list(
-				/obj/item/clothing/suit/armor/f13/brokenpa/t45b,
-				/obj/item/clothing/head/helmet/power_armor/t45b
+				/obj/item/clothing/head/helmet/f13/power_armor/t45b,
+				/obj/item/clothing/suit/armor/f13/power_armor/t45b
 				)
 	var/loot2 = list(
 				/obj/item/clothing/suit/armor/f13/leather_jacket/combat/riotpolice,
@@ -340,12 +340,12 @@
 				/obj/item/clothing/head/helmet/f13/combat/mk2
 				)
 	var/loot4 = list(
-				/obj/item/clothing/suit/armor/f13/t45b/raiderpa,
-				/obj/item/clothing/head/helmet/f13/power_armor/t45b/raiderpa_helm
+				/obj/item/clothing/suit/armor/f13/power_armor/raiderpa,
+				/obj/item/clothing/head/helmet/f13/power_armor/raiderpa_helm
 				)
 	var/loot5 = list(
-				/obj/item/clothing/suit/armor/f13/t45b/hotrod,
-				/obj/item/clothing/head/helmet/f13/power_armor/t45b/hotrod
+				/obj/item/clothing/suit/armor/f13/power_armor/hotrod,
+				/obj/item/clothing/head/helmet/f13/power_armor/hotrod
 				)
 
 /obj/effect/spawner/lootdrop/f13/armor/tier4/Initialize(mapload) //on mapload, pick what shit to spawn
@@ -358,11 +358,11 @@
 	lootcount = 2
 	var/loot1 = list(
 				/obj/item/clothing/suit/armor/f13/power_armor/t45d,
-				/obj/item/clothing/head/helmet/power_armor/t45d
+				/obj/item/clothing/head/helmet/f13/power_armor/t45d
 				)
 	var/loot2 = list(
 				/obj/item/clothing/suit/armor/f13/power_armor/t51b,
-				/obj/item/clothing/head/helmet/power_armor/t51b
+				/obj/item/clothing/head/helmet/f13/power_armor/t51b
 				)
 
 /obj/effect/spawner/lootdrop/f13/armor/tier5/Initialize(mapload) //on mapload, pick what shit to spawn
@@ -1396,7 +1396,9 @@
 		/obj/item/blueprint/weapon/smg10mm,
 		/obj/item/blueprint/weapon/AER9,
 		/obj/item/blueprint/weapon/AEP7,
-		/obj/item/blueprint/weapon/plasmapistol
+		/obj/item/blueprint/weapon/plasmapistol,
+		/obj/item/blueprint/weapon/plasmarifle,
+		/obj/item/gun/energy/laser/rcw
 	//	/obj/item/blueprint/armor/combat
 	)
 

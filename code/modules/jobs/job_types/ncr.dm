@@ -398,8 +398,8 @@ NCR Heavy Trooper
 	id = 			/obj/item/card/id/dogtag/ncrht
 	uniform =  		/obj/item/clothing/under/f13/ncr
 	suit_store = 	/obj/item/gun/ballistic/automatic/lmg
-	suit = 			/obj/item/clothing/suit/armor/f13/brokenpa/ncr
-	head = 			/obj/item/clothing/head/helmet/power_armor/t45b
+	suit = 			/obj/item/clothing/suit/armor/f13/power_armor/ncr
+	head = 			/obj/item/clothing/head/helmet/f13/power_armor/t45b
 	belt =          /obj/item/storage/belt/military/NCR_Bandolier
 	glasses = 		null
 	backpack_contents = list(
