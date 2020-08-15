@@ -532,7 +532,7 @@
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 
-	
+
 //Legion
 /obj/item/clothing/head/helmet/f13/legion
 	name = "legion helmet"
@@ -663,6 +663,13 @@
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 	flags_inv = HIDEEARS|HIDEEYES|HIDEHAIR
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
+
+/obj/item/clothing/head/helmet/f13/legion/marsheaddress
+	name = "priestess' headdress"
+	desc = "A headdress made of feathers and decorated with two golden tassles."
+	icon_state = "mars_headdress"
+	item_state = "mars_headdress"
+	dynamic_hair_suffix = "+generic"
 
 //Ranger Armors
 /obj/item/clothing/head/helmet/f13/ncr/rangercombat
