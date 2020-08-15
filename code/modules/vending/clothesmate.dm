@@ -61,7 +61,12 @@
 		            /obj/item/clothing/under/skirt/blue = 1,
 		            /obj/item/clothing/under/skirt/red = 1,
 		            /obj/item/clothing/under/skirt/purple = 1,
+					/obj/item/clothing/under/skirt/black/swept = 1,
 		            /obj/item/clothing/under/sundress = 2,
+					/obj/item/clothing/under/sundress/white = 1,
+					/obj/item/clothing/under/flower_dress = 1,
+					/obj/item/clothing/under/flamenco = 1, 
+					/obj/item/clothing/under/western_bustle = 1,
 		            /obj/item/clothing/under/stripeddress = 1,
 		            /obj/item/clothing/under/sailordress = 1,
 					/obj/item/clothing/under/f13/prom_dress = 1,
@@ -71,9 +76,17 @@
 					/obj/item/clothing/under/orange_dress = 1,
 					/obj/item/clothing/under/yellow_dress = 1,
 					/obj/item/clothing/under/cheongsam_dress = 1,
+					/obj/item/clothing/under/qipao/black = 1,
+					/obj/item/clothing/under/qipao/red = 1,
+					/obj/item/clothing/under/qipao/white = 1,
+					/obj/item/clothing/under/cheon/red = 1,
+					/obj/item/clothing/under/cheon/white = 1,
+					/obj/item/clothing/under/cheon/black = 1,
 					/obj/item/clothing/under/orange_skirt = 1,
 					/obj/item/clothing/under/brown_skirt = 1,
 					/obj/item/clothing/under/formalblack_dress = 1,
+					/obj/item/clothing/under/dress/green = 1,
+					/obj/item/clothing/under/dress/pink = 1,
 		            /obj/item/clothing/under/plaid_skirt = 1,
 		            /obj/item/clothing/under/plaid_skirt/blue = 1,
 		            /obj/item/clothing/under/plaid_skirt/purple = 1,
@@ -108,6 +121,7 @@
 		            /obj/item/clothing/head/beanie/stripedblue = 1,
 		            /obj/item/clothing/head/beanie/stripedgreen = 1,
 		            /obj/item/clothing/suit/jacket/letterman_red = 1,
+					/obj/item/clothing/under/croptop = 1,
 		            /obj/item/clothing/ears/headphones = 10,
 		            /obj/item/clothing/suit/apron/purple_bartender = 2,
 		            /obj/item/clothing/under/rank/bartender/purple = 2,
@@ -115,7 +129,12 @@
 					/obj/item/clothing/under/businessattire_tanned = 1,
 					/obj/item/clothing/under/f13/detectivealt = 1,
 					/obj/item/clothing/under/businessattire_manager = 1,
-					/obj/item/clothing/under/emr_dispatch = 1)
+					/obj/item/clothing/under/emr_dispatch = 1,
+					/obj/item/clothing/under/jeanshorts = 1,
+					/obj/item/clothing/under/jeans_ripped = 1,
+					/obj/item/clothing/under/denim_skirt = 1,
+					/obj/item/clothing/under/chaps = 1,
+					/obj/item/clothing/under/corset = 1)
 
 	contraband = list(/obj/item/clothing/under/syndicate/tacticool = 1,
 		              /obj/item/clothing/mask/balaclava = 1,
@@ -139,8 +158,8 @@
 /obj/item/vending_refill/clothing
 	machine_name = "ClothesMate"
 	icon_state = "refill_clothes"
-	charges = list(38, 4, 4)// of 112 standard, 12 contraband, 10 premium(?)
-	init_charges = list(38, 4, 4)
+	charges = list(64, 4, 4)// of 112 standard, 12 contraband, 10 premium(?)
+	init_charges = list(64, 4, 4)
 
 /obj/item/vending_refill/clothing/bos
 	machine_name = "Civilian ClothesMate"
