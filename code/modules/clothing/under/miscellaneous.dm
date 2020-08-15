@@ -754,6 +754,158 @@
 	item_color = "dispatch_s"
 	can_adjust = FALSE
 
+/obj/item/clothing/under/flower_dress
+	name = "flower dress"
+	desc = "A dress made from synthethic flowers, fashioned in a way to make a dress."
+	icon_state = "flower_dress"
+	item_state = "flower_dress"
+	item_color = "flower_dress"
+	can_adjust = FALSE
+
+/obj/item/clothing/under/flamenco
+	name = "flamenco dress"
+	desc = "A traditional, body-hugging flamenco dress."
+	icon_state = "flamenco"
+	item_state = "flamenco"
+	item_color = "flamenco"
+	can_adjust = FALSE
+
+/obj/item/clothing/under/western_bustle
+	name = "barmaid outfit"
+	desc = "A red barmaids outfit, similar to what you'd see at a tavern."
+	icon_state = "western_bustle"
+	item_state = "western_bustle"
+	item_color = "western_bustle"
+	can_adjust = FALSE
+
+/obj/item/clothing/under/jeanshorts
+	name = "jean shorts"
+	desc = "A pair rugged denim shorts."
+	icon_state = "jean_shorts"
+	item_state = "jean_shorts"
+	item_color = "jean_shorts"
+	can_adjust = FALSE
+
+/obj/item/clothing/under/jeans_ripped
+	name = "ripped jeans"
+	desc = "A pair of denim jeans with some holes in them."
+	icon_state = "jean_ripped"
+	item_state = "jean_ripped"
+	item_color = "jean_ripped"
+	can_adjust = FALSE
+
+/obj/item/clothing/under/denim_skirt
+	name = "denim skirt"
+	desc = "A skirt made out of thick denim."
+	icon_state = "denim_skirt"
+	item_state = "denim_skirt"
+	item_color = "denim_skirt"
+	can_adjust = FALSE
+
+/obj/item/clothing/under/chaps
+	name = "chap"
+	desc = "Yeehaw, cowboy."
+	icon_state = "chaps"
+	item_state = "chaps"
+	item_color = "chaps"
+	can_adjust = FALSE
+
+/obj/item/clothing/under/sundress/white
+	name = "white sundress"
+	desc = "A white sundress with a pink decorative flower design"
+	icon_state = "sundress_white"
+	item_state = "sundress_white"
+	item_color = "sundress_white"
+	can_adjust = FALSE
+
+/obj/item/clothing/under/dress/green
+	name = "green one piece dress"
+	desc = "A tight-fitting, one piece dress.  This one is green."
+	icon_state = "dress_green"
+	item_state = "dress_green"
+	item_color = "dress_green"
+	can_adjust = FALSE
+
+/obj/item/clothing/under/dress/pink
+	name = "pink one piece dress"
+	desc = "A tight-fitting, one piece dress.  This one is green."
+	icon_state = "dress_pink"
+	item_state = "dress_pink"
+	item_color = "dress_pink"
+	can_adjust = FALSE
+
+/obj/item/clothing/under/skirt/black/swept
+	name = "black swept skirt"
+	desc = "An angle hemmed skirt. It's rather short."
+	icon_state = "skirt_swept"
+	item_state = "skirt_swept"
+	item_color = "skirt_swept"
+	can_adjust = FALSE
+
+/obj/item/clothing/under/croptop
+	name = "croptop"
+	desc = "A red croptop with denim jeans"
+	icon_state = "croptop"
+	item_state = "croptop"
+	item_color = "croptop"
+	can_adjust = FALSE
+
+/obj/item/clothing/under/corset
+	name = "corset"
+	desc = "A restrictive, tight, black corset"
+	icon_state = "corset"
+	item_state = "corset"
+	item_color = "corset"
+	can_adjust = FALSE
+
+/obj/item/clothing/under/qipao/black
+	name = "black qipao"
+	desc = "A traditional, form fitting oriental dress. This one is black."
+	icon_state = "qipao"
+	item_state = "qipao"
+	item_color = "qipao"
+	can_adjust = FALSE
+
+/obj/item/clothing/under/qipao/red
+	name = "red qipao"
+	desc = "A traditional, form fitting oriental dress. This one is red."
+	icon_state = "qipao_red"
+	item_state = "qipao_red"
+	item_color = "qipao_red"
+	can_adjust = FALSE
+
+/obj/item/clothing/under/qipao/white
+	name = "white qipao"
+	desc = "A traditional, form fitting oriental dress. This one is white."
+	icon_state = "qipao_white"
+	item_state = "qipao_white"
+	item_color = "qipao_white"
+	can_adjust = FALSE
+
+/obj/item/clothing/under/cheon/red
+	name = "red cheon"
+	desc = "A traditional cheon, worn my men.  This one is red."
+	icon_state = "cheongr"
+	item_state = "cheongr"
+	item_color = "cheongr"
+	can_adjust = FALSE
+
+/obj/item/clothing/under/cheon/white
+	name = "white cheon"
+	desc = "A traditional cheon, worn my men.  This one is white."
+	icon_state = "cheongw"
+	item_state = "cheongw"
+	item_color = "cheongw"
+	can_adjust = FALSE
+
+/obj/item/clothing/under/cheon/black
+	name = "black cheon"
+	desc = "A traditional cheon, worn my men.  This one is black."
+	icon_state = "cheong"
+	item_state = "cheong"
+	item_color = "cheong"
+	can_adjust = FALSE
+
 /obj/item/clothing/under/plasmaman
 	name = "plasma envirosuit"
 	desc = "A special containment suit that allows plasma-based lifeforms to exist safely in an oxygenated environment, and automatically extinguishes them in a crisis. Despite being airtight, it's not spaceworthy."
