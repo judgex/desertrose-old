@@ -9,8 +9,8 @@
 
 //Survival Capsule
 /obj/item/survivalcapsule
-	name = "bluespace shelter capsule"
-	desc = "An emergency shelter stored within a pocket of bluespace."
+	name = "Basic Vault-tec C.A.M.P."
+	desc = "A basic C.A.M.P. packed and designed by Vault-tec.  Shake it and throw it!"
 	icon_state = "capsule"
 	icon = 'icons/obj/mining.dmi'
 	w_class = WEIGHT_CLASS_TINY
@@ -68,8 +68,8 @@
 		qdel(src)
 
 /obj/item/survivalcapsule/luxury
-	name = "luxury bluespace shelter capsule"
-	desc = "An exorbitantly expensive luxury suite stored within a pocket of bluespace."
+	name = "Deluxe Vaul-Tec C.A.M.P."
+	desc = "An exorbitantly expensive luxury C.A.M.P. packed and designed by Vault-tec.  Shake it and throw it!"
 	template_id = "shelter_beta"
 
 //Pod objects
