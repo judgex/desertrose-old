@@ -68,7 +68,7 @@ GLOBAL_DATUM_INIT(greatkhans, /datum/gang/greatkhans, new)
 		/datum/gang_item/clothing/khan_boots,
 		/datum/gang_item/clothing/khan_helmet,
 		/datum/gang_item/clothing/khan_uniform,
-		/datum/gang_item/clothing/khan_vest
+		/datum/gang_item/clothing/khan_jacket_armored
 	)
 
 /datum/gang/New(starting_members, starting_leader)
@@ -110,7 +110,7 @@ GLOBAL_DATUM_INIT(greatkhans, /datum/gang/greatkhans, new)
 	var/where = new_leader.equip_in_one_of_slots(gangtool, slots, FALSE)
 	if(!where)
 		gangtool.forceMove(get_turf(new_leader))
-	
+
 	if(assigned_tool)
 		var/obj/item/device/gangtool/tool = assigned_tool
 		tool.name = "[initial(tool.name)] - [name]"

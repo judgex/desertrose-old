@@ -49,18 +49,21 @@ Great Khan
 	access = list()
 	minimal_access = list()
 
+	loadout_options = list(
+	/datum/outfit/loadout/pusher,
+	/datum/outfit/loadout/enforcer,
+	/datum/outfit/loadout/brawler)
+
 /datum/outfit/job/wasteland/f13pusher
 	name = "Great Khan"
 	jobtype = /datum/job/wasteland/f13pusher
-
 	id = null
-	ears = null
-	belt = /obj/item/claymore/machete/pipe
-	backpack = /obj/item/storage/backpack/satchel/explorer
-	satchel = /obj/item/storage/backpack/satchel/explorer
-
-	suit = /obj/item/clothing/suit/toggle/labcoat/f13/khan
+	ears = 		/obj/item/radio/headset
+	belt = 		/obj/item/claymore/machete/pipe
+	backpack =	/obj/item/storage/backpack/satchel/explorer
+	satchel = 	/obj/item/storage/backpack/satchel/explorer
 	uniform = /obj/item/clothing/under/f13/khan
+
 
 /datum/outfit/job/wasteland/f13pusher/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -72,14 +75,18 @@ Great Khan
 		/obj/item/restraints/handcuffs=1, \
 		/obj/item/reagent_containers/pill/patch/jet=2, \
 		/obj/item/reagent_containers/syringe/medx=1)
+	suit = pick(
+		/obj/item/clothing/suit/toggle/labcoat/f13/khan_jacket, \
+		/obj/item/clothing/suit/armor/khan_vest)
 	suit_store = pick(
+		/obj/item/gun/ballistic/shotgun/automatic/hunting/trail, \
 		/obj/item/gun/ballistic/revolver/detective, \
 		/obj/item/gun/ballistic/shotgun/remington, \
 		/obj/item/gun/ballistic/revolver/caravan_shotgun, \
-		/obj/item/gun/ballistic/revolver/pipe_rifle, \
 		/obj/item/gun/ballistic/automatic/pistol/ninemil)
 	head = /obj/item/clothing/head/helmet/f13/khan
 	shoes = /obj/item/clothing/shoes/f13/khan
+
 
 /datum/outfit/job/wasteland/f13pusher/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
@@ -91,6 +98,23 @@ Great Khan
 		GLOB.all_gangs |= GK
 		GK.add_member(H)
 		H.gang = GK
+
+/datum/outfit/loadout/pusher
+	name = "Chemist"
+	backpack_contents = list(
+		/obj/item/book/granter/trait/chemistry=1)
+
+/datum/outfit/loadout/enforcer
+	name = "Enforcer"
+	suit_store = /obj/item/gun/ballistic/shotgun
+	backpack_contents = list(
+		/obj/item/storage/box/lethalshot=2)
+
+/datum/outfit/loadout/brawler
+	name = "Brawler"
+	gloves =	/obj/item/melee/unarmed/brass/spiked
+	backpack_contents = list(
+		/obj/item/book/granter/trait/iron_fist=1)
 
 /*
 Raider

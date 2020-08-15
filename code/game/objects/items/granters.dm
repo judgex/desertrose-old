@@ -148,6 +148,14 @@
 	traitname = "trekking"
 	remarks = list("It never hurts to take the road less travelled...", "Proper movement is key to your survival...", "Whether during combat or for simple travel, the desert can be your friend...", "Without proper knowledge, it can be hard to traverse the desert on foot...", "A Ranger is always prepared...")
 
+/obj/item/book/granter/trait/iron_fist
+	name = "Brawler's Guide to Fisticuffs"
+	desc = "An advanced manual on fistfighting. It has pictures, too!"
+	oneuse = TRUE
+	granted_trait = TRAIT_IRONFIST
+	traitname = "iron_fist"
+	remarks = list("Keep your fists up...", "Don't clench your thumb in your fist, or you might break it...", "Turn into your punch, and put your body weight behind it...", "Footwork is everything, make sure to step into your punches...", "Aim for their jaw for an easy K-O...")
+
 /obj/item/book/granter/trait/gunsmith_one
 	name = "Guns and Bullets, Part 1"
 	desc = "A rare issue of Guns and Bullets detailing the basic manufacture of firearms, allowing the reader to craft Tier 2 firearms. It's barely holding up, and looks like only one person can study the knowledge from it."

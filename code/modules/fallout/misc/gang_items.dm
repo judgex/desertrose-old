@@ -81,11 +81,11 @@
 	cost = 40
 	item_path = /obj/item/clothing/under/f13/khan
 
-/datum/gang_item/clothing/khan_vest
-	name = "Great Khan armored vest"
-	id = "khan_vest"
+/datum/gang_item/clothing/khan_jacket_armored
+	name = "Great Khan armored jacket"
+	id = "khan_jacket_armored"
 	cost = 60
-	item_path = /obj/item/clothing/suit/armor/khan
+	item_path = /obj/item/clothing/suit/toggle/labcoat/f13/khan_jacket_armored
 
 /datum/gang_item/clothing/prostitute_dress
 	name = "Prostitute dress"
@@ -197,3 +197,8 @@
 	id = "c4"
 	cost = 200
 	item_path = /obj/item/grenade/plastic/c4
+
+
+///////////////////
+//EQUIPMENT
+///////////////////
