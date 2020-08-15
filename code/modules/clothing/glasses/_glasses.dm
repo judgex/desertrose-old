@@ -192,6 +192,18 @@
 	icon_state = "blindfold"
 	item_state = "blindfold"
 
+/obj/item/clothing/glasses/sunglasses/fakeblindfold/equipped(mob/living/user, slot)
+	..()
+	if(ishuman(user))
+		var/mob/living/carbon/human/U = user
+		if(U.job in list("Priestess of Mars"))
+		else
+			to_chat(user, "<span class='userdanger'>\"You want to be blind, do you?\"</span>")
+			user.dropItemToGround(src, TRUE)
+			user.Dizzy(30)
+			user.Knockdown(100)
+			user.blind_eyes(30)
+		return
 
 /obj/item/clothing/glasses/sunglasses/reagent
 	name = "beer goggles"
