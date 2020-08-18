@@ -478,8 +478,8 @@
 		adjustHealth(-round(S.get_reagent_amount("uranium") * 0.1))
 		adjustToxic(round(S.get_reagent_amount("uranium") * 0.2))
 	if(S.has_reagent("radium", 1))
-		adjustHealth(-round(S.get_reagent_amount("radium") * 0.1))
-		adjustToxic(round(S.get_reagent_amount("radium") * 0.3)) // Radium is harsher (OOC: also easier to produce)
+		adjustHealth(-round(S.get_reagent_amount("radium") * 0.4))
+		adjustToxic(round(S.get_reagent_amount("radium") * 0.5)) // Radium is harsher (OOC: also easier to produce)
 
 	// Nutriments
 	if(S.has_reagent("eznutriment", 1))

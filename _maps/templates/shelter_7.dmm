@@ -1,4 +1,6 @@
 "a" = (/obj/structure/fence/corner/wooden{dir = 8},/turf/open/floor/plating/f13/outside/desert,/area/f13/wasteland)
+"b" = (/obj/structure/reagent_dispensers/compostbin,/turf/open/floor/plating/f13/outside/desert,/area/f13/wasteland)
+"c" = (/obj/structure/legion_extractor,/turf/open/floor/plating/f13/outside/desert,/area/f13/wasteland)
 "f" = (/obj/structure/table/wood,/obj/effect/spawner/lootdrop/f13/foodspawner,/obj/effect/spawner/lootdrop/f13/foodspawner,/turf/open/floor/f13/wood,/area/survivalpod)
 "g" = (/obj/structure/fence/corner/wooden,/turf/open/floor/plating/f13/outside/desert,/area/f13/wasteland)
 "i" = (/obj/structure/fermenting_barrel,/turf/open/floor/f13/wood,/area/survivalpod)
@@ -6,8 +8,10 @@
 "l" = (/obj/structure/table/wood,/obj/item/kitchen/knife,/obj/item/flashlight/lamp,/turf/open/floor/f13/wood,/area/survivalpod)
 "m" = (/turf/open/floor/plating/f13/outside/desert,/area/f13/wasteland)
 "n" = (/obj/structure/fence/wooden{pixel_y = 2},/turf/open/floor/plating/f13/outside/desert,/area/f13/wasteland)
+"q" = (/turf/open/indestructible/ground/outside/dirt,/area/f13/wasteland)
 "r" = (/obj/structure/bed,/obj/item/bedsheet/brown,/turf/open/floor/f13/wood,/area/survivalpod)
 "s" = (/obj/structure/sink/puddle,/turf/open/floor/plating/f13/outside/desert,/area/f13/wasteland)
+"t" = (/obj/structure/simple_door/metal/fence,/turf/open/floor/plating/f13/outside/desert,/area/f13/wasteland)
 "u" = (/obj/structure/table/wood,/obj/machinery/microwave,/turf/open/floor/f13/wood,/area/survivalpod)
 "y" = (/turf/closed/wall/f13/tentwall,/area/survivalpod)
 "B" = (/obj/structure/fence/wooden{pixel_y = -8},/turf/open/floor/plating/f13/outside/desert,/area/f13/wasteland)
@@ -18,21 +22,22 @@
 "J" = (/obj/structure/simple_door/tent,/turf/open/floor/f13/wood{icon_state = "housewood2"; tag = "icon-housewood2"},/area/survivalpod)
 "L" = (/obj/structure/closet/f13/leigon/plants,/obj/item/reagent_containers/food/snacks/grown/wheat,/obj/item/reagent_containers/food/snacks/grown/wheat,/obj/item/reagent_containers/food/snacks/grown/wheat,/obj/item/reagent_containers/food/snacks/grown/wheat,/obj/item/reagent_containers/food/snacks/grown/wheat,/obj/item/reagent_containers/food/snacks/grown/wheat,/turf/open/floor/f13/wood,/area/survivalpod)
 "O" = (/turf/open/floor/f13/wood,/area/survivalpod)
+"P" = (/obj/structure/fence/wooden{pixel_y = 2},/obj/structure/fence/wooden{pixel_y = 2},/turf/open/floor/plating/f13/outside/desert,/area/f13/wasteland)
 "Q" = (/obj/structure/fence/corner/wooden{dir = 4},/turf/open/floor/plating/f13/outside/desert,/area/f13/wasteland)
 "S" = (/obj/structure/closet/crate/wooden,/obj/item/shovel/spade,/obj/item/reagent_containers/spray/plantbgone,/obj/item/plant_analyzer,/obj/item/cultivator,/turf/open/floor/f13/wood,/area/survivalpod)
 "V" = (/mob/living/simple_animal/cow/brahmin,/turf/open/floor/plating/f13/outside/desert,/area/f13/wasteland)
-"X" = (/obj/structure/reagent_dispensers/compostbin,/turf/open/floor/plating/f13/outside/desert,/area/f13/wasteland)
+"X" = (/obj/machinery/smartfridge/bottlerack/seedbin,/turf/open/floor/f13/wood,/area/survivalpod)
 "Z" = (/obj/machinery/vending/hydroseeds,/turf/open/floor/f13/wood,/area/survivalpod)
 
 (1,1,1) = {"
-mmmyyyyyyymmm
-mmmyfuHOrymmm
-msjylOOOLymmm
-mmmyZOOSiymmm
-mmmyyyOyyymmm
-aDDDQyJyaDDDQ
-nGmGmmmmnmVmE
-nXGmmmmmmmmmB
-EGmGmmmmBVmVB
+aDDyyyyyyymmm
+nmmyfuHXrymmm
+nsjylOOOLymmm
+nqqyZOOSiymmm
+ncqyyyOyyymmm
+nbqmmyJyaDDDQ
+PGqGmmmmnmVmE
+nGqGmmmmtmmmB
+EGqGmmmmBVmVB
 aDDDgmmmaDDDg
 "}
