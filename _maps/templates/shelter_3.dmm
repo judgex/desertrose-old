@@ -6,7 +6,8 @@
 "i" = (/obj/structure/chair/f13foldupchair,/turf/open/floor/f13/wood,/area/survivalpod)
 "j" = (/obj/machinery/light/small{dir = 4},/turf/open/floor/f13/wood,/area/survivalpod)
 "k" = (/obj/structure/simple_door/tent,/turf/open/floor/f13/wood,/area/survivalpod)
-"l" = (/obj/structure/closet/crate/wooden,/obj/effect/spawner/lootdrop/f13/foodspawner,/obj/effect/spawner/lootdrop/f13/foodspawner,/turf/open/floor/f13/wood{icon_state = "housewood2"; tag = "icon-housewood2"},/area/survivalpod)
+"l" = (/obj/structure/closet/crate/wooden,/obj/effect/spawner/lootdrop/f13/foodspawner,/obj/effect/spawner/lootdrop/f13/foodspawner,/obj/effect/spawner/lootdrop/f13/foodspawner,/obj/effect/spawner/lootdrop/f13/alcoholspawner,/obj/effect/spawner/lootdrop/f13/alcoholspawner,/obj/effect/spawner/lootdrop/f13/alcoholspawner,/turf/open/floor/f13/wood{icon_state = "housewood2"; tag = "icon-housewood2"},/area/survivalpod)
+"m" = (/obj/machinery/workbench,/turf/open/floor/f13/wood{icon_state = "housewood2"; tag = "icon-housewood2"},/area/survivalpod)
 "n" = (/obj/structure/table/wood,/obj/machinery/chem_dispenser/drinks{dir = 8},/turf/open/floor/f13/wood,/area/survivalpod)
 "q" = (/obj/machinery/light/small{dir = 8},/turf/open/floor/f13/wood{icon_state = "housewood2"; tag = "icon-housewood2"},/area/survivalpod)
 "B" = (/turf/open/floor/f13/wood,/area/survivalpod)
@@ -23,7 +24,7 @@ LLLLLLLLL
 LQRQLQRQL
 LBKBLBKBL
 LkLLLLLkL
-LBBNclfBL
+LBBNclmBL
 LqBffffjL
 LiBffffiL
 LgPfffOnL
