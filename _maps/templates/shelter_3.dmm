@@ -9,7 +9,6 @@
 "l" = (/obj/structure/closet/crate/wooden,/obj/effect/spawner/lootdrop/f13/foodspawner,/obj/effect/spawner/lootdrop/f13/foodspawner,/turf/open/floor/f13/wood{icon_state = "housewood2"; tag = "icon-housewood2"},/area/survivalpod)
 "n" = (/obj/structure/table/wood,/obj/machinery/chem_dispenser/drinks{dir = 8},/turf/open/floor/f13/wood,/area/survivalpod)
 "q" = (/obj/machinery/light/small{dir = 8},/turf/open/floor/f13/wood{icon_state = "housewood2"; tag = "icon-housewood2"},/area/survivalpod)
-"u" = (/obj/structure/simple_door/tent,/turf/open/space/basic,/area/survivalpod)
 "B" = (/turf/open/floor/f13/wood,/area/survivalpod)
 "K" = (/obj/machinery/light/small,/turf/open/floor/f13/wood,/area/survivalpod)
 "L" = (/turf/closed/wall/f13/tentwall,/area/survivalpod)
@@ -23,7 +22,7 @@
 LLLLLLLLL
 LQRQLQRQL
 LBKBLBKBL
-LuLLLLLkL
+LkLLLLLkL
 LBBNclfBL
 LqBffffjL
 LiBffffiL
