@@ -364,13 +364,13 @@
 	else
 		desc = initial(desc)
 
-/obj/machinery/hydroponics/proc/mutate(lifemut = 2, endmut = 5, productmut = 1, yieldmut = 2, potmut = 25, wrmut = 2, wcmut = 5, traitmut = 0) // Mutates the current seed
+/obj/machinery/hydroponics/proc/mutate(lifemut = 2, endmut = 5, productmut = 1, yieldmut = 3, potmut = 25, wrmut = 2, wcmut = 2, traitmut = 0) // Mutates the current seed
 	if(!myseed)
 		return
 	myseed.mutate(lifemut, endmut, productmut, yieldmut, potmut, wrmut, wcmut, traitmut)
 
 /obj/machinery/hydroponics/proc/hardmutate()
-	mutate(4, 10, 2, 4, 50, 4, 10, 3)
+	mutate(4, 10, 2, 5, 60, 4, 4, 3)
 
 
 /obj/machinery/hydroponics/proc/mutatespecie() // FEV_solutiont produced a new plant!
@@ -450,7 +450,7 @@
 	if(S.has_reagent("FEV_solution", 5) || S.has_reagent("radium", 10) || S.has_reagent("uranium", 10))
 		switch(rand(100))
 			if(91 to 100)
-				adjustHealth(-10)
+				adjustHealth(-2)
 				to_chat(user, "<span class='warning'>The plant shrivels and burns.</span>")
 			if(81 to 90)
 				mutatespecie()
@@ -475,11 +475,11 @@
 
 	// After handling the mutating, we now handle the damage from adding crude radioactives...
 	if(S.has_reagent("uranium", 1))
-		adjustHealth(-round(S.get_reagent_amount("uranium") * 1))
-		adjustToxic(round(S.get_reagent_amount("uranium") * 2))
+		adjustHealth(-round(S.get_reagent_amount("uranium") * 0.1))
+		adjustToxic(round(S.get_reagent_amount("uranium") * 0.2))
 	if(S.has_reagent("radium", 1))
-		adjustHealth(-round(S.get_reagent_amount("radium") * 1))
-		adjustToxic(round(S.get_reagent_amount("radium") * 3)) // Radium is harsher (OOC: also easier to produce)
+		adjustHealth(-round(S.get_reagent_amount("radium") * 0.1))
+		adjustToxic(round(S.get_reagent_amount("radium") * 0.3)) // Radium is harsher (OOC: also easier to produce)
 
 	// Nutriments
 	if(S.has_reagent("eznutriment", 1))
