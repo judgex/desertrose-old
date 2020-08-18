@@ -1280,7 +1280,9 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 //		return
 
 	var/list/dat = list()
+	/*
 	var/total = special_s + special_p + special_e + special_c + special_i + special_a + special_l
+	*/
 	dat += "<center><b>Allocate points</b></center><br>"
 	//dat += "<center>[total] out of 30 possible</center><br>"
 	dat += "<b>Strength	   :</b> <a href='?_src_=prefs;preference=special_s;task=input'>[special_s]</a><BR>"
