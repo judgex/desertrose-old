@@ -257,7 +257,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				dat += "<a href='?_src_=prefs;preference=trait;task=menu'>Configure Quirks</a><br></center>"
 				dat += "<center><b>Current Quirks:</b> [all_quirks.len ? all_quirks.Join(", ") : "None"]</center>"
 			dat += "<center><h2>S.P.E.C.I.A.L</h2>"
-			dat += "<a href='?_src_=prefs;preference=special;task=menu'>Allocate Points</a><br></center>"//TODO me
+			dat += "<a href='?_src_=prefs;preference=special;task=menu'>Allocate Points</a><br></center>"
 			dat += "<h2>Identity</h2>"
 			dat += "<table width='100%'><tr><td width='75%' valign='top'>"
 			if(jobban_isbanned(user, "appearance"))
@@ -1282,7 +1282,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	var/list/dat = list()
 	var/total = special_s + special_p + special_e + special_c + special_i + special_a + special_l
 	dat += "<center><b>Allocate points</b></center><br>"
-	dat += "<center>[total] out of 30 possible</center><br>"
+	//dat += "<center>[total] out of 30 possible</center><br>"
 	dat += "<b>Strength	   :</b> <a href='?_src_=prefs;preference=special_s;task=input'>[special_s]</a><BR>"
 	dat += "<b>Perception  :</b> <a href='?_src_=prefs;preference=special_p;task=input'>[special_p]</a><BR>"
 	dat += "<b>Endurance   :</b> <a href='?_src_=prefs;preference=special_e;task=input'>[special_e]</a><BR>"
@@ -1290,10 +1290,10 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	dat += "<b>Intelligence:</b> <a href='?_src_=prefs;preference=special_i;task=input'>[special_i]</a><BR>"
 	dat += "<b>Agility     :</b> <a href='?_src_=prefs;preference=special_a;task=input'>[special_a]</a><BR>"
 	dat += "<b>Luck        :</b> <a href='?_src_=prefs;preference=special_l;task=input'>[special_l]</a><BR>"
-	if (total>30)
-		dat += "<center>Maximum exceeded, please change until your total is below 30<center>"
-	else
-		dat += "<center><a href='?_src_=prefs;preference=special;task=close'>Done</a></center>"
+	//if (total>30)
+//		dat += "<center>Maximum exceeded, please change until your total is below 30<center>"
+//	else
+	dat += "<center><a href='?_src_=prefs;preference=special;task=close'>Done</a></center>"
 
 	user << browse(null, "window=preferences")
 	var/datum/browser/popup = new(user, "mob_occupation", "<div align='center'>S.P.E.C.I.A.L</div>", 300, 400) //no reason not to reuse the occupation window, as it's cleaner that way
