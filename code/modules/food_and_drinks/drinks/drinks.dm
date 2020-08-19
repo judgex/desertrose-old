@@ -488,8 +488,9 @@
 	desc = "There is no air shortage. Do not drink."
 	icon_state = "air"
 	list_reagents = list("nitrogen" = 24, "oxygen" = 6)
+/*
 
-/obj/item/reagent_containers/food/drinks/soda_cans/f13nukacola
+/obj/item/reagent_containers/food/drinks/bottle/f13nukacola
 	name = "Nuka-Cola"
 	desc = "The most popular flavored soft drink in the United States before the Great War."
 	icon = 'icons/obj/f13vending.dmi'
@@ -499,11 +500,12 @@
 	bottle = TRUE
 	isGlass = TRUE
 
-/obj/item/reagent_containers/food/drinks/soda_cans/f13nukacola/radioactive
+
+/obj/item/reagent_containers/food/drinks/bottle/f13nukacola/radioactive
 	desc = "The most popular flavored soft drink in the United States before the Great War.<br>It was preserved in a fairly pristine state.<br>The bottle is slightly glowing."
 	list_reagents = list("nuka_cola" = 15, "radium" = 5)
 
-/obj/item/reagent_containers/food/drinks/soda_cans/sunset
+/obj/item/reagent_containers/food/drinks/bottle/sunset
 	name = "Sunset Sarsparilla"
 	desc = "The most popular flavored root beer in the West!"
 	icon = 'icons/obj/f13vending.dmi'
@@ -513,7 +515,7 @@
 	bottle = TRUE
 	isGlass = TRUE
 
-/obj/item/reagent_containers/food/drinks/soda_cans/bawls
+/obj/item/reagent_containers/food/drinks/bottle/bawls
 	name = "Balls Guarana"
 	desc = "To give you that Bounce!"
 	icon = 'icons/obj/f13vending.dmi'
@@ -523,7 +525,7 @@
 	bottle = TRUE
 	isGlass = TRUE
 
-/obj/item/reagent_containers/food/drinks/soda_cans/vim
+/obj/item/reagent_containers/food/drinks/bottle/vim
 	name = "Vim"
 	desc = "You've got Vim!"
 	icon = 'icons/obj/f13vending.dmi'
@@ -531,4 +533,4 @@
 	list_reagents = list("sugar" = 5, "vim" = 15)
 	foodtype = SUGAR
 	bottle = TRUE
-	isGlass = TRUE
+	isGlass = TRUE*/

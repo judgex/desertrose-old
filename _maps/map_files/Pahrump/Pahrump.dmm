@@ -1505,7 +1505,9 @@
 "aDD" = (/obj/structure/car/rubbish2,/turf/open/indestructible/ground/outside/road{icon_state = "verticalinnermain0"; tag = "icon-verticalinnermain0"},/area/f13/wasteland)
 "aDE" = (/obj/structure/table/wood,/obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier2,/turf/open/floor/f13/wood,/area/f13/village)
 "aDF" = (/obj/structure/toilet{dir = 8; icon_state = "toilet00"; tag = "icon-toilet00 (WEST)"},/turf/open/floor/f13{icon_state = "whitegreenrustychess"},/area/f13/village)
-"aDG" = (/obj/item/reagent_containers/food/drinks/soda_cans/sunset,/obj/item/reagent_containers/food/drinks/soda_cans/f13nukacola{pixel_x = 4; pixel_y = 6},/obj/item/reagent_containers/food/drinks/soda_cans/f13nukacola{pixel_x = 4; pixel_y = 6},/obj/item/reagent_containers/food/drinks/soda_cans/sunset,/obj/item/reagent_containers/food/drinks/soda_cans/sunset,/obj/structure/table/wood,/turf/open/floor/f13/wood,/area/f13/village)
+"aDG" = (/obj/item/reagent_containers/food/drinks/bottle/sunset,
+/obj/item/reagent_containers/food/drinks/bottle/f13nukacola{pixel_x = 4; pixel_y = 6},
+/obj/item/reagent_containers/food/drinks/bottle/f13nukacola{pixel_x = 4; pixel_y = 6},/obj/item/reagent_containers/food/drinks/bottle/sunset,/obj/item/reagent_containers/food/drinks/bottle/sunset,/obj/structure/table/wood,/turf/open/floor/f13/wood,/area/f13/village)
 "aDH" = (/obj/structure/closet/cabinet,/obj/effect/spawner/lootdrop/f13/weapon/gun/random,/turf/open/floor/f13/wood,/area/f13/village)
 "aDI" = (/obj/structure/simple_door/metal/store,/obj/structure/barricade/wooden/planks/pregame,/turf/open/floor/f13{icon_state = "whitegreenrustychess"},/area/f13/village)
 "aDJ" = (/obj/structure/simple_door/metal/store{icon_state = "brokenstore"; tag = "icon-brokenstore"},/turf/open/floor/f13{icon_state = "whitegreenrustychess"},/area/f13/village)
@@ -5327,7 +5329,9 @@
 "ciO" = (/obj/structure/table,/turf/open/floor/f13{icon_state = "bluedirtychess2"; tag = "icon-bluedirtychess2"},/area/f13/village)
 "ciR" = (/obj/structure/table/wood/fancy/black,/obj/item/radio/intercom{name = "radio station intercom"; pixel_x = 0; pixel_y = 30},/obj/item/modular_computer/laptop/preset/civillian,/obj/item/flashlight/lamp,/turf/open/floor/plasteel/grimy,/area/f13/village)
 "ciS" = (/obj/structure/table/wood/fancy/black,/obj/structure/decoration/clock/active{pixel_y = 30},/obj/item/reagent_containers/pill/patch/turbo{layer = 2.4},/turf/open/floor/plasteel/grimy,/area/f13/village)
-"ciT" = (/obj/structure/table/wood/fancy/black,/obj/item/radio/intercom{name = "radio station intercom"; pixel_x = 0; pixel_y = 30},/obj/item/reagent_containers/food/drinks/soda_cans/f13nukacola,/obj/item/reagent_containers/food/drinks/soda_cans/f13nukacola,/turf/open/floor/plasteel/grimy,/area/f13/village)
+"ciT" = (/obj/structure/table/wood/fancy/black,/obj/item/radio/intercom{name = "radio station intercom"; pixel_x = 0; pixel_y = 30},
+/obj/item/reagent_containers/food/drinks/bottle/f13nukacola,
+/obj/item/reagent_containers/food/drinks/bottle/f13nukacola,/turf/open/floor/plasteel/grimy,/area/f13/village)
 "ciU" = (/obj/structure/window/fulltile/house{dir = 2; icon_state = "storewindowtop"; tag = "icon-storewindowtop"},/turf/open/floor/plasteel/floorgrime,/area/f13/village)
 "ciV" = (/obj/structure/toilet{dir = 8; icon_state = "toilet00"},/obj/machinery/light/small,/turf/open/floor/f13{icon_state = "bluedirtychess2"; tag = "icon-bluedirtychess2"},/area/f13/village)
 "ciW" = (/obj/structure/girder/reinforced,/obj/effect/decal/fakelattice{density = 0; pixel_x = 17},/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,/area/f13/wasteland)
