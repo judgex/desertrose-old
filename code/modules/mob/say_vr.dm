@@ -3,6 +3,13 @@
 //////////////////////////////////////////////////////
 /mob
 	var/flavor_text = "" //tired of fucking double checking this
+	var/special_s = 3
+	var/special_p = 3
+	var/special_e = 3
+	var/special_c = 3
+	var/special_i = 3
+	var/special_a = 3
+	var/special_l = 3
 
 /mob/proc/update_flavor_text()
 	set src in usr
@@ -29,6 +36,10 @@
 			return "<span class='notice'>[html_encode(msg)]</span>"
 		else
 			return "<span class='notice'>[html_encode(copytext(msg, 1, 37))]... <a href='?src=[REF(src)];flavor_more=1'>More...</span></a>"
+
+/mob/proc/print_special()
+	return "S:[special_s],P:[special_p],E:[special_e],C:[special_c],I:[special_i],A:[special_a],L:[special_l]"
+
 
 /mob/proc/get_top_level_mob()
 	if(istype(src.loc,/mob)&&src.loc!=src)

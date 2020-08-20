@@ -81,6 +81,14 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	var/eye_color = "000"				//Eye color
 	var/datum/species/pref_species = new /datum/species/human()	//Mutant race
 	var/list/features = list("mcolor" = "FFF", "tail_lizard" = "Smooth", "tail_human" = "None", "snout" = "Round", "horns" = "None", "ears" = "None", "wings" = "None", "frills" = "None", "spines" = "None", "body_markings" = "None", "legs" = "Normal Legs", "moth_wings" = "Plain")
+	//special
+	var/special_s = 3
+	var/special_p = 3
+	var/special_e = 3
+	var/special_c = 3
+	var/special_i = 3
+	var/special_a = 3
+	var/special_l = 3
 
 	//special
 	var/special_s = 3
@@ -1517,7 +1525,11 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 						special_l = max(min(round(text2num(new_point)), 10),1)
 					SetSpecial(user)
 					return 1
+<<<<<<< HEAD
 
+=======
+				
+>>>>>>> 86bf17c5e3fe2efb4eec8f4f97fd6c45ec332753
 				if("ghostform")
 					if(unlock_content)
 						var/new_form = input(user, "Thanks for supporting BYOND - Choose your ghostly form:","Thanks for supporting BYOND",null) as null|anything in GLOB.ghost_forms
@@ -1989,6 +2001,15 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 	character.gender = gender
 	character.age = age
+	//special
+	character.special_s = special_s
+	character.special_p = special_p
+	character.special_e = special_e
+	character.special_c = special_c
+	character.special_i = special_i
+	character.special_a = special_a
+	character.special_l = special_l
+
 	character.has_penis = has_penis
 	character.has_vagina = has_vagina
 	character.has_breasts = has_breasts
