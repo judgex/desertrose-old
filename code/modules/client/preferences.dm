@@ -1022,7 +1022,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				job_tribal_low |= job.flag
 
 		return 1
-	else if (job.department_flag == TRIBAL)
+	else if (job.department_flag == FOLLOWERS)
 		job_followers_low &= ~job.flag
 		job_followers_med &= ~job.flag
 		job_followers_high &= ~job.flag
