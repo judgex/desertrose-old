@@ -412,7 +412,7 @@
 					/obj/item/shield/riot)
 	crate_name = "riot shields crate"
 
-/datum/supply_pack/security/armory/riotshields
+/datum/supply_pack/security/armory/stunbaton
 	name = "Stun Baton Crate"
 	desc = "For when the people are really uppity. Contains three stun batons. Requires Armory access to open."
 	cost = 3000
