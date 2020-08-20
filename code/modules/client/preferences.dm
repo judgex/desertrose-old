@@ -90,15 +90,6 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	var/special_a = 3
 	var/special_l = 3
 
-	//special
-	var/special_s = 3
-	var/special_p = 3
-	var/special_e = 3
-	var/special_c = 3
-	var/special_i = 3
-	var/special_a = 3
-	var/special_l = 3
-
 	var/list/custom_names = list()
 	var/prefered_security_department = SEC_DEPT_RANDOM
 
@@ -1525,11 +1516,6 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 						special_l = max(min(round(text2num(new_point)), 10),1)
 					SetSpecial(user)
 					return 1
-<<<<<<< HEAD
-
-=======
-				
->>>>>>> 86bf17c5e3fe2efb4eec8f4f97fd6c45ec332753
 				if("ghostform")
 					if(unlock_content)
 						var/new_form = input(user, "Thanks for supporting BYOND - Choose your ghostly form:","Thanks for supporting BYOND",null) as null|anything in GLOB.ghost_forms
