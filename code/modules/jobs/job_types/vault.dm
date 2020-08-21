@@ -160,6 +160,9 @@ Medical Doctor
 	backpack = 		/obj/item/storage/backpack/medic
 	satchel = 		/obj/item/storage/backpack/satchel/med
 	duffelbag = 	/obj/item/storage/backpack/duffelbag/med
+	backpack_contents = list(
+		/obj/item/reagent_containers/dropper/SR/Vault =1
+		)
 
 /datum/outfit/job/vault/f13doctor/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
