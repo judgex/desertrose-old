@@ -97,15 +97,6 @@
 	flags_inv = HIDEEARS|HIDEHAIR
 	strip_delay = 20
 
-/obj/item/clothing/head/helmet/f13/khan/fullhelm
-	name = "Great Khan full helmet"
-	desc = "A Khan helmet modified with steel horns and a full guard comprised of red sunglass lenses and a thick metal plate to conceal the lower face."
-	icon_state = "khanhelmet"
-	item_state = "khanhelmet"
-	armor = list(melee = 30, bullet = 30, laser = 30, energy = 30, bomb = 30, bio = 0, rad = 0, fire = 0, acid = 0)
-	flags_inv = HIDEEARS|HIDEHAIR
-	strip_delay = 20
-
 /obj/item/clothing/head/helmet/f13/ranger/old
 	name = "old ranger helmet"
 	desc = "An old military helmet, commonly worn by Desert Rangers, that went through the fire and the flames, saving a single life amongst heavy bloodshed.<br>This particular helmet has a \"Forgive me mama\" inscription on the side."

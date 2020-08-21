@@ -25,7 +25,7 @@
 "T" = (/obj/structure/fence/wooden{pixel_y = 2},/obj/structure/fence/wooden{pixel_y = 2},/turf/open/floor/plating/f13/outside/desert,/area/f13/wasteland)
 "V" = (/mob/living/simple_animal/cow/brahmin,/turf/open/floor/plating/f13/outside/desert,/area/f13/wasteland)
 "X" = (/obj/machinery/smartfridge/bottlerack/seedbin,/turf/open/floor/f13/wood,/area/survivalpod)
-"Y" = (/obj/structure/simple_door/metal/fence{dir = 8},/turf/open/floor/plating/f13/outside/desert,/area/f13/wasteland)
+"Y" = (/obj/structure/simple_door/metal/fence,/turf/open/floor/plating/f13/outside/desert,/area/f13/wasteland)
 "Z" = (/obj/machinery/vending/hydroseeds,/turf/open/floor/f13/wood,/area/survivalpod)
 
 (1,1,1) = {"
