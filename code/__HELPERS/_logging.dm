@@ -6,9 +6,6 @@
 #define WRITE_FILE(file, text) DIRECT_OUTPUT(file, text)
 #define WRITE_LOG(log, text) rustg_log_write(log, text)
 
-/proc/log_tgui(text)
-	//WRITE_LOG(GLOB.tgui_log, text)
-
 //print a warning message to world.log
 #define WARNING(MSG) warning("[MSG] in [__FILE__] at line [__LINE__] src: [UNLINT(src)] usr: [usr].")
 /proc/warning(msg)

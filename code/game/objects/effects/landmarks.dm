@@ -766,7 +766,3 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 /obj/effect/landmark/start/f13/followersvolunteer
 	name = "Followers Volunteer"
 	icon_state = "Followers_Volunteer"
-
-/obj/effect/landmark/start/f13/Professor
-	name = "Professor"
-	icon_state = "Professor"
