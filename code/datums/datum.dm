@@ -66,6 +66,8 @@
 		UnregisterSignal(target, signal_procs[target])
 	//END: ECS SHIT
 
+	SSsounds.free_datum_channels(src)
+
 	return QDEL_HINT_QUEUE
 
 #ifdef DATUMVAR_DEBUGGING_MODE

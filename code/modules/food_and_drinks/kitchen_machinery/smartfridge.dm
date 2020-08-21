@@ -708,10 +708,11 @@
         /obj/item/reagent_containers/food/drinks/soda_cans/tonic = 3,
 		/obj/item/reagent_containers/food/drinks/soda_cans/sodawater = 2,
 		/obj/item/reagent_containers/food/drinks/soda_cans/lemon_lime = 1,
-		/obj/item/reagent_containers/food/drinks/soda_cans/f13nukacola = 4,
-		/obj/item/reagent_containers/food/drinks/soda_cans/bawls = 3,
-		/obj/item/reagent_containers/food/drinks/soda_cans/vim = 3,
-        /obj/item/reagent_containers/food/drinks/soda_cans/sunset = 3)
+		
+/obj/item/reagent_containers/food/drinks/bottle/f13nukacola = 4,
+		/obj/item/reagent_containers/food/drinks/bottle/bawls = 3,
+		/obj/item/reagent_containers/food/drinks/bottle/vim = 3,
+        /obj/item/reagent_containers/food/drinks/bottle/sunset = 3)
 
 ////cans
 

@@ -540,19 +540,24 @@
 	id = "surgery_reconstruction"
 	build_type = PROTOLATHE
 	materials = list(MAT_METAL = 300, MAT_GLASS = 100)
+
 	build_path = /obj/item/disk/surgery/reconstruction
+
 	category = list("Medical Designs")
+
 	departmental_flags = DEPARTMENTAL_FLAG_MEDICAL | DEPARTMENTAL_FLAG_SCIENCE
 
-/datum/design/surgery_revival
+
+datum/design/surgery_revival
 	name = "Revival Surgery Disk"
 	desc = "A disk containing the instructions for a Revival surgery."
 	id = "surgery_revival"
-	build_type = PROTOLATHE
+	//build_type = PROTOLATHE //commented out for the SR update (21/08/20),stops it from being printed
 	materials = list(MAT_METAL = 300, MAT_GLASS = 100)
 	build_path = /obj/item/disk/surgery/revival
 	category = list("Medical Designs")
 	departmental_flags = DEPARTMENTAL_FLAG_MEDICAL | DEPARTMENTAL_FLAG_SCIENCE
+
 
 /datum/design/surgery_brainwashing
 	name = "Brainwashing Surgery Disk"

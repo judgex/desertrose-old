@@ -344,6 +344,13 @@
 			msg += "\n[print_flavor_text()]\n"
 			msg += "*---------*</span>"
 
+	if(get_visible_name() == "Unknown")
+		msg += ""
+	else if(skipface)
+		msg += ""
+	else
+		msg += "*---------*</span>"
+		msg += "\n[print_special()]\n"
 	to_chat(user, msg)
 	return msg
 

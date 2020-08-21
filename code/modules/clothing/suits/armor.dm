@@ -316,6 +316,12 @@
 	slowdown = 0.25
 	strip_delay = 10
 
+/obj/item/clothing/suit/armor/f13/metalarmor/militia
+	name = "ODF armor"
+	desc = "A suit of metal armor issued to members of the Oasis Defense Force."
+	item_color = "#5D4037"
+	color = "#5D4037"
+
 /obj/item/clothing/suit/armor/fluff/chestplate/Initialize()
 	. = ..()
 	AddComponent(/datum/component/spraycan_paintable)
@@ -784,46 +790,7 @@
 */
 // salvaged/broken power armor, does not require PA training
 
-/obj/item/clothing/suit/armor/f13/brokenpa
-	w_class = WEIGHT_CLASS_HUGE
-	slowdown = 1.40 //+0.1 from helmet = 1.5 total
-	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
-	cold_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
-	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS
-	flags_inv = HIDEJUMPSUIT
-	item_flags = SLOWS_WHILE_IN_HAND
-	clothing_flags = THICKMATERIAL
-	strip_delay = 200
-	equip_delay_self = 50
-	resistance_flags = LAVA_PROOF | FIRE_PROOF | ACID_PROOF
 
-/obj/item/clothing/suit/armor/f13/brokenpa/t45b
-	name = "salvaged T-45b power armor"
-	desc = "It's a set of early-model T-45 power armor with a custom air conditioning module and stripped out servomotors. Bulky and slow, but almost as good as the real thing."
-	icon_state = "t45bpowerarmor"
-	item_state = "t45bpowerarmor"
-	armor = list("melee" = 75, "bullet" = 60, "laser" = 35, "energy" = 50, "bomb" = 48, "bio" = 60, "rad" = 50, "fire" = 80, "acid" = 0)
-
-/obj/item/clothing/suit/armor/f13/brokenpa/raiderpa
-	name = "raider T-45b power armor"
-	desc = "It's a set of T-45b power armor with a custom air conditioning module and stripped out servomotors.This set has seen better days, metal scrap has been spot welded to the chassis "
-	icon_state = "raiderpa"
-	item_state = "raiderpa"
-	armor = list("melee" = 75, "bullet" = 60, "laser" = 35, "energy" = 50, "bomb" = 48, "bio" = 60, "rad" = 50, "fire" = 80, "acid" = 0)
-
-/obj/item/clothing/suit/armor/f13/brokenpa/t45bhotrod
-	name = "salvaged hotrod T-45b power armor"
-	desc = "It's a set of T-45b power armor with a custom air conditioning module and stripped out servomotors. This set has exhaust pipes piped to the pauldrons, flames erupting from them."
-	icon_state = "t45hotrod"
-	item_state = "t45hotrod"
-	armor = list("melee" = 75, "bullet" = 60, "laser" = 35, "energy" = 50, "bomb" = 48, "bio" = 60, "rad" = 50, "fire" = 80, "acid" = 0)
-
-/obj/item/clothing/suit/armor/f13/brokenpa/ncr
-	name = "salvaged NCR power armor"
-	desc = "It's a set of T-45b power armor with a air conditioning module installed, it however lacks servomotors to enhance the users strength. This one has brown paint trimmed along the edge and a two headed bear painted onto the chestplate."
-	icon_state = "ncrpowerarmor"
-	item_state = "ncrpowerarmor"
-	armor = list("melee" = 75, "bullet" = 60, "laser" = 35, "energy" = 50, "bomb" = 48, "bio" = 60, "rad" = 50, "fire" = 80, "acid" = 0)
 
 /obj/item/clothing/suit/armor/f13/power_armor
 	w_class = WEIGHT_CLASS_HUGE
@@ -839,18 +806,19 @@
 	strip_delay = 200
 	resistance_flags = LAVA_PROOF | FIRE_PROOF | ACID_PROOF
 	var/emped = 0
+	var/requires_training = TRUE
 
 /obj/item/clothing/suit/armor/f13/power_armor/mob_can_equip(mob/user, mob/equipper, slot, disable_warning = 1)
-	var/mob/living/carbon/human/H = user
-	if(src == H.wear_suit) //Suit is already equipped
-		return TRUE
-	if (!H.has_trait(TRAIT_PA_WEAR) && slot == SLOT_WEAR_SUIT)
-		to_chat(user, "<span class='warning'>You don't have the proper training to operate the power armor!</span>")
-		return 0
-	if(slot == SLOT_WEAR_SUIT)
-		H.add_trait(TRAIT_STUNIMMUNE)
-		H.add_trait(TRAIT_PUSHIMMUNE)
-		return ..()
+    var/mob/living/carbon/human/H = user
+    if(src == H.wear_suit) //Suit is already equipped
+        return TRUE
+    if (!H.has_trait(TRAIT_PA_WEAR) && slot == SLOT_WEAR_SUIT && requires_training)
+        to_chat(user, "<span class='warning'>You don't have the proper training to operate the power armor!</span>")
+        return 0
+    if(slot == SLOT_WEAR_SUIT)
+        H.add_trait(TRAIT_STUNIMMUNE)
+        H.add_trait(TRAIT_PUSHIMMUNE)
+        return ..()
 
 /obj/item/clothing/suit/armor/f13/power_armor/dropped(mob/user)
 	var/mob/living/carbon/human/H = user
@@ -873,6 +841,42 @@
 				slowdown -= 15
 				armor = armor.modifyRating(melee = 20, bullet = 20, laser = 20)
 				emped = 0
+
+/obj/item/clothing/suit/armor/f13/power_armor/t45b
+	name = "salvaged T-45b power armor"
+	desc = "It's a set of early-model T-45 power armor with a custom air conditioning module and stripped out servomotors. Bulky and slow, but almost as good as the real thing."
+	icon_state = "t45bpowerarmor"
+	item_state = "t45bpowerarmor"
+	armor = list("melee" = 75, "bullet" = 60, "laser" = 35, "energy" = 50, "bomb" = 48, "bio" = 60, "rad" = 50, "fire" = 80, "acid" = 0)
+	requires_training = FALSE
+	slowdown = 1.40
+
+/obj/item/clothing/suit/armor/f13/power_armor/ncr
+	name = "salvaged NCR power armor"
+	desc = "It's a set of T-45b power armor with a air conditioning module installed, it however lacks servomotors to enhance the users strength. This one has brown paint trimmed along the edge and a two headed bear painted onto the chestplate."
+	icon_state = "ncrpowerarmor"
+	item_state = "ncrpowerarmor"
+	armor = list("melee" = 75, "bullet" = 60, "laser" = 35, "energy" = 50, "bomb" = 48, "bio" = 60, "rad" = 50, "fire" = 80, "acid" = 0)
+	requires_training = FALSE
+	slowdown = 1.40
+
+/obj/item/clothing/suit/armor/f13/power_armor/raiderpa
+	name = "raider T-45b power armor"
+	desc = "It's a set of T-45b power armor with some of its plating heavily reconditioned. This set has seen better days, metal scrap has been spot welded to the chassis "
+	icon_state = "raiderpa"
+	item_state = "raiderpa"
+	armor = list("melee" = 60, "bullet" = 60, "laser" = 35, "energy" = 50, "bomb" = 48, "bio" = 60, "rad" = 50, "fire" = 80, "acid" = 0)
+	slowdown = 0.4
+	requires_training = FALSE
+
+/obj/item/clothing/suit/armor/f13/power_armor/hotrod
+	name = "hotrod T-45b power armor"
+	desc = "It's a set of T-45b power armor with a with some of its plating removed. This set has exhaust pipes piped to the pauldrons, flames erupting from them."
+	icon_state = "t45hotrod"
+	item_state = "t45hotrod"
+	armor = list("melee" = 60, "bullet" = 60, "laser" = 35, "energy" = 50, "bomb" = 48, "bio" = 60, "rad" = 50, "fire" = 80, "acid" = 0)
+	slowdown = 0.4
+	requires_training = FALSE
 
 /obj/item/clothing/suit/armor/f13/power_armor/excavator
 	name = "excavator power armor"
@@ -918,7 +922,6 @@
 	item_state = "t51bpowerarmor"
 	slowdown = 0.15 //+0.1 from helmet = total 0.25
 	armor = list("melee" = 70, "bullet" = 65, "laser" = 55, "energy" = 65, "bomb" = 62, "bio" = 100, "rad" = 99, "fire" = 90, "acid" = 0)
-
 
 /obj/item/clothing/suit/armor/f13/power_armor/advanced
 	name = "advanced power armor"
@@ -1146,13 +1149,16 @@
 	icon_state = "duster_recon"
 	item_state = "duster_recon"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	armor = list("melee" = 40, "bullet" = 35, "laser" = 20, "energy" = 20, "bomb" = 25, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
+	armor = list("melee" = 35, "bullet" = 30, "laser" = 20, "energy" = 20, "bomb" = 25, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
+	slowdown = -0.1
 
 /obj/item/clothing/suit/armor/f13/trailranger
 	name = "ranger vest"
 	desc = "A quaint little jacket and scarf worn by NCR trail rangers."
 	icon_state = "cowboyrang"
 	item_state = "cowboyrang"
+	armor = list("melee" = 40, "bullet" = 35, "laser" = 20, "energy" = 20, "bomb" = 25, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
+	slowdown = -0.14
 
 /obj/item/clothing/suit/armor/f13/town
 	name = "town trenchcoat"

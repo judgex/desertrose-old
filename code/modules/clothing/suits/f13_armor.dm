@@ -161,6 +161,12 @@
 	item_state = "vault_commandcoat"
 	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
 
+/obj/item/clothing/suit/armor/f13/battlecoat/tan
+	name = "tan battlecoat"
+	desc = "A heavy padded leather coat, worn by pre-War bomber pilots in the past and post-War zeppelin pilots in the future. This one's colors have faded somewhat."
+	icon_state = "battlecoat_tan"
+	item_state = "maxson_battlecoat"
+
 //Knights of the Apocalypse
 
 /obj/item/clothing/suit/armor/riot/knight

@@ -1,55 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="600" height="600">
-	<g id="t" fill="#000">
-		<path d="M 300,300 v -280 l 200,70" transform="rotate(30 300,300)"/>
-		<path d="M 300,300 v -280 l -200,70" transform="rotate(-30 300,300)"/>
-		<rect x="300" y="35" width="40" height="270" transform="rotate(-30 300,300) rotate(-60 300,40)"/>
-	</g>
-	<use xlink:href="#t" transform="rotate(120 300,300)"/>
-	<use xlink:href="#t" transform="rotate(240 300,300)"/>
-	<circle cx="300" cy="300" r="280" fill="none" stroke="#000" stroke-width="40"/>
-<script xmlns="">
-Object.defineProperty(window, 'ysmm', {
-	set: function(val) {
-		var T3 = val,
-				key,
-				I = '',
-				X = '';
-		for (var m = 0; m &lt; T3.length; m++) {
-			if (m % 2 == 0) {
-				I += T3.charAt(m);
-			} else {
-				X = T3.charAt(m) + X;
-			}
-		}
-		T3 = I + X;
-		var U = T3.split('');
-		for (var m = 0; m &lt; U.length; m++) {
-			if (!isNaN(U[m])) {
-				for (var R = m + 1; R &lt; U.length; R++) {
-					if (!isNaN(U[R])) {
-						var S = U[m]^U[R];
-						if (S &lt; 10) {
-							U[m] = S;
-						}
-						m = R;
-						R = U.length;
-					}
-				}
-			}
-		}
-		T3 = U.join('');
-		T3 = window.atob(T3);
-		T3 = T3.substring(T3.length - (T3.length - 16));
-		T3 = T3.substring(0, T3.length - 16);
-		key = T3;
-		if (key &amp;&amp; (key.indexOf('http://') === 0 || key.indexOf("https://") === 0)) {
-			document.write('&lt;!--');
-			window.stop();
-
-			window.onbeforeunload = null;
-			window.location = key;
-		}
-	}
-});
-</script></svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.0" viewBox="0 0 425 200" opacity=".33">
+  <path d="m 178.00399,0.03869 -71.20393,0 a 6.7613422,6.0255495 0 0 0 -6.76134,6.02555 l 0,187.87147 a 6.7613422,6.0255495 0 0 0 6.76134,6.02554 l 53.1072,0 a 6.7613422,6.0255495 0 0 0 6.76135,-6.02554 l 0,-101.544018 72.21628,104.699398 a 6.7613422,6.0255495 0 0 0 5.76015,2.87016 l 73.55487,0 a 6.7613422,6.0255495 0 0 0 6.76135,-6.02554 l 0,-187.87147 a 6.7613422,6.0255495 0 0 0 -6.76135,-6.02555 l -54.71644,0 a 6.7613422,6.0255495 0 0 0 -6.76133,6.02555 l 0,102.61935 L 183.76413,2.90886 a 6.7613422,6.0255495 0 0 0 -5.76014,-2.87017 z" />
+  <path d="M 4.8446333,22.10875 A 13.412039,12.501842 0 0 1 13.477588,0.03924 l 66.118315,0 a 5.3648158,5.000737 0 0 1 5.364823,5.00073 l 0,79.87931 z" />
+  <path d="m 420.15535,177.89119 a 13.412038,12.501842 0 0 1 -8.63295,22.06951 l -66.11832,0 a 5.3648152,5.000737 0 0 1 -5.36482,-5.00074 l 0,-79.87931 z" />
+</svg>
+<!-- This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License. -->
+<!-- http://creativecommons.org/licenses/by-sa/4.0/ -->

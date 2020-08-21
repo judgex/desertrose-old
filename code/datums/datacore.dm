@@ -96,6 +96,8 @@
 	var/list/leg = list()
 	var/list/ncr = list()
 	var/list/vault = list()
+	var/list/flw = list()
+	var/list/tribe = list()
 	var/list/was = list()
 	var/list/misc = list()
 	var/dat = {"
@@ -119,6 +121,9 @@
 		if(rank in GLOB.command_positions)
 			command[name] = rank
 			department = 1
+		if(rank in GLOB.ncr_rangervet_positions)
+			command[name] = rank
+			department = 1
 		if(rank in GLOB.brotherhood_positions)
 			bos[name] = rank
 			department = 1
@@ -130,6 +135,12 @@
 			department = 1
 		if(rank in GLOB.ncr_positions)
 			ncr[name] = rank
+			department = 1
+		if(rank in GLOB.followers_positions)
+			flw[name] = rank
+			department = 1
+		if(rank in GLOB.tribal_positions)
+			tribe[name] = rank
 			department = 1
 		if(rank in GLOB.vault_positions)
 			vault[name] = rank
@@ -155,14 +166,24 @@
 			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[den[name]]</td></tr>"
 			even = !even
 	if(leg.len > 0)
-		dat += "<tr><th colspan=3>Legion</th></tr>"
+		dat += "<tr><th colspan=3>Caesar's Legion</th></tr>"
 		for(var/name in leg)
 			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[leg[name]]</td></tr>"
 			even = !even
 	if(ncr.len > 0)
-		dat += "<tr><th colspan=3>NCR</th></tr>"
+		dat += "<tr><th colspan=3>New California Republic</th></tr>"
 		for(var/name in ncr)
 			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[ncr[name]]</td></tr>"
+			even = !even
+	if(flw.len > 0)
+		dat += "<tr><th colspan=3>Followers of the Apocalypse</th></tr>"
+		for(var/name in flw)
+			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[flw[name]]</td></tr>"
+			even = !even
+	if(tribe.len > 0)
+		dat += "<tr><th colspan=3>Wayfarer Tribe</th></tr>"
+		for(var/name in tribe)
+			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[tribe[name]]</td></tr>"
 			even = !even
 	if(vault.len > 0)
 		dat += "<tr><th colspan=3>Vault</th></tr>"

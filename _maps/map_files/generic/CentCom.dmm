@@ -57,21 +57,21 @@
 	pixel_y = 4
 	},
 /turf/open/floor/holofloor{
-	icon_state = "wood";
-	dir = 9
+	dir = 9;
+	icon_state = "wood"
 	},
 /area/holodeck/rec_center/lounge)
 "am" = (
 /obj/structure/closet/crate/bin,
 /turf/open/floor/holofloor{
-	icon_state = "wood";
-	dir = 9
+	dir = 9;
+	icon_state = "wood"
 	},
 /area/holodeck/rec_center/lounge)
 "an" = (
 /turf/open/floor/holofloor{
-	icon_state = "wood";
-	dir = 9
+	dir = 9;
+	icon_state = "wood"
 	},
 /area/holodeck/rec_center/lounge)
 "ao" = (
@@ -80,8 +80,8 @@
 	layer = 3.3
 	},
 /turf/open/floor/holofloor{
-	icon_state = "wood";
-	dir = 9
+	dir = 9;
+	icon_state = "wood"
 	},
 /area/holodeck/rec_center/lounge)
 "ap" = (
@@ -149,15 +149,15 @@
 	pixel_y = 8
 	},
 /turf/open/floor/holofloor{
-	icon_state = "wood";
-	dir = 9
+	dir = 9;
+	icon_state = "wood"
 	},
 /area/holodeck/rec_center/lounge)
 "aA" = (
 /obj/structure/chair/wood/normal,
 /turf/open/floor/holofloor{
-	icon_state = "wood";
-	dir = 9
+	dir = 9;
+	icon_state = "wood"
 	},
 /area/holodeck/rec_center/lounge)
 "aB" = (
@@ -197,16 +197,16 @@
 	dir = 4
 	},
 /turf/open/floor/holofloor{
-	icon_state = "wood";
-	dir = 9
+	dir = 9;
+	icon_state = "wood"
 	},
 /area/holodeck/rec_center/lounge)
 "aJ" = (
 /obj/structure/table/wood/poker,
 /obj/item/clothing/mask/cigarette/pipe,
 /turf/open/floor/holofloor{
-	icon_state = "wood";
-	dir = 9
+	dir = 9;
+	icon_state = "wood"
 	},
 /area/holodeck/rec_center/lounge)
 "aK" = (
@@ -214,8 +214,8 @@
 /obj/structure/table/wood/poker,
 /obj/effect/holodeck_effect/cards,
 /turf/open/floor/holofloor{
-	icon_state = "wood";
-	dir = 9
+	dir = 9;
+	icon_state = "wood"
 	},
 /area/holodeck/rec_center/lounge)
 "aL" = (
@@ -223,8 +223,8 @@
 	dir = 8
 	},
 /turf/open/floor/holofloor{
-	icon_state = "wood";
-	dir = 9
+	dir = 9;
+	icon_state = "wood"
 	},
 /area/holodeck/rec_center/lounge)
 "aM" = (
@@ -238,8 +238,8 @@
 	dir = 1
 	},
 /turf/open/floor/holofloor{
-	icon_state = "wood";
-	dir = 9
+	dir = 9;
+	icon_state = "wood"
 	},
 /area/holodeck/rec_center/lounge)
 "aO" = (
@@ -251,15 +251,15 @@
 	dir = 4
 	},
 /turf/open/floor/holofloor{
-	icon_state = "wood";
-	dir = 9
+	dir = 9;
+	icon_state = "wood"
 	},
 /area/holodeck/rec_center/lounge)
 "aQ" = (
 /obj/structure/window/reinforced,
 /turf/open/floor/holofloor{
-	icon_state = "wood";
-	dir = 9
+	dir = 9;
+	icon_state = "wood"
 	},
 /area/holodeck/rec_center/lounge)
 "aR" = (
@@ -278,8 +278,8 @@
 	pixel_y = 10
 	},
 /turf/open/floor/holofloor{
-	icon_state = "wood";
-	dir = 9
+	dir = 9;
+	icon_state = "wood"
 	},
 /area/holodeck/rec_center/lounge)
 "aU" = (
@@ -1302,14 +1302,14 @@
 	dir = 4
 	},
 /turf/open/floor/holofloor{
-	icon_state = "chapel";
-	dir = 1
+	dir = 1;
+	icon_state = "chapel"
 	},
 /area/holodeck/rec_center/chapelcourt)
 "dT" = (
 /turf/open/floor/holofloor{
-	icon_state = "chapel";
-	dir = 4
+	dir = 4;
+	icon_state = "chapel"
 	},
 /area/holodeck/rec_center/chapelcourt)
 "dU" = (
@@ -1321,8 +1321,8 @@
 /area/holodeck/rec_center/chapelcourt)
 "dV" = (
 /turf/open/floor/holofloor{
-	icon_state = "chapel";
-	dir = 1
+	dir = 1;
+	icon_state = "chapel"
 	},
 /area/holodeck/rec_center/chapelcourt)
 "dW" = (
@@ -1330,8 +1330,8 @@
 	dir = 8
 	},
 /turf/open/floor/holofloor{
-	icon_state = "chapel";
-	dir = 4
+	dir = 4;
+	icon_state = "chapel"
 	},
 /area/holodeck/rec_center/chapelcourt)
 "dX" = (
@@ -1355,8 +1355,8 @@
 	dir = 8
 	},
 /turf/open/floor/holofloor{
-	icon_state = "white";
-	dir = 8
+	dir = 8;
+	icon_state = "white"
 	},
 /area/holodeck/rec_center/firingrange)
 "eb" = (
@@ -1371,8 +1371,8 @@
 	dir = 4
 	},
 /turf/open/floor/holofloor{
-	icon_state = "white";
-	dir = 4
+	dir = 4;
+	icon_state = "white"
 	},
 /area/holodeck/rec_center/firingrange)
 "ed" = (
@@ -1474,8 +1474,8 @@
 	dir = 8
 	},
 /turf/open/floor/holofloor{
-	icon_state = "white";
-	dir = 10
+	dir = 10;
+	icon_state = "white"
 	},
 /area/holodeck/rec_center/firingrange)
 "es" = (
@@ -1488,8 +1488,8 @@
 	dir = 4
 	},
 /turf/open/floor/holofloor{
-	icon_state = "white";
-	dir = 6
+	dir = 6;
+	icon_state = "white"
 	},
 /area/holodeck/rec_center/firingrange)
 "eu" = (
@@ -1509,8 +1509,8 @@
 /area/holodeck/rec_center/spacechess)
 "ex" = (
 /turf/open/floor/holofloor{
-	icon_state = "stairs-old";
-	dir = 8
+	dir = 8;
+	icon_state = "stairs-old"
 	},
 /area/holodeck/rec_center/thunderdome1218)
 "ey" = (
@@ -1606,8 +1606,8 @@
 	dir = 1
 	},
 /turf/open/floor/holofloor{
-	icon_state = "chapel";
-	dir = 1
+	dir = 1;
+	icon_state = "chapel"
 	},
 /area/holodeck/rec_center/chapelcourt)
 "eN" = (
@@ -1615,8 +1615,8 @@
 	dir = 1
 	},
 /turf/open/floor/holofloor{
-	icon_state = "chapel";
-	dir = 4
+	dir = 4;
+	icon_state = "chapel"
 	},
 /area/holodeck/rec_center/chapelcourt)
 "eO" = (
@@ -1718,8 +1718,8 @@
 	dir = 8
 	},
 /turf/open/floor/holofloor{
-	icon_state = "neutral";
-	dir = 1
+	dir = 1;
+	icon_state = "neutral"
 	},
 /area/holodeck/rec_center/kobayashi)
 "fc" = (
@@ -1727,8 +1727,8 @@
 /obj/item/folder,
 /obj/item/pen,
 /turf/open/floor/holofloor{
-	icon_state = "neutral";
-	dir = 1
+	dir = 1;
+	icon_state = "neutral"
 	},
 /area/holodeck/rec_center/kobayashi)
 "fd" = (
@@ -1739,8 +1739,8 @@
 /obj/item/folder,
 /obj/item/pen/red,
 /turf/open/floor/holofloor{
-	icon_state = "neutral";
-	dir = 1
+	dir = 1;
+	icon_state = "neutral"
 	},
 /area/holodeck/rec_center/kobayashi)
 "fe" = (
@@ -1831,8 +1831,8 @@
 /area/holodeck/rec_center/spacechess)
 "fn" = (
 /turf/open/floor/holofloor{
-	icon_state = "neutral";
-	dir = 1
+	dir = 1;
+	icon_state = "neutral"
 	},
 /area/holodeck/rec_center/kobayashi)
 "fo" = (
@@ -1859,8 +1859,8 @@
 /obj/item/clothing/under/trek/medsci,
 /obj/item/clothing/under/trek/command,
 /turf/open/floor/holofloor{
-	icon_state = "neutral";
-	dir = 1
+	dir = 1;
+	icon_state = "neutral"
 	},
 /area/holodeck/rec_center/kobayashi)
 "fs" = (
@@ -1873,8 +1873,8 @@
 /obj/item/clothing/under/trek/engsec,
 /obj/item/clothing/under/trek/engsec,
 /turf/open/floor/holofloor{
-	icon_state = "neutral";
-	dir = 1
+	dir = 1;
+	icon_state = "neutral"
 	},
 /area/holodeck/rec_center/kobayashi)
 "fu" = (
@@ -2176,9 +2176,9 @@
 /area/ctf)
 "gB" = (
 /obj/structure/window/reinforced/fulltile{
-	obj_integrity = 5000;
 	max_integrity = 5000;
-	name = "hardened window"
+	name = "hardened window";
+	obj_integrity = 5000
 	},
 /turf/open/floor/plating,
 /area/ctf)
@@ -6746,9 +6746,9 @@
 	dir = 1
 	},
 /obj/machinery/door/window{
-	name = "Tactical Toilet";
-	icon_state = "right";
 	dir = 8;
+	icon_state = "right";
+	name = "Tactical Toilet";
 	opacity = 1
 	},
 /turf/open/floor/plasteel/freezer,
@@ -8160,22 +8160,22 @@
 /area/centcom/evac)
 "vS" = (
 /obj/machinery/door/window/brigdoor{
-	name = "CentCom Customs";
-	icon_state = "rightsecure";
+	base_state = "rightsecure";
 	dir = 4;
-	req_access_txt = "109";
-	base_state = "rightsecure"
+	icon_state = "rightsecure";
+	name = "CentCom Customs";
+	req_access_txt = "109"
 	},
 /obj/structure/table/reinforced,
 /turf/open/floor/plasteel,
 /area/centcom/evac)
 "vT" = (
 /obj/machinery/door/window/brigdoor{
-	name = "CentCom Customs";
-	icon_state = "rightsecure";
+	base_state = "rightsecure";
 	dir = 8;
-	req_access_txt = "109";
-	base_state = "rightsecure"
+	icon_state = "rightsecure";
+	name = "CentCom Customs";
+	req_access_txt = "109"
 	},
 /obj/structure/table/reinforced,
 /turf/open/floor/plasteel,
@@ -11117,7 +11117,7 @@
 /turf/open/floor/carpet/black,
 /area/centcom/holding)
 "Fb" = (
-/obj/structure/piano,
+///obj/structure/piano,
 /obj/machinery/light{
 	dir = 8
 	},
@@ -11229,9 +11229,9 @@
 /area/f13/tcoms)
 "Gr" = (
 /obj/structure/window/reinforced{
-	resistance_flags = 3;
 	color = "#008000";
-	dir = 1
+	dir = 1;
+	resistance_flags = 3
 	},
 /turf/open/lava,
 /area/wizard_station)
@@ -11252,9 +11252,9 @@
 	resistance_flags = 3
 	},
 /obj/structure/window/reinforced{
-	resistance_flags = 3;
 	color = "#008000";
-	dir = 1
+	dir = 1;
+	resistance_flags = 3
 	},
 /turf/open/lava/airless,
 /area/wizard_station)
@@ -12445,6 +12445,9 @@
 /obj/structure/window/reinforced/fulltile,
 /turf/open/floor/grass,
 /area/centcom/holding)
+"QS" = (
+/turf/closed/indestructible/f13/matrix,
+/area/centcom/evac)
 "QT" = (
 /obj/machinery/chem_dispenser/drinks,
 /turf/closed/indestructible{
@@ -37668,22 +37671,22 @@ aa
 rb
 rb
 qx
+QS
 qx
 qx
+QS
 qx
 qx
+QS
 qx
 qx
+QS
 qx
 qx
+QS
 qx
 qx
-qx
-qx
-qx
-qx
-qx
-qx
+QS
 qx
 qx
 iy
@@ -39210,7 +39213,7 @@ aa
 rb
 rb
 tR
-Cc
+QS
 Cc
 MX
 MX
@@ -40752,22 +40755,22 @@ aa
 rb
 rb
 qx
+QS
 qx
 qx
+QS
 qx
 qx
+QS
 qx
 qx
+QS
 qx
 qx
+QS
 qx
 qx
-qx
-qx
-qx
-qx
-qx
-qx
+QS
 qx
 qx
 iy
