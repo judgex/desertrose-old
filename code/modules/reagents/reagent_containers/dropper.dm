@@ -97,18 +97,3 @@
 		var/mutable_appearance/filling = mutable_appearance('icons/obj/reagentfillings.dmi', "dropper")
 		filling.color = mix_color_from_reagents(reagents.reagent_list)
 		add_overlay(filling)
-
-/obj/item/reagent_containers/dropper/SR/Vault
-	name = "Strange reagent dropper"
-	desc = "A dropper filled with a strange reagent,rumored to bring the dead back to life..."
-	icon = 'icons/obj/chemical.dmi'
-	icon_state = "dropper0"
-	list_reagents = list("strange_reagent" = 2)
-
-/obj/item/reagent_containers/dropper/SR/NotVault
-	name = "Strange reagent dropper"
-	desc = "A dropper filled with a strange reagent,rumored to bring the dead back to life..."
-	icon = 'icons/obj/chemical.dmi'
-	icon_state = "dropper0"
-	list_reagents = list("strange_reagent" = 3)
-
