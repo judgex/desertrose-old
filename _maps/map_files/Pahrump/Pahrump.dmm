@@ -541,10 +541,7 @@
 "aku" = (/obj/structure/sink{dir = 4; icon_state = "sink"; pixel_x = 10; pixel_y = 0; tag = "icon-sink (EAST)"},/obj/structure/mirror{pixel_x = 32},/mob/living/simple_animal/hostile/ghoul,/turf/open/floor/f13/wood,/area/f13/village)
 "akv" = (/obj/structure/fence{dir = 8; icon_state = "straight"},/obj/structure/barricade/wooden/planks,/turf/open/indestructible/ground/outside/sidewalk{dir = 7; icon_state = "outerpavement"},/area/f13/wasteland)
 "akw" = (/obj/structure/toilet{dir = 4; icon_state = "toilet00"; pixel_x = -3; pixel_y = 0; tag = "icon-toilet00 (EAST)"},/obj/machinery/light/small{dir = 8},/obj/effect/spawner/lootdrop/f13/cash_random_high,/turf/open/floor/f13/wood,/area/f13/village)
-<<<<<<< HEAD
 "akx" = (/obj/effect/landmark/start/f13/Professor,/turf/open/floor/f13/wood,/area/f13/clinic)
-=======
->>>>>>> parent of e04d4a8a... add a spawner for the FoA professor
 "aky" = (/obj/effect/spawner/lootdrop/f13/armor/random_high,/obj/structure/closet,/mob/living/simple_animal/hostile/alien,/turf/open/indestructible/ground/inside/mountain,/area/f13/tunnel)
 "akz" = (/obj/structure/table,/turf/open/floor/plasteel/f13/vault_floor/red/white/whiteredchess/whiteredchess2,/area/f13/ncr)
 "akA" = (/obj/structure/table,/obj/effect/decal/cleanable/dirt,/turf/open/floor/plasteel/floorgrime,/area/f13/legion)
@@ -2885,7 +2882,7 @@
 "bep" = (/obj/structure/window/fulltile/house{dir = 2; icon_state = "housewindowvertical"; tag = "icon-housewindowvertical"},/obj/structure/barricade/wooden/planks/pregame,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/building)
 "beq" = (/obj/structure/chair,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/building)
 "ber" = (/obj/machinery/vending/cola,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/building)
-"bes" = (/obj/structure/piano,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/building)
+"bes" = (/obj/structure/musician/piano,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/building)
 "bet" = (/obj/structure/chair/stool,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/building)
 "beu" = (/obj/structure/table,/obj/effect/spawner/lootdrop/f13/weapon/melee/random,/turf/open/floor/f13{icon_state = "whitegreenrustychess"},/area/f13/building)
 "bev" = (/obj/machinery/deepfryer,/turf/open/floor/f13{icon_state = "whitegreenrustychess"},/area/f13/building)
@@ -3242,7 +3239,7 @@
 "blz" = (/obj/structure/closet,/obj/item/storage/box/gloves,/turf/open/floor/f13/wood,/area/f13/clinic)
 "blA" = (/obj/structure/closet/crate/freezer/blood,/turf/open/floor/f13/wood,/area/f13/clinic)
 "blB" = (/obj/structure/rack,/obj/item/reagent_containers/hypospray/medipen/stimpak,/obj/item/reagent_containers/syringe/medx,/obj/item/reagent_containers/hypospray/medipen/stimpak,/turf/open/floor/f13/wood,/area/f13/clinic)
-"blC" = (/obj/structure/piano,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13/wood,/area/f13/city)
+"blC" = (/obj/structure/musician/piano,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13/wood,/area/f13/city)
 "blD" = (/obj/structure/chair/stool/f13stool{pixel_x = -8},/obj/effect/decal/cleanable/dirt,/obj/machinery/light/small{dir = 1},/turf/open/floor/f13/wood,/area/f13/city)
 "blE" = (/obj/machinery/jukebox,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13/wood,/area/f13/city)
 "blF" = (/obj/structure/simple_door/room,/turf/open/floor/f13{icon_state = "bar"},/area/f13/bar)
@@ -4872,7 +4869,7 @@
 "bTz" = (/obj/structure/bed,/obj/item/bedsheet{icon_state = "sheetcmo"; tag = "icon-sheetcmo"},/obj/effect/decal/cleanable/blood/old{icon_state = "floor5-old"; tag = "icon-floor5-old"},/obj/effect/decal/cleanable/dirt,/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,/area/f13/city)
 "bTC" = (/obj/structure/simple_door/metal/fence,/obj/structure/decoration/rag,/turf/open/indestructible/ground/outside/sidewalk,/area/f13/city)
 "bTE" = (/obj/effect/decal/cleanable/generic,/obj/effect/decal/cleanable/dirt,/turf/open/indestructible/ground/outside/sidewalk{dir = 1; icon_state = "horizontaloutermain1"; tag = "icon-horizontaloutermain1 (NORTH)"},/area/f13/city)
-"bTI" = (/obj/structure/piano{desc = "What a wierd piano.."; name = "minimoog"},/obj/effect/decal/cleanable/dirt,/turf/open/indestructible/ground/inside/dirt,/area/f13/caves)
+"bTI" = (/obj/structure/musician/piano{desc = "What a wierd piano.."; name = "minimoog"},/obj/effect/decal/cleanable/dirt,/turf/open/indestructible/ground/inside/dirt,/area/f13/caves)
 "bTJ" = (/obj/structure/lattice/catwalk,/obj/structure/handrail/g_central{pixel_y = -16},/turf/open/water,/area/f13/tunnel)
 "bTK" = (/obj/effect/decal/cleanable/blood/old{icon_state = "floor5-old"; tag = "icon-floor5-old"},/turf/open/indestructible/ground/inside/subway,/area/f13/sewer)
 "bTL" = (/obj/structure/chair/wood/modern{dir = 8; icon_state = "wooden_chair_settler"; tag = "icon-wooden_chair_settler (WEST)"},/obj/effect/decal/cleanable/dirt,/turf/open/indestructible/ground/inside/dirt,/area/f13/caves)
@@ -5471,7 +5468,7 @@
 "cnd" = (/obj/machinery/light/small,/obj/structure/table/wood/settler,/obj/item/paper_bin,/obj/item/pen,/turf/open/floor/f13/wood,/area/f13/village)
 "cne" = (/mob/living/simple_animal/hostile/deathclaw,/turf/open/floor/f13{icon_state = "reddirtyfull"; tag = "icon-reddirtyfull"},/area/f13/bunker)
 "cnf" = (/obj/structure/rack,/obj/effect/spawner/lootdrop/f13/weapon/gun/tier3,/turf/open/floor/f13{icon_state = "reddirtyfull"; tag = "icon-reddirtyfull"},/area/f13/bunker)
-"cng" = (/obj/structure/piano{desc = "What a wierd piano.."; name = "minimoog"},/turf/open/floor/wood/f13/carpet,/area/f13/village)
+"cng" = (/obj/structure/musician/piano{desc = "What a wierd piano.."; name = "minimoog"},/turf/open/floor/wood/f13/carpet,/area/f13/village)
 "cni" = (/obj/structure/bed,/obj/item/bedsheet/random,/turf/open/floor/f13/wood,/area/f13/village)
 "cnj" = (/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floordirtysolid"; tag = "icon-floordirtysolid"},/area/f13/ncr)
 "cnl" = (/obj/structure/sink{dir = 4; pixel_x = 12; tag = "icon-sink (EAST)"},/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,/area/f13/ncr)
@@ -7626,6 +7623,7 @@ aaaaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaebzQbzQbzQbzQbzQaaeaaeaIMabVaaeaa
 aaaaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaaaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaabaacaacaacaacaacaacaacankahJahJahJahJahJahJahJahJahJbzMaehaehaehaehaehaehaehaehaehaehaehaehaehaehaehaehaehaehaehaehaehaehaehaehaehaehaehaehbzMbzMbzMbzMbzMbzMaehaehaehbzMaehaehaehvIYaehaehaehbzMbzMaehaehaehaehaehaehaehaehaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaacaacaacaacaacaacaacaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 "}
+
 (1,1,2) = {"
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaakaakaaeaakaakaaeaaeaaeaaeaaeaaeaaeaaeaakaaeaaeaakaaeaaeaakaaeaakaaeaaeaaeaaeaaeaakaakaaeaaeaakaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaeaaa
