@@ -1288,11 +1288,11 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 //		return
 
 	var/list/dat = list()
-	/*
+	
 	var/total = special_s + special_p + special_e + special_c + special_i + special_a + special_l
-	*/
+	
 	dat += "<center><b>Allocate points</b></center><br>"
-	//dat += "<center>[total] out of 30 possible</center><br>"
+	dat += "<center>[total] out of 40 possible</center><br>"
 	dat += "<b>Strength	   :</b> <a href='?_src_=prefs;preference=special_s;task=input'>[special_s]</a><BR>"
 	dat += "<b>Perception  :</b> <a href='?_src_=prefs;preference=special_p;task=input'>[special_p]</a><BR>"
 	dat += "<b>Endurance   :</b> <a href='?_src_=prefs;preference=special_e;task=input'>[special_e]</a><BR>"
@@ -1300,10 +1300,10 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	dat += "<b>Intelligence:</b> <a href='?_src_=prefs;preference=special_i;task=input'>[special_i]</a><BR>"
 	dat += "<b>Agility     :</b> <a href='?_src_=prefs;preference=special_a;task=input'>[special_a]</a><BR>"
 	dat += "<b>Luck        :</b> <a href='?_src_=prefs;preference=special_l;task=input'>[special_l]</a><BR>"
-	//if (total>30)
-//		dat += "<center>Maximum exceeded, please change until your total is below 30<center>"
-//	else
-	dat += "<center><a href='?_src_=prefs;preference=special;task=close'>Done</a></center>"
+	if (total>40)
+		dat += "<center>Maximum exceeded, please change until your total is at or below 40<center>"
+	else
+		dat += "<center><a href='?_src_=prefs;preference=special;task=close'>Done</a></center>"
 
 	user << browse(null, "window=preferences")
 	var/datum/browser/popup = new(user, "mob_occupation", "<div align='center'>S.P.E.C.I.A.L</div>", 300, 400) //no reason not to reuse the occupation window, as it's cleaner that way
@@ -1475,45 +1475,45 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				ask_for_custom_name(user,href_list["preference"])
 			switch(href_list["preference"])
 				if("special_s")
-					var/new_point = input(user, "Choose Amount(1-10)", "Strength") as num|null
+					var/new_point = input(user, "Choose Amount(1-9)", "Strength") as num|null
 					if(new_point)
-						special_s = max(min(round(text2num(new_point)), 10),1)
+						special_s = max(min(round(text2num(new_point)), 9),1)
 					SetSpecial(user)
 					return 1
 				if("special_p")
-					var/new_point = input(user, "Choose Amount(1-10)", "Perception") as num|null
+					var/new_point = input(user, "Choose Amount(1-9)", "Perception") as num|null
 					if(new_point)
-						special_p = max(min(round(text2num(new_point)), 10),1)
+						special_p = max(min(round(text2num(new_point)), 9),1)
 					SetSpecial(user)
 					return 1
 				if("special_e")
-					var/new_point = input(user, "Choose Amount(1-10)", "Endurance") as num|null
+					var/new_point = input(user, "Choose Amount(1-9)", "Endurance") as num|null
 					if(new_point)
-						special_e = max(min(round(text2num(new_point)), 10),1)
+						special_e = max(min(round(text2num(new_point)), 9),1)
 					SetSpecial(user)
 					return 1
 				if("special_c")
-					var/new_point = input(user, "Choose Amount(1-10)", "Charisma") as num|null
+					var/new_point = input(user, "Choose Amount(1-9)", "Charisma") as num|null
 					if(new_point)
-						special_c = max(min(round(text2num(new_point)), 10),1)
+						special_c = max(min(round(text2num(new_point)), 9),1)
 					SetSpecial(user)
 					return 1
 				if("special_i")
-					var/new_point = input(user, "Choose Amount(1-10)", "Intelligence") as num|null
+					var/new_point = input(user, "Choose Amount(1-9)", "Intelligence") as num|null
 					if(new_point)
-						special_i = max(min(round(text2num(new_point)), 10),1)
+						special_i = max(min(round(text2num(new_point)), 9),1)
 					SetSpecial(user)
 					return 1
 				if("special_a")
-					var/new_point = input(user, "Choose Amount(1-10)", "Agility") as num|null
+					var/new_point = input(user, "Choose Amount(1-9)", "Agility") as num|null
 					if(new_point)
-						special_a = max(min(round(text2num(new_point)), 10),1)
+						special_a = max(min(round(text2num(new_point)), 9),1)
 					SetSpecial(user)
 					return 1
 				if("special_l")
-					var/new_point = input(user, "Choose Amount(1-10)", "Luck") as num|null
+					var/new_point = input(user, "Choose Amount(1-9)", "Luck") as num|null
 					if(new_point)
-						special_l = max(min(round(text2num(new_point)), 10),1)
+						special_l = max(min(round(text2num(new_point)), 9),1)
 					SetSpecial(user)
 					return 1
 				if("ghostform")
