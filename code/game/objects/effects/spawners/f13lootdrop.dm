@@ -16,7 +16,7 @@
 	name = "dancemachine or piano"
 	lootcount = 1
 	loot = list(
-				/obj/structure/piano = 3,
+				///obj/structure/piano = 3,
 				/obj/machinery/jukebox = 1
 				)
 
