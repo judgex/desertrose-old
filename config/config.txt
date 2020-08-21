@@ -27,10 +27,10 @@ STATIONNAME Mojave Wasteland
 HUB
 
 ## Uncomment and set the config in tools/discord/config.yml to enable sending stuff to discord's webhooks
-#USING_DISCORD
+# USING_DISCORD
 
 ## Uncomment to allow users to send discord messages to ooc, requires a bot and a comms_key
-#USING_DISCORD_OOC
+# USING_DISCORD_OOC
 
 ## Lobby time: This is the amount of time between rounds that players have to setup their characters and be ready.
 LOBBY_COUNTDOWN 160
@@ -42,7 +42,7 @@ ROUND_END_COUNTDOWN 60
 ## Comment this out if you want to use the SQL based admin system, the legacy system uses admins.txt.
 ## You need to set up your database to use the SQL based system.
 ## This flag is automatically enabled if SQL_ENABLED isn't
-#ADMIN_LEGACY_SYSTEM
+ADMIN_LEGACY_SYSTEM
 
 ##Uncomment this to stop any admins loaded by the legacy system from having their rank edited by the permissions panel
 #PROTECT_LEGACY_ADMINS
@@ -68,10 +68,7 @@ LOAD_LEGACY_RANKS_ONLY
 #USE_AGE_RESTRICTION_FOR_JOBS
 
 ## Uncomment the following line to enable the role whitelisting system.  You will also need the table from role_whitelist.sql in the SQL directory.
-USE_ROLE_WHITELIST
-
-## Uncomment the following line to enable the database custom items system.  You will also need the table from custom_items.sql in the SQL directory.
-USE_CUSTOM_ITEMS_FROM_DB
+#USE_ROLE_WHITELIST
 
 ## Uncomment this to have the job system use the player's account creation date, rather than the when they first joined the server for job timers.
 #USE_ACCOUNT_AGE_FOR_JOBS
@@ -226,13 +223,13 @@ ALLOW_WEBCLIENT
 # SERVER ss13.example.com:2506
 
 ## forum address
-DISCORDURL https://discord.gg/NGpP36m
+DISCORDURL https://discord.gg/PS5Genn
 
 ## Wiki address
-WIKIURL https://desert-rose-fallout-13.fandom.com/wiki/Desert_Rose_-_Fallout_13_Wiki
+WIKIURL https://wiki.fandom.com/wiki/Bad_Deathclaw_Wiki
 
 ## Rules address
-RULESURL https://discord.gg/NGpP36m
+RULESURL https://discord.gg/PS5Genn
 
 
 ## Github address
@@ -320,7 +317,7 @@ SOFT_POPCAP_MESSAGE Be warned that the server is currently serving a high number
 HARD_POPCAP_MESSAGE The server is currently serving a high number of users, You cannot currently join. You may wait for the number of living crew to decline, observe, or find alternative servers.
 
 ## Uncomment for 'extreme' population caps, players will not be allowed to join the server if living crew exceeds the listed number.
-EXTREME_POPCAP 130
+EXTREME_POPCAP 100
 
 ## Message for extreme cap
 EXTREME_POPCAP_MESSAGE Desert Rose is currently population capped while we organize and develop.  Thanks for your interest, please try again soon.
@@ -377,10 +374,10 @@ ANNOUNCE_ADMIN_LOGIN
 
 ## AUTOADMIN
 ## The default admin rank
-AUTOADMIN_RANK Knight
+AUTOADMIN_RANK Host
 
 ## Uncomment to automatically give that admin rank to all players
-#AUTOADMIN
+AUTOADMIN
 
 ## GENERATE_MINIMAPS
 ## Generating minimaps(For crew monitor) is slow and bogs down testing, so its disabled by default and must be enabled by uncommenting this config if you are running a production server.
@@ -473,6 +470,3 @@ BOT_IP 127.0.0.1:8081
 ##	For reference, Goonstation uses a resolution of 21x15 for it's widescreen mode.
 ##	Do note that changing this value will affect the title screen. The title screen will have to be updated manually if this is changed.
 DEFAULT_VIEW 15x15
-
-## Comment this out to enable clickable URLs from being posted in OOC
-BLOCKOOCURLS
