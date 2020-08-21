@@ -38,7 +38,8 @@
 			return "<span class='notice'>[html_encode(copytext(msg, 1, 37))]... <a href='?src=[REF(src)];flavor_more=1'>More...</span></a>"
 
 /mob/proc/print_special()
-	var/msg = "S:[special_s],P:[special_p],E:[special_e],C:[special_c],I:[special_i],A:[special_a],L:[special_l]"
+	var/msg = "S:[special_s],P:[special_p],E:[special_e],C:[special_c],I:[special_i],A:[special_a],L:[special_l]<br>"
+
 	if (special_s<3)
 		msg += "<br>This person looks puny, like a total noodle."
 	if (special_p<3)
@@ -46,13 +47,13 @@
 	if (special_e<3)
 		msg += "<br>It looks like a stiff breeze could tear them in two."
 	if (special_c<3)
-		msg += "<br>Staggeringly ugly and awkward, this isn't someone you'd want to spend time with."
+		msg += "<br>Staggeringly ugly and awkward, they are about as smooth as pavement."
 	if (special_i<3)
 		msg += "<br>They look like they'd struggle to get water out of a boot with instructions printed on the heel."
 	if (special_a<3)
 		msg += "<br>Maladroit and unbalanced, it is a wonder they can even stand straight."
 	if (special_l<3)
-		msg += "<br>Somehow you just know that they are as lucky as it gets."
+		msg += "<br>Unfortune just seems to stick to them like a fly to shit."
 
 	if (special_s>7)
 		msg += "<br>Simply built out of muscle, they could wrestle a deathclaw to death."
@@ -67,9 +68,7 @@
 	if (special_a>7)
 		msg += "<br>Moving like a panther, it is a wonder you have even noticed that they are here."
 	if (special_l>7)
-		msg += "<br>Unfortune just seems to stick to them like a fly to shit."
-
-	//	msg += 
+		msg += "<br>Somehow you just know that they are as lucky as it gets."
 	msg += "<br> *---------**---------*"
 	return msg
 
