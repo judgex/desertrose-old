@@ -392,6 +392,22 @@ GLOBAL_LIST_EMPTY(asset_datums)
 		"fontawesome-webfont.svg" = 'tgui/assets/fonts/fontawesome-webfont.svg'
 	)
 
+/datum/asset/simple/fontawesome
+	assets = list(
+		//"fa-regular-400.eot"  = 'html/font-awesome/webfonts/fa-regular-400.eot',
+	//	"fa-regular-400.woff" = 'html/font-awesome/webfonts/fa-regular-400.woff',
+	//	"fa-solid-900.eot"    = 'html/font-awesome/webfonts/fa-solid-900.eot',
+		//"fa-solid-900.woff"   = 'html/font-awesome/webfonts/fa-solid-900.woff',
+	//	"font-awesome.css"    = 'html/font-awesome/css/all.min.css',
+	//	"v4shim.css"          = 'html/font-awesome/css/v4-shims.min.css'
+	)
+
+/datum/asset/group/tgui
+	children = list(
+		/datum/asset/simple/tgui,
+		/datum/asset/simple/fontawesome
+	)
+
 /datum/asset/simple/headers
 	assets = list(
 		"alarm_green.gif" 			= 'icons/program_icons/alarm_green.gif',
