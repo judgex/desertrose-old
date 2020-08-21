@@ -1987,12 +1987,14 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 	character.gender = gender
 	character.age = age
-	//special
+	//special stuff
 	character.special_s = special_s
 	character.special_p = special_p
 	character.special_e = special_e
 	character.special_c = special_c
 	character.special_i = special_i
+	if (character.special_i<3)
+		character.dna.add_mutation(UNINTELLIGIBLE)
 	character.special_a = special_a
 	character.special_l = special_l
 
