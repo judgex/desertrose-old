@@ -1,5 +1,5 @@
 //copy pasta of the space piano, don't hurt me -Pete
-/*/obj/item/instrument
+/obj/item/instrument
 	name = "generic instrument"
 	resistance_flags = FLAMMABLE
 	force = 20
@@ -227,4 +227,3 @@
 	throw_speed = 3
 	throw_range = 15
 	hitsound = 'sound/items/bikehorn.ogg'
-*/
