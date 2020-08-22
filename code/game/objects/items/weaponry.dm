@@ -95,6 +95,19 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	throwforce = 25
 	block_chance = 10
 
+/obj/item/claymore/machete/gladius/kalebman//TODO me description and stuff
+//flip coin, crush headset
+	name = "kaleb man gladiouses"
+	desc = "Gladius personally forged by kaleb man"
+	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
+	icon_state = "machete_kalebman"
+	item_state = "claymore"
+	slot_flags = ITEM_SLOT_BELT
+	force = 35
+	throwforce = 25
+	block_chance = 10
+
 /obj/item/claymore/machete/pipe
 	name = "pipe"
 	desc = "A heavy rusted pipe, good for smashing heads. "
