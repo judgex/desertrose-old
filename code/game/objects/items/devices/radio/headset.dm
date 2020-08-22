@@ -48,7 +48,7 @@ obj/item/radio/headset/attackby(obj/item/W, mob/user, params)
 		visible_message("<span class='warning'>[user] attempts to destroy the [src]</span>")
 		if (do_after(user,50, target = src))
 			src.Destroy()
-			new /obj/item/stack/crafting/electronicparts (get_turf(src.loc))
+			new /obj/item/stack/crafting/electronicparts (get_turf(W.loc))
 	
 /obj/item/radio/headset/syndicate //disguised to look like a normal headset for stealth ops
 
