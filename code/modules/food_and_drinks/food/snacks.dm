@@ -163,7 +163,7 @@
 	..()
 	reagents.clear_reagents()
 	for(var/obj/item/reagent_containers/RC in contents)
-		RC.reagents.trans_to(reagents, RC.reagents.maximum_volume)
+		RC.reagents.trans_to(reagents, RC.reagents.total_volume)
 	if(istype(R))
 		contents_loop:
 			for(var/A in contents)

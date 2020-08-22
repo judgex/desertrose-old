@@ -1456,8 +1456,8 @@
 
 /datum/crafting_recipe/salvagedpaconversion
 	name = "Salvaged NCR Power Armor"
-	result = /obj/item/clothing/suit/armor/f13/brokenpa/ncr
-	reqs = list(/obj/item/clothing/suit/armor/f13/brokenpa/t45b = 1,
+	result = /obj/item/clothing/suit/armor/f13/power_armor/ncr
+	reqs = list(/obj/item/clothing/suit/armor/f13/power_armor/t45b = 1,
 				/obj/item/toy/crayon/spraycan)
 	time = 30
 	category = CAT_CLOTHING
@@ -1465,8 +1465,8 @@
 
 /datum/crafting_recipe/salvagedpaconversion2
 	name = "Salvaged Power Armor"
-	result = /obj/item/clothing/suit/armor/f13/brokenpa/t45b
-	reqs = list(/obj/item/clothing/suit/armor/f13/brokenpa/ncr = 1,
+	result = /obj/item/clothing/suit/armor/f13/power_armor/t45b
+	reqs = list(/obj/item/clothing/suit/armor/f13/power_armor/ncr = 1,
 				/obj/item/toy/crayon/spraycan)
 	time = 30
 	category = CAT_CLOTHING
@@ -1618,7 +1618,8 @@
 	reqs = list(///obj/item/stock_parts/cell/ammo/mfc = 1, //removed since it uses one use batteries now
 				/obj/item/stack/crafting/electronicparts = 2,
 				 /obj/item/gun/ballistic/revolver/pipe_rifle = 1,
-				 /obj/item/reagent_containers/food/drinks/soda_cans/f13nukacola = 1,
+				 
+/obj/item/reagent_containers/food/drinks/bottle/f13nukacola = 1,
 				 /obj/item/stack/cable_coil = 3)
 	tools = list(TOOL_WORKBENCH, TOOL_MULTITOOL)
 	time = 120
@@ -2985,12 +2986,28 @@
 	result = /obj/item/gun/energy/laser/plasma
 	reqs = list(/obj/item/stack/sheet/metal = 15,
 				/obj/item/advanced_crafting_components/flux = 1,
-				/obj/item/advanced_crafting_components/conductors = 1,
+				/obj/item/advanced_crafting_components/conductors = 2,
 				/obj/item/advanced_crafting_components/alloys = 1,
 				/obj/item/stack/crafting/metalparts = 3,
 				/obj/item/stack/crafting/electronicparts = 3
 				)
-	tools = list(TOOL_WORKBENCH, /obj/item/blueprint/weapon/AER9, /obj/item/blueprint/weapon/plasmapistol)
+	tools = list(TOOL_WORKBENCH, /obj/item/blueprint/weapon/plasmarifle)
+	time = 120
+	category = CAT_BLUEPRINTS
+	subcategory = CAT_BPWEAPON
+
+/datum/crafting_recipe/RCW
+	name = "RCW"
+	result = /obj/item/gun/energy/laser/plasma
+	reqs = list(/obj/item/stack/sheet/metal = 15,
+				/obj/item/advanced_crafting_components/flux = 1,
+				/obj/item/advanced_crafting_components/conductors = 1,
+				/obj/item/advanced_crafting_components/alloys = 1,
+				/obj/item/advanced_crafting_components/lenses = 1,
+				/obj/item/stack/crafting/metalparts = 3,
+				/obj/item/stack/crafting/electronicparts = 3
+				)
+	tools = list(TOOL_WORKBENCH, /obj/item/blueprint/weapon/RCW)
 	time = 120
 	category = CAT_BLUEPRINTS
 	subcategory = CAT_BPWEAPON

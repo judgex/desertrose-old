@@ -220,8 +220,8 @@
 		if (QDELETED(O))
 			return //It's a stack and has already been merged
 
-		if (isitem(O))
-			usr.put_in_hands(O)
+//		if (isitem(O))
+//			usr.put_in_hands(O) //It already drops the item on the ground, its easier to leave it there rather than do pickup inits all over (fixes biobag hud icon, etc)
 		O.add_fingerprint(usr)
 
 		//BubbleWrap - so newly formed boxes are empty

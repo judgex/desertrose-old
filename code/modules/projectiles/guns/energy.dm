@@ -253,6 +253,24 @@
 	else 
 		return
 
+/obj/item/gun/energy/attack_self(mob/living/user)
+	if (!ishuman(user))
+		return
+	if(cell)
+		if(can_charge == 0)
+			to_chat(user, "<span class='notice'>You can't remove the cell from \the [src].</span>")
+			return
+		cell.forceMove(drop_location())
+		user.put_in_hands(cell)
+		cell.update_icon()
+		cell = null
+		to_chat(user, "<span class='notice'>You pull the cell out of \the [src].</span>")
+		playsound(src, 'sound/f13weapons/equipsounds/laserreload.ogg', 50, 1)
+	else
+		to_chat(user, "<span class='notice'>There's no cell in \the [src].</span>")
+	return
+
+
 /obj/item/gun/energy/attackby(obj/item/A, mob/user, params)
 	..()
 	if (istype(A, /obj/item/stock_parts/cell/ammo))
@@ -267,8 +285,8 @@
 			else
 				to_chat(user, "<span class='warning'>You cannot seem to get \the [src] out of your hands!</span>")
 				return
-		else if (cell)
-			to_chat(user, "<span class='notice'>There's already a cell in \the [src].</span>")
+		//else if (cell)
+			//to_chat(user, "<span class='notice'>There's already a cell in \the [src].</span>")
 
 /obj/item/gun/energy/examine(mob/user)
 	..()

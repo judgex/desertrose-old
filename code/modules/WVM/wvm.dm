@@ -524,10 +524,10 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		new /datum/data/wasteland_equipment("survival knife",				/obj/item/kitchen/knife/combat/survival, 							70),
 		new /datum/data/wasteland_equipment("9mm pistol",					/obj/item/gun/ballistic/automatic/pistol/ninemil,					150),
 		new /datum/data/wasteland_equipment("M1911",						/obj/item/gun/ballistic/automatic/pistol/m1911,						170),
-		new /datum/data/wasteland_equipment("Guns and Bullets, Part 1",		/obj/item/book/granter/trait/gunsmith_one, 							200),
-		new /datum/data/wasteland_equipment("Guns and Bullets, Part 2",		/obj/item/book/granter/trait/gunsmith_two,							300),
-		new /datum/data/wasteland_equipment("Guns and Bullets, Part 3",		/obj/item/book/granter/trait/gunsmith_three, 						400),
-		new /datum/data/wasteland_equipment("Guns and Bullets, Part 4",		/obj/item/book/granter/trait/gunsmith_four, 							500)
+		new /datum/data/wasteland_equipment("Guns and Bullets, Part 1",		/obj/item/book/granter/trait/gunsmith_one, 							100),
+		new /datum/data/wasteland_equipment("Guns and Bullets, Part 2",		/obj/item/book/granter/trait/gunsmith_two,							200),
+		new /datum/data/wasteland_equipment("Guns and Bullets, Part 3",		/obj/item/book/granter/trait/gunsmith_three, 						300),
+		new /datum/data/wasteland_equipment("Guns and Bullets, Part 4",		/obj/item/book/granter/trait/gunsmith_four, 							400)
 		)
 
 /obj/machinery/mineral/wasteland_vendor/ammo
@@ -541,7 +541,7 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		new /datum/data/wasteland_equipment("Speed loader (.44)",			/obj/item/ammo_box/m44,												70),
 		new /datum/data/wasteland_equipment("Speed loader (.38)",			/obj/item/ammo_box/c38,												70),
 		new /datum/data/wasteland_equipment("small rifle magazine (5.56mm)",/obj/item/ammo_box/magazine/m556/rifle/small,						100),
-		new /datum/data/wasteland_equipment("Blackpowder",					/obj/item/reagent_containers/glass/bottle/blackpowder,				65)
+		new /datum/data/wasteland_equipment("Blackpowder",					/obj/item/reagent_containers/glass/bottle/blackpowder,				50)
 		)
 
 /obj/machinery/mineral/wasteland_vendor/clothing
@@ -565,9 +565,27 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		new /datum/data/wasteland_equipment("Explorer satchel",				/obj/item/storage/backpack/satchel/explorer,						25),
 		new /datum/data/wasteland_equipment("Spray bottle",					/obj/item/reagent_containers/spray,									35),
 		new /datum/data/wasteland_equipment("Bottle of E-Z-Nutrient",		/obj/item/reagent_containers/glass/bottle/nutrient/ez,				40),
-		new /datum/data/wasteland_equipment("Craftsmanship Monthly",		/obj/item/book/granter/trait/techno,								600)
+		new /datum/data/wasteland_equipment("Craftsmanship Monthly",		/obj/item/book/granter/trait/techno,								600),
 		)
 
+/obj/machinery/mineral/wasteland_vendor/camp
+	name = "Wasteland Camp-O-Vend"
+	icon_state = "generic_idle"
+	prize_list = list(
+		new /datum/data/wasteland_equipment("Vault-Tec C.A.M.P. Basic Edition",			/obj/item/survivalcapsule,								50),
+		new /datum/data/wasteland_equipment("Vault-Tec C.A.M.P. Premium Edition",		/obj/item/survivalcapsule/premium,						100),
+		new /datum/data/wasteland_equipment("Vault-Tec C.A.M.P. Expanded Edition",		/obj/item/survivalcapsule/quad,							150),
+		new /datum/data/wasteland_equipment("Vault-Tec C.A.M.P. Merchant Edition",		/obj/item/survivalcapsule/merchant,						300),
+		new /datum/data/wasteland_equipment("Vault-Tec C.A.M.P. Party-Tent Edition",	/obj/item/survivalcapsule/party,						150),
+		new /datum/data/wasteland_equipment("Vault-Tec C.A.M.P. Mess-Hall Edition",		/obj/item/survivalcapsule/kitchen,						250),
+		new /datum/data/wasteland_equipment("Vault-Tec C.A.M.P. Farm-N-Go Edition",		/obj/item/survivalcapsule/farm,							200),
+		new /datum/data/wasteland_equipment("Vault-Tec C.A.M.P. Occult Edition",		/obj/item/survivalcapsule/fortuneteller,				125),
+		new /datum/data/wasteland_equipment("Vault-Tec C.A.M.P. Smithery Edition",		/obj/item/survivalcapsule/blacksmith,					400),
+		new /datum/data/wasteland_equipment("Vault-Tec C.A.M.P. Ultra-Deluxe Edition",	/obj/item/survivalcapsule/super_deluxe,					600),
+		new /datum/data/wasteland_equipment("Keep your C.A.M.P. Clean: Trashbag",		/obj/item/storage/bag/trash,							30),
+		new /datum/data/wasteland_equipment("Keep your C.A.M.P. Clean: Soap",			/obj/item/soap/homemade,								25)
+		)
+		
 /obj/machinery/mineral/wasteland_vendor/special
 	name = "Wasteland Vending Machine - Special"
 	icon_state = "liberationstation_idle"
@@ -605,7 +623,13 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 	name = "Wasteland Vending Machine - Crafting"
 	icon_state = "generic_idle"
 	prize_list = list(
-		new /datum/data/wasteland_equipment("High Quality Parts",				/obj/item/stack/crafting/goodparts,									25)
+		new /datum/data/wasteland_equipment("High Quality Parts",				/obj/item/stack/crafting/goodparts,									25),
+		new /datum/data/wasteland_equipment("Metal Parts",						/obj/item/stack/crafting/metalparts,								10),
+		new /datum/data/wasteland_equipment("Electronic Parts",					/obj/item/stack/crafting/electronicparts,							5),
+		new /datum/data/wasteland_equipment("Metal Sheets x 20",				/obj/item/stack/sheet/metal/twenty,									50),
+		new /datum/data/wasteland_equipment("Metal Sheets x 50",				/obj/item/stack/sheet/metal/fifty,									115),
+		new /datum/data/wasteland_equipment("Glass Sheets x 10",				/obj/item/stack/sheet/glass/ten,									30),
+		new /datum/data/wasteland_equipment("Glass Sheets x 50",				/obj/item/stack/sheet/glass/fifty,									90)
 		)
 
 /datum/data/wasteland_equipment

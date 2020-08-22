@@ -113,7 +113,7 @@ Sentinel
 	accessory = 	/obj/item/clothing/accessory/bos/sentinel
 	suit = 			/obj/item/clothing/suit/armor/f13/power_armor/t60
 	belt =			/obj/item/storage/belt/military/assault
-	head = 			/obj/item/clothing/head/helmet/power_armor/t60
+	head = 			/obj/item/clothing/head/helmet/f13/power_armor/t60
 	mask =			/obj/item/clothing/mask/gas/sechailer/swat
 	id = 			/obj/item/card/id/dogtag
 	backpack_contents = list(
@@ -193,7 +193,8 @@ Head Scribe
 	backpack_contents = list(
 		/obj/item/shield/energy=1, \
 		/obj/item/kitchen/knife/combat=1, \
-		/obj/item/reagent_containers/hypospray/medipen/stimpak/super=2 \
+		/obj/item/reagent_containers/hypospray/medipen/stimpak/super=2, \
+		/obj/item/reagent_containers/dropper/SR/NotVault = 1
 		)
 
 /datum/outfit/loadout/hsstand
@@ -237,8 +238,8 @@ Knight-Captain
 
 	outfit = /datum/outfit/job/bos/f13knightcap
 
-	access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
-	minimal_access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
+	access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS, ACCESS_ARMORY, ACCESS_BRIG)
+	minimal_access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS, ACCESS_ARMORY, ACCESS_BRIG)
 
 /datum/outfit/job/bos/f13knightcap/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
@@ -253,6 +254,7 @@ Knight-Captain
 	gunsmith_two = TRUE
 	gunsmith_three = TRUE
 	gunsmith_four = TRUE
+	pa_wear = TRUE
 	suit = 			/obj/item/clothing/suit/armor/f13/combat/knightcap
 	uniform =		/obj/item/clothing/under/syndicate/brotherhood
 	accessory = 	/obj/item/clothing/accessory/bos/knightcaptain
@@ -325,7 +327,7 @@ Senior Paladin
 	jobtype = /datum/job/bos/f13seniorpaladin
 	pa_wear = TRUE
 	suit = 			/obj/item/clothing/suit/armor/f13/power_armor/t51b
-	head = 			/obj/item/clothing/head/helmet/power_armor/t51b
+	head = 			/obj/item/clothing/head/helmet/f13/power_armor/t51b
 	accessory = 	/obj/item/clothing/accessory/bos/seniorpaladin
 	uniform = 		/obj/item/clothing/under/f13/recon
 	mask =			/obj/item/clothing/mask/gas/sechailer/swat
@@ -388,7 +390,7 @@ Paladin
 	jobtype = /datum/job/bos/f13paladin
 	pa_wear = TRUE
 	suit = 			/obj/item/clothing/suit/armor/f13/power_armor/t45d
-	head = 			/obj/item/clothing/head/helmet/power_armor/t45d
+	head = 			/obj/item/clothing/head/helmet/f13/power_armor/t45d
 	uniform = 		/obj/item/clothing/under/f13/recon
 	mask =			/obj/item/clothing/mask/gas/sechailer/swat
 	belt = 			/obj/item/storage/belt/military

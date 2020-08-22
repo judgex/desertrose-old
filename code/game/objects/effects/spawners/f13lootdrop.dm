@@ -196,7 +196,7 @@
 				)
 
 /obj/effect/spawner/lootdrop/f13/armor/costumes/Initialize(mapload) //on mapload, pick what shit to spawn
-	loot = pick(loot1, loot2, loot3, loot4, loot5, loot6, loot7, loot8, loot9, loot10)
+	loot = pick(loot1, loot2, loot3, loot4, loot5, loot6, loot7, loot8, loot9, loot10, loot11, loot12, loot13, loot14)
 	. = ..()
 
 
@@ -249,7 +249,7 @@
 				)
 
 /obj/effect/spawner/lootdrop/f13/armor/tier1/Initialize(mapload) //on mapload, pick what shit to spawn
-	loot = pick(loot1, loot2, loot3, loot4, loot5, loot6, loot7, loot8, loot9, loot10)
+	loot = pick(loot1, loot2, loot3, loot4, loot5, loot6, loot7, loot8, loot9, loot10, loot11)
 	. = ..()
 
 /obj/effect/spawner/lootdrop/f13/armor/tier2 //TIER 2 ARMOR
@@ -321,15 +321,15 @@
 				)
 
 /obj/effect/spawner/lootdrop/f13/armor/tier3/Initialize(mapload) //on mapload, pick what shit to spawn
-	loot = pick(loot1, loot2, loot3, loot4, loot5, loot6, loot7, loot8)
+	loot = pick(loot1, loot2, loot3, loot4, loot5, loot6, loot7, loot8, loot9)
 	. = ..()
 
 /obj/effect/spawner/lootdrop/f13/armor/tier4 //TIER 4 ARMOR
 	name = "tier 4 armor"
 	lootcount = 2
 	var/loot1 = list(
-				/obj/item/clothing/suit/armor/f13/brokenpa/t45b,
-				/obj/item/clothing/head/helmet/power_armor/t45b
+				/obj/item/clothing/head/helmet/f13/power_armor/t45b,
+				/obj/item/clothing/suit/armor/f13/power_armor/t45b
 				)
 	var/loot2 = list(
 				/obj/item/clothing/suit/armor/f13/leather_jacket/combat/riotpolice,
@@ -340,16 +340,16 @@
 				/obj/item/clothing/head/helmet/f13/combat/mk2
 				)
 	var/loot4 = list(
-				/obj/item/clothing/suit/armor/f13/brokenpa/raiderpa,
-				/obj/item/clothing/head/helmet/f13/brokenpa/raiderpa_helm
+				/obj/item/clothing/suit/armor/f13/power_armor/raiderpa,
+				/obj/item/clothing/head/helmet/f13/power_armor/raiderpa_helm
 				)
 	var/loot5 = list(
-				/obj/item/clothing/suit/armor/f13/brokenpa/t45bhotrod,
-				/obj/item/clothing/head/helmet/f13/brokenpa/hotrod
+				/obj/item/clothing/suit/armor/f13/power_armor/hotrod,
+				/obj/item/clothing/head/helmet/f13/power_armor/hotrod
 				)
 
 /obj/effect/spawner/lootdrop/f13/armor/tier4/Initialize(mapload) //on mapload, pick what shit to spawn
-	loot = pick(loot1, loot2, loot3)
+	loot = pick(loot1, loot2, loot3, loot4, loot5)
 	. = ..()
 
 
@@ -358,11 +358,11 @@
 	lootcount = 2
 	var/loot1 = list(
 				/obj/item/clothing/suit/armor/f13/power_armor/t45d,
-				/obj/item/clothing/head/helmet/power_armor/t45d
+				/obj/item/clothing/head/helmet/f13/power_armor/t45d
 				)
 	var/loot2 = list(
 				/obj/item/clothing/suit/armor/f13/power_armor/t51b,
-				/obj/item/clothing/head/helmet/power_armor/t51b
+				/obj/item/clothing/head/helmet/f13/power_armor/t51b
 				)
 
 /obj/effect/spawner/lootdrop/f13/armor/tier5/Initialize(mapload) //on mapload, pick what shit to spawn
@@ -434,7 +434,7 @@
 				/obj/item/defibrillator/compact/combat/loaded,
 				/obj/item/reagent_containers/hypospray/combat,
 				/obj/item/clothing/glasses/hud/health/night,
-				/obj/item/disk/surgery/revival
+				///obj/item/disk/surgery/revival
 				)
 
 /obj/effect/spawner/lootdrop/f13/medical/vault/meds  //no drugs, didn't add
@@ -1116,7 +1116,55 @@
 	lootcount = 4
 
 /obj/effect/spawner/lootdrop/f13/seedspawner/Initialize(mapload) // This will spawn gatfruit sometimes.
-	loot = childtypesof(/obj/item/seeds)
+	loot = list(/obj/item/seeds/ambrosia,
+		            /obj/item/seeds/apple,
+		            /obj/item/seeds/banana,
+		            /obj/item/seeds/cotton,
+		            /obj/item/seeds/berry,
+		            /obj/item/seeds/poppy/broc,
+					/obj/item/seeds/cabbage,
+					/obj/item/seeds/carrot,
+					/obj/item/seeds/carrot/parsnip,
+					/obj/item/seeds/cherry,
+					/obj/item/seeds/chanter,
+					/obj/item/seeds/chili,
+					/obj/item/seeds/cocoapod,
+					/obj/item/seeds/coffee,
+					/obj/item/seeds/corn,
+					/obj/item/seeds/eggplant,
+					/obj/item/seeds/grape,
+					/obj/item/seeds/grass,
+					/obj/item/seeds/lemon,
+					/obj/item/seeds/lime,
+					/obj/item/seeds/onion,
+					/obj/item/seeds/orange,
+					/obj/item/seeds/rainbow_bunch,
+					/obj/item/seeds/pineapple,
+					/obj/item/seeds/potato,
+					/obj/item/seeds/poppy,
+					/obj/item/seeds/pumpkin,
+					/obj/item/seeds/wheat/rice,
+					/obj/item/seeds/soya,
+					/obj/item/seeds/sugarcane,
+					/obj/item/seeds/sunflower,
+					/obj/item/seeds/tea,
+					/obj/item/seeds/tobacco,
+					/obj/item/seeds/tomato,
+					/obj/item/seeds/tower,
+					/obj/item/seeds/watermelon,
+					/obj/item/seeds/wheat,
+					/obj/item/seeds/whitebeet,
+					/obj/item/seeds/xander,
+					/obj/item/seeds/mutfruit,
+					/obj/item/seeds/amanita,
+		            /obj/item/seeds/glowshroom,
+		            /obj/item/seeds/liberty,
+		            /obj/item/seeds/nettle,
+					/obj/item/seeds/plump,
+					/obj/item/seeds/reishi,
+					/obj/item/seeds/cannabis,
+					/obj/item/seeds/starthistle,
+					/obj/item/seeds/random)
 	. = ..()
 
 /obj/effect/spawner/lootdrop/f13/foodspawner
@@ -1396,7 +1444,9 @@
 		/obj/item/blueprint/weapon/smg10mm,
 		/obj/item/blueprint/weapon/AER9,
 		/obj/item/blueprint/weapon/AEP7,
-		/obj/item/blueprint/weapon/plasmapistol
+		/obj/item/blueprint/weapon/plasmapistol,
+		/obj/item/blueprint/weapon/plasmarifle,
+		/obj/item/gun/energy/laser/rcw
 	//	/obj/item/blueprint/armor/combat
 	)
 

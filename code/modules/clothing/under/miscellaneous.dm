@@ -319,6 +319,12 @@
 	fitted = FEMALE_UNIFORM_TOP
 	can_adjust = FALSE
 
+/obj/item/clothing/under/bride
+	name = "wedding gown"
+	desc = "An intricate white wedding gown"
+	icon_state = "bride_white"
+	item_state = "bride_white"
+	item_color = "bride_white"
 
 /obj/item/clothing/under/schoolgirl
 	name = "blue schoolgirl uniform"
@@ -631,6 +637,273 @@
 	icon_state = "sailor"
 	item_state = "sailor"
 	item_color = "sailor"
+	can_adjust = FALSE
+
+/obj/item/clothing/under/saloon_dress
+	name = "saloon dress"
+	desc = "A saloon girls outfit"
+	icon_state = "dress_saloon_s"
+	item_state = "dress_saloon_s"
+	item_color = "dress_saloon_s"
+	can_adjust = FALSE
+
+/obj/item/clothing/under/weddingdress_blue
+	name = "blue wedding dress"
+	desc = "An ornate pre-war wedding dress made out of precious materials.  This one is blue."
+	icon_state = "bride_blue_s"
+	item_state = "bride_blue_s"
+	item_color = "bride_blue_s"
+	can_adjust = FALSE
+
+/obj/item/clothing/under/weddingdress_orange
+	name = "orange wedding dress"
+	desc = "An ornate pre-war wedding dress made out of precious materials.  This one is orange."
+	icon_state = "bride_orange_s"
+	item_state = "bride_orange_s"
+	item_color = "bride_orange_s"
+	can_adjust = FALSE
+
+/obj/item/clothing/under/weddingdress_purple
+	name = "purple wedding dress"
+	desc = "An ornate pre-war wedding dress made out of precious materials.  This one is purple."
+	icon_state = "bride_purple_s"
+	item_state = "bride_purple_s"
+	item_color = "bride_purple_s"
+	can_adjust = FALSE
+
+/obj/item/clothing/under/weddingdress_red
+	name = "red wedding dress"
+	desc = "An ornate pre-war wedding dress made out of precious materials.  This one is red."
+	icon_state = "bride_red_s"
+	item_state = "bride_red_s"
+	item_color = "bride_red_s"
+	can_adjust = FALSE
+
+/obj/item/clothing/under/orange_dress
+	name = "orange dress"
+	desc = "An orange pre-war dress. This one has a short-cut."
+	icon_state = "dress_orange_s"
+	item_state = "dress_orange_s"
+	item_color = "dress_orange_s"
+	can_adjust = FALSE
+
+/obj/item/clothing/under/yellow_dress
+	name = "yellow dress"
+	desc = "A yellow pre-war dress. It appears to go below the knees"
+	icon_state = "dress_yellow_s"
+	item_state = "dress_yellow_s"
+	item_color = "dress_yellow_s"
+	can_adjust = FALSE
+
+/obj/item/clothing/under/formalblack_dress
+	name = "black dress"
+	desc = "A formal black dress."
+	icon_state = "dress_black"
+	item_state = "dress_black"
+	item_color = "dress_black"
+	fitted = FEMALE_UNIFORM_TOP
+	can_adjust = TRUE
+	alt_covers_chest = TRUE
+
+/obj/item/clothing/under/cheongsam_dress
+	name = "cheongsam"
+	desc = "A traditional, form fitting oriental dress."
+	icon_state = "cheongsam_s"
+	item_state = "cheongsam_s"
+	item_color = "cheongsam_s"
+	can_adjust = FALSE
+
+/obj/item/clothing/under/orange_skirt
+	name = "orange skirt"
+	desc = "A formal, orange skirt with blouse."
+	icon_state = "huresource_s"
+	item_state = "huresource_s"
+	item_color = "huresource_s"
+	can_adjust = FALSE
+
+/obj/item/clothing/under/brown_skirt
+	name = "brown skirt"
+	desc = "A formal, brown skirt with blouse."
+	icon_state = "dress_rd_s"
+	item_state = "dress_rd_s"
+	item_color = "dress_rd_s"
+	can_adjust = FALSE
+
+/obj/item/clothing/under/businessattire_tanned
+	name = "tanned business outfit"
+	desc = "A tanned looking outfit with a tie and slacks."
+	icon_state = "rdalt_s"
+	item_state = "rdalt_s"
+	item_color = "rdalt_s"
+	can_adjust = FALSE
+
+/obj/item/clothing/under/businessattire_manager
+	name = "managers business outfit"
+	desc = "A typical outfit worn by a manager pre-war.  This set comes with a long-sleeved shirt with no cuff buttons, slacks, belt, and a clip-on tie."
+	icon_state = "manager"
+	item_state = "manager"
+	item_color = "manager"
+	can_adjust = TRUE
+	alt_covers_chest = TRUE
+
+/obj/item/clothing/under/emr_dispatch
+	name = "emr dispatcher"
+	desc = "An emergency medical responder dispatchers outfit. With kahkis and a blue collared shirt."
+	icon_state = "dispatch_s"
+	item_state = "dispatch_s"
+	item_color = "dispatch_s"
+	can_adjust = FALSE
+
+/obj/item/clothing/under/flower_dress
+	name = "flower dress"
+	desc = "A dress made from synthethic flowers, fashioned in a way to make a dress."
+	icon_state = "flower_dress"
+	item_state = "flower_dress"
+	item_color = "flower_dress"
+	can_adjust = FALSE
+
+/obj/item/clothing/under/flamenco
+	name = "flamenco dress"
+	desc = "A traditional, body-hugging flamenco dress."
+	icon_state = "flamenco"
+	item_state = "flamenco"
+	item_color = "flamenco"
+	can_adjust = FALSE
+
+/obj/item/clothing/under/western_bustle
+	name = "barmaid outfit"
+	desc = "A red barmaids outfit, similar to what you'd see at a tavern."
+	icon_state = "western_bustle"
+	item_state = "western_bustle"
+	item_color = "western_bustle"
+	can_adjust = FALSE
+
+/obj/item/clothing/under/jeanshorts
+	name = "jean shorts"
+	desc = "A pair rugged denim shorts."
+	icon_state = "jean_shorts"
+	item_state = "jean_shorts"
+	item_color = "jean_shorts"
+	can_adjust = FALSE
+
+/obj/item/clothing/under/jeans_ripped
+	name = "ripped jeans"
+	desc = "A pair of denim jeans with some holes in them."
+	icon_state = "jean_ripped"
+	item_state = "jean_ripped"
+	item_color = "jean_ripped"
+	can_adjust = FALSE
+
+/obj/item/clothing/under/denim_skirt
+	name = "denim skirt"
+	desc = "A skirt made out of thick denim."
+	icon_state = "denim_skirt"
+	item_state = "denim_skirt"
+	item_color = "denim_skirt"
+	can_adjust = FALSE
+
+/obj/item/clothing/under/chaps
+	name = "chap"
+	desc = "Yeehaw, cowboy."
+	icon_state = "chaps"
+	item_state = "chaps"
+	item_color = "chaps"
+	can_adjust = FALSE
+
+/obj/item/clothing/under/sundress/white
+	name = "white sundress"
+	desc = "A white sundress with a pink decorative flower design"
+	icon_state = "sundress_white"
+	item_state = "sundress_white"
+	item_color = "sundress_white"
+	can_adjust = FALSE
+
+/obj/item/clothing/under/dress/green
+	name = "green one piece dress"
+	desc = "A tight-fitting, one piece dress.  This one is green."
+	icon_state = "dress_green"
+	item_state = "dress_green"
+	item_color = "dress_green"
+	can_adjust = FALSE
+
+/obj/item/clothing/under/dress/pink
+	name = "pink one piece dress"
+	desc = "A tight-fitting, one piece dress.  This one is green."
+	icon_state = "dress_pink"
+	item_state = "dress_pink"
+	item_color = "dress_pink"
+	can_adjust = FALSE
+
+/obj/item/clothing/under/skirt/black/swept
+	name = "black swept skirt"
+	desc = "An angle hemmed skirt. It's rather short."
+	icon_state = "skirt_swept"
+	item_state = "skirt_swept"
+	item_color = "skirt_swept"
+	can_adjust = FALSE
+
+/obj/item/clothing/under/croptop
+	name = "croptop"
+	desc = "A red croptop with denim jeans"
+	icon_state = "croptop"
+	item_state = "croptop"
+	item_color = "croptop"
+	can_adjust = FALSE
+
+/obj/item/clothing/under/corset
+	name = "corset"
+	desc = "A restrictive, tight, black corset"
+	icon_state = "corset"
+	item_state = "corset"
+	item_color = "corset"
+	can_adjust = FALSE
+
+/obj/item/clothing/under/qipao/black
+	name = "black qipao"
+	desc = "A traditional, form fitting oriental dress. This one is black."
+	icon_state = "qipao"
+	item_state = "qipao"
+	item_color = "qipao"
+	can_adjust = FALSE
+
+/obj/item/clothing/under/qipao/red
+	name = "red qipao"
+	desc = "A traditional, form fitting oriental dress. This one is red."
+	icon_state = "qipao_red"
+	item_state = "qipao_red"
+	item_color = "qipao_red"
+	can_adjust = FALSE
+
+/obj/item/clothing/under/qipao/white
+	name = "white qipao"
+	desc = "A traditional, form fitting oriental dress. This one is white."
+	icon_state = "qipao_white"
+	item_state = "qipao_white"
+	item_color = "qipao_white"
+	can_adjust = FALSE
+
+/obj/item/clothing/under/cheon/red
+	name = "red cheon"
+	desc = "A traditional cheon, worn my men.  This one is red."
+	icon_state = "cheongr"
+	item_state = "cheongr"
+	item_color = "cheongr"
+	can_adjust = FALSE
+
+/obj/item/clothing/under/cheon/white
+	name = "white cheon"
+	desc = "A traditional cheon, worn my men.  This one is white."
+	icon_state = "cheongw"
+	item_state = "cheongw"
+	item_color = "cheongw"
+	can_adjust = FALSE
+
+/obj/item/clothing/under/cheon/black
+	name = "black cheon"
+	desc = "A traditional cheon, worn my men.  This one is black."
+	icon_state = "cheong"
+	item_state = "cheong"
+	item_color = "cheong"
 	can_adjust = FALSE
 
 /obj/item/clothing/under/plasmaman

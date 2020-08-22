@@ -227,6 +227,15 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["body_is_always_random"] >> be_random_body
 	S["gender"]				>> gender
 	S["age"]				>> age
+	//special
+	S["special_s"]			>> special_s
+	S["special_p"]			>> special_p
+	S["special_e"]			>> special_e
+	S["special_c"]			>> special_c
+	S["special_i"]			>> special_i
+	S["special_a"]			>> special_a
+	S["special_l"]			>> special_l
+
 	S["has_penis"]			>> has_penis
 	S["has_vagina"]			>> has_vagina
 	S["has_breasts"]		>> has_breasts
@@ -237,8 +246,11 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["hair_style_name"]	>> hair_style
 	S["facial_style_name"]	>> facial_hair_style
 	S["underwear"]			>> underwear
+	S["undie_color"]		>> undie_color
 	S["undershirt"]			>> undershirt
+	S["shirt_color"]		>> shirt_color
 	S["socks"]				>> socks
+	S["socks_color"]		>> socks_color
 	S["backbag"]			>> backbag
 	S["uplink_loc"]			>> uplink_spawn_loc
 	S["feature_mcolor"]					>> features["mcolor"]
@@ -341,18 +353,22 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 
 	be_random_name	= sanitize_integer(be_random_name, 0, 1, initial(be_random_name))
 	be_random_body	= sanitize_integer(be_random_body, 0, 1, initial(be_random_body))
-	if(gender == MALE)
-		hair_style			= sanitize_inlist(hair_style, GLOB.hair_styles_male_list)
-		facial_hair_style			= sanitize_inlist(facial_hair_style, GLOB.facial_hair_styles_male_list)
-		underwear		= sanitize_inlist(underwear, GLOB.underwear_m)
-		undershirt 		= sanitize_inlist(undershirt, GLOB.undershirt_m)
-	else
-		hair_style			= sanitize_inlist(hair_style, GLOB.hair_styles_female_list)
-		facial_hair_style			= sanitize_inlist(facial_hair_style, GLOB.facial_hair_styles_female_list)
-		underwear		= sanitize_inlist(underwear, GLOB.underwear_f)
-		undershirt		= sanitize_inlist(undershirt, GLOB.undershirt_f)
-	socks			= sanitize_inlist(socks, GLOB.socks_list)
+	hair_style					= sanitize_inlist(hair_style, GLOB.hair_styles_list)
+	facial_hair_style			= sanitize_inlist(facial_hair_style, GLOB.facial_hair_styles_list)
+	underwear					= sanitize_inlist(underwear, GLOB.underwear_list)
+	undershirt 					= sanitize_inlist(undershirt, GLOB.undershirt_list)
+	undie_color						= sanitize_hexcolor(undie_color, 6, FALSE, initial(undie_color))
+	shirt_color						= sanitize_hexcolor(shirt_color, 6, FALSE, initial(shirt_color))
+	socks							= sanitize_inlist(socks, GLOB.socks_list)
+	socks_color						= sanitize_hexcolor(socks_color, 6, FALSE, initial(socks_color))
 	age				= sanitize_integer(age, AGE_MIN, AGE_MAX, initial(age))
+	special_s		= sanitize_integer(special_s, 1, 10, initial(special_s))
+	special_p		= sanitize_integer(special_p, 1, 10, initial(special_p))
+	special_e		= sanitize_integer(special_e, 1, 10, initial(special_e))
+	special_c		= sanitize_integer(special_c, 1, 10, initial(special_c))
+	special_i		= sanitize_integer(special_i, 1, 10, initial(special_i))
+	special_a		= sanitize_integer(special_a, 1, 10, initial(special_a))
+	special_l		= sanitize_integer(special_l, 1, 10, initial(special_l))
 	hair_color			= sanitize_hexcolor(hair_color, 3, 0)
 	facial_hair_color			= sanitize_hexcolor(facial_hair_color, 3, 0)
 	eye_color		= sanitize_hexcolor(eye_color, 3, 0)
@@ -435,6 +451,15 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["body_is_always_random"] , be_random_body)
 	WRITE_FILE(S["gender"]				, gender)
 	WRITE_FILE(S["age"]				, age)
+	//special
+	WRITE_FILE(S["special_s"]		,special_s)
+	WRITE_FILE(S["special_p"]		,special_p)
+	WRITE_FILE(S["special_e"]		,special_e)
+	WRITE_FILE(S["special_c"]		,special_c)
+	WRITE_FILE(S["special_i"]		,special_i)
+	WRITE_FILE(S["special_a"]		,special_a)
+	WRITE_FILE(S["special_l"]		,special_l)
+
 	WRITE_FILE(S["has_penis"]		 , has_penis)
 	WRITE_FILE(S["has_vagina"]		 , has_vagina)
 	WRITE_FILE(S["has_breasts"]		, has_breasts)
@@ -444,9 +469,12 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["skin_tone"]			, skin_tone)
 	WRITE_FILE(S["hair_style_name"]	, hair_style)
 	WRITE_FILE(S["facial_style_name"]	, facial_hair_style)
-	WRITE_FILE(S["underwear"]			, underwear)
-	WRITE_FILE(S["undershirt"]			, undershirt)
-	WRITE_FILE(S["socks"]				, socks)
+	WRITE_FILE(S["underwear"]				, underwear)
+	WRITE_FILE(S["undie_color"]				, undie_color)
+	WRITE_FILE(S["undershirt"]				, undershirt)
+	WRITE_FILE(S["shirt_color"]				, shirt_color)
+	WRITE_FILE(S["socks"]					, socks)
+	WRITE_FILE(S["socks_color"]				, socks_color)
 	WRITE_FILE(S["backbag"]			, backbag)
 	WRITE_FILE(S["uplink_loc"]			, uplink_spawn_loc)
 	WRITE_FILE(S["species"]			, pref_species.id)

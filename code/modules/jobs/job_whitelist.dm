@@ -1,7 +1,7 @@
 /proc/job_is_whitelist_locked(jobtitle)
-	if(!CONFIG_GET(flag/use_role_whitelist) && jobtitle in (GLOB.faction_whitelist_positions | GLOB.antagonist_whitelist_positions | GLOB.faction_player_positions | GLOB.command_positions | list("AI")))
+	if(!CONFIG_GET(flag/use_role_whitelist) && jobtitle in (GLOB.faction_whitelist_positions | GLOB.antagonist_whitelist_positions | GLOB.faction_player_positions | GLOB.command_positions | GLOB.ncr_ranger_positions | GLOB.ncr_rangervet_positions | list("AI")))
 		return FALSE
-	if(!CONFIG_GET(flag/use_role_whitelist) && !(jobtitle in (GLOB.faction_whitelist_positions | GLOB.antagonist_whitelist_positions | GLOB.faction_player_positions | GLOB.command_positions | list("AI"))))
+	if(!CONFIG_GET(flag/use_role_whitelist) && !(jobtitle in (GLOB.faction_whitelist_positions | GLOB.antagonist_whitelist_positions | GLOB.faction_player_positions | GLOB.command_positions | GLOB.ncr_ranger_positions | GLOB.ncr_rangervet_positions | list("AI"))))
 		return FALSE
 	return TRUE
 
@@ -42,6 +42,15 @@
 	if(!whitelists["leadership"])					// if they do not have leadership whitelist, remove leadership whitelist positions
 		for(var/rtypeWL in GLOB.command_positions)
 			play_records[rtypeWL] = 0
+
+	if(!whitelists["ranger"])
+		for(var/rtypeWL in GLOB.ncr_ranger_positions)	// if they do not have ranger whitelist, remove ranger whitelist positions
+			play_records[rtypeWL] = 0
+
+	if(!whitelists["vetranger"])
+		for(var/rtypeWL in GLOB.ncr_rangervet_positions)	// if they do not have ranger whitelist, remove ranger whitelist positions
+			play_records[rtypeWL] = 0
+
 	/*
 	if(!whitelists["leadership_bos"])					// if they do not have leadership_bos whitelist, remove leadership_bos whitelist positions
 		for(var/rtypeWL in GLOB.brotherhood_command_positions)
@@ -108,5 +117,12 @@
 		for(var/rtypeWL in GLOB.faction_player_positions)
 			play_records[rtypeWL] = rtypeWL
 
+	if(whitelists["ranger"])
+		for(var/rtypeWL in GLOB.ncr_ranger_positions)
+			play_records[rtypeWL] = rtypeWL
+
+	if(whitelists["vetranger"])
+		for(var/rtypeWL in GLOB.ncr_rangervet_positions)
+			play_records[rtypeWL] = rtypeWL
 
 	prefs.job_whitelists = play_records

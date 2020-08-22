@@ -4,8 +4,8 @@
 	icon_state = "nuka_vending"
 	icon_deny = "nuka_vending-deny"
 	product_slogans = "Take the leap... enjoy a Quantum!"
-	products = list(/obj/item/reagent_containers/food/drinks/soda_cans/f13nukacola/radioactive = 20)
-	contraband = list(/obj/item/reagent_containers/food/drinks/soda_cans/f13nukacola = 4)
+	products = list(/obj/item/reagent_containers/food/drinks/bottle/f13nukacola/radioactive = 20)
+	contraband = list(/obj/item/reagent_containers/food/drinks/bottle/f13nukacola = 4)
 	premium = list(/obj/item/reagent_containers/food/drinks/drinkingglass/filled/nuka_cola = 1) //REAl nuka cola
 	refill_canister = /obj/item/vending_refill/cola
 
@@ -31,18 +31,18 @@
 	name = "\improper Vim Soda Vending Machine"
 	desc = "A pre-war Vim Soda Vending Machine. You've got Vim!"
 	product_slogans = "Get some Vim and Vigour in you!"
-	products = list(/obj/item/reagent_containers/food/drinks/soda_cans/vim = 30)
+	products = list(/obj/item/reagent_containers/food/drinks/bottle/vim = 30)
 
 /obj/machinery/vending/cola/space_up
 	icon_state = "space_up"
 	name = "\improper Sunset Sarsparilla Vending Machine"
 	desc = "The Wests most Popular Soda Drink Vending Machine!"
 	product_slogans = "Freshen Up with Sunset Sarsparilla!"
-	products = list(/obj/item/reagent_containers/food/drinks/soda_cans/sunset = 30)
+	products = list(/obj/item/reagent_containers/food/drinks/bottle/sunset = 30)
 
 /obj/machinery/vending/cola/starkist
 	icon_state = "starkist"
 	name = "\improper Balls Guarana Vending Machine"
 	desc = "A pre-war Balls Guarana Vending Machine. For that Bounce! To keep you going!"
 	product_slogans = "The Drink to Keep you Going! Balls Guarana! Bounce!"
-	products = list(/obj/item/reagent_containers/food/drinks/soda_cans/bawls = 30)
+	products = list(/obj/item/reagent_containers/food/drinks/bottle/bawls = 30)

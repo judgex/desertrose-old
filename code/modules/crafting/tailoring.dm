@@ -275,9 +275,10 @@
 
 /datum/crafting_recipe/raiderpaconversion
 	name = "salvaged power armor to raider power armor conversion"
-	result = /obj/item/clothing/suit/armor/f13/brokenpa/raiderpa
-	reqs = list(/obj/item/clothing/suit/armor/f13/brokenpa/t45b  = 1,
-				/obj/item/stack/sheet/metal = 5)
+	result = /obj/item/clothing/suit/armor/f13/power_armor/raiderpa
+	reqs = list(/obj/item/clothing/suit/armor/f13/power_armor/t45b  = 1,
+				/obj/item/stack/sheet/metal = 10,
+				/obj/item/stack/crafting/electronicparts = 5)
 	tools = list(TOOL_WORKBENCH)
 	time = 60
 	category = CAT_CLOTHING
@@ -285,9 +286,32 @@
 
 /datum/crafting_recipe/raiderpahelmconversion
 	name = "salvaged power armor helmet to raider power armor helmet conversion"
-	result = /obj/item/clothing/head/helmet/f13/brokenpa/raiderpa_helm
-	reqs = list(/obj/item/clothing/head/helmet/power_armor/t45b = 1,
-				/obj/item/stack/sheet/metal = 5)
+	result = /obj/item/clothing/head/helmet/f13/power_armor/raiderpa_helm
+	reqs = list(/obj/item/clothing/head/helmet/f13/power_armor/t45b = 1,
+				/obj/item/stack/sheet/metal = 10,
+				/obj/item/stack/crafting/electronicparts = 5)
+	tools = list(TOOL_WORKBENCH)
+	time = 60
+	category = CAT_CLOTHING
+	subcategory = CAT_ARMOR
+
+/datum/crafting_recipe/hotrodpaconversion
+	name = "salvaged power armor to hot rod power armor conversion"
+	result = /obj/item/clothing/suit/armor/f13/power_armor/hotrod
+	reqs = list(/obj/item/clothing/suit/armor/f13/power_armor/t45b  = 1,
+				/obj/item/stack/sheet/metal = 10,
+				/obj/item/stack/crafting/electronicparts = 5)
+	tools = list(TOOL_WORKBENCH)
+	time = 60
+	category = CAT_CLOTHING
+	subcategory = CAT_ARMOR
+
+/datum/crafting_recipe/hotrodpahelmconversion
+	name = "salvaged power armor helmet to hot rod power armor helmet conversion"
+	result = /obj/item/clothing/head/helmet/f13/power_armor/hotrod
+	reqs = list(/obj/item/clothing/head/helmet/f13/power_armor/t45b = 1,
+				/obj/item/stack/sheet/metal = 10,
+				/obj/item/stack/crafting/electronicparts = 5)
 	tools = list(TOOL_WORKBENCH)
 	time = 60
 	category = CAT_CLOTHING

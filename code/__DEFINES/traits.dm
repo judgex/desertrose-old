@@ -76,6 +76,8 @@
 #define TRAIT_TECHNOPHREAK		"technophreak"	//needed to use the autolathe, renamed and sprited 30/06/2020
 #define TRAIT_PA_WEAR           "pa_wear"
 #define TRAIT_MEDICALEXPERT		"Medicinal Expert" //Can do revival surgery
+#define TRAIT_PRACTITIONER		"Practitioner" //Has access to FoA specific surgeries
+
 
 // fallout crafting traits
 #define TRAIT_GUNSMITH_ONE      "gunsmith_one"

@@ -64,8 +64,11 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	var/gender = MALE					//gender of character (well duh)
 	var/age = 30						//age of character
 	var/underwear = "Nude"				//underwear type
+	var/undie_color = "FFFFFF"
 	var/undershirt = "Nude"				//undershirt type
+	var/shirt_color = "FFFFFF"
 	var/socks = "Nude"					//socks type
+	var/socks_color = "FFFFFF"
 	var/backbag = DBACKPACK				//backpack type
 	var/hair_style = "Bald"				//Hair type
 	var/hair_color = "000"				//Hair color
@@ -78,14 +81,19 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	var/eye_color = "000"				//Eye color
 	var/datum/species/pref_species = new /datum/species/human()	//Mutant race
 	var/list/features = list("mcolor" = "FFF", "tail_lizard" = "Smooth", "tail_human" = "None", "snout" = "Round", "horns" = "None", "ears" = "None", "wings" = "None", "frills" = "None", "spines" = "None", "body_markings" = "None", "legs" = "Normal Legs", "moth_wings" = "Plain")
+	//special
+	var/special_s = 3
+	var/special_p = 3
+	var/special_e = 3
+	var/special_c = 3
+	var/special_i = 3
+	var/special_a = 3
+	var/special_l = 3
 
 	var/list/custom_names = list()
 	var/prefered_security_department = SEC_DEPT_RANDOM
 
 	var/flavor_text = ""
-
-		//Mob preview
-	var/icon/preview_icon = null
 
 		//Quirk list
 	var/list/positive_quirks = list()
@@ -171,6 +179,11 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 	var/action_buttons_screen_locs = list()
 
+	//backgrounds
+	var/mutable_appearance/character_background
+	var/icon/bgstate = "steel"
+	var/list/bgstate_options = list("000", "midgrey", "FFF", "white", "steel", "techmaint", "dark", "plating", "reinforced")
+
 /datum/preferences/New(client/C)
 	parent = C
 
@@ -207,8 +220,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	if(CONFIG_GET(flag/use_role_whitelist))
 		user.client.set_job_whitelist_from_db()
 
-	update_preview_icon()
-	user << browse_rsc(preview_icon, "previewicon.png")
+	update_preview_icon(current_tab != 0)
 	var/list/dat = list("<center>")
 
 	dat += "<a href='?_src_=prefs;preference=tab;tab=0' [current_tab == 0 ? "class='linkOn'" : ""]>Character Settings</a>"
@@ -248,6 +260,8 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				dat += "<center><h2>Quirk Setup</h2>"
 				dat += "<a href='?_src_=prefs;preference=trait;task=menu'>Configure Quirks</a><br></center>"
 				dat += "<center><b>Current Quirks:</b> [all_quirks.len ? all_quirks.Join(", ") : "None"]</center>"
+			dat += "<center><h2>S.P.E.C.I.A.L</h2>"
+			dat += "<a href='?_src_=prefs;preference=special;task=menu'>Allocate Points</a><br></center>"
 			dat += "<h2>Identity</h2>"
 			dat += "<table width='100%'><tr><td width='75%' valign='top'>"
 			if(jobban_isbanned(user, "appearance"))
@@ -260,6 +274,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 			dat += "<b>Gender:</b> <a href='?_src_=prefs;preference=gender'>[gender == MALE ? "Male" : "Female"]</a><BR>"
 			dat += "<b>Age:</b> <a href='?_src_=prefs;preference=age;task=input'>[age]</a><BR>"
+			dat += "<br><b>Cycle background:</b><a style='display:block;width:100px' href='?_src_=prefs;preference=cycle_bg;task=input'>[bgstate]</a><BR>"
 
 			dat += "<b>Special Names:</b><BR>"
 			var/old_group
@@ -275,13 +290,8 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 			dat += "<b>Custom job preferences:</b><BR>"
 			dat += "<a href='?_src_=prefs;preference=sec_dept;task=input'><b>Prefered security department:</b> [prefered_security_department]</a><BR></td>"
 
-			dat += "<td valign='center'>"
+			dat += "</tr></table>"
 
-			dat += "<div class='statusDisplay'><center><img src=previewicon.png width=[preview_icon.Width()] height=[preview_icon.Height()]></center></div>"
-
-			dat += "</td></tr></table>"
-
-			update_preview_icon()
 			dat += "<table><tr><td width='340px' height='300px' valign='top'>"
 			dat += "<h2>Flavor Text</h2>"
 			dat += "<a href='?_src_=prefs;preference=flavor_text;task=input'><b>Set Examine Text</b></a><br>"
@@ -301,9 +311,15 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 			dat += "<b>Species:</b><BR><a href='?_src_=prefs;preference=species;task=input'>[pref_species.name]</a><BR>"
 
-			dat += "<b>Underwear:</b><BR><a href ='?_src_=prefs;preference=underwear;task=input'>[underwear]</a><BR>"
-			dat += "<b>Undershirt:</b><BR><a href ='?_src_=prefs;preference=undershirt;task=input'>[undershirt]</a><BR>"
-			dat += "<b>Socks:</b><BR><a href ='?_src_=prefs;preference=socks;task=input'>[socks]</a><BR>"
+			dat += "<b>Underwear:</b><a style='display:block;width:100px' href ='?_src_=prefs;preference=underwear;task=input'>[underwear]</a>"
+			if(GLOB.underwear_list[underwear]?.has_color)
+				dat += "<b>Underwear Color:</b> <span style='border:1px solid #161616; background-color: #[undie_color];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=undie_color;task=input'>Change</a><BR>"
+			dat += "<b>Undershirt:</b><a style='display:block;width:100px' href ='?_src_=prefs;preference=undershirt;task=input'>[undershirt]</a>"
+			if(GLOB.undershirt_list[undershirt]?.has_color)
+				dat += "<b>Undershirt Color:</b> <span style='border:1px solid #161616; background-color: #[shirt_color];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=shirt_color;task=input'>Change</a><BR>"
+			dat += "<b>Socks:</b><a style='display:block;width:100px' href ='?_src_=prefs;preference=socks;task=input'>[socks]</a>"
+			if(GLOB.socks_list[socks]?.has_color)
+				dat += "<b>Socks Color:</b> <span style='border:1px solid #161616; background-color: #[socks_color];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=socks_color;task=input'>Change</a><BR>"
 			dat += "<b>Backpack:</b><BR><a href ='?_src_=prefs;preference=bag;task=input'>[backbag]</a><BR>"
 			dat += "<b>Uplink Spawn Location:</b><BR><a href ='?_src_=prefs;preference=uplink_loc;task=input'>[uplink_spawn_loc]</a><BR></td>"
 			var/use_skintones = pref_species.use_skintones
@@ -676,9 +692,11 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	dat += "<a href='?_src_=prefs;preference=reset_all'>Reset Setup</a>"
 	dat += "</center>"
 
-	var/datum/browser/popup = new(user, "preferences", "<div align='center'>Character Setup</div>", 640, 770)
+	winshow(user, "preferences_window", TRUE)
+	var/datum/browser/popup = new(user, "preferences_browser", "<div align='center'>Character Setup</div>", 640, 770)
 	popup.set_content(dat.Join())
-	popup.open(0)
+	popup.open(FALSE)
+	onclose(user, "preferences_window", src)
 
 #undef APPEARANCE_CATEGORY_COLUMN
 #undef MAX_MUTANT_ROWS
@@ -814,7 +832,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	popup.set_window_options("can_close=0")
 	popup.set_content(HTML)
 	popup.open(0)
-	return
+
 
 /datum/preferences/proc/SetJobPreferenceLevel(datum/job/job, level)
 	if (!job)
@@ -1004,7 +1022,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				job_tribal_low |= job.flag
 
 		return 1
-	else if (job.department_flag == TRIBAL)
+	else if (job.department_flag == FOLLOWERS)
 		job_followers_low &= ~job.flag
 		job_followers_med &= ~job.flag
 		job_followers_high &= ~job.flag
@@ -1258,7 +1276,37 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 		dat += "<br><center><a href='?_src_=prefs;preference=trait;task=reset'>Reset Traits</a></center>"
 
 	user << browse(null, "window=preferences")
-	var/datum/browser/popup = new(user, "mob_occupation", "<div align='center'>Quirk Preferences</div>", 900, 600) //no reason not to reuse the occupation window, as it's cleaner that way
+	var/datum/browser/popup = new(user, "mob_occupation", "<div align='center'>SPECIAL</div>", 900, 600) //no reason not to reuse the occupation window, as it's cleaner that way
+	popup.set_window_options("can_close=0")
+	popup.set_content(dat.Join())
+	popup.open(0)
+	return
+
+/datum/preferences/proc/SetSpecial(mob/user)
+//	if(!SSquirks)
+	//	to_chat(user, "<span class='danger'>The quirk subsystem is still initializing! Try again in a minute.</span>")
+//		return
+
+	var/list/dat = list()
+	
+	var/total = special_s + special_p + special_e + special_c + special_i + special_a + special_l
+	
+	dat += "<center><b>Allocate points</b></center><br>"
+	dat += "<center>[total] out of 40 possible</center><br>"
+	dat += "<b>Strength	   :</b> <a href='?_src_=prefs;preference=special_s;task=input'>[special_s]</a><BR>"
+	dat += "<b>Perception  :</b> <a href='?_src_=prefs;preference=special_p;task=input'>[special_p]</a><BR>"
+	dat += "<b>Endurance   :</b> <a href='?_src_=prefs;preference=special_e;task=input'>[special_e]</a><BR>"
+	dat += "<b>Charisma    :</b> <a href='?_src_=prefs;preference=special_c;task=input'>[special_c]</a><BR>"
+	dat += "<b>Intelligence:</b> <a href='?_src_=prefs;preference=special_i;task=input'>[special_i]</a><BR>"
+	dat += "<b>Agility     :</b> <a href='?_src_=prefs;preference=special_a;task=input'>[special_a]</a><BR>"
+	dat += "<b>Luck        :</b> <a href='?_src_=prefs;preference=special_l;task=input'>[special_l]</a><BR>"
+	if (total>40)
+		dat += "<center>Maximum exceeded, please change until your total is at or below 40<center>"
+	else
+		dat += "<center><a href='?_src_=prefs;preference=special;task=close'>Done</a></center>"
+
+	user << browse(null, "window=preferences")
+	var/datum/browser/popup = new(user, "mob_occupation", "<div align='center'>S.P.E.C.I.A.L</div>", 300, 400) //no reason not to reuse the occupation window, as it's cleaner that way
 	popup.set_window_options("can_close=0")
 	popup.set_content(dat.Join())
 	popup.open(0)
@@ -1270,6 +1318,13 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 		var/datum/quirk/T = SSquirks.quirks[V]
 		bal -= initial(T.value)
 	return bal
+
+/datum/preferences/Topic(href, href_list, hsrc)			//yeah, gotta do this I guess..
+	. = ..()
+	if(href_list["close"])
+		var/client/C = usr.client
+		if(C)
+			C.clear_character_previews()
 
 /datum/preferences/proc/process_link(mob/user, list/href_list)
 	if(href_list["jobbancheck"])
@@ -1371,6 +1426,17 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				SetQuirks(user)
 		return TRUE
 
+	else if(href_list["preference"] == "special")
+		switch(href_list["task"])
+			if("close")
+				user << browse(null, "window=mob_occupation")
+				ShowChoices(user)
+			if("update")
+			if("reset")
+			else
+				SetSpecial(user)
+		return TRUE
+
 	switch(href_list["task"])
 		if("random")
 			switch(href_list["preference"])
@@ -1388,10 +1454,13 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					facial_hair_style = random_facial_hair_style(gender)
 				if("underwear")
 					underwear = random_underwear(gender)
+					undie_color = random_short_color()
 				if("undershirt")
 					undershirt = random_undershirt(gender)
+					shirt_color = random_short_color()
 				if("socks")
 					socks = random_socks()
+					socks_color = random_short_color()
 				if(BODY_ZONE_PRECISE_EYES)
 					eye_color = random_eye_color()
 				if("s_tone")
@@ -1405,6 +1474,48 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 			if(href_list["preference"] in GLOB.preferences_custom_names)
 				ask_for_custom_name(user,href_list["preference"])
 			switch(href_list["preference"])
+				if("special_s")
+					var/new_point = input(user, "Choose Amount(1-9)", "Strength") as num|null
+					if(new_point)
+						special_s = max(min(round(text2num(new_point)), 9),1)
+					SetSpecial(user)
+					return 1
+				if("special_p")
+					var/new_point = input(user, "Choose Amount(1-9)", "Perception") as num|null
+					if(new_point)
+						special_p = max(min(round(text2num(new_point)), 9),1)
+					SetSpecial(user)
+					return 1
+				if("special_e")
+					var/new_point = input(user, "Choose Amount(1-9)", "Endurance") as num|null
+					if(new_point)
+						special_e = max(min(round(text2num(new_point)), 9),1)
+					SetSpecial(user)
+					return 1
+				if("special_c")
+					var/new_point = input(user, "Choose Amount(1-9)", "Charisma") as num|null
+					if(new_point)
+						special_c = max(min(round(text2num(new_point)), 9),1)
+					SetSpecial(user)
+					return 1
+				if("special_i")
+					var/new_point = input(user, "Choose Amount(1-9)", "Intelligence") as num|null
+					if(new_point)
+						special_i = max(min(round(text2num(new_point)), 9),1)
+					SetSpecial(user)
+					return 1
+				if("special_a")
+					var/new_point = input(user, "Choose Amount(1-9)", "Agility") as num|null
+					if(new_point)
+						special_a = max(min(round(text2num(new_point)), 9),1)
+					SetSpecial(user)
+					return 1
+				if("special_l")
+					var/new_point = input(user, "Choose Amount(1-9)", "Luck") as num|null
+					if(new_point)
+						special_l = max(min(round(text2num(new_point)), 9),1)
+					SetSpecial(user)
+					return 1
 				if("ghostform")
 					if(unlock_content)
 						var/new_form = input(user, "Thanks for supporting BYOND - Choose your ghostly form:","Thanks for supporting BYOND",null) as null|anything in GLOB.ghost_forms
@@ -1515,29 +1626,38 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					else
 						facial_hair_style = previous_list_item(facial_hair_style, GLOB.facial_hair_styles_female_list)
 
+				if("cycle_bg")
+					bgstate = next_list_item(bgstate, bgstate_options)
+
 				if("underwear")
-					var/new_underwear
-					if(gender == MALE)
-						new_underwear = input(user, "Choose your character's underwear:", "Character Preference")  as null|anything in GLOB.underwear_m
-					else
-						new_underwear = input(user, "Choose your character's underwear:", "Character Preference")  as null|anything in GLOB.underwear_f
+					var/new_underwear = input(user, "Choose your character's underwear:", "Character Preference")  as null|anything in GLOB.underwear_list
 					if(new_underwear)
 						underwear = new_underwear
 
+				if("undie_color")
+					var/n_undie_color = input(user, "Choose your underwear's color.", "Character Preference", "#[undie_color]") as color|null
+					if(n_undie_color)
+						undie_color = sanitize_hexcolor(n_undie_color, 6)
+
 				if("undershirt")
-					var/new_undershirt
-					if(gender == MALE)
-						new_undershirt = input(user, "Choose your character's undershirt:", "Character Preference") as null|anything in GLOB.undershirt_m
-					else
-						new_undershirt = input(user, "Choose your character's undershirt:", "Character Preference") as null|anything in GLOB.undershirt_f
+					var/new_undershirt = input(user, "Choose your character's undershirt:", "Character Preference") as null|anything in GLOB.undershirt_list
 					if(new_undershirt)
 						undershirt = new_undershirt
 
+				if("shirt_color")
+					var/n_shirt_color = input(user, "Choose your undershirt's color.", "Character Preference", "#[shirt_color]") as color|null
+					if(n_shirt_color)
+						shirt_color = sanitize_hexcolor(n_shirt_color, 6)
+
 				if("socks")
-					var/new_socks
-					new_socks = input(user, "Choose your character's socks:", "Character Preference") as null|anything in GLOB.socks_list
+					var/new_socks = input(user, "Choose your character's socks:", "Character Preference") as null|anything in GLOB.socks_list
 					if(new_socks)
 						socks = new_socks
+
+				if("socks_color")
+					var/n_socks_color = input(user, "Choose your socks' color.", "Character Preference", "#[socks_color]") as color|null
+					if(n_socks_color)
+						socks_color = sanitize_hexcolor(n_socks_color, 6)
 
 				if(BODY_ZONE_PRECISE_EYES)
 					var/new_eyes = input(user, "Choose your character's eye colour:", "Character Preference","#"+eye_color) as color|null
@@ -1867,6 +1987,17 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 	character.gender = gender
 	character.age = age
+	//special stuff
+	character.special_s = special_s
+	character.special_p = special_p
+	character.special_e = special_e
+	character.special_c = special_c
+	character.special_i = special_i
+	if (character.special_i<3)
+		character.dna.add_mutation(UNINTELLIGIBLE)
+	character.special_a = special_a
+	character.special_l = special_l
+
 	character.has_penis = has_penis
 	character.has_vagina = has_vagina
 	character.has_breasts = has_breasts
@@ -1883,9 +2014,14 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	character.skin_tone = skin_tone
 	character.hair_style = hair_style
 	character.facial_hair_style = facial_hair_style
-	character.underwear = underwear
+	character.saved_underwear = underwear
 	character.undershirt = undershirt
+	character.saved_undershirt = undershirt
 	character.socks = socks
+	character.saved_socks = socks
+	character.undie_color = undie_color
+	character.shirt_color = shirt_color
+	character.socks_color = socks_color
 
 	character.backbag = backbag
 
