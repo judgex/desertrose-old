@@ -103,8 +103,10 @@
 	icon_state = "khanhelmet"
 	item_state = "khanhelmet"
 	armor = list(melee = 30, bullet = 30, laser = 30, energy = 30, bomb = 30, bio = 0, rad = 0, fire = 0, acid = 0)
-	flags_inv = HIDEEARS|HIDEHAIR
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 	strip_delay = 20
+	
 
 /obj/item/clothing/head/helmet/f13/ranger/old
 	name = "old ranger helmet"
