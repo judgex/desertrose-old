@@ -184,13 +184,22 @@
 	armor = list(melee = 10, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
 	allowed = list(/obj/item/pen,/obj/item/paper,/obj/item/stamp,/obj/item/reagent_containers/food/drinks/flask,/obj/item/weapon,/obj/item/storage/box/matches,/obj/item/lighter,/obj/item/clothing/mask/cigarette,/obj/item/storage/fancy/cigarettes,/obj/item/flashlight,/obj/item/gun,/obj/item/ammo_box,/obj/item/ammo_casing)
 
-/obj/item/clothing/suit/toggle/labcoat/f13/khan
+/obj/item/clothing/suit/toggle/labcoat/f13/khan_jacket
 	name = "Great Khan jacket"
 	desc = "A black leather jacket. <br>There is an illustration on the back - an aggressive, red-eyed skull wearing a fur hat with horns.<br>The skull has a mongoloid moustache - it's obviously a Great Khans emblem."
-	icon_state = "khan"
+	icon_state = "khan_jacket"
 	item_state = "jensencoat"
 	body_parts_covered = CHEST
 	armor = list(melee = 30, bullet = 30, laser = 20, energy = 20, bomb = 30, bio = 0, rad = 0, fire = 25, acid = 25)
+	allowed = list(/obj/item/pen,/obj/item/paper,/obj/item/stamp,/obj/item/reagent_containers/food/drinks/flask,/obj/item/weapon,/obj/item/storage/box/matches,/obj/item/lighter,/obj/item/clothing/mask/cigarette,/obj/item/storage/fancy/cigarettes,/obj/item/flashlight,/obj/item/gun,/obj/item/ammo_box,/obj/item/ammo_casing)
+
+/obj/item/clothing/suit/toggle/labcoat/f13/khan_jacket_armored
+	name = "Great Khan armored jacket"
+	desc = "A black leather jacket. <br>There is an illustration on the back - an aggressive, red-eyed skull wearing a fur hat with horns.<br>The skull has a mongoloid moustache - it's obviously a Great Khans emblem.<br>Protective plates have been sewn into the jacket."
+	icon_state = "khan_jacket"
+	item_state = "jensencoat"
+	body_parts_covered = CHEST
+	armor = list(melee = 50, bullet = 45, laser = 35, energy = 35, bomb = 30, bio = 0, rad = 0, fire = 25, acid = 25)
 	allowed = list(/obj/item/pen,/obj/item/paper,/obj/item/stamp,/obj/item/reagent_containers/food/drinks/flask,/obj/item/weapon,/obj/item/storage/box/matches,/obj/item/lighter,/obj/item/clothing/mask/cigarette,/obj/item/storage/fancy/cigarettes,/obj/item/flashlight,/obj/item/gun,/obj/item/ammo_box,/obj/item/ammo_casing)
 
 /obj/item/clothing/suit/toggle/labcoat/f13/khan/battlecoat
@@ -247,7 +256,7 @@
 	desc = "A hood fashioned out of patchwork and feathers"
 	icon_state = "raven_hood"
 	item_state = "raven_hood"
-	
+
 
 /obj/item/clothing/suit/hooded/cloak/desert/bridgekeeper
 	name = "tattered cloak"

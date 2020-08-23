@@ -84,7 +84,7 @@
 /datum/gang_item/clothing/khan_jacket_armored
 	name = "Great Khan armored jacket"
 	id = "khan_jacket_armored"
-	cost = 60
+	cost = 100
 	item_path = /obj/item/clothing/suit/toggle/labcoat/f13/khan_jacket_armored
 
 /datum/gang_item/clothing/prostitute_dress
@@ -166,6 +166,13 @@
 	id = "switchblade"
 	cost = 60
 	item_path = /obj/item/switchblade
+
+/datum/gang_item/weapon/greasegun
+	name = "Grease Gun"
+	id = "greasegun"
+	cost = 150
+	item_path = /obj/item/gun/ballistic/automatic/greasegun
+
 
 ///////////////////
 //EQUIPMENT

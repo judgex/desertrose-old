@@ -386,12 +386,6 @@
 	icon_state = "khan_jacket"
 	item_state = "khan_jacket"
 
-/obj/item/clothing/suit/armor/khan_vest
-	name = "khan armored vest"
-	desc = "The symbol of the greatest pushers."
-	icon_state = "khan_vest"
-	item_state = "khan_vest"
-
 /obj/item/clothing/suit/armor/warriors
 	name = "warriors armored vest"
 	desc = "The symbol of the greatest gangers."
