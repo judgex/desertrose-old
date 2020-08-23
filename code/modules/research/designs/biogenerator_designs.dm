@@ -119,7 +119,7 @@
 	name = "Sheet of Leather"
 	id = "leather"
 	build_type = BIOGENERATOR
-	materials = list(MAT_BIOMASS = 150)
+	materials = list(MAT_BIOMASS = 1200)
 	build_path = /obj/item/stack/sheet/leather
 	category = list("initial","Organic Materials")
 
