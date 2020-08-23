@@ -1,8 +1,9 @@
 "a" = (/obj/structure/fence/corner/wooden{dir = 8},/turf/open/floor/plating/f13/outside/desert,/area/f13/wasteland)
 "f" = (/obj/structure/table/wood,/obj/effect/spawner/lootdrop/f13/foodspawner,/obj/effect/spawner/lootdrop/f13/foodspawner,/turf/open/floor/f13/wood,/area/survivalpod)
 "g" = (/obj/structure/fence/corner/wooden,/turf/open/floor/plating/f13/outside/desert,/area/f13/wasteland)
+"h" = (/obj/machinery/biogenerator,/turf/open/floor/plating/f13/outside/desert,/area/f13/wasteland)
 "i" = (/obj/structure/fermenting_barrel,/turf/open/floor/f13/wood,/area/survivalpod)
-"j" = (/obj/item/reagent_containers/glass/bucket,/turf/open/floor/plating/f13/outside/desert,/area/f13/wasteland)
+"j" = (/obj/item/reagent_containers/glass/bucket,/turf/open/indestructible/ground/outside/dirt,/area/f13/wasteland)
 "l" = (/obj/structure/table/wood,/obj/item/kitchen/knife,/obj/item/flashlight/lamp,/turf/open/floor/f13/wood,/area/survivalpod)
 "m" = (/turf/open/floor/plating/f13/outside/desert,/area/f13/wasteland)
 "n" = (/obj/structure/fence/wooden{pixel_y = 2},/turf/open/floor/plating/f13/outside/desert,/area/f13/wasteland)
@@ -11,6 +12,7 @@
 "s" = (/obj/structure/sink/puddle,/turf/open/floor/plating/f13/outside/desert,/area/f13/wasteland)
 "u" = (/obj/structure/table/wood,/obj/machinery/microwave,/turf/open/floor/f13/wood,/area/survivalpod)
 "v" = (/turf/open/indestructible/ground/outside/dirt,/area/f13/wasteland)
+"x" = (/obj/item/shovel,/turf/open/floor/plating/f13/outside/desert,/area/f13/wasteland)
 "y" = (/turf/closed/wall/f13/tentwall,/area/survivalpod)
 "B" = (/obj/structure/fence/wooden{pixel_y = -8},/turf/open/floor/plating/f13/outside/desert,/area/f13/wasteland)
 "D" = (/obj/structure/fence/wooden{dir = 4},/turf/open/floor/plating/f13/outside/desert,/area/f13/wasteland)
@@ -30,11 +32,11 @@
 
 (1,1,1) = {"
 aDDyyyyyyymmm
-nmmyfuHXrymmm
+nhvyfuHXrymmm
 nsjylOOOOymmm
 nvvyZOOSiymmm
 npvyyyOyyymmm
-nFvmmyJyaDDDQ
+nFvxmyJyaDDDQ
 TGvGmmmmnmVmE
 nGvGmmmmYmmmB
 EGvGmmmmBVmVB
