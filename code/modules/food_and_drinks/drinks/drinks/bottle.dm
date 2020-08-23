@@ -366,6 +366,47 @@
 	list_reagents = list("limejuice" = 100)
 	foodtype = FRUIT
 
+
+/obj/item/reagent_containers/food/drinks/bottle/f13nukacola
+	name = "Nuka-Cola"
+	desc = "The most popular flavored soft drink in the United States before the Great War."
+	icon = 'icons/obj/f13vending.dmi'
+	icon_state = "nukacola"
+	list_reagents = list("nuka_cola" = 25, "radium" = 5)
+	foodtype = SUGAR
+	isGlass = TRUE
+
+/obj/item/reagent_containers/food/drinks/bottle/f13nukacola/radioactive
+	desc = "The most popular flavored soft drink in the United States before the Great War.<br>It was preserved in a fairly pristine state.<br>The bottle is slightly glowing."
+	list_reagents = list("nuka_cola" = 15, "radium" = 5)
+
+/obj/item/reagent_containers/food/drinks/bottle/sunset
+	name = "Sunset Sarsparilla"
+	desc = "The most popular flavored root beer in the West!"
+	icon = 'icons/obj/f13vending.dmi'
+	icon_state = "sunset"
+	list_reagents = list("whiskey" = 1, "sunset" = 15, "salglu_solution" = 5)
+	foodtype = SUGAR
+	isGlass = TRUE
+
+/obj/item/reagent_containers/food/drinks/bottle/bawls
+	name = "Balls Guarana"
+	desc = "To give you that Bounce!"
+	icon = 'icons/obj/f13vending.dmi'
+	icon_state = "bawls"
+	list_reagents = list("coffee" = 10, "bawls" = 15)
+	foodtype = SUGAR
+	isGlass = TRUE
+
+/obj/item/reagent_containers/food/drinks/bottle/vim
+	name = "Vim"
+	desc = "You've got Vim!"
+	icon = 'icons/obj/f13vending.dmi'
+	icon_state = "vim"
+	list_reagents = list("sugar" = 5, "vim" = 15)
+	foodtype = SUGAR
+	isGlass = TRUE
+
 ////////////////////////// MOLOTOV ///////////////////////
 /obj/item/reagent_containers/food/drinks/bottle/molotov
 	name = "molotov cocktail"

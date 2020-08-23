@@ -99,6 +99,9 @@
 	var/dismemberment = 0 //The higher the number, the greater the bonus to dismembering. 0 will not dismember at all.
 	var/impact_effect_type //what type of impact effect to show when hitting something
 	var/log_override = FALSE //is this type spammed enough to not log? (KAs)
+	var/penetrating = 0//value for bullet penetration
+	var/bumped = 0//bullet penetration thing
+	var/passthrough = 0//bullet penetration thing
 
 /obj/item/projectile/Initialize()
 	. = ..()
@@ -242,6 +245,41 @@
 			trajectory_ignore_forcemove = TRUE
 			forceMove(target_turf)
 			trajectory_ignore_forcemove = FALSE
+		return FALSE
+
+	if(!passthrough && penetrating > 0)
+		if (istype(A, /turf/closed/wall/f13/tentwall))
+			if (prob(penetrating-0))
+				passthrough = 1
+		else if (istype(A, /turf/closed/wall/f13/wood))
+			if (prob(penetrating-25))
+				passthrough = 1
+		else if (istype(A, /turf/closed/wall/f13/wood/house))
+			if (prob(penetrating-25))
+				passthrough = 1
+		else if (istype(A, /obj/structure/barricade/sandbags))
+			if (prob(penetrating-25))
+				passthrough = 1
+		else if (istype(A, /turf/closed/wall/mineral/sandstone))
+			if (prob(penetrating-25))
+				passthrough = 1
+		else if (istype(A, /turf/closed/wall))
+			if (prob(penetrating-50))
+				passthrough = 1
+		else if (istype(A, /turf/closed/wall/rust))
+			if (prob(penetrating-50))
+				passthrough = 1
+	penetrating = 0
+
+	//the bullet passes through a dense object!
+	if(passthrough)
+		//move ourselves onto A so we can continue on our way.
+		var/turf/T = get_turf(A)
+		if(T)
+			forceMove(T)
+		permutated.Add(A)
+		bumped = 0
+		passthrough = 0
 		return FALSE
 
 	var/permutation = A.bullet_act(src, def_zone) // searches for return value, could be deleted after run so check A isn't null
