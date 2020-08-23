@@ -106,7 +106,7 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	slot_flags = ITEM_SLOT_BELT
 	force = 35
 	throwforce = 25
-	block_chance = 10
+	block_chance = 15
 
 /obj/item/claymore/machete/pipe
 	name = "pipe"
