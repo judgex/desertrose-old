@@ -434,7 +434,7 @@
 				/obj/item/defibrillator/compact/combat/loaded,
 				/obj/item/reagent_containers/hypospray/combat,
 				/obj/item/clothing/glasses/hud/health/night,
-				/obj/item/disk/surgery/revival
+				///obj/item/disk/surgery/revival
 				)
 
 /obj/effect/spawner/lootdrop/f13/medical/vault/meds  //no drugs, didn't add
@@ -1116,7 +1116,55 @@
 	lootcount = 4
 
 /obj/effect/spawner/lootdrop/f13/seedspawner/Initialize(mapload) // This will spawn gatfruit sometimes.
-	loot = childtypesof(/obj/item/seeds)
+	loot = list(/obj/item/seeds/ambrosia,
+		            /obj/item/seeds/apple,
+		            /obj/item/seeds/banana,
+		            /obj/item/seeds/cotton,
+		            /obj/item/seeds/berry,
+		            /obj/item/seeds/poppy/broc,
+					/obj/item/seeds/cabbage,
+					/obj/item/seeds/carrot,
+					/obj/item/seeds/carrot/parsnip,
+					/obj/item/seeds/cherry,
+					/obj/item/seeds/chanter,
+					/obj/item/seeds/chili,
+					/obj/item/seeds/cocoapod,
+					/obj/item/seeds/coffee,
+					/obj/item/seeds/corn,
+					/obj/item/seeds/eggplant,
+					/obj/item/seeds/grape,
+					/obj/item/seeds/grass,
+					/obj/item/seeds/lemon,
+					/obj/item/seeds/lime,
+					/obj/item/seeds/onion,
+					/obj/item/seeds/orange,
+					/obj/item/seeds/rainbow_bunch,
+					/obj/item/seeds/pineapple,
+					/obj/item/seeds/potato,
+					/obj/item/seeds/poppy,
+					/obj/item/seeds/pumpkin,
+					/obj/item/seeds/wheat/rice,
+					/obj/item/seeds/soya,
+					/obj/item/seeds/sugarcane,
+					/obj/item/seeds/sunflower,
+					/obj/item/seeds/tea,
+					/obj/item/seeds/tobacco,
+					/obj/item/seeds/tomato,
+					/obj/item/seeds/tower,
+					/obj/item/seeds/watermelon,
+					/obj/item/seeds/wheat,
+					/obj/item/seeds/whitebeet,
+					/obj/item/seeds/xander,
+					/obj/item/seeds/mutfruit,
+					/obj/item/seeds/amanita,
+		            /obj/item/seeds/glowshroom,
+		            /obj/item/seeds/liberty,
+		            /obj/item/seeds/nettle,
+					/obj/item/seeds/plump,
+					/obj/item/seeds/reishi,
+					/obj/item/seeds/cannabis,
+					/obj/item/seeds/starthistle,
+					/obj/item/seeds/random)
 	. = ..()
 
 /obj/effect/spawner/lootdrop/f13/foodspawner

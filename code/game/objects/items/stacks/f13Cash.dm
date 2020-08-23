@@ -40,6 +40,26 @@
 	resistance_flags = FLAMMABLE
 	var/flavor_desc = ""
 	var/value = CASH_CAP
+	var/flippable = TRUE
+	var/cooldown = 0
+	var/coinflip
+	var/list/sideslist = list("heads","tails")
+
+/obj/item/stack/f13Cash/attack_self(mob/user)
+	if (flippable)
+		if(cooldown < world.time)
+			coinflip = pick(sideslist)
+			cooldown = world.time + 15
+			//flick("coin_[cmineral]_flip", src)
+			//icon_state = "coin_[cmineral]_[coinflip]"
+			playsound(user.loc, 'sound/items/coinflip.ogg', 50, 1)
+			var/oldloc = loc
+			sleep(15)
+			if(loc == oldloc && user && !user.incapacitated())
+				user.visible_message("[user] has flipped [src]. It lands on [coinflip].", \
+ 								 "<span class='notice'>You flip [src]. It lands on [coinflip].</span>", \
+								 "<span class='italics'>You hear the clattering of loose change.</span>")
+		return TRUE//did the coin flip? useful for suicide_act
 
 /obj/item/stack/f13Cash/fivezerozero
 	amount = 500
@@ -189,6 +209,7 @@
 	icon = 'icons/obj/economy.dmi'
 	icon_state = "ncr" /* 10 points to whoever writes flavour text for each bill */
 	value = CASH_NCR * CASH_CAP
+	flippable = FALSE
 
 /obj/item/stack/f13Cash/ncr/update_icon()
 	switch(amount)

@@ -6,8 +6,15 @@ SUBSYSTEM_DEF(itemspawners)
 	log_game("Item Spawners Subsystem Firing")
 	message_admins("Item Spawners Subsystem Firing.")
 
+	cleanup_trash()
 	restock_trash_piles()
 
 /datum/controller/subsystem/itemspawners/proc/restock_trash_piles()
 	for(var/obj/item/storage/trash_stack/TS in GLOB.trash_piles)
 		TS.loot_players = list()
+
+/datum/controller/subsystem/itemspawners/proc/cleanup_trash()
+	for(var/obj/item/storage/trash_stack/TS in GLOB.trash_piles)
+		for(var/obj/A in TS.loc.contents)
+			if (!istype(A, /obj/item/storage/trash_stack))
+				A.Destroy()

@@ -9,7 +9,7 @@
 
 //Survival Capsule
 /obj/item/survivalcapsule
-	name = "Basic Vault-tec C.A.M.P."
+	name = "Basic Vault-Tec C.A.M.P."
 	desc = "A basic C.A.M.P. packed and designed by Vault-tec.  Shake it and throw it!"
 	icon_state = "capsule"
 	icon = 'icons/obj/mining.dmi'
@@ -67,10 +67,52 @@
 		new /obj/effect/particle_effect/smoke(get_turf(src))
 		qdel(src)
 
-/obj/item/survivalcapsule/luxury
-	name = "Deluxe Vaul-Tec C.A.M.P."
-	desc = "An exorbitantly expensive luxury C.A.M.P. packed and designed by Vault-tec.  Shake it and throw it!"
+/obj/item/survivalcapsule/premium
+	name = "Premium Vault-Tec C.A.M.P."
+	desc = "An intermediatly priced, carpeted, C.A.M.P. packed and designed by Vault-tec.  Shake it and throw it!"
 	template_id = "shelter_beta"
+
+/obj/item/survivalcapsule/quad
+	name = "Spacious Vault-Tec C.A.M.P."
+	desc = "An expanded tent with four living quarters and a soda fountain C.A.M.P. packed and designed by Vault-tec.  Shake it and throw it!"
+	template_id = "shelter_charlie"
+
+/obj/item/survivalcapsule/merchant
+	name = "Merchant Vault-Tec C.A.M.P."
+	desc = "A partially covered merchants stall.  This one has a sleeping quarters too. C.A.M.P. packed and designed by Vault-tec.  Shake it and throw it!"
+	template_id = "shelter_delta"
+
+/obj/item/survivalcapsule/party
+	name = "Party Vault-Tec C.A.M.P."
+	desc = "A large, spacious tent with a booze dispenser and some food. C.A.M.P. packed and designed by Vault-tec.  Shake it and throw it!"
+	template_id = "shelter_echo"
+
+/obj/item/survivalcapsule/kitchen
+	name = "Cook-N-Go Vault-Tec C.A.M.P."
+	desc = "A rapid, ready to deploy field mess kitchen. C.A.M.P. packed and designed by Vault-tec.  Shake it and throw it!"
+	template_id = "shelter_foxtrot"
+
+/obj/item/survivalcapsule/farm
+	name = "Farm-N-Go Vault-Tec C.A.M.P."
+	desc = "A ready to go, loaded farming plot with three brahmin, and a small living quarter. C.A.M.P. packed and designed by Vault-tec.  Shake it and throw it!"
+	template_id = "shelter_golf"
+
+/obj/item/survivalcapsule/fortuneteller
+	name = "Occult Vault-Tec C.A.M.P."
+	desc = "A camp with three brahmin and all your supernatural needs. C.A.M.P. packed and designed by Vault-tec.  Shake it and throw it!"
+	template_id = "shelter_hotel"
+
+/obj/item/survivalcapsule/blacksmith
+	name = "Blacksmithery Vault-Tec C.A.M.P."
+	desc = "An all-in-one smithery, with a workbench, lathe, and forge as its key components. C.A.M.P. packed and designed by Vault-tec.  Shake it and throw it!"
+	template_id = "shelter_india"
+
+/obj/item/survivalcapsule/super_deluxe
+	name = "Super Deluxe Vault-Tec C.A.M.P."
+	desc = "The best of the best, no luxury witheld super-deluxe C.A.M.P. packed and designed by Vault-tec. Dispensers, machinery, sleeping quarters, vendors, it has it all.  Shake it and throw it!"
+	template_id = "shelter_juliett"
+
+
 
 //Pod objects
 
