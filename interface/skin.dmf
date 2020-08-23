@@ -288,6 +288,34 @@ window "outputwindow"
 		is-default = true
 		saved-params = ""
 
+window "preferences_window"
+	elem "preferences_window"
+		type = MAIN
+		pos = 372,0
+		size = 1120x1000
+		anchor1 = none
+		anchor2 = none
+		background-color = none
+		is-visible = false
+		saved-params = "pos;size;is-minimized;is-maximized"
+		statusbar = false
+	elem "preferences_browser"
+		type = BROWSER
+		pos = -8,-8
+		size = 896x1008
+		anchor1 = 0,0
+		anchor2 = 90,100
+		background-color = none
+		saved-params = ""
+	elem "character_preview_map"
+		type = MAP
+		pos = 887,0
+		size = 313x1000
+		anchor1 = 90,0
+		anchor2 = 100,100
+		right-click = true
+		saved-params = "zoom;letterbox;zoom-mode"
+
 window "statwindow"
 	elem "statwindow"
 		type = MAIN
@@ -310,30 +338,3 @@ window "statwindow"
 		saved-params = ""
 		tab-text-color = #ffffff
 		tab-background-color = #411d1e
-
-window "preferences_window"
-	elem "preferences_window"
-		type = MAIN
-		pos = 372,0
-		size = 1280x1000
-		anchor1 = none
-		anchor2 = none
-		is-visible = false
-		saved-params = "pos;size;is-minimized;is-maximized"
-		statusbar = false
-	elem "preferences_browser"
-		type = BROWSER
-		pos = 0,0
-		size = 960x1000
-		anchor1 = 0,0
-		anchor2 = 75,100
-		saved-params = ""
-	elem "character_preview_map"
-		type = MAP
-		pos = 960,0
-		size = 320x1000
-		anchor1 = 75,0
-		anchor2 = 100,100
-		right-click = true
-		saved-params = "zoom;letterbox;zoom-mode"
-

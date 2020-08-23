@@ -10,6 +10,7 @@
 	verbs += /mob/living/proc/mob_sleep
 	verbs += /mob/living/proc/lay_down
 	verbs += /mob/living/proc/surrender
+	verbs += /mob/living/carbon/human/proc/underwear_toggle //fwee
 
 	//initialize limbs first
 	create_bodyparts()
@@ -635,6 +636,8 @@
 		facial_hair_style = "Shaved"
 	hair_style = pick("Bedhead", "Bedhead 2", "Bedhead 3")
 	underwear = "Nude"
+	undershirt = "Nude"
+	socks = "Nude"
 	update_body()
 	update_hair()
 
@@ -879,12 +882,12 @@
 	if(user == target && can_piggyback(target) && pulling == target && grab_state >= GRAB_AGGRESSIVE && stat == CONSCIOUS)
 		buckle_mob(target,TRUE,TRUE)
 	. = ..()
-		
+
 /*
 /mob/living/carbon/human/ShiftMiddleClickOn(mob/over)
 	. = ..()
 	if(ishuman(over))
-		var/mob/living/carbon/human/T = over  
+		var/mob/living/carbon/human/T = over
 		if(src.is_busy || src.a_intent == INTENT_HELP || get_turf(src) != get_turf(T) || !T.lying || !T )
 			return
 		if(src.zone_selected == BODY_ZONE_HEAD || src.zone_selected == BODY_ZONE_PRECISE_GROIN || src.zone_selected ==	BODY_ZONE_L_ARM || src.zone_selected == BODY_ZONE_R_ARM || src.zone_selected ==	BODY_ZONE_L_LEG || src.zone_selected == BODY_ZONE_R_LEG ) //all the stars align, time to curbstomp
