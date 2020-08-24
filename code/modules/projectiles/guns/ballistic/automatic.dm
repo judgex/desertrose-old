@@ -974,8 +974,8 @@
 	auto_eject_sound = 'sound/f13weapons/garand_ping.ogg'
 	can_bayonet = TRUE
 	bayonetstate = "lasmusket"
-	knife_x_offset = 24
-	knife_y_offset = 24
+	knife_x_offset = 22
+	knife_y_offset = 21
 
 /obj/item/gun/ballistic/automatic/m1garand/update_icon()
 	..()
