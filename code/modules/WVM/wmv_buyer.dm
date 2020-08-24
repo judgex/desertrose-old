@@ -106,6 +106,15 @@
 		playsound(src, 'sound/items/change_jaws.ogg', 60, 1)
 		to_chat(usr, "You sell [inserted_value] bottle caps value to a vending machine.")
 		src.ui_interact(usr)
+	else if(istype(I, /obj/item/stack/sheet/leather))
+		var/obj/item/stack/sheet/leather/sellable = I
+		var/price = 5
+		var/inserted_value = FLOOR(sellable.amount * price, 1)
+		stored_caps += inserted_value
+		I.Destroy()
+		playsound(src, 'sound/items/change_jaws.ogg', 60, 1)
+		to_chat(usr, "You sell [inserted_value] bottle caps value to a vending machine.")
+		src.ui_interact(usr)
 	else if(istype(I, /obj/item/reagent_containers/pill/patch/jet))
 		var/obj/item/reagent_containers/pill/patch/jet/sellable = I
 		var/price = 0.375
