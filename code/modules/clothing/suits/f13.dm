@@ -190,7 +190,7 @@
 	icon_state = "khan_jacket"
 	item_state = "jensencoat"
 	body_parts_covered = CHEST
-	armor = list(melee = 30, bullet = 30, laser = 20, energy = 20, bomb = 30, bio = 0, rad = 0, fire = 25, acid = 25)
+	armor = list(melee = 40, bullet = 35, laser = 25, energy = 25, bomb = 30, bio = 0, rad = 0, fire = 25, acid = 25)
 	allowed = list(/obj/item/pen,/obj/item/paper,/obj/item/stamp,/obj/item/reagent_containers/food/drinks/flask,/obj/item/weapon,/obj/item/storage/box/matches,/obj/item/lighter,/obj/item/clothing/mask/cigarette,/obj/item/storage/fancy/cigarettes,/obj/item/flashlight,/obj/item/gun,/obj/item/ammo_box,/obj/item/ammo_casing)
 
 /obj/item/clothing/suit/toggle/labcoat/f13/khan_jacket_armored
