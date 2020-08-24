@@ -355,12 +355,31 @@
 			return
 	return ..()
 
-/obj/item/proc/combine_items(mob/user, obj/item/A, obj/item/B, obj/item/C)
-	visible_message("triggering properly")
-	for(var/obj/item/D in B.contents)
-		var/obj/item/E = D
-		if(istype(D,/obj/item/attachments))		
-			user.transferItemToLoc(E,C)
+/obj/item/gun/proc/combine_items(mob/user, obj/item/gun/A, obj/item/gun/B, obj/item/gun/C)
+	if (B.bullet_speed)
+		C.desc += " It has an improved barrel installed."
+		C.projectile_speed -= 0.15
+	if (B.recoil_decrease)
+		C.desc += " It has a recoil compensator installed."
+		if (C.spread > 8)
+			C.spread -= 8
+		else
+			C.spread = 0
+	for(var/obj/item/D in B.contents)//D - old item
+		if(istype(D,/obj/item/attachments))
+			user.transferItemToLoc(D,C)//old attmns to new gun
+			if (istype(D,/obj/item/attachments/bullet_speed))
+				C.bullet_speed = D
+			if (istype(D,/obj/item/attachments/recoil_decrease))
+				C.recoil_decrease = D
+		/*
+		if(istype(D,/obj/item/ammo_box/magazine))
+			for (var/obj/item/F in C.contents)//F - new mag
+				if(istype(F,/obj/item/ammo_box/magazine))
+					F.forceMove(get_turf(user.loc))//delete old mag
+					F.Destroy()
+					user.transferItemToLoc(D,C)//old mag to new gun
+					*/
 	A.Destroy()
 	B.Destroy()
 	user.put_in_hand(C,user.active_hand_index)
