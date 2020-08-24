@@ -355,6 +355,16 @@
 			return
 	return ..()
 
+/obj/item/proc/combine_items(mob/user, obj/item/A, obj/item/B, obj/item/C)
+	visible_message("triggering properly")
+	for(var/obj/item/D in B.contents)
+		var/obj/item/E = D
+		if(istype(D,/obj/item/attachments))		
+			user.transferItemToLoc(E,C)
+	A.Destroy()
+	B.Destroy()
+	user.put_in_hand(C,user.active_hand_index)
+
 /obj/item/gun/attackby(obj/item/I, mob/user, params)
 	if(user.a_intent == INTENT_HARM)
 		return ..()
@@ -392,6 +402,25 @@
 	else if(istype(I, /obj/item/attachments/scope))
 		if(!can_scope)
 			return ..()
+		//trail carbine, brush gun, cowboy repeater, .44 revolver, rangemaster, hunting rifle
+		if (istype(src, /obj/item/gun/ballistic/revolver/m29))//weapons with existing scoped variants
+			combine_items(user,I,src, new /obj/item/gun/ballistic/revolver/m29/scoped)//44 revolver
+			return
+		if (istype(src, /obj/item/gun/ballistic/shotgun/automatic/hunting/cowboy))
+			combine_items(user,I,src, new /obj/item/gun/ballistic/shotgun/automatic/hunting/cowboy/scoped)//cowboy repeater
+			return
+		if (istype(src, /obj/item/gun/ballistic/shotgun/automatic/hunting/trail))
+			combine_items(user,I,src, new /obj/item/gun/ballistic/shotgun/automatic/hunting/trail)//trail carbine
+			return
+		if (istype(src, /obj/item/gun/ballistic/shotgun/automatic/hunting/brush))
+			combine_items(user,I,src, new /obj/item/gun/ballistic/shotgun/automatic/hunting/brush/scoped)//brush gun
+			return
+		if (istype(src, /obj/item/gun/ballistic/automatic/rangemaster))
+			combine_items(user,I,src, new /obj/item/gun/ballistic/automatic/rangemaster/scoped)//rangemaster
+			return
+		if (istype(src, /obj/item/gun/ballistic/shotgun/remington))
+			combine_items(user,I,src, new /obj/item/gun/ballistic/shotgun/remington/scoped)//hunting rifle
+			return
 		var/obj/item/attachments/scope/C = I
 		if(!scope)
 			if(!user.transferItemToLoc(I, src))

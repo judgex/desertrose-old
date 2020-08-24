@@ -999,6 +999,7 @@
 	burst_size = 1
 	fire_delay = 3
 	can_attachments = TRUE
+	can_scope = TRUE
 
 /obj/item/gun/ballistic/automatic/rangemaster/scoped
 	name = "Scoped Colt Rangemaster"
@@ -1009,6 +1010,7 @@
 	zoomable = TRUE
 	zoom_amt = 10
 	zoom_out_amt = 13
+	can_scope = FALSE
 
 /obj/item/gun/ballistic/automatic/fnfal
 	name = "FN FAL"
