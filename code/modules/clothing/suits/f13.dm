@@ -205,8 +205,8 @@
 /obj/item/clothing/suit/toggle/labcoat/f13/khan/battlecoat
 	name = "Great Khan battle coat"
 	desc = "A dark red leather coat lined with a patchwork of metal plates and padding on the inside. The back is dominated by a burning skull adorned with a horned helmet; the symbol of the Khans."
-	icon_state = "khanjacket"
-	item_state = "khanjacket"
+	icon_state = "khan_battlecoat"
+	item_state = "khan_battlecoat"
 	body_parts_covered = CHEST
 	armor = list(melee = 50, bullet = 45, laser = 35, energy = 35, bomb = 30, bio = 0, rad = 0, fire = 25, acid = 25)
 	allowed = list(/obj/item/pen,/obj/item/paper,/obj/item/stamp,/obj/item/reagent_containers/food/drinks/flask,/obj/item/weapon,/obj/item/storage/box/matches,/obj/item/lighter,/obj/item/clothing/mask/cigarette,/obj/item/storage/fancy/cigarettes,/obj/item/flashlight,/obj/item/gun,/obj/item/ammo_box,/obj/item/ammo_casing)
