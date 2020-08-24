@@ -122,8 +122,7 @@ GLOBAL_LIST_INIT(faction_player_positions, list(
 //Whitelisted positions list FO13 anything that shows up here requires that the user have an entry in the 'role_whitelist' table of id,ckey,"antagonist"
 GLOBAL_LIST_INIT(antagonist_whitelist_positions, list(
     "Raider",
-	"Outlaw",
-    "Great Khan" //DA KHANZ, BAY BEEEEEEE
+	"Outlaw" //Consider adding Great Khan to this list if people abuse it.
 ))
 
 GLOBAL_LIST_INIT(brotherhood_command_positions, list(
@@ -229,6 +228,7 @@ GLOBAL_LIST_INIT(vault_positions, list(
 
 GLOBAL_LIST_INIT(wasteland_positions, list(
     "Outlaw",
+    "Great Khan",
 	"Faithful",
     "Wastelander",
 ))
