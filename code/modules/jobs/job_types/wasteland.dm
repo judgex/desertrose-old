@@ -105,7 +105,7 @@ Great Khan
 	name = "Enforcer"
 	suit_store = /obj/item/gun/ballistic/shotgun/trench
 	backpack_contents = list(
-		/obj/item/storage/box/lethalshot=2, \
+		/obj/item/storage/box/lethalshot=1, \
 		/obj/item/storage/box/rubbershot/beanbag=1, \
 		/obj/item/restraints/legcuffs/bola/tactical=1, \
 		/obj/item/restraints/handcuffs=2)
