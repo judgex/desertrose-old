@@ -81,11 +81,11 @@
 	cost = 40
 	item_path = /obj/item/clothing/under/f13/khan
 
-/datum/gang_item/clothing/khan_vest
-	name = "Great Khan armored vest"
-	id = "khan_vest"
-	cost = 60
-	item_path = /obj/item/clothing/suit/armor/khan
+/datum/gang_item/clothing/khan_jacket_armored
+	name = "Great Khan armored jacket"
+	id = "khan_jacket_armored"
+	cost = 100
+	item_path = /obj/item/clothing/suit/toggle/labcoat/f13/khan_jacket_armored
 
 /datum/gang_item/clothing/prostitute_dress
 	name = "Prostitute dress"
@@ -102,6 +102,12 @@
 /obj/item/clothing/head/collectable/petehat/gang
 	name = "pimpin' hat"
 	desc = "The undisputed king of style."
+
+/datum/gang_item/clothing/glasses/sunglasses
+	name = "Sunglasses"
+	id = "sunglasses"
+	cost = 40
+	item_path = /obj/item/clothing/glasses/sunglasses
 
 /datum/gang_item/clothing/raider_uniform
 	name = "Raider uniform"
@@ -164,8 +170,21 @@
 /datum/gang_item/weapon/switchblade
 	name = "Switchblade"
 	id = "switchblade"
-	cost = 60
+	cost = 20
 	item_path = /obj/item/switchblade
+
+/datum/gang_item/weapon/sappers
+	name = "Sappers"
+	id = "sappers"
+	cost = 75
+	item_path = /obj/item/melee/unarmed/sappers
+
+/datum/gang_item/weapon/greasegun
+	name = "Grease Gun"
+	id = "greasegun"
+	cost = 150
+	item_path = /obj/item/gun/ballistic/automatic/greasegun
+
 
 ///////////////////
 //EQUIPMENT
@@ -175,10 +194,22 @@
 	category = "Purchase Equipment:"
 
 /datum/gang_item/equipment/spraycan
-	name = "Territory Spraycan"
+	name = "Spraycan"
 	id = "spraycan"
 	cost = 10
 	item_path = /obj/item/toy/crayon/spraycan
+
+/datum/gang_item/equipment/mentats
+	name = "Mentats"
+	id = "mentats"
+	cost = 30
+	item_path = /obj/item/storage/pill_bottle/chem_tin/mentats
+
+/datum/gang_item/equipment/fixer
+	name = "Fixer"
+	id = "fixer"
+	cost = 100
+	item_path = /obj/item/storage/pill_bottle/chem_tin/fixer
 
 /datum/gang_item/equipment/emp
 	name = "EMP Grenade"
@@ -197,3 +228,8 @@
 	id = "c4"
 	cost = 200
 	item_path = /obj/item/grenade/plastic/c4
+
+
+///////////////////
+//EQUIPMENT
+///////////////////
