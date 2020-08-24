@@ -49,7 +49,7 @@
 		if(0)
 			chosen_hole = CUM_TARGET_ANUS_FUNCLAW
 		if(1)
-			if(M.has_vagina())
+			if(M.has_puss())
 				chosen_hole = CUM_TARGET_VAGINA_FUNCLAW
 		if(2)
 			chosen_hole = CUM_TARGET_THROAT_FUNCLAW
@@ -98,7 +98,7 @@
 			else
 				message = "cums on \the [M]'s face."
 		if(CUM_TARGET_VAGINA_FUNCLAW)
-			if(M.is_bottomless() && M.has_vagina())
+			if(M.is_bottomless() && M.has_puss())
 				message = "rams its meaty cock into \the [M]'s pussy and fills it with sperm."
 				M.reagents.add_reagent("cum", rand(8,12))
 			else

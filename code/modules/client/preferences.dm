@@ -75,12 +75,14 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	var/facial_hair_style = "Shaved"	//Face hair type
 	var/facial_hair_color = "000"		//Facial hair color
 	var/skin_tone = "caucasian1"		//Skin color
-	var/has_penis = 0						//Do they have a penis? (for ERP verbs and surgery)
-	var/has_vagina = 0						//Do they have a vagina? (for ERP verbs and surgery)
-	var/has_breasts = 0						//Do they have breasts? (for ERP verbs and surgery)
+
+	var/has_peepee = 0						//Do they have a penis? (for ERP verbs and surgery)
+	var/has_puss = 0						//Do they have a vagina? (for ERP verbs and surgery)
+	var/has_breast = 0						//Do they have breasts? (for ERP verbs and surgery)
+
 	var/eye_color = "000"				//Eye color
 	var/datum/species/pref_species = new /datum/species/human()	//Mutant race
-	var/list/features = list("mcolor" = "FFF", "tail_lizard" = "Smooth", "tail_human" = "None", "snout" = "Round", "horns" = "None", "ears" = "None", "wings" = "None", "frills" = "None", "spines" = "None", "body_markings" = "None", "legs" = "Normal Legs", "moth_wings" = "Plain")
+	var/list/features = list("mcolor" = "FFF", "tail_lizard" = "Smooth", "tail_human" = "None", "snout" = "Round", "horns" = "None", "ears" = "None", "wings" = "None", "frills" = "None", "spines" = "None", "body_markings" = "None", "legs" = "Normal Legs", "moth_wings" = "Plain", "genitals_use_skintone" = FALSE, "has_cock" = FALSE, "cock_shape" = DEF_COCK_SHAPE, "cock_length" = COCK_SIZE_DEF, "cock_diameter_ratio" = COCK_DIAMETER_RATIO_DEF, "cock_color" = "ffffff", "has_balls" = FALSE, "balls_color" = "ffffff", "balls_shape" = DEF_BALLS_SHAPE, "balls_size" = BALLS_SIZE_DEF, "balls_cum_rate" = CUM_RATE, "balls_cum_mult" = CUM_RATE_MULT, "balls_efficiency" = CUM_EFFICIENCY, "has_breasts" = FALSE, "breasts_color" = "ffffff", "breasts_size" = BREASTS_SIZE_DEF, "breasts_shape" = DEF_BREASTS_SHAPE, "breasts_producing" = FALSE, "has_vag" = FALSE, "vag_shape" = DEF_VAGINA_SHAPE, "vag_color" = "ffffff", "has_womb" = FALSE, "balls_visibility"	= GEN_VISIBLE_NO_UNDIES, "breasts_visibility"= GEN_VISIBLE_NO_UNDIES, "cock_visibility"	= GEN_VISIBLE_NO_UNDIES, "vag_visibility"	= GEN_VISIBLE_NO_UNDIES )
 	//special
 	var/special_s = 3
 	var/special_p = 3
@@ -167,15 +169,18 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	var/clientfps = 40
 
 	var/parallax
-
+	var/arousable = TRUE
 	var/ambientocclusion = TRUE
 	var/auto_fit_viewport = FALSE
 
 	var/uplink_spawn_loc = UPLINK_PDA
+	var/auto_ooc = FALSE
 
 	var/list/exp = list()
 	var/list/job_whitelists = list()
 	var/list/menuoptions
+
+	var/cit_toggles = TOGGLES_CITADEL
 
 	var/action_buttons_screen_locs = list()
 
@@ -322,6 +327,67 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				dat += "<b>Socks Color:</b> <span style='border:1px solid #161616; background-color: #[socks_color];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=socks_color;task=input'>Change</a><BR>"
 			dat += "<b>Backpack:</b><BR><a href ='?_src_=prefs;preference=bag;task=input'>[backbag]</a><BR>"
 			dat += "<b>Uplink Spawn Location:</b><BR><a href ='?_src_=prefs;preference=uplink_loc;task=input'>[uplink_spawn_loc]</a><BR></td>"
+			dat += "</td>"
+
+			dat +="<td width='220px' height='300px' valign='top'>"
+			if(NOGENITALS in pref_species.species_traits)
+				dat += "<b>Your species ([pref_species.name]) does not support genitals!</b><br>"
+			else
+				if(pref_species.use_skintones)
+					dat += "<b>Genitals use skintone:</b><a href='?_src_=prefs;preference=genital_colour'>[features["genitals_use_skintone"] == TRUE ? "Yes" : "No"]</a>"
+				dat += "<h3>Penis</h3>"
+				dat += "<a style='display:block;width:50px' href='?_src_=prefs;preference=has_cock'>[features["has_cock"] == TRUE ? "Yes" : "No"]</a>"
+				if(features["has_cock"])
+					if(pref_species.use_skintones && features["genitals_use_skintone"] == TRUE)
+						dat += "<b>Penis Color:</b></a><BR>"
+						dat += "<span style='border: 1px solid #161616; background-color: [SKINTONE2HEX(skin_tone)];'>&nbsp;&nbsp;&nbsp;</span>(Skin tone overriding)</a><br>"
+					else
+						dat += "<b>Penis Color:</b></a><BR>"
+						dat += "<span style='border: 1px solid #161616; background-color: #[features["cock_color"]];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=cock_color;task=input'>Change</a><br>"
+					dat += "<b>Penis Shape:</b> <a style='display:block;width:120px' href='?_src_=prefs;preference=cock_shape;task=input'>[features["cock_shape"]]</a>"
+					dat += "<b>Penis Length:</b> <a style='display:block;width:120px' href='?_src_=prefs;preference=cock_length;task=input'>[features["cock_length"]] inch(es)</a>"
+					dat += "<b>Penis Visibility:</b><a style='display:block;width:100px' href='?_src_=prefs;preference=cock_visibility;task=input'>[features["cock_visibility"]]</a>"
+					dat += "<b>Has Testicles:</b><a style='display:block;width:50px' href='?_src_=prefs;preference=has_balls'>[features["has_balls"] == TRUE ? "Yes" : "No"]</a>"
+					if(features["has_balls"])
+						if(pref_species.use_skintones && features["genitals_use_skintone"] == TRUE)
+							dat += "<b>Testicles Color:</b></a><BR>"
+							dat += "<span style='border: 1px solid #161616; background-color: [SKINTONE2HEX(skin_tone)];'>&nbsp;&nbsp;&nbsp;</span>(Skin tone overriding)<br>"
+						else
+							dat += "<b>Testicles Color:</b></a><BR>"
+							dat += "<span style='border: 1px solid #161616; background-color: #[features["balls_color"]];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=balls_color;task=input'>Change</a><br>"
+						dat += "<b>Testicles Visibility:</b><a style='display:block;width:100px' href='?_src_=prefs;preference=balls_visibility;task=input'>[features["balls_visibility"]]</a>"
+				dat += APPEARANCE_CATEGORY_COLUMN
+				dat += "<h3>Vagina</h3>"
+				dat += "<a style='display:block;width:50px' href='?_src_=prefs;preference=has_vag'>[features["has_vag"] == TRUE ? "Yes" : "No"]</a>"
+				if(features["has_vag"])
+					dat += "<b>Vagina Type:</b> <a style='display:block;width:100px' href='?_src_=prefs;preference=vag_shape;task=input'>[features["vag_shape"]]</a>"
+					if(pref_species.use_skintones && features["genitals_use_skintone"] == TRUE)
+						dat += "<b>Vagina Color:</b></a><BR>"
+						dat += "<span style='border: 1px solid #161616; background-color: [SKINTONE2HEX(skin_tone)];'>&nbsp;&nbsp;&nbsp;</span>(Skin tone overriding)<br>"
+					else
+						dat += "<b>Vagina Color:</b></a><BR>"
+						dat += "<span style='border: 1px solid #161616; background-color: #[features["vag_color"]];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=vag_color;task=input'>Change</a><br>"
+					dat += "<b>Vagina Visibility:</b><a style='display:block;width:100px' href='?_src_=prefs;preference=vag_visibility;task=input'>[features["vag_visibility"]]</a>"
+					dat += "<b>Has Womb:</b><a style='display:block;width:50px' href='?_src_=prefs;preference=has_womb'>[features["has_womb"] == TRUE ? "Yes" : "No"]</a>"
+				dat += "</td>"
+				dat += APPEARANCE_CATEGORY_COLUMN
+				dat += "<h3>Breasts</h3>"
+				dat += "<a style='display:block;width:50px' href='?_src_=prefs;preference=has_breasts'>[features["has_breasts"] == TRUE ? "Yes" : "No"]</a>"
+				if(features["has_breasts"])
+					if(pref_species.use_skintones && features["genitals_use_skintone"] == TRUE)
+						dat += "<b>Color:</b></a><BR>"
+						dat += "<span style='border: 1px solid #161616; background-color: [SKINTONE2HEX(skin_tone)];'>&nbsp;&nbsp;&nbsp;</span>(Skin tone overriding)<br>"
+					else
+						dat += "<b>Color:</b></a><BR>"
+						dat += "<span style='border: 1px solid #161616; background-color: #[features["breasts_color"]];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=breasts_color;task=input'>Change</a><br>"
+					dat += "<b>Cup Size:</b><a style='display:block;width:50px' href='?_src_=prefs;preference=breasts_size;task=input'>[features["breasts_size"]]</a>"
+					dat += "<b>Breasts Shape:</b><a style='display:block;width:50px' href='?_src_=prefs;preference=breasts_shape;task=input'>[features["breasts_shape"]]</a>"
+					dat += "<b>Breasts Visibility:</b><a style='display:block;width:100px' href='?_src_=prefs;preference=breasts_visibility;task=input'>[features["breasts_visibility"]]</a>"
+					dat += "<b>Lactates:</b><a style='display:block;width:50px' href='?_src_=prefs;preference=breasts_producing'>[features["breasts_producing"] == TRUE ? "Yes" : "No"]</a>"
+				dat += "</td>"
+			dat += "</td>"
+			dat += "</tr></table>"
+
 			var/use_skintones = pref_species.use_skintones
 			if(use_skintones)
 
@@ -356,9 +422,9 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 			else if(use_skintones || mutant_colors)
 				dat += "</td>"
 
-			dat += "<a href='?_src_=prefs;preference=has_penis'>Has Penis: [has_penis ? "Yes" : "No"]</A><br>"
-			dat += "<a href='?_src_=prefs;preference=has_vagina'>Has Vagina: [has_vagina ? "Yes" : "No"]</A><br>"
-			dat += "<a href='?_src_=prefs;preference=has_breasts'>Has Breasts: [has_breasts ? "Yes" : "No"]</A><br>"
+			dat += "<a href='?_src_=prefs;preference=has_peepee'>Has Peepee: [has_peepee ? "Yes" : "No"]</A><br>"
+			dat += "<a href='?_src_=prefs;preference=has_puss'>Has Puss: [has_puss ? "Yes" : "No"]</A><br>"
+			dat += "<a href='?_src_=prefs;preference=has_breast'>Has Breast: [has_breast ? "Yes" : "No"]</A><br>"
 
 			if(HAIR in pref_species.species_traits)
 
@@ -655,6 +721,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 			dat += "<b>Play Lobby Music:</b> <a href='?_src_=prefs;preference=lobby_music'>[(toggles & SOUND_LOBBY) ? "Enabled":"Disabled"]</a><br>"
 			dat += "<b>See Pull Requests:</b> <a href='?_src_=prefs;preference=pull_requests'>[(chat_toggles & CHAT_PULLR) ? "Enabled":"Disabled"]</a><br>"
 			dat += "<b>Allow Lewd Verbs:</b> <a href='?_src_=prefs;preference=verb_consent'>[(wasteland_toggles & VERB_CONSENT) ? "Yes":"No"]</a><br>"
+			dat += "<b>Arousal:</b><a href='?_src_=prefs;preference=arousable'>[arousable == TRUE ? "Enabled" : "Disabled"]</a><BR>"
 
 			dat += "<br>"
 
@@ -1757,6 +1824,101 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					var/new_s_tone = input(user, "Choose your character's skin-tone:", "Character Preference")  as null|anything in GLOB.skin_tones
 					if(new_s_tone)
 						skin_tone = new_s_tone
+			//Genital code
+				if("cock_color")
+					var/new_cockcolor = input(user, "Penis color:", "Character Preference","#"+features["cock_color"]) as color|null
+					if(new_cockcolor)
+						var/temp_hsv = RGBtoHSV(new_cockcolor)
+						if(new_cockcolor == "#000000")
+							features["cock_color"] = pref_species.default_color
+						else if(ReadHSV(temp_hsv)[3] >= ReadHSV("#202020")[3])
+							features["cock_color"] = sanitize_hexcolor(new_cockcolor, 6)
+						else
+							to_chat(user,"<span class='danger'>Invalid color. Your color is not bright enough.</span>")
+
+				if("cock_length")
+					var/min_D = CONFIG_GET(keyed_number_list/penis_min_inches_prefs)
+					var/max_D = CONFIG_GET(keyed_number_list/penis_max_inches_prefs)
+					var/new_length = input(user, "Penis length in inches:\n([min_D]-[max_D])", "Character Preference") as num|null
+					if(new_length)
+						features["cock_length"] = clamp(round(new_length), min_D, max_D)
+
+				if("cock_shape")
+					var/new_shape
+					var/list/hockeys = list()
+					new_shape = input(user, "Penis shape:", "Character Preference") as null|anything in (GLOB.cock_shapes_list + hockeys)
+					if(new_shape)
+						features["cock_shape"] = new_shape
+
+				if("cock_visibility")
+					var/n_vis = input(user, "Penis Visibility", "Character Preference") as null|anything in CONFIG_GET(keyed_flag_list/safe_visibility_toggles)
+					if(n_vis)
+						features["cock_visibility"] = n_vis
+
+				if("balls_color")
+					var/new_ballscolor = input(user, "Testicles Color:", "Character Preference","#"+features["balls_color"]) as color|null
+					if(new_ballscolor)
+						var/temp_hsv = RGBtoHSV(new_ballscolor)
+						if(new_ballscolor == "#000000")
+							features["balls_color"] = pref_species.default_color
+						else if(ReadHSV(temp_hsv)[3] >= ReadHSV("#202020")[3])
+							features["balls_color"] = sanitize_hexcolor(new_ballscolor, 6)
+						else
+							to_chat(user,"<span class='danger'>Invalid color. Your color is not bright enough.</span>")
+
+				if("balls_visibility")
+					var/n_vis = input(user, "Testicles Visibility", "Character Preference") as null|anything in CONFIG_GET(keyed_flag_list/safe_visibility_toggles)
+					if(n_vis)
+						features["balls_visibility"] = n_vis
+
+				if("breasts_size")
+					var/new_size = input(user, "Breast Size", "Character Preference") as null|anything in CONFIG_GET(keyed_flag_list/breasts_cups_prefs)
+					if(new_size)
+						features["breasts_size"] = new_size
+
+				if("breasts_shape")
+					var/new_shape
+					new_shape = input(user, "Breast Shape", "Character Preference") as null|anything in GLOB.breasts_shapes_list
+					if(new_shape)
+						features["breasts_shape"] = new_shape
+
+				if("breasts_color")
+					var/new_breasts_color = input(user, "Breast Color:", "Character Preference","#"+features["breasts_color"]) as color|null
+					if(new_breasts_color)
+						var/temp_hsv = RGBtoHSV(new_breasts_color)
+						if(new_breasts_color == "#000000")
+							features["breasts_color"] = pref_species.default_color
+						else if(ReadHSV(temp_hsv)[3] >= ReadHSV("#202020")[3])
+							features["breasts_color"] = sanitize_hexcolor(new_breasts_color, 6)
+						else
+							to_chat(user,"<span class='danger'>Invalid color. Your color is not bright enough.</span>")
+
+				if("breasts_visibility")
+					var/n_vis = input(user, "Breasts Visibility", "Character Preference") as null|anything in CONFIG_GET(keyed_flag_list/safe_visibility_toggles)
+					if(n_vis)
+						features["breasts_visibility"] = n_vis
+
+				if("vag_shape")
+					var/new_shape
+					new_shape = input(user, "Vagina Type", "Character Preference") as null|anything in GLOB.vagina_shapes_list
+					if(new_shape)
+						features["vag_shape"] = new_shape
+
+				if("vag_color")
+					var/new_vagcolor = input(user, "Vagina color:", "Character Preference","#"+features["vag_color"]) as color|null
+					if(new_vagcolor)
+						var/temp_hsv = RGBtoHSV(new_vagcolor)
+						if(new_vagcolor == "#000000")
+							features["vag_color"] = pref_species.default_color
+						else if(ReadHSV(temp_hsv)[3] >= ReadHSV("#202020")[3])
+							features["vag_color"] = sanitize_hexcolor(new_vagcolor, 6)
+						else
+							to_chat(user,"<span class='danger'>Invalid color. Your color is not bright enough.</span>")
+
+				if("vag_visibility")
+					var/n_vis = input(user, "Vagina Visibility", "Character Preference") as null|anything in CONFIG_GET(keyed_flag_list/safe_visibility_toggles)
+					if(n_vis)
+						features["vag_visibility"] = n_vis
 
 				if("ooccolor")
 					var/new_ooccolor = input(user, "Choose your OOC colour:", "Game Preference",ooccolor) as color|null
@@ -1820,6 +1982,29 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 		else
 			switch(href_list["preference"])
+				//CITADEL PREFERENCES EDIT - I can't figure out how to modularize these, so they have to go here. :c -Pooj
+				if("genital_colour")
+					features["genitals_use_skintone"] = !features["genitals_use_skintone"]
+				if("arousable")
+					arousable = !arousable
+				if("has_cock")
+					features["has_cock"] = !features["has_cock"]
+					if(features["has_cock"] == FALSE)
+						features["has_balls"] = FALSE
+				if("has_balls")
+					features["has_balls"] = !features["has_balls"]
+				if("has_breasts")
+					features["has_breasts"] = !features["has_breasts"]
+					if(features["has_breasts"] == FALSE)
+						features["breasts_producing"] = FALSE
+				if("breasts_producing")
+					features["breasts_producing"] = !features["breasts_producing"]
+				if("has_vag")
+					features["has_vag"] = !features["has_vag"]
+					if(features["has_vag"] == FALSE)
+						features["has_womb"] = FALSE
+				if("has_womb")
+					features["has_womb"] = !features["has_womb"]
 				if("publicity")
 					if(unlock_content)
 						toggles ^= MEMBER_PUBLIC
@@ -1834,21 +2019,21 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					facial_hair_style = random_facial_hair_style(gender)
 					hair_style = random_hair_style(gender)
 
-				if("has_penis")
-					if(has_penis == 1)
-						has_penis = 0
+				if("has_peepee")
+					if(has_peepee == 1)
+						has_peepee = 0
 					else
-						has_penis = 1
-				if("has_vagina")
-					if(has_vagina == 1)
-						has_vagina = 0
+						has_peepee = 1
+				if("has_puss")
+					if(has_puss == 1)
+						has_puss = 0
 					else
-						has_vagina = 1
-				if("has_breasts")
-					if(has_breasts == 1)
-						has_breasts = 0
+						has_puss = 1
+				if("has_breast")
+					if(has_breast == 1)
+						has_breast = 0
 					else
-						has_breasts = 1
+						has_breast = 1
 
 				if("hotkeys")
 					hotkeys = !hotkeys
@@ -1996,9 +2181,9 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	character.special_a = special_a
 	character.special_l = special_l
 
-	character.has_penis = has_penis
-	character.has_vagina = has_vagina
-	character.has_breasts = has_breasts
+	character.has_peepee = has_peepee
+	character.has_puss = has_puss
+	character.has_breast = has_breast
 
 	character.eye_color = eye_color
 	var/obj/item/organ/eyes/organ_eyes = character.getorgan(/obj/item/organ/eyes)
@@ -2020,7 +2205,6 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	character.undie_color = undie_color
 	character.shirt_color = shirt_color
 	character.socks_color = socks_color
-
 	character.backbag = backbag
 
 	character.dna.features = features.Copy()
@@ -2035,6 +2219,8 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 		pref_species = new /datum/species/human
 		save_character()
 	character.set_species(chosen_species, icon_update=0)
+
+	character.give_genitals(TRUE) //character.update_genitals() is already called on genital.update_appearance()
 
 	if(icon_updates)
 		character.update_body()

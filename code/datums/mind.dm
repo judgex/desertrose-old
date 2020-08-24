@@ -100,6 +100,11 @@
 
 	if(new_character.mind)								//disassociate any mind currently in our new body's mind variable
 		new_character.mind.current = null
+//CIT CHANGE - makes arousal update when transfering bodies
+	if(isliving(new_character)) //New humans and such are by default enabled arousal. Let's always use the new mind's prefs.
+		var/mob/living/L = new_character
+		if(L.client?.prefs && L.client.prefs.auto_ooc && L.client.prefs.chat_toggles & CHAT_OOC)
+			DISABLE_BITFIELD(L.client.prefs.chat_toggles,CHAT_OOC)
 
 	var/datum/atom_hud/antag/hud_to_transfer = antag_hud//we need this because leave_hud() will clear this list
 	var/mob/living/old_current = current

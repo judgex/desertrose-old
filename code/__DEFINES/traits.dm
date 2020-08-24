@@ -106,3 +106,10 @@
 #define STASIS_MUTE "stasis"
 #define GENETICS_SPELL "genetics_spell"
 #define EYES_COVERED "eyes_covered"
+
+
+// arousal code'n shit
+#define TRAIT_PERMABONER		"permanent_arousal"
+#define TRAIT_NEVERBONER		"never_aroused"
+#define TRAIT_MASO              "masochism"
+

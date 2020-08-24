@@ -12,6 +12,7 @@
 	var/list/temporary_mutations = list() //Timers for temporary mutations
 	var/list/previous = list() //For temporary name/ui/ue/blood_type modifications
 	var/mob/living/holder
+	var/skin_tone_override //because custom skin tones are not found in the skin_tones global list.
 
 /datum/dna/New(mob/living/new_holder)
 	if(istype(new_holder))

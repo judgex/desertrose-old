@@ -31,7 +31,16 @@
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/wings, GLOB.r_wings_list,roundstart = TRUE)
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/caps, GLOB.caps_list)
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/moth_wings, GLOB.moth_wings_list)
+	//genitals
+	init_sprite_accessory_subtypes(/datum/sprite_accessory/penis, GLOB.cock_shapes_list)
+	init_sprite_accessory_subtypes(/datum/sprite_accessory/vagina, GLOB.vagina_shapes_list)
+	init_sprite_accessory_subtypes(/datum/sprite_accessory/breasts, GLOB.breasts_shapes_list)
+	init_sprite_accessory_subtypes(/datum/sprite_accessory/testicles, GLOB.balls_shapes_list)
 
+	for(var/gpath in subtypesof(/obj/item/organ/genital))
+		var/obj/item/organ/genital/G = gpath
+		if(!CHECK_BITFIELD(initial(G.genital_flags), GENITAL_BLACKLISTED))
+			GLOB.genitals_list[initial(G.name)] = gpath
 
 	//Species
 	for(var/spath in subtypesof(/datum/species))
