@@ -1081,7 +1081,7 @@
 	subcategory = CAT_TRIBAL
 
 /datum/crafting_recipe/goliathcloak
-	name = "deathclaw cloak"
+	name = "Deathclaw cloak"
 	result = /obj/item/clothing/suit/hooded/cloak/goliath
 	time = 50
 	reqs = list(/obj/item/stack/sheet/leather = 2,
@@ -1091,12 +1091,21 @@
 	subcategory = CAT_TRIBAL
 
 /datum/crafting_recipe/tatteredredcloak
-	name = "tattered red cloak"
+	name = "Tattered red cloak"
 	result = /obj/item/clothing/suit/hooded/cloak/goliath/tatteredred
 	time = 50
 	reqs = list(/obj/item/stack/sheet/leather = 1,
 				/obj/item/stack/sheet/sinew = 1,
 				/obj/item/stack/sheet/cloth = 2)
+	category = CAT_PRIMAL
+	subcategory = CAT_TRIBAL
+
+/datum/crafting_recipe/talisman//TODO ME
+	name = "Hunter's talisman"
+	result = /obj/item/clothing/neck/cloak/amulet
+	time = 50
+	reqs = list(/obj/item/stack/sheet/bone = 1,
+				/obj/item/stack/sheet/sinew = 1)
 	category = CAT_PRIMAL
 	subcategory = CAT_TRIBAL
 
