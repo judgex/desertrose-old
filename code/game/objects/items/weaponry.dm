@@ -95,6 +95,18 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	throwforce = 25
 	block_chance = 10
 
+/obj/item/claymore/machete/spatha
+	name = "Spatha"
+	desc = "This blade is what is known as a Spatha, a particular longsword design that it quickly becoming the favourite of the Legion Officers in Yuma. This one has more care done to it, bone handle, wooden guard and a blade that looks like it could sheer through metal."
+	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
+	icon_state = "machete_kalebman"
+	item_state = "claymore"
+	slot_flags = ITEM_SLOT_BELT
+	force = 40
+	throwforce = 25
+	block_chance = 15
+
 /obj/item/claymore/machete/pipe
 	name = "pipe"
 	desc = "A heavy rusted pipe, good for smashing heads. "
