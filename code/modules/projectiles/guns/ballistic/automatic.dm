@@ -972,6 +972,10 @@
 	en_bloc = 1
 	auto_eject = 1
 	auto_eject_sound = 'sound/f13weapons/garand_ping.ogg'
+	can_bayonet = TRUE
+	bayonetstate = "lasmusket"
+	knife_x_offset = 22
+	knife_y_offset = 21
 
 /obj/item/gun/ballistic/automatic/m1garand/update_icon()
 	..()
@@ -999,6 +1003,7 @@
 	burst_size = 1
 	fire_delay = 3
 	can_attachments = TRUE
+	can_scope = TRUE
 
 /obj/item/gun/ballistic/automatic/rangemaster/scoped
 	name = "Scoped Colt Rangemaster"
@@ -1009,6 +1014,7 @@
 	zoomable = TRUE
 	zoom_amt = 10
 	zoom_out_amt = 13
+	can_scope = FALSE
 
 /obj/item/gun/ballistic/automatic/fnfal
 	name = "FN FAL"

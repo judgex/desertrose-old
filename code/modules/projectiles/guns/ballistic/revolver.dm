@@ -361,16 +361,19 @@
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev44
 	fire_sound = 'sound/f13weapons/44mag.ogg'
 	fire_delay = 3
+	can_scope = TRUE
 
 /obj/item/gun/ballistic/revolver/m29/alt
 	item_state = "44magnum"
 	icon_state = "mysterious_m29"
+	can_scope = FALSE
 
 /obj/item/gun/ballistic/revolver/m29/coltwalker
-    name = "Colt Walker 1847"
-    desc = "A legendary gun of the west. The Colt Walker bears a fearsome reputation for a very good reason, finding itself in the hands of everyone from ancient army officials to outlaws throughout the years. An antique when the bombs dropped, the weapon is now incredibly outdated. Still, that doesn't make it any less lethal."
-    item_state = "coltwalker"
-    icon_state = "coltwalker"
+	name = "Colt Walker 1847"
+	desc = "A legendary gun of the west. The Colt Walker bears a fearsome reputation for a very good reason, finding itself in the hands of everyone from ancient army officials to outlaws throughout the years. An antique when the bombs dropped, the weapon is now incredibly outdated. Still, that doesn't make it any less lethal."
+	item_state = "coltwalker"
+	icon_state = "coltwalker"
+	can_scope = FALSE
 
 /obj/item/gun/ballistic/revolver/m29/peacekeeper
 	name = "Peacekeeper"
@@ -384,6 +387,7 @@
 	burst_delay = 1
 	var/select = 0
 	actions_types = list(/datum/action/item_action/toggle_firemode)
+	can_scope = FALSE
 
 /obj/item/gun/ballistic/revolver/m29/peacekeeper/ui_action_click()
 	burst_select()
@@ -414,6 +418,7 @@
 	zoomable = TRUE
 	zoom_amt = 10
 	zoom_out_amt = 13
+	can_scope = FALSE
 
 /obj/item/gun/ballistic/revolver/colt357
 	name = "\improper .357 magnum revolver"
