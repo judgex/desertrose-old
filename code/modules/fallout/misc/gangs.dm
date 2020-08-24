@@ -41,6 +41,7 @@ GLOBAL_DATUM_INIT(greatkhans, /datum/gang/greatkhans, new)
 
 		/datum/gang_item/clothing/prostitute_dress,
 		/datum/gang_item/clothing/hat,
+		/datum/gang_item/clothing/glasses/sunglasses,
 
 		/datum/gang_item/clothing/raider_uniform,
 		/datum/gang_item/clothing/jester_uniform,
@@ -56,11 +57,15 @@ GLOBAL_DATUM_INIT(greatkhans, /datum/gang/greatkhans, new)
 	round_start = TRUE
 	boss_items = list(
 		/datum/gang_item/equipment/spraycan,
+		/datum/gang_item/equipment/mentats,
+		/datum/gang_item/equipment/fixer,
 		/datum/gang_item/equipment/emp,
 		/datum/gang_item/equipment/necklace,
+		/datum/gang_item/equipment/c4,
 
 		/datum/gang_item/weapon/shuriken,
 		/datum/gang_item/weapon/switchblade,
+		/datum/gang_item/weapon/greasegun,
 
 		/datum/gang_item/clothing/prostitute_dress,
 		/datum/gang_item/clothing/hat,
@@ -68,7 +73,8 @@ GLOBAL_DATUM_INIT(greatkhans, /datum/gang/greatkhans, new)
 		/datum/gang_item/clothing/khan_boots,
 		/datum/gang_item/clothing/khan_helmet,
 		/datum/gang_item/clothing/khan_uniform,
-		/datum/gang_item/clothing/khan_vest
+		/datum/gang_item/clothing/khan_jacket_armored,
+		/datum/gang_item/clothing/glasses/sunglasses
 	)
 
 /datum/gang/New(starting_members, starting_leader)
@@ -110,7 +116,7 @@ GLOBAL_DATUM_INIT(greatkhans, /datum/gang/greatkhans, new)
 	var/where = new_leader.equip_in_one_of_slots(gangtool, slots, FALSE)
 	if(!where)
 		gangtool.forceMove(get_turf(new_leader))
-	
+
 	if(assigned_tool)
 		var/obj/item/device/gangtool/tool = assigned_tool
 		tool.name = "[initial(tool.name)] - [name]"

@@ -38,7 +38,7 @@ Great Khan
 	faction = "Wastelander"
 	total_positions = 6
 	spawn_positions = 6
-	description = "You are no common raider or tribal settler, for you are a Great Khan. Your ancestry is that of fierce warriors and noble chieftans, whose rites and sagas tell of blood soaked battlefields and great sacrifice for your tribe. At least, this was once the case: after the massacre at Bitter Springs by the NCR, your people have lost much of their strength - now you and many other Khans travel west of Vegas through Red Rock Canyon in the hopes of settling in the region of Pahrump. <span class='bold'>You are not a raider, and should not act as such without permission from server staff.</span>"
+	description = "You are no common raider or tribal settler, for you are a Great Khan. Your ancestry is that of fierce warriors and noble chieftans, whose rites and sagas tell of blood soaked battlefields and great sacrifice for your tribe. At least, this was once the case: after the massacre at Bitter Springs by the NCR, your people have lost much of their strength - now you and many other Khans travel west of Vegas through Red Rock Canyon in the hopes of settling in the region of Yuma."
 	supervisors = "your gang leadership"
 	selection_color = "#ff915e"
 	exp_requirements = 300
@@ -46,40 +46,43 @@ Great Khan
 
 	outfit = /datum/outfit/job/wasteland/f13pusher
 
-	access = list()
-	minimal_access = list()
+	access = list(ACCESS_KHAN)
+	minimal_access = list(ACCESS_KHAN)
+
+	loadout_options = list(
+	/datum/outfit/loadout/pusher,
+	/datum/outfit/loadout/enforcer,
+	/datum/outfit/loadout/brawler)
 
 /datum/outfit/job/wasteland/f13pusher
 	name = "Great Khan"
 	jobtype = /datum/job/wasteland/f13pusher
-
-	id = null
-	ears = null
-	belt = /obj/item/claymore/machete/pipe
-	backpack = /obj/item/storage/backpack/satchel/explorer
-	satchel = /obj/item/storage/backpack/satchel/explorer
-
-	suit = /obj/item/clothing/suit/toggle/labcoat/f13/khan
+	id = 		/obj/item/card/id/khantattoo
+	ears = 		/obj/item/radio/headset
+	belt = 		/obj/item/claymore/machete
+	backpack =	/obj/item/storage/backpack/satchel/explorer
+	satchel = 	/obj/item/storage/backpack/satchel/explorer
 	uniform = /obj/item/clothing/under/f13/khan
+
 
 /datum/outfit/job/wasteland/f13pusher/pre_equip(mob/living/carbon/human/H)
 	..()
-	r_pocket = pick(
-		/obj/item/flashlight/flare/torch, \
-		/obj/item/flashlight/flare)
+	r_pocket = /obj/item/flashlight/flare
 	l_pocket = /obj/item/storage/bag/money/small/khan
 	backpack_contents = list(
 		/obj/item/restraints/handcuffs=1, \
 		/obj/item/reagent_containers/pill/patch/jet=2, \
-		/obj/item/reagent_containers/syringe/medx=1)
+		/obj/item/reagent_containers/syringe/medx=1, \
+		/obj/item/reagent_containers/hypospray/medipen/stimpak=1)
+	suit = /obj/item/clothing/suit/toggle/labcoat/f13/khan_jacket
 	suit_store = pick(
-		/obj/item/gun/ballistic/revolver/detective, \
-		/obj/item/gun/ballistic/shotgun/remington, \
-		/obj/item/gun/ballistic/revolver/caravan_shotgun, \
-		/obj/item/gun/ballistic/revolver/pipe_rifle, \
+		/obj/item/gun/ballistic/shotgun/automatic/hunting/trail, \
+		/obj/item/gun/ballistic/shotgun/hunting, \
+		/obj/item/gun/ballistic/revolver/m29, \
 		/obj/item/gun/ballistic/automatic/pistol/ninemil)
 	head = /obj/item/clothing/head/helmet/f13/khan
 	shoes = /obj/item/clothing/shoes/f13/khan
+
 
 /datum/outfit/job/wasteland/f13pusher/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
@@ -91,6 +94,28 @@ Great Khan
 		GLOB.all_gangs |= GK
 		GK.add_member(H)
 		H.gang = GK
+
+/datum/outfit/loadout/pusher
+	name = "Chemist"
+	backpack_contents = list(
+		/obj/item/reagent_containers/glass/beaker/large=2, \
+		/obj/item/book/granter/trait/chemistry=1)
+
+/datum/outfit/loadout/enforcer
+	name = "Enforcer"
+	suit_store = /obj/item/gun/ballistic/shotgun/trench
+	backpack_contents = list(
+		/obj/item/storage/box/lethalshot=1, \
+		/obj/item/storage/box/rubbershot/beanbag=1, \
+		/obj/item/restraints/legcuffs/bola/tactical=1, \
+		/obj/item/restraints/handcuffs=2)
+
+/datum/outfit/loadout/brawler
+	name = "Brawler"
+	gloves =	/obj/item/melee/unarmed/brass/spiked
+	backpack_contents = list(
+		/obj/item/twohanded/baseball/spiked=1, \
+		/obj/item/reagent_containers/pill/patch/healpoultice=2)
 
 /*
 Raider
