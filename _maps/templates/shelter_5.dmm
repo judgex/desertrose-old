@@ -1,11 +1,12 @@
 "a" = (/turf/closed/wall/f13/tentwall,/area/survivalpod)
-"e" = (/obj/structure/table/wood,/turf/open/floor/f13/wood{icon_state = "housewood2"; tag = "icon-housewood2"},/area/survivalpod)
+"e" = (/obj/structure/table/wood,/obj/item/stock_parts/cell,/obj/item/stock_parts/cell,/turf/open/floor/f13/wood{icon_state = "housewood2"; tag = "icon-housewood2"},/area/survivalpod)
 "j" = (/obj/effect/overlay/desert_side{dir = 1},/turf/open/floor/f13/wood{icon_state = "housewood2"; tag = "icon-housewood2"},/area/survivalpod)
 "m" = (/turf/open/indestructible/ground/outside/dirt{icon_state = "dirtcorner"; tag = "icon-dirtcorner"},/area/survivalpod)
 "o" = (/obj/effect/overlay/desert_side,/turf/open/floor/f13/wood{icon_state = "housewood2"; tag = "icon-housewood2"},/area/survivalpod)
 "s" = (/obj/structure/table/wood,/obj/machinery/microwave,/turf/open/floor/f13/wood{icon_state = "housewood2"; tag = "icon-housewood2"},/area/survivalpod)
 "u" = (/turf/open/indestructible/ground/outside/dirt{dir = 8; icon_state = "dirtcorner"},/area/survivalpod)
 "y" = (/obj/structure/table/wood,/obj/item/lighter,/turf/open/floor/f13/wood{icon_state = "housewood2"; tag = "icon-housewood2"},/area/survivalpod)
+"z" = (/obj/machinery/space_heater,/turf/open/floor/f13/wood{icon_state = "housewood2"; tag = "icon-housewood2"},/area/survivalpod)
 "E" = (/obj/structure/table/wood,/obj/machinery/chem_dispenser/drinks/beer,/obj/item/storage/box/drinkingglasses,/turf/open/floor/f13/wood{icon_state = "housewood2"; tag = "icon-housewood2"},/area/survivalpod)
 "G" = (/turf/open/floor/f13/wood{icon_state = "housewood2"; tag = "icon-housewood2"},/area/survivalpod)
 "I" = (/obj/effect/overlay/desert_side{dir = 4},/turf/open/floor/f13/wood{icon_state = "housewood2"; tag = "icon-housewood2"},/area/survivalpod)
@@ -20,7 +21,7 @@
 
 (1,1,1) = {"
 aaaaaaaaaaaaaa
-aQEJGGyeGGGsQa
+aQEJGGyezzGsQa
 aGGGGGooGGGGJa
 aGGGGImuRGGGGa
 aGOOOIMKROOOGa

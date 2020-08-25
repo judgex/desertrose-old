@@ -153,8 +153,8 @@
 	reqs = list(/datum/reagent/fuel = 50,
 				/obj/item/stack/cable_coil = 1,
 				/obj/item/assembly/igniter = 1,
-				/obj/item/reagent_containers/food/drinks/soda_cans = 1)
-	parts = list(/obj/item/reagent_containers/food/drinks/soda_cans = 1)
+				/obj/item/reagent_containers/food/drinks/bottle = 1)
+	parts = list(/obj/item/reagent_containers/food/drinks/bottle = 1)
 	time = 15
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
@@ -1081,7 +1081,7 @@
 	subcategory = CAT_TRIBAL
 
 /datum/crafting_recipe/goliathcloak
-	name = "deathclaw cloak"
+	name = "Deathclaw cloak"
 	result = /obj/item/clothing/suit/hooded/cloak/goliath
 	time = 50
 	reqs = list(/obj/item/stack/sheet/leather = 2,
@@ -1091,12 +1091,21 @@
 	subcategory = CAT_TRIBAL
 
 /datum/crafting_recipe/tatteredredcloak
-	name = "tattered red cloak"
+	name = "Tattered red cloak"
 	result = /obj/item/clothing/suit/hooded/cloak/goliath/tatteredred
 	time = 50
 	reqs = list(/obj/item/stack/sheet/leather = 1,
 				/obj/item/stack/sheet/sinew = 1,
 				/obj/item/stack/sheet/cloth = 2)
+	category = CAT_PRIMAL
+	subcategory = CAT_TRIBAL
+
+/datum/crafting_recipe/talisman//TODO ME
+	name = "Hunter's talisman"
+	result = /obj/item/clothing/neck/cloak/amulet
+	time = 50
+	reqs = list(/obj/item/stack/sheet/bone = 1,
+				/obj/item/stack/sheet/sinew = 1)
 	category = CAT_PRIMAL
 	subcategory = CAT_TRIBAL
 
@@ -1639,7 +1648,7 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
 
-/datum/crafting_recipe/huntingrifle_scoped
+/*/datum/crafting_recipe/huntingrifle_scoped
 	name = "scoped hunting rifle"
 	result = /obj/item/gun/ballistic/shotgun/remington/scoped
 	reqs = list(/obj/item/gun/ballistic/shotgun/remington = 1,
@@ -1650,7 +1659,7 @@
 	time = 120
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
-
+*/
 /* CRAFT rework: removed for balance
 /datum/crafting_recipe/m1garand
 	name = "M1 Garand"
@@ -2294,6 +2303,17 @@
 	result = /obj/item/kitchen/knife/combat/scrap
 	time = 300
 	reqs = list(/obj/item/stack/sheet/metal = 3,
+				/obj/item/stack/sheet/cloth = 2)
+	traits = list(TRAIT_TECHNOPHOBE)
+	tools = list(TOOL_FORGE)
+	category = CAT_FORGE
+	subcategory = CAT_FORGEWEAPON
+
+/datum/crafting_recipe/combatbayonet
+	name = "Combat Knife"
+	result = /obj/item/kitchen/knife/combat/bayonet
+	time = 300
+	reqs = list(/obj/item/stack/sheet/metal = 5,
 				/obj/item/stack/sheet/cloth = 2)
 	traits = list(TRAIT_TECHNOPHOBE)
 	tools = list(TOOL_FORGE)
