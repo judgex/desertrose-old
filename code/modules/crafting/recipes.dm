@@ -2300,6 +2300,17 @@
 	category = CAT_FORGE
 	subcategory = CAT_FORGEWEAPON
 
+/datum/crafting_recipe/combatbayonet
+	name = "Combat Knife"
+	result = /obj/item/kitchen/knife/combat/bayonet
+	time = 300
+	reqs = list(/obj/item/stack/sheet/metal = 5,
+				/obj/item/stack/sheet/cloth = 2)
+	traits = list(TRAIT_TECHNOPHOBE)
+	tools = list(TOOL_FORGE)
+	category = CAT_FORGE
+	subcategory = CAT_FORGEWEAPON
+
 /datum/crafting_recipe/kitchen
 	name = "Kitchen Knife"
 	result = /obj/item/kitchen/knife
