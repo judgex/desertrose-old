@@ -24,6 +24,13 @@
 ---Fallout 13---
 */
 
+/obj/item/ammo_box/magazine/autopipe
+	name = "autopipe magazine (.38)"
+	icon_state = "autopipe_mag"
+	caliber = "357"
+	ammo_type = /obj/item/ammo_casing/a357
+	max_ammo = 24
+
 /obj/item/ammo_box/magazine/m556/rifle
 	name = "rifle magazine (5.56mm)"
 	icon_state = "r20"
