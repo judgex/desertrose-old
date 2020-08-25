@@ -34,6 +34,7 @@ SUBSYSTEM_DEF(input)
 			"O" = "ooc",
 			"T" = "say",
 			"M" = "me",
+			"U" = "surrender",
 			"Back" = "\".winset \\\"input.text=\\\"\\\"\\\"\"", // This makes it so backspace can remove default inputs
 			"Any" = "\"KeyDown \[\[*\]\]\"",
 			"Any+UP" = "\"KeyUp \[\[*\]\]\"",
@@ -49,6 +50,7 @@ SUBSYSTEM_DEF(input)
 			"O" = "ooc",
 			"T" = "say",
 			"M" = "me",
+			"U" = "surrender",
 			"Back" = "\".winset \\\"input.text=\\\"\\\"\\\"\"", // This makes it so backspace can remove default inputs
 			"Any" = "\"KeyDown \[\[*\]\]\"",
 			"Any+UP" = "\"KeyUp \[\[*\]\]\"",
