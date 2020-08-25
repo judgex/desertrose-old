@@ -634,6 +634,11 @@
 	weapon_weight = WEAPON_HEAVY
 	can_attachments = TRUE
 
+	bayonetstate = "rifles"
+	can_bayonet = TRUE
+	knife_x_offset = 23
+	knife_y_offset = 11
+
 /obj/item/gun/ballistic/automatic/assault_rifle/burst_select()
 	var/mob/living/carbon/human/user = usr
 	switch(select)
@@ -670,6 +675,8 @@
 	automatic = 1
 	fire_sound = 'sound/weapons/Gunshot_large_silenced.ogg'
 	weapon_weight = WEAPON_HEAVY
+	can_attachments = TRUE
+	can_bayonet = FALSE
 	force = 15
 
 
@@ -722,6 +729,11 @@
 	select = 0
 	can_attachments = TRUE
 
+	bayonetstate = "rifles"
+	can_bayonet = TRUE
+	knife_x_offset = 23
+	knife_y_offset = 10
+
 /obj/item/gun/ballistic/automatic/marksman/sniper
 	name = "sniper rifle"
 	desc = "A DKS 501, chambered in .308 Winchester.  With a light polymer body, it's suited for long treks through the desert."
@@ -732,6 +744,7 @@
 	fire_delay = 10
 	burst_size = 1
 	projectile_speed = 0 //basically hitscan
+	can_bayonet = FALSE
 
 /obj/item/gun/ballistic/automatic/marksman/sniper/gold
 	name = "golden sniper rifle"
@@ -749,6 +762,9 @@
 	mag_type = /obj/item/ammo_box/magazine/m556/rifle
 	zoomable = FALSE
 	weapon_weight = WEAPON_HEAVY
+	//bayonetstate = "rifles"
+	knife_x_offset = 22
+	knife_y_offset = 12
 
 /obj/item/gun/ballistic/automatic/marksman/servicerifle/r82
 	name = "R82 heavy service rifle"
@@ -760,6 +776,7 @@
 	icon_state = "R82"
 	item_state = "R82"
 	automatic = 1
+	can_bayonet = FALSE//TODO me
 
 /obj/item/gun/ballistic/automatic/marksman/servicerifle/varmint
 	name = "varmint rifle"
@@ -769,6 +786,7 @@
 	fire_delay = 8
 	init_mag_type = /obj/item/ammo_box/magazine/m556/rifle/small
 	mag_type = /obj/item/ammo_box/magazine/m556/rifle
+	can_bayonet = FALSE//todo me
 
 /obj/item/gun/ballistic/automatic/marksman/servicerifle/varmint/ratslayer
 	name = "ratslayer"
@@ -1004,6 +1022,10 @@
 	fire_delay = 3
 	can_attachments = TRUE
 	can_scope = TRUE
+	can_bayonet = TRUE
+	bayonetstate = "lasmusket"
+	knife_x_offset = 24
+	knife_y_offset = 21
 
 /obj/item/gun/ballistic/automatic/rangemaster/scoped
 	name = "Scoped Colt Rangemaster"
