@@ -96,7 +96,7 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	. = ..()
 	if(!istype(M))
 		return
-	M.apply_damage(35, STAMINA, null, 0)
+	M.apply_damage(20, STAMINA, null, 0)
 
 /obj/item/claymore/machete/gladius
 	name = "gladius"
