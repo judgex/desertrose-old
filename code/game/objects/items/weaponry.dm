@@ -85,6 +85,19 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	force = 35
 	throwforce = 25
 
+/obj/item/claymore/machete/training
+	name = "training machete"
+	desc = "A training machete made of tough wood."
+	icon_state = "machete_training"
+	force = 0
+	throwforce = 5
+
+/obj/item/claymore/machete/training/attack(mob/living/M, mob/living/user)
+	. = ..()
+	if(!istype(M))
+		return
+	M.apply_damage(20, STAMINA, null, 0)
+
 /obj/item/claymore/machete/gladius
 	name = "gladius"
 	desc = "A forged steel machete, the blade has been laborously sharpened and the weight has been evenly distributed for maximum killing power. An image of a bull is burned into the wooden handle."
