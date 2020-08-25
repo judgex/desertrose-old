@@ -632,6 +632,19 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		new /datum/data/wasteland_equipment("Glass Sheets x 50",				/obj/item/stack/sheet/glass/fifty,									90)
 		)
 
+/obj/machinery/mineral/wasteland_vendor/mining
+	name = "Wasteland Vending Machine - Mining"
+	icon_state = "generic_idle"
+	prize_list = list(
+		new /datum/data/wasteland_equipment("Pickaxe",					/obj/item/pickaxe,											25),
+		new /datum/data/wasteland_equipment("Mining drill",				/obj/item/pickaxe/drill,									100),
+		new /datum/data/wasteland_equipment("Manual mining scanner",	/obj/item/mining_scanner,									25),
+		new /datum/data/wasteland_equipment("Automatic mining scanner",	/obj/item/t_scanner/adv_mining_scanner/lesser,				200),
+		new /datum/data/wasteland_equipment("Advanced mining scanner",	/obj/item/t_scanner/adv_mining_scanner,						300),
+		new /datum/data/wasteland_equipment("Advanced mining scanner",	/obj/item/twohanded/required/kinetic_crusher,				500),
+		new /datum/data/wasteland_equipment("ORM Board",				/obj/item/circuitboard/machine/ore_redemption,				150)
+		)
+
 /datum/data/wasteland_equipment
 	var/equipment_name = "generic"
 	var/equipment_path = null
