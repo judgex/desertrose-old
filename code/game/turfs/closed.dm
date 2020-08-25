@@ -61,11 +61,11 @@
 	layer = FLY_LAYER
 
 /turf/closed/indestructible/splashscreen/New()
-	icon = 'icons/misc/splashscreen.dmi'
-	icon_state = "title[rand(1,12)]"
+	icon = 'icons/misc/lobby.dmi'
+	icon_state = "title[rand(1,13)]"
 
 	src.fullDark = new/atom/movable{
-		icon = 'icons/misc/splashscreen.dmi' //Replace with actual icon
+		icon = 'icons/misc/lobby.dmi' //Replace with actual icon
 		icon_state = "transition" //Replace with actual state
 		layer = 61;
 		alpha = 0;

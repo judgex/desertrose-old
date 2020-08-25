@@ -9,15 +9,15 @@
 /client/script = {"<style>
 body					{font-family: Verdana, sans-serif;}
 
-h1, h2, h3, h4, h5, h6	{color: #0000ff;	font-family: Georgia, Verdana, sans-serif;}
+h1, h2, h3, h4, h5, h6	{color: #3c4438;	font-family: Georgia, Verdana, sans-serif;}
 
 em						{font-style: normal;	font-weight: bold;}
 
-.motd					{color: #638500;	font-family: Verdana, sans-serif;}
+.motd					{color: #454943;	font-family: Verdana, sans-serif;}
 .motd h1, .motd h2, .motd h3, .motd h4, .motd h5, .motd h6
-	{color: #638500;	text-decoration: underline;}
+	{color: #3c4438;	text-decoration: underline;}
 .motd a, .motd a:link, .motd a:visited, .motd a:active, .motd a:hover
-	{color: #638500;}
+	{color: #4c5b42;}
 
 .italics				{					font-style: italic;}
 
@@ -27,8 +27,8 @@ em						{font-style: normal;	font-weight: bold;}
 
 .ooc					{					font-weight: bold;}
 .looc					{color: #6699CC'	font-weight: bold;}
-.adminobserverooc		{color: #0099cc;	font-weight: bold;}
-.adminooc				{color: #700038;	font-weight: bold;}
+.adminobserverooc		{color: #0b575e;	font-weight: bold;}
+.adminooc				{color: #77ca00;	font-weight: bold;}
 
 .adminobserver			{color: #E64B0B;	font-weight: bold;}
 .admin					{color: #386aff;	font-weight: bold;}
@@ -36,7 +36,7 @@ em						{font-style: normal;	font-weight: bold;}
 .name					{					font-weight: bold;}
 
 .say					{}
-.deadsay				{color: #5c00e6;}
+.deadsay				{color: #3c1478;}
 .binarysay    			{color: #20c20e; background-color: #000000; display: block;}
 .binarysay a  			{color: #00ff00;}
 .binarysay a:active, .binarysay a:visited {color: #88ff88;}
@@ -54,9 +54,9 @@ em						{font-style: normal;	font-weight: bold;}
 .redteamradio           {color: #ff0000;}
 .blueteamradio          {color: #0000ff;}
 .vaultradio      		{color: #6eaa2c;}
-.ncrradio      			{color: #eaaa54;}
-.bosradio      			{color: #686868;}
-.enclaveradio      		{color: #003000;}
+.ncrradio      			{color: #425919;}
+.bosradio      			{color: #6b4819;}
+.enclaveradio      		{color: #6d3f40;}
 .denradio      			{color: #a8732b;}
 .legionradio			{color: #c24d44;}
 
@@ -163,7 +163,7 @@ h1.alert, h2.alert		{color: #000000;}
 
 .icon 					{height: 1em;	width: auto;}
 
-.memo					{color: #638500;	text-align: center;}
+.memo					{color: #19654b;	text-align: center;}
 .memoedit				{text-align: center;	font-size: 2;}
 .abductor				{color: #800080; font-style: italic;}
 .mind_control			{color: #A00D6F; font-size: 3; font-weight: bold; font-style: italic;}

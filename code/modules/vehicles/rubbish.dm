@@ -29,143 +29,43 @@
 	S.icon = null
 	S.verbs.Cut()
 
-//Fallout 13 rubish decoration
+//Fallout 13 decorative derelict vehicles directory
 
-/obj/structure/car/rubbish1
-	name = "pre-War rubbish"
-	desc = "A rusty pre-War automobile carcass.<br>This car is damaged beyond repair."
-	icon = 'icons/fallout/objects/structures/rubish.dmi'
-	icon_state = "car_rubish1"
+/obj/structure/car
+	name = "остов автомобиля"
+	desc = "Ржавый остов довоенного авто.<br>Настолько сломан, что уже не починить."
+	icon = 'icons/fallout/vehicles/medium_vehicles.dmi'
+	icon_state = "derelict"
 	anchored = 1
 	density = 1
 	layer = ABOVE_MOB_LAYER
 	resistance_flags = INDESTRUCTIBLE
 
-/obj/structure/car/rubbish1/New()
+/obj/structure/car/Initialize()
 	..()
 
-	var/atom/movable/S = new (locate(x+1,y,z))
-	S1 = S
-	S.density = 1
-	S.anchored = 1
-	S.icon = null
-	S.verbs.Cut()
-
-	S = new (locate(x+1,y+1,z))
-	S2 = S
-	S.density = 1
-	S.anchored = 1
-	S.icon = null
-	S.verbs.Cut()
-
-	S = new (locate(x,y+1,z))
-	S3 = S
-	S.density = 1
-	S.anchored = 1
-	S.icon = null
-	S.verbs.Cut()
-
-
-/obj/structure/car/rubbish2
-	name = "pre-War rubbish"
-	desc = "A rusty pre-War automobile carcass.<br>This car is damaged beyond repair."
-	icon = 'icons/fallout/objects/structures/rubish.dmi'
-	icon_state = "car_rubish2"
-	anchored = 1
-	density = 1
-	layer = ABOVE_MOB_LAYER
-	resistance_flags = INDESTRUCTIBLE
-
-
-/obj/structure/car/rubbish2/New()
-	..()
+	dir = rand(1, 10)
 
 	var/atom/movable/S = new (locate(x+1,y,z))
-	S1 = S
 	S.density = 1
 	S.anchored = 1
 	S.icon = null
 	S.verbs.Cut()
 
-	S = new (locate(x+1,y+1,z))
-	S2 = S
-	S.density = 1
-	S.anchored = 1
-	S.icon = null
-	S.verbs.Cut()
+/obj/structure/car/highwayman
+	icon = 'icons/fallout/vehicles/car.dmi'
+	icon_state = "car1"
 
-	S = new (locate(x,y+1,z))
-	S3 = S
-	S.density = 1
-	S.anchored = 1
-	S.icon = null
-	S.verbs.Cut()
-
-
-/obj/structure/car/rubbish3
-	name = "pre-War rubbish"
-	desc = "A rusty pre-War automobile carcass.<br>This car is damaged beyond repair."
-	icon = 'icons/fallout/objects/structures/rubish.dmi'
-	icon_state = "car_rubish3"
-	anchored = 1
-	density = 1
-	layer = ABOVE_MOB_LAYER
-	resistance_flags = INDESTRUCTIBLE
-
-/obj/structure/car/rubbish3/New()
-	..()
+/obj/structure/car/highwayman/Initialize()
+	icon_state = "car[rand(1, 4)]"
 
 	var/atom/movable/S = new (locate(x+1,y,z))
-	S1 = S
 	S.density = 1
 	S.anchored = 1
 	S.icon = null
 	S.verbs.Cut()
 
-	S = new (locate(x+1,y+1,z))
-	S2 = S
-	S.density = 1
-	S.anchored = 1
-	S.icon = null
-	S.verbs.Cut()
-
-	S = new (locate(x,y+1,z))
-	S3 = S
-	S.density = 1
-	S.anchored = 1
-	S.icon = null
-	S.verbs.Cut()
-
-
-/obj/structure/car/rubbish4
-	name = "pre-War rubbish"
-	desc = "A rusty pre-War automobile carcass.<br>This car is damaged beyond repair."
-	icon = 'icons/fallout/objects/structures/rubish.dmi'
-	icon_state = "car_rubish4"
-	anchored = 1
-	density = 1
-	layer = ABOVE_MOB_LAYER
-	resistance_flags = INDESTRUCTIBLE
-
-/obj/structure/car/rubbish4/New()
-	..()
-
-	var/atom/movable/S = new (locate(x+1,y,z))
-	S1 = S
-	S.density = 1
-	S.anchored = 1
-	S.icon = null
-	S.verbs.Cut()
-
-	S = new (locate(x+1,y+1,z))
-	S2 = S
-	S.density = 1
-	S.anchored = 1
-	S.icon = null
-	S.verbs.Cut()
-
-	S = new (locate(x,y+1,z))
-	S3 = S
+	S = new (locate(x+2,y,z))
 	S.density = 1
 	S.anchored = 1
 	S.icon = null

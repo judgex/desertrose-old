@@ -67,8 +67,6 @@ window "mainwindow"
 		icon = 'icons\\deathclawlogo.png'
 		macro = "default"
 		menu = "menu"
-		outer-size = 656x518
-		inner-size = 640x459
 	elem "split"
 		type = CHILD
 		pos = 3,0
@@ -156,8 +154,6 @@ window "mapwindow"
 		saved-params = ""
 		statusbar = false
 		is-pane = true
-		outer-size = 1040x1040
-		inner-size = 1024x1001
 	elem "map"
 		type = MAP
 		pos = 0,0
@@ -181,8 +177,6 @@ window "infowindow"
 		background-color = #3c4438
 		saved-params = "pos;size;is-minimized;is-maximized"
 		is-pane = true
-		outer-size = 656x538
-		inner-size = 640x499
 	elem "info"
 		type = CHILD
 		pos = 0,30
@@ -276,7 +270,6 @@ window "outputwindow"
 		can-minimize = false
 		can-resize = false
 		is-pane = true
-		outer-size = 654x494
 	elem "browseroutput"
 		type = BROWSER
 		pos = 0,0
@@ -300,28 +293,28 @@ window "outputwindow"
 window "preferences_window"
 	elem "preferences_window"
 		type = MAIN
-		pos = 281,0
-		size = 700x700
+		pos = 480,95
+		size = 600x407
 		anchor1 = none
 		anchor2 = none
 		background-color = none
 		is-visible = false
 		saved-params = "pos;size;is-minimized;is-maximized"
 		statusbar = false
-		outer-size = 716x739
-		inner-size = 700x700
+		outer-size = 616x446
+		inner-size = 600x407
 	elem "preferences_browser"
 		type = BROWSER
-		pos = -8,-8
-		size = 518x708
+		pos = 0,0
+		size = 400x407
 		anchor1 = 0,0
 		anchor2 = 90,100
 		background-color = none
 		saved-params = ""
 	elem "character_preview_map"
 		type = MAP
-		pos = 509,0
-		size = 271x700
+		pos = 400,0
+		size = 200x407
 		anchor1 = 90,0
 		anchor2 = 100,100
 		right-click = true
@@ -337,8 +330,6 @@ window "statwindow"
 		background-color = #3c4438
 		saved-params = "pos;size;is-minimized;is-maximized"
 		is-pane = true
-		outer-size = 656x538
-		inner-size = 640x499
 	elem "stat"
 		type = INFO
 		pos = 0,0
