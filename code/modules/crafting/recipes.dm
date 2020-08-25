@@ -2057,6 +2057,16 @@
 	category = CAT_PRIMAL
 	subcategory = CAT_TRIBAL
 
+/datum/crafting_recipe/warmace
+	name = "Carve Training Machete"
+	result = /obj/item/claymore/machete/training
+	time = 50
+	reqs = list(/obj/item/stack/sheet/mineral/wood = 5,
+				/obj/item/stack/sheet/cloth = 2)
+	tools = list(TOOL_WORKBENCH)
+	category = CAT_PRIMAL
+	subcategory = CAT_TRIBAL
+
 /datum/crafting_recipe/spearquiver
 	name = "Spear Quiver"
 	result = /obj/item/storage/backpack/spearquiver
