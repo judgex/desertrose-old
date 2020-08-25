@@ -1022,6 +1022,10 @@
 	fire_delay = 3
 	can_attachments = TRUE
 	can_scope = TRUE
+	can_bayonet = TRUE
+	bayonetstate = "lasmusket"
+	knife_x_offset = 24
+	knife_y_offset = 21
 
 /obj/item/gun/ballistic/automatic/rangemaster/scoped
 	name = "Scoped Colt Rangemaster"
