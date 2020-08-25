@@ -610,11 +610,9 @@
 	hat_offset = 3
 
 //SexBot module begin
-/obj/item/robot_module/fisto_protectron
+/obj/item/robot_module/fisto_protectron //reminds me this fag, woona
 	name = "Fisto"
-	basic_modules = list(
-		/obj/item/dildo/cyborg,
-		/obj/item/reagent_containers/spray/sexborg_oil)
+	basic_modules = list(/obj/item/reagent_containers/spray/sexborg_oil)
 	radio_channels = list("Vault" = 1, "Service" = 1)
 	emag_modules = list(/obj/item/reagent_containers/spray/cyborg_lube)
 	ratvar_modules = list(/obj/item/clockwork/weapon/ratvarian_spear)
@@ -625,9 +623,7 @@
 
 /obj/item/robot_module/sexy_handy
 	name = "Hans"
-	basic_modules = list(
-		/obj/item/dildo/cyborg,
-		/obj/item/reagent_containers/spray/sexborg_oil)
+	basic_modules = list(/obj/item/reagent_containers/spray/sexborg_oil)
 	radio_channels = list("Vault" = 1, "Service" = 1)
 	emag_modules = list(/obj/item/reagent_containers/spray/cyborg_lube)
 	ratvar_modules = list(/obj/item/clockwork/weapon/ratvarian_spear)

@@ -1,4 +1,10 @@
 macro "default"
+	elem 
+		name = "F2"
+	elem 
+		name = "F3"
+	elem 
+		name = "F5"
 
 
 menu "menu"
@@ -50,24 +56,26 @@ menu "menu"
 window "mainwindow"
 	elem "mainwindow"
 		type = MAIN
-		pos = 0,0
+		pos = 281,0
 		size = 640x440
 		anchor1 = none
 		anchor2 = none
-		background-color = #411d1e
+		background-color = #3c4438
 		is-default = true
 		saved-params = "pos;size;is-minimized;is-maximized"
 		title = "Desert Rose"
 		icon = 'icons\\deathclawlogo.png'
 		macro = "default"
 		menu = "menu"
+		outer-size = 656x518
+		inner-size = 640x459
 	elem "split"
 		type = CHILD
 		pos = 3,0
 		size = 634x417
 		anchor1 = 0,0
 		anchor2 = 100,100
-		background-color = #411d1e
+		background-color = #3c4438
 		saved-params = "splitter"
 		left = "mapwindow"
 		right = "infowindow"
@@ -133,23 +141,23 @@ window "mainwindow"
 		size = 999x999
 		anchor1 = none
 		anchor2 = none
-		background-color = #411d1e
+		background-color = #3c4438
 		is-visible = false
 		saved-params = ""
 
 window "mapwindow"
 	elem "mapwindow"
 		type = MAIN
-		pos = 418,0
-		size = 1024x1024
+		pos = 281,0
+		size = 1024x1001
 		anchor1 = none
 		anchor2 = none
-		background-color = #411d1e
+		background-color = #3c4438
 		saved-params = ""
 		statusbar = false
 		is-pane = true
-		outer-size = 1090x1192
-		inner-size = 1068x1136
+		outer-size = 1040x1040
+		inner-size = 1024x1001
 	elem "map"
 		type = MAP
 		pos = 0,0
@@ -166,20 +174,22 @@ window "mapwindow"
 window "infowindow"
 	elem "infowindow"
 		type = MAIN
-		pos = 0,0
+		pos = 281,0
 		size = 640x480
 		anchor1 = none
 		anchor2 = none
-		background-color = #411d1e
+		background-color = #3c4438
 		saved-params = "pos;size;is-minimized;is-maximized"
 		is-pane = true
+		outer-size = 656x538
+		inner-size = 640x499
 	elem "info"
 		type = CHILD
 		pos = 0,30
 		size = 640x445
 		anchor1 = 0,0
 		anchor2 = 100,100
-		background-color = #6f3132
+		background-color = #454943
 		saved-params = "splitter"
 		left = "statwindow"
 		right = "outputwindow"
@@ -191,7 +201,7 @@ window "infowindow"
 		anchor1 = 3,0
 		anchor2 = 19,0
 		text-color = #ffffff
-		background-color = #411d1e
+		background-color = #3c4438
 		saved-params = "is-checked"
 		text = "Changelog"
 		command = "changelog"
@@ -202,7 +212,7 @@ window "infowindow"
 		anchor1 = 19,0
 		anchor2 = 34,0
 		text-color = #ffffff
-		background-color = #411d1e
+		background-color = #3c4438
 		saved-params = "is-checked"
 		text = "Rules"
 		command = "rules"
@@ -213,7 +223,7 @@ window "infowindow"
 		anchor1 = 34,0
 		anchor2 = 50,0
 		text-color = #ffffff
-		background-color = #411d1e
+		background-color = #3c4438
 		saved-params = "is-checked"
 		text = "Wiki"
 		command = "wiki"
@@ -224,7 +234,7 @@ window "infowindow"
 		anchor1 = 50,0
 		anchor2 = 66,0
 		text-color = #ffffff
-		background-color = #411d1e
+		background-color = #3c4438
 		saved-params = "is-checked"
 		text = "Discord"
 		command = "discord"
@@ -235,7 +245,7 @@ window "infowindow"
 		anchor1 = 66,0
 		anchor2 = 81,0
 		text-color = #ffffff
-		background-color = #411d1e
+		background-color = #3c4438
 		saved-params = "is-checked"
 		text = "Github"
 		command = "github"
@@ -246,7 +256,7 @@ window "infowindow"
 		anchor1 = 81,0
 		anchor2 = 97,0
 		text-color = #ffffff
-		background-color = #411d1e
+		background-color = #3c4438
 		saved-params = "is-checked"
 		text = "Report Issue"
 		command = "report-issue"
@@ -254,11 +264,11 @@ window "infowindow"
 window "outputwindow"
 	elem "outputwindow"
 		type = MAIN
-		pos = 0,0
+		pos = 281,0
 		size = 640x480
 		anchor1 = none
 		anchor2 = none
-		background-color = #ffe1e2
+		background-color = #747a70
 		saved-params = "pos;size;is-minimized;is-maximized"
 		titlebar = false
 		statusbar = false
@@ -273,44 +283,45 @@ window "outputwindow"
 		size = 640x480
 		anchor1 = 0,0
 		anchor2 = 100,100
-		background-color = #ffe1e2
+		background-color = #747a70
 		is-visible = false
 		is-disabled = true
 		saved-params = ""
-		auto-format = false
 	elem "output"
 		type = OUTPUT
 		pos = 0,0
 		size = 640x480
 		anchor1 = 0,0
 		anchor2 = 100,100
-		background-color = #ffe1e2
+		background-color = #747a70
 		is-default = true
 		saved-params = ""
 
 window "preferences_window"
 	elem "preferences_window"
 		type = MAIN
-		pos = 372,0
-		size = 1120x1000
+		pos = 281,0
+		size = 700x700
 		anchor1 = none
 		anchor2 = none
 		background-color = none
 		is-visible = false
 		saved-params = "pos;size;is-minimized;is-maximized"
 		statusbar = false
+		outer-size = 716x739
+		inner-size = 700x700
 	elem "preferences_browser"
 		type = BROWSER
 		pos = -8,-8
-		size = 896x1008
+		size = 518x708
 		anchor1 = 0,0
 		anchor2 = 90,100
 		background-color = none
 		saved-params = ""
 	elem "character_preview_map"
 		type = MAP
-		pos = 887,0
-		size = 313x1000
+		pos = 509,0
+		size = 271x700
 		anchor1 = 90,0
 		anchor2 = 100,100
 		right-click = true
@@ -319,22 +330,26 @@ window "preferences_window"
 window "statwindow"
 	elem "statwindow"
 		type = MAIN
-		pos = 0,0
+		pos = 281,0
 		size = 640x480
 		anchor1 = none
 		anchor2 = none
-		background-color = #411d1e
+		background-color = #3c4438
 		saved-params = "pos;size;is-minimized;is-maximized"
 		is-pane = true
+		outer-size = 656x538
+		inner-size = 640x499
 	elem "stat"
 		type = INFO
 		pos = 0,0
 		size = 640x480
 		anchor1 = 0,0
 		anchor2 = 100,100
-		text-color = #ffffff
-		background-color = #411d1e
+		text-color = #00ff00
+		background-color = #292929
 		is-default = true
 		saved-params = ""
-		tab-text-color = #ffffff
-		tab-background-color = #411d1e
+		highlight-color = #ffff99
+		tab-text-color = #00ff00
+		tab-background-color = #3c4438
+

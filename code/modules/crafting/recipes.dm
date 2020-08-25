@@ -73,24 +73,6 @@
 	category = CAT_ASSEM
 	subcategory = CAT_MACHINES
 
-/datum/crafting_recipe/dildo_plastic
-    name = "plastic dildo"
-    result = /obj/item/dildo
-    reqs = list(/obj/item/stack/sheet/plastic)
-    time = 20
-    tools = list(TOOL_WELDER, TOOL_WORKBENCH)
-    category = CAT_MISC
-    subcategory = CAT_MISC
-
-/datum/crafting_recipe/dildo_tribal
-    name = "wooden dildo"
-    result = /obj/item/dildo/wooden
-    reqs = list(/obj/item/stack/sheet/mineral/wood = 3)
-    tools = list(TOOL_KNIFE)
-    time = 85
-    category = CAT_MISC
-    subcategory = CAT_MISC
-
 /datum/crafting_recipe/campfirekit
 	name = "campfire kit"
 	result = /obj/item/crafting/campfirekit
@@ -1627,7 +1609,7 @@
 	reqs = list(///obj/item/stock_parts/cell/ammo/mfc = 1, //removed since it uses one use batteries now
 				/obj/item/stack/crafting/electronicparts = 2,
 				 /obj/item/gun/ballistic/revolver/pipe_rifle = 1,
-				 
+
 /obj/item/reagent_containers/food/drinks/bottle/f13nukacola = 1,
 				 /obj/item/stack/cable_coil = 3)
 	tools = list(TOOL_WORKBENCH, TOOL_MULTITOOL)

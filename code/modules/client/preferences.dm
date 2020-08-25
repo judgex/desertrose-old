@@ -9,7 +9,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	//doohickeys for savefiles
 	var/path
 	var/default_slot = 1				//Holder so it doesn't default to slot 1, rather the last one used
-	var/max_save_slots = 30 // lucky number
+	var/max_save_slots = 3
 
 	//non-preference stuff
 	var/muted = 0
@@ -261,8 +261,8 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				dat += "<a href='?_src_=prefs;preference=trait;task=menu'>Configure Quirks</a><br></center>"
 				dat += "<center><b>Current Quirks:</b> [all_quirks.len ? all_quirks.Join(", ") : "None"]</center>"
 			dat += "<center><h2>S.P.E.C.I.A.L</h2>"
-			dat += "<a href='?_src_=prefs;preference=special;task=menu'>Allocate Points</a><br></center>"
-			dat += "<h2>Identity</h2>"
+			dat += "<a href='?_src_=prefs;preference=special;task=menu'>Распределить очки S.P.E.C.I.A.L</a><br></center>"
+			dat += "<h2>Личность</h2>"
 			dat += "<table width='100%'><tr><td width='75%' valign='top'>"
 			if(jobban_isbanned(user, "appearance"))
 				dat += "<b>You are banned from using custom names and appearances. You can continue to adjust your characters, but you will be randomised once you join the game.</b><br>"
@@ -272,11 +272,11 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 			dat += "<b>Name:</b> "
 			dat += "<a href='?_src_=prefs;preference=name;task=input'>[real_name]</a><BR>"
 
-			dat += "<b>Gender:</b> <a href='?_src_=prefs;preference=gender'>[gender == MALE ? "Male" : "Female"]</a><BR>"
-			dat += "<b>Age:</b> <a href='?_src_=prefs;preference=age;task=input'>[age]</a><BR>"
+			dat += "<b>Пол:</b> <a href='?_src_=prefs;preference=gender'>[gender == MALE ? "Мужчина" : "Женщина"]</a><BR>"
+			dat += "<b>Возраст:</b> <a href='?_src_=prefs;preference=age;task=input'>[age]</a><BR>"
 			dat += "<br><b>Cycle background:</b><a style='display:block;width:100px' href='?_src_=prefs;preference=cycle_bg;task=input'>[bgstate]</a><BR>"
 
-			dat += "<b>Special Names:</b><BR>"
+			dat += "<b>Особые имена:</b><BR>"
 			var/old_group
 			for(var/custom_name_id in GLOB.preferences_custom_names)
 				var/namedata = GLOB.preferences_custom_names[custom_name_id]
@@ -304,12 +304,12 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				dat += "[TextPreview(features["flavor_text"])]...<BR>"
 
 			dat += "<h2>Body</h2>"
-			dat += "<a href='?_src_=prefs;preference=all;task=random'>Random Body</A> "
-			dat += "<a href='?_src_=prefs;preference=all'>Always Random Body: [be_random_body ? "Yes" : "No"]</A><br>"
+			dat += "<a href='?_src_=prefs;preference=all;task=random'>Случайное тело</A> "
+			dat += "<a href='?_src_=prefs;preference=all'>Всегда случайное тело: [be_random_body ? "Да" : "Нет"]</A><br>"
 
 			dat += "<table width='100%'><tr><td width='24%' valign='top'>"
 
-			dat += "<b>Species:</b><BR><a href='?_src_=prefs;preference=species;task=input'>[pref_species.name]</a><BR>"
+			dat += "<b>Раса:</b><BR><a href='?_src_=prefs;preference=species;task=input'>[pref_species.name]</a><BR>"
 
 			dat += "<b>Underwear:</b><a style='display:block;width:100px' href ='?_src_=prefs;preference=underwear;task=input'>[underwear]</a>"
 			if(GLOB.underwear_list[underwear]?.has_color)
@@ -327,7 +327,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 				dat += APPEARANCE_CATEGORY_COLUMN
 
-				dat += "<h3>Skin Tone</h3>"
+				dat += "<h3>Тон кожи</h3>"
 
 				dat += "<a href='?_src_=prefs;preference=s_tone;task=input'>[skin_tone]</a><BR>"
 
@@ -348,7 +348,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				if(!use_skintones && !mutant_colors)
 					dat += APPEARANCE_CATEGORY_COLUMN
 
-				dat += "<h3>Eye Color</h3>"
+				dat += "<h3>Цвет глаз</h3>"
 
 				dat += "<span style='border: 1px solid #161616; background-color: #[eye_color];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=eyes;task=input'>Change</a><BR>"
 
@@ -356,15 +356,11 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 			else if(use_skintones || mutant_colors)
 				dat += "</td>"
 
-			dat += "<a href='?_src_=prefs;preference=has_penis'>Has Penis: [has_penis ? "Yes" : "No"]</A><br>"
-			dat += "<a href='?_src_=prefs;preference=has_vagina'>Has Vagina: [has_vagina ? "Yes" : "No"]</A><br>"
-			dat += "<a href='?_src_=prefs;preference=has_breasts'>Has Breasts: [has_breasts ? "Yes" : "No"]</A><br>"
-
 			if(HAIR in pref_species.species_traits)
 
 				dat += APPEARANCE_CATEGORY_COLUMN
 
-				dat += "<h3>Hair Style</h3>"
+				dat += "<h3>Причёска</h3>"
 
 				dat += "<a href='?_src_=prefs;preference=hair_style;task=input'>[hair_style]</a><BR>"
 				dat += "<a href='?_src_=prefs;preference=previous_hair_style;task=input'>&lt;</a> <a href='?_src_=prefs;preference=next_hair_style;task=input'>&gt;</a><BR>"
@@ -385,7 +381,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				if(!mutant_category)
 					dat += APPEARANCE_CATEGORY_COLUMN
 
-				dat += "<h3>Tail</h3>"
+				dat += "<h3>Хвост</h3>"
 
 				dat += "<a href='?_src_=prefs;preference=tail_lizard;task=input'>[features["tail_lizard"]]</a><BR>"
 
@@ -534,7 +530,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 		if (1) // Game Preferences
 			dat += "<table><tr><td width='340px' height='300px' valign='top'>"
-			dat += "<h2>General Settings</h2>"
+			dat += "<h2>Основные настройки</h2>"
 			dat += "<b>UI Style:</b> <a href='?_src_=prefs;task=input;preference=ui'>[UI_style]</a><br>"
 			dat += "<b>tgui Monitors:</b> <a href='?_src_=prefs;preference=tgui_lock'>[(tgui_lock) ? "Primary" : "All"]</a><br>"
 			dat += "<b>tgui Style:</b> <a href='?_src_=prefs;preference=tgui_fancy'>[(tgui_fancy) ? "Fancy" : "No Frills"]</a><br>"
@@ -628,7 +624,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 			for (var/i in GLOB.special_roles)
 				if(jobban_isbanned(user, i))
-					dat += "<b>Be [capitalize(i)]:</b> <a href='?_src_=prefs;jobbancheck=[i]'>BANNED</a><br>"
+					dat += "<b>Be [capitalize(i)]:</b> <a href='?_src_=prefs;jobbancheck=[i]'>БАН</a><br>"
 				else
 					var/days_remaining = null
 					if(ispath(GLOB.special_roles[i]) && CONFIG_GET(flag/use_age_restriction_for_jobs)) //If it's a game mode antag, check if the player meets the minimum age
@@ -686,14 +682,14 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	dat += "<hr><center>"
 
 	if(!IsGuestKey(user.key))
-		dat += "<a href='?_src_=prefs;preference=load'>Undo</a> "
-		dat += "<a href='?_src_=prefs;preference=save'>Save Setup</a> "
+		dat += "<a href='?_src_=prefs;preference=load'>Отмена</a> "
+		dat += "<a href='?_src_=prefs;preference=save'>Сохранить</a> "
 
-	dat += "<a href='?_src_=prefs;preference=reset_all'>Reset Setup</a>"
+	dat += "<a href='?_src_=prefs;preference=reset_all'>Сброс</a>"
 	dat += "</center>"
 
 	winshow(user, "preferences_window", TRUE)
-	var/datum/browser/popup = new(user, "preferences_browser", "<div align='center'>Character Setup</div>", 640, 770)
+	var/datum/browser/popup = new(user, "preferences_browser", "<div align='center'>Настройки персонажа</div>", 640, 770)
 	popup.set_content(dat.Join())
 	popup.open(FALSE)
 	onclose(user, "preferences_window", src)
@@ -751,7 +747,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 			lastJob = job
 
 			if(jobban_isbanned(user, rank))
-				HTML += "<font color=red>[rank]</font></td><td><a href='?_src_=prefs;jobbancheck=[rank]'> BANNED</a></td></tr>"
+				HTML += "<font color=red>[rank]</font></td><td><a href='?_src_=prefs;jobbancheck=[rank]'> БАН</a></td></tr>"
 				continue
 			var/required_playtime_remaining = job.required_playtime_remaining(user.client)
 			if(required_playtime_remaining)
@@ -765,7 +761,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				HTML += "<font color=orange>[rank]</font></td><td></td></tr>"
 				continue
 			if(job.whitelist_locked(user.client,job.title))
-				HTML += "<font color=black>[rank]</font></td><td><font color=red>LOCKED</font></td></tr>"
+				HTML += "<font color=black>[rank]</font></td><td><font color=red>ЗАКРЫТО</font></td></tr>"
 				continue
 			if((rank in GLOB.command_positions) || (rank == "AI"))//Bold head jobs
 				HTML += "<b><span class='dark'>[rank]</span></b>"
@@ -804,9 +800,9 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 			if(rank == SSjob.overflow_role)//Overflow is special
 				if(job_civilian_low & overflow.flag)
-					HTML += "<font color=green>Yes</font>"
+					HTML += "<font color=green>Да</font>"
 				else
-					HTML += "<font color=red>No</font>"
+					HTML += "<font color=red>Нет</font>"
 				HTML += "</a></td></tr>"
 				continue
 
@@ -1288,9 +1284,9 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 //		return
 
 	var/list/dat = list()
-	
+
 	var/total = special_s + special_p + special_e + special_c + special_i + special_a + special_l
-	
+
 	dat += "<center><b>Allocate points</b></center><br>"
 	dat += "<center>[total] out of 40 possible</center><br>"
 	dat += "<b>Strength	   :</b> <a href='?_src_=prefs;preference=special_s;task=input'>[special_s]</a><BR>"
