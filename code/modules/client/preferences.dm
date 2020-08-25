@@ -181,8 +181,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 	//backgrounds
 	var/mutable_appearance/character_background
-	var/icon/bgstate = "dark"
-	var/list/bgstate_options = list("000", "dark")
+	var/icon/bgstate = "000"
 
 /datum/preferences/New(client/C)
 	parent = C
@@ -250,7 +249,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 						S.cd = "/character[i]"
 						S["real_name"] >> name
 						if(!name)
-							name = "Character[i]"
+							name = "Персонаж [i]"
 						dat += "<a style='white-space:nowrap;' href='?_src_=prefs;preference=changeslot;num=[i];' [i == default_slot ? "class='linkOn'" : ""]>[name]</a> "
 					dat += "</center>"
 
@@ -266,15 +265,14 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 			dat += "<table width='100%'><tr><td width='75%' valign='top'>"
 			if(jobban_isbanned(user, "appearance"))
 				dat += "<b>You are banned from using custom names and appearances. You can continue to adjust your characters, but you will be randomised once you join the game.</b><br>"
-			dat += "<a href='?_src_=prefs;preference=name;task=random'>Random Name</A> "
-			dat += "<a href='?_src_=prefs;preference=name'>Always Random Name: [be_random_name ? "Yes" : "No"]</a><BR>"
+			dat += "<a href='?_src_=prefs;preference=name;task=random'>Случайное имя</A> "
+			dat += "<a href='?_src_=prefs;preference=name'>Всегда случайное имя: [be_random_name ? "Да" : "Нет"]</a><BR>"
 
 			dat += "<b>Имя:</b> "
 			dat += "<a href='?_src_=prefs;preference=name;task=input'>[real_name]</a><BR>"
 
 			dat += "<b>Пол:</b> <a href='?_src_=prefs;preference=gender'>[gender == MALE ? "Мужчина" : "Женщина"]</a><BR>"
 			dat += "<b>Возраст:</b> <a href='?_src_=prefs;preference=age;task=input'>[age]</a><BR>"
-			dat += "<br><b>Фон:</b><a style='display:block;width:100px' href='?_src_=prefs;preference=cycle_bg;task=input'>[bgstate]</a><BR>"
 
 			dat += "<b>Особые имена:</b><BR>"
 			var/old_group
@@ -293,8 +291,8 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 			dat += "</tr></table>"
 
 			dat += "<table><tr><td width='340px' height='300px' valign='top'>"
-			dat += "<h2>Flavor Text</h2>"
-			dat += "<a href='?_src_=prefs;preference=flavor_text;task=input'><b>Set Examine Text</b></a><br>"
+			dat += "<h2>Информация о персонаже</h2>"
+			dat += "<a href='?_src_=prefs;preference=flavor_text;task=input'><b>Настроить</b></a><br>"
 			if(length(features["flavor_text"]) <= 40)
 				if(!length(features["flavor_text"]))
 					dat += "\[...\]"
@@ -303,7 +301,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 			else
 				dat += "[TextPreview(features["flavor_text"])]...<BR>"
 
-			dat += "<h2>Body</h2>"
+			dat += "<h2>Тело</h2>"
 			dat += "<a href='?_src_=prefs;preference=all;task=random'>Случайное тело</A> "
 			dat += "<a href='?_src_=prefs;preference=all'>Всегда случайное тело: [be_random_body ? "Да" : "Нет"]</A><br>"
 
@@ -366,7 +364,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				dat += "<a href='?_src_=prefs;preference=previous_hair_style;task=input'>&lt;</a> <a href='?_src_=prefs;preference=next_hair_style;task=input'>&gt;</a><BR>"
 				dat += "<span style='border:1px solid #161616; background-color: #[hair_color];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=hair;task=input'>Изменить</a><BR>"
 
-				dat += "<h3>Facial Hair Style</h3>"
+				dat += "<h3>Лицевая растительность</h3>"
 
 				dat += "<a href='?_src_=prefs;preference=facial_hair_style;task=input'>[facial_hair_style]</a><BR>"
 				dat += "<a href='?_src_=prefs;preference=previous_facehair_style;task=input'>&lt;</a> <a href='?_src_=prefs;preference=next_facehair_style;task=input'>&gt;</a><BR>"
@@ -1570,7 +1568,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 						metadata = sanitize(copytext(new_metadata,1,MAX_MESSAGE_LEN))
 
 				if("hair")
-					var/new_hair = input(user, "Choose your character's hair colour:", "Character Preference","#"+hair_color) as color|null
+					var/new_hair = input(user, "Choose your character's hair colour:", "Настройки персонажа","#"+hair_color) as color|null
 					if(new_hair)
 						hair_color = sanitize_hexcolor(new_hair)
 
@@ -1578,9 +1576,9 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				if("hair_style")
 					var/new_hair_style
 					if(gender == MALE)
-						new_hair_style = input(user, "Choose your character's hair style:", "Character Preference")  as null|anything in GLOB.hair_styles_male_list
+						new_hair_style = input(user, "Choose your character's hair style:", "Настройки персонажа")  as null|anything in GLOB.hair_styles_male_list
 					else
-						new_hair_style = input(user, "Choose your character's hair style:", "Character Preference")  as null|anything in GLOB.hair_styles_female_list
+						new_hair_style = input(user, "Choose your character's hair style:", "Настройки персонажа")  as null|anything in GLOB.hair_styles_female_list
 					if(new_hair_style)
 						hair_style = new_hair_style
 
@@ -1597,16 +1595,16 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 						hair_style = previous_list_item(hair_style, GLOB.hair_styles_female_list)
 
 				if("facial")
-					var/new_facial = input(user, "Choose your character's facial-hair colour:", "Character Preference","#"+facial_hair_color) as color|null
+					var/new_facial = input(user, "Choose your character's facial-hair colour:", "Настройки персонажа","#"+facial_hair_color) as color|null
 					if(new_facial)
 						facial_hair_color = sanitize_hexcolor(new_facial)
 
 				if("facial_hair_style")
 					var/new_facial_hair_style
 					if(gender == MALE)
-						new_facial_hair_style = input(user, "Choose your character's facial-hair style:", "Character Preference")  as null|anything in GLOB.facial_hair_styles_male_list
+						new_facial_hair_style = input(user, "Choose your character's facial-hair style:", "Настройки персонажа")  as null|anything in GLOB.facial_hair_styles_male_list
 					else
-						new_facial_hair_style = input(user, "Choose your character's facial-hair style:", "Character Preference")  as null|anything in GLOB.facial_hair_styles_female_list
+						new_facial_hair_style = input(user, "Choose your character's facial-hair style:", "Настройки персонажа")  as null|anything in GLOB.facial_hair_styles_female_list
 					if(new_facial_hair_style)
 						facial_hair_style = new_facial_hair_style
 
@@ -1622,47 +1620,44 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					else
 						facial_hair_style = previous_list_item(facial_hair_style, GLOB.facial_hair_styles_female_list)
 
-				if("cycle_bg")
-					bgstate = next_list_item(bgstate, bgstate_options)
-
 				if("underwear")
-					var/new_underwear = input(user, "Choose your character's underwear:", "Character Preference")  as null|anything in GLOB.underwear_list
+					var/new_underwear = input(user, "Choose your character's underwear:", "Настройки персонажа")  as null|anything in GLOB.underwear_list
 					if(new_underwear)
 						underwear = new_underwear
 
 				if("undie_color")
-					var/n_undie_color = input(user, "Choose your underwear's color.", "Character Preference", "#[undie_color]") as color|null
+					var/n_undie_color = input(user, "Choose your underwear's color.", "Настройки персонажа", "#[undie_color]") as color|null
 					if(n_undie_color)
 						undie_color = sanitize_hexcolor(n_undie_color, 6)
 
 				if("undershirt")
-					var/new_undershirt = input(user, "Choose your character's undershirt:", "Character Preference") as null|anything in GLOB.undershirt_list
+					var/new_undershirt = input(user, "Choose your character's undershirt:", "Настройки персонажа") as null|anything in GLOB.undershirt_list
 					if(new_undershirt)
 						undershirt = new_undershirt
 
 				if("shirt_color")
-					var/n_shirt_color = input(user, "Choose your undershirt's color.", "Character Preference", "#[shirt_color]") as color|null
+					var/n_shirt_color = input(user, "Choose your undershirt's color.", "Настройки персонажа", "#[shirt_color]") as color|null
 					if(n_shirt_color)
 						shirt_color = sanitize_hexcolor(n_shirt_color, 6)
 
 				if("socks")
-					var/new_socks = input(user, "Choose your character's socks:", "Character Preference") as null|anything in GLOB.socks_list
+					var/new_socks = input(user, "Choose your character's socks:", "Настройки персонажа") as null|anything in GLOB.socks_list
 					if(new_socks)
 						socks = new_socks
 
 				if("socks_color")
-					var/n_socks_color = input(user, "Choose your socks' color.", "Character Preference", "#[socks_color]") as color|null
+					var/n_socks_color = input(user, "Choose your socks' color.", "Настройки персонажа", "#[socks_color]") as color|null
 					if(n_socks_color)
 						socks_color = sanitize_hexcolor(n_socks_color, 6)
 
 				if(BODY_ZONE_PRECISE_EYES)
-					var/new_eyes = input(user, "Choose your character's eye colour:", "Character Preference","#"+eye_color) as color|null
+					var/new_eyes = input(user, "Выберите цвет ваших глаз:", "Настройки персонажа","#"+eye_color) as color|null
 					if(new_eyes)
 						eye_color = sanitize_hexcolor(new_eyes)
 
 				if("species")
 
-					var/result = input(user, "Select a species", "Species Selection") as null|anything in GLOB.roundstart_races
+					var/result = input(user, "Выберите расу", "Выбор расы") as null|anything in GLOB.roundstart_races
 
 					if(result)
 						var/newtype = GLOB.species_list[result]
@@ -1673,7 +1668,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 							features["mcolor"] = pref_species.default_color
 
 				if("mutant_color")
-					var/new_mutantcolor = input(user, "Choose your character's alien/mutant color:", "Character Preference","#"+features["mcolor"]) as color|null
+					var/new_mutantcolor = input(user, "Choose your character's alien/mutant color:", "Настройки персонажа","#"+features["mcolor"]) as color|null
 					if(new_mutantcolor)
 						var/temp_hsv = RGBtoHSV(new_mutantcolor)
 						if(new_mutantcolor == "#000000")
