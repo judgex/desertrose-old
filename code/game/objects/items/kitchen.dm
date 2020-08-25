@@ -124,6 +124,11 @@
 	attack_verb = list("slashed", "stabbed", "sliced", "shanked", "ripped", "lacerated")
 	bayonet = TRUE
 
+/obj/item/kitchen/knife/combat/bayonet
+	name = "bayonet"
+	icon_state = "knife_bayonet"
+	desc = "A rifle bayonet."
+
 /obj/item/kitchen/knife/combat/scrap
 	name = "scrapper combat knife"
 	icon_state = "scrapknife"
