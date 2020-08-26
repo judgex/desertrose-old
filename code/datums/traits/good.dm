@@ -26,6 +26,14 @@
 		if(mood)
 			mood.mood_modifier = 1 //Change this once/if species get their own mood modifiers.
 
+/datum/quirk/trapper
+	name = "Trapper"
+	desc = "As an experienced hunter and trapper you know your way around butchering animals for their products, and are able to get twice the usable materials by eliminating waste."
+	value = 2
+	mob_trait = TRAIT_TRAPPER
+	gain_text = "<span class='notice'>You learn the secrets of butchering!</span>"
+	lose_text = "<span class='danger'>You forget how to slaughter animals.</span>"
+
 /datum/quirk/bigleagues
 	name = "Big Leagues"
 	desc = "Swing for the fences! You deal additional damage with melee weapons."
