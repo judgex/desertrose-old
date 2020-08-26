@@ -63,7 +63,7 @@
 /turf/open/indestructible/ground/outside/desert
 	name = "desert"
 	icon_state = "wasteland"
-//	step_sounds = list("human" = "dirtfootsteps")
+	step_sounds = list("human" = "dirtfootsteps")
 //	allowed_plants = list(/obj/item/seeds/poppy/broc, /obj/item/seeds/xander, /obj/item/seeds/mutfruit, \
 //	/obj/item/seeds/feracactus, /obj/item/seeds/corn,/obj/item/seeds/shroom, /obj/item/seeds/agave)
 	slowdown = 1
@@ -148,7 +148,7 @@
 /turf/open/indestructible/ground/outside/dirt
 	name = "dirt"
 	icon_state = "dirtfull"
-//	step_sounds = list("human" = "dirtfootsteps")
+	step_sounds = list("human" = "dirtfootsteps")
 //	allowed_plants = list(/obj/item/seeds/poppy/broc, /obj/item/seeds/xander, /obj/item/seeds/mutfruit, \
 //	/obj/item/seeds/potato, /obj/item/seeds/carrot, /obj/item/seeds/pumpkin, /obj/item/seeds/corn, /obj/item/seeds/agave)
 	slowdown = 0.2
@@ -161,26 +161,26 @@
 	name = "\proper road"
 	icon_state = "innermiddle"
 	icon = 'icons/fallout/turfs/asphalt.dmi'
-//	step_sounds = list("human" = "erikafootsteps")
+	step_sounds = list("human" = "erikafootsteps")
 
 /turf/open/indestructible/ground/outside/sidewalk
 	name = "\proper sidewalk"
 	icon_state = "outermiddle"
 	icon = 'icons/fallout/turfs/sidewalk.dmi'
-//	step_sounds = list("human" = "erikafootsteps")
+	step_sounds = list("human" = "erikafootsteps")
 
 /turf/open/indestructible/ground/outside/ruins
 	name = "ruins"
 	desc = "It's just a pile of concrete rubble."
 	icon_state = "rubblefull"
 	icon = 'icons/fallout/turfs/ground.dmi'
-//	step_sounds = list("human" = "erikafootsteps")
+	step_sounds = list("human" = "erikafootsteps")
 
 /turf/open/indestructible/ground/outside/wood
 	name = "\proper wood planks"
 	icon_state = "housewood1"
 	icon = 'icons/turf/floors.dmi'
-	//	step_sounds = list("human" = "woodfootsteps")
+	step_sounds = list("human" = "woodfootsteps")
 
 /turf/open/indestructible/ground/outside/water
 	gender = PLURAL
@@ -221,7 +221,7 @@
 	icon_state = "rockfloor1"
 	icon = 'icons/fallout/turfs/mining.dmi'
 //	allowed_plants = list(/obj/item/seeds/glow)
-//	step_sounds = list("human" = "erikafootsteps")
+	step_sounds = list("human" = "erikafootsteps")
 
 /turf/open/indestructible/ground/inside/mountain/Initialize()
 	. = ..()
@@ -269,7 +269,7 @@
 /turf/open/indestructible/ground/inside/dirt
 	name = "dirt"
 	icon_state = "dirtfull"
-//	step_sounds = list("human" = "dirtfootsteps")
+	step_sounds = list("human" = "dirtfootsteps")
 //	allowed_plants = list(/obj/item/seeds/poppy/broc, /obj/item/seeds/xander, /obj/item/seeds/mutfruit, \
 //	/obj/item/seeds/potato, /obj/item/seeds/carrot, /obj/item/seeds/pumpkin, /obj/item/seeds/corn, /obj/item/seeds/agave)
 	slowdown = 0.2

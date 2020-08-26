@@ -47,8 +47,8 @@
 "aU" = (/turf/open/indestructible/ground/outside/dirt{icon_state = "dirt"; dir = 1},/area/f13/wasteland)
 "aV" = (/turf/closed/wall/f13/wood/house/clean,/area/f13/building)
 "aW" = (/obj/structure/chalkboard,/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
-"aX" = (/obj/structure/dresser,/turf/open/indestructible/ground/outside/wood,/area/f13/building)
-"aY" = (/obj/structure/chair/comfy,/turf/open/indestructible/ground/outside/wood,/area/f13/building)
+"aX" = (/obj/structure/dresser,/turf/open/floor/f13/wood,/area/f13/building)
+"aY" = (/obj/structure/chair/comfy,/turf/open/floor/f13/wood,/area/f13/building)
 "aZ" = (/turf/open/indestructible/ground/outside/wood,/area/f13/wasteland)
 "ba" = (/obj/structure/bus_door,/turf/open/indestructible/ground/outside/road,/area/f13/wasteland)
 "bb" = (/obj/structure/cargocrate,/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
@@ -56,16 +56,16 @@
 "bd" = (/turf/open/indestructible/ground/outside/dirt{icon_state = "dirtcorner"; dir = 1},/area/f13/wasteland)
 "be" = (/obj/structure/chair/bench,/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
 "bf" = (/turf/open/indestructible/ground/outside/water,/area/f13/wasteland)
-"bg" = (/turf/open/indestructible/ground/outside/wood,/area/f13/building)
+"bg" = (/turf/open/floor/f13/wood,/area/f13/building)
 "bh" = (/obj/structure/window/fulltile/house,/turf/open/indestructible/ground/outside/wood,/area/f13/building)
 "bi" = (/obj/structure/guillotine,/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
 "bj" = (/obj/structure/kitchenspike/cross,/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
 "bk" = (/obj/structure/ore_box,/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
 "bl" = (/obj/structure/fermenting_barrel,/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
-"bm" = (/obj/structure/simple_door/house,/turf/open/indestructible/ground/outside/wood,/area/f13/building)
-"bn" = (/obj/structure/closet/crate/wooden,/turf/open/indestructible/ground/outside/wood,/area/f13/building)
-"bo" = (/obj/structure/closet/cabinet,/turf/open/indestructible/ground/outside/wood,/area/f13/building)
-"bp" = (/obj/structure/piano,/turf/open/indestructible/ground/outside/wood,/area/f13/building)
+"bm" = (/obj/structure/table,/turf/open/floor/f13/wood,/area/f13/building)
+"bn" = (/obj/structure/simple_door/house,/turf/open/floor/f13/wood,/area/f13/building)
+"bo" = (/obj/structure/closet/crate/wooden,/turf/open/floor/f13/wood,/area/f13/building)
+"bp" = (/obj/structure/closet/cabinet,/turf/open/floor/f13/wood,/area/f13/building)
 "bq" = (/turf/open/indestructible/ground/outside/desert,/area/f13/forest)
 "br" = (/obj/structure/fence,/turf/open/indestructible/ground/outside/desert,/area/f13/forest)
 "bs" = (/obj/structure/nest/ghoul,/turf/open/indestructible/ground/outside/desert,/area/f13/forest)
@@ -77,11 +77,20 @@
 "by" = (/obj/effect/landmark/start/f13/wastelander,/turf/open/indestructible/ground/outside/desert,/area/f13/forest)
 "bz" = (/obj/effect/landmark/observer_start,/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
 "bA" = (/obj/machinery/light/lampost,/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
-"bB" = (/obj/machinery/light,/turf/open/indestructible/ground/outside/wood,/area/f13/building)
-"bC" = (/obj/structure/table,/turf/open/indestructible/ground/outside/wood,/area/f13/building)
+"bB" = (/obj/structure/piano,/turf/open/floor/f13/wood,/area/f13/building)
+"bC" = (/obj/structure/chair/wood/normal{icon_state = "wooden_chair_settler"; dir = 8},/turf/open/floor/f13/wood,/area/f13/building)
 "bD" = (/obj/structure/table,/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
-"bE" = (/obj/structure/chair/wood/normal{icon_state = "wooden_chair_settler"; dir = 8},/turf/open/indestructible/ground/outside/wood,/area/f13/building)
+"bE" = (/obj/machinery/light,/turf/open/floor/f13/wood,/area/f13/building)
 "bF" = (/obj/machinery/manned_turret,/turf/open/indestructible/ground/outside/wood,/area/f13/wasteland)
+"bG" = (/obj/landmark/vertibird{name = "kabobpost"},/turf/open/indestructible/ground/outside/dirt{icon_state = "dirtcorner"; dir = 4},/area/f13/wasteland)
+"bH" = (/obj/vertibird,/turf/open/indestructible/ground/outside/desert,/area/f13/forest)
+"bI" = (/obj/structure/table,/obj/item/key/vertibird,/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
+"bJ" = (/turf/closed/indestructible/opshuttle,/area/f13/forest)
+"bK" = (/turf/open/floor/f13,/area/f13/forest)
+"bL" = (/obj/vertibird_exit_door,/turf/open/floor/f13,/area/f13/forest)
+"bM" = (/obj/landmark/vertibird_enter,/turf/open/floor/f13,/area/f13/forest)
+"bN" = (/turf/closed/indestructible/fakeglass,/area/f13/forest)
+"bO" = (/obj/machinery/computer/vertibird_console,/turf/open/floor/f13,/area/f13/forest)
 
 (1,1,1) = {"
 aaabacadaeafafagahacaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
@@ -104,20 +113,20 @@ aaabacadaeafafagahacaiaaaaaaaaaOaPaPaPaPaPaPaQaaaaaaaaaabqbqbqbqbqbqbqbqbqbqbqbq
 aaabacadaeafafagahacaiaaaaaaaaaSaTaPaPaPaPaPaRaNaaaaaaaabqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
 aaabacadaeafafagahacaiaaaaaaaaaaaOaPaPaPaPaPaPaQaaaaaaaabqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
 aaabacadaeafafagahacaiaaaaaaaaaaaOaPaPaPaPaPaPaRaNaaaaaabqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
-aaabacadaeafafagahacaiaaaaaaaaaaaSaUaTaPaPaPaPaPaRaNaaaabqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
+aaabacadaeafafagahacaiaaaaaaaaaabGaUaTaPaPaPaPaPaRaNaaaabqbqbqbqbqbqbqbHbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
 aaabacadaeafafagahacaiaaaaaaaaaaaaaaaOaPaPaPaPaPaPaQaaaabqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
 aaabbtadaeafafagahacaiaaaaaaaaaaaaaaaSaUaTaPaPaPaPaQaaaabqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
 aaabacadaeafafagahacaiaaaaaaaaaaaaaaaaaaaOaPaPaPaPaRaNaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
 aaabacadaeafafagahacaiaaaaaaaaaaaaaaaaaaaOaPaPaPaPaPaQaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
 aaabacadaeafafagahacaiaaaaaaaaaaaaaaaaaaaSaTaPaPaPaPaQaaaaaaaaaaaaaVaVaVaVaVaVaaaaaabqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
 aaabacadaeafafagahacaiaaaaaaaaaaaaaaaaaaaaaOaPaPaPaPaQbjaabiaaaWaaaVaXaYaYbgaVaaaabqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
-aaabacadaeafafagahacaiaaaaaaaaaaaaaaaaaaaaaOaPaPaPaPaQaaaaaaaaaaaabhbgbCbCbgaVaaaabqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
-aaabacadaeafbaagahacaiaaaaaaaaaaaaaabbaabkaOaPaPaPaPaQaaaaaabzbDbDbhbgbCbCbgaVaaaabqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
-aaabacadaeafafagahacaiaaaaaaaaaaaaaabcbcblaSaUaUaUaUbdaaaaaaaabebeaVbgbCbCbgaVaaaabqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
-aaabacadaeafafagahacaiaaaaaaaaaaaaaaaaaaaZaZaZaZaZaZaZaaaVaVbmaVaVaVbgbgbgbgaVaaaabqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
-aaabbtadaeafafagahacaiaaaaaaaaaaaaaaaaaaaZbfbfbfbfbfaZaaaVbgbgbnbobpbEbgbgbgaVaaaabqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
+aaabacadaeafafagahacaiaaaaaaaaaaaaaaaaaaaaaOaPaPaPaPaQaaaaaaaaaaaabhbgbmbmbgaVaaaabqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
+aaabacadaeafbaagahacaiaaaaaaaaaaaaaabbaabkaOaPaPaPaPaQaaaaaabzbIbDbhbgbmbmbgaVaaaabqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
+aaabacadaeafafagahacaiaaaaaaaaaaaaaabcbcblaSaUaUaUaUbdaaaaaaaabebeaVbgbmbmbgaVaaaabqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
+aaabacadaeafafagahacaiaaaaaaaaaaaaaaaaaaaZaZaZaZaZaZaZaaaVaVbnaVaVaVbgbgbgbgaVaaaabqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
+aaabbtadaeafafagahacaiaaaaaaaaaaaaaaaaaaaZbfbfbfbfbfaZaaaVbgbgbobpbBbCbgbgbgaVaaaabqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
 aaabacadaeafafagahacaiaaaaaaaaaaaaaabAaaaZbfbfbfbfbfaZaaaVbgbgbgbgbgbgbgbgbgaVaaaabqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
-aaabacadaeafafagahacaiaaaaaaaaaaaaaaaaaaaZbfbfbfbfbfaZaaaVbgbBbCbCbCbCbgbBbgaVaaaabqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
+aaabacadaeafafagahacaiaaaaaaaaaaaaaaaaaaaZbfbfbfbfbfaZaaaVbgbEbmbmbmbmbgbEbgaVaaaabqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
 aaabacadaeafafagahacaiaaaaaaaaaaaaaaaaaaaZaZaZbFaZaZaZaaaVaVaVaVaVaVaVaVaVaVaVaaaabqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
 aaabacadaeafafagahacaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
 aaabacadaeafatagahacaiaabqbqbqbqbqbqbqbqbrbrbrbrbrbrbrbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
@@ -137,14 +146,14 @@ aaabacadaeafafagahacaiaabqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
 aaabbtadaeafafagahacaiaabqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
 aaabacadaeafafagahacaiaabqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
 aaabacadaeafafagahacaiaabqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
-aaabacadaeafafagahacaiaabqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
-aaabacadaeafafagahacaiaabqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
-aaabacadaeatafagahacaiaabqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
-aaabacadaeafafagahacaiaabqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
-aaabacadaeafafagahacaiaabqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
-aaabacadaeafafagahacaiaabqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
-aaabacadaeafafagahacaiaabqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
-aaabacadaeafafagahacaiaabqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
+aaabacadaeafafagahacaiaabqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbJbJbJbJbJbqbqbqbqbqbqbq
+aaabacadaeafafagahacaiaabqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbJbKbKbKbJbqbqbqbqbqbqbq
+aaabacadaeatafagahacaiaabqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbJbKbKbKbJbqbqbqbqbqbqbq
+aaabacadaeafafagahacaiaabqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbLbKbMbKbLbqbqbqbqbqbqbq
+aaabacadaeafafagahacaiaabqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbJbKbKbKbJbqbqbqbqbqbqbq
+aaabacadaeafafagahacaiaabqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbJbKbKbKbJbqbqbqbqbqbqbq
+aaabacadaeafafagahacaiaabqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbNbKbObKbNbqbqbqbqbqbqbq
+aaabacadaeafafagahacaiaabqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbNbNbNbNbNbqbqbqbqbqbqbq
 aaabacadaeafafagahacaiaabqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
 aaabbtadaeafafagahacaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
 aaabacadaeafafagahacaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq

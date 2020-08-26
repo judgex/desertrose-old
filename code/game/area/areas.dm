@@ -54,6 +54,7 @@
 	var/global/global_uid = 0
 	var/uid
 	var/list/ambientsounds = GENERIC
+	var/list/ambientmusic = FALLOUT_WASTELAND
 	flags_1 = CAN_BE_DIRTY_1
 
 	var/list/firedoors
@@ -435,6 +436,12 @@ GLOBAL_LIST_EMPTY(teleportlocs)
 			SEND_SOUND(L, sound(sound, repeat = 0, wait = 0, volume = 25, channel = CHANNEL_AMBIENCE))
 			L.client.played = TRUE
 			addtimer(CALLBACK(L.client, /client/proc/ResetAmbiencePlayed), 600)
+
+	var/ambient_s = pick(ambientmusic)
+	if(!L.client.played)
+		SEND_SOUND(L, sound(ambient_s, repeat = 0, wait = 0, volume = 25, channel = CHANNEL_AMBIENCE))
+		L.client.played = TRUE
+		addtimer(CALLBACK(L.client, /client/proc/ResetAmbiencePlayed), 600)
 
 /area/Exited(atom/movable/M)
 	SEND_SIGNAL(src, COMSIG_AREA_EXITED, M)

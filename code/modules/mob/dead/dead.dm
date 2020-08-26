@@ -37,22 +37,22 @@ INITIALIZE_IMMEDIATE(/mob/dead)
 
 	if(!statpanel("Status"))
 		return
-	stat(null, "Game Mode: [SSticker.hide_mode ? "Secret" : "[GLOB.master_mode]"]")
+	stat(null, "Игровой режим: [SSticker.hide_mode ? "Secret" : "[GLOB.master_mode]"]")
 
 	if(SSticker.HasRoundStarted())
 		return
 
 	var/time_remaining = SSticker.GetTimeLeft()
 	if(time_remaining > 0)
-		stat(null, "Time To Start: [round(time_remaining/10)]s")
+		stat(null, "Время до начала: [round(time_remaining/10)]с")
 	else if(time_remaining == -10)
-		stat(null, "Time To Start: DELAYED")
+		stat(null, "Время до начала: ОСТАНОВЛЕНО")
 	else
-		stat(null, "Time To Start: SOON")
+		stat(null, "Время до начала: СКОРО")
 
-	stat(null, "Players: [SSticker.totalPlayers]")
+	stat(null, "Игроков: [SSticker.totalPlayers]")
 	if(client.holder)
-		stat(null, "Players Ready: [SSticker.totalPlayersReady]")
+		stat(null, "Игроков готово: [SSticker.totalPlayersReady]")
 
 /mob/dead/proc/server_hop()
 	set category = "OOC"

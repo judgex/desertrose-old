@@ -95,7 +95,7 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 	var/static/list/one_character_prefix = list(MODE_HEADSET = TRUE, MODE_ROBOT = TRUE, MODE_WHISPER = TRUE)
 
 	if(sanitize)
-		message = trim(copytext(sanitize(message), 1, MAX_MESSAGE_LEN))
+		message = trim(copytext_char(sanitize(message), 1, MAX_MESSAGE_LEN))
 	if(!message || message == "")
 		return
 
@@ -105,11 +105,11 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 	var/in_critical = InCritical()
 
 	if(one_character_prefix[message_mode])
-		message = copytext(message, 2)
+		message = copytext_char(message, 2)
 	else if(message_mode || saymode)
-		message = copytext(message, 3)
-	if(findtext(message, " ", 1, 2))
-		message = copytext(message, 2)
+		message = copytext_char(message, 3)
+	if(findtext_char(message, " ", 1, 2))
+		message = copytext_char(message, 2)
 
 	if(message_mode == "admin")
 		if(client)
@@ -141,11 +141,11 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 		// No, you cannot speak in xenocommon just because you know the key
 		if(can_speak_in_language(message_language))
 			language = message_language
-		message = copytext(message, 3)
+		message = copytext_char(message, 3)
 
 		// Trim the space if they said ",0 I LOVE LANGUAGES"
-		if(findtext(message, " ", 1, 2))
-			message = copytext(message, 2)
+		if(findtext_char(message, " ", 1, 2))
+			message = copytext_char(message, 2)
 
 	if(!language)
 		language = get_default_language()
@@ -174,7 +174,7 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 			var/health_diff = round(-HEALTH_THRESHOLD_DEAD + health)
 			// If we cut our message short, abruptly end it with a-..
 			var/message_len = length(message)
-			message = copytext(message, 1, health_diff) + "[message_len > health_diff ? "-.." : "..."]"
+			message = copytext_char(message, 1, health_diff) + "[message_len > health_diff ? "-.." : "..."]"
 			message = Ellipsis(message, 10, 1)
 			last_words = message
 			message_mode = MODE_WHISPER_CRIT
@@ -236,7 +236,7 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 
 	// Create map text prior to modifying message for goonchat
 	if (client?.prefs.chat_on_map && stat != UNCONSCIOUS && (client.prefs.see_chat_non_mob || ismob(speaker)) && can_hear())
-		create_chat_message(speaker, message_language, raw_message, spans, message_mode)
+		create_chat_message(speaker, message_language, raw_message, spans)
 
 
 	// Recompose message for AI hrefs, language incomprehension.
@@ -303,7 +303,7 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 		if(!ignore_spam && client.handle_spam_prevention(message,MUTE_IC))
 			return 0
 	var/static/regex/slurs = regex("nigg|fag|tranny|dyke|kike|pedo|loli|shota", "i")
-	if(findtext(message, slurs))
+	if(findtext_char(message, slurs))
 		//to_chat(src, "<B>Никаких оскорблений.</B>")
 		log_admin("[key_name(client)] has triggered the slur filter in IC (say): [message]")
 		message_admins("[key_name_admin(client)] has triggered the slur filter in IC (say): [message]")
@@ -324,13 +324,13 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 	return 1
 
 /mob/living/proc/get_key(message)
-	var/key = copytext(message, 1, 2)
+	var/key = copytext_char(message, 1, 2)
 	if(key in GLOB.department_radio_prefixes)
-		return lowertext(copytext(message, 2, 3))
+		return lowertext(copytext_char(message, 2, 3))
 
 /mob/living/proc/get_message_language(message)
-	if(copytext(message, 1, 2) == ",")
-		var/key = copytext(message, 2, 3)
+	if(copytext_char(message, 1, 2) == ",")
+		var/key = copytext_char(message, 2, 3)
 		for(var/ld in GLOB.all_languages)
 			var/datum/language/LD = ld
 			if(initial(LD.key) == key)
