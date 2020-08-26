@@ -153,8 +153,8 @@
 	reqs = list(/datum/reagent/fuel = 50,
 				/obj/item/stack/cable_coil = 1,
 				/obj/item/assembly/igniter = 1,
-				/obj/item/reagent_containers/food/drinks/soda_cans = 1)
-	parts = list(/obj/item/reagent_containers/food/drinks/soda_cans = 1)
+				/obj/item/reagent_containers/food/drinks/bottle = 1)
+	parts = list(/obj/item/reagent_containers/food/drinks/bottle = 1)
 	time = 15
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
@@ -232,7 +232,7 @@
 /datum/crafting_recipe/ec
 	name = "Small Energy Cell"
 	result = /obj/item/stock_parts/cell/ammo/ec
-	reqs = list(/obj/item/stock_parts/cell=2)
+	reqs = list(/obj/item/stock_parts/capacitor=2)
 	traits = list(TRAIT_GUNSMITH_ONE)
 	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER1)
 	time = 10
@@ -242,9 +242,9 @@
 /datum/crafting_recipe/mfc
 	name = "Microfusion Cell"
 	result = /obj/item/stock_parts/cell/ammo/mfc
-	reqs = list(/obj/item/stack/crafting/goodparts=1, /obj/item/stock_parts/cell/ammo/ec=2)
+	reqs = list(/obj/item/stack/crafting/goodparts=2, /obj/item/stock_parts/capacitor=3)
 	traits = list(TRAIT_GUNSMITH_TWO)
-	tools = list(TOOL_AWORKBENCH, TOOL_GUNTIER2)
+	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER2)
 	time = 20
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
@@ -252,7 +252,7 @@
 /datum/crafting_recipe/ecp
 	name = "Electron Charge Pack"
 	result = /obj/item/stock_parts/cell/ammo/ecp
-	reqs = list(/obj/item/stock_parts/capacitor=1, /obj/item/stock_parts/cell/ammo/mfc=2)
+	reqs = list(/obj/item/stack/crafting/goodparts=3, /obj/item/stock_parts/capacitor=5)
 	traits = list(TRAIT_GUNSMITH_THREE)
 	tools = list(TOOL_AWORKBENCH, TOOL_GUNTIER3)
 	time = 30
@@ -1081,7 +1081,7 @@
 	subcategory = CAT_TRIBAL
 
 /datum/crafting_recipe/goliathcloak
-	name = "deathclaw cloak"
+	name = "Deathclaw cloak"
 	result = /obj/item/clothing/suit/hooded/cloak/goliath
 	time = 50
 	reqs = list(/obj/item/stack/sheet/leather = 2,
@@ -1091,12 +1091,21 @@
 	subcategory = CAT_TRIBAL
 
 /datum/crafting_recipe/tatteredredcloak
-	name = "tattered red cloak"
+	name = "Tattered red cloak"
 	result = /obj/item/clothing/suit/hooded/cloak/goliath/tatteredred
 	time = 50
 	reqs = list(/obj/item/stack/sheet/leather = 1,
 				/obj/item/stack/sheet/sinew = 1,
 				/obj/item/stack/sheet/cloth = 2)
+	category = CAT_PRIMAL
+	subcategory = CAT_TRIBAL
+
+/datum/crafting_recipe/talisman//TODO ME
+	name = "Hunter's talisman"
+	result = /obj/item/clothing/neck/cloak/amulet
+	time = 50
+	reqs = list(/obj/item/stack/sheet/bone = 1,
+				/obj/item/stack/sheet/sinew = 1)
 	category = CAT_PRIMAL
 	subcategory = CAT_TRIBAL
 
@@ -1612,6 +1621,18 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
 
+/datum/crafting_recipe/autopiperifle
+	name = "auto pipe rifle"
+	result = /obj/item/gun/ballistic/automatic/autopipe
+	reqs = list(/datum/reagent/blackpowder = 30,
+	/obj/item/stack/sheet/metal = 5,
+	/obj/item/stack/sheet/mineral/wood = 5)
+	tools = list(TOOL_WORKBENCH,TOOL_GUNTIER2)
+	traits = list(TRAIT_GUNSMITH_TWO)
+	time = 120
+	category = CAT_WEAPONRY
+	subcategory = CAT_WEAPON
+
 /datum/crafting_recipe/lasmusket
 	name = "Laser Musket"
 	result = /obj/item/gun/ballistic/shotgun/lasmusket
@@ -1639,7 +1660,7 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
 
-/datum/crafting_recipe/huntingrifle_scoped
+/*/datum/crafting_recipe/huntingrifle_scoped
 	name = "scoped hunting rifle"
 	result = /obj/item/gun/ballistic/shotgun/remington/scoped
 	reqs = list(/obj/item/gun/ballistic/shotgun/remington = 1,
@@ -1650,7 +1671,7 @@
 	time = 120
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
-
+*/
 /* CRAFT rework: removed for balance
 /datum/crafting_recipe/m1garand
 	name = "M1 Garand"
@@ -2048,6 +2069,16 @@
 	category = CAT_PRIMAL
 	subcategory = CAT_TRIBAL
 
+/datum/crafting_recipe/warmace
+	name = "Carve Training Machete"
+	result = /obj/item/claymore/machete/training
+	time = 50
+	reqs = list(/obj/item/stack/sheet/mineral/wood = 5,
+				/obj/item/stack/sheet/cloth = 2)
+	tools = list(TOOL_WORKBENCH)
+	category = CAT_PRIMAL
+	subcategory = CAT_TRIBAL
+
 /datum/crafting_recipe/spearquiver
 	name = "Spear Quiver"
 	result = /obj/item/storage/backpack/spearquiver
@@ -2294,6 +2325,17 @@
 	result = /obj/item/kitchen/knife/combat/scrap
 	time = 300
 	reqs = list(/obj/item/stack/sheet/metal = 3,
+				/obj/item/stack/sheet/cloth = 2)
+	traits = list(TRAIT_TECHNOPHOBE)
+	tools = list(TOOL_FORGE)
+	category = CAT_FORGE
+	subcategory = CAT_FORGEWEAPON
+
+/datum/crafting_recipe/combatbayonet
+	name = "Combat Knife"
+	result = /obj/item/kitchen/knife/combat/bayonet
+	time = 300
+	reqs = list(/obj/item/stack/sheet/metal = 5,
 				/obj/item/stack/sheet/cloth = 2)
 	traits = list(TRAIT_TECHNOPHOBE)
 	tools = list(TOOL_FORGE)

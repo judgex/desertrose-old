@@ -34,6 +34,8 @@
 				for(var/i in 1 to 2)
 					new bones (T)
 			else
+				if (butcher.has_trait(TRAIT_TRAPPER))
+					new bones (T)
 				new bones (T)
 		meat.butcher_results.Remove(bones) //in case you want to, say, have it drop its results on gib
 	for(var/V in meat.guaranteed_butcher_results)

@@ -72,8 +72,6 @@
 			<A href='?src=[REF(src)];[HrefToken()];secrets=resetmovement'>Reset movement directions to default</A><BR>
 			<BR>
 			<A href='?src=[REF(src)];[HrefToken()];secrets=changebombcap'>Change bomb cap</A><BR>
-			<A href='?src=[REF(src)];[HrefToken()];secrets=masspurrbation'>Mass Purrbation</A><BR>
-			<A href='?src=[REF(src)];[HrefToken()];secrets=massremovepurrbation'>Mass Remove Purrbation</A><BR>
 			"}
 
 	dat += "<BR>"

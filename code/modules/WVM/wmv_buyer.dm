@@ -39,10 +39,11 @@
 	dat += "<br>"
 	dat +="<div class='statusDisplay'>"
 	dat += "<b>Accepted goods and prices:</b><br>"
-	dat += "Iron ore : 0.7 caps<br>"
-	dat += "Silver : 3 caps<br>"
-	dat += "Gold : 10 caps<br>"
+	dat += "Iron ore : 1.5 caps<br>"
+	dat += "Silver : 5 caps<br>"
+	dat += "Gold : 15 caps<br>"
 	dat += "Leather : 5 caps<br>"
+	dat += "Jet/Psycho/Turbo : 15 caps<br>"
 	dat += ""
 	dat += "</div>"
 
@@ -80,7 +81,7 @@
 /obj/machinery/mineral/wasteland_trader/proc/add_caps(obj/item/I)
 	if(istype(I, /obj/item/stack/ore/iron))
 		var/obj/item/stack/ore/iron/sellable = I
-		var/price = 0.7
+		var/price = 1.5
 		var/inserted_value = FLOOR(sellable.amount * price, 1)
 		stored_caps += inserted_value
 		I.Destroy()
@@ -89,7 +90,7 @@
 		src.ui_interact(usr)
 	else if(istype(I, /obj/item/stack/ore/gold))
 		var/obj/item/stack/ore/gold/sellable = I
-		var/price = 10
+		var/price = 15
 		var/inserted_value = FLOOR(sellable.amount * price, 1)
 		stored_caps += inserted_value
 		I.Destroy()
@@ -98,7 +99,7 @@
 		src.ui_interact(usr)
 	else if(istype(I, /obj/item/stack/ore/silver))
 		var/obj/item/stack/ore/silver/sellable = I
-		var/price = 3
+		var/price = 5
 		var/inserted_value = FLOOR(sellable.amount * price, 1)
 		stored_caps += inserted_value
 		I.Destroy()
@@ -109,6 +110,33 @@
 		var/obj/item/stack/sheet/leather/sellable = I
 		var/price = 5
 		var/inserted_value = FLOOR(sellable.amount * price, 1)
+		stored_caps += inserted_value
+		I.Destroy()
+		playsound(src, 'sound/items/change_jaws.ogg', 60, 1)
+		to_chat(usr, "You sell [inserted_value] bottle caps value to a vending machine.")
+		src.ui_interact(usr)
+	else if(istype(I, /obj/item/reagent_containers/pill/patch/jet))
+		var/obj/item/reagent_containers/pill/patch/jet/sellable = I
+		var/price = 0.375
+		var/inserted_value = FLOOR(sellable.volume * price, 1)//40 volume
+		stored_caps += inserted_value
+		I.Destroy()
+		playsound(src, 'sound/items/change_jaws.ogg', 60, 1)
+		to_chat(usr, "You sell [inserted_value] bottle caps value to a vending machine.")
+		src.ui_interact(usr)
+	else if(istype(I, /obj/item/reagent_containers/hypospray/medipen/psycho))
+		var/obj/item/reagent_containers/hypospray/medipen/psycho/sellable = I
+		var/price = 1.5
+		var/inserted_value = FLOOR(sellable.volume * price, 1)//10 volume
+		stored_caps += inserted_value
+		I.Destroy()
+		playsound(src, 'sound/items/change_jaws.ogg', 60, 1)
+		to_chat(usr, "You sell [inserted_value] bottle caps value to a vending machine.")
+		src.ui_interact(usr)
+	else if(istype(I, /obj/item/reagent_containers/syringe/medx))
+		var/obj/item/reagent_containers/syringe/medx/sellable = I
+		var/price = 1
+		var/inserted_value = FLOOR(sellable.volume * price, 1)//15 volume
 		stored_caps += inserted_value
 		I.Destroy()
 		playsound(src, 'sound/items/change_jaws.ogg', 60, 1)

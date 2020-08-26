@@ -176,6 +176,20 @@
 	icon = 'icons/fallout/turfs/ground.dmi'
 //	step_sounds = list("human" = "erikafootsteps")
 
+/turf/open/indestructible/ground/outside/wood
+	name = "\proper wood planks"
+	icon_state = "housewood1"
+	icon = 'icons/turf/floors.dmi'
+	//	step_sounds = list("human" = "woodfootsteps")
+
+/turf/open/indestructible/ground/outside/water
+	gender = PLURAL
+	name = "river water"
+	desc = "Shallow river water."
+	icon = 'icons/turf/floors.dmi'
+	icon_state = "riverwater_motion"
+	slowdown = 2
+
 /turf/open/indestructible/ground/outside/snow
 	initial_gas_mix = "o2=22;n2=82;TEMP=285"
 	name = "snow"

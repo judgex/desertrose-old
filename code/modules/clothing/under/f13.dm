@@ -380,11 +380,11 @@
 	item_color = "khan"
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 10, "fire" = 10, "acid" = 40)
 
-/obj/item/clothing/suit/armor/khan
-	name = "khan armored vest"
+/obj/item/clothing/suit/armor/khan_jacket
+	name = "khan armored jacket"
 	desc = "The symbol of the greatest pushers."
-	icon_state = "khan"
-	item_state = "khan"
+	icon_state = "khan_jacket"
+	item_state = "khan_jacket"
 
 /obj/item/clothing/suit/armor/warriors
 	name = "warriors armored vest"

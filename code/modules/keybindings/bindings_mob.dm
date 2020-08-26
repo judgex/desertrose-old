@@ -81,7 +81,7 @@
 			return
 	return ..()
 
-/mob/key_down(_key, client/user)
+/mob/key_down(_key, client/user)//hotkeys for stuff
 	switch(_key)
 		if("T")
 			src.set_typing_indicator(TRUE)
@@ -89,4 +89,6 @@
 			src.set_typing_indicator(TRUE)
 		if("C")
 			src/living.toggle_combat_mode()
+		if("N")
+			src.toggle_typing_indicator()
 	return ..()

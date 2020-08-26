@@ -387,6 +387,7 @@ TODO sprite, ignore for now*/
 	fire_delay = 3
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
+	can_scope = TRUE
 
 /obj/item/gun/ballistic/shotgun/remington/attackby(obj/item/A, mob/user, params)
 	..()
@@ -409,6 +410,7 @@ TODO sprite, ignore for now*/
 	zoomable = TRUE
 	zoom_amt = 10
 	zoom_out_amt = 13
+	can_scope = FALSE
 
 /obj/item/gun/ballistic/shotgun/remington/scoped/paciencia
 	name = "Paciencia"
@@ -460,6 +462,7 @@ TODO sprite, ignore for now*/
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 	fire_delay = 4
+	can_scope = TRUE
 
 /obj/item/gun/ballistic/shotgun/automatic/hunting/trail/scoped
 	name = "scoped trail carbine"
@@ -475,6 +478,7 @@ TODO sprite, ignore for now*/
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 	fire_delay = 6
+	can_scope = FALSE
 
 /obj/item/gun/ballistic/shotgun/automatic/hunting/cowboy
 	name = "cowboy repeater"
@@ -487,6 +491,7 @@ TODO sprite, ignore for now*/
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 	fire_delay = 6
+	can_scope = TRUE
 
 /obj/item/gun/ballistic/shotgun/automatic/hunting/cowboy/scoped
 	name = "scoped cowboy repeater"
@@ -502,6 +507,7 @@ TODO sprite, ignore for now*/
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 	fire_delay = 8
+	can_scope = FALSE
 
 /obj/item/gun/ballistic/shotgun/automatic/hunting/brush
 	name = "brush gun"
@@ -513,6 +519,7 @@ TODO sprite, ignore for now*/
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 	fire_delay = 6
+	can_scope = TRUE
 
 /obj/item/gun/ballistic/shotgun/automatic/hunting/brush/scoped
 	name = "scoped brush gun"
@@ -527,6 +534,7 @@ TODO sprite, ignore for now*/
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 	fire_delay = 8
+	can_scope = FALSE
 
 /obj/item/gun/ballistic/revolver/widowmaker
 	name = "winchester widowmaker"
