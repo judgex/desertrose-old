@@ -14,14 +14,14 @@ $include antag_rep.txt
 # There are various options which are hard-locked for security reasons.
 
 ## Server name: This appears at the top of the screen in-game and in the BYOND hub. Uncomment and replace 'tgstation' with the name of your choice.
-@SERVERNAME Fallout 13: New Texas
+@SERVERNAME [RU] Fallout 13 - CBET ATOMA [REDUX]
 ## Napist Note: honestly all the display garbage should be setup to be handled via config, not in their own separate files. cross-ref code/game/world.dm #L245
 
 ## Server SQL name: This is the name used to identify the server to the SQL DB, distinct from SERVERNAME as it must be at most 32 characters.
 SERVERSQLNAME fo13sql
 
 ## Station name: The name of the station as it is referred to in-game. If commented out, the game will generate a random name instead.
-STATIONNAME Орегон
+STATIONNAME Oregon
 
 ## Put on byond hub: Uncomment this to put your server on the byond hub.
 HUB
@@ -226,17 +226,17 @@ ALLOW_WEBCLIENT
 # SERVER ss13.example.com:2506
 
 ## forum address
-DISCORDURL https://discord.gg/NGpP36m
+DISCORDURL https://discord.gg/GEMmJYV
 
 ## Wiki address
 WIKIURL https://desert-rose-fallout-13.fandom.com/wiki/Desert_Rose_-_Fallout_13_Wiki
 
 ## Rules address
-RULESURL https://discord.gg/NGpP36m
+RULESURL https://discord.gg/GEMmJYV
 
 
 ## Github address
-GITHUBURL https://github.com/judgex/desertrose
+GITHUBURL https://github.com/iWuna/Fallout-13-RoseEdition
 
 ## Round specific stats address
 ## Link to round specific parsed logs; IE statbus. It is appended with the RoundID automatically by ticker/Reboot()
@@ -255,7 +255,7 @@ GITHUBURL https://github.com/judgex/desertrose
 GITHUBREPOID 49179392
 
 ## Ban appeals URL - usually for a forum or wherever people should go to contact your admins.
-BANAPPEALS http://desertrosefallout13.boards.net/
+BANAPPEALS https://discord.gg/GEMmJYV
 
 ## System command that invokes youtube-dl, used by Play Internet Sound.
 ## You can install youtube-dl with

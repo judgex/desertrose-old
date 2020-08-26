@@ -63,10 +63,11 @@ window "mainwindow"
 		background-color = #3c4438
 		is-default = true
 		saved-params = "pos;size;is-minimized;is-maximized"
-		title = "Desert Rose"
-		icon = 'icons\\deathclawlogo.png'
+		title = "Fallout 13 - Свет Атома"
 		macro = "default"
 		menu = "menu"
+		outer-size = 656x518
+		inner-size = 640x459
 	elem "split"
 		type = CHILD
 		pos = 3,0
@@ -94,8 +95,8 @@ window "mainwindow"
 		size = 40x20
 		anchor1 = 100,100
 		anchor2 = none
-		text-color = #ffffff
-		background-color = #411d1e
+		text-color = #00ff00
+		background-color = #3c4438
 		saved-params = "is-checked"
 		text = "Chat"
 		command = ".winset \"saybutton.is-checked=true ? input.command=\"!say \\\"\" : input.command=\"\"saybutton.is-checked=true ? mebutton.is-checked=false\"\"saybutton.is-checked=true ? oocbutton.is-checked=false\""
@@ -154,6 +155,8 @@ window "mapwindow"
 		saved-params = ""
 		statusbar = false
 		is-pane = true
+		outer-size = 1040x1040
+		inner-size = 1024x1001
 	elem "map"
 		type = MAP
 		pos = 0,0
@@ -177,6 +180,8 @@ window "infowindow"
 		background-color = #3c4438
 		saved-params = "pos;size;is-minimized;is-maximized"
 		is-pane = true
+		outer-size = 656x538
+		inner-size = 640x499
 	elem "info"
 		type = CHILD
 		pos = 0,30
@@ -194,7 +199,7 @@ window "infowindow"
 		size = 104x20
 		anchor1 = 3,0
 		anchor2 = 19,0
-		text-color = #ffffff
+		text-color = #00ff00
 		background-color = #3c4438
 		saved-params = "is-checked"
 		text = "Changelog"
@@ -205,7 +210,7 @@ window "infowindow"
 		size = 100x20
 		anchor1 = 19,0
 		anchor2 = 34,0
-		text-color = #ffffff
+		text-color = #00ff00
 		background-color = #3c4438
 		saved-params = "is-checked"
 		text = "Rules"
@@ -216,7 +221,7 @@ window "infowindow"
 		size = 100x20
 		anchor1 = 34,0
 		anchor2 = 50,0
-		text-color = #ffffff
+		text-color = #00ff00
 		background-color = #3c4438
 		saved-params = "is-checked"
 		text = "Wiki"
@@ -227,7 +232,7 @@ window "infowindow"
 		size = 100x20
 		anchor1 = 50,0
 		anchor2 = 66,0
-		text-color = #ffffff
+		text-color = #00ff00
 		background-color = #3c4438
 		saved-params = "is-checked"
 		text = "Discord"
@@ -238,7 +243,7 @@ window "infowindow"
 		size = 100x20
 		anchor1 = 66,0
 		anchor2 = 81,0
-		text-color = #ffffff
+		text-color = #00ff00
 		background-color = #3c4438
 		saved-params = "is-checked"
 		text = "Github"
@@ -249,7 +254,7 @@ window "infowindow"
 		size = 100x20
 		anchor1 = 81,0
 		anchor2 = 97,0
-		text-color = #ffffff
+		text-color = #00ff00
 		background-color = #3c4438
 		saved-params = "is-checked"
 		text = "Report Issue"
@@ -270,6 +275,7 @@ window "outputwindow"
 		can-minimize = false
 		can-resize = false
 		is-pane = true
+		outer-size = 654x494
 	elem "browseroutput"
 		type = BROWSER
 		pos = 0,0
@@ -293,7 +299,7 @@ window "outputwindow"
 window "preferences_window"
 	elem "preferences_window"
 		type = MAIN
-		pos = 480,95
+		pos = 281,0
 		size = 600x407
 		anchor1 = none
 		anchor2 = none
@@ -309,7 +315,7 @@ window "preferences_window"
 		size = 400x407
 		anchor1 = 0,0
 		anchor2 = 90,100
-		background-color = none
+		background-color = #292929
 		saved-params = ""
 	elem "character_preview_map"
 		type = MAP
@@ -330,6 +336,8 @@ window "statwindow"
 		background-color = #3c4438
 		saved-params = "pos;size;is-minimized;is-maximized"
 		is-pane = true
+		outer-size = 656x538
+		inner-size = 640x499
 	elem "stat"
 		type = INFO
 		pos = 0,0

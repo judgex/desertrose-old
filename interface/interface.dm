@@ -13,12 +13,12 @@
 	return
 
 /client/verb/discord()
-	set name = "discord"
+	set name = "дискорд"
 	set desc = "Visit the Discord."
 	set hidden = 1
 	var/discordurl = CONFIG_GET(string/discordurl)
 	if(discordurl)
-		if(alert("This will open the Discord in your browser. Are you sure?",,"Yes","No")!="Yes")
+		if(alert("Это откроет Дискорд в вашем браузере, вы уверены?",,"Да","Нет")!="Да")
 			return
 		src << link(discordurl)
 	else
@@ -41,7 +41,7 @@
 
 
 /client/verb/github()
-	set name = "github"
+	set name = "гитхаб"
 	set desc = "Visit Github"
 	set hidden = 1
 	var/githuburl = CONFIG_GET(string/githuburl)
