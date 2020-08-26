@@ -550,7 +550,7 @@
 	fire_delay = 30
 	burst_delay = 3
 	automatic = 1
-	spread = 45
+	spread = 27
 
 /obj/item/gun/ballistic/automatic/autopipe/burst_select()
 	var/mob/living/carbon/human/user = usr
@@ -558,12 +558,12 @@
 		if(0)
 			select += 1
 			burst_size = 4
-			spread = 45
+			spread = 27
 			to_chat(user, "<span class='notice'>You switch to [burst_size]-rnd burst.</span>")
 		if(1)
 			select = 0
 			burst_size = 1
-			spread = 15
+			spread = 12
 			to_chat(user, "<span class='notice'>You switch to semi-automatic.</span>")
 	playsound(user, 'sound/weapons/empty.ogg', 100, 1)
 	update_icon()
