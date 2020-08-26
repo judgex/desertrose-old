@@ -14,14 +14,14 @@ $include antag_rep.txt
 # There are various options which are hard-locked for security reasons.
 
 ## Server name: This appears at the top of the screen in-game and in the BYOND hub. Uncomment and replace 'tgstation' with the name of your choice.
-@SERVERNAME Desert Rose 2
+@SERVERNAME Fallout 13: New Texas
 ## Napist Note: honestly all the display garbage should be setup to be handled via config, not in their own separate files. cross-ref code/game/world.dm #L245
 
 ## Server SQL name: This is the name used to identify the server to the SQL DB, distinct from SERVERNAME as it must be at most 32 characters.
 SERVERSQLNAME fo13sql
 
 ## Station name: The name of the station as it is referred to in-game. If commented out, the game will generate a random name instead.
-STATIONNAME Mojave Wasteland
+STATIONNAME Texas Wasteland
 
 ## Put on byond hub: Uncomment this to put your server on the byond hub.
 HUB
@@ -68,10 +68,10 @@ LOAD_LEGACY_RANKS_ONLY
 #USE_AGE_RESTRICTION_FOR_JOBS
 
 ## Uncomment the following line to enable the role whitelisting system.  You will also need the table from role_whitelist.sql in the SQL directory.
-USE_ROLE_WHITELIST
+#USE_ROLE_WHITELIST
 
 ## Uncomment the following line to enable the database custom items system.  You will also need the table from custom_items.sql in the SQL directory.
-USE_CUSTOM_ITEMS_FROM_DB
+#USE_CUSTOM_ITEMS_FROM_DB
 
 ## Uncomment this to have the job system use the player's account creation date, rather than the when they first joined the server for job timers.
 #USE_ACCOUNT_AGE_FOR_JOBS
@@ -185,7 +185,7 @@ VOTE_PERIOD 600
 # DONT_DEL_NEWMOB
 
 ## set a hosted by name for unix platforms
-HOSTEDBY
+HOSTEDBY TauCeti
 
 ## Set to jobban "Guest-" accounts from Captain, HoS, HoP, CE, RD, CMO, Warden, Security, Detective, and AI positions.
 ## Set to 1 to jobban them from those positions, set to 0 to allow them.

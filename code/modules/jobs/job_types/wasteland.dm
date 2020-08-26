@@ -266,8 +266,7 @@ Raider
 		/obj/item/ammo_box/a357=2,
 		/obj/item/clothing/mask/gas/explorer/folded=1,
 		/obj/item/throwing_star/spear=1,
-		/obj/item/grenade/chem_grenade/teargas=1,
-		/obj/item/dildo=1)
+		/obj/item/grenade/chem_grenade/teargas=1)
 
 /datum/outfit/loadout/raider_badlands
 	name = "Badlands"

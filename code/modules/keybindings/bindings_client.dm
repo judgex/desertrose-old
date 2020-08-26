@@ -20,7 +20,7 @@
 	//don't want to kick people if a lag spike results in a huge flood of commands being sent
 	if(cache >= MAX_KEYPRESS_AUTOKICK)
 		if(!keysend_tripped)
-			keysend_tripped = TRUE		
+			keysend_tripped = TRUE
 			next_keysend_trip_reset = world.time + (2 SECONDS)
 		else
 			log_admin("Client [ckey] was just autokicked for flooding keysends; likely abuse but potentially lagspike.")
@@ -54,8 +54,11 @@
 			else
 				get_adminhelp()
 			return
-		if("F2") // Screenshot. Hold shift to choose a name and location to save in
-			winset(src, null, "command=.screenshot [!keys_held["shift"] ? "auto" : ""]")
+		if("F2")
+			winset(src, null, "command=ooc [!keys_held["shift"] ? "auto" : ""]")
+			return
+		if("F3")
+			winset(src, null, "command=say [!keys_held["shift"] ? "auto" : ""]")
 			return
 		if("F12") // Toggles minimal HUD
 			mob.button_pressed_F12()

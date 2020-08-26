@@ -1,10 +1,10 @@
 /mob/living/simple_animal/hostile/ghoul
-	name = "feral ghoul"
+	name = "дикий гуль"
 	desc = "A ghoul that has lost it's mind and become aggressive."
-	icon = 'icons/mob/wastemobs.dmi'
-	icon_state = "feralghoul"
-	icon_living = "feralghoul"
-	icon_dead = "feralghoul_dead"
+	icon = 'icons/mob/ghouls.dmi'
+	icon_state = "retro_ghoul"
+	icon_living = "retro_ghoul"
+	icon_dead = "retro_ghoul_d"
 	mob_biotypes = list(MOB_ORGANIC, MOB_HUMANOID)
 	robust_searching = 1
 	turns_per_move = 5
@@ -38,22 +38,10 @@
 	idlesound = list('sound/f13npc/ghoul/idle.ogg')
 	death_sound = 'sound/f13npc/ghoul/ghoul_death.ogg'
 
-/mob/living/simple_animal/hostile/ghoul/reaver
-	name = "feral ghoul reaver"
-	desc = "A ghoul that has lost it's mind and become aggressive. This one is strapped with metal armor, and appears far stronger."
-	icon = 'icons/mob/wastemobs.dmi'
-	icon_state = "ghoulreaver"
-	icon_living = "ghoulreaver"
-	icon_dead = "ghoulreaver_dead"
-	speed = 2
-	maxHealth = 100
-	health = 100
-	harm_intent_damage = 6
-	melee_damage_lower = 15
-	melee_damage_upper = 15
-
-/mob/living/simple_animal/hostile/ghoul/reaver/Initialize()
+/mob/living/simple_animal/hostile/ghoul/Initialize()
 	. = ..()
+	icon_state = "retro_ghoul-[rand(1,10)]"
+	icon_living = "retro_ghoul-[rand(1,10)]"
 
 /mob/living/simple_animal/hostile/ghoul/reaver/Aggro()
 	..()
@@ -88,11 +76,11 @@
 	melee_damage_upper = 15
 
 /mob/living/simple_animal/hostile/ghoul/glowing
-	name = "glowing feral ghoul"
+	name = "светящийся гуль"
 	desc = "A feral ghoul that has absorbed massive amounts of radiation, causing them to glow in the dark and radiate constantly."
-	icon_state = "glowinghoul"
-	icon_living = "glowinghoul"
-	icon_dead = "glowinghoul_dead"
+	icon_state = "retro_glowghoul-1"
+	icon_living = "retro_glowghoul-1"
+	icon_dead = "retro_glowghoul_d"
 	maxHealth = 80
 	health = 80
 	speed = 2
@@ -103,6 +91,7 @@
 /mob/living/simple_animal/hostile/ghoul/legendary
 	name = "legendary ghoul"
 	desc = "A ghoul that has lost it's mind and become aggressive. This one is exceptionally large, bulging muscles. It looks quite strong."
+	icon = 'icons/mob/wastemobs.dmi'
 	icon_state = "glowinghoul"
 	icon_living = "glowinghoul"
 	icon_dead = "glowinghoul_dead"
@@ -119,6 +108,8 @@
 /mob/living/simple_animal/hostile/ghoul/glowing/Initialize()
 	. = ..()
 	set_light(2)
+	icon_state = "retro_glowghoul-[rand(1,10)]"
+	icon_living = "retro_glowghoul-[rand(1,10)]"
 
 /mob/living/simple_animal/hostile/ghoul/glowing/Aggro()
 	..()
@@ -133,6 +124,7 @@
 /mob/living/simple_animal/hostile/ghoul/frozen
 	name = "frozen feral ghoul"
 	desc = "A feral ghoul that has absorbed massive amounts of cold and Radiates Cold Air.."
+	icon = 'icons/mob/wastemobs.dmi'
 	icon_state = "frozen_feral"
 	icon_living = "frozen feral"
 	icon_dead = "frozen_feral_dead"
@@ -160,6 +152,7 @@
 /mob/living/simple_animal/hostile/ghoul/hot
 	name = "hot glowing ghoul"
 	desc = "A feral ghoul that has absorbed massive amounts of cold and Radiates Cold Air.."
+	icon = 'icons/mob/wastemobs.dmi'
 	icon_state = "hot_glowing_one"
 	icon_living = "hot_glowing_one"
 	icon_dead = "hot_glowing_one_dead"

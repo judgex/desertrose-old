@@ -139,7 +139,7 @@
 	faction = list("radscorpion")
 	gold_core_spawnable = HOSTILE_SPAWN
 	var/scorpion_color = "radscorpion" //holder for icon set
-	var/list/icon_sets = list("radscorpion", "radscorpion_blue", "radscorpion_black")
+	var/list/icon_sets = list("radscorpion_blue", "radscorpion_black")
 
 	emote_taunt = list("snips")
 	emote_taunt_sound = list('sound/f13npc/scorpion/taunt1.ogg', 'sound/f13npc/scorpion/taunt2.ogg', 'sound/f13npc/scorpion/taunt3.ogg')
@@ -171,9 +171,9 @@
 	name = "gecko"
 	desc = "A large mutated reptile with sharp teeth."
 	icon = 'icons/mob/wastemobs.dmi'
-	icon_state = "gekkon"
-	icon_living = "gekkon"
-	icon_dead = "gekkon_dead"
+	icon_state = "gecko"
+	icon_living = "gecko"
+	icon_dead = "gecko_d"
 	mob_biotypes = list(MOB_ORGANIC, MOB_BEAST)
 	speak_chance = 0
 	turns_per_move = 5
@@ -635,4 +635,3 @@
 /mob/living/simple_animal/hostile/mirelurk/baby/Aggro()
 	..()
 	summon_backup(10)
-	

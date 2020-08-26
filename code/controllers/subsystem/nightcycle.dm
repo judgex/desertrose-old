@@ -89,22 +89,22 @@ SUBSYSTEM_DEF(nightcycle)
 	switch (newTime)
 		if ("SUNRISE")
 			sunColour = "#ffd1b3"
-			sunPower = 0.3
+			sunPower = 0.5
 		if ("MORNING")
 			sunColour = "#fff2e6"
-			sunPower = 0.5
+			sunPower = 0.6
 		if ("DAYTIME")
 			sunColour = "#FFFFFF"
-			sunPower = 0.75
+			sunPower = 0.8
 		if ("AFTERNOON")
 			sunColour = "#fff2e6"
-			sunPower = 0.5
+			sunPower = 0.6
 		if ("SUNSET")
 			sunColour = "#ffcccc"
-			sunPower = 0.3
+			sunPower = 0.5
 		if("NIGHTTIME")
 			sunColour = "#00111a"
-			sunPower = 0.20
+			sunPower = 0.4
 
 
 

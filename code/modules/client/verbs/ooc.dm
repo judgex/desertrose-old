@@ -41,24 +41,24 @@
 		if(handle_spam_prevention(msg,MUTE_OOC))
 			return
 		if(findtext(msg, "byond://"))
-			to_chat(src, "<B>Advertising other servers is not allowed.</B>")
+			to_chat(src, "<B>Пожалуйста, не рекламируйте другие проекты.</B>")
 			log_admin("[key_name(src)] has attempted to advertise in OOC: [msg]")
-			message_admins("[key_name_admin(src)] has attempted to advertise in OOC: [msg]")
+			message_admins("[key_name_admin(src)] попытался рекламировать: [msg]")
 			return
-		var/static/regex/slurs = regex("nigg|fag|tranny|dyke|kike|pedo|loli|shota", "i")
+		var/static/regex/slurs = regex("негр|хуйло|трап|трансуха|педик|пидор|лесбуха|хуйлан|лошара|сучара|хуесос", "i")
 		if(findtext(msg, slurs))
-			to_chat(src, "<B>Slurs are not allowed on Desert Rose.</B>")
+			to_chat(src, "<B>Никаких оскорблений.</B>")
 			log_admin("[key_name(src)] has triggered the slur filter (OOC): [msg].")
-			message_admins("[key_name_admin(src)] has triggered the slur filter (OOC): [msg].")
+			message_admins("[key_name_admin(src)] спровоцировал фильтр оскорблений (OOC): [msg].")
 			return
 		if(CONFIG_GET(flag/blockoocurls))
 			if(findtext(msg, "://") || findtext(msg, "www."))
-				to_chat(src, "<B>Posting clickable links in OOC is not allowed.</B>")
+				to_chat(src, "<B>Постинг кликабельных ссылок запрещён.</B>")
 				log_admin("[key_name(src)] has attempted to post a clickable link in OOC: [msg]")
-				message_admins("[key_name_admin(src)] has attempted to post a clickable link in OOC: [msg]")
+				message_admins("[key_name_admin(src)] попытался запостить ссылку: [msg]")
 				return
 	if(!(prefs.chat_toggles & CHAT_OOC))
-		to_chat(src, "<span class='danger'>You have OOC muted.</span>")
+		to_chat(src, "<span class='danger'>Мут ООС.</span>")
 		return
 
 

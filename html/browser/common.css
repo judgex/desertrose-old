@@ -2,9 +2,9 @@ body
 {
 	padding: 0;
 	margin: 0;
-	background-color: #272727;
+	background-color: #000000;
 	font-size: 12px;
-	color: #ffffff;
+	color: #0bcc62;
 	line-height: 170%;
 }
 
@@ -16,9 +16,9 @@ hr
 
 a, button, a:link, a:visited, a:active, .linkOn, .linkOff
 {
-	color: #ffffff;
+	color: #0bcc62;
 	text-decoration: none;
-	background: #40628a;
+	background: #124b28;
 	border: 1px solid #161616;
 	padding: 1px 4px 1px 4px;
 	margin: 0 2px 0 0;
@@ -33,7 +33,7 @@ a:hover
 
 a.white, a.white:link, a.white:visited, a.white:active
 {
-	color: #40628a;
+	color: #0bcc62;
 	text-decoration: none;
 	background: #ffffff;
 	border: 1px solid #161616;
@@ -44,22 +44,27 @@ a.white, a.white:link, a.white:visited, a.white:active
 
 a.white:hover
 {
-	color: #ffffff;
-	background: #40628a;
+	color: #124b28;
+	background: #0bcc62;
 }
 
 .linkOn, a.linkOn:link, a.linkOn:visited, a.linkOn:active, a.linkOn:hover
 {
-	color: #ffffff;
-	background: #2f943c;
-	border-color: #24722e;
+	/*color: #0bcc62; 
+	background: #124b28;*/
+	color: #124b28;
+	background: #0bcc62;
+	/*border-color: #24722e;*/
+	border-color: #124b28;
+	border-width: 2px;
 }
 
 .linkOff, a.linkOff:link, a.linkOff:visited, a.linkOff:active, a.linkOff:hover
 {
-	color: #ffffff;
+	color: #ffffff; 
 	background: #999999;
 	border-color: #666666;
+	pointer-events: none;
 }
 
 a.icon, .linkOn.icon, .linkOff.icon
@@ -98,7 +103,7 @@ h1, h2, h3, h4, h5, h6
 {
 	margin: 0;
 	padding: 16px 0 8px 0;
-	color: #517087;
+	color: #0bcc62;
 }
 
 h1
@@ -134,7 +139,7 @@ h4
 	padding: 6px 8px 6px 8px;
 	border-bottom: 2px solid #161616;
 	background: #383838;
-	color: #98B0C3;
+	color: #0bcc62;
 	font-size: 16px;
 }
 
@@ -149,7 +154,7 @@ h4
 {
 	clear: both;
 	padding: 8px;
-	font-family: Verdana, Geneva, sans-serif;
+	font-family: Verdana,Geneva,sans-serif;
 }
 
 .good
@@ -169,7 +174,7 @@ h4
 
 .highlight
 {
-	color: #8BA5C4;
+	color: #0bcc62;
 }
 
 .dark
@@ -181,7 +186,7 @@ h4
 {
 	position: relative;
 	background: #E9C183;
-	color: #15345A;
+	color: #124b28;
 	font-size: 10px;
 	font-style: italic;
 	padding: 2px 4px 0 4px;
@@ -209,9 +214,10 @@ div.notice
 
 .statusDisplay
 {
+	/*background: #124b28;*/
 	background: #000000;
-	color: #ffffff;
-	border: 1px solid #40628a;
+	color: #0bcc62;
+	border: 1px solid #0bcc62;
 	padding: 4px;
 	margin: 3px 0;
 }
@@ -233,7 +239,7 @@ div.notice
 {
 	padding: 8px;
 	margin: 10px 4px 4px 4px;
-	border: 1px solid #40628a;
+	border: 1px solid #124b28;
 	background-color: #202020;
 }
 
@@ -256,7 +262,7 @@ div.notice
 {
 	width: 100%;
 	height: 100%;
-	background: #40628a;
+	background: #124b28;
 	overflow: hidden;
 }
 
@@ -281,7 +287,7 @@ div.notice
 .progressFill.highlight
 {
 	color: #ffffff;
-	background: #8BA5C4;
+	background: #0bcc62;
 }
 
 .clearBoth
@@ -305,6 +311,79 @@ div.notice
 	clear: both;
 }
 
+.frame ol {
+	padding-left: 20px;
+}
+.frame {
+	width: 200px;
+	height: 100%;
+	border: 1px solid #067639;
+	margin-top: 10px;
+}
+.wrap_frame {
+	padding-left: 5px;
+}
+.left_block_table {
+	float: left;
+	width: 180px;
+}
+.job	{
+	width: 26%;
+	float: left;
+}
+.right_block_frame {
+	padding-left: 210px;
+	margin-top: 20px;
+}
+.leg_title {
+	display: inline-block;
+	position: relative;
+	top: -12px;
+}
+.leg_img {
+	padding-top: 5px;
+}
+.middle_img  {
+	border: 1px solid #067639;
+	margin-top: 21px;
+}
+.job_p {
+	margin-top: -15px;
+	width: 145px;
+	height: 87px;
+	overflow: auto;
+	border: 1px solid #067639;
+	text-align: center;
+}
+.job_p .linkOff, .job_p a {
+	display: block;
+	margin: 2.5px auto;
+	text-align: center;
+}
+.left_mid {
+	float: left;
+	margin-right: 2px;
+}
+.a_block {
+	margin-top: -15px;
+	width: 300px;
+	height: 20px;
+}
+.g {
+	height: 15px;
+}
+.mid_item {
+	overflow: hidden ;
+	white-space: nowrap;
+}
+div {
+	-moz-border-radius: 4px;
+   -webkit-border-radius: 4px;
+   border-radius: 4px;
+   -khtml-border-radius: 4px;
+}
+.uiContent .right_table div {
+}
 
 .switch {
   position: relative;
@@ -396,3 +475,23 @@ ul.sparse {
 .slider.round:before {
   border-radius: 50%;
 }
+
+.disabled_job {
+	background-color: #999999 !important;
+	color: #FFF !important;
+}
+.low_job {
+	background-color: #e2af00 !important;
+	color: #000 !important;
+}
+.middle_job {
+	background-color: #124b28 !important;
+	color: #146D14 !important;
+}
+.high_job {
+	background-color: #0bcc62 !important;
+	color: #082C08 !important;
+}
+.unavailable_job {
+	background-color: #C24D44 !important;
+	color: #000 !important;

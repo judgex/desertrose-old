@@ -44,8 +44,8 @@
 #define DESOLATE_PLANT_SPAWN_LIST list(/obj/structure/flora/grass/wasteland = 1)
 
 /turf/open/floor/plating/f13/outside/desert
-	name = "\proper desert"
-	desc = "A stretch of desert."
+	name = "песок"
+	desc = "Песок. Много песка."
 	icon = 'icons/turf/f13desert.dmi'
 	icon_state = "wasteland1"
 
@@ -103,8 +103,8 @@
 	. =  ..()
 
 /turf/open/floor/plating/f13/outside/road
-	name = "\proper road"
-	desc = "A stretch of road."
+	name = "дорога"
+	desc = "Просёлочная дорога, приведи меня домой..."
 	icon = 'icons/turf/f13road.dmi'
 	icon_state = "outermiddle"
 
