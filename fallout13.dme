@@ -1602,6 +1602,7 @@
 #include "code\modules\fallout\misc\beta_advanced\color_correction.dm"
 #include "code\modules\fallout\misc\beta_advanced\crawling.dm"
 #include "code\modules\fallout\misc\beta_advanced\death_screens.dm"
+#include "code\modules\fallout\misc\beta_advanced\decoration_f13.dm"
 #include "code\modules\fallout\misc\beta_advanced\noise.dm"
 #include "code\modules\fallout\misc\beta_advanced\step_sound.dm"
 #include "code\modules\fallout\mob\simple_animal\mobs\eyebot.dm"
