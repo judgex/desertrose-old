@@ -49,13 +49,14 @@
 "aW" = (/obj/structure/chalkboard,/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
 "aX" = (/obj/structure/dresser,/turf/open/floor/f13/wood,/area/f13/building)
 "aY" = (/obj/structure/chair/comfy,/turf/open/floor/f13/wood,/area/f13/building)
-"aZ" = (/turf/open/indestructible/ground/outside/wood,/area/f13/wasteland)
+"aZ" = (/turf/open/floor/plasteel/f13{icon_state = "floorrusty"},/area/f13/wasteland)
 "ba" = (/obj/structure/bus_door,/turf/open/indestructible/ground/outside/road,/area/f13/wasteland)
 "bb" = (/obj/structure/cargocrate,/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
 "bc" = (/obj/structure/closet/crate/wooden,/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
 "bd" = (/turf/open/indestructible/ground/outside/dirt{icon_state = "dirtcorner"; dir = 1},/area/f13/wasteland)
 "be" = (/obj/structure/chair/bench,/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
 "bf" = (/turf/open/indestructible/ground/outside/water,/area/f13/wasteland)
+"bg" = (/obj/machinery/manned_turret,/turf/open/floor/plasteel/f13{icon_state = "floorrusty"},/area/f13/wasteland)
 "bh" = (/obj/structure/window/fulltile/house,/turf/open/indestructible/ground/outside/wood,/area/f13/building)
 "bi" = (/obj/structure/guillotine,/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
 "bj" = (/obj/structure/kitchenspike/cross,/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
@@ -80,7 +81,6 @@
 "bC" = (/obj/structure/chair/wood/normal{icon_state = "wooden_chair_settler"; dir = 8},/turf/open/floor/f13/wood,/area/f13/building)
 "bD" = (/obj/structure/table,/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
 "bE" = (/obj/machinery/light,/turf/open/floor/f13/wood,/area/f13/building)
-"bF" = (/obj/machinery/manned_turret,/turf/open/indestructible/ground/outside/wood,/area/f13/wasteland)
 "bG" = (/obj/landmark/vertibird{name = "kabobpost"},/turf/open/indestructible/ground/outside/dirt{icon_state = "dirtcorner"; dir = 4},/area/f13/wasteland)
 "bH" = (/obj/vertibird,/turf/open/indestructible/ground/outside/desert,/area/f13/forest)
 "bI" = (/obj/structure/table,/obj/item/key/vertibird,/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
@@ -127,7 +127,7 @@ aaabacadaeafafagahacaiaaaaaaaaaaaaaZaZaZaZaZaZaZaaaVaVbnaVaVaVbPbPbPbPaVaaaaaaaa
 aaabacadaeafafagahacaiaaaaaaaaaaaaaZbfbfbfbfbfaZaaaVbPbPbobpbBbCbPbPbPaVaaaaaaaaaabqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
 aaabacadaeafafagahacaiaaaaaaaabAaaaZbfbfbfbfbfaZaaaVbPbPbPbPbPbPbPbPbPaVaaaaaaaaaabqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
 aaabacadaeafbaagahacaiaaaaaaaaaaaaaZbfbfbfbfbfaZaaaVbPbEbmbmbmbmbPbEbPaVaaaaaaaaaabqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
-aaabacadaeafafagahacaiaaaaaaaaaaaaaZaZaZbFaZaZaZaaaVaVaVaVaVaVaVaVaVaVaVaaaaaaaaaabqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
+aaabacadaeafafagahacaiaaaaaaaaaaaaaZaZaZbgaZaZaZaaaVaVaVaVaVaVaVaVaVaVaVaaaaaaaaaabqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
 aaabacadaeafafagahacaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
 aaabbtadaeafafagahacaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
 aaabacadaeafafagahacaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq

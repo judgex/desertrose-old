@@ -189,6 +189,7 @@
 	icon = 'icons/turf/floors.dmi'
 	icon_state = "riverwater_motion"
 	slowdown = 2
+	step_sounds = list("human" = "waterfootsteps")
 
 /turf/open/indestructible/ground/outside/snow
 	initial_gas_mix = "o2=22;n2=82;TEMP=285"
