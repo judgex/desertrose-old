@@ -1040,7 +1040,7 @@
 	icon_state = "shamanstaff[wielded]"
 
 /obj/item/twohanded/sledgehammer/marsstaff
-	name = "mar's staff"
+	name = "Staff of Mars"
 	desc = " A staff crafted by the guidance of Mars."
 	icon = 'icons/obj/items_and_weapons.dmi'
 	icon_state = "mars_staff0"
