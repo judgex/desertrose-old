@@ -31,6 +31,9 @@
 	ammo_type = /obj/item/ammo_casing/a357
 	max_ammo = 24
 
+/obj/item/ammo_box/magazine/autopipe/empty
+	start_empty = 1
+
 /obj/item/ammo_box/magazine/m556/rifle
 	name = "rifle magazine (5.56mm)"
 	icon_state = "r20"
