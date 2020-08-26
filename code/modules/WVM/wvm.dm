@@ -585,6 +585,21 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		new /datum/data/wasteland_equipment("Keep your C.A.M.P. Clean: Trashbag",		/obj/item/storage/bag/trash,							30),
 		new /datum/data/wasteland_equipment("Keep your C.A.M.P. Clean: Soap",			/obj/item/soap/homemade,								25)
 		)
+
+
+/obj/machinery/mineral/wasteland_vendor/pipboy
+	name = "Wasteland Pip-N-Walk"
+	icon_state = "generic_idle"
+	prize_list = list(
+		new /datum/data/wasteland_equipment("Pip-boy 3000",			/obj/item/pda,																150),
+		new /datum/data/wasteland_equipment("Reprogrammable ID",	/obj/item/card/id/selfassign,												100),
+		new /datum/data/wasteland_equipment("E.N.H.A.N.C.E. Your Pip-boy: Reagent Scanner",	/obj/item/cartridge/chemistry,						50),
+		new /datum/data/wasteland_equipment("E.N.H.A.N.C.E. Your Pip-boy: Health Scanner",	/obj/item/cartridge/medical,						50),
+		new /datum/data/wasteland_equipment("E.N.H.A.N.C.E. Your Pip-boy: Signaler",	/obj/item/cartridge/signal,								50),
+		
+
+		)
+		
 		
 /obj/machinery/mineral/wasteland_vendor/special
 	name = "Wasteland Vending Machine - Special"
