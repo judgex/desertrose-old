@@ -13,6 +13,7 @@
 // END_PREFERENCES
 
 // BEGIN_INCLUDE
+#include "_maps\map_files\debug\turbo_wasteland-redux.dmm"
 #include "_maps\map_files\Pahrump\Dungeons.dmm"
 #include "_maps\map_files\Pahrump\Pahrump.dmm"
 #include "_maps\templates\fallout_templates.dm"
@@ -1599,6 +1600,7 @@
 #include "code\modules\fallout\misc\gangs.dm"
 #include "code\modules\fallout\misc\gangtool.dm"
 #include "code\modules\fallout\misc\overlays.dm"
+#include "code\modules\fallout\misc\beta_advanced\death_screens.dm"
 #include "code\modules\fallout\mob\simple_animal\mobs\eyebot.dm"
 #include "code\modules\fallout\mob\simple_animal\mobs\fallout_NPC.dm"
 #include "code\modules\fallout\mob\simple_animal\mobs\Securitron.dm"

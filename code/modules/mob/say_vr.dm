@@ -18,7 +18,7 @@
 	var/msg = stripped_multiline_input(usr, "Set the flavor text in your 'examine' verb. This can also be used for OOC notes and preferences!", "Flavor Text", html_decode(flavor_text), MAX_MESSAGE_LEN*2, TRUE)
 
 	if(!isnull(msg))
-		msg = copytext(msg, 1, MAX_MESSAGE_LEN)
+		msg = copytext_char(msg, 1, MAX_MESSAGE_LEN)
 		msg = html_encode(msg)
 
 		flavor_text = msg
@@ -35,7 +35,7 @@
 		if(length(msg) <= 40)
 			return "<span class='notice'>[html_encode(msg)]</span>"
 		else
-			return "<span class='notice'>[html_encode(copytext(msg, 1, 37))]... <a href='?src=[REF(src)];flavor_more=1'>More...</span></a>"
+			return "<span class='notice'>[html_encode(copytext_char(msg, 1, 37))]... <a href='?src=[REF(src)];flavor_more=1'>More...</span></a>"
 
 /mob/proc/print_special()
 	var/msg = "S:[special_s],P:[special_p],E:[special_e],C:[special_c],I:[special_i],A:[special_a],L:[special_l]<br>"
@@ -100,13 +100,13 @@ proc/get_top_level_mob(var/mob/S)
 
 /datum/emote/living/subtle/proc/check_invalid(mob/user, input)
 	. = TRUE
-	if(copytext(input,1,5) == "says")
+	if(copytext_char(input,1,5) == "говорит")
 		to_chat(user, "<span class='danger'>Invalid emote.</span>")
-	else if(copytext(input,1,9) == "exclaims")
+	else if(copytext_char(input,1,9) == "восклицает")
 		to_chat(user, "<span class='danger'>Invalid emote.</span>")
-	else if(copytext(input,1,6) == "yells")
+	else if(copytext_char(input,1,6) == "кричит")
 		to_chat(user, "<span class='danger'>Invalid emote.</span>")
-	else if(copytext(input,1,5) == "asks")
+	else if(copytext_char(input,1,5) == "спрашивает")
 		to_chat(user, "<span class='danger'>Invalid emote.</span>")
 	else
 		. = FALSE
@@ -119,7 +119,7 @@ proc/get_top_level_mob(var/mob/S)
 		to_chat(user, "You cannot send IC messages (muted).")
 		return FALSE
 	else if(!params)
-		var/subtle_emote = copytext(sanitize(input("Choose an emote to display.") as message|null), 1, MAX_MESSAGE_LEN)
+		var/subtle_emote = copytext_char(sanitize(input("Choose an emote to display.") as message|null), 1, MAX_MESSAGE_LEN)
 		if(subtle_emote && !check_invalid(user, subtle_emote))
 			var/type = input("Is this a visible or hearable emote?") as null|anything in list("Visible", "Hearable")
 			switch(type)
@@ -171,13 +171,13 @@ proc/get_top_level_mob(var/mob/S)
 
 /datum/emote/living/subtler/proc/check_invalid(mob/user, input)
 	. = TRUE
-	if(copytext(input,1,5) == "says")
+	if(copytext_char(input,1,5) == "говорит")
 		to_chat(user, "<span class='danger'>Invalid emote.</span>")
-	else if(copytext(input,1,9) == "exclaims")
+	else if(copytext_char(input,1,9) == "восклицает")
 		to_chat(user, "<span class='danger'>Invalid emote.</span>")
-	else if(copytext(input,1,6) == "yells")
+	else if(copytext_char(input,1,6) == "кричит")
 		to_chat(user, "<span class='danger'>Invalid emote.</span>")
-	else if(copytext(input,1,5) == "asks")
+	else if(copytext_char(input,1,5) == "спрашивает")
 		to_chat(user, "<span class='danger'>Invalid emote.</span>")
 	else
 		. = FALSE
@@ -190,7 +190,7 @@ proc/get_top_level_mob(var/mob/S)
 		to_chat(user, "You cannot send IC messages (muted).")
 		return FALSE
 	else if(!params)
-		var/subtle_emote = copytext(sanitize(input("Choose an emote to display.") as message|null), 1, MAX_MESSAGE_LEN)
+		var/subtle_emote = copytext_char(sanitize(input("Choose an emote to display.") as message|null), 1, MAX_MESSAGE_LEN)
 		if(subtle_emote && !check_invalid(user, subtle_emote))
 			var/type = input("Is this a visible or hearable emote?") as null|anything in list("Visible", "Hearable")
 			switch(type)
