@@ -800,3 +800,28 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 
 	log_admin("[key_name(usr)] has [AI_Interact ? "activated" : "deactivated"] Admin AI Interact")
 	message_admins("[key_name_admin(usr)] has [AI_Interact ? "activated" : "deactivated"] their AI interaction")
+
+/client/proc/SetTimeOfDay()
+	set name = "Set Time of Day"
+	set category = "Fun"
+
+	var/daytime = input(usr, "Choose time of day to set)", "FALLOUT") as null|anything in list("Morning", "Day", "Evening", "Night")
+
+	if(!daytime)
+		return
+
+	switch(daytime)
+		if("Morning")
+			daytime = 1//"MORNING"
+		if("Day")
+			daytime = 2//"DAYTIME"
+		if("Evening")
+			daytime = 3//"AFTERNOON"
+		if("Night")
+			daytime = 4//"NIGHTTIME"
+
+	//SSnightcycle.updateLight(daytime)
+	set_time_of_day(daytime)
+	to_chat(usr, "<span class='interface'>Time of day successfully updated.</span>")
+	log_admin("[key_name(usr)] changed time of day to [daytime].")
+	message_admins("[key_name_admin(usr)] changed time of day to [daytime].")
