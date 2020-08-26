@@ -37,6 +37,8 @@
 		has_penis = FALSE
 	//end of lewd
 
+	overlay_fullscreen("noise", /obj/screen/fullscreen/noisescreen)
+	add_client_colour(/datum/client_colour/correction)
 
 /mob/living/prepare_huds()
 	..()

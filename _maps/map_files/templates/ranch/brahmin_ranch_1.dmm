@@ -1,4 +1,3 @@
-"aa" = (/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
 "ab" = (/obj/structure/fence/corner{dir = 9; icon_state = "corner"},/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
 "ac" = (/obj/structure/fence{dir = 4; icon_state = "straight"; tag = "icon-metal_fence3"},/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
 "ad" = (/turf/closed/wall/f13/wood/house,/area/f13/village)
@@ -48,7 +47,7 @@
 "aV" = (/obj/machinery/light/small,/obj/structure/table/wood/settler,/obj/item/paper_bin,/obj/item/pen,/turf/open/floor/f13/wood,/area/f13/village)
 "aW" = (/obj/structure/chair/wood{dir = 8},/turf/open/floor/f13/wood,/area/f13/village)
 "aX" = (/turf/open/floor/f13/wood{icon_state = "housewood3-broken"; tag = "icon-housewood3-broken"},/area/f13/village)
-"aY" = (/obj/structure/table/wood/fancy,/obj/item/restraints/handcuffs,/obj/item/melee/chainofcommand/tailwhip/kitty,/obj/item/dildo,/turf/open/floor/f13/wood,/area/f13/village)
+"aY" = (/obj/structure/table/wood/fancy,/obj/item/restraints/handcuffs,/obj/item/melee/chainofcommand/tailwhip/kitty,/turf/open/floor/f13/wood,/area/f13/village)
 "aZ" = (/turf/open/indestructible/ground/outside/dirt{dir = 4; icon_state = "dirt"},/area/f13/farm)
 "ba" = (/obj/structure/toilet,/obj/machinery/light/small{dir = 1},/obj/item/reagent_containers/food/snacks/f13/steak,/obj/item/twohanded/sledgehammer,/obj/effect/decal/remains/human,/turf/open/floor/f13/wood,/area/f13/village)
 "bb" = (/turf/open/indestructible/ground/outside/dirt{dir = 4; icon_state = "dirtcorner"; tag = "icon-dirtcorner (EAST)"},/area/f13/wasteland)
@@ -88,7 +87,7 @@
 "bJ" = (/obj/machinery/light/small,/turf/open/floor/f13/wood,/area/f13/village)
 "bK" = (/obj/effect/decal/cleanable/blood,/turf/open/floor/f13/wood{icon_state = "housewood3-broken"; tag = "icon-housewood3-broken"},/area/f13/village)
 "bL" = (/obj/item/reagent_containers/glass/bucket,/obj/machinery/hydroponics/soil,/turf/open/indestructible/ground/outside/dirt,/area/f13/farm)
-"bM" = (/obj/structure/car/rubbish3,/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
+"bM" = (/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
 "bN" = (/obj/structure/bed/mattress,/turf/open/floor/f13/wood,/area/f13/village)
 "bO" = (/obj/structure/table/wood/settler,/turf/open/floor/f13/wood,/area/f13/village)
 "bP" = (/obj/structure/rack,/obj/effect/spawner/lootdrop/f13/armor/costumes,/turf/open/floor/f13/wood,/area/f13/village)
@@ -108,21 +107,21 @@
 "cd" = (/obj/structure/bed/mattress,/obj/effect/decal/cleanable/cobweb/cobweb2,/turf/open/floor/f13/wood,/area/f13/village)
 
 (1,1,1) = {"
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaabacacacacacadadadaeadadadadadadadadadadadafafafafafafaf
-aaaaagahaiajakalamanaoanapaqarasatauavanawaxadayazaAaaaaaaaa
-aaaaagaBaCaCaDaEadancbananaGanasanaGananananadaHaIaJadadadaa
-aKaLagaBaCaMaNaOadaPaQaRaSanaTasanaUaVaWaXaYadaZaIaJadbaadaa
-bbbcagaBaCbdadadadasasasasbeasasbeasasasasasadaZaIaJadamadaa
-aaaabfbgbhbiadbjaWanbkasblananaFanasananbnboadaZaIbpazazazaA
-aaaaaabraCbdaeananananbebmbwbsanbxasbsanananbtaZbubuaIbubuaJ
-aabvaabraCbdadanananbyasbzanbObAanasbCancbanbtaZaIaIaIaIaIaJ
+bMbMbMbMbMbMbMbMbMbMbMbMbMbMbMbMbMbMbMbMbMbMbMbMbMbMbMbMbMbM
+bMbMabacacacacacadadadaeadadadadadadadadadadadafafafafafafaf
+bMbMagahaiajakalamanaoanapaqarasatauavanawaxadayazaAbMbMbMbM
+bMbMagaBaCaCaDaEadancbananaGanasanaGananananadaHaIaJadadadbM
+aKaLagaBaCaMaNaOadaPaQaRaSanaTasanaUaVaWaXaYadaZaIaJadbaadbM
+bbbcagaBaCbdadadadasasasasbeasasbeasasasasasadaZaIaJadamadbM
+bMbMbfbgbhbiadbjaWanbkasblananaFanasananbnboadaZaIbpazazazaA
+bMbMbMbraCbdaeananananbebmbwbsanbxasbsanananbtaZbubuaIbubuaJ
+bMbvbMbraCbdadanananbyasbzanbObAanasbCancbanbtaZaIaIaIaIaIaJ
 aiaiaibDaCbBadasasasasasanbGbOaWaFasbqaXaGaFadaZbubuaIbubuaJ
 aCaCaCaCaCaCbIananbEanananaFanbKanbeananananamaZaIaIaIaIaIaJ
 bHbHbHbHbHbFadanaGanaXasccananananasbJanananadaZbubuaIbLbuaJ
-bMaaaaaaaaaaadadadasasasbeasasasasasasbeasasadaZaIaIaIaIaIaJ
-aaaaaaaaaaaaaaaaadbNanbNanaocdasbPbQbRanbSbTadaZbubuaIbUbuaJ
-aaaaaaaaaaaaaaaaadanbVaGaXananasanaGanaFananbtbWbYbYbYbYbYbZ
-aaaaaaaaaaaaaaaaadbNaXbNbVanbNasbXbTcabPbPbTadafafafafafafaf
-aaaaaaaaaaaaaaaaadadadadaeadadadaeadadaeadadadaaaaaaaaaaaaaa
+bMbMbMbMbMbMadadadasasasbeasasasasasasbeasasadaZaIaIaIaIaIaJ
+bMbMbMbMbMbMbMbMadbNanbNanaocdasbPbQbRanbSbTadaZbubuaIbUbuaJ
+bMbMbMbMbMbMbMbMadanbVaGaXananasanaGanaFananbtbWbYbYbYbYbYbZ
+bMbMbMbMbMbMbMbMadbNaXbNbVanbNasbXbTcabPbPbTadafafafafafafaf
+bMbMbMbMbMbMbMbMadadadadaeadadadaeadadaeadadadbMbMbMbMbMbMbM
 "}

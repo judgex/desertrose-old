@@ -78,7 +78,6 @@
 "bz" = (/obj/effect/decal/cleanable/glass,/turf/open/floor/f13/wood,/area/f13/village)
 "bA" = (/obj/machinery/light/small{dir = 4},/turf/open/floor/f13/wood,/area/f13/village)
 "bB" = (/obj/structure/chair/wood/modern{dir = 4; icon_state = "wooden_chair_settler"; tag = "icon-wooden_chair_settler (WEST)"},/turf/open/floor/f13/wood,/area/f13/village)
-"bC" = (/obj/structure/table/wood/settler,/obj/effect/spawner/lootdrop/f13/cash_random_low,/turf/open/floor/f13/wood,/area/f13/village)
 "bD" = (/obj/structure/table/wood/settler,/turf/open/indestructible/ground/outside/dirt,/area/f13/farm)
 "bE" = (/obj/structure/table/wood/settler,/obj/item/flashlight/lantern,/turf/open/indestructible/ground/outside/dirt,/area/f13/farm)
 "bF" = (/obj/structure/wreck/trash/five_tires,/turf/open/indestructible/ground/outside/dirt,/area/f13/wasteland)
@@ -111,8 +110,8 @@
 "cg" = (/obj/structure/table/wood/settler,/obj/item/crafting/abraxo,/obj/item/crafting/duct_tape,/obj/structure/sink/kitchen{pixel_y = 27},/obj/structure/mirror{pixel_x = -26; pixel_y = -1},/turf/open/floor/plasteel/dark,/area/f13/village)
 "ch" = (/turf/open/floor/plasteel/dark,/area/f13/village)
 "ci" = (/obj/structure/bed,/obj/effect/decal/cleanable/cobweb,/turf/open/floor/f13/wood,/area/f13/village)
-"cj" = (/obj/structure/closet/cabinet,/obj/item/dildo,/turf/open/floor/f13/wood,/area/f13/village)
-"ck" = (/obj/structure/table/wood/settler,/obj/item/dildo{icon_state = "dildo"; layer = 1.1},/obj/effect/spawner/lootdrop/f13/cash_random_low,/turf/open/floor/f13/wood,/area/f13/village)
+"cj" = (/obj/structure/closet/cabinet,/turf/open/floor/f13/wood,/area/f13/village)
+"ck" = (/obj/structure/table/wood/settler,/obj/effect/spawner/lootdrop/f13/cash_random_low,/turf/open/floor/f13/wood,/area/f13/village)
 "cl" = (/obj/structure/closet/cabinet,/obj/effect/spawner/lootdrop/clothing_middle,/obj/effect/spawner/lootdrop/clothing_high,/turf/open/floor/f13/wood,/area/f13/village)
 "cm" = (/obj/machinery/light/small{dir = 1},/turf/open/floor/f13/wood,/area/f13/village)
 "cn" = (/obj/structure/bed,/obj/item/bedsheet{icon_state = "sheetbrown"; tag = "icon-sheetbrown"},/turf/open/floor/f13/wood,/area/f13/village)
@@ -138,7 +137,7 @@ aaaaaCaDaEabababaFaGaHaIaJaKaraLaMaraNaLaLacaOaPaQaRacaSacaB
 aaaaaCaTaDabaUaVaWaIaIaIaXaYaraZaLararbaaracbbaPaQaRacaLacaB
 aaaaaCaDaDbcaLbdarbebfbgaIaIaraLaLbhbiaLaLacbbbjaQaRbkbkbkaB
 aaaaaCaDaDbcblbmbnboboboaLaLaraLbpaLaLaLbqbrbbbsbtbuayaybvbw
-aaaaaCaDaDbcaLbxaLbqbyaLbzbAaraLaLaLaLbBbCacbbbDbEbDaPaPaQbw
+aaaaaCaDaDbcaLbxaLbqbyaLbzbAaraLaLaLaLbBckacbbbDbEbDaPaPaQbw
 aaaaaCaDbFabaLaLbGbHbIbHbJaLararararaMararacbbbKbKbKaPbLaQbw
 aiaibMaDaDabbNaMbHbHbHbHaLaLaMaLbOaLaLaLaLbrbPaPaPaPaPaPbQbw
 aDaDaDaDaDbRaLbSbBaLaNaLaMaLaraLaLaLbTbUaLbVbbbWaPaPaPbXaQbw
