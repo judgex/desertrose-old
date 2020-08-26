@@ -6,7 +6,7 @@
 	var/message_mode = get_message_mode(message)
 	if(client && (message_mode == "admin" || message_mode == "deadmin"))
 		message = copytext(message, 3)
-		if(findtext(message, " ", 1, 2))
+		if(findtext_char(message, " ", 1, 2))
 			message = copytext(message, 2)
 
 		if(message_mode == "admin")

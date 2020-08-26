@@ -393,7 +393,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 				return	//all done. The ghost is auto-deleted
 
 		//check if they were a monkey
-		else if(findtext(G_found.real_name,"monkey"))
+		else if(findtext_char(G_found.real_name,"monkey"))
 			if(alert("This character appears to have been a monkey. Would you like to respawn them as such?",,"Yes","No")=="Yes")
 				var/mob/living/carbon/monkey/new_monkey = new
 				SSjob.SendToLateJoin(new_monkey)
@@ -1290,12 +1290,12 @@ GLOBAL_LIST_EMPTY(custom_outfits) //Admin created outfits
 	if(!check_rights(R_FUN))
 		return
 
-	var/list/punishment_list = list(ADMIN_PUNISHMENT_LIGHTNING, 
-									ADMIN_PUNISHMENT_BRAINDAMAGE, 
-									ADMIN_PUNISHMENT_GIB, 
-									ADMIN_PUNISHMENT_BSA, 
-									ADMIN_PUNISHMENT_FIREBALL, 
-									ADMIN_PUNISHMENT_ROD, 
+	var/list/punishment_list = list(ADMIN_PUNISHMENT_LIGHTNING,
+									ADMIN_PUNISHMENT_BRAINDAMAGE,
+									ADMIN_PUNISHMENT_GIB,
+									ADMIN_PUNISHMENT_BSA,
+									ADMIN_PUNISHMENT_FIREBALL,
+									ADMIN_PUNISHMENT_ROD,
 									ADMIN_PUNISHMENT_SUPPLYPOD,
 									ADMIN_PUNISHMENT_PIE,
 									ADMIN_PUNISHMENT_CUSTOM_PIE)

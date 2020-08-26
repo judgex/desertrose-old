@@ -64,11 +64,11 @@
 	log_talk(user,"[key_name(user)] : [msg]",LOGEMOTE)
 
 /datum/emote/proc/replace_pronoun(mob/user, message)
-	if(findtext(message, "their"))
+	if(findtext_char(message, "their"))
 		message = replacetext(message, "their", user.p_their())
-	if(findtext(message, "them"))
+	if(findtext_char(message, "them"))
 		message = replacetext(message, "them", user.p_them())
-	if(findtext(message, "%s"))
+	if(findtext_char(message, "%s"))
 		message = replacetext(message, "%s", user.p_s())
 	return message
 

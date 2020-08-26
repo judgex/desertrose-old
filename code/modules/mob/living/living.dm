@@ -353,29 +353,38 @@
 // MOB PROCS //END
 
 /mob/living/proc/mob_sleep()
-	set name = "Sleep"
+	set name = "Спать"
 	set category = "IC"
 
 	if(IsSleeping())
-		to_chat(src, "<span class='notice'>You are already sleeping.</span>")
+		to_chat(src, "<span class='notice'>Вы уже спите.</span>")
 		return
 	else
-		if(alert(src, "You sure you want to sleep for a while?", "Sleep", "Yes", "No") == "Yes")
+		if(alert(src, "Вы уверены что хотите поспать?", "Сон", "Да", "Нет") == "Да")
 			SetSleeping(400) //Short nap
 	update_canmove()
 
 /mob/proc/get_contents()
 
 /mob/living/proc/lay_down()
-	set name = "Rest"
+	set name = "Ползти"
 	set category = "IC"
 
-	resting = !resting
-	to_chat(src, "<span class='notice'>You are now [resting ? "resting" : "getting up"].</span>")
-	update_canmove()
+	if(stat)
+		return
+
+	if(!under_object)
+		resting = !resting
+		to_chat(src, "<span class='notice'>Теперь вы [resting ? "лежите" : "встаете"].</span>")
+		update_canmove()
+	else
+		playsound(loc, pick('sound/f13weapons/pan.ogg', 'sound/items/trayhit2.ogg', 'sound/items/trayhit1.ogg'), 50, 1)
+		Stun(1)
+		apply_damage(5, BRUTE, get_bodypart("head"))
+		to_chat(src, "<span class='danger'>Когда вы попытались встать, вы ударились о [under_object] своей головой!<br>Ай!</span>")
 
 /mob/living/proc/surrender()
-	set name = "Surrender"
+	set name = "Сдаться"
 	set category = "IC"
 
 	if(canmove)
@@ -383,7 +392,7 @@
 			lay_down()
 
 		Knockdown(200)
-		visible_message("<span class='big bold'>[src] surrenders!</span>")
+		visible_message("<span class='big bold'>[src] сдаётся!</span>")
 		playsound(loc, 'sound/f13effects/surrender.ogg', 50, 1)
 
 //Recursive function to find everything a mob is holding. Really shitty proc tbh.

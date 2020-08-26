@@ -134,7 +134,7 @@
 	. = ..()
 	if(.)
 		var/mob/living/carbon/human/H = user
-		if(findtext(select_message_type(user), "open"))
+		if(findtext_char(select_message_type(user), "open"))
 			H.OpenWings()
 		else
 			H.CloseWings()

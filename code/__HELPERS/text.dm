@@ -30,19 +30,19 @@
 	var/list/strip_chars = list("<",">")
 	t = copytext_char(t,1,limit)
 	for(var/char in strip_chars)
-		var/index = findtext(t, char)
+		var/index = findtext_char(t, char)
 		while(index)
 			t = copytext_char(t, 1, index) + copytext_char(t, index+1)
-			index = findtext(t, char)
+			index = findtext_char(t, char)
 	return t
 
 //Removes a few problematic characters
 /proc/sanitize_simple(t,list/repl_chars = list("\n"="#","\t"="#"))
 	for(var/char in repl_chars)
-		var/index = findtext(t, char)
+		var/index = findtext_char(t, char)
 		while(index)
 			t = copytext_char(t, 1, index) + repl_chars[char] + copytext_char(t, index+1)
-			index = findtext(t, char, index+1)
+			index = findtext_char(t, char, index+1)
 	return t
 
 /proc/sanitize_filename(t)
@@ -175,7 +175,7 @@
 	return t_out
 
 //html_encode helper proc that returns the smallest non null of two numbers
-//or 0 if they're both null (needed because of findtext returning 0 when a value is not present)
+//or 0 if they're both null (needed because of findtext_char returning 0 when a value is not present)
 /proc/non_zero_min(a, b)
 	if(!a)
 		return b
@@ -192,7 +192,7 @@
 /proc/dd_hasprefix(text, prefix)
 	var/start = 1
 	var/end = length(prefix) + 1
-	return findtext(text, prefix, start, end)
+	return findtext_char(text, prefix, start, end)
 
 //Checks the beginning of a string for a specified sub-string. This proc is case sensitive
 //Returns the position of the substring or 0 if it was not found
@@ -206,7 +206,7 @@
 /proc/dd_hassuffix(text, suffix)
 	var/start = length(text) - length(suffix)
 	if(start)
-		return findtext(text, suffix, start, null)
+		return findtext_char(text, suffix, start, null)
 	return
 
 //Checks the end of a string for a specified substring. This proc is case sensitive
@@ -219,7 +219,7 @@
 //Checks if any of a given list of needles is in the haystack
 /proc/text_in_list(haystack, list/needle_list, start=1, end=0)
 	for(var/needle in needle_list)
-		if(findtext(haystack, needle, start, end))
+		if(findtext_char(haystack, needle, start, end))
 			return 1
 	return 0
 
@@ -272,7 +272,7 @@
 //Returns a string with the first element of the string capitalized.
 /proc/capitalize(t as text)
 	var/first = ascii2text(text2ascii(t))
-	return uppertext(first) + copytext_char(t, length(first) + 1)
+	return upperrustext(first) + copytext(t, length(first) + 1)
 
 //Centers text by adding spaces to either side of the string.
 /proc/dd_centertext(message, length)
@@ -404,13 +404,13 @@ GLOBAL_LIST_INIT(binary, list("0","1"))
 		. += copytext_char(into, start, end)
 
 //finds the first occurrence of one of the characters from needles argument inside haystack
-//it may appear this can be optimised, but it really can't. findtext() is so much faster than anything you can do in byondcode.
+//it may appear this can be optimised, but it really can't. findtext_char() is so much faster than anything you can do in byondcode.
 //stupid byond :(
 /proc/findchar(haystack, needles, start=1, end=0)
 	var/temp
 	var/len = length(needles)
 	for(var/i=1, i<=len, i++)
-		temp = findtextEx(haystack, ascii2text(text2ascii(needles,i)), start, end)	//Note: ascii2text(text2ascii) is faster than copytext()
+		temp = findtextEx(haystack, ascii2text(text2ascii(needles,i)), start, end)	//Note: ascii2text(text2ascii) is faster than copytext_char()
 		if(temp)
 			end = temp
 	return end
@@ -456,7 +456,7 @@ GLOBAL_LIST_INIT(binary, list("0","1"))
 		for(var/i = 1, i <= tlistlen, i++)
 			var/line = tlist[i]
 			var/count_asterisk = length(replacetext(line, regex("\[^\\*\]+", "g"), ""))
-			if(count_asterisk % 2 == 1 && findtext(line, regex("^\\s*\\*", "g"))) // there is an extra asterisk in the beggining
+			if(count_asterisk % 2 == 1 && findtext_char(line, regex("^\\s*\\*", "g"))) // there is an extra asterisk in the beggining
 
 				var/count_w = length(replacetext(line, regex("^( *)\\*.*$", "g"), "$1")) // whitespace before asterisk
 				line = replacetext(line, regex("^ *(\\*.*)$", "g"), "$1")
@@ -603,25 +603,25 @@ GLOBAL_LIST_INIT(binary, list("0","1"))
 
 	var/list/accepted = list()
 	for(var/string in proposed)
-		if(findtext(string,GLOB.is_website) || findtext(string,GLOB.is_email) || findtext(string,all_invalid_symbols) || !findtext(string,GLOB.is_alphanumeric))
+		if(findtext_char(string,GLOB.is_website) || findtext_char(string,GLOB.is_email) || findtext_char(string,all_invalid_symbols) || !findtext_char(string,GLOB.is_alphanumeric))
 			continue
 		var/buffer = ""
 		var/early_culling = TRUE
 		for(var/pos = 1, pos <= length(string), pos++)
 			var/let = copytext_char(string, pos, (pos + 1) % length(string))
-			if(early_culling && !findtext(let,GLOB.is_alphanumeric))
+			if(early_culling && !findtext_char(let,GLOB.is_alphanumeric))
 				continue
 			early_culling = FALSE
 			buffer += let
-		if(!findtext(buffer,GLOB.is_alphanumeric))
+		if(!findtext_char(buffer,GLOB.is_alphanumeric))
 			continue
 		var/punctbuffer = ""
 		var/cutoff = length(buffer)
 		for(var/pos = length(buffer), pos >= 0, pos--)
 			var/let = copytext_char(buffer, pos, (pos + 1) % length(buffer))
-			if(findtext(let,GLOB.is_alphanumeric))
+			if(findtext_char(let,GLOB.is_alphanumeric))
 				break
-			if(findtext(let,GLOB.is_punctuation))
+			if(findtext_char(let,GLOB.is_punctuation))
 				punctbuffer = let + punctbuffer //Note this isn't the same thing as using +=
 				cutoff = pos
 		if(punctbuffer) //We clip down excessive punctuation to get the letter count lower and reduce repeats. It's not perfect but it helps.
@@ -630,11 +630,11 @@ GLOBAL_LIST_INIT(binary, list("0","1"))
 			var/periods = 0
 			for(var/pos = length(punctbuffer), pos >= 0, pos--)
 				var/punct = copytext_char(punctbuffer, pos, (pos + 1) % length(punctbuffer))
-				if(!exclaim && findtext(punct,"!"))
+				if(!exclaim && findtext_char(punct,"!"))
 					exclaim = TRUE
-				if(!question && findtext(punct,"?"))
+				if(!question && findtext_char(punct,"?"))
 					question = TRUE
-				if(!exclaim && !question && findtext(punct,"."))
+				if(!exclaim && !question && findtext_char(punct,"."))
 					periods += 1
 			if(exclaim)
 				if(question)
@@ -649,7 +649,7 @@ GLOBAL_LIST_INIT(binary, list("0","1"))
 				else
 					punctbuffer = "" //Grammer nazis be damned
 			buffer = copytext_char(buffer, 1, cutoff) + punctbuffer
-		if(!findtext(buffer,GLOB.is_alphanumeric))
+		if(!findtext_char(buffer,GLOB.is_alphanumeric))
 			continue
 		if(!buffer || length(buffer) > 280 || length(buffer) <= cullshort || buffer in accepted)
 			continue
@@ -682,13 +682,13 @@ GLOBAL_LIST_INIT(binary, list("0","1"))
 
 //Used for applying byonds text macros to strings that are loaded at runtime
 /proc/apply_text_macros(string)
-	var/next_backslash = findtext(string, "\\")
+	var/next_backslash = findtext_char(string, "\\")
 	if(!next_backslash)
 		return string
 
 	var/leng = length(string)
 
-	var/next_space = findtext(string, " ", next_backslash + 1)
+	var/next_space = findtext_char(string, " ", next_backslash + 1)
 	if(!next_space)
 		next_space = leng - next_backslash
 
@@ -779,3 +779,71 @@ proc/TextPreview(var/string,var/len=40)
 			return string
 	else
 		return "[copytext_char(string, 1, 37)]..."
+
+
+//russian//
+/proc/upperrustext(text as text)
+	var/t = ""
+	for(var/i = 1, i <= length(text), i++)
+		var/a = text2ascii(text, i)
+		if (a == 1105 || a == 1025)
+			t += ascii2text(1025)
+			continue
+		if (a < 1072 || a > 1105)
+			t += ascii2text(a)
+			continue
+		t += ascii2text(a - 32)
+	return t
+
+/proc/lowerrustext(text as text)
+	var/t = ""
+	for(var/i = 1, i <= length(text), i++)
+		var/a = text2ascii(text, i)
+		if (a > 191 && a < 224)
+			t += ascii2text(a + 32)
+		else if (a == 168)
+			t += ascii2text(184)
+		else t += ascii2text(a)
+	return t
+
+/proc/rhtml_encode(var/msg, var/html = 0)
+	var/rep
+	if(html)
+		rep = "&#x44F;"
+	else
+		rep = "&#255;"
+	var/list/c = text2list(msg, "&#255;")
+	if(c.len == 1)
+		c = text2list(msg, rep)
+		if(c.len == 1)
+			return html_encode(msg)
+	var/out = ""
+	var/first = 1
+	for(var/text in c)
+		if(!first)
+			out += rep
+		first = 0
+		out += html_encode(text)
+	return out
+
+/proc/rhtml_decode(var/msg, var/html = 0)
+	var/rep
+	if(html)
+		rep = "&#x44F;"
+	else
+		rep = "&#255;"
+	var/list/c = text2list(msg, "&#255;")
+	if(c.len == 1)
+		c = text2list(msg, "&#255;")
+		if(c.len == 1)
+			c = text2list(msg, "&#x4FF")
+			if(c.len == 1)
+				return html_decode(msg)
+	var/out = ""
+	var/first = 1
+	for(var/text in c)
+		if(!first)
+			out += rep
+		first = 0
+		out += html_decode(text)
+	return out

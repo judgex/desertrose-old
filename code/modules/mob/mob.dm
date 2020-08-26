@@ -73,7 +73,7 @@
 	if(!client)
 		return
 
-	msg = copytext(msg, 1, MAX_MESSAGE_LEN)
+	msg = copytext_char(msg, 1, MAX_MESSAGE_LEN)
 
 	if(type)
 		if(type & 1 && eye_blind )//Vision related
@@ -94,7 +94,7 @@
 	// voice muffling
 	if(stat == UNCONSCIOUS)
 		if(type & 2) //audio
-			to_chat(src, "<I>... You can almost hear something ...</I>")
+			to_chat(src, "<I>... Вы что-то слышите ...</I>")
 	else
 		to_chat(src, msg)
 

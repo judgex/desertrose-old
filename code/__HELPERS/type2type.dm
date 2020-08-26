@@ -508,7 +508,7 @@
 
 	. = list()
 
-	var/var_found = findtext(t_string,"\[") //Not the actual variables, just a generic "should we even bother" check
+	var/var_found = findtext_char(t_string,"\[") //Not the actual variables, just a generic "should we even bother" check
 	if(var_found)
 		//Find var names
 
@@ -523,7 +523,7 @@
 
 		list_value = splittext(intermediate_stage," ")
 		for(var/value in list_value)
-			if(findtext(value,"]"))
+			if(findtext_char(value,"]"))
 				value = splittext(value,"]") //"name]!" --> list("name","!")
 				for(var/A in value)
 					if(var_source.vars.Find(A))
@@ -533,9 +533,9 @@
 /proc/color_hex2num(A)
 	if(!A)
 		return 0
-	var/R = hex2num(copytext(A,2,4))
-	var/G = hex2num(copytext(A,4,6))
-	var/B = hex2num(copytext(A,6,0))
+	var/R = hex2num(copytext_char(A,2,4))
+	var/G = hex2num(copytext_char(A,4,6))
+	var/B = hex2num(copytext_char(A,6,0))
 	return R+G+B
 
 //word of warning: using a matrix like this as a color value will simplify it back to a string after being set
@@ -543,12 +543,12 @@
 	var/length = length(string)
 	if(length != 7 && length != 9)
 		return color_matrix_identity()
-	var/r = hex2num(copytext(string, 2, 4))/255
-	var/g = hex2num(copytext(string, 4, 6))/255
-	var/b = hex2num(copytext(string, 6, 8))/255
+	var/r = hex2num(copytext_char(string, 2, 4))/255
+	var/g = hex2num(copytext_char(string, 4, 6))/255
+	var/b = hex2num(copytext_char(string, 6, 8))/255
 	var/a = 1
 	if(length == 9)
-		a = hex2num(copytext(string, 8, 10))/255
+		a = hex2num(copytext_char(string, 8, 10))/255
 	if(!isnum(r) || !isnum(g) || !isnum(b) || !isnum(a))
 		return color_matrix_identity()
 	return list(r,0,0,0, 0,g,0,0, 0,0,b,0, 0,0,0,a, 0,0,0,0)
@@ -572,7 +572,7 @@
 				return /atom
 			else
 				return /datum
-	return text2path(copytext(string_type, 1, last_slash))
+	return text2path(copytext_char(string_type, 1, last_slash))
 
 //returns a string the last bit of a type, without the preceeding '/'
 /proc/type2top(the_type)
@@ -613,8 +613,39 @@
 	var/r
 	var/c
 	for(var/i = 1 to length(str)/2)
-		c = hex2num(copytext(str,i*2-1,i*2+1), safe)
+		c = hex2num(copytext_char(str,i*2-1,i*2+1), safe)
 		if(isnull(c))
 			return null
 		r += ascii2text(c)
 	return r
+
+
+//Converts a string into a list by splitting the string at each delimiter found. (discarding the seperator)
+/proc/text2list(text, delimiter="\n")
+	var/delim_len = length(delimiter)
+	. = list()
+	var/last_found = 1
+	var/found = 1
+	if(delim_len < 1)
+		var/text_len = length(text)
+		while(found++ <= text_len)
+			. += copytext(text,found-1, found)
+	else
+		do
+			found = findtext(text, delimiter, last_found, 0)
+			. += copytext(text, last_found, found)
+			last_found = found + delim_len
+		while(found)
+
+//Case Sensitive!
+/proc/text2listEx(text, delimiter="\n")
+	var/delim_len = length(delimiter)
+	if(delim_len < 1) return list(text)
+	. = list()
+	var/last_found = 1
+	var/found
+	do
+		found = findtextEx(text, delimiter, last_found, 0)
+		. += copytext(text, last_found, found)
+		last_found = found + delim_len
+	while(found)

@@ -97,21 +97,21 @@
 	while(counter>=1)
 		newletter=copytext(phrase,(leng-counter)+1,(leng-counter)+2)
 		if(rand(1,3)==3)
-			if(lowertext(newletter)=="o")
-				newletter="u"
-			if(lowertext(newletter)=="s")
-				newletter="ch"
-			if(lowertext(newletter)=="a")
-				newletter="ah"
-			if(lowertext(newletter)=="u")
-				newletter="oo"
-			if(lowertext(newletter)=="c")
-				newletter="k"
+			if(lowertext(newletter)=="а")
+				newletter="о"
+			if(lowertext(newletter)=="я")
+				newletter="мя"
+			if(lowertext(newletter)=="ч")
+				newletter="хв"
+			if(lowertext(newletter)=="м")
+				newletter="ри"
+			if(lowertext(newletter)=="с")
+				newletter="ху"
 		if(rand(1,20)==20)
 			if(newletter==" ")
-				newletter="...huuuhhh..."
+				newletter="...уххх..."
 			if(newletter==".")
-				newletter=" *BURP*."
+				newletter=" *РЫГАЕТ*."
 		switch(rand(1,20))
 			if(1)
 				newletter+="'"
