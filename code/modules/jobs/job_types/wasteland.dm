@@ -230,8 +230,8 @@ Raider
 	suit = /obj/item/clothing/suit/armor/f13/raider/supafly
 	head = /obj/item/clothing/head/helmet/f13/raider
 	backpack_contents = list(
-		/obj/item/gun/ballistic/automatic/mini_uzi=1,
-		/obj/item/ammo_box/magazine/uzim9mm =1,
+		/obj/item/gun/ballistic/automatic/autopipe=1,
+		/obj/item/ammo_box/magazine/autopipe=2,
 		/obj/item/kitchen/knife/combat=1,
 		/obj/item/storage/pill_bottle/dice=1,
 		/obj/item/storage/fancy/cigarettes/cigpack_cannabis=1)

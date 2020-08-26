@@ -39,9 +39,9 @@
 	dat += "<br>"
 	dat +="<div class='statusDisplay'>"
 	dat += "<b>Accepted goods and prices:</b><br>"
-	dat += "Iron ore : 0.7 caps<br>"
-	dat += "Silver : 3 caps<br>"
-	dat += "Gold : 10 caps<br>"
+	dat += "Iron ore : 1.5 caps<br>"
+	dat += "Silver : 5 caps<br>"
+	dat += "Gold : 15 caps<br>"
 	dat += "Leather : 5 caps<br>"
 	dat += "Jet/Psycho/Turbo : 15 caps<br>"
 	dat += ""
@@ -81,7 +81,7 @@
 /obj/machinery/mineral/wasteland_trader/proc/add_caps(obj/item/I)
 	if(istype(I, /obj/item/stack/ore/iron))
 		var/obj/item/stack/ore/iron/sellable = I
-		var/price = 0.7
+		var/price = 1.5
 		var/inserted_value = FLOOR(sellable.amount * price, 1)
 		stored_caps += inserted_value
 		I.Destroy()
@@ -90,7 +90,7 @@
 		src.ui_interact(usr)
 	else if(istype(I, /obj/item/stack/ore/gold))
 		var/obj/item/stack/ore/gold/sellable = I
-		var/price = 10
+		var/price = 15
 		var/inserted_value = FLOOR(sellable.amount * price, 1)
 		stored_caps += inserted_value
 		I.Destroy()
@@ -99,7 +99,7 @@
 		src.ui_interact(usr)
 	else if(istype(I, /obj/item/stack/ore/silver))
 		var/obj/item/stack/ore/silver/sellable = I
-		var/price = 3
+		var/price = 5
 		var/inserted_value = FLOOR(sellable.amount * price, 1)
 		stored_caps += inserted_value
 		I.Destroy()

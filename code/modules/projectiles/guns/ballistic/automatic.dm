@@ -535,6 +535,40 @@
 	automatic = 1
 	can_attachments = TRUE
 
+/obj/item/gun/ballistic/automatic/autopipe
+	name = "\improper auto pipe rifle"
+	desc = "An improvised rifle improved with automatic capability, highly innacurate and slow to fire"
+	icon_state = "auto_pipe_rifle"
+	item_state = "improvshotgun"
+	w_class = WEIGHT_CLASS_BULKY
+	weapon_weight = WEAPON_HEAVY
+	slot_flags = 0
+	mag_type = /obj/item/ammo_box/magazine/autopipe
+	fire_sound = 'sound/weapons/Gunshot.ogg'
+	can_suppress = FALSE
+	burst_size = 4
+	fire_delay = 30
+	burst_delay = 3
+	automatic = 1
+	spread = 45
+
+/obj/item/gun/ballistic/automatic/autopipe/burst_select()
+	var/mob/living/carbon/human/user = usr
+	switch(select)
+		if(0)
+			select += 1
+			burst_size = 4
+			spread = 45
+			to_chat(user, "<span class='notice'>You switch to [burst_size]-rnd burst.</span>")
+		if(1)
+			select = 0
+			burst_size = 1
+			spread = 15
+			to_chat(user, "<span class='notice'>You switch to semi-automatic.</span>")
+	playsound(user, 'sound/weapons/empty.ogg', 100, 1)
+	update_icon()
+	return
+
 /obj/item/gun/ballistic/automatic/smg10mm
 	name = "10mm submachine gun"
 	desc = "A select fire open bolt 10mm submachine gun. The serial number and manufactuer markings have been scratched off."
