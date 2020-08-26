@@ -78,7 +78,7 @@
 #define ACCESS_CENT_CAPTAIN 109//Captain's office/ID comp/AI.
 #define ACCESS_CENT_BAR 110 // The non-existent CentCom Bar
 
-	//Desert Rose 2 Custom access
+	//Fallout 13 Custom access
 
 #define ACCESS_BOS			120 //general BOS access
 #define ACCESS_NCR			121 //general NCR access

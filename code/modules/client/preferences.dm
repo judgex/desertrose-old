@@ -179,6 +179,8 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 	var/action_buttons_screen_locs = list()
 
+	var/music_volume = 1
+
 	//backgrounds
 	var/mutable_appearance/character_background
 	var/icon/bgstate = "000"

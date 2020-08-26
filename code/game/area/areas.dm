@@ -409,7 +409,6 @@ GLOBAL_LIST_EMPTY(teleportlocs)
 		if(ENVIRON)
 			used_environ += amount
 
-
 /area/Entered(atom/movable/M)
 	set waitfor = FALSE
 	SEND_SIGNAL(src, COMSIG_AREA_ENTERED, M)
@@ -431,17 +430,16 @@ GLOBAL_LIST_EMPTY(teleportlocs)
 
 	if(prob(35))
 		var/sound = pick(ambientsounds)
-
 		if(!L.client.played)
 			SEND_SOUND(L, sound(sound, repeat = 0, wait = 0, volume = 25, channel = CHANNEL_AMBIENCE))
 			L.client.played = TRUE
 			addtimer(CALLBACK(L.client, /client/proc/ResetAmbiencePlayed), 600)
-
-	var/ambient_s = pick(ambientmusic)
-	if(!L.client.played)
-		SEND_SOUND(L, sound(ambient_s, repeat = 0, wait = 0, volume = 25, channel = CHANNEL_AMBIENCE))
-		L.client.played = TRUE
-		addtimer(CALLBACK(L.client, /client/proc/ResetAmbiencePlayed), 600)
+	if(prob(40))
+		var/music = pick(ambientmusic)
+		if(!L.client.played)
+			SEND_SOUND(L, sound(music, repeat = 0, wait = 0, volume = 25, channel = CHANNEL_AMBIENCE))
+			L.client.played = TRUE
+			addtimer(CALLBACK(L.client, /client/proc/ResetAmbiencePlayed), 600)
 
 /area/Exited(atom/movable/M)
 	SEND_SIGNAL(src, COMSIG_AREA_EXITED, M)
