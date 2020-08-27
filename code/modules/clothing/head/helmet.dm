@@ -532,6 +532,19 @@
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 
+//Strange Combat Helm
+
+/obj/item/clothing/head/helmet/f13/rangerbroken
+	name = "broken riot helmet"
+	icon_state = "ranger_broken"
+	desc = "An old riot police helmet, out of use around the time of the war."
+	armor = list("melee" = 50, "bullet" = 50, "laser" = 40, "energy" = 50, "bomb" = 39, "bio" = 20, "rad" = 20, "fire" = 30, "acid" = 0)
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR|HIDEFACE
+	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
+	resistance_flags = LAVA_PROOF | FIRE_PROOF
+	dynamic_hair_suffix = ""
+	dynamic_fhair_suffix = ""
+	flash_protect = 1
 
 //Legion
 /obj/item/clothing/head/helmet/f13/legion
@@ -688,11 +701,6 @@
 	lighting_alpha = LIGHTING_PLANE_ALPHA_LOWLIGHT_VISION
 	darkness_view = 128
 
-/obj/item/clothing/head/helmet/f13/ncr/rangercombat/riotpolice
-	name = "strange combat helmet"
-	desc = "An old riot police helmet, out of use around the time of the war."
-	armor = list("melee" = 50, "bullet" = 50, "laser" = 40, "energy" = 50, "bomb" = 39, "bio" = 20, "rad" = 20, "fire" = 30, "acid" = 0)
-
 /obj/item/clothing/head/helmet/f13/ncr/rangercombat/desert
 	name = "desert ranger combat helmet"
 	desc = "An U.S Marine Corps helmet, used by the legendary Desert Rangers."
@@ -795,9 +803,9 @@
 	flash_protect = 2
 	dynamic_hair_suffix = ""
 	dynamic_fhair_suffix = ""
+	speechspan = SPAN_ROBOT //makes you sound like a robot
 	darkness_view = 128
 	lighting_alpha = LIGHTING_PLANE_ALPHA_LOWLIGHT_VISION
-	speechspan = SPAN_ROBOT //makes you sound like a robot
 	var/emped = 0
 	var/requires_training = TRUE
 
