@@ -25,6 +25,7 @@ SUBSYSTEM_DEF(persistence)
 	if(CONFIG_GET(flag/use_antag_rep))
 		LoadAntagReputation()
 	SSmapping.load_marks() //Why is this here? because there's no misc late init subsystem in tg. sigh
+	SSjob.AddMapJobs() //shut up
 	..()
 
 /datum/controller/subsystem/persistence/proc/LoadSatchels()
