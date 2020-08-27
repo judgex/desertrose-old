@@ -59,6 +59,7 @@
 	desc = "Пустоши зовут..."
 	//icon = 'icons/blank_title.png'
 	layer = FLY_LAYER
+	plane = 2
 
 /turf/closed/indestructible/splashscreen/New()
 	icon = 'icons/misc/lobby.dmi'
@@ -68,6 +69,7 @@
 		icon = 'icons/misc/lobby.dmi' //Replace with actual icon
 		icon_state = "transition" //Replace with actual state
 		layer = 61;
+		plane = 2;
 		alpha = 0;
 		}(src)
 
