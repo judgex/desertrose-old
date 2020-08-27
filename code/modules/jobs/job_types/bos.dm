@@ -64,6 +64,7 @@ Elder
 	jobtype = /datum/job/bos/f13elder
 	pa_wear = TRUE
 	suit = 			/obj/item/clothing/suit/f13/elder
+	glasses =       /obj/item/clothing/glasses/night
 	accessory = 	/obj/item/clothing/accessory/bos/elder
 	suit_store =	/obj/item/gun/energy/laser/laer
 	backpack_contents = list(
@@ -111,6 +112,7 @@ Sentinel
 	pa_wear = TRUE
 	uniform = 		/obj/item/clothing/under/f13/recon
 	accessory = 	/obj/item/clothing/accessory/bos/sentinel
+	glasses =       /obj/item/clothing/glasses/night
 	suit = 			/obj/item/clothing/suit/armor/f13/power_armor/t60
 	belt =			/obj/item/storage/belt/military/assault
 	head = 			/obj/item/clothing/head/helmet/f13/power_armor/t60
@@ -187,6 +189,7 @@ Head Scribe
 	chemwhiz = TRUE
 	uniform = 		/obj/item/clothing/under/syndicate/brotherhood
 	accessory = 	/obj/item/clothing/accessory/bos/headscribe
+	glasses =       /obj/item/clothing/glasses/night
 	suit = 			/obj/item/clothing/suit/armor/f13/headscribe
 	belt = 			/obj/item/storage/belt/utility/full/engi
 	id = 			/obj/item/card/id/dogtag
@@ -256,6 +259,7 @@ Knight-Captain
 	gunsmith_four = TRUE
 	pa_wear = TRUE
 	suit = 			/obj/item/clothing/suit/armor/f13/combat/knightcap
+	glasses =       /obj/item/clothing/glasses/night
 	uniform =		/obj/item/clothing/under/syndicate/brotherhood
 	accessory = 	/obj/item/clothing/accessory/bos/knightcaptain
 	belt = 			/obj/item/storage/belt/security/full
@@ -578,6 +582,7 @@ datum/job/bos/f13seniorknight
 	suit = 			/obj/item/clothing/suit/armor/f13/combat/brotherhood
 	accessory = 	/obj/item/clothing/accessory/bos/seniorknight
 	uniform =		/obj/item/clothing/under/syndicate/brotherhood
+	glasses =       /obj/item/clothing/glasses/night
 	mask =			/obj/item/clothing/mask/gas/sechailer/swat
 	belt = 			/obj/item/storage/belt/military
 	head = 			/obj/item/clothing/head/helmet/f13/combat/brotherhood
