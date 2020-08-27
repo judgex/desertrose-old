@@ -311,6 +311,15 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
 
+/datum/crafting_recipe/autoriflemag
+	name = "empty auto pipe rifle magazine (.38/.357)"
+	result = /obj/item/ammo_box/magazine/autopipe/empty
+	reqs = list(/obj/item/stack/sheet/metal = 2)
+	tools = list(TOOL_WORKBENCH)
+	time = 10
+	category = CAT_WEAPONRY
+	subcategory = CAT_AMMO
+
 /datum/crafting_recipe/m10mm_auto
 	name = "empty 10mm submachine gun magazine (10mm)"
 	result = /obj/item/ammo_box/magazine/m10mm_auto/empty
