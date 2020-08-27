@@ -232,7 +232,7 @@
 /datum/crafting_recipe/ec
 	name = "Small Energy Cell"
 	result = /obj/item/stock_parts/cell/ammo/ec
-	reqs = list(/obj/item/stock_parts/cell=2)
+	reqs = list(/obj/item/stock_parts/capacitor=2)
 	traits = list(TRAIT_GUNSMITH_ONE)
 	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER1)
 	time = 10
@@ -242,9 +242,9 @@
 /datum/crafting_recipe/mfc
 	name = "Microfusion Cell"
 	result = /obj/item/stock_parts/cell/ammo/mfc
-	reqs = list(/obj/item/stack/crafting/goodparts=1, /obj/item/stock_parts/cell/ammo/ec=2)
+	reqs = list(/obj/item/stack/crafting/goodparts=2, /obj/item/stock_parts/capacitor=3)
 	traits = list(TRAIT_GUNSMITH_TWO)
-	tools = list(TOOL_AWORKBENCH, TOOL_GUNTIER2)
+	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER2)
 	time = 20
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
@@ -252,7 +252,7 @@
 /datum/crafting_recipe/ecp
 	name = "Electron Charge Pack"
 	result = /obj/item/stock_parts/cell/ammo/ecp
-	reqs = list(/obj/item/stock_parts/capacitor=1, /obj/item/stock_parts/cell/ammo/mfc=2)
+	reqs = list(/obj/item/stack/crafting/goodparts=3, /obj/item/stock_parts/capacitor=5)
 	traits = list(TRAIT_GUNSMITH_THREE)
 	tools = list(TOOL_AWORKBENCH, TOOL_GUNTIER3)
 	time = 30
@@ -325,6 +325,15 @@
 	reqs = list(/obj/item/stack/sheet/metal = 6)
 	traits = list(TRAIT_GUNSMITH_THREE)
 	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER3)
+	time = 10
+	category = CAT_WEAPONRY
+	subcategory = CAT_AMMO
+
+/datum/crafting_recipe/autoriflemag
+	name = "empty auto pipe rifle magazine (.38/.357)"
+	result = /obj/item/ammo_box/magazine/autopipe/empty
+	reqs = list(/obj/item/stack/sheet/metal = 2)
+	tools = list(TOOL_WORKBENCH)
 	time = 10
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
@@ -1621,6 +1630,18 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
 
+/datum/crafting_recipe/autopiperifle
+	name = "auto pipe rifle"
+	result = /obj/item/gun/ballistic/automatic/autopipe
+	reqs = list(/datum/reagent/blackpowder = 30,
+	/obj/item/stack/sheet/metal = 5,
+	/obj/item/stack/sheet/mineral/wood = 5)
+	tools = list(TOOL_WORKBENCH,TOOL_GUNTIER2)
+	traits = list(TRAIT_GUNSMITH_TWO)
+	time = 120
+	category = CAT_WEAPONRY
+	subcategory = CAT_WEAPON
+
 /datum/crafting_recipe/lasmusket
 	name = "Laser Musket"
 	result = /obj/item/gun/ballistic/shotgun/lasmusket
@@ -2053,6 +2074,16 @@
 	time = 100
 	reqs = list(/obj/item/stack/sheet/mineral/wood = 10,
 				/obj/item/stack/sheet/cloth = 3)
+	tools = list(TOOL_WORKBENCH)
+	category = CAT_PRIMAL
+	subcategory = CAT_TRIBAL
+
+/datum/crafting_recipe/warmace
+	name = "Carve Training Machete"
+	result = /obj/item/claymore/machete/training
+	time = 50
+	reqs = list(/obj/item/stack/sheet/mineral/wood = 5,
+				/obj/item/stack/sheet/cloth = 2)
 	tools = list(TOOL_WORKBENCH)
 	category = CAT_PRIMAL
 	subcategory = CAT_TRIBAL

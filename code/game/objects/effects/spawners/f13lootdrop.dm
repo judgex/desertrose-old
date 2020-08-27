@@ -333,7 +333,7 @@
 				)
 	var/loot2 = list(
 				/obj/item/clothing/suit/armor/f13/leather_jacket/combat/riotpolice,
-				/obj/item/clothing/head/helmet/f13/ncr/rangercombat/riotpolice
+				/obj/item/clothing/head/helmet/f13/rangerbroken
 				)
 	var/loot3 = list(
 				/obj/item/clothing/suit/armor/f13/combat/mk2,
