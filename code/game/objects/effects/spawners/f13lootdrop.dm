@@ -1473,7 +1473,9 @@
 		/obj/item/blueprint/weapon/R91,
 		/obj/item/blueprint/weapon/sniper,
 		/obj/item/blueprint/weapon/breacher,
-		/obj/item/blueprint/weapon/lmg
+		/obj/item/blueprint/weapon/lmg,
+		/obj/item/blueprint/weapon/R82,
+		/obj/item/blueprint/weapon/deagle
 	)
 /obj/effect/spawner/lootdrop/f13/blueprintVHigh
 	name = "blueprint-tier(VHigh) item spawner"
