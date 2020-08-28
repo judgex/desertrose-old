@@ -123,6 +123,8 @@
 #define CAT_BELTS	"Belts"
 #define CAT_BLUEPRINTS	"Blueprints"
 #define CAT_BPWEAPON	"Weapons"
+#define CAT_BPWEAPON_ONEUSE	"Weapons - Damaged"
+#define CAT_BP_COPY	"Copy Blueprints"
 
 #define RCD_FLOORWALL 1
 #define RCD_AIRLOCK 2

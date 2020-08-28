@@ -31,39 +31,90 @@
     desc = "A crafting blueprint for a weapon design."
     icon_state = "blueprint1"
 
-//ballistics
-
-/obj/item/blueprint/weapon/R91
-    name = "R91 assault rifle blueprint"
-
-/obj/item/blueprint/weapon/infiltrator
-    name = "Infiltrator blueprint"
-
-/obj/item/blueprint/weapon/uzi
-    name = "UZI blueprint"
-
-/obj/item/blueprint/weapon/smg10mm
-    name = "10mm SMG blueprint"
-
-/obj/item/blueprint/weapon/marksmanrifle
-    name = "Marksman rifle blueprint"
-
-//energy
+//low tier
 /obj/item/blueprint/weapon/AEP7
-    name = "AEP7 blueprint"
+	name = "AEP7 blueprint"
+/obj/item/blueprint/weapon/trail_carbine
+	name = "Trail Carbine blueprint"
+/obj/item/blueprint/weapon/lever_action
+	name = "Lever Action shotgun blueprint"
 
-/obj/item/blueprint/weapon/AER9
-    name = "AER9 blueprint"
+//mid tier
+/obj/item/blueprint/weapon/marksmanrifle
+	name = "Marksman Rifle blueprint"
+/obj/item/blueprint/weapon/marksmanrifle/limited
+	name = "Damaged Marksman Rifle blueprint "
 
 /obj/item/blueprint/weapon/plasmapistol
-    name = "Plasma pistol blueprint"
+	name = "Plasma Pistol blueprint"
+/obj/item/blueprint/weapon/plasmapistol/limited
+	name = "Damaged Plasma Pistol blueprint"
 
+/obj/item/blueprint/weapon/uzi
+	name = "UZI blueprint"
+/obj/item/blueprint/weapon/uzi/limited
+	name = "Damaged UZI blueprint"
+
+/obj/item/blueprint/weapon/smg10mm
+	name = "10mm SMG blueprint"
+/obj/item/blueprint/weapon/smg10mm/limited
+	name = "Damaged 10mm SMG blueprint"
+
+/obj/item/blueprint/weapon/brush
+	name = "Brush Gun blueprint"
+/obj/item/blueprint/weapon/brush/limited
+	name = "Damaged Brush Gun blueprint"
+
+/obj/item/blueprint/weapon/grease_gun
+ 	name = "Grease Gun blueprint"
+/obj/item/blueprint/weapon/grease_gun/limited
+ 	name = "Damaged Grease Gun blueprint"
+//high tier
+/obj/item/blueprint/weapon/R91
+	name = "R91 Assault rifle blueprint"
+/obj/item/blueprint/weapon/R91/limited
+	name = "Damaged R91 Assault rifle blueprint"
+
+/obj/item/blueprint/weapon/sniper
+	name = "Sniper Rifle blueprint"
+/obj/item/blueprint/weapon/sniper/limited
+	name = "Damaged Sniper Rifle blueprint"
+
+/obj/item/blueprint/weapon/breacher
+	name = "Breacher Shotgun blueprint"
+/obj/item/blueprint/weapon/breacher/limited
+	name = "Damaged Breacher Shotgun blueprint"
+
+/obj/item/blueprint/weapon/lmg
+	name = "LMG blueprint"
+/obj/item/blueprint/weapon/lmg/limited
+	name = "Damaged LMG blueprint"
+
+//very high tier
 /obj/item/blueprint/weapon/plasmarifle
-    name = "Plasma Rifle blueprint"
+	name = "Plasma Rifle blueprint"
+/obj/item/blueprint/weapon/plasmarifle/limited
+	name = "Damaged Plasma Rifle blueprint"
 
-/obj/item/blueprint/weapon/RCW
-    name = "Laser RCW blueprint"
+/obj/item/blueprint/weapon/AER9
+	name = "AER9 blueprint"
+/obj/item/blueprint/weapon/AER9/limited
+	name = "Damaged AER9 blueprint"
 
+/obj/item/blueprint/weapon/AM_rifle
+	name = "AM Rifle blueprint"
+/obj/item/blueprint/weapon/AM_rifle/limited
+	name = "Damaged AM Rifle blueprint"
+
+/obj/item/blueprint/weapon/city_killer
+	name = "City Killer shotgun blueprint"
+/obj/item/blueprint/weapon/city_killer/limited
+	name = "Damaged City Killer shotgun blueprint"
+
+/obj/item/blueprint/weapon/rangemaster
+	name = "Colt Rangemaster blueprint"
+/obj/item/blueprint/weapon/rangemaster/limited
+	name = "Damaged Colt Rangemaster blueprint"
 
 //armor blueprints
 /obj/item/blueprint/armor
