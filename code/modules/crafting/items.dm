@@ -72,13 +72,11 @@
 //high tier
 /obj/item/blueprint/weapon/R82
 	name = "R82 heavy service rifle blueprint"
-
 /obj/item/blueprint/weapon/R82/limited
 	name = "Damaged R82 heavy service rifle blueprint"
 
 /obj/item/blueprint/weapon/deagle
 	name = "Desert Eagle blueprint"
-
 /obj/item/blueprint/weapon/deagle/limited
 	name = "Damaged Desert Eagle blueprint"
 
