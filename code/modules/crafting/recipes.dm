@@ -3521,7 +3521,7 @@
 	name = "R82 heavy service rifle blueprint"
 	tools = list(TOOL_AWORKBENCH, TOOL_GUNTIER3, /obj/item/blueprint/weapon/R82)
 
-/datum/crafting_recipe/bpcopy/lmg
+/datum/crafting_recipe/bpcopy/deagle
 	result = /obj/item/blueprint/weapon/deagle/limited
 	name = "Desert Eagle blueprint"
 	tools = list(TOOL_AWORKBENCH, TOOL_GUNTIER3, /obj/item/blueprint/weapon/deagle)
