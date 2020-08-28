@@ -3460,6 +3460,40 @@
 	time = 120
 	category = CAT_BLUEPRINTS
 	subcategory = CAT_BPWEAPON_ONEUSE
+
+//bozar
+/datum/crafting_recipe/bozar
+	name = "bozar"
+	result = /obj/item/gun/ballistic/automatic/bozar
+	reqs = list(/obj/item/stack/sheet/metal = 10,
+				/obj/item/advanced_crafting_components/assembly = 1,
+				/obj/item/advanced_crafting_components/alloys = 1,
+				/obj/item/advanced_crafting_components/receiver = 1,
+				/datum/reagent/blackpowder = 30,
+				/obj/item/stack/crafting/goodparts = 5, 
+				/obj/item/blueprint/weapon/bozar
+				)
+	tools = list(TOOL_WORKBENCH)
+	time = 120
+	category = CAT_BLUEPRINTS
+	subcategory = CAT_BPWEAPON_ONEUSE
+
+/datum/crafting_recipe/bozar/limited
+	name = "bozar"
+	result = /obj/item/gun/ballistic/automatic/bozar
+	reqs = list(/obj/item/stack/sheet/metal = 10,
+				/obj/item/advanced_crafting_components/assembly = 1,
+				/obj/item/advanced_crafting_components/alloys = 1,
+				/obj/item/advanced_crafting_components/receiver = 1,
+				/datum/reagent/blackpowder = 30,
+				/obj/item/stack/crafting/goodparts = 5, 
+				/obj/item/blueprint/weapon/bozar/limited
+				)
+	tools = list(TOOL_WORKBENCH)
+	time = 120
+	category = CAT_BLUEPRINTS
+	subcategory = CAT_BPWEAPON_ONEUSE
+
 //BP copy
 /datum/crafting_recipe/bpcopy	
 	result = /obj/item/blueprint/weapon/marksmanrifle/limited
@@ -3550,3 +3584,8 @@
 	result = /obj/item/blueprint/weapon/rangemaster/limited
 	name = "Colt Rangemaster blueprint"
 	tools = list(TOOL_AWORKBENCH, TOOL_GUNTIER3, /obj/item/blueprint/weapon/rangemaster)
+
+/datum/crafting_recipe/bpcopy/bozar
+	result = /obj/item/blueprint/weapon/bozar/limited
+	name = "Bozar blueprint"
+	tools = list(TOOL_AWORKBENCH, TOOL_GUNTIER3, /obj/item/blueprint/weapon/bozar)
