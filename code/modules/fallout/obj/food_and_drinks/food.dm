@@ -282,8 +282,8 @@
 
 /obj/item/reagent_containers/food/snacks/f13/caravanlunch
     name = "Caravan Lunch"
-    desc = "A collection of food with the radiation removed. Simple, fast and filling. Often eaten by merchants."
-    icon_state = "lunchbox"
+    desc = "A collection of food conveniently assembled into a lunchbox with the radiation removed. Simple, fast and filling. Often eaten by merchants."
+    icon_state = "caravanlunch"
     bonus_reagents = list("vitamin" = 5)
     list_reagents = list("nutriment" = 50)
     filling_color = "B#22222"
