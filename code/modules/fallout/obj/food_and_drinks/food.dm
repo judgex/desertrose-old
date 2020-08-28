@@ -39,6 +39,18 @@
 	cooked_type = /obj/item/reagent_containers/food/snacks/meat/steak/deathclaw
 	slice_path = null
 
+/obj/item/reagent_containers/food/snacks/meat/slab/mirelurk
+	name = "mirelurk meat"
+	desc = "Meat from a Mirelurk, still inside its shell.  Going to need pliers for this..."
+	icon_state = "Mirelurk_meat"
+	bitesize = 4 //Big animal, small part of it
+	filling_color = "#406618"
+	list_reagents = list("nutriment" = 7, "vitamin" = 3)
+	bonus_reagents = list("nutriment" = 2, "vitamin" = 1)
+	cooked_type = /obj/item/reagent_containers/food/snacks/meat/steak/mirelurk
+	tastes = list("crab" = 1)
+	slice_path = null
+
 /obj/item/reagent_containers/food/snacks/meat/slab/squirrel
     name = "squirrel meat"
     desc = "Squirrel meat, the staple of many wasteland dishes."
@@ -47,6 +59,7 @@
     filling_color = "#FA8072"
     cooked_type = /obj/item/reagent_containers/food/snacks/meat/steak/squirrel
     slice_path = null
+
 
 //WASTELAND STEAKS
 
@@ -73,6 +86,14 @@
     desc = "A steak made from a small slab of squirrel meat. It is, unsurprisingly, small."
     list_reagents = list("nutriment" = 9)
     bonus_reagents = list("vitamin" = 4)
+
+/obj/item/reagent_containers/food/snacks/meat/steak/mirelurk
+	name = "mirelurk roast"
+	desc = "Meat from a Mirelurks shell, cracked open and roasted to perfection."
+	icon_state = "Mirelurl_roast"
+	list_reagents = list("nutriment" = 9)
+	bonus_reagents = list("nutriment" = 3, "vitamin" = 3)
+
 
 //WASTELAND JUNK FOOD
 
@@ -334,6 +355,26 @@
    bonus_reagents = list("vitamin" = 6)
    list_reagents = list("nutriment" = 32)
    filling_color = "B#22222"
+   trash = /obj/item/reagent_containers/glass/bowl
+
+/obj/item/reagent_containers/food/snacks/f13/mirelurkstew
+	name = "Mirelurk Stew"
+	desc = "A hearty stew made from de-shelled Mirelurk meat, onions, butter, and other such delights."
+	icon_state = "Mirelurk_stew"
+	bonus_reagents = list("vitamin" = 6, "tricordrazine" = 5)
+	list_reagents = list("nutriment" = 20)
+	tastes = list("crab" = 5, "onions" = 1)
+	filling_color = "#406618"
+	trash = /obj/item/reagent_containers/glass/bowl
+
+/obj/item/reagent_containers/food/snacks/f13/mirelurkcake
+	name = "Mirelurk Cake"
+	desc = "A savory cake made from the meat of a Mirelurk.  A popular dish from the coastlines."
+	bitesize = 5
+	icon_state = "Mirelurk_cake"
+	list_reagents = list("nutriment" = 20, "vitamin" = 9)
+	tastes = list("cake" = 1, "crab" = 5)
+	filling_color = "#406618"
 
 //Grownable
 /*
