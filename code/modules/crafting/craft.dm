@@ -56,7 +56,9 @@
 							CAT_WASTELAND,
 							CAT_BELTS),
 						list( //bp
-							CAT_BPWEAPON))
+							CAT_BPWEAPON,
+							CAT_BPWEAPON_ONEUSE,
+							CAT_BP_COPY))
 
 	var/datum/action/innate/crafting/button
 	var/display_craftable_only = FALSE

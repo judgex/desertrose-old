@@ -50,7 +50,8 @@
 		/obj/item/reagent_containers/food/drinks/beer = 1,
 		/obj/item/reagent_containers/food/snacks/meat/slab/molerat = 1,
 		/obj/item/reagent_containers/food/snacks/grown/corn = 1,
-		/obj/item/reagent_containers/food/snacks/grown/soybeans = 1
+		/obj/item/reagent_containers/food/snacks/grown/soybeans = 1,
+		/obj/item/reagent_containers/glass/bowl = 1
 	)
 	result = /obj/item/reagent_containers/food/snacks/f13/moleratstew
 	category = CAT_FOOD
@@ -81,12 +82,13 @@
 	reqs = list(
     	/obj/item/reagent_containers/food/snacks/meat/steak/squirrel = 1,
     	/obj/item/reagent_containers/food/snacks/grown/carrot = 1,
-    	/obj/item/reagent_containers/food/snacks/grown/potato = 1
+    	/obj/item/reagent_containers/food/snacks/grown/potato = 1,
+    	/obj/item/reagent_containers/glass/bowl = 1
 	)
 	result = /obj/item/reagent_containers/food/snacks/f13/squirrelstew
 	category = CAT_FOOD
 	subcategory = CAT_WASTEFOOD
-	
+
 /datum/crafting_recipe/food/pemmican
 	name = "pemmican"
 	reqs = list(
@@ -98,14 +100,14 @@
 	category = CAT_FOOD
 	subcategory = CAT_WASTEFOOD
 
-/datum/crafting_recipe/food/crunchymutfruit	
+/datum/crafting_recipe/food/crunchymutfruit
 	name = "crunchy mutfruit"
 	reqs = list(
     	/obj/item/reagent_containers/food/snacks/grown/mutfruit = 1,
     	/obj/item/reagent_containers/food/snacks/butter = 1,
     	/datum/reagent/consumable/sugar = 5
 	)
-	result = /obj/item/reagent_containers/food/snacks/crunchymutfruit	
+	result = /obj/item/reagent_containers/food/snacks/crunchymutfruit
 	category = CAT_FOOD
 	subcategory = CAT_WASTEFOOD
 
@@ -115,6 +117,31 @@
     	/obj/item/reagent_containers/food/snacks/grown/tato = 2,
     	/obj/item/reagent_containers/food/snacks/butter = 1
 	)
-	result = /obj/item/reagent_containers/food/snacks/tatofries	
+	result = /obj/item/reagent_containers/food/snacks/tatofries
+	category = CAT_FOOD
+	subcategory = CAT_WASTEFOOD
+
+/datum/crafting_recipe/food/mirelurkstew
+	name = "Mirelurk Stew"
+	reqs = list(
+		/obj/item/reagent_containers/food/snacks/meat/slab/mirelurk = 2,
+		/obj/item/reagent_containers/food/snacks/butter = 1,
+		/obj/item/reagent_containers/food/snacks/grown/onion = 1,
+		/datum/reagent/consumable/milk = 5,
+		/obj/item/reagent_containers/glass/bowl = 1
+	)
+	result = /obj/item/reagent_containers/food/snacks/f13/mirelurkstew
+	category = CAT_FOOD
+	subcategory = CAT_WASTEFOOD
+
+/datum/crafting_recipe/food/mirelurkcake
+	name = "Mirelurk Cake"
+	reqs = list(
+		/obj/item/reagent_containers/food/snacks/meat/slab/mirelurk = 1,
+		/datum/reagent/consumable/flour = 15,
+		/obj/item/reagent_containers/food/snacks/egg = 2,
+		/datum/reagent/consumable/sodiumchloride = 1
+	)
+	result = /obj/item/reagent_containers/food/snacks/f13/mirelurkcake
 	category = CAT_FOOD
 	subcategory = CAT_WASTEFOOD
