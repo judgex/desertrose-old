@@ -3220,6 +3220,66 @@
 	time = 120
 	category = CAT_BLUEPRINTS
 	subcategory = CAT_BPWEAPON_ONEUSE
+//r82
+/datum/crafting_recipe/R82
+	name = "R82 heavy service rifle"
+	result = /obj/item/gun/ballistic/automatic/marksman/servicerifle/r82
+	reqs = list(/obj/item/stack/sheet/metal = 5,
+				/obj/item/advanced_crafting_components/assembly = 1,
+				/obj/item/advanced_crafting_components/receiver = 1,
+				/datum/reagent/blackpowder = 30,
+				/obj/item/stack/sheet/mineral/wood = 5,
+				/obj/item/stack/crafting/goodparts = 5
+				)
+	tools = list(TOOL_WORKBENCH, /obj/item/blueprint/weapon/R82)
+	time = 120
+	category = CAT_BLUEPRINTS
+	subcategory = CAT_BPWEAPON
+/datum/crafting_recipe/R82/limited
+	name = "R82 heavy service rifle"
+	result = /obj/item/gun/ballistic/automatic/marksman/servicerifle/r82
+	reqs = list(/obj/item/stack/sheet/metal = 5,
+				/obj/item/advanced_crafting_components/assembly = 1,
+				/obj/item/advanced_crafting_components/receiver = 1,
+				/datum/reagent/blackpowder = 30,
+				/obj/item/stack/sheet/mineral/wood = 5,
+				/obj/item/stack/crafting/goodparts = 5,
+				 /obj/item/blueprint/weapon/R82/limited = 1)
+	tools = list(TOOL_WORKBENCH)
+	time = 120
+	category = CAT_BLUEPRINTS
+	subcategory = CAT_BPWEAPON_ONEUSE
+//desert eagle
+/datum/crafting_recipe/deagle
+	name = "Desert Eagle"
+	result = /obj/item/gun/ballistic/automatic/pistol/deagle
+	reqs = list(/obj/item/stack/sheet/metal = 5,
+				/obj/item/advanced_crafting_components/alloys = 1,
+				/obj/item/advanced_crafting_components/receiver = 1,
+				/datum/reagent/blackpowder = 30,
+				/obj/item/stack/sheet/mineral/wood = 5,
+				/obj/item/stack/crafting/goodparts = 5
+				)
+	tools = list(TOOL_WORKBENCH, /obj/item/blueprint/weapon/deagle)
+	time = 120
+	category = CAT_BLUEPRINTS
+	subcategory = CAT_BPWEAPON
+/datum/crafting_recipe/deagle/limited
+	name = "Desert Eagle"
+	result = /obj/item/gun/ballistic/automatic/pistol/deagle
+	reqs = list(/obj/item/stack/sheet/metal = 5,
+				/obj/item/advanced_crafting_components/alloys = 1,
+				/obj/item/advanced_crafting_components/receiver = 1,
+				/datum/reagent/blackpowder = 30,
+				/obj/item/stack/sheet/mineral/wood = 5,
+				/obj/item/stack/crafting/goodparts = 5, 
+				/obj/item/blueprint/weapon/deagle/limited = 1
+				)
+	tools = list(TOOL_WORKBENCH)
+	time = 120
+	category = CAT_BLUEPRINTS
+	subcategory = CAT_BPWEAPON_ONEUSE
+
 
 //very high tier
 //bozar
@@ -3456,15 +3516,20 @@
 	name = "LMG blueprint"
 	tools = list(TOOL_AWORKBENCH, TOOL_GUNTIER3, /obj/item/blueprint/weapon/lmg)
 
+/datum/crafting_recipe/bpcopy/R82
+	result = /obj/item/blueprint/weapon/R82/limited
+	name = "R82 heavy service rifle blueprint"
+	tools = list(TOOL_AWORKBENCH, TOOL_GUNTIER3, /obj/item/blueprint/weapon/R82)
+
+/datum/crafting_recipe/bpcopy/deagle
+	result = /obj/item/blueprint/weapon/deagle/limited
+	name = "Desert Eagle blueprint"
+	tools = list(TOOL_AWORKBENCH, TOOL_GUNTIER3, /obj/item/blueprint/weapon/deagle)
+
 /datum/crafting_recipe/bpcopy/plasmarifle
 	result = /obj/item/blueprint/weapon/plasmarifle/limited
 	name = "Plasma Rifle blueprint"
 	tools = list(TOOL_AWORKBENCH, TOOL_GUNTIER3, /obj/item/blueprint/weapon/plasmarifle)
-
-/datum/crafting_recipe/bpcopy/AER9
-	result = /obj/item/blueprint/weapon/AER9/limited
-	name = "AER9 blueprint"
-	tools = list(TOOL_AWORKBENCH, TOOL_GUNTIER3, /obj/item/blueprint/weapon/AER9)
 
 /datum/crafting_recipe/bpcopy/AER9
 	result = /obj/item/blueprint/weapon/AER9/limited
