@@ -103,29 +103,39 @@
 //very high tier
 /obj/item/blueprint/weapon/plasmarifle
 	name = "Plasma Rifle blueprint"
+
 /obj/item/blueprint/weapon/plasmarifle/limited
 	name = "Damaged Plasma Rifle blueprint"
 
 /obj/item/blueprint/weapon/AER9
 	name = "AER9 blueprint"
+
 /obj/item/blueprint/weapon/AER9/limited
 	name = "Damaged AER9 blueprint"
 
 /obj/item/blueprint/weapon/AM_rifle
 	name = "AM Rifle blueprint"
+
 /obj/item/blueprint/weapon/AM_rifle/limited
 	name = "Damaged AM Rifle blueprint"
 
 /obj/item/blueprint/weapon/city_killer
 	name = "City Killer shotgun blueprint"
+
 /obj/item/blueprint/weapon/city_killer/limited
 	name = "Damaged City Killer shotgun blueprint"
 
 /obj/item/blueprint/weapon/rangemaster
 	name = "Colt Rangemaster blueprint"
+
 /obj/item/blueprint/weapon/rangemaster/limited
 	name = "Damaged Colt Rangemaster blueprint"
 
+/obj/item/blueprint/weapon/bozar
+	name = "Bozar blueprint"
+
+/obj/item/blueprint/weapon/bozar/limited
+	name = "Damaged bozar blueprint"
 //armor blueprints
 /obj/item/blueprint/armor
     name = "armor blueprint"

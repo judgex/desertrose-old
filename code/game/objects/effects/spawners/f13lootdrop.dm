@@ -942,8 +942,8 @@
     loot = list(
             /obj/effect/spawner/lootdrop/f13/weapon/gun/tier1 = 80,
             /obj/effect/spawner/lootdrop/f13/weapon/gun/tier2 = 14,
-            /obj/effect/spawner/lootdrop/f13/weapon/gun/tier3 = 3,
-            /obj/effect/spawner/lootdrop/f13/weapon/gun/tier4 = 2,
+            /obj/effect/spawner/lootdrop/f13/weapon/gun/tier3 = 4,
+            /obj/effect/spawner/lootdrop/f13/weapon/gun/tier4 = 1,
             /obj/effect/spawner/lootdrop/f13/weapon/gun/tier5 = 1
             )
 
@@ -1495,7 +1495,8 @@
 	loot = list(
 		/obj/item/blueprint/weapon/AM_rifle,
 		/obj/item/blueprint/weapon/city_killer,
-		/obj/item/blueprint/weapon/rangemaster
+		/obj/item/blueprint/weapon/rangemaster,
+		/obj/item/blueprint/weapon/bozar
 	)
 
 /obj/effect/spawner/lootdrop/f13/advcrafting
