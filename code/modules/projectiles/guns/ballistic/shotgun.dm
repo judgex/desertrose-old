@@ -117,12 +117,11 @@
 	fire_sound = 'sound/f13weapons/hunting_rifle.ogg'
 
 
-/*TODO sprite, ignore for now
 /obj/item/gun/ballistic/shotgun/musket
-	name = "Musket"
-	desc = "An antique looking musket."
-	icon_state = "moistnugget"
-	item_state = "moistnugget"
+	name = " a Rifled Musket"
+	desc = "An old style rifled musket chambered in .58, probably made by some master craftsman or something. The design looks very antiquated, but trust me, you do not want to get shot by one of these."
+	icon_state = "1851enfield"
+	item_state = "1851enfield"
 	slot_flags = 0 //no ITEM_SLOT_BACK sprite, alas
 	mag_type = /obj/item/ammo_box/magazine/internal/musket
 	var/bolt_open = FALSE
@@ -130,11 +129,11 @@
 	nocase = TRUE
 	knife_x_offset = 27
 	knife_y_offset = 13
-	fire_delay = 100
+	fire_delay = 20
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 	fire_sound = 'sound/f13weapons/hunting_rifle.ogg'
-TODO sprite, ignore for now*/
+
 
 //BB gun
 /obj/item/gun/ballistic/shotgun/bb
@@ -335,7 +334,7 @@ TODO sprite, ignore for now*/
 	scopestate = "AEP7_scope"
 	scope_x_offset = 8
 	scope_y_offset = 19
-	can_bayonet = TRUE	
+	can_bayonet = TRUE
 	bayonetstate = "trenchgun"
 	knife_x_offset = 23
 	knife_y_offset = 14
