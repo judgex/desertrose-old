@@ -90,7 +90,7 @@
 /obj/item/reagent_containers/food/snacks/meat/steak/mirelurk
 	name = "mirelurk roast"
 	desc = "Meat from a Mirelurks shell, cracked open and roasted to perfection."
-	icon_state = "Mirelurl_roast"
+	icon_state = "Mirelurk_roast"
 	list_reagents = list("nutriment" = 9)
 	bonus_reagents = list("nutriment" = 3, "vitamin" = 3)
 
