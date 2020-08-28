@@ -70,6 +70,18 @@
 /obj/item/blueprint/weapon/grease_gun/limited
  	name = "Damaged Grease Gun blueprint"
 //high tier
+/obj/item/blueprint/weapon/R82
+	name = "R82 heavy service rifle blueprint"
+
+/obj/item/blueprint/weapon/R82/limited
+	name = "Damaged R82 heavy service rifle blueprint"
+
+/obj/item/blueprint/weapon/deagle
+	name = "Desert Eagle blueprint"
+
+/obj/item/blueprint/weapon/deagle/limited
+	name = "Damaged Desert Eagle blueprint"
+
 /obj/item/blueprint/weapon/R91
 	name = "R91 Assault rifle blueprint"
 /obj/item/blueprint/weapon/R91/limited
