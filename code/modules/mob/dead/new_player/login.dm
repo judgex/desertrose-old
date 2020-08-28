@@ -34,4 +34,4 @@
 			postfix = "in about [DisplayTimeText(tl)]"
 		else
 			postfix = "soon"
-		to_chat(src, "Please set up your character and select \"Ready\". The game will start [postfix].")
+		to_chat(src, "Please set up your character and wait for the game to begin! The game will start [postfix].")
