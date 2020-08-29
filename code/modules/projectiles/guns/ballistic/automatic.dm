@@ -518,6 +518,47 @@
 	update_icon()
 	return
 
+/obj/item/gun/ballistic/automatic/pps
+	name = "\improper ancient SMG"
+	desc = "An extremely fast firing, innacurate SMG from past wars. Low ammo capacity and low damage, Uses 9mm rounds."
+	icon_state = "pps"
+	mag_type = /obj/item/ammo_box/magazine/uzim9mm
+	w_class = WEIGHT_CLASS_NORMAL
+	//can_scope = TRUE
+	//scopestate = "AEP7_scope"
+	//scope_x_offset = 9
+	//scope_y_offset = 21
+	burst_size = 3
+	burst_delay = 1
+	fire_delay = 5
+	force = 15
+	spread = 10
+	can_attachments = TRUE
+	extra_damage = -9
+
+/obj/item/gun/ballistic/automatic/pps/burst_select()
+	var/mob/living/carbon/human/user = usr
+	switch(select)
+		if(0)
+			select += 1
+			burst_size = 3
+			spread = 28
+			if (burst_improvement)
+				burst_size = 4
+			if (recoil_decrease)
+				spread = 20
+			to_chat(user, "<span class='notice'>You switch to [burst_size]-rnd burst.</span>")
+		if(1)
+			select = 0
+			burst_size = 1
+			spread = 10
+			if (recoil_decrease)
+				spread = 2
+			to_chat(user, "<span class='notice'>You switch to semi-automatic.</span>")
+	playsound(user, 'sound/weapons/empty.ogg', 100, 1)
+	update_icon()
+	return
+
 /obj/item/gun/ballistic/automatic/tommygun
 	name = "\improper Thompson SMG"
 	desc = "Based on the classic 'Chicago Typewriter'."
@@ -1015,7 +1056,7 @@
 	return
 
 /obj/item/gun/ballistic/automatic/mg34
-	name = "ancient machine gun"
+	name = "\improper ancient machine gun"
 	desc = "An old light machine gun, manufactured over 100 years ago still in use by some NCR forces today."
 	icon_state = "mg34"
 	item_state = "R84"
