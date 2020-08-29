@@ -2,30 +2,46 @@
 	department_flag = WASTELAND
 
 /*
-Cult Leader
+Coven Stuff
 */
 
-/*
-/datum/job/wasteland/f13cultleader
-	title = "Cult Leader"
-	flag = F13CULTLEADER
-	//faction = "Station"
+/datum/job/wasteland/covenwitch
+	title = "Coven Witch"
+	flag = EVENTCOVEN
+	faction = "Coven"
 	total_positions = 0
 	spawn_positions = 0
-	supervisors = "your God"
-	selection_color = "#ffddf0"
+	description = "You are a Witch of the Iron Coven. As the Witch you answer directly to the Exalted and the Matriarchs. The commanding officer in this region is a Matriarch by the name of The Harbinger. Circumstances may change the identity of the local commanding officer, but you will forevermore answer to the bidding of any and all Matriarchs. You are the equivilent of a Brotherhood Knight in rank, but your role has changed in the century since your people betrayed the Brotherhood of Steel. Witches are the primary military force of your organization. From far away to the east, in Dallas, New Orleans, and the sprawling metropolis that is Miami, you have come to do the bidding of the Grand Matriarch, your holy leader. She orders that the people of this region, like any other, be subjugated to her will. Your job is to organize missions to subvert the power of the local factions, spread scripture, protect and recruit citizens, and disperse technology to the people. The Matriarchs of the Coven have given you the permission to recruit and command your own squad, given that they eventually submit to the Iron Church's FEV treatment. You spread the scripture of the Iron Codex, you distribute technology to the masses and though you are in open war with the people of this area, it is your sworn duty to preserve all life in the name of fulfilling the Prophecy. All lives lost are a tragedy. In the eyes of your superiors, all deserve a chance to bask in the shadow of the Void."
+	forbids = ""
+	enforces = ""
+	supervisors = "Exalted and the Matriarchs."
+	selection_color = "#95a5a6"
 
-	outfit = /datum/outfit/job/wasteland/f13cultleader
+	outfit = /datum/outfit/job/wasteland/covenwitch
 
-/datum/outfit/job/wasteland/f13cultleader
-	name = "Cult Leader"
-	jobtype = /datum/job/wasteland/f13cultleader
+/datum/outfit/job/wasteland/covenwitch
+	name = "Coven Witch"
+	jobtype = /datum/job/wasteland/covenwitch
+	backpack = /obj/item/storage/backpack/satchel/leather
+	ears = 			/obj/item/radio/headset/headset_sci
+	glasses = 		/obj/item/clothing/glasses/night
+	mask = 			/obj/item/clothing/mask/gas/syndicate
+	uniform =		/obj/item/clothing/under/syndicate/combat
+	suit = 			/obj/item/clothing/suit/hooded/cloak/goliath
+	belt = 			/obj/item/storage/belt/military/army
+	shoes = 		/obj/item/clothing/shoes/plate/red
+	gloves = 		/obj/item/clothing/gloves/plate/red
+	id = 			/obj/item/card/id/syndicate/anyone
+	l_hand =		/obj/item/nullrod/claymore/darkblade
+	suit_store =  	/obj/item/gun/ballistic/automatic/pistol/suppressed
 
-	id = /obj/item/card/id/gold
-	uniform =  /obj/item/clothing/under/rank/captain
-
-*/
-
+	backpack_contents = list(
+		/obj/item/reagent_containers/hypospray/medipen/stimpak=2,
+		/obj/item/flashlight/flare/culttorch=1,
+		/obj/item/grenade/flashbang=1,
+		/obj/item/pda=1,
+		/obj/item/reagent_containers/glass/bottle/FEV_solution=1
+		)
 /*
 Great Khan
 */
@@ -500,118 +516,3 @@ Raider
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/m556/rifle/small=2)
 
-/*
-Punished Raider
-*/
-
-/*
-/datum/job/wasteland/f13punraider
-	title = "Punished Raider"
-	flag = F13PUNRAIDER
-	department_head = list("Captain")
-	head_announce = list("Security")
-	req_admin_notify = 1
-//	faction = "Station"
-	total_positions = 0
-	spawn_positions = 0
-	supervisors = "no one"
-	selection_color = "#dddddd"
-	outfit = /datum/outfit/job/wasteland/f13punraider
-
-	access = list()
-	minimal_access = list()
-
-/datum/outfit/job/wasteland/f13punraider
-	name = "Punished Raider"
-	jobtype = /datum/job/wasteland/f13punraider
-
-	id = null
-	ears = null
-	belt = null
-	backpack = /obj/item/storage/backpack/satchel/explorer
-	satchel = /obj/item/storage/backpack/satchel/explorer
-
-/datum/outfit/job/wasteland/f13punraider/pre_equip(mob/living/carbon/human/H)
-	..()
-	uniform = pick(
-		/obj/item/clothing/under/kilt/highlander, \
-		/obj/item/clothing/under/sexymime, \
-		/obj/item/clothing/under/sundress, \
-		/obj/item/clothing/under/schoolgirl, \
-		/obj/item/clothing/under/rank/clown, \
-		null)
-	suit = pick(
-		/obj/item/clothing/suit/whitedress, \
-		/obj/item/clothing/suit/poncho/ponchoshame, \
-		/obj/item/clothing/suit/chickensuit, \
-		/obj/item/clothing/suit/straight_jacket, \
-		null)
-	head = pick(
-		/obj/item/clothing/head/sombrero/shamebrero, \
-		/obj/item/clothing/head/papersack, \
-		/obj/item/clothing/head/chicken,\
-		/obj/item/clothing/head/santa,\
-		/obj/item/clothing/head/festive,\
-		/obj/item/clothing/head/canada,\
-		/obj/item/clothing/head/bandana,\
-		/obj/item/clothing/head/collectable,\
-		/obj/item/clothing/head/rice_hat,\
-		/obj/item/clothing/head/jester,\
-		/obj/item/clothing/head/cone,\
-		/obj/item/clothing/head/hooded/carp_hood,\
-		/obj/item/clothing/head/fedora,\
-		/obj/item/clothing/head/lobsterhat,\
-		null)
-	mask = pick(
-		/obj/item/clothing/mask/joy,\
-		/obj/item/clothing/mask/spig,\
-		/obj/item/clothing/mask/joy/joyful,\
-		/obj/item/clothing/mask/cowmask,\
-		/obj/item/clothing/mask/frog/cursed,\
-		/obj/item/clothing/mask/horsehead,\
-		null)
-	r_pocket = pick(
-		/obj/item/organ/appendix, \
-		/obj/item/reagent_containers/food/snacks/grown/potato,\
-		null)
-	shoes = pick(
-		/obj/item/clothing/shoes/clown_shoes,\
-		null)
-	backpack_contents = pick(
-		/obj/item/restraints/handcuffs, \
-		/obj/item/gun/ballistic/revolver/russian, \
-		/obj/item/reagent_containers/food/snacks/grown/banana)
-	belt  = /obj/item/claymore/machete/pipe
-
-*/
-
-/*
-Trader
-*/
-
-/*
-/datum/job/wasteland/f13traider
-	title = "Traider"
-	flag = F13TRAIDER
-	department_head = list("Captain")
-	department_flag = WASTELAND
-	head_announce = list("Security")
-	faction = "Station"
-	total_positions = 2
-	spawn_positions = 2
-	supervisors = "no one"
-	selection_color = "#ffdddd"
-
-	outfit = /datum/outfit/job/wasteland/f13traider
-
-	access = list()
-	minimal_access = list()
-
-/datum/outfit/job/wasteland/f13traider
-	name = "Traider"
-	jobtype = /datum/job/wasteland/f13traider
-
-	id = /obj/item/card/id/gold
-	uniform =  /obj/item/clothing/under/rank/captain
-
-*/
