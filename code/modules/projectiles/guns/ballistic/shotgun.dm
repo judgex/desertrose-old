@@ -436,7 +436,7 @@
 /obj/item/gun/ballistic/shotgun/ww2rifle
 	name = "ancient rifle"
 	desc = "An ancient military rifle in use over 100 years ago, chambered in .308 and packing an additional punch."
-	icon_state = "kar89"
+	icon_state = "kar98"
 	item_state = "308"
 	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/kar98
 	fire_sound = 'sound/f13weapons/hunting_rifle.ogg'
@@ -448,7 +448,7 @@
 	extra_penetration = 10
 
 /obj/item/gun/ballistic/shotgun/ww2rifle/scoped
-	name = "ancient rifle"
+	name = "scoped ancient rifle"
 	desc = "An ancient military rifle in use over 100 years ago, chambered in .308 and packing an additional punch. Now with a scope."
 	icon_state = "kar98scope"
 	item_state = "308"
