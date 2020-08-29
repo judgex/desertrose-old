@@ -61,3 +61,11 @@
 	caliber = "a556"
 	max_ammo = 60
 	multiple_sprites = 2
+
+/obj/item/ammo_box/magazine/mg34
+	name = "ammo box (7.62)"
+	icon_state = "r80"
+	ammo_type = /obj/item/ammo_casing/a762
+	caliber = "a762"
+	max_ammo = 100
+	multiple_sprites = 2

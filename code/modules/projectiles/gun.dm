@@ -439,6 +439,8 @@
 		if (istype(src, /obj/item/gun/ballistic/shotgun/remington))
 			combine_items(user,I,src, new /obj/item/gun/ballistic/shotgun/remington/scoped)//hunting rifle
 			return
+		if (istype(src,/obj/item/gun/ballistic/shotgun/ww2rifle))
+			combine_items(user,I,src, new /obj/item/gun/ballistic/shotgun/ww2rifle/scoped)//kar98
 		var/obj/item/attachments/scope/C = I
 		if(!scope)
 			if(!user.transferItemToLoc(I, src))
