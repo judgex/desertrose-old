@@ -67,5 +67,5 @@
 	icon_state = "r80"
 	ammo_type = /obj/item/ammo_casing/a762
 	caliber = "a762"
-	max_ammo = 100
+	max_ammo = 60
 	multiple_sprites = 2
