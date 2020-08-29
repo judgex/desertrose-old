@@ -2059,7 +2059,7 @@
 	category = CAT_PRIMAL
 	subcategory = CAT_TRIBAL
 
-/datum/crafting_recipe/tribaloutfit
+/datum/crafting_recipe/tribaloutfitfemale
 	name = "Female Tribal Outfit"
 	result = /obj/item/clothing/under/f13/female/tribal
 	time = 20
@@ -2078,7 +2078,7 @@
 	category = CAT_PRIMAL
 	subcategory = CAT_TRIBAL
 
-/datum/crafting_recipe/warmace
+/datum/crafting_recipe/training_machete
 	name = "Carve Training Machete"
 	result = /obj/item/claymore/machete/training
 	time = 50
