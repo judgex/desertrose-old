@@ -3476,7 +3476,7 @@
 	tools = list(TOOL_WORKBENCH)
 	time = 120
 	category = CAT_BLUEPRINTS
-	subcategory = CAT_BPWEAPON_ONEUSE
+	subcategory = CAT_BPWEAPON
 
 /datum/crafting_recipe/bozar/limited
 	name = "bozar"
