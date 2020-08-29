@@ -10,8 +10,7 @@
 					/obj/item/reagent_containers/glass/bowl = 20,
 					/obj/item/reagent_containers/food/drinks/flask = 10,
 					/obj/item/reagent_containers/food/drinks/ice = 10,
-					
-/obj/item/reagent_containers/food/drinks/bottle/f13nukacola = 5,
+					/obj/item/reagent_containers/food/drinks/bottle/f13nukacola = 5,
 					/obj/item/reagent_containers/food/drinks/bottle/wine = 1,
 					/obj/item/reagent_containers/food/drinks/bottle/bawls = 3,
 					/obj/item/reagent_containers/food/drinks/bottle/kahlua = 1,

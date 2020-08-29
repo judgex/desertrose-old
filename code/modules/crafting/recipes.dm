@@ -402,20 +402,20 @@
 	result = /obj/item/ammo_box/magazine/m556/rifle/assault/empty
 	reqs = list(/obj/item/stack/sheet/metal = 4)
 	traits = list(TRAIT_GUNSMITH_TWO)
-	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER3)
+	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER2)
 	time = 10
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
-/* //50 round magazines, let's not hand these out like candy.
+
 /datum/crafting_recipe/rifleextended556
 	name = "empty extended rifle magazine (5.56mm)"
 	result = /obj/item/ammo_box/magazine/m556/rifle/extended/empty
 	reqs = list(/obj/item/stack/sheet/metal = 5)
-	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER3)
+	tools = list(TOOL_AWORKBENCH, TOOL_GUNTIER4)
 	time = 10
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
-*/
+
 /datum/crafting_recipe/m45
 	name = "empty handgun magazine (.45)"
 	result = /obj/item/ammo_box/magazine/m45/empty
@@ -463,23 +463,23 @@
 	subcategory = CAT_AMMO
 
 /datum/crafting_recipe/m762
-	name = "empty rifle magazine (7.62x51)"
+	name = "empty rifle magazine (7.62x51/.308)"
 	result = /obj/item/ammo_box/magazine/m762/empty
 	reqs = list(/obj/item/stack/sheet/metal = 2)
-	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER3)
+	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER2)
 	time = 10
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
-/* //way too powerful
+
 /datum/crafting_recipe/m762ext
-	name = "empty extended rifle magazine (7.62x51)"
+	name = "empty extended rifle magazine (7.62x51.308)"
 	result = /obj/item/ammo_box/magazine/m762/ext/empty
 	reqs = list(/obj/item/stack/sheet/metal = 4)
-	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER4)
+	tools = list(TOOL_AWORKBENCH, TOOL_GUNTIER4)
 	time = 10
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
-*/
+
 /datum/crafting_recipe/c45
 	name = ".45 FMJ ammo box"
 	result = /obj/item/ammo_box/c45
@@ -2911,8 +2911,11 @@
 
 
 //Blueprints
+
 //low tier
+
 //laser pistol
+
 /datum/crafting_recipe/AEP7
 	name = "AEP7"
 	result = /obj/item/gun/energy/laser/pistol
@@ -2925,7 +2928,9 @@
 	time = 120
 	category = CAT_BLUEPRINTS
 	subcategory = CAT_BPWEAPON
+
 //lever action
+
 /datum/crafting_recipe/lever_action
 	name = "Lever Action shotgun"
 	result = /obj/item/gun/energy/laser/pistol
@@ -2937,7 +2942,9 @@
 	time = 120
 	category = CAT_BLUEPRINTS
 	subcategory = CAT_BPWEAPON
+
 //trail carbine
+
 /datum/crafting_recipe/trail_carbine
 	name = "Trail Carbine"
 	result = /obj/item/gun/energy/laser/pistol
@@ -2949,8 +2956,11 @@
 	time = 120
 	category = CAT_BLUEPRINTS
 	subcategory = CAT_BPWEAPON
+
 //mid tier
+
 //plasma pistol
+
 /datum/crafting_recipe/PlasmaPistol
 	name = "Plasma Pistol"
 	result = /obj/item/gun/energy/laser/plasma/pistol
@@ -2963,6 +2973,7 @@
 	time = 120
 	category = CAT_BLUEPRINTS
 	subcategory = CAT_BPWEAPON
+
 /datum/crafting_recipe/PlasmaPistol/limited
 	name = "Plasma Pistol"
 	result = /obj/item/gun/energy/laser/plasma/pistol
@@ -2976,7 +2987,9 @@
 	time = 120
 	category = CAT_BLUEPRINTS
 	subcategory = CAT_BPWEAPON_ONEUSE
+
 //uzi
+
 /datum/crafting_recipe/uzi
 	name = "Mini uzi"
 	result = /obj/item/gun/ballistic/automatic/mini_uzi
@@ -3001,7 +3014,9 @@
 	time = 120
 	category = CAT_BLUEPRINTS
 	subcategory = CAT_BPWEAPON_ONEUSE
+
 //10mm smg
+
 /datum/crafting_recipe/smg10mm
 	name = "10mm SMG"
 	result = /obj/item/gun/ballistic/automatic/smg10mm
@@ -3026,7 +3041,9 @@
 	time = 120
 	category = CAT_BLUEPRINTS
 	subcategory = CAT_BPWEAPON_ONEUSE
+
 //grease gun
+
 /datum/crafting_recipe/smg10mm/limited
 	name = "10mm SMG"
 	result = /obj/item/gun/ballistic/automatic/smg10mm
@@ -3038,6 +3055,7 @@
 	time = 120
 	category = CAT_BLUEPRINTS
 	subcategory = CAT_BPWEAPON
+
 /datum/crafting_recipe/smg10mm/limited
 	name = "10mm SMG"
 	result = /obj/item/gun/ballistic/automatic/smg10mm
@@ -3050,7 +3068,9 @@
 	time = 120
 	category = CAT_BLUEPRINTS
 	subcategory = CAT_BPWEAPON_ONEUSE
+
 //marksman rifle
+
 /datum/crafting_recipe/marksmanrifle
 	name = "Marksman rifle"
 	result = /obj/item/gun/ballistic/automatic/marksman
@@ -3063,6 +3083,7 @@
 	time = 120
 	category = CAT_BLUEPRINTS
 	subcategory = CAT_BPWEAPON
+
 /datum/crafting_recipe/marksmanrifle/limited
 	name = "Marksman rifle"
 	result = /obj/item/gun/ballistic/automatic/marksman
@@ -3076,7 +3097,9 @@
 	time = 120
 	category = CAT_BLUEPRINTS
 	subcategory = CAT_BPWEAPON_ONEUSE
+
 //brush gun
+
 /datum/crafting_recipe/brush
 	name = "Brush gun"
 	result = /obj/item/gun/ballistic/automatic/marksman
@@ -3089,6 +3112,7 @@
 	time = 120
 	category = CAT_BLUEPRINTS
 	subcategory = CAT_BPWEAPON
+
 /datum/crafting_recipe/brush/limited
 	name = "Brush gun"
 	result = /obj/item/gun/ballistic/automatic/marksman
@@ -3102,8 +3126,11 @@
 	time = 120
 	category = CAT_BLUEPRINTS
 	subcategory = CAT_BPWEAPON_ONEUSE
+
 //high tier
+
 //r91
+
 /datum/crafting_recipe/r91
 	name = "R91 assault rifle"
 	result = /obj/item/gun/ballistic/automatic/assault_rifle
@@ -3118,6 +3145,7 @@
 	time = 120
 	category = CAT_BLUEPRINTS
 	subcategory = CAT_BPWEAPON
+
 /datum/crafting_recipe/r91/limited
 	name = "R91 assault rifle"
 	result = /obj/item/gun/ballistic/automatic/assault_rifle
@@ -3132,7 +3160,9 @@
 	time = 120
 	category = CAT_BLUEPRINTS
 	subcategory = CAT_BPWEAPON_ONEUSE
+
 //lmg
+
 /datum/crafting_recipe/lmg
 	name = "R84 LMG"
 	result = /obj/item/gun/ballistic/automatic/lmg
@@ -3146,6 +3176,7 @@
 	time = 120
 	category = CAT_BLUEPRINTS
 	subcategory = CAT_BPWEAPON
+
 /datum/crafting_recipe/lmg/limited
 	name = "R84 LMG"
 	result = /obj/item/gun/ballistic/automatic/lmg
@@ -3160,7 +3191,9 @@
 	time = 120
 	category = CAT_BLUEPRINTS
 	subcategory = CAT_BPWEAPON_ONEUSE
+
 //breacher
+
 /datum/crafting_recipe/breacher
 	name = "Breacher shotgun"
 	result = /obj/item/gun/ballistic/automatic/shotgun/riot
@@ -3175,6 +3208,7 @@
 	time = 120
 	category = CAT_BLUEPRINTS
 	subcategory = CAT_BPWEAPON
+
 /datum/crafting_recipe/breacher/limited
 	name = "Breacher shotgun"
 	result = /obj/item/gun/ballistic/automatic/shotgun/riot
@@ -3190,7 +3224,9 @@
 	time = 120
 	category = CAT_BLUEPRINTS
 	subcategory = CAT_BPWEAPON_ONEUSE
+
 //sniper
+
 /datum/crafting_recipe/sniper
 	name = "Sniper rifle"
 	result = /obj/item/gun/ballistic/automatic/marksman/sniper
@@ -3205,6 +3241,7 @@
 	time = 120
 	category = CAT_BLUEPRINTS
 	subcategory = CAT_BPWEAPON
+
 /datum/crafting_recipe/sniper/limited
 	name = "Sniper rifle"
 	result = /obj/item/gun/ballistic/automatic/marksman/sniper
@@ -3220,7 +3257,9 @@
 	time = 120
 	category = CAT_BLUEPRINTS
 	subcategory = CAT_BPWEAPON_ONEUSE
+
 //r82
+
 /datum/crafting_recipe/R82
 	name = "R82 heavy service rifle"
 	result = /obj/item/gun/ballistic/automatic/marksman/servicerifle/r82
@@ -3235,6 +3274,7 @@
 	time = 120
 	category = CAT_BLUEPRINTS
 	subcategory = CAT_BPWEAPON
+
 /datum/crafting_recipe/R82/limited
 	name = "R82 heavy service rifle"
 	result = /obj/item/gun/ballistic/automatic/marksman/servicerifle/r82
@@ -3250,6 +3290,7 @@
 	category = CAT_BLUEPRINTS
 	subcategory = CAT_BPWEAPON_ONEUSE
 //desert eagle
+
 /datum/crafting_recipe/deagle
 	name = "Desert Eagle"
 	result = /obj/item/gun/ballistic/automatic/pistol/deagle
@@ -3264,6 +3305,7 @@
 	time = 120
 	category = CAT_BLUEPRINTS
 	subcategory = CAT_BPWEAPON
+
 /datum/crafting_recipe/deagle/limited
 	name = "Desert Eagle"
 	result = /obj/item/gun/ballistic/automatic/pistol/deagle
@@ -3311,6 +3353,7 @@
 	time = 120
 	category = CAT_BLUEPRINTS
 	subcategory = CAT_BPWEAPON
+
 /datum/crafting_recipe/AER9/limited
 	name = "AER9"
 	result = /obj/item/gun/energy/laser/aer9
@@ -3324,7 +3367,7 @@
 	tools = list(TOOL_WORKBENCH)
 	time = 120
 	category = CAT_BLUEPRINTS
-	subcategory = CAT_BPWEAPON
+	subcategory = CAT_BPWEAPON_ONEUSE
 //plasma rifle
 /datum/crafting_recipe/PlasmaRifle
 	name = "Plasma Rifle"
@@ -3340,6 +3383,7 @@
 	time = 120
 	category = CAT_BLUEPRINTS
 	subcategory = CAT_BPWEAPON
+
 /datum/crafting_recipe/PlasmaRifle/limited
 	name = "Plasma Rifle"
 	result = /obj/item/gun/energy/laser/plasma
@@ -3354,8 +3398,10 @@
 	tools = list(TOOL_WORKBENCH)
 	time = 120
 	category = CAT_BLUEPRINTS
-	subcategory = CAT_BPWEAPON
+	subcategory = CAT_BPWEAPON_ONEUSE
+
 //tribeam
+
 /datum/crafting_recipe/tribeam
 	name = "Tribeam Laser Rifle"
 	result = /obj/item/gun/energy/laser/scatter
@@ -3370,6 +3416,7 @@
 	time = 120
 	category = CAT_BLUEPRINTS
 	subcategory = CAT_BPWEAPON
+
 //AM rifle
 /datum/crafting_recipe/AM_rifle
 	name = "AM Rifle"
@@ -3385,6 +3432,7 @@
 	time = 120
 	category = CAT_BLUEPRINTS
 	subcategory = CAT_BPWEAPON
+
 /datum/crafting_recipe/AM_rifle/limited
 	name = "AM Rifle"
 	result = /obj/item/gun/ballistic/automatic/sniper_rifle
@@ -3400,7 +3448,9 @@
 	time = 120
 	category = CAT_BLUEPRINTS
 	subcategory = CAT_BPWEAPON_ONEUSE
+
 //city killer
+
 /datum/crafting_recipe/city_killer
 	name = "City-Killer shotgun"
 	result = /obj/item/gun/ballistic/shotgun/automatic/combat
@@ -3415,7 +3465,9 @@
 	time = 120
 	category = CAT_BLUEPRINTS
 	subcategory = CAT_BPWEAPON
+
 /datum/crafting_recipe/city_killer/limited
+
 	name = "City-Killer shotgun"
 	result = /obj/item/gun/ballistic/shotgun/automatic/combat
 	reqs = list(/obj/item/stack/sheet/metal = 10,
@@ -3430,7 +3482,9 @@
 	time = 120
 	category = CAT_BLUEPRINTS
 	subcategory = CAT_BPWEAPON_ONEUSE
+
 //rangemaster
+
 /datum/crafting_recipe/rangemaster
 	name = "Colt Rangemaster"
 	result = /obj/item/gun/ballistic/automatic/rangemaster
@@ -3445,6 +3499,7 @@
 	time = 120
 	category = CAT_BLUEPRINTS
 	subcategory = CAT_BPWEAPON
+
 /datum/crafting_recipe/rangemaster
 	name = "Colt Rangemaster"
 	result = /obj/item/gun/ballistic/automatic/rangemaster
