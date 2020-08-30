@@ -402,20 +402,20 @@
 	result = /obj/item/ammo_box/magazine/m556/rifle/assault/empty
 	reqs = list(/obj/item/stack/sheet/metal = 4)
 	traits = list(TRAIT_GUNSMITH_TWO)
-	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER3)
+	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER2)
 	time = 10
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
-/* //50 round magazines, let's not hand these out like candy.
+
 /datum/crafting_recipe/rifleextended556
 	name = "empty extended rifle magazine (5.56mm)"
 	result = /obj/item/ammo_box/magazine/m556/rifle/extended/empty
 	reqs = list(/obj/item/stack/sheet/metal = 5)
-	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER3)
+	tools = list(TOOL_AWORKBENCH, TOOL_GUNTIER4)
 	time = 10
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
-*/
+
 /datum/crafting_recipe/m45
 	name = "empty handgun magazine (.45)"
 	result = /obj/item/ammo_box/magazine/m45/empty
@@ -463,23 +463,23 @@
 	subcategory = CAT_AMMO
 
 /datum/crafting_recipe/m762
-	name = "empty rifle magazine (7.62x51)"
+	name = "empty rifle magazine (7.62x51/.308)"
 	result = /obj/item/ammo_box/magazine/m762/empty
 	reqs = list(/obj/item/stack/sheet/metal = 2)
-	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER3)
+	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER2)
 	time = 10
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
-/* //way too powerful
+
 /datum/crafting_recipe/m762ext
-	name = "empty extended rifle magazine (7.62x51)"
+	name = "empty extended rifle magazine (7.62x51.308)"
 	result = /obj/item/ammo_box/magazine/m762/ext/empty
 	reqs = list(/obj/item/stack/sheet/metal = 4)
-	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER4)
+	tools = list(TOOL_AWORKBENCH, TOOL_GUNTIER4)
 	time = 10
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
-*/
+
 /datum/crafting_recipe/c45
 	name = ".45 FMJ ammo box"
 	result = /obj/item/ammo_box/c45
@@ -2059,7 +2059,7 @@
 	category = CAT_PRIMAL
 	subcategory = CAT_TRIBAL
 
-/datum/crafting_recipe/tribaloutfit
+/datum/crafting_recipe/tribaloutfitfemale
 	name = "Female Tribal Outfit"
 	result = /obj/item/clothing/under/f13/female/tribal
 	time = 20
@@ -2078,7 +2078,7 @@
 	category = CAT_PRIMAL
 	subcategory = CAT_TRIBAL
 
-/datum/crafting_recipe/warmace
+/datum/crafting_recipe/training_machete
 	name = "Carve Training Machete"
 	result = /obj/item/claymore/machete/training
 	time = 50
@@ -2911,7 +2911,86 @@
 
 
 //Blueprints
-/*/datum/crafting_recipe/uzi
+
+//low tier
+
+//laser pistol
+
+/datum/crafting_recipe/AEP7
+	name = "AEP7"
+	result = /obj/item/gun/energy/laser/pistol
+	reqs = list(/obj/item/stack/sheet/metal = 5,
+				/obj/item/advanced_crafting_components/lenses = 1,
+				/obj/item/stack/crafting/metalparts = 3,
+				/obj/item/stack/crafting/electronicparts = 3
+				)
+	tools = list(TOOL_WORKBENCH, /obj/item/blueprint/weapon/AEP7)
+	time = 120
+	category = CAT_BLUEPRINTS
+	subcategory = CAT_BPWEAPON
+
+//lever action
+
+/datum/crafting_recipe/lever_action
+	name = "Lever Action shotgun"
+	result = /obj/item/gun/energy/laser/pistol
+	reqs = list(/obj/item/stack/sheet/metal = 5,
+				/obj/item/advanced_crafting_components/receiver = 1,
+				/obj/item/stack/crafting/metalparts = 3,
+				/datum/reagent/blackpowder = 20)
+	tools = list(TOOL_WORKBENCH, /obj/item/blueprint/weapon/lever_action)
+	time = 120
+	category = CAT_BLUEPRINTS
+	subcategory = CAT_BPWEAPON
+
+//trail carbine
+
+/datum/crafting_recipe/trail_carbine
+	name = "Trail Carbine"
+	result = /obj/item/gun/energy/laser/pistol
+	reqs = list(/obj/item/stack/sheet/metal = 5,
+				/obj/item/advanced_crafting_components/receiver = 1,
+				/obj/item/stack/crafting/metalparts = 3,
+				/datum/reagent/blackpowder = 20)
+	tools = list(TOOL_WORKBENCH, /obj/item/blueprint/weapon/lever_action)
+	time = 120
+	category = CAT_BLUEPRINTS
+	subcategory = CAT_BPWEAPON
+
+//mid tier
+
+//plasma pistol
+
+/datum/crafting_recipe/PlasmaPistol
+	name = "Plasma Pistol"
+	result = /obj/item/gun/energy/laser/plasma/pistol
+	reqs = list(/obj/item/stack/sheet/metal = 5,
+				/obj/item/advanced_crafting_components/flux = 1,
+				/obj/item/stack/crafting/metalparts = 3,
+				/obj/item/stack/crafting/electronicparts = 3
+				)
+	tools = list(TOOL_WORKBENCH, /obj/item/blueprint/weapon/plasmapistol)
+	time = 120
+	category = CAT_BLUEPRINTS
+	subcategory = CAT_BPWEAPON
+
+/datum/crafting_recipe/PlasmaPistol/limited
+	name = "Plasma Pistol"
+	result = /obj/item/gun/energy/laser/plasma/pistol
+	reqs = list(/obj/item/stack/sheet/metal = 5,
+				/obj/item/advanced_crafting_components/flux = 1,
+				/obj/item/stack/crafting/metalparts = 3,
+				/obj/item/stack/crafting/electronicparts = 3,
+				/obj/item/blueprint/weapon/plasmapistol/limited = 1
+				)
+	tools = list(TOOL_WORKBENCH)
+	time = 120
+	category = CAT_BLUEPRINTS
+	subcategory = CAT_BPWEAPON_ONEUSE
+
+//uzi
+
+/datum/crafting_recipe/uzi
 	name = "Mini uzi"
 	result = /obj/item/gun/ballistic/automatic/mini_uzi
 	reqs = list(/obj/item/stack/sheet/metal = 10,
@@ -2921,7 +3000,136 @@
 	tools = list(TOOL_WORKBENCH, /obj/item/blueprint/weapon/uzi)
 	time = 120
 	category = CAT_BLUEPRINTS
-	subcategory = CAT_BPWEAPON*/
+	subcategory = CAT_BPWEAPON
+
+/datum/crafting_recipe/uzi/limited
+	name = "Mini uzi"
+	result = /obj/item/gun/ballistic/automatic/mini_uzi
+	reqs = list(/obj/item/stack/sheet/metal = 10,
+				/obj/item/advanced_crafting_components/receiver = 1,
+				/datum/reagent/blackpowder = 30,
+				/obj/item/blueprint/weapon/uzi/limited
+				)
+	tools = list(TOOL_WORKBENCH)
+	time = 120
+	category = CAT_BLUEPRINTS
+	subcategory = CAT_BPWEAPON_ONEUSE
+
+//10mm smg
+
+/datum/crafting_recipe/smg10mm
+	name = "10mm SMG"
+	result = /obj/item/gun/ballistic/automatic/smg10mm
+	reqs = list(/obj/item/stack/sheet/metal = 10,
+				/obj/item/advanced_crafting_components/receiver = 1,
+				/datum/reagent/blackpowder = 30
+				)
+	tools = list(TOOL_WORKBENCH, /obj/item/blueprint/weapon/smg10mm)
+	time = 120
+	category = CAT_BLUEPRINTS
+	subcategory = CAT_BPWEAPON
+
+/datum/crafting_recipe/smg10mm/limited
+	name = "10mm SMG"
+	result = /obj/item/gun/ballistic/automatic/smg10mm
+	reqs = list(/obj/item/stack/sheet/metal = 10,
+				/obj/item/advanced_crafting_components/receiver = 1,
+				/datum/reagent/blackpowder = 30, 
+				/obj/item/blueprint/weapon/smg10mm/limited
+				)
+	tools = list(TOOL_WORKBENCH)
+	time = 120
+	category = CAT_BLUEPRINTS
+	subcategory = CAT_BPWEAPON_ONEUSE
+
+//grease gun
+
+/datum/crafting_recipe/smg10mm/limited
+	name = "10mm SMG"
+	result = /obj/item/gun/ballistic/automatic/smg10mm
+	reqs = list(/obj/item/stack/sheet/metal = 10,
+				/obj/item/advanced_crafting_components/receiver = 1,
+				/datum/reagent/blackpowder = 30, 
+				)
+	tools = list(TOOL_WORKBENCH, /obj/item/blueprint/weapon/grease_gun)
+	time = 120
+	category = CAT_BLUEPRINTS
+	subcategory = CAT_BPWEAPON
+
+/datum/crafting_recipe/smg10mm/limited
+	name = "10mm SMG"
+	result = /obj/item/gun/ballistic/automatic/smg10mm
+	reqs = list(/obj/item/stack/sheet/metal = 10,
+				/obj/item/advanced_crafting_components/receiver = 1,
+				/datum/reagent/blackpowder = 30, 
+				/obj/item/blueprint/weapon/grease_gun/limited
+				)
+	tools = list(TOOL_WORKBENCH)
+	time = 120
+	category = CAT_BLUEPRINTS
+	subcategory = CAT_BPWEAPON_ONEUSE
+
+//marksman rifle
+
+/datum/crafting_recipe/marksmanrifle
+	name = "Marksman rifle"
+	result = /obj/item/gun/ballistic/automatic/marksman
+	reqs = list(/obj/item/stack/sheet/metal = 10,
+				/obj/item/advanced_crafting_components/assembly = 1,
+				/datum/reagent/blackpowder = 30,
+				/obj/item/stack/crafting/goodparts = 3
+				)
+	tools = list(TOOL_WORKBENCH, /obj/item/blueprint/weapon/marksmanrifle)
+	time = 120
+	category = CAT_BLUEPRINTS
+	subcategory = CAT_BPWEAPON
+
+/datum/crafting_recipe/marksmanrifle/limited
+	name = "Marksman rifle"
+	result = /obj/item/gun/ballistic/automatic/marksman
+	reqs = list(/obj/item/stack/sheet/metal = 10,
+				/obj/item/advanced_crafting_components/assembly = 1,
+				/datum/reagent/blackpowder = 30,
+				/obj/item/stack/crafting/goodparts = 3,
+				/obj/item/blueprint/weapon/marksmanrifle/limited = 1
+				)
+	tools = list(TOOL_WORKBENCH)
+	time = 120
+	category = CAT_BLUEPRINTS
+	subcategory = CAT_BPWEAPON_ONEUSE
+
+//brush gun
+
+/datum/crafting_recipe/brush
+	name = "Brush gun"
+	result = /obj/item/gun/ballistic/automatic/marksman
+	reqs = list(/obj/item/stack/sheet/metal = 10,
+				/obj/item/advanced_crafting_components/assembly = 1,
+				/datum/reagent/blackpowder = 30,
+				/obj/item/stack/crafting/goodparts = 3
+				)
+	tools = list(TOOL_WORKBENCH, /obj/item/blueprint/weapon/brush)
+	time = 120
+	category = CAT_BLUEPRINTS
+	subcategory = CAT_BPWEAPON
+
+/datum/crafting_recipe/brush/limited
+	name = "Brush gun"
+	result = /obj/item/gun/ballistic/automatic/marksman
+	reqs = list(/obj/item/stack/sheet/metal = 10,
+				/obj/item/advanced_crafting_components/assembly = 1,
+				/datum/reagent/blackpowder = 30,
+				/obj/item/stack/crafting/goodparts = 3,
+				/obj/item/blueprint/weapon/brush/limited = 1
+				)
+	tools = list(TOOL_WORKBENCH)
+	time = 120
+	category = CAT_BLUEPRINTS
+	subcategory = CAT_BPWEAPON_ONEUSE
+
+//high tier
+
+//r91
 
 /datum/crafting_recipe/r91
 	name = "R91 assault rifle"
@@ -2938,45 +3146,185 @@
 	category = CAT_BLUEPRINTS
 	subcategory = CAT_BPWEAPON
 
-/datum/crafting_recipe/smg10mm
-	name = "10mm SMG"
-	result = /obj/item/gun/ballistic/automatic/smg10mm
-	reqs = list(/obj/item/stack/sheet/metal = 10,
+/datum/crafting_recipe/r91/limited
+	name = "R91 assault rifle"
+	result = /obj/item/gun/ballistic/automatic/assault_rifle
+	reqs = list(/obj/item/stack/sheet/metal = 5,
+				/obj/item/advanced_crafting_components/assembly = 1,
 				/obj/item/advanced_crafting_components/receiver = 1,
-				/datum/reagent/blackpowder = 30
-				)
-	tools = list(TOOL_WORKBENCH, /obj/item/blueprint/weapon/smg10mm)
+				/datum/reagent/blackpowder = 30,
+				/obj/item/stack/sheet/mineral/wood = 5,
+				/obj/item/stack/crafting/goodparts = 5,
+				/obj/item/blueprint/weapon/R91/limited = 1)
+	tools = list(TOOL_WORKBENCH)
 	time = 120
 	category = CAT_BLUEPRINTS
-	subcategory = CAT_BPWEAPON
+	subcategory = CAT_BPWEAPON_ONEUSE
 
-/datum/crafting_recipe/infiltrator
-	name = "Infiltrator assault rifle"
-	result = /obj/item/gun/ballistic/automatic/assault_rifle/infiltrator
-	reqs = list(/obj/item/stack/sheet/metal = 10,
+//lmg
+
+/datum/crafting_recipe/lmg
+	name = "R84 LMG"
+	result = /obj/item/gun/ballistic/automatic/lmg
+	reqs = list(/obj/item/stack/sheet/metal = 5,
 				/obj/item/advanced_crafting_components/assembly = 1,
 				/obj/item/advanced_crafting_components/alloys = 1,
 				/datum/reagent/blackpowder = 30,
-				/obj/item/stack/crafting/goodparts = 3
+				/obj/item/stack/crafting/goodparts = 5
 				)
-	tools = list(TOOL_WORKBENCH, /obj/item/blueprint/weapon/R91)
+	tools = list(TOOL_WORKBENCH, /obj/item/blueprint/weapon/lmg)
 	time = 120
 	category = CAT_BLUEPRINTS
 	subcategory = CAT_BPWEAPON
 
-/datum/crafting_recipe/marksmanrifle
-	name = "Marksman rifle"
-	result = /obj/item/gun/ballistic/automatic/marksman
-	reqs = list(/obj/item/stack/sheet/metal = 10,
+/datum/crafting_recipe/lmg/limited
+	name = "R84 LMG"
+	result = /obj/item/gun/ballistic/automatic/lmg
+	reqs = list(/obj/item/stack/sheet/metal = 5,
 				/obj/item/advanced_crafting_components/assembly = 1,
+				/obj/item/advanced_crafting_components/alloys = 1,
 				/datum/reagent/blackpowder = 30,
-				/obj/item/stack/crafting/goodparts = 3
+				/obj/item/stack/crafting/goodparts = 5,
+				/obj/item/blueprint/weapon/lmg/limited = 1
 				)
-	tools = list(TOOL_WORKBENCH, /obj/item/blueprint/weapon/marksmanrifle)
+	tools = list(TOOL_WORKBENCH)
+	time = 120
+	category = CAT_BLUEPRINTS
+	subcategory = CAT_BPWEAPON_ONEUSE
+
+//breacher
+
+/datum/crafting_recipe/breacher
+	name = "Breacher shotgun"
+	result = /obj/item/gun/ballistic/automatic/shotgun/riot
+	reqs = list(/obj/item/stack/sheet/metal = 5,
+				/obj/item/advanced_crafting_components/alloys = 1,
+				/obj/item/advanced_crafting_components/receiver = 1,
+				/datum/reagent/blackpowder = 30,
+				/obj/item/stack/sheet/mineral/wood = 5,
+				/obj/item/stack/crafting/goodparts = 5
+				)
+	tools = list(TOOL_WORKBENCH, /obj/item/blueprint/weapon/breacher)
 	time = 120
 	category = CAT_BLUEPRINTS
 	subcategory = CAT_BPWEAPON
 
+/datum/crafting_recipe/breacher/limited
+	name = "Breacher shotgun"
+	result = /obj/item/gun/ballistic/automatic/shotgun/riot
+	reqs = list(/obj/item/stack/sheet/metal = 5,
+				/obj/item/advanced_crafting_components/alloys = 1,
+				/obj/item/advanced_crafting_components/receiver = 1,
+				/datum/reagent/blackpowder = 30,
+				/obj/item/stack/sheet/mineral/wood = 5,
+				/obj/item/stack/crafting/goodparts = 5,
+				/obj/item/blueprint/weapon/breacher/limited = 1
+				)
+	tools = list(TOOL_WORKBENCH)
+	time = 120
+	category = CAT_BLUEPRINTS
+	subcategory = CAT_BPWEAPON_ONEUSE
+
+//sniper
+
+/datum/crafting_recipe/sniper
+	name = "Sniper rifle"
+	result = /obj/item/gun/ballistic/automatic/marksman/sniper
+	reqs = list(/obj/item/stack/sheet/metal = 5,
+				/obj/item/advanced_crafting_components/assembly = 1,
+				/obj/item/advanced_crafting_components/alloys = 1,
+				/datum/reagent/blackpowder = 30,
+				/obj/item/stack/sheet/mineral/wood = 5,
+				/obj/item/stack/crafting/goodparts = 5
+				)
+	tools = list(TOOL_WORKBENCH, /obj/item/blueprint/weapon/sniper)
+	time = 120
+	category = CAT_BLUEPRINTS
+	subcategory = CAT_BPWEAPON
+
+/datum/crafting_recipe/sniper/limited
+	name = "Sniper rifle"
+	result = /obj/item/gun/ballistic/automatic/marksman/sniper
+	reqs = list(/obj/item/stack/sheet/metal = 5,
+				/obj/item/advanced_crafting_components/assembly = 1,
+				/obj/item/advanced_crafting_components/alloys = 1,
+				/datum/reagent/blackpowder = 30,
+				/obj/item/stack/sheet/mineral/wood = 5,
+				/obj/item/stack/crafting/goodparts = 5, 
+				/obj/item/blueprint/weapon/sniper/limited = 1
+				)
+	tools = list(TOOL_WORKBENCH)
+	time = 120
+	category = CAT_BLUEPRINTS
+	subcategory = CAT_BPWEAPON_ONEUSE
+
+//r82
+
+/datum/crafting_recipe/R82
+	name = "R82 heavy service rifle"
+	result = /obj/item/gun/ballistic/automatic/marksman/servicerifle/r82
+	reqs = list(/obj/item/stack/sheet/metal = 5,
+				/obj/item/advanced_crafting_components/assembly = 1,
+				/obj/item/advanced_crafting_components/receiver = 1,
+				/datum/reagent/blackpowder = 30,
+				/obj/item/stack/sheet/mineral/wood = 5,
+				/obj/item/stack/crafting/goodparts = 5
+				)
+	tools = list(TOOL_WORKBENCH, /obj/item/blueprint/weapon/R82)
+	time = 120
+	category = CAT_BLUEPRINTS
+	subcategory = CAT_BPWEAPON
+
+/datum/crafting_recipe/R82/limited
+	name = "R82 heavy service rifle"
+	result = /obj/item/gun/ballistic/automatic/marksman/servicerifle/r82
+	reqs = list(/obj/item/stack/sheet/metal = 5,
+				/obj/item/advanced_crafting_components/assembly = 1,
+				/obj/item/advanced_crafting_components/receiver = 1,
+				/datum/reagent/blackpowder = 30,
+				/obj/item/stack/sheet/mineral/wood = 5,
+				/obj/item/stack/crafting/goodparts = 5,
+				 /obj/item/blueprint/weapon/R82/limited = 1)
+	tools = list(TOOL_WORKBENCH)
+	time = 120
+	category = CAT_BLUEPRINTS
+	subcategory = CAT_BPWEAPON_ONEUSE
+//desert eagle
+
+/datum/crafting_recipe/deagle
+	name = "Desert Eagle"
+	result = /obj/item/gun/ballistic/automatic/pistol/deagle
+	reqs = list(/obj/item/stack/sheet/metal = 5,
+				/obj/item/advanced_crafting_components/alloys = 1,
+				/obj/item/advanced_crafting_components/receiver = 1,
+				/datum/reagent/blackpowder = 30,
+				/obj/item/stack/sheet/mineral/wood = 5,
+				/obj/item/stack/crafting/goodparts = 5
+				)
+	tools = list(TOOL_WORKBENCH, /obj/item/blueprint/weapon/deagle)
+	time = 120
+	category = CAT_BLUEPRINTS
+	subcategory = CAT_BPWEAPON
+
+/datum/crafting_recipe/deagle/limited
+	name = "Desert Eagle"
+	result = /obj/item/gun/ballistic/automatic/pistol/deagle
+	reqs = list(/obj/item/stack/sheet/metal = 5,
+				/obj/item/advanced_crafting_components/alloys = 1,
+				/obj/item/advanced_crafting_components/receiver = 1,
+				/datum/reagent/blackpowder = 30,
+				/obj/item/stack/sheet/mineral/wood = 5,
+				/obj/item/stack/crafting/goodparts = 5, 
+				/obj/item/blueprint/weapon/deagle/limited = 1
+				)
+	tools = list(TOOL_WORKBENCH)
+	time = 120
+	category = CAT_BLUEPRINTS
+	subcategory = CAT_BPWEAPON_ONEUSE
+
+
+//very high tier
+//bozar
 /datum/crafting_recipe/bozar
 	name = "Bozar"
 	result = /obj/item/gun/ballistic/automatic/bozar
@@ -2991,20 +3339,7 @@
 	time = 120
 	category = CAT_BLUEPRINTS
 	subcategory = CAT_BPWEAPON
-
-/datum/crafting_recipe/AEP7
-	name = "AEP7"
-	result = /obj/item/gun/energy/laser/pistol
-	reqs = list(/obj/item/stack/sheet/metal = 5,
-				/obj/item/advanced_crafting_components/lenses = 1,
-				/obj/item/stack/crafting/metalparts = 3,
-				/obj/item/stack/crafting/electronicparts = 3
-				)
-	tools = list(TOOL_WORKBENCH, /obj/item/blueprint/weapon/AEP7)
-	time = 120
-	category = CAT_BLUEPRINTS
-	subcategory = CAT_BPWEAPON
-
+//aer9
 /datum/crafting_recipe/AER9
 	name = "AER9"
 	result = /obj/item/gun/energy/laser/aer9
@@ -3019,19 +3354,21 @@
 	category = CAT_BLUEPRINTS
 	subcategory = CAT_BPWEAPON
 
-/datum/crafting_recipe/PlasmaPistol
-	name = "Plasma Pistol"
-	result = /obj/item/gun/energy/laser/plasma/pistol
-	reqs = list(/obj/item/stack/sheet/metal = 5,
-				/obj/item/advanced_crafting_components/flux = 1,
-				/obj/item/stack/crafting/metalparts = 3,
-				/obj/item/stack/crafting/electronicparts = 3
+/datum/crafting_recipe/AER9/limited
+	name = "AER9"
+	result = /obj/item/gun/energy/laser/aer9
+	reqs = list(/obj/item/stack/sheet/metal = 15,
+				/obj/item/advanced_crafting_components/lenses = 1,
+				/obj/item/advanced_crafting_components/alloys = 1,
+				/obj/item/stack/crafting/goodparts = 3,
+				/obj/item/stack/crafting/electronicparts = 3, 
+				/obj/item/blueprint/weapon/AER9/limited = 1
 				)
-	tools = list(TOOL_WORKBENCH, /obj/item/blueprint/weapon/plasmapistol)
+	tools = list(TOOL_WORKBENCH)
 	time = 120
 	category = CAT_BLUEPRINTS
-	subcategory = CAT_BPWEAPON
-
+	subcategory = CAT_BPWEAPON_ONEUSE
+//plasma rifle
 /datum/crafting_recipe/PlasmaRifle
 	name = "Plasma Rifle"
 	result = /obj/item/gun/energy/laser/plasma
@@ -3047,21 +3384,23 @@
 	category = CAT_BLUEPRINTS
 	subcategory = CAT_BPWEAPON
 
-/datum/crafting_recipe/RCW
-	name = "RCW"
+/datum/crafting_recipe/PlasmaRifle/limited
+	name = "Plasma Rifle"
 	result = /obj/item/gun/energy/laser/plasma
 	reqs = list(/obj/item/stack/sheet/metal = 15,
 				/obj/item/advanced_crafting_components/flux = 1,
-				/obj/item/advanced_crafting_components/conductors = 1,
+				/obj/item/advanced_crafting_components/conductors = 2,
 				/obj/item/advanced_crafting_components/alloys = 1,
-				/obj/item/advanced_crafting_components/lenses = 1,
 				/obj/item/stack/crafting/metalparts = 3,
-				/obj/item/stack/crafting/electronicparts = 3
+				/obj/item/stack/crafting/electronicparts = 3, 
+				/obj/item/blueprint/weapon/plasmarifle/limited = 1
 				)
-	tools = list(TOOL_WORKBENCH, /obj/item/blueprint/weapon/RCW)
+	tools = list(TOOL_WORKBENCH)
 	time = 120
 	category = CAT_BLUEPRINTS
-	subcategory = CAT_BPWEAPON
+	subcategory = CAT_BPWEAPON_ONEUSE
+
+//tribeam
 
 /datum/crafting_recipe/tribeam
 	name = "Tribeam Laser Rifle"
@@ -3077,3 +3416,231 @@
 	time = 120
 	category = CAT_BLUEPRINTS
 	subcategory = CAT_BPWEAPON
+
+//AM rifle
+/datum/crafting_recipe/AM_rifle
+	name = "AM Rifle"
+	result = /obj/item/gun/ballistic/automatic/sniper_rifle
+	reqs = list(/obj/item/stack/sheet/metal = 10,
+				/obj/item/advanced_crafting_components/assembly = 1,
+				/obj/item/advanced_crafting_components/alloys = 1,
+				/obj/item/advanced_crafting_components/receiver = 1,
+				/datum/reagent/blackpowder = 30,
+				/obj/item/stack/crafting/goodparts = 5
+				)
+	tools = list(TOOL_WORKBENCH, /obj/item/blueprint/weapon/AM_rifle)
+	time = 120
+	category = CAT_BLUEPRINTS
+	subcategory = CAT_BPWEAPON
+
+/datum/crafting_recipe/AM_rifle/limited
+	name = "AM Rifle"
+	result = /obj/item/gun/ballistic/automatic/sniper_rifle
+	reqs = list(/obj/item/stack/sheet/metal = 10,
+				/obj/item/advanced_crafting_components/assembly = 1,
+				/obj/item/advanced_crafting_components/alloys = 1,
+				/obj/item/advanced_crafting_components/receiver = 1,
+				/datum/reagent/blackpowder = 30,
+				/obj/item/stack/crafting/goodparts = 5, 
+				/obj/item/blueprint/weapon/AM_rifle/limited = 1
+				)
+	tools = list(TOOL_WORKBENCH)
+	time = 120
+	category = CAT_BLUEPRINTS
+	subcategory = CAT_BPWEAPON_ONEUSE
+
+//city killer
+
+/datum/crafting_recipe/city_killer
+	name = "City-Killer shotgun"
+	result = /obj/item/gun/ballistic/shotgun/automatic/combat
+	reqs = list(/obj/item/stack/sheet/metal = 10,
+				/obj/item/advanced_crafting_components/assembly = 1,
+				/obj/item/advanced_crafting_components/alloys = 1,
+				/obj/item/advanced_crafting_components/receiver = 1,
+				/datum/reagent/blackpowder = 30,
+				/obj/item/stack/crafting/goodparts = 5
+				)
+	tools = list(TOOL_WORKBENCH, /obj/item/blueprint/weapon/city_killer)
+	time = 120
+	category = CAT_BLUEPRINTS
+	subcategory = CAT_BPWEAPON
+
+/datum/crafting_recipe/city_killer/limited
+
+	name = "City-Killer shotgun"
+	result = /obj/item/gun/ballistic/shotgun/automatic/combat
+	reqs = list(/obj/item/stack/sheet/metal = 10,
+				/obj/item/advanced_crafting_components/assembly = 1,
+				/obj/item/advanced_crafting_components/alloys = 1,
+				/obj/item/advanced_crafting_components/receiver = 1,
+				/datum/reagent/blackpowder = 30,
+				/obj/item/stack/crafting/goodparts = 5,
+				/obj/item/blueprint/weapon/city_killer/limited = 1
+				)
+	tools = list(TOOL_WORKBENCH)
+	time = 120
+	category = CAT_BLUEPRINTS
+	subcategory = CAT_BPWEAPON_ONEUSE
+
+//rangemaster
+
+/datum/crafting_recipe/rangemaster
+	name = "Colt Rangemaster"
+	result = /obj/item/gun/ballistic/automatic/rangemaster
+	reqs = list(/obj/item/stack/sheet/metal = 10,
+				/obj/item/advanced_crafting_components/assembly = 1,
+				/obj/item/advanced_crafting_components/alloys = 1,
+				/obj/item/advanced_crafting_components/receiver = 1,
+				/datum/reagent/blackpowder = 30,
+				/obj/item/stack/crafting/goodparts = 5
+				)
+	tools = list(TOOL_WORKBENCH, /obj/item/blueprint/weapon/rangemaster)
+	time = 120
+	category = CAT_BLUEPRINTS
+	subcategory = CAT_BPWEAPON
+
+/datum/crafting_recipe/rangemaster
+	name = "Colt Rangemaster"
+	result = /obj/item/gun/ballistic/automatic/rangemaster
+	reqs = list(/obj/item/stack/sheet/metal = 10,
+				/obj/item/advanced_crafting_components/assembly = 1,
+				/obj/item/advanced_crafting_components/alloys = 1,
+				/obj/item/advanced_crafting_components/receiver = 1,
+				/datum/reagent/blackpowder = 30,
+				/obj/item/stack/crafting/goodparts = 5, 
+				/obj/item/blueprint/weapon/rangemaster/limited
+				)
+	tools = list(TOOL_WORKBENCH)
+	time = 120
+	category = CAT_BLUEPRINTS
+	subcategory = CAT_BPWEAPON_ONEUSE
+
+//bozar
+/datum/crafting_recipe/bozar
+	name = "bozar"
+	result = /obj/item/gun/ballistic/automatic/bozar
+	reqs = list(/obj/item/stack/sheet/metal = 10,
+				/obj/item/advanced_crafting_components/assembly = 1,
+				/obj/item/advanced_crafting_components/alloys = 1,
+				/obj/item/advanced_crafting_components/receiver = 1,
+				/datum/reagent/blackpowder = 30,
+				/obj/item/stack/crafting/goodparts = 5, 
+				/obj/item/blueprint/weapon/bozar
+				)
+	tools = list(TOOL_WORKBENCH)
+	time = 120
+	category = CAT_BLUEPRINTS
+	subcategory = CAT_BPWEAPON
+
+/datum/crafting_recipe/bozar/limited
+	name = "bozar"
+	result = /obj/item/gun/ballistic/automatic/bozar
+	reqs = list(/obj/item/stack/sheet/metal = 10,
+				/obj/item/advanced_crafting_components/assembly = 1,
+				/obj/item/advanced_crafting_components/alloys = 1,
+				/obj/item/advanced_crafting_components/receiver = 1,
+				/datum/reagent/blackpowder = 30,
+				/obj/item/stack/crafting/goodparts = 5, 
+				/obj/item/blueprint/weapon/bozar/limited
+				)
+	tools = list(TOOL_WORKBENCH)
+	time = 120
+	category = CAT_BLUEPRINTS
+	subcategory = CAT_BPWEAPON_ONEUSE
+
+//BP copy
+/datum/crafting_recipe/bpcopy	
+	result = /obj/item/blueprint/weapon/marksmanrifle/limited
+	name = "Marksman Rifle blueprint"
+	reqs = list(/obj/item/paper = 1)
+	tools = list(TOOL_AWORKBENCH, TOOL_GUNTIER3, /obj/item/blueprint/weapon/marksmanrifle)
+	traits = list(TRAIT_GUNSMITH_THREE)
+	time = 120
+	category = CAT_BLUEPRINTS
+	subcategory = CAT_BP_COPY
+
+/datum/crafting_recipe/bpcopy/plasmapistol
+	result = /obj/item/blueprint/weapon/plasmapistol/limited
+	name = "Plasma Pistol blueprint"
+	tools = list(TOOL_AWORKBENCH, TOOL_GUNTIER3, /obj/item/blueprint/weapon/plasmapistol)
+
+/datum/crafting_recipe/bpcopy/uzi
+	result = /obj/item/blueprint/weapon/uzi/limited
+	name = "UZI blueprint"
+	tools = list(TOOL_AWORKBENCH, TOOL_GUNTIER3, /obj/item/blueprint/weapon/uzi)
+	
+/datum/crafting_recipe/bpcopy/smg10mm
+	result = /obj/item/blueprint/weapon/smg10mm/limited
+	name = "10mm SMG blueprint"
+	tools = list(TOOL_AWORKBENCH, TOOL_GUNTIER3, /obj/item/blueprint/weapon/smg10mm)
+
+/datum/crafting_recipe/bpcopy/brush
+	result = /obj/item/blueprint/weapon/brush/limited
+	name = "Brush Gun blueprint"
+	tools = list(TOOL_AWORKBENCH, TOOL_GUNTIER3, /obj/item/blueprint/weapon/brush)
+
+/datum/crafting_recipe/bpcopy/grease_gun
+	result = /obj/item/blueprint/weapon/grease_gun/limited
+	name = "Grease Gun blueprint"
+	tools = list(TOOL_AWORKBENCH, TOOL_GUNTIER3, /obj/item/blueprint/weapon/grease_gun)
+
+/datum/crafting_recipe/bpcopy/R91
+	result = /obj/item/blueprint/weapon/R91/limited
+	name = "R91 Assault rifle blueprint"
+	tools = list(TOOL_AWORKBENCH, TOOL_GUNTIER3, /obj/item/blueprint/weapon/R91)
+
+/datum/crafting_recipe/bpcopy/sniper
+	result = /obj/item/blueprint/weapon/sniper/limited
+	name = "Sniper Rifle blueprint"
+	tools = list(TOOL_AWORKBENCH, TOOL_GUNTIER3, /obj/item/blueprint/weapon/sniper)
+
+/datum/crafting_recipe/bpcopy/breacher
+	result = /obj/item/blueprint/weapon/breacher/limited
+	name = "Breacher Shotgun blueprint"
+	tools = list(TOOL_AWORKBENCH, TOOL_GUNTIER3, /obj/item/blueprint/weapon/breacher)
+
+/datum/crafting_recipe/bpcopy/lmg
+	result = /obj/item/blueprint/weapon/lmg/limited
+	name = "LMG blueprint"
+	tools = list(TOOL_AWORKBENCH, TOOL_GUNTIER3, /obj/item/blueprint/weapon/lmg)
+
+/datum/crafting_recipe/bpcopy/R82
+	result = /obj/item/blueprint/weapon/R82/limited
+	name = "R82 heavy service rifle blueprint"
+	tools = list(TOOL_AWORKBENCH, TOOL_GUNTIER3, /obj/item/blueprint/weapon/R82)
+
+/datum/crafting_recipe/bpcopy/deagle
+	result = /obj/item/blueprint/weapon/deagle/limited
+	name = "Desert Eagle blueprint"
+	tools = list(TOOL_AWORKBENCH, TOOL_GUNTIER3, /obj/item/blueprint/weapon/deagle)
+
+/datum/crafting_recipe/bpcopy/plasmarifle
+	result = /obj/item/blueprint/weapon/plasmarifle/limited
+	name = "Plasma Rifle blueprint"
+	tools = list(TOOL_AWORKBENCH, TOOL_GUNTIER3, /obj/item/blueprint/weapon/plasmarifle)
+
+/datum/crafting_recipe/bpcopy/AER9
+	result = /obj/item/blueprint/weapon/AER9/limited
+	name = "AER9 blueprint"
+	tools = list(TOOL_AWORKBENCH, TOOL_GUNTIER3, /obj/item/blueprint/weapon/AER9)
+
+/datum/crafting_recipe/bpcopy/AM_rifle
+	result = /obj/item/blueprint/weapon/AM_rifle/limited
+	name = "AM Rifle blueprint"
+	tools = list(TOOL_AWORKBENCH, TOOL_GUNTIER3, /obj/item/blueprint/weapon/AM_rifle)
+
+/datum/crafting_recipe/bpcopy/city_killer
+	result = /obj/item/blueprint/weapon/city_killer/limited
+	name = "City Killer shotgun blueprint"
+	tools = list(TOOL_AWORKBENCH, TOOL_GUNTIER3, /obj/item/blueprint/weapon/city_killer)
+
+/datum/crafting_recipe/bpcopy/rangemaster
+	result = /obj/item/blueprint/weapon/rangemaster/limited
+	name = "Colt Rangemaster blueprint"
+	tools = list(TOOL_AWORKBENCH, TOOL_GUNTIER3, /obj/item/blueprint/weapon/rangemaster)
+
+/datum/crafting_recipe/bpcopy/bozar
+	result = /obj/item/blueprint/weapon/bozar/limited
+	name = "Bozar blueprint"
+	tools = list(TOOL_AWORKBENCH, TOOL_GUNTIER3, /obj/item/blueprint/weapon/bozar)

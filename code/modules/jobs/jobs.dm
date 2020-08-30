@@ -252,7 +252,8 @@ GLOBAL_LIST_INIT(followers_command_positions, list(
 GLOBAL_LIST_INIT(followers_positions, list(
     "Practitioner",
     "Followers Guard",
-    "Followers Volunteer"
+    "Followers Volunteer",
+	"Professor"
 ))
 /*
 GLOBAL_LIST_INIT(engineering_positions, list(
