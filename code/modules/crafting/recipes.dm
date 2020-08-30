@@ -3130,9 +3130,9 @@
 
 //grease gun
 
-/datum/crafting_recipe/smg10mm/limited
-	name = "10mm SMG"
-	result = /obj/item/gun/ballistic/automatic/smg10mm
+/datum/crafting_recipe/grease_gun/limited
+	name = "Grease gun"
+	result = /obj/item/gun/ballistic/automatic/greasegun
 	reqs = list(/obj/item/stack/sheet/metal = 10,
 				/obj/item/advanced_crafting_components/receiver = 1,
 				/datum/reagent/blackpowder = 30, 
@@ -3142,9 +3142,9 @@
 	category = CAT_BLUEPRINTS
 	subcategory = CAT_BPWEAPON
 
-/datum/crafting_recipe/smg10mm/limited
-	name = "10mm SMG"
-	result = /obj/item/gun/ballistic/automatic/smg10mm
+/datum/crafting_recipe/grease_gun/limited
+	name = "Grease gun"
+	result = /obj/item/gun/ballistic/automatic/greasegun
 	reqs = list(/obj/item/stack/sheet/metal = 10,
 				/obj/item/advanced_crafting_components/receiver = 1,
 				/datum/reagent/blackpowder = 30, 
