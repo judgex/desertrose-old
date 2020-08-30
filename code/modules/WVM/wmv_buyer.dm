@@ -42,8 +42,9 @@
 	dat += "Iron ore : 1.5 caps<br>"
 	dat += "Silver : 5 caps<br>"
 	dat += "Gold : 15 caps<br>"
+	dat += "Diamond : 50 caps<br>"
 	dat += "Leather : 5 caps<br>"
-	dat += "Jet/Psycho/Turbo : 15 caps<br>"
+	dat += "Jet/Psycho/MedX : 15 caps<br>"
 	dat += ""
 	dat += "</div>"
 
@@ -79,6 +80,14 @@
 
 /* Adding a caps to caps storage and release vending item. */
 /obj/machinery/mineral/wasteland_trader/proc/add_caps(obj/item/I)
+	if(istype(I, /obj/item/stack/ore/diamond))
+		var/obj/item/stack/ore/iron/sellable = I
+		var/price = 50
+		var/inserted_value = FLOOR(sellable.amount * price, 1)
+		stored_caps += inserted_value
+		I.Destroy()
+		playsound(src, 'sound/items/change_jaws.ogg', 60, 1)
+		to_chat(usr, "You sell [inserted_value] bottle caps value to a vending machine.")
 	if(istype(I, /obj/item/stack/ore/iron))
 		var/obj/item/stack/ore/iron/sellable = I
 		var/price = 1.5

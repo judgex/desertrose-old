@@ -1599,7 +1599,7 @@
 	subcategory = CAT_WEAPON
 *//* CRAFT rework: removed for balance
 /datum/crafting_recipe/thatgun
-	name = ".223 pistol"
+	name = ".556 pistol"
 	result = /obj/item/gun/ballistic/revolver/thatgun
 	reqs = list(/obj/item/gun/ballistic/shotgun/remington = 1,
 				/obj/item/stack/crafting/metalparts = 2,
@@ -2967,6 +2967,31 @@
 	subcategory = CAT_BPWEAPON
 
 //mid tier
+//.556 pistol
+/datum/crafting_recipe/thatgun
+	name = ".556 pistol"
+	result = /obj/item/gun/ballistic/revolver/thatgun
+	reqs = list(/obj/item/stack/crafting/metalparts = 2,
+				/datum/reagent/blackpowder = 15,
+				/obj/item/stack/sheet/metal = 3)
+	tools = list(TOOL_WORKBENCH, /obj/item/blueprint/weapon/thatgun)
+	time = 120
+	category = CAT_BLUEPRINTS
+	subcategory = CAT_BPWEAPON
+
+/datum/crafting_recipe/thatgun/limited
+	name = ".556 pistol"
+	result = /obj/item/gun/ballistic/revolver/thatgun
+	reqs = list(/obj/item/stack/crafting/metalparts = 2,
+				/datum/reagent/blackpowder = 15,
+				/obj/item/stack/sheet/metal = 3,
+				/obj/item/blueprint/weapon/thatgun/limited
+				)
+	tools = list(TOOL_WORKBENCH)
+	time = 120
+	category = CAT_BLUEPRINTS
+	subcategory = CAT_BPWEAPON
+
 //pps
 /datum/crafting_recipe/pps
 	name = "Ancient SMG"
@@ -3745,3 +3770,8 @@
 	result = /obj/item/blueprint/weapon/kar98/limited
 	name = "Ancient rifle blueprint"
 	tools = list(TOOL_AWORKBENCH, TOOL_GUNTIER3, /obj/item/blueprint/weapon/kar98)
+
+/datum/crafting_recipe/bpcopy/thatgun
+	result = /obj/item/blueprint/weapon/thatgun/limited
+	name = ".556 pistol blueprint"
+	tools = list(TOOL_AWORKBENCH, TOOL_GUNTIER3, /obj/item/blueprint/weapon/thatgun)

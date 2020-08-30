@@ -1447,6 +1447,7 @@
 	icon_state = "blueprint_loot"
 	lootcount = 1
 	loot = list(
+		/obj/item/blueprint/weapon/thatgun,
 		/obj/item/blueprint/weapon/marksmanrifle,
 		/obj/item/blueprint/weapon/plasmapistol,
 		/obj/item/blueprint/weapon/uzi,
@@ -1461,6 +1462,7 @@
 	icon_state = "blueprint_loot"
 	lootcount = 1
 	loot = list(
+		/obj/item/blueprint/weapon/thatgun/limited,
 		/obj/item/blueprint/weapon/marksmanrifle/limited,
 		/obj/item/blueprint/weapon/plasmapistol/limited,
 		/obj/item/blueprint/weapon/uzi/limited,
