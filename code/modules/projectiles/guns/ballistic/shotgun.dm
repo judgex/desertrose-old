@@ -117,12 +117,11 @@
 	fire_sound = 'sound/f13weapons/hunting_rifle.ogg'
 
 
-/*TODO sprite, ignore for now
 /obj/item/gun/ballistic/shotgun/musket
-	name = "Musket"
-	desc = "An antique looking musket."
-	icon_state = "moistnugget"
-	item_state = "moistnugget"
+	name = " a Rifled Musket"
+	desc = "An old style rifled musket chambered in .58, probably made by some master craftsman or something. The design looks very antiquated, but trust me, you do not want to get shot by one of these."
+	icon_state = "1851enfield"
+	item_state = "1851enfield"
 	slot_flags = 0 //no ITEM_SLOT_BACK sprite, alas
 	mag_type = /obj/item/ammo_box/magazine/internal/musket
 	var/bolt_open = FALSE
@@ -130,11 +129,11 @@
 	nocase = TRUE
 	knife_x_offset = 27
 	knife_y_offset = 13
-	fire_delay = 100
+	fire_delay = 20
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 	fire_sound = 'sound/f13weapons/hunting_rifle.ogg'
-TODO sprite, ignore for now*/
+
 
 //BB gun
 /obj/item/gun/ballistic/shotgun/bb
@@ -335,7 +334,7 @@ TODO sprite, ignore for now*/
 	scopestate = "AEP7_scope"
 	scope_x_offset = 8
 	scope_y_offset = 19
-	can_bayonet = TRUE	
+	can_bayonet = TRUE
 	bayonetstate = "trenchgun"
 	knife_x_offset = 23
 	knife_y_offset = 14
@@ -389,6 +388,8 @@ TODO sprite, ignore for now*/
 	weapon_weight = WEAPON_HEAVY
 	can_scope = TRUE
 
+
+
 /obj/item/gun/ballistic/shotgun/remington/attackby(obj/item/A, mob/user, params)
 	..()
 	if(istype(A, /obj/item/circular_saw) || istype(A, /obj/item/gun/energy/plasmacutter))
@@ -431,6 +432,38 @@ TODO sprite, ignore for now*/
 			return
 	else
 		..()
+
+/obj/item/gun/ballistic/shotgun/ww2rifle
+	name = "\improper ancient rifle"
+	desc = "An ancient military rifle in use over 100 years ago, chambered in .308 and packing an additional punch."
+	icon_state = "kar98"
+	item_state = "308"
+	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/kar98
+	fire_sound = 'sound/f13weapons/hunting_rifle.ogg'
+	fire_delay = 5
+	w_class = WEIGHT_CLASS_BULKY
+	weapon_weight = WEAPON_HEAVY
+	can_scope = TRUE
+	extra_damage = 10
+	extra_penetration = 10
+
+/obj/item/gun/ballistic/shotgun/ww2rifle/scoped
+	name = "\improper scoped ancient rifle"
+	desc = "An ancient military rifle in use over 100 years ago, chambered in .308 and packing an additional punch. Now with a scope."
+	icon_state = "kar98scope"
+	item_state = "308"
+	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/kar98
+	fire_sound = 'sound/f13weapons/hunting_rifle.ogg'
+	fire_delay = 5
+	w_class = WEIGHT_CLASS_BULKY
+	weapon_weight = WEAPON_HEAVY
+	zoomable = TRUE
+	zoom_amt = 10
+	zoom_out_amt = 13
+	can_scope = FALSE
+	extra_damage = 10
+	extra_penetration = 10
+
 
 //Anti-Materiel Rifle (NCR)
 /obj/item/gun/ballistic/shotgun/antimateriel

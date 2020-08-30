@@ -236,14 +236,6 @@
 	materials = list(MAT_METAL = 1000)
 	w_class = WEIGHT_CLASS_NORMAL
 
-/obj/item/ammo_box/musketball//TODO
-	name = "Musket Balls box"
-	icon_state = "Batbox"
-	ammo_type = /obj/item/ammo_casing/caseless/musketball
-	max_ammo = 10
-	materials = list(MAT_METAL = 1000)
-	w_class = WEIGHT_CLASS_NORMAL
-
 //.44 Magnum
 /obj/item/ammo_box/m44box
 	name = "ammo box (.44 Magnum FMJ)"
@@ -358,6 +350,14 @@
 	multiple_sprites = 1
 	materials = list(MAT_METAL = 5000)
 	w_class = WEIGHT_CLASS_SMALL
+
+/obj/item/ammo_box/musketbag/
+	name = "Bag of Musket Cartridges"
+	icon_state = "musketbag"
+	ammo_type = /obj/item/ammo_casing/caseless/musketball
+	max_ammo = 15
+	materials = list(MAT_METAL = 1000)
+	w_class = WEIGHT_CLASS_NORMAL
 
 /obj/item/ammo_box/a308
 	name = "stripper clip (.308)"

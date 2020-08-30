@@ -25,7 +25,7 @@
 */
 
 /obj/item/ammo_box/magazine/autopipe
-	name = "autopipe magazine (.38)"
+	name = "autopipe magazine (.357)"
 	icon_state = "autopipe_mag"
 	caliber = "357"
 	ammo_type = /obj/item/ammo_casing/a357

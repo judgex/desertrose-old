@@ -942,8 +942,8 @@
     loot = list(
             /obj/effect/spawner/lootdrop/f13/weapon/gun/tier1 = 80,
             /obj/effect/spawner/lootdrop/f13/weapon/gun/tier2 = 14,
-            /obj/effect/spawner/lootdrop/f13/weapon/gun/tier3 = 3,
-            /obj/effect/spawner/lootdrop/f13/weapon/gun/tier4 = 2,
+            /obj/effect/spawner/lootdrop/f13/weapon/gun/tier3 = 4,
+            /obj/effect/spawner/lootdrop/f13/weapon/gun/tier4 = 1,
             /obj/effect/spawner/lootdrop/f13/weapon/gun/tier5 = 1
             )
 
@@ -1439,7 +1439,8 @@
 	loot = list(
 		/obj/item/blueprint/weapon/AEP7,
 		/obj/item/blueprint/weapon/trail_carbine,
-		/obj/item/blueprint/weapon/lever_action
+		/obj/item/blueprint/weapon/lever_action,
+		/obj/item/blueprint/weapon/kar98
 	)
 /obj/effect/spawner/lootdrop/f13/blueprintMid
 	name = "blueprint-tier(Mid) item spawner"
@@ -1451,7 +1452,9 @@
 		/obj/item/blueprint/weapon/uzi,
 		/obj/item/blueprint/weapon/smg10mm,
 		/obj/item/blueprint/weapon/brush,
-		/obj/item/blueprint/weapon/grease_gun
+		/obj/item/blueprint/weapon/grease_gun,
+		/obj/item/blueprint/weapon/pps,
+		/obj/item/blueprint/weapon/mg34
 	)
 /obj/effect/spawner/lootdrop/f13/blueprintMidLimited
 	name = "blueprint-tier(MidLimited) item spawner"
@@ -1463,7 +1466,9 @@
 		/obj/item/blueprint/weapon/uzi/limited,
 		/obj/item/blueprint/weapon/smg10mm/limited,
 		/obj/item/blueprint/weapon/brush/limited,
-		/obj/item/blueprint/weapon/grease_gun/limited
+		/obj/item/blueprint/weapon/grease_gun/limited,
+		/obj/item/blueprint/weapon/pps/limited,
+		/obj/item/blueprint/weapon/mg34/limited
 	)
 /obj/effect/spawner/lootdrop/f13/blueprintHigh
 	name = "blueprint-tier(High) item spawner"
@@ -1473,7 +1478,9 @@
 		/obj/item/blueprint/weapon/R91,
 		/obj/item/blueprint/weapon/sniper,
 		/obj/item/blueprint/weapon/breacher,
-		/obj/item/blueprint/weapon/lmg
+		/obj/item/blueprint/weapon/lmg,
+		/obj/item/blueprint/weapon/R82,
+		/obj/item/blueprint/weapon/deagle
 	)
 /obj/effect/spawner/lootdrop/f13/blueprintVHigh
 	name = "blueprint-tier(VHigh) item spawner"
@@ -1493,7 +1500,8 @@
 	loot = list(
 		/obj/item/blueprint/weapon/AM_rifle,
 		/obj/item/blueprint/weapon/city_killer,
-		/obj/item/blueprint/weapon/rangemaster
+		/obj/item/blueprint/weapon/rangemaster,
+		/obj/item/blueprint/weapon/bozar
 	)
 
 /obj/effect/spawner/lootdrop/f13/advcrafting
