@@ -2942,7 +2942,7 @@
 
 /datum/crafting_recipe/lever_action
 	name = "Lever Action shotgun"
-	result = /obj/item/gun/energy/laser/pistol
+	result = /obj/item/gun/ballistic/shotgun/trench
 	reqs = list(/obj/item/stack/sheet/metal = 5,
 				/obj/item/advanced_crafting_components/receiver = 1,
 				/obj/item/stack/crafting/metalparts = 3,
@@ -2956,7 +2956,7 @@
 
 /datum/crafting_recipe/trail_carbine
 	name = "Trail Carbine"
-	result = /obj/item/gun/energy/laser/pistol
+	result = /obj/item/gun/ballistic/shotgun/automatic/hunting/trail
 	reqs = list(/obj/item/stack/sheet/metal = 5,
 				/obj/item/advanced_crafting_components/receiver = 1,
 				/obj/item/stack/crafting/metalparts = 3,
@@ -2995,7 +2995,7 @@
 //mg34
 /datum/crafting_recipe/mg34
 	name = "Ancient machine gun"
-	result = /obj/item/gun/energy/laser/plasma/pistol
+	result = /obj/item/gun/ballistic/automatic/mg34
 	reqs = list(/obj/item/stack/sheet/metal = 5,
 				/obj/item/advanced_crafting_components/flux = 1,
 				/obj/item/stack/crafting/metalparts = 3,
@@ -3007,7 +3007,7 @@
 	subcategory = CAT_BPWEAPON
 /datum/crafting_recipe/mg34/limited
 	name = "Ancient machine gun"
-	result = /obj/item/gun/energy/laser/plasma/pistol
+	result = /obj/item/gun/ballistic/automatic/mg34
 	reqs = list(/obj/item/stack/sheet/metal = 5,
 				/obj/item/advanced_crafting_components/assembly = 1,
 				/obj/item/stack/crafting/metalparts = 3,
@@ -3021,7 +3021,7 @@
 //kar98
 /datum/crafting_recipe/kar98
 	name = "Ancient rifle"
-	result = /obj/item/gun/energy/laser/plasma/pistol
+	result = /obj/item/gun/ballistic/shotgun/ww2rifle
 	reqs = list(/obj/item/stack/sheet/metal = 5,
 				/obj/item/advanced_crafting_components/receiver = 1,
 				/obj/item/stack/crafting/metalparts = 3,
@@ -3033,7 +3033,7 @@
 	subcategory = CAT_BPWEAPON
 /datum/crafting_recipe/kar98/limited
 	name = "Ancient rifle"
-	result = /obj/item/gun/energy/laser/plasma/pistol
+	result = /obj/item/gun/ballistic/shotgun/ww2rifle
 	reqs = list(/obj/item/stack/sheet/metal = 5,
 				/obj/item/advanced_crafting_components/receiver = 1,
 				/obj/item/stack/crafting/metalparts = 3,
