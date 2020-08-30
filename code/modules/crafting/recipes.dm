@@ -480,6 +480,15 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
 
+/datum/crafting_recipe/mSniperRifle
+	name = "empty sniper rifle magazine (7.62x51/.308)"
+	result = /obj/item/ammo_box/magazine/w308/empty
+	reqs = list(/obj/item/stack/sheet/metal = 2)
+	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER2)
+	time = 10
+	category = CAT_WEAPONRY
+	subcategory = CAT_AMMO
+
 /datum/crafting_recipe/c45
 	name = ".45 FMJ ammo box"
 	result = /obj/item/ammo_box/c45
@@ -2958,6 +2967,83 @@
 	subcategory = CAT_BPWEAPON
 
 //mid tier
+//pps
+/datum/crafting_recipe/pps
+	name = "Ancient SMG"
+	result = /obj/item/gun/ballistic/automatic/pps
+	reqs = list(/obj/item/stack/sheet/metal = 5,
+				/obj/item/advanced_crafting_components/receiver = 1,
+				/obj/item/stack/crafting/metalparts = 2,
+				/datum/reagent/blackpowder = 30
+				)
+	tools = list(TOOL_WORKBENCH, /obj/item/blueprint/weapon/pps)
+	time = 120
+	category = CAT_BLUEPRINTS
+	subcategory = CAT_BPWEAPON
+/datum/crafting_recipe/pps/limited
+	name = "Ancient SMG"
+	result = /obj/item/gun/ballistic/automatic/pps
+	reqs = list(/obj/item/stack/sheet/metal = 5,
+				/obj/item/advanced_crafting_components/receiver = 1,
+				/obj/item/stack/crafting/metalparts = 2,
+				/datum/reagent/blackpowder = 30,
+				/obj/item/blueprint/weapon/pps/limited)
+	tools = list(TOOL_WORKBENCH)
+	time = 120
+	category = CAT_BLUEPRINTS
+	subcategory = CAT_BPWEAPON_ONEUSE
+//mg34
+/datum/crafting_recipe/mg34
+	name = "Ancient machine gun"
+	result = /obj/item/gun/energy/laser/plasma/pistol
+	reqs = list(/obj/item/stack/sheet/metal = 5,
+				/obj/item/advanced_crafting_components/flux = 1,
+				/obj/item/stack/crafting/metalparts = 3,
+				/datum/reagent/blackpowder = 60
+				)
+	tools = list(TOOL_WORKBENCH, /obj/item/blueprint/weapon/mg34)
+	time = 120
+	category = CAT_BLUEPRINTS
+	subcategory = CAT_BPWEAPON
+/datum/crafting_recipe/mg34/limited
+	name = "Ancient machine gun"
+	result = /obj/item/gun/energy/laser/plasma/pistol
+	reqs = list(/obj/item/stack/sheet/metal = 5,
+				/obj/item/advanced_crafting_components/assembly = 1,
+				/obj/item/stack/crafting/metalparts = 3,
+				/datum/reagent/blackpowder = 60, 
+				/obj/item/blueprint/weapon/mg34/limited
+				)
+	tools = list(TOOL_WORKBENCH)
+	time = 120
+	category = CAT_BLUEPRINTS
+	subcategory = CAT_BPWEAPON_ONEUSE
+//kar98
+/datum/crafting_recipe/kar98
+	name = "Ancient rifle"
+	result = /obj/item/gun/energy/laser/plasma/pistol
+	reqs = list(/obj/item/stack/sheet/metal = 5,
+				/obj/item/advanced_crafting_components/receiver = 1,
+				/obj/item/stack/crafting/metalparts = 3,
+				/datum/reagent/blackpowder = 10
+				)
+	tools = list(TOOL_WORKBENCH, /obj/item/blueprint/weapon/kar98)
+	time = 120
+	category = CAT_BLUEPRINTS
+	subcategory = CAT_BPWEAPON
+/datum/crafting_recipe/kar98/limited
+	name = "Ancient rifle"
+	result = /obj/item/gun/energy/laser/plasma/pistol
+	reqs = list(/obj/item/stack/sheet/metal = 5,
+				/obj/item/advanced_crafting_components/receiver = 1,
+				/obj/item/stack/crafting/metalparts = 3,
+				/datum/reagent/blackpowder = 10, 
+				/obj/item/blueprint/weapon/kar98/limited
+				)
+	tools = list(TOOL_WORKBENCH)
+	time = 120
+	category = CAT_BLUEPRINTS
+	subcategory = CAT_BPWEAPON_ONEUSE
 
 //plasma pistol
 
@@ -3500,7 +3586,7 @@
 	category = CAT_BLUEPRINTS
 	subcategory = CAT_BPWEAPON
 
-/datum/crafting_recipe/rangemaster
+/datum/crafting_recipe/rangemaster/limited
 	name = "Colt Rangemaster"
 	result = /obj/item/gun/ballistic/automatic/rangemaster
 	reqs = list(/obj/item/stack/sheet/metal = 10,
@@ -3518,7 +3604,7 @@
 
 //bozar
 /datum/crafting_recipe/bozar
-	name = "bozar"
+	name = "Bozar"
 	result = /obj/item/gun/ballistic/automatic/bozar
 	reqs = list(/obj/item/stack/sheet/metal = 10,
 				/obj/item/advanced_crafting_components/assembly = 1,
@@ -3534,7 +3620,7 @@
 	subcategory = CAT_BPWEAPON
 
 /datum/crafting_recipe/bozar/limited
-	name = "bozar"
+	name = "Bozar"
 	result = /obj/item/gun/ballistic/automatic/bozar
 	reqs = list(/obj/item/stack/sheet/metal = 10,
 				/obj/item/advanced_crafting_components/assembly = 1,
@@ -3644,3 +3730,18 @@
 	result = /obj/item/blueprint/weapon/bozar/limited
 	name = "Bozar blueprint"
 	tools = list(TOOL_AWORKBENCH, TOOL_GUNTIER3, /obj/item/blueprint/weapon/bozar)
+
+/datum/crafting_recipe/bpcopy/pps
+	result = /obj/item/blueprint/weapon/pps/limited
+	name = "Ancient SMG blueprint"
+	tools = list(TOOL_AWORKBENCH, TOOL_GUNTIER3, /obj/item/blueprint/weapon/pps)
+
+/datum/crafting_recipe/bpcopy/mg34
+	result = /obj/item/blueprint/weapon/mg34/limited
+	name = "Ancient machine gun blueprint"
+	tools = list(TOOL_AWORKBENCH, TOOL_GUNTIER3, /obj/item/blueprint/weapon/mg34)
+
+/datum/crafting_recipe/bpcopy/kar98
+	result = /obj/item/blueprint/weapon/kar98/limited
+	name = "Ancient rifle blueprint"
+	tools = list(TOOL_AWORKBENCH, TOOL_GUNTIER3, /obj/item/blueprint/weapon/kar98)

@@ -32,71 +32,105 @@
     icon_state = "blueprint1"
 
 //low tier
+
 /obj/item/blueprint/weapon/AEP7
 	name = "AEP7 blueprint"
+
 /obj/item/blueprint/weapon/trail_carbine
 	name = "Trail Carbine blueprint"
+
 /obj/item/blueprint/weapon/lever_action
 	name = "Lever Action shotgun blueprint"
 
+/obj/item/blueprint/weapon/kar98
+	name = "Ancient rifle blueprint"
+
+/obj/item/blueprint/weapon/kar98/limited
+	name = "Damaged ancient rifle blueprint"
+
 //mid tier
+/obj/item/blueprint/weapon/pps
+	name = "Ancient SMG blueprint"
+
+/obj/item/blueprint/weapon/pps/limited
+	name = "Damaged ancient SMG blueprint"
+
+/obj/item/blueprint/weapon/mg34
+	name = "Ancient machine gun blueprint"
+
+/obj/item/blueprint/weapon/mg34/limited
+	name = "Damaged ancient machine gun blueprint"
+
 /obj/item/blueprint/weapon/marksmanrifle
 	name = "Marksman Rifle blueprint"
+
 /obj/item/blueprint/weapon/marksmanrifle/limited
-	name = "Damaged Marksman Rifle blueprint "
+	name = "Damaged Marksman Rifle blueprint"
 
 /obj/item/blueprint/weapon/plasmapistol
 	name = "Plasma Pistol blueprint"
+
 /obj/item/blueprint/weapon/plasmapistol/limited
 	name = "Damaged Plasma Pistol blueprint"
 
 /obj/item/blueprint/weapon/uzi
 	name = "UZI blueprint"
+
 /obj/item/blueprint/weapon/uzi/limited
 	name = "Damaged UZI blueprint"
 
 /obj/item/blueprint/weapon/smg10mm
 	name = "10mm SMG blueprint"
+
 /obj/item/blueprint/weapon/smg10mm/limited
 	name = "Damaged 10mm SMG blueprint"
 
 /obj/item/blueprint/weapon/brush
 	name = "Brush Gun blueprint"
+
 /obj/item/blueprint/weapon/brush/limited
 	name = "Damaged Brush Gun blueprint"
 
 /obj/item/blueprint/weapon/grease_gun
  	name = "Grease Gun blueprint"
+
 /obj/item/blueprint/weapon/grease_gun/limited
  	name = "Damaged Grease Gun blueprint"
+
 //high tier
 /obj/item/blueprint/weapon/R82
 	name = "R82 heavy service rifle blueprint"
+
 /obj/item/blueprint/weapon/R82/limited
 	name = "Damaged R82 heavy service rifle blueprint"
 
 /obj/item/blueprint/weapon/deagle
 	name = "Desert Eagle blueprint"
+
 /obj/item/blueprint/weapon/deagle/limited
 	name = "Damaged Desert Eagle blueprint"
 
 /obj/item/blueprint/weapon/R91
 	name = "R91 Assault rifle blueprint"
+
 /obj/item/blueprint/weapon/R91/limited
 	name = "Damaged R91 Assault rifle blueprint"
 
 /obj/item/blueprint/weapon/sniper
 	name = "Sniper Rifle blueprint"
+
 /obj/item/blueprint/weapon/sniper/limited
 	name = "Damaged Sniper Rifle blueprint"
 
 /obj/item/blueprint/weapon/breacher
 	name = "Breacher Shotgun blueprint"
+
 /obj/item/blueprint/weapon/breacher/limited
 	name = "Damaged Breacher Shotgun blueprint"
 
 /obj/item/blueprint/weapon/lmg
 	name = "LMG blueprint"
+	
 /obj/item/blueprint/weapon/lmg/limited
 	name = "Damaged LMG blueprint"
 

@@ -434,7 +434,7 @@
 		..()
 
 /obj/item/gun/ballistic/shotgun/ww2rifle
-	name = "ancient rifle"
+	name = "\improper ancient rifle"
 	desc = "An ancient military rifle in use over 100 years ago, chambered in .308 and packing an additional punch."
 	icon_state = "kar98"
 	item_state = "308"
@@ -448,7 +448,7 @@
 	extra_penetration = 10
 
 /obj/item/gun/ballistic/shotgun/ww2rifle/scoped
-	name = "scoped ancient rifle"
+	name = "\improper scoped ancient rifle"
 	desc = "An ancient military rifle in use over 100 years ago, chambered in .308 and packing an additional punch. Now with a scope."
 	icon_state = "kar98scope"
 	item_state = "308"

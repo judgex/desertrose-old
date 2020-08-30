@@ -1439,7 +1439,8 @@
 	loot = list(
 		/obj/item/blueprint/weapon/AEP7,
 		/obj/item/blueprint/weapon/trail_carbine,
-		/obj/item/blueprint/weapon/lever_action
+		/obj/item/blueprint/weapon/lever_action,
+		/obj/item/blueprint/weapon/kar98
 	)
 /obj/effect/spawner/lootdrop/f13/blueprintMid
 	name = "blueprint-tier(Mid) item spawner"
@@ -1451,7 +1452,9 @@
 		/obj/item/blueprint/weapon/uzi,
 		/obj/item/blueprint/weapon/smg10mm,
 		/obj/item/blueprint/weapon/brush,
-		/obj/item/blueprint/weapon/grease_gun
+		/obj/item/blueprint/weapon/grease_gun,
+		/obj/item/blueprint/weapon/pps,
+		/obj/item/blueprint/weapon/mg34
 	)
 /obj/effect/spawner/lootdrop/f13/blueprintMidLimited
 	name = "blueprint-tier(MidLimited) item spawner"
@@ -1463,7 +1466,9 @@
 		/obj/item/blueprint/weapon/uzi/limited,
 		/obj/item/blueprint/weapon/smg10mm/limited,
 		/obj/item/blueprint/weapon/brush/limited,
-		/obj/item/blueprint/weapon/grease_gun/limited
+		/obj/item/blueprint/weapon/grease_gun/limited,
+		/obj/item/blueprint/weapon/pps/limited,
+		/obj/item/blueprint/weapon/mg34/limited
 	)
 /obj/effect/spawner/lootdrop/f13/blueprintHigh
 	name = "blueprint-tier(High) item spawner"
