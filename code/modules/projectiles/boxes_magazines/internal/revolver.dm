@@ -61,4 +61,4 @@
 	name = ".223 pistol cylinder"
 	ammo_type = /obj/item/ammo_casing/a556
 	caliber = "a556"
-	max_ammo = 6
+	max_ammo = 5
