@@ -480,6 +480,15 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
 
+/datum/crafting_recipe/mSniperRifle
+	name = "empty sniper rifle magazine (7.62x51/.308)"
+	result = /obj/item/ammo_box/magazine/w308/empty
+	reqs = list(/obj/item/stack/sheet/metal = 2)
+	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER2)
+	time = 10
+	category = CAT_WEAPONRY
+	subcategory = CAT_AMMO
+
 /datum/crafting_recipe/c45
 	name = ".45 FMJ ammo box"
 	result = /obj/item/ammo_box/c45
@@ -3500,7 +3509,7 @@
 	category = CAT_BLUEPRINTS
 	subcategory = CAT_BPWEAPON
 
-/datum/crafting_recipe/rangemaster
+/datum/crafting_recipe/rangemaster/limited
 	name = "Colt Rangemaster"
 	result = /obj/item/gun/ballistic/automatic/rangemaster
 	reqs = list(/obj/item/stack/sheet/metal = 10,
@@ -3518,7 +3527,7 @@
 
 //bozar
 /datum/crafting_recipe/bozar
-	name = "bozar"
+	name = "Bozar"
 	result = /obj/item/gun/ballistic/automatic/bozar
 	reqs = list(/obj/item/stack/sheet/metal = 10,
 				/obj/item/advanced_crafting_components/assembly = 1,
@@ -3534,7 +3543,7 @@
 	subcategory = CAT_BPWEAPON
 
 /datum/crafting_recipe/bozar/limited
-	name = "bozar"
+	name = "Bozar"
 	result = /obj/item/gun/ballistic/automatic/bozar
 	reqs = list(/obj/item/stack/sheet/metal = 10,
 				/obj/item/advanced_crafting_components/assembly = 1,

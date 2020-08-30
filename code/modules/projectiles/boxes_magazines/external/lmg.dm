@@ -54,6 +54,10 @@
 	max_ammo = 7
 	multiple_sprites = 2
 
+/obj/item/ammo_box/magazine/w308/empty
+	start_empty = 1
+	
+
 /obj/item/ammo_box/magazine/lmg
 	name = "ammo box (5.56)"
 	icon_state = "r80"
