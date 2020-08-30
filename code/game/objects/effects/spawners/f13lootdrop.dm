@@ -1458,6 +1458,9 @@
 	icon_state = "blueprint_loot"
 	lootcount = 1
 	loot = list(
+		//obj/item/blueprint/weapon/pps/limited,
+		//obj/item/blueprint/weapon/kar98/limited,
+		//obj/item/blueprint/weapon/mg34/limited,
 		/obj/item/blueprint/weapon/marksmanrifle/limited,
 		/obj/item/blueprint/weapon/plasmapistol/limited,
 		/obj/item/blueprint/weapon/uzi/limited,
