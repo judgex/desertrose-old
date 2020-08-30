@@ -507,11 +507,12 @@
 	w_class = WEIGHT_CLASS_SMALL
 
 /obj/item/gun/ballistic/revolver/thatgun
-	name = ".223 pistol"
-	desc = "A .223 rifle modified and cut down to a pistol. This is a one-of-a kind firearm, obviously made with love and skill."
+	name = ".556 pistol"
+	desc = "A .556 rifle modified and cut down to a pistol. This is a one-of-a kind firearm, obviously made with love and skill."
 	icon_state = "thatgun"
 	fire_sound = 'sound/f13weapons/magnum_fire.ogg'
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/thatgun
+	extra_penetration = 17
 
 /obj/item/gun/ballistic/revolver/zhurong
 	name = "Zhu-Rong v417"
