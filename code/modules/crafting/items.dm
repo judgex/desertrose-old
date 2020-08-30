@@ -40,10 +40,25 @@
 	name = "Lever Action shotgun blueprint"
 
 //mid tier
+/obj/item/blueprint/weapon/pps
+	name = "Ancient SMG blueprint"
+/obj/item/blueprint/weapon/pps/limited
+	name = "Damaged ancient SMG blueprint"
+
+/obj/item/blueprint/weapon/kar98
+	name = "Ancient rifle blueprint"
+/obj/item/blueprint/weapon/kar98/limited
+	name = "Damaged ancient rifle blueprint"
+
+/obj/item/blueprint/weapon/mg34
+	name = "Ancient machine gun blueprint"
+/obj/item/blueprint/weapon/mg34/limited
+	name = "Damaged ancient machine gun blueprint"
+
 /obj/item/blueprint/weapon/marksmanrifle
 	name = "Marksman Rifle blueprint"
 /obj/item/blueprint/weapon/marksmanrifle/limited
-	name = "Damaged Marksman Rifle blueprint "
+	name = "Damaged Marksman Rifle blueprint"
 
 /obj/item/blueprint/weapon/plasmapistol
 	name = "Plasma Pistol blueprint"
