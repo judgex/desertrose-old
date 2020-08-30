@@ -520,7 +520,7 @@
 
 /obj/item/gun/ballistic/automatic/pps
 	name = "\improper ancient SMG"
-	desc = "An extremely fast firing, innacurate SMG from past wars. Low ammo capacity and low damage, Uses 9mm rounds."
+	desc = "An extremely fast firing, innacurate SMG from past wars. Low fire rate and low damage. Uses 9mm rounds."
 	icon_state = "pps"
 	mag_type = /obj/item/ammo_box/magazine/uzim9mm
 	w_class = WEIGHT_CLASS_NORMAL
@@ -530,7 +530,7 @@
 	//scope_y_offset = 21
 	burst_size = 3
 	burst_delay = 1
-	fire_delay = 5
+	fire_delay = 7
 	force = 15
 	spread = 10
 	can_attachments = TRUE
