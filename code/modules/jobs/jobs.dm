@@ -73,6 +73,9 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 "Sheriff",
 "Deputy",
 "Shopkeeper",
+"Doctor",
+"Prospector",
+"Detective",
 
 "Chief",
 "Shaman",
@@ -114,6 +117,9 @@ GLOBAL_LIST_INIT(faction_player_positions, list(
 
 "Deputy",
 "Shopkeeper",
+"Doctor",
+"Prospector",
+"Detective",
 
 "Cyborg",
 "Vault-tec Security"
@@ -153,13 +159,11 @@ GLOBAL_LIST_INIT(den_positions, list(
     "Doctor",
     "Citizen",
     "Deputy",
-	"Banker",
 	"Shopkeeper",
     "Farmer",
     "Prospector",
 	"Detective",
 	"Preacher",
-	"Barkeep"
 ))
 
 GLOBAL_LIST_INIT(legion_command_positions, list(
