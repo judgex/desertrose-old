@@ -23,7 +23,7 @@ Mayor
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "the people of the town"
-	description = "You are the head honcho of Oasis, and the people look to you for leadership. Pass laws to protect your Citizens, engage in diplomacy with outsiders and make deals with the powers present within the Region to better the people - or exploit them for your own personal gain."
+	description = "You are the head honcho of Oasis and the people look to you for leadership. Pass laws to protect your Citizens, distribute the Town's funds and make deals with the powers present within the Region to better the people - or exploit them for your own personal gain."
 	selection_color = "#d7b088"
 
 	outfit = /datum/outfit/job/den/f13mayor
@@ -106,6 +106,8 @@ Mayor
 
 /datum/job/den/f13sheriff/after_spawn(mob/living/carbon/human/H, mob/M)
 	H.add_quirk("Hard Yards")
+	H.add_quirk("Lifegiver")
+	H.add_quirk("Self-Aware")
 
 /*--------------------------------------------------------------*/
 
@@ -261,8 +263,8 @@ Mayor
 	flag = F13DENDOC
 	department_flag = DEN
 	faction = "Town"
-	total_positions = 2
-	spawn_positions = 2
+	total_positions = 1
+	spawn_positions = 1
 	supervisors = "law and order"
 	description = "Handy with a scalpel and scanner, your expertise in the practice of medicine makes you an indispensible asset to the Town. Just remember - medicine doesn't come free, and you aren't here out of the kindness of your heart. Be sure to turn a profit, or the Mayor might reconsider your position!"
 	selection_color = "#dcba97"
@@ -509,7 +511,7 @@ Mayor
 	selection_color = "#dcba97"
 	exp_requirements = 2
 	exp_type = EXP_TYPE_CREW
-	
+
 	outfit = /datum/outfit/job/den/f13settler
 
 	loadout_options = list(
@@ -624,6 +626,7 @@ Detective
 
 /*--------------------------------------------------------------*/
 
+/*
 /datum/job/den/f13banker
 	title = "Banker"
 	flag = F13BANKER
@@ -701,6 +704,7 @@ Detective
 		/obj/item/storage/fancy/cigarettes/cigpack_bigboss=1,
 		/obj/item/storage/box/matches=1
 		)
+*/
 
 /*--------------------------------------------------------------*/
 
