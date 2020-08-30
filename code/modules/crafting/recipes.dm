@@ -3010,7 +3010,7 @@
 	category = CAT_BLUEPRINTS
 	subcategory = CAT_BPWEAPON_ONEUSE
 //kar98
-/datum/crafting_recipe/PlasmaPistol
+/datum/crafting_recipe/kar98
 	name = "Ancient rifle"
 	result = /obj/item/gun/energy/laser/plasma/pistol
 	reqs = list(/obj/item/stack/sheet/metal = 5,
@@ -3022,7 +3022,7 @@
 	time = 120
 	category = CAT_BLUEPRINTS
 	subcategory = CAT_BPWEAPON
-/datum/crafting_recipe/PlasmaPistol
+/datum/crafting_recipe/kar98/limited
 	name = "Ancient rifle"
 	result = /obj/item/gun/energy/laser/plasma/pistol
 	reqs = list(/obj/item/stack/sheet/metal = 5,
