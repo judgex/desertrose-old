@@ -50,10 +50,10 @@
 
 //mid tier
 /obj/item/blueprint/weapon/thatgun
-	name = ".556 pistol blueprint"
+	name = ".223 pistol blueprint"
 
 /obj/item/blueprint/weapon/thatgun/limited
-	name = "Damaged .556 pistol blueprint"
+	name = "Damaged .223 pistol blueprint"
 
 /obj/item/blueprint/weapon/pps
 	name = "Ancient SMG blueprint"
