@@ -7145,7 +7145,7 @@
 "vNi" = (/obj/structure/simple_door/metal/barred,/obj/machinery/door/poddoor/shutters/preopen{id = "bottomcellghoul"},/obj/machinery/door/poddoor/shutters/preopen{id = "bottomcellghoul"},/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,/area/f13/tunnel)
 "vNA" = (/obj/structure/chair/wood/modern{dir = 4},/turf/open/floor/f13/wood,/area/f13/building)
 "vNE" = (/obj/structure/rack,/obj/item/clothing/suit/armor/f13/battlecoat,/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,/area/f13/tunnel)
-"vOc" = (/obj/machinery/autolathe/constructionlathe,/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,/area/f13/tunnel)
+"vOc" = (/obj/machinery/autolathe,/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,/area/f13/tunnel)
 "vPE" = (/obj/machinery/mineral/wasteland_vendor/attachments,/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
 "vPG" = (/obj/structure/rack,/obj/effect/spawner/lootdrop/f13/weapon/gun/random_high,/obj/effect/spawner/lootdrop/f13/weapon/gun/random_high,/obj/effect/spawner/lootdrop/f13/weapon/gun/random_high,/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,/area/f13/tunnel)
 "vQk" = (/obj/structure/decoration/vent/rusty,/turf/closed/wall/f13/wood,/area/f13/tunnel)
