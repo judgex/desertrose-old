@@ -2967,9 +2967,9 @@
 	subcategory = CAT_BPWEAPON
 
 //mid tier
-//.556 pistol
+//.223 pistol
 /datum/crafting_recipe/thatgun
-	name = ".556 pistol"
+	name = ".223 pistol"
 	result = /obj/item/gun/ballistic/revolver/thatgun
 	reqs = list(/obj/item/stack/crafting/metalparts = 2,
 				/datum/reagent/blackpowder = 15,
@@ -2980,7 +2980,7 @@
 	subcategory = CAT_BPWEAPON
 
 /datum/crafting_recipe/thatgun/limited
-	name = ".556 pistol"
+	name = ".223 pistol"
 	result = /obj/item/gun/ballistic/revolver/thatgun
 	reqs = list(/obj/item/stack/crafting/metalparts = 2,
 				/datum/reagent/blackpowder = 15,
@@ -3773,5 +3773,5 @@
 
 /datum/crafting_recipe/bpcopy/thatgun
 	result = /obj/item/blueprint/weapon/thatgun/limited
-	name = ".556 pistol blueprint"
+	name = ".223 pistol blueprint"
 	tools = list(TOOL_AWORKBENCH, TOOL_GUNTIER3, /obj/item/blueprint/weapon/thatgun)
