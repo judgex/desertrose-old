@@ -1599,7 +1599,7 @@
 	subcategory = CAT_WEAPON
 *//* CRAFT rework: removed for balance
 /datum/crafting_recipe/thatgun
-	name = ".223 pistol"
+	name = ".556 pistol"
 	result = /obj/item/gun/ballistic/revolver/thatgun
 	reqs = list(/obj/item/gun/ballistic/shotgun/remington = 1,
 				/obj/item/stack/crafting/metalparts = 2,
@@ -2942,7 +2942,7 @@
 
 /datum/crafting_recipe/lever_action
 	name = "Lever Action shotgun"
-	result = /obj/item/gun/energy/laser/pistol
+	result = /obj/item/gun/ballistic/shotgun/trench
 	reqs = list(/obj/item/stack/sheet/metal = 5,
 				/obj/item/advanced_crafting_components/receiver = 1,
 				/obj/item/stack/crafting/metalparts = 3,
@@ -2956,7 +2956,7 @@
 
 /datum/crafting_recipe/trail_carbine
 	name = "Trail Carbine"
-	result = /obj/item/gun/energy/laser/pistol
+	result = /obj/item/gun/ballistic/shotgun/automatic/hunting/trail
 	reqs = list(/obj/item/stack/sheet/metal = 5,
 				/obj/item/advanced_crafting_components/receiver = 1,
 				/obj/item/stack/crafting/metalparts = 3,
@@ -2967,6 +2967,31 @@
 	subcategory = CAT_BPWEAPON
 
 //mid tier
+//.223 pistol
+/datum/crafting_recipe/thatgun
+	name = ".223 pistol"
+	result = /obj/item/gun/ballistic/revolver/thatgun
+	reqs = list(/obj/item/stack/crafting/metalparts = 2,
+				/datum/reagent/blackpowder = 15,
+				/obj/item/stack/sheet/metal = 3)
+	tools = list(TOOL_WORKBENCH, /obj/item/blueprint/weapon/thatgun)
+	time = 120
+	category = CAT_BLUEPRINTS
+	subcategory = CAT_BPWEAPON
+
+/datum/crafting_recipe/thatgun/limited
+	name = ".223 pistol"
+	result = /obj/item/gun/ballistic/revolver/thatgun
+	reqs = list(/obj/item/stack/crafting/metalparts = 2,
+				/datum/reagent/blackpowder = 15,
+				/obj/item/stack/sheet/metal = 3,
+				/obj/item/blueprint/weapon/thatgun/limited
+				)
+	tools = list(TOOL_WORKBENCH)
+	time = 120
+	category = CAT_BLUEPRINTS
+	subcategory = CAT_BPWEAPON
+
 //pps
 /datum/crafting_recipe/pps
 	name = "Ancient SMG"
@@ -2995,7 +3020,7 @@
 //mg34
 /datum/crafting_recipe/mg34
 	name = "Ancient machine gun"
-	result = /obj/item/gun/energy/laser/plasma/pistol
+	result = /obj/item/gun/ballistic/automatic/mg34
 	reqs = list(/obj/item/stack/sheet/metal = 5,
 				/obj/item/advanced_crafting_components/flux = 1,
 				/obj/item/stack/crafting/metalparts = 3,
@@ -3007,7 +3032,7 @@
 	subcategory = CAT_BPWEAPON
 /datum/crafting_recipe/mg34/limited
 	name = "Ancient machine gun"
-	result = /obj/item/gun/energy/laser/plasma/pistol
+	result = /obj/item/gun/ballistic/automatic/mg34
 	reqs = list(/obj/item/stack/sheet/metal = 5,
 				/obj/item/advanced_crafting_components/assembly = 1,
 				/obj/item/stack/crafting/metalparts = 3,
@@ -3021,7 +3046,7 @@
 //kar98
 /datum/crafting_recipe/kar98
 	name = "Ancient rifle"
-	result = /obj/item/gun/energy/laser/plasma/pistol
+	result = /obj/item/gun/ballistic/shotgun/ww2rifle
 	reqs = list(/obj/item/stack/sheet/metal = 5,
 				/obj/item/advanced_crafting_components/receiver = 1,
 				/obj/item/stack/crafting/metalparts = 3,
@@ -3033,7 +3058,7 @@
 	subcategory = CAT_BPWEAPON
 /datum/crafting_recipe/kar98/limited
 	name = "Ancient rifle"
-	result = /obj/item/gun/energy/laser/plasma/pistol
+	result = /obj/item/gun/ballistic/shotgun/ww2rifle
 	reqs = list(/obj/item/stack/sheet/metal = 5,
 				/obj/item/advanced_crafting_components/receiver = 1,
 				/obj/item/stack/crafting/metalparts = 3,
@@ -3130,9 +3155,9 @@
 
 //grease gun
 
-/datum/crafting_recipe/smg10mm/limited
-	name = "10mm SMG"
-	result = /obj/item/gun/ballistic/automatic/smg10mm
+/datum/crafting_recipe/grease_gun/limited
+	name = "Grease gun"
+	result = /obj/item/gun/ballistic/automatic/greasegun
 	reqs = list(/obj/item/stack/sheet/metal = 10,
 				/obj/item/advanced_crafting_components/receiver = 1,
 				/datum/reagent/blackpowder = 30, 
@@ -3142,9 +3167,9 @@
 	category = CAT_BLUEPRINTS
 	subcategory = CAT_BPWEAPON
 
-/datum/crafting_recipe/smg10mm/limited
-	name = "10mm SMG"
-	result = /obj/item/gun/ballistic/automatic/smg10mm
+/datum/crafting_recipe/grease_gun/limited
+	name = "Grease gun"
+	result = /obj/item/gun/ballistic/automatic/greasegun
 	reqs = list(/obj/item/stack/sheet/metal = 10,
 				/obj/item/advanced_crafting_components/receiver = 1,
 				/datum/reagent/blackpowder = 30, 
@@ -3745,3 +3770,8 @@
 	result = /obj/item/blueprint/weapon/kar98/limited
 	name = "Ancient rifle blueprint"
 	tools = list(TOOL_AWORKBENCH, TOOL_GUNTIER3, /obj/item/blueprint/weapon/kar98)
+
+/datum/crafting_recipe/bpcopy/thatgun
+	result = /obj/item/blueprint/weapon/thatgun/limited
+	name = ".223 pistol blueprint"
+	tools = list(TOOL_AWORKBENCH, TOOL_GUNTIER3, /obj/item/blueprint/weapon/thatgun)
