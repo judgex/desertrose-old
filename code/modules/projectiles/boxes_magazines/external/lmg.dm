@@ -73,3 +73,6 @@
 	caliber = "a762"
 	max_ammo = 60
 	multiple_sprites = 2
+
+/obj/item/ammo_box/magazine/mg34/empty
+	start_empty = 1

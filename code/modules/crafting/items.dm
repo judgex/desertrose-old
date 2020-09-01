@@ -49,6 +49,12 @@
 	name = "Damaged ancient rifle blueprint"
 
 //mid tier
+/obj/item/blueprint/weapon/thatgun
+	name = ".223 pistol blueprint"
+
+/obj/item/blueprint/weapon/thatgun/limited
+	name = "Damaged .223 pistol blueprint"
+
 /obj/item/blueprint/weapon/pps
 	name = "Ancient SMG blueprint"
 
