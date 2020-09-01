@@ -2993,6 +2993,7 @@
 	subcategory = CAT_BPWEAPON_ONEUSE
 
 //pps
+
 /datum/crafting_recipe/pps
 	name = "Ancient SMG"
 	result = /obj/item/gun/ballistic/automatic/pps
@@ -3005,6 +3006,7 @@
 	time = 120
 	category = CAT_BLUEPRINTS
 	subcategory = CAT_BPWEAPON
+
 /datum/crafting_recipe/pps_lim
 	name = "Ancient SMG"
 	result = /obj/item/gun/ballistic/automatic/pps
@@ -3018,6 +3020,7 @@
 	category = CAT_BLUEPRINTS
 	subcategory = CAT_BPWEAPON_ONEUSE
 //mg34
+
 /datum/crafting_recipe/mg34
 	name = "Ancient machine gun"
 	result = /obj/item/gun/ballistic/automatic/mg34
@@ -3030,6 +3033,7 @@
 	time = 120
 	category = CAT_BLUEPRINTS
 	subcategory = CAT_BPWEAPON
+
 /datum/crafting_recipe/mg34_lim
 	name = "Ancient machine gun"
 	result = /obj/item/gun/ballistic/automatic/mg34
@@ -3043,7 +3047,9 @@
 	time = 120
 	category = CAT_BLUEPRINTS
 	subcategory = CAT_BPWEAPON_ONEUSE
+
 //kar98
+
 /datum/crafting_recipe/kar98
 	name = "Ancient rifle"
 	result = /obj/item/gun/ballistic/shotgun/ww2rifle
@@ -3056,6 +3062,7 @@
 	time = 120
 	category = CAT_BLUEPRINTS
 	subcategory = CAT_BPWEAPON
+
 /datum/crafting_recipe/kar98_lim
 	name = "Ancient rifle"
 	result = /obj/item/gun/ballistic/shotgun/ww2rifle
