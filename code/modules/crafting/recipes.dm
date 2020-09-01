@@ -2990,7 +2990,7 @@
 	tools = list(TOOL_WORKBENCH)
 	time = 120
 	category = CAT_BLUEPRINTS
-	subcategory = CAT_BPWEAPON
+	subcategory = CAT_BPWEAPON_ONEUSE
 
 //pps
 /datum/crafting_recipe/pps
