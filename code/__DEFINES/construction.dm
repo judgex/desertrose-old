@@ -95,6 +95,7 @@
 #define CAT_MACHINES "Machines/Objects"
 #define CAT_PRIMAL  "Tribal"
 #define CAT_TRIBAL  "Tribal"
+#define CAT_TRIBAL_WEAPONS	"Tribal - War"
 #define CAT_FORGE   "Forge"
 #define CAT_FORGEWEAPON   "Forge Weapon"
 #define CAT_FORGEARMOR   "Forge Armor"
