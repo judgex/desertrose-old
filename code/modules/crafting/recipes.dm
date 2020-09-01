@@ -2037,7 +2037,7 @@
 				/obj/item/stack/sheet/metal = 1)
 	tools = list(TOOL_WORKBENCH)
 	category = CAT_WEAPONRY
-	subcategory = CAT_AMMO
+	subcategory = CAT_AMMO_FIVE
 
 /datum/crafting_recipe/tribe_quiver
 	name = "Craft Quiver and Arrows"
@@ -2114,7 +2114,7 @@
 				/obj/item/stack/crafting/metalparts = 2)
 	tools = list(TOOL_WORKBENCH)
 	category = CAT_WEAPONRY
-	subcategory = CAT_AMMO
+	subcategory = CAT_AMMO_FIVE
 
 /datum/crafting_recipe/arrowpoison
 	name = "Poison Arrow"
@@ -2124,7 +2124,7 @@
 				/obj/item/grown/nettle/basic = 5)
 	tools = list(TOOL_WORKBENCH)
 	category = CAT_WEAPONRY
-	subcategory = CAT_AMMO
+	subcategory = CAT_AMMO_FIVE
 
 /datum/crafting_recipe/arrowburn
 	name = "Burn Posion Arrow"
@@ -2135,7 +2135,7 @@
 				/obj/item/reagent_containers/food/snacks/meat/slab/human/ghoul = 4)
 	tools = list(TOOL_WORKBENCH)
 	category = CAT_WEAPONRY
-	subcategory = CAT_AMMO
+	subcategory = CAT_AMMO_FIVE
 
 /datum/crafting_recipe/voodoo
     name = "Voodoo"
