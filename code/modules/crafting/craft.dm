@@ -15,7 +15,11 @@
 	var/list/subcategories = list(
 						list(	//Weapon subcategories
 							CAT_WEAPON,
-							CAT_AMMO),
+							CAT_AMMO_ONE,
+							CAT_AMMO_TWO,
+							CAT_AMMO_THREE,
+							CAT_AMMO_FOUR,
+							CAT_AMMO_FIVE),
 						list(	//forge subcatergories
 							CAT_FORGEWEAPON,
 							CAT_FORGEARMOR,

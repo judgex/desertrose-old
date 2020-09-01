@@ -197,7 +197,7 @@
 	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER1)
 	time = 10
 	category = CAT_WEAPONRY
-	subcategory = CAT_AMMO
+	subcategory = CAT_AMMO_FIVE
 
 /datum/crafting_recipe/needlerammoap
 	name = "armour-piercing needler stripper clip (needle darts)"
@@ -207,7 +207,7 @@
 	tools = list(TOOL_AWORKBENCH, TOOL_GUNTIER2)
 	time = 10
 	category = CAT_WEAPONRY
-	subcategory = CAT_AMMO
+	subcategory = CAT_AMMO_FIVE
 
 /datum/crafting_recipe/speedloader38
 	name = "empty speed loader (.38)"
@@ -216,7 +216,7 @@
 	tools = list(TOOL_WORKBENCH)
 	time = 10
 	category = CAT_WEAPONRY
-	subcategory = CAT_AMMO
+	subcategory = CAT_AMMO_ONE
 
 /datum/crafting_recipe/cell
 	name = "Power Cell"
@@ -227,7 +227,7 @@
 	tools = list(TOOL_WORKBENCH)
 	time = 10
 	category = CAT_WEAPONRY
-	subcategory = CAT_AMMO
+	subcategory = CAT_AMMO_FOUR
 
 /datum/crafting_recipe/ec
 	name = "Small Energy Cell"
@@ -237,7 +237,7 @@
 	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER1)
 	time = 10
 	category = CAT_WEAPONRY
-	subcategory = CAT_AMMO
+	subcategory = CAT_AMMO_FOUR
 
 /datum/crafting_recipe/mfc
 	name = "Microfusion Cell"
@@ -247,7 +247,7 @@
 	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER2)
 	time = 20
 	category = CAT_WEAPONRY
-	subcategory = CAT_AMMO
+	subcategory = CAT_AMMO_FOUR
 
 /datum/crafting_recipe/ecp
 	name = "Electron Charge Pack"
@@ -257,7 +257,7 @@
 	tools = list(TOOL_AWORKBENCH, TOOL_GUNTIER3)
 	time = 30
 	category = CAT_WEAPONRY
-	subcategory = CAT_AMMO
+	subcategory = CAT_AMMO_FOUR
 
 /datum/crafting_recipe/speedloader10mm
 	name = "empty speed loader (10mm)"
@@ -266,7 +266,7 @@
 	tools = list(TOOL_WORKBENCH)
 	time = 10
 	category = CAT_WEAPONRY
-	subcategory = CAT_AMMO
+	subcategory = CAT_AMMO_ONE
 
 /datum/crafting_recipe/speedloader44
 	name = "empty speed loader (.44)"
@@ -276,7 +276,7 @@
 	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER1)
 	time = 10
 	category = CAT_WEAPONRY
-	subcategory = CAT_AMMO
+	subcategory = CAT_AMMO_ONE
 
 /datum/crafting_recipe/speedloader4570
 	name = "empty speed loader (.45-70)"
@@ -286,7 +286,7 @@
 	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER3)
 	time = 10
 	category = CAT_WEAPONRY
-	subcategory = CAT_AMMO
+	subcategory = CAT_AMMO_ONE
 
 /datum/crafting_recipe/tube44
 	name = "empty speed loader tube (.44)"
@@ -296,7 +296,7 @@
 	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER2)
 	time = 10
 	category = CAT_WEAPONRY
-	subcategory = CAT_AMMO
+	subcategory = CAT_AMMO_ONE
 
 /datum/crafting_recipe/batterybox //lasmusket ammo
 	name = "Laser Musket battery pack"
@@ -307,7 +307,7 @@
 	tools = list(TOOL_WORKBENCH, TOOL_MULTITOOL)
 	time = 20
 	category = CAT_WEAPONRY
-	subcategory = CAT_AMMO
+	subcategory = CAT_AMMO_FIVE
 
 /datum/crafting_recipe/tube357
 	name = "empty speed loader tube (.357)"
@@ -317,7 +317,7 @@
 	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER2)
 	time = 10
 	category = CAT_WEAPONRY
-	subcategory = CAT_AMMO
+	subcategory = CAT_AMMO_ONE
 
 /datum/crafting_recipe/tube4570
 	name = "empty speed loader tube (.45-70)"
@@ -327,7 +327,7 @@
 	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER3)
 	time = 10
 	category = CAT_WEAPONRY
-	subcategory = CAT_AMMO
+	subcategory = CAT_AMMO_ONE
 
 /datum/crafting_recipe/autoriflemag
 	name = "empty auto pipe rifle magazine (.38/.357)"
@@ -336,7 +336,7 @@
 	tools = list(TOOL_WORKBENCH)
 	time = 10
 	category = CAT_WEAPONRY
-	subcategory = CAT_AMMO
+	subcategory = CAT_AMMO_ONE
 
 /datum/crafting_recipe/m10mm_auto
 	name = "empty 10mm submachine gun magazine (10mm)"
@@ -346,7 +346,7 @@
 	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER2)
 	time = 10
 	category = CAT_WEAPONRY
-	subcategory = CAT_AMMO
+	subcategory = CAT_AMMO_ONE
 
 /datum/crafting_recipe/greasegunmag
 	name = "empty grease submachine gun magazine (.45)"
@@ -356,7 +356,7 @@
 	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER2)
 	time = 10
 	category = CAT_WEAPONRY
-	subcategory = CAT_AMMO
+	subcategory = CAT_AMMO_ONE
 
 /datum/crafting_recipe/mini_uzimag
 	name = "empty mini uzi magazine (9mm)"
@@ -366,7 +366,7 @@
 	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER2)
 	time = 10
 	category = CAT_WEAPONRY
-	subcategory = CAT_AMMO
+	subcategory = CAT_AMMO_ONE
 
 /datum/crafting_recipe/d12g
 	name = "empty shotgun drum magazine (12g)"
@@ -376,7 +376,7 @@
 	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER3)
 	time = 10
 	category = CAT_WEAPONRY
-	subcategory = CAT_AMMO
+	subcategory = CAT_AMMO_ONE
 
 /datum/crafting_recipe/riflesmall556
 	name = "empty small rifle magazine (5.56mm)"
@@ -385,7 +385,7 @@
 	tools = list(TOOL_WORKBENCH)
 	time = 10
 	category = CAT_WEAPONRY
-	subcategory = CAT_AMMO
+	subcategory = CAT_AMMO_ONE
 
 /datum/crafting_recipe/rifle556
 	name = "empty 20rd rifle magazine (5.56mm)"
@@ -395,7 +395,7 @@
 	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER1)
 	time = 10
 	category = CAT_WEAPONRY
-	subcategory = CAT_AMMO
+	subcategory = CAT_AMMO_ONE
 
 /datum/crafting_recipe/rifleassault556
 	name = "empty 30rd rifle magazine (5.56mm)"
@@ -405,7 +405,7 @@
 	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER2)
 	time = 10
 	category = CAT_WEAPONRY
-	subcategory = CAT_AMMO
+	subcategory = CAT_AMMO_ONE
 
 /datum/crafting_recipe/rifleextended556
 	name = "empty extended rifle magazine (5.56mm)"
@@ -414,7 +414,7 @@
 	tools = list(TOOL_AWORKBENCH, TOOL_GUNTIER4)
 	time = 10
 	category = CAT_WEAPONRY
-	subcategory = CAT_AMMO
+	subcategory = CAT_AMMO_ONE
 
 /datum/crafting_recipe/m45
 	name = "empty handgun magazine (.45)"
@@ -423,7 +423,7 @@
 	tools = list(TOOL_WORKBENCH)
 	time = 10
 	category = CAT_WEAPONRY
-	subcategory = CAT_AMMO
+	subcategory = CAT_AMMO_ONE
 
 /datum/crafting_recipe/m50
 	name = "empty handgun magazine (.50 AE)"
@@ -433,7 +433,7 @@
 	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER3)
 	time = 10
 	category = CAT_WEAPONRY
-	subcategory = CAT_AMMO
+	subcategory = CAT_AMMO_ONE
 
 /datum/crafting_recipe/m10mm_adv
 	name = "empty 10mm pistol magazine (10mm)"
@@ -442,7 +442,7 @@
 	tools = list(TOOL_WORKBENCH)
 	time = 10
 	category = CAT_WEAPONRY
-	subcategory = CAT_AMMO
+	subcategory = CAT_AMMO_ONE
 
 /datum/crafting_recipe/m9mm
 	name = "empty 9mm pistol magazine (9mm)"
@@ -451,7 +451,7 @@
 	tools = list(TOOL_WORKBENCH)
 	time = 10
 	category = CAT_WEAPONRY
-	subcategory = CAT_AMMO
+	subcategory = CAT_AMMO_ONE
 
 /datum/crafting_recipe/enbloc
 	name = "empty en-bloc clip (7.62x51mm)"
@@ -460,7 +460,7 @@
 	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER4)
 	time = 10
 	category = CAT_WEAPONRY
-	subcategory = CAT_AMMO
+	subcategory = CAT_AMMO_ONE
 
 /datum/crafting_recipe/m762
 	name = "empty rifle magazine (7.62x51/.308)"
@@ -469,7 +469,7 @@
 	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER2)
 	time = 10
 	category = CAT_WEAPONRY
-	subcategory = CAT_AMMO
+	subcategory = CAT_AMMO_ONE
 
 /datum/crafting_recipe/m762ext
 	name = "empty extended rifle magazine (7.62x51.308)"
@@ -478,7 +478,7 @@
 	tools = list(TOOL_AWORKBENCH, TOOL_GUNTIER4)
 	time = 10
 	category = CAT_WEAPONRY
-	subcategory = CAT_AMMO
+	subcategory = CAT_AMMO_ONE
 
 /datum/crafting_recipe/mSniperRifle
 	name = "empty sniper rifle magazine (7.62x51/.308)"
@@ -487,7 +487,7 @@
 	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER2)
 	time = 10
 	category = CAT_WEAPONRY
-	subcategory = CAT_AMMO
+	subcategory = CAT_AMMO_ONE
 
 /datum/crafting_recipe/c45
 	name = ".45 FMJ ammo box"
@@ -497,7 +497,7 @@
 	tools = list(TOOL_WORKBENCH)
 	time = 10
 	category = CAT_WEAPONRY
-	subcategory = CAT_AMMO
+	subcategory = CAT_AMMO_TWO
 
 /datum/crafting_recipe/c45jhp
 	name = ".45 JHP ammo box"
@@ -507,7 +507,7 @@
 	tools = list(TOOL_WORKBENCH)
 	time = 10
 	category = CAT_WEAPONRY
-	subcategory = CAT_AMMO
+	subcategory = CAT_AMMO_TWO
 
 /datum/crafting_recipe/m44
 	name = ".44 Magnum FMJ ammo box"
@@ -518,7 +518,7 @@
 	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER1)
 	time = 10
 	category = CAT_WEAPONRY
-	subcategory = CAT_AMMO
+	subcategory = CAT_AMMO_TWO
 
 /datum/crafting_recipe/m44jhp
 	name = ".44 Magnum JHP ammo box"
@@ -529,7 +529,7 @@
 	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER1)
 	time = 10
 	category = CAT_WEAPONRY
-	subcategory = CAT_AMMO
+	subcategory = CAT_AMMO_TWO
 
 /datum/crafting_recipe/a357
 	name = ".357 Magnum FMJ ammo box"
@@ -540,7 +540,7 @@
 	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER1)
 	time = 10
 	category = CAT_WEAPONRY
-	subcategory = CAT_AMMO
+	subcategory = CAT_AMMO_TWO
 
 /datum/crafting_recipe/a357jhp
 	name = ".357 Magnum JHP ammo box"
@@ -551,7 +551,7 @@
 	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER1)
 	time = 10
 	category = CAT_WEAPONRY
-	subcategory = CAT_AMMO
+	subcategory = CAT_AMMO_TWO
 
 /datum/crafting_recipe/c38
 	name = ".38 special ammo box"
@@ -561,7 +561,7 @@
 	tools = list(TOOL_WORKBENCH)
 	time = 10
 	category = CAT_WEAPONRY
-	subcategory = CAT_AMMO
+	subcategory = CAT_AMMO_TWO
 
 /datum/crafting_recipe/c4570
 	name = ".45-70 FMJ ammo box"
@@ -572,7 +572,7 @@
 	tools = list(TOOL_AWORKBENCH, TOOL_GUNTIER3)
 	time = 10
 	category = CAT_WEAPONRY
-	subcategory = CAT_AMMO
+	subcategory = CAT_AMMO_THREE
 
 /datum/crafting_recipe/c4570jhp
 	name = ".45-70 JHP ammo box"
@@ -583,7 +583,7 @@
 	tools = list(TOOL_AWORKBENCH, TOOL_GUNTIER3)
 	time = 10
 	category = CAT_WEAPONRY
-	subcategory = CAT_AMMO
+	subcategory = CAT_AMMO_THREE
 
 /datum/crafting_recipe/a50mg
 	name = ".50 MG (rifle) ammo box"
@@ -594,7 +594,7 @@
 	tools = list(TOOL_AWORKBENCH, TOOL_GUNTIER3)
 	time = 10
 	category = CAT_WEAPONRY
-	subcategory = CAT_AMMO
+	subcategory = CAT_AMMO_THREE
 
 /datum/crafting_recipe/a50ae
 	name = ".50 AE (pistol) ammo box"
@@ -605,7 +605,7 @@
 	tools = list(TOOL_AWORKBENCH, TOOL_GUNTIER3)
 	time = 10
 	category = CAT_WEAPONRY
-	subcategory = CAT_AMMO
+	subcategory = CAT_AMMO_TWO
 
 /datum/crafting_recipe/c10mm
 	name = "10mm FMJ ammo box"
@@ -615,7 +615,7 @@
 	tools = list(TOOL_WORKBENCH)
 	time = 10
 	category = CAT_WEAPONRY
-	subcategory = CAT_AMMO
+	subcategory = CAT_AMMO_TWO
 
 /datum/crafting_recipe/c10mmjhp
 	name = "10mm JHP ammo box"
@@ -625,7 +625,7 @@
 	tools = list(TOOL_WORKBENCH)
 	time = 10
 	category = CAT_WEAPONRY
-	subcategory = CAT_AMMO
+	subcategory = CAT_AMMO_TWO
 
 /datum/crafting_recipe/c10mmap
 	name = "10mm AP ammo box"
@@ -636,7 +636,7 @@
 	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER1)
 	time = 10
 	category = CAT_WEAPONRY
-	subcategory = CAT_AMMO
+	subcategory = CAT_AMMO_TWO
 
 /datum/crafting_recipe/magnumshot
 	name = "magnum buckshot shotgun box"
@@ -647,7 +647,7 @@
 	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER2)
 	time = 10
 	category = CAT_WEAPONRY
-	subcategory = CAT_AMMO
+	subcategory = CAT_AMMO_FIVE
 
 /datum/crafting_recipe/lethalshot
 	name = "buckshot shotgun box"
@@ -658,7 +658,7 @@
 	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER1)
 	time = 10
 	category = CAT_WEAPONRY
-	subcategory = CAT_AMMO
+	subcategory = CAT_AMMO_FIVE
 
 /datum/crafting_recipe/slugshot
 	name = "slug shotgun box"
@@ -669,7 +669,7 @@
 	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER2)
 	time = 10
 	category = CAT_WEAPONRY
-	subcategory = CAT_AMMO
+	subcategory = CAT_AMMO_FIVE
 
 /datum/crafting_recipe/beanbag
 	name = "beanbag shotgun box"
@@ -679,7 +679,7 @@
 	tools = list(TOOL_WORKBENCH)
 	time = 10
 	category = CAT_WEAPONRY
-	subcategory = CAT_AMMO
+	subcategory = CAT_AMMO_FIVE
 
 /datum/crafting_recipe/rubbershot
 	name = "rubbershot shotgun box"
@@ -689,7 +689,7 @@
 	tools = list(TOOL_WORKBENCH)
 	time = 10
 	category = CAT_WEAPONRY
-	subcategory = CAT_AMMO
+	subcategory = CAT_AMMO_FIVE
 
 /datum/crafting_recipe/a556
 	name = "5.56mm FMJ ammo box"
@@ -700,7 +700,7 @@
 	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER1)
 	time = 10
 	category = CAT_WEAPONRY
-	subcategory = CAT_AMMO
+	subcategory = CAT_AMMO_THREE
 
 /datum/crafting_recipe/a556jhp
 	name = "5.56mm JHP ammo box"
@@ -711,7 +711,7 @@
 	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER1)
 	time = 10
 	category = CAT_WEAPONRY
-	subcategory = CAT_AMMO
+	subcategory = CAT_AMMO_THREE
 
 /datum/crafting_recipe/a556ap
 	name = "5.56 AP ammo box"
@@ -722,7 +722,7 @@
 	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER2)
 	time = 10
 	category = CAT_WEAPONRY
-	subcategory = CAT_AMMO
+	subcategory = CAT_AMMO_THREE
 
 /datum/crafting_recipe/a556sport
 	name = "5.56 match ammo box"
@@ -732,7 +732,7 @@
 	tools = list(TOOL_WORKBENCH)
 	time = 10
 	category = CAT_WEAPONRY
-	subcategory = CAT_AMMO
+	subcategory = CAT_AMMO_THREE
 
 /datum/crafting_recipe/c9mm
 	name = "9mm FMJ ammo box"
@@ -742,7 +742,7 @@
 	tools = list(TOOL_WORKBENCH)
 	time = 10
 	category = CAT_WEAPONRY
-	subcategory = CAT_AMMO
+	subcategory = CAT_AMMO_TWO
 
 /datum/crafting_recipe/c9mmjhp
 	name = "9mm JHP ammo box"
@@ -752,7 +752,7 @@
 	tools = list(TOOL_WORKBENCH)
 	time = 10
 	category = CAT_WEAPONRY
-	subcategory = CAT_AMMO
+	subcategory = CAT_AMMO_TWO
 
 /datum/crafting_recipe/c9mmap
 	name = "9mm AP ammo box"
@@ -762,7 +762,7 @@
 	tools = list(TOOL_WORKBENCH)
 	time = 10
 	category = CAT_WEAPONRY
-	subcategory = CAT_AMMO
+	subcategory = CAT_AMMO_TWO
 
 /datum/crafting_recipe/a762
 	name = "7.62mm FMJ ammo box"
@@ -773,7 +773,7 @@
 	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER2)
 	time = 10
 	category = CAT_WEAPONRY
-	subcategory = CAT_AMMO
+	subcategory = CAT_AMMO_THREE
 
 /datum/crafting_recipe/a762jhp
 	name = "7.62mm JHP ammo box"
@@ -784,7 +784,7 @@
 	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER2)
 	time = 10
 	category = CAT_WEAPONRY
-	subcategory = CAT_AMMO
+	subcategory = CAT_AMMO_THREE
 
 /datum/crafting_recipe/a762ap
 	name = "7.62mm AP ammo box"
@@ -795,7 +795,7 @@
 	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER2)
 	time = 10
 	category = CAT_WEAPONRY
-	subcategory = CAT_AMMO
+	subcategory = CAT_AMMO_THREE
 
 /datum/crafting_recipe/a308
 	name = ".308 ammo box"
@@ -805,7 +805,7 @@
 	traits = list(TRAIT_GUNSMITH_ONE)
 	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER1)
 	category = CAT_WEAPONRY
-	subcategory = CAT_AMMO
+	subcategory = CAT_AMMO_TWO
 
 /datum/crafting_recipe/spear
 	name = "Spear"
