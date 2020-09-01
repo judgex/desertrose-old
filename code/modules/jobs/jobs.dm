@@ -10,7 +10,6 @@ GLOBAL_LIST_INIT(command_positions, list(
     "Priestess of Mars",
 
     "NCR Captain",
-    "NCR Veteran Ranger",
     "NCR Ambassador",
 	"NCR Administrator",
 
@@ -68,15 +67,15 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 "NCR Military Police",
 "NCR Heavy Trooper",
 "NCR Corporal",
-"NCR Veteran Ranger",
-"NCR Patrol Ranger",
-"NCR Scout Ranger",
 "NCR Trooper",
 
 "Mayor",
 "Sheriff",
 "Deputy",
 "Shopkeeper",
+"Doctor",
+"Prospector",
+"Detective",
 
 "Chief",
 "Shaman",
@@ -118,6 +117,9 @@ GLOBAL_LIST_INIT(faction_player_positions, list(
 
 "Deputy",
 "Shopkeeper",
+"Doctor",
+"Prospector",
+"Detective",
 
 "Cyborg",
 "Vault-tec Security"
@@ -126,7 +128,8 @@ GLOBAL_LIST_INIT(faction_player_positions, list(
 //Whitelisted positions list FO13 anything that shows up here requires that the user have an entry in the 'role_whitelist' table of id,ckey,"antagonist"
 GLOBAL_LIST_INIT(antagonist_whitelist_positions, list(
     "Raider",
-	"Outlaw" //Consider adding Great Khan to this list if people abuse it.
+	"Outlaw",
+    "Great Khan" //DA KHANZ, BAY BEEEEEEE
 ))
 
 GLOBAL_LIST_INIT(brotherhood_command_positions, list(
@@ -156,11 +159,11 @@ GLOBAL_LIST_INIT(den_positions, list(
     "Doctor",
     "Citizen",
     "Deputy",
-	"Banker",
 	"Shopkeeper",
     "Farmer",
     "Prospector",
-	"Detective"
+	"Detective",
+	"Preacher",
 ))
 
 GLOBAL_LIST_INIT(legion_command_positions, list(
@@ -187,12 +190,15 @@ GLOBAL_LIST_INIT(legion_positions, list(
 
 GLOBAL_LIST_INIT(ncr_command_positions, list(
     "NCR Captain",
-    "NCR Veteran Ranger",
-    "NCR Ambassador"
+    "NCR Ambassador",
+    "NCR Veteran Ranger"
+))
+
+GLOBAL_LIST_INIT(ncr_rangervet_positions, list(
+	"NCR Veteran Ranger"
 ))
 
 GLOBAL_LIST_INIT(ncr_ranger_positions, list(
-	"NCR Veteran Ranger",
 	"NCR Patrol Ranger",
 	"NCR Scout Ranger"
 ))
@@ -227,8 +233,6 @@ GLOBAL_LIST_INIT(vault_positions, list(
 
 GLOBAL_LIST_INIT(wasteland_positions, list(
     "Outlaw",
-    "Great Khan",
-    "Preacher",
 	"Faithful",
     "Wastelander",
 ))
@@ -252,7 +256,8 @@ GLOBAL_LIST_INIT(followers_command_positions, list(
 GLOBAL_LIST_INIT(followers_positions, list(
     "Practitioner",
     "Followers Guard",
-    "Followers Volunteer"
+    "Followers Volunteer",
+	"Professor"
 ))
 /*
 GLOBAL_LIST_INIT(engineering_positions, list(

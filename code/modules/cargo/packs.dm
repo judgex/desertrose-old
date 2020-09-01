@@ -405,12 +405,22 @@
 
 /datum/supply_pack/security/armory/riotshields
 	name = "Riot Shields Crate"
-	desc = "For when the people really uppity. Contains three riot shields. Requires Armory access to open."
+	desc = "For when the people are really uppity. Contains three riot shields. Requires Armory access to open."
 	cost = 2000
 	contains = list(/obj/item/shield/riot,
 					/obj/item/shield/riot,
 					/obj/item/shield/riot)
 	crate_name = "riot shields crate"
+
+/datum/supply_pack/security/armory/stunbaton
+	name = "Stun Baton Crate"
+	desc = "For when the people are really uppity. Contains three stun batons. Requires Armory access to open."
+	cost = 3000
+	contains = list(/obj/item/melee/baton/loaded,
+					/obj/item/melee/baton/loaded,
+					/obj/item/melee/baton/loaded)
+	crate_name = "stun baton crate"
+
 
 /datum/supply_pack/security/armory/swat
 	name = "SWAT Crate"

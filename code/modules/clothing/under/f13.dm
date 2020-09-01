@@ -207,6 +207,16 @@
 	item_state = "priestess"
 	item_color = "priestess"
 
+/obj/item/clothing/under/f13/pmarsrobe
+	name = "priestess of mars robe"
+	desc = "A red robe decorated with bird feathers for the Priestess of Mars."
+	icon_state = "pmars_robe"
+	item_state = "pmars_robe"
+	armor = list(melee = 0, bullet = 0, laser = 20, energy = 20, bomb = 5, bio = 0, rad = 0, fire = 100, acid = 0)
+	resistance_flags = LAVA_PROOF | FIRE_PROOF
+	body_parts_covered = CHEST|GROIN|ARMS|LEGS
+	flags_inv = HIDEGLOVES|HIDESHOES
+
 // Generic
 
 /obj/item/clothing/under/f13/machinist
@@ -370,11 +380,11 @@
 	item_color = "khan"
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 10, "fire" = 10, "acid" = 40)
 
-/obj/item/clothing/suit/armor/khan
-	name = "khan armored vest"
+/obj/item/clothing/suit/armor/khan_jacket
+	name = "khan armored jacket"
 	desc = "The symbol of the greatest pushers."
-	icon_state = "khan"
-	item_state = "khan"
+	icon_state = "khan_jacket"
+	item_state = "khan_jacket"
 
 /obj/item/clothing/suit/armor/warriors
 	name = "warriors armored vest"
@@ -437,6 +447,15 @@
 	icon_state = "nato_uniform"
 	item_state = "nato_uniform"
 	item_color = "nato_uniform"
+
+//Prom Dress
+
+/obj/item/clothing/under/f13/prom_dress
+	name = "purple prom dress"
+	desc = "This purple dress has miraculously survived the war, and seems mostly undamaged, except for a few loose ends from wear and tear. The dress is made from a soft fabric, likely a marbled velvet."
+	icon_state = "promdress"
+	item_state = "promdress"
+	item_color = "promdress"
 
 //Dust Devils
 
@@ -809,6 +828,10 @@
 	item_state = "bl_suit"
 	item_color = "combat"
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 20, "fire" = 20, "acid" = 40)
+
+/obj/item/clothing/under/f13/combat/militia
+	name = "ODF fatigues"
+	desc = "An olive-green combat uniform, issued to members of the Oasis Defense Force."
 
 /obj/item/clothing/under/f13/enclave_officer
 	name = "officer uniform"

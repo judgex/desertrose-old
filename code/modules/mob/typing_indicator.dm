@@ -85,3 +85,9 @@ GLOBAL_LIST_EMPTY(typing_indicator_overlays)
 		return
 	if(!hud_typing)
 		set_typing_indicator(FALSE) 
+
+/mob/proc/toggle_typing_indicator()
+	if(typing)
+		set_typing_indicator(FALSE)
+	else
+		set_typing_indicator(TRUE)

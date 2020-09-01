@@ -1038,3 +1038,55 @@
 
 /obj/item/twohanded/sledgehammer/shamanstaff/update_icon()
 	icon_state = "shamanstaff[wielded]"
+
+/obj/item/twohanded/sledgehammer/marsstaff
+	name = "Staff of Mars"
+	desc = " A staff crafted by the guidance of Mars."
+	icon = 'icons/obj/items_and_weapons.dmi'
+	icon_state = "mars_staff0"
+	lefthand_file = 'icons/mob/inhands/weapons/polearms_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/weapons/polearms_righthand.dmi'
+	force_unwielded = 5
+	force_wielded = 10
+	slot_flags = ITEM_SLOT_BACK
+	hitsound = "swing_hit"
+	attack_verb = list("bashed", "pounded", "bludgeoned", "pummeled", "enlightened")
+	w_class = WEIGHT_CLASS_BULKY
+	sharpness = IS_BLUNT
+
+var/brightness_on = 6 //TWICE AS BRIGHT AS A REGULAR ESWORD
+var/list/possible_colors = list("red")
+
+/obj/item/twohanded/sledgehammer/marsstaff/update_icon()
+	icon_state = "mars_staff[wielded]"
+	if(wielded)
+		playsound(loc, 'sound/effects/torch_light.ogg', 50, 0)
+		light_color = LIGHT_COLOR_RED
+		START_PROCESSING(SSobj, src)
+		set_light(brightness_on)
+		sharpness = IS_BLUNT
+/obj/item/twohanded/sledgehammer/marsstaff/attack(mob/living/M, mob/living/user)
+	. = ..()
+	if(!istype(M))
+		return
+	M.apply_damage(2, BURN, 0)
+	M.apply_damage(25, STAMINA, null, 0)
+
+/obj/item/twohanded/sledgehammer/marsstaff/pickup(mob/living/user, slot)
+	..()
+	if(ishuman(user))
+		var/mob/living/carbon/human/U = user
+		if(U.job in list("Priestess of Mars"))
+		else
+			to_chat(user, "<span class='userdanger'>You invoke the wrath of Mars!</span>")
+			user.emote("scream")
+			user.apply_damage(30, BURN, pick(BODY_ZONE_L_ARM, BODY_ZONE_R_ARM))
+			user.dropItemToGround(src, TRUE)
+			user.Knockdown(50)
+		return
+
+/obj/item/twohanded/sledgehammer/marsstaff/unwield() //Specific unwield () to switch hitsounds.
+	sharpness = IS_BLUNT
+	..()
+	STOP_PROCESSING(SSobj, src)
+	set_light(0)

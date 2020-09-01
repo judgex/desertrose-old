@@ -323,7 +323,7 @@
 	gloves = /obj/item/clothing/gloves/f13/military
 	//radio = /obj/item/device/radio/headset
 	//mask = /obj/item/clothing/mask/gas
-	head = /obj/item/clothing/head/helmet/power_armor/t45d
+	head = /obj/item/clothing/head/helmet/f13/power_armor/t45d
 	//back = /obj/item/weapon/storage/backpack
 
 /mob/living/simple_animal/hostile/ncr

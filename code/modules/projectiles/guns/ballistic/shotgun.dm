@@ -117,12 +117,11 @@
 	fire_sound = 'sound/f13weapons/hunting_rifle.ogg'
 
 
-/*TODO sprite, ignore for now
 /obj/item/gun/ballistic/shotgun/musket
-	name = "Musket"
-	desc = "An antique looking musket."
-	icon_state = "moistnugget"
-	item_state = "moistnugget"
+	name = " a Rifled Musket"
+	desc = "An old style rifled musket chambered in .58, probably made by some master craftsman or something. The design looks very antiquated, but trust me, you do not want to get shot by one of these."
+	icon_state = "1851enfield"
+	item_state = "1851enfield"
 	slot_flags = 0 //no ITEM_SLOT_BACK sprite, alas
 	mag_type = /obj/item/ammo_box/magazine/internal/musket
 	var/bolt_open = FALSE
@@ -130,11 +129,11 @@
 	nocase = TRUE
 	knife_x_offset = 27
 	knife_y_offset = 13
-	fire_delay = 100
+	fire_delay = 20
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 	fire_sound = 'sound/f13weapons/hunting_rifle.ogg'
-TODO sprite, ignore for now*/
+
 
 //BB gun
 /obj/item/gun/ballistic/shotgun/bb
@@ -165,6 +164,9 @@ TODO sprite, ignore for now*/
 	var/bolt_open = FALSE
 	can_bayonet = TRUE
 	fire_delay = 20
+	knife_x_offset = 23
+	knife_y_offset = 21
+	bayonetstate = "lasmusket"
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 	isenergy = TRUE
@@ -332,7 +334,7 @@ TODO sprite, ignore for now*/
 	scopestate = "AEP7_scope"
 	scope_x_offset = 8
 	scope_y_offset = 19
-	can_bayonet = TRUE	
+	can_bayonet = TRUE
 	bayonetstate = "trenchgun"
 	knife_x_offset = 23
 	knife_y_offset = 14
@@ -384,6 +386,9 @@ TODO sprite, ignore for now*/
 	fire_delay = 3
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
+	can_scope = TRUE
+
+
 
 /obj/item/gun/ballistic/shotgun/remington/attackby(obj/item/A, mob/user, params)
 	..()
@@ -406,6 +411,7 @@ TODO sprite, ignore for now*/
 	zoomable = TRUE
 	zoom_amt = 10
 	zoom_out_amt = 13
+	can_scope = FALSE
 
 /obj/item/gun/ballistic/shotgun/remington/scoped/paciencia
 	name = "Paciencia"
@@ -426,6 +432,38 @@ TODO sprite, ignore for now*/
 			return
 	else
 		..()
+
+/obj/item/gun/ballistic/shotgun/ww2rifle
+	name = "\improper ancient rifle"
+	desc = "An ancient military rifle in use over 100 years ago, chambered in .308 and packing an additional punch."
+	icon_state = "kar98"
+	item_state = "308"
+	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/kar98
+	fire_sound = 'sound/f13weapons/hunting_rifle.ogg'
+	fire_delay = 5
+	w_class = WEIGHT_CLASS_BULKY
+	weapon_weight = WEAPON_HEAVY
+	can_scope = TRUE
+	extra_damage = 10
+	extra_penetration = 10
+
+/obj/item/gun/ballistic/shotgun/ww2rifle/scoped
+	name = "\improper scoped ancient rifle"
+	desc = "An ancient military rifle in use over 100 years ago, chambered in .308 and packing an additional punch. Now with a scope."
+	icon_state = "kar98scope"
+	item_state = "308"
+	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/kar98
+	fire_sound = 'sound/f13weapons/hunting_rifle.ogg'
+	fire_delay = 5
+	w_class = WEIGHT_CLASS_BULKY
+	weapon_weight = WEAPON_HEAVY
+	zoomable = TRUE
+	zoom_amt = 10
+	zoom_out_amt = 13
+	can_scope = FALSE
+	extra_damage = 10
+	extra_penetration = 10
+
 
 //Anti-Materiel Rifle (NCR)
 /obj/item/gun/ballistic/shotgun/antimateriel
@@ -457,6 +495,7 @@ TODO sprite, ignore for now*/
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 	fire_delay = 4
+	can_scope = TRUE
 
 /obj/item/gun/ballistic/shotgun/automatic/hunting/trail/scoped
 	name = "scoped trail carbine"
@@ -472,6 +511,7 @@ TODO sprite, ignore for now*/
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 	fire_delay = 6
+	can_scope = FALSE
 
 /obj/item/gun/ballistic/shotgun/automatic/hunting/cowboy
 	name = "cowboy repeater"
@@ -484,6 +524,7 @@ TODO sprite, ignore for now*/
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 	fire_delay = 6
+	can_scope = TRUE
 
 /obj/item/gun/ballistic/shotgun/automatic/hunting/cowboy/scoped
 	name = "scoped cowboy repeater"
@@ -499,6 +540,7 @@ TODO sprite, ignore for now*/
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 	fire_delay = 8
+	can_scope = FALSE
 
 /obj/item/gun/ballistic/shotgun/automatic/hunting/brush
 	name = "brush gun"
@@ -510,6 +552,7 @@ TODO sprite, ignore for now*/
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 	fire_delay = 6
+	can_scope = TRUE
 
 /obj/item/gun/ballistic/shotgun/automatic/hunting/brush/scoped
 	name = "scoped brush gun"
@@ -524,6 +567,7 @@ TODO sprite, ignore for now*/
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 	fire_delay = 8
+	can_scope = FALSE
 
 /obj/item/gun/ballistic/revolver/widowmaker
 	name = "winchester widowmaker"

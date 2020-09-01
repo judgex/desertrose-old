@@ -207,14 +207,19 @@ Priestess of Mars
 	name = "Priestess of Mars"
 	uniform = /obj/item/clothing/under/f13/priestess
 	glasses = /obj/item/clothing/glasses/sunglasses/fakeblindfold
+	head	= /obj/item/clothing/head/helmet/f13/legion/marsheaddress
 	ears	= /obj/item/radio/headset/headset_legion
+	gloves	= /obj/item/clothing/gloves/fingerless
 	jobtype = /datum/job/CaesarsLegion/f13priestess
 	id = /obj/item/card/id/dogtag/legpriest
-	shoes = /obj/item/clothing/shoes/roman
+	r_hand = /obj/item/twohanded/sledgehammer/marsstaff
+	shoes = /obj/item/clothing/shoes/sandal
 	backpack_contents = list(
 		/obj/item/reagent_containers/pill/patch/healingpowder=3, \
-		/obj/item/flashlight/lantern=1,
-		)
+		/obj/item/flashlight/lantern=1, \
+		/obj/item/clothing/under/f13/pmarsrobe=1, \
+		/obj/item/clothing/shoes/roman=1
+	)
 
 /datum/outfit/job/CaesarsLegion/f13priestess/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
@@ -231,7 +236,6 @@ Priestess of Mars
 
 /datum/job/CaesarsLegion/f13priestess/after_spawn(mob/living/carbon/human/H, mob/M)
 	H.add_quirk("Spiritual")
-
 
 /* Decanus
 /datum/job/CaesarsLegion/Legionnaire/f13decan
@@ -696,7 +700,7 @@ Venator
 	H.add_quirk("Hard Yards")
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13venator
-	name = "Legion Explorer"
+	name = "Legion Venator"
 	jobtype 	= /datum/job/CaesarsLegion/Legionnaire/f13explorer
 	id 			= 	/obj/item/card/id/dogtag/legvenator
 	suit 		= 	/obj/item/clothing/suit/armor/f13/legion/venator
@@ -708,7 +712,6 @@ Venator
 	backpack_contents = list(
 		/obj/item/restraints/legcuffs/bola=1, \
 		/obj/item/reagent_containers/pill/patch/healpoultice=2, \
-		/obj/item/flashlight/flare/torch=1, \
 		/obj/item/storage/bag/money/small/legenlisted,
 		/obj/item/radio)
 

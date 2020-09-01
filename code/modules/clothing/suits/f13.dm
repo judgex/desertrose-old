@@ -184,13 +184,31 @@
 	armor = list(melee = 10, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
 	allowed = list(/obj/item/pen,/obj/item/paper,/obj/item/stamp,/obj/item/reagent_containers/food/drinks/flask,/obj/item/weapon,/obj/item/storage/box/matches,/obj/item/lighter,/obj/item/clothing/mask/cigarette,/obj/item/storage/fancy/cigarettes,/obj/item/flashlight,/obj/item/gun,/obj/item/ammo_box,/obj/item/ammo_casing)
 
-/obj/item/clothing/suit/toggle/labcoat/f13/khan
+/obj/item/clothing/suit/toggle/labcoat/f13/khan_jacket
 	name = "Great Khan jacket"
 	desc = "A black leather jacket. <br>There is an illustration on the back - an aggressive, red-eyed skull wearing a fur hat with horns.<br>The skull has a mongoloid moustache - it's obviously a Great Khans emblem."
-	icon_state = "khan"
+	icon_state = "khan_jacket"
 	item_state = "jensencoat"
 	body_parts_covered = CHEST
-	armor = list(melee = 30, bullet = 30, laser = 20, energy = 20, bomb = 30, bio = 0, rad = 0, fire = 25, acid = 25)
+	armor = list(melee = 40, bullet = 35, laser = 25, energy = 25, bomb = 30, bio = 0, rad = 0, fire = 25, acid = 25)
+	allowed = list(/obj/item/pen,/obj/item/paper,/obj/item/stamp,/obj/item/reagent_containers/food/drinks/flask,/obj/item/weapon,/obj/item/storage/box/matches,/obj/item/lighter,/obj/item/clothing/mask/cigarette,/obj/item/storage/fancy/cigarettes,/obj/item/flashlight,/obj/item/gun,/obj/item/ammo_box,/obj/item/ammo_casing)
+
+/obj/item/clothing/suit/toggle/labcoat/f13/khan_jacket_armored
+	name = "Great Khan armored jacket"
+	desc = "A black leather jacket. <br>There is an illustration on the back - an aggressive, red-eyed skull wearing a fur hat with horns.<br>The skull has a mongoloid moustache - it's obviously a Great Khans emblem.<br>Protective plates have been sewn into the jacket."
+	icon_state = "khan_jacket"
+	item_state = "jensencoat"
+	body_parts_covered = CHEST
+	armor = list(melee = 50, bullet = 45, laser = 35, energy = 35, bomb = 30, bio = 0, rad = 0, fire = 25, acid = 25)
+	allowed = list(/obj/item/pen,/obj/item/paper,/obj/item/stamp,/obj/item/reagent_containers/food/drinks/flask,/obj/item/weapon,/obj/item/storage/box/matches,/obj/item/lighter,/obj/item/clothing/mask/cigarette,/obj/item/storage/fancy/cigarettes,/obj/item/flashlight,/obj/item/gun,/obj/item/ammo_box,/obj/item/ammo_casing)
+
+/obj/item/clothing/suit/toggle/labcoat/f13/khan/battlecoat
+	name = "Great Khan battle coat"
+	desc = "A dark red leather coat lined with a patchwork of metal plates and padding on the inside. The back is dominated by a burning skull adorned with a horned helmet; the symbol of the Khans."
+	icon_state = "khan_battlecoat"
+	item_state = "khan_battlecoat"
+	body_parts_covered = CHEST
+	armor = list(melee = 50, bullet = 45, laser = 35, energy = 35, bomb = 30, bio = 0, rad = 0, fire = 25, acid = 25)
 	allowed = list(/obj/item/pen,/obj/item/paper,/obj/item/stamp,/obj/item/reagent_containers/food/drinks/flask,/obj/item/weapon,/obj/item/storage/box/matches,/obj/item/lighter,/obj/item/clothing/mask/cigarette,/obj/item/storage/fancy/cigarettes,/obj/item/flashlight,/obj/item/gun,/obj/item/ammo_box,/obj/item/ammo_casing)
 
 /obj/item/clothing/suit/toggle/labcoat/f13/followers
@@ -238,7 +256,7 @@
 	desc = "A hood fashioned out of patchwork and feathers"
 	icon_state = "raven_hood"
 	item_state = "raven_hood"
-	
+
 
 /obj/item/clothing/suit/hooded/cloak/desert/bridgekeeper
 	name = "tattered cloak"
@@ -264,6 +282,38 @@
 	icon_state = "golhood"
 	desc = "A protective & concealing hood."
 	armor = list("melee" = 50, "bullet" = 40, "laser" = 25, "energy" = 10, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 60, "acid" = 60)
+	flags_inv = HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR
+
+/obj/item/clothing/suit/hooded/parka/medical
+	name = "armored medical parka"
+	icon_state = "armormedical"
+	desc = "A staunch, practical parka made out of a wind-breaking jacket, reinforced with metal plates."
+	allowed = list(/obj/item/flashlight, /obj/item/tank/internals, /obj/item/pickaxe, /obj/item/twohanded/spear, /obj/item/twohanded/bonespear, /obj/item/gun)
+	armor = list("melee" = 50, "bullet" = 40, "laser" = 30, "energy" = 10, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 60, "acid" = 60)
+	hoodtype = /obj/item/clothing/head/hooded/parkahood/medical
+	body_parts_covered = CHEST|GROIN|ARMS
+
+/obj/item/clothing/head/hooded/parkahood/medical
+	name = "armored medical parka hood"
+	icon_state = "armorhoodmedical"
+	desc = "A protective & concealing parka hood."
+	armor = list("melee" = 50, "bullet" = 40, "laser" = 30, "energy" = 10, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 60, "acid" = 60)
+	flags_inv = HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR
+
+/obj/item/clothing/suit/hooded/parka/grey
+	name = "grey armored parka"
+	icon_state = "armorgrey"
+	desc = "A staunch, practical parka made out of a wind-breaking jacket, reinforced with metal plates."
+	allowed = list(/obj/item/flashlight, /obj/item/tank/internals, /obj/item/pickaxe, /obj/item/twohanded/spear, /obj/item/twohanded/bonespear, /obj/item/gun)
+	armor = list("melee" = 50, "bullet" = 40, "laser" = 30, "energy" = 10, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 60, "acid" = 60)
+	hoodtype = /obj/item/clothing/head/hooded/parkahood/grey
+	body_parts_covered = CHEST|GROIN|ARMS
+
+/obj/item/clothing/head/hooded/parkahood/grey
+	name = "armored grey parka hood"
+	icon_state = "armorhoodgrey"
+	desc = "A protective & concealing parka hood."
+	armor = list("melee" = 50, "bullet" = 40, "laser" = 30, "energy" = 10, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 60, "acid" = 60)
 	flags_inv = HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR
 
 /obj/item/clothing/suit/hooded/cloak/goliath/tatteredred

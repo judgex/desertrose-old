@@ -1305,8 +1305,6 @@ GLOBAL_REAL_VAR(list/stack_trace_storage)
 /proc/______qdel_list_wrapper(list/L) //the underscores are to encourage people not to use this directly.
 	QDEL_LIST(L)
 
-
-
 /proc/random_nukecode()
 	var/val = rand(0, 99999)
 	var/str = "[val]"
