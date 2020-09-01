@@ -495,7 +495,7 @@
 	illustration = null
 	w_class = WEIGHT_CLASS_SMALL
 	var/icon_type = "g"
-	var/spawn_type = /obj/item/ammo_casing/shotgun/buckshot
+	var/spawn_type = /obj/item/ammo_casing/shotgun/magnumshot
 	var/fancy_open = FALSE
 
 /obj/item/storage/box/magnumshot/PopulateContents()
@@ -536,7 +536,7 @@
 	. = ..()
 	GET_COMPONENT(STR, /datum/component/storage)
 	STR.max_items = 14
-	STR.can_hold = typecacheof(list(/obj/item/ammo_casing/shotgun/buckshot))
+	STR.can_hold = typecacheof(list(/obj/item/ammo_casing/shotgun/magnumshot))
 
 
 /obj/item/storage/box/slugshot
