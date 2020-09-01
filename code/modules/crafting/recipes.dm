@@ -2361,7 +2361,7 @@
 	subcategory = CAT_FORGEWEAPON
 
 /datum/crafting_recipe/combatbayonet
-	name = "Combat Knife"
+	name = "Bayonet Knife"
 	result = /obj/item/kitchen/knife/combat/bayonet
 	time = 300
 	reqs = list(/obj/item/stack/sheet/metal = 5,

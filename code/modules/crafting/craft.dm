@@ -28,7 +28,8 @@
 							CAT_MISC,
 							CAT_BOTTLE), //MISC Subcategories
 						list(
-							CAT_TRIBAL), //Tribal subcategories
+							CAT_TRIBAL,
+							CAT_TRIBAL_WEAPONS), //Tribal subcategories
 						list(
 							CAT_MEDS,
 							CAT_DRUGS),//Ghetto Chem subcategories
