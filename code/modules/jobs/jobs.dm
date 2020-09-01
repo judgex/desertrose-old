@@ -147,7 +147,7 @@ GLOBAL_LIST_INIT(brotherhood_positions, list(
 	"Senior Scribe",
 	"Scribe",
 	"Initiate",
-	"Off-Duty",
+	"Off-Duty"
 ))
 
 GLOBAL_LIST_INIT(den_command_positions, list(
@@ -164,6 +164,7 @@ GLOBAL_LIST_INIT(den_positions, list(
     "Prospector",
 	"Detective",
 	"Preacher",
+	"Barkeep"
 ))
 
 GLOBAL_LIST_INIT(legion_command_positions, list(
@@ -234,7 +235,7 @@ GLOBAL_LIST_INIT(vault_positions, list(
 GLOBAL_LIST_INIT(wasteland_positions, list(
     "Outlaw",
 	"Faithful",
-    "Wastelander",
+    "Wastelander"
 ))
 GLOBAL_LIST_INIT(security_positions, list(
     "Vault-tec Security",
