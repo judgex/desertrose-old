@@ -208,8 +208,8 @@
 	icon_state = "abed"
 
 /obj/structure/bed/mattress
-	name = "mattress"
-	desc = "This is used to lie in, sleep in or strap on."
+	name = "матрас"
+	desc = "Матрас. Спасибо что не обоссаный. Наверное..."
 	icon_state = "mattress0"
 	buildstacktype = /obj/item/stack/sheet/cloth
 	buildstackamount = 3
@@ -219,3 +219,48 @@
 	..()
 	icon_state = "mattress[rand(0,6)]"
 
+/obj/structure/bed/wooden
+	name = "деревянная кровать"
+	icon_state = "wood_bed"
+
+/obj/structure/bed/bedroll
+	name = "походный спальник"
+	icon_state = "bedroll"
+
+/obj/structure/bed/bedroll/attack_hand(mob/living/carbon/human/user)
+	to_chat(user, "Вы начинаете сворачивать спальное место.")
+	if(do_after(user, 25, target = loc))
+		new/obj/item/bedroll(get_turf(src))
+		qdel(src)
+
+/obj/item/bedroll
+	name = "спальник"
+	desc = "Простой в использовании спальный мешок."
+	icon = 'icons/obj/f13misc.dmi'
+	icon_state = "bedroll"
+
+/obj/item/bedroll/attack_self(mob/user)
+	to_chat(user, "Вы начинаете разворачивать спальное место.")
+	if(do_after(user, 25, target = loc))
+		new/obj/structure/bed/bedroll(get_turf(src))
+		qdel(src)
+
+/obj/structure/bed/metal
+	name = "металлическая кровать"
+	icon_state = "metal_bed_nm"
+
+/obj/structure/bed/wire
+	name = "металлическая кровать"
+	icon_state = "wire_bed"
+
+/obj/structure/bed/wire/rand
+	name = "металлическая кровать"
+	icon_state = "wire_bed"
+
+/obj/structure/bed/metal/rand
+	name = "металлическая кровать"
+	icon_state = "metal_bed5"
+
+/obj/structure/bed/metal/rand/New()
+	..()
+	icon_state = "metal_bed[rand(1,5)]"

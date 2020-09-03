@@ -448,15 +448,18 @@
  * Racks
  */
 /obj/structure/rack
-	name = "rack"
-	desc = "Different from the Middle Ages version."
+	name = "стеллаж"
+	desc = "Обычный стеллаж для хранения всяких вещей."
 	icon = 'icons/fallout/objects/structures/furniture.dmi'
-	icon_state = "rack"
+	icon_state = "shelf"
 	layer = TABLE_LAYER
 	density = TRUE
 	anchored = TRUE
 	pass_flags = LETPASSTHROW //You can throw objects over this, despite it's density.
 	max_integrity = 20
+
+/obj/structure/rack/wooden
+	icon_state = "rack"
 
 /obj/structure/rack/examine(mob/user)
 	..()
