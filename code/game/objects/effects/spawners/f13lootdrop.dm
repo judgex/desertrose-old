@@ -942,8 +942,8 @@
     loot = list(
             /obj/effect/spawner/lootdrop/f13/weapon/gun/tier1 = 80,
             /obj/effect/spawner/lootdrop/f13/weapon/gun/tier2 = 14,
-            /obj/effect/spawner/lootdrop/f13/weapon/gun/tier3 = 3,
-            /obj/effect/spawner/lootdrop/f13/weapon/gun/tier4 = 2,
+            /obj/effect/spawner/lootdrop/f13/weapon/gun/tier3 = 4,
+            /obj/effect/spawner/lootdrop/f13/weapon/gun/tier4 = 1,
             /obj/effect/spawner/lootdrop/f13/weapon/gun/tier5 = 1
             )
 
@@ -1432,22 +1432,78 @@
 	/obj/item/book/granter/trait/gunsmith_three = 10,
 	/obj/item/book/granter/trait/gunsmith_four = 10)
 
-/obj/effect/spawner/lootdrop/f13/blueprint //ballistics only for now
-	name = "blueprint-tier item spawner"
+/obj/effect/spawner/lootdrop/f13/blueprintLow
+	name = "blueprint-tier(Low) item spawner"
 	icon_state = "blueprint_loot"
 	lootcount = 1
 	loot = list(
-		///obj/item/blueprint/misc/stim,
-		///obj/item/blueprint/misc/superstims,
-		/obj/item/blueprint/weapon/R91,
-		/obj/item/blueprint/weapon/marksmanrifle,
-		/obj/item/blueprint/weapon/smg10mm,
-		/obj/item/blueprint/weapon/AER9,
 		/obj/item/blueprint/weapon/AEP7,
+		/obj/item/blueprint/weapon/trail_carbine,
+		/obj/item/blueprint/weapon/lever_action,
+		/obj/item/blueprint/weapon/kar98
+	)
+/obj/effect/spawner/lootdrop/f13/blueprintMid
+	name = "blueprint-tier(Mid) item spawner"
+	icon_state = "blueprint_loot"
+	lootcount = 1
+	loot = list(
+		/obj/item/blueprint/weapon/thatgun,
+		/obj/item/blueprint/weapon/marksmanrifle,
 		/obj/item/blueprint/weapon/plasmapistol,
+		/obj/item/blueprint/weapon/uzi,
+		/obj/item/blueprint/weapon/smg10mm,
+		/obj/item/blueprint/weapon/brush,
+		/obj/item/blueprint/weapon/grease_gun,
+		/obj/item/blueprint/weapon/pps,
+		/obj/item/blueprint/weapon/mg34
+	)
+/obj/effect/spawner/lootdrop/f13/blueprintMidLimited
+	name = "blueprint-tier(MidLimited) item spawner"
+	icon_state = "blueprint_loot"
+	lootcount = 1
+	loot = list(
+		/obj/item/blueprint/weapon/thatgun/limited,
+		/obj/item/blueprint/weapon/marksmanrifle/limited,
+		/obj/item/blueprint/weapon/plasmapistol/limited,
+		/obj/item/blueprint/weapon/uzi/limited,
+		/obj/item/blueprint/weapon/smg10mm/limited,
+		/obj/item/blueprint/weapon/brush/limited,
+		/obj/item/blueprint/weapon/grease_gun/limited,
+		/obj/item/blueprint/weapon/pps/limited,
+		/obj/item/blueprint/weapon/mg34/limited
+	)
+/obj/effect/spawner/lootdrop/f13/blueprintHigh
+	name = "blueprint-tier(High) item spawner"
+	icon_state = "blueprint_loot"
+	lootcount = 1
+	loot = list(
+		/obj/item/blueprint/weapon/R91,
+		/obj/item/blueprint/weapon/sniper,
+		/obj/item/blueprint/weapon/breacher,
+		/obj/item/blueprint/weapon/lmg,
+		/obj/item/blueprint/weapon/R82,
+		/obj/item/blueprint/weapon/deagle
+	)
+/obj/effect/spawner/lootdrop/f13/blueprintVHigh
+	name = "blueprint-tier(VHigh) item spawner"
+	icon_state = "blueprint_loot"
+	lootcount = 1
+	loot = list(
 		/obj/item/blueprint/weapon/plasmarifle,
-		/obj/item/gun/energy/laser/rcw
-	//	/obj/item/blueprint/armor/combat
+		/obj/item/blueprint/weapon/AER9,
+		/obj/item/blueprint/weapon/AM_rifle,
+		/obj/item/blueprint/weapon/city_killer,
+		/obj/item/blueprint/weapon/rangemaster
+	)
+/obj/effect/spawner/lootdrop/f13/blueprintVHighBallistics
+	name = "blueprint-tier(VHighBallistics) item spawner"
+	icon_state = "blueprint_loot"
+	lootcount = 1
+	loot = list(
+		/obj/item/blueprint/weapon/AM_rifle,
+		/obj/item/blueprint/weapon/city_killer,
+		/obj/item/blueprint/weapon/rangemaster,
+		/obj/item/blueprint/weapon/bozar
 	)
 
 /obj/effect/spawner/lootdrop/f13/advcrafting

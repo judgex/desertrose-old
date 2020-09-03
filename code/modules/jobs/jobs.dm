@@ -73,6 +73,9 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 "Sheriff",
 "Deputy",
 "Shopkeeper",
+"Doctor",
+"Prospector",
+"Detective",
 
 "Chief",
 "Shaman",
@@ -114,6 +117,9 @@ GLOBAL_LIST_INIT(faction_player_positions, list(
 
 "Deputy",
 "Shopkeeper",
+"Doctor",
+"Prospector",
+"Detective",
 
 "Cyborg",
 "Vault-tec Security"
@@ -141,7 +147,7 @@ GLOBAL_LIST_INIT(brotherhood_positions, list(
 	"Senior Scribe",
 	"Scribe",
 	"Initiate",
-	"Off-Duty",
+	"Off-Duty"
 ))
 
 GLOBAL_LIST_INIT(den_command_positions, list(
@@ -153,7 +159,6 @@ GLOBAL_LIST_INIT(den_positions, list(
     "Doctor",
     "Citizen",
     "Deputy",
-	"Banker",
 	"Shopkeeper",
     "Farmer",
     "Prospector",
@@ -230,7 +235,7 @@ GLOBAL_LIST_INIT(vault_positions, list(
 GLOBAL_LIST_INIT(wasteland_positions, list(
     "Outlaw",
 	"Faithful",
-    "Wastelander",
+    "Wastelander"
 ))
 GLOBAL_LIST_INIT(security_positions, list(
     "Vault-tec Security",
@@ -252,7 +257,8 @@ GLOBAL_LIST_INIT(followers_command_positions, list(
 GLOBAL_LIST_INIT(followers_positions, list(
     "Practitioner",
     "Followers Guard",
-    "Followers Volunteer"
+    "Followers Volunteer",
+	"Professor"
 ))
 /*
 GLOBAL_LIST_INIT(engineering_positions, list(
