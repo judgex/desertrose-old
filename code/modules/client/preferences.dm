@@ -9,7 +9,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	//doohickeys for savefiles
 	var/path
 	var/default_slot = 1				//Holder so it doesn't default to slot 1, rather the last one used
-	var/max_save_slots = 3
+	var/max_save_slots = 30 // lucky number
 
 	//non-preference stuff
 	var/muted = 0
@@ -179,11 +179,10 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 	var/action_buttons_screen_locs = list()
 
-	var/music_volume = 1
-
 	//backgrounds
 	var/mutable_appearance/character_background
-	var/icon/bgstate = "000"
+	var/icon/bgstate = "steel"
+	var/list/bgstate_options = list("000", "midgrey", "FFF", "white", "steel", "techmaint", "dark", "plating", "reinforced")
 
 /datum/preferences/New(client/C)
 	parent = C
@@ -224,9 +223,9 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	update_preview_icon(current_tab != 0)
 	var/list/dat = list("<center>")
 
-	dat += "<a href='?_src_=prefs;preference=tab;tab=0' [current_tab == 0 ? "class='linkOn'" : ""]>Настройки персонажа</a>"
-	dat += "<a href='?_src_=prefs;preference=tab;tab=1' [current_tab == 1 ? "class='linkOn'" : ""]>Настройки игры</a>"
-	dat += "<a href='?_src_=prefs;preference=tab;tab=2' [current_tab == 2 ? "class='linkOn'" : ""]>Настройки ООС</a>"
+	dat += "<a href='?_src_=prefs;preference=tab;tab=0' [current_tab == 0 ? "class='linkOn'" : ""]>Character Settings</a>"
+	dat += "<a href='?_src_=prefs;preference=tab;tab=1' [current_tab == 1 ? "class='linkOn'" : ""]>Game Preferences</a>"
+	dat += "<a href='?_src_=prefs;preference=tab;tab=2' [current_tab == 2 ? "class='linkOn'" : ""]>OOC Preferences</a>"
 
 	if(!path)
 		dat += "<div class='notice'>Please create an account to save your preferences</div>"
@@ -251,7 +250,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 						S.cd = "/character[i]"
 						S["real_name"] >> name
 						if(!name)
-							name = "Персонаж [i]"
+							name = "Character[i]"
 						dat += "<a style='white-space:nowrap;' href='?_src_=prefs;preference=changeslot;num=[i];' [i == default_slot ? "class='linkOn'" : ""]>[name]</a> "
 					dat += "</center>"
 
@@ -262,21 +261,22 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				dat += "<a href='?_src_=prefs;preference=trait;task=menu'>Configure Quirks</a><br></center>"
 				dat += "<center><b>Current Quirks:</b> [all_quirks.len ? all_quirks.Join(", ") : "None"]</center>"
 			dat += "<center><h2>S.P.E.C.I.A.L</h2>"
-			dat += "<a href='?_src_=prefs;preference=special;task=menu'>Распределить очки</a><br></center>"
-			dat += "<h2>Личность</h2>"
+			dat += "<a href='?_src_=prefs;preference=special;task=menu'>Allocate Points</a><br></center>"
+			dat += "<h2>Identity</h2>"
 			dat += "<table width='100%'><tr><td width='75%' valign='top'>"
 			if(jobban_isbanned(user, "appearance"))
 				dat += "<b>You are banned from using custom names and appearances. You can continue to adjust your characters, but you will be randomised once you join the game.</b><br>"
-			dat += "<a href='?_src_=prefs;preference=name;task=random'>Случайное имя</A> "
-			dat += "<a href='?_src_=prefs;preference=name'>Всегда случайное имя: [be_random_name ? "Да" : "Нет"]</a><BR>"
+			dat += "<a href='?_src_=prefs;preference=name;task=random'>Random Name</A> "
+			dat += "<a href='?_src_=prefs;preference=name'>Always Random Name: [be_random_name ? "Yes" : "No"]</a><BR>"
 
-			dat += "<b>Имя:</b> "
+			dat += "<b>Name:</b> "
 			dat += "<a href='?_src_=prefs;preference=name;task=input'>[real_name]</a><BR>"
 
-			dat += "<b>Пол:</b> <a href='?_src_=prefs;preference=gender'>[gender == MALE ? "Мужчина" : "Женщина"]</a><BR>"
-			dat += "<b>Возраст:</b> <a href='?_src_=prefs;preference=age;task=input'>[age]</a><BR>"
-
-			dat += "<b>Особые имена:</b><BR>"
+			dat += "<b>Gender:</b> <a href='?_src_=prefs;preference=gender'>[gender == MALE ? "Male" : "Female"]</a><BR>"
+			dat += "<b>Age:</b> <a href='?_src_=prefs;preference=age;task=input'>[age]</a><BR>"
+			dat += "<br><b>Cycle background:</b><a style='display:block;width:100px' href='?_src_=prefs;preference=cycle_bg;task=input'>[bgstate]</a><BR>"
+/*
+			dat += "<b>Special Names:</b><BR>"
 			var/old_group
 			for(var/custom_name_id in GLOB.preferences_custom_names)
 				var/namedata = GLOB.preferences_custom_names[custom_name_id]
@@ -291,10 +291,10 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 			dat += "<a href='?_src_=prefs;preference=sec_dept;task=input'><b>Prefered security department:</b> [prefered_security_department]</a><BR></td>"
 
 			dat += "</tr></table>"
-
+*/
 			dat += "<table><tr><td width='340px' height='300px' valign='top'>"
-			dat += "<h2>Информация о персонаже</h2>"
-			dat += "<a href='?_src_=prefs;preference=flavor_text;task=input'><b>Настроить</b></a><br>"
+			dat += "<h2>Flavor Text</h2>"
+			dat += "<a href='?_src_=prefs;preference=flavor_text;task=input'><b>Set Examine Text</b></a><br>"
 			if(length(features["flavor_text"]) <= 40)
 				if(!length(features["flavor_text"]))
 					dat += "\[...\]"
@@ -303,31 +303,31 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 			else
 				dat += "[TextPreview(features["flavor_text"])]...<BR>"
 
-			dat += "<h2>Тело</h2>"
-			dat += "<a href='?_src_=prefs;preference=all;task=random'>Случайное тело</A> "
-			dat += "<a href='?_src_=prefs;preference=all'>Всегда случайное тело: [be_random_body ? "Да" : "Нет"]</A><br>"
+			dat += "<h2>Body</h2>"
+			dat += "<a href='?_src_=prefs;preference=all;task=random'>Random Body</A> "
+			dat += "<a href='?_src_=prefs;preference=all'>Always Random Body: [be_random_body ? "Yes" : "No"]</A><br>"
 
 			dat += "<table width='100%'><tr><td width='24%' valign='top'>"
 
-			dat += "<b>Раса:</b><BR><a href='?_src_=prefs;preference=species;task=input'>[pref_species.name]</a><BR>"
+			dat += "<b>Species:</b><BR><a href='?_src_=prefs;preference=species;task=input'>[pref_species.name]</a><BR>"
 
-			dat += "<b>Нижнее бельё:</b><a style='display:block;width:100px' href ='?_src_=prefs;preference=underwear;task=input'>[underwear]</a>"
+			dat += "<b>Underwear:</b><a style='display:block;width:100px' href ='?_src_=prefs;preference=underwear;task=input'>[underwear]</a>"
 			if(GLOB.underwear_list[underwear]?.has_color)
-				dat += "<b>Цвет:</b> <span style='border:1px solid #161616; background-color: #[undie_color];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=undie_color;task=input'>Change</a><BR>"
-			dat += "<b>Верхнее бельё:</b><a style='display:block;width:100px' href ='?_src_=prefs;preference=undershirt;task=input'>[undershirt]</a>"
+				dat += "<b>Underwear Color:</b> <span style='border:1px solid #161616; background-color: #[undie_color];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=undie_color;task=input'>Change</a><BR>"
+			dat += "<b>Undershirt:</b><a style='display:block;width:100px' href ='?_src_=prefs;preference=undershirt;task=input'>[undershirt]</a>"
 			if(GLOB.undershirt_list[undershirt]?.has_color)
-				dat += "<b>Цвет:</b> <span style='border:1px solid #161616; background-color: #[shirt_color];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=shirt_color;task=input'>Change</a><BR>"
-			dat += "<b>Носки:</b><a style='display:block;width:100px' href ='?_src_=prefs;preference=socks;task=input'>[socks]</a>"
+				dat += "<b>Undershirt Color:</b> <span style='border:1px solid #161616; background-color: #[shirt_color];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=shirt_color;task=input'>Change</a><BR>"
+			dat += "<b>Socks:</b><a style='display:block;width:100px' href ='?_src_=prefs;preference=socks;task=input'>[socks]</a>"
 			if(GLOB.socks_list[socks]?.has_color)
-				dat += "<b>Цвет:</b> <span style='border:1px solid #161616; background-color: #[socks_color];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=socks_color;task=input'>Change</a><BR>"
-			dat += "<b>Рюкзак:</b><BR><a href ='?_src_=prefs;preference=bag;task=input'>[backbag]</a><BR>"
-			dat += "<b>Место спавна аплинка:</b><BR><a href ='?_src_=prefs;preference=uplink_loc;task=input'>[uplink_spawn_loc]</a><BR></td>"
+				dat += "<b>Socks Color:</b> <span style='border:1px solid #161616; background-color: #[socks_color];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=socks_color;task=input'>Change</a><BR>"
+			dat += "<b>Backpack:</b><BR><a href ='?_src_=prefs;preference=bag;task=input'>[backbag]</a><BR>"
+			dat += "<b>Uplink Spawn Location:</b><BR><a href ='?_src_=prefs;preference=uplink_loc;task=input'>[uplink_spawn_loc]</a><BR></td>"
 			var/use_skintones = pref_species.use_skintones
 			if(use_skintones)
 
 				dat += APPEARANCE_CATEGORY_COLUMN
 
-				dat += "<h3>Тон кожи</h3>"
+				dat += "<h3>Skin Tone</h3>"
 
 				dat += "<a href='?_src_=prefs;preference=s_tone;task=input'>[skin_tone]</a><BR>"
 
@@ -348,29 +348,33 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				if(!use_skintones && !mutant_colors)
 					dat += APPEARANCE_CATEGORY_COLUMN
 
-				dat += "<h3>Цвет глаз</h3>"
+				dat += "<h3>Eye Color</h3>"
 
-				dat += "<span style='border: 1px solid #161616; background-color: #[eye_color];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=eyes;task=input'>Изменить</a><BR>"
+				dat += "<span style='border: 1px solid #161616; background-color: #[eye_color];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=eyes;task=input'>Change</a><BR>"
 
 				dat += "</td>"
 			else if(use_skintones || mutant_colors)
 				dat += "</td>"
 
+			dat += "<a href='?_src_=prefs;preference=has_penis'>Has Penis: [has_penis ? "Yes" : "No"]</A><br>"
+			dat += "<a href='?_src_=prefs;preference=has_vagina'>Has Vagina: [has_vagina ? "Yes" : "No"]</A><br>"
+			dat += "<a href='?_src_=prefs;preference=has_breasts'>Has Breasts: [has_breasts ? "Yes" : "No"]</A><br>"
+
 			if(HAIR in pref_species.species_traits)
 
 				dat += APPEARANCE_CATEGORY_COLUMN
 
-				dat += "<h3>Причёска</h3>"
+				dat += "<h3>Hair Style</h3>"
 
 				dat += "<a href='?_src_=prefs;preference=hair_style;task=input'>[hair_style]</a><BR>"
 				dat += "<a href='?_src_=prefs;preference=previous_hair_style;task=input'>&lt;</a> <a href='?_src_=prefs;preference=next_hair_style;task=input'>&gt;</a><BR>"
-				dat += "<span style='border:1px solid #161616; background-color: #[hair_color];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=hair;task=input'>Изменить</a><BR>"
+				dat += "<span style='border:1px solid #161616; background-color: #[hair_color];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=hair;task=input'>Change</a><BR>"
 
-				dat += "<h3>Лицевая растительность</h3>"
+				dat += "<h3>Facial Hair Style</h3>"
 
 				dat += "<a href='?_src_=prefs;preference=facial_hair_style;task=input'>[facial_hair_style]</a><BR>"
 				dat += "<a href='?_src_=prefs;preference=previous_facehair_style;task=input'>&lt;</a> <a href='?_src_=prefs;preference=next_facehair_style;task=input'>&gt;</a><BR>"
-				dat += "<span style='border: 1px solid #161616; background-color: #[facial_hair_color];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=facial;task=input'>Изменить</a><BR>"
+				dat += "<span style='border: 1px solid #161616; background-color: #[facial_hair_color];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=facial;task=input'>Change</a><BR>"
 
 				dat += "</td>"
 
@@ -381,7 +385,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				if(!mutant_category)
 					dat += APPEARANCE_CATEGORY_COLUMN
 
-				dat += "<h3>Хвост</h3>"
+				dat += "<h3>Tail</h3>"
 
 				dat += "<a href='?_src_=prefs;preference=tail_lizard;task=input'>[features["tail_lizard"]]</a><BR>"
 
@@ -530,7 +534,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 		if (1) // Game Preferences
 			dat += "<table><tr><td width='340px' height='300px' valign='top'>"
-			dat += "<h2>Основные настройки</h2>"
+			dat += "<h2>General Settings</h2>"
 			dat += "<b>UI Style:</b> <a href='?_src_=prefs;task=input;preference=ui'>[UI_style]</a><br>"
 			dat += "<b>tgui Monitors:</b> <a href='?_src_=prefs;preference=tgui_lock'>[(tgui_lock) ? "Primary" : "All"]</a><br>"
 			dat += "<b>tgui Style:</b> <a href='?_src_=prefs;preference=tgui_fancy'>[(tgui_fancy) ? "Fancy" : "No Frills"]</a><br>"
@@ -624,7 +628,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 			for (var/i in GLOB.special_roles)
 				if(jobban_isbanned(user, i))
-					dat += "<b>Be [capitalize(i)]:</b> <a href='?_src_=prefs;jobbancheck=[i]'>БАН</a><br>"
+					dat += "<b>Be [capitalize(i)]:</b> <a href='?_src_=prefs;jobbancheck=[i]'>BANNED</a><br>"
 				else
 					var/days_remaining = null
 					if(ispath(GLOB.special_roles[i]) && CONFIG_GET(flag/use_age_restriction_for_jobs)) //If it's a game mode antag, check if the player meets the minimum age
@@ -682,14 +686,14 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	dat += "<hr><center>"
 
 	if(!IsGuestKey(user.key))
-		dat += "<a href='?_src_=prefs;preference=load'>Отмена</a> "
-		dat += "<a href='?_src_=prefs;preference=save'>Сохранить</a> "
+		dat += "<a href='?_src_=prefs;preference=load'>Undo</a> "
+		dat += "<a href='?_src_=prefs;preference=save'>Save Setup</a> "
 
-	dat += "<a href='?_src_=prefs;preference=reset_all'>Сброс</a>"
+	dat += "<a href='?_src_=prefs;preference=reset_all'>Reset Setup</a>"
 	dat += "</center>"
 
 	winshow(user, "preferences_window", TRUE)
-	var/datum/browser/popup = new(user, "preferences_browser", "<div align='center'>Настройки персонажа</div>", 640, 770)
+	var/datum/browser/popup = new(user, "preferences_browser", "<div align='center'>Character Setup</div>", 640, 770)
 	popup.set_content(dat.Join())
 	popup.open(FALSE)
 	onclose(user, "preferences_window", src)
@@ -731,6 +735,9 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 			if(job.total_positions == 0)
 				continue
 
+			if(job.faction == "None") //All jobs are now loaded into occupations so maps can just hide individual ones
+				continue
+
 			index += 1
 			if((index >= limit) || (job.title in splitJobs))
 				width += widthPerColumn
@@ -747,7 +754,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 			lastJob = job
 
 			if(jobban_isbanned(user, rank))
-				HTML += "<font color=red>[rank]</font></td><td><a href='?_src_=prefs;jobbancheck=[rank]'> БАН</a></td></tr>"
+				HTML += "<font color=red>[rank]</font></td><td><a href='?_src_=prefs;jobbancheck=[rank]'> BANNED</a></td></tr>"
 				continue
 			var/required_playtime_remaining = job.required_playtime_remaining(user.client)
 			if(required_playtime_remaining)
@@ -761,7 +768,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				HTML += "<font color=orange>[rank]</font></td><td></td></tr>"
 				continue
 			if(job.whitelist_locked(user.client,job.title))
-				HTML += "<font color=black>[rank]</font></td><td><font color=red>ЗАКРЫТО</font></td></tr>"
+				HTML += "<font color=black>[rank]</font></td><td><font color=red>LOCKED</font></td></tr>"
 				continue
 			if((rank in GLOB.command_positions) || (rank == "AI"))//Bold head jobs
 				HTML += "<b><span class='dark'>[rank]</span></b>"
@@ -800,9 +807,9 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 			if(rank == SSjob.overflow_role)//Overflow is special
 				if(job_civilian_low & overflow.flag)
-					HTML += "<font color=green>Да</font>"
+					HTML += "<font color=green>Yes</font>"
 				else
-					HTML += "<font color=red>Нет</font>"
+					HTML += "<font color=red>No</font>"
 				HTML += "</a></td></tr>"
 				continue
 
@@ -1287,19 +1294,19 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 	var/total = special_s + special_p + special_e + special_c + special_i + special_a + special_l
 
-	dat += "<center><b>Распределение очков</b></center><br>"
+	dat += "<center><b>Allocate points</b></center><br>"
 	dat += "<center>[total] out of 40 possible</center><br>"
-	dat += "<b>Сила		   :</b> <a href='?_src_=prefs;preference=special_s;task=input'>[special_s]</a><BR>"
-	dat += "<b>Восприятие  :</b> <a href='?_src_=prefs;preference=special_p;task=input'>[special_p]</a><BR>"
-	dat += "<b>Выносливость:</b> <a href='?_src_=prefs;preference=special_e;task=input'>[special_e]</a><BR>"
-	dat += "<b>Харизма     :</b> <a href='?_src_=prefs;preference=special_c;task=input'>[special_c]</a><BR>"
-	dat += "<b>Интиллект   :</b> <a href='?_src_=prefs;preference=special_i;task=input'>[special_i]</a><BR>"
-	dat += "<b>Ловкость    :</b> <a href='?_src_=prefs;preference=special_a;task=input'>[special_a]</a><BR>"
-	dat += "<b>Удача       :</b> <a href='?_src_=prefs;preference=special_l;task=input'>[special_l]</a><BR>"
+	dat += "<b>Strength	   :</b> <a href='?_src_=prefs;preference=special_s;task=input'>[special_s]</a><BR>"
+	dat += "<b>Perception  :</b> <a href='?_src_=prefs;preference=special_p;task=input'>[special_p]</a><BR>"
+	dat += "<b>Endurance   :</b> <a href='?_src_=prefs;preference=special_e;task=input'>[special_e]</a><BR>"
+	dat += "<b>Charisma    :</b> <a href='?_src_=prefs;preference=special_c;task=input'>[special_c]</a><BR>"
+	dat += "<b>Intelligence:</b> <a href='?_src_=prefs;preference=special_i;task=input'>[special_i]</a><BR>"
+	dat += "<b>Agility     :</b> <a href='?_src_=prefs;preference=special_a;task=input'>[special_a]</a><BR>"
+	dat += "<b>Luck        :</b> <a href='?_src_=prefs;preference=special_l;task=input'>[special_l]</a><BR>"
 	if (total>40)
 		dat += "<center>Maximum exceeded, please change until your total is at or below 40<center>"
 	else
-		dat += "<center><a href='?_src_=prefs;preference=special;task=close'>Завершить</a></center>"
+		dat += "<center><a href='?_src_=prefs;preference=special;task=close'>Done</a></center>"
 
 	user << browse(null, "window=preferences")
 	var/datum/browser/popup = new(user, "mob_occupation", "<div align='center'>S.P.E.C.I.A.L</div>", 300, 400) //no reason not to reuse the occupation window, as it's cleaner that way
@@ -1570,7 +1577,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 						metadata = sanitize(copytext(new_metadata,1,MAX_MESSAGE_LEN))
 
 				if("hair")
-					var/new_hair = input(user, "Choose your character's hair colour:", "Настройки персонажа","#"+hair_color) as color|null
+					var/new_hair = input(user, "Choose your character's hair colour:", "Character Preference","#"+hair_color) as color|null
 					if(new_hair)
 						hair_color = sanitize_hexcolor(new_hair)
 
@@ -1578,9 +1585,9 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				if("hair_style")
 					var/new_hair_style
 					if(gender == MALE)
-						new_hair_style = input(user, "Choose your character's hair style:", "Настройки персонажа")  as null|anything in GLOB.hair_styles_male_list
+						new_hair_style = input(user, "Choose your character's hair style:", "Character Preference")  as null|anything in GLOB.hair_styles_male_list
 					else
-						new_hair_style = input(user, "Choose your character's hair style:", "Настройки персонажа")  as null|anything in GLOB.hair_styles_female_list
+						new_hair_style = input(user, "Choose your character's hair style:", "Character Preference")  as null|anything in GLOB.hair_styles_female_list
 					if(new_hair_style)
 						hair_style = new_hair_style
 
@@ -1597,16 +1604,16 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 						hair_style = previous_list_item(hair_style, GLOB.hair_styles_female_list)
 
 				if("facial")
-					var/new_facial = input(user, "Choose your character's facial-hair colour:", "Настройки персонажа","#"+facial_hair_color) as color|null
+					var/new_facial = input(user, "Choose your character's facial-hair colour:", "Character Preference","#"+facial_hair_color) as color|null
 					if(new_facial)
 						facial_hair_color = sanitize_hexcolor(new_facial)
 
 				if("facial_hair_style")
 					var/new_facial_hair_style
 					if(gender == MALE)
-						new_facial_hair_style = input(user, "Choose your character's facial-hair style:", "Настройки персонажа")  as null|anything in GLOB.facial_hair_styles_male_list
+						new_facial_hair_style = input(user, "Choose your character's facial-hair style:", "Character Preference")  as null|anything in GLOB.facial_hair_styles_male_list
 					else
-						new_facial_hair_style = input(user, "Choose your character's facial-hair style:", "Настройки персонажа")  as null|anything in GLOB.facial_hair_styles_female_list
+						new_facial_hair_style = input(user, "Choose your character's facial-hair style:", "Character Preference")  as null|anything in GLOB.facial_hair_styles_female_list
 					if(new_facial_hair_style)
 						facial_hair_style = new_facial_hair_style
 
@@ -1622,44 +1629,47 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					else
 						facial_hair_style = previous_list_item(facial_hair_style, GLOB.facial_hair_styles_female_list)
 
+				if("cycle_bg")
+					bgstate = next_list_item(bgstate, bgstate_options)
+
 				if("underwear")
-					var/new_underwear = input(user, "Choose your character's underwear:", "Настройки персонажа")  as null|anything in GLOB.underwear_list
+					var/new_underwear = input(user, "Choose your character's underwear:", "Character Preference")  as null|anything in GLOB.underwear_list
 					if(new_underwear)
 						underwear = new_underwear
 
 				if("undie_color")
-					var/n_undie_color = input(user, "Choose your underwear's color.", "Настройки персонажа", "#[undie_color]") as color|null
+					var/n_undie_color = input(user, "Choose your underwear's color.", "Character Preference", "#[undie_color]") as color|null
 					if(n_undie_color)
 						undie_color = sanitize_hexcolor(n_undie_color, 6)
 
 				if("undershirt")
-					var/new_undershirt = input(user, "Choose your character's undershirt:", "Настройки персонажа") as null|anything in GLOB.undershirt_list
+					var/new_undershirt = input(user, "Choose your character's undershirt:", "Character Preference") as null|anything in GLOB.undershirt_list
 					if(new_undershirt)
 						undershirt = new_undershirt
 
 				if("shirt_color")
-					var/n_shirt_color = input(user, "Choose your undershirt's color.", "Настройки персонажа", "#[shirt_color]") as color|null
+					var/n_shirt_color = input(user, "Choose your undershirt's color.", "Character Preference", "#[shirt_color]") as color|null
 					if(n_shirt_color)
 						shirt_color = sanitize_hexcolor(n_shirt_color, 6)
 
 				if("socks")
-					var/new_socks = input(user, "Choose your character's socks:", "Настройки персонажа") as null|anything in GLOB.socks_list
+					var/new_socks = input(user, "Choose your character's socks:", "Character Preference") as null|anything in GLOB.socks_list
 					if(new_socks)
 						socks = new_socks
 
 				if("socks_color")
-					var/n_socks_color = input(user, "Choose your socks' color.", "Настройки персонажа", "#[socks_color]") as color|null
+					var/n_socks_color = input(user, "Choose your socks' color.", "Character Preference", "#[socks_color]") as color|null
 					if(n_socks_color)
 						socks_color = sanitize_hexcolor(n_socks_color, 6)
 
 				if(BODY_ZONE_PRECISE_EYES)
-					var/new_eyes = input(user, "Выберите цвет ваших глаз:", "Настройки персонажа","#"+eye_color) as color|null
+					var/new_eyes = input(user, "Choose your character's eye colour:", "Character Preference","#"+eye_color) as color|null
 					if(new_eyes)
 						eye_color = sanitize_hexcolor(new_eyes)
 
 				if("species")
 
-					var/result = input(user, "Выберите расу", "Выбор расы") as null|anything in GLOB.roundstart_races
+					var/result = input(user, "Select a species", "Species Selection") as null|anything in GLOB.roundstart_races
 
 					if(result)
 						var/newtype = GLOB.species_list[result]
@@ -1670,7 +1680,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 							features["mcolor"] = pref_species.default_color
 
 				if("mutant_color")
-					var/new_mutantcolor = input(user, "Choose your character's alien/mutant color:", "Настройки персонажа","#"+features["mcolor"]) as color|null
+					var/new_mutantcolor = input(user, "Choose your character's alien/mutant color:", "Character Preference","#"+features["mcolor"]) as color|null
 					if(new_mutantcolor)
 						var/temp_hsv = RGBtoHSV(new_mutantcolor)
 						if(new_mutantcolor == "#000000")
