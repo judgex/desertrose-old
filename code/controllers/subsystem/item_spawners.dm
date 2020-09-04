@@ -14,7 +14,7 @@ SUBSYSTEM_DEF(itemspawners)
 
 /datum/controller/subsystem/itemspawners/proc/restock_trash_piles()
 	for(var/obj/item/storage/trash_stack/TS in GLOB.trash_piles)
-		TS.loot_players = list()
+		TS.loot_players.Cut() //This culls a list safely
 		for(var/obj/item/A in TS.loc.contents)
 			if(A.from_trash)
 				qdel(A)
