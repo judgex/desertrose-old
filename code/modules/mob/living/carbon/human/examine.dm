@@ -354,24 +354,6 @@
 	to_chat(user, msg)
 	return msg
 
-	if(social_faction)
-		var/datum/gang/G = gang
-		var/datum/gang/UserGang = user.gang
-		if(social_faction == "Raiders" && !G && (!skipface || isobserver(user) || (user.social_faction in GLOB.allowed_gang_factions && src != user)))
-			msg += "\n<span class='danger'><font size=3>[t_He] [t_is] a <span class='bold'>Raider</span>!</span></font>"
-		else if(G && G == UserGang)
-			if(G.leader == src)
-				msg += "\n<span class='nicegreen'><font size=3>[t_He] [t_is] the <span class='bold'>leader</span> of your gang!</span></font>"
-			else
-				msg += "\n<span class='nicegreen'><font size=3>[t_He] [t_is] a <span class='bold'>member</span> of your gang!</span></font>"
-		else if(G && G.leader == src)
-			msg += "\n<font size=3><span class='danger'>[t_He] [t_is] the <b>gang leader</b> of the </span><span style='color: [G.color];font-weight: bold;'>[G.name]!</span></font>"
-		else if(G)
-			msg += "\n<font size=3><span class='danger'>[t_He] [t_is] a <b>gang member</b> of the </span><span style='color: [G.color];font-weight: bold;'>[G.name]!</span></font>"
-
-	to_chat(user, msg)
-	return msg
-
 /mob/living/proc/status_effect_examines(pronoun_replacement) //You can include this in any mob's examine() to show the examine texts of status effects!
 	var/list/dat = list()
 	if(!pronoun_replacement)

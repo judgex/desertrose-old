@@ -385,10 +385,8 @@
 			legcuffed = null
 			update_inv_legcuffed()
 			return
-		else
-			dropItemToGround(I)
-			return
-		return TRUE
+		dropItemToGround(I)
+		return
 
 /mob/living/carbon/get_standard_pixel_y_offset(lying = 0)
 	if(lying)

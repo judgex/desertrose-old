@@ -650,7 +650,7 @@ GLOBAL_LIST_INIT(binary, list("0","1"))
 			buffer = copytext(buffer, 1, cutoff) + punctbuffer
 		if(!findtext(buffer,GLOB.is_alphanumeric))
 			continue
-		if(!buffer || length(buffer) > 280 || length(buffer) <= cullshort || buffer in accepted)
+		if(!buffer || length(buffer) > 280 || length(buffer) <= cullshort || (buffer in accepted))
 			continue
 
 		accepted += buffer

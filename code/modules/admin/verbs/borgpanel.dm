@@ -23,8 +23,9 @@
 
 /datum/borgpanel/New(user, mob/living/silicon/robot/borg)
 	if(!istype(borg))
-		CRASH("Borg panel is only available for borgs")
+		stack_trace("Borg panel is only available for borgs")
 		qdel(src)
+		return
 	if (istype(user, /mob))
 		var/mob/M = user
 		if (!M.client)

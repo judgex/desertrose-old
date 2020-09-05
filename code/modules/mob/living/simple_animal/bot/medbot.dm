@@ -482,37 +482,33 @@
 		playsound(loc, messagevoice[message], 50, 0)
 		bot_reset()
 		return
-	else
-		if(!emagged && check_overdose(patient,reagent_id,injection_amount))
-			soft_reset()
-			return
-		C.visible_message("<span class='danger'>[src] is trying to inject [patient]!</span>", \
-			"<span class='userdanger'>[src] is trying to inject you!</span>")
-
-		var/failed = FALSE
-		if(do_mob(src, patient, 30))	//Is C == patient? This is so confusing
-			if((get_dist(src, patient) <= 1) && (on) && assess_patient(patient))
-				if(reagent_id == "internal_beaker")
-					if(use_beaker && reagent_glass && reagent_glass.reagents.total_volume)
-						var/fraction = min(injection_amount/reagent_glass.reagents.total_volume, 1)
-						reagent_glass.reagents.reaction(patient, INJECT, fraction)
-						reagent_glass.reagents.trans_to(patient,injection_amount) //Inject from beaker instead.
-				else
-					patient.reagents.add_reagent(reagent_id,injection_amount)
-				C.visible_message("<span class='danger'>[src] injects [patient] with its syringe!</span>", \
-					"<span class='userdanger'>[src] injects you with its syringe!</span>")
-			else
-				failed = TRUE
-		else
-			failed = TRUE
-
-		if(failed)
-			visible_message("[src] retracts its syringe.")
-		update_icon()
+	if(!emagged && check_overdose(patient,reagent_id,injection_amount))
 		soft_reset()
 		return
+	C.visible_message("<span class='danger'>[src] is trying to inject [patient]!</span>", \
+		"<span class='userdanger'>[src] is trying to inject you!</span>")
 
-	reagent_id = null
+	var/failed = FALSE
+	if(do_mob(src, patient, 30))	//Is C == patient? This is so confusing
+		if((get_dist(src, patient) <= 1) && (on) && assess_patient(patient))
+			if(reagent_id == "internal_beaker")
+				if(use_beaker && reagent_glass && reagent_glass.reagents.total_volume)
+					var/fraction = min(injection_amount/reagent_glass.reagents.total_volume, 1)
+					reagent_glass.reagents.reaction(patient, INJECT, fraction)
+					reagent_glass.reagents.trans_to(patient,injection_amount) //Inject from beaker instead.
+			else
+				patient.reagents.add_reagent(reagent_id,injection_amount)
+			C.visible_message("<span class='danger'>[src] injects [patient] with its syringe!</span>", \
+				"<span class='userdanger'>[src] injects you with its syringe!</span>")
+		else
+			failed = TRUE
+	else
+		failed = TRUE
+
+	if(failed)
+		visible_message("[src] retracts its syringe.")
+	update_icon()
+	soft_reset()
 	return
 
 /mob/living/simple_animal/bot/medbot/proc/check_overdose(mob/living/carbon/patient,reagent_id,injection_amount)
