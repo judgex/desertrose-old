@@ -671,8 +671,7 @@ Knight
 	backpack_contents = list(
 		/obj/item/clothing/accessory/bos/juniorknight=1,
 		/obj/item/gun/ballistic/shotgun/trench=1,
-		/obj/item/storage/box/lethalshot=2,
-		/obj/item/
+		/obj/item/storage/box/lethalshot=2
 		)
 
 /datum/outfit/loadout/knightc
