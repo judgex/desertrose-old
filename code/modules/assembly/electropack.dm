@@ -268,7 +268,9 @@ Code:
 	return
 
 /obj/item/assembly/signaler/electropack/boomcollar/proc/boom(mob/living/L)
-	explosion(src.loc,0,1,2, flame_range = 2)
+	explosion(get_turf(src),0,1,2, flame_range = 2)
+	if(!istype(L) || L != loc || L.get_item_by_slot(SLOT_NECK) != src)
+		return
 	var/obj/item/bodypart/head/victimhead = L.get_bodypart(BODY_ZONE_HEAD)
 	victimhead.dismember()
 
