@@ -329,3 +329,18 @@
 		if(rider in AM.buckled_mobs)
 			AM.unbuckle_mob(rider)
 	. = ..()
+
+
+/mob/living/carbon/human/verb/piggyback()
+	set name = "piggyback"
+	set desc = "Ride on a person's back. They must be aggressively grabbing you."
+	set category = "IC"
+
+	var/mob/living/target = pulledby
+
+	if(stat != CONSCIOUS || !istype(target)) //This equally checks for not being pulled, or pulled by weird non rideable mobs or objects
+		to_chat(src, "<span class='warning'>Someone needs a firm grip on you!</span>")
+		return
+
+	if(target.grab_state >= GRAB_AGGRESSIVE && target.stat == CONSCIOUS)
+		target.buckle_mob(src,TRUE,TRUE)
