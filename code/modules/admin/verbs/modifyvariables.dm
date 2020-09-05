@@ -343,7 +343,8 @@ GLOBAL_PROTECT(VVpixelmovement)
 		var/list/varsvars = vv_parse_text(O, var_value)
 		for(var/V in varsvars)
 			var_value = replacetext(var_value,"\[[V]]","[O.vars[V]]")
-
+	if(isnull(var_value))
+		return // operation cancelled by user, prevents runtime at line 355
 	if (O)
 		L = L.Copy()
 
