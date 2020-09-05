@@ -364,6 +364,50 @@
 		for(var/obj/screen/mov_intent/selector in hud_used.static_inventory)
 			selector.toggle(src)
 
+/mob
+	var/is_shifted = FALSE
+
 /mob/Moved(atom/OldLoc, Dir, Forced = FALSE)
 	. = ..()
 	//set_typing_indicator(FALSE)
+	if(is_shifted)
+		is_shifted = FALSE
+		if(ishuman(src))
+			var/mob/living/M = src
+			pixel_x = M.get_standard_pixel_x_offset(lying) //these are mob/living level procs and this can be triggered by anyone (pointlessly)
+			pixel_y = M.get_standard_pixel_y_offset(lying)
+		else
+			pixel_x = 0
+			pixel_y = 0
+
+/mob/verb/eastshift()
+	set hidden = TRUE
+	if(!canface())
+		return FALSE
+	if(pixel_x <= 16)
+		pixel_x++
+		is_shifted = TRUE
+
+/mob/verb/westshift()
+	set hidden = TRUE
+	if(!canface())
+		return FALSE
+	if(pixel_x >= -16)
+		pixel_x--
+		is_shifted = TRUE
+
+/mob/verb/northshift()
+	set hidden = TRUE
+	if(!canface())
+		return FALSE
+	if(pixel_y <= 16)
+		pixel_y++
+		is_shifted = TRUE
+
+/mob/verb/southshift()
+	set hidden = TRUE
+	if(!canface())
+		return FALSE
+	if(pixel_y >= -16)
+		pixel_y--
+		is_shifted = TRUE
