@@ -624,14 +624,6 @@ Turf and target are separate in case you want to teleport some distance from a t
 	else
 		return get_step(ref, base_dir)
 
-//Takes: Anything that could possibly have variables and a varname to check.
-//Returns: 1 if found, 0 if not.
-/proc/hasvar(datum/A, varname)
-	if(A.vars.Find(lowertext(varname)))
-		return 1
-	else
-		return 0
-
 //Repopulates sortedAreas list
 /proc/repopulate_sorted_areas()
 	GLOB.sortedAreas = list()
