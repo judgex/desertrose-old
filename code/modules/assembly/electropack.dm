@@ -272,9 +272,8 @@ Code:
 	if(!istype(L) || L != loc || L.get_item_by_slot(SLOT_NECK) != src)
 		return
 	var/obj/item/bodypart/head/victimhead = L.get_bodypart(BODY_ZONE_HEAD)
-	if(!istype(victimhead))
-		return
-	victimhead.dismember()
+	if(istype(victimhead))
+		victimhead.dismember()
 
 /obj/item/key/bcollar
 	name = "Explosive Collar Key"
