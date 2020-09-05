@@ -71,7 +71,7 @@
 /turf/closed/wall/proc/break_wall()
 	if(sheet_type)
 		new sheet_type(src, sheet_amount)
-	return new girder_type(src)
+	return girder_type ? new girder_type(src) : null
 
 /turf/closed/wall/proc/devastate_wall()
 	if(sheet_type)
