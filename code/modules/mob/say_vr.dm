@@ -53,7 +53,7 @@
 	if (special_a<3)
 		msg += "<br>Maladroit and unbalanced, it is a wonder they can even stand straight."
 	if (special_l<3)
-		msg += "<br>Unfortune just seems to stick to them like a fly to shit."
+		msg += "<br>Misfortune just seems to stick to them like a fly to shit."
 
 	if (special_s>7)
 		msg += "<br>Simply built out of muscle, they could wrestle a deathclaw to death."

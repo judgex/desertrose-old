@@ -47,8 +47,8 @@ other types of metals and chemistry for reagents).
 	var/icon_cache
 
 /datum/design/Destroy()
+	SHOULD_CALL_PARENT(FALSE)
 	CRASH("DESIGN DATUMS SHOULD NOT EVER BE DESTROYED AS THEY ARE ONLY MEANT TO BE IN A GLOBAL LIST AND REFERENCED FOR US.")
-	return ..()
 
 /datum/design/proc/icon_html(client/user)
 	var/datum/asset/spritesheet/sheet = get_asset_datum(/datum/asset/spritesheet/research_designs)
