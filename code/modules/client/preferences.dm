@@ -1564,7 +1564,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 				if("flavor_text")
 					var/oldtext = features["flavor_text"]
-					var/msg = stripped_multiline_input(usr," Set the flavor text in your 'examine' verb. This can also be used for OOC notes. \n Leave blank and hit 'OK' to delete it. Hit 'Cancel' to abort. \n This will not be visible if you wear a mask or helmet that hides your face.","Flavor Text",html_decode(features["flavor_text"]), MAX_MESSAGE_LEN*2, TRUE) as null|message
+					var/msg = stripped_multiline_input(usr," Set the flavor text in your 'examine' verb. This can also be used for OOC notes. \n Leave blank and hit 'OK' to delete it. Hit 'Cancel' to abort. \n This will not be visible if you wear a mask or helmet that hides your face.","Flavor Text",html_decode(features["flavor_text"]), MAX_MESSAGE_LEN*2, TRUE)
 					if(msg)
 						msg = copytext(msg, 1, MAX_MESSAGE_LEN*2)
 						features["flavor_text"] = msg

@@ -343,7 +343,8 @@ GLOBAL_PROTECT(VVpixelmovement)
 		var/list/varsvars = vv_parse_text(O, var_value)
 		for(var/V in varsvars)
 			var_value = replacetext(var_value,"\[[V]]","[O.vars[V]]")
-
+	if(isnull(var_value))
+		return // operation cancelled by user, prevents runtime at line 355
 	if (O)
 		L = L.Copy()
 
@@ -526,8 +527,8 @@ GLOBAL_PROTECT(VVpixelmovement)
 	var/var_value
 
 	if(param_var_name)
-		if(!param_var_name in O.vars)
-			to_chat(src, "A variable with this name ([param_var_name]) doesn't exist in this datum ([O])")
+		if(!(param_var_name in O.vars))
+			to_chat(src, "A variable with the name \"[param_var_name]\" doesn't exist in this datum, \"[O]\"")
 			return
 		variable = param_var_name
 

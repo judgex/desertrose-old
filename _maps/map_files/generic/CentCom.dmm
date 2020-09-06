@@ -144,10 +144,6 @@
 /area/holodeck/rec_center/bunker)
 "az" = (
 /obj/structure/table/wood,
-/obj/item/storage/box/matches{
-	pixel_x = -4;
-	pixel_y = 8
-	},
 /turf/open/floor/holofloor{
 	dir = 9;
 	icon_state = "wood"
@@ -10497,16 +10493,6 @@
 	},
 /turf/open/floor/engine/cult,
 /area/wizard_station)
-"DF" = (
-/turf/open/floor/plating/snowed/temperatre,
-/area/f13/underground/mountain)
-"DG" = (
-/turf/open/floor/plating/foam,
-/area/f13/underground/mountain)
-"DH" = (
-/obj/machinery/door/airlock/freezer,
-/turf/open/floor/plating/f13/inside/mountain,
-/area/f13/underground/mountain)
 "DI" = (
 /obj/structure/window/reinforced{
 	dir = 1
@@ -10519,9 +10505,6 @@
 /obj/structure/wreck/trash/secway,
 /turf/open/floor/plasteel/neutral,
 /area/centcom/evac)
-"DK" = (
-/turf/open/floor/plating/f13/inside/mountain,
-/area/f13/underground/mountain)
 "DL" = (
 /obj/item/clothing/suit/wizrobe/black,
 /obj/item/clothing/head/wizard/black,
@@ -10719,13 +10702,6 @@
 /obj/effect/decal/cleanable/glass,
 /turf/open/floor/grass,
 /area/centcom/evac)
-"Es" = (
-/turf/open/lava/plasma,
-/area/f13/underground/mountain)
-"Et" = (
-/obj/structure/barricade/bars,
-/turf/open/floor/plating/f13/inside/mountain,
-/area/f13/underground/mountain)
 "Eu" = (
 /obj/effect/spawner/lootdrop/organ_spawner,
 /turf/open/indestructible/ground/outside/desert,
@@ -32626,14 +32602,14 @@ aa
 aa
 aa
 rb
-tc
-tc
-tc
-tc
-tc
-tc
-tc
-tc
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+rb
 rb
 aa
 aa
@@ -32883,14 +32859,14 @@ rb
 rb
 rb
 rb
-tc
-DF
-DF
-DF
-DF
-Es
-Es
-tc
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+rb
 rb
 rb
 rb
@@ -33140,14 +33116,14 @@ rb
 rb
 rb
 rb
-tc
-DF
-DF
-DF
-DF
-Es
-Es
-tc
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+rb
 rb
 rb
 rb
@@ -33397,14 +33373,14 @@ rb
 rb
 rb
 rb
-tc
-DG
-tc
-tc
-tc
-tc
-tc
-tc
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+rb
 rb
 rb
 rb
@@ -33654,14 +33630,14 @@ rc
 rc
 rc
 rc
-tc
-DG
-DH
-DK
-DK
-DK
-DK
-tc
+rY
+rY
+rY
+rY
+rY
+rY
+rY
+rb
 tc
 tk
 tk
@@ -33911,14 +33887,14 @@ rc
 Dt
 rY
 rY
-tc
-tc
-tc
-tc
-tc
-tc
-DK
-tc
+rY
+rY
+rY
+rY
+rY
+rY
+rY
+rb
 tj
 tl
 tl
@@ -34173,9 +34149,9 @@ rY
 rY
 rY
 rY
-tc
-Et
-tc
+rY
+rY
+rb
 tj
 tl
 tl
