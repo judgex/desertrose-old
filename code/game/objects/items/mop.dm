@@ -5,10 +5,11 @@
 	icon_state = "mop"
 	lefthand_file = 'icons/mob/inhands/equipment/custodial_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/custodial_righthand.dmi'
-	force = 3
+	force = 15
 	throwforce = 5
 	throw_speed = 3
 	throw_range = 7
+	damtype = STAMINA
 	w_class = WEIGHT_CLASS_NORMAL
 	attack_verb = list("mopped", "bashed", "bludgeoned", "whacked")
 	resistance_flags = FLAMMABLE
@@ -23,6 +24,16 @@
 	..()
 	create_reagents(mopcap)
 
+
+/obj/item/mop/Initialize()
+	. = ..()
+	var/datum/component/jousting/JC = AddComponent(/datum/component/jousting)
+	JC.unmounted_damage_boost_per_tile = 1
+	JC.unmounted_knockdown_chance_per_tile = 15
+	JC.unmounted_knockdown_time = 50
+	JC.mounted_damage_boost_per_tile = 5
+	JC.mounted_knockdown_chance_per_tile = 25
+	JC.mounted_knockdown_time = 80
 
 /obj/item/mop/proc/clean(turf/A)
 	if(reagents.has_reagent("water", 1) || reagents.has_reagent("holywater", 1) || reagents.has_reagent("vodka", 1) || reagents.has_reagent("cleaner", 1))
@@ -83,7 +94,7 @@
 	item_state = "mop"
 	lefthand_file = 'icons/mob/inhands/equipment/custodial_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/custodial_righthand.dmi'
-	force = 6
+	force = 25 //It's stamina damage
 	throwforce = 8
 	throw_range = 4
 	mopspeed = 45
@@ -94,6 +105,16 @@
 /obj/item/mop/advanced/New()
 	..()
 	START_PROCESSING(SSobj, src)
+
+/obj/item/mop/advanced/Initialize()
+	. = ..()
+	GET_COMPONENT(JC,/datum/component/jousting) //Actually excellent for jousting/charging
+	JC.unmounted_damage_boost_per_tile = 5
+	JC.unmounted_knockdown_chance_per_tile = 25
+	JC.unmounted_knockdown_time = 30
+	JC.mounted_damage_boost_per_tile = 10
+	JC.mounted_knockdown_chance_per_tile = 30
+	JC.mounted_knockdown_time = 100
 
 /obj/item/mop/advanced/attack_self(mob/user)
 	refill_enabled = !refill_enabled
