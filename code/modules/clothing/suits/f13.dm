@@ -272,7 +272,7 @@
 	name = "deathclaw cloak"
 	icon_state = "goliath_cloak"
 	desc = "A staunch, practical cloak made out of sinew and skin from the fearsome deathclaw."
-	allowed = list(/obj/item/flashlight, /obj/item/tank/internals, /obj/item/pickaxe, /obj/item/twohanded/spear, /obj/item/twohanded/bonespear, /obj/item/gun)
+	allowed = list(/obj/item/gun, /obj/item/kitchen, /obj/item/twohanded, /obj/item/claymore, /obj/item/twohanded/spear)
 	armor = list("melee" = 50, "bullet" = 40, "laser" = 25, "energy" = 10, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 60, "acid" = 60)
 	hoodtype = /obj/item/clothing/head/hooded/cloakhood/goliath
 	body_parts_covered = CHEST|GROIN|ARMS
