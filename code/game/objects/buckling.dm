@@ -26,13 +26,13 @@
 		else
 			if(user_unbuckle_mob(buckled_mobs[1],user))
 				return 1
-
+/*
 /atom/movable/MouseDrop_T(mob/living/M, mob/living/user) //This actually doesn't work because of the interaction menu. Use verbs on humans
 	. = ..()
 	if(can_buckle && istype(M) && istype(user))
 		if(user_buckle_mob(M, user))
 			return 1
-
+*/
 /atom/movable/proc/has_buckled_mobs()
 	if(LAZYLEN(buckled_mobs))
 		return TRUE
