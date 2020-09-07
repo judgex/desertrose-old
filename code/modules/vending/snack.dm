@@ -31,7 +31,7 @@
 		S.forceMove(get_turf(src))
 	return ..()
 
-	/obj/machinery/vending/snack/random
+/obj/machinery/vending/snack/random
 	name = "\improper Random Snackies"
 	icon_state = "random_snack"
 	desc = "Uh oh!"

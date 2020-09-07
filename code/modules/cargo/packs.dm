@@ -1497,9 +1497,8 @@
 					/obj/item/instrument/saxophone,
 					/obj/item/instrument/trombone,
 					/obj/item/instrument/recorder,
-					/obj/item/instrument/harmonica
-					///obj/structure/piano/unanchored
-					)
+					/obj/item/instrument/harmonica,
+					/obj/structure/piano/unanchored)
 	crate_type = /obj/structure/closet/crate/wooden
 /datum/supply_pack/misc/book_crate
 	name = "Book Crate"

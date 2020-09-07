@@ -11,7 +11,7 @@
 	var/casingtype		//set ONLY it and NULLIFY projectiletype, if we have projectile IN CASING
 	var/move_to_delay = 3 //delay for the automated movement.
 	var/list/friends = list()
-	var/list/emote_taunt = list()
+	var/list/emote_taunt
 	var/emote_taunt_sound = FALSE // Does it have a sound associated with the emote? Defaults to false.
 	var/taunt_chance = 0
 
@@ -147,7 +147,7 @@
 			var/possible_target_distance = get_dist(targets_from, A)
 			if(target_dist < possible_target_distance)
 				Targets -= A
-	if(!Targets.len)//We didnt find nothin!
+	if(isemptylist(Targets))//We didnt find nothin!
 		return
 	var/chosen_target = pick(Targets)//Pick the remaining targets (if any) at random
 	return chosen_target
@@ -284,10 +284,10 @@
 
 /mob/living/simple_animal/hostile/proc/Aggro()
 	vision_range = aggro_vision_range
-	if(target && emote_taunt.len && prob(taunt_chance))
+	if(target && LAZYLEN(emote_taunt) && prob(taunt_chance))
 		emote("me", 1, "[pick(emote_taunt)] at [target].")
 		taunt_chance = max(taunt_chance-7,2)
-		if(emote_taunt_sound)
+		if(LAZYLEN(emote_taunt_sound))
 			var/taunt_choice = pick(emote_taunt_sound)
 			playsound(loc, taunt_choice, 50, 0)
 
@@ -464,7 +464,7 @@
 	if (!T)
 		return
 
-	if (!length(SSmobs.clients_by_zlevel[T.z])) // It's fine to use .len here but doesn't compile on 511
+	if (isemptylist(SSmobs.clients_by_zlevel[T.z])) // It's fine to use .len here but doesn't compile on 511
 		toggle_ai(AI_Z_OFF)
 		return
 

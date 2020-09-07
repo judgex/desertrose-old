@@ -96,5 +96,6 @@
 		S.sharerDies(gibbed)
 
 	set_typing_indicator(FALSE) //SKYRAT CHANGE
+	change_combat_indicator(FALSE)
 	
 	return TRUE

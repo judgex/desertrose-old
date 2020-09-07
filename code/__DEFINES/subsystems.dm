@@ -51,8 +51,6 @@
 // Subsystems shutdown in the reverse of the order they initialize in
 // The numbers just define the ordering, they are meaningless otherwise.
 
-#define INIT_ORDER_INSTRUMENTS 21
-#define INIT_ORDER_SOUNDS 20
 #define INIT_ORDER_GARBAGE 19
 #define INIT_ORDER_DBCORE 18
 #define INIT_ORDER_BLACKBOX 17
@@ -83,6 +81,7 @@
 #define INIT_ORDER_SQUEAK -40
 #define INIT_ORDER_PATH -50
 #define INIT_ORDER_PERSISTENCE -100
+
 // Subsystem fire priority, from lowest to highest priority
 // If the subsystem isn't listed here it's either DEFAULT or PROCESS (if it's a processing subsystem child)
 
@@ -98,7 +97,6 @@
 #define FIRE_PRIORITY_THROWING		25
 #define FIRE_PRIORITY_SPACEDRIFT	30
 #define FIRE_PRIORITY_FIELDS		30
-#define FIRE_PRIORITY_INSTRUMENTS	30
 #define FIRE_PRIOTITY_SMOOTHING		35
 #define FIRE_PRIORITY_ORBIT			35
 #define FIRE_PRIORITY_NETWORKS		40

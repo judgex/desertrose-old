@@ -436,29 +436,7 @@
 	build_path = /obj/item/storage/pill_bottle
 	category = list("initial", "Medical")
 
-/datum/design/beanbag_slug
-	name = "Beanbag Slug"
-	id = "beanbag_slug"
-	build_type = AUTOLATHE
-	materials = list(MAT_METAL = 1000)
-	build_path = /obj/item/ammo_casing/shotgun/beanbag
-	category = list("initial", "Security")
 
-/datum/design/rubbershot
-	name = "Rubber Shot"
-	id = "rubber_shot"
-	build_type = AUTOLATHE
-	materials = list(MAT_METAL = 1000)
-	build_path = /obj/item/ammo_casing/shotgun/rubbershot
-	category = list("initial", "Security")
-
-/datum/design/c38
-	name = "Speed Loader (.38)"
-	id = "c38"
-	build_type = AUTOLATHE
-	materials = list(MAT_METAL = 2000)
-	build_path = /obj/item/ammo_box/c38
-	category = list("initial", "Security")
 
 /datum/design/recorder
 	name = "Universal Recorder"
@@ -670,20 +648,52 @@
 	category = list("hacked", "Security")
 
 /datum/design/shotgun_slug
-	name = "Shotgun Slug"
+	name = "Shotgun Slug Box"
 	id = "shotgun_slug"
 	build_type = AUTOLATHE
-	materials = list(MAT_METAL = 1000)
-	build_path = /obj/item/ammo_casing/shotgun
+	materials = list(MAT_METAL = 14000)
+	build_path = /obj/item/storage/box/slugshot
 	category = list("initial", "Security")
 
 /datum/design/buckshot_shell
-	name = "Buckshot Shell"
+	name = "Buckshot Shell Box"
 	id = "buckshot_shell"
 	build_type = AUTOLATHE
-	materials = list(MAT_METAL = 1000)
-	build_path = /obj/item/ammo_casing/shotgun/buckshot
-	category = list("hacked", "Security")
+	materials = list(MAT_METAL = 14000)
+	build_path = /obj/item/storage/box/lethalshot
+	category = list("initial", "Security")
+
+/datum/design/magnum_shell
+	name = "Magnum Buckshot Shell Box"
+	id = "magnum_shot"
+	build_type = AUTOLATHE
+	materials = list(MAT_METAL = 35000)
+	build_path = /obj/item/storage/box/magnumshot
+	category = list("initial", "Security")
+
+/datum/design/rubber_shell
+	name = "Rubbershot Shell Box"
+	id = "rubber_shot"
+	build_type = AUTOLATHE
+	materials = list(MAT_METAL = 14000)
+	build_path = /obj/item/storage/box/rubbershot
+	category = list("initial", "Security")
+
+/datum/design/beanbag_shell
+	name = "Beanbag Shell Box"
+	id = "beanbag_shot"
+	build_type = AUTOLATHE
+	materials = list(MAT_METAL = 14000)
+	build_path = /obj/item/storage/box/beanbag
+	category = list("initial", "Security")
+
+/datum/design/c38
+	name = ".38 FMJ Ammo Box"
+	id = "c38"
+	build_type = AUTOLATHE
+	materials = list(MAT_METAL = 8000)
+	build_path = /obj/item/ammo_box/box38
+	category = list("initial", "Security")
 
 /*
 /datum/design/shotgun_dart
@@ -720,15 +730,15 @@
 	category = list("hacked", "Security")
 
 /datum/design/a357
-	name = "Speed Loader (.357)"
-	id = "a357"
+	name = ".357 FMJ Box"
+	id = "a357box"
 	build_type = AUTOLATHE
-	materials = list(MAT_METAL = 4000)
-	build_path = /obj/item/ammo_box/a357
+	materials = list(MAT_METAL = 1200)
+	build_path = /obj/item/ammo_box/a357box
 	category = list("initial", "Security")
 
 /datum/design/c10mm
-	name = "Ammo Box (10mm)"
+	name = "10mm FMJ Ammo Box"
 	id = "c10mm"
 	build_type = AUTOLATHE
 	materials = list(MAT_METAL = 10000)
@@ -736,7 +746,7 @@
 	category = list("initial", "Security")
 
 /datum/design/c45
-	name = "Ammo Box (.45)"
+	name = ".45 FMJ Ammo Box"
 	id = "c45"
 	build_type = AUTOLATHE
 	materials = list(MAT_METAL = 10000)
@@ -744,7 +754,7 @@
 	category = list("initial", "Security")
 
 /datum/design/c9mm
-	name = "Ammo Box (9mm)"
+	name = "9mm FMJ Ammo Box"
 	id = "c9mm"
 	build_type = AUTOLATHE
 	materials = list(MAT_METAL = 15000)
@@ -752,106 +762,66 @@
 	category = list("initial", "Security")
 
 /datum/design/a50AEbox
-	name = "Ammo Box (.50 AE)"
+	name = ".50 AE Ammo Box"
 	id = "a50AEbox"
 	build_type = AUTOLATHE
 	materials = list(MAT_METAL = 15000)
 	build_path = /obj/item/ammo_box/a50AEbox
 	category = list("initial", "Security")
 
-/datum/design/m44
-	name = "Speed Loader (.44)"
-	id = "m44"
+/datum/design/m44box
+	name = ".44 FMJ Ammobox"
+	id = "m44box"
 	build_type = AUTOLATHE
 	materials = list(MAT_METAL = 4000)
-	build_path = /obj/item/ammo_box/m44
-	category = list("initial", "Security")
-
-/datum/design/a40mm
-	name = "Ammo Box (40mm)"
-	id = "a40mm"
-	build_type = AUTOLATHE
-	materials = list(MAT_METAL = 20000)
-	build_path = /obj/item/ammo_box/a40mm
+	build_path = /obj/item/ammo_box/m44box
 	category = list("initial", "Security")
 
 /datum/design/a556
-	name = "Ammo Box (5.56x45mm)"
+	name = "5.56 FMJ Ammo Box"
 	id = "a556"
 	build_type = AUTOLATHE
 	materials = list(MAT_METAL = 20000)
 	build_path = /obj/item/ammo_box/a556
 	category = list("initial", "Security")
 
-/datum/design/a762
-	name = "Stripper Clip (7.62)"
-	id = "a762"
+/datum/design/a762box
+	name = "7.62 FMJ Ammo Box"
+	id = "a762box"
 	build_type = AUTOLATHE
-	materials = list(MAT_METAL = 5000)
-	build_path = /obj/item/ammo_box/a762
+	materials = list(MAT_METAL = 20000)
+	build_path = /obj/item/ammo_box/a762box
 	category = list("initial", "Security")
 
-/datum/design/a308
-	name = "Stripper Clip (.308)"
-	id = "a308"
+/datum/design/a308box
+	name = ".308 Ammo Box"
+	id = "a308box"
 	build_type = AUTOLATHE
-	materials = list(MAT_METAL = 7000)
-	build_path = /obj/item/ammo_box/a308
-	category = list("initial", "Security")
-
-/datum/design/doublestacked
-	name = "Rangemaster Stripper Clip (7.62mm)"
-	id = "doublestacked"
-	build_type = AUTOLATHE
-	materials = list(MAT_METAL = 10000)
-	build_path = /obj/item/ammo_box/a762/doublestacked
+	materials = list(MAT_METAL = 25000)
+	build_path = /obj/item/ammo_box/a308box
 	category = list("initial", "Security")
 
 /datum/design/c4570
-	name = "45-70 speed loader (NCR)"
-	id = "c4570"
+	name = "45-70 Ammo Box"
+	id = "c4570box"
 	build_type = AUTOLATHE
-	materials = list(MAT_METAL = 8000)
-	build_path = /obj/item/ammo_box/c4570
-	category = list("initial", "Security")
-
-/datum/design/c4570tube
-	name = "Speed loader tube (.45-70)"
-	id = "4570tube"
-	build_type = AUTOLATHE
-	materials = list(MAT_METAL = 12000)
-	build_path = /obj/item/ammo_box/tube/c4570
-	category = list("initial", "Security")
-
-/datum/design/m44tube
-	name = "Speed loader tube (.44)"
-	id = "44tube"
-	build_type = AUTOLATHE
-	materials = list(MAT_METAL = 6000)
-	build_path = /obj/item/ammo_box/tube/m44
-	category = list("initial", "Security")
-
-/datum/design/a357tube
-	name = "Speed loader tube (.357)"
-	id = "357tube"
-	build_type = AUTOLATHE
-	materials = list(MAT_METAL = 7000)
-	build_path = /obj/item/ammo_box/tube/a357
+	materials = list(MAT_METAL = 25000)
+	build_path = /obj/item/ammo_box/c4570box
 	category = list("initial", "Security")
 
 /datum/design/a50MG
-	name = "Anti-Materiel Ammo Rack (.50MG)"
-	id = "a50MG"
+	name = "50BMG Ammo Box"
+	id = "a50MGbox"
 	build_type = AUTOLATHE
-	materials = list(MAT_METAL = 14000)
-	build_path = /obj/item/ammo_box/a50MG
+	materials = list(MAT_METAL = 40000)
+	build_path = /obj/item/ammo_box/a50MGbox
 	category = list("initial", "Security")
 
 /datum/design/a50MGincendiary
 	name = "Anti-Materiel Incendiary Ammo Rack (.50MG)"
 	id = "a50MGincendiary"
 	build_type = AUTOLATHE
-	materials = list(MAT_METAL = 20000)
+	materials = list(MAT_METAL = 50000)
 	build_path = /obj/item/ammo_box/a50MG/incendiary
 	category = list("initial", "Security")
 

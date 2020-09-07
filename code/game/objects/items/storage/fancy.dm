@@ -495,7 +495,7 @@
 	illustration = null
 	w_class = WEIGHT_CLASS_SMALL
 	var/icon_type = "g"
-	var/spawn_type = /obj/item/ammo_casing/shotgun/buckshot
+	var/spawn_type = /obj/item/ammo_casing/shotgun/magnumshot
 	var/fancy_open = FALSE
 
 /obj/item/storage/box/magnumshot/PopulateContents()
@@ -536,7 +536,7 @@
 	. = ..()
 	GET_COMPONENT(STR, /datum/component/storage)
 	STR.max_items = 14
-	STR.can_hold = typecacheof(list(/obj/item/ammo_casing/shotgun/buckshot))
+	STR.can_hold = typecacheof(list(/obj/item/ammo_casing/shotgun/magnumshot))
 
 
 /obj/item/storage/box/slugshot
@@ -636,3 +636,30 @@
 	GET_COMPONENT(STR, /datum/component/storage)
 	STR.max_items = 14
 	STR.can_hold = typecacheof(list(/obj/item/ammo_casing/shotgun/beanbag))
+
+//Rings//
+
+/obj/item/storage/fancy/ringbox
+	name = "ring box"
+	desc = "A tiny box covered in soft red felt made for holding rings."
+	icon = 'icons/obj/ring.dmi'
+	icon_state = "gold ringbox"
+	icon_type = "gold ring"
+	w_class = WEIGHT_CLASS_TINY
+	spawn_type = /obj/item/clothing/gloves/ring
+
+/obj/item/storage/fancy/ringbox/ComponentInitialize()
+	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.max_items = 1
+	STR.can_hold = typecacheof(list(/obj/item/clothing/gloves/ring))
+
+/obj/item/storage/fancy/ringbox/diamond
+	icon_state = "diamond ringbox"
+	icon_type = "diamond ring"
+	spawn_type = /obj/item/clothing/gloves/ring/diamond
+
+/obj/item/storage/fancy/ringbox/silver
+	icon_state = "silver ringbox"
+	icon_type = "silver ring"
+	spawn_type = /obj/item/clothing/gloves/ring/silver

@@ -133,6 +133,7 @@
 #define F13PUSHER		(1<<3)
 #define F13PUNRAIDER	(1<<4)
 #define F13DETECTIVE	(1<<5)
+#define EVENTCOVEN		(1<<6)
 
 #define ENCLAVE			(1<<9)
 
@@ -155,6 +156,7 @@
 #define	F13PRACTITIONER	(1<<1)
 #define F13FOLLOWERGUARD	(1<<2)
 #define F13FOLLOWERVOLUNTEER	(1<<3)
+#define F13PROFESSOR	(1<<4)
 
 
 #define JOB_AVAILABLE 0
