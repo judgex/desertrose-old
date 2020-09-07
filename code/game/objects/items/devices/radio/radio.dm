@@ -200,6 +200,8 @@
 	return ITALICS | REDUCE_RANGE
 
 /obj/item/radio/talk_into(mob/living/M, message, channel, list/spans,datum/language/language, direct=TRUE)
+	if(!istype(M))
+		return
 	// DR doesnt have mobility flags...? So this is here because adding mobility flags would be a whole PR
 	var/stat_softcrit = M.stat == SOFT_CRIT
 	var/stat_conscious = (M.stat == CONSCIOUS) || stat_softcrit

@@ -12,6 +12,7 @@
 	var/list/temporary_mutations = list() //Timers for temporary mutations
 	var/list/previous = list() //For temporary name/ui/ue/blood_type modifications
 	var/mob/living/holder
+	var/skin_tone_override //because custom skin tones are not found in the skin_tones global list.
 
 /datum/dna/New(mob/living/new_holder)
 	if(istype(new_holder))
@@ -42,8 +43,13 @@
 	destination.dna.real_name = real_name
 	destination.dna.temporary_mutations = temporary_mutations.Copy()
 	destination.flavor_text = destination.dna.features["flavor_text"] //Update the flavor_text to use new dna text
+	if(ishuman(destination))
+		var/mob/living/carbon/human/H = destination
+		H.give_genitals(TRUE)//This gives the body the genitals of this DNA. Used for any transformations based on DNA
 	if(transfer_SE)
 		destination.dna.struc_enzymes = struc_enzymes
+
+	SEND_SIGNAL(destination, COMSIG_CARBON_IDENTITY_TRANSFERRED_TO, src, transfer_SE)
 
 /datum/dna/proc/copy_dna(datum/dna/new_dna)
 	new_dna.unique_enzymes = unique_enzymes

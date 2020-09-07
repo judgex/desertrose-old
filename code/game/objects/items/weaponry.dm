@@ -132,6 +132,14 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	force = 25
 	sharpness = IS_BLUNT
 
+/obj/item/claymore/machete/pipe/Initialize()
+	. = ..()
+	var/datum/component/jousting/JC = AddComponent(/datum/component/jousting)
+	JC.unmounted_knockdown_chance_per_tile = 15
+	JC.unmounted_knockdown_time = 50
+	JC.mounted_damage_boost_per_tile = 15
+	JC.mounted_knockdown_chance_per_tile = 15
+
 /obj/item/claymore/machete/warclub
 	name = "war club"
 	desc = "A simple carved wooden club with turquoise inlays."
@@ -143,6 +151,14 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	block_chance = 10
 	armour_penetration = 5
 	sharpness = IS_BLUNT
+
+/obj/item/claymore/machete/warclub/Initialize()
+	. = ..()
+	var/datum/component/jousting/JC = AddComponent(/datum/component/jousting)
+	JC.unmounted_knockdown_chance_per_tile = 25
+	JC.unmounted_knockdown_time = 50
+	JC.mounted_damage_boost_per_tile = 20
+	JC.mounted_knockdown_chance_per_tile = 20
 
 /obj/item/claymore/machete/pipe/tireiron
 	name = "tire iron"
@@ -159,6 +175,12 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	attack_verb = list("mashed", "bashed", "piped", "hit", "bludgeoned", "whacked", "bonked")
 	force = 25
 	sharpness = IS_BLUNT
+
+/obj/item/claymore/machete/golf/Initialize()
+	. = ..()
+	var/datum/component/jousting/JC = AddComponent(/datum/component/jousting)
+	JC.mounted_damage_boost_per_tile = 25
+	JC.mounted_knockdown_chance_per_tile = 25
 
 /obj/item/claymore/machete/golf/teniron
 	name = "10 iron"
@@ -636,6 +658,7 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	name = "cat o' nine tails"
 	desc = "A whip fashioned from the severed tails of cats."
 	icon_state = "catwhip"
+	damtype = "arousal"
 
 /obj/item/melee/skateboard
 	name = "skateboard"
@@ -646,6 +669,15 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	throwforce = 4
 	w_class = WEIGHT_CLASS_HUGE
 	attack_verb = list("smacked", "whacked", "slammed", "smashed")
+
+//This is literally wacking someone with a skateboard, not riding it. Okay
+/obj/item/melee/skateboard/Initialize()
+	. = ..()
+	var/datum/component/jousting/JC = AddComponent(/datum/component/jousting)
+	JC.unmounted_knockdown_chance_per_tile = 20
+	JC.unmounted_knockdown_time = 10
+	JC.mounted_damage_boost_per_tile = 25
+	JC.mounted_knockdown_chance_per_tile = 20
 
 /obj/item/melee/skateboard/attack_self(mob/user)
 	new /obj/vehicle/ridden/scooter/skateboard(get_turf(user))

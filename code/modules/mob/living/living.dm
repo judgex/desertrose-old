@@ -1,8 +1,8 @@
 //lewd
 /mob/living
-	var/has_penis = FALSE
-	var/has_vagina = FALSE
-	var/has_breasts = FALSE
+	var/has_peen = FALSE
+	var/has_vulva = FALSE
+	var/has_breast = FALSE
 	var/last_partner
 	var/last_orifice
 	var/lastmoan
@@ -27,14 +27,14 @@
 	sexual_potency = (prob(80) ? rand(9, 14) : pick(rand(5, 13), rand(15, 20)))
 	lust_tolerance = (prob(80) ? rand(150, 300) : pick(rand(10, 100), rand(350,600)))
 	if(gender == MALE)
-		has_penis = TRUE
-		has_vagina = FALSE
-		has_breasts = FALSE
+		has_peen = TRUE
+		has_vulva = FALSE
+		has_breast = FALSE
 
 	if(gender == FEMALE)
-		has_vagina = TRUE
-		has_breasts = TRUE
-		has_penis = FALSE
+		has_vulva = TRUE
+		has_breast = TRUE
+		has_peen = FALSE
 	//end of lewd
 
 
@@ -626,6 +626,8 @@
 	set name = "Resist"
 	set category = "IC"
 
+
+	unbuckle_all_mobs() //Always let people stop piggybacking by resisting
 	if(!can_resist())
 		return
 	changeNext_move(CLICK_CD_RESIST)
@@ -652,7 +654,6 @@
 			resist_fire() //stop, drop, and roll
 		else if(last_special <= world.time)
 			resist_restraints() //trying to remove cuffs.
-
 
 /mob/proc/resist_grab(moving_resist)
 	return 1 //returning 0 means we successfully broke free
@@ -1051,6 +1052,10 @@
 		if(client)
 			client.move_delay = world.time + movement_delay()
 	lying_prev = lying
+
+	if(LAZYLEN(buckled_mobs) && lying) //We're lying down but we have someone buckled to us, we should drop them
+		unbuckle_all_mobs(TRUE)  //Oops, drop our peeps
+
 	return canmove
 
 /mob/living/proc/AddAbility(obj/effect/proc_holder/A)

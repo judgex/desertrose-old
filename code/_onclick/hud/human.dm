@@ -279,6 +279,10 @@
 
 	healths = new /obj/screen/healths()
 	infodisplay += healths
+	//CIT CHANGE - adds arousal and stamina to hud
+	arousal = new /obj/screen/arousal()
+	arousal.icon_state = (owner.canbearoused == 1 ? "arousal0" : "")
+	infodisplay += arousal
 
 	healthdoll = new /obj/screen/healthdoll()
 	infodisplay += healthdoll

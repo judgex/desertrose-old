@@ -134,8 +134,8 @@
 
 /datum/mood_event/saw_many_unburied_faction/add_effects()
 	var/mob/living/carbon/human/H = owner
-	if(!H.faction_deaths.len)	//tempfix
+	if(istype(H) && !LAZYLEN(H.faction_deaths))	//tempfix
 		mood_change = -2
 		return
-	mood_change = -2*(H.faction_deaths.len)
+	mood_change = -2*(LAZYLEN(H.faction_deaths))
 	

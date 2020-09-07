@@ -51,7 +51,8 @@ GLOBAL_LIST_INIT(huds, list(
 /datum/atom_hud/proc/remove_hud_from(mob/M)
 	if(!M || !hudusers[M])
 		return
-	if (!--hudusers[M])
+	hudusers[M] -= 1
+	if (!hudusers[M])
 		hudusers -= M
 		if(queued_to_see[M])
 			queued_to_see -= M
@@ -87,7 +88,7 @@ GLOBAL_LIST_INIT(huds, list(
 			for(var/atom/A in hudatoms)
 				add_to_single_hud(M, A)
 	else
-		hudusers[M]++
+		hudusers[M] += 1
 
 /datum/atom_hud/proc/show_hud_images_after_cooldown(M)
 	if(queued_to_see[M])

@@ -2,6 +2,14 @@
 #define LIST_MODE_TEXT 1
 #define LIST_MODE_FLAG 2
 
+#define KEY_MODE_TEXT 0
+#define KEY_MODE_TYPE 1
+
+#define VALUE_MODE_NUM 0
+#define VALUE_MODE_TEXT 1
+#define VALUE_MODE_FLAG 2
+#define VALUE_MODE_NUM_LIST 3
+
 /datum/config_entry
 	var/name	//read-only, this is determined by the last portion of the derived entry type
 	var/config_entry_value
@@ -160,6 +168,8 @@
 	abstract_type = /datum/config_entry/keyed_flag_list
 	config_entry_value = list()
 	dupes_allowed = TRUE
+	var/key_mode
+	var/value_mode
 
 /datum/config_entry/keyed_flag_list/ValidateAndSet(str_val)
 	if(!VASProcCallGuard(str_val))
@@ -171,6 +181,8 @@
 	config_entry_value = list()
 	dupes_allowed = TRUE
 	var/splitter = " "
+	var/max_val = INFINITY
+	var/min_val = -INFINITY
 
 /datum/config_entry/keyed_number_list/vv_edit_var(var_name, var_value)
 	return var_name != "splitter" && ..()

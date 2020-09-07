@@ -41,13 +41,11 @@
 	set_combat_indicator(state)
 
 /mob/living/proc/disable_combat_mode(silent = TRUE, was_forced = FALSE, visible = FALSE, update_icon = TRUE)
-	. = ..()
 	set_combat_indicator(FALSE)
 	change_combat_indicator(FALSE)
 
 
 /mob/living/proc/enable_combat_mode(silent = TRUE, was_forced = FALSE, visible = FALSE, update_icon = TRUE)
-	. = ..()
 	set_combat_indicator(TRUE)
 	change_combat_indicator(TRUE)
 

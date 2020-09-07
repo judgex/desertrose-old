@@ -125,7 +125,7 @@
 			if(!computer || !hard_drive || !hard_drive.store_file(logfile))
 				if(!computer)
 					// This program shouldn't even be runnable without computer.
-					CRASH("Var computer is null!")
+					stack_trace("Var computer is null!")
 					return 1
 				if(!hard_drive)
 					computer.visible_message("\The [computer] shows an \"I/O Error - Hard drive connection error\" warning.")
