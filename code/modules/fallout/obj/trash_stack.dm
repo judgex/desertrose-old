@@ -23,8 +23,12 @@
 			to_chat(user, "<span class='notice'>You already have looted [src].</span>")
 			return
 		for(var/i=0, i<rand(1,4), i++)
-			var/itemtype = pickweight(GLOB.trash_list)
-			new itemtype(ST)
+			var/itemtype= pickweight(GLOB.trash_list)
+			if(itemtype)
+				to_chat(user, "<span class='notice'>You scavenge through the filthy [src].</span>")
+				var/obj/item/item = new itemtype(ST)
+				if(istype(item))
+					item.from_trash = TRUE
 		loot_players += user
 	else
 		return ..()

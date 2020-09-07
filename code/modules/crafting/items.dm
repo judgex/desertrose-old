@@ -196,37 +196,37 @@
 //plasma
 /obj/item/advanced_crafting_components/flux
 	name = "Flux capacitator"
-	desc = "An energy weapon part, a crafstman might want to have this."
+	desc = "An energy weapon part, a craftsman might want to have this."
 	icon_state = "flux"
 
 //lasers
 /obj/item/advanced_crafting_components/lenses
 	name = "Focused crystal lenses"
-	desc = "An energy weapon part, a crafstman might want to have this."
+	desc = "An energy weapon part, a craftsman might want to have this."
 	icon_state = "lenses"
 
 //general energy
 /obj/item/advanced_crafting_components/conductors
 	name = "Superconductor coil"
-	desc = "An energy weapon part, a crafstman might want to have this."
+	desc = "An energy weapon part, a craftsman might want to have this."
 	icon_state = "conductor"
 
 //general ballistics
 /obj/item/advanced_crafting_components/receiver
 	name = "Advanced modular receiver"
-	desc = "A ballistic weapon part, a crafstman might want to have this."
+	desc = "A ballistic weapon part, a craftsman might want to have this."
 	icon_state = "receiver"
 
 //rifles
 /obj/item/advanced_crafting_components/assembly
 	name = "Pre-war weapon assembly"
-	desc = "A ballistic weapon part, a crafstman might want to have this."
+	desc = "A ballistic weapon part, a craftsman might want to have this."
 	icon_state = "weapon_parts_1"
 
 //general
 /obj/item/advanced_crafting_components/alloys
 	name = "Superlight alloys"
-	desc = "A general crafting part, a crafstman might want to have this."
+	desc = "A general crafting part, a craftsman might want to have this."
 	icon_state = "alloys"
 
 /obj/item/attachments

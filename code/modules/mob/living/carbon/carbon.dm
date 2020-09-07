@@ -385,10 +385,8 @@
 			legcuffed = null
 			update_inv_legcuffed()
 			return
-		else
-			dropItemToGround(I)
-			return
-		return TRUE
+		dropItemToGround(I)
+		return
 
 /mob/living/carbon/get_standard_pixel_y_offset(lying = 0)
 	if(lying)
@@ -557,9 +555,10 @@
 			lighting_alpha = min(lighting_alpha, G.lighting_alpha)
 	if(head)
 		var/obj/item/clothing/head/H = head
-		see_in_dark = max(H.darkness_view, see_in_dark)
-		if(!isnull(H.lighting_alpha))
-			lighting_alpha = min(lighting_alpha, H.lighting_alpha)
+		if(istype(H))
+			see_in_dark = max(H.darkness_view, see_in_dark)
+			if(!isnull(H.lighting_alpha))
+				lighting_alpha = min(lighting_alpha, H.lighting_alpha)
 	if(dna)
 		for(var/X in dna.mutations)
 			var/datum/mutation/M = X

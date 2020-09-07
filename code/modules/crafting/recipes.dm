@@ -607,6 +607,17 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO_THREE
 
+/datum/crafting_recipe/minieball
+	name = "Box of musket catridges"
+	result = /obj/item/ammo_box/musketbag
+	reqs = list(/obj/item/stack/sheet/metal = 5,
+				/datum/reagent/blackpowder = 30)
+	traits = list(TRAIT_GUNSMITH_ONE)
+	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER1)
+	time = 10
+	category = CAT_WEAPONRY
+	subcategory = CAT_AMMO_THREE
+
 /datum/crafting_recipe/a50ae
 	name = ".50 AE (pistol) ammo box"
 	result = /obj/item/ammo_box/a50AEbox
@@ -1665,13 +1676,23 @@
 /datum/crafting_recipe/lasmusket
 	name = "Laser Musket"
 	result = /obj/item/gun/ballistic/shotgun/lasmusket
-	reqs = list(///obj/item/stock_parts/cell/ammo/mfc = 1, //removed since it uses one use batteries now
-				/obj/item/stack/crafting/electronicparts = 2,
-				 /obj/item/gun/ballistic/revolver/pipe_rifle = 1,
-				 
-/obj/item/reagent_containers/food/drinks/bottle/f13nukacola = 1,
-				 /obj/item/stack/cable_coil = 3)
+	reqs = list(/obj/item/stack/crafting/electronicparts = 2,
+	/obj/item/gun/ballistic/revolver/pipe_rifle = 1,
+	/obj/item/reagent_containers/food/drinks/bottle/f13nukacola = 1,
+	/obj/item/stack/cable_coil = 3)
 	tools = list(TOOL_WORKBENCH, TOOL_MULTITOOL)
+	time = 120
+	category = CAT_WEAPONRY
+	subcategory = CAT_WEAPON
+
+/datum/crafting_recipe/musket
+	name = "Rifled Musket"
+	result = /obj/item/gun/ballistic/shotgun/musket
+	reqs = list(/obj/item/stack/crafting/metalparts = 5,
+	/obj/item/stack/sheet/mineral/wood = 2,
+	/obj/item/stack/sheet/metal = 10,
+	/datum/reagent/blackpowder = 30)
+	tools = list(TOOL_WORKBENCH)
 	time = 120
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
@@ -3017,6 +3038,7 @@
 	subcategory = CAT_BPWEAPON_ONEUSE
 
 //pps
+
 /datum/crafting_recipe/pps
 	name = "Ancient SMG"
 	result = /obj/item/gun/ballistic/automatic/pps
@@ -3029,6 +3051,7 @@
 	time = 120
 	category = CAT_BLUEPRINTS
 	subcategory = CAT_BPWEAPON
+
 /datum/crafting_recipe/pps_lim
 	name = "Ancient SMG"
 	result = /obj/item/gun/ballistic/automatic/pps
@@ -3042,6 +3065,7 @@
 	category = CAT_BLUEPRINTS
 	subcategory = CAT_BPWEAPON_ONEUSE
 //mg34
+
 /datum/crafting_recipe/mg34
 	name = "Ancient machine gun"
 	result = /obj/item/gun/ballistic/automatic/mg34
@@ -3054,6 +3078,7 @@
 	time = 120
 	category = CAT_BLUEPRINTS
 	subcategory = CAT_BPWEAPON
+
 /datum/crafting_recipe/mg34_lim
 	name = "Ancient machine gun"
 	result = /obj/item/gun/ballistic/automatic/mg34
@@ -3067,7 +3092,9 @@
 	time = 120
 	category = CAT_BLUEPRINTS
 	subcategory = CAT_BPWEAPON_ONEUSE
+
 //kar98
+
 /datum/crafting_recipe/kar98
 	name = "Ancient rifle"
 	result = /obj/item/gun/ballistic/shotgun/ww2rifle
@@ -3080,6 +3107,7 @@
 	time = 120
 	category = CAT_BLUEPRINTS
 	subcategory = CAT_BPWEAPON
+
 /datum/crafting_recipe/kar98_lim
 	name = "Ancient rifle"
 	result = /obj/item/gun/ballistic/shotgun/ww2rifle

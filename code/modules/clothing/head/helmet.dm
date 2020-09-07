@@ -722,7 +722,8 @@
 	icon_state = "desert_ranger"
 	item_state = "desert_ranger"
 	armor = list("melee" = 30, "bullet" = 30, "laser" = 30, "energy" = 30, "bomb" = 30, "bio" = 30, "rad" = 30, "fire" = 30, "acid" = 0)
-
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR|HIDEFACE
+	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 //Metal masks
 
 /obj/item/clothing/head/helmet/f13/raidermetal
