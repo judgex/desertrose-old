@@ -1,13 +1,19 @@
 	//Genitals and Arousal Lists
-GLOBAL_LIST_EMPTY(genitals_list)
-GLOBAL_LIST_EMPTY(cock_shapes_list)
+GLOBAL_LIST_EMPTY(cock_shapes_list)//global_lists.dm for the list initializations //Now also _DATASTRUCTURES globals.dm
+GLOBAL_LIST_EMPTY(cock_shapes_icons) //Associated list for names->icon_states for cockshapes.
+GLOBAL_LIST_EMPTY(gentlemans_organ_names)
 GLOBAL_LIST_EMPTY(balls_shapes_list)
+GLOBAL_LIST_EMPTY(balls_shapes_icons)
+GLOBAL_LIST_EMPTY(breasts_size_list)
+GLOBAL_LIST_EMPTY(genital_fluids_list)
 GLOBAL_LIST_EMPTY(breasts_shapes_list)
+GLOBAL_LIST_EMPTY(breasts_shapes_icons)
 GLOBAL_LIST_EMPTY(vagina_shapes_list)
-//longcat memes.
-GLOBAL_LIST_INIT(dick_nouns, list("phallus", "willy", "dick", "prick", "member", "tool", "gentleman's organ", "cock", "wang", "knob", "dong", "joystick", "pecker", "johnson", "weenie", "tadger", "schlong", "thirsty ferret", "One eyed trouser trout", "Ding dong", "ankle spanker", "Pork sword", "engine cranker", "Harry hot dog", "Davy Crockett", "Kidney cracker", "Heat seeking moisture missile", "Giggle stick", "love whistle", "Tube steak", "Uncle Dick", "Purple helmet warrior"))
-
-GLOBAL_LIST_INIT(genitals_visibility_toggles, list(GEN_VISIBLE_ALWAYS, GEN_VISIBLE_NO_CLOTHES, GEN_VISIBLE_NO_UNDIES, GEN_VISIBLE_NEVER))
+GLOBAL_LIST_EMPTY(vagina_shapes_icons)
+GLOBAL_LIST_INIT(cum_into_containers_list, list(/obj/item/reagent_containers/food/snacks/pie)) //Yer fuggin snowflake name list jfc
+GLOBAL_LIST_INIT(dick_nouns, list("dick","cock","member","shaft"))
+//,"semen")
+//GLOBAL_LIST_INIT(milk_id_list,"milk")
 
 GLOBAL_LIST_INIT(dildo_shapes, list(
 		"Human"		= "human",
@@ -34,41 +40,53 @@ GLOBAL_LIST_INIT(dildo_colors, list(//mostly neon colors
 		))
 
 /mob/living/carbon/proc/has_penis()
-	var/obj/item/organ/genital/G = getorganslot(ORGAN_SLOT_PENIS)
-	if(G && istype(G, /obj/item/organ/genital/penis))
-		return TRUE
+	if(getorganslot("penis"))//slot shared with ovipositor
+		if(istype(getorganslot("penis"), /obj/item/organ/genital/penis))
+			return TRUE
 	return FALSE
 
 /mob/living/carbon/proc/has_balls()
-	var/obj/item/organ/genital/G = getorganslot(ORGAN_SLOT_TESTICLES)
-	if(G && istype(G, /obj/item/organ/genital/testicles))
-		return TRUE
+	if(getorganslot("balls"))
+		if(istype(getorganslot("balls"), /obj/item/organ/genital/testicles))
+			return TRUE
 	return FALSE
 
 /mob/living/carbon/proc/has_vagina()
-	if(getorganslot(ORGAN_SLOT_VAGINA))
+	if(getorganslot("vagina"))
 		return TRUE
 	return FALSE
 
 /mob/living/carbon/proc/has_breasts()
-	if(getorganslot(ORGAN_SLOT_BREASTS))
+	if(getorganslot("breasts"))
 		return TRUE
 	return FALSE
 
-/mob/living/carbon/proc/is_groin_exposed(list/L)
+/mob/living/carbon/proc/has_ovipositor()
+	if(getorganslot("penis"))//shared slot
+		if(istype(getorganslot("penis"), /obj/item/organ/genital/ovipositor))
+			return TRUE
+	return FALSE
+
+/mob/living/carbon/human/proc/has_eggsack()
+	if(getorganslot("balls"))
+		if(istype(getorganslot("balls"), /obj/item/organ/genital/eggsack))
+			return TRUE
+	return FALSE
+
+/mob/living/carbon/human/proc/is_bodypart_exposed(bodypart)
+
+/mob/living/carbon/proc/is_groin_exposed(var/list/L)
 	if(!L)
 		L = get_equipped_items()
-	for(var/A in L)
-		var/obj/item/I = A
+	for(var/obj/item/I in L)
 		if(I.body_parts_covered & GROIN)
 			return FALSE
 	return TRUE
 
-/mob/living/carbon/proc/is_chest_exposed(list/L)
+/mob/living/carbon/proc/is_chest_exposed(var/list/L)
 	if(!L)
 		L = get_equipped_items()
-	for(var/A in L)
-		var/obj/item/I = A
+	for(var/obj/item/I in L)
 		if(I.body_parts_covered & CHEST)
 			return FALSE
 	return TRUE
@@ -86,9 +104,9 @@ GLOBAL_LIST_INIT(dildo_colors, list(//mostly neon colors
 	message_admins("[src] gave everyone genitals.")
 	for(var/mob/living/carbon/human/H in GLOB.mob_list)
 		if(H.gender == MALE)
-			H.give_genital(/obj/item/organ/genital/penis)
-			H.give_genital(/obj/item/organ/genital/testicles)
+			H.give_penis()
+			H.give_balls()
 		else
-			H.give_genital(/obj/item/organ/genital/vagina)
-			H.give_genital(/obj/item/organ/genital/womb)
-			H.give_genital(/obj/item/organ/genital/breasts)
+			H.give_vagina()
+			H.give_womb()
+			H.give_breasts()

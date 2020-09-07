@@ -1,67 +1,99 @@
 /obj/item/organ/genital/testicles
-	name = "testicles"
-	desc = "A male reproductive organ."
-	icon_state = "testicles"
-	icon = 'icons/obj/genitals/testicles.dmi'
-	zone = BODY_ZONE_PRECISE_GROIN
-	slot = ORGAN_SLOT_TESTICLES
-	size = BALLS_SIZE_MIN
-	arousal_verb = "Your balls ache a little"
-	unarousal_verb = "Your balls finally stop aching, again"
-	linked_organ_slot = ORGAN_SLOT_PENIS
-	genital_flags = CAN_MASTURBATE_WITH|MASTURBATE_LINKED_ORGAN|GENITAL_FUID_PRODUCTION|UPDATE_OWNER_APPEARANCE|GENITAL_UNDIES_HIDDEN
-	var/size_name = "average"
-	shape = DEF_BALLS_SHAPE
-	fluid_id = /datum/reagent/consumable/semen
-	masturbation_verb = "massage"
-	layer_index = TESTICLES_LAYER_INDEX
+	name 					= "testicles"
+	desc 					= "A male reproductive organ."
+	icon_state 				= "testicles"
+	icon 					= 'modular_citadel/icons/obj/genitals/testicles.dmi'
+	zone 					= "groin"
+	slot 					= "testicles"
+	size 					= BALLS_SIZE_MIN
+	var/size_name			= "average"
+	shape					= "single"
+	var/sack_size			= BALLS_SACK_SIZE_DEF
+	var/cached_size			= 6
+	//fluid_mult				= 0.133 // Set to a lower value due to production scaling with size (I.E. 6 inches the "normal" amount)
+	fluid_mult				= 1.0 //Defaults to 1 no matter what you do. It just does. Just gonna adapt I guess.
+	fluid_max_volume		= 3
+	fluid_id 				= "semen"
+	producing				= TRUE
+	can_masturbate_with		= FALSE
+	masturbation_verb 		= "massage"
+	can_climax				= TRUE
+	var/sent_full_message	= TRUE //defaults to 1 since they're full to start
 
-/obj/item/organ/genital/testicles/generate_fluid()
-	if(!linked_organ && !update_link())
+
+/obj/item/organ/genital/testicles/on_life()
+	if(QDELETED(src))
+		return
+	if(!reagents || !owner)
+		return
+	//reagents.maximum_volume = fluid_max_volume * cached_size// fluid amount is also scaled by the size of the organ
+	reagents.maximum_volume = fluid_max_volume * ((cached_size / 2) + 1) * ((size / 2) + 1) * fluid_mult //Hyper - New calculation for more dynamic fluid levels. I can't believe I typed that.
+	if(reagents && producing)
+		if(reagents.total_volume == 0) // Apparently, 0.015 gets rounded down to zero and no reagents are created if we don't start it with 0.1 in the tank.
+			fluid_rate = 0.1
+		else
+			//fluid_rate = CUM_RATE * cached_size * fluid_mult // fluid rate is scaled by the size of the organ
+			fluid_rate = ((CUM_RATE / 5) * (cached_size / 3) * (size / 4) * fluid_mult) / 10 //Hyper - Production was way too high by default. This should drop it back down, but allow for it to get really high
+		generate_cum()
+
+/obj/item/organ/genital/testicles/proc/generate_cum()
+	//reagents.maximum_volume = fluid_max_volume //This is the line that broke cum for so long
+	if(reagents.total_volume >= reagents.maximum_volume - 0.1) //Hyper - Check for it being close to the maximum. It sometimes doesn't proc due to a rounding error.
+		if(!sent_full_message)
+			send_full_message()
+			sent_full_message = TRUE
 		return FALSE
-	return ..()
-	// in memoriam "Your balls finally feel full, again." ??-2020
+	sent_full_message = FALSE
+	update_link()
+	if(!linked_organ)
+		return FALSE
+	reagents.isolate_reagent(fluid_id)//remove old reagents if it changed and just clean up generally
+	reagents.add_reagent(fluid_id, (fluid_rate))//generate the cum
 
-/obj/item/organ/genital/testicles/upon_link()
-	size = linked_organ.size
-	update_size()
-	update_appearance()
+/obj/item/organ/genital/testicles/update_link()
+	if(owner && !QDELETED(src))
+		linked_organ = (owner.getorganslot("penis"))
+		if(linked_organ)
+			linked_organ.linked_organ = src
+			size = linked_organ.size
+			var/obj/item/organ/genital/penis/O = linked_organ
+			cached_size = O.length
+	else
+		if(linked_organ)
+			linked_organ.linked_organ = null
+		linked_organ = null
 
-/obj/item/organ/genital/testicles/update_size(modified = FALSE)
+/obj/item/organ/genital/testicles/proc/send_full_message(msg = "Your balls finally feel full, again.")
+	if(owner && istext(msg))
+		to_chat(owner, msg)
+		return TRUE
+
+/obj/item/organ/genital/testicles/update_appearance()
 	switch(size)
-		if(BALLS_SIZE_MIN)
+		if(0.1 to 3)
 			size_name = "average"
-		if(BALLS_SIZE_DEF)
+		//if(1.1 to 2)
+		if(3.1 to 8)
 			size_name = "enlarged"
-		if(BALLS_SIZE_MAX)
+		//if(2.1 to INFINITY)
+		if(8.1 to INFINITY)
 			size_name = "engorged"
 		else
 			size_name = "nonexistant"
 
-/obj/item/organ/genital/testicles/update_appearance()
-	. = ..()
-	desc = "You see an [size_name] pair of testicles."
-	var/datum/sprite_accessory/S = GLOB.balls_shapes_list[shape]
-	var/icon_shape = S ? S.icon_state : "single"
-	icon_state = "testicles_[icon_shape]_[size]"
+	if(!internal)
+		desc = "You see an [size_name] pair of testicles."
+	else
+		desc = "They don't have any testicles you can see."
+
 	if(owner)
+		var/string
 		if(owner.dna.species.use_skintones && owner.dna.features["genitals_use_skintone"])
 			if(ishuman(owner)) // Check before recasting type, although someone fucked up if you're not human AND have use_skintones somehow...
 				var/mob/living/carbon/human/H = owner // only human mobs have skin_tone, which we need.
-				color = SKINTONE2HEX(H.skin_tone)
-				if(!H.dna.skin_tone_override)
-					icon_state += "_s"
-		else
-			color = "#[owner.dna.features["balls_color"]]"
-
-/obj/item/organ/genital/testicles/get_features(mob/living/carbon/human/H)
-	var/datum/dna/D = H.dna
-	if(D.species.use_skintones && D.features["genitals_use_skintone"])
-		color = SKINTONE2HEX(H.skin_tone)
-	else
-		color = "#[D.features["balls_color"]]"
-	shape = D.features["balls_shape"]
-	fluid_rate = D.features["balls_cum_rate"]
-	fluid_mult = D.features["balls_cum_mult"]
-	fluid_efficiency = D.features["balls_efficiency"]
-	toggle_visibility(D.features["balls_visibility"], FALSE)
+				color = "#[skintone2hex(H.skin_tone)]"
+				string = "testicles_[GLOB.balls_shapes_icons[shape]]_[size]-s"
+		if(ishuman(owner))
+			var/mob/living/carbon/human/H = owner
+			icon_state = sanitize_text(string)
+			H.update_genitals()
