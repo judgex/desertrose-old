@@ -827,7 +827,7 @@
 	traits = list(TRAIT_GUNSMITH_ONE)
 	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER1)
 	category = CAT_WEAPONRY
-	subcategory = CAT_AMMO_TWO
+	subcategory = CAT_AMMO_THREE
 
 /datum/crafting_recipe/spear
 	name = "Spear"
