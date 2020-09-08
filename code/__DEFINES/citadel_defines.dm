@@ -4,14 +4,10 @@
 
 //Filters
 #define CIT_FILTER_STAMINACRIT filter(type="drop_shadow", x=0, y=0, size=-3, color="#04080F")
+//hud s tuff
+#define ui_arousal "EAST-1:28,CENTER-4:8"//Below the health doll
 
-//organ defines
-#define VAGINA_LAYER_INDEX		1
-#define TESTICLES_LAYER_INDEX	2
-#define GENITAL_LAYER_INDEX		3
-#define PENIS_LAYER_INDEX		4
 
-#define GENITAL_LAYER_INDEX_LENGTH 4 //keep it updated with each new index added, thanks.
 
 //genital flags
 #define GENITAL_BLACKLISTED		(1<<0) //for genitals that shouldn't be added to GLOB.genitals_list.
@@ -28,39 +24,75 @@
 #define GENITAL_CAN_TAUR		(1<<11)
 
 
-#define DEF_VAGINA_SHAPE	"Human"
+//organ defines
+#define COCK_SIZE_MIN		1
+#define COCK_SIZE_MAX		10
 
-#define COCK_SIZE_DEF		6
+#define COCK_GIRTH_RATIO_MAX		0.42
+#define COCK_GIRTH_RATIO_DEF		0.25
+#define COCK_GIRTH_RATIO_MIN		0.15
 
-#define COCK_DIAMETER_RATIO_MAX		0.42
-#define COCK_DIAMETER_RATIO_DEF		0.25
-#define COCK_DIAMETER_RATIO_MIN		0.15
-
-#define DEF_COCK_SHAPE		"Human"
+#define KNOT_GIRTH_RATIO_MAX		3
+#define KNOT_GIRTH_RATIO_DEF		2.1
+#define KNOT_GIRTH_RATIO_MIN		1.25
 
 #define BALLS_VOLUME_BASE	25
 #define BALLS_VOLUME_MULT	1
 
-#define DEF_BALLS_SHAPE		"Single"
+#define BALLS_SIZE_MIN		1 //Hyper - Unchanged
+#define BALLS_SIZE_DEF		8 //Changed from 2
+#define BALLS_SIZE_MAX		40 //Changed from 3
 
-#define BALLS_SIZE_MIN		1
-#define BALLS_SIZE_DEF		2
-#define BALLS_SIZE_MAX		3
+#define BALLS_SACK_SIZE_MIN 1
+#define BALLS_SACK_SIZE_DEF	8
+#define BALLS_SACK_SIZE_MAX 40
 
-#define CUM_RATE			2 // holy shit what a really shitty define name - relates to units per arbitrary measure of time?
+#define CUM_RATE			5
 #define CUM_RATE_MULT		1
 #define CUM_EFFICIENCY		1 //amount of nutrition required per life()
 
+#define EGG_GIRTH_MIN		1 //inches
+#define EGG_GIRTH_DEF		6
+#define EGG_GIRTH_MAX		16
+
 #define BREASTS_VOLUME_BASE	50	//base volume for the reagents in the breasts, multiplied by the size then multiplier. 50u for A cups, 850u for HH cups.
 #define BREASTS_VOLUME_MULT	1	//global multiplier for breast volume.
+#define BREASTS_SIZE_FLAT	0
+#define BREASTS_SIZE_A		1
+#define BREASTS_SIZE_B		2
+#define BREASTS_SIZE_C		3
+#define BREASTS_SIZE_D		4
+#define BREASTS_SIZE_E		5
+#define BREASTS_SIZE_F		6
+#define BREASTS_SIZE_G		7
+#define BREASTS_SIZE_H		8
+#define BREASTS_SIZE_I		9
+#define BREASTS_SIZE_J		10
+#define BREASTS_SIZE_K		11
+#define BREASTS_SIZE_L		12
+#define BREASTS_SIZE_M		13
+#define BREASTS_SIZE_N		14
+#define BREASTS_SIZE_O		15
+#define BREASTS_SIZE_HUGE		16
+#define BREASTS_SIZE_MASSIVE		17
+#define BREASTS_SIZE_GIGA		25
+#define BREASTS_SIZE_IMPOSSIBLE		30
 
-#define BREASTS_SIZE_DEF	"c" //lowercase cause those sprite accessory don't use uppercased letters.
+//Bodysize Limits
+#define MIN_BODYSIZE		50
+#define MAX_BODYSIZE		200
 
-#define DEF_BREASTS_SHAPE	"Pair"
+#define BREASTS_SIZE_MIN 	BREASTS_SIZE_A
+#define BREASTS_SIZE_DEF	BREASTS_SIZE_D
+#define BREASTS_SIZE_MAX 	BREASTS_SIZE_IMPOSSIBLE
 
 #define MILK_RATE			5
 #define MILK_RATE_MULT		1
 #define MILK_EFFICIENCY		1
+
+#define AROUSAL_MINIMUM_DEFAULT 	0
+#define AROUSAL_MAXIMUM_DEFAULT 	100
+#define AROUSAL_START_VALUE			1
 
 //visibility toggles defines to avoid errors typos code errors.
 #define GEN_VISIBLE_ALWAYS "Always visible"
@@ -71,6 +103,8 @@
 #define ADMIN_MARKREAD(client) "(<a href='?_src_=holder;markedread=\ref[client]'>MARK READ</a>)"//marks an adminhelp as read and under investigation
 #define ADMIN_IC(client) "(<a href='?_src_=holder;icissue=\ref[client]'>IC</a>)"//marks and adminhelp as an IC issue
 #define ADMIN_REJECT(client) "(<a href='?_src_=holder;rejectadminhelp=\ref[client]'>REJT</a>)"//Rejects an adminhelp for being unclear or otherwise unhelpful. resets their adminhelp timer
+
+#define AROUSAL "arousal"
 
 //Citadel istypes
 #define isgenital(A) (istype(A, /obj/item/organ/genital))

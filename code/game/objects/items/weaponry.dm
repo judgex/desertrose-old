@@ -658,6 +658,7 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	name = "cat o' nine tails"
 	desc = "A whip fashioned from the severed tails of cats."
 	icon_state = "catwhip"
+	damtype = "arousal"
 
 /obj/item/melee/skateboard
 	name = "skateboard"
