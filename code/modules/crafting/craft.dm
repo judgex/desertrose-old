@@ -15,7 +15,11 @@
 	var/list/subcategories = list(
 						list(	//Weapon subcategories
 							CAT_WEAPON,
-							CAT_AMMO),
+							CAT_AMMO_ONE,
+							CAT_AMMO_TWO,
+							CAT_AMMO_THREE,
+							CAT_AMMO_FOUR,
+							CAT_AMMO_FIVE),
 						list(	//forge subcatergories
 							CAT_FORGEWEAPON,
 							CAT_FORGEARMOR,
@@ -24,7 +28,8 @@
 							CAT_MISC,
 							CAT_BOTTLE), //MISC Subcategories
 						list(
-							CAT_TRIBAL), //Tribal subcategories
+							CAT_TRIBAL,
+							CAT_TRIBAL_WEAPONS), //Tribal subcategories
 						list(
 							CAT_MEDS,
 							CAT_DRUGS),//Ghetto Chem subcategories
@@ -56,7 +61,9 @@
 							CAT_WASTELAND,
 							CAT_BELTS),
 						list( //bp
-							CAT_BPWEAPON))
+							CAT_BPWEAPON,
+							CAT_BPWEAPON_ONEUSE,
+							CAT_BP_COPY))
 
 	var/datum/action/innate/crafting/button
 	var/display_craftable_only = FALSE

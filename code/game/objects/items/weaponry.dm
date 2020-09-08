@@ -85,6 +85,19 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	force = 35
 	throwforce = 25
 
+/obj/item/claymore/machete/training
+	name = "training machete"
+	desc = "A training machete made of tough wood."
+	icon_state = "machete_training"
+	force = 0
+	throwforce = 5
+
+/obj/item/claymore/machete/training/attack(mob/living/M, mob/living/user)
+	. = ..()
+	if(!istype(M))
+		return
+	M.apply_damage(20, STAMINA, null, 0)
+
 /obj/item/claymore/machete/gladius
 	name = "gladius"
 	desc = "A forged steel machete, the blade has been laborously sharpened and the weight has been evenly distributed for maximum killing power. An image of a bull is burned into the wooden handle."
@@ -95,6 +108,21 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	throwforce = 25
 	block_chance = 10
 
+/obj/item/claymore/machete/spatha
+	name = "\improper Spatha"
+	desc = "This blade is what is known as a Spatha, a particular longsword design that it quickly becoming the favourite of the Legion Officers in Yuma. This one has more care done to it, bone handle, wooden guard and a blade that looks like it could sheer through metal."
+	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
+	icon_state = "machete_kalebman"
+	item_state = "claymore"
+	slot_flags = ITEM_SLOT_BELT
+	force = 40
+	throwforce = 25
+	block_chance = 15
+
+/obj/item/claymore/machete/spatha/kalebman
+	desc = "Light touches this dark, curved blade like the glimmer of the evening sun on a calm lake. Longer than your usual Spatha, it is made from steel alloys that are seldom utilized by Caesar's Legion due to their rarity. The hilt is made of thick Deathclaw bone, with carved knots along the edge and golden rings lining it for grip enhancement. Along the blade's curved flat on each side are large solid golden bulls, in the shape that mimicks Caesar's flag, each bull standing atop a gilded 'C' which represents the Century, one hundred. At the far end of the blade, near the tip, a recent addition has been made; a crude engraving. It reads; 'XCIX'"
+
 /obj/item/claymore/machete/pipe
 	name = "pipe"
 	desc = "A heavy rusted pipe, good for smashing heads. "
@@ -103,6 +131,14 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	attack_verb = list("mashed", "bashed", "piped", "hit", "bludgeoned", "whacked", "bonked")
 	force = 25
 	sharpness = IS_BLUNT
+
+/obj/item/claymore/machete/pipe/Initialize()
+	. = ..()
+	var/datum/component/jousting/JC = AddComponent(/datum/component/jousting)
+	JC.unmounted_knockdown_chance_per_tile = 15
+	JC.unmounted_knockdown_time = 50
+	JC.mounted_damage_boost_per_tile = 15
+	JC.mounted_knockdown_chance_per_tile = 15
 
 /obj/item/claymore/machete/warclub
 	name = "war club"
@@ -115,6 +151,14 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	block_chance = 10
 	armour_penetration = 5
 	sharpness = IS_BLUNT
+
+/obj/item/claymore/machete/warclub/Initialize()
+	. = ..()
+	var/datum/component/jousting/JC = AddComponent(/datum/component/jousting)
+	JC.unmounted_knockdown_chance_per_tile = 25
+	JC.unmounted_knockdown_time = 50
+	JC.mounted_damage_boost_per_tile = 20
+	JC.mounted_knockdown_chance_per_tile = 20
 
 /obj/item/claymore/machete/pipe/tireiron
 	name = "tire iron"
@@ -131,6 +175,12 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	attack_verb = list("mashed", "bashed", "piped", "hit", "bludgeoned", "whacked", "bonked")
 	force = 25
 	sharpness = IS_BLUNT
+
+/obj/item/claymore/machete/golf/Initialize()
+	. = ..()
+	var/datum/component/jousting/JC = AddComponent(/datum/component/jousting)
+	JC.mounted_damage_boost_per_tile = 25
+	JC.mounted_knockdown_chance_per_tile = 25
 
 /obj/item/claymore/machete/golf/teniron
 	name = "10 iron"
@@ -618,6 +668,15 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	throwforce = 4
 	w_class = WEIGHT_CLASS_HUGE
 	attack_verb = list("smacked", "whacked", "slammed", "smashed")
+
+//This is literally wacking someone with a skateboard, not riding it. Okay
+/obj/item/melee/skateboard/Initialize()
+	. = ..()
+	var/datum/component/jousting/JC = AddComponent(/datum/component/jousting)
+	JC.unmounted_knockdown_chance_per_tile = 20
+	JC.unmounted_knockdown_time = 10
+	JC.mounted_damage_boost_per_tile = 25
+	JC.mounted_knockdown_chance_per_tile = 20
 
 /obj/item/melee/skateboard/attack_self(mob/user)
 	new /obj/vehicle/ridden/scooter/skateboard(get_turf(user))

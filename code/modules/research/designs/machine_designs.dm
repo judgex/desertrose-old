@@ -38,6 +38,7 @@
 	name = "Machine Design (Siege Cannon Board)"
 	build_path = /obj/item/circuitboard/machine/emitter/siege
 	desc = "The Ciruit Board for a powerful, immobile siege laser."
+	id = "siege cannon"
 
 /datum/design/board/power_compressor
 	name = "Machine Design (Power Compressor Board)"

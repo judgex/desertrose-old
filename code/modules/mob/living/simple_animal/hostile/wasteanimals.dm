@@ -578,7 +578,7 @@
 	icon_dead = "mirelurk_d"
 	speed = 1
 	icon_gib = "gib"
-	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 2, /obj/item/stack/sheet/sinew = 1)
+	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab/mirelurk = 2, /obj/item/stack/sheet/sinew = 1)
 	maxHealth = 150
 	health = 150
 	melee_damage_lower = 10
@@ -600,7 +600,7 @@
 	speed = 1
 	icon_dead = "mirelurkhunter_d"
 	icon_gib = "gib"
-	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 4, /obj/item/stack/sheet/sinew = 2)
+	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab/mirelurk = 4, /obj/item/stack/sheet/sinew = 2)
 	maxHealth = 250
 	health = 250
 	melee_damage_lower = 30
@@ -635,4 +635,3 @@
 /mob/living/simple_animal/hostile/mirelurk/baby/Aggro()
 	..()
 	summon_backup(10)
-	

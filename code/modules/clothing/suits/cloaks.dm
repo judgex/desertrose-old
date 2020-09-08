@@ -75,3 +75,10 @@
 	name = "wayfarer cloak"
 	desc = "A symbol of the authority of the Wayfarer Chief."
 	icon_state = "chiefcloak"
+
+/obj/item/clothing/neck/cloak/amulet
+	name = "\improper hunter's amulet"
+	desc = "A hunter's talisman, some say the old gods smile on those who wear it."
+	icon_state = "talisman"
+	item_state = "talisman"
+	body_parts_covered = null

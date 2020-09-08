@@ -449,6 +449,21 @@ update_label("John Doe", "Clowny")
 	icon_state = "holodogtag"
 	id_type = "ID tags"
 
+/obj/item/card/id/selfassign/attack_self(mob/user)
+    if(isliving(user))
+        var/mob/living/living_user = user
+        if(alert(user, "Action", "Agent ID", "Show", "Forge") == "Forge")
+            registered_name = living_user.real_name
+            assignment = living_user.job
+            update_label()
+            to_chat(user, "<span class='notice'>You successfully forge the ID card.</span>")
+            return
+    ..()
+
+/obj/item/card/id/selfassign
+	icon_state = "silver"
+	item_state = "silver_id"
+	desc = "A rewritable card that allows you to put your name and assignment on it."
 
 /obj/item/card/id/dogtag/deputy
 	name = "deputy's badge"
@@ -597,6 +612,8 @@ update_label("John Doe", "Clowny")
 	desc = "A golden disc awarded to the elite hunters of the legion. If you are close enough to read the insignia you won't be alive much longer."
 	icon_state = "legionmedallioncent"
 	id_type = "venator medallion"
+	assignment = "Venator"
+
 
 /obj/item/card/id/dogtag/legpriest
 	name = "priestess medallion"
@@ -647,4 +664,11 @@ update_label("John Doe", "Clowny")
 	icon_state = "brokenholodog"
 	item_state = "brokenholodog"
 
-
+/obj/item/card/id/khantattoo
+	name = "Great Khan tattoo"
+	desc = "A tattoo of the symbol of the Great Khans."
+	icon_state = "skin"
+	item_state = "skin"
+	id_type = "gang tattoo"
+	item_flags = NODROP
+	access = list(ACCESS_KHAN)

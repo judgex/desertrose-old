@@ -29,6 +29,14 @@
 	var/wieldsound = null
 	var/unwieldsound = null
 
+/obj/item/twohanded/Initialize()
+	. = ..()
+	var/datum/component/jousting/JC = AddComponent(/datum/component/jousting) //Oh yeah. We can modify and tweak this for individual items
+	JC.mounted_damage_boost_per_tile = 25 //Percentage of weapon force on the bonus hit
+	JC.mounted_knockdown_chance_per_tile = 25 // This is 100% at 4 tiles
+	JC.mounted_knockdown_time = 60
+
+
 /obj/item/twohanded/proc/unwield(mob/living/carbon/user, show_message = TRUE)
 	if(!wielded || !user)
 		return
@@ -221,11 +229,11 @@
 	righthand_file = 'icons/mob/inhands/weapons/axes_righthand.dmi'
 	name = "woodaxe"
 	desc = "The axe forgets what the tree remembers."
-	force = 5
+	force = 25
 	throwforce = 15
 	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = ITEM_SLOT_BACK
-	force_unwielded = 10
+	force_unwielded = 25
 	force_wielded = 50
 	attack_verb = list("axed", "chopped", "cleaved", "torn", "hacked")
 	hitsound = 'sound/weapons/bladeslice.ogg'
@@ -237,6 +245,14 @@
 /obj/item/twohanded/fireaxe/Initialize()
 	. = ..()
 	AddComponent(/datum/component/butchering, 100, 80, 0 , hitsound) //axes are not known for being precision butchering tools
+	GET_COMPONENT(JC,/datum/component/jousting)
+	JC.movement_reset_tolerance = 4
+	JC.unmounted_damage_boost_per_tile = 25
+	JC.unmounted_knockdown_chance_per_tile = 25
+	JC.unmounted_knockdown_time = 5
+	JC.mounted_damage_boost_per_tile = 25
+	JC.mounted_knockdown_chance_per_tile = 25
+	JC.mounted_knockdown_time = 30
 
 /obj/item/twohanded/fireaxe/update_icon()  //Currently only here to fuck with the on-mob icons.
 	icon_state = "fireaxe[wielded]"
@@ -268,13 +284,13 @@
 	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
 	name = "double-bladed energy sword"
 	desc = "Handle with care."
-	force = 3
+	force = 25
 	throwforce = 5
 	throw_speed = 3
 	throw_range = 5
 	w_class = WEIGHT_CLASS_SMALL
 	var/w_class_on = WEIGHT_CLASS_BULKY
-	force_unwielded = 3
+	force_unwielded = 25
 	force_wielded = 34
 	wieldsound = 'sound/weapons/saberon.ogg'
 	unwieldsound = 'sound/weapons/saberoff.ogg'
@@ -457,7 +473,7 @@
 	righthand_file = 'icons/mob/inhands/weapons/polearms_righthand.dmi'
 	name = "improvised metal glaive"
 	desc = "A improvised metal glaive that can be wielded."
-	force = 10
+	force = 25
 	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = ITEM_SLOT_BACK
 	force_unwielded = 25
@@ -490,10 +506,6 @@
 		qdel(src)
 		return BRUTELOSS
 	return BRUTELOSS
-
-/obj/item/twohanded/spear/Initialize()
-	. = ..()
-	AddComponent(/datum/component/jousting)
 
 /obj/item/twohanded/spear/examine(mob/user)
 	..()
@@ -563,7 +575,7 @@
 	inhand_x_dimension = 64
 	inhand_y_dimension = 64
 	slot_flags = ITEM_SLOT_BACK
-	force = 10
+	force = 5
 	var/force_on = 60
 	w_class = WEIGHT_CLASS_BULKY
 	throwforce = 20
@@ -791,6 +803,7 @@
 	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
 	name = "high frequency blade"
 	desc = "A potent weapon capable of cutting through nearly anything. Wielding it in two hands will allow you to deflect gunfire."
+	force = 20
 	force_unwielded = 20
 	force_wielded = 40
 	armour_penetration = 100
@@ -845,9 +858,10 @@
 	righthand_file = 'icons/mob/inhands/weapons/polearms_righthand.dmi'
 	name = "bone spear"
 	desc = "A haphazardly-constructed yet still deadly weapon. The pinnacle of modern technology."
-	force = 11
+	force = 15
 	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = ITEM_SLOT_BACK
+	force_unwielded = 15
 	force_wielded = 32
 	throwforce = 25
 	throwforce = 20
@@ -908,6 +922,7 @@
 	icon_state = "baseball0"
 	lefthand_file = 'icons/mob/inhands/weapons/polearms_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/polearms_righthand.dmi'
+	force = 15
 	force_unwielded = 15
 	force_wielded = 30
 	throwforce = 15
@@ -927,8 +942,9 @@
 	icon_state = "baseballspike0"
 	lefthand_file = 'icons/mob/inhands/weapons/polearms_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/polearms_righthand.dmi'
-	force_unwielded = 25
-	force_wielded = 40
+	force = 20
+	force_unwielded = 20
+	force_wielded = 35
 	throwforce = 20
 	slot_flags = ITEM_SLOT_BACK
 	attack_verb = list("beat", "smacked", "clubbed", "clobbered")
@@ -946,9 +962,10 @@
 	icon_state = "sledgehammer0"
 	lefthand_file = 'icons/mob/inhands/weapons/polearms_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/polearms_righthand.dmi'
-	force_unwielded = 20
+	force = 25
+	force_unwielded = 25
 	force_wielded = 45
-	throwforce = 20
+	throwforce = 30
 	slot_flags = ITEM_SLOT_BACK
 	attack_verb = list("bashed", "pounded", "bludgeoned", "pummeled", "thrashed")
 	w_class = WEIGHT_CLASS_BULKY
@@ -977,6 +994,7 @@
 	icon_state = "supersledge0"
 	lefthand_file = 'icons/mob/inhands/weapons/polearms_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/polearms_righthand.dmi'
+	force = 25
 	force_unwielded = 25
 	force_wielded = 60
 
@@ -991,6 +1009,7 @@
 	icon_state = "atom_hammer0"
 	lefthand_file = 'icons/mob/inhands/weapons/polearms_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/polearms_righthand.dmi'
+	force = 25
 	force_unwielded = 25
 	force_wielded = 60
 
@@ -1010,8 +1029,9 @@
 	icon_state = "warmace0"
 	lefthand_file = 'icons/mob/inhands/weapons/polearms_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/polearms_righthand.dmi'
-	force_unwielded = 20
-	force_wielded = 40
+	force = 25
+	force_unwielded = 25
+	force_wielded = 45
 	throwforce = 20
 	armour_penetration = 20
 	slot_flags = ITEM_SLOT_BACK
@@ -1029,6 +1049,7 @@
 	icon_state = "shamanstaff0"
 	lefthand_file = 'icons/mob/inhands/weapons/polearms_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/polearms_righthand.dmi'
+	force = 15
 	force_unwielded = 15
 	force_wielded = 30
 	slot_flags = ITEM_SLOT_BACK
@@ -1040,7 +1061,7 @@
 	icon_state = "shamanstaff[wielded]"
 
 /obj/item/twohanded/sledgehammer/marsstaff
-	name = "mar's staff"
+	name = "Staff of Mars"
 	desc = " A staff crafted by the guidance of Mars."
 	icon = 'icons/obj/items_and_weapons.dmi'
 	icon_state = "mars_staff0"

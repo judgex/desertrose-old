@@ -455,7 +455,7 @@ Proc for attack log creation, because really why not
 			continue
 		if(M.stat != DEAD && !adminoverride)
 			continue
-		if(speaker_key && speaker_key in prefs.ignoring)
+		if(speaker_key && (speaker_key in prefs.ignoring))
 			continue
 
 		switch(message_type)
