@@ -27,5 +27,3 @@
 #define DEL_REAGENT		1	// reagent deleted (fully cleared)
 #define ADD_REAGENT		2	// reagent added
 #define REM_REAGENT		3	// reagent removed (may still exist)
-
-#define NO_REAGENTS_VALUE 0

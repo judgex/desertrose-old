@@ -61,7 +61,6 @@
 	var/dimension_x = 32
 	var/dimension_y = 32
 	var/center = FALSE	//Should we center the sprite?
-	var/list/relevant_layers
 	var/alpha_mask_state
 
 	//for snowflake/donor specific sprites
