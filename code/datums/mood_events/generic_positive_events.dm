@@ -65,8 +65,3 @@
 	description = "<span class='nicegreen'>The dead have been given a proper burial</span>\n"
 	mood_change = 2
 	timeout = 3400
-  
-/datum/mood_event/orgasm
-	description = "<span class='userlove'>I came!</span>\n" //funny meme haha
-	mood_change = 3
-	timeout = 100 SECONDS

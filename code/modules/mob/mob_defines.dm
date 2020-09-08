@@ -15,7 +15,7 @@
 	var/list/datum/action/chameleon_item_actions
 	var/static/next_mob_id = 0
 
-	var/stat = CONSCIOUS //Whether a mob is alive or dead. TODO: Move this to living - Nodrak
+	var/stat = 0 //Whether a mob is alive or dead. TODO: Move this to living - Nodrak
 
 
 	/*A bunch of this stuff really needs to go under their own defines instead of being globally attached to mob.
@@ -24,7 +24,7 @@
 	I'll make some notes on where certain variable defines should probably go.
 	Changing this around would probably require a good look-over the pre-existing code.
 	*/
-	var/zone_selected = BODY_ZONE_CHEST
+	var/zone_selected = null
 
 	var/computer_id = null
 	var/list/logging = list(INDIVIDUAL_ATTACK_LOG, INDIVIDUAL_SAY_LOG, INDIVIDUAL_EMOTE_LOG, INDIVIDUAL_OOC_LOG, INDIVIDUAL_LOOC_LOG)

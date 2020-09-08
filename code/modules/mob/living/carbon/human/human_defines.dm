@@ -48,8 +48,7 @@
 	var/gender_ambiguous = 0 //if something goes wrong during gender reassignment this generates a line in examine
 
 	var/name_override //For temporary visible name changes
-	var/genital_override = FALSE //Force genitals on things incase of chems
- 
+
 	var/datum/personal_crafting/handcrafting
 	var/datum/physiology/physiology
 

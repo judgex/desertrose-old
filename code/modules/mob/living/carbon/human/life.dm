@@ -23,9 +23,6 @@
 	if (notransform)
 		return
 
-	if(stat != DEAD)
-		handle_arousal()
-
 	if(..()) //not dead
 		handle_active_genes()
 
