@@ -83,7 +83,11 @@
 #define CAT_NONE	""
 #define CAT_WEAPONRY	"Weaponry"
 #define CAT_WEAPON	"Weapons"
-#define CAT_AMMO	"Ammunition"
+#define CAT_AMMO_ONE	"Ammunition - Empty"
+#define CAT_AMMO_TWO	"Ammunition - Handguns"
+#define CAT_AMMO_THREE	"Ammunition - Rifles"
+#define CAT_AMMO_FOUR	"Ammunition - Energy"
+#define CAT_AMMO_FIVE	"Ammunition - Other"
 #define CAT_ROBOT	"Robots"
 #define CAT_MISC	"Misc"
 #define CAT_BOTTLE "Bottling"
@@ -91,6 +95,7 @@
 #define CAT_MACHINES "Machines/Objects"
 #define CAT_PRIMAL  "Tribal"
 #define CAT_TRIBAL  "Tribal"
+#define CAT_TRIBAL_WEAPONS	"Tribal - War"
 #define CAT_FORGE   "Forge"
 #define CAT_FORGEWEAPON   "Forge Weapon"
 #define CAT_FORGEARMOR   "Forge Armor"
@@ -123,6 +128,8 @@
 #define CAT_BELTS	"Belts"
 #define CAT_BLUEPRINTS	"Blueprints"
 #define CAT_BPWEAPON	"Weapons"
+#define CAT_BPWEAPON_ONEUSE	"Weapons - Damaged"
+#define CAT_BP_COPY	"Copy Blueprints"
 
 #define RCD_FLOORWALL 1
 #define RCD_AIRLOCK 2

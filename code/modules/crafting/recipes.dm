@@ -3150,7 +3150,7 @@
 
 //uzi
 
-/datum/crafting_recipe/uzi
+/datum/crafting_recipe/uzi_lim
 	name = "Mini uzi"
 	result = /obj/item/gun/ballistic/automatic/mini_uzi
 	reqs = list(/obj/item/stack/sheet/metal = 10,
@@ -3158,17 +3158,22 @@
 				/datum/reagent/blackpowder = 30
 				)
 	tools = list(TOOL_WORKBENCH, /obj/item/blueprint/weapon/uzi)
+				/datum/reagent/blackpowder = 30,
+				/obj/item/blueprint/weapon/uzi/limited = 1
+				)
 	time = 120
 	category = CAT_BLUEPRINTS
-	subcategory = CAT_BPWEAPON
+	subcategory = CAT_BPWEAPON_ONEUSE
 
-/datum/crafting_recipe/uzi_lim
-	name = "Mini uzi"
-	result = /obj/item/gun/ballistic/automatic/mini_uzi
+//10mm smg
+
+/datum/crafting_recipe/smg10mm_lim
+	name = "10mm SMG"
+	result = /obj/item/gun/ballistic/automatic/smg10mm
 	reqs = list(/obj/item/stack/sheet/metal = 10,
 				/obj/item/advanced_crafting_components/receiver = 1,
 				/datum/reagent/blackpowder = 30,
-				/obj/item/blueprint/weapon/uzi/limited = 1
+				/obj/item/blueprint/weapon/smg10mm/limited = 1
 				)
 	tools = list(TOOL_WORKBENCH)
 	time = 120
@@ -3209,7 +3214,7 @@
 	result = /obj/item/gun/ballistic/automatic/greasegun
 	reqs = list(/obj/item/stack/sheet/metal = 10,
 				/obj/item/advanced_crafting_components/receiver = 1,
-				/datum/reagent/blackpowder = 30,
+				/datum/reagent/blackpowder = 30
 				)
 	tools = list(TOOL_WORKBENCH, /obj/item/blueprint/weapon/grease_gun)
 	time = 120
@@ -3221,6 +3226,7 @@
 	result = /obj/item/gun/ballistic/automatic/greasegun
 	reqs = list(/obj/item/stack/sheet/metal = 10,
 				/obj/item/advanced_crafting_components/receiver = 1,
+				/datum/reagent/blackpowder = 30,
 				/datum/reagent/blackpowder = 30,
 				/obj/item/blueprint/weapon/grease_gun/limited = 1
 				)
@@ -3685,8 +3691,7 @@
 				/obj/item/advanced_crafting_components/alloys = 1,
 				/obj/item/advanced_crafting_components/receiver = 1,
 				/datum/reagent/blackpowder = 30,
-				/obj/item/stack/crafting/goodparts = 5,
-
+				/obj/item/stack/crafting/goodparts = 5
 				)
 	tools = list(TOOL_WORKBENCH, /obj/item/blueprint/weapon/bozar)
 	time = 120

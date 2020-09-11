@@ -63,12 +63,12 @@
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
 		add_fibers(H)
-		if(H.gloves) //Check if the gloves (if any) hide fingerprints
+		if(istype(H.gloves, /obj/item/clothing/gloves)) //Check if the gloves (if any) hide fingerprints
 			var/obj/item/clothing/gloves/G = H.gloves
 			if(G.transfer_prints)
-				ignoregloves = 1
+				ignoregloves = TRUE
 			if(!ignoregloves)
-				H.gloves.add_fingerprint(H, TRUE) //ignoregloves = 1 to avoid infinite loop.
+				G.add_fingerprint(H, TRUE) //ignoregloves = TRUE to avoid infinite loop.
 				return
 		var/full_print = md5(H.dna.uni_identity)
 		LAZYSET(fingerprints, full_print, full_print)
