@@ -637,6 +637,8 @@
 	set name = "Resist"
 	set category = "IC"
 
+
+	unbuckle_all_mobs() //Always let people stop piggybacking by resisting
 	if(!can_resist())
 		return
 	changeNext_move(CLICK_CD_RESIST)
@@ -663,7 +665,6 @@
 			resist_fire() //stop, drop, and roll
 		else if(last_special <= world.time)
 			resist_restraints() //trying to remove cuffs.
-
 
 /mob/proc/resist_grab(moving_resist)
 	return 1 //returning 0 means we successfully broke free
@@ -1062,6 +1063,10 @@
 		if(client)
 			client.move_delay = world.time + movement_delay()
 	lying_prev = lying
+
+	if(LAZYLEN(buckled_mobs) && lying) //We're lying down but we have someone buckled to us, we should drop them
+		unbuckle_all_mobs(TRUE)  //Oops, drop our peeps
+
 	return canmove
 
 /mob/living/proc/AddAbility(obj/effect/proc_holder/A)

@@ -544,8 +544,7 @@
 		M.emote(pick("twitch","scream","laugh"))
 	M.adjustBrainLoss(2)
 	..()
-	return
-	. = 1
+	return TRUE
 
 /datum/reagent/drug/psycho/addiction_act_stage1(mob/living/M)
 	M.hallucination += 10
