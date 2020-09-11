@@ -140,6 +140,16 @@
 	item_state = "sexymaid_s"
 	body_parts_covered = CHEST
 
+/obj/item/clothing/suit/f13/blue_coat //
+	name = "padded blue coat"
+	desc = "A thick, long blue overcoat with a raised collar. There are a few pens pushed neatly into a pocket at the breast."
+	icon_state = "blue_coat_custom"
+	item_state = "blue_coat_custom"
+	body_parts_covered = CHEST
+	armor = list(melee = 20, bullet = 20, laser = 0, energy = 0, bomb = 20, bio = 0, rad = 0, fire = 0, acid = 0)
+
+
+
 //Special Biosuit
 
 /obj/item/clothing/suit/bio_suit/f13/hazmat
