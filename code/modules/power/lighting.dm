@@ -615,6 +615,8 @@
 	drop_light_tube(user)
 
 /obj/machinery/light/proc/drop_light_tube(mob/user)
+	if(!istype(light_type,/obj/item/light))
+		return
 	var/obj/item/light/L = new light_type()
 	L.status = status
 	L.rigged = rigged

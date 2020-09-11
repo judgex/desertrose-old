@@ -124,8 +124,11 @@ Code:
 		else
 			to_chat(user, "<span class='warning'>With a click the shock collar locks!</span>")
 			lock = TRUE
-			if(SLOT_NECK)
-				item_flags = NODROP
+		if(!ismob(src.loc))
+			return
+		var/mob/M = src.loc
+		if(M.get_item_by_slot(SLOT_NECK) == src)
+			item_flags = NODROP
 	return
 
 /obj/item/assembly/signaler/electropack/shockcollar/attack_hand(mob/user)
@@ -214,12 +217,13 @@ Code:
 			to_chat(user, "<span class='warning'>With a click the explosive collar unlocks!</span>")
 			lock = FALSE
 			item_flags = null
-		else
-			to_chat(user, "<span class='warning'>With a click the explosive collar locks!</span>")
-			lock = TRUE
-			if(SLOT_NECK)
-				item_flags = NODROP
-	return
+		to_chat(user, "<span class='warning'>With a click the explosive collar locks!</span>")
+		lock = TRUE
+		if(!ismob(src.loc))
+			return
+		var/mob/M = src.loc
+		if(M.get_item_by_slot(SLOT_NECK) == src)
+			item_flags = NODROP
 
 /obj/item/assembly/signaler/electropack/boomcollar/attack_hand(mob/user)
 	if(loc == user && user.get_item_by_slot(SLOT_NECK))
@@ -264,9 +268,11 @@ Code:
 	return
 
 /obj/item/assembly/signaler/electropack/boomcollar/proc/boom(mob/living/L)
-	explosion(src.loc,0,1,2, flame_range = 2)
-	if (SLOT_NECK)
-		var/obj/item/bodypart/head/victimhead = L.get_bodypart(BODY_ZONE_HEAD)
+	explosion(get_turf(src),0,1,2, flame_range = 2)
+	if(!istype(L) || L != loc || L.get_item_by_slot(SLOT_NECK) != src)
+		return
+	var/obj/item/bodypart/head/victimhead = L.get_bodypart(BODY_ZONE_HEAD)
+	if(istype(victimhead))
 		victimhead.dismember()
 
 /obj/item/key/bcollar
