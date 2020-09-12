@@ -255,8 +255,7 @@ GLOBAL_PROTECT(security_mode)
 			features += "vote"
 		hostedby = CONFIG_GET(string/hostedby)
 
-	s += "<b>\[RU] Fallout 13 - New Oregon<br>"
-	s += "Medium RP server with custom lore.<br>"
+	s += "Medium RP.<br>"
 	s += "Med RP \[https://discord.gg/GEMmJYV]<br>"
 	s += "Hosted by: TauCeti"
 
