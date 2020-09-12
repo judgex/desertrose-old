@@ -64,6 +64,7 @@ window "mainwindow"
 		is-default = true
 		saved-params = "pos;size;is-minimized;is-maximized"
 		title = "Fallout 13 - Свет Атома"
+		icon = 'icons\\ss13_32.png'
 		macro = "default"
 		menu = "menu"
 		outer-size = 656x518
@@ -148,19 +149,19 @@ window "mapwindow"
 	elem "mapwindow"
 		type = MAIN
 		pos = 281,0
-		size = 1024x1001
+		size = 640x480
 		anchor1 = none
 		anchor2 = none
 		background-color = #3c4438
 		saved-params = ""
 		statusbar = false
 		is-pane = true
-		outer-size = 1040x1040
-		inner-size = 1024x1001
+		outer-size = 640x480
+		inner-size = 640x480
 	elem "map"
 		type = MAP
 		pos = 0,0
-		size = 1024x1024
+		size = 640x480
 		anchor1 = 0,0
 		anchor2 = 100,100
 		font-family = "Arial"
