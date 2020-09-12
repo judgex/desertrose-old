@@ -1,6 +1,6 @@
 ﻿<!-- Most valid html will work in here, excluding images. -->
 <hr>
-<h1 style="text-align: center;">Добро пожаловать на <span style="color: #ffff99;">Fallout 13</span></h1>
+<h1 style="text-align: center;">Добро пожаловать на Fallout 13</h1>
 <hr>
 <p style="text-align: center;"><a href="https://www.reddit.com/r/Fallout13/">Наш реддит</a>. <em><br />Донаты будут направленны на разработку.</em><br /><br /> <em><strong>Разработка всё еще на стадии Бета, так что не надейтесь на идеально сбалансированный экшон в безграничной Пустоши, с всякими невероятными штуками о которых вы так давно мечтали.<br /> <br />Заходите поболтать в наш дружелюбный <a href="https://discord.gg/GEMmJYV">Дискорд чат</a> - с нами интересно.</strong></em> <br /><strong>Пожалуйста <a href="https://goo.gl/tskzbM">ПРОЧТИТЕ ПРАВИЛА СЕРВЕРА</a> - ignorantia juris non excusat (незнание правил не освобождает от ответственности)!</strong></p>
 <hr />
