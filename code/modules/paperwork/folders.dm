@@ -6,7 +6,7 @@
 	w_class = WEIGHT_CLASS_SMALL
 	pressure_resistance = 2
 	resistance_flags = FLAMMABLE
-
+	
 /obj/item/folder/suicide_act(mob/living/user)
 	user.visible_message("<span class='suicide'>[user] begins filing an imaginary death warrent! It looks like [user.p_theyre()] trying to commit suicide!</span>")
 	return OXYLOSS
@@ -26,11 +26,6 @@
 /obj/item/folder/white
 	desc = "A white folder."
 	icon_state = "folder_white"
-
-/obj/item/folder/newspaper
-	desc = "A freshly printed newspaper."
-	icon = 'icons/obj/bureaucracy.dmi'
-	icon_state = "newspaper"
 
 
 /obj/item/folder/update_icon()
