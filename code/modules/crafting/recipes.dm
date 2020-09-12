@@ -3157,10 +3157,7 @@
 				/obj/item/advanced_crafting_components/receiver = 1,
 				/datum/reagent/blackpowder = 30
 				)
-	tools = list(TOOL_WORKBENCH, /obj/item/blueprint/weapon/uzi)
-				/datum/reagent/blackpowder = 30,
-				/obj/item/blueprint/weapon/uzi/limited = 1
-				)
+	tools = list(TOOL_WORKBENCH,/obj/item/blueprint/weapon/uzi/limited = 1)
 	time = 120
 	category = CAT_BLUEPRINTS
 	subcategory = CAT_BPWEAPON_ONEUSE
