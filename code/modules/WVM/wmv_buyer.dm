@@ -14,6 +14,16 @@
 	var/expected_price = 0
 	var/list/prize_list = list()  //if you add something to this, please, for the love of god, sort it by price/type. use tabs and not spaces.
 
+	var/list/goods_list = list( /obj/item/stack/ore/diamond = 50,
+								/obj/item/stack/ore/gold = 15,
+								/obj/item/stack/ore/silver = 5,
+								/obj/item/stack/ore/iron = 1.5,
+								/obj/item/stack/sheet/leather = 5,
+								/obj/item/reagent_containers/pill/patch/jet = 5,
+								/obj/item/reagent_containers/hypospray/medipen/psycho = 15,
+								/obj/item/reagent_containers/syringe/medx = 15
+								)
+
 /obj/machinery/mineral/wasteland_trader/general
 	name = "Trading point"
 	icon_state = "generic_idle"
@@ -44,7 +54,7 @@
 	dat += "Gold : 15 caps<br>"
 	dat += "Diamond : 50 caps<br>"
 	dat += "Leather : 5 caps<br>"
-	dat += "Jet/Psycho/MedX : 15 caps<br>"
+	dat += "Jet/Psycho/MedX : 5-15 caps<br>"
 	dat += ""
 	dat += "</div>"
 
@@ -80,80 +90,28 @@
 
 /* Adding a caps to caps storage and release vending item. */
 /obj/machinery/mineral/wasteland_trader/proc/add_caps(obj/item/I)
-	if(istype(I, /obj/item/stack/ore/diamond))
-		var/obj/item/stack/ore/iron/sellable = I
-		var/price = 50
-		var/inserted_value = FLOOR(sellable.amount * price, 1)
-		stored_caps += inserted_value
-		I.Destroy()
-		playsound(src, 'sound/items/change_jaws.ogg', 60, 1)
-		to_chat(usr, "You sell [inserted_value] bottle caps value to a vending machine.")
-	if(istype(I, /obj/item/stack/ore/iron))
-		var/obj/item/stack/ore/iron/sellable = I
-		var/price = 1.5
-		var/inserted_value = FLOOR(sellable.amount * price, 1)
-		stored_caps += inserted_value
-		I.Destroy()
-		playsound(src, 'sound/items/change_jaws.ogg', 60, 1)
-		to_chat(usr, "You sell [inserted_value] bottle caps value to a vending machine.")
-		src.ui_interact(usr)
-	else if(istype(I, /obj/item/stack/ore/gold))
-		var/obj/item/stack/ore/gold/sellable = I
-		var/price = 15
-		var/inserted_value = FLOOR(sellable.amount * price, 1)
-		stored_caps += inserted_value
-		I.Destroy()
-		playsound(src, 'sound/items/change_jaws.ogg', 60, 1)
-		to_chat(usr, "You sell [inserted_value] bottle caps value to a vending machine.")
-		src.ui_interact(usr)
-	else if(istype(I, /obj/item/stack/ore/silver))
-		var/obj/item/stack/ore/silver/sellable = I
-		var/price = 5
-		var/inserted_value = FLOOR(sellable.amount * price, 1)
-		stored_caps += inserted_value
-		I.Destroy()
-		playsound(src, 'sound/items/change_jaws.ogg', 60, 1)
-		to_chat(usr, "You sell [inserted_value] bottle caps value to a vending machine.")
-		src.ui_interact(usr)
-	else if(istype(I, /obj/item/stack/sheet/leather))
-		var/obj/item/stack/sheet/leather/sellable = I
-		var/price = 5
-		var/inserted_value = FLOOR(sellable.amount * price, 1)
-		stored_caps += inserted_value
-		I.Destroy()
-		playsound(src, 'sound/items/change_jaws.ogg', 60, 1)
-		to_chat(usr, "You sell [inserted_value] bottle caps value to a vending machine.")
-		src.ui_interact(usr)
-	else if(istype(I, /obj/item/reagent_containers/pill/patch/jet))
-		var/obj/item/reagent_containers/pill/patch/jet/sellable = I
-		var/price = 0.375
-		var/inserted_value = FLOOR(sellable.volume * price, 1)//40 volume
-		stored_caps += inserted_value
-		I.Destroy()
-		playsound(src, 'sound/items/change_jaws.ogg', 60, 1)
-		to_chat(usr, "You sell [inserted_value] bottle caps value to a vending machine.")
-		src.ui_interact(usr)
-	else if(istype(I, /obj/item/reagent_containers/hypospray/medipen/psycho))
-		var/obj/item/reagent_containers/hypospray/medipen/psycho/sellable = I
-		var/price = 1.5
-		var/inserted_value = FLOOR(sellable.volume * price, 1)//10 volume
-		stored_caps += inserted_value
-		I.Destroy()
-		playsound(src, 'sound/items/change_jaws.ogg', 60, 1)
-		to_chat(usr, "You sell [inserted_value] bottle caps value to a vending machine.")
-		src.ui_interact(usr)
-	else if(istype(I, /obj/item/reagent_containers/syringe/medx))
-		var/obj/item/reagent_containers/syringe/medx/sellable = I
-		var/price = 1
-		var/inserted_value = FLOOR(sellable.volume * price, 1)//15 volume
-		stored_caps += inserted_value
-		I.Destroy()
-		playsound(src, 'sound/items/change_jaws.ogg', 60, 1)
-		to_chat(usr, "You sell [inserted_value] bottle caps value to a vending machine.")
-		src.ui_interact(usr)
-	else
+	var/final_value = 0
+	var/value_per = 0
+
+	if(!I?.type in goods_list)
+		to_chat(usr, "<span class='notice'>[src] is not buying that!</span>")
 		return
-		
+
+	value_per = goods_list[I.type]
+	if(!isnum(value_per))
+		return
+
+	if(istype(I, /obj/item/stack))
+		var/obj/item/stack/S = I
+		final_value = FLOOR(S.amount * value_per, 1)
+	else
+		final_value = value_per
+
+	stored_caps += final_value
+	playsound(src, 'sound/items/change_jaws.ogg', 60, 1)
+	to_chat(usr, "You sell [final_value] bottle caps value to the [src]. Total caps: [stored_caps].")
+	qdel(I)
+	src.ui_interact(usr)
 
 /* Spawn all caps on world and clear caps storage */
 /obj/machinery/mineral/wasteland_trader/proc/remove_all_caps()
