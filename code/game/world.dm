@@ -256,7 +256,6 @@ GLOBAL_PROTECT(security_mode)
 		hostedby = CONFIG_GET(string/hostedby)
 
 	s += "Med RP \[https://discord.gg/GEMmJYV]<br>"
-	s += "Hosted by: TauCeti"
 
 	var/n = 0
 	for (var/mob/M in GLOB.player_list)
