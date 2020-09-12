@@ -14,6 +14,8 @@
 
 // BEGIN_INCLUDE
 #include "_maps\_oregon.dm"
+#include "_maps\map_files\Oregon\Dungeons.dmm"
+#include "_maps\map_files\Oregon\oregon_wasteland-redux.dmm"
 #include "_maps\templates\fallout_templates.dm"
 #include "_maps\templates\ranch\ranch.dm"
 #include "code\_compile_options.dm"
