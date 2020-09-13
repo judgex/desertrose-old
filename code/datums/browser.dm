@@ -328,7 +328,7 @@
 		preview_icon = callback.Invoke(settings)
 		if (preview_icon)
 			user << browse_rsc(preview_icon, "previewicon.png")
-	var/dat = ""
+	var/dat = "<meta charset=UTF-8>"
 
 	for (var/name in settings["mainsettings"])
 		var/setting = settings["mainsettings"][name]

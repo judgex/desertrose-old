@@ -390,7 +390,7 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 	popup.open()
 
 /obj/machinery/trading_machine/proc/get_ui_content(var/state)
-	var/dat = ""
+	var/dat = "<meta charset=UTF-8>"
 	switch(state)
 		// --- Work
 		if(STATE_IDLE)
@@ -596,11 +596,11 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		new /datum/data/wasteland_equipment("E.N.H.A.N.C.E. Your Pip-boy: Reagent Scanner",	/obj/item/cartridge/chemistry,						50),
 		new /datum/data/wasteland_equipment("E.N.H.A.N.C.E. Your Pip-boy: Health Scanner",	/obj/item/cartridge/medical,						50),
 		new /datum/data/wasteland_equipment("E.N.H.A.N.C.E. Your Pip-boy: Signaler",	/obj/item/cartridge/signal,								50),
-		
+
 
 		)
-		
-		
+
+
 /obj/machinery/mineral/wasteland_vendor/special
 	name = "Wasteland Vending Machine - Special"
 	icon_state = "liberationstation_idle"

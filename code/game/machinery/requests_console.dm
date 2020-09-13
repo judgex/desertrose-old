@@ -130,7 +130,7 @@ GLOBAL_LIST_EMPTY(allConsoles)
 
 /obj/machinery/requests_console/ui_interact(mob/user)
 	. = ..()
-	var/dat = ""
+	var/dat = "<meta charset=UTF-8>"
 	if(!open)
 		switch(screen)
 			if(1)	//req. assistance

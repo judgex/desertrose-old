@@ -20,7 +20,7 @@ var/list/interactions
 			interactions[I.command] = I
 
 /mob/living/carbon/human/proc/list_interaction_attributes()
-	var/dat = ""
+	var/dat = "<html><meta charset=UTF-8>"
 	if(has_hands())
 		dat += "...have hands."
 	if(has_mouth())

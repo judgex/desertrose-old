@@ -105,10 +105,6 @@
   mood_change = -3
   timeout = 3000
 
-/datum/mood_event/nyctophobia
-	description = "<span class='warning'>It sure is dark around here...</span>\n"
-	mood_change = -3
-
 /datum/mood_event/family_heirloom_missing
 	description = "<span class='warning'>I'm missing my family heirloom...</span>\n"
 	mood_change = -4
@@ -138,4 +134,4 @@
 		mood_change = -2
 		return
 	mood_change = -2*(LAZYLEN(H.faction_deaths))
-	
+

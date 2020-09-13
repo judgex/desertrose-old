@@ -12,7 +12,7 @@
 	var/mob/living/carbon/human/H = quirk_holder
 	if(NOBLOOD in H.dna.species.species_traits) //can't lose blood if your species doesn't have any
 		return
-	else 
+	else
 		quirk_holder.blood_volume -= 0.275
 
 
@@ -48,6 +48,7 @@
 /datum/quirk/brainproblems/on_process()
 	quirk_holder.adjustBrainLoss(0.2)
 
+/*
 /datum/quirk/nyctophobia
 	name = "Nyctophobia"
 	desc = "As far as you can remember, you've always been afraid of the dark. While in the dark without a light source, you instinctually act careful, and constantly feel a sense of dread."
@@ -66,7 +67,7 @@
 		SEND_SIGNAL(quirk_holder, COMSIG_ADD_MOOD_EVENT, "nyctophobia", /datum/mood_event/nyctophobia)
 	else
 		SEND_SIGNAL(quirk_holder, COMSIG_CLEAR_MOOD_EVENT, "nyctophobia")
-
+*/
 
 
 /datum/quirk/nonviolent

@@ -98,7 +98,7 @@
 	var/ok = 0
 	switch(item)
 		if("admin_log")
-			var/dat = "<B>Admin Log<HR></B>"
+			var/dat = "<meta charset=UTF-8><B>Admin Log<HR></B>"
 			for(var/l in GLOB.admin_log)
 				dat += "<li>[l]</li>"
 			if(!GLOB.admin_log.len)
@@ -106,7 +106,7 @@
 			usr << browse(dat, "window=admin_log")
 
 		if("list_job_debug")
-			var/dat = "<B>Job Debug info.</B><HR>"
+			var/dat = "<meta charset=UTF-8><B>Job Debug info.</B><HR>"
 			for(var/line in SSjob.job_debug)
 				dat += "[line]<BR>"
 			dat+= "*******<BR><BR>"
@@ -117,7 +117,7 @@
 			usr << browse(dat, "window=jobdebug;size=600x500")
 
 		if("show_admins")
-			var/dat = "<B>Current admins:</B><HR>"
+			var/dat = "<meta charset=UTF-8><B>Current admins:</B><HR>"
 			if(GLOB.admin_datums)
 				for(var/ckey in GLOB.admin_datums)
 					var/datum/admins/D = GLOB.admin_datums[ckey]
@@ -193,7 +193,7 @@
 		if("list_bombers")
 			if(!check_rights(R_ADMIN))
 				return
-			var/dat = "<B>Bombing List</B><HR>"
+			var/dat = "<meta charset=UTF-8><B>Bombing List</B><HR>"
 			for(var/l in GLOB.bombers)
 				dat += text("[l]<BR>")
 			usr << browse(dat, "window=bombers")
@@ -201,7 +201,7 @@
 		if("list_signalers")
 			if(!check_rights(R_ADMIN))
 				return
-			var/dat = "<B>Showing last [length(GLOB.lastsignalers)] signalers.</B><HR>"
+			var/dat = "<meta charset=UTF-8><B>Showing last [length(GLOB.lastsignalers)] signalers.</B><HR>"
 			for(var/sig in GLOB.lastsignalers)
 				dat += "[sig]<BR>"
 			usr << browse(dat, "window=lastsignalers;size=800x500")
@@ -209,7 +209,7 @@
 		if("list_lawchanges")
 			if(!check_rights(R_ADMIN))
 				return
-			var/dat = "<B>Showing last [length(GLOB.lawchanges)] law changes.</B><HR>"
+			var/dat = "<meta charset=UTF-8><B>Showing last [length(GLOB.lawchanges)] law changes.</B><HR>"
 			for(var/sig in GLOB.lawchanges)
 				dat += "[sig]<BR>"
 			usr << browse(dat, "window=lawchanges;size=800x500")
@@ -265,7 +265,7 @@
 		if("manifest")
 			if(!check_rights(R_ADMIN))
 				return
-			var/dat = "<B>Showing Wasteland Census.</B><HR>"
+			var/dat = "<meta charset=UTF-8><B>Showing Wasteland Census.</B><HR>"
 			dat += "<table cellspacing=5><tr><th>Name</th><th>Position</th></tr>"
 			for(var/datum/data/record/t in GLOB.data_core.general)
 				dat += "<tr><td>[t.fields["name"]]</td><td>[t.fields["rank"]]</td></tr>"
@@ -274,7 +274,7 @@
 		if("DNA")
 			if(!check_rights(R_ADMIN))
 				return
-			var/dat = "<B>Showing DNA from blood.</B><HR>"
+			var/dat = "<meta charset=UTF-8><B>Showing DNA from blood.</B><HR>"
 			dat += "<table cellspacing=5><tr><th>Name</th><th>DNA</th><th>Blood Type</th></tr>"
 			for(var/mob/living/carbon/human/H in GLOB.carbon_list)
 				if(H.ckey)
@@ -284,7 +284,7 @@
 		if("fingerprints")
 			if(!check_rights(R_ADMIN))
 				return
-			var/dat = "<B>Showing Fingerprints.</B><HR>"
+			var/dat = "<meta charset=UTF-8><B>Showing Fingerprints.</B><HR>"
 			dat += "<table cellspacing=5><tr><th>Name</th><th>Fingerprints</th></tr>"
 			for(var/mob/living/carbon/human/H in GLOB.carbon_list)
 				if(H.ckey)
