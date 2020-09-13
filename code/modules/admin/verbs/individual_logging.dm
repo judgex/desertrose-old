@@ -1,3 +1,5 @@
+//bruh
+
 /proc/show_individual_logging_panel(mob/M, source = LOGSRC_CLIENT, type = INDIVIDUAL_ATTACK_LOG)
 	if(!M || !ismob(M))
 		return
