@@ -4,7 +4,6 @@
 
 	//Add client links
 	var/dat = "<html><meta charset=UTF-8>"
-	dat = ""
 	if(M.client)
 		dat += "<center><p>Client</p></center>"
 		dat += "<center><a href='?_src_=holder;[HrefToken()];individuallog=[REF(M)];log_type=[INDIVIDUAL_ATTACK_LOG];log_src=[LOGSRC_CLIENT]'>Attack log</a> | "
