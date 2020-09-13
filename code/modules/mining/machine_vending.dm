@@ -1,8 +1,8 @@
 /**********************Mining Equipment Vendor**************************/
 
 /obj/machinery/mineral/equipment_vendor
-	name = "mining equipment vendor"
-	desc = "An equipment vendor for miners, points collected at an ore redemption machine can be spent here."
+	name = "exploration equipment vendor"
+	desc = "An equipment vendor for miners and adventurers, points collected at an ore redemption machine can be spent here."
 	icon = 'icons/obj/machines/mining_machines.dmi'
 	icon_state = "mining"
 	density = TRUE
@@ -16,21 +16,29 @@
 		new /datum/data/mining_equipment("Whiskey",						/obj/item/reagent_containers/food/drinks/bottle/whiskey,			100),
 		new /datum/data/mining_equipment("Absinthe",					/obj/item/reagent_containers/food/drinks/bottle/absinthe/premium,	100),
 		new /datum/data/mining_equipment("Cigar",						/obj/item/clothing/mask/cigarette/cigar/havana,						150),
-		new /datum/data/mining_equipment("Soap",						/obj/item/soap,											200),
-		new /datum/data/mining_equipment("Laser Pointer",				/obj/item/laser_pointer,											300),
+		new /datum/data/mining_equipment("Soap",						/obj/item/soap,														200),
+		new /datum/data/mining_equipment("Basic Vault-Tec C.A.M.P.",	/obj/item/survivalcapsule,											400),
+		new /datum/data/mining_equipment("Geiger counter",				/obj/item/geiger_counter,											150),
 		new /datum/data/mining_equipment("Explorer's Webbing",			/obj/item/storage/belt/mining,										500),
 		new /datum/data/mining_equipment("Point Transfer Card",			/obj/item/card/mining_point_card,									500),
 		new /datum/data/mining_equipment("Kinetic Crusher",				/obj/item/twohanded/required/kinetic_crusher,						750),
 		new /datum/data/mining_equipment("Kinetic Accelerator",			/obj/item/gun/energy/kinetic_accelerator,							750),
+		new /datum/data/mining_equipment("10-mm pistol",				/obj/item/gun/ballistic/automatic/pistol/n99,						750),
+		new /datum/data/mining_equipment("10-mm SMG",					/obj/item/gun/ballistic/automatic/smg10mm,							1250),
+		new /datum/data/mining_equipment("10-mm pistol mag",			/obj/item/ammo_box/magazine/m10mm_adv,								250),
+		new /datum/data/mining_equipment("10-mm SMG mag",				/obj/item/ammo_box/magazine/m10mm_auto,								300),
+		new /datum/data/mining_equipment("10-mm ammo box",				/obj/item/ammo_box/c10mm,											500),
+		new /datum/data/mining_equipment("10-mm ammo box (HP)",			/obj/item/ammo_box/c10mm/jhp,										750),
+		new /datum/data/mining_equipment("10-mm ammo box (AP)",			/obj/item/ammo_box/c10mm/ap,										1000),
+		new /datum/data/mining_equipment("Laser pistol",				/obj/item/gun/energy/laser/pistol,									750),
+		new /datum/data/mining_equipment("Energy cell",					/obj/item/stock_parts/cell/ammo/ec,									500),
+		new /datum/data/mining_equipment("Stimpak",						/obj/item/reagent_containers/hypospray/medipen/stimpak,				500),
+		new /datum/data/mining_equipment("MRE",							/obj/item/reagent_containers/food/snacks/f13/mre,					150),
+		new /datum/data/mining_equipment("Flask",						/obj/item/reagent_containers/food/drinks/flask/vault113,			150),
 		new /datum/data/mining_equipment("Advanced Scanner",			/obj/item/t_scanner/adv_mining_scanner,								800),
 		new /datum/data/mining_equipment("Resonator",					/obj/item/resonator,												800),
-		new /datum/data/mining_equipment("Lazarus Injector",			/obj/item/lazarus_injector,											1000),
-		new /datum/data/mining_equipment("Silver Pickaxe",				/obj/item/pickaxe/silver,											1000),
 		new /datum/data/mining_equipment("Mining Conscription Kit",		/obj/item/storage/backpack/duffelbag/mining_conscript,				1000),
-//		new /datum/data/mining_equipment("Mining Hardsuit",				/obj/item/clothing/suit/space/hardsuit/mining,						2000),
-		new /datum/data/mining_equipment("Diamond Pickaxe",				/obj/item/pickaxe/diamond,											2000),
-		new /datum/data/mining_equipment("Super Resonator",				/obj/item/resonator/upgraded,										2500),
-		new /datum/data/mining_equipment("Jump Boots",					/obj/item/clothing/shoes/bhop,										2500),
+		new /datum/data/mining_equipment("Jump Boots",					/obj/item/clothing/shoes/bhop,										3000),
 		new /datum/data/mining_equipment("KA White Tracer Rounds",		/obj/item/borg/upgrade/modkit/tracer,								100),
 		new /datum/data/mining_equipment("KA Adjustable Tracer Rounds",	/obj/item/borg/upgrade/modkit/tracer/adjustable,					150),
 		new /datum/data/mining_equipment("KA Super Chassis",			/obj/item/borg/upgrade/modkit/chassis_mod,							250),
@@ -255,14 +263,17 @@
 		qdel(src)
 
 /obj/item/storage/backpack/duffelbag/mining_conscript
-	name = "mining conscription kit"
-	desc = "A kit containing everything a crewmember needs to support a shaft miner in the field."
+	name = "explorer conscription kit"
+	desc = "A kit containing everything a crewmember needs to commence exploration out in the Wastes."
 
 /obj/item/storage/backpack/duffelbag/mining_conscript/PopulateContents()
 	new /obj/item/pickaxe/mini(src)
 	new /obj/item/clothing/glasses/meson(src)
 	new /obj/item/t_scanner/adv_mining_scanner/lesser(src)
 	new /obj/item/storage/bag/ore(src)
+	new /obj/item/clothing/gloves/color/black(src)
+	new /obj/item/clothing/shoes/workboots/mining(src)
+	new /obj/item/clothing/under/rank/miner/lavaland
 	new /obj/item/clothing/suit/hooded/explorer(src)
 	new /obj/item/encryptionkey/headset_cargo(src)
 	new /obj/item/clothing/mask/gas/explorer(src)
