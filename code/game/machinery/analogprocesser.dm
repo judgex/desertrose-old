@@ -42,7 +42,7 @@
 		if(bowl)
 			new /obj/item/reagent_containers/glass/bowl(T)
 	. = ..()
-	
+
 
 /obj/structure/chopping_block/attackby(obj/item/I, mob/living/user, params)
 	if(build_stage == 1)
@@ -65,7 +65,7 @@
 		completed = TRUE
 		qdel(I)
 		qdel(src)
-	
+
 /obj/machinery/processor/chopping_block
 	name = "chopping block"
 	desc = "A primitive version that cavemen used to use for processing food. Yuck!"
@@ -91,10 +91,10 @@
 	if(processing)
 		to_chat(user, "<span class='warning'>[src] is in the process of processing!</span>")
 		return TRUE
-	if(istype(O, /obj/item/wrench))
-		src.Destroy()
-	if(istype(O, /obj/item/screwdriver))
-		src.Destroy()
+
+	if(istype(O, /obj/item/wrench) || istype(O, /obj/item/screwdriver))
+		return
+
 	if(istype(O, /obj/item/storage/bag/tray))
 		var/obj/item/storage/T = O
 		var/loaded = 0
