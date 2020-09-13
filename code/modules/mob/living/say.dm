@@ -303,10 +303,11 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 		if(!ignore_spam && client.handle_spam_prevention(message,MUTE_IC))
 			return 0
 	var/static/regex/slurs = regex("раиссея|метагей|тритор|тр@п|тр*п|павергейм|повергейм|генокрад|нюка|порошенко|брейнрот|лол|кек|азаза|ванотян|вуна|лолечка|лоли|фоллач|фолач|хостинг", "i")
-	var/static/regex/memes = regex("лукашенко|путин|lmao|ayy|lol|kek|cheburek|ежжи|спанчбоб|рофл|uwu|owo|0w0", "i")
+	var/static/regex/memes = regex("лукашенко|путин|lmao|ayy|lol|kek|cheburek|ежжи|спанчбоб|рофл|uwu|owo|0w0|@w@|>w<|обэма|>w>|blacklivesmatters|BLM|вуася|алейкум|украина|зеленский", "i")
 	if(findtext_char(message, memes))
 		to_chat(src, "<B>Nice meme...</B>")
-		message_admins("[key_name_admin(client)] мемы в ИЦ...: [message]")
+		message_admins("[key_name_admin(client)] мемы в ИЦ... Гибаю хуйлана: [message]")
+		src.gib()
 		return 0
 	if(findtext_char(message, slurs))
 		to_chat(src, "<B>No OOC in IC.</B>")
