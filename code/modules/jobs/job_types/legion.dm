@@ -65,6 +65,8 @@ Needs whitelist
 	access = list()
 	minimal_access = list()
 
+	exp_requirements = 300
+	exp_type = EXP_TYPE_LEGION
 
 /datum/job/CaesarsLegion/Legionnaire/f13legate/after_spawn(mob/living/carbon/human/H, mob/M)
 	H.add_quirk("Hard Yards")
@@ -86,6 +88,7 @@ Needs whitelist
 		/obj/item/ammo_box/magazine/m556/rifle=2, \
 		/obj/item/flashlight/flare/torch=1, \
 		/obj/item/storage/bag/money/small/legion)
+
 
 /*
 Centurion
@@ -175,6 +178,9 @@ Orator
 	description = "You are the the resonator of Caesar's better wills; a Legionnaire who has, perhaps through injury or advanced age, proven himself unable to fight effectively any longer. Instead of facing \"retirement\" in the Legion, one of your superiors took note of your studies and way with words, and you have been made the face and voice of the Conturbernae."
 	supervisors = "the Centurion"
 
+	exp_requirements = 65
+	exp_type = EXP_TYPE_LEGION
+
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13orator
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13orator
@@ -202,6 +208,9 @@ Priestess of Mars
 	supervisors = "the Centurion, Mars"
 
 	outfit = /datum/outfit/job/CaesarsLegion/f13priestess
+
+	exp_requirements = 100
+	exp_type = EXP_TYPE_LEGION
 
 /datum/outfit/job/CaesarsLegion/f13priestess
 	name = "Priestess of Mars"
@@ -323,6 +332,9 @@ Decanii
 	description = "You answer directly to the Centurion, working with them to organize the Legionaries. You lead the Veteran Legionaries on patrols, raids and scouting missions on behalf of your Centurion."
 	supervisors = "the Centurion"
 
+	exp_requirements = 65
+	exp_type = EXP_TYPE_LEGION
+
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13decanvet
 
 /datum/job/CaesarsLegion/Legionnaire/f13decanvet/after_spawn(mob/living/carbon/human/H, mob/M)
@@ -363,6 +375,9 @@ Decanii
 	description = "You answer directly to the Centurion, working with them to organize the Legionaries. You lead the Prime Legionaries on patrols, raids and scouting missions on behalf of your Centurion."
 	supervisors = "the Veteran Decanus and the Centurion"
 
+	exp_requirements = 60
+	exp_type = EXP_TYPE_LEGION
+
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13decan
 
 /datum/job/CaesarsLegion/Legionnaire/f13decanrec/after_spawn(mob/living/carbon/human/H, mob/M)
@@ -401,6 +416,9 @@ Decanii
 	spawn_positions = 1
 	description = "You answer directly to the Centurion, working with them to organize the Legionaries. You lead the Recruit Legionaries on patrols, raids and scouting missions on behalf of your Centurion."
 	supervisors = "the Prime Decanus and the Centurion"
+
+	exp_requirements = 50
+	exp_type = EXP_TYPE_LEGION
 
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13decanrec
 
@@ -443,6 +461,9 @@ Vexillarius
 	spawn_positions = 1
 	description = "You answer directly to the Decani and the Centurion, acting as a standard bearer for your squad. You raise troop morale, relay orders from the Decanii and the Centurion, and rally men when ordered, however, you hold no actual authority over the troops and should instead only relay orders from your superiors."
 	supervisors = "the Decani and Centurion"
+
+	exp_requirements = 45
+	exp_type = EXP_TYPE_LEGION
 
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13vexillarius
 
@@ -504,6 +525,9 @@ datum/job/CaesarsLegion/Legionnaire/f13slavemaster
 	description = "You are the feared and respected disciplinary corps of the Legion. Acting as both master of the Slaves and de-facto executioner of the Centurion's will within his ranks, you are a faceless and undoubtedly cruel torturer... but be careful to not let your hubris and malice lead to a strikeback from those you thought broken."
 	supervisors = "the Decani and Centurion"
 
+	exp_requirements = 35
+	exp_type = EXP_TYPE_LEGION
+
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13slavemaster
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13slavemaster
@@ -540,6 +564,9 @@ Veteran Legionary
 	supervisors = "the Decani and Centurion"
 
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13vetlegionary
+
+	exp_requirements = 65
+	exp_type = EXP_TYPE_LEGION
 
 	loadout_options = list(
 	/datum/outfit/loadout/vetlegassault, //scoped .44 revolver
@@ -603,6 +630,9 @@ Prime Legionairy
 	spawn_positions = 3
 	description = "You answer to the Decani and the Centurion, as well as Veterans above you. Acting as a loyal soldier of the Centuria, you have the great honour of serving under Caesar in his quest to unite the scattered tribes of The Mojave. You have been through enough battles to call yourself a prime, but you are by no means yet a Veteran."
 	supervisors = "the Decani and Centurion"
+
+	exp_requirements = 35
+	exp_type = EXP_TYPE_LEGION
 
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13legionary
 

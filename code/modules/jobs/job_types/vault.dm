@@ -43,6 +43,8 @@ Overseer
 
 	access = list()			//See get_access()
 	minimal_access = list()	//See get_access()
+	exp_requirements = 580
+	exp_type = EXP_TYPE_CREW
 
 /datum/job/vault/f13overseer/get_access()
 	return get_all_accesses()
@@ -100,6 +102,9 @@ Head of Security
 						ACCESS_MORGUE, ACCESS_ALL_PERSONAL_LOCKERS, ACCESS_MINING, ACCESS_MEDICAL, ACCESS_CARGO, ACCESS_HEADS,
 						ACCESS_HOS, ACCESS_RC_ANNOUNCE, ACCESS_KEYCARD_AUTH, ACCESS_MINERAL_STOREROOM)
 
+	exp_requirements = 380
+	exp_type = EXP_TYPE_CREW
+
 /datum/outfit/job/vault/f13hos
 	name = "Chief of Security"
 	jobtype = /datum/job/vault/f13hos
@@ -145,6 +150,9 @@ Medical Doctor
 
 	access = list(ACCESS_MEDICAL, ACCESS_MORGUE, ACCESS_SURGERY, ACCESS_CHEMISTRY, ACCESS_MINERAL_STOREROOM, ACCESS_CARGO)
 	minimal_access = list(ACCESS_MEDICAL, ACCESS_MORGUE, ACCESS_SURGERY, ACCESS_CHEMISTRY, ACCESS_MINERAL_STOREROOM, ACCESS_CARGO)
+
+	exp_requirements = 280
+	exp_type = EXP_TYPE_CREW
 
 /datum/outfit/job/vault/f13doctor
 	name = "Medical Doctor"
@@ -192,6 +200,9 @@ Scientist
 	access = list(ACCESS_ROBOTICS, ACCESS_RESEARCH, ACCESS_MINERAL_STOREROOM, ACCESS_TECH_STORAGE, ACCESS_CARGO)
 	minimal_access = list(ACCESS_ROBOTICS, ACCESS_RESEARCH, ACCESS_MINERAL_STOREROOM, ACCESS_CARGO)
 
+	exp_requirements = 250
+	exp_type = EXP_TYPE_CREW
+
 /datum/outfit/job/vault/f13vaultscientist
 	name = "Scientist"
 	jobtype = /datum/job/vault/f13vaultscientist
@@ -227,6 +238,8 @@ Security Officer
 	access = list(ACCESS_CARGO, ACCESS_SECURITY, ACCESS_SEC_DOORS, ACCESS_BRIG, ACCESS_MORGUE, ACCESS_WEAPONS, ACCESS_FORENSICS_LOCKERS, ACCESS_MINERAL_STOREROOM)
 	minimal_access = list(ACCESS_CARGO, ACCESS_SECURITY, ACCESS_SEC_DOORS, ACCESS_BRIG, ACCESS_WEAPONS, ACCESS_MINERAL_STOREROOM) //BUT SEE /DATUM/JOB/WARDEN/GET_ACCESS()
 
+	exp_requirements = 290
+	exp_type = EXP_TYPE_CREW
 
 /datum/job/vault/f13officer/get_access()
 	var/list/L = list()
@@ -378,6 +391,9 @@ Vault Engineer
 
 	access = list(ACCESS_CARGO, ACCESS_ENGINE, ACCESS_ENGINE_EQUIP, ACCESS_TECH_STORAGE, ACCESS_ATMOSPHERICS, ACCESS_TCOMSAT, ACCESS_MINERAL_STOREROOM)
 	minimal_access = list(ACCESS_CARGO, ACCESS_ENGINE, ACCESS_ENGINE_EQUIP, ACCESS_TECH_STORAGE, ACCESS_MINERAL_STOREROOM)
+
+	exp_requirements = 220
+	exp_type = EXP_TYPE_CREW
 
 /datum/outfit/job/vault/f13vaultengineer
 	name = "Vault-tec Engineer"

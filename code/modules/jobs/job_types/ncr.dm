@@ -30,6 +30,9 @@ Colonel
 	total_positions = 0
 	spawn_positions = 0
 
+	exp_requirements = 300
+	exp_type = EXP_TYPE_NCR
+
 	outfit = /datum/outfit/job/ncr/f13colonel
 
 /datum/outfit/job/ncr/f13colonel/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -71,6 +74,9 @@ Captain
 	description = "You are the commanding officer of your company and direct superior to the Veteran Ranger and Lieutenant. Coordinating with your staff, you must ensure that the objectives of High Command are completed to the letter. Working closely with your subordinates on logistics, mission planning and special operations with the Rangers, you are here to establish a strong foothold for the NCR within the region."
 	supervisors = "Colonel"
 	req_admin_notify = 1
+
+	exp_requirements = 200
+	exp_type = EXP_TYPE_NCR
 
 	outfit = /datum/outfit/job/ncr/f13captain
 
@@ -145,6 +151,9 @@ Ambassador
 	supervisors = "Colonel"
 	req_admin_notify = 1
 
+	exp_requirements = 30
+	exp_type = EXP_TYPE_NCR
+
 	outfit = /datum/outfit/job/ncr/f13ambassador
 
 /datum/outfit/job/ncr/f13ambassador
@@ -177,6 +186,9 @@ Lieutenant
 	description = "You are the direct superior to the Sergeant and Enlisted, working with the Captain and under special circumstances, Rangers. You plan patrols, training and missions, working in some cases with Rangers in accomplishing objectives otherwise beyond the capabilities of ordinary enlisted personnel."
 	supervisors = "Captain and above"
 	selection_color = "#fff5cc"
+
+	exp_requirements = 65
+	exp_type = EXP_TYPE_NCR
 
 	outfit = /datum/outfit/job/ncr/f13lieutenant
 
@@ -255,6 +267,9 @@ Sergeant
 	supervisors = "Lieutenants and above"
 	selection_color = "#fff5cc"
 
+	exp_requirements = 60
+	exp_type = EXP_TYPE_NCR
+
 	outfit = /datum/outfit/job/ncr/f13sergeant
 
 	loadout_options = list(
@@ -309,6 +324,9 @@ Corporal
 	description = "You are an experienced enlisted soldier with a high degree of skill in a particular area. You work closely with your squad, taking orders from your Sergeant to achieve the NCR's goals."
 	supervisors = "Sergeants and above"
 	selection_color = "#fff5cc"
+
+	exp_requirements = 50
+	exp_type = EXP_TYPE_NCR
 
 	outfit = /datum/outfit/job/ncr/f13specialist
 
@@ -385,6 +403,9 @@ NCR Heavy Trooper
 	supervisors = "the officers"
 	selection_color = "#fff5cc"
 
+	exp_requirements = 50
+	exp_type = EXP_TYPE_NCR
+
 	outfit = /datum/outfit/job/ncr/f13ncrht
 
 	loadout_options = list(
@@ -438,6 +459,9 @@ NCR Military Police
 
 	outfit = /datum/outfit/job/ncr/f13ncrmp
 
+	exp_requirements = 30
+	exp_type = EXP_TYPE_NCR
+
 /datum/outfit/job/ncr/f13ncrmp
 	name = "NCR Military Police"
 	jobtype = /datum/job/ncr/f13ncrmp
@@ -472,7 +496,7 @@ Trooper
 	description = "You answer to everyone above you in the chain of command, taking orders from your Sergeant directly and obeying all commands given by officers such as the Lieutenant and Captain."
 	supervisors = "Corporals and above"
 	selection_color = "#fff5cc"
-	exp_requirements = 12
+	exp_requirements = 20
 	exp_type = EXP_TYPE_NCR
 
 	outfit = /datum/outfit/job/ncr/f13trooper
@@ -526,7 +550,7 @@ Recruit
 	supervisors = "everyone in the NCR"
 	selection_color = "#fff5cc"
 	exp_requirements = 12
-	exp_type = EXP_TYPE_CREW
+	exp_type = EXP_TYPE_WASTELAND
 
 	outfit = /datum/outfit/job/ncr/f13recruit
 
@@ -589,7 +613,7 @@ Recruit
 	supervisors = "NCR Administrator"
 	selection_color = "#fff5cc"
 	exp_requirements = 12
-	exp_type = EXP_TYPE_CREW
+	exp_type = EXP_TYPE_WASTELAND
 
 	outfit = /datum/outfit/job/ncr/f13ncrcitizen
 
