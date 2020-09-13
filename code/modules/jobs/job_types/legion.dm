@@ -105,6 +105,9 @@ Centurion
 	selection_color = "#ffdddd"
 	req_admin_notify = 1
 
+	exp_requirements = 250
+	exp_type = EXP_TYPE_LEGION
+
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13centurion
 
 	loadout_options = list(
@@ -719,6 +722,9 @@ Venator
 	supervisors = "the Centurion"
 	selection_color = "#ffdddd"
 
+	exp_requirements = 45
+	exp_type = EXP_TYPE_LEGION
+
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13venator
 
 	loadout_options = list(
@@ -772,6 +778,9 @@ Explorer
 	spawn_positions = 2
 	description = "Acting as the eyes and ears of the Legion, you are in the region to scout it out for potential conquest. Make note of your surroundings and above all, survive to report back."
 	supervisors = "the Venator and Centurion"
+
+	exp_requirements = 40
+	exp_type = EXP_TYPE_LEGION
 
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13explorer
 

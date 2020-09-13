@@ -584,6 +584,9 @@ Recruit
 	supervisors = "Ambassador or Captain"
 	selection_color = "#fff5cc"
 
+	exp_requirements = 70
+	exp_type = EXP_TYPE_NCR
+
 	outfit = /datum/outfit/job/ncr/f13ncradmin
 
 /datum/outfit/job/ncr/f13ncradmin
@@ -694,6 +697,9 @@ Veteran Ranger
 	description = "You answer directly to the Captain, working either independently or in a team to complete your mission objectives however required, operating either alone, in a squad or with the NCR Army. Your primary mission is to improve general opinion of the Republic and to neutralize slavers and raiders operating in the area."
 	supervisors = "Captain and above"
 	selection_color = "#ffeeaa"
+
+	exp_requirements = 80
+	exp_type = EXP_TYPE_NCR
 
 	outfit = /datum/outfit/job/ncr/f13vetranger
 
@@ -839,6 +845,9 @@ Ranger -- Split into Patrol and Scout
 	supervisors = "Veteran Ranger"
 	selection_color = "#fff5cc"
 
+	exp_requirements = 90
+	exp_type = EXP_TYPE_NCR
+
 	outfit = /datum/outfit/job/ncr/f13rangerpatrol
 
 /datum/job/ncr/f13rangerpatrol/after_spawn(mob/living/carbon/human/H, mob/M)
@@ -883,6 +892,9 @@ Ranger -- Split into Patrol and Scout
 	description = "As a Scout Ranger, you perform reconnaissance and assist in special operations for the Republic. Your reason for being sent here is to identify and neutralize threats to the Republic and to assist Patrol Rangers in identifying slavers and raiders so that they can be brought to justice."
 	supervisors = "Veteran Ranger"
 	selection_color = "#fff5cc"
+
+	exp_requirements = 90
+	exp_type = EXP_TYPE_NCR
 
 	outfit = /datum/outfit/job/ncr/f13rangerscout
 

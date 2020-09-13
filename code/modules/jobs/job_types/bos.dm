@@ -48,6 +48,9 @@ Elder
 	total_positions = 0
 	spawn_positions = 0
 
+	exp_requirements = 400
+	exp_type = EXP_TYPE_BROTHERHOOD
+
 	outfit = /datum/outfit/job/bos/f13elder
 
 	access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_MINERAL_STOREROOM, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
@@ -88,6 +91,9 @@ Sentinel
 	enforces = "The Brotherhood of Steel Expects: Obeying the Chain That - Binds your direct superior. Collection and safeguarding of technology from the wasteland. Experimentation and research."
 	supervisors = "the elder"
 	selection_color = "#7f8c8d"
+
+	exp_requirements = 300
+	exp_type = EXP_TYPE_BROTHERHOOD
 
 	loadout_options = list(
 	/datum/outfit/loadout/sentstand, //Tribeam laser and 10mm pistol
@@ -167,6 +173,9 @@ Head Scribe
 	supervisors = "the elder"
 	selection_color = "#7f8c8d"
 
+	exp_requirements = 250
+	exp_type = EXP_TYPE_BROTHERHOOD
+
 	loadout_options = list(
 	/datum/outfit/loadout/hsstand, //Pulse pistol, and medbeam
 	/datum/outfit/loadout/hspract //Needler and hypospray
@@ -232,6 +241,9 @@ Knight-Captain
 	enforces = "The Brotherhood of Steel Expects: Obeying the Chain That - Binds your direct superior. Collection and safeguarding of technology from the wasteland. Experimentation and research."
 	supervisors = "the Sentinel"
 	selection_color = "#7f8c8d"
+
+	exp_requirements = 150
+	exp_type = EXP_TYPE_BROTHERHOOD
 
 	loadout_options = list(
 	/datum/outfit/loadout/capstand, //AER9 and 10mm pistol
@@ -316,6 +328,9 @@ Senior Paladin
 	supervisors = "the Sentinel"
 	selection_color = "#95a5a6"
 
+	exp_requirements = 100
+	exp_type = EXP_TYPE_BROTHERHOOD
+
 	loadout_options = list(
 		/datum/outfit/loadout/spaladina, //M72 Gauss rifle and Glock
 		/datum/outfit/loadout/spaladinc, //AER14 and N99. No more gatling. Sorry gamers; will balance it further and make it obtainable through other means.
@@ -376,6 +391,9 @@ Paladin
 	enforces = "The Brotherhood of Steel Expects: Obeying the Chain That - Binds your direct superior. Collection and safeguarding of technology from the wasteland. Experimentation and research."
 	supervisors = "the Sentinel, or Senior Paladin"
 	selection_color = "#95a5a6"
+
+	exp_requirements = 90
+	exp_type = EXP_TYPE_BROTHERHOOD
 
 	loadout_options = list(
 	/datum/outfit/loadout/paladina, //Carbine and aep7
@@ -461,6 +479,9 @@ Senior Scribe
 	supervisors = "the Head Scribe"
 	selection_color = "#95a5a6"
 
+	exp_requirements = 60
+	exp_type = EXP_TYPE_BROTHERHOOD
+
 	outfit = /datum/outfit/job/bos/f13seniorscribe
 
 	access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
@@ -505,6 +526,9 @@ Scribe
 	enforces = "The Brotherhood of Steel Expects: Obeying the Chain That - Binds your direct superior. Collection and safeguarding of technology from the wasteland. Experimentation and research."
 	supervisors = "the Head Scribe"
 	selection_color = "#95a5a6"
+
+	exp_requirements = 50
+	exp_type = EXP_TYPE_BROTHERHOOD
 
 	loadout_options = list(
 	/datum/outfit/loadout/scribea,
@@ -571,6 +595,9 @@ datum/job/bos/f13seniorknight
 	/datum/outfit/loadout/sknightb, //lever shotgun and teleshield
 	)
 
+	exp_requirements = 20
+	exp_type = EXP_TYPE_BROTHERHOOD
+
 	outfit = /datum/outfit/job/bos/f13seniorknight
 
 	access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
@@ -628,6 +655,9 @@ Knight
 	enforces = "The Brotherhood of Steel Expects: Obeying the Chain That - Binds your direct superior. Collection and safeguarding of technology from the wasteland. Experimentation and research."
 	supervisors = "the Knight-Captain, or Senior Knight"
 	selection_color = "#95a5a6"
+
+	exp_requirements = 20
+	exp_type = EXP_TYPE_BROTHERHOOD
 
 	loadout_options = list(
 	/datum/outfit/loadout/knighta, //AER9
@@ -705,7 +735,7 @@ Initiate
 	enforces = "The Brotherhood of Steel Expects: Obeying the Chain That - Binds your direct superior. Collection and safeguarding of technology from the wasteland. Experimentation and research."
 	supervisors = "the scribes, knights, or Paladins"
 	selection_color = "#95a5a6"
-	exp_requirements = 12
+	exp_requirements = 120
 	exp_type = EXP_TYPE_CREW
 
 	loadout_options = list(
@@ -781,6 +811,9 @@ Off-Duty
 	/datum/outfit/loadout/offk, //Senior Paladin
 	/datum/outfit/loadout/offl, //Sentinel
 	)
+
+	exp_requirements = 120
+	exp_type = EXP_TYPE_CREW
 
 	outfit = /datum/outfit/job/bos/f13offdutybos
 

@@ -44,7 +44,7 @@ Overseer
 	access = list()			//See get_access()
 	minimal_access = list()	//See get_access()
 	exp_requirements = 580
-	exp_type = EXP_TYPE_CREW
+	exp_type = EXP_TYPE_VAULT
 
 /datum/job/vault/f13overseer/get_access()
 	return get_all_accesses()
@@ -103,7 +103,7 @@ Head of Security
 						ACCESS_HOS, ACCESS_RC_ANNOUNCE, ACCESS_KEYCARD_AUTH, ACCESS_MINERAL_STOREROOM)
 
 	exp_requirements = 380
-	exp_type = EXP_TYPE_CREW
+	exp_type = EXP_TYPE_VAULT
 
 /datum/outfit/job/vault/f13hos
 	name = "Chief of Security"
@@ -152,7 +152,7 @@ Medical Doctor
 	minimal_access = list(ACCESS_MEDICAL, ACCESS_MORGUE, ACCESS_SURGERY, ACCESS_CHEMISTRY, ACCESS_MINERAL_STOREROOM, ACCESS_CARGO)
 
 	exp_requirements = 280
-	exp_type = EXP_TYPE_CREW
+	exp_type = EXP_TYPE_VAULT
 
 /datum/outfit/job/vault/f13doctor
 	name = "Medical Doctor"
@@ -201,7 +201,7 @@ Scientist
 	minimal_access = list(ACCESS_ROBOTICS, ACCESS_RESEARCH, ACCESS_MINERAL_STOREROOM, ACCESS_CARGO)
 
 	exp_requirements = 250
-	exp_type = EXP_TYPE_CREW
+	exp_type = EXP_TYPE_VAULT
 
 /datum/outfit/job/vault/f13vaultscientist
 	name = "Scientist"
@@ -239,7 +239,7 @@ Security Officer
 	minimal_access = list(ACCESS_CARGO, ACCESS_SECURITY, ACCESS_SEC_DOORS, ACCESS_BRIG, ACCESS_WEAPONS, ACCESS_MINERAL_STOREROOM) //BUT SEE /DATUM/JOB/WARDEN/GET_ACCESS()
 
 	exp_requirements = 290
-	exp_type = EXP_TYPE_CREW
+	exp_type = EXP_TYPE_VAULT
 
 /datum/job/vault/f13officer/get_access()
 	var/list/L = list()
@@ -393,7 +393,7 @@ Vault Engineer
 	minimal_access = list(ACCESS_CARGO, ACCESS_ENGINE, ACCESS_ENGINE_EQUIP, ACCESS_TECH_STORAGE, ACCESS_MINERAL_STOREROOM)
 
 	exp_requirements = 220
-	exp_type = EXP_TYPE_CREW
+	exp_type = EXP_TYPE_VAULT
 
 /datum/outfit/job/vault/f13vaultengineer
 	name = "Vault-tec Engineer"
