@@ -275,7 +275,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	set category = "OOC"
 	set name = "Ghost"
 	set desc = "Relinquish your life and enter the land of the dead."
-	set hidden 1
+	set hidden = TRUE
 
 	if(stat != DEAD)
 		succumb()
@@ -292,7 +292,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	set category = "OOC"
 	set name = "Ghost"
 	set desc = "Relinquish your life and enter the land of the dead."
-	set hidden 1
+	set hidden = TRUE
 	var/response = alert(src, "Are you -sure- you want to ghost?\n(You are alive. If you ghost whilst still alive you may not play again this round! You can't change your mind so choose wisely!!)","Are you sure you want to ghost?","Ghost","Stay in body")
 	if(response != "Ghost")
 		return
