@@ -306,8 +306,9 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 	var/static/regex/memes = regex("лукашенко|путин|lmao|ayy|lol|kek|cheburek|ежжи|спанчбоб|рофл|uwu|owo|0w0|@w@|>w<|обэма|>w>|blacklivesmatters|BLM|вуася|алейкум|украина|зеленский", "i")
 	if(findtext_char(message, memes))
 		to_chat(src, "<B>Nice meme...</B>")
+		to_chat(src, "<img src=\"https://media.discordapp.net/attachments/150333355303370752/666377552381739075/utycfu67.gif\">")
 		message_admins("[key_name_admin(client)] мемы в ИЦ... Гибаю хуйлана: [message]")
-		src.gib()
+
 		return 0
 	if(findtext_char(message, slurs))
 		to_chat(src, "<B>No OOC in IC.</B>")
