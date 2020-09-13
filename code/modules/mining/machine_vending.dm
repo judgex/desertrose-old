@@ -273,7 +273,7 @@
 	new /obj/item/storage/bag/ore(src)
 	new /obj/item/clothing/gloves/color/black(src)
 	new /obj/item/clothing/shoes/workboots/mining(src)
-	new /obj/item/clothing/under/rank/miner/lavaland
+	new /obj/item/clothing/under/rank/miner/lavaland(src)
 	new /obj/item/clothing/suit/hooded/explorer(src)
 	new /obj/item/encryptionkey/headset_cargo(src)
 	new /obj/item/clothing/mask/gas/explorer(src)
