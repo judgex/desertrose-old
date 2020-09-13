@@ -45,15 +45,15 @@
 			log_admin("[key_name(src)] has attempted to advertise in OOC: [msg]")
 			message_admins("[key_name_admin(src)] попытался рекламировать: [msg]")
 			return
-		var/static/regex/slurs = regex("негр|хуйло|трап|трансуха|педик|пидор|лесбуха|хуйлан|лошара|сучара|хуесос", "i")
+		var/static/regex/slurs = regex("pedo|loli|shota|негр|хуйло|трап|трансуха|педик|пидор|лесбуха|хуйлан|лошара|сучара|хуесос|пизда|хуёвина|fagg|asshole|fuck|blyat|блять|блядь|pidor|dolboeb|долбоеб|пиздохуёвина|педик|desrt rose", "i")
 		if(findtext(msg, slurs))
-			to_chat(src, "<B>Никаких оскорблений.</B>")
+			to_chat(src, "<B>Slurs are not allowed.</B>")
 			log_admin("[key_name(src)] has triggered the slur filter (OOC): [msg].")
 			message_admins("[key_name_admin(src)] спровоцировал фильтр оскорблений (OOC): [msg].")
 			return
 		if(CONFIG_GET(flag/blockoocurls))
 			if(findtext(msg, "://") || findtext(msg, "www."))
-				to_chat(src, "<B>Постинг кликабельных ссылок запрещён.</B>")
+				to_chat(src, "<B>Posting clickable links in OOC is not allowed.</B>")
 				log_admin("[key_name(src)] has attempted to post a clickable link in OOC: [msg]")
 				message_admins("[key_name_admin(src)] попытался запостить ссылку: [msg]")
 				return

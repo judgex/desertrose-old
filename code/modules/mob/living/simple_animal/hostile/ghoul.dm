@@ -1,5 +1,5 @@
 /mob/living/simple_animal/hostile/ghoul
-	name = "дикий гуль"
+	name = "feral ghoul"
 	desc = "A ghoul that has lost it's mind and become aggressive."
 	icon = 'icons/mob/ghouls.dmi'
 	icon_state = "retro_ghoul"
@@ -18,7 +18,7 @@
 	melee_damage_lower = 10
 	melee_damage_upper = 10
 	attacktext = "claws"
-	attack_sound = 'sound/hallucinations/growl1.ogg'
+	attack_sound = 'sound/weapons/punch1.ogg'
 	atmos_requirements = list("min_oxy" = 5, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 1, "min_co2" = 0, "max_co2" = 5, "min_n2" = 0, "max_n2" = 0)
 	unsuitable_atmos_damage = 20
 	robust_searching = 0
@@ -76,7 +76,7 @@
 	melee_damage_upper = 15
 
 /mob/living/simple_animal/hostile/ghoul/glowing
-	name = "светящийся гуль"
+	name = "glowing ghoul"
 	desc = "A feral ghoul that has absorbed massive amounts of radiation, causing them to glow in the dark and radiate constantly."
 	icon_state = "retro_glowghoul-1"
 	icon_living = "retro_glowghoul-1"

@@ -270,6 +270,7 @@ Works together with spawning an observer, noted above.
 /*
 This is the proc mobs get to turn into a ghost. Forked from ghostize due to compatibility issues.
 */
+/*
 /mob/living/verb/ghost()
 	set category = "OOC"
 	set name = "Ghost"
@@ -285,6 +286,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 			return	//didn't want to ghost after-all
 		ghostize(0)						//0 parameter is so we can never re-enter our body, "Charlie, you can never come baaaack~" :3
 
+
 /mob/camera/verb/ghost()
 	set category = "OOC"
 	set name = "Ghost"
@@ -294,7 +296,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	if(response != "Ghost")
 		return
 	ghostize(0)
-
+*/
 /mob/dead/observer/Move(NewLoc, direct)
 	if(updatedir)
 		setDir(direct)//only update dir if we actually need it, so overlays won't spin on base sprites that don't have directions of their own

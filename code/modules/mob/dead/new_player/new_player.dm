@@ -33,7 +33,7 @@
 	return
 
 /mob/dead/new_player/proc/new_player_panel()
-	var/output = "<center><p><a href='byond://?src=[REF(src)];show_preferences=1'>Настройка персонажа</a></p>"
+	var/output = "<center><p><a href='byond://?src=[REF(src)];show_preferences=1'>Setup Character</a></p>"
 
 	if(SSticker.current_state <= GAME_STATE_PREGAME)
 	/*
@@ -45,11 +45,11 @@
 			if(PLAYER_READY_TO_OBSERVE)
 				output += "<p>\[ [LINKIFY_READY("Ready", PLAYER_READY_TO_PLAY)] | [LINKIFY_READY("Not Ready", PLAYER_NOT_READY)] | <b> Observe </b> \]</p>"
 	*/
-		output += "<p>Будьте терпеливы, игра скоро начнётся!</p>"
-		output += "<p><a href='byond://?src=[REF(src)];refresh=1'>(Обновить)</a></p>"
+		output += "<p>Game will start soon!</p>"
+		output += "<p><a href='byond://?src=[REF(src)];refresh=1'>(Refresh)</a></p>"
 	else
-		output += "<p><a href='byond://?src=[REF(src)];manifest=1'>Список играющих</a></p>"
-		output += "<p><a href='byond://?src=[REF(src)];late_join=1'>Зайти в игру!</a></p>"
+		output += "<p><a href='byond://?src=[REF(src)];manifest=1'>Player List</a></p>"
+		output += "<p><a href='byond://?src=[REF(src)];late_join=1'>Join Game!</a></p>"
 
 	if(!IsGuestKey(src.key))
 		if (SSdbcore.Connect())

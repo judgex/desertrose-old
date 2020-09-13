@@ -64,7 +64,7 @@ window "mainwindow"
 		is-default = true
 		saved-params = "pos;size;is-minimized;is-maximized"
 		title = "Fallout 13 - Свет Атома"
-		icon = 'icons\\ss13_32.png'
+		icon = 'icons\\logo.png'
 		macro = "default"
 		menu = "menu"
 		outer-size = 656x518

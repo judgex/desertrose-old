@@ -1,9 +1,9 @@
 // 'basic' language; spoken by default.
 /datum/language/common
-	name = "Английский язык"
+	name = "English language"
 	desc = "The common galactic tongue."
-	speech_verb = "говорит"
-	whisper_verb = "шепчет"
+	speech_verb = "says"
+	whisper_verb = "whispers"
 	key = "0"
 	flags = TONGUELESS_SPEECH | LANGUAGE_HIDE_ICON_IF_UNDERSTOOD
 	default_priority = 100

@@ -100,13 +100,13 @@ proc/get_top_level_mob(var/mob/S)
 
 /datum/emote/living/subtle/proc/check_invalid(mob/user, input)
 	. = TRUE
-	if(copytext_char(input,1,5) == "говорит")
+	if(copytext_char(input,1,5) == "says")
 		to_chat(user, "<span class='danger'>Invalid emote.</span>")
-	else if(copytext_char(input,1,9) == "восклицает")
+	else if(copytext_char(input,1,9) == "exclaims")
 		to_chat(user, "<span class='danger'>Invalid emote.</span>")
-	else if(copytext_char(input,1,6) == "кричит")
+	else if(copytext_char(input,1,6) == "yells")
 		to_chat(user, "<span class='danger'>Invalid emote.</span>")
-	else if(copytext_char(input,1,5) == "спрашивает")
+	else if(copytext_char(input,1,5) == "asks")
 		to_chat(user, "<span class='danger'>Invalid emote.</span>")
 	else
 		. = FALSE
