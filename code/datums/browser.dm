@@ -429,6 +429,8 @@
 // to pass a "close=1" parameter to the atom's Topic() proc for special handling.
 // Otherwise, the user mob's machine var will be reset directly.
 //
+
+/* Below is the Bay version. Let's try that one
 /proc/onclose(mob/user, windowid, atom/ref=null)
 	if(!user.client)
 		return
@@ -437,6 +439,17 @@
 		param = "[REF(ref)]"
 
 	winset(user, windowid, "on-close=\".windowclose [param]\"")
+*/
+
+/proc/onclose(mob/user, windowid, var/atom/ref=null)
+	if(!user || !user.client) return
+	var/param = "null"
+	if(ref)
+		param = "\ref[ref]"
+
+	spawn(2)
+		if(!user.client) return
+		winset(user, windowid, "on-close=\".windowclose [param]\"")
 
 
 
