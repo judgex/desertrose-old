@@ -302,17 +302,17 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 			return 0
 		if(!ignore_spam && client.handle_spam_prevention(message,MUTE_IC))
 			return 0
-	var/static/regex/slurs = regex("раиссея|метагей|тритор|тр@п|тр*п|павергейм|повергейм|генокрад|нюка|порошенко|брейнрот|лол|кек|азаза|ванотян|вуна|лолечка|лоли|фоллач|фолач|хостинг", "i")
+	var/static/regex/slurs = regex("раиссея|метагей|тритор|павергейм|повергейм|генокрад|нюка|порошенко|брейнрот|лол|кек|азаза|ванотян|вуна|лолечка|лоли|фоллач|фолач|хостинг", "i")
 	var/static/regex/memes = regex("лукашенко|путин|lmao|ayy|lol|kek|cheburek|ежжи|спанчбоб|рофл|uwu|owo|0w0|@w@|>w<|обэма|>w>|blacklivesmatters|BLM|вуася|алейкум|украина|зеленский", "i")
 	if(findtext_char(message, memes))
 		//to_chat(src, "<B>Nice meme...</B>")
 		//src.gib()
 		message_admins("[key_name_admin(client)] мемы в ИЦ...  [message]")
 		//return 0
-	if(findtext_char(message, slurs))
+	//if(findtext_char(message, slurs))
 		//to_chat(src, "<B>No OOC in IC.</B>")
-		log_admin("[key_name(client)] долбоеб пизданул ООС хуйню в ИЦ: [message]")
-		message_admins("[key_name_admin(client)] долбоеб пизданул ООС хуйню в ИЦ: [message]")
+		//log_admin("[key_name(client)] долбоеб пизданул ООС хуйню в ИЦ: [message]")
+		//message_admins("[key_name_admin(client)] долбоеб пизданул ООС хуйню в ИЦ: [message]")
 		//return 0 //Uncomment this (and the to_chat line) if we want to prevent them saying it, rather than just alert us.
 
 	return 1
