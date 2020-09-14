@@ -79,11 +79,11 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 			title = "Resolved Tickets"
 	if(!l2b)
 		return
-	var/list/dat = list("<html><head><title>[title]</title></head>")
+	var/list/dat = list("<html><meta charset=UTF-8><head><title>[title]</title></head>")
 	dat += "<A href='?_src_=holder;[HrefToken()];ahelp_tickets=[state]'>Refresh</A><br><br>"
 	for(var/I in l2b)
 		var/datum/admin_help/AH = I
-		dat += "<span class='adminnotice'><span class='adminhelp'>Ticket #[AH.id]</span>: <A href='?_src_=holder;[HrefToken()];ahelp=[REF(AH)];ahelp_action=ticket'>[AH.initiator_key_name]: [AH.name]</A></span><br>"
+		dat += "<span class='adminnotice'><meta charset=UTF-8><span class='adminhelp'>Ticket #[AH.id]</span>: <A href='?_src_=holder;[HrefToken()];ahelp=[REF(AH)];ahelp_action=ticket'>[AH.initiator_key_name]: [AH.name]</A></span><br>"
 
 	usr << browse(dat.Join(), "window=ahelp_list[state];size=600x480")
 
