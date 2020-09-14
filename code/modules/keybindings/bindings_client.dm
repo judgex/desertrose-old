@@ -60,6 +60,9 @@
 		if("F3")
 			winset(src, null, "command=say [!keys_held["shift"] ? "auto" : ""]")
 			return
+		if("F4")
+			winset(src, null, "command=asay [!keys_held["shift"] ? "auto" : ""]")
+			return
 		if("F12") // Toggles minimal HUD
 			mob.button_pressed_F12()
 			return
