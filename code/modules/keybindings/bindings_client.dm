@@ -60,6 +60,8 @@
 		if("F3")
 			winset(src, null, "command=say [!keys_held["shift"] ? "auto" : ""]")
 			return
+		if("F3")
+			winset(src, null, "command=me [keys_held["shift"] ? "auto" : ""]")
 		if("F4")
 			winset(src, null, "command=asay [!keys_held["shift"] ? "auto" : ""]")
 			return
