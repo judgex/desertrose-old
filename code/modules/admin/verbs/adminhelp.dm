@@ -396,7 +396,7 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 
 //Show the ticket panel
 /datum/admin_help/proc/TicketPanel()
-	var/list/dat = list("<html><head><title>Ticket #[id]</title></head>")
+	var/list/dat = list("<html><meta charset=UTF-8><head><title>Ticket #[id]</title></head>")
 	var/ref_src = "[REF(src)]"
 	dat += "<h4>Admin Help Ticket #[id]: [LinkedReplyName(ref_src)]</h4>"
 	dat += "<b>State: "

@@ -2,12 +2,13 @@
 	if(!check_rights())
 		return
 	log_admin("[key_name(usr)] checked the player panel.")
-	var/dat = "<html><meta charset=UTF-8><head><title>Player Panel</title></head>"
+	var/dat = "<meta charset=UTF-8><head><title>Player Panel</title></head>"
 
 	//javascript, the part that does most of the work~
 	dat += {"
 
 		<head>
+			<meta charset=UTF-8>
 			<script type='text/javascript'>
 
 				var locked_tabs = new Array();
