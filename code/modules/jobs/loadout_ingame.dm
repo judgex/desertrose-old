@@ -136,6 +136,8 @@
 	data["selected"] = selected_name
 	if (selected_name)
 		data["items"] = selected_items
+		if(!(selected_datum.name in preview_images) || !(dir2text(selected_direction) in preview_images[selected_datum.name))
+			generate_previews()
 		data["preview"] = preview_images[selected_datum.name][dir2text(selected_direction)]
 	return data
 
