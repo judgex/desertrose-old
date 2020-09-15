@@ -173,36 +173,3 @@
 	desc = "Rails, for a pre-war train. Don't stand on these."
 	icon = 'icons/obj/rails.dmi'
 	icon_state = "rails"
-
-/obj/structure/fluff/beach_railings
-	name = "beach railings"
-	desc = "A double rail."
-	icon = 'icons/obj/fluff.dmi'
-	icon_state = "railing"
-	density = FALSE
-	anchored = TRUE
-	deconstructible = FALSE
-
-/obj/structure/fluff/beach_umbrella
-	name = "beach umbrella"
-	desc = "A fancy umbrella designed to keep the sun off beach-goers."
-	icon = 'icons/obj/fluff.dmi'
-	icon_state = "brella"
-	density = FALSE
-	anchored = TRUE
-	deconstructible = FALSE
-
-/obj/structure/fluff/beach_umbrella/security
-	icon_state = "hos_brella"
-
-/obj/structure/fluff/beach_umbrella/science
-	icon_state = "rd_brella"
-
-/obj/structure/fluff/beach_umbrella/engine
-	icon_state = "ce_brella"
-
-/obj/structure/fluff/beach_umbrella/cap
-	icon_state = "cap_brella"
-
-/obj/structure/fluff/beach_umbrella/syndi
-	icon_state = "syndi_brella"

@@ -118,7 +118,7 @@
 
 
 /obj/item/gun/ballistic/shotgun/musket
-	name = "Rifled Musket"
+	name = " a Rifled Musket"
 	desc = "An old style rifled musket chambered in .58, probably made by some master craftsman or something. The design looks very antiquated, but trust me, you do not want to get shot by one of these."
 	icon_state = "1851enfield"
 	item_state = "1851enfield"

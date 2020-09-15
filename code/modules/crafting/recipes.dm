@@ -607,17 +607,6 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO_THREE
 
-/datum/crafting_recipe/minieball
-	name = "Box of musket catridges"
-	result = /obj/item/ammo_box/musketbag
-	reqs = list(/obj/item/stack/sheet/metal = 5,
-				/datum/reagent/blackpowder = 30)
-	traits = list(TRAIT_GUNSMITH_ONE)
-	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER1)
-	time = 10
-	category = CAT_WEAPONRY
-	subcategory = CAT_AMMO_THREE
-
 /datum/crafting_recipe/a50ae
 	name = ".50 AE (pistol) ammo box"
 	result = /obj/item/ammo_box/a50AEbox
@@ -1676,23 +1665,13 @@
 /datum/crafting_recipe/lasmusket
 	name = "Laser Musket"
 	result = /obj/item/gun/ballistic/shotgun/lasmusket
-	reqs = list(/obj/item/stack/crafting/electronicparts = 2,
-	/obj/item/gun/ballistic/revolver/pipe_rifle = 1,
-	/obj/item/reagent_containers/food/drinks/bottle/f13nukacola = 1,
-	/obj/item/stack/cable_coil = 3)
+	reqs = list(///obj/item/stock_parts/cell/ammo/mfc = 1, //removed since it uses one use batteries now
+				/obj/item/stack/crafting/electronicparts = 2,
+				 /obj/item/gun/ballistic/revolver/pipe_rifle = 1,
+				 
+/obj/item/reagent_containers/food/drinks/bottle/f13nukacola = 1,
+				 /obj/item/stack/cable_coil = 3)
 	tools = list(TOOL_WORKBENCH, TOOL_MULTITOOL)
-	time = 120
-	category = CAT_WEAPONRY
-	subcategory = CAT_WEAPON
-
-/datum/crafting_recipe/musket
-	name = "Rifled Musket"
-	result = /obj/item/gun/ballistic/shotgun/musket
-	reqs = list(/obj/item/stack/crafting/metalparts = 5,
-	/obj/item/stack/sheet/mineral/wood = 2,
-	/obj/item/stack/sheet/metal = 10,
-	/datum/reagent/blackpowder = 30)
-	tools = list(TOOL_WORKBENCH)
 	time = 120
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
