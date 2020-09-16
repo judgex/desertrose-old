@@ -59,7 +59,7 @@
 	self_delay = 0
 
 /obj/item/reagent_containers/pill/patch/healingpowder/attack(mob/living/L, mob/user)
-	..=()
+	.=..()
 	if(L.has_trait(TRAIT_MEDEBIL, TRAIT_GENERIC))
 		to_chat(user, "Ahh, yes, finally good medicine.")
 		list_reagents = list("healing_powder" = 18)
