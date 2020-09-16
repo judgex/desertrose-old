@@ -901,7 +901,10 @@
 		else if(!logout && CONFIG_GET(flag/announce_admin_login) && (prefs.toggles & ANNOUNCE_LOGIN))
 			if(ckey == "iwuna")
 				string = pick(
-					"ГЭНГ ГЭНГ ГЭНГ, ВУНА В ЗДАНИИ")
+					"ГЭНГ БЭНГ БЭНГ, ВУНА В ЗДАНИИ")
+			if(ckey == "vanotyan")
+				string = pick(
+					"Ванотян хуй жрал")
 			else
 				string = pick(
 					"Admin login: [key_name(src)]")
