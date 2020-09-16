@@ -14,9 +14,6 @@
 	light_type = /obj/item/light/bulb
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF //Destroying these just causes issues. Let's fucking not
 
-/obj/machinery/light/sign/break_light_tube()
-	return
-
 /obj/machinery/light/sign/update_icon()
 	return
 
