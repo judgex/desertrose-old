@@ -53,7 +53,7 @@
 	var/mutable_appearance/scope_overlay
 
 	var/can_bayonet = FALSE
-	var/can_scope = FALSE	
+	var/can_scope = FALSE
 	var/can_attachments = FALSE
 
 	var/datum/action/item_action/toggle_gunlight/alight
@@ -366,7 +366,7 @@
 			C.spread -= 8
 		else
 			C.spread = 0
-	
+
 	for(var/obj/item/D in B.contents)//D - old item
 		if(istype(D,/obj/item/attachments))
 			user.transferItemToLoc(D,C)//old attmns to new gun
@@ -379,8 +379,9 @@
 				var/obj/item/ammo_box/magazine/oldmag = D
 				X.stored_ammo = oldmag.stored_ammo
 				X.contents = oldmag.contents
-	A.Destroy()
-	B.Destroy()
+
+	qdel(A)
+	qdel(B)
 	user.put_in_hand(C,user.active_hand_index)
 
 /obj/item/gun/attackby(obj/item/I, mob/user, params)

@@ -68,8 +68,7 @@
 #define TR_KEEPSE		(1<<5)	// changelings shouldn't edit the DNA's SE when turning into a monkey
 #define TR_DEFAULTMSG	(1<<6)
 #define TR_KEEPORGANS	(1<<8)
-#define TR_KEEPREAGENTS	(1<<10)
-#define TR_KEEPSTUNS	(1<<9)
+
 
 #define CLONER_FRESH_CLONE "fresh"
 #define CLONER_MATURE_CLONE "mature"
@@ -91,9 +90,6 @@
 #define NO_DNA_COPY     14
 #define DRINKSBLOOD		15
 #define NOEYES			16
-#define NOAROUSAL		17	//Stops all arousal effects
-#define NOGENITALS		18	//Cannot create, use, or otherwise have genitals
-#define SKINTONE		19	//uses skin tones
 
 #define ORGAN_SLOT_BRAIN "brain"
 #define ORGAN_SLOT_APPENDIX "appendix"
@@ -116,13 +112,3 @@
 #define ORGAN_SLOT_BRAIN_ANTIDROP "brain_antidrop"
 #define ORGAN_SLOT_BRAIN_ANTISTUN "brain_antistun"
 #define ORGAN_SLOT_TAIL "tail"
-#define ORGAN_SLOT_PENIS "penis"
-#define ORGAN_SLOT_WOMB "womb"
-#define ORGAN_SLOT_VAGINA "vagina"
-#define ORGAN_SLOT_TESTICLES "testicles"
-#define ORGAN_SLOT_BREASTS "breasts"
-
-///organ defines
-#define STANDARD_ORGAN_THRESHOLD 	100
-#define STANDARD_ORGAN_HEALING 		(1/(15 MINUTES / (2 SECONDS)))
-#define STANDARD_ORGAN_DECAY		(1/(15 MINUTES / (2 SECONDS)))		//designed to fail organs when left to decay for ~15 minutes. 2 SECOND is SSmobs tickrate.

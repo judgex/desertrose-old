@@ -117,9 +117,6 @@
 		WRITE_LOG(GLOB.world_game_log, "VOTE: [text]")
 
 
-/proc/log_consent(text)
-	WRITE_LOG(GLOB.world_game_log, "CONSENT: [text]")
-
 /proc/log_topic(text)
 	WRITE_LOG(GLOB.world_game_log, "TOPIC: [text]")
 
