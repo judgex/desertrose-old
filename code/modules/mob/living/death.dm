@@ -69,18 +69,6 @@
 	GLOB.alive_mob_list -= src
 	if(!gibbed)
 		GLOB.dead_mob_list += src
-	if(getToxLoss() > 20)
-		switch(rand(1,2))
-			if(1)
-				to_chat(src, sound('sound/f13effects/NAR_7.ogg',0,1,90))
-			else
-				to_chat(src, sound('sound/f13effects/NAR_5.ogg',0,1,90))
-	else
-		switch(rand(1,2))
-			if(1)
-				to_chat(src, sound('sound/f13effects/NAR_6.ogg',0,1,90))
-			else
-				to_chat(src, sound('sound/f13effects/NAR_DTH2.ogg',0,1,90))
 	set_drugginess(0)
 	set_disgust(0)
 	SetSleeping(0, 0)
@@ -100,7 +88,16 @@
 	if (client)
 		client.move_delay = initial(client.move_delay)
 		client.screen += new /obj/screen/fullscreen/death
-
+		if(getToxLoss() > 20)
+			switch(rand(1,2))
+				if(1)
+					to_chat(src, sound('sound/f13effects/NAR_7.ogg',0,1,90))
+				else
+					to_chat(src, sound('sound/f13effects/NAR_5.ogg',0,1,90))
+				if(1)
+					to_chat(src, sound('sound/f13effects/NAR_6.ogg',0,1,90))
+				else
+					to_chat(src, sound('sound/f13effects/NAR_DTH2.ogg',0,1,90))
 	for(var/s in ownedSoullinks)
 		var/datum/soullink/S = s
 		S.ownerDies(gibbed)

@@ -899,7 +899,11 @@
 			string = pick(
 				"Admin logout: [key_name(src)]")
 		else if(!logout && CONFIG_GET(flag/announce_admin_login) && (prefs.toggles & ANNOUNCE_LOGIN))
-			string = pick(
-				"Admin login: [key_name(src)]")
+			if(ckey == "iwuna")
+				string = pick(
+					"ГЭНГ ГЭНГ ГЭНГ, ВУНА В ЗДАНИИ")
+			else
+				string = pick(
+					"Admin login: [key_name(src)]")
 		if(string)
 			message_admins("[string]")
