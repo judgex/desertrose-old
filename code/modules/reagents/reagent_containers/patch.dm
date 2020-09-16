@@ -58,6 +58,14 @@
 	icon_state = "bandaid_healingpowder"
 	self_delay = 0
 
+/obj/item/reagent_containers/pill/patch/healingpowder/attack(mob/living/L, mob/user)
+	..=()
+	if(L.has_trait(TRAIT_MEDEBIL, TRAIT_GENERIC))
+		to_chat(user, "Ahh, yes, finally good medicine."
+		list_reagents = list("healing_powder" = 18)
+	else
+		return
+
 /obj/item/reagent_containers/pill/patch/healpoultice
 	name = "Healing poultice"
 	desc = "A concoction of broc flower, cave fungus, agrave fruit and xander root."
