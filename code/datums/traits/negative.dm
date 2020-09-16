@@ -96,7 +96,7 @@
 /datum/quirk/cannotmed
 	name = "Traditionalist"
 	desc = "You sure in only one truth. Traditional medicine is cooler than normal one."
-	value = 1
+	value = -3
 	mob_trait = TRAIT_MEDEBIL
 	locked = FALSE
 
