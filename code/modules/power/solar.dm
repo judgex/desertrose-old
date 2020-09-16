@@ -147,27 +147,9 @@
 
 //trace towards sun to see if we're in shadow
 /obj/machinery/power/solar/proc/occlusion()
-
-	var/ax = x		// start at the solar panel
-	var/ay = y
-	var/turf/T = null
-	var/dx = SSsun.dx
-	var/dy = SSsun.dy
-
-	for(var/i = 1 to 5)		// 5 steps is enough
-		ax += dx	// do step
-		ay += dy
-
-		T = locate( round(ax,0.5),round(ay,0.5),z)
-
-		if(T.x == 1 || T.x==world.maxx || T.y==1 || T.y==world.maxy)		// not obscured if we reach the edge
-			break
-
-		if(T.density)			// if we hit a solid turf, panel is obscured
-			obscured = 1
-			return
-
-	obscured = 0		// if hit the edge or stepped 20 times, not obscured
+	obscured = TRUE
+	if(locate(/atom/movable/sunobj) in view(src))
+		obscured = FALSE
 	update_solar_exposure()
 
 
