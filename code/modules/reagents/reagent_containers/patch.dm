@@ -64,7 +64,7 @@
 		to_chat(user, "Ahh, yes, finally good medicine."
 		list_reagents = list("healing_powder" = 18)
 	else
-		return
+		list_reagents = list("healing_powder" = 10)
 
 /obj/item/reagent_containers/pill/patch/healpoultice
 	name = "Healing poultice"
