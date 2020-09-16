@@ -1430,6 +1430,8 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 /area/f13/legioncamp
 	name = "Legion Camp"
 	icon_state = "legioncamp"
+	outdoors = 1
+	open_space = 1
 
 /area/f13/powerplant
 	name = "Power Plant"
