@@ -100,6 +100,10 @@
 	return OXYLOSS//ironic. he could save others from oxyloss, but not himself.
 
 /obj/item/reagent_containers/hypospray/medipen/attack(mob/M, mob/user)
+	var/mob/living/L = user
+	if(L.has_trait(TRAIT_MEDEBIL, TRAIT_GENERIC))
+		to_chat(user, "<span class='warning'>Ew, modern medicine? I prefer to die!</span>")
+		return FALSE
 	if(!reagents.total_volume)
 		to_chat(user, "<span class='warning'>[src] is empty!</span>")
 		return

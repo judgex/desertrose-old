@@ -42,7 +42,7 @@
 	..()
 	if(visualsOnly)
 		return
-	H.add_trait(TRAIT_TECHNOPHOBE, TRAIT_GENERIC)
+	H.add_trait(TRAIT_TECHNOPHOBE, TRAIT_GENERIC, TRAIT_MEDEBIL)
 
 /*
 Legate

@@ -93,9 +93,12 @@
 	mob_trait = TRAIT_POOR_AIM
 	medical_record_text = "Patient possesses a strong tremor in both hands."
 
-
-
-
+/datum/quirk/cannotmed
+	name = "Traditionalist"
+	desc = "You sure in only one truth. Traditional medicine is cooler than normal one."
+	value = 1
+	mob_trait = TRAIT_MEDEBIL
+	locked = FALSE
 
 /*
 /datum/quirk/insanity

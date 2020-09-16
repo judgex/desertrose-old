@@ -45,6 +45,7 @@
 #define TRAIT_HOLY				"holy"
 #define TRAIT_DEPRESSION		"depression"
 #define TRAIT_JOLLY				"jolly"
+#define TRAIT_MEDEBIL				"no_med"
 #define TRAIT_HARD_YARDS        "hard_yards"
 #define TRAIT_NOCRITDAMAGE		"no_crit"
 #define TRAIT_NOSLIPWATER		"noslip_water"
