@@ -260,10 +260,11 @@ Follower Guard
 	id = /obj/item/card/id/silver
 	uniform = /obj/item/clothing/under/f13/bodyguard
 	suit = /obj/item/clothing/suit/armor/vest/old
-	suit_store = /obj/item/gun/ballistic/automatic/pistol/n99
+	suit_store = /obj/item/gun/ballistic/shotgun/lethal
 	shoes = /obj/item/clothing/shoes/combat
 	backpack_contents = list(
 		/obj/item/melee/classic_baton/telescopic=1,
-		/obj/item/ammo_box/magazine/m10mm_adv=2,
 		/obj/item/flashlight/flare/torch=1,
-		/obj/item/reagent_containers/spray/pepper=1)
+		/obj/item/reagent_containers/spray/pepper=1,
+		/obj/item/storage/box/rubbershot/beanbag=2,
+		/obj/item/ammo_casing/shotgun/beanbag=4)
