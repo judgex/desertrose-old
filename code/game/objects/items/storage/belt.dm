@@ -207,45 +207,6 @@
 	new /obj/item/melee/baton/loaded(src)
 	update_icon()
 
-/obj/item/storage/belt/follower
-	name = "Follower belt"
-	desc = "A belt tooled to hold non-lethal counter-measures.."
-	icon_state = "explorer2"
-	item_state = "explorer2"//Could likely use a better one.
-	content_overlays = TRUE
-
-/obj/item/storage/belt/follower/ComponentInitialize()
-	. = ..()
-	GET_COMPONENT(STR, /datum/component/storage)
-	STR.max_items = 5
-	STR.max_w_class = WEIGHT_CLASS_NORMAL
-	STR.can_hold = typecacheof(list(
-		/obj/item/melee/baton,
-		/obj/item/melee/classic_baton,
-		/obj/item/grenade,
-		/obj/item/reagent_containers/spray/pepper,
-		/obj/item/restraints/handcuffs,
-		/obj/item/assembly/flash/handheld,
-		/obj/item/clothing/glasses,
-		/obj/item/ammo_casing/shotgun,
-		/obj/item/ammo_box,
-		/obj/item/reagent_containers/food/snacks/donut,
-		/obj/item/kitchen/knife/combat,
-		/obj/item/flashlight/seclite,
-		/obj/item/melee/classic_baton/telescopic,
-		/obj/item/radio,
-		/obj/item/clothing/gloves,
-		/obj/item/restraints/legcuffs/bola
-		))
-
-/obj/item/storage/belt/follower/full/PopulateContents()
-	new /obj/item/reagent_containers/spray/pepper(src)
-	new /obj/item/restraints/handcuffs(src)
-	new /obj/item/melee/classic_baton/telescopic(src)
-	new /obj/item/kitchen/knife/combat(src)
-	new /obj/item/storage/box/rubbershot/beanbag(src)
-	update_icon()
-
 /obj/item/storage/belt/mining
 	name = "explorer's webbing"
 	desc = "A versatile chest rig, cherished by miners and hunters alike."
