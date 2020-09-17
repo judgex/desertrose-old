@@ -37,7 +37,7 @@
 
 /datum/component/riding/proc/handle_vehicle_layer()
 	var/atom/movable/AM = parent
-	var/static/list/defaults = list(TEXT_NORTH = OBJ_LAYER, TEXT_SOUTH = ABOVE_MOB_LAYER, TEXT_EAST = ABOVE_MOB_LAYER, TEXT_WEST = ABOVE_MOB_LAYER)
+	var/static/list/defaults = list(TEXT_NORTH = ABOVE_MOB_LAYER, TEXT_SOUTH = BELOW_MOB_LAYER, TEXT_EAST = ABOVE_MOB_LAYER, TEXT_WEST = ABOVE_MOB_LAYER)
 	. = defaults["[AM.dir]"]
 	if(directional_vehicle_layers["[AM.dir]"])
 		. = directional_vehicle_layers["[AM.dir]"]
