@@ -51,7 +51,7 @@
 	var/obj/machinery/light/newlight = null
 	var/obj/item/stock_parts/cell/cell
 
-	var/cell_connectors = TRUE
+	var/cell_connectors = FALSE
 
 /obj/structure/light_construct/Initialize(mapload, ndir, building)
 	. = ..()
@@ -151,13 +151,14 @@
 						newlight = new /obj/machinery/light/built(loc)
 					if("bulb")
 						newlight = new /obj/machinery/light/small/built(loc)
-				newlight.setDir(dir)
-				transfer_fingerprints_to(newlight)
-				if(cell)
-					newlight.cell = cell
-					cell.forceMove(newlight)
-					cell = null
-				qdel(src)
+				if(newlight)
+					newlight.setDir(dir)
+					transfer_fingerprints_to(newlight)
+					if(cell)
+						newlight.cell = cell
+						cell.forceMove(newlight)
+						cell = null
+					qdel(src)
 				return
 	return ..()
 
@@ -200,6 +201,8 @@
 	var/bulb_power = 1			// basically the alpha of the emitted light source
 	var/bulb_colour = "#FFFFFF"	// befault colour of the light.
 	var/status = LIGHT_OK		// LIGHT_OK, _EMPTY, _BURNED or _BROKEN
+	var/status_prev = LIGHT_OK
+
 	var/flickering = FALSE
 	var/light_type = /obj/item/light/tube		// the type of light item
 	var/fitting = "tube"
@@ -208,8 +211,12 @@
 
 	var/rigged = FALSE			// true if rigged to explode
 
+	var/prob_starts_broken = 5
+	var/prob_starts_empty = 1
+	var/prob_starts_burned = 0
+
 	var/obj/item/stock_parts/cell/cell
-	var/start_with_cell = TRUE	// if true, this fixture generates a very weak cell at roundstart
+	var/start_with_cell = FALSE	// if true, this fixture generates a very weak cell at roundstart
 
 	var/nightshift_enabled = FALSE	//Currently in night shift mode?
 	var/nightshift_allowed = TRUE	//Set to FALSE to never let this light get switched to night mode.
@@ -228,12 +235,35 @@
 	var/nightshift_start_time = 702000		//7:30 PM, station time
 	var/nightshift_end_time = 270000		//7:30 AM, station time
 
-/obj/machinery/light/broken
-	status = LIGHT_BROKEN
-	icon_state = "tube-broken"
+/obj/machinery/light/Move()
+	if(status != LIGHT_BROKEN)
+		break_light_tube(1)
+	return ..()
+
+// create a new lighting fixture
+/obj/machinery/light/Initialize()
+	. = ..()
+	if(start_with_cell && !no_emergency)
+		cell = new/obj/item/stock_parts/cell/emergency_light(src)
+
+	if(prob(prob_starts_empty))
+		status = LIGHT_EMPTY
+
+	if(prob(prob_starts_broken))
+		status = LIGHT_BROKEN
+
+	if(prob(prob_starts_burned))
+		status = LIGHT_BURNED
+
+	update(0,TRUE)
+
+/obj/machinery/light/Destroy()
+	if(cell in src.contents)
+		qdel(cell)
+	set_light(0)
+	return ..()
 
 // the smaller bulb light fixture
-
 /obj/machinery/light/small
 	icon_state = "bulb"
 	base_state = "bulb"
@@ -241,61 +271,28 @@
 	brightness = 4
 	desc = "A small lighting fixture."
 	light_type = /obj/item/light/bulb
+	prob_starts_broken = 2
+	prob_starts_empty = 2
+
+/obj/machinery/light/broken
+	icon_state = "tube-broken"
+	prob_starts_broken = 100
 
 /obj/machinery/light/small/broken
-	status = LIGHT_BROKEN
 	icon_state = "bulb-broken"
-
-/obj/machinery/light/Move()
-	if(status != LIGHT_BROKEN)
-		break_light_tube(1)
-	return ..()
+	prob_starts_broken = 100
 
 /obj/machinery/light/built
 	icon_state = "tube-empty"
-	start_with_cell = FALSE
-
-/obj/machinery/light/built/Initialize()
-	. = ..()
-	status = LIGHT_EMPTY
-	update(0)
+	prob_starts_broken = 0
+	prob_starts_empty = 100
 
 /obj/machinery/light/small/built
 	icon_state = "bulb-empty"
+	prob_starts_broken = 0
+	prob_starts_empty = 100
 
-/obj/machinery/light/small/built/Initialize()
-	. = ..()
-	status = LIGHT_EMPTY
-	update(0)
-
-
-
-// create a new lighting fixture
-/obj/machinery/light/Initialize()
-	. = ..()
-	if(start_with_cell && !no_emergency)
-		cell = new/obj/item/stock_parts/cell/emergency_light(src)
-	spawn(2)
-		switch(fitting)
-			if("tube")
-				brightness = 8
-				if(prob(2))
-					break_light_tube(1)
-			if("bulb")
-				brightness = 4
-				if(prob(5))
-					break_light_tube(1)
-		spawn(1)
-			update(0)
-
-/obj/machinery/light/Destroy()
-	var/area/A = get_area(src)
-	if(A)
-		on = FALSE
-//		A.update_lights()
-	QDEL_NULL(cell)
-	return ..()
-
+//A mini kahuna
 /obj/machinery/light/update_icon()
 	cut_overlays()
 	switch(status)		// set icon_states
@@ -314,12 +311,24 @@
 	return
 
 // update the icon_state and luminosity of the light depending on its state
-/obj/machinery/light/proc/update(trigger = TRUE)
-	switch(status)
-		if(LIGHT_BROKEN,LIGHT_BURNED,LIGHT_EMPTY)
-			on = FALSE
-	emergency_mode = FALSE
-	if(on)
+//A big kahuna
+/obj/machinery/light/proc/update(trigger = TRUE, forceme = FALSE)
+
+	if(!forceme && status == status_prev) //Nothing has changed
+		return
+
+	status_prev = status
+	if(status == LIGHT_BROKEN || status == LIGHT_BURNED || status == LIGHT_EMPTY)
+		on = FALSE
+		use_power = IDLE_POWER_USE //We're off
+		set_light(0)
+	else
+		on = TRUE
+		if(rigged && trigger && status == LIGHT_OK && !forceme)
+			set_light(0)
+			explode()
+			return //Don't bother doing anything else
+
 		var/BR = brightness
 		var/PO = bulb_power
 		var/CO = bulb_colour
@@ -327,27 +336,19 @@
 			BR = nightshift_brightness
 			PO = nightshift_light_power
 			CO = nightshift_light_color
-		var/matching = light && BR == light.light_range && PO == light.light_power && CO == light.light_color
-		if(!matching)
-			switchcount++
-			if(rigged)
-				if(status == LIGHT_OK && trigger)
-					explode()
-			else if( prob( min(60, (switchcount^2)*0.01) ) )
-				if(trigger)
-					burn_out()
-			else
-				use_power = ACTIVE_POWER_USE
-				set_light(BR, PO, CO)
-	else if(has_emergency_power(LIGHT_EMERGENCY_POWER_USE) && !turned_off())
-		use_power = IDLE_POWER_USE
-		emergency_mode = TRUE
-		START_PROCESSING(SSmachines, src)
-	else
-		use_power = IDLE_POWER_USE
-		set_light(0)
-	update_icon()
 
+		use_power = ACTIVE_POWER_USE
+
+		if(emergency_mode && has_emergency_power(LIGHT_EMERGENCY_POWER_USE))
+			use_power = IDLE_POWER_USE
+			emergency_mode = TRUE
+			START_PROCESSING(SSmachines, src) //ugh I hate this, is this emergency shit even used
+		else
+			emergency_mode = FALSE
+
+		set_light(BR, PO, CO)
+
+	update_icon()
 	active_power_usage = (brightness * 10)
 	if(on != on_gs)
 		on_gs = on
@@ -355,8 +356,9 @@
 			static_power_used = brightness * 20 //20W per unit luminosity
 			addStaticPower(static_power_used, STATIC_LIGHT)
 		else
-			removeStaticPower(static_power_used, STATIC_LIGHT)
+			removeStaticPower(static_power_used, STATIC_LIGHT) //I hate these
 
+//This is purely used for emergency mode. What a shit
 /obj/machinery/light/process()
 	if (!cell)
 		return PROCESS_KILL
@@ -370,9 +372,7 @@
 /obj/machinery/light/proc/burn_out()
 	if(status == LIGHT_OK)
 		status = LIGHT_BURNED
-		icon_state = "[base_state]-burned"
-		on = FALSE
-		set_light(0)
+		update()
 
 // attempt to set the light's on/off status
 // will not switch on if broken/burned/empty
@@ -437,6 +437,7 @@
 
 				if(on && rigged)
 					explode()
+				return 1
 			else
 				to_chat(user, "<span class='warning'>This type of light requires a [fitting]!</span>")
 
@@ -457,19 +458,22 @@
 		return ..()
 
 /obj/machinery/light/deconstruct(disassembled = TRUE)
-	if(!(flags_1 & NODECONSTRUCT_1))
-		var/obj/structure/light_construct/newlight = null
-		var/cur_stage = 2
-		if(!disassembled)
-			cur_stage = 1
-		switch(fitting)
-			if("tube")
-				newlight = new /obj/structure/light_construct(src.loc)
-				newlight.icon_state = "tube-construct-stage[cur_stage]"
+	if(flags_1 & NODECONSTRUCT_1)
+		return //Big nope
 
-			if("bulb")
-				newlight = new /obj/structure/light_construct/small(src.loc)
-				newlight.icon_state = "bulb-construct-stage[cur_stage]"
+	var/obj/structure/light_construct/newlight = null
+	var/cur_stage = 2
+	if(!disassembled)
+		cur_stage = 1
+	switch(fitting)
+		if("tube")
+			newlight = new /obj/structure/light_construct(src.loc)
+			newlight.icon_state = "tube-construct-stage[cur_stage]"
+
+		if("bulb")
+			newlight = new /obj/structure/light_construct/small(src.loc)
+			newlight.icon_state = "bulb-construct-stage[cur_stage]"
+	if(newlight)
 		newlight.setDir(src.dir)
 		newlight.stage = cur_stage
 		if(!disassembled)
@@ -498,9 +502,6 @@
 	if(. && !QDELETED(src))
 		if(prob(damage_amount * 5))
 			break_light_tube()
-
-
-
 
 /obj/machinery/light/play_attack_sound(damage_amount, damage_type = BRUTE, damage_flag = 0)
 	switch(damage_type)
@@ -553,7 +554,7 @@
 	flickering = 1
 	if(on && status == LIGHT_OK)
 		for(var/i = 0; i < amount; i++)
-			if(status != LIGHT_OK)
+			if(status != LIGHT_OK || QDELETED(src))
 				break
 			on = !on
 			update(0)
@@ -600,7 +601,7 @@
 
 		if(prot > 0)
 			to_chat(user, "<span class='notice'>You remove the light [fitting].</span>")
-		else if(istype(user) && user.dna.check_mutation(TK))
+		else if(istype(H) && H.dna.check_mutation(TK))
 			to_chat(user, "<span class='notice'>You telekinetically remove the light [fitting].</span>")
 		else
 			to_chat(user, "<span class='warning'>You try to remove the light [fitting], but you burn your hand on it!</span>")
@@ -615,9 +616,17 @@
 	drop_light_tube(user)
 
 /obj/machinery/light/proc/drop_light_tube(mob/user)
-	if(!istype(light_type,/obj/item/light))
+	if(!ispath(light_type) || QDELETED(src))
 		return
-	var/obj/item/light/L = new light_type()
+
+	if(status == LIGHT_EMPTY) //There's no tube/bulb in it already?
+		return
+
+	var/obj/item/light/L = new light_type(loc)
+	if(!istype(L))
+		qdel(L)
+		return 0
+
 	L.status = status
 	L.rigged = rigged
 	L.brightness = brightness
@@ -627,12 +636,9 @@
 	switchcount = 0
 
 	L.update()
-	L.forceMove(loc)
-
 	if(user) //puts it in our active hand
 		L.add_fingerprint(user)
 		user.put_in_active_hand(L)
-
 	status = LIGHT_EMPTY
 	update()
 	return L
@@ -651,7 +657,10 @@
 // break the light and make sparks if was on
 
 /obj/machinery/light/proc/break_light_tube(skip_sound_and_sparks = 0)
-	if(status == LIGHT_EMPTY || status == LIGHT_BROKEN)
+	if(QDELETED(src) || !isturf(src.loc)) //Make sure we haven't actually been eaten or are in a weird place
+		return
+
+	if(status == LIGHT_EMPTY || status == LIGHT_BROKEN) //Already broken idiot
 		return
 
 	if(!skip_sound_and_sparks)
@@ -666,7 +675,7 @@
 	if(status == LIGHT_OK)
 		return
 	status = LIGHT_OK
-	brightness = initial(brightness)
+//	brightness = initial(brightness) //This is done in update
 	on = TRUE
 	update()
 
@@ -696,8 +705,8 @@
 	break_light_tube()	// break it first to give a warning
 	sleep(2)
 	explosion(T, 0, 0, 2, 2)
-	sleep(1)
-	qdel(src)
+	if(!QDELETED(src))
+		qdel(src) //Make sure we got deleted
 
 // the light item
 // can be tube or bulb subtypes
