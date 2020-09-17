@@ -257,14 +257,13 @@ Follower Guard
 	name = "Followers Guard"
 	jobtype = /datum/job/followers/f13followerguard
 	backpack = /obj/item/storage/backpack/explorer
+	belt = /obj/item/storage/belt/follower/full
 	id = /obj/item/card/id/silver
 	uniform = /obj/item/clothing/under/f13/bodyguard
 	suit = /obj/item/clothing/suit/armor/vest/old
 	suit_store = /obj/item/gun/ballistic/shotgun/lethal
 	shoes = /obj/item/clothing/shoes/combat
 	backpack_contents = list(
-		/obj/item/melee/classic_baton/telescopic=1,
-		/obj/item/flashlight/flare/torch=1,
-		/obj/item/reagent_containers/spray/pepper=1,
-		/obj/item/storage/box/rubbershot/beanbag=2,
+	    /obj/item/gun/ballistic/automatic/pistol/n99=1, \
+		/obj/item/flashlight/flare/torch=1, \
 		/obj/item/ammo_casing/shotgun/beanbag=4)
