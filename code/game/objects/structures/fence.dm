@@ -27,6 +27,23 @@
 	. = ..()
 	update_cut_status()
 
+/obj/structure/fence/CanPass(atom/movable/mover, turf/target)
+	if(istype(mover) && (mover.pass_flags & PASSGLASS))
+		return 1
+	if(get_dir(loc, target) == dir)
+		return !density
+	else if(istype(mover, /obj/item/projectile/bullet) && !valid_window_location(loc, mover.dir))
+		return TRUE
+	return 1
+
+/obj/structure/fence/CheckExit(atom/movable/O, turf/target)
+	if(istype(O) && (O.pass_flags & PASSGLASS))
+		return 1
+	if(get_dir(O.loc, target) == dir)
+		return 0
+	return 1
+
+
 /obj/structure/fence/examine(mob/user)
 	. = ..()
 	switch(hole_size)
