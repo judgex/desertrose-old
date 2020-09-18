@@ -108,8 +108,8 @@ window "mainwindow"
 		size = 40x20
 		anchor1 = 100,100
 		anchor2 = none
-		text-color = #ffffff
-		background-color = #411d1e
+		text-color = #00ff00
+		background-color = #3c4438
 		saved-params = "is-checked"
 		text = "OOC"
 		command = ".winset \"oocbutton.is-checked=true ? input.command=\"!ooc \\\"\" : input.command=\"\"oocbutton.is-checked=true ? mebutton.is-checked=false\"\"oocbutton.is-checked=true ? saybutton.is-checked=false\""
@@ -120,8 +120,8 @@ window "mainwindow"
 		size = 40x20
 		anchor1 = 100,100
 		anchor2 = none
-		text-color = #ffffff
-		background-color = #411d1e
+		text-color = #00ff00
+		background-color = #3c4438
 		saved-params = "is-checked"
 		text = "Me"
 		command = ".winset \"mebutton.is-checked=true ? input.command=\"!me \\\"\" : input.command=\"\"mebutton.is-checked=true ? saybutton.is-checked=false\"\"mebutton.is-checked=true ? oocbutton.is-checked=false\""
