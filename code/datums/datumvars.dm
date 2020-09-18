@@ -82,7 +82,7 @@
 				atomsnowflake += "<br><font size='1'><a href='?_src_=vars;[HrefToken()];rotatedatum=[refid];rotatedir=left'><<</a> <a href='?_src_=vars;[HrefToken()];datumedit=[refid];varnameedit=dir'>[dir2text(A.dir)]</a> <a href='?_src_=vars;[HrefToken()];rotatedatum=[refid];rotatedir=right'>>></a></font>"
 			var/mob/living/M = A
 			atomsnowflake += {"
-				<br><font size='1'><a href='?_src_=vars;[HrefToken()];datumedit=[refid];varnameedit=ckey'>[M.ckey ? M.ckey : "No ckey"]</a> / <a href='?_src_=vars;[HrefToken()];datumedit=[refid];varnameedit=real_name'>[M.real_name ? M.real_name : "No real name"]</a></font>
+				<meta charset=UTF-8><br><font size='1'><a href='?_src_=vars;[HrefToken()];datumedit=[refid];varnameedit=ckey'>[M.ckey ? M.ckey : "No ckey"]</a> / <a href='?_src_=vars;[HrefToken()];datumedit=[refid];varnameedit=real_name'>[M.real_name ? M.real_name : "No real name"]</a></font>
 				<br><font size='1'>
 					BRUTE:<font size='1'><a href='?_src_=vars;[HrefToken()];mobToDamage=[refid];adjustDamage=brute'>[M.getBruteLoss()]</a>
 					FIRE:<font size='1'><a href='?_src_=vars;[HrefToken()];mobToDamage=[refid];adjustDamage=fire'>[M.getFireLoss()]</a>
@@ -94,19 +94,19 @@
 				</font>
 			"}
 		else
-			atomsnowflake += "<a href='?_src_=vars;[HrefToken()];datumedit=[refid];varnameedit=name'><b>[D]</b></a>"
+			atomsnowflake += "<meta charset=UTF-8><a href='?_src_=vars;[HrefToken()];datumedit=[refid];varnameedit=name'><b>[D]</b></a>"
 			if(A.dir)
-				atomsnowflake += "<br><font size='1'><a href='?_src_=vars;[HrefToken()];rotatedatum=[refid];rotatedir=left'><<</a> <a href='?_src_=vars;[HrefToken()];datumedit=[refid];varnameedit=dir'>[dir2text(A.dir)]</a> <a href='?_src_=vars;[HrefToken()];rotatedatum=[refid];rotatedir=right'>>></a></font>"
+				atomsnowflake += "<meta charset=UTF-8><br><font size='1'><a href='?_src_=vars;[HrefToken()];rotatedatum=[refid];rotatedir=left'><<</a> <a href='?_src_=vars;[HrefToken()];datumedit=[refid];varnameedit=dir'>[dir2text(A.dir)]</a> <a href='?_src_=vars;[HrefToken()];rotatedatum=[refid];rotatedir=right'>>></a></font>"
 	else
-		atomsnowflake += "<b>[D]</b>"
+		atomsnowflake += "<meta charset=UTF-8><b>[D]</b>"
 
 	var/formatted_type = replacetext("[type]", "/", "<wbr>/")
 	var/marked
 	if(holder && holder.marked_datum && holder.marked_datum == D)
-		marked = "<br><font size='1' color='red'><b>Marked Object</b></font>"
+		marked = "<meta charset=UTF-8><br><font size='1' color='red'><b>Marked Object</b></font>"
 	var/varedited_line = ""
 	if(!islist && (D.datum_flags & DF_VAR_EDITED))
-		varedited_line = "<br><font size='1' color='red'><b>Var Edited</b></font>"
+		varedited_line = "<meta charset=UTF-8><br><font size='1' color='red'><b>Var Edited</b></font>"
 
 	var/list/dropdownoptions = list()
 	if (islist)
@@ -154,7 +154,7 @@
 
 	var/html = {"
 <html>
-	<head>
+	<head><meta charset=UTF-8>
 		<title>[title]</title>
 		<style>
 			body {

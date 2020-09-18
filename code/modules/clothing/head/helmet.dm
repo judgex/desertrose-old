@@ -809,6 +809,28 @@
 	lighting_alpha = LIGHTING_PLANE_ALPHA_LOWLIGHT_VISION
 	var/emped = 0
 	var/requires_training = TRUE
+	var/brightness_on = 4 //luminosity when the light is on
+	var/on = 0
+	light_color = LIGHT_COLOR_YELLOW
+
+/obj/item/clothing/head/helmet/f13/power_armor/attack_self(mob/user)
+	on = !on
+	icon_state = "[initial(icon_state)][on]"
+	user.update_inv_head()	//so our mob-overlays update
+
+	if(on)
+		turn_on(user)
+	else
+		turn_off(user)
+	for(var/X in actions)
+		var/datum/action/A = X
+		A.UpdateButtonIcon()
+
+/obj/item/clothing/head/helmet/f13/power_armor/proc/turn_on(mob/user)
+	set_light(brightness_on)
+
+/obj/item/clothing/head/helmet/f13/power_armor/proc/turn_off(mob/user)
+	set_light(0)
 
 /obj/item/clothing/head/helmet/f13/power_armor/mob_can_equip(mob/user, mob/equipper, slot, disable_warning = 1)
 	var/mob/living/carbon/human/H = user
@@ -862,6 +884,9 @@
 	lighting_alpha = null
 	requires_training = FALSE
 
+/obj/item/clothing/head/helmet/f13/power_armor/raiderpa_helm/attack_self(mob/user)
+	return FALSE
+
 /obj/item/clothing/head/helmet/f13/power_armor/hotrod
 	name = "hotrod T-45b power helmet"
 	desc = "This power armor helmet is so decrepit and battle-worn that it have lost most of its capability to protect the wearer from harm."
@@ -905,8 +930,6 @@
 	icon_state = "t60helmet"
 	item_state = "t60helmet"
 	armor = list("melee" = 75, "bullet" = 70, "laser" = 60, "energy" = 70, "bomb" = 82, "bio" = 100, "rad" = 100, "fire" = 95, "acid" = 0)
-	var/brightness_on = 4 //luminosity when the light is on
-	var/on = 0
 
 /obj/item/clothing/head/helmet/f13/power_armor/t45d
 	name = "T-45d power helmet"
@@ -914,8 +937,6 @@
 	icon_state = "t45dhelmet"
 	item_state = "t45dhelmet"
 	armor = list("melee" = 65, "bullet" = 60, "laser" = 50, "energy" = 60, "bomb" = 62, "bio" = 100, "rad" = 90, "fire" = 90, "acid" = 0)
-	var/brightness_on = 4 //luminosity when the light is on
-	var/on = 0
 
 /obj/item/clothing/head/helmet/f13/power_armor/excavator
 	name = "excavator power helmet"
@@ -923,8 +944,6 @@
 	icon_state = "excavator"
 	item_state = "excavator"
 	armor = list("melee" = 60, "bullet" = 55, "laser" = 45, "energy" = 60, "bomb" = 62, "bio" = 100, "rad" = 90, "fire" = 90, "acid" = 0)
-	var/brightness_on = 4 //luminosity when the light is on
-	var/on = 0
 
 //LightToggle
 
