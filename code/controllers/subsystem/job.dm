@@ -461,12 +461,30 @@ SUBSYSTEM_DEF(job)
 		SSpersistence.antag_rep_change[M.client.ckey] += job.GetAntagRep()
 
 	to_chat(M, "<b>You are the [rank].</b>")
+	if (!job.objectives)//if objectives aren't set yet
+		if (job.department_flag == LEGION)//done
+			job.objectives = job.objectivesList[rand(0,2)]//get a random one
+		if (job.department_flag == NCR)//done
+			job.objectives = job.objectivesList[rand(0,2)]//get a random one
+		if (job.department_flag == BOS)//done
+			job.objectives = job.objectivesList[rand(0,2)]//get a random one
+	//	if (job.department_flag == DEN)
+	//		job.objectives = job.objectivesList[rand(0,2)]//get a random one
+		if (job.department_flag == VAULT)
+			job.objectives = job.objectivesList[rand(0,2)]//get a random one
+		//if (job.department_flag == WASTELAND)
+		//	job.objectives = job.objectivesList[rand(0,2)]//get a random one
+		if (job.department_flag == TRIBAL)//done
+			job.objectives = job.objectivesList[rand(0,2)]//get a random one
+		if (job.department_flag == FOLLOWERS)//done
+			job.objectives = job.objectivesList[rand(0,2)]//get a random one
 	if(job)
 		to_chat(M, "<b>As the [rank] you answer directly to [job.supervisors]. Special circumstances may change this.</b>")
 		to_chat(M, "<b>To speak on your departments radio, use the :h button. To see others, look closely at your headset.</b>")
 		to_chat(M, "<FONT color='blue'><B>[job.description]</b>")
 		to_chat(M, "<FONT color='red'><b>[job.forbids]</b>")
 		to_chat(M, "<FONT color='green'><b>[job.enforces]</b>")
+		to_chat(M, "<FONT color='black'><b>[job.objectives]</b>")
 		if(job.req_admin_notify)
 			to_chat(M, "<b>You are playing a job that is important for Game Progression. If you have to disconnect, please notify the admins via adminhelp.</b>")
 	/*	if(CONFIG_GET(number/minimal_access_threshold))
