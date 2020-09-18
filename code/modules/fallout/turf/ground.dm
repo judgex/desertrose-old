@@ -96,7 +96,7 @@
 					DS.pixel_x = 32
 				if(WEST)
 					DS.pixel_x = -32
-			DS.dir = dir = turn(direction, 180)
+			DS.dir = turn(direction, 180)
 
 /obj/effect/overlay/desert_side
 	name = "desert"
@@ -153,6 +153,22 @@
 //	/obj/item/seeds/potato, /obj/item/seeds/carrot, /obj/item/seeds/pumpkin, /obj/item/seeds/corn, /obj/item/seeds/agave)
 	slowdown = 0.2
 	flags_1 = CAN_HAVE_NATURE
+
+/turf/open/indestructible/ground/outside/dirt/Initialize()
+	for(var/direction in GLOB.cardinals)
+		var/turf/turf_to_check = get_step(src, direction)
+		if(istype(turf_to_check, /turf/open/water))
+			var/obj/effect/overlay/rockfloor_side/DS = new /obj/effect/overlay/rockfloor_side(src)
+			switch(direction)
+				if(NORTH)
+					DS.pixel_y = 32
+				if(SOUTH)
+					DS.pixel_y = -32
+				if(EAST)
+					DS.pixel_x = 32
+				if(WEST)
+					DS.pixel_x = -32
+			DS.dir = turn(direction, 180)
 
 /turf/open/indestructible/ground/outside/dirt/MakeSlippery(wet_setting, min_wet_time, wet_time_to_add, max_wet_time, permanent)
 	return
