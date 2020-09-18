@@ -170,3 +170,9 @@
 	name = "campfire kit"
 	desc = "A small box filled with an assortment of wood and tender. Useful for quickly making a fire."
 	icon_state = "lunchbox"
+
+/obj/item/crafting/campfirekit/attack_self(mob/user)
+	to_chat(user, "Вы начинаете собирать костёр.")
+	if(do_after(user, 25, target = loc))
+		new/obj/structure/campfire(get_turf(src))
+		qdel(src)

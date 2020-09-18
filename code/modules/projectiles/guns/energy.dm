@@ -250,7 +250,7 @@
 		else
 			to_chat(user, "<span class='notice'>There's no cell in \the [src].</span>")
 		return
-	else 
+	else
 		return
 
 /obj/item/gun/energy/attack_self(mob/living/user)
@@ -278,6 +278,7 @@
 		if (!cell && istype(AM, cell_type))
 			if(user.transferItemToLoc(AM, src))
 				cell = AM
+				playsound(src.loc, 'sound/weapons/energy_cell_in.ogg', 40, 1)
 				to_chat(user, "<span class='notice'>You load a new cell into \the [src].</span>")
 				A.update_icon()
 				update_icon()
