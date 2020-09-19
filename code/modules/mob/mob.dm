@@ -132,8 +132,8 @@
 				else
 					continue
 
-			else if(T.lighting_object || T.sunlighting_object)
-				if(((T.lighting_object.invisibility <= M.see_invisible) || (T.sunlighting_object.invisibility <= M.see_invisible)) && T.is_softly_lit()) //the light object is dark and not invisible to us
+			else if(T.lighting_object)
+				if(T.lighting_object.invisibility <= M.see_invisible && T.is_softly_lit()) //the light object is dark and not invisible to us
 					if(blind_message)
 						msg = blind_message
 					else
@@ -539,8 +539,9 @@
 			var/ETA = SSshuttle.emergency.getModeStr()
 			if(ETA)
 				stat(null, "[ETA] [SSshuttle.emergency.getTimerStr()]")
-		if(SSsunlight && SSsunlight.current_step_datum)
-			stat(null, "Time of Day: [SSsunlight.current_step_datum.name]")
+
+//		if(SSsunlight && SSsunlight.current_step_datum)
+//			stat(null, "Time of Day: [SSsunlight.current_step_datum.name]")
 
 	if(client && client.holder)
 		if(statpanel("MC"))
