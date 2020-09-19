@@ -36,6 +36,24 @@
 	desc = "A large and advanced pre-war workbench to tackle any project!"
 	machine_tool_behaviour = list(TOOL_AWORKBENCH, TOOL_WORKBENCH)
 
+/obj/machinery/workbench/mbench
+	name = "machine workbench"
+	//icon_state = "advanced_bench"
+	desc = "A machining bench, useful for producing complex machined parts."
+	machine_tool_behaviour = list(TOOL_MWORKBENCH)
+
+/obj/machinery/workbench/assbench
+	name = "assembly workbench"
+	//icon_state = "advanced_bench"
+	desc = "An assembly bench, useful for assembling complex parts into semi-finished products."
+	machine_tool_behaviour = list(TOOL_ASSWORKBENCH)
+
+/obj/machinery/workbench/fbench
+	name = "finishing workbench"
+	//icon_state = "advanced_bench"
+	desc = "A finishing bench, used for polishing crude constructs into finished, high quality tools."
+	machine_tool_behaviour = list(TOOL_FWORKBENCH)
+
 /obj/machinery/workbench/bottler
 	name = "bottle press"
 	icon_state = "bottler"

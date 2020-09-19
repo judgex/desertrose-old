@@ -10,6 +10,12 @@
     icon_state = "blueprint_empty"
     w_class = WEIGHT_CLASS_TINY
 
+/obj/item/prefabs
+    name = "crafting prefabs"
+    icon = 'icons/fallout/objects/items.dmi'
+    icon_state = "blueprint_empty"
+    w_class = WEIGHT_CLASS_TINY
+
 //misc blueprints
 /obj/item/blueprint/misc
     name = "weapon blueprint"
@@ -192,6 +198,36 @@
     icon = 'icons/fallout/objects/crafting.dmi'
     icon_state = "blueprint_empty"
     w_class = WEIGHT_CLASS_TINY
+
+/obj/item/prefabs/mWeaponParts
+	name = "Metal Weapon Parts"
+	desc = ""
+	//icon_state = ""
+
+/obj/item/prefabs/wWeaponParts
+	name = "Wooden Weapon Parts"
+	desc = ""
+	//icon_state = ""
+
+/obj/item/prefabs/pWeaponParts
+	name = "Plastic Weapon Parts"
+	desc = ""
+	//icon_state = ""
+
+/obj/item/prefabs/machineryParts
+	name = ""
+	desc = ""
+	//icon_state = ""
+
+/obj/item/prefabs/complex/simpleWeaponAssembly
+	name = "Simple Weapon Assembly"
+	desc = ""
+	//icon_state = ""
+
+/obj/item/prefabs/complex/complexWeaponAssembly
+	name = "Complex Weapon Assembly"
+	desc = ""
+	//icon_state = ""
 
 //plasma
 /obj/item/advanced_crafting_components/flux
