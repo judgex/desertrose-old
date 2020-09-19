@@ -801,7 +801,6 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 	log_admin("[key_name(usr)] has [AI_Interact ? "activated" : "deactivated"] Admin AI Interact")
 	message_admins("[key_name_admin(usr)] has [AI_Interact ? "activated" : "deactivated"] their AI interaction")
 
-/*
 /client/proc/SetTimeOfDay()
 	set name = "Set Time of Day"
 	set category = "Fun"
@@ -826,4 +825,3 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 	to_chat(usr, "<span class='interface'>Time of day successfully updated.</span>")
 	log_admin("[key_name(usr)] changed time of day to [daytime].")
 	message_admins("[key_name_admin(usr)] changed time of day to [daytime].")
-*/

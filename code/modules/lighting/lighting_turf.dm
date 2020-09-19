@@ -58,7 +58,7 @@
 
 // Used to get a scaled lumcount.
 /turf/proc/get_lumcount(var/minlum = 0, var/maxlum = 1)
-	if (!lighting_object)
+	if (!lighting_object && !sunlighting_object)
 		return 1
 
 	var/totallums = 0
@@ -69,8 +69,13 @@
 			continue
 		L = thing
 		totallums += L.lum_r + L.lum_b + L.lum_g
+	for(thing in suncorners)
+		if(!thing)
+			continue
+		L = thing
+		totallums += L.lum_r + L.lum_b + L.lum_g
 
-	totallums /= 12//24 // 4 corners, each with 3 channels, get the average.
+	totallums /= 24//12 // 4 corners, each with 3 channels, get the average.
 
 	totallums = (totallums - minlum) / (maxlum - minlum)
 
@@ -81,10 +86,10 @@
 // itself as too dark to allow sight and see_in_dark becomes useful.
 // So basically if this returns true the tile is unlit black.
 /turf/proc/is_softly_lit()
-	if (!lighting_object)
+	if (!lighting_object && !sunlighting_object)
 		return FALSE
 
-	return max(!lighting_object.luminosity)
+	return max(!lighting_object.luminosity, !sunlighting_object.luminosity)
 
 // Can't think of a good name, this proc will recalculate the has_opaque_atom variable.
 /turf/proc/recalc_atom_opacity()

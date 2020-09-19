@@ -77,7 +77,7 @@
 #define MASSIVE_OBJ_LAYER 11
 #define POINT_LAYER 12
 
-#define LIGHTING_PLANE 15 // should be -3 if using fancy light
+#define LIGHTING_PLANE -3
 #define FLOOR_PLANE -1
 #define LIGHTING_LAYER 15
 
