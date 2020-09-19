@@ -26,7 +26,7 @@
 	force_threshold = 15
 	faction = list("hostile", "supermutant")
 	melee_damage_lower = 45
-	melee_damage_upper = 65
+	melee_damage_upper = 55
 	mob_size = MOB_SIZE_LARGE
 	anchored = TRUE //unpullable
 	attacktext = "smashes"
@@ -96,6 +96,25 @@
 		visible_message("<span class='danger'>\the [src] shouts something incoherent about brahmins for the last time and stops moving...</span>")
 	..()
 
+/mob/living/simple_animal/hostile/supermutant/meleemutant
+	desc = "A huge and ugly mutant humanoid.  This one is brandishing a sledgehammer."
+	icon = 'icons/fallout/mobs/supermutant.dmi'
+	icon_state = "hulk_melee_s"
+	icon_living = "hulk_melee_s"
+	icon_dead = "hulk_melee_s"
+	maxHealth = 350
+	health = 350
+	force_threshold = 15
+	melee_damage_lower = 45
+	melee_damage_upper = 65
+	attack_sound = "hit_swing"
+
+/mob/living/simple_animal/hostile/supermutant/meleemutant/death(gibbed)
+	icon = 'icons/fallout/mobs/supermutant_dead.dmi'
+	icon_state = icon_dead
+	anchored = FALSE
+	..()
+
 /mob/living/simple_animal/hostile/supermutant/rangedmutant
 	desc = "A huge and ugly mutant humanoid.  This one is armed with a poorly maintained hunting rifle."
 	icon = 'icons/fallout/mobs/supermutant.dmi'
@@ -110,6 +129,12 @@
 	projectiletype = /obj/item/projectile/bullet/F13/c308mmBullet
 	projectilesound = 'sound/f13weapons/hunting_rifle.ogg'
 	loot = list(/obj/item/ammo_box/a308)
+
+/mob/living/simple_animal/hostile/supermutant/rangedmutant/death(gibbed)
+	icon = 'icons/fallout/mobs/supermutant_dead.dmi'
+	icon_state = icon_dead
+	anchored = FALSE
+	..()
 
 /mob/living/simple_animal/hostile/supermutant/legendary
 	name = "legendary super mutant"
@@ -130,8 +155,100 @@
 	anchored = FALSE
 	..()
 
-/mob/living/simple_animal/hostile/supermutant/rangedmutant/death(gibbed)
+/mob/living/simple_animal/hostile/supermutant/nightkin
+	name = "nightkin"
+	desc = "A blue variant of the standard Super Mutant, equiped with steathboys."
+	icon = 'icons/fallout/mobs/supermutant.dmi'
+	icon_state = "night_s"
+	icon_living = "night_s"
+	icon_dead = "night_s"
+	maxHealth = 350
+	health = 350
+	alpha = 80
+	force_threshold = 15
+	melee_damage_lower = 45
+	melee_damage_upper = 70
+	attacktext = "slashes"
+	attack_sound = "sound/weapons/bladeslice.ogg"
+
+/mob/living/simple_animal/hostile/supermutant/nightkin/Aggro()
+	..()
+	summon_backup(15)
+	alpha = 255
+
+/mob/living/simple_animal/hostile/supermutant/nightkin/death(gibbed)
 	icon = 'icons/fallout/mobs/supermutant_dead.dmi'
 	icon_state = icon_dead
 	anchored = FALSE
 	..()
+
+/mob/living/simple_animal/hostile/supermutant/nightkin/rangedmutant
+	name = "nightkin veteran"
+	desc = "A blue variant of the standard Super Mutant, equiped with steathboys.  This one is holding an Assault Rifle."
+	icon = 'icons/fallout/mobs/supermutant.dmi'
+	icon_state = "night_ranged_s"
+	icon_living = "night_ranged_s"
+	icon_dead = "night_ranged_s"
+	maxHealth = 400
+	health = 400
+	ranged = 1
+	alpha = 80
+	force_threshold = 15
+	melee_damage_lower = 45
+	melee_damage_upper = 55
+	attacktext = "smashes"
+	attack_sound = "punch"
+	extra_projectiles = 1
+	retreat_distance = 4
+	minimum_distance = 6
+	projectiletype = /obj/item/projectile/bullet/F13/c556Bullet
+	projectilesound = 'sound/f13weapons/assaultrifle_fire.ogg'
+	loot = list(/obj/item/ammo_box/magazine/m556/rifle)
+
+/mob/living/simple_animal/hostile/supermutant/nightkin/rangedmutant/Aggro()
+	..()
+	summon_backup(15)
+	alpha = 255
+
+/mob/living/simple_animal/hostile/supermutant/nightkin/rangedmutant/death(gibbed)
+	icon = 'icons/fallout/mobs/supermutant_dead.dmi'
+	icon_state = icon_dead
+	anchored = FALSE
+	..()
+
+/mob/living/simple_animal/hostile/supermutant/nightkin/elitemutant
+	name = "nightkin elite"
+	desc = "A blue variant of the standard Super Mutant, and a remnant of the Masters Army."
+	icon = 'icons/fallout/mobs/supermutant.dmi'
+	icon_state = "night_boss_s"
+	icon_living = "night_boss_s"
+	icon_dead = "night_boss_s"
+	ranged = 1
+	maxHealth = 500
+	health = 500
+	alpha = 80
+	force_threshold = 15
+	melee_damage_lower = 45
+	melee_damage_upper = 55
+	attacktext = "smashes"
+	attack_sound = "punch"
+	retreat_distance = 5
+	minimum_distance = 7
+	projectiletype = /obj/item/projectile/plasma/repeater
+	projectilesound = 'sound/f13weapons/plasma_rifle.ogg'
+	loot = list(/obj/item/stock_parts/cell/ammo/mfc)
+
+/mob/living/simple_animal/hostile/supermutant/nightkin/elitemutant/Aggro()
+	..()
+	summon_backup(15)
+	alpha = 255
+
+/mob/living/simple_animal/hostile/supermutant/nightkin/elitemutant/death(gibbed)
+	icon = 'icons/fallout/mobs/supermutant_dead.dmi'
+	icon_state = icon_dead
+	anchored = FALSE
+	..()
+	var/turf/T = get_turf(src)
+	if(prob(40))
+		new /obj/item/gun/energy/laser/plasma(T)
+	. = ..()
