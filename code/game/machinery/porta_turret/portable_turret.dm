@@ -655,6 +655,11 @@
 	. = ..()
 	AddComponent(/datum/component/empprotection, EMP_PROTECT_SELF | EMP_PROTECT_WIRES)
 
+#define ROLE_ENCLAVE			"Enclave"
+
+/obj/machinery/porta_turret/enclave
+	faction = list(ROLE_ENCLAVE)
+
 /obj/machinery/porta_turret/syndicate/energy
 	icon_state = "standard_stun"
 	base_icon_state = "standard"

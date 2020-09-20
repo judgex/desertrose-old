@@ -10,6 +10,9 @@
 		return
 	H.add_trait(TRAIT_TECHNOPHREAK, TRAIT_GENERIC)
 
+/datum/job/enclave/after_spawn(mob/living/carbon/human/H, mob/M)
+	H.add_quirk("Hard Yards")
+
 /*
 Commander
 */
@@ -37,18 +40,13 @@ Commander
 
 	id = /obj/item/card/id/dogtag
 	uniform =  /obj/item/clothing/under/f13/enclave_officer
-
 	shoes = /obj/item/clothing/shoes/combat/swat
 	gloves = /obj/item/clothing/gloves/combat
-
+	r_pocket = /obj/item/twohanded/binocs
 	ears = /obj/item/radio/headset/headset_enclave
 	belt = /obj/item/gun/energy/laser/plasma/pistol
 	suit = /obj/item/clothing/suit/f13/autumn
-
-	gunsmith_one = TRUE
-	gunsmith_two = TRUE
-	gunsmith_three = TRUE
-	gunsmith_four = TRUE
+	back = /obj/item/storage/backpack/trekker
 	pa_wear = TRUE
 /*
 Medic
@@ -80,10 +78,7 @@ Medic
 	gloves = /obj/item/clothing/gloves/combat
 	belt = /obj/item/gun/energy/laser/plasma/pistol
 	ears = /obj/item/radio/headset/headset_enclave
-	gunsmith_one = TRUE
-	gunsmith_two = TRUE
-	gunsmith_three = TRUE
-	gunsmith_four = TRUE
+	back = /obj/item/storage/backpack/trekker
 	pa_wear = TRUE
 /*
 Private
@@ -106,6 +101,25 @@ Private
 	exp_requirements = 1500
 	exp_type = EXP_TYPE_NCR
 
+	loadout_options = list(
+	/datum/outfit/loadout/enclave_soldier_1,
+	/datum/outfit/loadout/enclave_soldier_2
+	)
+
+/datum/outfit/loadout/enclave_soldier_1
+	name = "Enclave Plasma soldier"
+	uniform = /obj/item/clothing/under/color
+	suit_store = /obj/item/gun/energy/laser/plasma
+	backpack_contents = list(
+		/obj/item/stock_parts/cell/ammo/mfc = 3)
+
+/datum/outfit/loadout/enclave_soldier_2
+	name = "Enclave Ballistic soldier"
+	uniform = /obj/item/clothing/under/color
+	suit_store = /obj/item/gun/ballistic/automatic/assault_carbine
+	backpack_contents = list(
+		/obj/item/ammo_box/magazine/m556/rifle/assault = 3)
+
 /datum/outfit/job/enclave/f13usprivate
 	name = "US Private"
 	jobtype = /datum/job/enclave/f13usprivate
@@ -114,15 +128,11 @@ Private
 	shoes = /obj/item/clothing/shoes/combat/swat
 	gloves = /obj/item/clothing/gloves/combat
 	ears = /obj/item/radio/headset/headset_enclave
-	gunsmith_one = TRUE
-	gunsmith_two = TRUE
-	gunsmith_three = TRUE
-	gunsmith_four = TRUE
-	pa_wear = TRUE
 	head = /obj/item/clothing/head/helmet/f13/combat/enclave
 	suit = /obj/item/clothing/suit/armor/f13/combat/enclave
 	belt = /obj/item/gun/energy/laser/plasma/pistol
-/*
+	back = /obj/item/storage/backpack/trekker
+
 /*
 Scientist
 */
@@ -130,7 +140,7 @@ Scientist
 	title = "US Scientist"
 	flag = F13USSCIENTIST
 	department_flag = ENCLAVE
-	//faction = "Station"
+	faction = "Enclave"
 	total_positions = 2
 	spawn_positions = 2
 	supervisors = "the commander"
@@ -141,12 +151,21 @@ Scientist
 	access = list()
 	minimal_access = list()
 
+	exp_requirements = 500
+	exp_type = EXP_TYPE_NCR
+
 /datum/outfit/job/enclave/f13usscientist
 	name = "US Scientist"
 	jobtype = /datum/job/enclave/f13usscientist
 
-	id = /obj/item/card/id/gold
-	uniform =  /obj/item/clothing/under/rank/captain
+	id = /obj/item/card/id/dogtag
+	uniform =  /obj/item/clothing/under/f13/dbdu
+	shoes = /obj/item/clothing/shoes/combat/swat
+	gloves = /obj/item/clothing/gloves/combat
+	ears = /obj/item/radio/headset/headset_enclave
+	head = /obj/item/clothing/head/bio_hood/f13/hazmat
+	suit = /obj/item/clothing/suit/bio_suit/f13/hazmat
+	belt = /obj/item/storage/belt/utility/full/engi
 
 
 /*
@@ -156,7 +175,7 @@ Engineer
 	title = "US Engineer"
 	flag = F13USENGINEER
 	department_flag = ENCLAVE
-	//faction = "Station"
+	faction = "Enclave"
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "the commander"
@@ -167,13 +186,26 @@ Engineer
 	access = list()
 	minimal_access = list()
 
+	exp_requirements = 400
+	exp_type = EXP_TYPE_NCR
+
 /datum/outfit/job/enclave/f13usengineer
 	name = "US Engineer"
 	jobtype = /datum/job/enclave/f13usengineer
 
-	id = /obj/item/card/id/gold
-	uniform =  /obj/item/clothing/under/rank/captain
+	id = /obj/item/card/id/dogtag
+	uniform =  /obj/item/clothing/under/f13/petrochico
+	shoes = /obj/item/clothing/shoes/combat/swat
+	gloves = /obj/item/clothing/gloves/combat
+	ears = /obj/item/radio/headset/headset_enclave
+	head = /obj/item/clothing/head/hardhat
+	belt = /obj/item/storage/belt/utility/full/engi
+	gunsmith_one = TRUE
+	gunsmith_two = TRUE
+	gunsmith_three = TRUE
+	gunsmith_four = TRUE
 
+/*
 /*
 Colonist
 */
