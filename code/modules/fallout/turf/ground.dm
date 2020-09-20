@@ -84,7 +84,19 @@
 	icon_state = "wasteland[rand(1,31)]"
 	for(var/direction in GLOB.cardinals)
 		var/turf/turf_to_check = get_step(src, direction)
-		if(istype(turf_to_check, /turf/open))
+		if(istype(turf_to_check, /turf/open/water))
+			var/obj/effect/overlay/desert_side/DS = new /obj/effect/overlay/desert_side(src)
+			switch(direction)
+				if(NORTH)
+					DS.pixel_y = 32
+				if(SOUTH)
+					DS.pixel_y = -32
+				if(EAST)
+					DS.pixel_x = 32
+				if(WEST)
+					DS.pixel_x = -32
+			DS.dir = turn(direction, 180)
+		if(istype(turf_to_check, /turf/open/indestructible/ground/outside/water))
 			var/obj/effect/overlay/desert_side/DS = new /obj/effect/overlay/desert_side(src)
 			switch(direction)
 				if(NORTH)
