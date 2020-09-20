@@ -319,6 +319,15 @@
 	adjusted_flags = null
 	actions_types = list(/datum/action/item_action/adjust)
 
+/obj/item/clothing/mask/bandana/oldredbandana
+	name = "old bandana"
+	desc = "A fine bandana."
+	icon_state = "legdecan"
+	flags_inv = HIDEFACE
+	visor_flags_inv = HIDEFACE
+	adjusted_flags = null
+	actions_types = list(/datum/action/item_action/adjust)
+
 /obj/item/clothing/mask/bandana/legcenturion
 	name = "centurion bandana"
 	desc = "A fine centurion bandana."

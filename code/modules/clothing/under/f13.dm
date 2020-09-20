@@ -144,6 +144,14 @@
 	item_color = "vetranger"
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 40, "fire" = 30, "acid" = 70)
 
+/obj/item/clothing/under/f13/rustic
+	name = "rustic outfit"
+	desc = "Simple rustic clothes for your day to day life in the wastes."
+	icon_state = "vetranger"
+	item_state = "vetranger"
+	item_color = "vetranger"
+	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 30, "fire" = 20, "acid" = 50)
+
 /obj/item/clothing/under/f13/sheriff
 	name = "sheriff outfit"
 	desc = "The symbol of law and civilization, a black vest over a well starched white shirt."
@@ -447,6 +455,8 @@
 	icon_state = "nato_uniform"
 	item_state = "nato_uniform"
 	item_color = "nato_uniform"
+
+
 
 //Prom Dress
 
