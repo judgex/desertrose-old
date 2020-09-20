@@ -2,8 +2,8 @@
 /**********************Ore box**************************/
 
 /obj/structure/ore_box
-	name = "ящик для руды"
-	desc = "Тяжёлый ящик для руды. Ржавый, но всё еще способен удерживать руду."
+	name = "ore box"
+	desc = "heavy box for ore..."
 	icon = 'icons/obj/mining.dmi'
 	icon_state = "orebox"
 	density = TRUE
@@ -46,14 +46,14 @@
 		show_contents(user)
 
 /obj/structure/ore_box/proc/show_contents(mob/user)
-	var/dat = text("<b>Содержимое коробки...</b><br>")
+	var/dat = text("<b>Box contents...</b><br>")
 	var/list/assembled = list()
 	for(var/obj/item/stack/ore/O in src)
 		assembled[O.type] += O.amount
 	for(var/type in assembled)
 		var/obj/item/stack/ore/O = type
 		dat += "[initial(O.name)] - [assembled[type]]<br>"
-	dat += text("<br><br><A href='?src=[REF(src)];removeall=1'>Опустошить</A>")
+	dat += text("<br><br><A href='?src=[REF(src)];removeall=1'>Empty</A>")
 	user << browse(dat, "window=orebox")
 
 /obj/structure/ore_box/proc/dump_box_contents()
