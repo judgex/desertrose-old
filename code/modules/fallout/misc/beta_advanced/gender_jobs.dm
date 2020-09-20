@@ -1,5 +1,4 @@
 /datum/job
-	.=..()
 	var/disallowed_gender = 0
 
 /datum/job/proc/is_gender_allowed(client/client)
