@@ -63,13 +63,15 @@
 /turf/open/floor/grass
 	name = "grass patch"
 	desc = "You can't tell if this is real grass or just cheap plastic imitation."
-	icon_state = "grass"
+	icon = 'icons/fallout/turfs/floors.dmi'
+	icon_state = "grass1"
 	floor_tile = /obj/item/stack/tile/grass
-	broken_states = list("sand")
+	broken_states = list("grass1")
 	flags_1 = NONE
 	bullet_bounce_sound = null
 	var/ore_type = /obj/item/stack/ore/glass
 	var/turfverb = "uproot"
+	step_sounds = list("human" = "dirtfootsteps")
 
 /turf/open/floor/grass/Initialize()
 	. = ..()

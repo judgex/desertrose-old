@@ -81,6 +81,14 @@
 	category = CAT_MISC
 	subcategory = CAT_MISC
 
+/datum/crafting_recipe/clothing_to_cloth
+	name = "cloth"
+	result = /obj/item/stack/sheet/cloth
+	reqs = list(/obj/item/clothing = 1)
+	time = 80
+	category = CAT_MISC
+	subcategory = CAT_MISC
+
 /datum/crafting_recipe/setupcampfirekit
 	name = "set up campfire kit"
 	result = /obj/structure/campfire

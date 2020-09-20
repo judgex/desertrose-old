@@ -55,7 +55,7 @@
 	name = "Select Loadout"
 	desc = "Activate this item to select your additional loadout equipment. It will vanish once you're done."
 	icon = 'icons/effects/landmarks_static.dmi'
-	icon_state = "random_loot"
+	icon_state = "loadout"
 	item_flags = NODROP
 
 /obj/item/loadout_token/attack_self(var/mob/user)
@@ -114,6 +114,10 @@
 	selected_datum.spawn_at(kitbox)
 	M.put_in_hands(kitbox)
 	disable_loadout_select(M)
+
+/obj/item/storage/box/large
+	icon = 'icons/effects/landmarks_static.dmi'
+	icon_state = "loadout"
 
 /obj/item/storage/box/large/ComponentInitialize() //same storage as a backpack, to allow it to hold loadout items
 	. = ..()
