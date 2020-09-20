@@ -82,6 +82,25 @@ Medic
 	pa_wear = TRUE
 	suit = /obj/item/clothing/suit/toggle/labcoat/f13/followers
 
+/datum/outfit/loadout/enclave_medic_1
+	name = "Enclave Medic"
+	uniform = /obj/item/clothing/under/color/black
+	suit_store = /obj/item/gun/energy/laser/plasma
+	back = /obj/item/storage/backpack/satchel/med
+	belt = /obj/item/gun/energy/laser/plasma/glock
+	backpack_contents = list(
+		/obj/item/reagent_containers/hypospray/medipen/stimpak/super = 3, /obj/item/stock_parts/cell/ammo/ec = 1)
+
+/datum/outfit/loadout/enclave_medic_2
+	name = "Enclave Surgeon"
+	uniform = /obj/item/clothing/under/color
+	suit_store = /obj/item/gun/energy/laser/plasma/glock
+	r_pocket = /obj/item/clothing/glasses/hud/health/sunglasses
+	gloves = /obj/item/clothing/gloves/color/latex/nitrile
+	back = /obj/item/storage/backpack/duffelbag/med/surgery
+	backpack_contents = list(
+		/obj/item/reagent_containers/hypospray/medipen/stimpak/super = 1, /obj/item/stock_parts/cell/ammo/ec = 2)
+
 /*
 Private
 */
@@ -110,14 +129,14 @@ Private
 
 /datum/outfit/loadout/enclave_soldier_1
 	name = "Enclave Plasma soldier"
-	uniform = /obj/item/clothing/under/color
+	uniform = /obj/item/clothing/under/color/black
 	suit_store = /obj/item/gun/energy/laser/plasma
 	backpack_contents = list(
 		/obj/item/stock_parts/cell/ammo/mfc = 3)
 
 /datum/outfit/loadout/enclave_soldier_2
 	name = "Enclave Ballistic soldier"
-	uniform = /obj/item/clothing/under/color
+	uniform = /obj/item/clothing/under/color/black
 	suit_store = /obj/item/gun/ballistic/automatic/assault_carbine
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/m556/rifle/assault = 3)
