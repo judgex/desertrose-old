@@ -144,7 +144,7 @@
 		qdel(turfPlant)
 	. =  ..()
 
-/turf/open/indestructible/ground/outside/dirt
+/turf/open/indestructible/ground/outside/desert/dirt
 	name = "dirt"
 	icon_state = "dirtfull"
 	step_sounds = list("human" = "dirtfootsteps")
@@ -152,7 +152,6 @@
 //	/obj/item/seeds/potato, /obj/item/seeds/carrot, /obj/item/seeds/pumpkin, /obj/item/seeds/corn, /obj/item/seeds/agave)
 	slowdown = 0.2
 	flags_1 = CAN_HAVE_NATURE
-	initial_gas_mix = "o2=30;n2=82;TEMP=293.15"
 
 /turf/open/indestructible/ground/outside/road
 	name = "\proper road"
