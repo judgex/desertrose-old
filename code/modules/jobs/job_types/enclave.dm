@@ -1,4 +1,4 @@
-/*/datum/outfit/job/enclave/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+/datum/outfit/job/enclave/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
 	if(visualsOnly)
 		return
@@ -17,7 +17,7 @@ Commander
 	title = "US Commander"
 	flag = F13USCOMMANDER
 	department_flag = ENCLAVE
-	//faction = "Station"
+	faction = "Enclave"
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "the US Government"
@@ -43,7 +43,7 @@ Medic
 	title = "US Medic"
 	flag = F13USMEDIC
 	department_flag = ENCLAVE
-	//faction = "Station"
+	faction = "Enclave"
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "the commander"
@@ -68,7 +68,7 @@ Private
 	title = "US Private"
 	flag = F13USPRIVATE
 	department_flag = ENCLAVE
-	//faction = "Station"
+	faction = "Enclave"
 	total_positions = 2
 	spawn_positions = 2
 	supervisors = "the commander"
@@ -86,7 +86,7 @@ Private
 	id = /obj/item/card/id/gold
 	uniform =  /obj/item/clothing/under/rank/captain
 
-
+/*
 /*
 Scientist
 */
