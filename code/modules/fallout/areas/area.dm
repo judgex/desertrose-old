@@ -28,7 +28,7 @@
 	outdoors = 1
 	open_space = 1
 	blob_allowed = 0
-	environment = 19
+	environment = 15
 	grow_chance = 45
 
 /area/f13/forest
