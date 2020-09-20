@@ -12,7 +12,7 @@
 	var/mob/living/carbon/human/H = quirk_holder
 	if(NOBLOOD in H.dna.species.species_traits) //can't lose blood if your species doesn't have any
 		return
-	else 
+	else
 		quirk_holder.blood_volume -= 0.275
 
 
@@ -149,3 +149,23 @@
 		dumb_thing = FALSE //only once per life
 		if(prob(1))
 			new/obj/item/reagent_containers/food/snacks/pastatomato(get_turf(H)) //now that's what I call spaghetti code
+
+/datum/quirk/underprepared
+	name = "Underprepared"
+	desc = "You are not suited to a life in the Wastes! Instantly lose 15 maximum health and walk slower on desert tiles."
+	value = -3
+	mob_trait = TRAIT_UNDERPREPARED
+	gain_text = "<span class='notice'>You feel less healthy than usual, and you move a little slower.</span>"
+	lose_text = "<span class='danger'>You feel healthier than usual and move a little faster.</span>"
+
+/datum/quirk/underprepared/on_spawn()
+	var/mob/living/carbon/human/mob_tar = quirk_holder
+	mob_tar.maxHealth += -15
+	mob_tar.health += -15
+
+/datum/quirk/mute
+	name = "Mute"
+	desc = "You have entirely lost the ability to speak. How unfortunate!"
+	value = -1
+	mob_trait = TRAIT_MUTE
+
