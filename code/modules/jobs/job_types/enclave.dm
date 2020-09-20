@@ -43,6 +43,7 @@ Commander
 	shoes = /obj/item/clothing/shoes/combat/swat
 	gloves = /obj/item/clothing/gloves/combat
 	r_pocket = /obj/item/twohanded/binocs
+	accessory = /obj/item/clothing/accessory/enclave/colonel
 	ears = /obj/item/radio/headset/headset_enclave
 	belt = /obj/item/gun/energy/laser/plasma/pistol
 	suit = /obj/item/clothing/suit/f13/autumn
@@ -71,7 +72,8 @@ Medic
 
 	loadout_options = list(
 	/datum/outfit/loadout/enclave_medic_1,
-	/datum/outfit/loadout/enclave_medic_2
+	/datum/outfit/loadout/enclave_medic_2,
+	/datum/outfit/loadout/enclave_medic_3
 	)
 
 /datum/outfit/job/enclave/f13usmedic
@@ -89,22 +91,31 @@ Medic
 
 /datum/outfit/loadout/enclave_medic_1
 	name = "Enclave Medic"
-	uniform = /obj/item/clothing/under/color/black
-	suit_store = /obj/item/gun/energy/laser/plasma
+	uniform = /obj/item/clothing/under/syndicate/camo
+	suit_store = /obj/item/gun/energy/laser/plasma/pistol
 	back = /obj/item/storage/backpack/satchel/med
-	belt = /obj/item/gun/energy/laser/plasma/glock
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/stimpak/super = 3, /obj/item/stock_parts/cell/ammo/ec = 1)
 
 /datum/outfit/loadout/enclave_medic_2
 	name = "Enclave Surgeon"
-	uniform = /obj/item/clothing/under/color
+	uniform = /obj/item/clothing/under/syndicate/camo
 	suit_store = /obj/item/gun/energy/laser/plasma/glock
 	r_pocket = /obj/item/clothing/glasses/hud/health/sunglasses
 	gloves = /obj/item/clothing/gloves/color/latex/nitrile
 	back = /obj/item/storage/backpack/duffelbag/med/surgery
 	backpack_contents = list(
-		/obj/item/reagent_containers/hypospray/medipen/stimpak/super = 1, /obj/item/stock_parts/cell/ammo/ec = 2)
+		/obj/item/reagent_containers/hypospray/medipen/stimpak/super = 1, /obj/item/stock_parts/cell/ammo/ec = 2, /obj/item/clothing/mask/surgical = 1)
+
+/datum/outfit/loadout/enclave_medic_3
+	name = "Enclave Chemist"
+	uniform = /obj/item/clothing/under/rank/chemist
+	suit_store = /obj/item/gun/energy/laser/plasma/glock
+	r_pocket = /obj/item/clothing/glasses/hud/health/sunglasses
+	gloves = /obj/item/clothing/gloves/color/latex/nitrile
+	back = /obj/item/storage/backpack/satchel/med
+	backpack_contents = list(
+		/obj/item/stock_parts/cell/ammo/ec = 2, /obj/item/book/granter/trait/chemistry = 1, /obj/item/storage/box/beakers = 1)
 
 /*
 Private
@@ -136,6 +147,7 @@ Private
 	name = "Enclave Plasma soldier"
 	uniform = /obj/item/clothing/under/color/black
 	suit_store = /obj/item/gun/energy/laser/plasma
+	accessory = /obj/item/clothing/accessory/enclave/sergeant
 	backpack_contents = list(
 		/obj/item/stock_parts/cell/ammo/mfc = 3)
 
@@ -143,6 +155,7 @@ Private
 	name = "Enclave Ballistic soldier"
 	uniform = /obj/item/clothing/under/color/black
 	suit_store = /obj/item/gun/ballistic/automatic/assault_carbine
+	accessory = /obj/item/clothing/accessory/enclave/private
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/m556/rifle/assault = 3)
 
@@ -193,7 +206,6 @@ Scientist
 	suit = /obj/item/clothing/suit/bio_suit/f13/hazmat
 	belt = /obj/item/storage/belt/utility/full/engi
 
-
 /*
 Engineer
 */
@@ -231,6 +243,32 @@ Engineer
 	gunsmith_three = TRUE
 	gunsmith_four = TRUE
 
+	loadout_options = list(
+	/datum/outfit/loadout/enclave_eng_1,
+	/datum/outfit/loadout/enclave_eng_2,
+	/datum/outfit/loadout/enclave_eng_3
+	)
+
+/datum/outfit/loadout/enclave_eng_1
+	name = "Enclave Combat Engineer"
+	uniform = /obj/item/clothing/under/color/black
+	suit_store = /obj/item/gun/energy/laser/plasma
+	accessory = /obj/item/clothing/accessory/enclave/sergeant
+	backpack_contents = list(
+		/obj/item/stock_parts/cell/ammo/mfc = 3)
+
+/datum/outfit/loadout/enclave_eng_2
+	name = "Enclave Mechanic"
+	backpack_contents = list(
+		/obj/item/clothing/head/welding/f13/fire = 1)
+
+/datum/outfit/loadout/enclave_eng_3
+	name = "Enclave Pilot"
+	head = /obj/item/clothing/head/helmet/f13/combat/enclave
+	suit_store = /obj/item/gun/energy/laser/plasma/pistol
+	backpack_contents = list(
+		/obj/item/stock_parts/cell/ammo/ec = 2)
+
 /*
 /*
 Colonist
@@ -257,3 +295,24 @@ Colonist
 	id = /obj/item/card/id/gold
 	uniform =  /obj/item/clothing/under/rank/captain
 */
+
+/obj/item/clothing/accessory/enclave/sergeant
+    name = "Sergeant pins"
+    desc = "A silver pin with one device, a silver sword centered on the purple coloring, and notches denoting the rank of the Paladin."
+    icon_state = "paladin"
+    item_color = "paladin"
+    minimize_when_attached = TRUE
+
+/obj/item/clothing/accessory/enclave/private
+    name = "Private pins"
+    desc = "A silver pin with one device, and purple coloring."
+    icon_state = "juniorpaladin"
+    item_color = "juniorpaladin"
+    minimize_when_attached = TRUE
+
+/obj/item/clothing/accessory/enclave/colonel
+    name = "Colonel pins"
+    desc = "A gold-plated, silver lined pin with one device and two outstretched wings on the side; a golden sword centered on green-cloth. It bears notches with gems on the top half, and denotes the rank of Colonel."
+    icon_state = "elder"
+    item_color = "elder"
+    minimize_when_attached = TRUE
