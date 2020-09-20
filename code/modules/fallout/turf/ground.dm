@@ -81,11 +81,10 @@
 	. = ..()
 	if(!((locate(/obj/structure) in src) || (locate(/obj/machinery) in src)))
 		plantGrass()
-	if(icon_state != "wasteland")
-		icon_state = "wasteland[rand(1,31)]"
+	icon_state = "wasteland[rand(1,31)]"
 	for(var/direction in GLOB.cardinals)
 		var/turf/turf_to_check = get_step(src, direction)
-		if(istype(turf_to_check, /turf/open/water))
+		if(istype(turf_to_check, /turf/open))
 			var/obj/effect/overlay/desert_side/DS = new /obj/effect/overlay/desert_side(src)
 			switch(direction)
 				if(NORTH)
