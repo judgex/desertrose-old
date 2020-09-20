@@ -1120,12 +1120,30 @@
 	category = CAT_PRIMAL
 	subcategory = CAT_TRIBAL_WEAPONS
 
-/datum/crafting_recipe/talisman//TODO ME
+/datum/crafting_recipe/talisman
 	name = "Hunter's talisman"
 	result = /obj/item/clothing/neck/cloak/amulet
 	time = 50
 	reqs = list(/obj/item/stack/sheet/bone = 1,
 				/obj/item/stack/sheet/sinew = 1)
+	category = CAT_PRIMAL
+	subcategory = CAT_TRIBAL_WEAPONS
+
+/datum/crafting_recipe/cloakbrown
+	name = "Cloak"
+	result = /obj/item/clothing/neck/cloak
+	time = 50
+	reqs = list(/obj/item/stack/sheet/cloth = 2,
+				/obj/item/stack/sheet/leather = 2)
+	category = CAT_PRIMAL
+	subcategory = CAT_TRIBAL_WEAPONS
+
+/datum/crafting_recipe/cloakdark
+	name = "Dark Cloak"
+	result = /obj/item/clothing/neck/cloak/grey
+	time = 50
+	reqs = list(/obj/item/stack/sheet/cloth = 2,
+				/obj/item/stack/sheet/leather = 2)
 	category = CAT_PRIMAL
 	subcategory = CAT_TRIBAL_WEAPONS
 

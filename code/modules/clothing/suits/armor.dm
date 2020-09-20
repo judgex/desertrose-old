@@ -1195,6 +1195,13 @@
 	icon_state = "towntrench_heavy"
 	armor = list("melee" = 60, "bullet" = 50, "laser" = 30, "energy" = 40, "bomb" = 25, "bio" = 40, "rad" = 40, "fire" = 80, "acid" = 0)
 
+/obj/item/clothing/suit/armor/f13/town/embroidered
+	name = "embroidered trenchcoat"
+	desc = "A custom armored trench coat with extra-length and a raised collar. There's a flower embroidered onto the back, although the color is a little faded."
+	icon_state = "towntrench_special"
+	item_state = "towntrench_special"
+	armor = list("melee" = 50, "bullet" = 40, "laser" = 25, "energy" = 40, "bomb" = 25, "bio" = 40, "rad" = 35, "fire" = 80, "acid" = 0)
+
 /obj/item/clothing/suit/armor/f13/town/deputy
 	name = "deputy trenchcoat"
 	desc = "An armored trench coat with added shoulderpads, a chestplate, and legguards."
