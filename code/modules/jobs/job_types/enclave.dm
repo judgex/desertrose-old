@@ -35,10 +35,21 @@ Commander
 	name = "US Commander"
 	jobtype = /datum/job/enclave/f13uscommander
 
-	id = /obj/item/card/id/gold
-	uniform =  /obj/item/clothing/under/rank/captain
+	id = /obj/item/card/id/dogtag
+	uniform =  /obj/item/clothing/under/f13/enclave_officer
 
+	shoes = /obj/item/clothing/shoes/combat/swat
+	gloves = /obj/item/clothing/gloves/combat
 
+	ears = /obj/item/radio/headset/headset_enclave
+	belt = /obj/item/gun/energy/laser/plasma/pistol
+	suit = /obj/item/clothing/suit/f13/autumn
+
+	gunsmith_one = TRUE
+	gunsmith_two = TRUE
+	gunsmith_three = TRUE
+	gunsmith_four = TRUE
+	pa_wear = TRUE
 /*
 Medic
 */
@@ -63,10 +74,17 @@ Medic
 /datum/outfit/job/enclave/f13usmedic
 	name = "US Medic"
 	jobtype = /datum/job/enclave/f13usmedic
-	id = /obj/item/card/id/gold
-	uniform =  /obj/item/clothing/under/rank/captain
-
-
+	id = /obj/item/card/id/dogtag
+	uniform =  /obj/item/clothing/under/f13/enclave_officer
+	shoes = /obj/item/clothing/shoes/combat/swat
+	gloves = /obj/item/clothing/gloves/combat
+	belt = /obj/item/gun/energy/laser/plasma/pistol
+	ears = /obj/item/radio/headset/headset_enclave
+	gunsmith_one = TRUE
+	gunsmith_two = TRUE
+	gunsmith_three = TRUE
+	gunsmith_four = TRUE
+	pa_wear = TRUE
 /*
 Private
 */
@@ -91,10 +109,19 @@ Private
 /datum/outfit/job/enclave/f13usprivate
 	name = "US Private"
 	jobtype = /datum/job/enclave/f13usprivate
-
-	id = /obj/item/card/id/gold
-	uniform =  /obj/item/clothing/under/rank/captain
-
+	id = /obj/item/card/id/dogtag
+	uniform =  /obj/item/clothing/under/f13/dbdu
+	shoes = /obj/item/clothing/shoes/combat/swat
+	gloves = /obj/item/clothing/gloves/combat
+	ears = /obj/item/radio/headset/headset_enclave
+	gunsmith_one = TRUE
+	gunsmith_two = TRUE
+	gunsmith_three = TRUE
+	gunsmith_four = TRUE
+	pa_wear = TRUE
+	head = /obj/item/clothing/head/helmet/f13/combat/enclave
+	suit = /obj/item/clothing/suit/armor/f13/combat/enclave
+	belt = /obj/item/gun/energy/laser/plasma/pistol
 /*
 /*
 Scientist
