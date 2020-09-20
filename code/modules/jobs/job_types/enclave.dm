@@ -80,6 +80,8 @@ Medic
 	ears = /obj/item/radio/headset/headset_enclave
 	back = /obj/item/storage/backpack/trekker
 	pa_wear = TRUE
+	suit = /obj/item/clothing/suit/toggle/labcoat/f13/followers
+
 /*
 Private
 */
