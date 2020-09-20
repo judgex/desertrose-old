@@ -12,7 +12,7 @@
 
 /obj/vertibird/New()
 	var/obj/item/start = new /obj/landmark/vertibird()
-	start.name = "Poseidon Oil 057 - 'The Freezer'"
+	start.name = "Camp Navarro"
 	start.loc = loc
 	vertibird = src
 
