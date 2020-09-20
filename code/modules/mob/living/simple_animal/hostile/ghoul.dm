@@ -64,7 +64,7 @@
 /mob/living/simple_animal/hostile/ghoul/frozenreaver
 	name = "frozen ghoul reaver"
 	desc = "A ghoul that has lost it's mind and become aggressive. This one is strapped with metal armor, and appears far stronger."
-	icon = 'icons/mob/wastemobs.dmi'
+	icon = 'icons/mob/ghouls.dmi'
 	icon_state = "frozen_reaver"
 	icon_living = "frozen_reaver"
 	icon_dead = "frozen_reaver_dead"
@@ -91,7 +91,7 @@
 /mob/living/simple_animal/hostile/ghoul/legendary
 	name = "legendary ghoul"
 	desc = "A ghoul that has lost it's mind and become aggressive. This one is exceptionally large, bulging muscles. It looks quite strong."
-	icon = 'icons/mob/wastemobs.dmi'
+	icon = 'icons/mob/ghouls.dmi'
 	icon_state = "glowinghoul"
 	icon_living = "glowinghoul"
 	icon_dead = "glowinghoul_dead"
