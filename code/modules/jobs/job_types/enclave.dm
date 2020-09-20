@@ -69,6 +69,11 @@ Medic
 	exp_requirements = 2500
 	exp_type = EXP_TYPE_NCR
 
+	loadout_options = list(
+	/datum/outfit/loadout/enclave_medic_1,
+	/datum/outfit/loadout/enclave_medic_2
+	)
+
 /datum/outfit/job/enclave/f13usmedic
 	name = "US Medic"
 	jobtype = /datum/job/enclave/f13usmedic

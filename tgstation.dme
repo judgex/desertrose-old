@@ -1604,6 +1604,7 @@
 #include "code\modules\fallout\misc\beta_advanced\death_screens.dm"
 #include "code\modules\fallout\misc\beta_advanced\decoration_f13.dm"
 #include "code\modules\fallout\misc\beta_advanced\fluff.dm"
+#include "code\modules\fallout\misc\beta_advanced\gender_jobs.dm"
 #include "code\modules\fallout\misc\beta_advanced\noise.dm"
 #include "code\modules\fallout\misc\beta_advanced\step_sound.dm"
 #include "code\modules\fallout\misc\beta_advanced\lighting\sun\sunlighting_corner.dm"

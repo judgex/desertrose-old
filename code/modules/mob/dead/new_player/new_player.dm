@@ -335,6 +335,8 @@
 		return JOB_UNAVAILABLE_WHITELIST
 	if(latejoin && !job.special_check_latejoin(client))
 		return JOB_UNAVAILABLE_GENERIC
+	if(!job.is_gender_allowed(src.client))
+		return 0
 	if(LAZYLEN(SSmapping.config.removed_jobs))
 		for(var/J in SSmapping.config.removed_jobs) //Search through our individual jobs to be removed
 			if(job.title == J) //Found one, abort.
