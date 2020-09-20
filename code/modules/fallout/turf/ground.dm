@@ -151,6 +151,7 @@
 //	allowed_plants = list(/obj/item/seeds/poppy/broc, /obj/item/seeds/xander, /obj/item/seeds/mutfruit, \
 //	/obj/item/seeds/potato, /obj/item/seeds/carrot, /obj/item/seeds/pumpkin, /obj/item/seeds/corn, /obj/item/seeds/agave)
 	slowdown = 0.2
+	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
 	flags_1 = CAN_HAVE_NATURE
 
 /turf/open/indestructible/ground/outside/dirt/Initialize()
@@ -252,7 +253,7 @@
 		plantShrooms()
 	for(var/direction in GLOB.cardinals)
 		var/turf/turf_to_check = get_step(src, direction)
-		if(istype(turf_to_check, /turf/open/water))
+		if(istype(turf_to_check, /turf/open))
 			var/obj/effect/overlay/rockfloor_side/DS = new /obj/effect/overlay/rockfloor_side(src)
 			switch(direction)
 				if(NORTH)
