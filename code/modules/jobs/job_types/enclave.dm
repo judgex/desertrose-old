@@ -28,6 +28,9 @@ Commander
 	access = list()
 	minimal_access = list()
 
+	exp_requirements = 3500
+	exp_type = EXP_TYPE_NCR
+
 /datum/outfit/job/enclave/f13uscommander
 	name = "US Commander"
 	jobtype = /datum/job/enclave/f13uscommander
@@ -54,6 +57,9 @@ Medic
 	access = list()
 	minimal_access = list()
 
+	exp_requirements = 2500
+	exp_type = EXP_TYPE_NCR
+
 /datum/outfit/job/enclave/f13usmedic
 	name = "US Medic"
 	jobtype = /datum/job/enclave/f13usmedic
@@ -78,6 +84,9 @@ Private
 
 	access = list()
 	minimal_access = list()
+
+	exp_requirements = 1500
+	exp_type = EXP_TYPE_NCR
 
 /datum/outfit/job/enclave/f13usprivate
 	name = "US Private"
