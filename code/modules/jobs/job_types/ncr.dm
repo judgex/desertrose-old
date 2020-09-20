@@ -31,7 +31,7 @@ Colonel
 	total_positions = 0
 	spawn_positions = 0
 
-	exp_requirements = 300
+	exp_requirements = 800
 	exp_type = EXP_TYPE_NCR
 
 	outfit = /datum/outfit/job/ncr/f13colonel
@@ -76,7 +76,7 @@ Captain
 	supervisors = "Colonel"
 	req_admin_notify = 1
 
-	exp_requirements = 200
+	exp_requirements = 700
 	exp_type = EXP_TYPE_NCR
 
 	outfit = /datum/outfit/job/ncr/f13captain
@@ -152,7 +152,7 @@ Ambassador
 	supervisors = "Colonel"
 	req_admin_notify = 1
 
-	exp_requirements = 30
+	exp_requirements = 100
 	exp_type = EXP_TYPE_NCR
 
 	outfit = /datum/outfit/job/ncr/f13ambassador
@@ -188,7 +188,7 @@ Lieutenant
 	supervisors = "Captain and above"
 	selection_color = "#fff5cc"
 
-	exp_requirements = 65
+	exp_requirements = 500
 	exp_type = EXP_TYPE_NCR
 
 	outfit = /datum/outfit/job/ncr/f13lieutenant
@@ -268,7 +268,7 @@ Sergeant
 	supervisors = "Lieutenants and above"
 	selection_color = "#fff5cc"
 
-	exp_requirements = 60
+	exp_requirements = 250
 	exp_type = EXP_TYPE_NCR
 
 	outfit = /datum/outfit/job/ncr/f13sergeant
@@ -326,7 +326,7 @@ Corporal
 	supervisors = "Sergeants and above"
 	selection_color = "#fff5cc"
 
-	exp_requirements = 50
+	exp_requirements = 230
 	exp_type = EXP_TYPE_NCR
 
 	outfit = /datum/outfit/job/ncr/f13specialist
@@ -404,7 +404,7 @@ NCR Heavy Trooper
 	supervisors = "the officers"
 	selection_color = "#fff5cc"
 
-	exp_requirements = 50
+	exp_requirements = 265
 	exp_type = EXP_TYPE_NCR
 
 	outfit = /datum/outfit/job/ncr/f13ncrht
@@ -460,7 +460,7 @@ NCR Military Police
 
 	outfit = /datum/outfit/job/ncr/f13ncrmp
 
-	exp_requirements = 30
+	exp_requirements = 300
 	exp_type = EXP_TYPE_NCR
 
 /datum/outfit/job/ncr/f13ncrmp
@@ -497,7 +497,7 @@ Trooper
 	description = "You answer to everyone above you in the chain of command, taking orders from your Sergeant directly and obeying all commands given by officers such as the Lieutenant and Captain."
 	supervisors = "Corporals and above"
 	selection_color = "#fff5cc"
-	exp_requirements = 20
+	exp_requirements = 100
 	exp_type = EXP_TYPE_NCR
 
 	outfit = /datum/outfit/job/ncr/f13trooper
@@ -550,7 +550,7 @@ Recruit
 	description = "You are a noncombatant member of the NCR assigned the vital duty of helping them with cooking, farming, mining, and other menial tasks. While you have been to basic training, it was rushed and hardly prepared you for the horrors of war. Your sidearm is to be used in your own defense, only."
 	supervisors = "everyone in the NCR"
 	selection_color = "#fff5cc"
-	exp_requirements = 12
+	exp_requirements = 80
 	exp_type = EXP_TYPE_WASTELAND
 
 	outfit = /datum/outfit/job/ncr/f13recruit
@@ -585,7 +585,7 @@ Recruit
 	supervisors = "Ambassador or Captain"
 	selection_color = "#fff5cc"
 
-	exp_requirements = 70
+	exp_requirements = 110
 	exp_type = EXP_TYPE_NCR
 
 	outfit = /datum/outfit/job/ncr/f13ncradmin
@@ -616,7 +616,7 @@ Recruit
 	description = "As an NCR Citizen, you may believe that the potential for fortune out west has dried up and that the frontier holds abundant opportunities for you to encroach and take advantage of. Surrounded by the relative safety of the Republic, you are responsible for being a part of the cities community and maintaining the facilities within it in any capacity which will aid the greater good. You may correspond with the Administrator or other NCR leadership to help them achieve goals, or pursue your own individual goals as an independent agent of the NCR.."
 	supervisors = "NCR Administrator"
 	selection_color = "#fff5cc"
-	exp_requirements = 12
+	exp_requirements = 40
 	exp_type = EXP_TYPE_WASTELAND
 
 	outfit = /datum/outfit/job/ncr/f13ncrcitizen
@@ -699,7 +699,7 @@ Veteran Ranger
 	supervisors = "Captain and above"
 	selection_color = "#ffeeaa"
 
-	exp_requirements = 80
+	exp_requirements = 670
 	exp_type = EXP_TYPE_NCR
 
 	outfit = /datum/outfit/job/ncr/f13vetranger
@@ -846,7 +846,7 @@ Ranger -- Split into Patrol and Scout
 	supervisors = "Veteran Ranger"
 	selection_color = "#fff5cc"
 
-	exp_requirements = 90
+	exp_requirements = 560
 	exp_type = EXP_TYPE_NCR
 
 	outfit = /datum/outfit/job/ncr/f13rangerpatrol
@@ -894,7 +894,7 @@ Ranger -- Split into Patrol and Scout
 	supervisors = "Veteran Ranger"
 	selection_color = "#fff5cc"
 
-	exp_requirements = 90
+	exp_requirements = 450
 	exp_type = EXP_TYPE_NCR
 
 	outfit = /datum/outfit/job/ncr/f13rangerscout
