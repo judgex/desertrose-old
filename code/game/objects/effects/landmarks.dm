@@ -728,7 +728,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 	name = "US Private"
 
 /obj/effect/landmark/start/f13/usheavy
-	name = "US Heavy"
+	name = "US Heavy Soldier"
 
 /obj/effect/landmark/start/f13/usscientist
 	name = "US Scientist"
