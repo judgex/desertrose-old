@@ -176,7 +176,8 @@ Private
 
 	loadout_options = list(
 	/datum/outfit/loadout/enclave_soldier_1,
-	/datum/outfit/loadout/enclave_soldier_2
+	/datum/outfit/loadout/enclave_soldier_2,
+	/datum/outfit/loadout/enclave_soldier_3
 	)
 
 /datum/outfit/loadout/enclave_soldier_1
