@@ -227,6 +227,12 @@ Engineer
 	exp_requirements = 400
 	exp_type = EXP_TYPE_NCR
 
+	loadout_options = list(
+	/datum/outfit/loadout/enclave_eng_1,
+	/datum/outfit/loadout/enclave_eng_2,
+	/datum/outfit/loadout/enclave_eng_3
+	)
+
 /datum/outfit/job/enclave/f13usengineer
 	name = "US Engineer"
 	jobtype = /datum/job/enclave/f13usengineer
@@ -242,12 +248,6 @@ Engineer
 	gunsmith_two = TRUE
 	gunsmith_three = TRUE
 	gunsmith_four = TRUE
-
-	loadout_options = list(
-	/datum/outfit/loadout/enclave_eng_1,
-	/datum/outfit/loadout/enclave_eng_2,
-	/datum/outfit/loadout/enclave_eng_3
-	)
 
 /datum/outfit/loadout/enclave_eng_1
 	name = "Enclave Combat Engineer"
