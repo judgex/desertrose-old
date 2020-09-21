@@ -1,3 +1,5 @@
+#define ACCESS_ENCLAVE		131
+
 /datum/outfit/job/enclave/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
 	if(visualsOnly)
@@ -28,10 +30,10 @@ Commander
 
 	outfit = /datum/outfit/job/enclave/f13uscommander
 
-	access = list()
-	minimal_access = list()
+	access = list(ACCESS_ENCLAVE)
+	minimal_access = list(ACCESS_ENCLAVE)
 
-	exp_requirements = 3500
+	exp_requirements = 5500
 	exp_type = EXP_TYPE_NCR
 
 /datum/outfit/job/enclave/f13uscommander
@@ -43,6 +45,7 @@ Commander
 	shoes = /obj/item/clothing/shoes/combat/swat
 	gloves = /obj/item/clothing/gloves/combat
 	r_pocket = /obj/item/twohanded/binocs
+	l_pocket = /obj/item/key/vertibird
 	accessory = /obj/item/clothing/accessory/enclave/colonel
 	ears = /obj/item/radio/headset/headset_enclave
 	belt = /obj/item/gun/energy/laser/plasma/pistol
@@ -64,8 +67,8 @@ Medic
 
 	outfit = /datum/outfit/job/enclave/f13usmedic
 
-	access = list()
-	minimal_access = list()
+	access = list(ACCESS_ENCLAVE)
+	minimal_access = list(ACCESS_ENCLAVE)
 
 	exp_requirements = 2500
 	exp_type = EXP_TYPE_NCR
@@ -132,10 +135,10 @@ Private
 
 	outfit = /datum/outfit/job/enclave/f13usprivate
 
-	access = list()
-	minimal_access = list()
+	access = list(ACCESS_ENCLAVE)
+	minimal_access = list(ACCESS_ENCLAVE)
 
-	exp_requirements = 1500
+	exp_requirements = 3500
 	exp_type = EXP_TYPE_NCR
 
 	loadout_options = list(
@@ -148,6 +151,7 @@ Private
 	uniform = /obj/item/clothing/under/color/black
 	suit_store = /obj/item/gun/energy/laser/plasma
 	accessory = /obj/item/clothing/accessory/enclave/sergeant
+	pa_wear = TRUE
 	backpack_contents = list(
 		/obj/item/stock_parts/cell/ammo/mfc = 3)
 
@@ -158,6 +162,15 @@ Private
 	accessory = /obj/item/clothing/accessory/enclave/private
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/m556/rifle/assault = 3)
+
+/datum/outfit/loadout/enclave_soldier_3
+	name = "Enclave Spy"
+	uniform = /obj/item/clothing/under/color/black
+	accessory = /obj/item/clothing/accessory/enclave/sergeant
+	r_pocket = /obj/item/encryptionkey/syndicate
+	belt = /obj/item/gun/ballistic/automatic/pistol/suppressed
+	backpack_contents = list(
+		/obj/item/ammo_box/magazine/m10mm = 2, /obj/item/storage/box/syndie_kit/chameleon = 1, /obj/item/storage/box/syndie_kit/imp_microbomb = 1, /obj/item/jammer = 1)
 
 /datum/outfit/job/enclave/f13usprivate
 	name = "US Private"
@@ -187,8 +200,8 @@ Scientist
 
 	outfit = /datum/outfit/job/enclave/f13usscientist
 
-	access = list()
-	minimal_access = list()
+	access = list(ACCESS_ENCLAVE)
+	minimal_access = list(ACCESS_ENCLAVE)
 
 	exp_requirements = 500
 	exp_type = EXP_TYPE_NCR
@@ -221,8 +234,8 @@ Engineer
 
 	outfit = /datum/outfit/job/enclave/f13usengineer
 
-	access = list()
-	minimal_access = list()
+	access = list(ACCESS_ENCLAVE)
+	minimal_access = list(ACCESS_ENCLAVE)
 
 	exp_requirements = 400
 	exp_type = EXP_TYPE_NCR
@@ -242,7 +255,6 @@ Engineer
 	shoes = /obj/item/clothing/shoes/combat/swat
 	gloves = /obj/item/clothing/gloves/combat
 	ears = /obj/item/radio/headset/headset_enclave
-	head = /obj/item/clothing/head/hardhat
 	belt = /obj/item/storage/belt/utility/full/engi
 	gunsmith_one = TRUE
 	gunsmith_two = TRUE
@@ -251,23 +263,26 @@ Engineer
 
 /datum/outfit/loadout/enclave_eng_1
 	name = "Enclave Combat Engineer"
-	uniform = /obj/item/clothing/under/color/black
-	suit_store = /obj/item/gun/energy/laser/plasma
+	suit_store = /obj/item/gun/energy/laser/plasma/pistol
 	accessory = /obj/item/clothing/accessory/enclave/sergeant
 	backpack_contents = list(
 		/obj/item/stock_parts/cell/ammo/mfc = 3)
 
 /datum/outfit/loadout/enclave_eng_2
-	name = "Enclave Mechanic"
+	name = "Enclave Flamethrower"
+	mask = /obj/item/clothing/mask/gas/explorer
+	suit = /obj/item/clothing/suit/fire/atmos
+	back = /obj/item/tank/internals/oxygen/red
+	head = /obj/item/clothing/head/welding/f13/fire
 	backpack_contents = list(
-		/obj/item/clothing/head/welding/f13/fire = 1)
+		/obj/item/flamethrower/full/tank = 1, /obj/item/tank/internals/plasma/full = 1)
 
 /datum/outfit/loadout/enclave_eng_3
 	name = "Enclave Pilot"
 	head = /obj/item/clothing/head/helmet/f13/combat/enclave
 	suit_store = /obj/item/gun/energy/laser/plasma/pistol
 	backpack_contents = list(
-		/obj/item/stock_parts/cell/ammo/ec = 2)
+		/obj/item/stock_parts/cell/ammo/ec = 2, /obj/item/key/vertibird = 1)
 
 /*
 /*

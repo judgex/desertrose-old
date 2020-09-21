@@ -658,7 +658,19 @@
 #define ROLE_ENCLAVE			"Enclave"
 
 /obj/machinery/porta_turret/enclave
+	stun_projectile = /obj/item/projectile/bullet/syndicate_turret
+	lethal_projectile = /obj/item/projectile/bullet/syndicate_turret
+	lethal_projectile_sound = 'sound/weapons/gunshot.ogg'
+	stun_projectile_sound = 'sound/weapons/gunshot.ogg'
+	icon_state = "syndie_off"
+	base_icon_state = "syndie"
 	faction = list(ROLE_ENCLAVE)
+	installation = null
+	always_up = 1
+	use_power = NO_POWER_USE
+	has_cover = 0
+	scan_range = 8
+	req_access = list(ACCESS_ENCLAVE)
 
 /obj/machinery/porta_turret/syndicate/energy
 	icon_state = "standard_stun"
