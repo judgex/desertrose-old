@@ -1,5 +1,3 @@
-#define ACCESS_ENCLAVE		131
-
 /datum/outfit/job/enclave/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
 	if(visualsOnly)
@@ -34,7 +32,7 @@ Commander
 	minimal_access = list(ACCESS_ENCLAVE)
 
 	exp_requirements = 5500
-	exp_type = EXP_TYPE_NCR
+	exp_type = EXP_TYPE_ENCLAVE
 
 /datum/outfit/job/enclave/f13uscommander
 	name = "US Commander"
@@ -71,7 +69,7 @@ Medic
 	minimal_access = list(ACCESS_ENCLAVE)
 
 	exp_requirements = 2500
-	exp_type = EXP_TYPE_NCR
+	exp_type = EXP_TYPE_ENCLAVE
 
 	loadout_options = list(
 	/datum/outfit/loadout/enclave_medic_1,
@@ -121,6 +119,41 @@ Medic
 		/obj/item/stock_parts/cell/ammo/ec = 2, /obj/item/book/granter/trait/chemistry = 1, /obj/item/storage/box/beakers = 1)
 
 /*
+HEAVY!
+*/
+/datum/job/enclave/f13usheavy
+	title = "US Heavy Soldier"
+	flag = F13USPRIVATE
+	department_flag = ENCLAVE
+	faction = "Enclave"
+	total_positions = 1
+	spawn_positions = 1
+	supervisors = "the commander"
+	selection_color = "#ccccff"
+
+	outfit = /datum/outfit/job/enclave/f13usheavy
+
+	access = list(ACCESS_ENCLAVE)
+	minimal_access = list(ACCESS_ENCLAVE)
+
+	exp_requirements = 4500
+	exp_type = EXP_TYPE_ENCLAVE
+
+/datum/outfit/job/enclave/f13usheavy
+	name = "US Heavy"
+	jobtype = /datum/job/enclave/f13usheavy
+	id = /obj/item/card/id/dogtag
+	uniform =  /obj/item/clothing/under/f13/bdu
+	shoes = /obj/item/clothing/shoes/combat/swat
+	gloves = /obj/item/clothing/gloves/combat
+	ears = /obj/item/radio/headset/headset_enclave
+	head = /obj/item/clothing/head/helmet/f13/power_armor/advanced
+	suit = /obj/item/clothing/suit/armor/f13/power_armor/advanced
+	belt = /obj/item/storage/belt/military
+	back = /obj/item/minigunpack
+	pa_wear = TRUE
+
+/*
 Private
 */
 /datum/job/enclave/f13usprivate
@@ -139,7 +172,7 @@ Private
 	minimal_access = list(ACCESS_ENCLAVE)
 
 	exp_requirements = 3500
-	exp_type = EXP_TYPE_NCR
+	exp_type = EXP_TYPE_ENCLAVE
 
 	loadout_options = list(
 	/datum/outfit/loadout/enclave_soldier_1,
@@ -151,7 +184,6 @@ Private
 	uniform = /obj/item/clothing/under/color/black
 	suit_store = /obj/item/gun/energy/laser/plasma
 	accessory = /obj/item/clothing/accessory/enclave/sergeant
-	pa_wear = TRUE
 	backpack_contents = list(
 		/obj/item/stock_parts/cell/ammo/mfc = 3)
 

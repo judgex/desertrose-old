@@ -727,6 +727,9 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 /obj/effect/landmark/start/f13/usprivate
 	name = "US Private"
 
+/obj/effect/landmark/start/f13/usheavy
+	name = "US Heavy"
+
 /obj/effect/landmark/start/f13/usscientist
 	name = "US Scientist"
 
