@@ -30,8 +30,6 @@
 
 	var/lightFlag = NONE //tags such as GLOBAL_LIGHTING - No other use so far
 
-	var/skip_falloff = FALSE	// ONLY for use with sunlight, behavior is undefined if TRUE on regular sources.
-
 /datum/light_source/New(var/atom/owner, var/atom/top)
 	source_atom = owner // Set our new owner.
 	LAZYADD(source_atom.light_sources, src)
@@ -123,20 +121,6 @@
 // The braces and semicolons are there to be able to do this on a single line.
 #define LUM_FALLOFF(C, T) (1 - CLAMP01(sqrt((C.x - T.x) ** 2 + (C.y - T.y) ** 2 + LIGHTING_HEIGHT) / max(1, light_range)))
 
-// APPLY_CORNER without LUM_FALLOFF.
-#define APPLY_CORNER_SIMPLE(C)               \
-	. = light_power;                         \
-	var/OLD = effect_str[C];                 \
-                                             \
-	effect_str[C] = .;                       \
-                                             \
-	C.update_lumcount                        \
-	(                                        \
-		(. * lum_r) - (OLD * applied_lum_r), \
-		(. * lum_g) - (OLD * applied_lum_g), \
-		(. * lum_b) - (OLD * applied_lum_b)  \
-	);
-
 #define APPLY_CORNER(C)                      \
 	. = LUM_FALLOFF(C, pixel_turf);          \
 	. *= light_power;                        \
@@ -187,14 +171,9 @@
 		REMOVE_CORNER(C)
 		effect_str[C] = 0
 
-
-	if (skip_falloff)
-		APPLY_CORNER_SIMPLE(C)
-	else
-		APPLY_CORNER(C)
+	APPLY_CORNER(C)
 	UNSETEMPTY(effect_str)
 
-// If you update this, update the equivalent proc in lighting_source_novis.dm.
 /datum/light_source/proc/update_corners()
 	var/update = FALSE
 	var/atom/source_atom = src.source_atom
@@ -343,3 +322,11 @@
 	else
 		return 0
 	return 1
+
+
+
+
+#undef EFFECT_UPDATE
+#undef LUM_FALLOFF
+#undef REMOVE_CORNER
+#undef APPLY_CORNER
