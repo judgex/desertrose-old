@@ -202,7 +202,7 @@ Private
 	r_pocket = /obj/item/encryptionkey/syndicate
 	belt = /obj/item/gun/ballistic/automatic/pistol/suppressed
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m10mm = 2, /obj/item/storage/box/syndie_kit/chameleon = 1, /obj/item/storage/box/syndie_kit/imp_microbomb = 1, /obj/item/jammer = 1)
+		/obj/item/ammo_box/magazine/m10mm = 2, /obj/item/storage/box/syndie_kit/chameleon = 1, /obj/item/storage/box/syndie_kit/imp_microbomb = 1, /obj/item/jammer = 1, /obj/item/card/id/syndicate/anyone = 1)
 
 /datum/outfit/job/enclave/f13usprivate
 	name = "US Private"
