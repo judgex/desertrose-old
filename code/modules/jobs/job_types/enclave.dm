@@ -150,7 +150,8 @@ HEAVY!
 	head = /obj/item/clothing/head/helmet/f13/power_armor/advanced
 	suit = /obj/item/clothing/suit/armor/f13/power_armor/advanced
 	belt = /obj/item/storage/belt/military
-	back = /obj/item/minigunpack
+	backpack_contents = list(
+		/obj/item/minigunpack = 1)
 	pa_wear = TRUE
 
 /*
@@ -198,7 +199,6 @@ Private
 
 /datum/outfit/loadout/enclave_soldier_3
 	name = "Enclave Spy"
-	uniform = /obj/item/clothing/under/color/black
 	accessory = /obj/item/clothing/accessory/enclave/sergeant
 	r_pocket = /obj/item/encryptionkey/syndicate
 	belt = /obj/item/gun/ballistic/automatic/pistol/suppressed
