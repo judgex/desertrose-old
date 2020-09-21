@@ -60,7 +60,7 @@ Medic
 	flag = F13USMEDIC
 	department_flag = ENCLAVE
 	faction = "Enclave"
-	total_positions = 1
+	total_positions = 2
 	spawn_positions = 1
 	supervisors = "the commander"
 	selection_color = "#ccccff"
@@ -128,7 +128,7 @@ Private
 	flag = F13USPRIVATE
 	department_flag = ENCLAVE
 	faction = "Enclave"
-	total_positions = 2
+	total_positions = 4
 	spawn_positions = 2
 	supervisors = "the commander"
 	selection_color = "#ccccff"
@@ -227,7 +227,7 @@ Engineer
 	flag = F13USENGINEER
 	department_flag = ENCLAVE
 	faction = "Enclave"
-	total_positions = 1
+	total_positions = 2
 	spawn_positions = 1
 	supervisors = "the commander"
 	selection_color = "#ccccff"
