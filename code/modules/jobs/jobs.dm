@@ -22,7 +22,7 @@ GLOBAL_LIST_INIT(command_positions, list(
     "Chief",
     "Shaman",
 
-	"Lead Practitioner"
+	"Lead Practitioner",
 
 	"US Commander"
     ))
@@ -131,10 +131,11 @@ GLOBAL_LIST_INIT(faction_player_positions, list(
 GLOBAL_LIST_INIT(antagonist_whitelist_positions, list(
     "Raider",
 	"Outlaw",
-    "Great Khan" //DA KHANZ, BAY BEEEEEEE
-    "US Private"
-    "US Medic"
-    "US Engineer"
+    "Great Khan", //DA KHANZ, BAY BEEEEEEE
+    "US Private",
+    "US Medic",
+    "US Engineer",
+    "US Commander"
 ))
 
 GLOBAL_LIST_INIT(brotherhood_command_positions, list(
