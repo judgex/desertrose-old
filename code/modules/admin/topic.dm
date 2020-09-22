@@ -775,7 +775,7 @@
 //анкап
 		counter = 0
 		dat += "<table cellpadding='1' cellspacing='0' width='100%'>"
-		dat += "<tr align='center' bgcolor='e6b740'><th colspan='[length(GLOB.ankap_positions)]'><a href='?src=[REF(src)];[HrefToken()];jobban3=den;jobban4=[REF(M)]'>Enclave Positions</a></th></tr><tr align='center'>"
+		dat += "<tr align='center' bgcolor='e6b740'><th colspan='[length(GLOB.ankap_positions)]'><a href='?src=[REF(src)];[HrefToken()];jobban3=encl;jobban4=[REF(M)]'>Enclave Positions</a></th></tr><tr align='center'>"
 		for(var/jobPos in GLOB.ankap_positions)
 			if(!jobPos)
 				continue
