@@ -148,8 +148,8 @@
 	name = "rustic outfit"
 	desc = "Simple rustic clothes for your day to day life in the wastes."
 	icon_state = "vetranger"
-	item_state = "vetranger"
-	item_color = "vetranger"
+	item_state = "rustictown"
+	item_color = "rustictown"
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 30, "fire" = 20, "acid" = 50)
 
 /obj/item/clothing/under/f13/sheriff
