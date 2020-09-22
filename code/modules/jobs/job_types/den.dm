@@ -119,9 +119,9 @@ Mayor
 	total_positions = 4
 	spawn_positions = 4
 	supervisors = "the sheriff and the mayor"
-	description = "Working alongside the Sheriff you've known them for a while, having worked with them under the previous Sheriff - you bagged many a bandit and raider together on the road. These days you patrol the areas outside of town, tracking down bounties on the run and keeping the settlers safe from harm."
+	description = "You are a Deputy working within the Town of Oasis - patrol the streets and tunnels of the Town. Prevent barfights, uphold the Law and maintain order. Or don't - taking bribes and allowing certain criminal elements might just be part of the job."
 	selection_color = "#dcba97"
-	exp_requirements = 12
+	exp_requirements = 1800
 	exp_type = EXP_TYPE_DEN
 
 	outfit = /datum/outfit/job/den/f13deputy
@@ -214,8 +214,8 @@ Mayor
 	description = "Prospecting is a complicated business, some call it scrounging or looting, but there is more to it then sifting through rubble - few can boast the skills you posess in mining and delving through the ruins of pre-war America. Not many survive this line of business and the pay has always been uncertain, but perhaps today you'll find strike gold."
 	selection_color = "#dcba97"
 
-	exp_requirements = 12
-	exp_type = EXP_TYPE_CREW
+	exp_requirements = 1200
+	exp_type = EXP_TYPE_DEN
 
 	outfit = /datum/outfit/job/den/f13prospector
 
@@ -269,8 +269,8 @@ Mayor
 	description = "Handy with a scalpel and scanner, your expertise in the practice of medicine makes you an indispensible asset to the Town. Just remember - medicine doesn't come free, and you aren't here out of the kindness of your heart. Be sure to turn a profit, or the Mayor might reconsider your position!"
 	selection_color = "#dcba97"
 
-	exp_requirements = 12
-	exp_type = EXP_TYPE_CREW
+	exp_requirements = 1200
+	exp_type = EXP_TYPE_DEN
 
 	outfit = /datum/outfit/job/den/f13dendoc
 	access = list(ACCESS_BAR, ACCESS_CLONING)
@@ -311,8 +311,8 @@ Mayor
 	description = "You are a beacon of faith in the wasteland. Guide the Town and any others who wish to be led on spiritual matters, and try to build your flock. Remember, the Oasis Oak and the Church are the centre of your religion - protect them at all costs."
 	selection_color = "#dcba97"
 
-	exp_requirements = 12
-	exp_type = EXP_TYPE_CREW
+	exp_requirements = 600
+	exp_type = EXP_TYPE_DEN
 
 	outfit = /datum/outfit/job/den/f13preacher
 
@@ -432,8 +432,8 @@ Mayor
 	supervisors = "law and order"
 	description = "As a Barkeep, you believe that the frontier holds abundant opportunity for bartending and service. Hidden safely away behind the walls of Oasis, you enact out your skills of mixing the finest drinks and serving the best grub in the wasteland. As per your terms of agreement you should follow the law and order of the town. However the Blue Oyster is your private business, working in harmony with the farm next door to supply you with crop and goods to keep you in profit."
 	selection_color = "#dcba97"
-	exp_requirements = 12
-	exp_type = EXP_TYPE_CREW
+	exp_requirements = 600
+	exp_type = EXP_TYPE_DEN
 
 	outfit = /datum/outfit/job/den/f13barkeep
 
@@ -596,6 +596,8 @@ Detective
 	supervisors = "law and order"
 	selection_color = "#dcba97"
 	outfit = /datum/outfit/job/wasteland/f13detective
+	exp_requirements = 1200
+	exp_type = EXP_TYPE_DEN
 
 	access = list(ACCESS_BAR, ACCESS_FORENSICS_LOCKERS)
 	minimal_access = list(ACCESS_BAR, ACCESS_FORENSICS_LOCKERS)
@@ -718,6 +720,8 @@ Detective
     supervisors = "law and order"
     description = "The capitalist economy of pre-war america survived alongside its people. Now it's your job to continue its survival, so make some caps!"
     selection_color = "#dcba97"
+    exp_requirements = 1200
+    exp_type = EXP_TYPE_DEN
 
     outfit = /datum/outfit/job/den/f13shopkeeper
     access = list(ACCESS_BAR, ACCESS_CARGO_BOT)
