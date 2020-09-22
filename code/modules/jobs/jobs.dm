@@ -23,6 +23,8 @@ GLOBAL_LIST_INIT(command_positions, list(
     "Shaman",
 
 	"Lead Practitioner"
+
+	"US Commander"
     ))
 
 GLOBAL_LIST_INIT(silicon_whitelist_positions, list(
@@ -130,6 +132,9 @@ GLOBAL_LIST_INIT(antagonist_whitelist_positions, list(
     "Raider",
 	"Outlaw",
     "Great Khan" //DA KHANZ, BAY BEEEEEEE
+    "US Private"
+    "US Medic"
+    "US Engineer"
 ))
 
 GLOBAL_LIST_INIT(brotherhood_command_positions, list(
@@ -217,6 +222,16 @@ GLOBAL_LIST_INIT(ncr_positions, list(
     "NCR Citizen",
     "NCR Administrator"
 ))
+
+GLOBAL_LIST_INIT(ankap_positions, list(
+    "US Engineer",
+    "US Scientist",
+    "US Private",
+    "US Heavy Soldier",
+    "US Medic",
+    "US Commander"
+))
+
 
 GLOBAL_LIST_INIT(vault_command_positions, list(
     "Overseer",

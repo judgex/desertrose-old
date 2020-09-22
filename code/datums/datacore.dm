@@ -100,6 +100,7 @@
 	var/list/tribe = list()
 	var/list/khan = list()
 	var/list/was = list()
+	var/list/encl = list()
 	var/list/misc = list()
 	var/dat = {"<meta charset=UTF-8>
 	<head><style>
@@ -154,6 +155,9 @@
 			department = 1
 		if(!department && !(name in command))
 			misc[name] = rank
+		if(rank in GLOB.ankap_positions)
+			encl[name] = rank
+			department = 1
 	if(command.len > 0)
 		dat += "<tr><th colspan=3>Leaders</th></tr>"
 		for(var/name in command)

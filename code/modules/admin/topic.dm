@@ -772,6 +772,25 @@
 				counter = 0
 		dat += "</tr></table>"
 
+//анкап
+		counter = 0
+		dat += "<table cellpadding='1' cellspacing='0' width='100%'>"
+		dat += "<tr align='center' bgcolor='e6b740'><th colspan='[length(GLOB.ankap_positions)]'><a href='?src=[REF(src)];[HrefToken()];jobban3=den;jobban4=[REF(M)]'>Enclave Positions</a></th></tr><tr align='center'>"
+		for(var/jobPos in GLOB.ankap_positions)
+			if(!jobPos)
+				continue
+			if(jobban_isbanned(M, jobPos))
+				dat += "<td width='15%'><a href='?src=[REF(src)];[HrefToken()];jobban3=[jobPos];jobban4=[REF(M)]'><font color=red>[jobPos]</font></a></td>"
+				counter++
+			else
+				dat += "<td width='15%'><a href='?src=[REF(src)];[HrefToken()];jobban3=[jobPos];jobban4=[REF(M)]'>[jobPos]</a></td>"
+				counter++
+
+			if(counter >= 6) //So things dont get squiiiiished!
+				dat += "</tr><tr>"
+				counter = 0
+		dat += "</tr></table>"
+
 
 		//Ghost Roles (light light gray)
 		dat += "<table cellpadding='1' cellspacing='0' width='100%'>"
