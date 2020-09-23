@@ -205,10 +205,10 @@
 	health = 750
 	melee_damage_lower = 55
 	melee_damage_upper = 55
-	extra_projectiles = 5 //6 projectiles. oh lord.
+	extra_projectiles = 2
 	retreat_distance = 3
 	minimum_distance = 5
-	ranged_cooldown_time = 12
+	ranged_cooldown_time = 10
 	loot = list(/obj/effect/mob_spawn/human/corpse/enclave/soldier)
 	healable = 1
 	ranged = 1
@@ -230,7 +230,7 @@
 	retreat_distance = 6
 	minimum_distance = 6
 	extra_projectiles = 2
-	ranged_cooldown_time = 22
+	ranged_cooldown_time = 25
 	loot = list(/obj/effect/mob_spawn/human/corpse/enclave/soldier)
 	healable = 1
 	ranged = 1
