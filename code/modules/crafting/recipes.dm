@@ -3591,7 +3591,7 @@
 //AM rifle
 /datum/crafting_recipe/AM_rifle
 	name = "AM Rifle"
-	result = /obj/item/gun/ballistic/automatic/sniper_rifle
+	result = /obj/item/gun/ballistic/shotgun/antimateriel
 	reqs = list(/obj/item/stack/sheet/metal = 10,
 				/obj/item/advanced_crafting_components/assembly = 1,
 				/obj/item/advanced_crafting_components/alloys = 1,
@@ -3606,7 +3606,7 @@
 
 /datum/crafting_recipe/AM_rifle_lim
 	name = "AM Rifle"
-	result = /obj/item/gun/ballistic/automatic/sniper_rifle
+	result = /obj/item/gun/ballistic/shotgun/antimateriel
 	reqs = list(/obj/item/stack/sheet/metal = 10,
 				/obj/item/advanced_crafting_components/assembly = 1,
 				/obj/item/advanced_crafting_components/alloys = 1,
