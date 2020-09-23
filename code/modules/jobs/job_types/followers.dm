@@ -6,6 +6,7 @@
 	minimal_access = list(ACCESS_FOLLOWER)
 	forbids = "Aligning oneself with a faction exclusively. Acting in an aggressive and violent way on the offensive, not in defense. Abandoning your facility, peers, and community."
 	enforces = "Preaching humanitarianism and valuing human life. Assist and provide medical services to any who require it, regardless of faction. Provide free education for all those who are willing to learn."
+	objectivesList = list("Leadership recommends the following goal for this week: Establish medical outposts throughout the wasteland","Leadership recommends the following goal for this week: Experiment with and improve medical techniques and equipment", "Leadership recommends the following goal for this week: Replenish the operation's funds through donations and sales.")
 
 /datum/outfit/job/followers/
 	name =		"FOLLOWERSdatums"
@@ -257,13 +258,13 @@ Follower Guard
 	name = "Followers Guard"
 	jobtype = /datum/job/followers/f13followerguard
 	backpack = /obj/item/storage/backpack/explorer
+	belt = /obj/item/storage/belt/follower/full
 	id = /obj/item/card/id/silver
 	uniform = /obj/item/clothing/under/f13/bodyguard
 	suit = /obj/item/clothing/suit/armor/vest/old
-	suit_store = /obj/item/gun/ballistic/automatic/pistol/n99
+	suit_store = /obj/item/gun/ballistic/shotgun/lethal
 	shoes = /obj/item/clothing/shoes/combat
 	backpack_contents = list(
-		/obj/item/melee/classic_baton/telescopic=1,
-		/obj/item/ammo_box/magazine/m10mm_adv=2,
-		/obj/item/flashlight/flare/torch=1,
-		/obj/item/reagent_containers/spray/pepper=1)
+	    /obj/item/gun/ballistic/automatic/pistol/n99=1, \
+		/obj/item/flashlight/flare/torch=1, \
+		/obj/item/ammo_casing/shotgun/beanbag=4)
