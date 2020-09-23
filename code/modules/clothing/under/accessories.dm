@@ -155,7 +155,7 @@
     minimize_when_attached = TRUE
 
 /obj/item/clothing/accessory/ncr/TPR
-    name = "(E-2) Private rank pins"
+    name = "(E-3) Private First Class rank pins"
     desc = "A trooper should wear this."
     icon_state = "ncrenlisted"
     item_color = "ncrenlisted"
