@@ -385,7 +385,7 @@ Corporal
 	uniform =  		/obj/item/clothing/under/f13/ncr
 	id = 			/obj/item/card/id/dogtag/ncrtrooper
 	neck = 			/obj/item/storage/belt/holster
-	accessory = /obj/item/clothing/accessory/ncr/SPC
+	accessory = /obj/item/clothing/accessory/ncr/CPL
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/pistol/ninemil=1, \
 		/obj/item/ammo_box/magazine/m9mm=2, \
