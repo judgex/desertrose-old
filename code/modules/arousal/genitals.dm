@@ -1,54 +1,56 @@
 /obj/item/organ/genital
 	color = "#fcccb3"
-	w_class = WEIGHT_CLASS_SMALL
-//	organ_flags = ORGAN_NO_DISMEMBERMENT
-	var/shape
-	var/sensitivity = 1 // wow if this were ever used that'd be cool but it's not but i'm keeping it for my unshit code
-	var/genital_flags //see citadel_defines.dm
-	var/masturbation_verb = "masturbate"
-	var/orgasm_verb = "cumming" //present continous
+	w_class 					= WEIGHT_CLASS_NORMAL
+	var/shape					= "Human" //Changed to be uppercase, let me know if this breaks everything..!!
+	var/sensitivity				= AROUSAL_START_VALUE
+	var/list/genital_flags		= list()
+	var/can_masturbate_with 	= FALSE
+	var/masturbation_verb		= "masturbate"
+	var/can_climax				= FALSE
 	var/arousal_verb = "You feel aroused"
 	var/unarousal_verb = "You no longer feel aroused"
-	var/fluid_transfer_factor = 0 //How much would a partner get in them if they climax using this?
-	var/size = 2 //can vary between num or text, just used in icon_state strings
-	var/datum/reagent/fluid_id = null
-	var/fluid_max_volume = 50
-	var/fluid_efficiency = 1
-	var/fluid_rate = CUM_RATE
-	var/fluid_mult = 1
-	var/time_since_last_orgasm = 500
-	var/aroused_state = FALSE //Boolean used in icon_state strings
+	var/fluid_transfer_factor	= 0.0 //How much would a partner get in them if they climax using this?
+	var/size					= 2 //can vary between num or text, just used in icon_state strings
+	var/fluid_id				= null
+	var/fluid_max_volume		= 15
+	var/fluid_efficiency		= 1
+	var/fluid_rate				= 1
+	var/fluid_mult				= 1
+	var/producing				= FALSE
+	var/aroused_state			= FALSE //Boolean used in icon_state strings
+	var/aroused_amount			= 50 //This is a num from 0 to 100 for arousal percentage for when to use arousal state icons.
 	var/obj/item/organ/genital/linked_organ
-	var/linked_organ_slot //used for linking an apparatus' organ to its other half on update_link().
-	var/layer_index = GENITAL_LAYER_INDEX //Order should be very important. FIRST vagina, THEN testicles, THEN penis, as this affects the order they are rendered in.
+	var/through_clothes			= FALSE
+	var/internal				= FALSE
+	var/hidden					= FALSE
+	var/colourtint				= ""
 
-/obj/item/organ/genital/Initialize(mapload, do_update = TRUE)
+/obj/item/organ/genital/Initialize()
 	. = ..()
-	if(fluid_id)
-		create_reagents(fluid_max_volume, NONE, NO_REAGENTS_VALUE)
-		if(CHECK_BITFIELD(genital_flags, GENITAL_FUID_PRODUCTION))
-			reagents.add_reagent(fluid_id, fluid_max_volume)
-	if(do_update)
-		update()
-
+	if(!reagents)
+		create_reagents(fluid_max_volume)
+	update()
+	
 /obj/item/organ/genital/proc/set_aroused_state(new_state)
 	if(!(genital_flags & GENITAL_CAN_AROUSE))
 		return FALSE
-/*
-	if(has_trait(TRAIT_PERMABONER))
+	if(!((HAS_TRAIT(owner,TRAIT_PERMABONER) && !new_state) || HAS_TRAIT(owner,TRAIT_NEVERBONER) && new_state))
 		aroused_state = new_state
 	return aroused_state
-*/
+
+/obj/item/organ/genital/Destroy()
+	remove_ref()
+	if(owner)
+		Remove(owner, 1)//this should remove references to it, so it can be GCd correctly
+	update_link()//this should remove any other links it has
+	return ..()
+
 /obj/item/organ/genital/proc/update()
 	if(QDELETED(src))
 		return
 	update_size()
 	update_appearance()
-	if(genital_flags & UPDATE_OWNER_APPEARANCE && owner && ishuman(owner))
-		var/mob/living/carbon/human/H = owner
-		H.update_genitals()
-	if(linked_organ_slot || (linked_organ && !owner))
-		update_link()
+	update_link()
 
 //exposure and through-clothing code
 /mob/living/carbon
@@ -73,15 +75,16 @@
 		if(BODY_ZONE_PRECISE_GROIN)
 			return owner.is_groin_exposed()
 
+
 /obj/item/organ/genital/proc/toggle_visibility(visibility, update = TRUE)
-	genital_flags &= ~(GENITAL_THROUGH_CLOTHES|GENITAL_HIDDEN|GENITAL_UNDIES_HIDDEN)
+	genital_flags &= ~(GENITAL_HIDDEN|GENITAL_UNDIES_HIDDEN)
 	if(owner)
 		owner.exposed_genitals -= src
 	switch(visibility)
-		if(GEN_VISIBLE_ALWAYS)
-			genital_flags |= GENITAL_THROUGH_CLOTHES
-			if(owner)
-				owner.exposed_genitals += src
+//		if(GEN_VISIBLE_ALWAYS)
+//			genital_flags |= GENITAL_THROUGH_CLOTHES
+//			if(owner)
+//				owner.exposed_genitals += src
 		if(GEN_VISIBLE_NO_UNDIES)
 			genital_flags |= GENITAL_UNDIES_HIDDEN
 		if(GEN_VISIBLE_NEVER)
@@ -138,154 +141,255 @@
 	return
 
 
-/obj/item/organ/genital/proc/modify_size(modifier, min = -INFINITY, max = INFINITY)
-	fluid_max_volume += modifier*2.5
-	fluid_rate += modifier/10
-	if(reagents)
-		reagents.maximum_volume = fluid_max_volume
-	return
 
 /obj/item/organ/genital/proc/update_size()
 	return
 
 /obj/item/organ/genital/proc/update_appearance()
-	if(!owner || owner.stat == DEAD)
-		aroused_state = FALSE
-
-/obj/item/organ/genital/on_life()
-	. = ..()
-	if(!reagents || !.)
-		return
-	reagents.maximum_volume = fluid_max_volume
-	if(fluid_id && CHECK_BITFIELD(genital_flags, GENITAL_FUID_PRODUCTION))
-		time_since_last_orgasm++
-
-/obj/item/organ/genital/proc/generate_fluid(datum/reagents/R)
-	var/amount = clamp(fluid_rate * time_since_last_orgasm * fluid_mult,0,fluid_max_volume)
-	R.clear_reagents()
-	R.add_reagent(fluid_id,amount)
-	return TRUE
+	return
 
 /obj/item/organ/genital/proc/update_link()
-	if(owner)
-		if(linked_organ)
-			return FALSE
-		linked_organ = owner.getorganslot(linked_organ_slot)
-		if(linked_organ)
-			linked_organ.linked_organ = src
-			linked_organ.upon_link()
-			upon_link()
-			return TRUE
+	return
+
+/obj/item/organ/genital/proc/remove_ref()
 	if(linked_organ)
 		linked_organ.linked_organ = null
 		linked_organ = null
-	return FALSE
 
-//post organ duo making arrangements.
-/obj/item/organ/genital/proc/upon_link()
-	return
-
-/obj/item/organ/genital/Insert(mob/living/carbon/M, special = FALSE, drop_if_replaced = TRUE)
-	. = ..()
-	if(.)
-		update()
-		RegisterSignal(owner, COMSIG_MOB_DEATH, .proc/update_appearance)
-		if(genital_flags & GENITAL_THROUGH_CLOTHES)
-			owner.exposed_genitals += src
-
-/obj/item/organ/genital/Remove(special = FALSE)
-	. = ..()
-	var/mob/living/carbon/C = .
+/obj/item/organ/genital/Insert(mob/living/carbon/M, special = 0)
+	..()
 	update()
-	if(!QDELETED(C))
-		if(genital_flags & UPDATE_OWNER_APPEARANCE && ishuman(C))
-			var/mob/living/carbon/human/H = .
-			H.update_genitals()
-		C.exposed_genitals -= src
-		UnregisterSignal(C, COMSIG_MOB_DEATH)
+
+/obj/item/organ/genital/Remove(mob/living/carbon/M, special = 0)
+	..()
+	update()
 
 //proc to give a player their genitals and stuff when they log in
-/mob/living/carbon/human/proc/give_genitals(clean = FALSE)//clean will remove all pre-existing genitals. proc will then give them any genitals that are enabled in their DNA
+/mob/living/carbon/human/proc/give_genitals(clean=0)//clean will remove all pre-existing genitals. proc will then give them any genitals that are enabled in their DNA
 	if(clean)
-		for(var/obj/item/organ/genital/G in internal_organs)
-			qdel(G)
+		var/obj/item/organ/genital/GtoClean
+		for(GtoClean in internal_organs)
+			qdel(GtoClean)
 	if (NOGENITALS in dna.species.species_traits)
 		return
+	//Order should be very important. FIRST vagina, THEN testicles, THEN penis, as this affects the order they are rendered in.
 	if(dna.features["has_vag"])
-		give_genital(/obj/item/organ/genital/vagina)
+		give_vagina()
 	if(dna.features["has_womb"])
-		give_genital(/obj/item/organ/genital/womb)
+		give_womb()
+	if(dna.features["can_get_preg"])
+		make_breedable() //hyperstation set up the pregnancy stuff
 	if(dna.features["has_balls"])
-		give_genital(/obj/item/organ/genital/testicles)
-	if(dna.features["has_breasts"])
-		give_genital(/obj/item/organ/genital/breasts)
+		give_balls()
+	if(dna.features["has_breasts"]) // since we have multi-boobs as a thing, we'll want to at least draw over these. but not over the pingas.
+		give_breasts()
 	if(dna.features["has_cock"])
-		give_genital(/obj/item/organ/genital/penis)
+		give_penis()
+	if(dna.features["has_ovi"])
+		give_ovipositor()
+	if(dna.features["has_eggsack"])
+		give_eggsack()
 
-/mob/living/carbon/human/proc/give_genital(obj/item/organ/genital/G)
-	if(!dna || (NOGENITALS in dna.species.species_traits) || getorganslot(initial(G.slot)))
+/mob/living/carbon/human/proc/give_penis()
+	if(!dna)
 		return FALSE
-	G = new G(null, FALSE)
-	G.get_features(src)
-	G.Insert(src)
-	return G
+	if(NOGENITALS in dna.species.species_traits)
+		return FALSE
+	if(!getorganslot("penis"))
+		var/obj/item/organ/genital/penis/P = new
+		P.Insert(src)
+		if(P)
+			P.color = "#[skintone2hex(skin_tone)]"
+			P.length = dna.features["cock_length"]
+			P.girth_ratio = dna.features["cock_girth_ratio"]
+			P.shape = dna.features["cock_shape"]
+			P.prev_length = P.length
+			P.cached_length = P.length
+			P.update()
 
-/obj/item/organ/genital/proc/get_features(mob/living/carbon/human/H)
+/mob/living/carbon/human/proc/give_balls()
+	if(!dna)
+		return FALSE
+	if(NOGENITALS in dna.species.species_traits)
+		return FALSE
+	if(!getorganslot("testicles"))
+		var/obj/item/organ/genital/testicles/T = new
+		T.Insert(src)
+		if(T)
+			T.color = "#[skintone2hex(skin_tone)]"
+			T.size = dna.features["balls_size"]
+			T.sack_size = dna.features["balls_sack_size"]
+			T.shape = dna.features["balls_shape"]
+			if(dna.features["balls_shape"] == "Hidden")
+				T.internal = TRUE
+			else
+				T.internal = FALSE
+			T.fluid_rate = dna.features["balls_cum_rate"]
+			T.fluid_mult = dna.features["balls_cum_mult"]
+			T.fluid_efficiency = dna.features["balls_efficiency"]
+			T.update()
+
+/mob/living/carbon/human/proc/give_breasts()
+	if(!dna)
+		return FALSE
+	if(NOGENITALS in dna.species.species_traits)
+		return FALSE
+	if(!getorganslot("breasts"))
+		var/obj/item/organ/genital/breasts/B = new
+		B.Insert(src)
+		if(B)
+			B.color = "#[skintone2hex(skin_tone)]"
+			B.size = dna.features["breasts_size"]
+			if(!isnum(B.size))
+				if(B.size == "flat")
+					B.cached_size = 0
+					B.prev_size = 0
+				else if (B.cached_size == "huge")
+					B.prev_size = "huge"
+				else
+					B.cached_size = B.breast_values[B.size]
+					B.prev_size = B.size
+			else
+				B.cached_size = B.size
+				B.prev_size = B.size
+			B.shape = dna.features["breasts_shape"]
+			B.producing = dna.features["breasts_producing"]
+			B.update()
+
+
+/mob/living/carbon/human/proc/give_ovipositor()
+	return
+/mob/living/carbon/human/proc/give_eggsack()
 	return
 
+/mob/living/carbon/human/proc/give_vagina()
+	if(!dna)
+		return FALSE
+	if(NOGENITALS in dna.species.species_traits)
+		return FALSE
+	if(!getorganslot("vagina"))
+		var/obj/item/organ/genital/vagina/V = new
+		V.Insert(src)
+		if(V)
+			V.color = "#[skintone2hex(skin_tone)]"
+			V.update()
+			V.shape = "[dna.features["vag_shape"]]"
+			V.update()
+
+/mob/living/carbon/human/proc/give_womb()
+	if(!dna)
+		return FALSE
+	if(NOGENITALS in dna.species.species_traits)
+		return FALSE
+	if(!getorganslot("womb"))
+		var/obj/item/organ/genital/womb/W = new
+		W.Insert(src)
+		if(W)
+			W.update()
+
+/mob/living/carbon/human/proc/make_breedable()
+	//Hyperstation, This makes the character able to use the impreg features of the game
+	breedable = 1
+	impregchance = 30	//30% is a good base chance
+
+/datum/species/proc/genitals_layertext(layer)
+	switch(layer)
+		if(GENITALS_BEHIND_LAYER)
+			return "BEHIND"
+		/*if(GENITALS_ADJ_LAYER)
+			return "ADJ"*/
+		if(GENITALS_FRONT_LAYER)
+			return "FRONT"
 
 //procs to handle sprite overlays being applied to humans
 
-/mob/living/carbon/human/equip_to_slot(obj/item/I, slot)
-	. = ..()
-	if(!. && I && slot && !(slot in GLOB.no_genitals_update_slots)) //the item was successfully equipped, and the chosen slot wasn't merely storage, hands or cuffs.
-		update_genitals()
+/obj/item/equipped(mob/user, slot)
+	if(ishuman(user))
+		var/mob/living/carbon/human/H = user
+		H.update_genitals()
+	..()
 
-/mob/living/carbon/human/doUnEquip(obj/item/I, force, newloc, no_move, invdrop = TRUE)
-	var/no_update = FALSE
-	if(!I || I == l_store || I == r_store || I == s_store || I == handcuffed || I == legcuffed || get_held_index_of_item(I)) //stops storages, cuffs and held items from triggering it.
-		no_update = TRUE
+/mob/living/carbon/human/doUnEquip(obj/item/I, force)
 	. = ..()
-	if(!. || no_update)
+	if(!.)
 		return
 	update_genitals()
 
 /mob/living/carbon/human/proc/update_genitals()
-	if(QDELETED(src))
+	if(src && !QDELETED(src))
+		dna.species.handle_genitals(src)
+
+//fermichem procs
+/mob/living/carbon/human/proc/Force_update_genitals(mob/living/carbon/human/H) //called in fermiChem
+	dna.species.handle_genitals(src)//should work.
+	//dna.species.handle_breasts(src)
+
+//Checks to see if organs are new on the mob, and changes their colours so that they don't get crazy colours.
+/mob/living/carbon/human/proc/emergent_genital_call()
+	var/organCheck = FALSE
+	var/breastCheck = FALSE
+	var/willyCheck = FALSE
+	if(!canbearoused)
+//		ADD_TRAIT(src, TRAIT_PHARMA, "pharma")//Prefs prevent unwanted organs.
 		return
-	var/static/list/relevant_layers = list("[GENITALS_BEHIND_LAYER]" = "BEHIND", "[GENITALS_FRONT_LAYER]" = "FRONT")
-	var/static/list/layers_num
-	if(!layers_num)
-		for(var/L in relevant_layers)
-			LAZYSET(layers_num, L, text2num(L))
+	for(var/obj/item/organ/O in internal_organs)
+		if(istype(O, /obj/item/organ/genital))
+			organCheck = TRUE
+			if(/obj/item/organ/genital/penis)
+				//dna.features["has_cock"] = TRUE
+				willyCheck = TRUE
+			if(/obj/item/organ/genital/breasts)
+				//dna.features["has_breasts"] = TRUE//Goddamnit get in there.
+				breastCheck = TRUE
+	if(organCheck == FALSE)
+		if(ishuman(src) && dna.species.id == "human")
+			dna.features["genitals_use_skintone"] = TRUE
+			dna.species.use_skintones = TRUE
+		//So people who haven't set stuff up don't get rainbow surprises.
+		dna.features["cock_color"] = "[dna.features["mcolor"]]"
+		dna.features["breasts_color"] = "[dna.features["mcolor"]]"
+	else //If there's a new organ, make it the same colour.
+		if(breastCheck == FALSE)
+			dna.features["breasts_color"] = dna.features["cock_color"]
+		else if (willyCheck == FALSE)
+			dna.features["cock_color"] = dna.features["breasts_color"]
+	return
+
+/datum/species/proc/handle_genitals(mob/living/carbon/human/H)//more like handle sadness
+	if(!H)//no args
+		CRASH("H = null")
+	if(!LAZYLEN(H.internal_organs))//if they have no organs, we're done
+		return
+	if((NOGENITALS in species_traits) && (H.genital_override = FALSE))//golems and such - things that shouldn't
+		return
+	if(HAS_TRAIT(H, TRAIT_HUSK))
+		return
+	var/list/genitals_to_add = list()
+	var/list/relevant_layers = list(GENITALS_BEHIND_LAYER, GENITALS_FRONT_LAYER) //GENITALS_ADJ_LAYER removed
+	var/list/standing = list()
+	var/size
+	var/aroused_state
+	var/colourtint
+
 	for(var/L in relevant_layers) //Less hardcode
-		remove_overlay(layers_num[L])
-	remove_overlay(GENITALS_EXPOSED_LAYER)
-	if(!LAZYLEN(internal_organs) || ((NOGENITALS in dna.species.species_traits) && !genital_override) || has_trait(TRAIT_HUSK))
-		return
-
+		H.remove_overlay(L)
 	//start scanning for genitals
-
-	var/list/gen_index[GENITAL_LAYER_INDEX_LENGTH]
-	var/list/genitals_to_add
-	var/list/fully_exposed
-	for(var/obj/item/organ/genital/G in internal_organs)
-		if(G.is_exposed()) //Checks appropriate clothing slot and if it's through_clothes
-			LAZYADD(gen_index[G.layer_index], G)
-	for(var/L in gen_index)
-		if(L) //skip nulls
-			LAZYADD(genitals_to_add, L)
-	if(!genitals_to_add)
-		return
+	for(var/obj/item/organ/O in H.internal_organs)
+		if(isgenital(O))
+			var/obj/item/organ/genital/G = O
+			if(G.hidden)
+				return	//we're gunna just hijack this for updates.
+			if(G.is_exposed()) //Checks appropriate clothing slot and if it's through_clothes
+				genitals_to_add += H.getorganslot(G.slot)
 	//Now we added all genitals that aren't internal and should be rendered
 	//start applying overlays
 	for(var/layer in relevant_layers)
-		var/list/standing = list()
-		var/layertext = relevant_layers[layer]
-		for(var/A in genitals_to_add)
-			var/obj/item/organ/genital/G = A
+		var/layertext = genitals_layertext(layer)
+		for(var/obj/item/organ/genital/G in genitals_to_add)
 			var/datum/sprite_accessory/S
-			var/size = G.size
+			size = G.size
+			aroused_state = G.aroused_state
+			colourtint = G.colourtint
 			switch(G.type)
 				if(/obj/item/organ/genital/penis)
 					S = GLOB.cock_shapes_list[G.shape]
@@ -298,79 +402,23 @@
 
 			if(!S || S.icon_state == "none")
 				continue
-			var/aroused_state = G.aroused_state && S.alt_aroused
-			var/accessory_icon = S.icon
-			var/do_center = S.center
-			var/dim_x = S.dimension_x
-			var/dim_y = S.dimension_y
-/*
-			if(G.genital_flags & GENITAL_CAN_TAUR && S.taur_icon && (!S.feat_taur || dna.features[S.feat_taur]) && dna.species.mutant_bodyparts["taur"])
-				var/datum/sprite_accessory/taur/T = GLOB.taur_list[dna.features["taur"]]
-				if(T?.taur_mode & S.accepted_taurs)
-					accessory_icon = S.taur_icon
-					do_center = TRUE
-					dim_x = S.taur_dimension_x
-					dim_y = S.taur_dimension_y
-*/
-			var/mutable_appearance/genital_overlay = mutable_appearance(accessory_icon, layer = -layer)
-			if(do_center)
-				genital_overlay = center_image(genital_overlay, dim_x, dim_y)
 
-			if(dna.species.use_skintones && dna.features["genitals_use_skintone"])
-				genital_overlay.color = SKINTONE2HEX(skin_tone)
-			else
-				switch(S.color_src)
-					if("cock_color")
-						genital_overlay.color = "#[dna.features["cock_color"]]"
-					if("balls_color")
-						genital_overlay.color = "#[dna.features["balls_color"]]"
-					if("breasts_color")
-						genital_overlay.color = "#[dna.features["breasts_color"]]"
-					if("vag_color")
-						genital_overlay.color = "#[dna.features["vag_color"]]"
+			var/mutable_appearance/genital_overlay = mutable_appearance(S.icon, layer = -layer)
+			genital_overlay.icon_state = "[G.slot]_[S.icon_state]_[size]_[aroused_state]_[layertext]"
 
-			genital_overlay.icon_state = "[G.slot]_[S.icon_state]_[size][(dna.species.use_skintones && !dna.skin_tone_override) ? "_s" : ""]_[aroused_state]_[layertext]"
+			if(S.center)
+				genital_overlay = center_image(genital_overlay, S.dimension_x, S.dimension_y)
 
-			if(layers_num[layer] == GENITALS_FRONT_LAYER && G.genital_flags & GENITAL_THROUGH_CLOTHES)
-				genital_overlay.layer = -GENITALS_EXPOSED_LAYER
-				LAZYADD(fully_exposed, genital_overlay)
-			else
-				genital_overlay.layer = -layers_num[layer]
-				standing += genital_overlay
+			genital_overlay.color = "#[skintone2hex(H.skin_tone)]"
+			genital_overlay.icon_state = "[G.slot]_[S.icon_state]_[size]-s_[aroused_state]_[layertext]"
+			if (colourtint)
+				genital_overlay.color = "#[colourtint]"
+
+			standing += genital_overlay
 
 		if(LAZYLEN(standing))
-			overlays_standing[layers_num[layer]] = standing
-
-	if(LAZYLEN(fully_exposed))
-		overlays_standing[GENITALS_EXPOSED_LAYER] = fully_exposed
-		apply_overlay(GENITALS_EXPOSED_LAYER)
+			H.overlays_standing[layer] = standing.Copy()
+			standing = list()
 
 	for(var/L in relevant_layers)
-		apply_overlay(layers_num[L])
-
-
-//Checks to see if organs are new on the mob, and changes their colours so that they don't get crazy colours.
-/mob/living/carbon/human/proc/emergent_genital_call()
-	if(!client.prefs.arousable)
-		return FALSE
-
-	var/organCheck = locate(/obj/item/organ/genital) in internal_organs
-	var/breastCheck = getorganslot(ORGAN_SLOT_BREASTS)
-	var/willyCheck = getorganslot(ORGAN_SLOT_PENIS)
-
-	if(organCheck == FALSE)
-		if(ishuman(src) && dna.species.use_skintones)
-			dna.features["genitals_use_skintone"] = TRUE
-		if(src.dna.species.fixed_mut_color)
-			dna.features["cock_color"] = "[dna.species.fixed_mut_color]"
-			dna.features["breasts_color"] = "[dna.species.fixed_mut_color]"
-			return
-		//So people who haven't set stuff up don't get rainbow surprises.
-		dna.features["cock_color"] = "[dna.features["mcolor"]]"
-		dna.features["breasts_color"] = "[dna.features["mcolor"]]"
-	else //If there's a new organ, make it the same colour.
-		if(breastCheck == FALSE)
-			dna.features["breasts_color"] = dna.features["cock_color"]
-		else if (willyCheck == FALSE)
-			dna.features["cock_color"] = dna.features["breasts_color"]
-	return TRUE
+		H.apply_overlay(L)

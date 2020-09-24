@@ -16,29 +16,29 @@
 
 /datum/surgery_step/lower_surgery/preop(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery)
 	var/mob/living/carbon/human/H = target	//no type check, as that should be handled by the surgery
-	if(H.has_peepee == TRUE)
+	if(H.has_dick == TRUE)
 		user.visible_message("[user] begins to reshape [target]'s genitals to look more feminine.", "<span class='notice'>You begin to reshape [target]'s genitals to look more feminine...</span>")
 	else
 		user.visible_message("[user] begins to reshape [target]'s genitals to look more masculine.", "<span class='notice'>You begin to reshape [target]'s genitals to look more masculine...</span>")
 
 /datum/surgery_step/lower_surgery/success(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery)
 	var/mob/living/carbon/human/H = target	//no type check, as that should be handled by the surgery
-	if(H.has_peepee)
+	if(H.has_dick)
 		user.visible_message("[user] surgically constructed [target]'s vagina.", "<span class='notice'>You finished surgically constructing [target]'s vagina.</span>")
-		H.has_peepee = FALSE
-		H.has_puss = TRUE
+		H.has_dick = FALSE
+		H.has_vulva = TRUE
 	else
 		user.visible_message("[user] surgically constructed [target]'s penis.", "<span class='notice'>You finished surgically constructing [target]'s penis.</span>")
-		H.has_peepee = TRUE
-		H.has_puss = FALSE
+		H.has_dick = TRUE
+		H.has_vulva = FALSE
 	target.regenerate_icons()
 	return 1
 
 /datum/surgery_step/lower_surgery/failure(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery)
 	var/mob/living/carbon/human/H = target
 	user.visible_message("<span class='warning'>[user] accidentally mutilates [target]'s genitals.</span>", "<span class='warning'>You accidentally mutilate [target]'s genitals!</span>")
-	H.has_peepee = FALSE
-	H.has_puss = FALSE
+	H.has_dick = FALSE
+	H.has_vulva = FALSE
 	target.regenerate_icons()
 	return 1
 
@@ -60,22 +60,22 @@
 
 /datum/surgery_step/castration/preop(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery)
 	var/mob/living/carbon/human/H = target	//no type check, as that should be handled by the surgery
-	if(H.has_peepee == TRUE)
+	if(H.has_dick == TRUE)
 		user.visible_message("[user] begins to slice away at [target]'s penis.", "<span class='notice'>You begin to slice away at [target]'s penis.</span>")
 	else
 		return 0
 
 /datum/surgery_step/castration/success(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery)
 	var/mob/living/carbon/human/H = target	//no type check, as that should be handled by the surgery
-	if(H.has_peepee)
+	if(H.has_dick)
 		user.visible_message("[user] castrated [target].", "<span class='notice'>You finished castrating [target].</span>")
-		H.has_peepee = FALSE
+		H.has_dick = FALSE
 	return 1
 
 /datum/surgery_step/castration/failure(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery)
 	var/mob/living/carbon/human/H = target
 	user.visible_message("<span class='warning'>[user] accidentally sinks the [tool] deep into the remnants of [target]'s penis.</span>", "<span class='warning'>You accidentally sink the [tool] deep into the remnants of [target]'s penis!</span>")
-	H.has_puss = TRUE
+	H.has_vulva = TRUE
 	target.regenerate_icons()
 	return 1
 

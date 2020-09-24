@@ -1,7 +1,7 @@
 //lewd
 /mob/living
-	var/has_peepee = FALSE
-	var/has_puss = FALSE
+	var/has_dick = FALSE
+	var/has_vulva = FALSE
 	var/has_breast = FALSE
 	var/last_partner
 	var/last_orifice
@@ -27,14 +27,14 @@
 	sexual_potency = (prob(80) ? rand(9, 14) : pick(rand(5, 13), rand(15, 20)))
 	lust_tolerance = (prob(80) ? rand(150, 300) : pick(rand(10, 100), rand(350,600)))
 	if(gender == MALE)
-		has_peepee = TRUE
-		has_puss = FALSE
+		has_dick = TRUE
+		has_vulva = FALSE
 		has_breast = FALSE
 
 	if(gender == FEMALE)
-		has_puss = TRUE
+		has_vulva = TRUE
 		has_breast = TRUE
-		has_peepee = FALSE
+		has_dick = FALSE
 	//end of lewd
 
 
