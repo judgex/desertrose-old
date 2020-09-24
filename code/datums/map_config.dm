@@ -5,21 +5,21 @@
 
 /datum/map_config
 	// Metadata
-	var/config_filename = "_maps/boxstation.json"
+	var/config_filename = "_maps/Pahrump.json"
 	var/defaulted = TRUE  // set to FALSE by LoadConfig() succeeding
 	// Config from maps.txt
 	var/config_max_users = 0
 	var/config_min_users = 0
 	var/voteweight = 1
 
-	// Config actually from the JSON - should default to Box
-	var/map_name = "Box Station"
-	var/map_path = "map_files/BoxStation"
-	var/map_file = "BoxStation.dmm"
+	// Config actually from the JSON - should default to Pahrump (its YUMA god damn it FUCK)
+	var/map_name = "Pahrump"
+	var/map_path = "map_files/Pahrump"
+	var/map_file = "Pahrump.dmm"
 
 	var/traits = null
-	var/space_ruin_levels = 1
-	var/space_empty_levels = 1
+	var/space_ruin_levels = 0
+	var/space_empty_levels = 0
 
 	var/minetype = null //"lavaland"
 
@@ -29,6 +29,9 @@
 		"ferry" = "ferry_fancy",
 		"whiteship" = "whiteship_box",
 		"emergency" = "emergency_box")
+
+	var/list/added_jobs = list()     //Overrides the "none" faction using job name
+	var/list/removed_jobs = list()   //Removes the "none" faction using job name - can also use #all# (case sensitive)
 
 /proc/load_map_config(filename = "data/next_map.json", default_to_box, delete_after, error_if_missing = TRUE)
 	var/datum/map_config/config = new
@@ -93,6 +96,22 @@
 			shuttles[key] = value
 	else if ("shuttles" in json)
 		log_world("map_config shuttles is not a list!")
+		return
+
+	if (islist(json["added_jobs"]))
+		var/list/J = json["added_jobs"]
+		for(var/key in J)
+			LAZYADD(added_jobs,key)
+	else if ("added_jobs" in json)
+		log_world("map_config added jobs is not a list! fuck!!")
+		return
+
+	if (islist(json["removed_jobs"]))
+		var/list/J = json["removed_jobs"]
+		for(var/key in J)
+			LAZYADD(removed_jobs,key)
+	else if ("removed_jobs" in json)
+		log_world("map_config removed jobs is not a list!")
 		return
 
 	traits = json["traits"]

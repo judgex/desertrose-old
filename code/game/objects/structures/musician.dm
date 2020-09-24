@@ -1,4 +1,4 @@
-/*
+
 #define MUSICIAN_HEARCHECK_MINDELAY 4
 #define MUSIC_MAXLINES 300
 #define MUSIC_MAXLINECHARS 50
@@ -375,4 +375,3 @@
 /obj/structure/piano/wrench_act(mob/living/user, obj/item/I)
 	default_unfasten_wrench(user, I, 40)
 	return TRUE
-*/

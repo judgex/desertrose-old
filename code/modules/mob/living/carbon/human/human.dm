@@ -1044,43 +1044,6 @@
 
 			src.is_busy = FALSE
 */
-//Can C try to piggyback at all.
-/mob/living/carbon/human/proc/can_piggyback(mob/living/carbon/C)
-	if(istype(C) && C.stat == CONSCIOUS)
-		return TRUE
-	return FALSE
-
-/mob/living/carbon/human/buckle_mob(mob/living/M, force = FALSE, check_loc = TRUE)
-	if(!force)//humans are only meant to be ridden through piggybacking and special cases
-		return
-	if(!is_type_in_typecache(M, can_ride_typecache))
-		M.visible_message("<span class='warning'>[M] really can't seem to mount [src]...</span>")
-		return
-	var/datum/component/riding/human/riding_datum = LoadComponent(/datum/component/riding/human)
-	riding_datum.ride_check_rider_incapacitated = TRUE
-	riding_datum.ride_check_rider_restrained = TRUE
-	riding_datum.set_riding_offsets(RIDING_OFFSET_ALL, list(TEXT_NORTH = list(0, 6), TEXT_SOUTH = list(0, 6), TEXT_EAST = list(-6, 4), TEXT_WEST = list( 6, 4)))
-	if(buckled_mobs && ((M in buckled_mobs) || (buckled_mobs.len >= max_buckled_mobs)) || buckled || (M.stat != CONSCIOUS))
-		return
-	if(can_piggyback(M))
-		riding_datum.ride_check_ridden_incapacitated = TRUE
-		visible_message("<span class='notice'>[M] starts to climb onto [src]...</span>")
-		if(do_after(M, 15, target = src))
-			if(can_piggyback(M))
-				if(M.incapacitated(FALSE, TRUE) || incapacitated(FALSE, TRUE))
-					M.visible_message("<span class='warning'>[M] can't hang onto [src]!</span>")
-					return
-				if(!riding_datum.equip_buckle_inhands(M, 2))	//MAKE SURE THIS IS LAST!!
-					M.visible_message("<span class='warning'>[M] can't climb onto [src]!</span>")
-					return
-			. = ..(M, force, check_loc)
-			stop_pulling()
-		else
-			visible_message("<span class='warning'>[M] fails to climb onto [src]!</span>")
-	else
-		. = ..(M,force,check_loc)
-		stop_pulling()
-
 
 /mob/living/carbon/human/proc/despawn()
 	var/datum/job/job_to_free = SSjob.GetJob(job)

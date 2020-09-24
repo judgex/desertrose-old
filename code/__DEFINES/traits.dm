@@ -67,9 +67,11 @@
 #define TRAIT_PROSOPAGNOSIA		"prosopagnosia"
 #define	TRAIT_DRUNK_HEALING		"drunk_healing"
 #define TRAIT_BIG_LEAGUES		"big_leagues"
+#define TRAIT_TRAPPER			"trapper"
 #define TRAIT_IRONFIST			"iron_fist"
 #define TRAIT_PSYCHO			"psycho"
 #define	TRAIT_LIFEGIVER			"lifegiver"
+#define TRAIT_UNDERPREPARED		"underprepared"
 
 #define	TRAIT_CHEMWHIZ			"chemwhiz"
 #define TRAIT_TECHNOPHOBE		"luddite" //Cannot use autolathes/biogens

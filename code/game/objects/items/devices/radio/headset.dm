@@ -43,6 +43,13 @@
 		return ..(freq, level)
 	return FALSE
 
+obj/item/radio/headset/attackby(obj/item/W, mob/user, params)
+	if (user.a_intent == INTENT_HARM)
+		visible_message("<span class='warning'>[user] attempts to destroy the [src]</span>")
+		if (do_after(user,50, target = src))
+			new /obj/item/stack/crafting/electronicparts (get_turf(user))
+			qdel(src)
+
 /obj/item/radio/headset/syndicate //disguised to look like a normal headset for stealth ops
 
 /obj/item/radio/headset/syndicate/alt //undisguised bowman with flash protection

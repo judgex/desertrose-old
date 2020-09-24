@@ -5,20 +5,27 @@
 	anchored = 1
 	density = 0
 	var/has_plod = TRUE
-	var/obj/item/reagent_containers/food/snacks/grown/produce = null
+	var/produce
+	var/timer = 5000 //50 seconds
 
 /obj/structure/flora/wasteplant/attack_hand(mob/user)
+	if(!ispath(produce))
+		return ..()
+
 	if(has_plod)
-		user.put_in_hands(new produce)
-		user << "<span class='notice'>You take [produce] from [src].</span>"
+		var/obj/item/product = new produce
+		if(!istype(product))
+			return //Something fucked up here or it's a weird product
+		user.put_in_hands(product)
+		to_chat(user, "<span class='notice'>You pluck [product] from [src].</span>")
 		has_plod = FALSE
 		update_icon() //Won't update due to proc otherwise
-		regrow()
+		timer = initial(timer) + rand(-100,100) //add some variability
+		addtimer(CALLBACK(src, .proc/regrow),timer) //Set up the timer properly
 	update_icon()
 
 /obj/structure/flora/wasteplant/proc/regrow()
-	if(!has_plod)
-		sleep(5000)
+	if(!QDELETED(src))
 		has_plod = TRUE
 		update_icon()
 

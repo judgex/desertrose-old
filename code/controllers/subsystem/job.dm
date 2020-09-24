@@ -6,6 +6,7 @@ SUBSYSTEM_DEF(job)
 	var/list/occupations = list()		//List of all jobs
 	var/list/name_occupations = list()	//Dict of all jobs, keys are titles
 	var/list/type_occupations = list()	//Dict of all jobs, keys are types
+	var/list/factionless_jobs = list()
 	var/list/unassigned = list()		//Players who need jobs
 	var/list/job_debug = list()			//Debug info
 	var/initial_players_to_assign = 0 	//used for checking against population caps
@@ -40,28 +41,45 @@ SUBSYSTEM_DEF(job)
 /datum/controller/subsystem/job/proc/SetupOccupations(faction = "Station")
 	occupations = list()
 	var/list/all_jobs = subtypesof(/datum/job)
+
 	if(!all_jobs.len)
 		to_chat(world, "<span class='boldannounce'>Error setting up jobs, no job datums found</span>")
 		return 0
 
 	for(var/J in all_jobs)
 		var/datum/job/job = new J()
+
 		if(!job)
 			continue
+
 		//if(job.faction != faction) //TGCLAW Change: Any faction can now join and have the appropriate faction tag IE BoS and Den -ma44
 		//	continue
-		if(job.faction == "None") //No faction or commented out; remove
+
+		if(job.faction == "None")  //This is checked later for map config
+			factionless_jobs[job.title] = job
 			continue
-		if(!job.config_check())
+
+		if(!job.config_check()) //Checks for AI allowed and shit. Barely used
 			continue
-		if(!job.map_check())	//Even though we initialize before mapping, this is fine because the config is loaded at new
-			testing("Removed [job.type] due to map config");
-			continue
+
+//		if(!job.map_check())	//Even though we initialize before mapping, this is fine because the config is loaded at new (obsolete)
+//			testing("Removed [job.type] due to map config");
+//			continue
 		occupations += job
 		name_occupations[job.title] = job
 		type_occupations[J] = job
 
 	return 1
+
+//We'll call this way late, probably in SSpersistence since it seems like the boot order is fucky
+/datum/controller/subsystem/job/proc/AddMapJobs()
+	if(LAZYLEN(SSmapping.config.added_jobs) && LAZYLEN(factionless_jobs))
+		for(var/Q in SSmapping.config.added_jobs)  //It's fastest to browse through the ones we need to add rather than all jobs
+			var/datum/job/job = factionless_jobs[Q]
+			if(istype(job) && !(job in occupations)) //Make sure it's not already in there
+				occupations += job
+				name_occupations[job.title] = job
+				type_occupations[job.type] = job
 
 
 /datum/controller/subsystem/job/proc/Debug(text)
@@ -121,7 +139,7 @@ SUBSYSTEM_DEF(job)
 		if(flag && (!(flag in player.client.prefs.be_special)))
 			Debug("FOC flag failed, Player: [player], Flag: [flag], ")
 			continue
-		if(player.mind && job.title in player.mind.restricted_roles)
+		if(player.mind && (job.title in player.mind.restricted_roles))
 			Debug("FOC incompatible with antagonist role, Player: [player]")
 			continue
 		if(player.client.prefs.GetJobDepartment(job, level) & job.flag)
@@ -163,7 +181,7 @@ SUBSYSTEM_DEF(job)
 			Debug("GRJ player not enough xp, Player: [player]")
 			continue
 
-		if(player.mind && job.title in player.mind.restricted_roles)
+		if(player.mind && (job.title in player.mind.restricted_roles))
 			Debug("GRJ incompatible with antagonist role, Player: [player], Job: [job.title]")
 			continue
 
@@ -339,7 +357,7 @@ SUBSYSTEM_DEF(job)
 					Debug("DO player not enough xp, Player: [player], Job:[job.title]")
 					continue
 
-				if(player.mind && job.title in player.mind.restricted_roles)
+				if(player.mind && (job.title in player.mind.restricted_roles))
 					Debug("DO incompatible with antagonist role, Player: [player], Job:[job.title]")
 					continue
 
@@ -443,12 +461,30 @@ SUBSYSTEM_DEF(job)
 		SSpersistence.antag_rep_change[M.client.ckey] += job.GetAntagRep()
 
 	to_chat(M, "<b>You are the [rank].</b>")
+	if (!job.objectives)//if objectives aren't set yet
+		if (job.department_flag == LEGION)//done
+			job.objectives = job.objectivesList[rand(0,2)]//get a random one
+		if (job.department_flag == NCR)//done
+			job.objectives = job.objectivesList[rand(0,2)]//get a random one
+		if (job.department_flag == BOS)//done
+			job.objectives = job.objectivesList[rand(0,2)]//get a random one
+	//	if (job.department_flag == DEN)
+	//		job.objectives = job.objectivesList[rand(0,2)]//get a random one
+		if (job.department_flag == VAULT)
+			job.objectives = job.objectivesList[rand(0,2)]//get a random one
+		//if (job.department_flag == WASTELAND)
+		//	job.objectives = job.objectivesList[rand(0,2)]//get a random one
+		if (job.department_flag == TRIBAL)//done
+			job.objectives = job.objectivesList[rand(0,2)]//get a random one
+		if (job.department_flag == FOLLOWERS)//done
+			job.objectives = job.objectivesList[rand(0,2)]//get a random one
 	if(job)
 		to_chat(M, "<b>As the [rank] you answer directly to [job.supervisors]. Special circumstances may change this.</b>")
 		to_chat(M, "<b>To speak on your departments radio, use the :h button. To see others, look closely at your headset.</b>")
 		to_chat(M, "<FONT color='blue'><B>[job.description]</b>")
 		to_chat(M, "<FONT color='red'><b>[job.forbids]</b>")
 		to_chat(M, "<FONT color='green'><b>[job.enforces]</b>")
+		to_chat(M, "<FONT color='black'><b>[job.objectives]</b>")
 		if(job.req_admin_notify)
 			to_chat(M, "<b>You are playing a job that is important for Game Progression. If you have to disconnect, please notify the admins via adminhelp.</b>")
 	/*	if(CONFIG_GET(number/minimal_access_threshold))
