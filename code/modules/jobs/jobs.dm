@@ -213,7 +213,7 @@ GLOBAL_LIST_INIT(ncr_positions, list(
     "NCR Trooper",
     "NCR Patrol Ranger",
 	"NCR Scout Ranger",
-    "NCR Assistant",
+    "NCR Recruit",
     "NCR Citizen",
     "NCR Administrator"
 ))
