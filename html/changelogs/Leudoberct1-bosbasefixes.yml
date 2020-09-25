@@ -1,0 +1,6 @@
+author: Leudoberct
+
+delete-after: True
+
+changes: 
+  - rscdel: "Removes Brotherhood location 9 due to it being in the middle of a building."
