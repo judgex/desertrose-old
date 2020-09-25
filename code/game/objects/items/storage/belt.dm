@@ -207,6 +207,14 @@
 	new /obj/item/melee/baton/loaded(src)
 	update_icon()
 
+/obj/item/storage/belt/security/follower/PopulateContents()
+	new /obj/item/reagent_containers/spray/pepper(src)
+	new /obj/item/restraints/handcuffs(src)
+	new /obj/item/melee/classic_baton/telescopic(src)
+	new /obj/item/kitchen/knife/combat(src)
+	new /obj/item/storage/box/rubbershot/beanbag(src)
+	update_icon()
+
 /obj/item/storage/belt/mining
 	name = "explorer's webbing"
 	desc = "A versatile chest rig, cherished by miners and hunters alike."
