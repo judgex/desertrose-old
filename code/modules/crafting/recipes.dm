@@ -1827,18 +1827,59 @@ add recipes for parts and assemblies w/ benches
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
 */
+
 /datum/crafting_recipe/servicerifle
-	name = "service rifle"
+	name = "service rifle (crude)"
 	result = /obj/item/gun/ballistic/automatic/marksman/servicerifle
-	reqs = list(/obj/item/stack/sheet/mineral/wood = 1,
-				/obj/item/stack/crafting/metalparts = 2,
-				/obj/item/stack/sheet/metal = 6,
+	reqs = list(/obj/item/prefabs/complex/barrel/m556 = 1,
+				/obj/item/prefabs/complex/trigger = 1,
+				/obj/item/prefabs/complex/action = 1,
+				/obj/item/prefabs/complex/bolt = 1,
+				/obj/item/prefabs/complex/trigger = 1,
+				/obj/item/prefabs/complex/screw = 5,
+				/obj/item/prefabs/complex/complexWeaponFrame = 1,
 				/datum/reagent/blackpowder = 20)
 	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER3)
 	traits = list(TRAIT_GUNSMITH_THREE)
 	time = 120
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
+
+/datum/crafting_recipe/servicerifle/mid
+	name = "service rifle (fair)"
+	result = /obj/item/gun/ballistic/automatic/marksman/servicerifle/mid
+	reqs = list(/obj/item/prefabs/complex/barrel/m556 = 1,
+				/obj/item/prefabs/complex/trigger = 1,
+				/obj/item/prefabs/complex/action = 1,
+				/obj/item/prefabs/complex/bolt = 1,
+				/obj/item/prefabs/complex/trigger = 1,
+				/obj/item/prefabs/complex/screw = 5,
+				/obj/item/prefabs/complex/complexWeaponFrame/mid = 1,
+				/datum/reagent/blackpowder = 20)
+	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER3)
+	traits = list(TRAIT_GUNSMITH_THREE)
+	time = 120
+	category = CAT_WEAPONRY
+	subcategory = CAT_WEAPON
+
+/datum/crafting_recipe/servicerifle/high
+	name = "service rifle (masterwork)"
+	result = /obj/item/gun/ballistic/automatic/marksman/servicerifle/high
+	reqs = list(/obj/item/prefabs/complex/barrel/m556 = 1,
+				/obj/item/prefabs/complex/trigger = 1,
+				/obj/item/prefabs/complex/action = 1,
+				/obj/item/prefabs/complex/bolt = 1,
+				/obj/item/prefabs/complex/trigger = 1,
+				/obj/item/prefabs/complex/screw = 3,
+				/obj/item/prefabs/complex/complexWeaponFrame/high = 1,
+				/datum/reagent/blackpowder = 20)
+	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER3)
+	traits = list(TRAIT_GUNSMITH_THREE)
+	time = 120
+	category = CAT_WEAPONRY
+	subcategory = CAT_WEAPON
+
+
 /* CRAFT rework: removed for balance
 /datum/crafting_recipe/marksmanrifle
 	name = "marksman rifle"
@@ -2985,6 +3026,43 @@ add recipes for parts and assemblies w/ benches
 	subcategory = CAT_FORGEMISC
 
 
+//weapon stuff
+/datum/crafting_recipe/wParts
+	name = "Weapon parts (Wood)"
+	result = /obj/item/stack/prefabs/wWeaponParts
+	time = 5
+	reqs = list(/obj/item/stack/sheet/mineral/wood = 2)
+	tools = list(TOOL_FORGE)
+	category = CAT_FORGE
+	subcategory = CAT_FORGEPARTS
+
+/datum/crafting_recipe/mParts
+	name = "Weapon parts (Metal)"
+	result = /obj/item/stack/prefabs/mWeaponParts
+	time = 5
+	reqs = list(/obj/item/stack/sheet/metal = 2)
+	tools = list(TOOL_FORGE)
+	category = CAT_FORGE
+	subcategory = CAT_FORGEPARTS
+
+/datum/crafting_recipe/pParts
+	name = "Weapon parts (Plastic)"
+	result = /obj/item/stack/prefabs/pWeaponParts
+	time = 5
+	reqs = list(/obj/item/stack/sheet/plastic = 2)
+	tools = list(TOOL_FORGE)
+	category = CAT_FORGE
+	subcategory = CAT_FORGEPARTS
+
+/datum/crafting_recipe/psParts
+	name = "Weapon parts (Plasteel)"
+	result = /obj/item/stack/prefabs/psWeaponParts
+	time = 5
+	reqs = list(/obj/item/stack/sheet/plasteel = 2)
+	tools = list(TOOL_FORGE)
+	category = CAT_FORGE
+	subcategory = CAT_FORGEPARTS
+
 //Blueprints
 
 //low tier
@@ -2994,7 +3072,7 @@ add recipes for parts and assemblies w/ benches
 /datum/crafting_recipe/AEP7
 	name = "AEP7"
 	result = /obj/item/gun/energy/laser/pistol
-	reqs = list(/obj/item/prefabs/complex/simpleWeaponAssembly = 1,
+	reqs = list(/obj/item/prefabs/complex/simpleWeaponFrame = 1,
 				/obj/item/advanced_crafting_components/lenses = 1)
 	tools = list(TOOL_WORKBENCH, /obj/item/blueprint/weapon/AEP7)
 	time = 120
@@ -3006,7 +3084,7 @@ add recipes for parts and assemblies w/ benches
 /datum/crafting_recipe/lever_action
 	name = "Lever Action shotgun"
 	result = /obj/item/gun/ballistic/shotgun/trench
-	reqs = list(/obj/item/prefabs/complex/simpleWeaponAssembly = 1,
+	reqs = list(/obj/item/prefabs/complex/simpleWeaponFrame = 1,
 				/obj/item/advanced_crafting_components/receiver = 1,
 				/datum/reagent/blackpowder = 20)
 	tools = list(TOOL_WORKBENCH, /obj/item/blueprint/weapon/lever_action)
@@ -3019,7 +3097,7 @@ add recipes for parts and assemblies w/ benches
 /datum/crafting_recipe/trail_carbine
 	name = "Trail Carbine"
 	result = /obj/item/gun/ballistic/shotgun/automatic/hunting/trail
-	reqs = list(/obj/item/prefabs/complex/simpleWeaponAssembly,
+	reqs = list(/obj/item/prefabs/complex/simpleWeaponFrame,
 				/obj/item/advanced_crafting_components/receiver = 1,
 				/datum/reagent/blackpowder = 20)
 	tools = list(TOOL_WORKBENCH, /obj/item/blueprint/weapon/lever_action)
@@ -3032,7 +3110,7 @@ add recipes for parts and assemblies w/ benches
 /datum/crafting_recipe/thatgun
 	name = ".223 pistol"
 	result = /obj/item/gun/ballistic/revolver/thatgun
-	reqs = list(/obj/item/prefabs/complex/simpleWeaponAssembly = 2,
+	reqs = list(/obj/item/prefabs/complex/simpleWeaponFrame = 2,
 				/datum/reagent/blackpowder = 15)
 	tools = list(TOOL_WORKBENCH, /obj/item/blueprint/weapon/thatgun)
 	time = 120
@@ -3042,7 +3120,7 @@ add recipes for parts and assemblies w/ benches
 /datum/crafting_recipe/thatgun_lim
 	name = ".223 pistol"
 	result = /obj/item/gun/ballistic/revolver/thatgun
-	reqs = list(/obj/item/prefabs/complex/simpleWeaponAssembly = 2,
+	reqs = list(/obj/item/prefabs/complex/simpleWeaponFrame = 2,
 				/datum/reagent/blackpowder = 15,
 				/obj/item/blueprint/weapon/thatgun/limited = 1
 				)
@@ -3056,7 +3134,7 @@ add recipes for parts and assemblies w/ benches
 /datum/crafting_recipe/pps
 	name = "Ancient SMG"
 	result = /obj/item/gun/ballistic/automatic/pps
-	reqs = list(/obj/item/prefabs/complex/simpleWeaponAssembly = 2,
+	reqs = list(/obj/item/prefabs/complex/simpleWeaponFrame = 2,
 				/obj/item/advanced_crafting_components/receiver = 1,
 				/datum/reagent/blackpowder = 30
 				)
@@ -3068,7 +3146,7 @@ add recipes for parts and assemblies w/ benches
 /datum/crafting_recipe/pps_lim
 	name = "Ancient SMG"
 	result = /obj/item/gun/ballistic/automatic/pps
-	reqs = list(/obj/item/prefabs/complex/simpleWeaponAssembly = 2,
+	reqs = list(/obj/item/prefabs/complex/simpleWeaponFrame = 2,
 				/obj/item/advanced_crafting_components/receiver = 1,
 				/datum/reagent/blackpowder = 30,
 				/obj/item/blueprint/weapon/pps/limited = 1)
@@ -3081,7 +3159,7 @@ add recipes for parts and assemblies w/ benches
 /datum/crafting_recipe/mg34
 	name = "Ancient machine gun"
 	result = /obj/item/gun/ballistic/automatic/mg34
-	reqs = list(/obj/item/prefabs/complex/simpleWeaponAssembly = 2,
+	reqs = list(/obj/item/prefabs/complex/simpleWeaponFrame = 2,
 				/obj/item/advanced_crafting_components/assembly = 1,
 				/datum/reagent/blackpowder = 60
 				)
@@ -3093,7 +3171,7 @@ add recipes for parts and assemblies w/ benches
 /datum/crafting_recipe/mg34_lim
 	name = "Ancient machine gun"
 	result = /obj/item/gun/ballistic/automatic/mg34
-	reqs = list(/obj/item/prefabs/complex/simpleWeaponAssembly = 2,
+	reqs = list(/obj/item/prefabs/complex/simpleWeaponFrame = 2,
 				/obj/item/advanced_crafting_components/assembly = 1,
 				/datum/reagent/blackpowder = 60, 
 				/obj/item/blueprint/weapon/mg34/limited = 1
@@ -3108,7 +3186,7 @@ add recipes for parts and assemblies w/ benches
 /datum/crafting_recipe/kar98
 	name = "Ancient rifle"
 	result = /obj/item/gun/ballistic/shotgun/ww2rifle
-	reqs = list(/obj/item/prefabs/complex/simpleWeaponAssembly = 2,
+	reqs = list(/obj/item/prefabs/complex/simpleWeaponFrame = 2,
 				/obj/item/advanced_crafting_components/receiver = 1,
 				/datum/reagent/blackpowder = 10
 				)
@@ -3120,7 +3198,7 @@ add recipes for parts and assemblies w/ benches
 /datum/crafting_recipe/kar98_lim
 	name = "Ancient rifle"
 	result = /obj/item/gun/ballistic/shotgun/ww2rifle
-	reqs = list(/obj/item/prefabs/complex/simpleWeaponAssembly = 2,
+	reqs = list(/obj/item/prefabs/complex/simpleWeaponFrame = 2,
 				/obj/item/advanced_crafting_components/receiver = 1,
 				/datum/reagent/blackpowder = 10, 
 				/obj/item/blueprint/weapon/kar98/limited = 1
@@ -3135,7 +3213,7 @@ add recipes for parts and assemblies w/ benches
 /datum/crafting_recipe/PlasmaPistol
 	name = "Plasma Pistol"
 	result = /obj/item/gun/energy/laser/plasma/pistol
-	reqs = list(/obj/item/prefabs/complex/complexWeaponAssembly = 1,
+	reqs = list(/obj/item/prefabs/complex/complexWeaponFrame = 1,
 				/obj/item/advanced_crafting_components/flux = 1,
 				)
 	tools = list(TOOL_WORKBENCH, /obj/item/blueprint/weapon/plasmapistol)
@@ -3146,7 +3224,7 @@ add recipes for parts and assemblies w/ benches
 /datum/crafting_recipe/PlasmaPistol_lim
 	name = "Plasma Pistol"
 	result = /obj/item/gun/energy/laser/plasma/pistol
-	reqs = list(/obj/item/prefabs/complex/complexWeaponAssembly = 1,
+	reqs = list(/obj/item/prefabs/complex/complexWeaponFrame = 1,
 				/obj/item/advanced_crafting_components/flux = 1,
 				/obj/item/blueprint/weapon/plasmapistol/limited = 1
 				)
@@ -3160,7 +3238,7 @@ add recipes for parts and assemblies w/ benches
 /datum/crafting_recipe/uzi
 	name = "Mini uzi"
 	result = /obj/item/gun/ballistic/automatic/mini_uzi
-	reqs = list(/obj/item/prefabs/complex/complexWeaponAssembly = 1,
+	reqs = list(/obj/item/prefabs/complex/complexWeaponFrame = 1,
 				/obj/item/advanced_crafting_components/receiver = 1,
 				/datum/reagent/blackpowder = 30
 				)
@@ -3172,7 +3250,7 @@ add recipes for parts and assemblies w/ benches
 /datum/crafting_recipe/uzi_lim
 	name = "Mini uzi"
 	result = /obj/item/gun/ballistic/automatic/mini_uzi
-	reqs = list(/obj/item/prefabs/complex/complexWeaponAssembly = 1,
+	reqs = list(/obj/item/prefabs/complex/complexWeaponFrame = 1,
 				/obj/item/advanced_crafting_components/receiver = 1,
 				/datum/reagent/blackpowder = 30,
 				/obj/item/blueprint/weapon/uzi/limited = 1
@@ -3187,7 +3265,7 @@ add recipes for parts and assemblies w/ benches
 /datum/crafting_recipe/smg10mm
 	name = "10mm SMG"
 	result = /obj/item/gun/ballistic/automatic/smg10mm
-	reqs = list(/obj/item/prefabs/complex/complexWeaponAssembly = 1,
+	reqs = list(/obj/item/prefabs/complex/complexWeaponFrame = 1,
 				/obj/item/advanced_crafting_components/receiver = 1,
 				/datum/reagent/blackpowder = 30
 				)
@@ -3199,7 +3277,7 @@ add recipes for parts and assemblies w/ benches
 /datum/crafting_recipe/smg10mm_lim
 	name = "10mm SMG"
 	result = /obj/item/gun/ballistic/automatic/smg10mm
-	reqs = list(/obj/item/prefabs/complex/complexWeaponAssembly = 1,
+	reqs = list(/obj/item/prefabs/complex/complexWeaponFrame = 1,
 				/obj/item/advanced_crafting_components/receiver = 1,
 				/datum/reagent/blackpowder = 30, 
 				/obj/item/blueprint/weapon/smg10mm/limited = 1
@@ -3214,7 +3292,7 @@ add recipes for parts and assemblies w/ benches
 /datum/crafting_recipe/grease_gun
 	name = "Grease gun"
 	result = /obj/item/gun/ballistic/automatic/greasegun
-	reqs = list(/obj/item/prefabs/complex/complexWeaponAssembly = 1,
+	reqs = list(/obj/item/prefabs/complex/complexWeaponFrame = 1,
 				/obj/item/advanced_crafting_components/receiver = 1,
 				/datum/reagent/blackpowder = 30, 
 				)
@@ -3226,7 +3304,7 @@ add recipes for parts and assemblies w/ benches
 /datum/crafting_recipe/grease_gun_lim
 	name = "Grease gun"
 	result = /obj/item/gun/ballistic/automatic/greasegun
-	reqs = list(/obj/item/prefabs/complex/complexWeaponAssembly = 1,
+	reqs = list(/obj/item/prefabs/complex/complexWeaponFrame = 1,
 				/obj/item/advanced_crafting_components/receiver = 1,
 				/datum/reagent/blackpowder = 30, 
 				/obj/item/blueprint/weapon/grease_gun/limited = 1
@@ -3241,7 +3319,7 @@ add recipes for parts and assemblies w/ benches
 /datum/crafting_recipe/marksmanrifle
 	name = "Marksman rifle"
 	result = /obj/item/gun/ballistic/automatic/marksman
-	reqs = list(/obj/item/prefabs/complex/complexWeaponAssembly = 1,
+	reqs = list(/obj/item/prefabs/complex/complexWeaponFrame = 1,
 				/obj/item/advanced_crafting_components/assembly = 1,
 				/datum/reagent/blackpowder = 30,
 				)
@@ -3253,7 +3331,7 @@ add recipes for parts and assemblies w/ benches
 /datum/crafting_recipe/marksmanrifle_lim
 	name = "Marksman rifle"
 	result = /obj/item/gun/ballistic/automatic/marksman
-	reqs = list(/obj/item/prefabs/complex/complexWeaponAssembly = 1,
+	reqs = list(/obj/item/prefabs/complex/complexWeaponFrame = 1,
 				/obj/item/advanced_crafting_components/assembly = 1,
 				/datum/reagent/blackpowder = 30,
 				/obj/item/blueprint/weapon/marksmanrifle/limited = 1
@@ -3268,7 +3346,7 @@ add recipes for parts and assemblies w/ benches
 /datum/crafting_recipe/brush
 	name = "Brush gun"
 	result = /obj/item/gun/ballistic/shotgun/automatic/hunting/brush
-	reqs = list(/obj/item/prefabs/complex/complexWeaponAssembly = 1,
+	reqs = list(/obj/item/prefabs/complex/complexWeaponFrame = 1,
 				/obj/item/advanced_crafting_components/assembly = 1,
 				/datum/reagent/blackpowder = 30
 				)
@@ -3280,7 +3358,7 @@ add recipes for parts and assemblies w/ benches
 /datum/crafting_recipe/brush_lim
 	name = "Brush gun"
 	result = /obj/item/gun/ballistic/shotgun/automatic/hunting/brush
-	reqs = list(/obj/item/prefabs/complex/complexWeaponAssembly = 1,
+	reqs = list(/obj/item/prefabs/complex/complexWeaponFrame = 1,
 				/obj/item/advanced_crafting_components/assembly = 1,
 				/datum/reagent/blackpowder = 30,
 				/obj/item/blueprint/weapon/brush/limited = 1
@@ -3297,7 +3375,7 @@ add recipes for parts and assemblies w/ benches
 /datum/crafting_recipe/r91
 	name = "R91 assault rifle"
 	result = /obj/item/gun/ballistic/automatic/assault_rifle
-	reqs = list(/obj/item/prefabs/complex/complexWeaponAssembly = 2,
+	reqs = list(/obj/item/prefabs/complex/complexWeaponFrame = 2,
 				/obj/item/advanced_crafting_components/assembly = 1,
 				/obj/item/advanced_crafting_components/receiver = 1,
 				/datum/reagent/blackpowder = 30
@@ -3310,7 +3388,7 @@ add recipes for parts and assemblies w/ benches
 /datum/crafting_recipe/r91_lim
 	name = "R91 assault rifle"
 	result = /obj/item/gun/ballistic/automatic/assault_rifle
-	reqs = list(/obj/item/prefabs/complex/complexWeaponAssembly = 2,
+	reqs = list(/obj/item/prefabs/complex/complexWeaponFrame = 2,
 				/obj/item/advanced_crafting_components/assembly = 1,
 				/obj/item/advanced_crafting_components/receiver = 1,
 				/datum/reagent/blackpowder = 30,
@@ -3325,7 +3403,7 @@ add recipes for parts and assemblies w/ benches
 /datum/crafting_recipe/lmg
 	name = "R84 LMG"
 	result = /obj/item/gun/ballistic/automatic/lmg
-	reqs = list(/obj/item/prefabs/complex/complexWeaponAssembly = 2,
+	reqs = list(/obj/item/prefabs/complex/complexWeaponFrame = 2,
 				/obj/item/advanced_crafting_components/assembly = 1,
 				/obj/item/advanced_crafting_components/alloys = 1,
 				/datum/reagent/blackpowder = 30
@@ -3338,7 +3416,7 @@ add recipes for parts and assemblies w/ benches
 /datum/crafting_recipe/lmg_lim
 	name = "R84 LMG"
 	result = /obj/item/gun/ballistic/automatic/lmg
-	reqs = list(/obj/item/prefabs/complex/complexWeaponAssembly = 2,
+	reqs = list(/obj/item/prefabs/complex/complexWeaponFrame = 2,
 				/obj/item/advanced_crafting_components/assembly = 1,
 				/obj/item/advanced_crafting_components/alloys = 1,
 				/datum/reagent/blackpowder = 30,
@@ -3354,7 +3432,7 @@ add recipes for parts and assemblies w/ benches
 /datum/crafting_recipe/breacher
 	name = "Breacher shotgun"
 	result = /obj/item/gun/ballistic/automatic/shotgun/riot
-	reqs = list(/obj/item/prefabs/complex/complexWeaponAssembly = 2,
+	reqs = list(/obj/item/prefabs/complex/complexWeaponFrame = 2,
 				/obj/item/advanced_crafting_components/alloys = 1,
 				/obj/item/advanced_crafting_components/receiver = 1,
 				/datum/reagent/blackpowder = 30
@@ -3367,7 +3445,7 @@ add recipes for parts and assemblies w/ benches
 /datum/crafting_recipe/breacher_lim
 	name = "Breacher shotgun"
 	result = /obj/item/gun/ballistic/automatic/shotgun/riot
-	reqs = list(/obj/item/prefabs/complex/complexWeaponAssembly = 2,
+	reqs = list(/obj/item/prefabs/complex/complexWeaponFrame = 2,
 				/obj/item/advanced_crafting_components/alloys = 1,
 				/obj/item/advanced_crafting_components/receiver = 1,
 				/datum/reagent/blackpowder = 30,
@@ -3383,7 +3461,7 @@ add recipes for parts and assemblies w/ benches
 /datum/crafting_recipe/sniper
 	name = "Sniper rifle"
 	result = /obj/item/gun/ballistic/automatic/marksman/sniper
-	reqs = list(/obj/item/prefabs/complex/complexWeaponAssembly = 2,
+	reqs = list(/obj/item/prefabs/complex/complexWeaponFrame = 2,
 				/obj/item/advanced_crafting_components/assembly = 1,
 				/obj/item/advanced_crafting_components/alloys = 1,
 				/datum/reagent/blackpowder = 30
@@ -3396,7 +3474,7 @@ add recipes for parts and assemblies w/ benches
 /datum/crafting_recipe/sniper_lim
 	name = "Sniper rifle"
 	result = /obj/item/gun/ballistic/automatic/marksman/sniper
-	reqs = list(/obj/item/prefabs/complex/complexWeaponAssembly = 2,
+	reqs = list(/obj/item/prefabs/complex/complexWeaponFrame = 2,
 				/obj/item/advanced_crafting_components/assembly = 1,
 				/obj/item/advanced_crafting_components/alloys = 1,
 				/datum/reagent/blackpowder = 30,
@@ -3412,7 +3490,7 @@ add recipes for parts and assemblies w/ benches
 /datum/crafting_recipe/R82
 	name = "R82 heavy service rifle"
 	result = /obj/item/gun/ballistic/automatic/marksman/servicerifle/r82
-	reqs = list(/obj/item/prefabs/complex/complexWeaponAssembly = 2,
+	reqs = list(/obj/item/prefabs/complex/complexWeaponFrame = 2,
 				/obj/item/advanced_crafting_components/assembly = 1,
 				/obj/item/advanced_crafting_components/receiver = 1,
 				/datum/reagent/blackpowder = 30
@@ -3425,7 +3503,7 @@ add recipes for parts and assemblies w/ benches
 /datum/crafting_recipe/R82_lim
 	name = "R82 heavy service rifle"
 	result = /obj/item/gun/ballistic/automatic/marksman/servicerifle/r82
-	reqs = list(/obj/item/prefabs/complex/complexWeaponAssembly = 2,
+	reqs = list(/obj/item/prefabs/complex/complexWeaponFrame = 2,
 				/obj/item/advanced_crafting_components/assembly = 1,
 				/obj/item/advanced_crafting_components/receiver = 1,
 				/datum/reagent/blackpowder = 30,
@@ -3439,7 +3517,7 @@ add recipes for parts and assemblies w/ benches
 /datum/crafting_recipe/deagle
 	name = "Desert Eagle"
 	result = /obj/item/gun/ballistic/automatic/pistol/deagle
-	reqs = list(/obj/item/prefabs/complex/complexWeaponAssembly = 2,
+	reqs = list(/obj/item/prefabs/complex/complexWeaponFrame = 2,
 				/obj/item/advanced_crafting_components/alloys = 1,
 				/obj/item/advanced_crafting_components/receiver = 1,
 				/datum/reagent/blackpowder = 30,
@@ -3452,7 +3530,7 @@ add recipes for parts and assemblies w/ benches
 /datum/crafting_recipe/deagle_lim
 	name = "Desert Eagle"
 	result = /obj/item/gun/ballistic/automatic/pistol/deagle
-	reqs = list(/obj/item/prefabs/complex/complexWeaponAssembly = 2,
+	reqs = list(/obj/item/prefabs/complex/complexWeaponFrame = 2,
 				/obj/item/advanced_crafting_components/alloys = 1,
 				/obj/item/advanced_crafting_components/receiver = 1,
 				/datum/reagent/blackpowder = 30,
@@ -3469,8 +3547,8 @@ add recipes for parts and assemblies w/ benches
 /datum/crafting_recipe/bozar
 	name = "Bozar"
 	result = /obj/item/gun/ballistic/automatic/bozar
-	reqs = list(/obj/item/prefabs/complex/complexWeaponAssembly = 3,
-				/obj/item/prefabs/complex/simpleWeaponAssembly = 2,
+	reqs = list(/obj/item/prefabs/complex/complexWeaponFrame = 3,
+				/obj/item/prefabs/complex/simpleWeaponFrame = 2,
 				/obj/item/advanced_crafting_components/assembly = 1,
 				/obj/item/advanced_crafting_components/alloys = 1,
 				/obj/item/advanced_crafting_components/receiver = 1,
@@ -3484,8 +3562,8 @@ add recipes for parts and assemblies w/ benches
 /datum/crafting_recipe/AER9
 	name = "AER9"
 	result = /obj/item/gun/energy/laser/aer9
-	reqs = list(/obj/item/prefabs/complex/complexWeaponAssembly = 3,
-				/obj/item/prefabs/complex/simpleWeaponAssembly = 2,
+	reqs = list(/obj/item/prefabs/complex/complexWeaponFrame = 3,
+				/obj/item/prefabs/complex/simpleWeaponFrame = 2,
 				/obj/item/advanced_crafting_components/lenses = 1,
 				/obj/item/advanced_crafting_components/alloys = 1,
 				)
@@ -3497,8 +3575,8 @@ add recipes for parts and assemblies w/ benches
 /datum/crafting_recipe/AER9_lim
 	name = "AER9"
 	result = /obj/item/gun/energy/laser/aer9
-	reqs = list(/obj/item/prefabs/complex/complexWeaponAssembly = 3,
-				/obj/item/prefabs/complex/simpleWeaponAssembly = 2,
+	reqs = list(/obj/item/prefabs/complex/complexWeaponFrame = 3,
+				/obj/item/prefabs/complex/simpleWeaponFrame = 2,
 				/obj/item/advanced_crafting_components/lenses = 1,
 				/obj/item/advanced_crafting_components/alloys = 1,
 				/obj/item/blueprint/weapon/AER9/limited = 1
@@ -3511,8 +3589,8 @@ add recipes for parts and assemblies w/ benches
 /datum/crafting_recipe/PlasmaRifle
 	name = "Plasma Rifle"
 	result = /obj/item/gun/energy/laser/plasma
-	reqs = list(/obj/item/prefabs/complex/complexWeaponAssembly = 3,
-				/obj/item/prefabs/complex/simpleWeaponAssembly = 2,
+	reqs = list(/obj/item/prefabs/complex/complexWeaponFrame = 3,
+				/obj/item/prefabs/complex/simpleWeaponFrame = 2,
 				/obj/item/advanced_crafting_components/flux = 1,
 				/obj/item/advanced_crafting_components/conductors = 2,
 				/obj/item/advanced_crafting_components/alloys = 1
@@ -3525,8 +3603,8 @@ add recipes for parts and assemblies w/ benches
 /datum/crafting_recipe/PlasmaRifle_lim
 	name = "Plasma Rifle"
 	result = /obj/item/gun/energy/laser/plasma
-	reqs = list(/obj/item/prefabs/complex/complexWeaponAssembly = 3,
-				/obj/item/prefabs/complex/simpleWeaponAssembly = 2,
+	reqs = list(/obj/item/prefabs/complex/complexWeaponFrame = 3,
+				/obj/item/prefabs/complex/simpleWeaponFrame = 2,
 				/obj/item/advanced_crafting_components/flux = 1,
 				/obj/item/advanced_crafting_components/conductors = 2,
 				/obj/item/advanced_crafting_components/alloys = 1,
@@ -3542,8 +3620,8 @@ add recipes for parts and assemblies w/ benches
 /datum/crafting_recipe/tribeam
 	name = "Tribeam Laser Rifle"
 	result = /obj/item/gun/energy/laser/scatter
-	reqs = list(/obj/item/prefabs/complex/complexWeaponAssembly = 3,
-				/obj/item/prefabs/complex/simpleWeaponAssembly = 2,
+	reqs = list(/obj/item/prefabs/complex/complexWeaponFrame = 3,
+				/obj/item/prefabs/complex/simpleWeaponFrame = 2,
 				/obj/item/advanced_crafting_components/conductors = 1,
 				/obj/item/advanced_crafting_components/alloys = 1,
 				/obj/item/advanced_crafting_components/lenses = 1
@@ -3557,8 +3635,8 @@ add recipes for parts and assemblies w/ benches
 /datum/crafting_recipe/AM_rifle
 	name = "AM Rifle"
 	result = /obj/item/gun/ballistic/automatic/sniper_rifle
-	reqs = list(/obj/item/prefabs/complex/complexWeaponAssembly = 3,
-				/obj/item/prefabs/complex/simpleWeaponAssembly = 2,
+	reqs = list(/obj/item/prefabs/complex/complexWeaponFrame = 3,
+				/obj/item/prefabs/complex/simpleWeaponFrame = 2,
 				/obj/item/advanced_crafting_components/assembly = 1,
 				/obj/item/advanced_crafting_components/alloys = 1,
 				/obj/item/advanced_crafting_components/receiver = 1,
@@ -3572,8 +3650,8 @@ add recipes for parts and assemblies w/ benches
 /datum/crafting_recipe/AM_rifle_lim
 	name = "AM Rifle"
 	result = /obj/item/gun/ballistic/automatic/sniper_rifle
-	reqs = list(/obj/item/prefabs/complex/complexWeaponAssembly = 3,
-				/obj/item/prefabs/complex/simpleWeaponAssembly = 2,
+	reqs = list(/obj/item/prefabs/complex/complexWeaponFrame = 3,
+				/obj/item/prefabs/complex/simpleWeaponFrame = 2,
 				/obj/item/advanced_crafting_components/assembly = 1,
 				/obj/item/advanced_crafting_components/alloys = 1,
 				/obj/item/advanced_crafting_components/receiver = 1,
@@ -3590,8 +3668,8 @@ add recipes for parts and assemblies w/ benches
 /datum/crafting_recipe/city_killer
 	name = "City-Killer shotgun"
 	result = /obj/item/gun/ballistic/shotgun/automatic/combat
-	reqs = list(/obj/item/prefabs/complex/complexWeaponAssembly = 3,
-				/obj/item/prefabs/complex/simpleWeaponAssembly = 2,
+	reqs = list(/obj/item/prefabs/complex/complexWeaponFrame = 3,
+				/obj/item/prefabs/complex/simpleWeaponFrame = 2,
 				/obj/item/advanced_crafting_components/assembly = 1,
 				/obj/item/advanced_crafting_components/alloys = 1,
 				/obj/item/advanced_crafting_components/receiver = 1,
@@ -3606,8 +3684,8 @@ add recipes for parts and assemblies w/ benches
 
 	name = "City-Killer shotgun"
 	result = /obj/item/gun/ballistic/shotgun/automatic/combat
-	reqs = list(/obj/item/prefabs/complex/complexWeaponAssembly = 3,
-				/obj/item/prefabs/complex/simpleWeaponAssembly = 2,
+	reqs = list(/obj/item/prefabs/complex/complexWeaponFrame = 3,
+				/obj/item/prefabs/complex/simpleWeaponFrame = 2,
 				/obj/item/advanced_crafting_components/assembly = 1,
 				/obj/item/advanced_crafting_components/alloys = 1,
 				/obj/item/advanced_crafting_components/receiver = 1,
@@ -3624,8 +3702,8 @@ add recipes for parts and assemblies w/ benches
 /datum/crafting_recipe/rangemaster
 	name = "Colt Rangemaster"
 	result = /obj/item/gun/ballistic/automatic/rangemaster
-	reqs = list(/obj/item/prefabs/complex/complexWeaponAssembly = 3,
-				/obj/item/prefabs/complex/simpleWeaponAssembly = 2,
+	reqs = list(/obj/item/prefabs/complex/complexWeaponFrame = 3,
+				/obj/item/prefabs/complex/simpleWeaponFrame = 2,
 				/obj/item/advanced_crafting_components/assembly = 1,
 				/obj/item/advanced_crafting_components/alloys = 1,
 				/obj/item/advanced_crafting_components/receiver = 1,
@@ -3639,8 +3717,8 @@ add recipes for parts and assemblies w/ benches
 /datum/crafting_recipe/rangemaster_lim
 	name = "Colt Rangemaster"
 	result = /obj/item/gun/ballistic/automatic/rangemaster
-	reqs = list(/obj/item/prefabs/complex/complexWeaponAssembly = 3,
-				/obj/item/prefabs/complex/simpleWeaponAssembly = 2,
+	reqs = list(/obj/item/prefabs/complex/complexWeaponFrame = 3,
+				/obj/item/prefabs/complex/simpleWeaponFrame = 2,
 				/obj/item/advanced_crafting_components/assembly = 1,
 				/obj/item/advanced_crafting_components/alloys = 1,
 				/obj/item/advanced_crafting_components/receiver = 1,
@@ -3656,8 +3734,8 @@ add recipes for parts and assemblies w/ benches
 /datum/crafting_recipe/bozar
 	name = "Bozar"
 	result = /obj/item/gun/ballistic/automatic/bozar
-	reqs = list(/obj/item/prefabs/complex/complexWeaponAssembly = 3,
-				/obj/item/prefabs/complex/simpleWeaponAssembly = 2,
+	reqs = list(/obj/item/prefabs/complex/complexWeaponFrame = 3,
+				/obj/item/prefabs/complex/simpleWeaponFrame = 2,
 				/obj/item/advanced_crafting_components/assembly = 1,
 				/obj/item/advanced_crafting_components/alloys = 1,
 				/obj/item/advanced_crafting_components/receiver = 1,
@@ -3671,8 +3749,8 @@ add recipes for parts and assemblies w/ benches
 /datum/crafting_recipe/bozar_lim
 	name = "Bozar"
 	result = /obj/item/gun/ballistic/automatic/bozar
-	reqs = list(/obj/item/prefabs/complex/complexWeaponAssembly = 3,
-				/obj/item/prefabs/complex/simpleWeaponAssembly = 2,
+	reqs = list(/obj/item/prefabs/complex/complexWeaponFrame = 3,
+				/obj/item/prefabs/complex/simpleWeaponFrame = 2,
 				/obj/item/advanced_crafting_components/assembly = 1,
 				/obj/item/advanced_crafting_components/alloys = 1,
 				/obj/item/advanced_crafting_components/receiver = 1,

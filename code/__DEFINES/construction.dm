@@ -100,6 +100,7 @@
 #define CAT_FORGEWEAPON   "Forge Weapon"
 #define CAT_FORGEARMOR   "Forge Armor"
 #define CAT_FORGEMISC   "Forge Misc"
+#define CAT_FORGEPARTS   "Forge Parts"
 #define CAT_MEDICAL	"Ghetto Chemistry"
 #define CAT_MEDS "Medicine"
 #define CAT_ASSEM  	"Assembling"

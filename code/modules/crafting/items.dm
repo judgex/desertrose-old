@@ -12,7 +12,13 @@
 
 /obj/item/prefabs
     name = "crafting prefabs"
-    icon = 'icons/fallout/objects/items.dmi'
+    icon = 'icons/fallout/objects/crafting.dmi'
+    icon_state = "blueprint_empty"
+    w_class = WEIGHT_CLASS_TINY
+
+/obj/item/stack/prefabs
+    name = "crafting prefabs"
+    icon = 'icons/fallout/objects/crafting.dmi'
     icon_state = "blueprint_empty"
     w_class = WEIGHT_CLASS_TINY
 
@@ -199,35 +205,179 @@
     icon_state = "blueprint_empty"
     w_class = WEIGHT_CLASS_TINY
 
-/obj/item/prefabs/mWeaponParts
+/obj/item/stack/prefabs/mWeaponParts
 	name = "Metal Weapon Parts"
 	desc = ""
 	//icon_state = ""
 
-/obj/item/prefabs/wWeaponParts
+GLOBAL_LIST_INIT(wWeaponParts_recipes, list ( \
+	new/datum/stack_recipe("Wooden Stock", /obj/item/prefabs/complex/stock, 2, time = 50)
+	))
+
+/obj/item/stack/prefabs/wWeaponParts
 	name = "Wooden Weapon Parts"
 	desc = ""
 	//icon_state = ""
 
-/obj/item/prefabs/pWeaponParts
+/obj/item/stack/prefabs/wWeaponParts/Initialize(mapload, new_amount, merge = TRUE)
+	recipes = GLOB.wWeaponParts_recipes
+	return ..()
+
+/obj/item/stack/prefabs/pWeaponParts
 	name = "Plastic Weapon Parts"
 	desc = ""
 	//icon_state = ""
 
-/obj/item/prefabs/machineryParts
-	name = ""
+/obj/item/stack/prefabs/psWeaponParts
+	name = "Plasteel Weapon Parts"
 	desc = ""
 	//icon_state = ""
 
-/obj/item/prefabs/complex/simpleWeaponAssembly
-	name = "Simple Weapon Assembly"
+/obj/item/prefabs/complex/simpleWeaponFrame
+	name = "Simple Weapon Frame (crude)"
+	desc = ""
+	icon_state = "gunframe"
+
+/obj/item/prefabs/complex/complexWeaponFrame
+	name = "Complex Weapon Frame (crude)"
+	desc = ""
+	icon_state = "gunframe"
+
+/obj/item/prefabs/complex/simpleWeaponFrame/mid
+	name = "Simple Weapon Frame (fair)"
 	desc = ""
 	//icon_state = ""
 
-/obj/item/prefabs/complex/complexWeaponAssembly
-	name = "Complex Weapon Assembly"
+/obj/item/prefabs/complex/complexWeaponFrame/mid
+	name = "Complex Weapon Frame (fair)"
 	desc = ""
 	//icon_state = ""
+
+/obj/item/prefabs/complex/simpleWeaponFrame/high
+	name = "Simple Weapon Frame (masterwork)"
+	desc = ""
+	//icon_state = ""
+
+/obj/item/prefabs/complex/complexWeaponFrame/high
+	name = "Complex Weapon Frame (masterwork)"
+	desc = ""
+	//icon_state = ""
+
+//moulds
+
+/obj/item/prefabs/mould
+	name = "Mould"
+	desc = ""
+	icon_state = "mould"
+
+/obj/item/prefabs/mould/action
+	name = "Simple Action Mould"
+	desc = ""
+
+/obj/item/prefabs/mould/barrel/m357
+	name = ".357 Barrel Mould"
+	desc = ""
+
+/obj/item/prefabs/mould/barrel/m44
+	name = ".44 Barrel Mould"
+	desc = ""
+
+/obj/item/prefabs/mould/barrel/m556
+	name = "556 Barrel Mould"
+	desc = ""
+
+/obj/item/prefabs/mould/barrel/m762
+	name = "762 Barrel Mould"
+	desc = ""
+
+/obj/item/prefabs/mould/bolt
+	name = "Simple Bolt Mould"
+	desc = ""
+
+/obj/item/prefabs/mould/bolt/high
+	name = "Advanced Bolt Mould"
+	desc = ""
+
+/obj/item/prefabs/mould/trigger
+	name = "Trigger Mould"
+	desc = ""
+
+/obj/item/prefabs/mould/stock
+	name = "Stock Mould"
+	desc = ""
+
+/obj/item/prefabs/mould/screw
+	name = "Screw Mould"
+	desc = ""
+
+/obj/item/prefabs/mould/simpleWeaponFrame
+	name = "Simple Weapon Frame Mould"
+	desc = ""
+
+/obj/item/prefabs/mould/complexWeaponFrame
+	name = "Complex Weapon Frame Mould"
+	desc = ""
+
+//components
+/obj/item/prefabs/complex/action
+	name = "Simple Action"
+	desc = ""
+	icon_state = "action"
+
+/obj/item/prefabs/complex/action/auto
+	name = "Automatic Action"
+	desc = ""
+	icon_state = "action"
+
+/obj/item/prefabs/complex/barrel
+	name = "10mm Barrel"
+	desc = ""
+	icon_state = "barrel"
+
+/obj/item/prefabs/complex/barrel/m357
+	name = ".357 Barrel"
+	desc = ""
+
+/obj/item/prefabs/complex/barrel/m44
+	name = ".44 Barrel"
+	desc = ""
+
+/obj/item/prefabs/complex/barrel/m556
+	name = "556 Barrel"
+	desc = ""
+
+/obj/item/prefabs/complex/barrel/m762
+	name = "762 Barrel"
+	desc = ""
+
+/obj/item/prefabs/complex/bolt
+	name = "Simple Bolt"
+	desc = ""
+	icon_state = "bolt"
+
+/obj/item/prefabs/complex/bolt/high
+	name = "Advanced Bolt"
+	desc = ""
+
+/obj/item/prefabs/complex/trigger
+	name = "Trigger"
+	desc = ""
+	icon_state = "trigger"
+
+/obj/item/prefabs/complex/stock
+	name = "Wooden Stock"
+	desc = ""
+	icon_state = "stockwood"
+
+/obj/item/prefabs/complex/stock/mid
+	name = "Plastic Stock"
+	desc = ""
+	icon_state = "stock"
+
+/obj/item/prefabs/complex/screw
+	name = "Screw"
+	desc = ""
+	icon_state = "screw"
 
 //plasma
 /obj/item/advanced_crafting_components/flux

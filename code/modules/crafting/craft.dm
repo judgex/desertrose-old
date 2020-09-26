@@ -23,7 +23,8 @@
 						list(	//forge subcatergories
 							CAT_FORGEWEAPON,
 							CAT_FORGEARMOR,
-							CAT_FORGEMISC),
+							CAT_FORGEMISC,
+							CAT_FORGEPARTS),
 						list(
 							CAT_MISC,
 							CAT_BOTTLE), //MISC Subcategories
