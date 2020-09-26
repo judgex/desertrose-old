@@ -32,10 +32,10 @@
 	//H.add_trait(TRAIT_TECHNOPHREAK, TRAIT_GENERIC)
 
 /*
-Lead Practitioner
+Administrator
 */
 /datum/job/followers/f13leadpractitioner
-	title = "Lead Practitioner"
+	title = "Followers Administrator"
 	flag = F13LEADPRACTITIONER
 	department_flag = FOLLOWERS
 	head_announce = list("Security")
@@ -43,7 +43,7 @@ Lead Practitioner
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "No one."
-	description = "You are the Lead Practitioner.  As Lead Pract you are the administrator for the on-site followers. While there is no tradtional chain of command that is used, you have been chosen to lead due to your expert knowledge in the field of medicine and other general knowledges. Make sure that the supplies donated are being put to use, help secure more donations, and fill in as needed whenever short staffed or if the clinic is busy."
+	description = "You are the Follower Administrator. You are the administrator for the on-site followers. While there is no tradtional chain of command that is used, you have been chosen to lead due to your expert knowledge in the field of medicine and other general knowledges. Make sure that the supplies donated are being put to use, help secure more donations, and fill in as needed whenever short staffed or if the clinic is busy."
 	forbids = "Causing harm to others except in times of self-defense."
 	enforces = "Followers are not fond of the NCR due to their corruption, but they will help them. They dislike the Brotherhood for hoarding tech, but will make deals to work with them if it furthers the spreading of knowledge. Legion is our mistake and its our job to correct the mistake by speaking of the truth, but recognize that the best way to fight the legion is to teach them and sometimes that can mean helping them.Preaching humanitarianism and valuing human life. Assist and provide medical services to any who require it, regardless of faction. Provide free education for all those who are willing to learn."
 	selection_color = "#FF95FF"
@@ -63,7 +63,7 @@ Lead Practitioner
 	H.add_trait(TRAIT_TECHNOPHREAK, TRAIT_GENERIC, TRAIT_CHEMWHIZ, TRAIT_PRACTITIONER)
 
 /datum/outfit/job/followers/f13leadpractitioner
-	name = "Lead Practitioner"
+	name = "Followers Administrator"
 	jobtype = /datum/job/followers/f13leadpractitioner
 	id = /obj/item/card/id/silver
 	chemwhiz = TRUE
@@ -78,20 +78,22 @@ Lead Practitioner
 		/obj/item/reagent_containers/medspray/synthflesh=2,
 		/obj/item/reagent_containers/hypospray/combat=1,
 		/obj/item/clothing/glasses/hud/health=1,
-		/obj/item/reagent_containers/dropper/SR/NotVault=1)
+		/obj/item/reagent_containers/dropper/SR/NotVault=1,
+		/obj/item/book/granter/trait/chemistry=1,
+		/obj/item/book/granter/trait/techno=1)
 
 /*
 Professor
 */
 /datum/job/followers/f13Professor
-	title = "Professor"
+	title = "Followers Scientist"
 	flag = F13PRACTITIONER
 	department_flag = FOLLOWERS
 	faction = "Followers"
 	total_positions = 3
 	spawn_positions = 3
-	supervisors = "Followers having no strict command structure, don't report to anyone- though they will look to the Lead Pract for guidance."
-	description = "You are a Follower Professor. As a Professor it is your job to teach the wastes- be it teaching them how to make medicine, grow crops or treat toxic water. You are a learned individual in your chosen field, you know how to do research and have all the basic tools to teach others how to handle the technology they will come across.Followers are not fond of the NCR due to their corruption, but they will help them. They dislike the Brotherhood for hoarding tech, but will make deals to work with them if it furthers the spreading of knowledge. Legion is our mistake and its our job to correct the mistake by speaking of the truth, but recognize that the best way to fight the legion is to teach them and sometimes that can mean helping them.Preaching humanitarianism and valuing human life, Provide free education for all those who are willing to learn."
+	supervisors = "Followers having no strict command structure, don't report to anyone- though they will look to the Administrator for guidance."
+	description = "You are a Follower Scientist. As a Scientist it is your job to teach the wastes- be it teaching them how to make medicine, grow crops or treat toxic water. You are a learned individual in your chosen field, you know how to do research and have all the basic tools to teach others how to handle the technology they will come across.Followers are not fond of the NCR due to their corruption, but they will help them. They dislike the Brotherhood for hoarding tech, but will make deals to work with them if it furthers the spreading of knowledge. Legion is our mistake and its our job to correct the mistake by speaking of the truth, but recognize that the best way to fight the legion is to teach them and sometimes that can mean helping them.Preaching humanitarianism and valuing human life, Provide free education for all those who are willing to learn."
 	forbids = "Causing harm to others except in times of self-defense."
 	enforces = "Followers are not fond of the NCR due to their corruption, but they will help them. They dislike the Brotherhood for hoarding tech, but will make deals to work with them if it furthers the spreading of knowledge. Legion is our mistake and its our job to correct the mistake by speaking of the truth, but recognize that the best way to fight the legion is to teach them and sometimes that can mean helping them.Preaching humanitarianism and valuing human life. Assist and provide medical services to any who require it, regardless of faction. Provide free education for all those who are willing to learn."
 	selection_color = "#FFDDFF"
@@ -111,7 +113,7 @@ Professor
 
 
 /datum/outfit/job/followers/f13Professor
-	name = "Professor"
+	name = "Followers Scientist"
 	jobtype = /datum/job/followers/f13Professor
 	backpack = /obj/item/storage/backpack/explorer
 	uniform = /obj/item/clothing/under/f13/followers
@@ -128,14 +130,14 @@ Professor
 Practitioner
 */
 /datum/job/followers/f13practitioner
-	title = "Practitioner"
+	title = "Followers Doctor"
 	flag = F13PRACTITIONER
 	department_flag = FOLLOWERS
 	faction = "Followers"
 	total_positions = 3
 	spawn_positions = 3
-	supervisors = "Followers having no strict command structure, don't report to anyone- though they will look to the Lead Pract for guidance."
-	description ="You are the Practitioner. As a Practioner it is your responsibility to maintain working order in the hospital and to manage its staff and to treat patients who come in regardless of whether or not they can afford care. Some Practioners are known for leaving the hospital to look for injured or those who need help who may not come to a health facility, however it is key that those who do travel around to give aid keep in touch with the rest of staff and if there are no other able physicans or chemist that they stay to offer the best aid possible."
+	supervisors = "Followers having no strict command structure, don't report to anyone- though they will look to the Administrator for guidance."
+	description ="You are a Followers Doctor. As a Followers Doctor it is your responsibility to maintain working order in the hospital and to manage its staff and to treat patients who come in regardless of whether or not they can afford care. Some Doctors are known for leaving the hospital to look for injured or those who need help who may not come to a health facility, however it is key that those who do travel around to give aid keep in touch with the rest of staff and if there are no other able physicans or chemist that they stay to offer the best aid possible."
 	forbids = "Causing harm to others except in times of self-defense."
 	enforces = "Followers are not fond of the NCR due to their corruption, but they will help them. They dislike the Brotherhood for hoarding tech, but will make deals to work with them if it furthers the spreading of knowledge. Legion is our mistake and its our job to correct the mistake by speaking of the truth, but recognize that the best way to fight the legion is to teach them and sometimes that can mean helping them.Preaching humanitarianism and valuing human life. Assist and provide medical services to any who require it, regardless of faction. Provide free education for all those who are willing to learn."
 	selection_color = "#FFDDFF"
@@ -158,7 +160,7 @@ Practitioner
 
 
 /datum/outfit/job/followers/f13practitioner
-	name = "Practitioner"
+	name = "Followers Doctor"
 	jobtype = /datum/job/followers/f13practitioner
 	backpack = /obj/item/storage/backpack/explorer
 	uniform = /obj/item/clothing/under/f13/followers
@@ -211,8 +213,8 @@ Follower Volunteer
 	faction = "Followers"
 	total_positions = 3
 	spawn_positions = 3
-	supervisors = "Followers having no strict command structure, don't report to anyone- though they will look to the Lead Pract for guidance and the other practioners as well."
-	description = "You are a Follower Volunteer. As a Volunteer, you make sure they get connected to the right people to find treatment, assist in the functions of the hospital, and stepping in for the practioners when they are not present. Your reason for being here is to provide education and medical services, as well to learn from other Practioners as to better provide medical care for the wastes."
+	supervisors = "Followers having no strict command structure, don't report to anyone- though they will look to the Administrator for guidance and the other Doctors as well."
+	description = "You are a Follower Volunteer. As a Volunteer, you make sure they get connected to the right people to find treatment, assist in the functions of the hospital, and stepping in for the Doctors when they are not present. Your reason for being here is to provide education and medical services, as well to learn from other Doctors as to better provide medical care for the wastes."
 	forbids = "Causing harm to others except in times of self-defense."
 	enforces = "Followers are not fond of the NCR due to their corruption, but they will help them. They dislike the Brotherhood for hoarding tech, but will make deals to work with them if it furthers the spreading of knowledge. Legion is our mistake and its our job to correct the mistake by speaking of the truth, but recognize that the best way to fight the legion is to teach them and sometimes that can mean helping them. Preaching humanitarianism and valuing human life. Assist and provide medical services to any who require it, regardless of faction. Provide free education for all those who are willing to learn."
 	selection_color = "#FFDDFF"
@@ -223,7 +225,7 @@ Follower Volunteer
 	//the follower volunteer doesn't need more access as it is already stored in the /datum/job/followers
 
 /datum/outfit/job/followers/f13followervolunteer
-	name = "Follower Volunteer"
+	name = "Followers Volunteer"
 	jobtype = /datum/job/followers/f13followervolunteer
 	backpack = /obj/item/storage/backpack/explorer
 	id = /obj/item/card/id/silver
@@ -243,7 +245,7 @@ Follower Guard
 	faction = "Followers"
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "Followers having no strict command structure, don't report to anyone- though they will look to the Lead Pract for guidance and the other practioners as well."
+	supervisors = "Followers having no strict command structure, don't report to anyone- though they will look to the Administrator for guidance and the other Doctors as well."
 	description = "You are a Follower Guard. As a Guard for the Followers of Apocalypse, you are responsible for the safety and the maintenance of order in the hospital and among your peers. Your reason for being here is to make sure the other staff can provide education and medical services to those in need, furthering research in non-military matters, as well as helping their communities get access to basic necessities. "
 	forbids = "Causing harm to others except in times of self-defense or in defense of other followers."
 	enforces = "Followers are not fond of the NCR due to their corruption, but they will help them. They dislike the Brotherhood for hoarding tech, but will make deals to work with them if it furthers the spreading of knowledge. Legion is our mistake and its our job to correct the mistake by speaking of the truth, but recognize that the best way to fight the legion is to teach them and sometimes that can mean helping them. Preaching humanitarianism and valuing human life. Assist and provide medical services to any who require it, regardless of faction. Provide free education for all those who are willing to learn."
@@ -266,7 +268,9 @@ Follower Guard
 	suit_store = /obj/item/gun/ballistic/shotgun/hunting
 	glasses = /obj/item/clothing/glasses/sunglasses
 	shoes = /obj/item/clothing/shoes/combat
+	neck = 	/obj/item/storage/belt/holster
 	backpack_contents = list(
 	    /obj/item/gun/ballistic/automatic/pistol/n99=1, \
-		/obj/item/flashlight/flare/torch=1, \
-		/obj/item/storage/box/rubbershot/beanbag=1)
+		/obj/item/flashlight/seclite=1, \
+		/obj/item/storage/box/rubbershot/beanbag=1, \
+		/obj/item/storage/firstaid/ancient=1)

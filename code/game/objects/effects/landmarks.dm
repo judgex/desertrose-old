@@ -751,22 +751,17 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 	icon_state = "Villager"
 
 //Followers of the Apocalypse
-/obj/effect/landmark/start/f13/leadpractitioner
-	name = "Lead Practitioner"
-	icon_state = "Lead_Practitioner"
+/obj/effect/landmark/start/f13/followersadministrator
+	name = "Followers Administrator"
 
-/obj/effect/landmark/start/f13/practitioner
-	name = "Practitioner"
-	icon_state = "Practitioner"
+/obj/effect/landmark/start/f13/followersdoctor
+	name = "Followers Doctor"
 
 /obj/effect/landmark/start/f13/followersguard
 	name = "Followers Guard"
-	icon_state = "Followers_Guard"
 
 /obj/effect/landmark/start/f13/followersvolunteer
 	name = "Followers Volunteer"
-	icon_state = "Followers_Volunteer"
 
-/obj/effect/landmark/start/f13/Professor
-	name = "Professor"
-	icon_state = "Professor"
+/obj/effect/landmark/start/f13/followersscientist
+	name = "Followers Scientist"

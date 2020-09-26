@@ -1135,6 +1135,10 @@
 	item_state = "scoped308"
 	extra_damage = 8
 	extra_penetration = 5
+	zoomable = TRUE
+	zoom_amt = 10
+	zoom_out_amt = 13
+	can_scope = FALSE
 
 /obj/item/gun/ballistic/automatic/rangemaster
 	name = "Colt Rangemaster"
