@@ -14,6 +14,11 @@
 	var/synthetic = FALSE // To distinguish between organic and synthetic organs
 
 
+
+/obj/item/organ/Initialize()
+	. = ..()
+	START_PROCESSING(SSobj, src)
+
 /obj/item/organ/proc/Insert(mob/living/carbon/M, special = 0, drop_if_replaced = TRUE)
 	if(!iscarbon(M) || owner == M)
 		return
@@ -35,17 +40,17 @@
 		A.Grant(M)
 
 //Special is for instant replacement like autosurgeons
-/obj/item/organ/proc/Remove(mob/living/carbon/M, special = FALSE)
+/obj/item/organ/proc/Remove(special = FALSE)
+	if(owner)
+		owner.internal_organs -= src
+		if(owner.internal_organs_slot[slot] == src)
+			owner.internal_organs_slot.Remove(slot)
+		for(var/X in actions)
+			var/datum/action/A = X
+			A.Remove(owner)
+		. = owner //for possible subtypes specific post-removal code.
 	owner = null
-	if(M)
-		M.internal_organs -= src
-		if(M.internal_organs_slot[slot] == src)
-			M.internal_organs_slot.Remove(slot)
-		if(vital && !special && !(M.status_flags & GODMODE))
-			M.death()
-	for(var/X in actions)
-		var/datum/action/A = X
-		A.Remove(M)
+	START_PROCESSING(SSobj, src)
 
 
 /obj/item/organ/proc/on_find(mob/living/finder)

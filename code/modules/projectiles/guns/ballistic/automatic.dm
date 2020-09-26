@@ -484,6 +484,7 @@
 	icon_state = "mini-uzi"
 	mag_type = /obj/item/ammo_box/magazine/uzim9mm
 	w_class = WEIGHT_CLASS_NORMAL
+	weapon_weight = WEAPON_MEDIUM
 	can_scope = TRUE
 	scopestate = "AEP7_scope"
 	scope_x_offset = 9
@@ -494,6 +495,7 @@
 	force = 15
 	spread = 10
 	can_attachments = TRUE
+	can_suppress = TRUE
 
 /obj/item/gun/ballistic/automatic/mini_uzi/burst_select()
 	var/mob/living/carbon/human/user = usr
@@ -620,7 +622,7 @@
 	slot_flags = 0
 	mag_type = /obj/item/ammo_box/magazine/m10mm_auto
 	w_class = WEIGHT_CLASS_BULKY
-	weapon_weight = WEAPON_HEAVY
+	weapon_weight = WEAPON_MEDIUM //You should be able to dual-wield these.
 	fire_sound = 'sound/f13weapons/10mm_fire_03.ogg'
 	burst_size = 2
 	fire_delay = 2
@@ -926,7 +928,7 @@
 	item_state = "cshotgun1"
 	fire_sound = 'sound/f13weapons/repeater_fire.ogg'
 	mag_type = /obj/item/ammo_box/magazine/d12g
-	burst_size = 1
+	burst_size = 3 //Who keeps nerfing this? S.B.
 	automatic = 1
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
@@ -938,7 +940,7 @@
 	item_state = "cshotgun1"
 	fire_sound = 'sound/f13weapons/repeater_fire.ogg'
 	mag_type = /obj/item/ammo_box/magazine/d12g
-	burst_size = 1
+	burst_size = 2
 	fire_delay = 4
 	automatic = 1
 	w_class = WEIGHT_CLASS_BULKY
@@ -955,6 +957,7 @@
 	mag_type = /obj/item/ammo_box/magazine/d12g
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
+	force = 40
 
 /obj/item/gun/ballistic/automatic/greasegun
 	name = "M3A1 Grease Gun"
@@ -964,6 +967,7 @@
 	mag_type = /obj/item/ammo_box/magazine/greasegun
 	fire_sound = 'sound/f13weapons/greasegun.ogg'
 	can_suppress = FALSE
+	weapon_weight = WEAPON_MEDIUM
 	burst_size = 2
 	fire_delay = 3
 	burst_delay = 3
@@ -1153,6 +1157,15 @@
 	name = "Old Glory"
 	desc = "This Machine kills communists!"
 	icon_state = "oldglory"
+	extra_damage = 10
+
+/obj/item/gun/ballistic/automatic/m1garand/republicspride
+	name = "Republic's Pride"
+	desc = "A well-tuned scoped M1C rifle crafted by master gunsmith from the Gunrunners. Proudly issued to Scout Captains and packs a mean punch. Chambered in 7.62x51."
+	icon_state = "republics_pride"
+	item_state = "scoped308"
+	extra_damage = 8
+	extra_penetration = 5
 
 /obj/item/gun/ballistic/automatic/rangemaster
 	name = "Colt Rangemaster"

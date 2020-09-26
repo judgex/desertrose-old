@@ -1044,7 +1044,7 @@
 
 /obj/item/twohanded/sledgehammer/shamanstaff
 	name = "shaman staff"
-	desc = "An intricate staff, carried for centuries by the shaman class of thw Wayfayer Tribe."
+	desc = "An intricate staff, carried for centuries by the shaman class of the Wayfayer Tribe."
 	icon = 'icons/obj/items_and_weapons.dmi'
 	icon_state = "shamanstaff0"
 	lefthand_file = 'icons/mob/inhands/weapons/polearms_lefthand.dmi'
