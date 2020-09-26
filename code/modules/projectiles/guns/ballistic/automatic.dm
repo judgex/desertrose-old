@@ -865,8 +865,8 @@
 	item_state = "servicerifle"
 	fire_sound = 'sound/f13weapons/varmint_rifle.ogg'
 	fire_delay = 3
-	extra_damage = 5
-	extra_penetration = 5
+	extra_damage = 10
+	extra_penetration = 10
 	mag_type = /obj/item/ammo_box/magazine/m556/rifle
 	zoomable = FALSE
 	weapon_weight = WEAPON_HEAVY
@@ -884,6 +884,7 @@
 	icon_state = "R82"
 	item_state = "R82"
 	automatic = 1
+	burst_size = 3
 	can_bayonet = FALSE//TODO me
 
 /obj/item/gun/ballistic/automatic/marksman/servicerifle/varmint
@@ -894,7 +895,7 @@
 	fire_delay = 8
 	init_mag_type = /obj/item/ammo_box/magazine/m556/rifle/small
 	mag_type = /obj/item/ammo_box/magazine/m556/rifle
-	can_bayonet = FALSE//todo me
+	can_bayonet = FALSE
 
 /obj/item/gun/ballistic/automatic/marksman/servicerifle/varmint/ratslayer
 	name = "ratslayer"

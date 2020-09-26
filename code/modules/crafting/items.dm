@@ -274,6 +274,10 @@ GLOBAL_LIST_INIT(wWeaponParts_recipes, list ( \
 	name = "Simple Action Mould"
 	desc = ""
 
+/obj/item/prefabs/mould/actionauto
+	name = "Automatic Action Mould"
+	desc = ""
+
 /obj/item/prefabs/mould/barrel/m357
 	name = ".357 Barrel Mould"
 	desc = ""

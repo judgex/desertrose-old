@@ -131,6 +131,8 @@
 #define CAT_BPWEAPON	"Weapons"
 #define CAT_BPWEAPON_ONEUSE	"Weapons - Damaged"
 #define CAT_BP_COPY	"Copy Blueprints"
+#define CAT_MOULD "Moulds"
+#define CAT_MOULD_ONE "Moulds"
 
 #define RCD_FLOORWALL 1
 #define RCD_AIRLOCK 2
