@@ -412,7 +412,7 @@ Mayor
 	shoes = 		/obj/item/clothing/shoes/jackboots
 	backpack = 		/obj/item/storage/backpack/cultpack
 	satchel = 		/obj/item/storage/backpack/cultpack
-	r_hand = 		/obj/item/gun/ballistic/revolver/m29/alt
+	r_hand = 		/obj/item/gun/ballistic/revolver/m29
 	r_pocket = /obj/item/flashlight/flare
 	backpack_contents = list(
 		/obj/item/ammo_box/m44=2, \
