@@ -26,6 +26,12 @@
 	caliber = "needle"
 	projectile_type = /obj/item/projectile/bullet/needle/ap
 
+/obj/item/ammo_casing/caseless/needle/ultra
+	name = "An ultracite needler round."
+	desc = "A dart for use in needler pistols."
+	caliber = "ultraneedle"
+	projectile_type = /obj/item/projectile/bullet/needle/ultra
+
 /obj/item/ammo_casing/caseless/arrow
 	name = "metal arrow"
 	desc = "A simple arrow with a metal head."
