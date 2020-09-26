@@ -341,7 +341,7 @@ Raider
 	uniform = /obj/item/clothing/under/syndicate/tacticool
 	head = /obj/item/clothing/head/helmet/f13/brahmincowboyhat
 	backpack_contents = list(
-		/obj/item/gun/ballistic/revolver/m29/alt=1,
+		/obj/item/gun/ballistic/revolver/m29=1,
 		/obj/item/ammo_box/m44=2,
 		/obj/item/gun/ballistic/shotgun/automatic/hunting/cowboy=1,
 		/obj/item/ammo_box/tube/a357=2)

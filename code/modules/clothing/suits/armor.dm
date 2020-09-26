@@ -926,6 +926,13 @@
 	slowdown = 0.15 //+0.1 from helmet = total 0.25
 	armor = list("melee" = 70, "bullet" = 65, "laser" = 55, "energy" = 65, "bomb" = 62, "bio" = 100, "rad" = 99, "fire" = 90, "acid" = 0)
 
+/obj/item/clothing/suit/armor/f13/power_armor/t51b/ultra
+	name = "Ultracite power armor"
+	desc = "The pinnacle of pre-war technology. This suit of power armor provides substantial protection to the wearer. Now ultracite enhanced."
+	icon_state = "ultracitepa"
+	item_state = "ultracitepa"
+	slowdown = 0
+
 /obj/item/clothing/suit/armor/f13/power_armor/advanced
 	name = "advanced power armor"
 	desc = "An advanced suit of armor typically used by the Enclave.<br>It is composed of lightweight metal alloys, reinforced with ceramic castings at key stress points.<br>Additionally, like the T-51b power armor, it includes a recycling system that can convert human waste into drinkable water, and an air conditioning system for it's user's comfort."
