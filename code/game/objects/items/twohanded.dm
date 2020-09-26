@@ -566,13 +566,14 @@
 
 /obj/item/twohanded/spear/ultra
 	icon_state = "ultraglaive"
-	lefthand_file = 'icons/mob/inhands/weapons/polearms_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/polearms_righthand.dmi'
 	name = "Ultracite glaive"
 	desc = "An ultracite enhanced metal glaive that can be wielded."
 	force = 35
 	force_unwielded = 35
 	force_wielded = 55
+
+/obj/item/twohanded/spear/ultra/update_icon()
+	icon_state = "ultraglaive[wielded]"
 
 /obj/item/twohanded/spear/ultra/attack(mob/living/M, mob/living/user)
 	. = ..()
