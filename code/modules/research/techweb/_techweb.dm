@@ -57,6 +57,10 @@
 	id = "ENCLAVE"
 	organization = "Enclave"
 
+/datum/techweb/followers //Followers tech "channel"
+	id = "FOLLOWERS"
+	organization = "Followers of the Apocalypse"
+
 
 /datum/techweb/Destroy()
 	researched_nodes = null
