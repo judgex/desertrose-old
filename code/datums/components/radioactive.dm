@@ -42,7 +42,7 @@
 	if(!prob(50))
 		return
 	if(mob_activated)
-		var/list/targets
+		var/list/targets = list()
 		for(var/mob/living/carbon/C in range(4, parent))
 			targets += C
 		if(!targets)

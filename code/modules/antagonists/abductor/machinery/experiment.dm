@@ -200,15 +200,12 @@
 			points += point_reward
 			credits += point_reward
 			return "<span class='good'>Experiment successful! [point_reward] new data-points collected.</span>"
-		else
-			playsound(src.loc, 'sound/machines/buzz-sigh.ogg', 50, 1)
-			return "<span class='bad'>Experiment failed! No replacement organ detected.</span>"
-	else
-		say("Brain activity nonexistent - disposing sample...")
-		open_machine()
-		SendBack(H)
-		return "<span class='bad'>Specimen braindead - disposed.</span>"
-	return "<span class='bad'>ERROR</span>"
+		playsound(src.loc, 'sound/machines/buzz-sigh.ogg', 50, 1)
+		return "<span class='bad'>Experiment failed! No replacement organ detected.</span>"
+	say("Brain activity nonexistent - disposing sample...")
+	open_machine()
+	SendBack(H)
+	return "<span class='bad'>Specimen braindead - disposed.</span>"
 
 
 /obj/machinery/abductor/experiment/proc/SendBack(mob/living/carbon/human/H)

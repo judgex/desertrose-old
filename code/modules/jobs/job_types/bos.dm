@@ -11,6 +11,8 @@ Main doors: ACCESS_CAPTAIN 20
 	minimal_access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
 	outfit = /datum/outfit/job/bos/
 
+	objectivesList = list("Leadership recommends the following goal for this week: Establish an outpost at the radio tower","Leadership recommends the following goal for this week: Acquire blueprints for research and preservation", "Leadership recommends the following goal for this week: Acquire or confiscate dangerous tech by any means necessary.")
+
 /datum/outfit/job/bos
 	name = "bosdatums"
 	jobtype = /datum/job/bos
@@ -671,8 +673,7 @@ Knight
 	backpack_contents = list(
 		/obj/item/clothing/accessory/bos/juniorknight=1,
 		/obj/item/gun/ballistic/shotgun/trench=1,
-		/obj/item/storage/box/lethalshot=2,
-		/obj/item/
+		/obj/item/storage/box/lethalshot=2
 		)
 
 /datum/outfit/loadout/knightc

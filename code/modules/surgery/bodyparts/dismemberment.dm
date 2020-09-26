@@ -45,34 +45,6 @@
 
 /obj/item/bodypart/chest/dismember()
 	return FALSE
-	if(!owner)
-		return FALSE
-	var/mob/living/carbon/C = owner
-	if(!dismemberable)
-		return FALSE
-	if(C.has_trait(TRAIT_NODISMEMBER))
-		return FALSE
-
-	var/organ_spilled = 0
-	var/turf/T = get_turf(C)
-	C.add_splatter_floor(T)
-	playsound(get_turf(C), 'sound/misc/splort.ogg', 80, 1)
-	for(var/X in C.internal_organs)
-		var/obj/item/organ/O = X
-		var/org_zone = check_zone(O.zone)
-		if(org_zone != BODY_ZONE_CHEST)
-			continue
-		O.Remove(C)
-		O.forceMove(T)
-		organ_spilled = 1
-	if(cavity_item)
-		cavity_item.forceMove(T)
-		cavity_item = null
-		organ_spilled = 1
-
-	if(organ_spilled)
-		C.visible_message("<span class='danger'><B>[C]'s internal organs spill out onto the floor!</B></span>")
-	return 1
 
 
 

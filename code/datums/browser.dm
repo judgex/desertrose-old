@@ -39,9 +39,14 @@
 	//title_image = ntitle_image
 
 /datum/browser/proc/add_stylesheet(name, file)
-	stylesheets["[ckey(name)].css"] = file
-	register_asset("[ckey(name)].css", file)
-
+	if(istype(name, /datum/asset/spritesheet))
+		var/datum/asset/spritesheet/sheet = name
+		stylesheets["spritesheet_[sheet.name].css"] = "data/spritesheets/[sheet.name]"
+	else
+		var/asset_name = "[name].css"
+		stylesheets[asset_name] = file
+		if(!SSassets.cache[asset_name])
+			register_asset(asset_name, file)
 /datum/browser/proc/add_script(name, file)
 	scripts["[ckey(name)].js"] = file
 	register_asset("[ckey(name)].js", file)
@@ -371,9 +376,11 @@
 				if (isnull(settings["mainsettings"][setting]["value"]))
 					settings["mainsettings"][setting]["value"] = oldval
 			if ("string")
-				settings["mainsettings"][setting]["value"] = stripped_input(user, "Enter new value for [settings["mainsettings"][setting]["desc"]]", "Enter new value for [settings["mainsettings"][setting]["desc"]]")
+				settings["mainsettings"][setting]["value"] = stripped_input(user, "Enter new value for [settings["mainsettings"][setting]["desc"]]", "Enter new value for [settings["mainsettings"][setting]["desc"]]", settings["mainsettings"][setting]["value"])
 			if ("number")
 				settings["mainsettings"][setting]["value"] = input(user, "Enter new value for [settings["mainsettings"][setting]["desc"]]", "Enter new value for [settings["mainsettings"][setting]["desc"]]") as num
+			if ("color")
+				settings["mainsettings"][setting]["value"] = input(user, "Enter new value for [settings["mainsettings"][setting]["desc"]]", "Enter new value for [settings["mainsettings"][setting]["desc"]]", settings["mainsettings"][setting]["value"]) as color
 			if ("boolean")
 				settings["mainsettings"][setting]["value"] = input(user, "[settings["mainsettings"][setting]["desc"]]?") in list("Yes","No")
 			if ("ckey")
@@ -429,6 +436,8 @@
 // to pass a "close=1" parameter to the atom's Topic() proc for special handling.
 // Otherwise, the user mob's machine var will be reset directly.
 //
+
+/* Below is the Bay version. Let's try that one
 /proc/onclose(mob/user, windowid, atom/ref=null)
 	if(!user.client)
 		return
@@ -437,6 +446,17 @@
 		param = "[REF(ref)]"
 
 	winset(user, windowid, "on-close=\".windowclose [param]\"")
+*/
+
+/proc/onclose(mob/user, windowid, var/atom/ref=null)
+	if(!user || !user.client) return
+	var/param = "null"
+	if(ref)
+		param = "\ref[ref]"
+
+	spawn(2)
+		if(!user.client) return
+		winset(user, windowid, "on-close=\".windowclose [param]\"")
 
 
 

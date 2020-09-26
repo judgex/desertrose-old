@@ -20,11 +20,12 @@
 #define FORCE_STRING_OVERRIDE	(1<<2) // used for tooltips
 #define NEEDS_PERMIT			(1<<3) //Used by security bots to determine if this item is safe for public use.
 #define SLOWS_WHILE_IN_HAND		(1<<4)
-#define NO_MAT_REDEMPTION			(1<<5) // Stops you from putting things like an RCD or other items into an ORM or protolathe for materials.
-#define DROPDEL						(1<<6) // When dropped, it calls qdel on itself
+#define NO_MAT_REDEMPTION		(1<<5) // Stops you from putting things like an RCD or other items into an ORM or protolathe for materials.
+#define DROPDEL					(1<<6) // When dropped, it calls qdel on itself
 #define NOBLUDGEON				(1<<7)		// when an item has this it produces no "X has been hit by Y with Z" message in the default attackby()
 #define NODROP					(1<<8)		// This flag makes it so that an item literally cannot be removed at all, or at least that's how it should be. Only deleted.
 #define ABSTRACT				(1<<9) 	// for all things that are technically items but used for various different stuff
+#define NO_UNIFORM_REQUIRED		(1<<10) ///Can be worn on certain slots (currently belt and id) that would otherwise require an uniform.
 
 // Flags for the clothing_flags var on /obj/item/clothing
 

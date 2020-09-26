@@ -6,6 +6,7 @@
 
 	var/slowed = FALSE
 	var/slowvalue = 1
+	var/climb_on_ticks = 20
 
 	var/list/riding_offsets = list()	//position_of_user = list(dir = list(px, py)), or RIDING_OFFSET_ALL for a generic one.
 	var/list/directional_vehicle_layers = list()	//["[DIRECTION]"] = layer. Don't set it for a direction for default, set a direction to null for no change.
@@ -29,13 +30,14 @@
 /datum/component/riding/proc/vehicle_mob_unbuckle(mob/living/M, force = FALSE)
 	restore_position(M)
 	unequip_buckle_inhands(M)
+	qdel(src) //Everything else should be stripped already, we need to remove this in case they re-climb
 
 /datum/component/riding/proc/vehicle_mob_buckle(mob/living/M, force = FALSE)
 	handle_vehicle_offsets()
 
 /datum/component/riding/proc/handle_vehicle_layer()
 	var/atom/movable/AM = parent
-	var/static/list/defaults = list(TEXT_NORTH = OBJ_LAYER, TEXT_SOUTH = ABOVE_MOB_LAYER, TEXT_EAST = ABOVE_MOB_LAYER, TEXT_WEST = ABOVE_MOB_LAYER)
+	var/static/list/defaults = list(TEXT_NORTH = ABOVE_MOB_LAYER, TEXT_SOUTH = BELOW_MOB_LAYER, TEXT_EAST = ABOVE_MOB_LAYER, TEXT_WEST = ABOVE_MOB_LAYER)
 	. = defaults["[AM.dir]"]
 	if(directional_vehicle_layers["[AM.dir]"])
 		. = directional_vehicle_layers["[AM.dir]"]
@@ -65,6 +67,7 @@
 	var/atom/movable/AM = parent
 	AM.unbuckle_mob(M)
 
+//This is awful
 /datum/component/riding/proc/handle_vehicle_offsets()
 	var/atom/movable/AM = parent
 	var/AM_dir = "[AM.dir]"
@@ -86,7 +89,7 @@
 						if(diroffsets.len == 3)
 							buckled_mob.layer = diroffsets[3]
 						break dir_loop
-	var/list/static/default_vehicle_pixel_offsets = list(TEXT_NORTH = list(0, 0), TEXT_SOUTH = list(0, 0), TEXT_EAST = list(0, 0), TEXT_WEST = list(0, 0))
+	var/list/static/default_vehicle_pixel_offsets = list(TEXT_NORTH = list(0, 0), TEXT_SOUTH = list(0, 0), TEXT_EAST = list(0, 0), TEXT_WEST = list( 0, 0))
 	var/px = default_vehicle_pixel_offsets[AM_dir]
 	var/py = default_vehicle_pixel_offsets[AM_dir]
 	if(directional_vehicle_offsets[AM_dir])
@@ -104,7 +107,7 @@
 
 //Override this to set your vehicle's various pixel offsets
 /datum/component/riding/proc/get_offsets(pass_index) // list(dir = x, y, layer)
-	. = list(TEXT_NORTH = list(0, 0), TEXT_SOUTH = list(0, 0), TEXT_EAST = list(0, 0), TEXT_WEST = list(0, 0))
+	. = list(TEXT_NORTH = list(0, 4), TEXT_SOUTH = list(0, 4), TEXT_EAST = list(-8, 3), TEXT_WEST = list( 8, 3))
 	if(riding_offsets["[pass_index]"])
 		. = riding_offsets["[pass_index]"]
 	else if(riding_offsets["[RIDING_OFFSET_ALL]"])
@@ -190,9 +193,14 @@
 
 ///////Yes, I said humans. No, this won't end well...//////////
 /datum/component/riding/human
+	ride_check_rider_incapacitated = TRUE
+	ride_check_rider_restrained = TRUE
+
+
 
 /datum/component/riding/human/Initialize()
 	. = ..()
+	set_riding_offsets(RIDING_OFFSET_ALL, list(TEXT_NORTH = list(0, 6), TEXT_SOUTH = list(0, 6), TEXT_EAST = list(-6, 4), TEXT_WEST = list( 6, 4)))
 	RegisterSignal(parent, COMSIG_HUMAN_MELEE_UNARMED_ATTACK, .proc/on_host_unarmed_melee)
 
 /datum/component/riding/human/proc/on_host_unarmed_melee(atom/target)
@@ -202,11 +210,11 @@
 
 /datum/component/riding/human/handle_vehicle_layer()
 	var/atom/movable/AM = parent
-	if(AM.buckled_mobs && AM.buckled_mobs.len)
+	if(LAZYLEN(AM.buckled_mobs))
 		if(AM.dir == SOUTH)
 			AM.layer = ABOVE_MOB_LAYER
 		else
-			AM.layer = OBJ_LAYER
+			AM.layer = 3.9 //weirdly, there's nothing between mob layer and lying layer and 3.9 is empty
 	else
 		AM.layer = MOB_LAYER
 
@@ -215,6 +223,9 @@
 	AM.unbuckle_mob(user)
 	user.Knockdown(60)
 	user.visible_message("<span class='warning'>[AM] pushes [user] off of [AM.p_them()]!</span>")
+
+/datum/component/riding/human/get_offsets(pass_index) // list(dir = x, y, layer)
+	return list(TEXT_NORTH = list(0, 4), TEXT_SOUTH = list(0, 4), TEXT_EAST = list(-8, 3), TEXT_WEST = list( 8, 3))
 
 /datum/component/riding/cyborg
 
@@ -273,8 +284,22 @@
 	M.throw_at(target, 14, 5, AM)
 	M.Knockdown(60)
 
+
 /datum/component/riding/proc/equip_buckle_inhands(mob/living/carbon/human/user, amount_required = 1)
-	var/atom/movable/AM = parent
+	if(amount_required <= 0 || !istype(user))
+		return FALSE
+
+	for(var/i = 1 to amount_required)
+		var/obj/item/riding_offhand/inhand = new /obj/item/riding_offhand(user)
+		if(!user.put_in_hands(inhand,forced = TRUE, del_on_fail = TRUE))
+			return FALSE
+
+		inhand.rider = user
+		inhand.mount = parent
+
+	return TRUE
+
+/*	//Terrible
 	var/amount_equipped = 0
 	for(var/amount_needed = amount_required, amount_needed > 0, amount_needed--)
 		var/obj/item/riding_offhand/inhand = new /obj/item/riding_offhand(user)
@@ -289,12 +314,12 @@
 	else
 		unequip_buckle_inhands(user)
 		return FALSE
-
+*/
 /datum/component/riding/proc/unequip_buckle_inhands(mob/living/carbon/user)
 	var/atom/movable/AM = parent
 	for(var/obj/item/riding_offhand/O in user.contents)
-		if(O.parent != AM)
-			CRASH("RIDING OFFHAND ON WRONG MOB")
+		if(O.mount != AM)
+			stack_trace("RIDING OFFHAND ON WRONG MOB")
 			continue
 		if(O.selfdeleting)
 			continue
@@ -309,23 +334,50 @@
 	w_class = WEIGHT_CLASS_HUGE
 	item_flags = ABSTRACT | DROPDEL | NOBLUDGEON
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
-	var/mob/living/carbon/rider
-	var/mob/living/parent
+	var/mob/living/rider
+	var/atom/movable/mount //this should be a movable due to inheritance from the component
 	var/selfdeleting = FALSE
 
-/obj/item/riding_offhand/dropped()
-	selfdeleting = TRUE
+/obj/item/riding_offhand/dropped(mob/user)
+	var/mob/living/M = user
+	if(istype(M.buckled,/mob/living))
+		to_chat(M,"<span class='warning'>You loosen your grip!</span>")
+		M.buckled.unbuckle_mob(M, force = TRUE)  //Rider dropped their reins, drop the person
+
+	if(LAZYLEN(M.buckled_mobs)) //We're holding a rider offhand -- this will be for fireman hauls
+		to_chat(M,"<span class='warning'>You stop carrying a rider!</span>")
+		M.unbuckle_all_mobs()
+
+	selfdeleting = TRUE //DROPDEL should handle this fine but whatever
 	. = ..()
 
+/*
 /obj/item/riding_offhand/equipped()
-	if(loc != rider)
+	if(loc != rider) //Somehow
 		selfdeleting = TRUE
-		qdel(src)
+		qdel(src) //okay
+		return 0
 	. = ..()
+*/
 
+//might as well do it twice to be sure things are cleared
 /obj/item/riding_offhand/Destroy()
-	var/atom/movable/AM = parent
-	if(selfdeleting)
+	var/atom/movable/AM = mount
+	if(selfdeleting && istype(AM))
 		if(rider in AM.buckled_mobs)
 			AM.unbuckle_mob(rider)
 	. = ..()
+
+/mob/living/carbon/human/verb/piggyback()
+	set name = "Piggyback"
+	set desc = "Ride on a person's back. They must be aggressively grabbing you."
+	set category = "IC"
+
+	var/mob/living/target = pulledby
+
+	if(stat != CONSCIOUS || !istype(target)) //This equally checks for not being pulled, or pulled by weird non rideable mobs or objects
+		to_chat(src, "<span class='warning'>Someone needs a firm grip on you!</span>")
+		return
+
+	if(target.grab_state >= GRAB_AGGRESSIVE && target.stat == CONSCIOUS && LAZYLEN(target.buckled_mobs) < target.max_buckled_mobs)
+		target.buckle_mob(src,TRUE,FALSE)

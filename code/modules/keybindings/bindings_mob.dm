@@ -61,16 +61,28 @@
 	if(client.keys_held["Ctrl"])
 		switch(SSinput.movement_keys[_key])
 			if(NORTH)
-				northface()
+				if(client.keys_held["Shift"])
+					northshift()
+				else
+					northface()
 				return
 			if(SOUTH)
-				southface()
+				if(client.keys_held["Shift"])
+					southshift()
+				else
+					southface()
 				return
 			if(WEST)
-				westface()
+				if(client.keys_held["Shift"])
+					westshift()
+				else
+					westface()
 				return
 			if(EAST)
-				eastface()
+				if(client.keys_held["Shift"])
+					eastshift()
+				else
+					eastface()
 				return
 	return ..()
 
@@ -88,7 +100,9 @@
 		if("M")
 			src.set_typing_indicator(TRUE)
 		if("C")
-			src/living.toggle_combat_mode()
+			var/mob/living/L = src
+			if(istype(L))
+				L.toggle_combat_mode()
 		if("N")
 			src.toggle_typing_indicator()
 	return ..()

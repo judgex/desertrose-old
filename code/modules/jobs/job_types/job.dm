@@ -43,6 +43,10 @@
 	//For things that faction Enforces.
 	var/enforces = ""
 
+	//faction objective for the round
+	var/objectives
+	var/objectivesList
+
 	//Sellection screen color
 	var/selection_color = "#ffffff"
 

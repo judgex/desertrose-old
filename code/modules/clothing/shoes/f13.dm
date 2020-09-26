@@ -109,8 +109,8 @@
 /obj/item/clothing/shoes/f13/military/ncr_scout
 	name = "NCR scout boots"
 	desc = "A pair of thick-soled leather boots, well-worn by the wearer."
-	icon_state = "scoutboots"
-	item_state = "scoutboots"
+	icon_state = "laced"
+	item_state = "laced"
 
 /obj/item/clothing/shoes/f13/military/legionleather
 	name = "leather boots"

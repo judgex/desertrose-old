@@ -58,14 +58,23 @@ GLOBAL_LIST_INIT(blacklisted_automated_baseturfs, typecacheof(list(
 /turf/proc/ChangeTurf(path, list/new_baseturfs, flags)
 	if(!path)
 		return
-	if(path == /turf/open/space/basic)
+	var/our_path
+	if(islist(path) && LAZYLEN(path))
+		our_path = path[1]
+	else
+		our_path = path
+
+	if(our_path == /turf/open/space/basic)
 		// basic doesn't initialize and this will cause issues
 		// no warning though because this can happen naturaly as a result of it being built on top of
-		path = /turf/open/space
+		//This is suber obsolete
+		our_path = /turf/open/floor
 	if(!GLOB.use_preloader && path == type && !(flags & CHANGETURF_FORCEOP)) // Don't no-op if the map loader requires it to be reconstructed
 		return src
+	if(!ispath(our_path)) //We got passed a bad path somehow, it loves to crash on a bad new()
+		return src
 	if(flags & CHANGETURF_SKIP)
-		return new path(src)
+		return new our_path(src)
 
 	var/old_opacity = opacity
 	var/old_dynamic_lighting = dynamic_lighting
@@ -87,9 +96,8 @@ GLOBAL_LIST_INIT(blacklisted_automated_baseturfs, typecacheof(list(
 		comp.RemoveComponent()
 
 	changing_turf = TRUE
-	qdel(src)	//Just get the side effects and call Destroy
-	var/turf/W = new path(src)
-
+	qdel(src)	//Just get the side effects and call Destroy- this will probably also delete everything	on the turf
+	var/turf/W = new our_path(src)
 	for(var/i in transferring_comps)
 		W.TakeComponent(i)
 
@@ -106,7 +114,7 @@ GLOBAL_LIST_INIT(blacklisted_automated_baseturfs, typecacheof(list(
 
 	W.blueprint_data = old_bp
 
-	if(SSlighting.initialized)
+	if(SSlighting.initialized) //Why is it doing all this lighting shit if the turf is already qdeleted??
 		recalc_atom_opacity()
 		lighting_object = old_lighting_object
 		affecting_lights = old_affecting_lights
@@ -120,9 +128,8 @@ GLOBAL_LIST_INIT(blacklisted_automated_baseturfs, typecacheof(list(
 			else
 				lighting_clear_overlay()
 
-		for(var/turf/open/space/S in RANGE_TURFS(1, src)) //RANGE_TURFS is in code\__HELPERS\game.dm
-			S.update_starlight()
-
+//		for(var/turf/open/space/S in RANGE_TURFS(1, src)) //RANGE_TURFS is in code\__HELPERS\game.dm
+//			S.update_starlight()
 	return W
 
 /turf/open/ChangeTurf(path, list/new_baseturfs, flags)

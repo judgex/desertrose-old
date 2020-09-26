@@ -40,17 +40,15 @@
 	if(!battery)
 		to_chat(user, "<span class='warning'>There is no power cell connected to \the [src].</span>")
 		return FALSE
-	else
-		battery.forceMove(get_turf(src))
-		to_chat(user, "<span class='notice'>You detach \the [battery] from \the [src].</span>")
-		battery = null
+	battery.forceMove(get_turf(src))
+	to_chat(user, "<span class='notice'>You detach \the [battery] from \the [src].</span>")
+	battery = null
 
-		if(holder)
-			if(holder.enabled && !holder.use_power())
-				holder.shutdown_computer()
+	if(holder)
+		if(holder.enabled && !holder.use_power())
+			holder.shutdown_computer()
 
-		return TRUE
-	return FALSE
+	return TRUE
 
 
 
