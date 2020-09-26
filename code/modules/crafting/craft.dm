@@ -11,8 +11,7 @@
 				CAT_ASSEM,
 				CAT_FOOD,
 				CAT_CLOTHING,
-				CAT_BLUEPRINTS,
-				CAT_MOULD)
+				CAT_BLUEPRINTS)
 	var/list/subcategories = list(
 						list(	//Weapon subcategories
 							CAT_WEAPON,
@@ -24,8 +23,7 @@
 						list(	//forge subcatergories
 							CAT_FORGEWEAPON,
 							CAT_FORGEARMOR,
-							CAT_FORGEMISC,
-							CAT_FORGEPARTS),
+							CAT_FORGEMISC),
 						list(
 							CAT_MISC,
 							CAT_BOTTLE), //MISC Subcategories
@@ -65,10 +63,7 @@
 						list( //bp
 							CAT_BPWEAPON,
 							CAT_BPWEAPON_ONEUSE,
-							CAT_BP_COPY),
-						list( //moulds
-							CAT_MOULD_ONE)
-							)
+							CAT_BP_COPY))
 
 	var/datum/action/innate/crafting/button
 	var/display_craftable_only = FALSE
