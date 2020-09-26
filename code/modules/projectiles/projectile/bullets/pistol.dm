@@ -51,6 +51,11 @@
     damage = 30
     armour_penetration = 35
 
+/obj/item/projectile/bullet/needle/ultra
+    name = "ultracite needle"
+    damage = 50
+    armour_penetration = 25
+
 /*
 /obj/item/ammo_casing/c9mmr
 	name = "9mm bullet casing"
