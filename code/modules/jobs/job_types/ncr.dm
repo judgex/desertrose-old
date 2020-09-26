@@ -96,6 +96,7 @@ Captain
 	suit_store 	= /obj/item/gun/ballistic/automatic/pistol/ninemil
 	glasses 	= /obj/item/clothing/glasses/sunglasses/big
 	shoes       = /obj/item/clothing/shoes/f13/military/ncr_officer
+	neck = 		/obj/item/storage/belt/holster
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/m9mm=2, \
 		/obj/item/kitchen/knife/combat=1, \
@@ -385,7 +386,7 @@ Corporal
 	uniform =  		/obj/item/clothing/under/f13/ncr
 	id = 			/obj/item/card/id/dogtag/ncrtrooper
 	neck = 			/obj/item/storage/belt/holster
-	accessory = /obj/item/clothing/accessory/ncr/SPC
+	accessory = /obj/item/clothing/accessory/ncr/CPL
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/pistol/ninemil=1, \
 		/obj/item/ammo_box/magazine/m9mm=2, \
@@ -904,7 +905,7 @@ Ranger -- Split into Patrol and Scout
 	suit_store = /obj/item/gun/ballistic/shotgun/automatic/hunting/trail/scoped
 	backpack_contents = list(
 		/obj/item/ammo_box/tube/m44=2,
-		/obj/item/gun/ballistic/revolver/m29/alt=1,
+		/obj/item/gun/ballistic/revolver/m29=1,
 		/obj/item/ammo_box/m44=2
 		)
 */
@@ -945,7 +946,7 @@ Ranger -- Split into Patrol and Scout
 	suit_store =	/obj/item/gun/ballistic/automatic/marksman
 	r_pocket = /obj/item/twohanded/binocs
 	backpack_contents = list(
-		/obj/item/gun/ballistic/revolver/m29/alt,
+		/obj/item/gun/ballistic/revolver/m29,
 		/obj/item/ammo_box/m44=2, \
 		/obj/item/ammo_box/magazine/m556/rifle=2, \
 		/obj/item/restraints/handcuffs=1, \
@@ -992,7 +993,7 @@ Ranger -- Split into Patrol and Scout
 	glasses = 		/obj/item/clothing/glasses/sunglasses
 	r_pocket = 		/obj/item/twohanded/binocs
 	backpack_contents = list(
-		/obj/item/gun/ballistic/revolver/m29/alt,
+		/obj/item/gun/ballistic/revolver/m29,
 		/obj/item/ammo_box/m44=2, \
 		/obj/item/ammo_box/tube/m44=2, \
 		/obj/item/restraints/handcuffs=1, \
