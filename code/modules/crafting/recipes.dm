@@ -3912,7 +3912,7 @@
 	category = CAT_MOULD
 	subcategory = CAT_MOULD_ONE
 
-/datum/crafting_recipe/boltadvanced
+/datum/crafting_recipe/mould/boltadvanced
 	result = /obj/item/prefabs/mould/bolt/high
 	name = "Advanced Bolt Mould"
 	tools = list(TOOL_FORGE, TOOL_GUNTIER1)
