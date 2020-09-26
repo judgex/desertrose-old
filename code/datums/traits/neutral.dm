@@ -67,18 +67,14 @@
 		species.liked_food = initial(species.liked_food)
 		species.disliked_food = initial(species.disliked_food)
 
-/*----------------------------------------------------
-Prosthetic Limbs
-----------------------------------------------------*/
-
-/datum/quirk/left_arm_prosthetic_limb
-	name = "Left Arm Prosthetic Limb"
-	desc = "An accident caused you to lose your left arm. Because of this, you now have a prosthetic!"
+/datum/quirk/prosthetic_limb
+	name = "Prosthetic Limb"
+	desc = "An accident caused you to lose one of your limbs. Because of this, you now have a random prosthetic!"
 	value = 0
 	var/slot_string = "limb"
 
-/datum/quirk/left_arm_prosthetic_limb/on_spawn()
-	var/limb_slot = BODY_ZONE_L_ARM
+/datum/quirk/prosthetic_limb/on_spawn()
+	var/limb_slot = pick(BODY_ZONE_L_ARM, BODY_ZONE_R_ARM, BODY_ZONE_L_LEG, BODY_ZONE_R_LEG)
 	var/mob/living/carbon/human/H = quirk_holder
 	var/obj/item/bodypart/old_part = H.get_bodypart(limb_slot)
 	var/obj/item/bodypart/prosthetic
@@ -86,72 +82,12 @@ Prosthetic Limbs
 		if(BODY_ZONE_L_ARM)
 			prosthetic = new/obj/item/bodypart/l_arm/robot/surplus(quirk_holder)
 			slot_string = "left arm"
-	prosthetic.replace_limb(H)
-	qdel(old_part)
-	H.regenerate_icons()
-
-/datum/quirk/left_arm_prosthetic_limb/post_add()
-	to_chat(quirk_holder, "<span class='boldannounce'>Your left arm has been replaced with a surplus prosthetic. It is fragile and will easily come apart under duress. Additionally, \
-	you need to use a welding tool and cables to repair it, instead of bruise packs and ointment.</span>")
-
-/datum/quirk/right_arm_prosthetic_limb
-	name = "Right Arm Prosthetic Limb"
-	desc = "An accident caused you to lose your right arm. Because of this, you now have a prosthetic!"
-	value = 0
-	var/slot_string = "limb"
-
-/datum/quirk/right_arm_prosthetic_limb/on_spawn()
-	var/limb_slot = BODY_ZONE_R_ARM
-	var/mob/living/carbon/human/H = quirk_holder
-	var/obj/item/bodypart/old_part = H.get_bodypart(limb_slot)
-	var/obj/item/bodypart/prosthetic
-	switch(limb_slot)
 		if(BODY_ZONE_R_ARM)
 			prosthetic = new/obj/item/bodypart/r_arm/robot/surplus(quirk_holder)
 			slot_string = "right arm"
-	prosthetic.replace_limb(H)
-	qdel(old_part)
-	H.regenerate_icons()
-
-/datum/quirk/right_arm_prosthetic_limb/post_add()
-	to_chat(quirk_holder, "<span class='boldannounce'>Your right arm has been replaced with a surplus prosthetic. It is fragile and will easily come apart under duress. Additionally, \
-	you need to use a welding tool and cables to repair it, instead of bruise packs and ointment.</span>")
-
-/datum/quirk/left_leg_prosthetic_limb
-	name = "Left Leg Prosthetic Limb"
-	desc = "An accident caused you to lose your left leg. Because of this, you now have a prosthetic!"
-	value = 0
-	var/slot_string = "limb"
-
-/datum/quirk/left_leg_prosthetic_limb/on_spawn()
-	var/limb_slot = BODY_ZONE_L_LEG
-	var/mob/living/carbon/human/H = quirk_holder
-	var/obj/item/bodypart/old_part = H.get_bodypart(limb_slot)
-	var/obj/item/bodypart/prosthetic
-	switch(limb_slot)
 		if(BODY_ZONE_L_LEG)
 			prosthetic = new/obj/item/bodypart/l_leg/robot/surplus(quirk_holder)
 			slot_string = "left leg"
-	prosthetic.replace_limb(H)
-	qdel(old_part)
-	H.regenerate_icons()
-
-/datum/quirk/left_leg_prosthetic_limb/post_add()
-	to_chat(quirk_holder, "<span class='boldannounce'>Your left leg has been replaced with a surplus prosthetic. It is fragile and will easily come apart under duress. Additionally, \
-	you need to use a welding tool and cables to repair it, instead of bruise packs and ointment.</span>")
-
-/datum/quirk/right_leg_prosthetic_limb
-	name = "Right Leg Prosthetic Limb"
-	desc = "An accident caused you to lose your right leg. Because of this, you now have a prosthetic!"
-	value = 0
-	var/slot_string = "limb"
-
-/datum/quirk/right_leg_prosthetic_limb/on_spawn()
-	var/limb_slot = BODY_ZONE_R_LEG
-	var/mob/living/carbon/human/H = quirk_holder
-	var/obj/item/bodypart/old_part = H.get_bodypart(limb_slot)
-	var/obj/item/bodypart/prosthetic
-	switch(limb_slot)
 		if(BODY_ZONE_R_LEG)
 			prosthetic = new/obj/item/bodypart/r_leg/robot/surplus(quirk_holder)
 			slot_string = "right leg"
@@ -159,11 +95,9 @@ Prosthetic Limbs
 	qdel(old_part)
 	H.regenerate_icons()
 
-/datum/quirk/right_leg_prosthetic_limb/post_add()
-	to_chat(quirk_holder, "<span class='boldannounce'>Your right leg has been replaced with a surplus prosthetic. It is fragile and will easily come apart under duress. Additionally, \
+/datum/quirk/prosthetic_limb/post_add()
+	to_chat(quirk_holder, "<span class='boldannounce'>Your [slot_string] has been replaced with a surplus prosthetic. It is fragile and will easily come apart under duress. Additionally, \
 	you need to use a welding tool and cables to repair it, instead of bruise packs and ointment.</span>")
-
-/*-------------------------------------------------------------------*/
 
 /datum/quirk/family_heirloom
 	name = "Family Heirloom"
@@ -262,6 +196,3 @@ Prosthetic Limbs
 /datum/quirk/monochromatic/remove()
 	if(quirk_holder)
 		quirk_holder.remove_client_colour(/datum/client_colour/monochrome)
-
-
-
