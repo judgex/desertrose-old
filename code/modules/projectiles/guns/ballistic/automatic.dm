@@ -832,12 +832,43 @@
 	item_state = "gold_sniper"
 
 /obj/item/gun/ballistic/automatic/marksman/servicerifle
-	name = "service rifle"
+	name = "service rifle (crude)"
+	desc = "A 5.56x45 semi-automatic service rifle manufactured by the NCR and issued to all combat personnel."
+	icon_state = "service_rifle"
+	item_state = "servicerifle"
+	fire_sound = 'sound/f13weapons/varmint_rifle.ogg'
+	fire_delay = 5
+	extra_damage = -5
+	mag_type = /obj/item/ammo_box/magazine/m556/rifle
+	zoomable = FALSE
+	weapon_weight = WEAPON_HEAVY
+	//bayonetstate = "rifles"
+	knife_x_offset = 22
+	knife_y_offset = 12
+
+/obj/item/gun/ballistic/automatic/marksman/servicerifle/mid
+	name = "service rifle (fair)"
 	desc = "A 5.56x45 semi-automatic service rifle manufactured by the NCR and issued to all combat personnel."
 	icon_state = "service_rifle"
 	item_state = "servicerifle"
 	fire_sound = 'sound/f13weapons/varmint_rifle.ogg'
 	fire_delay = 4
+	mag_type = /obj/item/ammo_box/magazine/m556/rifle
+	zoomable = FALSE
+	weapon_weight = WEAPON_HEAVY
+	//bayonetstate = "rifles"
+	knife_x_offset = 22
+	knife_y_offset = 12
+
+/obj/item/gun/ballistic/automatic/marksman/servicerifle/high
+	name = "service rifle (masterwork)"
+	desc = "A 5.56x45 semi-automatic service rifle manufactured by the NCR and issued to all combat personnel."
+	icon_state = "service_rifle"
+	item_state = "servicerifle"
+	fire_sound = 'sound/f13weapons/varmint_rifle.ogg'
+	fire_delay = 3
+	extra_damage = 10
+	extra_penetration = 10
 	mag_type = /obj/item/ammo_box/magazine/m556/rifle
 	zoomable = FALSE
 	weapon_weight = WEAPON_HEAVY
@@ -1135,6 +1166,10 @@
 	item_state = "scoped308"
 	extra_damage = 8
 	extra_penetration = 5
+	zoomable = TRUE
+	zoom_amt = 10
+	zoom_out_amt = 13
+	can_scope = FALSE
 
 /obj/item/gun/ballistic/automatic/rangemaster
 	name = "Colt Rangemaster"

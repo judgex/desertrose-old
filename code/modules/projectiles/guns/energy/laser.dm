@@ -225,8 +225,6 @@
 	zoomable = TRUE
 	zoom_amt = 10
 	zoom_out_amt = 13
-	scope_x_offset = 12
-	scope_y_offset = 20
 	fire_delay = 3
 	equipsound = 'sound/f13weapons/equipsounds/aer9equip.ogg'
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/lasgun)

@@ -217,3 +217,5 @@ tools/MapAtmosFixer/MapAtmosFixer/bin/*
 /_maps/templates.dm
 /config
 config/config.txt
+interactions/lewd
+config/config.txt
