@@ -1122,5 +1122,12 @@ Nothing else in the console has ID requirements.
 	matching_designs = list()
 	SyncRDevices()
 
+/obj/machinery/computer/rdconsole/core/followers/Initialize()
+	. = ..()
+	stored_research = SSresearch.followers_tech
+	stored_research.consoles_accessing[src] = TRUE
+	matching_designs = list()
+	SyncRDevices()
+
 /obj/machinery/computer/rdconsole/experiment
 	name = "E.X.P.E.R.I-MENTOR R&D Console"

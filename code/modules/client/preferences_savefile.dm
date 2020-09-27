@@ -227,6 +227,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["name_is_always_random"] >> be_random_name
 	S["body_is_always_random"] >> be_random_body
 	S["gender"]				>> gender
+	S["body_model"]			>> features["body_model"]
 	S["age"]				>> age
 	//special
 	S["special_s"]			>> special_s
@@ -372,6 +373,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	//Sanitize this probably all needs to be reduced to a few lists with [job]_[faction]_[high | med | low] and inline  or something but I don't have the energy, so have some spaghetti - Nappist
 	real_name = reject_bad_name(real_name)
 	gender = sanitize_gender(gender)
+	features["body_model"] = sanitize_gender(features["body_model"], FALSE, FALSE, gender == FEMALE ? FEMALE : MALE)
 	if(!real_name)
 		real_name = random_unique_name(gender)
 
@@ -498,6 +500,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["name_is_always_random"] , be_random_name)
 	WRITE_FILE(S["body_is_always_random"] , be_random_body)
 	WRITE_FILE(S["gender"]				, gender)
+	WRITE_FILE(S["body_model"]				, features["body_model"])
 	WRITE_FILE(S["age"]				, age)
 	//special
 	WRITE_FILE(S["special_s"]		,special_s)

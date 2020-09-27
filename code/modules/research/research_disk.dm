@@ -32,3 +32,7 @@
 /obj/item/disk/tech_disk/vault/Initialize()
 	. = ..()
 	stored_research = new /datum/techweb/science
+
+/obj/item/disk/tech_disk/followers/Initialize()
+	. = ..()
+	stored_research = new /datum/techweb/followers
