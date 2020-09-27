@@ -223,6 +223,8 @@
 	icon_state = "ultra_rifle"
 	item_state = "laser-rifle9"
 	zoomable = TRUE
+	zoom_amt = 10
+	zoom_out_amt = 13
 	scope_x_offset = 12
 	scope_y_offset = 20
 	fire_delay = 3
