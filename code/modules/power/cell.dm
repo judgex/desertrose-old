@@ -386,6 +386,12 @@
 	icon_state = "mfc-full"
 	maxcharge = 2000
 
+/obj/item/stock_parts/cell/ammo/ultracite
+	name = "ultracite cell"
+	desc = "An advanced ultracite cell, used as ammunition for special energy weapons."
+	icon_state = "ultracite"
+	maxcharge = 2000
+
 /obj/item/stock_parts/cell/ammo/mfc/process()
 	switch(charge)
 		if (1001 to 2000)
