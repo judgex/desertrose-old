@@ -2839,7 +2839,7 @@
 "bcL" = (/turf/open/indestructible/ground/outside/dirt{dir = 6; icon_state = "dirt"},/area/f13/farm)
 "bcM" = (/obj/structure/simple_door/metal/fence{dir = 8; icon_state = "fence"},/turf/open/indestructible/ground/outside/dirt,/area/f13/farm)
 "bcN" = (/obj/structure/rack,/obj/effect/spawner/lootdrop/f13/armor/random,/turf/open/floor/f13/wood,/area/f13/village)
-"bcO" = (/obj/structure/frame/machine,/obj/item/stack/cable_coil/red,/obj/item/circuitboard/machine/techfab/department/engineering,/obj/structure/cable{icon_state = "4-8"},/turf/open/floor/plating/f13,/area/f13/followers)
+"bcO" = (/obj/structure/frame/machine,/obj/item/stack/cable_coil/red,/obj/structure/cable{icon_state = "4-8"},/turf/open/floor/plating/f13,/area/f13/followers)
 "bcP" = (/obj/structure/chair{dir = 4; icon_state = "chair"; tag = "icon-chair (EAST)"},/turf/open/floor/plasteel/barber{icon = 'icons/turf/f13floors2.dmi'; icon_state = "bluerustychess2"; tag = "icon-bluerustychess2"},/area/f13/building)
 "bcQ" = (/obj/structure/table/reinforced,/obj/machinery/computer/terminal{dir = 8; termtag = "Security"},/turf/open/floor/plasteel/barber{icon = 'icons/turf/f13floors2.dmi'; icon_state = "bluerustychess2"; tag = "icon-bluerustychess2"},/area/f13/building)
 "bcR" = (/obj/machinery/shower{dir = 8; icon_state = "shower"; tag = "icon-shower (WEST)"},/turf/open/floor/plasteel/barber{icon = 'icons/turf/f13floors2.dmi'; icon_state = "bluerustychess2"; tag = "icon-bluerustychess2"},/area/f13/building)
