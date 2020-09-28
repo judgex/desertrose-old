@@ -10,14 +10,13 @@
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 
 /obj/item/clothing/neck/cloak/grey
-	name = "dark cloak"
+	name = "grey cloak"
 	desc = "It's a cape that can be worn around your neck."
 	icon = 'icons/obj/clothing/cloaks.dmi'
-	icon_state = "cloak"
-	item_state = "cloak"
+	icon_state = "cloakgrey"
+	item_state = "cloakgrey"
 	w_class = WEIGHT_CLASS_SMALL
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	color = "#4A4A4B"
 
 /obj/item/clothing/head/cloakhood
 	name = "cloak hood"
