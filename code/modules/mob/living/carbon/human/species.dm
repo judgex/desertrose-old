@@ -515,6 +515,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 				var/state = "[T.icon_state][((DIGITIGRADE in species_traits) && T.has_digitigrade) ? "_d" : ""]"
 				var/mutable_appearance/MA
 				if(H.dna.species.sexes && H.dna.features["body_model"] == FEMALE)
+					MA = wear_female_version(state, T.icon, BODY_LAYER, FEMALE_UNIFORM_TOP)
 				else
 					MA = mutable_appearance(T.icon, state, -BODY_LAYER)
 				if(T.has_color)
@@ -625,7 +626,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 	if(!bodyparts_to_add)
 		return
 
-	var/g = (H.gender == FEMALE) ? "f" : "m"
+	var/g = (H.dna.features["body_model"] == FEMALE) ? "f" : "m"
 
 	for(var/layer in relevent_layers)
 		var/layertext = mutant_bodyparts_layertext(layer)

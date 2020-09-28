@@ -564,6 +564,23 @@
 		desc = "A makeshift spear with [G] attached to it."
 	update_icon()
 
+/obj/item/twohanded/spear/ultra
+	icon_state = "ultraglaive0"
+	name = "Ultracite glaive"
+	desc = "An ultracite enhanced metal glaive that can be wielded."
+	force = 35
+	force_unwielded = 35
+	force_wielded = 55
+
+/obj/item/twohanded/spear/ultra/update_icon()
+	icon_state = "ultraglaive[wielded]"
+
+/obj/item/twohanded/spear/ultra/attack(mob/living/M, mob/living/user)
+	. = ..()
+	if(!istype(M))
+		return
+	M.apply_damage(20, TOX, null, 0)
+
 //THERMIC LANCE
 /obj/item/twohanded/required/thermic_lance
 	name = "thermic lance"
