@@ -213,7 +213,7 @@ GLOBAL_LIST_INIT(ncr_positions, list(
     "NCR Trooper",
     "NCR Patrol Ranger",
 	"NCR Scout Ranger",
-    "NCR Assistant",
+    "NCR Recruit",
     "NCR Citizen",
     "NCR Administrator"
 ))
@@ -252,13 +252,13 @@ GLOBAL_LIST_INIT(tribal_positions, list(
 ))
 
 GLOBAL_LIST_INIT(followers_command_positions, list(
-    "Lead Practitioner",
+    "Followers Administrator",
 ))
 GLOBAL_LIST_INIT(followers_positions, list(
-    "Practitioner",
+    "Followers Doctor",
     "Followers Guard",
     "Followers Volunteer",
-	"Professor"
+	"Followers Scientist"
 ))
 /*
 GLOBAL_LIST_INIT(engineering_positions, list(
