@@ -924,6 +924,13 @@
 	var/brightness_on = 4 //luminosity when the light is on
 	var/on = 0
 
+/obj/item/clothing/head/helmet/f13/power_armor/midwest
+	name = "midwestern power helmet"
+	desc = "This helmet once belonged to the Mid Western branch of the Brotherhood of Steel now residing wherever it's user currently is situated."
+	icon_state = "midwestpa_helm"
+	item_state = "midwestpa_helm"
+	armor = list("melee" = 65, "bullet" = 60, "laser" = 50, "energy" = 60, "bomb" = 62, "bio" = 100, "rad" = 90, "fire" = 90, "acid" = 0)
+
 /obj/item/clothing/head/helmet/f13/power_armor/excavator
 	name = "excavator power helmet"
 	desc = "The helmet of the excavator power armor suit."
