@@ -288,6 +288,18 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 		for(var/datum/disease/A in C.diseases)
 			A.cure(FALSE)
 
+//CITADEL EDIT
+	if(NOAROUSAL in species_traits)
+		C.canbearoused = FALSE
+	else
+		if(C.client)
+			C.canbearoused = C.client.prefs.arousable
+	if(ishuman(C))
+		var/mob/living/carbon/human/H = C
+		if(NOGENITALS in H.dna.species.species_traits)
+			H.give_genitals(TRUE) //call the clean up proc to delete anything on the mob then return.
+
+// EDIT ENDS
 
 /datum/species/proc/on_species_loss(mob/living/carbon/C)
 	if(C.dna.species.exotic_bloodtype)
@@ -503,6 +515,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 				var/state = "[T.icon_state][((DIGITIGRADE in species_traits) && T.has_digitigrade) ? "_d" : ""]"
 				var/mutable_appearance/MA
 				if(H.dna.species.sexes && H.dna.features["body_model"] == FEMALE)
+					MA = wear_female_version(state, T.icon, BODY_LAYER, FEMALE_UNIFORM_TOP)
 				else
 					MA = mutable_appearance(T.icon, state, -BODY_LAYER)
 				if(T.has_color)
@@ -613,7 +626,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 	if(!bodyparts_to_add)
 		return
 
-	var/g = (H.gender == FEMALE) ? "f" : "m"
+	var/g = (H.dna.features["body_model"] == FEMALE) ? "f" : "m"
 
 	for(var/layer in relevent_layers)
 		var/layertext = mutant_bodyparts_layertext(layer)
@@ -1486,6 +1499,8 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 				H.adjustStaminaLoss(damage * hit_percent * H.physiology.stamina_mod)
 		if(BRAIN)
 			H.adjustBrainLoss(damage * hit_percent * H.physiology.brain_mod)
+		if(AROUSAL)											//Citadel edit - arousal
+			H.adjustArousalLoss(damage * hit_percent)
 	return 1
 
 /datum/species/proc/on_hit(obj/item/projectile/P, mob/living/carbon/human/H)
