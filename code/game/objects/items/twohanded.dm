@@ -565,7 +565,7 @@
 	update_icon()
 
 /obj/item/twohanded/spear/ultra
-	icon_state = "ultraglaive"
+	icon_state = "ultraglaive0"
 	name = "Ultracite glaive"
 	desc = "An ultracite enhanced metal glaive that can be wielded."
 	force = 35
@@ -579,8 +579,7 @@
 	. = ..()
 	if(!istype(M))
 		return
-	M.apply_damage(200, CLONE, 0)
-	//M.apply_damage(25, STAMINA, null, 0)
+	M.apply_damage(20, TOX, null, 0)
 
 //THERMIC LANCE
 /obj/item/twohanded/required/thermic_lance
