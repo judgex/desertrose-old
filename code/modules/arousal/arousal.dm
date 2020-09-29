@@ -11,7 +11,7 @@
 
 
 /mob/living/carbon/human
-	canbearoused = TRUE
+	canbearoused = FALSE
 
 	var/saved_underwear = ""//saves their underwear so it can be toggled later
 	var/saved_undershirt = ""
