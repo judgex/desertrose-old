@@ -268,7 +268,7 @@ GLOBAL_LIST_INIT(wWeaponParts_recipes, list ( \
 				B.forceMove(usr.loc)
 				to_chat(usr,"You make a [B]")
 				qdel(src)
-		else if(screw&&trigger&&)
+		//else if(screw&&trigger&&)
 		else 
 			to_chat(usr,"This isn't quite right...")
 	if(istype(W, /obj/item/prefabs/complex/action/simple))
