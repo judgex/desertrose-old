@@ -211,7 +211,7 @@
 	//icon_state = ""
 
 GLOBAL_LIST_INIT(wWeaponParts_recipes, list ( \
-	new/datum/stack_recipe("Wooden Stock", /obj/item/prefabs/complex/stock, 2, time = 50)
+	new/datum/stack_recipe("Wooden Stock", /obj/item/prefabs/complex/stock/low, 2, time = 50)
 	))
 
 /obj/item/stack/prefabs/wWeaponParts
@@ -234,11 +234,74 @@ GLOBAL_LIST_INIT(wWeaponParts_recipes, list ( \
 	//icon_state = ""
 
 /obj/item/prefabs/complex/simpleWeaponFrame
+	name = "Simple Weapon Frame"
+	desc = ""
+	icon_state = "gunframe"
+
+/obj/item/prefabs/complex/complexWeaponFrame//todo me more recipes
+	var/obj/item/prefabs/complex/action/simple/actionsimple
+	var/obj/item/prefabs/complex/barrel/m556/m556barrel
+	var/obj/item/prefabs/complex/trigger/trigger
+	var/obj/item/prefabs/complex/bolt/simple/boltsimple
+	var/obj/item/prefabs/complex/stock/mid/stockplastic
+	var/obj/item/prefabs/complex/screw/screw
+
+	name = "Complex Weapon Frame"
+	desc = ""
+	icon_state = "gunframe"
+
+/obj/item/prefabs/complex/complexWeaponFrame/attackby(obj/item/W, mob/user, params)//todo me more recipes
+	if(istype(W, /obj/item/wrench))
+		if(stockplastic&&m556barrel&&trigger&&boltsimple&&screw&&actionsimple)
+			if(istype(src,/obj/item/prefabs/complex/complexWeaponFrame/low))
+				var/obj/item/B = new /obj/item/gun/ballistic/automatic/marksman/servicerifle
+				B.forceMove(usr.loc)
+				to_chat(usr,"You make a [B]")
+				qdel(src)
+			if(istype(src,/obj/item/prefabs/complex/complexWeaponFrame/mid))
+				var/obj/item/B = new /obj/item/gun/ballistic/automatic/marksman/servicerifle/mid
+				B.forceMove(usr.loc)
+				to_chat(usr,"You make a [B]")
+				qdel(src)
+			if(istype(src,/obj/item/prefabs/complex/complexWeaponFrame/high))
+				var/obj/item/B = new /obj/item/gun/ballistic/automatic/marksman/servicerifle/high
+				B.forceMove(usr.loc)
+				to_chat(usr,"You make a [B]")
+				qdel(src)
+		else if(screw&&trigger&&)
+		else 
+			to_chat(usr,"This isn't quite right...")
+	if(istype(W, /obj/item/prefabs/complex/action/simple))
+		usr.transferItemToLoc(W,src)
+		to_chat(usr,"You install the [W] into the [src]")
+		actionsimple = W
+	if(istype(W, /obj/item/prefabs/complex/barrel/m556))
+		usr.transferItemToLoc(W,src)
+		to_chat(usr,"You install the [W] into the [src]")
+		m556barrel = W
+	if(istype(W, /obj/item/prefabs/complex/trigger))
+		usr.transferItemToLoc(W,src)
+		to_chat(usr,"You install the [W] into the [src]")
+		trigger = W
+	if(istype(W, /obj/item/prefabs/complex/bolt/simple))
+		usr.transferItemToLoc(W,src)
+		to_chat(usr,"You install the [W] into the [src]")
+		boltsimple = W
+	if(istype(W, /obj/item/prefabs/complex/stock/mid))
+		usr.transferItemToLoc(W,src)
+		to_chat(usr,"You install the [W] into the [src]")
+		stockplastic = W
+	if(istype(W, /obj/item/prefabs/complex/screw))
+		usr.transferItemToLoc(W,src)
+		to_chat(usr,"You install the [W] into the [src]")
+		screw = W
+
+/obj/item/prefabs/complex/simpleWeaponFrame/low
 	name = "Simple Weapon Frame (crude)"
 	desc = ""
 	icon_state = "gunframe"
 
-/obj/item/prefabs/complex/complexWeaponFrame
+/obj/item/prefabs/complex/complexWeaponFrame/low
 	name = "Complex Weapon Frame (crude)"
 	desc = ""
 	icon_state = "gunframe"
@@ -323,7 +386,7 @@ GLOBAL_LIST_INIT(wWeaponParts_recipes, list ( \
 	desc = ""
 
 //components
-/obj/item/prefabs/complex/action
+/obj/item/prefabs/complex/action/simple
 	name = "Simple Action"
 	desc = ""
 	icon_state = "action"
@@ -334,6 +397,11 @@ GLOBAL_LIST_INIT(wWeaponParts_recipes, list ( \
 	icon_state = "action"
 
 /obj/item/prefabs/complex/barrel
+	name = "Barrel"
+	desc = ""
+	icon_state = "barrel"
+
+/obj/item/prefabs/complex/barrel/mm10
 	name = "10mm Barrel"
 	desc = ""
 	icon_state = "barrel"
@@ -355,6 +423,11 @@ GLOBAL_LIST_INIT(wWeaponParts_recipes, list ( \
 	desc = ""
 
 /obj/item/prefabs/complex/bolt
+	name = "Bolt"
+	desc = ""
+	icon_state = "bolt"
+
+/obj/item/prefabs/complex/bolt/simple
 	name = "Simple Bolt"
 	desc = ""
 	icon_state = "bolt"
@@ -369,6 +442,11 @@ GLOBAL_LIST_INIT(wWeaponParts_recipes, list ( \
 	icon_state = "trigger"
 
 /obj/item/prefabs/complex/stock
+	name = "Stock"
+	desc = ""
+	icon_state = "stockwood"
+
+/obj/item/prefabs/complex/stock/low
 	name = "Wooden Stock"
 	desc = ""
 	icon_state = "stockwood"

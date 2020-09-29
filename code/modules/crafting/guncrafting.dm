@@ -55,7 +55,6 @@
 	desc = "A moulding bench, used for superheating metal into its molten form and moulding it."
 	machine_tool_behaviour = list(TOOL_FWORKBENCH)
 
-
 /obj/machinery/workbench/fbench/attackby(obj/item/W, mob/user, params)//todo me 
 	if(istype(W, /obj/item/screwdriver) && mould)
 		var/obj/item/prefabs/mould/B = mould
@@ -96,11 +95,11 @@
 							C.forceMove(src.loc)
 						if(istype(src.contents[1],/obj/item/prefabs/mould/action))
 							Q.amount -= 1
-							var/obj/item/prefabs/complex/action/C = new /obj/item/prefabs/complex/action
+							var/obj/item/prefabs/complex/action/simple/C = new /obj/item/prefabs/complex/action/simple
 							C.forceMove(src.loc)
 						if(istype(src.contents[1],/obj/item/prefabs/mould/bolt))
 							Q.amount -= 1
-							var/obj/item/prefabs/complex/bolt/C = new /obj/item/prefabs/complex/bolt
+							var/obj/item/prefabs/complex/bolt/simple/C = new /obj/item/prefabs/complex/bolt/simple
 							C.forceMove(src.loc)
 						if(istype(src.contents[1],/obj/item/prefabs/mould/screw))
 							Q.amount -= 1
@@ -108,7 +107,7 @@
 							C.forceMove(src.loc)
 						if(istype(src.contents[1],/obj/item/prefabs/mould/simpleWeaponFrame))
 							Q.amount -= 1
-							var/obj/item/prefabs/complex/simpleWeaponFrame/C = new /obj/item/prefabs/complex/simpleWeaponFrame
+							var/obj/item/prefabs/complex/simpleWeaponFrame/low/C = new /obj/item/prefabs/complex/simpleWeaponFrame/low
 							C.forceMove(src.loc)
 						if(istype(src.contents[1],/obj/item/prefabs/mould/complexWeaponFrame))
 							Q.amount -= 1
