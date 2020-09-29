@@ -484,6 +484,7 @@
 	icon_state = "mini-uzi"
 	mag_type = /obj/item/ammo_box/magazine/uzim9mm
 	w_class = WEIGHT_CLASS_NORMAL
+	weapon_weight = WEAPON_MEDIUM
 	can_scope = TRUE
 	scopestate = "AEP7_scope"
 	scope_x_offset = 9
@@ -494,6 +495,7 @@
 	force = 15
 	spread = 10
 	can_attachments = TRUE
+	can_suppress = TRUE
 
 /obj/item/gun/ballistic/automatic/mini_uzi/burst_select()
 	var/mob/living/carbon/human/user = usr
@@ -620,7 +622,7 @@
 	slot_flags = 0
 	mag_type = /obj/item/ammo_box/magazine/m10mm_auto
 	w_class = WEIGHT_CLASS_BULKY
-	weapon_weight = WEAPON_HEAVY
+	weapon_weight = WEAPON_MEDIUM //You should be able to dual-wield these.
 	fire_sound = 'sound/f13weapons/10mm_fire_03.ogg'
 	burst_size = 2
 	fire_delay = 2
@@ -830,12 +832,43 @@
 	item_state = "gold_sniper"
 
 /obj/item/gun/ballistic/automatic/marksman/servicerifle
-	name = "service rifle"
+	name = "service rifle (crude)"
+	desc = "A 5.56x45 semi-automatic service rifle manufactured by the NCR and issued to all combat personnel."
+	icon_state = "service_rifle"
+	item_state = "servicerifle"
+	fire_sound = 'sound/f13weapons/varmint_rifle.ogg'
+	fire_delay = 5
+	extra_damage = -5
+	mag_type = /obj/item/ammo_box/magazine/m556/rifle
+	zoomable = FALSE
+	weapon_weight = WEAPON_HEAVY
+	//bayonetstate = "rifles"
+	knife_x_offset = 22
+	knife_y_offset = 12
+
+/obj/item/gun/ballistic/automatic/marksman/servicerifle/mid
+	name = "service rifle (fair)"
 	desc = "A 5.56x45 semi-automatic service rifle manufactured by the NCR and issued to all combat personnel."
 	icon_state = "service_rifle"
 	item_state = "servicerifle"
 	fire_sound = 'sound/f13weapons/varmint_rifle.ogg'
 	fire_delay = 4
+	mag_type = /obj/item/ammo_box/magazine/m556/rifle
+	zoomable = FALSE
+	weapon_weight = WEAPON_HEAVY
+	//bayonetstate = "rifles"
+	knife_x_offset = 22
+	knife_y_offset = 12
+
+/obj/item/gun/ballistic/automatic/marksman/servicerifle/high
+	name = "service rifle (masterwork)"
+	desc = "A 5.56x45 semi-automatic service rifle manufactured by the NCR and issued to all combat personnel."
+	icon_state = "service_rifle"
+	item_state = "servicerifle"
+	fire_sound = 'sound/f13weapons/varmint_rifle.ogg'
+	fire_delay = 3
+	extra_damage = 10
+	extra_penetration = 10
 	mag_type = /obj/item/ammo_box/magazine/m556/rifle
 	zoomable = FALSE
 	weapon_weight = WEAPON_HEAVY
@@ -853,7 +886,8 @@
 	icon_state = "R82"
 	item_state = "R82"
 	automatic = 1
-	can_bayonet = FALSE//TODO me
+	burst_size = 3
+	can_bayonet = FALSE
 
 /obj/item/gun/ballistic/automatic/marksman/servicerifle/varmint
 	name = "varmint rifle"
@@ -863,7 +897,7 @@
 	fire_delay = 8
 	init_mag_type = /obj/item/ammo_box/magazine/m556/rifle/small
 	mag_type = /obj/item/ammo_box/magazine/m556/rifle
-	can_bayonet = FALSE//todo me
+	can_bayonet = FALSE
 
 /obj/item/gun/ballistic/automatic/marksman/servicerifle/varmint/ratslayer
 	name = "ratslayer"
@@ -894,7 +928,7 @@
 	item_state = "cshotgun1"
 	fire_sound = 'sound/f13weapons/repeater_fire.ogg'
 	mag_type = /obj/item/ammo_box/magazine/d12g
-	burst_size = 1
+	burst_size = 3 //Who keeps nerfing this? S.B.
 	automatic = 1
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
@@ -906,7 +940,7 @@
 	item_state = "cshotgun1"
 	fire_sound = 'sound/f13weapons/repeater_fire.ogg'
 	mag_type = /obj/item/ammo_box/magazine/d12g
-	burst_size = 1
+	burst_size = 2
 	fire_delay = 4
 	automatic = 1
 	w_class = WEIGHT_CLASS_BULKY
@@ -923,6 +957,7 @@
 	mag_type = /obj/item/ammo_box/magazine/d12g
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
+	force = 40
 
 /obj/item/gun/ballistic/automatic/greasegun
 	name = "M3A1 Grease Gun"
@@ -932,6 +967,7 @@
 	mag_type = /obj/item/ammo_box/magazine/greasegun
 	fire_sound = 'sound/f13weapons/greasegun.ogg'
 	can_suppress = FALSE
+	weapon_weight = WEAPON_MEDIUM
 	burst_size = 2
 	fire_delay = 3
 	burst_delay = 3
@@ -1121,6 +1157,19 @@
 	name = "Old Glory"
 	desc = "This Machine kills communists!"
 	icon_state = "oldglory"
+	extra_damage = 10
+
+/obj/item/gun/ballistic/automatic/m1garand/republicspride
+	name = "Republic's Pride"
+	desc = "A well-tuned scoped M1C rifle crafted by master gunsmith from the Gunrunners. Proudly issued to Scout Captains and packs a mean punch. Chambered in 7.62x51."
+	icon_state = "republics_pride"
+	item_state = "scoped308"
+	extra_damage = 8
+	extra_penetration = 5
+	zoomable = TRUE
+	zoom_amt = 10
+	zoom_out_amt = 13
+	can_scope = FALSE
 
 /obj/item/gun/ballistic/automatic/rangemaster
 	name = "Colt Rangemaster"

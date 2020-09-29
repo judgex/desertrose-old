@@ -238,6 +238,18 @@
 	damage = 28
 	armour_penetration = 15
 
+/obj/item/projectile/beam/laser/ultra_pistol
+	name = "laser beam"
+	damage = 40
+	armour_penetration = 15
+	irradiate = 200
+
+/obj/item/projectile/beam/laser/ultra_rifle
+	name = "laser beam"
+	damage = 45
+	armour_penetration = 20
+	irradiate = 200
+
 /obj/item/projectile/beam/laser/gatling //Gatling Laser Projectile
 	name = "rapid-fire laser beam"
 	damage = 12

@@ -14,6 +14,7 @@ SUBSYSTEM_DEF(research)
 	var/datum/techweb/bos/bos_tech //BoS starting tech
 	var/datum/techweb/enclave/enclave_tech //Could probably be used if enclave ever gets implemented as a faction
 	var/datum/techweb/unknown/unknown_tech //Global tech; all newly built consoles, departmental crafters, imprinters and servers will use this
+	var/datum/techweb/followers/followers_tech //Followers starting tech
 
 	var/list/techweb_nodes = list()				//associative id = node datum
 	var/list/techweb_categories = list()		//category name = list(node.id = node)
@@ -46,6 +47,7 @@ SUBSYSTEM_DEF(research)
 	bos_tech = new /datum/techweb/bos
 	enclave_tech = new /datum/techweb/enclave
 	unknown_tech = new /datum/techweb/unknown
+	followers_tech = new /datum/techweb/followers
 
 	autosort_categories()
 	return ..()
@@ -72,6 +74,7 @@ SUBSYSTEM_DEF(research)
 	science_tech.last_bitcoins = bitcoins  // Doesn't take tick drift into account
 	bos_tech.last_bitcoins = bitcoins
 	unknown_tech.last_bitcoins = bitcoins
+	followers_tech.last_bitcoins = bitcoins
 
 	for(var/i in bitcoins)
 		bitcoins[i] *= income_time_difference / 10
@@ -79,6 +82,7 @@ SUBSYSTEM_DEF(research)
 	science_tech.add_point_list(bitcoins)
 	bos_tech.add_point_list(bitcoins)
 	unknown_tech.add_point_list(bitcoins) //tbh these guys can get a fuckton of points, because it isn't even being used
+	followers_tech.add_point_list(bitcoins)
 
 	last_income = world.time
 
