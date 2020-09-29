@@ -223,8 +223,8 @@
 	icon_state = "ultra_rifle"
 	item_state = "laser-rifle9"
 	zoomable = TRUE
-	scope_x_offset = 12
-	scope_y_offset = 20
+	zoom_amt = 10
+	zoom_out_amt = 13
 	fire_delay = 3
 	equipsound = 'sound/f13weapons/equipsounds/aer9equip.ogg'
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/lasgun)

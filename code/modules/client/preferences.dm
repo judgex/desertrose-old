@@ -64,11 +64,11 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	var/gender = MALE					//gender of character (well duh)
 	var/age = 30						//age of character
 	var/underwear = "Nude"				//underwear type
-	var/undie_color = "FFFFFF"
+	var/undie_color = "FFF"
 	var/undershirt = "Nude"				//undershirt type
-	var/shirt_color = "FFFFFF"
+	var/shirt_color = "FFF"
 	var/socks = "Nude"					//socks type
-	var/socks_color = "FFFFFF"
+	var/socks_color = "FFF"
 	var/backbag = DBACKPACK				//backpack type
 	var/hair_style = "Bald"				//Hair type
 	var/hair_color = "000"				//Hair color
@@ -2116,7 +2116,6 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 						else
 							features["body_model"] = chosengender
 					gender = chosengender
-
 
 
 				if("has_dick")
