@@ -1824,7 +1824,7 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
 */
-/datum/crafting_recipe/servicerifle
+/*/datum/crafting_recipe/servicerifle
 	name = "service rifle (crude)"
 	result = /obj/item/gun/ballistic/automatic/marksman/servicerifle
 	reqs = list(/obj/item/prefabs/complex/barrel/m556 = 1,
@@ -1871,7 +1871,7 @@
 	time = 120
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
-
+*/
 /* CRAFT rework: removed for balance
 /datum/crafting_recipe/marksmanrifle
 	name = "marksman rifle"
