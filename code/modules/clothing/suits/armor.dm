@@ -1048,6 +1048,12 @@
 	icon_state = "palacent"
 	armor = list("melee" = 75, "bullet" = 50, "laser" = 35, "energy" = 35, "bomb" = 39, "bio" = 60, "rad" = 20, "fire" = 80, "acid" = 0)
 
+/obj/item/clothing/suit/armor/f13/legion/palacent/custom_excess
+	name = "Champion of Kanab's Armor"
+	desc = "The armor of the Champion and Conqueror of the city in Utah named Kanab. The armor is made up of pieces of Power Armor and pre-war Riot Gear, the shin guards are spraypainted a dark crimson and the Power Armour pauldron has a red trim. The symbol of a Pheonix is carefully engraved and painted upon the chest piece... I wonder what it means.."
+	icon_state = "palacent_excess"
+	item_state = "palacent_excess"
+
 /obj/item/clothing/suit/armor/f13/legion/rangercent
 	name = "ranger-hunter centurion armor"
 	desc = "A suit of armor collected over the years by the deaths of countless NCR rangers. It forfeits protection for added speed."
