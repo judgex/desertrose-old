@@ -36,6 +36,122 @@
 	desc = "A large and advanced pre-war workbench to tackle any project!"
 	machine_tool_behaviour = list(TOOL_AWORKBENCH, TOOL_WORKBENCH)
 
+/obj/machinery/workbench/mbench
+	name = "machine workbench"
+	//icon_state = "advanced_bench"
+	desc = "A machining bench, useful for producing complex machined parts."
+	machine_tool_behaviour = list(TOOL_MWORKBENCH)
+
+/obj/machinery/workbench/assbench
+	name = "assembly workbench"
+	//icon_state = "advanced_bench"
+	desc = "An assembly bench, useful for assembling complex parts into semi-finished products."
+	machine_tool_behaviour = list(TOOL_ASSWORKBENCH)
+
+/obj/machinery/workbench/fbench
+	var/obj/item/prefabs/mould
+	name = "moulding workbench"
+	icon_state = "moulding"
+	desc = "A moulding bench, used for superheating metal into its molten form and moulding it."
+	machine_tool_behaviour = list(TOOL_FWORKBENCH)
+
+/obj/machinery/workbench/fbench/attackby(obj/item/W, mob/user, params)//todo me 
+	if(istype(W, /obj/item/screwdriver) && mould)
+		var/obj/item/prefabs/mould/B = mould
+		B.forceMove(src.loc)
+		mould = null
+		to_chat(user,"You remove the mould.")
+	else if(istype(W, /obj/item/prefabs/mould) && mould)
+		var/obj/item/prefabs/mould/B = mould
+		var/obj/item/prefabs/mould/C = W
+		B.forceMove(src.loc)
+		mould = null
+		user.transferItemToLoc(C, src)
+		mould = C
+		to_chat(user,"You replace the mould.")
+	else if(istype(W, /obj/item/prefabs/mould) && !mould)
+		var/obj/item/prefabs/mould/C = W
+		user.transferItemToLoc(C, src)
+		mould = C
+		to_chat(user,"You install the [W].")
+	else if(user.transferItemToLoc(W, drop_location()))
+		return TRUE
+
+/obj/machinery/workbench/fbench/Crossed(atom/movable/AM)
+	for(var/A in src.loc)
+		if(A == src)
+			continue
+		if(isobj(A))
+			var/obj/O = A
+			if(istype(O,/obj/item/stack/sheet/metal))
+				var/obj/item/stack/sheet/Q = O
+				if(Q.amount < 1)
+					qdel(Q)
+				else
+					if(src.contents.len>0)
+						if(istype(src.contents[1],/obj/item/prefabs/mould/barrel/m556))
+							Q.amount -= 1
+							var/obj/item/prefabs/complex/barrel/m556/C = new /obj/item/prefabs/complex/barrel/m556
+							C.forceMove(src.loc)
+						if(istype(src.contents[1],/obj/item/prefabs/mould/action))
+							Q.amount -= 1
+							var/obj/item/prefabs/complex/action/simple/C = new /obj/item/prefabs/complex/action/simple
+							C.forceMove(src.loc)
+						if(istype(src.contents[1],/obj/item/prefabs/mould/bolt))
+							Q.amount -= 1
+							var/obj/item/prefabs/complex/bolt/simple/C = new /obj/item/prefabs/complex/bolt/simple
+							C.forceMove(src.loc)
+						if(istype(src.contents[1],/obj/item/prefabs/mould/screw))
+							Q.amount -= 1
+							var/obj/item/prefabs/complex/screw/C = new /obj/item/prefabs/complex/screw
+							C.forceMove(src.loc)
+						if(istype(src.contents[1],/obj/item/prefabs/mould/simpleWeaponFrame))
+							Q.amount -= 1
+							var/obj/item/prefabs/complex/simpleWeaponFrame/low/C = new /obj/item/prefabs/complex/simpleWeaponFrame/low
+							C.forceMove(src.loc)
+						if(istype(src.contents[1],/obj/item/prefabs/mould/complexWeaponFrame))
+							Q.amount -= 1
+							var/obj/item/prefabs/complex/complexWeaponFrame/C = new /obj/item/prefabs/complex/complexWeaponFrame
+							C.forceMove(src.loc)
+						if(istype(src.contents[1],/obj/item/prefabs/mould/trigger))
+							Q.amount -= 1
+							var/obj/item/prefabs/complex/trigger/C = new /obj/item/prefabs/complex/trigger
+							C.forceMove(src.loc)
+			if(istype(O,/obj/item/stack/sheet/plastic))
+				var/obj/item/stack/sheet/Q = O
+				if(Q.amount < 1)
+					qdel(Q)
+				else
+					if(src.contents.len>0)
+						if(istype(src.contents[1],/obj/item/prefabs/mould/stock))
+							Q.amount -= 1
+							var/obj/item/prefabs/complex/stock/mid/C = new /obj/item/prefabs/complex/stock/mid
+							C.forceMove(src.loc)
+						if(istype(src.contents[1],/obj/item/prefabs/mould/simpleWeaponFrame))
+							Q.amount -= 1
+							var/obj/item/prefabs/complex/simpleWeaponFrame/mid/C = new /obj/item/prefabs/complex/simpleWeaponFrame/mid
+							C.forceMove(src.loc)
+						if(istype(src.contents[1],/obj/item/prefabs/mould/complexWeaponFrame))
+							Q.amount -= 1
+							var/obj/item/prefabs/complex/complexWeaponFrame/mid/C = new /obj/item/prefabs/complex/complexWeaponFrame/mid
+							C.forceMove(src.loc)
+			if(istype(O,/obj/item/stack/sheet/plasteel))
+				var/obj/item/stack/sheet/Q = O
+				if(Q.amount < 1)
+					qdel(Q)
+				else
+					if(src.contents.len>0)
+						if(istype(src.contents[1],/obj/item/prefabs/mould/simpleWeaponFrame))
+							Q.amount -= 1
+							var/obj/item/prefabs/complex/simpleWeaponFrame/high/C = new /obj/item/prefabs/complex/simpleWeaponFrame/high
+							C.forceMove(src.loc)
+						if(istype(src.contents[1],/obj/item/prefabs/mould/complexWeaponFrame))
+							Q.amount -= 1
+							var/obj/item/prefabs/complex/complexWeaponFrame/high/C = new /obj/item/prefabs/complex/complexWeaponFrame/high
+							C.forceMove(src.loc)
+
+
+
 /obj/machinery/workbench/bottler
 	name = "bottle press"
 	icon_state = "bottler"
