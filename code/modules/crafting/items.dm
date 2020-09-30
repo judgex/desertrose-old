@@ -372,7 +372,7 @@ GLOBAL_LIST_INIT(wWeaponParts_recipes, list ( \
 
 /obj/item/prefabs/complex/complexWeaponFrame/attackby(obj/item/W, mob/user, params)//todo me more recipes
 	if(istype(W, /obj/item/wrench))
-		if(screw&&trigger&&boltsimple&&actionsimple&&m556barrel&&stockplastic)
+		if(screw&&trigger&&boltsimple&&actionsimple&&m556barrel&&stockplastic)//service
 			if(istype(src,/obj/item/prefabs/complex/complexWeaponFrame/low))
 				var/obj/item/B = new /obj/item/gun/ballistic/automatic/marksman/servicerifle
 				B.forceMove(usr.loc)
@@ -388,7 +388,7 @@ GLOBAL_LIST_INIT(wWeaponParts_recipes, list ( \
 				B.forceMove(usr.loc)
 				to_chat(usr,"You make a [B]")
 				qdel(src)
-		else if(screw&&trigger&&boltsimple&&actionsimple&&m556barrel&&stockwood)
+		else if(screw&&trigger&&boltsimple&&actionsimple&&m556barrel&&stockwood)//varmint
 			if(istype(src,/obj/item/prefabs/complex/complexWeaponFrame/low))
 				var/obj/item/B = new /obj/item/gun/ballistic/automatic/marksman/servicerifle/varmint
 				B.forceMove(usr.loc)
