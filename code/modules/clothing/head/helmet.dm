@@ -667,6 +667,12 @@
 	armor = list("melee" = 75, "bullet" = 50, "laser" = 35, "energy" = 35, "bomb" = 39, "bio" = 60, "rad" = 20, "fire" = 80, "acid" = 0)
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
 
+/obj/item/clothing/head/helmet/f13/legion/palacent/custom_excess
+	name = "Champion of Kanab's Helm"
+	desc = "A custom forged steel full helmet made for the Conqueror and Champion of Kanab. It has a large plume of red horse hair across the top of it going horizontally, symbolizing the position of a Centurion."
+	icon_state = "palacent_excess"
+	item_state = "palacent_excess"
+
 /obj/item/clothing/head/helmet/f13/legion/legate
 	name = "legion legate helmet"
 	desc = "A custom forged steel full helmet complete with abstract points and arches. The face is extremely intimidating, as it was meant to be. This particular one was ordered to be forged by Caesar, given to his second legate in exchange for his undying loyalty to Caesar."
