@@ -1560,7 +1560,7 @@
 	time = 120
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
-
+/*
 /datum/crafting_recipe/n99
 	name = "10mm pistol"
 	result = /obj/item/gun/ballistic/automatic/pistol/n99
@@ -1573,7 +1573,7 @@
 	time = 120
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
-
+*/
 /datum/crafting_recipe/colt6250
 	name = "colt 6250"
 	result = /obj/item/gun/ballistic/revolver/colt6250
@@ -1754,7 +1754,7 @@
 	time = 120
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
-*/
+*//*
 /datum/crafting_recipe/varmintrifle
 	name = "varmint rifle"
 	result = /obj/item/gun/ballistic/automatic/marksman/servicerifle/varmint
@@ -1766,7 +1766,7 @@
 	traits = list(TRAIT_GUNSMITH_TWO)
 	time = 120
 	category = CAT_WEAPONRY
-	subcategory = CAT_WEAPON
+	subcategory = CAT_WEAPON*/
 /* CRAFT rework: removed for balance
 /datum/crafting_recipe/rangemaster
 	name = "colt rangemaster"
@@ -3052,7 +3052,7 @@
 	subcategory = CAT_BPWEAPON
 
 //trail carbine
-
+/*
 /datum/crafting_recipe/trail_carbine
 	name = "Trail Carbine"
 	result = /obj/item/gun/ballistic/shotgun/automatic/hunting/trail
@@ -3064,10 +3064,10 @@
 	time = 120
 	category = CAT_BLUEPRINTS
 	subcategory = CAT_BPWEAPON
-
+*/
 //mid tier
 //.223 pistol
-/datum/crafting_recipe/thatgun
+/*/datum/crafting_recipe/thatgun
 	name = ".223 pistol"
 	result = /obj/item/gun/ballistic/revolver/thatgun
 	reqs = list(/obj/item/stack/crafting/metalparts = 2,
@@ -3090,9 +3090,9 @@
 	time = 120
 	category = CAT_BLUEPRINTS
 	subcategory = CAT_BPWEAPON_ONEUSE
-
+*/
 //pps
-
+/*
 /datum/crafting_recipe/pps
 	name = "Ancient SMG"
 	result = /obj/item/gun/ballistic/automatic/pps
@@ -3117,7 +3117,7 @@
 	tools = list(TOOL_WORKBENCH)
 	time = 120
 	category = CAT_BLUEPRINTS
-	subcategory = CAT_BPWEAPON_ONEUSE
+	subcategory = CAT_BPWEAPON_ONEUSE*/
 //mg34
 
 /datum/crafting_recipe/mg34
@@ -3895,7 +3895,16 @@
 	subcategory = CAT_MOULD_ONE
 
 /datum/crafting_recipe/mould/simpleaction
-	result = /obj/item/prefabs/mould/action
+	result = /obj/item/prefabs/mould/barrel/mm9
+	name = "9mm Barrel Mould"
+	tools = list(TOOL_FORGE, TOOL_GUNTIER1)
+	traits = list(TRAIT_GUNSMITH_ONE)
+	time = 30
+	category = CAT_MOULD
+	subcategory = CAT_MOULD_ONE
+
+/datum/crafting_recipe/mould/simpleaction
+	result = /obj/item/prefabs/mould/action/simple
 	name = "Simple Action Mould"
 	tools = list(TOOL_FORGE, TOOL_GUNTIER1)
 	traits = list(TRAIT_GUNSMITH_ONE)
