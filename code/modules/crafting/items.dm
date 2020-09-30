@@ -234,6 +234,7 @@ GLOBAL_LIST_INIT(wWeaponParts_recipes, list ( \
 	//icon_state = ""
 
 /obj/item/prefabs/complex/simpleWeaponFrame
+
 	var/obj/item/prefabs/complex/action/simple/actionsimple
 	var/obj/item/prefabs/complex/action/auto/actionauto
 
@@ -253,6 +254,7 @@ GLOBAL_LIST_INIT(wWeaponParts_recipes, list ( \
 	var/obj/item/prefabs/complex/stock/low/stockwood
 
 	var/obj/item/prefabs/complex/screw/screw
+
 
 	name = "Simple Weapon Frame"
 	desc = ""
@@ -366,7 +368,6 @@ GLOBAL_LIST_INIT(wWeaponParts_recipes, list ( \
 
 	var/obj/item/prefabs/complex/stock/mid/stockplastic
 	var/obj/item/prefabs/complex/stock/low/stockwood
-
 	var/obj/item/prefabs/complex/screw/screw
 
 	name = "Complex Weapon Frame"
