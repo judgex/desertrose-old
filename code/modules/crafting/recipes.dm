@@ -1560,7 +1560,7 @@
 	time = 120
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
-
+/*
 /datum/crafting_recipe/n99
 	name = "10mm pistol"
 	result = /obj/item/gun/ballistic/automatic/pistol/n99
@@ -1573,7 +1573,7 @@
 	time = 120
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
-
+*/
 /datum/crafting_recipe/colt6250
 	name = "colt 6250"
 	result = /obj/item/gun/ballistic/revolver/colt6250
