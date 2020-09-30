@@ -278,13 +278,13 @@ GLOBAL_LIST_INIT(wWeaponParts_recipes, list ( \
 				B.forceMove(usr.loc)
 				to_chat(usr,"You make a [B]")
 				qdel(src)
-		else if(screw&&trigger&&boltsimple&&actionsimple&&m4570)//hunting revolver
+		else if(screw&&trigger&&boltsimple&&actionsimple&&m4570barrel)//hunting revolver
 			if(istype(src,/obj/item/prefabs/complex/complexWeaponFrame/low))
 				var/obj/item/B = new /obj/item/gun/ballistic/revolver/sequoia/scoped
 				B.forceMove(usr.loc)
 				to_chat(usr,"You make a [B]")
 				qdel(src)
-		else if(screw&&trigger&&boltadvanced&&actionsimple&&m556)//556 pistol
+		else if(screw&&trigger&&boltadvanced&&actionsimple&&m556barrel)//556 pistol
 			if(istype(src,/obj/item/prefabs/complex/complexWeaponFrame/low))
 				var/obj/item/B = new /obj/item/gun/ballistic/revolver/thatgun
 				B.forceMove(usr.loc)
@@ -353,8 +353,11 @@ GLOBAL_LIST_INIT(wWeaponParts_recipes, list ( \
 	var/obj/item/prefabs/complex/barrel/m556/m556barrel
 	var/obj/item/prefabs/complex/barrel/mm10/mm10barrel
 	var/obj/item/prefabs/complex/barrel/m357/m357barrel
+	var/obj/item/prefabs/complex/barrel/mm9/mm9barrel
 	var/obj/item/prefabs/complex/barrel/m44/m44barrel
 	var/obj/item/prefabs/complex/barrel/m762/m762barrel
+	var/obj/item/prefabs/complex/barrel/m4570/m4570barrel
+
 
 	var/obj/item/prefabs/complex/trigger/trigger
 
@@ -394,6 +397,18 @@ GLOBAL_LIST_INIT(wWeaponParts_recipes, list ( \
 				B.forceMove(usr.loc)
 				to_chat(usr,"You make a [B]")
 				qdel(src)
+		else if(screw&&trigger&&boltsimple&&actionsimple&&m44barrel&&stockwood)//trail carbine
+			if(istype(src,/obj/item/prefabs/complex/complexWeaponFrame/low))
+				var/obj/item/B = new /obj/item/gun/ballistic/shotgun/automatic/hunting/trail
+				B.forceMove(usr.loc)
+				to_chat(usr,"You make a [B]")
+				qdel(src)
+		else if(screw&&trigger&&boltsimple&&actionauto&&mm9barrel&&stockwood)//pps
+			if(istype(src,/obj/item/prefabs/complex/complexWeaponFrame/low))
+				var/obj/item/B = new /obj/item/gun/ballistic/automatic/pps
+				B.forceMove(usr.loc)
+				to_chat(usr,"You make a [B]")
+				qdel(src)
 		else 
 			to_chat(usr,"This isn't quite right...")
 	if(istype(W, /obj/item/prefabs/complex/action/simple))
@@ -408,23 +423,27 @@ GLOBAL_LIST_INIT(wWeaponParts_recipes, list ( \
 		usr.transferItemToLoc(W,src)
 		to_chat(usr,"You install the [W] into the [src]")
 		m556barrel = W
-	if(istype(W, /obj/item/prefabs/complex/barrel/mm10barrel))
+	if(istype(W, /obj/item/prefabs/complex/barrel/mm10))
 		usr.transferItemToLoc(W,src)
 		to_chat(usr,"You install the [W] into the [src]")
 		mm10barrel = W
-	if(istype(W, /obj/item/prefabs/complex/barrel/m357barrel))
+	if(istype(W, /obj/item/prefabs/complex/barrel/mm9))
+		usr.transferItemToLoc(W,src)
+		to_chat(usr,"You install the [W] into the [src]")
+		mm10barrel = W
+	if(istype(W, /obj/item/prefabs/complex/barrel/m357))
 		usr.transferItemToLoc(W,src)
 		to_chat(usr,"You install the [W] into the [src]")
 		m357barrel = W
-	if(istype(W, /obj/item/prefabs/complex/barrel/m44barrel))
+	if(istype(W, /obj/item/prefabs/complex/barrel/m44))
 		usr.transferItemToLoc(W,src)
 		to_chat(usr,"You install the [W] into the [src]")
 		m44barrel = W
-	if(istype(W, /obj/item/prefabs/complex/barrel/m762barrel))
+	if(istype(W, /obj/item/prefabs/complex/barrel/m762))
 		usr.transferItemToLoc(W,src)
 		to_chat(usr,"You install the [W] into the [src]")
 		m762barrel = W
-	if(istype(W, /obj/item/prefabs/complex/barrel/m4570barrel))
+	if(istype(W, /obj/item/prefabs/complex/barrel/m4570))
 		usr.transferItemToLoc(W,src)
 		to_chat(usr,"You install the [W] into the [src]")
 		m4570barrel = W
@@ -486,7 +505,7 @@ GLOBAL_LIST_INIT(wWeaponParts_recipes, list ( \
 	desc = ""
 	icon_state = "mould"
 
-/obj/item/prefabs/mould/action
+/obj/item/prefabs/mould/action/simple
 	name = "Simple Action Mould"
 	desc = ""
 
@@ -496,6 +515,14 @@ GLOBAL_LIST_INIT(wWeaponParts_recipes, list ( \
 
 /obj/item/prefabs/mould/barrel/m357
 	name = ".357 Barrel Mould"
+	desc = ""
+
+/obj/item/prefabs/mould/barrel/mm10
+	name = "10mm Barrel Mould"
+	desc = ""
+
+/obj/item/prefabs/mould/barrel/mm9
+	name = "9mm Barrel Mould"
 	desc = ""
 
 /obj/item/prefabs/mould/barrel/m44
@@ -514,7 +541,7 @@ GLOBAL_LIST_INIT(wWeaponParts_recipes, list ( \
 	name = "762 Barrel Mould"
 	desc = ""
 
-/obj/item/prefabs/mould/bolt
+/obj/item/prefabs/mould/bolt/simple
 	name = "Simple Bolt Mould"
 	desc = ""
 
@@ -560,6 +587,11 @@ GLOBAL_LIST_INIT(wWeaponParts_recipes, list ( \
 
 /obj/item/prefabs/complex/barrel/mm10
 	name = "10mm Barrel"
+	desc = ""
+	icon_state = "barrel"
+
+/obj/item/prefabs/complex/barrel/mm9
+	name = "9mm Barrel"
 	desc = ""
 	icon_state = "barrel"
 
