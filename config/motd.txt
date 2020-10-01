@@ -1,4 +1,4 @@
-<!-- Most valid html will work in here, excluding images. -->
+﻿<!-- Most valid html will work in here, excluding images. -->
 
 <h1>Welcome to Desert Rose 2: Back to the Wasteland!</h1>
 
