@@ -311,19 +311,14 @@
 
 /obj/structure/car/attackby(obj/item/I, mob/living/carbon/human/user, params)
 	if(istype(I, /obj/item/weldingtool))
-		if(WT.remove_fuel(0,user))
 		to_chat(user, "You start deconstruct car wreckage.")
-		playsound(src.loc, I.usesound, 100, 1)
-		if(do_after(user, 100, target = loc))
-			if( !WT.isOn() )
-				return
+		if(W.use_tool(src, user, 40, volume=100))
 			to_chat(user, "You deconstructed car wreckage.")
 			new/obj/item/stack/crafting/metalparts/three(get_turf(src), 1)
 			weld = 1
 	if(istype(I, /obj/item/crowbar) && weld == 1)
 		to_chat(user, "You start deconstruct car metal parts.")
-		playsound(src.loc, I.usesound, 100, 1)
-		if(do_after(user, 50, target = loc))
+		if(W.use_tool(src, user, 40, volume=100))
 			new/obj/item/stack/sheet/metal/five(get_turf(src), 1)
 			qdel(src)
 
