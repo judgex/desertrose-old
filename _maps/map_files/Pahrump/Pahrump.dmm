@@ -7085,7 +7085,7 @@
 "txj" = (/obj/structure/barricade/wooden,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "greenrustyfull"; tag = "icon-greenrustyfull"},/area/f13/tunnel)
 "txq" = (/obj/structure/barricade/wooden,/obj/effect/decal/cleanable/generic,/turf/open/indestructible/ground/inside/mountain,/area/f13/tunnel)
 "txF" = (/obj/structure/flora/grass/wasteland{icon_state = "tall_grass_4"; layer = 5; tag = "icon-tall_grass_4"},/turf/open/indestructible/ground/inside/mountain,/area/f13/caves)
-"tyj" = (/obj/machinery/button/door{id = "bargambling"; name = "shutters button"; pixel_y = 32},/turf/open/floor/carpet,/area/f13/city)
+"tyj" = (/obj/machinery/button/door{id = "bargambling"; name = "shutters button"; pixel_y = 32; req_one_access_txt = "28"},/turf/open/floor/carpet,/area/f13/city)
 "tzi" = (/obj/structure/car/rubbish2,/turf/open/indestructible/ground/outside/dirt,/area/f13/wasteland)
 "tzF" = (/obj/machinery/hydroponics/soil,/obj/item/seeds/cannabis,/turf/open/indestructible/ground/inside/mountain,/area/f13/tunnel)
 "tzO" = (/obj/machinery/smartfridge/drying_rack,/turf/open/indestructible/ground/inside/mountain,/area/f13/tunnel)
