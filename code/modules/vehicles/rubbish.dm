@@ -309,7 +309,7 @@
 	resistance_flags = INDESTRUCTIBLE
 	var/weld = 0
 
-/obj/structure/car/attackby(obj/item/I, mob/living/carbon/human/user, params)
+/obj/structure/car/attackby(obj/item/W, mob/user, params)
 	if(istype(I, /obj/item/weldingtool))
 		to_chat(user, "You start deconstruct car wreckage.")
 		if(W.use_tool(src, user, 40, volume=100))
