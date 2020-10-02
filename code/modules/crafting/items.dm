@@ -302,6 +302,10 @@ GLOBAL_LIST_INIT(wWeaponParts_recipes, list ( \
 		usr.transferItemToLoc(W,src)
 		to_chat(usr,"You install the [W] into the [src]")
 		actionauto = W
+	if(istype(W, /obj/item/prefabs/complex/trigger))
+		usr.transferItemToLoc(W,src)
+		to_chat(usr,"You install the [W] into the [src]")
+		trigger = W
 	if(istype(W, /obj/item/prefabs/complex/barrel/m556))
 		usr.transferItemToLoc(W,src)
 		to_chat(usr,"You install the [W] into the [src]")
@@ -420,6 +424,10 @@ GLOBAL_LIST_INIT(wWeaponParts_recipes, list ( \
 		usr.transferItemToLoc(W,src)
 		to_chat(usr,"You install the [W] into the [src]")
 		actionauto = W
+	if(istype(W, /obj/item/prefabs/complex/trigger))
+		usr.transferItemToLoc(W,src)
+		to_chat(usr,"You install the [W] into the [src]")
+		trigger = W
 	if(istype(W, /obj/item/prefabs/complex/barrel/m556))
 		usr.transferItemToLoc(W,src)
 		to_chat(usr,"You install the [W] into the [src]")

@@ -3913,7 +3913,7 @@
 	subcategory = CAT_MOULD_ONE
 
 /datum/crafting_recipe/mould/bolt
-	result = /obj/item/prefabs/mould/bolt
+	result = /obj/item/prefabs/mould/bolt/simple
 	name = "Simple Bolt Mould"
 	tools = list(TOOL_FORGE, TOOL_GUNTIER1)
 	traits = list(TRAIT_GUNSMITH_ONE)
