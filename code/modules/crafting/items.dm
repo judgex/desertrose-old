@@ -364,7 +364,6 @@ GLOBAL_LIST_INIT(wWeaponParts_recipes, list ( \
 	var/obj/item/prefabs/complex/barrel/m762/m762barrel
 	var/obj/item/prefabs/complex/barrel/m4570/m4570barrel
 
-
 	var/obj/item/prefabs/complex/trigger/trigger
 
 	var/obj/item/prefabs/complex/bolt/simple/boltsimple
