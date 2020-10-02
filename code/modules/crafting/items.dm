@@ -263,31 +263,31 @@ GLOBAL_LIST_INIT(wWeaponParts_recipes, list ( \
 /obj/item/prefabs/complex/simpleWeaponFrame/attackby(obj/item/W, mob/user, params)//todo me more recipes
 	if(istype(W, /obj/item/wrench))
 		if(screw&&trigger&&boltsimple&&actionsimple&&mm10barrel)//10mm
-			if(istype(src,/obj/item/prefabs/complex/complexWeaponFrame/low))
+			if(istype(src,/obj/item/prefabs/complex/simpleWeaponFrame/low))
 				var/obj/item/B = new /obj/item/gun/ballistic/automatic/pistol/n99
 				B.forceMove(usr.loc)
 				to_chat(usr,"You make a [B]")
 				qdel(src)
 		else if(screw&&trigger&&boltsimple&&actionsimple&&m357barrel)//357
-			if(istype(src,/obj/item/prefabs/complex/complexWeaponFrame/low))
+			if(istype(src,/obj/item/prefabs/complex/simpleWeaponFrame/low))
 				var/obj/item/B = new /obj/item/gun/ballistic/revolver/colt357
 				B.forceMove(usr.loc)
 				to_chat(usr,"You make a [B]")
 				qdel(src)
 		else if(screw&&trigger&&boltsimple&&actionsimple&&m44barrel)//44
-			if(istype(src,/obj/item/prefabs/complex/complexWeaponFrame/low))
+			if(istype(src,/obj/item/prefabs/complex/simpleWeaponFrame/low))
 				var/obj/item/B = new /obj/item/gun/ballistic/revolver/m29
 				B.forceMove(usr.loc)
 				to_chat(usr,"You make a [B]")
 				qdel(src)
 		else if(screw&&trigger&&boltsimple&&actionsimple&&m4570barrel)//hunting revolver
-			if(istype(src,/obj/item/prefabs/complex/complexWeaponFrame/low))
+			if(istype(src,/obj/item/prefabs/complex/simpleWeaponFrame/low))
 				var/obj/item/B = new /obj/item/gun/ballistic/revolver/sequoia/scoped
 				B.forceMove(usr.loc)
 				to_chat(usr,"You make a [B]")
 				qdel(src)
 		else if(screw&&trigger&&boltadvanced&&actionsimple&&m556barrel)//556 pistol
-			if(istype(src,/obj/item/prefabs/complex/complexWeaponFrame/low))
+			if(istype(src,/obj/item/prefabs/complex/simpleWeaponFrame/low))
 				var/obj/item/B = new /obj/item/gun/ballistic/revolver/thatgun
 				B.forceMove(usr.loc)
 				to_chat(usr,"You make a [B]")
