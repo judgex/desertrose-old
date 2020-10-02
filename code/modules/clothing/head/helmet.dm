@@ -432,6 +432,11 @@
 	item_state = "combat_helmet_mk2"
 	armor = list("melee" = 45, "bullet" = 50, "laser" = 45, "energy" = 40, "bomb" = 39, "bio" = 70, "rad" = 70, "fire" = 70, "acid" = 0)
 
+/obj/item/clothing/head/helmet/f13/combat/remnant
+    desc = "A dark helmet with yellow lenses, used commonly in espionage or shadow ops. Worn by CAG or OS members."
+    icon_state = "remnant_helmet"
+    item_state = "remnant_helmet"
+
 /obj/item/clothing/head/helmet/f13/combat/mk2/dark
 	name = "reinforced combat helmet"
 	color = "#302E2E" // Dark Grey
