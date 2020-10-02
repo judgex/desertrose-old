@@ -361,7 +361,7 @@
 	fire_delay = 3
 	burst_delay = 3
 	slowdown = 1.0
-	w_class = WEIGHT_CLASS_HUGE
+	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 	spread = 20
 	randomspread = 1
@@ -1105,7 +1105,7 @@
 	fire_delay = 7
 	burst_delay = 4
 	slowdown = 1.2
-	w_class = WEIGHT_CLASS_BULKY
+	w_class = WEIGHT_CLASS_HUGE
 	weapon_weight = WEAPON_HEAVY
 	spread = 25
 	//randomspread = 5
