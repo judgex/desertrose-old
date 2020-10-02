@@ -674,6 +674,13 @@
 	item_state = "enclave_armor"
 	armor = list("melee" = 45, "bullet" = 50, "laser" = 45, "energy" = 75, "bomb" = 70, "bio" = 80, "rad" = 80, "fire" = 80, "acid" = 50)
 
+/obj/item/clothing/suit/armor/f13/combat/remnant
+	name = "combat armor"
+	desc = "A dark armor, used commonly in espionage or shadow ops. Worn by CAG or OS members."
+	icon_state = "remnant"
+	item_state = "remnant"
+	armor = list("melee" = 45, "bullet" = 50, "laser" = 45, "energy" = 75, "bomb" = 70, "bio" = 80, "rad" = 80, "fire" = 80, "acid" = 50)
+
 /obj/item/clothing/suit/armor/f13/combat/swat
 	name = "SWAT combat armor"
 	desc = "A custom version of the pre-war combat armor, slimmed down and minimalist for domestic S.W.A.T. teams. It gives excellent protection, but only to the chest."
