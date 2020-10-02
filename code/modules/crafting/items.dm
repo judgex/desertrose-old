@@ -263,31 +263,31 @@ GLOBAL_LIST_INIT(wWeaponParts_recipes, list ( \
 /obj/item/prefabs/complex/simpleWeaponFrame/attackby(obj/item/W, mob/user, params)//todo me more recipes
 	if(istype(W, /obj/item/wrench))
 		if(screw&&trigger&&boltsimple&&actionsimple&&mm10barrel)//10mm
-			if(istype(src,/obj/item/prefabs/complex/complexWeaponFrame/low))
+			if(istype(src,/obj/item/prefabs/complex/simpleWeaponFrame/low))
 				var/obj/item/B = new /obj/item/gun/ballistic/automatic/pistol/n99
 				B.forceMove(usr.loc)
 				to_chat(usr,"You make a [B]")
 				qdel(src)
 		else if(screw&&trigger&&boltsimple&&actionsimple&&m357barrel)//357
-			if(istype(src,/obj/item/prefabs/complex/complexWeaponFrame/low))
+			if(istype(src,/obj/item/prefabs/complex/simpleWeaponFrame/low))
 				var/obj/item/B = new /obj/item/gun/ballistic/revolver/colt357
 				B.forceMove(usr.loc)
 				to_chat(usr,"You make a [B]")
 				qdel(src)
 		else if(screw&&trigger&&boltsimple&&actionsimple&&m44barrel)//44
-			if(istype(src,/obj/item/prefabs/complex/complexWeaponFrame/low))
+			if(istype(src,/obj/item/prefabs/complex/simpleWeaponFrame/low))
 				var/obj/item/B = new /obj/item/gun/ballistic/revolver/m29
 				B.forceMove(usr.loc)
 				to_chat(usr,"You make a [B]")
 				qdel(src)
 		else if(screw&&trigger&&boltsimple&&actionsimple&&m4570barrel)//hunting revolver
-			if(istype(src,/obj/item/prefabs/complex/complexWeaponFrame/low))
+			if(istype(src,/obj/item/prefabs/complex/simpleWeaponFrame/low))
 				var/obj/item/B = new /obj/item/gun/ballistic/revolver/sequoia/scoped
 				B.forceMove(usr.loc)
 				to_chat(usr,"You make a [B]")
 				qdel(src)
 		else if(screw&&trigger&&boltadvanced&&actionsimple&&m556barrel)//556 pistol
-			if(istype(src,/obj/item/prefabs/complex/complexWeaponFrame/low))
+			if(istype(src,/obj/item/prefabs/complex/simpleWeaponFrame/low))
 				var/obj/item/B = new /obj/item/gun/ballistic/revolver/thatgun
 				B.forceMove(usr.loc)
 				to_chat(usr,"You make a [B]")
@@ -302,6 +302,10 @@ GLOBAL_LIST_INIT(wWeaponParts_recipes, list ( \
 		usr.transferItemToLoc(W,src)
 		to_chat(usr,"You install the [W] into the [src]")
 		actionauto = W
+	if(istype(W, /obj/item/prefabs/complex/trigger))
+		usr.transferItemToLoc(W,src)
+		to_chat(usr,"You install the [W] into the [src]")
+		trigger = W
 	if(istype(W, /obj/item/prefabs/complex/barrel/m556))
 		usr.transferItemToLoc(W,src)
 		to_chat(usr,"You install the [W] into the [src]")
@@ -359,7 +363,6 @@ GLOBAL_LIST_INIT(wWeaponParts_recipes, list ( \
 	var/obj/item/prefabs/complex/barrel/m44/m44barrel
 	var/obj/item/prefabs/complex/barrel/m762/m762barrel
 	var/obj/item/prefabs/complex/barrel/m4570/m4570barrel
-
 
 	var/obj/item/prefabs/complex/trigger/trigger
 
@@ -420,6 +423,10 @@ GLOBAL_LIST_INIT(wWeaponParts_recipes, list ( \
 		usr.transferItemToLoc(W,src)
 		to_chat(usr,"You install the [W] into the [src]")
 		actionauto = W
+	if(istype(W, /obj/item/prefabs/complex/trigger))
+		usr.transferItemToLoc(W,src)
+		to_chat(usr,"You install the [W] into the [src]")
+		trigger = W
 	if(istype(W, /obj/item/prefabs/complex/barrel/m556))
 		usr.transferItemToLoc(W,src)
 		to_chat(usr,"You install the [W] into the [src]")
