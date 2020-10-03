@@ -479,7 +479,7 @@
 	return
 
 /obj/item/gun/ballistic/automatic/mini_uzi
-	name = "\improper Type U3 Uzi"
+	name = "\improper Type U3 Uzi (crude)"
 	desc = "A lightweight, burst-fire submachine gun, for when you really want someone dead. Uses 9mm rounds."
 	icon_state = "mini-uzi"
 	mag_type = /obj/item/ammo_box/magazine/uzim9mm
@@ -491,11 +491,25 @@
 	scope_y_offset = 21
 	burst_size = 2
 	burst_delay = 2
-	fire_delay = 2
+	fire_delay = 4
 	force = 15
+	extra_damage = -5
+	extra_penetration = -5
 	spread = 10
 	can_attachments = TRUE
 	can_suppress = TRUE
+
+/obj/item/gun/ballistic/automatic/mini_uzi/mid
+	name = "\improper Type U3 Uzi (fair)"
+	desc = "A lightweight, burst-fire submachine gun, for when you really want someone dead. Uses 9mm rounds."
+	fire_delay = 3
+
+/obj/item/gun/ballistic/automatic/mini_uzi/high
+	name = "\improper Type U3 Uzi (masterwork)"
+	desc = "A lightweight, burst-fire submachine gun, for when you really want someone dead. Uses 9mm rounds."
+	fire_delay = 1
+	extra_damage = 5
+	extra_penetration = 5
 
 /obj/item/gun/ballistic/automatic/mini_uzi/burst_select()
 	var/mob/living/carbon/human/user = usr
@@ -521,7 +535,7 @@
 	return
 
 /obj/item/gun/ballistic/automatic/pps
-	name = "\improper ancient SMG"
+	name = "\improper ancient SMG (crude)"
 	desc = "An extremely fast firing, innacurate SMG from past wars. Low fire rate and low damage. Uses 9mm rounds."
 	icon_state = "pps"
 	mag_type = /obj/item/ammo_box/magazine/uzim9mm
@@ -531,12 +545,29 @@
 	//scope_x_offset = 9
 	//scope_y_offset = 21
 	burst_size = 3
+	burst_delay = 2
+	fire_delay = 9
+	force = 15
+	spread = 20
+	can_attachments = TRUE
+	extra_damage = -14
+
+/obj/item/gun/ballistic/automatic/pps/mid
+	name = "\improper ancient SMG (fair)"
+	burst_size = 3
 	burst_delay = 1
 	fire_delay = 7
-	force = 15
 	spread = 10
 	can_attachments = TRUE
 	extra_damage = -9
+
+/obj/item/gun/ballistic/automatic/pps/high
+	name = "\improper ancient SMG (masterwork)"
+	burst_size = 3
+	burst_delay = 1
+	fire_delay = 7
+	spread = 5
+	can_attachments = TRUE
 
 /obj/item/gun/ballistic/automatic/pps/burst_select()
 	var/mob/living/carbon/human/user = usr
@@ -615,7 +646,7 @@
 	return
 
 /obj/item/gun/ballistic/automatic/smg10mm
-	name = "10mm submachine gun"
+	name = "10mm submachine gun (crude)"
 	desc = "A select fire open bolt 10mm submachine gun. The serial number and manufactuer markings have been scratched off."
 	icon_state = "smg10mm"
 	item_state = "smg10mm"
@@ -625,12 +656,28 @@
 	weapon_weight = WEAPON_MEDIUM //You should be able to dual-wield these.
 	fire_sound = 'sound/f13weapons/10mm_fire_03.ogg'
 	burst_size = 2
-	fire_delay = 2
-	burst_delay = 2
+	fire_delay = 4
+	burst_delay = 3
+	extra_damage = -5
+	extra_penetration = -5
 	can_suppress = FALSE //we dont have sprites therefore cease
 	force = 15
 	spread = 18
 	can_attachments = TRUE
+
+/obj/item/gun/ballistic/automatic/smg10mm/mid
+	name = "10mm submachine gun"
+	burst_size = 2
+	fire_delay = 2
+	burst_delay = 2
+
+/obj/item/gun/ballistic/automatic/smg10mm/high
+	name = "10mm submachine gun"
+	burst_size = 2
+	fire_delay = 2
+	burst_delay = 2
+	extra_damage = 5
+	extra_penetration = 10
 
 /obj/item/gun/ballistic/automatic/smg10mm/burst_select()
 	var/mob/living/carbon/human/user = usr
