@@ -1433,17 +1433,18 @@
 	/obj/item/book/granter/trait/gunsmith_four = 10)
 
 /obj/effect/spawner/lootdrop/f13/blueprintLow
-	name = "gun comps spawner + some BPs I guess(rename later)"
+	name = "gun comps spawner"
 	icon_state = "blueprint_loot"
 	lootcount = 1
 	loot = list(
-		/obj/item/blueprint/weapon/AEP7,
-		/obj/item/blueprint/weapon/lever_action,
-		/obj/item/blueprint/weapon/kar98,
+		//obj/item/blueprint/weapon/AEP7,
+		//obj/item/blueprint/weapon/lever_action,
+		//obj/item/blueprint/weapon/kar98,
 		/obj/item/prefabs/complex/barrel/mm9,
 		/obj/item/prefabs/complex/action/auto,
 		/obj/item/prefabs/complex/bolt/high,
-		/obj/item/prefabs/complex/barrel/m4570
+		/obj/item/prefabs/complex/barrel/m4570,
+		/obj/item/prefabs/complex/barrel/mm10
 	)
 /obj/effect/spawner/lootdrop/f13/blueprintMid
 	name = "blueprint-tier(Mid) item spawner"
@@ -1452,8 +1453,6 @@
 	loot = list(
 		/obj/item/blueprint/weapon/marksmanrifle,
 		/obj/item/blueprint/weapon/plasmapistol,
-		/obj/item/blueprint/weapon/uzi,
-		/obj/item/blueprint/weapon/smg10mm,
 		/obj/item/blueprint/weapon/brush,
 		/obj/item/blueprint/weapon/grease_gun,
 		/obj/item/blueprint/weapon/pps,
