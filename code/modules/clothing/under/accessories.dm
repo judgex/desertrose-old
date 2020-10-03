@@ -460,6 +460,12 @@
 	icon_state = "medblueband"
 	item_color = "medblueband"
 
+/obj/item/clothing/accessory/armband/remnant
+	name = "remnant armband"
+	desc = "An armband signifying allegiance to the Enclave, worn by all members."
+	icon_state = "remnant"
+	item_color = "remnant"
+
 //////////////
 //OBJECTION!//
 //////////////

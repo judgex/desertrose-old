@@ -55,7 +55,6 @@
 	desc = "A moulding bench, used for superheating metal into its molten form and moulding it."
 	machine_tool_behaviour = list(TOOL_FWORKBENCH)
 
-
 /obj/machinery/workbench/fbench/attackby(obj/item/W, mob/user, params)//todo me 
 	if(istype(W, /obj/item/screwdriver) && mould)
 		var/obj/item/prefabs/mould/B = mould
@@ -94,13 +93,37 @@
 							Q.amount -= 1
 							var/obj/item/prefabs/complex/barrel/m556/C = new /obj/item/prefabs/complex/barrel/m556
 							C.forceMove(src.loc)
-						if(istype(src.contents[1],/obj/item/prefabs/mould/action))
+						if(istype(src.contents[1],/obj/item/prefabs/mould/barrel/mm9))
 							Q.amount -= 1
-							var/obj/item/prefabs/complex/action/C = new /obj/item/prefabs/complex/action
+							var/obj/item/prefabs/complex/barrel/m556/C = new /obj/item/prefabs/complex/barrel/mm9
 							C.forceMove(src.loc)
-						if(istype(src.contents[1],/obj/item/prefabs/mould/bolt))
+						if(istype(src.contents[1],/obj/item/prefabs/mould/barrel/mm10))
 							Q.amount -= 1
-							var/obj/item/prefabs/complex/bolt/C = new /obj/item/prefabs/complex/bolt
+							var/obj/item/prefabs/complex/barrel/m556/C = new /obj/item/prefabs/complex/barrel/mm10
+							C.forceMove(src.loc)
+						if(istype(src.contents[1],/obj/item/prefabs/mould/barrel/m357))
+							Q.amount -= 1
+							var/obj/item/prefabs/complex/barrel/m556/C = new /obj/item/prefabs/complex/barrel/m357
+							C.forceMove(src.loc)
+						if(istype(src.contents[1],/obj/item/prefabs/mould/barrel/m44))
+							Q.amount -= 1
+							var/obj/item/prefabs/complex/barrel/m556/C = new /obj/item/prefabs/complex/barrel/m44
+							C.forceMove(src.loc)
+						if(istype(src.contents[1],/obj/item/prefabs/mould/barrel/m762))
+							Q.amount -= 1
+							var/obj/item/prefabs/complex/barrel/m556/C = new /obj/item/prefabs/complex/barrel/m762
+							C.forceMove(src.loc)
+						if(istype(src.contents[1],/obj/item/prefabs/mould/barrel/m4570))
+							Q.amount -= 1
+							var/obj/item/prefabs/complex/barrel/m556/C = new /obj/item/prefabs/complex/barrel/m4570
+							C.forceMove(src.loc)
+						if(istype(src.contents[1],/obj/item/prefabs/mould/action/simple))
+							Q.amount -= 1
+							var/obj/item/prefabs/complex/action/simple/C = new /obj/item/prefabs/complex/action/simple
+							C.forceMove(src.loc)
+						if(istype(src.contents[1],/obj/item/prefabs/mould/bolt/simple))
+							Q.amount -= 1
+							var/obj/item/prefabs/complex/bolt/simple/C = new /obj/item/prefabs/complex/bolt/simple
 							C.forceMove(src.loc)
 						if(istype(src.contents[1],/obj/item/prefabs/mould/screw))
 							Q.amount -= 1
@@ -108,7 +131,7 @@
 							C.forceMove(src.loc)
 						if(istype(src.contents[1],/obj/item/prefabs/mould/simpleWeaponFrame))
 							Q.amount -= 1
-							var/obj/item/prefabs/complex/simpleWeaponFrame/C = new /obj/item/prefabs/complex/simpleWeaponFrame
+							var/obj/item/prefabs/complex/simpleWeaponFrame/low/C = new /obj/item/prefabs/complex/simpleWeaponFrame/low
 							C.forceMove(src.loc)
 						if(istype(src.contents[1],/obj/item/prefabs/mould/complexWeaponFrame))
 							Q.amount -= 1

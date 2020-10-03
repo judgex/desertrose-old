@@ -1102,13 +1102,13 @@
 	fire_sound = 'sound/f13weapons/assaultrifle_fire.ogg'
 	can_suppress = FALSE
 	burst_size = 1
-	fire_delay = 15
-	burst_delay = 5
-	slowdown = 1.0
-	w_class = WEIGHT_CLASS_BULKY
+	fire_delay = 7
+	burst_delay = 4
+	slowdown = 1.2
+	w_class = WEIGHT_CLASS_HUGE
 	weapon_weight = WEAPON_HEAVY
 	spread = 25
-	randomspread = 15
+	//randomspread = 5
 
 /obj/item/gun/ballistic/automatic/mg34/burst_select()
 	var/mob/living/carbon/human/user = usr
@@ -1116,12 +1116,12 @@
 		if(0)
 			select += 1
 			burst_size = 1
-			spread = 20
+			spread = 15
 			to_chat(user, "<span class='notice'>You switch to semi-automatic.</span>")
 		if(1)
 			select = 0
-			burst_size = 6
-			spread = 60
+			burst_size = 4
+			spread = 30
 			to_chat(user, "<span class='notice'>You switch to [burst_size]-rnd burst.</span>")
 	playsound(user, 'sound/weapons/empty.ogg', 100, 1)
 	update_icon()
