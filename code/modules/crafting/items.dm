@@ -255,7 +255,9 @@ GLOBAL_LIST_INIT(wWeaponParts_recipes, list ( \
 
 	var/obj/item/prefabs/complex/screw/screw
 
-
+	var/obj/item/advanced_crafting_components/alloys/alloys
+	var/obj/item/advanced_crafting_components/receiver/receiver
+	var/obj/item/advanced_crafting_components/assembly/assembly
 	name = "Simple Weapon Frame"
 	desc = ""
 	icon_state = "gunframe"
@@ -294,6 +296,18 @@ GLOBAL_LIST_INIT(wWeaponParts_recipes, list ( \
 				qdel(src)
 		else 
 			to_chat(usr,"This isn't quite right...")
+	if(istype(W, /obj/item/advanced_crafting_components/alloys))
+		usr.transferItemToLoc(W,src)
+		to_chat(usr,"You install the [W] into the [src]")
+		alloys = W
+	if(istype(W, /obj/item/advanced_crafting_components/receiver))
+		usr.transferItemToLoc(W,src)
+		to_chat(usr,"You install the [W] into the [src]")
+		receiver = W
+	if(istype(W, /obj/item/advanced_crafting_components/assembly))
+		usr.transferItemToLoc(W,src)
+		to_chat(usr,"You install the [W] into the [src]")
+		assembly = W
 	if(istype(W, /obj/item/prefabs/complex/action/simple))
 		usr.transferItemToLoc(W,src)
 		to_chat(usr,"You install the [W] into the [src]")
@@ -460,6 +474,18 @@ GLOBAL_LIST_INIT(wWeaponParts_recipes, list ( \
 				qdel(src)
 		else 
 			to_chat(usr,"This isn't quite right...")
+	if(istype(W, /obj/item/advanced_crafting_components/alloys))
+		usr.transferItemToLoc(W,src)
+		to_chat(usr,"You install the [W] into the [src]")
+		alloys = W
+	if(istype(W, /obj/item/advanced_crafting_components/receiver))
+		usr.transferItemToLoc(W,src)
+		to_chat(usr,"You install the [W] into the [src]")
+		receiver = W
+	if(istype(W, /obj/item/advanced_crafting_components/assembly))
+		usr.transferItemToLoc(W,src)
+		to_chat(usr,"You install the [W] into the [src]")
+		assembly = W
 	if(istype(W, /obj/item/prefabs/complex/action/simple))
 		usr.transferItemToLoc(W,src)
 		to_chat(usr,"You install the [W] into the [src]")
