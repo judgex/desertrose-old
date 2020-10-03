@@ -13,6 +13,9 @@
 /obj/item/gun/energy/laser/rcw/ui_action_click()
 	burst_select()
 
+/obj/item/gun/energy/laser/plasma/carbine/ui_action_click()
+	burst_select()
+
 /obj/item/gun/energy/laser/proc/burst_select()
 	var/mob/living/carbon/human/user = usr
 	select = !select
@@ -299,6 +302,39 @@
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 	projectile_speed = 1.1
+
+/obj/item/gun/energy/laser/plasma/carbine
+	name ="plasma carbine"
+	item_state = "plasma"
+	icon_state = "plasmacarbine"
+	desc = ""
+	ammo_type = list(/obj/item/ammo_casing/energy/plasmacarbine)
+	cell_type = /obj/item/stock_parts/cell/ammo/mfc
+	burst_size = 2
+	burst_delay = 1
+	equipsound = 'sound/f13weapons/equipsounds/plasequip.ogg'
+	w_class = WEIGHT_CLASS_BULKY
+	weapon_weight = WEAPON_HEAVY
+	projectile_speed = 1.6
+	can_scope = TRUE
+	scopestate = "plasma_scope"
+	scope_x_offset = 13
+	scope_y_offset = 16
+
+/obj/item/gun/energy/laser/plasma/carbine/burst_select()
+	var/mob/living/carbon/human/user = usr
+	switch(select)
+		if(0)
+			select += 1
+			burst_size = 2
+			to_chat(user, "<span class='notice'>You switch to dual-stream plasma.</span>")
+		if(1)
+			select = 0
+			burst_size = 1
+			to_chat(user, "<span class='notice'>You switch to singular stream plasma.</span>")
+	playsound(user, 'sound/f13weapons/equipsounds/plasequip.ogg', 80, 1)
+	update_icon()
+	return
 
 /obj/item/gun/energy/laser/plasma/scatter
 	name = "multiplas Rifle"
