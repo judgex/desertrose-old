@@ -886,7 +886,7 @@
 	icon_state = "R82"
 	item_state = "R82"
 	automatic = 1
-	burst_size = 3
+	burst_size = 2
 	can_bayonet = FALSE
 
 /obj/item/gun/ballistic/automatic/marksman/servicerifle/varmint
