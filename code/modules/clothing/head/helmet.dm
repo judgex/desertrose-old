@@ -941,6 +941,7 @@
 	icon_state = "t51bgs"
 	item_state = "t51bgs"
 	slowdown = 0
+	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEFACIALHAIR
 
 /obj/item/clothing/head/helmet/f13/power_armor/midwest
 	name = "midwestern power helmet"

@@ -909,6 +909,7 @@
 	icon_state = "t51bgs"
 	item_state = "t51bgs"
 	slowdown = 0
+	flags_inv = HIDEJUMPSUIT|HIDENECK
 
 /obj/item/clothing/suit/armor/f13/power_armor/t45d/sierra
 	name = "sierra power armor"
