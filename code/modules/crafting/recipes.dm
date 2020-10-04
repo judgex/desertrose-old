@@ -3260,7 +3260,7 @@
 	subcategory = CAT_BPWEAPON_ONEUSE
 */
 //grease gun
-
+/*
 /datum/crafting_recipe/grease_gun
 	name = "Grease gun"
 	result = /obj/item/gun/ballistic/automatic/greasegun
@@ -3285,7 +3285,7 @@
 	time = 120
 	category = CAT_BLUEPRINTS
 	subcategory = CAT_BPWEAPON_ONEUSE
-
+*/
 //marksman rifle
 
 /datum/crafting_recipe/marksmanrifle
@@ -3319,7 +3319,7 @@
 
 /datum/crafting_recipe/brush
 	name = "Brush gun"
-	result = /obj/item/gun/ballistic/automatic/marksman
+	result = /obj/item/gun/ballistic/shotgun/automatic/hunting/brush
 	reqs = list(/obj/item/stack/sheet/metal = 10,
 				/obj/item/advanced_crafting_components/assembly = 1,
 				/datum/reagent/blackpowder = 30,
@@ -3332,7 +3332,7 @@
 
 /datum/crafting_recipe/brush_lim
 	name = "Brush gun"
-	result = /obj/item/gun/ballistic/automatic/marksman
+	result = /obj/item/gun/ballistic/shotgun/automatic/hunting/brush
 	reqs = list(/obj/item/stack/sheet/metal = 10,
 				/obj/item/advanced_crafting_components/assembly = 1,
 				/datum/reagent/blackpowder = 30,
