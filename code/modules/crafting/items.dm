@@ -324,26 +324,26 @@ GLOBAL_LIST_INIT(wWeaponParts_recipes, list ( \
 		usr.transferItemToLoc(W,src)
 		to_chat(usr,"You install the [W] into the [src]")
 		m556barrel = W
-	if(istype(W, /obj/item/prefabs/complex/barrel/m556))
+	if(istype(W, /obj/item/prefabs/complex/barrel/mm10))
 		usr.transferItemToLoc(W,src)
 		to_chat(usr,"You install the [W] into the [src]")
 		mm10barrel = W
-	if(istype(W, /obj/item/prefabs/complex/barrel/m556))
+	if(istype(W, /obj/item/prefabs/complex/barrel/m357))
 		usr.transferItemToLoc(W,src)
 		to_chat(usr,"You install the [W] into the [src]")
 		m357barrel = W
-	if(istype(W, /obj/item/prefabs/complex/barrel/m556))
+	if(istype(W, /obj/item/prefabs/complex/barrel/m44))
 		usr.transferItemToLoc(W,src)
 		to_chat(usr,"You install the [W] into the [src]")
 		m44barrel = W
-	if(istype(W, /obj/item/prefabs/complex/barrel/m556))
+	if(istype(W, /obj/item/prefabs/complex/barrel/m762))
 		usr.transferItemToLoc(W,src)
 		to_chat(usr,"You install the [W] into the [src]")
 		m762barrel = W
-	if(istype(W, /obj/item/prefabs/complex/barrel/m556))
+	if(istype(W, /obj/item/prefabs/complex/barrel/m4570))
 		usr.transferItemToLoc(W,src)
 		to_chat(usr,"You install the [W] into the [src]")
-		m556barrel = W
+		m4570barrel = W
 	if(istype(W, /obj/item/prefabs/complex/bolt/simple))
 		usr.transferItemToLoc(W,src)
 		to_chat(usr,"You install the [W] into the [src]")
