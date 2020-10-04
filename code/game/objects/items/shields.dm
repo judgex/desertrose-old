@@ -39,6 +39,18 @@
 		final_block_chance = 100
 	return ..()
 
+/obj/item/shield/riot/ultra
+	name = "Ultracite shield"
+	desc = "An ultracite enhanced riot shield."
+	icon_state = "ultrashield"
+
+/obj/item/shield/riot/ultra/hit_reaction(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK)
+	if(attack_type == THROWN_PROJECTILE_ATTACK)
+		final_block_chance += 45
+	if(attack_type == LEAP_ATTACK)
+		final_block_chance = 100
+	return ..()
+
 /obj/item/shield/riot/roman
 	name = "roman shield"
 	desc = "Bears an inscription on the inside: <i>\"Romanes venio domus\"</i>."

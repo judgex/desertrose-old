@@ -100,6 +100,7 @@
 #define CAT_FORGEWEAPON   "Forge Weapon"
 #define CAT_FORGEARMOR   "Forge Armor"
 #define CAT_FORGEMISC   "Forge Misc"
+#define CAT_FORGEPARTS   "Forge Parts"
 #define CAT_MEDICAL	"Ghetto Chemistry"
 #define CAT_MEDS "Medicine"
 #define CAT_ASSEM  	"Assembling"
@@ -130,6 +131,8 @@
 #define CAT_BPWEAPON	"Weapons"
 #define CAT_BPWEAPON_ONEUSE	"Weapons - Damaged"
 #define CAT_BP_COPY	"Copy Blueprints"
+#define CAT_MOULD "Moulds"
+#define CAT_MOULD_ONE "Moulds"
 
 #define RCD_FLOORWALL 1
 #define RCD_AIRLOCK 2

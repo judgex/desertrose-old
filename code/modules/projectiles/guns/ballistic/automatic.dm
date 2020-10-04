@@ -479,21 +479,37 @@
 	return
 
 /obj/item/gun/ballistic/automatic/mini_uzi
-	name = "\improper Type U3 Uzi"
+	name = "\improper Type U3 Uzi (crude)"
 	desc = "A lightweight, burst-fire submachine gun, for when you really want someone dead. Uses 9mm rounds."
 	icon_state = "mini-uzi"
 	mag_type = /obj/item/ammo_box/magazine/uzim9mm
 	w_class = WEIGHT_CLASS_NORMAL
+	weapon_weight = WEAPON_MEDIUM
 	can_scope = TRUE
 	scopestate = "AEP7_scope"
 	scope_x_offset = 9
 	scope_y_offset = 21
 	burst_size = 2
 	burst_delay = 2
-	fire_delay = 2
+	fire_delay = 4
 	force = 15
+	extra_damage = -5
+	extra_penetration = -5
 	spread = 10
 	can_attachments = TRUE
+	can_suppress = TRUE
+
+/obj/item/gun/ballistic/automatic/mini_uzi/mid
+	name = "\improper Type U3 Uzi (fair)"
+	desc = "A lightweight, burst-fire submachine gun, for when you really want someone dead. Uses 9mm rounds."
+	fire_delay = 3
+
+/obj/item/gun/ballistic/automatic/mini_uzi/high
+	name = "\improper Type U3 Uzi (masterwork)"
+	desc = "A lightweight, burst-fire submachine gun, for when you really want someone dead. Uses 9mm rounds."
+	fire_delay = 1
+	extra_damage = 5
+	extra_penetration = 5
 
 /obj/item/gun/ballistic/automatic/mini_uzi/burst_select()
 	var/mob/living/carbon/human/user = usr
@@ -519,7 +535,7 @@
 	return
 
 /obj/item/gun/ballistic/automatic/pps
-	name = "\improper ancient SMG"
+	name = "\improper ancient SMG (crude)"
 	desc = "An extremely fast firing, innacurate SMG from past wars. Low fire rate and low damage. Uses 9mm rounds."
 	icon_state = "pps"
 	mag_type = /obj/item/ammo_box/magazine/uzim9mm
@@ -529,12 +545,29 @@
 	//scope_x_offset = 9
 	//scope_y_offset = 21
 	burst_size = 3
+	burst_delay = 2
+	fire_delay = 9
+	force = 15
+	spread = 20
+	can_attachments = TRUE
+	extra_damage = -14
+
+/obj/item/gun/ballistic/automatic/pps/mid
+	name = "\improper ancient SMG (fair)"
+	burst_size = 3
 	burst_delay = 1
 	fire_delay = 7
-	force = 15
 	spread = 10
 	can_attachments = TRUE
 	extra_damage = -9
+
+/obj/item/gun/ballistic/automatic/pps/high
+	name = "\improper ancient SMG (masterwork)"
+	burst_size = 3
+	burst_delay = 1
+	fire_delay = 7
+	spread = 5
+	can_attachments = TRUE
 
 /obj/item/gun/ballistic/automatic/pps/burst_select()
 	var/mob/living/carbon/human/user = usr
@@ -613,22 +646,38 @@
 	return
 
 /obj/item/gun/ballistic/automatic/smg10mm
-	name = "10mm submachine gun"
+	name = "10mm submachine gun (crude)"
 	desc = "A select fire open bolt 10mm submachine gun. The serial number and manufactuer markings have been scratched off."
 	icon_state = "smg10mm"
 	item_state = "smg10mm"
 	slot_flags = 0
 	mag_type = /obj/item/ammo_box/magazine/m10mm_auto
 	w_class = WEIGHT_CLASS_BULKY
-	weapon_weight = WEAPON_HEAVY
+	weapon_weight = WEAPON_MEDIUM //You should be able to dual-wield these.
 	fire_sound = 'sound/f13weapons/10mm_fire_03.ogg'
 	burst_size = 2
-	fire_delay = 2
-	burst_delay = 2
+	fire_delay = 4
+	burst_delay = 3
+	extra_damage = -5
+	extra_penetration = -5
 	can_suppress = FALSE //we dont have sprites therefore cease
 	force = 15
 	spread = 18
 	can_attachments = TRUE
+
+/obj/item/gun/ballistic/automatic/smg10mm/mid
+	name = "10mm submachine gun"
+	burst_size = 2
+	fire_delay = 2
+	burst_delay = 2
+
+/obj/item/gun/ballistic/automatic/smg10mm/high
+	name = "10mm submachine gun"
+	burst_size = 2
+	fire_delay = 2
+	burst_delay = 2
+	extra_damage = 5
+	extra_penetration = 10
 
 /obj/item/gun/ballistic/automatic/smg10mm/burst_select()
 	var/mob/living/carbon/human/user = usr
@@ -830,12 +879,43 @@
 	item_state = "gold_sniper"
 
 /obj/item/gun/ballistic/automatic/marksman/servicerifle
-	name = "service rifle"
+	name = "service rifle (crude)"
+	desc = "A 5.56x45 semi-automatic service rifle manufactured by the NCR and issued to all combat personnel."
+	icon_state = "service_rifle"
+	item_state = "servicerifle"
+	fire_sound = 'sound/f13weapons/varmint_rifle.ogg'
+	fire_delay = 5
+	extra_damage = -5
+	mag_type = /obj/item/ammo_box/magazine/m556/rifle
+	zoomable = FALSE
+	weapon_weight = WEAPON_HEAVY
+	//bayonetstate = "rifles"
+	knife_x_offset = 22
+	knife_y_offset = 12
+
+/obj/item/gun/ballistic/automatic/marksman/servicerifle/mid
+	name = "service rifle (fair)"
 	desc = "A 5.56x45 semi-automatic service rifle manufactured by the NCR and issued to all combat personnel."
 	icon_state = "service_rifle"
 	item_state = "servicerifle"
 	fire_sound = 'sound/f13weapons/varmint_rifle.ogg'
 	fire_delay = 4
+	mag_type = /obj/item/ammo_box/magazine/m556/rifle
+	zoomable = FALSE
+	weapon_weight = WEAPON_HEAVY
+	//bayonetstate = "rifles"
+	knife_x_offset = 22
+	knife_y_offset = 12
+
+/obj/item/gun/ballistic/automatic/marksman/servicerifle/high
+	name = "service rifle (masterwork)"
+	desc = "A 5.56x45 semi-automatic service rifle manufactured by the NCR and issued to all combat personnel."
+	icon_state = "service_rifle"
+	item_state = "servicerifle"
+	fire_sound = 'sound/f13weapons/varmint_rifle.ogg'
+	fire_delay = 3
+	extra_damage = 10
+	extra_penetration = 10
 	mag_type = /obj/item/ammo_box/magazine/m556/rifle
 	zoomable = FALSE
 	weapon_weight = WEAPON_HEAVY
@@ -853,7 +933,8 @@
 	icon_state = "R82"
 	item_state = "R82"
 	automatic = 1
-	can_bayonet = FALSE//TODO me
+	burst_size = 2
+	can_bayonet = FALSE
 
 /obj/item/gun/ballistic/automatic/marksman/servicerifle/varmint
 	name = "varmint rifle"
@@ -863,7 +944,7 @@
 	fire_delay = 8
 	init_mag_type = /obj/item/ammo_box/magazine/m556/rifle/small
 	mag_type = /obj/item/ammo_box/magazine/m556/rifle
-	can_bayonet = FALSE//todo me
+	can_bayonet = FALSE
 
 /obj/item/gun/ballistic/automatic/marksman/servicerifle/varmint/ratslayer
 	name = "ratslayer"
@@ -894,7 +975,7 @@
 	item_state = "cshotgun1"
 	fire_sound = 'sound/f13weapons/repeater_fire.ogg'
 	mag_type = /obj/item/ammo_box/magazine/d12g
-	burst_size = 1
+	burst_size = 3 //Who keeps nerfing this? S.B.
 	automatic = 1
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
@@ -906,7 +987,7 @@
 	item_state = "cshotgun1"
 	fire_sound = 'sound/f13weapons/repeater_fire.ogg'
 	mag_type = /obj/item/ammo_box/magazine/d12g
-	burst_size = 1
+	burst_size = 2
 	fire_delay = 4
 	automatic = 1
 	w_class = WEIGHT_CLASS_BULKY
@@ -923,6 +1004,7 @@
 	mag_type = /obj/item/ammo_box/magazine/d12g
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
+	force = 40
 
 /obj/item/gun/ballistic/automatic/greasegun
 	name = "M3A1 Grease Gun"
@@ -932,6 +1014,7 @@
 	mag_type = /obj/item/ammo_box/magazine/greasegun
 	fire_sound = 'sound/f13weapons/greasegun.ogg'
 	can_suppress = FALSE
+	weapon_weight = WEAPON_MEDIUM
 	burst_size = 2
 	fire_delay = 3
 	burst_delay = 3
@@ -1066,13 +1149,13 @@
 	fire_sound = 'sound/f13weapons/assaultrifle_fire.ogg'
 	can_suppress = FALSE
 	burst_size = 1
-	fire_delay = 15
-	burst_delay = 5
-	slowdown = 1.0
-	w_class = WEIGHT_CLASS_BULKY
+	fire_delay = 7
+	burst_delay = 4
+	slowdown = 1.2
+	w_class = WEIGHT_CLASS_HUGE
 	weapon_weight = WEAPON_HEAVY
 	spread = 25
-	randomspread = 15
+	//randomspread = 5
 
 /obj/item/gun/ballistic/automatic/mg34/burst_select()
 	var/mob/living/carbon/human/user = usr
@@ -1080,12 +1163,12 @@
 		if(0)
 			select += 1
 			burst_size = 1
-			spread = 20
+			spread = 15
 			to_chat(user, "<span class='notice'>You switch to semi-automatic.</span>")
 		if(1)
 			select = 0
-			burst_size = 6
-			spread = 60
+			burst_size = 4
+			spread = 30
 			to_chat(user, "<span class='notice'>You switch to [burst_size]-rnd burst.</span>")
 	playsound(user, 'sound/weapons/empty.ogg', 100, 1)
 	update_icon()
@@ -1121,6 +1204,19 @@
 	name = "Old Glory"
 	desc = "This Machine kills communists!"
 	icon_state = "oldglory"
+	extra_damage = 10
+
+/obj/item/gun/ballistic/automatic/m1garand/republicspride
+	name = "Republic's Pride"
+	desc = "A well-tuned scoped M1C rifle crafted by master gunsmith from the Gunrunners. Proudly issued to Scout Captains and packs a mean punch. Chambered in 7.62x51."
+	icon_state = "republics_pride"
+	item_state = "scoped308"
+	extra_damage = 8
+	extra_penetration = 5
+	zoomable = TRUE
+	zoom_amt = 10
+	zoom_out_amt = 13
+	can_scope = FALSE
 
 /obj/item/gun/ballistic/automatic/rangemaster
 	name = "Colt Rangemaster"

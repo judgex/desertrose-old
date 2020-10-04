@@ -453,6 +453,14 @@
 	fire_sound = 'sound/weapons/gunshot_silenced.ogg'
 	w_class = WEIGHT_CLASS_SMALL
 
+/obj/item/gun/ballistic/revolver/needler/ultra
+	name = "Ultracite needler"
+	desc = "An ultracite enhanced needler pistol"
+	icon_state = "ultraneedler"
+	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/revneedler
+	fire_sound = 'sound/weapons/gunshot_silenced.ogg'
+	w_class = WEIGHT_CLASS_SMALL
+
 /obj/item/gun/ballistic/revolver/colt6250
 	name = "colt 6250"
 	desc = "The Colt 6520 10mm autoloading pistol is a highly durable and efficient weapon developed by Colt Firearms prior to the Great War. It proved to be resistant to the desert-like conditions of the post-nuclear wasteland and is a fine example of workmanship and quality construction."
@@ -507,8 +515,8 @@
 	w_class = WEIGHT_CLASS_SMALL
 
 /obj/item/gun/ballistic/revolver/thatgun
-	name = ".556 pistol"
-	desc = "A .556 rifle modified and cut down to a pistol."
+	name = ".223 pistol"
+	desc = "A 556 rifle modified and cut down to a pistol."
 	icon_state = "thatgun"
 	fire_sound = 'sound/f13weapons/magnum_fire.ogg'
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/thatgun

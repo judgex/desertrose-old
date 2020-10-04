@@ -12,6 +12,7 @@
 	var/list/temporary_mutations = list() //Timers for temporary mutations
 	var/list/previous = list() //For temporary name/ui/ue/blood_type modifications
 	var/mob/living/holder
+	var/skin_tone_override //because custom skin tones are not found in the skin_tones global list.
 
 /datum/dna/New(mob/living/new_holder)
 	if(istype(new_holder))
@@ -42,8 +43,13 @@
 	destination.dna.real_name = real_name
 	destination.dna.temporary_mutations = temporary_mutations.Copy()
 	destination.flavor_text = destination.dna.features["flavor_text"] //Update the flavor_text to use new dna text
+	if(ishuman(destination))
+		var/mob/living/carbon/human/H = destination
+		H.give_genitals(TRUE)//This gives the body the genitals of this DNA. Used for any transformations based on DNA
 	if(transfer_SE)
 		destination.dna.struc_enzymes = struc_enzymes
+
+	SEND_SIGNAL(destination, COMSIG_CARBON_IDENTITY_TRANSFERRED_TO, src, transfer_SE)
 
 /datum/dna/proc/copy_dna(datum/dna/new_dna)
 	new_dna.unique_enzymes = unique_enzymes
@@ -80,19 +86,29 @@
 	. = ""
 	var/list/L = new /list(DNA_UNI_IDENTITY_BLOCKS)
 
-	L[DNA_GENDER_BLOCK] = construct_block((holder.gender!=MALE)+1, 2)
+	switch(holder.gender)
+		if(MALE)
+			L[DNA_GENDER_BLOCK] = construct_block(G_MALE, 4)
+		if(FEMALE)
+			L[DNA_GENDER_BLOCK] = construct_block(G_FEMALE, 4)
+		if(PLURAL)
+			L[DNA_GENDER_BLOCK] = construct_block(G_PLURAL, 4)
+		else
+			L[DNA_GENDER_BLOCK] = construct_block(G_NEUTER, 4)
+
 	if(ishuman(holder))
 		var/mob/living/carbon/human/H = holder
 		if(!GLOB.hair_styles_list.len)
 			init_sprite_accessory_subtypes(/datum/sprite_accessory/hair,GLOB.hair_styles_list, GLOB.hair_styles_male_list, GLOB.hair_styles_female_list)
 		L[DNA_HAIR_STYLE_BLOCK] = construct_block(GLOB.hair_styles_list.Find(H.hair_style), GLOB.hair_styles_list.len)
+		L[DNA_EYE_COLOR_BLOCK] = sanitize_hexcolor(H.eye_color)
 		L[DNA_HAIR_COLOR_BLOCK] = sanitize_hexcolor(H.hair_color)
 		if(!GLOB.facial_hair_styles_list.len)
 			init_sprite_accessory_subtypes(/datum/sprite_accessory/facial_hair, GLOB.facial_hair_styles_list, GLOB.facial_hair_styles_male_list, GLOB.facial_hair_styles_female_list)
 		L[DNA_FACIAL_HAIR_STYLE_BLOCK] = construct_block(GLOB.facial_hair_styles_list.Find(H.facial_hair_style), GLOB.facial_hair_styles_list.len)
 		L[DNA_FACIAL_HAIR_COLOR_BLOCK] = sanitize_hexcolor(H.facial_hair_color)
 		L[DNA_SKIN_TONE_BLOCK] = construct_block(GLOB.skin_tones.Find(H.skin_tone), GLOB.skin_tones.len)
-		L[DNA_EYE_COLOR_BLOCK] = sanitize_hexcolor(H.eye_color)
+
 
 	for(var/i=1, i<=DNA_UNI_IDENTITY_BLOCKS, i++)
 		if(L[i])
@@ -143,6 +159,16 @@
 			setblock(uni_identity, blocknumber, construct_block(GLOB.facial_hair_styles_list.Find(H.facial_hair_style), GLOB.facial_hair_styles_list.len))
 		if(DNA_HAIR_STYLE_BLOCK)
 			setblock(uni_identity, blocknumber, construct_block(GLOB.hair_styles_list.Find(H.hair_style), GLOB.hair_styles_list.len))
+		if(DNA_GENDER_BLOCK)
+			switch(H.gender)
+				if(MALE)
+					setblock(uni_identity, blocknumber, construct_block(G_MALE, 4))
+				if(FEMALE)
+					setblock(uni_identity, blocknumber, construct_block(G_FEMALE, 4))
+				if(PLURAL)
+					setblock(uni_identity, blocknumber, construct_block(G_PLURAL, 4))
+				else
+					setblock(uni_identity, blocknumber, construct_block(G_NEUTER, 4))
 
 /datum/dna/proc/mutations_say_mods(message)
 	if(message)
@@ -281,7 +307,16 @@
 /mob/living/carbon/proc/updateappearance(icon_update=1, mutcolor_update=0, mutations_overlay_update=0)
 	if(!has_dna())
 		return
-	gender = (deconstruct_block(getblock(dna.uni_identity, DNA_GENDER_BLOCK), 2)-1) ? FEMALE : MALE
+
+	switch(deconstruct_block(getblock(dna.uni_identity, DNA_GENDER_BLOCK), 4))
+		if(G_MALE)
+			set_gender(MALE, TRUE, forced = TRUE)
+		if(G_FEMALE)
+			set_gender(FEMALE, TRUE, forced = TRUE)
+		if(G_PLURAL)
+			set_gender(PLURAL, TRUE, forced = TRUE)
+		else
+			set_gender(NEUTER, TRUE, forced = TRUE)
 
 /mob/living/carbon/human/updateappearance(icon_update=1, mutcolor_update=0, mutations_overlay_update=0)
 	..()

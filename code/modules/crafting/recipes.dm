@@ -1560,7 +1560,7 @@
 	time = 120
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
-
+/*
 /datum/crafting_recipe/n99
 	name = "10mm pistol"
 	result = /obj/item/gun/ballistic/automatic/pistol/n99
@@ -1573,7 +1573,7 @@
 	time = 120
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
-
+*/
 /datum/crafting_recipe/colt6250
 	name = "colt 6250"
 	result = /obj/item/gun/ballistic/revolver/colt6250
@@ -1754,7 +1754,7 @@
 	time = 120
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
-*/
+*//*
 /datum/crafting_recipe/varmintrifle
 	name = "varmint rifle"
 	result = /obj/item/gun/ballistic/automatic/marksman/servicerifle/varmint
@@ -1766,7 +1766,7 @@
 	traits = list(TRAIT_GUNSMITH_TWO)
 	time = 120
 	category = CAT_WEAPONRY
-	subcategory = CAT_WEAPON
+	subcategory = CAT_WEAPON*/
 /* CRAFT rework: removed for balance
 /datum/crafting_recipe/rangemaster
 	name = "colt rangemaster"
@@ -1824,18 +1824,54 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
 */
-/datum/crafting_recipe/servicerifle
-	name = "service rifle"
+/*/datum/crafting_recipe/servicerifle
+	name = "service rifle (crude)"
 	result = /obj/item/gun/ballistic/automatic/marksman/servicerifle
-	reqs = list(/obj/item/stack/sheet/mineral/wood = 1,
-				/obj/item/stack/crafting/metalparts = 2,
-				/obj/item/stack/sheet/metal = 6,
+	reqs = list(/obj/item/prefabs/complex/barrel/m556 = 1,
+				/obj/item/prefabs/complex/trigger = 1,
+				/obj/item/prefabs/complex/action = 1,
+				/obj/item/prefabs/complex/bolt = 1,
+				/obj/item/prefabs/complex/trigger = 1,
+				/obj/item/prefabs/complex/screw = 3,
+				/obj/item/prefabs/complex/complexWeaponFrame = 1,
 				/datum/reagent/blackpowder = 20)
-	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER3)
-	traits = list(TRAIT_GUNSMITH_THREE)
+	tools = list(TOOL_WORKBENCH)
 	time = 120
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
+
+/datum/crafting_recipe/servicerifle/mid
+	name = "service rifle (fair)"
+	result = /obj/item/gun/ballistic/automatic/marksman/servicerifle/mid
+	reqs = list(/obj/item/prefabs/complex/barrel/m556 = 1,
+				/obj/item/prefabs/complex/trigger = 1,
+				/obj/item/prefabs/complex/action = 1,
+				/obj/item/prefabs/complex/bolt = 1,
+				/obj/item/prefabs/complex/trigger = 1,
+				/obj/item/prefabs/complex/screw = 3,
+				/obj/item/prefabs/complex/complexWeaponFrame/mid = 1,
+				/datum/reagent/blackpowder = 20)
+	tools = list(TOOL_WORKBENCH)
+	time = 120
+	category = CAT_WEAPONRY
+	subcategory = CAT_WEAPON
+
+/datum/crafting_recipe/servicerifle/high
+	name = "service rifle (masterwork)"
+	result = /obj/item/gun/ballistic/automatic/marksman/servicerifle/high
+	reqs = list(/obj/item/prefabs/complex/barrel/m556 = 1,
+				/obj/item/prefabs/complex/trigger = 1,
+				/obj/item/prefabs/complex/action = 1,
+				/obj/item/prefabs/complex/bolt = 1,
+				/obj/item/prefabs/complex/trigger = 1,
+				/obj/item/prefabs/complex/screw = 3,
+				/obj/item/prefabs/complex/complexWeaponFrame/high = 1,
+				/datum/reagent/blackpowder = 20)
+	tools = list(TOOL_WORKBENCH)
+	time = 120
+	category = CAT_WEAPONRY
+	subcategory = CAT_WEAPON
+*/
 /* CRAFT rework: removed for balance
 /datum/crafting_recipe/marksmanrifle
 	name = "marksman rifle"
@@ -3016,7 +3052,7 @@
 	subcategory = CAT_BPWEAPON
 
 //trail carbine
-
+/*
 /datum/crafting_recipe/trail_carbine
 	name = "Trail Carbine"
 	result = /obj/item/gun/ballistic/shotgun/automatic/hunting/trail
@@ -3028,10 +3064,10 @@
 	time = 120
 	category = CAT_BLUEPRINTS
 	subcategory = CAT_BPWEAPON
-
+*/
 //mid tier
 //.223 pistol
-/datum/crafting_recipe/thatgun
+/*/datum/crafting_recipe/thatgun
 	name = ".223 pistol"
 	result = /obj/item/gun/ballistic/revolver/thatgun
 	reqs = list(/obj/item/stack/crafting/metalparts = 2,
@@ -3054,9 +3090,9 @@
 	time = 120
 	category = CAT_BLUEPRINTS
 	subcategory = CAT_BPWEAPON_ONEUSE
-
+*/
 //pps
-
+/*
 /datum/crafting_recipe/pps
 	name = "Ancient SMG"
 	result = /obj/item/gun/ballistic/automatic/pps
@@ -3081,7 +3117,7 @@
 	tools = list(TOOL_WORKBENCH)
 	time = 120
 	category = CAT_BLUEPRINTS
-	subcategory = CAT_BPWEAPON_ONEUSE
+	subcategory = CAT_BPWEAPON_ONEUSE*/
 //mg34
 
 /datum/crafting_recipe/mg34
@@ -3170,7 +3206,7 @@
 	subcategory = CAT_BPWEAPON_ONEUSE
 
 //uzi
-
+/*
 /datum/crafting_recipe/uzi
 	name = "Mini uzi"
 	result = /obj/item/gun/ballistic/automatic/mini_uzi
@@ -3195,9 +3231,9 @@
 	time = 120
 	category = CAT_BLUEPRINTS
 	subcategory = CAT_BPWEAPON_ONEUSE
-
+*/
 //10mm smg
-
+/*
 /datum/crafting_recipe/smg10mm
 	name = "10mm SMG"
 	result = /obj/item/gun/ballistic/automatic/smg10mm
@@ -3222,7 +3258,7 @@
 	time = 120
 	category = CAT_BLUEPRINTS
 	subcategory = CAT_BPWEAPON_ONEUSE
-
+*/
 //grease gun
 
 /datum/crafting_recipe/grease_gun
@@ -3845,3 +3881,96 @@
 	result = /obj/item/blueprint/weapon/thatgun/limited
 	name = ".223 pistol blueprint"
 	tools = list(TOOL_AWORKBENCH, TOOL_GUNTIER3, /obj/item/blueprint/weapon/thatgun)
+
+//moulds
+
+/datum/crafting_recipe/mould	
+	result = /obj/item/prefabs/mould/barrel/m556
+	name = "556 Barrel Mould"
+	reqs = list(/obj/item/stack/sheet/metal = 10)
+	tools = list(TOOL_FORGE, TOOL_GUNTIER3)
+	traits = list(TRAIT_GUNSMITH_THREE)
+	time = 30
+	category = CAT_MOULD
+	subcategory = CAT_MOULD_ONE
+
+/datum/crafting_recipe/mould/simpleaction
+	result = /obj/item/prefabs/mould/barrel/mm9
+	name = "9mm Barrel Mould"
+	tools = list(TOOL_FORGE, TOOL_GUNTIER1)
+	traits = list(TRAIT_GUNSMITH_ONE)
+	time = 30
+	category = CAT_MOULD
+	subcategory = CAT_MOULD_ONE
+
+/datum/crafting_recipe/mould/simpleaction
+	result = /obj/item/prefabs/mould/action/simple
+	name = "Simple Action Mould"
+	tools = list(TOOL_FORGE, TOOL_GUNTIER1)
+	traits = list(TRAIT_GUNSMITH_ONE)
+	time = 30
+	category = CAT_MOULD
+	subcategory = CAT_MOULD_ONE
+
+/datum/crafting_recipe/mould/bolt
+	result = /obj/item/prefabs/mould/bolt/simple
+	name = "Simple Bolt Mould"
+	tools = list(TOOL_FORGE, TOOL_GUNTIER1)
+	traits = list(TRAIT_GUNSMITH_ONE)
+	time = 30
+	category = CAT_MOULD
+	subcategory = CAT_MOULD_ONE
+
+/datum/crafting_recipe/mould/boltadvanced
+	result = /obj/item/prefabs/mould/bolt/high
+	name = "Advanced Bolt Mould"
+	tools = list(TOOL_FORGE, TOOL_GUNTIER1)
+	traits = list(TRAIT_GUNSMITH_ONE)
+	time = 30
+	category = CAT_MOULD
+	subcategory = CAT_MOULD_ONE
+
+/datum/crafting_recipe/mould/trigger
+	result = /obj/item/prefabs/mould/trigger
+	name = "Trigger Mould"
+	tools = list(TOOL_FORGE, TOOL_GUNTIER1)
+	traits = list(TRAIT_GUNSMITH_ONE)
+	time = 30
+	category = CAT_MOULD
+	subcategory = CAT_MOULD_ONE
+
+/datum/crafting_recipe/mould/stock
+	result = /obj/item/prefabs/mould/stock
+	name = "Stock Mould"
+	tools = list(TOOL_FORGE, TOOL_GUNTIER1)
+	traits = list(TRAIT_GUNSMITH_ONE)
+	time = 30
+	category = CAT_MOULD
+	subcategory = CAT_MOULD_ONE
+
+/datum/crafting_recipe/mould/screw
+	result = /obj/item/prefabs/mould/screw
+	name = "Screw Mould"
+	tools = list(TOOL_FORGE, TOOL_GUNTIER1)
+	traits = list(TRAIT_GUNSMITH_ONE)
+	time = 30
+	category = CAT_MOULD
+	subcategory = CAT_MOULD_ONE
+
+/datum/crafting_recipe/mould/sWeaponFramea
+	result = /obj/item/prefabs/mould/simpleWeaponFrame
+	name = "Simple Weapon Frame Mould"
+	tools = list(TOOL_FORGE, TOOL_GUNTIER1)
+	traits = list(TRAIT_GUNSMITH_ONE)
+	time = 30
+	category = CAT_MOULD
+	subcategory = CAT_MOULD_ONE
+
+/datum/crafting_recipe/mould/cWeaponFrame
+	result = /obj/item/prefabs/mould/complexWeaponFrame
+	name = "Complex Weapon Frame Mould"
+	tools = list(TOOL_FORGE, TOOL_GUNTIER3)
+	traits = list(TRAIT_GUNSMITH_THREE)
+	time = 30
+	category = CAT_MOULD
+	subcategory = CAT_MOULD_ONE
