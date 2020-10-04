@@ -515,8 +515,8 @@
 	w_class = WEIGHT_CLASS_SMALL
 
 /obj/item/gun/ballistic/revolver/thatgun
-	name = ".556 pistol"
-	desc = "A .556 rifle modified and cut down to a pistol."
+	name = ".223 pistol"
+	desc = "A 556 rifle modified and cut down to a pistol."
 	icon_state = "thatgun"
 	fire_sound = 'sound/f13weapons/magnum_fire.ogg'
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/thatgun
