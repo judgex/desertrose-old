@@ -1007,7 +1007,7 @@
 	force = 40
 
 /obj/item/gun/ballistic/automatic/greasegun
-	name = "M3A1 Grease Gun"
+	name = "M3A1 Grease Gun (crude)"
 	desc = "An inexpensive .45 ACP submachine gun. Slow fire rate means less waste of ammo and controllable bursts."
 	icon_state = "grease_gun"
 	item_state = "smg9mm"
@@ -1018,9 +1018,23 @@
 	burst_size = 2
 	fire_delay = 3
 	burst_delay = 3
+	extra_damage = -5
+	extra_penetration = -5
 	force = 15
 	spread = 10
 	can_attachments = TRUE
+
+/obj/item/gun/ballistic/automatic/greasegun/mid
+	name = "M3A1 Grease Gun (fair)"
+	fire_delay = 3
+	burst_delay = 3
+
+/obj/item/gun/ballistic/automatic/greasegun/high
+	name = "M3A1 Grease Gun (masterwork)"
+	fire_delay = 2
+	burst_delay = 2
+	extra_penetration = 7
+	extra_damage = 7
 
 /obj/item/gun/ballistic/automatic/greasegun/burst_select()
 	var/mob/living/carbon/human/user = usr
