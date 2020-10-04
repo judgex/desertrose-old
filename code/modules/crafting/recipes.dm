@@ -3206,7 +3206,7 @@
 	subcategory = CAT_BPWEAPON_ONEUSE
 
 //uzi
-
+/*
 /datum/crafting_recipe/uzi
 	name = "Mini uzi"
 	result = /obj/item/gun/ballistic/automatic/mini_uzi
@@ -3231,9 +3231,9 @@
 	time = 120
 	category = CAT_BLUEPRINTS
 	subcategory = CAT_BPWEAPON_ONEUSE
-
+*/
 //10mm smg
-
+/*
 /datum/crafting_recipe/smg10mm
 	name = "10mm SMG"
 	result = /obj/item/gun/ballistic/automatic/smg10mm
@@ -3258,7 +3258,7 @@
 	time = 120
 	category = CAT_BLUEPRINTS
 	subcategory = CAT_BPWEAPON_ONEUSE
-
+*/
 //grease gun
 
 /datum/crafting_recipe/grease_gun
