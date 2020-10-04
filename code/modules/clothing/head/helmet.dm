@@ -935,6 +935,13 @@
 	var/brightness_on = 4 //luminosity when the light is on
 	var/on = 0
 
+/obj/item/clothing/head/helmet/f13/power_armor/t45d/gunslinger
+	name = "Gunslinger T-51b Helm"
+	desc = "With most of the external plating stripped to allow for internal thermal and night vision scanners, as well as aided targeting assist via onboard systems, this helm provides much more utility then protection. To support these systems, secondary power cells were installed into the helm, and covered with a stylish hat."
+	icon_state = "t51bgs"
+	item_state = "t51bgs"
+	slowdown = 0
+
 /obj/item/clothing/head/helmet/f13/power_armor/midwest
 	name = "midwestern power helmet"
 	desc = "This helmet once belonged to the Mid Western branch of the Brotherhood of Steel now residing wherever it's user currently is situated."
