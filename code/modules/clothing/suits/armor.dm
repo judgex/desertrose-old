@@ -903,6 +903,14 @@
 	item_state = "t45dpowerarmor"
 	armor = list("melee" = 65, "bullet" = 60, "laser" = 50, "energy" = 60, "bomb" = 62, "bio" = 100, "rad" = 90, "fire" = 90, "acid" = 0)
 
+/obj/item/clothing/suit/armor/f13/power_armor/t45d/gunslinger
+	name = "Gunslinger T-51b"
+	desc = "What was once a suit of T-51 Power Armor is now an almost unrecognizable piece of art or garbage, depending on who you ask. Almost all of the external plating has either been removed or stripped to allow for maximum mobility, and overlapping underplates protect the user from small arms fire. Whoever designed this had a very specific purpose in mind: mobility and aesthetics over defense."
+	icon_state = "t51bgs"
+	item_state = "t51bgs"
+	slowdown = 0
+	flags_inv = HIDEJUMPSUIT|HIDENECK
+
 /obj/item/clothing/suit/armor/f13/power_armor/t45d/sierra
 	name = "sierra power armor"
 	desc = "A captured set of T-45d power armor put into use by the NCR, it's been heavily modified and decorated with the head of a bear and intricate gold trimming. A two headed bear is scorched into the breastplate."
