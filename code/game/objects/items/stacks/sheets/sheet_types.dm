@@ -154,6 +154,32 @@ GLOBAL_LIST_INIT(metal_recipes, list ( \
 	return BRUTELOSS
 
 /*
+prewar alloys
+*/
+/obj/item/stack/sheet/prewar
+	name = "pre-war alloys"
+	singular_name = "pre war alloy"
+	desc = "This sheet was manufactured by using advanced smelting techniques before the war."
+	icon_state = "sheet-prewar"
+	item_state = "sheet-metal"
+	materials = list(MAT_METAL=2000, MAT_PLASMA=2000)
+	throwforce = 10
+	flags_1 = CONDUCT_1
+	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 100, "acid" = 80)
+	resistance_flags = FIRE_PROOF
+	merge_type = /obj/item/stack/sheet/plasteel
+	grind_results = list("iron" = 20, "plasma" = 20)
+
+/obj/item/stack/sheet/prewar/twenty
+	amount = 20
+
+/obj/item/stack/sheet/prewar/five
+	amount = 5
+
+/obj/item/stack/sheet/prewar/fifty
+	amount = 50
+
+/*
  * Plasteel
  */
 GLOBAL_LIST_INIT(plasteel_recipes, list ( \
@@ -200,7 +226,8 @@ GLOBAL_LIST_INIT(wood_recipes, list ( \
 	new/datum/stack_recipe("wooden sandals", /obj/item/clothing/shoes/sandal, 1), \
 	new/datum/stack_recipe("wood floor tile", /obj/item/stack/tile/wood, 1, 4, 20), \
 	new/datum/stack_recipe("wood table frame", /obj/structure/table_frame/wood, 2, time = 10), \
-	new/datum/stack_recipe("rifle stock", /obj/item/weaponcrafting/stock, 10, time = 40), \
+	new/datum/stack_recipe("Wooden Stock", /obj/item/prefabs/complex/stock/low, 2, time = 50), \
+	//new/datum/stack_recipe("rifle stock", /obj/item/weaponcrafting/stock, 10, time = 40), \
 	new/datum/stack_recipe("rolling pin", /obj/item/kitchen/rollingpin, 2, time = 30), \
 	new/datum/stack_recipe("chopping block", /obj/item/chopping_block, 2, time = 30), \
 	new/datum/stack_recipe("wooden chair", /obj/structure/chair/wood/, 3, time = 10, one_per_turf = TRUE, on_floor = TRUE), \

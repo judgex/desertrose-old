@@ -744,7 +744,7 @@
 	return
 
 /obj/item/gun/ballistic/automatic/assault_rifle
-	name = "assault rifle"
+	name = "assault rifle (crude)"
 	desc = "A standard R91 assault rifle, out of use around the time of the Great War."
 	icon_state = "assault_rifle"
 	item_state = "fnfal"
@@ -754,7 +754,8 @@
 	fire_sound = 'sound/f13weapons/assaultrifle_fire.ogg'
 	burst_size = 2
 	automatic = 1
-	fire_delay = 3
+	fire_delay = 5
+	burst_delay = 4
 	spread = 8
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
@@ -764,6 +765,22 @@
 	can_bayonet = TRUE
 	knife_x_offset = 23
 	knife_y_offset = 11
+
+/obj/item/gun/ballistic/automatic/assault_rifle/mid
+	name = "assault rifle (fair)"
+	automatic = 1
+	fire_delay = 3
+	extra_penetration = 0
+	extra_damage = 0
+	burst_delay = 2
+
+/obj/item/gun/ballistic/automatic/assault_rifle/high
+	name = "assault rifle (masterwork)"
+	automatic = 1
+	fire_delay = 2
+	extra_damage = 7
+	extra_penetration = 7
+	burst_delay = 1
 
 /obj/item/gun/ballistic/automatic/assault_rifle/burst_select()
 	var/mob/living/carbon/human/user = usr
@@ -1233,7 +1250,7 @@
 	can_scope = FALSE
 
 /obj/item/gun/ballistic/automatic/rangemaster
-	name = "Colt Rangemaster"
+	name = "Colt Rangemaster (crude)"
 	desc = "A Colt Rangemaster semi-automatic rifle, chambered for 7.62x51. Single-shot only."
 	icon_state = "rangemaster"
 	item_state = "308"
@@ -1242,7 +1259,9 @@
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 	burst_size = 1
-	fire_delay = 3
+	fire_delay = 5
+	extra_penetration = -10
+	extra_damage = -10
 	can_attachments = TRUE
 	can_scope = TRUE
 	can_bayonet = TRUE
@@ -1251,7 +1270,7 @@
 	knife_y_offset = 21
 
 /obj/item/gun/ballistic/automatic/rangemaster/scoped
-	name = "Scoped Colt Rangemaster"
+	name = "Scoped Colt Rangemaster (crude)"
 	desc = "Nothing's better than seeing that surprised look on your target's face. The Loophole x20 Scope on this hunting rifle makes it easier than ever before. Accurate from first shot to last, no matter what kind of game you're gunning for."
 	icon_state = "rangemaster"
 	item_state = "scoped308"
@@ -1260,6 +1279,19 @@
 	zoom_amt = 10
 	zoom_out_amt = 13
 	can_scope = FALSE
+
+/obj/item/gun/ballistic/automatic/rangemaster/scoped/mid
+	name = "Scoped Colt Rangemaster (fair)"
+	fire_delay = 3
+	extra_penetration = 0
+	extra_damage = 0
+
+/obj/item/gun/ballistic/automatic/rangemaster/scoped/high
+	name = "Scoped Colt Rangemaster (masterwork)"
+	fire_delay = 2
+	extra_penetration = 10
+	extra_damage = 10
+
 
 /obj/item/gun/ballistic/automatic/fnfal
 	name = "FN FAL"
