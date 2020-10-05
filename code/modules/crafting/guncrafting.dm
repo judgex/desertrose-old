@@ -155,6 +155,12 @@
 							Q.amount -= 1
 							var/obj/item/prefabs/complex/stock/mid/C = new /obj/item/prefabs/complex/stock/mid
 							C.forceMove(src.loc)
+			if(istype(O,/obj/item/stack/sheet/plasteel))
+				var/obj/item/stack/sheet/Q = O
+				if(Q.amount < 1)
+					qdel(Q)
+				else
+					if(src.contents.len>0)
 						if(istype(src.contents[1],/obj/item/prefabs/mould/simpleWeaponFrame))
 							Q.amount -= 1
 							var/obj/item/prefabs/complex/simpleWeaponFrame/mid/C = new /obj/item/prefabs/complex/simpleWeaponFrame/mid
@@ -163,7 +169,7 @@
 							Q.amount -= 1
 							var/obj/item/prefabs/complex/complexWeaponFrame/mid/C = new /obj/item/prefabs/complex/complexWeaponFrame/mid
 							C.forceMove(src.loc)
-			if(istype(O,/obj/item/stack/sheet/plasteel))
+			if(istype(O,/obj/item/stack/sheet/prewar))
 				var/obj/item/stack/sheet/Q = O
 				if(Q.amount < 1)
 					qdel(Q)
