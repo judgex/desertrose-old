@@ -241,9 +241,11 @@ GLOBAL_LIST_INIT(wWeaponParts_recipes, list ( \
 	var/obj/item/prefabs/complex/barrel/m556/m556barrel
 	var/obj/item/prefabs/complex/barrel/mm10/mm10barrel
 	var/obj/item/prefabs/complex/barrel/m357/m357barrel
+	var/obj/item/prefabs/complex/barrel/mm9/mm9barrel
 	var/obj/item/prefabs/complex/barrel/m44/m44barrel
-	var/obj/item/prefabs/complex/barrel/m4570/m4570barrel
+	var/obj/item/prefabs/complex/barrel/m45/m45barrel
 	var/obj/item/prefabs/complex/barrel/m762/m762barrel
+	var/obj/item/prefabs/complex/barrel/m4570/m4570barrel
 
 	var/obj/item/prefabs/complex/trigger/trigger
 
@@ -263,6 +265,12 @@ GLOBAL_LIST_INIT(wWeaponParts_recipes, list ( \
 	icon_state = "gunframe"
 
 /obj/item/prefabs/complex/simpleWeaponFrame/attackby(obj/item/W, mob/user, params)//todo me more recipes
+	if(istype(W, /obj/item/screwdriver))
+		if(src.contents.len > 0)			
+			to_chat(usr,"You remove the [src.contents[1]] from the [src].")
+			usr.transferItemToLoc(src.contents[1],usr.loc)
+		else
+			to_chat(usr,"The weapon frame does not contain anything.")
 	if(istype(W, /obj/item/wrench))
 		if(screw&&trigger&&boltsimple&&actionsimple&&mm10barrel)//10mm
 			if(istype(src,/obj/item/prefabs/complex/simpleWeaponFrame/low))
@@ -324,6 +332,10 @@ GLOBAL_LIST_INIT(wWeaponParts_recipes, list ( \
 		usr.transferItemToLoc(W,src)
 		to_chat(usr,"You install the [W] into the [src]")
 		m556barrel = W
+	if(istype(W, /obj/item/prefabs/complex/barrel/mm9))
+		usr.transferItemToLoc(W,src)
+		to_chat(usr,"You install the [W] into the [src]")
+		mm9barrel = W
 	if(istype(W, /obj/item/prefabs/complex/barrel/mm10))
 		usr.transferItemToLoc(W,src)
 		to_chat(usr,"You install the [W] into the [src]")
@@ -375,6 +387,7 @@ GLOBAL_LIST_INIT(wWeaponParts_recipes, list ( \
 	var/obj/item/prefabs/complex/barrel/m357/m357barrel
 	var/obj/item/prefabs/complex/barrel/mm9/mm9barrel
 	var/obj/item/prefabs/complex/barrel/m44/m44barrel
+	var/obj/item/prefabs/complex/barrel/m45/m45barrel
 	var/obj/item/prefabs/complex/barrel/m762/m762barrel
 	var/obj/item/prefabs/complex/barrel/m4570/m4570barrel
 
@@ -395,6 +408,12 @@ GLOBAL_LIST_INIT(wWeaponParts_recipes, list ( \
 	icon_state = "gunframe"
 
 /obj/item/prefabs/complex/complexWeaponFrame/attackby(obj/item/W, mob/user, params)//todo me more recipes
+	if(istype(W, /obj/item/screwdriver))
+		if(src.contents.len > 0)			
+			to_chat(usr,"You remove the [src.contents[1]] from the [src].")
+			usr.transferItemToLoc(src.contents[1],usr.loc)
+		else
+			to_chat(usr,"The weapon frame does not contain anything.")
 	if(istype(W, /obj/item/wrench))
 		if(screw&&trigger&&boltsimple&&actionsimple&&m556barrel&&stockplastic)//service
 			if(istype(src,/obj/item/prefabs/complex/complexWeaponFrame/low))
@@ -469,6 +488,22 @@ GLOBAL_LIST_INIT(wWeaponParts_recipes, list ( \
 				qdel(src)
 			if(istype(src,/obj/item/prefabs/complex/complexWeaponFrame/high))
 				var/obj/item/B = new /obj/item/gun/ballistic/automatic/smg10mm/high
+				B.forceMove(usr.loc)
+				to_chat(usr,"You make a [B]")
+				qdel(src)
+		else if(screw&&trigger&&boltsimple&&actionauto&&m45barrel&&stockplastic&&receiver)//grease gun
+			if(istype(src,/obj/item/prefabs/complex/complexWeaponFrame/low))
+				var/obj/item/B = new /obj/item/gun/ballistic/automatic/greasegun
+				B.forceMove(usr.loc)
+				to_chat(usr,"You make a [B]")
+				qdel(src)
+			if(istype(src,/obj/item/prefabs/complex/complexWeaponFrame/mid))
+				var/obj/item/B = new /obj/item/gun/ballistic/automatic/greasegun/mid
+				B.forceMove(usr.loc)
+				to_chat(usr,"You make a [B]")
+				qdel(src)
+			if(istype(src,/obj/item/prefabs/complex/complexWeaponFrame/high))
+				var/obj/item/B = new /obj/item/gun/ballistic/automatic/greasegun/high
 				B.forceMove(usr.loc)
 				to_chat(usr,"You make a [B]")
 				qdel(src)
@@ -608,6 +643,10 @@ GLOBAL_LIST_INIT(wWeaponParts_recipes, list ( \
 	name = ".44 Barrel Mould"
 	desc = ""
 
+/obj/item/prefabs/mould/barrel/m45
+	name = ".45 Barrel Mould"
+	desc = ""
+
 /obj/item/prefabs/mould/barrel/m4570
 	name = ".45-70 Barrel Mould"
 	desc = ""
@@ -680,6 +719,10 @@ GLOBAL_LIST_INIT(wWeaponParts_recipes, list ( \
 
 /obj/item/prefabs/complex/barrel/m44
 	name = ".44 Barrel"
+	desc = ""
+
+/obj/item/prefabs/complex/barrel/m45
+	name = ".45 Barrel"
 	desc = ""
 
 /obj/item/prefabs/complex/barrel/m4570

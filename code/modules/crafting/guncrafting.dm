@@ -89,33 +89,37 @@
 					qdel(Q)
 				else
 					if(src.contents.len>0)
-						if(istype(src.contents[1],/obj/item/prefabs/mould/barrel/m556))
+						if(istype(src.contents[1],/obj/item/prefabs/mould/barrel/m556))//556
 							Q.amount -= 1
 							var/obj/item/prefabs/complex/barrel/m556/C = new /obj/item/prefabs/complex/barrel/m556
 							C.forceMove(src.loc)
-						if(istype(src.contents[1],/obj/item/prefabs/mould/barrel/mm9))
+						if(istype(src.contents[1],/obj/item/prefabs/mould/barrel/mm9))//9mm
 							Q.amount -= 1
-							var/obj/item/prefabs/complex/barrel/m556/C = new /obj/item/prefabs/complex/barrel/mm9
+							var/obj/item/prefabs/complex/barrel/mm9/C = new /obj/item/prefabs/complex/barrel/mm9
 							C.forceMove(src.loc)
-						if(istype(src.contents[1],/obj/item/prefabs/mould/barrel/mm10))
+						if(istype(src.contents[1],/obj/item/prefabs/mould/barrel/mm10))//10mm
 							Q.amount -= 1
-							var/obj/item/prefabs/complex/barrel/m556/C = new /obj/item/prefabs/complex/barrel/mm10
+							var/obj/item/prefabs/complex/barrel/mm10/C = new /obj/item/prefabs/complex/barrel/mm10
 							C.forceMove(src.loc)
-						if(istype(src.contents[1],/obj/item/prefabs/mould/barrel/m357))
+						if(istype(src.contents[1],/obj/item/prefabs/mould/barrel/m357))//357
 							Q.amount -= 1
-							var/obj/item/prefabs/complex/barrel/m556/C = new /obj/item/prefabs/complex/barrel/m357
+							var/obj/item/prefabs/complex/barrel/m357/C = new /obj/item/prefabs/complex/barrel/m357
 							C.forceMove(src.loc)
-						if(istype(src.contents[1],/obj/item/prefabs/mould/barrel/m44))
+						if(istype(src.contents[1],/obj/item/prefabs/mould/barrel/m44))//44
 							Q.amount -= 1
-							var/obj/item/prefabs/complex/barrel/m556/C = new /obj/item/prefabs/complex/barrel/m44
+							var/obj/item/prefabs/complex/barrel/m44/C = new /obj/item/prefabs/complex/barrel/m44
 							C.forceMove(src.loc)
-						if(istype(src.contents[1],/obj/item/prefabs/mould/barrel/m762))
+						if(istype(src.contents[1],/obj/item/prefabs/mould/barrel/m45))//45
 							Q.amount -= 1
-							var/obj/item/prefabs/complex/barrel/m556/C = new /obj/item/prefabs/complex/barrel/m762
+							var/obj/item/prefabs/complex/barrel/m45/C = new /obj/item/prefabs/complex/barrel/m45
 							C.forceMove(src.loc)
-						if(istype(src.contents[1],/obj/item/prefabs/mould/barrel/m4570))
+						if(istype(src.contents[1],/obj/item/prefabs/mould/barrel/m762))//762
 							Q.amount -= 1
-							var/obj/item/prefabs/complex/barrel/m556/C = new /obj/item/prefabs/complex/barrel/m4570
+							var/obj/item/prefabs/complex/barrel/m762/C = new /obj/item/prefabs/complex/barrel/m762
+							C.forceMove(src.loc)
+						if(istype(src.contents[1],/obj/item/prefabs/mould/barrel/m4570))//4570
+							Q.amount -= 1
+							var/obj/item/prefabs/complex/barrel/m4570/C = new /obj/item/prefabs/complex/barrel/m4570
 							C.forceMove(src.loc)
 						if(istype(src.contents[1],/obj/item/prefabs/mould/action/simple))
 							Q.amount -= 1

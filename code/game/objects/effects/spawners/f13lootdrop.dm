@@ -1440,11 +1440,9 @@
 		//obj/item/blueprint/weapon/AEP7,
 		//obj/item/blueprint/weapon/lever_action,
 		//obj/item/blueprint/weapon/kar98,
-		/obj/item/prefabs/complex/barrel/mm9,
 		/obj/item/prefabs/complex/action/auto,
 		/obj/item/prefabs/complex/bolt/high,
-		/obj/item/prefabs/complex/barrel/m4570,
-		/obj/item/prefabs/complex/barrel/mm10
+		/obj/item/prefabs/complex/barrel/m4570
 	)
 /obj/effect/spawner/lootdrop/f13/blueprintMid
 	name = "blueprint-tier(Mid) item spawner"

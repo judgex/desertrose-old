@@ -3260,7 +3260,7 @@
 	subcategory = CAT_BPWEAPON_ONEUSE
 */
 //grease gun
-
+/*
 /datum/crafting_recipe/grease_gun
 	name = "Grease gun"
 	result = /obj/item/gun/ballistic/automatic/greasegun
@@ -3285,7 +3285,7 @@
 	time = 120
 	category = CAT_BLUEPRINTS
 	subcategory = CAT_BPWEAPON_ONEUSE
-
+*/
 //marksman rifle
 
 /datum/crafting_recipe/marksmanrifle
@@ -3319,7 +3319,7 @@
 
 /datum/crafting_recipe/brush
 	name = "Brush gun"
-	result = /obj/item/gun/ballistic/automatic/marksman
+	result = /obj/item/gun/ballistic/shotgun/automatic/hunting/brush
 	reqs = list(/obj/item/stack/sheet/metal = 10,
 				/obj/item/advanced_crafting_components/assembly = 1,
 				/datum/reagent/blackpowder = 30,
@@ -3332,7 +3332,7 @@
 
 /datum/crafting_recipe/brush_lim
 	name = "Brush gun"
-	result = /obj/item/gun/ballistic/automatic/marksman
+	result = /obj/item/gun/ballistic/shotgun/automatic/hunting/brush
 	reqs = list(/obj/item/stack/sheet/metal = 10,
 				/obj/item/advanced_crafting_components/assembly = 1,
 				/datum/reagent/blackpowder = 30,
@@ -3894,9 +3894,45 @@
 	category = CAT_MOULD
 	subcategory = CAT_MOULD_ONE
 
-/datum/crafting_recipe/mould/simpleaction
+/datum/crafting_recipe/mould/mm9barrel
 	result = /obj/item/prefabs/mould/barrel/mm9
 	name = "9mm Barrel Mould"
+	tools = list(TOOL_FORGE, TOOL_GUNTIER1)
+	traits = list(TRAIT_GUNSMITH_ONE)
+	time = 30
+	category = CAT_MOULD
+	subcategory = CAT_MOULD_ONE
+
+/datum/crafting_recipe/mould/mm10barrel
+	result = /obj/item/prefabs/mould/barrel/mm10
+	name = "10mm Barrel Mould"
+	tools = list(TOOL_FORGE, TOOL_GUNTIER2)
+	traits = list(TRAIT_GUNSMITH_TWO)
+	time = 30
+	category = CAT_MOULD
+	subcategory = CAT_MOULD_ONE
+
+/datum/crafting_recipe/mould/m44barrel
+	result = /obj/item/prefabs/mould/barrel/m44
+	name = ".44 Barrel Mould"
+	tools = list(TOOL_FORGE, TOOL_GUNTIER2)
+	traits = list(TRAIT_GUNSMITH_TWO)
+	time = 30
+	category = CAT_MOULD
+	subcategory = CAT_MOULD_ONE
+
+/datum/crafting_recipe/mould/m357barrel
+	result = /obj/item/prefabs/mould/barrel/m357
+	name = ".357 Barrel Mould"
+	tools = list(TOOL_FORGE, TOOL_GUNTIER1)
+	traits = list(TRAIT_GUNSMITH_ONE)
+	time = 30
+	category = CAT_MOULD
+	subcategory = CAT_MOULD_ONE
+
+/datum/crafting_recipe/mould/m45barrel
+	result = /obj/item/prefabs/mould/barrel/m45
+	name = ".45 Barrel Mould"
 	tools = list(TOOL_FORGE, TOOL_GUNTIER1)
 	traits = list(TRAIT_GUNSMITH_ONE)
 	time = 30
