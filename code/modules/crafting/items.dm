@@ -210,18 +210,10 @@
 	desc = ""
 	//icon_state = ""
 
-GLOBAL_LIST_INIT(wWeaponParts_recipes, list ( \
-	new/datum/stack_recipe("Wooden Stock", /obj/item/prefabs/complex/stock/low, 2, time = 50)
-	))
-
 /obj/item/stack/prefabs/wWeaponParts
 	name = "Wooden Weapon Parts"
 	desc = ""
 	//icon_state = ""
-
-/obj/item/stack/prefabs/wWeaponParts/Initialize(mapload, new_amount, merge = TRUE)
-	recipes = GLOB.wWeaponParts_recipes
-	return ..()
 
 /obj/item/stack/prefabs/pWeaponParts
 	name = "Plastic Weapon Parts"
@@ -242,7 +234,6 @@ GLOBAL_LIST_INIT(wWeaponParts_recipes, list ( \
 	var/obj/item/prefabs/complex/barrel/mm10/mm10barrel
 	var/obj/item/prefabs/complex/barrel/mm9/mm9barrel
 	var/obj/item/prefabs/complex/barrel/m357/m357barrel
-	var/obj/item/prefabs/complex/barrel/mm9/mm9barrel
 	var/obj/item/prefabs/complex/barrel/m44/m44barrel
 	var/obj/item/prefabs/complex/barrel/m45/m45barrel
 	var/obj/item/prefabs/complex/barrel/m762/m762barrel

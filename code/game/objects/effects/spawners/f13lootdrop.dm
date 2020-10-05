@@ -1491,7 +1491,7 @@
 		/obj/item/blueprint/weapon/plasmarifle,
 		/obj/item/blueprint/weapon/AER9,
 		/obj/item/blueprint/weapon/AM_rifle,
-		/obj/item/blueprint/weapon/city_killer,
+		/obj/item/blueprint/weapon/city_killer
 		//obj/item/blueprint/weapon/rangemaster
 	)
 /obj/effect/spawner/lootdrop/f13/blueprintVHighBallistics
