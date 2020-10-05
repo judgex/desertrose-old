@@ -713,7 +713,7 @@
 
 
 /obj/item/clothing/suit/armor/f13/rangercombat/eliteriot/reclaimed
-	name = "reclaimed desert ranger helmet"
+	name = "reclaimed desert ranger overcoat"
 	desc = "A refurbished and personalized set of pre-unification desert ranger gear."
 	icon_state = "reclaimed_desert_ranger"
 	item_state = "reclaimed_desert_ranger"
