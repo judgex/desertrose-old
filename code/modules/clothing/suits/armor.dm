@@ -560,6 +560,16 @@
 	armor = list("melee" = 45, "bullet" = 55, "laser" = 45, "energy" = 45, "bomb" = 55, "bio" = 65, "rad" = 10, "fire" = 60, "acid" = 20)
 	icon = 'icons/fallout/clothing_w/suit.dmi'
 
+/obj/item/clothing/suit/armor/f13/gunnerplates
+	name = "gunner armor"
+	desc = "An old military grade pre war combat armor. This armor has a skull painted on the back to symbolize the gunners."
+	icon_state = "GunnerPlates"
+	item_state = "GunnerPlates"
+	slowdown = 0
+	flags_inv = HIDEJUMPSUIT|HIDENECK
+	icon = 'icons/fallout/clothing_w/suit.dmi'
+	armor = list("melee" = 45, "bullet" = 55, "laser" = 45, "energy" = 45, "bomb" = 55, "bio" = 65, "rad" = 10, "fire" = 60, "acid" = 20)
+
 /obj/item/clothing/suit/armor/f13/combatmk2leg
 	name = "legatus armor mk2"
 	desc = "An old military grade pre war combat armor, specially designed for a Legionary Legatus."
