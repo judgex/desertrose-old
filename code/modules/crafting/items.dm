@@ -210,18 +210,10 @@
 	desc = ""
 	//icon_state = ""
 
-GLOBAL_LIST_INIT(wWeaponParts_recipes, list ( \
-	new/datum/stack_recipe("Wooden Stock", /obj/item/prefabs/complex/stock/low, 2, time = 50)
-	))
-
 /obj/item/stack/prefabs/wWeaponParts
 	name = "Wooden Weapon Parts"
 	desc = ""
 	//icon_state = ""
-
-/obj/item/stack/prefabs/wWeaponParts/Initialize(mapload, new_amount, merge = TRUE)
-	recipes = GLOB.wWeaponParts_recipes
-	return ..()
 
 /obj/item/stack/prefabs/pWeaponParts
 	name = "Plastic Weapon Parts"
@@ -240,10 +232,12 @@ GLOBAL_LIST_INIT(wWeaponParts_recipes, list ( \
 
 	var/obj/item/prefabs/complex/barrel/m556/m556barrel
 	var/obj/item/prefabs/complex/barrel/mm10/mm10barrel
+	var/obj/item/prefabs/complex/barrel/mm9/mm9barrel
 	var/obj/item/prefabs/complex/barrel/m357/m357barrel
 	var/obj/item/prefabs/complex/barrel/m44/m44barrel
-	var/obj/item/prefabs/complex/barrel/m4570/m4570barrel
+	var/obj/item/prefabs/complex/barrel/m45/m45barrel
 	var/obj/item/prefabs/complex/barrel/m762/m762barrel
+	var/obj/item/prefabs/complex/barrel/m4570/m4570barrel
 
 	var/obj/item/prefabs/complex/trigger/trigger
 
@@ -255,12 +249,20 @@ GLOBAL_LIST_INIT(wWeaponParts_recipes, list ( \
 
 	var/obj/item/prefabs/complex/screw/screw
 
-
+	var/obj/item/advanced_crafting_components/alloys/alloys
+	var/obj/item/advanced_crafting_components/receiver/receiver
+	var/obj/item/advanced_crafting_components/assembly/assembly
 	name = "Simple Weapon Frame"
 	desc = ""
 	icon_state = "gunframe"
 
 /obj/item/prefabs/complex/simpleWeaponFrame/attackby(obj/item/W, mob/user, params)//todo me more recipes
+	if(istype(W, /obj/item/screwdriver))
+		if(src.contents.len > 0)			
+			to_chat(usr,"You remove the [src.contents[1]] from the [src].")
+			usr.transferItemToLoc(src.contents[1],usr.loc)
+		else
+			to_chat(usr,"The weapon frame does not contain anything.")
 	if(istype(W, /obj/item/wrench))
 		if(screw&&trigger&&boltsimple&&actionsimple&&mm10barrel)//10mm
 			if(istype(src,/obj/item/prefabs/complex/simpleWeaponFrame/low))
@@ -294,6 +296,18 @@ GLOBAL_LIST_INIT(wWeaponParts_recipes, list ( \
 				qdel(src)
 		else 
 			to_chat(usr,"This isn't quite right...")
+	if(istype(W, /obj/item/advanced_crafting_components/alloys))
+		usr.transferItemToLoc(W,src)
+		to_chat(usr,"You install the [W] into the [src]")
+		alloys = W
+	if(istype(W, /obj/item/advanced_crafting_components/receiver))
+		usr.transferItemToLoc(W,src)
+		to_chat(usr,"You install the [W] into the [src]")
+		receiver = W
+	if(istype(W, /obj/item/advanced_crafting_components/assembly))
+		usr.transferItemToLoc(W,src)
+		to_chat(usr,"You install the [W] into the [src]")
+		assembly = W
 	if(istype(W, /obj/item/prefabs/complex/action/simple))
 		usr.transferItemToLoc(W,src)
 		to_chat(usr,"You install the [W] into the [src]")
@@ -310,26 +324,30 @@ GLOBAL_LIST_INIT(wWeaponParts_recipes, list ( \
 		usr.transferItemToLoc(W,src)
 		to_chat(usr,"You install the [W] into the [src]")
 		m556barrel = W
-	if(istype(W, /obj/item/prefabs/complex/barrel/m556))
+	if(istype(W, /obj/item/prefabs/complex/barrel/mm9))
+		usr.transferItemToLoc(W,src)
+		to_chat(usr,"You install the [W] into the [src]")
+		mm9barrel = W
+	if(istype(W, /obj/item/prefabs/complex/barrel/mm10))
 		usr.transferItemToLoc(W,src)
 		to_chat(usr,"You install the [W] into the [src]")
 		mm10barrel = W
-	if(istype(W, /obj/item/prefabs/complex/barrel/m556))
+	if(istype(W, /obj/item/prefabs/complex/barrel/m357))
 		usr.transferItemToLoc(W,src)
 		to_chat(usr,"You install the [W] into the [src]")
 		m357barrel = W
-	if(istype(W, /obj/item/prefabs/complex/barrel/m556))
+	if(istype(W, /obj/item/prefabs/complex/barrel/m44))
 		usr.transferItemToLoc(W,src)
 		to_chat(usr,"You install the [W] into the [src]")
 		m44barrel = W
-	if(istype(W, /obj/item/prefabs/complex/barrel/m556))
+	if(istype(W, /obj/item/prefabs/complex/barrel/m762))
 		usr.transferItemToLoc(W,src)
 		to_chat(usr,"You install the [W] into the [src]")
 		m762barrel = W
-	if(istype(W, /obj/item/prefabs/complex/barrel/m556))
+	if(istype(W, /obj/item/prefabs/complex/barrel/m4570))
 		usr.transferItemToLoc(W,src)
 		to_chat(usr,"You install the [W] into the [src]")
-		m556barrel = W
+		m4570barrel = W
 	if(istype(W, /obj/item/prefabs/complex/bolt/simple))
 		usr.transferItemToLoc(W,src)
 		to_chat(usr,"You install the [W] into the [src]")
@@ -361,6 +379,7 @@ GLOBAL_LIST_INIT(wWeaponParts_recipes, list ( \
 	var/obj/item/prefabs/complex/barrel/m357/m357barrel
 	var/obj/item/prefabs/complex/barrel/mm9/mm9barrel
 	var/obj/item/prefabs/complex/barrel/m44/m44barrel
+	var/obj/item/prefabs/complex/barrel/m45/m45barrel
 	var/obj/item/prefabs/complex/barrel/m762/m762barrel
 	var/obj/item/prefabs/complex/barrel/m4570/m4570barrel
 
@@ -373,11 +392,20 @@ GLOBAL_LIST_INIT(wWeaponParts_recipes, list ( \
 	var/obj/item/prefabs/complex/stock/low/stockwood
 	var/obj/item/prefabs/complex/screw/screw
 
+	var/obj/item/advanced_crafting_components/alloys/alloys
+	var/obj/item/advanced_crafting_components/receiver/receiver
+	var/obj/item/advanced_crafting_components/assembly/assembly
 	name = "Complex Weapon Frame"
 	desc = ""
 	icon_state = "gunframe"
 
 /obj/item/prefabs/complex/complexWeaponFrame/attackby(obj/item/W, mob/user, params)//todo me more recipes
+	if(istype(W, /obj/item/screwdriver))
+		if(src.contents.len > 0)			
+			to_chat(usr,"You remove the [src.contents[1]] from the [src].")
+			usr.transferItemToLoc(src.contents[1],usr.loc)
+		else
+			to_chat(usr,"The weapon frame does not contain anything.")
 	if(istype(W, /obj/item/wrench))
 		if(screw&&trigger&&boltsimple&&actionsimple&&m556barrel&&stockplastic)//service
 			if(istype(src,/obj/item/prefabs/complex/complexWeaponFrame/low))
@@ -407,14 +435,116 @@ GLOBAL_LIST_INIT(wWeaponParts_recipes, list ( \
 				B.forceMove(usr.loc)
 				to_chat(usr,"You make a [B]")
 				qdel(src)
-		else if(screw&&trigger&&boltsimple&&actionauto&&mm9barrel&&stockwood)//pps
+		else if(screw&&trigger&&boltsimple&&actionauto&&mm9barrel&&stockwood&&receiver)//pps
 			if(istype(src,/obj/item/prefabs/complex/complexWeaponFrame/low))
 				var/obj/item/B = new /obj/item/gun/ballistic/automatic/pps
 				B.forceMove(usr.loc)
 				to_chat(usr,"You make a [B]")
 				qdel(src)
-		else 
+			if(istype(src,/obj/item/prefabs/complex/complexWeaponFrame/mid))
+				var/obj/item/B = new /obj/item/gun/ballistic/automatic/pps/mid
+				B.forceMove(usr.loc)
+				to_chat(usr,"You make a [B]")
+				qdel(src)
+			if(istype(src,/obj/item/prefabs/complex/complexWeaponFrame/high))
+				var/obj/item/B = new /obj/item/gun/ballistic/automatic/pps/high
+				B.forceMove(usr.loc)
+				to_chat(usr,"You make a [B]")
+				qdel(src)
+		else if(screw&&trigger&&boltsimple&&actionauto&&mm9barrel&&stockplastic&&receiver)//uzi
+			if(istype(src,/obj/item/prefabs/complex/complexWeaponFrame/low))
+				var/obj/item/B = new /obj/item/gun/ballistic/automatic/mini_uzi
+				B.forceMove(usr.loc)
+				to_chat(usr,"You make a [B]")
+				qdel(src)
+			if(istype(src,/obj/item/prefabs/complex/complexWeaponFrame/mid))
+				var/obj/item/B = new /obj/item/gun/ballistic/automatic/mini_uzi/mid
+				B.forceMove(usr.loc)
+				to_chat(usr,"You make a [B]")
+				qdel(src)
+			if(istype(src,/obj/item/prefabs/complex/complexWeaponFrame/high))
+				var/obj/item/B = new /obj/item/gun/ballistic/automatic/mini_uzi/high
+				B.forceMove(usr.loc)
+				to_chat(usr,"You make a [B]")
+				qdel(src)
+		else if(screw&&trigger&&boltsimple&&actionauto&&mm10barrel&&stockplastic&&receiver)//10mmsmg
+			if(istype(src,/obj/item/prefabs/complex/complexWeaponFrame/low))
+				var/obj/item/B = new /obj/item/gun/ballistic/automatic/smg10mm
+				B.forceMove(usr.loc)
+				to_chat(usr,"You make a [B]")
+				qdel(src)
+			if(istype(src,/obj/item/prefabs/complex/complexWeaponFrame/mid))
+				var/obj/item/B = new /obj/item/gun/ballistic/automatic/smg10mm/mid
+				B.forceMove(usr.loc)
+				to_chat(usr,"You make a [B]")
+				qdel(src)
+			if(istype(src,/obj/item/prefabs/complex/complexWeaponFrame/high))
+				var/obj/item/B = new /obj/item/gun/ballistic/automatic/smg10mm/high
+				B.forceMove(usr.loc)
+				to_chat(usr,"You make a [B]")
+				qdel(src)
+		else if(screw&&trigger&&boltsimple&&actionauto&&m45barrel&&stockplastic&&receiver)//grease gun
+			if(istype(src,/obj/item/prefabs/complex/complexWeaponFrame/low))
+				var/obj/item/B = new /obj/item/gun/ballistic/automatic/greasegun
+				B.forceMove(usr.loc)
+				to_chat(usr,"You make a [B]")
+				qdel(src)
+			if(istype(src,/obj/item/prefabs/complex/complexWeaponFrame/mid))
+				var/obj/item/B = new /obj/item/gun/ballistic/automatic/greasegun/mid
+				B.forceMove(usr.loc)
+				to_chat(usr,"You make a [B]")
+				qdel(src)
+			if(istype(src,/obj/item/prefabs/complex/complexWeaponFrame/high))
+				var/obj/item/B = new /obj/item/gun/ballistic/automatic/greasegun/high
+				B.forceMove(usr.loc)
+				to_chat(usr,"You make a [B]")
+				qdel(src)
+		else if(screw&&trigger&&boltadvanced&&actionsimple&&m762barrel&&stockplastic&&receiver&&assembly)//rangemaster
+			if(istype(src,/obj/item/prefabs/complex/complexWeaponFrame/low))
+				var/obj/item/B = new /obj/item/gun/ballistic/automatic/rangemaster/scoped
+				B.forceMove(usr.loc)
+				to_chat(usr,"You make a [B]")
+				qdel(src)
+			if(istype(src,/obj/item/prefabs/complex/complexWeaponFrame/mid))
+				var/obj/item/B = new /obj/item/gun/ballistic/automatic/rangemaster/scoped/mid
+				B.forceMove(usr.loc)
+				to_chat(usr,"You make a [B]")
+				qdel(src)
+			if(istype(src,/obj/item/prefabs/complex/complexWeaponFrame/high))
+				var/obj/item/B = new /obj/item/gun/ballistic/automatic/rangemaster/scoped/high
+				B.forceMove(usr.loc)
+				to_chat(usr,"You make a [B]")
+				qdel(src)
+		else if(screw&&trigger&&boltadvanced&&actionauto&&m556barrel&&stockplastic&&receiver&&assembly)//assault rifle
+			if(istype(src,/obj/item/prefabs/complex/complexWeaponFrame/low))
+				var/obj/item/B = new /obj/item/gun/ballistic/automatic/assault_rifle
+				B.forceMove(usr.loc)
+				to_chat(usr,"You make a [B]")
+				qdel(src)
+			if(istype(src,/obj/item/prefabs/complex/complexWeaponFrame/mid))
+				var/obj/item/B = new /obj/item/gun/ballistic/automatic/assault_rifle/mid
+				B.forceMove(usr.loc)
+				to_chat(usr,"You make a [B]")
+				qdel(src)
+			if(istype(src,/obj/item/prefabs/complex/complexWeaponFrame/high))
+				var/obj/item/B = new /obj/item/gun/ballistic/automatic/assault_rifle/high
+				B.forceMove(usr.loc)
+				to_chat(usr,"You make a [B]")
+				qdel(src)
+		else
 			to_chat(usr,"This isn't quite right...")
+	if(istype(W, /obj/item/advanced_crafting_components/alloys))
+		usr.transferItemToLoc(W,src)
+		to_chat(usr,"You install the [W] into the [src]")
+		alloys = W
+	if(istype(W, /obj/item/advanced_crafting_components/receiver))
+		usr.transferItemToLoc(W,src)
+		to_chat(usr,"You install the [W] into the [src]")
+		receiver = W
+	if(istype(W, /obj/item/advanced_crafting_components/assembly))
+		usr.transferItemToLoc(W,src)
+		to_chat(usr,"You install the [W] into the [src]")
+		assembly = W
 	if(istype(W, /obj/item/prefabs/complex/action/simple))
 		usr.transferItemToLoc(W,src)
 		to_chat(usr,"You install the [W] into the [src]")
@@ -438,7 +568,7 @@ GLOBAL_LIST_INIT(wWeaponParts_recipes, list ( \
 	if(istype(W, /obj/item/prefabs/complex/barrel/mm9))
 		usr.transferItemToLoc(W,src)
 		to_chat(usr,"You install the [W] into the [src]")
-		mm10barrel = W
+		mm9barrel = W
 	if(istype(W, /obj/item/prefabs/complex/barrel/m357))
 		usr.transferItemToLoc(W,src)
 		to_chat(usr,"You install the [W] into the [src]")
@@ -537,6 +667,10 @@ GLOBAL_LIST_INIT(wWeaponParts_recipes, list ( \
 	name = ".44 Barrel Mould"
 	desc = ""
 
+/obj/item/prefabs/mould/barrel/m45
+	name = ".45 Barrel Mould"
+	desc = ""
+
 /obj/item/prefabs/mould/barrel/m4570
 	name = ".45-70 Barrel Mould"
 	desc = ""
@@ -609,6 +743,10 @@ GLOBAL_LIST_INIT(wWeaponParts_recipes, list ( \
 
 /obj/item/prefabs/complex/barrel/m44
 	name = ".44 Barrel"
+	desc = ""
+
+/obj/item/prefabs/complex/barrel/m45
+	name = ".45 Barrel"
 	desc = ""
 
 /obj/item/prefabs/complex/barrel/m4570

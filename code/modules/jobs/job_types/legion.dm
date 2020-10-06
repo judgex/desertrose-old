@@ -576,8 +576,8 @@ Veteran Legionary
 
 	loadout_options = list(
 	/datum/outfit/loadout/vetlegassault, //scoped .44 revolver
-	/datum/outfit/loadout/vetlegbreach, //lever-action shotgun
-	/datum/outfit/loadout/vetlegclose //shotgun
+	/datum/outfit/loadout/vetlegrange, //marksman rifle
+	/datum/outfit/loadout/vetlegclose //lever-action shotgun
 	)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13vetlegionary/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -597,9 +597,7 @@ Veteran Legionary
 	ears	=		/obj/item/radio/headset/headset_legion
 	backpack_contents = list(
 		/obj/item/restraints/legcuffs/bola=1, \
-		/obj/item/throwing_star/spear, \
-		/obj/item/claymore/machete/reinforced=1, \
-		/obj/item/reagent_containers/pill/patch/healingpowder=2, \
+		/obj/item/reagent_containers/pill/patch/healingpowder=3, \
 		/obj/item/flashlight/lantern=1, \
 		/obj/item/storage/bag/money/small/legenlisted,
 		/obj/item/radio)
@@ -607,28 +605,30 @@ Veteran Legionary
 
 /datum/outfit/loadout/vetlegassault
 	name = "Assault Legionary"
-	suit_store = /obj/item/gun/ballistic/revolver/thatgun
+	suit_store = /obj/item/gun/ballistic/automatic/mini_uzi
 	backpack_contents = list(
-		/obj/item/twohanded/fireaxe=1,
+		/obj/item/ammo_box/magazine/uzim9mm=2 ,
 		)
 
-/datum/outfit/loadout/vetlegbreach
-	name = "Foot Legionary"
-	suit_store = /obj/item/gun/ballistic/shotgun/automatic/hunting/trail
+/datum/outfit/loadout/vetlegrange
+	name = "Ranged Legionary"
+	suit_store = /obj/item/gun/ballistic/automatic/marksman
 	backpack_contents = list(
-		/obj/item/ammo_box/tube/m44=1,
+		/obj/item/ammo_box/magazine/m556/rifle=2,
 		)
 
 /datum/outfit/loadout/vetlegclose
 	name = "Protector Legionary"
 	suit_store = /obj/item/gun/ballistic/shotgun/trench
 	backpack_contents = list(
-		/obj/item/storage/box/slugshot=1,
+		/obj/item/storage/box/slugshot=1, \
+		/obj/item/storage/box/beanbag=1, \
 		/obj/item/shield/riot/roman=1
 		)
 
 /datum/job/CaesarsLegion/Legionnaire/f13vetlegionary/after_spawn(mob/living/carbon/human/H, mob/M)
 	H.add_quirk("Big Leagues")
+	H.add_quirk("Hard Yards")
 
 /*
 Prime Legionairy
@@ -647,7 +647,9 @@ Prime Legionairy
 
 	loadout_options = list(
 	/datum/outfit/loadout/legassault, //.357 revolver
-	/datum/outfit/loadout/legbreach //hunting shotgun
+	/datum/outfit/loadout/legline, //glaive
+	/datum/outfit/loadout/legbreach, //hunting shotgun
+	/datum/outfit/loadout/legrange //trail carbine
 	)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13legionary/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -667,8 +669,6 @@ Prime Legionairy
 	ears	=		/obj/item/radio/headset/headset_legion
 	backpack_contents = list(
 		/obj/item/restraints/legcuffs/bola=1, \
-		/obj/item/throwing_star/spear, \
-		/obj/item/claymore/machete=1, \
 		/obj/item/reagent_containers/pill/patch/healingpowder=2, \
 		/obj/item/flashlight/flare/torch=1, \
 		/obj/item/radio)
@@ -676,15 +676,34 @@ Prime Legionairy
 
 /datum/outfit/loadout/legassault
 	name = "Foot Legionary"
-	suit_store = /obj/item/gun/ballistic/revolver/colt357
+	suit_store = /obj/item/gun/ballistic/revolver/thatgun
 	backpack_contents = list(
-		/obj/item/ammo_box/a357=2)
+		/obj/item/storage/backpack/spearquiver=1, \
+		/obj/item/claymore/machete/reinforced=1, \
+		/obj/item/ammo_box/magazine/m556/rifle=2)
+
+/datum/outfit/loadout/legline
+	name = "Lineman"
+	suit_store = /obj/item/twohanded/spear
+	backpack_contents = list(
+		/obj/item/gun/ballistic/automatic/pistol/n99, \
+		/obj/item/ammo_box/magazine/m10mm_adv=2, \
+		/obj/item/claymore/machete/reinforced)
 
 /datum/outfit/loadout/legbreach
 	name = "Close Quarters Legionary"
 	suit_store = /obj/item/gun/ballistic/shotgun/hunting
 	backpack_contents = list(
-		/obj/item/storage/box/lethalshot=1)
+		/obj/item/storage/box/slugshot=1, \
+		/obj/item/storage/box/beanbag=1, \
+		/obj/item/claymore/machete/gladius=1)
+
+/datum/outfit/loadout/legrange
+	name = "Ranged Legionary"
+	suit_store = /obj/item/gun/ballistic/shotgun/automatic/hunting/trail/scoped
+	backpack_contents = list(
+		/obj/item/ammo_box/tube/m44=2, \
+		/obj/item/claymore/machete/reinforced)
 
 /datum/job/CaesarsLegion/Legionnaire/f13legionary/after_spawn(mob/living/carbon/human/H, mob/M)
 	H.add_quirk("Big Leagues")
@@ -720,12 +739,14 @@ Recruit Legionary
 	head = 			/obj/item/clothing/head/helmet/f13/legion/recruit
 	mask =			/obj/item/clothing/mask/bandana/legrecruit
 	glasses = 		/obj/item/clothing/glasses/legiongoggles
+	ears	=		/obj/item/radio/headset/headset_legion
 	r_pocket =      /obj/item/restraints/handcuffs
-	suit_store =	/obj/item/gun/ballistic/revolver/pipe_rifle
+	suit_store =	/obj/item/gun/ballistic/revolver/colt357
 	backpack_contents = list(
-		/obj/item/kitchen/knife/butcher, \
-		/obj/item/flashlight/flare/torch=1,
-		/obj/item/radio)
+		/obj/item/kitchen/knife/butcher=1, \
+		/obj/item/reagent_containers/pill/patch/healingpowder=2, \
+		/obj/item/flashlight/flare/torch=1, \
+		/obj/item/restraints/handcuffs)
 
 /*
 Venator
