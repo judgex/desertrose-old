@@ -839,7 +839,7 @@
 	item_color = "combat"
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 20, "fire" = 20, "acid" = 40)
 
-/obj/item/clothing/under/f13/guner
+/obj/item/clothing/under/f13/gunner
 	name = "combat uniform"
 	desc = "An ancient combat uniform, that went out of use around the time of the Great War."
 	icon_state = "GunnerPlates"
