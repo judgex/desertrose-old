@@ -479,7 +479,7 @@
 	return
 
 /obj/item/gun/ballistic/automatic/mini_uzi
-	name = "\improper Type U3 Uzi (crude)"
+	name = "\improper Type U3 Uzi (standard)"
 	desc = "A lightweight, burst-fire submachine gun, for when you really want someone dead. Uses 9mm rounds."
 	icon_state = "mini-uzi"
 	mag_type = /obj/item/ammo_box/magazine/uzim9mm
@@ -500,7 +500,7 @@
 	can_suppress = TRUE
 
 /obj/item/gun/ballistic/automatic/mini_uzi/mid
-	name = "\improper Type U3 Uzi (fair)"
+	name = "\improper Type U3 Uzi (improved)"
 	desc = "A lightweight, burst-fire submachine gun, for when you really want someone dead. Uses 9mm rounds."
 	fire_delay = 3
 
@@ -535,7 +535,7 @@
 	return
 
 /obj/item/gun/ballistic/automatic/pps
-	name = "\improper ancient SMG (crude)"
+	name = "\improper ancient SMG (standard)"
 	desc = "An extremely fast firing, innacurate SMG from past wars. Low fire rate and low damage. Uses 9mm rounds."
 	icon_state = "pps"
 	mag_type = /obj/item/ammo_box/magazine/uzim9mm
@@ -553,7 +553,7 @@
 	extra_damage = -14
 
 /obj/item/gun/ballistic/automatic/pps/mid
-	name = "\improper ancient SMG (fair)"
+	name = "\improper ancient SMG (improved)"
 	burst_size = 3
 	burst_delay = 1
 	fire_delay = 7
@@ -646,7 +646,7 @@
 	return
 
 /obj/item/gun/ballistic/automatic/smg10mm
-	name = "10mm submachine gun (crude)"
+	name = "10mm submachine gun (standard)"
 	desc = "A select fire open bolt 10mm submachine gun. The serial number and manufactuer markings have been scratched off."
 	icon_state = "smg10mm"
 	item_state = "smg10mm"
@@ -744,7 +744,7 @@
 	return
 
 /obj/item/gun/ballistic/automatic/assault_rifle
-	name = "assault rifle (crude)"
+	name = "assault rifle (standard)"
 	desc = "A standard R91 assault rifle, out of use around the time of the Great War."
 	icon_state = "assault_rifle"
 	item_state = "fnfal"
@@ -767,7 +767,7 @@
 	knife_y_offset = 11
 
 /obj/item/gun/ballistic/automatic/assault_rifle/mid
-	name = "assault rifle (fair)"
+	name = "assault rifle (improved)"
 	automatic = 1
 	fire_delay = 3
 	extra_penetration = 0
@@ -778,8 +778,8 @@
 	name = "assault rifle (masterwork)"
 	automatic = 1
 	fire_delay = 2
-	extra_damage = 7
-	extra_penetration = 7
+	extra_damage = 4
+	extra_penetration = 4
 	burst_delay = 1
 
 /obj/item/gun/ballistic/automatic/assault_rifle/burst_select()
@@ -896,7 +896,7 @@
 	item_state = "gold_sniper"
 
 /obj/item/gun/ballistic/automatic/marksman/servicerifle
-	name = "service rifle (crude)"
+	name = "service rifle (standard)"
 	desc = "A 5.56x45 semi-automatic service rifle manufactured by the NCR and issued to all combat personnel."
 	icon_state = "service_rifle"
 	item_state = "servicerifle"
@@ -911,7 +911,7 @@
 	knife_y_offset = 12
 
 /obj/item/gun/ballistic/automatic/marksman/servicerifle/mid
-	name = "service rifle (fair)"
+	name = "service rifle (improved)"
 	desc = "A 5.56x45 semi-automatic service rifle manufactured by the NCR and issued to all combat personnel."
 	icon_state = "service_rifle"
 	item_state = "servicerifle"
@@ -1024,7 +1024,7 @@
 	force = 40
 
 /obj/item/gun/ballistic/automatic/greasegun
-	name = "M3A1 Grease Gun (crude)"
+	name = "M3A1 Grease Gun (standard)"
 	desc = "An inexpensive .45 ACP submachine gun. Slow fire rate means less waste of ammo and controllable bursts."
 	icon_state = "grease_gun"
 	item_state = "smg9mm"
@@ -1042,7 +1042,7 @@
 	can_attachments = TRUE
 
 /obj/item/gun/ballistic/automatic/greasegun/mid
-	name = "M3A1 Grease Gun (fair)"
+	name = "M3A1 Grease Gun (improved)"
 	fire_delay = 3
 	burst_delay = 3
 
@@ -1250,7 +1250,7 @@
 	can_scope = FALSE
 
 /obj/item/gun/ballistic/automatic/rangemaster
-	name = "Colt Rangemaster (crude)"
+	name = "Colt Rangemaster (standard)"
 	desc = "A Colt Rangemaster semi-automatic rifle, chambered for 7.62x51. Single-shot only."
 	icon_state = "rangemaster"
 	item_state = "308"
@@ -1270,7 +1270,7 @@
 	knife_y_offset = 21
 
 /obj/item/gun/ballistic/automatic/rangemaster/scoped
-	name = "Scoped Colt Rangemaster (crude)"
+	name = "Scoped Colt Rangemaster (standard)"
 	desc = "Nothing's better than seeing that surprised look on your target's face. The Loophole x20 Scope on this hunting rifle makes it easier than ever before. Accurate from first shot to last, no matter what kind of game you're gunning for."
 	icon_state = "rangemaster"
 	item_state = "scoped308"
@@ -1281,7 +1281,7 @@
 	can_scope = FALSE
 
 /obj/item/gun/ballistic/automatic/rangemaster/scoped/mid
-	name = "Scoped Colt Rangemaster (fair)"
+	name = "Scoped Colt Rangemaster (improved)"
 	fire_delay = 3
 	extra_penetration = 0
 	extra_damage = 0
