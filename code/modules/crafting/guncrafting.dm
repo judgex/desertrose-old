@@ -144,7 +144,7 @@
 							C.forceMove(src.loc)
 						if(istype(src.contents[1],/obj/item/prefabs/mould/complexWeaponFrame))
 							Q.amount -= 1
-							var/obj/item/prefabs/complex/complexWeaponFrame/C = new /obj/item/prefabs/complex/complexWeaponFrame
+							var/obj/item/prefabs/complex/complexWeaponFrame/low/C = new /obj/item/prefabs/complex/complexWeaponFrame/low
 							C.forceMove(src.loc)
 						if(istype(src.contents[1],/obj/item/prefabs/mould/trigger))
 							Q.amount -= 1
