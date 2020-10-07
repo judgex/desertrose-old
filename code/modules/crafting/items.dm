@@ -607,22 +607,22 @@
 		screw = W
 
 /obj/item/prefabs/complex/simpleWeaponFrame/low
-	name = "Simple Weapon Frame (crude)"
+	name = "Simple Weapon Frame (standard)"
 	desc = ""
 	icon_state = "gunframe"
 
 /obj/item/prefabs/complex/complexWeaponFrame/low
-	name = "Complex Weapon Frame (crude)"
+	name = "Complex Weapon Frame (standard)"
 	desc = ""
 	icon_state = "gunframe"
 
 /obj/item/prefabs/complex/simpleWeaponFrame/mid
-	name = "Simple Weapon Frame (fair)"
+	name = "Simple Weapon Frame (improved)"
 	desc = ""
 	//icon_state = ""
 
 /obj/item/prefabs/complex/complexWeaponFrame/mid
-	name = "Complex Weapon Frame (fair)"
+	name = "Complex Weapon Frame (improved)"
 	desc = ""
 	//icon_state = ""
 

@@ -1825,7 +1825,7 @@
 	subcategory = CAT_WEAPON
 */
 /*/datum/crafting_recipe/servicerifle
-	name = "service rifle (crude)"
+	name = "service rifle (standard)"
 	result = /obj/item/gun/ballistic/automatic/marksman/servicerifle
 	reqs = list(/obj/item/prefabs/complex/barrel/m556 = 1,
 				/obj/item/prefabs/complex/trigger = 1,
@@ -1841,7 +1841,7 @@
 	subcategory = CAT_WEAPON
 
 /datum/crafting_recipe/servicerifle/mid
-	name = "service rifle (fair)"
+	name = "service rifle (improved)"
 	result = /obj/item/gun/ballistic/automatic/marksman/servicerifle/mid
 	reqs = list(/obj/item/prefabs/complex/barrel/m556 = 1,
 				/obj/item/prefabs/complex/trigger = 1,
