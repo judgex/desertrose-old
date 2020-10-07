@@ -1,4 +1,4 @@
-/datum/job/tribals //do NOT use this for anything, it's just to store faction datums
+/datum/job/tribal //do NOT use this for anything, it's just to store faction datums
 	department_flag = TRIBAL
 	selection_color = "#ffeeaa"
 	forbids = "The use of pre-war technology, especially prewar weapons of war."
@@ -38,6 +38,10 @@ Tribal Chief
 
 	outfit = /datum/outfit/job/tribal/f13chief
 
+	access = list(ACCESS_TRIBE)
+	minimal_access = list(ACCESS_TRIBE)
+
+
 /datum/job/tribal/f13chief/after_spawn(mob/living/carbon/human/H, mob/M)
 	H.add_quirk("Hard Yards")
 	H.add_quirk("Lifegiver")
@@ -50,6 +54,7 @@ Tribal Chief
 	uniform = /obj/item/clothing/under/f13/tribe_chief
 	belt = /obj/item/claymore/machete/warclub
 	neck = /obj/item/clothing/neck/cloak/chiefcloak
+	id = 		/obj/item/card/id/tribetattoo
 	backpack_contents = list(
 		/obj/item/restraints/legcuffs/bola=1,
 		/obj/item/reagent_containers/pill/patch/healingpowder=2,
@@ -74,6 +79,9 @@ Tribal Shaman
 
 	outfit = /datum/outfit/job/tribal/f13shaman
 
+	access = list(ACCESS_TRIBE)
+	minimal_access = list(ACCESS_TRIBE)
+
 /datum/job/tribal/f13shaman/after_spawn(mob/living/carbon/human/H, mob/M)
 	H.add_quirk("Hard Yards")
 	H.add_quirk("Spiritual")
@@ -87,6 +95,7 @@ Tribal Shaman
 	uniform = /obj/item/clothing/under/f13/tribe_shaman
 	r_pocket = /obj/item/kitchen/knife/ritualdagger
 	r_hand = /obj/item/twohanded/sledgehammer/shamanstaff
+	id = 		/obj/item/card/id/tribetattoo
 	backpack_contents = list(
 		/obj/item/reagent_containers/pill/patch/healingpowder=2,
 		/obj/item/stack/medical/gauze=1,
@@ -109,6 +118,8 @@ Tribal Head Hunter
     selection_color = "#006666"
 
     outfit = /datum/outfit/job/tribal/f13Hhunter
+    access = list(ACCESS_TRIBE)
+    minimal_access = list(ACCESS_TRIBE)
 
 /datum/job/tribal/f13Hhunter/after_spawn(mob/living/carbon/human/H, mob/M)
     H.add_quirk("Hard Yards")
@@ -123,7 +134,8 @@ Tribal Head Hunter
     uniform = /obj/item/clothing/under/f13/tribe_Hhunter
     suit = /obj/item/clothing/suit/hooded/cloak/hhunter
     belt = /obj/item/melee/transforming/cleaving_saw
-    neck = /obj/item/clothing/neck/cloak/Hhuntercloak
+    id = 		/obj/item/card/id/tribetattoo
+   // neck = /obj/item/clothing/neck/cloak/Hhuntercloak - don't need for now
     backpack_contents = list(
         /obj/item/restraints/legcuffs/bola=1,
         /obj/item/reagent_containers/pill/patch/healingpowder=2,
@@ -149,6 +161,9 @@ Villager
 
 	outfit = /datum/outfit/job/tribal/f13villager
 
+	access = list(ACCESS_TRIBE)
+	minimal_access = list(ACCESS_TRIBE)
+
 	loadout_options = list(
 	//datum/outfit/loadout/huntervillager, //Bow and quiver
 	/datum/outfit/loadout/farmervillager //Warclub farming gear
@@ -164,6 +179,7 @@ Villager
 
 	backpack = /obj/item/storage/backpack/explorer
 	uniform = /obj/item/clothing/under/f13/tribe
+	id = 		/obj/item/card/id/tribetattoo
 	backpack_contents = list(
 	/obj/item/reagent_containers/pill/patch/healingpowder=1,
 	/obj/item/stack/medical/gauze=1,
@@ -197,6 +213,9 @@ Hunter
 
     outfit = /datum/outfit/job/tribal/f13hunter
 
+    access = list(ACCESS_TRIBE)
+    minimal_access = list(ACCESS_TRIBE)
+
 /datum/job/tribal/f13hunter/after_spawn(mob/living/carbon/human/H, mob/M)
 	H.add_quirk("Hard Yards")
 	H.add_quirk("Lifegiver")
@@ -208,6 +227,7 @@ Hunter
 	backpack = /obj/item/storage/backpack/explorer
 	uniform = /obj/item/clothing/under/f13/tribe
 	suit = /obj/item/clothing/suit/armor/f13/tribe_armor
+	id = 		/obj/item/card/id/tribetattoo
 	backpack_contents = list(
 /obj/item/reagent_containers/pill/patch/healingpowder=2,
 /obj/item/stack/medical/gauze=1,
