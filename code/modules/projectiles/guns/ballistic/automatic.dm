@@ -479,7 +479,7 @@
 	return
 
 /obj/item/gun/ballistic/automatic/mini_uzi
-	name = "\improper Type U3 Uzi"
+	name = "\improper Type U3 Uzi (standard)"
 	desc = "A lightweight, burst-fire submachine gun, for when you really want someone dead. Uses 9mm rounds."
 	icon_state = "mini-uzi"
 	mag_type = /obj/item/ammo_box/magazine/uzim9mm
@@ -491,11 +491,25 @@
 	scope_y_offset = 21
 	burst_size = 2
 	burst_delay = 2
-	fire_delay = 2
+	fire_delay = 4
 	force = 15
+	extra_damage = -5
+	extra_penetration = -5
 	spread = 10
 	can_attachments = TRUE
 	can_suppress = TRUE
+
+/obj/item/gun/ballistic/automatic/mini_uzi/mid
+	name = "\improper Type U3 Uzi (improved)"
+	desc = "A lightweight, burst-fire submachine gun, for when you really want someone dead. Uses 9mm rounds."
+	fire_delay = 3
+
+/obj/item/gun/ballistic/automatic/mini_uzi/high
+	name = "\improper Type U3 Uzi (masterwork)"
+	desc = "A lightweight, burst-fire submachine gun, for when you really want someone dead. Uses 9mm rounds."
+	fire_delay = 1
+	extra_damage = 5
+	extra_penetration = 5
 
 /obj/item/gun/ballistic/automatic/mini_uzi/burst_select()
 	var/mob/living/carbon/human/user = usr
@@ -521,7 +535,7 @@
 	return
 
 /obj/item/gun/ballistic/automatic/pps
-	name = "\improper ancient SMG"
+	name = "\improper ancient SMG (standard)"
 	desc = "An extremely fast firing, innacurate SMG from past wars. Low fire rate and low damage. Uses 9mm rounds."
 	icon_state = "pps"
 	mag_type = /obj/item/ammo_box/magazine/uzim9mm
@@ -531,12 +545,29 @@
 	//scope_x_offset = 9
 	//scope_y_offset = 21
 	burst_size = 3
+	burst_delay = 2
+	fire_delay = 9
+	force = 15
+	spread = 20
+	can_attachments = TRUE
+	extra_damage = -14
+
+/obj/item/gun/ballistic/automatic/pps/mid
+	name = "\improper ancient SMG (improved)"
+	burst_size = 3
 	burst_delay = 1
 	fire_delay = 7
-	force = 15
 	spread = 10
 	can_attachments = TRUE
 	extra_damage = -9
+
+/obj/item/gun/ballistic/automatic/pps/high
+	name = "\improper ancient SMG (masterwork)"
+	burst_size = 3
+	burst_delay = 1
+	fire_delay = 7
+	spread = 5
+	can_attachments = TRUE
 
 /obj/item/gun/ballistic/automatic/pps/burst_select()
 	var/mob/living/carbon/human/user = usr
@@ -615,7 +646,7 @@
 	return
 
 /obj/item/gun/ballistic/automatic/smg10mm
-	name = "10mm submachine gun"
+	name = "10mm submachine gun (standard)"
 	desc = "A select fire open bolt 10mm submachine gun. The serial number and manufactuer markings have been scratched off."
 	icon_state = "smg10mm"
 	item_state = "smg10mm"
@@ -625,12 +656,28 @@
 	weapon_weight = WEAPON_MEDIUM //You should be able to dual-wield these.
 	fire_sound = 'sound/f13weapons/10mm_fire_03.ogg'
 	burst_size = 2
-	fire_delay = 2
-	burst_delay = 2
+	fire_delay = 4
+	burst_delay = 3
+	extra_damage = -5
+	extra_penetration = -5
 	can_suppress = FALSE //we dont have sprites therefore cease
 	force = 15
 	spread = 18
 	can_attachments = TRUE
+
+/obj/item/gun/ballistic/automatic/smg10mm/mid
+	name = "10mm submachine gun"
+	burst_size = 2
+	fire_delay = 2
+	burst_delay = 2
+
+/obj/item/gun/ballistic/automatic/smg10mm/high
+	name = "10mm submachine gun"
+	burst_size = 2
+	fire_delay = 2
+	burst_delay = 2
+	extra_damage = 5
+	extra_penetration = 10
 
 /obj/item/gun/ballistic/automatic/smg10mm/burst_select()
 	var/mob/living/carbon/human/user = usr
@@ -697,7 +744,7 @@
 	return
 
 /obj/item/gun/ballistic/automatic/assault_rifle
-	name = "assault rifle"
+	name = "assault rifle (standard)"
 	desc = "A standard R91 assault rifle, out of use around the time of the Great War."
 	icon_state = "assault_rifle"
 	item_state = "fnfal"
@@ -707,7 +754,8 @@
 	fire_sound = 'sound/f13weapons/assaultrifle_fire.ogg'
 	burst_size = 2
 	automatic = 1
-	fire_delay = 3
+	fire_delay = 5
+	burst_delay = 4
 	spread = 8
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
@@ -717,6 +765,22 @@
 	can_bayonet = TRUE
 	knife_x_offset = 23
 	knife_y_offset = 11
+
+/obj/item/gun/ballistic/automatic/assault_rifle/mid
+	name = "assault rifle (improved)"
+	automatic = 1
+	fire_delay = 3
+	extra_penetration = 0
+	extra_damage = 0
+	burst_delay = 2
+
+/obj/item/gun/ballistic/automatic/assault_rifle/high
+	name = "assault rifle (masterwork)"
+	automatic = 1
+	fire_delay = 2
+	extra_damage = 4
+	extra_penetration = 4
+	burst_delay = 1
 
 /obj/item/gun/ballistic/automatic/assault_rifle/burst_select()
 	var/mob/living/carbon/human/user = usr
@@ -832,7 +896,7 @@
 	item_state = "gold_sniper"
 
 /obj/item/gun/ballistic/automatic/marksman/servicerifle
-	name = "service rifle (crude)"
+	name = "service rifle (standard)"
 	desc = "A 5.56x45 semi-automatic service rifle manufactured by the NCR and issued to all combat personnel."
 	icon_state = "service_rifle"
 	item_state = "servicerifle"
@@ -847,7 +911,7 @@
 	knife_y_offset = 12
 
 /obj/item/gun/ballistic/automatic/marksman/servicerifle/mid
-	name = "service rifle (fair)"
+	name = "service rifle (improved)"
 	desc = "A 5.56x45 semi-automatic service rifle manufactured by the NCR and issued to all combat personnel."
 	icon_state = "service_rifle"
 	item_state = "servicerifle"
@@ -886,7 +950,7 @@
 	icon_state = "R82"
 	item_state = "R82"
 	automatic = 1
-	burst_size = 3
+	burst_size = 2
 	can_bayonet = FALSE
 
 /obj/item/gun/ballistic/automatic/marksman/servicerifle/varmint
@@ -960,7 +1024,7 @@
 	force = 40
 
 /obj/item/gun/ballistic/automatic/greasegun
-	name = "M3A1 Grease Gun"
+	name = "M3A1 Grease Gun (standard)"
 	desc = "An inexpensive .45 ACP submachine gun. Slow fire rate means less waste of ammo and controllable bursts."
 	icon_state = "grease_gun"
 	item_state = "smg9mm"
@@ -971,9 +1035,23 @@
 	burst_size = 2
 	fire_delay = 3
 	burst_delay = 3
+	extra_damage = -5
+	extra_penetration = -5
 	force = 15
 	spread = 10
 	can_attachments = TRUE
+
+/obj/item/gun/ballistic/automatic/greasegun/mid
+	name = "M3A1 Grease Gun (improved)"
+	fire_delay = 3
+	burst_delay = 3
+
+/obj/item/gun/ballistic/automatic/greasegun/high
+	name = "M3A1 Grease Gun (masterwork)"
+	fire_delay = 2
+	burst_delay = 2
+	extra_penetration = 7
+	extra_damage = 7
 
 /obj/item/gun/ballistic/automatic/greasegun/burst_select()
 	var/mob/living/carbon/human/user = usr
@@ -1102,13 +1180,13 @@
 	fire_sound = 'sound/f13weapons/assaultrifle_fire.ogg'
 	can_suppress = FALSE
 	burst_size = 1
-	fire_delay = 15
-	burst_delay = 5
-	slowdown = 1.0
-	w_class = WEIGHT_CLASS_BULKY
+	fire_delay = 7
+	burst_delay = 4
+	slowdown = 1.2
+	w_class = WEIGHT_CLASS_HUGE
 	weapon_weight = WEAPON_HEAVY
 	spread = 25
-	randomspread = 15
+	//randomspread = 5
 
 /obj/item/gun/ballistic/automatic/mg34/burst_select()
 	var/mob/living/carbon/human/user = usr
@@ -1116,12 +1194,12 @@
 		if(0)
 			select += 1
 			burst_size = 1
-			spread = 20
+			spread = 15
 			to_chat(user, "<span class='notice'>You switch to semi-automatic.</span>")
 		if(1)
 			select = 0
-			burst_size = 6
-			spread = 60
+			burst_size = 4
+			spread = 30
 			to_chat(user, "<span class='notice'>You switch to [burst_size]-rnd burst.</span>")
 	playsound(user, 'sound/weapons/empty.ogg', 100, 1)
 	update_icon()
@@ -1172,7 +1250,7 @@
 	can_scope = FALSE
 
 /obj/item/gun/ballistic/automatic/rangemaster
-	name = "Colt Rangemaster"
+	name = "Colt Rangemaster (standard)"
 	desc = "A Colt Rangemaster semi-automatic rifle, chambered for 7.62x51. Single-shot only."
 	icon_state = "rangemaster"
 	item_state = "308"
@@ -1181,7 +1259,9 @@
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 	burst_size = 1
-	fire_delay = 3
+	fire_delay = 5
+	extra_penetration = -10
+	extra_damage = -10
 	can_attachments = TRUE
 	can_scope = TRUE
 	can_bayonet = TRUE
@@ -1190,7 +1270,7 @@
 	knife_y_offset = 21
 
 /obj/item/gun/ballistic/automatic/rangemaster/scoped
-	name = "Scoped Colt Rangemaster"
+	name = "Scoped Colt Rangemaster (standard)"
 	desc = "Nothing's better than seeing that surprised look on your target's face. The Loophole x20 Scope on this hunting rifle makes it easier than ever before. Accurate from first shot to last, no matter what kind of game you're gunning for."
 	icon_state = "rangemaster"
 	item_state = "scoped308"
@@ -1199,6 +1279,19 @@
 	zoom_amt = 10
 	zoom_out_amt = 13
 	can_scope = FALSE
+
+/obj/item/gun/ballistic/automatic/rangemaster/scoped/mid
+	name = "Scoped Colt Rangemaster (improved)"
+	fire_delay = 3
+	extra_penetration = 0
+	extra_damage = 0
+
+/obj/item/gun/ballistic/automatic/rangemaster/scoped/high
+	name = "Scoped Colt Rangemaster (masterwork)"
+	fire_delay = 2
+	extra_penetration = 10
+	extra_damage = 10
+
 
 /obj/item/gun/ballistic/automatic/fnfal
 	name = "FN FAL"
