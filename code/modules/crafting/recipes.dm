@@ -1825,7 +1825,7 @@
 	subcategory = CAT_WEAPON
 */
 /*/datum/crafting_recipe/servicerifle
-	name = "service rifle (crude)"
+	name = "service rifle (standard)"
 	result = /obj/item/gun/ballistic/automatic/marksman/servicerifle
 	reqs = list(/obj/item/prefabs/complex/barrel/m556 = 1,
 				/obj/item/prefabs/complex/trigger = 1,
@@ -1841,7 +1841,7 @@
 	subcategory = CAT_WEAPON
 
 /datum/crafting_recipe/servicerifle/mid
-	name = "service rifle (fair)"
+	name = "service rifle (improved)"
 	result = /obj/item/gun/ballistic/automatic/marksman/servicerifle/mid
 	reqs = list(/obj/item/prefabs/complex/barrel/m556 = 1,
 				/obj/item/prefabs/complex/trigger = 1,
@@ -3347,7 +3347,7 @@
 //high tier
 
 //r91
-
+/*
 /datum/crafting_recipe/r91
 	name = "R91 assault rifle"
 	result = /obj/item/gun/ballistic/automatic/assault_rifle
@@ -3377,7 +3377,7 @@
 	time = 120
 	category = CAT_BLUEPRINTS
 	subcategory = CAT_BPWEAPON_ONEUSE
-
+*/
 //lmg
 
 /datum/crafting_recipe/lmg
@@ -3701,7 +3701,7 @@
 	subcategory = CAT_BPWEAPON_ONEUSE
 
 //rangemaster
-
+/*
 /datum/crafting_recipe/rangemaster
 	name = "Colt Rangemaster"
 	result = /obj/item/gun/ballistic/automatic/rangemaster
@@ -3732,7 +3732,7 @@
 	time = 120
 	category = CAT_BLUEPRINTS
 	subcategory = CAT_BPWEAPON_ONEUSE
-
+*/
 //bozar
 /datum/crafting_recipe/bozar
 	name = "Bozar"

@@ -560,6 +560,16 @@
 	armor = list("melee" = 45, "bullet" = 55, "laser" = 45, "energy" = 45, "bomb" = 55, "bio" = 65, "rad" = 10, "fire" = 60, "acid" = 20)
 	icon = 'icons/fallout/clothing_w/suit.dmi'
 
+/obj/item/clothing/suit/armor/f13/gunnerplates
+	name = "gunner armor"
+	desc = "An old military grade pre war combat armor. This armor has a skull painted on the back to symbolize the gunners."
+	icon_state = "GunnerPlates"
+	item_state = "GunnerPlates"
+	slowdown = 0
+	flags_inv = HIDEJUMPSUIT|HIDENECK
+	icon = 'icons/fallout/clothing_w/suit.dmi'
+	armor = list("melee" = 45, "bullet" = 55, "laser" = 45, "energy" = 45, "bomb" = 55, "bio" = 65, "rad" = 10, "fire" = 60, "acid" = 20)
+
 /obj/item/clothing/suit/armor/f13/combatmk2leg
 	name = "legatus armor mk2"
 	desc = "An old military grade pre war combat armor, specially designed for a Legionary Legatus."
@@ -1192,6 +1202,15 @@
 	desc = "A thicker than average duster worn by NCR recon rangers out in the field. It's not heavily armored by any means, but is easy to move around in and provides excellent protection from the harsh desert environment."
 	icon_state = "duster_recon"
 	item_state = "duster_recon"
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
+	armor = list("melee" = 35, "bullet" = 30, "laser" = 20, "energy" = 20, "bomb" = 25, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
+	slowdown = -0.1
+
+/obj/item/clothing/suit/toggle/armor/f13/rangercustomdark
+	name = "tattered recon duster"
+	desc = "A thicker than average duster worn by rangers out in the field. This one has been dyed black and appears to be a little more heavily armoured."
+	icon_state = "duster_recon_custom"
+	item_state = "duster_recon_custom"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list("melee" = 35, "bullet" = 30, "laser" = 20, "energy" = 20, "bomb" = 25, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
 	slowdown = -0.1
