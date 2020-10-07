@@ -543,6 +543,7 @@
 	name = "box of slug shotgun shots"
 	desc = "A box full of slug rounds, designed for riot shotguns."
 	icon = 'icons/obj/ammo.dmi'
+	w_class = WEIGHT_CLASS_SMALL
 	var/icon_type = "l"
 	var/spawn_type = /obj/item/ammo_casing/shotgun
 	var/fancy_open = FALSE

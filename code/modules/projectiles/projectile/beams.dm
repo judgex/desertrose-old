@@ -283,6 +283,16 @@
 	eyeblur = 0
 	is_reflectable = TRUE
 
+/obj/item/projectile/plasmacarbine //Plasma carbine
+	name = "plasma bolt"
+	icon_state = "plasma_clot"
+	damage_type = BURN
+	damage = 45
+	armour_penetration = 15
+	flag = "laser" //checks vs. energy protection
+	eyeblur = 0
+	is_reflectable = TRUE
+
 /obj/item/projectile/plasma/repeater //Plasma repeater
 	name = "plasma stream"
 	icon_state = "plasma_clot"

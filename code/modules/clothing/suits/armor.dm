@@ -560,6 +560,16 @@
 	armor = list("melee" = 45, "bullet" = 55, "laser" = 45, "energy" = 45, "bomb" = 55, "bio" = 65, "rad" = 10, "fire" = 60, "acid" = 20)
 	icon = 'icons/fallout/clothing_w/suit.dmi'
 
+/obj/item/clothing/suit/armor/f13/gunnerplates
+	name = "gunner armor"
+	desc = "An old military grade pre war combat armor. This armor has a skull painted on the back to symbolize the gunners."
+	icon_state = "GunnerPlates"
+	item_state = "GunnerPlates"
+	slowdown = 0
+	flags_inv = HIDEJUMPSUIT|HIDENECK
+	icon = 'icons/fallout/clothing_w/suit.dmi'
+	armor = list("melee" = 45, "bullet" = 55, "laser" = 45, "energy" = 45, "bomb" = 55, "bio" = 65, "rad" = 10, "fire" = 60, "acid" = 20)
+
 /obj/item/clothing/suit/armor/f13/combatmk2leg
 	name = "legatus armor mk2"
 	desc = "An old military grade pre war combat armor, specially designed for a Legionary Legatus."
@@ -672,6 +682,13 @@
 	desc = "An old set of pre-war combat armor, painted black."
 	icon_state = "enclave_armor"
 	item_state = "enclave_armor"
+	armor = list("melee" = 45, "bullet" = 50, "laser" = 45, "energy" = 75, "bomb" = 70, "bio" = 80, "rad" = 80, "fire" = 80, "acid" = 50)
+
+/obj/item/clothing/suit/armor/f13/combat/remnant
+	name = "combat armor"
+	desc = "A dark armor, used commonly in espionage or shadow ops. Worn by CAG or OS members."
+	icon_state = "remnant"
+	item_state = "remnant"
 	armor = list("melee" = 45, "bullet" = 50, "laser" = 45, "energy" = 75, "bomb" = 70, "bio" = 80, "rad" = 80, "fire" = 80, "acid" = 50)
 
 /obj/item/clothing/suit/armor/f13/combat/swat
@@ -896,6 +913,14 @@
 	item_state = "t45dpowerarmor"
 	armor = list("melee" = 65, "bullet" = 60, "laser" = 50, "energy" = 60, "bomb" = 62, "bio" = 100, "rad" = 90, "fire" = 90, "acid" = 0)
 
+/obj/item/clothing/suit/armor/f13/power_armor/t45d/gunslinger
+	name = "Gunslinger T-51b"
+	desc = "What was once a suit of T-51 Power Armor is now an almost unrecognizable piece of art or garbage, depending on who you ask. Almost all of the external plating has either been removed or stripped to allow for maximum mobility, and overlapping underplates protect the user from small arms fire. Whoever designed this had a very specific purpose in mind: mobility and aesthetics over defense."
+	icon_state = "t51bgs"
+	item_state = "t51bgs"
+	slowdown = 0
+	flags_inv = HIDEJUMPSUIT|HIDENECK
+
 /obj/item/clothing/suit/armor/f13/power_armor/t45d/sierra
 	name = "sierra power armor"
 	desc = "A captured set of T-45d power armor put into use by the NCR, it's been heavily modified and decorated with the head of a bear and intricate gold trimming. A two headed bear is scorched into the breastplate."
@@ -1047,6 +1072,12 @@
 	desc = "The armor of a Centurion who has bested one or more Brotherhood Paladins, adding pieces of his prizes to his own defense. The symbol of the Legion is crudely painted on this once-marvelous suit of armor."
 	icon_state = "palacent"
 	armor = list("melee" = 75, "bullet" = 50, "laser" = 35, "energy" = 35, "bomb" = 39, "bio" = 60, "rad" = 20, "fire" = 80, "acid" = 0)
+
+/obj/item/clothing/suit/armor/f13/legion/palacent/custom_excess
+	name = "Champion of Kanab's Armor"
+	desc = "The armor of the Champion and Conqueror of the city in Utah named Kanab. The armor is made up of pieces of Power Armor and pre-war Riot Gear, the shin guards are spraypainted a dark crimson and the Power Armour pauldron has a red trim. The symbol of a Pheonix is carefully engraved and painted upon the chest piece... I wonder what it means.."
+	icon_state = "palacent_excess"
+	item_state = "palacent_excess"
 
 /obj/item/clothing/suit/armor/f13/legion/rangercent
 	name = "ranger-hunter centurion armor"
