@@ -551,6 +551,16 @@
 	dynamic_fhair_suffix = ""
 	flash_protect = 1
 
+/obj/item/clothing/head/helmet/f13/rangercustomflicker
+	name = "broken riot helmet"
+	icon_state = "rangercustom"
+	item_state = "rangercustom"
+	desc = "A broken old riot police helmet, out of use around the time of the war. The visor of this one has been spray-painted orange and the lower half a deep red."
+	armor = list("melee" = 40, "bullet" = 30, "laser" = 20, "energy" = 30, "bomb" = 25, "bio" = 40, "rad" = 40, "fire" = 80, "acid" = 0)
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR|HIDEFACE
+	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
+	resistance_flags = LAVA_PROOF | FIRE_PROOF
+
 //Legion
 /obj/item/clothing/head/helmet/f13/legion
 	name = "legion helmet"
