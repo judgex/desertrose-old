@@ -54,9 +54,14 @@
 	icon_state = "moulding"
 	desc = "A moulding bench, used for superheating metal into its molten form and moulding it."
 	machine_tool_behaviour = list(TOOL_FWORKBENCH)
+	wrenchable = FALSE
 
-/obj/machinery/workbench/fbench/attackby(obj/item/W, mob/user, params)//todo me 
-	if(istype(W, /obj/item/screwdriver) && mould)
+/obj/machinery/workbench/fbench/attackby(obj/item/W, mob/user, params)//todo me
+	var/mob/living/carbon/human/H = usr
+	if (istype(W, /obj/item/stack/sheet/prewar) && !H.has_trait(TRAIT_MASTER_GUNSMITH))
+		to_chat(usr,"You have no clue as to how to work this material.")
+		return
+	else if(istype(W, /obj/item/screwdriver) && mould)
 		var/obj/item/prefabs/mould/B = mould
 		B.forceMove(src.loc)
 		mould = null

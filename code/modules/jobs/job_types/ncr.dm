@@ -380,6 +380,9 @@ Corporal
 	///datum/outfit/loadout/specmech //Power armor, assault rifle
 	)
 
+/datum/job/den/f13specialist/after_spawn(mob/living/carbon/human/H, mob/M)
+	H.add_quirk("Master Gunsmith")
+
 /datum/outfit/job/ncr/f13specialist
 	name = "NCR Corporal"
 	jobtype = /datum/job/ncr/f13specialist
