@@ -1206,6 +1206,15 @@
 	armor = list("melee" = 35, "bullet" = 30, "laser" = 20, "energy" = 20, "bomb" = 25, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
 	slowdown = -0.1
 
+/obj/item/clothing/suit/toggle/armor/f13/rangercustomdark
+	name = "tattered recon duster"
+	desc = "A thicker than average duster worn by rangers out in the field. This one has been dyed black and appears to be a little more heavily armoured."
+	icon_state = "duster_recon_custom"
+	item_state = "duster_recon_custom"
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
+	armor = list("melee" = 35, "bullet" = 30, "laser" = 20, "energy" = 20, "bomb" = 25, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
+	slowdown = -0.1
+
 /obj/item/clothing/suit/armor/f13/trailranger
 	name = "ranger vest"
 	desc = "A quaint little jacket and scarf worn by NCR trail rangers."
