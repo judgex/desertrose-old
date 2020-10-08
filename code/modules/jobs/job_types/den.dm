@@ -741,3 +741,6 @@ Detective
 	if(visualsOnly)
 		return
 	H.add_trait(TRAIT_TECHNOPHREAK)
+
+/datum/job/den/f13shopkeeper/after_spawn(mob/living/carbon/human/H, mob/M)
+	H.add_quirk("Master Gunsmith")
