@@ -820,7 +820,7 @@
 	. = ..()
 
 /obj/item/gun/ballistic/automatic/smg10mm/mid
-	name = "10mm submachine gun"
+	name = "10mm submachine gun (improved)"
 	burst_size = 2
 	fire_delay = 2
 	burst_delay = 2
@@ -849,7 +849,7 @@
 
 
 /obj/item/gun/ballistic/automatic/smg10mm/high
-	name = "10mm submachine gun"
+	name = "10mm submachine gun (masterwork)"
 	burst_size = 2
 	fire_delay = 2
 	burst_delay = 2
