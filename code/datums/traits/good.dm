@@ -60,7 +60,7 @@
 	lose_text = "<span class='danger'>You forget how Power Armor works.</span>"
 	locked = TRUE
 
-/datum/quirk/pa_wear
+/datum/quirk/master_gunsmith
 	name = "Master Gunsmith"
 	desc = "You're a master gunsmith, able to make weapons of previously unseen power."
 	value = 3
