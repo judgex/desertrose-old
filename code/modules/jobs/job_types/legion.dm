@@ -891,7 +891,7 @@ Auxilia
 	/datum/outfit/loadout/auxengi //Toolbelt, wood, metal, leather
 	)
 
-/datum/job/den/f13auxilia/after_spawn(mob/living/carbon/human/H, mob/M)
+/datum/job/CaesarsLegion/f13auxilia/after_spawn(mob/living/carbon/human/H, mob/M)
 	H.add_quirk("Master Gunsmith")
 
 /datum/outfit/job/CaesarsLegion/f13auxilia
