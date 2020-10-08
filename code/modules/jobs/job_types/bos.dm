@@ -185,7 +185,7 @@ Head Scribe
 		return
 	H.add_trait(TRAIT_MEDICALEXPERT, TRAIT_GENERIC, TRAIT_CHEMWHIZ)
 
-/datum/job/den/f13headscribe/after_spawn(mob/living/carbon/human/H, mob/M)
+/datum/job/bos/f13headscribe/after_spawn(mob/living/carbon/human/H, mob/M)
 	H.add_quirk("Master Gunsmith")
 
 /datum/outfit/job/bos/f13headscribe

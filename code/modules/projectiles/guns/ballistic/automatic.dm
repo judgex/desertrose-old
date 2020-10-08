@@ -970,7 +970,7 @@
 	if(istype(W,/obj/item/screwdriver))
 		var/obj/item/A = new /obj/item/prefabs/complex/screw
 		var/obj/item/B = new /obj/item/prefabs/complex/trigger
-		var/obj/item/C = new /obj/item/prefabs/complex/bolt/simple
+		var/obj/item/C = new /obj/item/prefabs/complex/bolt/high
 		var/obj/item/D = new /obj/item/prefabs/complex/action/auto
 		var/obj/item/E = new /obj/item/prefabs/complex/barrel/m556
 		var/obj/item/F = new /obj/item/prefabs/complex/stock/mid
