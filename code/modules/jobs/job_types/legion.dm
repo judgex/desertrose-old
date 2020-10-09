@@ -127,8 +127,7 @@ Centurion
 		/obj/item/key/bcollar=1, \
 		/obj/item/assembly/signaler/electropack/shockcollar=1, \
 		/obj/item/assembly/signaler/electropack/boomcollar=2, \
-		/obj/item/storage/bag/money/small/legofficers=1, \
-		)
+		/obj/item/storage/bag/money/small/legofficers=1 )
 
 /datum/outfit/loadout/centheavy
 	name = "Paladin-Slayer Centurion"
@@ -607,14 +606,14 @@ Veteran Legionary
 	name = "Assault Legionary"
 	suit_store = /obj/item/gun/ballistic/automatic/mini_uzi
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/uzim9mm=2 ,
+		/obj/item/ammo_box/magazine/uzim9mm=2
 		)
 
 /datum/outfit/loadout/vetlegrange
 	name = "Ranged Legionary"
 	suit_store = /obj/item/gun/ballistic/automatic/marksman
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m556/rifle=2,
+		/obj/item/ammo_box/magazine/m556/rifle=2
 		)
 
 /datum/outfit/loadout/vetlegclose
@@ -825,7 +824,7 @@ Explorer
 
 	loadout_options = list(
 	/datum/outfit/loadout/explinfil, //C4, engineering supplies
-	/datum/outfit/loadout/explscout, //.44 trail carbine
+	/datum/outfit/loadout/explscout //.44 trail carbine
 	//datum/outfit/loadout/explassassin //.308 DKS sniper rifle
 	)
 
