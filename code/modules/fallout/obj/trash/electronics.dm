@@ -12,7 +12,7 @@
 						/obj/item/stock_parts/matter_bin=1,
 						/obj/item/stock_parts/micro_laser=2,
 					)
-	var/toast_time = 10
+	var/toast_time = 35
 	var/obj/item/stock_parts/cell/cell = null
 	var/fork_damage = 6
 	var/is_toasting = 0
@@ -121,7 +121,7 @@
 			I.color = "#444433"
 		else
 			I.name = "[initial(I.name)] (toasted)"
-			I.color = "#C28430"
+			I.color = "#C27430"
 
 		I.throwforce = I.throwforce + 2 //The corners are sharper ok
 		I.forceMove(get_turf(src))
@@ -164,5 +164,5 @@
 	desc = "A large, unwieldy device meant to sit on a counter and slowly, painstakingly toast bread. It's clearly inferior to the double-slot models but it may be useful for toast heathens who prefer quantity over quality."
 	icon_state = "toaster" //ToDO COME ON how is there no toaster oven sprite
 	toast_slots = 4
-	toast_time = 16
+	toast_time = 70
 	power_use = 20
