@@ -462,6 +462,9 @@ SUBSYSTEM_DEF(job)
 
 	to_chat(M, "<b>You are the [rank].</b>")
 	if (!job.objectives)//if objectives aren't set yet
+		if(LAZYLEN(job.objectivesList))
+			job.objectives = pick(job.objectivesList)
+/*
 		if (job.department_flag == LEGION)//done
 			job.objectives = job.objectivesList[rand(0,2)]//get a random one
 		if (job.department_flag == NCR)//done
@@ -478,6 +481,7 @@ SUBSYSTEM_DEF(job)
 			job.objectives = job.objectivesList[rand(0,2)]//get a random one
 		if (job.department_flag == FOLLOWERS)//done
 			job.objectives = job.objectivesList[rand(0,2)]//get a random one
+*/
 	if(job)
 		to_chat(M, "<b>As the [rank] you answer directly to [job.supervisors]. Special circumstances may change this.</b>")
 		to_chat(M, "<b>To speak on your departments radio, use the :h button. To see others, look closely at your headset.</b>")

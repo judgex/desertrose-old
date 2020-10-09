@@ -622,9 +622,14 @@ GLOBAL_LIST_EMPTY(asset_datums)
 			var/list/types = O.get_all_possible_item_paths()
 
 			for (var/item in types)
+				if(item == "" || isnull(item))
+					log_game("There was an error with the loadouts! Blame: [j]:[D]") //Can remove this after finding
+					continue
 				var/filename = sanitize_filename("[item].png")
 				var/icon/I = getFlatTypeIcon(item)
-				register_asset(filename, I)
-				assets[filename] = I
-
+				if(I)
+					register_asset(filename, I)
+					assets[filename] = I
+				else
+					log_game("Error loading icon file! Blame: [j]:[D]:[I]")
 				//design.ui_data["icon"] = filename
