@@ -60,6 +60,15 @@
 	lose_text = "<span class='danger'>You forget how Power Armor works.</span>"
 	locked = TRUE
 
+/datum/quirk/master_gunsmith
+	name = "Master Gunsmith"
+	desc = "You're a master gunsmith, able to make weapons of previously unseen power."
+	value = 3
+	mob_trait = TRAIT_MASTER_GUNSMITH
+	gain_text = "<span class='notice'>You realize how to make great weapons.</span>"
+	lose_text = "<span class='danger'>You forget how to make weapons.</span>"
+	locked = TRUE
+
 /datum/quirk/drunkhealing
 	name = "Drunken Resilience"
 	desc = "Nothing like a good drink to make you feel on top of the world. Whenever you're drunk, you slowly recover from injuries."

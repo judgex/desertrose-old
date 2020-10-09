@@ -21,6 +21,7 @@ GLOBAL_LIST_INIT(command_positions, list(
 
     "Chief",
     "Shaman",
+    "Head Hunter",
 
 	"Lead Practitioner"
     ))
@@ -79,6 +80,7 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 
 "Chief",
 "Shaman",
+"Head Hunter",
 
 "Lead Practitioner",
 
@@ -248,7 +250,9 @@ GLOBAL_LIST_INIT(silicon_positions, list(
 GLOBAL_LIST_INIT(tribal_positions, list(
     "Chief",
     "Shaman",
-    "Villager"
+    "Head Hunter",
+    "Villager",
+    "Hunter"
 ))
 
 GLOBAL_LIST_INIT(followers_command_positions, list(
@@ -324,7 +328,7 @@ GLOBAL_LIST_INIT(exp_jobsmap, list(
     EXP_TYPE_SCRIBE        = list("titles" = list("Scribe")),
     EXP_TYPE_DECANUS       = list("titles" = list("Legion Decanus")),
 
-    EXP_TYPE_TRIBALCOMMAND = list("titles" = list("Chief","Shaman")),
+    EXP_TYPE_TRIBALCOMMAND = list("titles" = list("Chief","Shaman","Head Hunter")),
     EXP_TYPE_FOLLOWERSCOMMAND = list("titles" = list("Lead Practitioner")),
   	EXP_TYPE_NCRCOMMAND    = list("titles" = list("NCR Lieutenant","NCR Sergeant","NCR Captain","NCR Ambassador"))
   	// EXP_TYPE_ENCLAVE = list("titles" = enclave_positions),
