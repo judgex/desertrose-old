@@ -672,3 +672,16 @@ update_label("John Doe", "Clowny")
 	id_type = "gang tattoo"
 	item_flags = NODROP
 	access = list(ACCESS_KHAN)
+
+
+/* Tribal Tags
+*/
+
+/obj/item/card/id/tribetattoo
+	name = "Tattoo of the machine spirits"
+	desc = "A tattoo depicting the five machine spirits in harmony."
+	icon_state = "talisman"
+	item_state = "talisman"
+	id_type = "tribe tattoo"
+	item_flags = NODROP
+	access = list(ACCESS_TRIBE)

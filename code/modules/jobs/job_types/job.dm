@@ -45,7 +45,7 @@
 
 	//faction objective for the round
 	var/objectives
-	var/objectivesList
+	var/list/objectivesList
 
 	//Sellection screen color
 	var/selection_color = "#ffffff"

@@ -167,7 +167,7 @@ prewar alloys
 	flags_1 = CONDUCT_1
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 100, "acid" = 80)
 	resistance_flags = FIRE_PROOF
-	merge_type = /obj/item/stack/sheet/plasteel
+	merge_type = /obj/item/stack/sheet/prewar
 	grind_results = list("iron" = 20, "plasma" = 20)
 
 /obj/item/stack/sheet/prewar/twenty

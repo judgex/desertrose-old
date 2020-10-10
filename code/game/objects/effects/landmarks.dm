@@ -765,3 +765,11 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 
 /obj/effect/landmark/start/f13/followersscientist
 	name = "Followers Scientist"
+
+/obj/effect/landmark/start/f13/hunter
+    name = "Hunter"
+    icon_state = "Hunter"
+
+/obj/effect/landmark/start/f13/Hhunter
+    name = "Head Hunter"
+    icon_state = "Head Hunter"

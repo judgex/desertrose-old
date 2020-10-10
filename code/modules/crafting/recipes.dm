@@ -1825,7 +1825,7 @@
 	subcategory = CAT_WEAPON
 */
 /*/datum/crafting_recipe/servicerifle
-	name = "service rifle (crude)"
+	name = "service rifle (standard)"
 	result = /obj/item/gun/ballistic/automatic/marksman/servicerifle
 	reqs = list(/obj/item/prefabs/complex/barrel/m556 = 1,
 				/obj/item/prefabs/complex/trigger = 1,
@@ -1841,7 +1841,7 @@
 	subcategory = CAT_WEAPON
 
 /datum/crafting_recipe/servicerifle/mid
-	name = "service rifle (fair)"
+	name = "service rifle (improved)"
 	result = /obj/item/gun/ballistic/automatic/marksman/servicerifle/mid
 	reqs = list(/obj/item/prefabs/complex/barrel/m556 = 1,
 				/obj/item/prefabs/complex/trigger = 1,
@@ -3956,7 +3956,7 @@
 	time = 30
 	category = CAT_MOULD
 	subcategory = CAT_MOULD_ONE
-
+/*
 /datum/crafting_recipe/mould/boltadvanced
 	result = /obj/item/prefabs/mould/bolt/high
 	name = "Advanced Bolt Mould"
@@ -3965,7 +3965,7 @@
 	time = 30
 	category = CAT_MOULD
 	subcategory = CAT_MOULD_ONE
-
+*/
 /datum/crafting_recipe/mould/trigger
 	result = /obj/item/prefabs/mould/trigger
 	name = "Trigger Mould"

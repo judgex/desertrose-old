@@ -412,6 +412,12 @@
 	icon_state = "chiefrags"
 	item_state = "chiefrags"
 
+/obj/item/clothing/under/f13/tribe_Hhunter
+	name = "Razorclaw robes"
+	desc = "Tanned leather robes, decorated with bones of deathclaws and marked with the great machine spirit of earth."
+	icon_state = "hhunterrags"
+	item_state = "hhunterrags"
+
 /obj/item/clothing/under/f13/tribe_shaman
 
 	name = "tribal shaman robes"

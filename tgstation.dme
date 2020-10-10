@@ -2464,6 +2464,7 @@
 #include "code\modules\projectiles\guns\ballistic\automatic.dm"
 #include "code\modules\projectiles\guns\ballistic\laser_gatling.dm"
 #include "code\modules\projectiles\guns\ballistic\launchers.dm"
+#include "code\modules\projectiles\guns\ballistic\minigum.dm"
 #include "code\modules\projectiles\guns\ballistic\pistol.dm"
 #include "code\modules\projectiles\guns\ballistic\revolver.dm"
 #include "code\modules\projectiles\guns\ballistic\shotgun.dm"
