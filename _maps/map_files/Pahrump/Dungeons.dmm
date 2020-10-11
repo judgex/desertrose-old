@@ -1226,7 +1226,7 @@
 "yp" = (/obj/machinery/light/small{dir = 4},/turf/open/floor/plasteel/f13/vault_floor/green,/area/f13/vault)
 "yq" = (/obj/structure/chair{dir = 8},/obj/effect/decal/remains/human,/turf/open/floor/plasteel/barber{icon = 'icons/turf/f13floors2.dmi'; icon_state = "bluerustychess2"; tag = "icon-bluerustychess2"},/area/f13/bunker)
 "yr" = (/obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier3,/turf/open/floor/plasteel/barber{icon_state = "plating"; tag = "icon-plating"},/area/f13/bunker)
-"ys" = (/obj/machinery/light/small{dir = 4},/obj/structure/closet,/obj/effect/spawner/lootdrop/f13/weapon/gun/tier3,/obj/effect/spawner/lootdrop/f13/weapon/gun/tier3,/obj/effect/spawner/lootdrop/f13/armor/tier4,/turf/open/floor/wood/f13/old,/area/f13/city)
+"ys" = (/obj/machinery/light/small{dir = 4},/obj/structure/closet,/obj/effect/spawner/lootdrop/f13/weapon/gun/tier3,/obj/effect/spawner/lootdrop/f13/weapon/gun/tier3,/obj/effect/spawner/lootdrop/f13/armor/tier4,/obj/effect/spawner/lootdrop/f13/blueprintLow,/obj/effect/spawner/lootdrop/f13/blueprintLow,/turf/open/floor/wood/f13/old,/area/f13/city)
 "yt" = (/obj/machinery/light{light_color = "#e8eaff"},/turf/open/indestructible/ground/outside/dirt,/area/f13/wasteland)
 "yu" = (/obj/structure/closet/secure_closet/freezer/kitchen/maintenance,/obj/effect/spawner/lootdrop/f13/foodspawner,/obj/effect/spawner/lootdrop/f13/foodspawner,/turf/open/floor/plasteel/floorgrime,/area/f13/vault)
 "yv" = (/obj/machinery/light{dir = 1; light_color = "#e8eaff"},/turf/open/indestructible/ground/outside/dirt,/area/f13/city)

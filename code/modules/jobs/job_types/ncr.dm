@@ -350,12 +350,7 @@ Sergeant
 	suit = 			/obj/item/clothing/suit/armor/f13/power_armor/ncr
 	head = 			/obj/item/clothing/head/helmet/f13/power_armor/t45b
 	belt = 			/obj/item/storage/belt/military/assault/ncr
-	suit_store = 	/obj/item/gun/ballistic/automatic/lmg
-	backpack_contents = list(
-		/obj/item/ammo_box/magazine/lmg=3, \
-		/obj/item/book/granter/trait/trekking=1
-	)
-
+	back = 			/obj/item/minigunpackbal
 /*
 Corporal
 */
