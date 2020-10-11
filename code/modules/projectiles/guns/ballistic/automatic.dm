@@ -615,7 +615,7 @@
 	name = "\improper ancient SMG (standard)"
 	desc = "An extremely fast firing, innacurate SMG from past wars. Low fire rate and low damage. Uses 9mm rounds."
 	icon_state = "pps"
-	mag_type = /obj/item/ammo_box/magazine/uzim9mm
+	mag_type = /obj/item/ammo_box/magazine/pps9mm
 	w_class = WEIGHT_CLASS_NORMAL
 	//can_scope = TRUE
 	//scopestate = "AEP7_scope"
