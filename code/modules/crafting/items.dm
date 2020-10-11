@@ -288,6 +288,16 @@
 				B.forceMove(usr.loc)
 				to_chat(usr,"You make a [B]")
 				qdel(src)
+			if(istype(src,/obj/item/prefabs/complex/simpleWeaponFrame/mid))
+				var/obj/item/B = new /obj/item/gun/ballistic/revolver/sequoia/scoped/mid
+				B.forceMove(usr.loc)
+				to_chat(usr,"You make a [B]")
+				qdel(src)
+			if(istype(src,/obj/item/prefabs/complex/simpleWeaponFrame/high))
+				var/obj/item/B = new /obj/item/gun/ballistic/revolver/sequoia/scoped/high
+				B.forceMove(usr.loc)
+				to_chat(usr,"You make a [B]")
+				qdel(src)
 		else if(screw&&trigger&&boltadvanced&&actionsimple&&m556barrel)//556 pistol
 			if(istype(src,/obj/item/prefabs/complex/simpleWeaponFrame/low))
 				var/obj/item/B = new /obj/item/gun/ballistic/revolver/thatgun
@@ -432,6 +442,22 @@
 		else if(screw&&trigger&&boltsimple&&actionsimple&&m44barrel&&stockwood)//trail carbine
 			if(istype(src,/obj/item/prefabs/complex/complexWeaponFrame/low))
 				var/obj/item/B = new /obj/item/gun/ballistic/shotgun/automatic/hunting/trail
+				B.forceMove(usr.loc)
+				to_chat(usr,"You make a [B]")
+				qdel(src)
+		else if(screw&&trigger&&boltsimple&&actionsimple&&m4570barrel&&stockwood)//brush gun
+			if(istype(src,/obj/item/prefabs/complex/complexWeaponFrame/low))
+				var/obj/item/B = new /obj/item/gun/ballistic/shotgun/automatic/hunting/brush/scoped
+				B.forceMove(usr.loc)
+				to_chat(usr,"You make a [B]")
+				qdel(src)
+			if(istype(src,/obj/item/prefabs/complex/complexWeaponFrame/mid))
+				var/obj/item/B = new /obj/item/gun/ballistic/shotgun/automatic/hunting/brush/scoped/mid
+				B.forceMove(usr.loc)
+				to_chat(usr,"You make a [B]")
+				qdel(src)
+			if(istype(src,/obj/item/prefabs/complex/complexWeaponFrame/high))
+				var/obj/item/B = new /obj/item/gun/ballistic/shotgun/automatic/hunting/brush/scoped/high
 				B.forceMove(usr.loc)
 				to_chat(usr,"You make a [B]")
 				qdel(src)

@@ -19,6 +19,8 @@
 	if(visualsOnly)
 		return
 	H.add_trait(TRAIT_TECHNOPHOBE, TRAIT_GENERIC)
+	H.add_quirk("Hard Yards")
+	H.add_quirk("Trapper")
 
 /*
 Tribal Chief
@@ -43,8 +45,10 @@ Tribal Chief
 
 
 /datum/job/tribal/f13chief/after_spawn(mob/living/carbon/human/H, mob/M)
-	H.add_quirk("Hard Yards")
+	//H.add_quirk("Hard Yards")
 	H.add_quirk("Lifegiver")
+	H.add_quirk("Iron Fist")
+	//H.add_quirk("Trapper")
 
 /datum/outfit/job/tribal/f13chief
 	name = "Chief"
@@ -83,7 +87,7 @@ Tribal Shaman
 	minimal_access = list(ACCESS_TRIBE)
 
 /datum/job/tribal/f13shaman/after_spawn(mob/living/carbon/human/H, mob/M)
-	H.add_quirk("Hard Yards")
+	//H.add_quirk("Hard Yards")
 	H.add_quirk("Spiritual")
 
 /datum/outfit/job/tribal/f13shaman
@@ -122,10 +126,10 @@ Tribal Head Hunter
     minimal_access = list(ACCESS_TRIBE)
 
 /datum/job/tribal/f13Hhunter/after_spawn(mob/living/carbon/human/H, mob/M)
-    H.add_quirk("Hard Yards")
+    //H.add_quirk("Hard Yards")
     H.add_quirk("Lifegiver")
     H.add_quirk("Big Leagues")
-    H.add_quirk("Trapper")
+    //H.add_quirk("Trapper")
 
 /datum/outfit/job/tribal/f13Hhunter
     name = "Hhunter"
@@ -170,8 +174,8 @@ Villager
 	)
 
 /datum/job/tribal/f13villager/after_spawn(mob/living/carbon/human/H, mob/M)
-	H.add_quirk("Hard Yards")
-	H.add_quirk("Trapper")
+	//H.add_quirk("Hard Yards")
+	//H.add_quirk("Trapper")
 
 /datum/outfit/job/tribal/f13villager
 	name = "Villager"
@@ -217,9 +221,9 @@ Hunter
     minimal_access = list(ACCESS_TRIBE)
 
 /datum/job/tribal/f13hunter/after_spawn(mob/living/carbon/human/H, mob/M)
-	H.add_quirk("Hard Yards")
+	//H.add_quirk("Hard Yards")
 	H.add_quirk("Lifegiver")
-	H.add_quirk("Trapper")
+	//H.add_quirk("Trapper")
 
 /datum/outfit/job/tribal/f13hunter
 	name = "Hunter"
