@@ -3956,7 +3956,7 @@
 	time = 30
 	category = CAT_MOULD
 	subcategory = CAT_MOULD_ONE
-
+/*
 /datum/crafting_recipe/mould/boltadvanced
 	result = /obj/item/prefabs/mould/bolt/high
 	name = "Advanced Bolt Mould"
@@ -3965,7 +3965,7 @@
 	time = 30
 	category = CAT_MOULD
 	subcategory = CAT_MOULD_ONE
-
+*/
 /datum/crafting_recipe/mould/trigger
 	result = /obj/item/prefabs/mould/trigger
 	name = "Trigger Mould"
