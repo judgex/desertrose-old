@@ -4,7 +4,7 @@
 	desc = "A backpack that allows for the wielding of a minigun with the help of a robotic arm and an ammo delivery system."
 	icon = 'icons/obj/guns/minigun.dmi'
 	icon_state = "balholstered"
-	item_state = "backpack"
+	item_state = "balholstered"
 	lefthand_file = 'icons/mob/inhands/equipment/backpack_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/backpack_righthand.dmi'
 	slot_flags = ITEM_SLOT_BACK
@@ -74,8 +74,10 @@
 /obj/item/minigunpackbal/update_icon()
 	if(armed)
 		icon_state = "balnotholstered"
+		item_state = "balnotholstered"
 	else
 		icon_state = "balholstered"
+		item_state = "balholstered"
 
 /obj/item/minigunpackbal/proc/attach_gun(var/mob/user)
 	if(!gun)
