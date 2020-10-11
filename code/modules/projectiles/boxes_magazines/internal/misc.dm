@@ -12,9 +12,9 @@
 
 /obj/item/ammo_box/magazine/internal/minigunbal
 	name = "minigun ammo pack"
-	ammo_type = /obj/item/ammo_casing/c9mm
-	caliber = "9mm"
-	max_ammo = 2500
+	ammo_type = /obj/item/ammo_casing/c5mm
+	caliber = "5mm"
+	max_ammo = 1000
 
 /obj/item/ammo_box/magazine/internal/tribalbow
 	name = "bow internal magazine"

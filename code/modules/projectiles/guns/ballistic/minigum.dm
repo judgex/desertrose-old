@@ -1,9 +1,9 @@
 //The ammo/gun is stored in a back slot item
 /obj/item/minigunpackbal
-	name = "Minigun ammo belt"
-	desc = ""
+	name = "Minigun pack"
+	desc = "A backpack that allows for the wielding of a minigun with the help of a robotic arm and an ammo delivery system."
 	icon = 'icons/obj/guns/minigun.dmi'
-	icon_state = "holstered"
+	icon_state = "balholstered"
 	item_state = "backpack"
 	lefthand_file = 'icons/mob/inhands/equipment/backpack_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/backpack_righthand.dmi'
@@ -73,9 +73,9 @@
 
 /obj/item/minigunpackbal/update_icon()
 	if(armed)
-		icon_state = "notholstered"
+		icon_state = "balnotholstered"
 	else
-		icon_state = "holstered"
+		icon_state = "balholstered"
 
 /obj/item/minigunpackbal/proc/attach_gun(var/mob/user)
 	if(!gun)
@@ -92,7 +92,7 @@
 
 /obj/item/gun/ballistic/minigunbal
 	name = "minigun"
-	desc = "A minigun."
+	desc = "A fast firing 5mm minigun."
 	icon = 'icons/obj/guns/minigun.dmi'
 	icon_state = "minigunbal_spin"
 	item_state = "minigun"
@@ -102,13 +102,11 @@
 	w_class = WEIGHT_CLASS_HUGE
 	materials = list()
 	burst_size = 5
-	burst_delay = 1
+	burst_delay = 1.3
 	automatic = 1
 	fire_delay = 5
-	spread = 5
+	spread = 20
 	weapon_weight = WEAPON_HEAVY
-	extra_penetration = 10
-	extra_damage = -9
 	fire_sound = 'sound/f13weapons/assaultrifle_fire.ogg'
 	mag_type = /obj/item/ammo_box/magazine/internal/minigunbal
 	casing_ejector = TRUE
@@ -142,7 +140,7 @@
 
 /obj/item/gun/ballistic/minigunbal/afterattack(atom/target, mob/living/user, flag, params)
 	if(!ammo_pack || ammo_pack.loc != user)
-		to_chat(user, "You need the backpack ammo belt to fire the gun!")
+		to_chat(user, "You need the backpack to fire the gun!")
 	. = ..()
 
 /obj/item/gun/ballistic/minigunbal/dropped(mob/living/user)

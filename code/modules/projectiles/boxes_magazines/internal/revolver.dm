@@ -68,3 +68,8 @@
 	ammo_type = /obj/item/ammo_casing/a556
 	caliber = "a556"
 	max_ammo = 5
+
+/obj/item/ammo_box/magazine/internal/cylinder/shotgunrevolver
+	name = "revolver shotgun cylinder"
+	ammo_type = /obj/item/ammo_casing/shotgun/buckshot
+	max_ammo = 3
