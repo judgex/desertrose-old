@@ -2223,6 +2223,17 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO_FIVE
 
+/datum/crafting_recipe/arrowburn
+	name = "Recharge Minigun Ammo"
+	result = /obj/item/minigunpackbal
+	time = 30
+	reqs = list(/obj/item/minigunpackbal = 1,
+				/obj/item/stack/sheet/metal = 20,
+				/datum/reagent/blackpowder = 120)
+	tools = list(TOOL_WORKBENCH)
+	category = CAT_WEAPONRY
+	subcategory = CAT_AMMO_FIVE
+
 /datum/crafting_recipe/voodoo
     name = "Voodoo"
     result = /obj/item/reagent_containers/pill/patch/voodoo

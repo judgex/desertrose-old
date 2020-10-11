@@ -316,6 +316,8 @@
 	item_state = "arclight"
 	dynamic_hair_suffix = ""
 	visor_flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE
+	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEFACIALHAIR
+
 
 /obj/item/clothing/head/helmet/f13/raider/arclight/Initialize()
 	. = ..()
