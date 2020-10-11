@@ -145,6 +145,11 @@ GLOBAL_DATUM_INIT(iconCache, /savefile, new("data/iconCache.sav")) //Cache of ic
 		return
 
 	if(cookie != "none")
+		var/regex/crashy_thingy = regex("^\\s*(\[\\\[\\{\\}\\\]\]\\s*){5,}")
+		if(crashy_thingy.Find(cookie))
+			message_admins("[key_name(src.owner)] tried to crash the server using at least 5 \"\[\" in a row. Ban them.")
+			log_admin_private("[key_name(owner)] tried to crash the server using at least 5 \"\[\" in a row. Ban them.")
+			return
 		var/list/connData = json_decode(cookie)
 		if (connData && islist(connData) && connData.len > 0 && connData["connData"])
 			connectionHistory = connData["connData"] //lol fuck
@@ -217,7 +222,7 @@ GLOBAL_DATUM_INIT(iconCache, /savefile, new("data/iconCache.sav")) //Cache of ic
 			var/datum/mind/M = I
 			if(M.current && M.current.client)
 				C = M.current.client
-			
+
 
 		if (!C)
 			continue
