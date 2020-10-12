@@ -32,14 +32,13 @@ SUBSYSTEM_DEF(nightcycle)
 	var/newTime
 
 /datum/controller/subsystem/nightcycle/fire(resumed = FALSE)
-	if (working)
-		doWork()
-		CHECK_TICK
-		return
-	if (nextBracket())
+	if(nextBracket())
 		working = 1
 		currentColumn = 1
-		CHECK_TICK
+
+	CHECK_TICK
+	if (working)
+		doWork()
 
 /datum/controller/subsystem/nightcycle/proc/nextBracket()
 	var/Time = station_time()

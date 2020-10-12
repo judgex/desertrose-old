@@ -31,6 +31,13 @@
 		/obj/item/reagent_containers/food/snacks/cracker, //Why toast a cracker? Who the fuck knows
 		/obj/item/reagent_containers/food/snacks/customizable/sandwich)) //Ehhhhhhhhhhhhhhhhh. I guess for toaster ovens, and "toast" items
 
+	if(!rand(0,9) && isturf(loc) && !istype(src,/obj/item/trash/f13/electronic/toaster/oven)) //Randomized variants
+		new /obj/item/trash/f13/electronic/toaster/oven(get_turf(src))
+		qdel(src)
+	else if(!rand(0,9999) && isturf(loc) && !istype(src,/obj/item/trash/f13/electronic/toaster/atomics))
+		new /obj/item/trash/f13/electronic/toaster/atomics(get_turf(src))
+		qdel(src)
+
 /obj/item/trash/f13/electronic/toaster/Destroy()
 	spew_contents()
 	QDEL_NULL(cell)
@@ -116,12 +123,12 @@
 		else if(I.color == "#444433") //This is dumb as hell and I don't give a fuck
 			I.name = "[initial(I.name)] (burnt)"
 			I.color = "#111111"
-		else if(I.color == "#C27430")
+		else if(I.color == "#c27430") //You IDIOT, of COURSE it forces lowercase, what is WRONG with you
 			I.name = "[initial(I.name)] (double toasted)"
 			I.color = "#444433"
 		else
 			I.name = "[initial(I.name)] (toasted)"
-			I.color = "#C27430"
+			I.color = "#c27430"
 
 		I.throwforce = I.throwforce + 2 //The corners are sharper ok
 		I.forceMove(get_turf(src))
