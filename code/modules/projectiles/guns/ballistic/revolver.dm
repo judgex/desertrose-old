@@ -453,8 +453,8 @@
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/shotgunrevolver
 	fire_sound = 'sound/f13weapons/caravan_shotgun.ogg'
 	fire_delay = 10
-	w_class = WEIGHT_CLASS_BULKY
-	weapon_weight = WEAPON_HEAVY
+	w_class = WEIGHT_CLASS_SMALL
+	weapon_weight = WEAPON_LIGHT
 	spread = 40
 
 /obj/item/gun/ballistic/revolver/needler

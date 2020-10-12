@@ -72,4 +72,5 @@
 /obj/item/ammo_box/magazine/internal/cylinder/shotgunrevolver
 	name = "revolver shotgun cylinder"
 	ammo_type = /obj/item/ammo_casing/shotgun/buckshot
+	caliber = "shotgun"
 	max_ammo = 3
