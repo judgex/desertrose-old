@@ -720,8 +720,6 @@
 	icon_state = "rigscustom_suit"
 	item_state = "rigscustom_suit"
 	icon = 'icons/fallout/clothing/suits.dmi'
-	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
-	armor = list("melee" = 55, "bullet" = 55, "laser" = 55, "energy" = 40, "bomb" = 55, "bio" = 60, "rad" = 60, "fire" = 90, "acid" = 20)
 
 /obj/item/clothing/suit/armor/f13/rangercombat/desert
 	name = "desert ranger combat armor"
