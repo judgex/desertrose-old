@@ -2233,7 +2233,7 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO_FIVE
 
-/datum/crafting_recipe/arrowburn
+/datum/crafting_recipe/miniguncharge
 	name = "Recharge Minigun Ammo"
 	result = /obj/item/minigunpackbal
 	time = 30

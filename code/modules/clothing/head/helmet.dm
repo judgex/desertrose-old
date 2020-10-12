@@ -708,21 +708,28 @@
 	dynamic_hair_suffix = "+generic"
 
 //Ranger Armors
-/obj/item/clothing/head/helmet/f13/ncr/rangercombat
-	name = "ranger combat helmet"
-	desc = "An old combat helmet, out of use around the time of the war."
-	icon_state = "ranger"
-	item_state = "ranger"
-	armor = list("melee" = 60, "bullet" = 50, "laser" = 30, "energy" = 50, "bomb" = 39, "bio" = 60, "rad" = 60, "fire" = 90, "acid" = 0)
-	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR|HIDEFACE
-	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
-	resistance_flags = LAVA_PROOF | FIRE_PROOF
-	dynamic_hair_suffix = ""
-	dynamic_fhair_suffix = ""
-	flash_protect = 1
-	glass_colour_type = /datum/client_colour/glass_colour/red
-	lighting_alpha = LIGHTING_PLANE_ALPHA_LOWLIGHT_VISION
-	darkness_view = 128
+	/obj/item/clothing/head/helmet/f13/ncr/rangercombat
+		name = "ranger combat helmet"
+		desc = "An old combat helmet, out of use around the time of the war."
+		icon_state = "ranger"
+		item_state = "ranger"
+		armor = list("melee" = 60, "bullet" = 50, "laser" = 30, "energy" = 50, "bomb" = 39, "bio" = 60, "rad" = 60, "fire" = 90, "acid" = 0)
+		flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR|HIDEFACE
+		flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
+		resistance_flags = LAVA_PROOF | FIRE_PROOF
+		dynamic_hair_suffix = ""
+		dynamic_fhair_suffix = ""
+		flash_protect = 1
+		glass_colour_type = /datum/client_colour/glass_colour/red
+		lighting_alpha = LIGHTING_PLANE_ALPHA_LOWLIGHT_VISION
+		darkness_view = 128
+
+/obj/item/clothing/head/helmet/f13/ncr/rangercombat/rigscustom
+	name = "11th Armored Calvary Helmet"
+	desc = "An advanced combat helmet used by the 11th Armored Calvary Regiment before the war. There is a worn and faded 11th Armored Calvary Regiment's insignia just above the visor. The helmet itself has some scratches and dents sustained from battle."
+	icon_state = "rigscustom_helmet"
+	item_state = "rigscustom_helmet"
+	icon = 'icons/fallout/clothing/hats.dmi'
 
 /obj/item/clothing/head/helmet/f13/ncr/rangercombat/desert
 	name = "desert ranger combat helmet"
