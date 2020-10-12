@@ -379,6 +379,16 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO_ONE
 
+/datum/crafting_recipe/pps_mag
+	name = "empty ppsh magazine (9mm)"
+	result = /obj/item/ammo_box/magazine/pps9mm/empty
+	reqs = list(/obj/item/stack/sheet/metal = 6)
+	traits = list(TRAIT_GUNSMITH_THREE)
+	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER3)
+	time = 10
+	category = CAT_WEAPONRY
+	subcategory = CAT_AMMO_ONE
+
 /datum/crafting_recipe/d12g
 	name = "empty shotgun drum magazine (12g)"
 	result = /obj/item/ammo_box/magazine/d12g/empty
@@ -2219,6 +2229,17 @@
 	reqs = list(/obj/item/ammo_casing/caseless/arrow = 1,
 				/obj/item/reagent_containers/food/drinks/bottle = 1,
 				/obj/item/reagent_containers/food/snacks/meat/slab/human/ghoul = 4)
+	tools = list(TOOL_WORKBENCH)
+	category = CAT_WEAPONRY
+	subcategory = CAT_AMMO_FIVE
+
+/datum/crafting_recipe/miniguncharge
+	name = "Recharge Minigun Ammo"
+	result = /obj/item/minigunpackbal
+	time = 30
+	reqs = list(/obj/item/minigunpackbal = 1,
+				/obj/item/stack/sheet/metal = 20,
+				/datum/reagent/blackpowder = 120)
 	tools = list(TOOL_WORKBENCH)
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO_FIVE

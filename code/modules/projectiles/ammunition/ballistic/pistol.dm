@@ -1,3 +1,10 @@
+//5mm
+/obj/item/ammo_casing/c5mm
+	name = "5mm FMJ bullet casing"
+	desc = "A 5mm full metal jacket bullet casing."
+	caliber = "5mm"
+	projectile_type = /obj/item/projectile/bullet/c9mm
+
 // 10mm
 /obj/item/ammo_casing/c10mm
 	name = "10mm FMJ bullet casing"

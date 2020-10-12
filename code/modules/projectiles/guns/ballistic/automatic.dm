@@ -479,6 +479,7 @@
 	return
 
 /obj/item/gun/ballistic/automatic/mini_uzi
+	spawnwithmagazine = FALSE
 	name = "\improper Type U3 Uzi (standard)"
 	desc = "A lightweight, burst-fire submachine gun, for when you really want someone dead. Uses 9mm rounds."
 	icon_state = "mini-uzi"
@@ -610,10 +611,11 @@
 	return
 
 /obj/item/gun/ballistic/automatic/pps
+	spawnwithmagazine = FALSE
 	name = "\improper ancient SMG (standard)"
 	desc = "An extremely fast firing, innacurate SMG from past wars. Low fire rate and low damage. Uses 9mm rounds."
 	icon_state = "pps"
-	mag_type = /obj/item/ammo_box/magazine/uzim9mm
+	mag_type = /obj/item/ammo_box/magazine/pps9mm
 	w_class = WEIGHT_CLASS_NORMAL
 	//can_scope = TRUE
 	//scopestate = "AEP7_scope"
@@ -793,6 +795,7 @@
 	return
 
 /obj/item/gun/ballistic/automatic/smg10mm
+	spawnwithmagazine = FALSE
 	name = "10mm submachine gun (standard)"
 	desc = "A select fire open bolt 10mm submachine gun. The serial number and manufactuer markings have been scratched off."
 	icon_state = "smg10mm"
@@ -963,6 +966,7 @@
 	return
 
 /obj/item/gun/ballistic/automatic/assault_rifle
+	spawnwithmagazine = FALSE
 	name = "assault rifle (standard)"
 	desc = "A standard R91 assault rifle, out of use around the time of the Great War."
 	icon_state = "assault_rifle"
@@ -1191,6 +1195,7 @@
 	item_state = "gold_sniper"
 
 /obj/item/gun/ballistic/automatic/marksman/servicerifle
+	spawnwithmagazine = FALSE
 	name = "service rifle (standard)"
 	desc = "A 5.56x45 semi-automatic service rifle manufactured by the NCR and issued to all combat personnel."
 	icon_state = "service_rifle"
@@ -1366,6 +1371,7 @@
 	force = 40
 
 /obj/item/gun/ballistic/automatic/greasegun
+	spawnwithmagazine = FALSE
 	name = "M3A1 Grease Gun (standard)"
 	desc = "An inexpensive .45 ACP submachine gun. Slow fire rate means less waste of ammo and controllable bursts."
 	icon_state = "grease_gun"
@@ -1383,6 +1389,7 @@
 	spread = 10
 	randomspread = 10
 	can_attachments = TRUE
+	spawnwithmagazine = FALSE
 	
 /obj/item/gun/ballistic/automatic/greasegun/attackby(obj/item/W, mob/user, params)
 	if(istype(W,/obj/item/screwdriver))
@@ -1692,6 +1699,7 @@
 	zoomable = TRUE
 	zoom_amt = 10
 	zoom_out_amt = 13
+	spawnwithmagazine = FALSE
 	can_scope = FALSE
 
 /obj/item/gun/ballistic/automatic/rangemaster/scoped/attackby(obj/item/W, mob/user, params)
