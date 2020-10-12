@@ -654,13 +654,13 @@
 	item_state = "legdecanprim"
 	icon_state = "legdecanprim"
 
-/obj/item/clothing/head/helmet/f13/legion/vet/decanalt
+/obj/item/clothing/head/helmet/f13/legion/vet/decan/alt
 	name = "legion veteran decanus helmet"
 	desc = "This is a metal helmet that's been reinforced with stronger leather patches and anointed with a array of red and dark red feathers. This one has several large white and black feathers sewn along side the rest of the feathers aswell. There is also a ballistic face-shield attached to the helmet that protects the face from physical blows and small pistol calibers."
 	item_state = "vetdecalt"
 	icon_state = "vetdecalt"
 
-/obj/item/clothing/head/helmet/f13/legion/vet/decanalt/attack_self(mob/user)
+/obj/item/clothing/head/helmet/f13/legion/vet/decan/alt/attack_self(mob/user)
 	if(can_toggle && !user.incapacitated())
 		if(world.time > cooldown + toggle_cooldown)
 			cooldown = world.time
