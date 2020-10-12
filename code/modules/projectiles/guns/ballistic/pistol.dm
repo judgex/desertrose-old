@@ -101,6 +101,11 @@
 	spread = 0
 	name = "10mm pistol (improved)"
 
+/obj/item/gun/ballistic/automatic/pistol/n99/high//masterwork
+	spread = 0
+	
+	name = "10mm pistol (masterwork)"
+
 /obj/item/gun/ballistic/automatic/pistol/n99/pers/gunslinger
 	name = "10mm pistol (gunslinger variant)"
 	fire_delay = 2
