@@ -41,6 +41,16 @@
 /obj/item/ammo_box/magazine/uzim9mm/empty
 	start_empty = 1
 
+/obj/item/ammo_box/magazine/pps9mm
+	name = "ppsh magazine (9mm)"
+	icon_state = "ppshDrum"
+	ammo_type = /obj/item/ammo_casing/c9mm
+	caliber = "9mm"
+	max_ammo = 71
+
+/obj/item/ammo_box/magazine/pps9mm/empty
+	start_empty = 1
+
 /obj/item/ammo_box/magazine/smgm9mm
 	name = "submachine gun magazine (9mm)"
 	icon_state = "smg9mm-42"

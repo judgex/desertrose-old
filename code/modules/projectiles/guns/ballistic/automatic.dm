@@ -479,6 +479,7 @@
 	return
 
 /obj/item/gun/ballistic/automatic/mini_uzi
+	spawnwithmagazine = FALSE
 	name = "\improper Type U3 Uzi (standard)"
 	desc = "A lightweight, burst-fire submachine gun, for when you really want someone dead. Uses 9mm rounds."
 	icon_state = "mini-uzi"
@@ -491,10 +492,11 @@
 	scope_y_offset = 21
 	burst_size = 2
 	burst_delay = 2
-	fire_delay = 4
+	fire_delay = 5
 	force = 15
 	extra_damage = -5
 	extra_penetration = -5
+	randomspread = 10
 	spread = 10
 	can_attachments = TRUE
 	can_suppress = TRUE
@@ -524,7 +526,12 @@
 /obj/item/gun/ballistic/automatic/mini_uzi/mid
 	name = "\improper Type U3 Uzi (improved)"
 	desc = "A lightweight, burst-fire submachine gun, for when you really want someone dead. Uses 9mm rounds."
-	fire_delay = 3
+	w_class = WEIGHT_CLASS_SMALL
+	weapon_weight = WEAPON_LIGHT
+	fire_delay = 4
+	extra_penetration = 0
+	extra_damage = 0
+	randomspread = 0
 
 /obj/item/gun/ballistic/automatic/mini_uzi/mid/attackby(obj/item/W, mob/user, params)
 	if(istype(W,/obj/item/screwdriver))
@@ -551,9 +558,12 @@
 /obj/item/gun/ballistic/automatic/mini_uzi/high
 	name = "\improper Type U3 Uzi (masterwork)"
 	desc = "A lightweight, burst-fire submachine gun, for when you really want someone dead. Uses 9mm rounds."
-	fire_delay = 1
+	w_class = WEIGHT_CLASS_SMALL
+	weapon_weight = WEAPON_LIGHT
+	fire_delay = 3
 	extra_damage = 5
 	extra_penetration = 5
+	randomspread = 0
 
 /obj/item/gun/ballistic/automatic/mini_uzi/high/attackby(obj/item/W, mob/user, params)
 	if(istype(W,/obj/item/screwdriver))
@@ -601,10 +611,11 @@
 	return
 
 /obj/item/gun/ballistic/automatic/pps
+	spawnwithmagazine = FALSE
 	name = "\improper ancient SMG (standard)"
 	desc = "An extremely fast firing, innacurate SMG from past wars. Low fire rate and low damage. Uses 9mm rounds."
 	icon_state = "pps"
-	mag_type = /obj/item/ammo_box/magazine/uzim9mm
+	mag_type = /obj/item/ammo_box/magazine/pps9mm
 	w_class = WEIGHT_CLASS_NORMAL
 	//can_scope = TRUE
 	//scopestate = "AEP7_scope"
@@ -612,11 +623,13 @@
 	//scope_y_offset = 21
 	burst_size = 3
 	burst_delay = 2
-	fire_delay = 9
+	fire_delay = 6
 	force = 15
 	spread = 20
 	can_attachments = TRUE
+	randomspread = 10
 	extra_damage = -14
+	extra_penetration = -5
 
 /obj/item/gun/ballistic/automatic/pps/attackby(obj/item/W, mob/user, params)
 	if(istype(W,/obj/item/screwdriver))
@@ -642,12 +655,13 @@
 
 /obj/item/gun/ballistic/automatic/pps/mid
 	name = "\improper ancient SMG (improved)"
-	burst_size = 3
-	burst_delay = 1
-	fire_delay = 7
-	spread = 10
+	burst_delay = 1.5
+	fire_delay = 5
 	can_attachments = TRUE
 	extra_damage = -9
+	extra_penetration = 0
+	randomspread = 0
+
 
 /obj/item/gun/ballistic/automatic/pps/mid/attackby(obj/item/W, mob/user, params)
 	if(istype(W,/obj/item/screwdriver))
@@ -674,10 +688,13 @@
 /obj/item/gun/ballistic/automatic/pps/high
 	name = "\improper ancient SMG (masterwork)"
 	burst_size = 3
-	burst_delay = 1
-	fire_delay = 7
-	spread = 5
+	extra_damage = 0
+	extra_penetration = 5
+	burst_delay = 1.5
+	randomspread = 0
 	can_attachments = TRUE
+	w_class = WEIGHT_CLASS_SMALL
+	weapon_weight = WEAPON_LIGHT
 
 /obj/item/gun/ballistic/automatic/pps/high/attackby(obj/item/W, mob/user, params)
 	if(istype(W,/obj/item/screwdriver))
@@ -778,6 +795,7 @@
 	return
 
 /obj/item/gun/ballistic/automatic/smg10mm
+	spawnwithmagazine = FALSE
 	name = "10mm submachine gun (standard)"
 	desc = "A select fire open bolt 10mm submachine gun. The serial number and manufactuer markings have been scratched off."
 	icon_state = "smg10mm"
@@ -790,8 +808,9 @@
 	burst_size = 2
 	fire_delay = 4
 	burst_delay = 3
-	extra_damage = -5
-	extra_penetration = -5
+	extra_damage = -6
+	extra_penetration = -6
+	randomspread = 10
 	can_suppress = FALSE //we dont have sprites therefore cease
 	force = 15
 	spread = 18
@@ -821,9 +840,9 @@
 
 /obj/item/gun/ballistic/automatic/smg10mm/mid
 	name = "10mm submachine gun (improved)"
-	burst_size = 2
-	fire_delay = 2
-	burst_delay = 2
+	randomspread = 0
+	extra_penetration = 0
+	extra_damage = 0
 
 /obj/item/gun/ballistic/automatic/smg10mm/mid/attackby(obj/item/W, mob/user, params)
 	if(istype(W,/obj/item/screwdriver))
@@ -850,11 +869,14 @@
 
 /obj/item/gun/ballistic/automatic/smg10mm/high
 	name = "10mm submachine gun (masterwork)"
+	randomspread = 0
 	burst_size = 2
 	fire_delay = 2
 	burst_delay = 2
-	extra_damage = 5
-	extra_penetration = 10
+	extra_damage = 6
+	extra_penetration = 6
+	w_class = WEIGHT_CLASS_SMALL
+	weapon_weight = WEAPON_LIGHT
 
 /obj/item/gun/ballistic/automatic/smg10mm/high/attackby(obj/item/W, mob/user, params)
 	if(istype(W,/obj/item/screwdriver))
@@ -944,6 +966,7 @@
 	return
 
 /obj/item/gun/ballistic/automatic/assault_rifle
+	spawnwithmagazine = FALSE
 	name = "assault rifle (standard)"
 	desc = "A standard R91 assault rifle, out of use around the time of the Great War."
 	icon_state = "assault_rifle"
@@ -954,12 +977,15 @@
 	fire_sound = 'sound/f13weapons/assaultrifle_fire.ogg'
 	burst_size = 2
 	automatic = 1
-	fire_delay = 5
-	burst_delay = 4
+	fire_delay = 4
+	burst_delay = 3
+	extra_damage = -6
+	extra_penetration = -6
 	spread = 8
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 	can_attachments = TRUE
+	randomspread = 10
 
 	bayonetstate = "rifles"
 	can_bayonet = TRUE
@@ -992,7 +1018,7 @@
 
 /obj/item/gun/ballistic/automatic/assault_rifle/mid
 	name = "assault rifle (improved)"
-	automatic = 1
+	randomspread = 0
 	fire_delay = 3
 	extra_penetration = 0
 	extra_damage = 0
@@ -1024,11 +1050,12 @@
 
 /obj/item/gun/ballistic/automatic/assault_rifle/high
 	name = "assault rifle (masterwork)"
-	automatic = 1
-	fire_delay = 2
-	extra_damage = 4
-	extra_penetration = 4
-	burst_delay = 1
+	randomspread = 0
+	fire_delay = 3
+	extra_damage = 6
+	extra_penetration = 6
+	burst_delay = 2
+	weapon_weight = WEAPON_LIGHT
 
 /obj/item/gun/ballistic/automatic/assault_rifle/high/attackby(obj/item/W, mob/user, params)
 	if(istype(W,/obj/item/screwdriver))
@@ -1168,17 +1195,20 @@
 	item_state = "gold_sniper"
 
 /obj/item/gun/ballistic/automatic/marksman/servicerifle
+	spawnwithmagazine = FALSE
 	name = "service rifle (standard)"
 	desc = "A 5.56x45 semi-automatic service rifle manufactured by the NCR and issued to all combat personnel."
 	icon_state = "service_rifle"
 	item_state = "servicerifle"
 	fire_sound = 'sound/f13weapons/varmint_rifle.ogg'
 	fire_delay = 5
-	extra_damage = -5
+	extra_damage = -6
+	extra_penetration = -6
 	mag_type = /obj/item/ammo_box/magazine/m556/rifle
 	zoomable = FALSE
 	weapon_weight = WEAPON_HEAVY
 	//bayonetstate = "rifles"
+	randomspread = 10
 	knife_x_offset = 22
 	knife_y_offset = 12
 
@@ -1204,17 +1234,10 @@
 
 /obj/item/gun/ballistic/automatic/marksman/servicerifle/mid
 	name = "service rifle (improved)"
-	desc = "A 5.56x45 semi-automatic service rifle manufactured by the NCR and issued to all combat personnel."
-	icon_state = "service_rifle"
-	item_state = "servicerifle"
-	fire_sound = 'sound/f13weapons/varmint_rifle.ogg'
+	randomspread = 0
 	fire_delay = 4
-	mag_type = /obj/item/ammo_box/magazine/m556/rifle
-	zoomable = FALSE
-	weapon_weight = WEAPON_HEAVY
-	//bayonetstate = "rifles"
-	knife_x_offset = 22
-	knife_y_offset = 12
+	extra_damage = 0
+	extra_penetration = 0
 
 /obj/item/gun/ballistic/automatic/marksman/servicerifle/mid/attackby(obj/item/W, mob/user, params)
 	if(istype(W,/obj/item/screwdriver))
@@ -1238,19 +1261,11 @@
 
 /obj/item/gun/ballistic/automatic/marksman/servicerifle/high
 	name = "service rifle (masterwork)"
-	desc = "A 5.56x45 semi-automatic service rifle manufactured by the NCR and issued to all combat personnel."
-	icon_state = "service_rifle"
-	item_state = "servicerifle"
-	fire_sound = 'sound/f13weapons/varmint_rifle.ogg'
+	randomspread = 0
 	fire_delay = 3
 	extra_damage = 10
 	extra_penetration = 10
-	mag_type = /obj/item/ammo_box/magazine/m556/rifle
-	zoomable = FALSE
-	weapon_weight = WEAPON_HEAVY
-	//bayonetstate = "rifles"
-	knife_x_offset = 22
-	knife_y_offset = 12
+	weapon_weight = WEAPON_LIGHT
 
 /obj/item/gun/ballistic/automatic/marksman/servicerifle/high/attackby(obj/item/W, mob/user, params)
 	if(istype(W,/obj/item/screwdriver))
@@ -1356,6 +1371,7 @@
 	force = 40
 
 /obj/item/gun/ballistic/automatic/greasegun
+	spawnwithmagazine = FALSE
 	name = "M3A1 Grease Gun (standard)"
 	desc = "An inexpensive .45 ACP submachine gun. Slow fire rate means less waste of ammo and controllable bursts."
 	icon_state = "grease_gun"
@@ -1371,7 +1387,9 @@
 	extra_penetration = -5
 	force = 15
 	spread = 10
+	randomspread = 10
 	can_attachments = TRUE
+	spawnwithmagazine = FALSE
 	
 /obj/item/gun/ballistic/automatic/greasegun/attackby(obj/item/W, mob/user, params)
 	if(istype(W,/obj/item/screwdriver))
@@ -1397,6 +1415,7 @@
 
 /obj/item/gun/ballistic/automatic/greasegun/mid
 	name = "M3A1 Grease Gun (improved)"
+	randomspread = 0
 	fire_delay = 3
 	burst_delay = 3
 
@@ -1426,8 +1445,11 @@
 	name = "M3A1 Grease Gun (masterwork)"
 	fire_delay = 2
 	burst_delay = 2
-	extra_penetration = 7
-	extra_damage = 7
+	extra_penetration = 5
+	extra_damage = 5
+	randomspread = 0
+	w_class = WEIGHT_CLASS_SMALL
+	weapon_weight = WEAPON_LIGHT
 
 /obj/item/gun/ballistic/automatic/greasegun/high/attackby(obj/item/W, mob/user, params)
 	if(istype(W,/obj/item/screwdriver))
@@ -1666,6 +1688,7 @@
 	bayonetstate = "lasmusket"
 	knife_x_offset = 24
 	knife_y_offset = 21
+	randomspread = 10
 
 /obj/item/gun/ballistic/automatic/rangemaster/scoped
 	name = "Scoped Colt Rangemaster (standard)"
@@ -1676,6 +1699,7 @@
 	zoomable = TRUE
 	zoom_amt = 10
 	zoom_out_amt = 13
+	spawnwithmagazine = FALSE
 	can_scope = FALSE
 
 /obj/item/gun/ballistic/automatic/rangemaster/scoped/attackby(obj/item/W, mob/user, params)
@@ -1704,7 +1728,7 @@
 
 /obj/item/gun/ballistic/automatic/rangemaster/scoped/mid
 	name = "Scoped Colt Rangemaster (improved)"
-	fire_delay = 3
+	randomspread = 0
 	extra_penetration = 0
 	extra_damage = 0
 
@@ -1734,9 +1758,10 @@
 
 /obj/item/gun/ballistic/automatic/rangemaster/scoped/high
 	name = "Scoped Colt Rangemaster (masterwork)"
-	fire_delay = 2
-	extra_penetration = 10
-	extra_damage = 10
+	randomspread = 0
+	fire_delay = 4
+	extra_penetration = 7
+	extra_damage = 7
 
 /obj/item/gun/ballistic/automatic/rangemaster/scoped/high/attackby(obj/item/W, mob/user, params)
 	if(istype(W,/obj/item/screwdriver))
