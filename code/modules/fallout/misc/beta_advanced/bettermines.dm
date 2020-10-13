@@ -64,5 +64,14 @@
 	anchored = 1
 	icon_state = "landmine_active"
 
+/obj/item/grenade/bettermine/explosive/planted/attackby(obj/item/I, mob/user, params)
+	if(istype(I, /obj/item/shovel))
+		if(do_after(user, 20, target = loc))
+			to_chat(user, "You covered landmine with some sand.")
+			icon_state = initial(icon_state) + "_hidden"
+			return
+	else
+		return
+
 /obj/item/grenade/bettermine/explosive/mineEffect(mob/victim)
 	explosion(loc, range_devastation, range_heavy, range_light, range_flash)
