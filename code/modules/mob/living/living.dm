@@ -355,7 +355,7 @@
 // MOB PROCS //END
 
 /mob/living/proc/mob_sleep()
-	set name = "Спать"
+	set name = "Sleep"
 	set category = "IC"
 
 	if(IsSleeping())
@@ -369,7 +369,7 @@
 /mob/proc/get_contents()
 
 /mob/living/proc/lay_down()
-	set name = "Ползти"
+	set name = "Craw"
 	set category = "IC"
 
 	if(stat)
@@ -386,7 +386,7 @@
 		to_chat(src, "<span class='danger'>Когда вы попытались встать, вы ударились о [under_object] своей головой!<br>Ай!</span>")
 
 /mob/living/proc/surrender()
-	set name = "Сдаться"
+	set name = "Surrender"
 	set category = "IC"
 
 	if(canmove)
