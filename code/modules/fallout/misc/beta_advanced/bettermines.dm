@@ -6,6 +6,9 @@
 	icon = 'icons/obj/items_and_weapons.dmi'
 	icon_state = "landmine"
 	var/triggered = 0
+	var/press_bolted = 1
+	var/hidden = 0
+	var/wire_cut = 0
 	det_time = 0
 
 /obj/item/grenade/bettermine/attack_self(mob/user)
@@ -66,12 +69,50 @@
 
 /obj/item/grenade/bettermine/explosive/planted/attackby(obj/item/I, mob/user, params)
 	if(istype(I, /obj/item/shovel))
-		if(do_after(user, 20, target = loc))
-			to_chat(user, "You covered landmine with some sand.")
-			icon_state = initial(icon_state) + "_hidden"
+		if(!hidden)
+			if(do_after(user, 20, target = loc))
+				to_chat(user, "You covered landmine with some sand.")
+				icon_state = initial(icon_state) + "_hidden"
+				hidden = 1
+				return
+		else
+			if(do_after(user, 20, target = loc))
+				to_chat(user, "You uncovered landmine.")
+				icon_state = initial(icon_state) - "_hidden"
+				return
+
+	if(istype(I, /obj/item/screwdriver) && active == 1)
+		to_chat(user, "Вы аккуратно начинаете развинчивать болты на мине.")
+		playsound(src.loc, I.usesound, 100, 1)
+		if(do_after(user, 15, target = loc))
+			to_chat(user, "You carefully remove bolts from detonating plate.")
+			press_bolted = 0
 			return
-	else
+	if(istype(I, /obj/item/screwdriver) && press_bolted == 0)
 		return
+	if(istype(I, /obj/item/wirecutters) && press_bolted == 0)
+		if(do_after(user, 15, target = loc))
+			playsound(src.loc, I.usesound, 100, 1)
+			to_chat(user, "You carefully cut wires inside of this mine, now it can be safely deconstructed...")
+			wire_cut = 1
+			active = 0
+			return
+	if(istype(I, /obj/item/wirecutters) && wire_cut == 1)
+		return
+	if(istype(I, /obj/item/wrench) && wire_cut == 1)
+		to_chat(user, "You started dissassemble mine components.")
+		playsound(src.loc, I.usesound, 100, 1)
+		if(do_after(user, 25, target = loc))
+			switch(rand(1,10))
+				if(5)
+					to_chat(user, "You successfuly disassembled mine and got all components!")
+					new/obj/item/crafting/sensor/(get_turf(src), 1)
+					new/obj/item/stack/sheet/metal/(get_turf(src), 1)
+					new/obj/item/stack/cable_coil/(get_turf(src), 2)
+					qdel(src)
+				else
+					to_chat(user, "Sadly, you didn't take anything useful from this mine...")
+					qdel(src)
 
 /obj/item/grenade/bettermine/explosive/mineEffect(mob/victim)
 	explosion(loc, range_devastation, range_heavy, range_light, range_flash)
