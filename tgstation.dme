@@ -1599,6 +1599,7 @@
 #include "code\modules\fallout\misc\gangs.dm"
 #include "code\modules\fallout\misc\gangtool.dm"
 #include "code\modules\fallout\misc\overlays.dm"
+#include "code\modules\fallout\misc\beta_advanced\bettermines.dm"
 #include "code\modules\fallout\misc\beta_advanced\bettersandbags.dm"
 #include "code\modules\fallout\misc\beta_advanced\color_correction.dm"
 #include "code\modules\fallout\misc\beta_advanced\crawling.dm"

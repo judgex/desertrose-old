@@ -3834,3 +3834,13 @@
 	result = /obj/item/blueprint/weapon/thatgun/limited
 	name = ".223 pistol blueprint"
 	tools = list(TOOL_AWORKBENCH, TOOL_GUNTIER3, /obj/item/blueprint/weapon/thatgun)
+
+/datum/crafting_recipe/landmine
+	name = "landmine"
+	result = /obj/item/grenade/bettermine/explosive
+	reqs = list(/obj/item/stack/sheet/metal = 2, /datum/reagent/blackpowder = 2)
+	traits = list(TRAIT_GUNSMITH_TWO)
+	tools = list(TOOL_WORKBENCH)
+	time = 25
+	category = CAT_WEAPONRY
+	subcategory = CAT_AMMO_ONE
