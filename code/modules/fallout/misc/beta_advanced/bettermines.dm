@@ -10,8 +10,8 @@
 
 /obj/item/grenade/bettermine/attack_self(mob/user)
 	if(!active)
-		to_chat(user, "<span class='warning'>Вы устанавливаете [name]!</span>")
-		visible_message("<span class='danger'>[user] устанавливает [src]!</span>")
+		to_chat(user, "<span class='warning'>You planted [name]!</span>")
+		visible_message("<span class='danger'>[user] planted [src]!</span>")
 		playsound(user.loc, 'sound/weapons/armbomb.ogg', 60, 1)
 		active = 1
 		icon_state = initial(icon_state) + "_active"
@@ -19,7 +19,7 @@
 
 		var/turf/bombturf = get_turf(src)
 		var/area/A = get_area(bombturf)
-		var/message = "[ADMIN_LOOKUPFLW(user)]) активирует детонацию [name] в [ADMIN_COORDJMP(bombturf)]"
+		var/message = "[ADMIN_LOOKUPFLW(user)]) has primed a [name] at [ADMIN_COORDJMP(bombturf)]"
 		GLOB.bombers += message
 		message_admins(message)
 		log_game("[key_name(usr)] has primed a [name] for detonation at [A.name] [COORD(bombturf)].")
