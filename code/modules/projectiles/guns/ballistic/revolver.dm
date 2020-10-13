@@ -445,6 +445,18 @@
 			return 1
 	return 0
 
+/obj/item/gun/ballistic/revolver/shotgunrevolver
+	name = "\improper judge"
+	desc = "A large revolver that has been modified to fire shotgun shells."
+	icon_state = "revolvershotgun"
+	item_state = "gun"
+	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/shotgunrevolver
+	fire_sound = 'sound/f13weapons/caravan_shotgun.ogg'
+	fire_delay = 10
+	w_class = WEIGHT_CLASS_SMALL
+	weapon_weight = WEAPON_LIGHT
+	spread = 40
+
 /obj/item/gun/ballistic/revolver/needler
 	name = "needler pistol"
 	desc = "You suspect this Bringham needler pistol was once used in scientific field studies. It uses small hard-plastic hypodermic darts as ammo. "
@@ -479,7 +491,7 @@
 	fire_delay = 4
 
 /obj/item/gun/ballistic/revolver/sequoia/scoped
-	name = "hunting revolver"
+	name = "hunting revolver (standard)"
 	desc = "A scoped double action revolver chambered in 45-70."
 	icon_state = "hunting_revolver"
 	zoomable = TRUE

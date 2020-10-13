@@ -185,9 +185,6 @@ Head Scribe
 		return
 	H.add_trait(TRAIT_MEDICALEXPERT, TRAIT_GENERIC, TRAIT_CHEMWHIZ)
 
-/datum/job/bos/f13headscribe/after_spawn(mob/living/carbon/human/H, mob/M)
-	H.add_quirk("Master Gunsmith")
-
 /datum/outfit/job/bos/f13headscribe
 	name = "Head Scribe"
 	jobtype = /datum/job/bos/f13headscribe
@@ -249,11 +246,17 @@ Knight-Captain
 	access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS, ACCESS_ARMORY, ACCESS_BRIG)
 	minimal_access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS, ACCESS_ARMORY, ACCESS_BRIG)
 
+/datum/job/bos/f13knightcap/after_spawn(mob/living/carbon/human/H, mob/M)
+	H.add_quirk("Master Gunsmith")
+
 /datum/outfit/job/bos/f13knightcap/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
 	if(visualsOnly)
 		return
 	H.add_trait(TRAIT_CHEMWHIZ)
+
+
+
 
 /datum/outfit/job/bos/f13knightcap
 	name = "Knight-Captain"

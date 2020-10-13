@@ -42,6 +42,13 @@
 			user.visible_message("[user] disassembles the wreck.</span>")
 			inuse = FALSE
 			new /obj/item/stack/sheet/metal/five/(get_turf(user))
+			if (prob(50))
+				new /obj/item/stack/crafting/goodparts/(get_turf(user))
+			if (prob(50))
+				new /obj/item/stack/crafting/goodparts/(get_turf(user))
+			if (prob(50))
+				new /obj/item/stack/crafting/goodparts/(get_turf(user))
+			new /obj/item/stack/crafting/goodparts/(get_turf(user))
 			if (uses_left == 0)
 				qdel(src)
 				qdel(S1)

@@ -301,7 +301,7 @@
 	equipsound = 'sound/f13weapons/equipsounds/plasequip.ogg'
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
-	projectile_speed = 1.1
+	projectile_speed = 0.9
 
 /obj/item/gun/energy/laser/plasma/carbine
 	name ="plasma carbine"
@@ -473,6 +473,10 @@
 	desc = "The AER14, a successor to the AER9 and AER12, was a prototype in development before the Great War. It features an orange trim and higher firepower at the cost of slower firing rate."
 	icon_state = "aer14"
 	item_state = "laser-rifle9"
+	can_scope = TRUE
+	scopestate = "AEP7_scope"
+	scope_x_offset = 12
+	scope_y_offset = 20
 	fire_delay = 3.5
 	equipsound = 'sound/f13weapons/equipsounds/aer14equip.ogg'
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/aer14)

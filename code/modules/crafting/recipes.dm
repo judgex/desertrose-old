@@ -250,6 +250,16 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO_FOUR
 
+/datum/crafting_recipe/ecrecharge
+	name = "Small Energy Cell (recycle)"
+	result = /obj/item/stock_parts/cell/ammo/ec
+	reqs = list(/obj/item/stock_parts/cell/ammo/ec=2)
+	traits = list(TRAIT_GUNSMITH_ONE)
+	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER1)
+	time = 10
+	category = CAT_WEAPONRY
+	subcategory = CAT_AMMO_FOUR
+
 /datum/crafting_recipe/mfc
 	name = "Microfusion Cell"
 	result = /obj/item/stock_parts/cell/ammo/mfc
@@ -260,10 +270,30 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO_FOUR
 
+/datum/crafting_recipe/mfcrecharge
+	name = "Microfusion Cell (recycle)"
+	result = /obj/item/stock_parts/cell/ammo/mfc
+	reqs = list(/obj/item/stock_parts/cell/ammo/mfc=2)
+	traits = list(TRAIT_GUNSMITH_TWO)
+	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER2)
+	time = 20
+	category = CAT_WEAPONRY
+	subcategory = CAT_AMMO_FOUR
+
 /datum/crafting_recipe/ecp
 	name = "Electron Charge Pack"
 	result = /obj/item/stock_parts/cell/ammo/ecp
 	reqs = list(/obj/item/stack/crafting/goodparts=3, /obj/item/stock_parts/capacitor=5)
+	traits = list(TRAIT_GUNSMITH_THREE)
+	tools = list(TOOL_AWORKBENCH, TOOL_GUNTIER3)
+	time = 30
+	category = CAT_WEAPONRY
+	subcategory = CAT_AMMO_FOUR
+
+/datum/crafting_recipe/ecprecharge
+	name = "Electron Charge Pack (recycle)"
+	result = /obj/item/stock_parts/cell/ammo/ecp
+	reqs = list(/obj/item/stock_parts/cell/ammo/ecp=2)
 	traits = list(TRAIT_GUNSMITH_THREE)
 	tools = list(TOOL_AWORKBENCH, TOOL_GUNTIER3)
 	time = 30
@@ -375,6 +405,16 @@
 	reqs = list(/obj/item/stack/sheet/metal = 2)
 	traits = list(TRAIT_GUNSMITH_TWO)
 	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER2)
+	time = 10
+	category = CAT_WEAPONRY
+	subcategory = CAT_AMMO_ONE
+
+/datum/crafting_recipe/pps_mag
+	name = "empty ppsh magazine (9mm)"
+	result = /obj/item/ammo_box/magazine/pps9mm/empty
+	reqs = list(/obj/item/stack/sheet/metal = 6)
+	traits = list(TRAIT_GUNSMITH_THREE)
+	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER3)
 	time = 10
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO_ONE
@@ -2219,6 +2259,17 @@
 	reqs = list(/obj/item/ammo_casing/caseless/arrow = 1,
 				/obj/item/reagent_containers/food/drinks/bottle = 1,
 				/obj/item/reagent_containers/food/snacks/meat/slab/human/ghoul = 4)
+	tools = list(TOOL_WORKBENCH)
+	category = CAT_WEAPONRY
+	subcategory = CAT_AMMO_FIVE
+
+/datum/crafting_recipe/miniguncharge
+	name = "Recharge Minigun Ammo"
+	result = /obj/item/minigunpackbal
+	time = 30
+	reqs = list(/obj/item/minigunpackbal = 1,
+				/obj/item/stack/sheet/metal = 20,
+				/datum/reagent/blackpowder = 120)
 	tools = list(TOOL_WORKBENCH)
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO_FIVE

@@ -28,7 +28,7 @@
 
 /obj/item/projectile/bullet/a556/jhp
 	damage = 55 //45
-	armour_penetration = -20//-5
+	armour_penetration = -40//-5
 
 /obj/item/projectile/bullet/a556/sport
 	damage = 30
