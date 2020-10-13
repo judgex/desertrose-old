@@ -100,4 +100,4 @@
 	var/itemTypeString = "[itemType]"
 	var/obj/item = new itemTypeString()
 
-	player.put_in_active_hand(item)
+	player.dropItemToGround(item)
