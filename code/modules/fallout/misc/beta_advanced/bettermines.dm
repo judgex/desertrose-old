@@ -2,7 +2,7 @@
 	name = "dummy mine"
 	desc = "Better stay away from that thing."
 	density = FALSE
-	anchored = TRUE
+	anchored = FALSE
 	icon = 'icons/obj/items_and_weapons.dmi'
 	icon_state = "landmine"
 	var/triggered = 0
@@ -59,7 +59,7 @@
 	var/range_light = 2
 	var/range_flash = 3
 
-/obj/item/grenade/bettermine/active/explosive/planted
+/obj/item/grenade/bettermine/explosive/planted
 	active = 1
 	anchored = 1
 	icon_state = "landmine_active"
