@@ -340,8 +340,8 @@ Decanii
 	name = "Legion Veteran Decanus"
 	jobtype = /datum/job/CaesarsLegion/Legionnaire/f13decanvet
 	id = 			/obj/item/card/id/dogtag/legveteran
-	suit = 			/obj/item/clothing/suit/armor/f13/legion/heavy
-	head = 			/obj/item/clothing/head/helmet/f13/legion/heavy
+	suit = 			/obj/item/clothing/suit/armor/f13/legion/vet
+	head = 			/obj/item/clothing/head/helmet/f13/legion/vet/decan/alt
 	mask =			/obj/item/clothing/mask/bandana/legdecan
 	glasses = 		/obj/item/clothing/glasses/sunglasses/big
 	ears = 			/obj/item/radio/headset/headset_legion
@@ -685,9 +685,9 @@ Prime Legionairy
 	name = "Lineman"
 	suit_store = /obj/item/twohanded/spear
 	backpack_contents = list(
-		/obj/item/gun/ballistic/automatic/pistol/n99, \
+		/obj/item/gun/ballistic/automatic/pistol/n99=1, \
 		/obj/item/ammo_box/magazine/m10mm_adv=2, \
-		/obj/item/claymore/machete/reinforced)
+		/obj/item/claymore/machete/reinforced=1)
 
 /datum/outfit/loadout/legbreach
 	name = "Close Quarters Legionary"

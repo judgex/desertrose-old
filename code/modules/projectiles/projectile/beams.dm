@@ -277,8 +277,8 @@
 	name = "plasma bolt"
 	icon_state = "plasma_clot"
 	damage_type = BURN
-	damage = 42
-	armour_penetration = 12
+	damage = 48
+	armour_penetration = 15
 	flag = "laser" //checks vs. energy protection
 	eyeblur = 0
 	is_reflectable = TRUE
@@ -305,7 +305,7 @@
 
 /obj/item/projectile/plasma/pistol //Plasma pistol
 	damage = 45
-	armour_penetration = 3
+	armour_penetration = 5
 
 /obj/item/projectile/plasma/pistol/glock //Glock (streamlined plasma pistol)
 	damage = 30

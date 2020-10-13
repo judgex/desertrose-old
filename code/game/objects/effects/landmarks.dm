@@ -620,6 +620,10 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 	name = "Initiate"
 	icon_state = "Initiate_Scribe"
 
+/obj/effect/landmark/start/f13/offduty
+	name = "Off-Duty"
+	icon_state = "Off-Duty"
+
 // Vault
 
 /obj/effect/landmark/start/f13/overseer
