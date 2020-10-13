@@ -86,15 +86,49 @@
 		user.dropItemToGround(src)
 
 /obj/item/gun/ballistic/automatic/pistol/n99
-	name = "10mm pistol"
+	name = "10mm pistol (standard)"
 	desc = "A pre-war large-framed, gas-operated advanced 10mm pistol."
 	icon_state = "n99"
 	mag_type = /obj/item/ammo_box/magazine/m10mm_adv
 	fire_sound = 'sound/f13weapons/10mm_fire_02.ogg'
 	w_class = WEIGHT_CLASS_NORMAL
 	can_attachments = TRUE
-	fire_delay = 2
+	fire_delay = 3
 	can_suppress = TRUE
+	spread = 15
+
+/obj/item/gun/ballistic/automatic/pistol/n99/mid//improved
+	spread = 0
+	name = "10mm pistol (improved)"
+
+/obj/item/gun/ballistic/automatic/pistol/n99/high//masterwork
+	spread = 0
+	
+	name = "10mm pistol (masterwork)"
+
+/obj/item/gun/ballistic/automatic/pistol/n99/pers/gunslinger
+	name = "10mm pistol (gunslinger variant)"
+	fire_delay = 2
+	gunslinger = TRUE
+	fire_delay = 1.9
+
+/obj/item/gun/ballistic/automatic/pistol/n99/pers/glock
+	name = "10mm pistol (extended variant)"
+	mag_type = /obj/item/ammo_box/magazine/m10mm_auto
+	fire_delay = 1
+	extra_penetration = -5
+	spread = 30
+
+/obj/item/gun/ballistic/automatic/pistol/n99/pers/long
+	name = "10mm pistol (scoped variant)"
+	fire_delay = 2.5
+	extra_penetration = 10
+	extra_damage = 3
+	slowdown = 1.2
+	bullet_speed = 0.8
+	zoomable = TRUE
+	zoom_amt = 8
+	zoom_out_amt = 11
 
 /obj/item/gun/ballistic/automatic/pistol/n99/executive
 	name = "\improper Executive" //'the Executive'

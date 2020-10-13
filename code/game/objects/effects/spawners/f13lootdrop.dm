@@ -1452,7 +1452,8 @@
 	loot = list(
 		/obj/item/blueprint/weapon/marksmanrifle,
 		/obj/item/blueprint/weapon/plasmapistol,
-		/obj/item/blueprint/weapon/brush,
+		/obj/item/blueprint/weapon/AER9,
+		//obj/item/blueprint/weapon/brush,
 		//obj/item/blueprint/weapon/grease_gun,
 		///obj/item/blueprint/weapon/pps,
 		/obj/item/blueprint/weapon/mg34
@@ -1464,7 +1465,8 @@
 	loot = list(
 		/obj/item/blueprint/weapon/marksmanrifle/limited,
 		/obj/item/blueprint/weapon/plasmapistol/limited,
-		/obj/item/blueprint/weapon/brush/limited,
+		/obj/item/blueprint/weapon/AER9/limited,
+		//obj/item/blueprint/weapon/brush/limited,
 		//obj/item/blueprint/weapon/grease_gun/limited,
 		/obj/item/blueprint/weapon/mg34/limited,
 		/obj/item/prefabs/complex/action/auto,
@@ -1489,7 +1491,6 @@
 	lootcount = 1
 	loot = list(
 		/obj/item/blueprint/weapon/plasmarifle,
-		/obj/item/blueprint/weapon/AER9,
 		/obj/item/blueprint/weapon/AM_rifle,
 		/obj/item/blueprint/weapon/city_killer
 		//obj/item/blueprint/weapon/rangemaster
