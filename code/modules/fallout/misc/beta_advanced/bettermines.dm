@@ -59,49 +59,44 @@
 	name = "explosive mine"
 	var/range_devastation = 0
 	var/range_heavy = 1
-	var/range_light = 2
-	var/range_flash = 3
+	var/range_light = 1
+	var/range_flash = 2
 
 /obj/item/grenade/bettermine/explosive/planted
 	active = 1
 	anchored = 1
 	icon_state = "landmine_active"
 
-/obj/item/grenade/bettermine/explosive/planted/attackby(obj/item/I, mob/user, params)
+/obj/item/grenade/bettermine/explosive/planted/attackby(obj/item/I, mob/living/user, params)
 	if(istype(I, /obj/item/shovel))
-		if(!hidden)
+		if(hidden == 0)
 			if(do_after(user, 20, target = loc))
 				to_chat(user, "You covered landmine with some sand.")
-				icon_state = initial(icon_state) + "_hidden"
+				icon_state = "landmine_hidden"
 				hidden = 1
 				return
 		else
 			if(do_after(user, 20, target = loc))
 				to_chat(user, "You uncovered landmine.")
-				icon_state = initial(icon_state) - "_hidden"
+				icon_state = "landmine_active"
 				return
-
-	if(istype(I, /obj/item/screwdriver) && active == 1)
-		to_chat(user, "Вы аккуратно начинаете развинчивать болты на мине.")
-		playsound(src.loc, I.usesound, 100, 1)
+	if(istype(I, /obj/item/screwdriver) && active)
+		to_chat(user, "You started carefully removing bolts from detonating plate.")
+		I.play_tool_sound(src, 75)
 		if(do_after(user, 15, target = loc))
 			to_chat(user, "You carefully remove bolts from detonating plate.")
 			press_bolted = 0
 			return
-	if(istype(I, /obj/item/screwdriver) && press_bolted == 0)
-		return
 	if(istype(I, /obj/item/wirecutters) && press_bolted == 0)
 		if(do_after(user, 15, target = loc))
-			playsound(src.loc, I.usesound, 100, 1)
+			I.play_tool_sound(src, 75)
 			to_chat(user, "You carefully cut wires inside of this mine, now it can be safely deconstructed...")
 			wire_cut = 1
 			active = 0
 			return
-	if(istype(I, /obj/item/wirecutters) && wire_cut == 1)
-		return
 	if(istype(I, /obj/item/wrench) && wire_cut == 1)
 		to_chat(user, "You started dissassemble mine components.")
-		playsound(src.loc, I.usesound, 100, 1)
+		I.play_tool_sound(src, 75)
 		if(do_after(user, 25, target = loc))
 			switch(rand(1,10))
 				if(5)

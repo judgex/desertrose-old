@@ -50,6 +50,7 @@
 	name = "water"
 	icon_state = "water"
 	bullet_sizzle = TRUE
+	step_sounds = list("human" = "waterfootsteps")
 
 /turf/open/floor/holofloor/asteroid
 	name = "asteroid"
