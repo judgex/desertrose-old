@@ -3,7 +3,7 @@
 	var/looting = FALSE
 
 /mob/living/simple_animal/proc/getLootObject(var/modifer)
-
+/*
 	var/list/trash = list (
 		/obj/item/trash/f13/bubblegum = 1,
 		/obj/item/trash/f13/bubblegum_large = 1,
@@ -26,7 +26,7 @@
 		/obj/item/trash/f13/mre = 1,
 		/obj/item/trash/f13/rotten = 1
 	)
-
+*/
 
 	var/list/common = list (/obj/item/stack/f13Cash/random/ncr/low = 37
 	)
