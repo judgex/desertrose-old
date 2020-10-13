@@ -560,6 +560,16 @@
 	armor = list("melee" = 45, "bullet" = 55, "laser" = 45, "energy" = 45, "bomb" = 55, "bio" = 65, "rad" = 10, "fire" = 60, "acid" = 20)
 	icon = 'icons/fallout/clothing_w/suit.dmi'
 
+/obj/item/clothing/suit/armor/f13/gunnerplates
+	name = "gunner armor"
+	desc = "An old military grade pre war combat armor. This armor has a skull painted on the back to symbolize the gunners."
+	icon_state = "GunnerPlates"
+	item_state = "GunnerPlates"
+	slowdown = 0
+	flags_inv = HIDEJUMPSUIT|HIDENECK
+	icon = 'icons/fallout/clothing_w/suit.dmi'
+	armor = list("melee" = 45, "bullet" = 55, "laser" = 45, "energy" = 45, "bomb" = 55, "bio" = 65, "rad" = 10, "fire" = 60, "acid" = 20)
+
 /obj/item/clothing/suit/armor/f13/combatmk2leg
 	name = "legatus armor mk2"
 	desc = "An old military grade pre war combat armor, specially designed for a Legionary Legatus."
@@ -703,6 +713,13 @@
 	item_state = "ranger"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
 	armor = list("melee" = 55, "bullet" = 55, "laser" = 55, "energy" = 40, "bomb" = 55, "bio" = 60, "rad" = 60, "fire" = 90, "acid" = 20)
+
+/obj/item/clothing/suit/armor/f13/rangercombat/rigscustom
+	name = "11th Armored Calvary Armor"
+	desc = "A suit of special military grade riot control gear and a duster, worn by 11th Armored Calvary Regiment members in The Divide before the war. Yellow markings are painted on the shoulderpads and forearm guards."
+	icon_state = "rigscustom_suit"
+	item_state = "rigscustom_suit"
+	icon = 'icons/fallout/clothing/suits.dmi'
 
 /obj/item/clothing/suit/armor/f13/rangercombat/desert
 	name = "desert ranger combat armor"
@@ -902,6 +919,14 @@
 	icon_state = "t45dpowerarmor"
 	item_state = "t45dpowerarmor"
 	armor = list("melee" = 65, "bullet" = 60, "laser" = 50, "energy" = 60, "bomb" = 62, "bio" = 100, "rad" = 90, "fire" = 90, "acid" = 0)
+
+/obj/item/clothing/suit/armor/f13/power_armor/t45d/gunslinger
+	name = "Gunslinger T-51b"
+	desc = "What was once a suit of T-51 Power Armor is now an almost unrecognizable piece of art or garbage, depending on who you ask. Almost all of the external plating has either been removed or stripped to allow for maximum mobility, and overlapping underplates protect the user from small arms fire. Whoever designed this had a very specific purpose in mind: mobility and aesthetics over defense."
+	icon_state = "t51bgs"
+	item_state = "t51bgs"
+	slowdown = 0
+	flags_inv = HIDEJUMPSUIT|HIDENECK
 
 /obj/item/clothing/suit/armor/f13/power_armor/t45d/sierra
 	name = "sierra power armor"
@@ -1184,6 +1209,15 @@
 	desc = "A thicker than average duster worn by NCR recon rangers out in the field. It's not heavily armored by any means, but is easy to move around in and provides excellent protection from the harsh desert environment."
 	icon_state = "duster_recon"
 	item_state = "duster_recon"
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
+	armor = list("melee" = 35, "bullet" = 30, "laser" = 20, "energy" = 20, "bomb" = 25, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
+	slowdown = -0.1
+
+/obj/item/clothing/suit/toggle/armor/f13/rangercustomdark
+	name = "tattered recon duster"
+	desc = "A thicker than average duster worn by rangers out in the field. This one has been dyed black and appears to be a little more heavily armoured."
+	icon_state = "duster_recon_custom"
+	item_state = "duster_recon_custom"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list("melee" = 35, "bullet" = 30, "laser" = 20, "energy" = 20, "bomb" = 25, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
 	slowdown = -0.1

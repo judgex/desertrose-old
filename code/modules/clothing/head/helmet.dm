@@ -316,6 +316,8 @@
 	item_state = "arclight"
 	dynamic_hair_suffix = ""
 	visor_flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE
+	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEFACIALHAIR
+
 
 /obj/item/clothing/head/helmet/f13/raider/arclight/Initialize()
 	. = ..()
@@ -551,6 +553,16 @@
 	dynamic_fhair_suffix = ""
 	flash_protect = 1
 
+/obj/item/clothing/head/helmet/f13/rangercustomflicker
+	name = "broken riot helmet"
+	icon_state = "rangercustom"
+	item_state = "rangercustom"
+	desc = "A broken old riot police helmet, out of use around the time of the war. The visor of this one has been spray-painted orange and the lower half a deep red."
+	armor = list("melee" = 40, "bullet" = 30, "laser" = 20, "energy" = 30, "bomb" = 25, "bio" = 40, "rad" = 40, "fire" = 80, "acid" = 0)
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR|HIDEFACE
+	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
+	resistance_flags = LAVA_PROOF | FIRE_PROOF
+
 //Legion
 /obj/item/clothing/head/helmet/f13/legion
 	name = "legion helmet"
@@ -642,6 +654,33 @@
 	item_state = "legdecanprim"
 	icon_state = "legdecanprim"
 
+/obj/item/clothing/head/helmet/f13/legion/vet/decan/alt
+	name = "legion veteran decanus helmet"
+	desc = "This is a metal helmet that's been reinforced with stronger leather patches and anointed with a array of red and dark red feathers. This one has several large white and black feathers sewn along side the rest of the feathers aswell. There is also a ballistic face-shield attached to the helmet that protects the face from physical blows and small pistol calibers."
+	item_state = "vetdecalt"
+	icon_state = "vetdecalt"
+
+/obj/item/clothing/head/helmet/f13/legion/vet/decan/alt/attack_self(mob/user)
+	if(can_toggle && !user.incapacitated())
+		if(world.time > cooldown + toggle_cooldown)
+			cooldown = world.time
+			up = !up
+			flags_1 ^= visor_flags
+			flags_inv ^= visor_flags_inv
+			flags_cover ^= visor_flags_cover
+			icon_state = "[initial(icon_state)][up ? "up" : ""]"
+			to_chat(user, "[up ? alt_toggle_message : toggle_message] \the [src]")
+
+			user.update_inv_head()
+			if(iscarbon(user))
+				var/mob/living/carbon/C = user
+				C.head_update(src, forced = 1)
+
+			if(active_sound)
+				while(up)
+					playsound(src.loc, "[active_sound]", 100, 0, 4)
+					sleep(15)
+
 /obj/item/clothing/head/helmet/f13/legion/vet/decan
 	name = "legion veteran decanus helmet"
 	desc = "It's a leather legion helmet that's been reinforced with stronger leather patches and anointed with a array of red and dark red feathers. This one has several large white and black feathers sewn along side the rest of the feathers aswell."
@@ -696,21 +735,28 @@
 	dynamic_hair_suffix = "+generic"
 
 //Ranger Armors
-/obj/item/clothing/head/helmet/f13/ncr/rangercombat
-	name = "ranger combat helmet"
-	desc = "An old combat helmet, out of use around the time of the war."
-	icon_state = "ranger"
-	item_state = "ranger"
-	armor = list("melee" = 60, "bullet" = 50, "laser" = 30, "energy" = 50, "bomb" = 39, "bio" = 60, "rad" = 60, "fire" = 90, "acid" = 0)
-	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR|HIDEFACE
-	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
-	resistance_flags = LAVA_PROOF | FIRE_PROOF
-	dynamic_hair_suffix = ""
-	dynamic_fhair_suffix = ""
-	flash_protect = 1
-	glass_colour_type = /datum/client_colour/glass_colour/red
-	lighting_alpha = LIGHTING_PLANE_ALPHA_LOWLIGHT_VISION
-	darkness_view = 128
+	/obj/item/clothing/head/helmet/f13/ncr/rangercombat
+		name = "ranger combat helmet"
+		desc = "An old combat helmet, out of use around the time of the war."
+		icon_state = "ranger"
+		item_state = "ranger"
+		armor = list("melee" = 60, "bullet" = 50, "laser" = 30, "energy" = 50, "bomb" = 39, "bio" = 60, "rad" = 60, "fire" = 90, "acid" = 0)
+		flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR|HIDEFACE
+		flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
+		resistance_flags = LAVA_PROOF | FIRE_PROOF
+		dynamic_hair_suffix = ""
+		dynamic_fhair_suffix = ""
+		flash_protect = 1
+		glass_colour_type = /datum/client_colour/glass_colour/red
+		lighting_alpha = LIGHTING_PLANE_ALPHA_LOWLIGHT_VISION
+		darkness_view = 128
+
+/obj/item/clothing/head/helmet/f13/ncr/rangercombat/rigscustom
+	name = "11th Armored Calvary Helmet"
+	desc = "An advanced combat helmet used by the 11th Armored Calvary Regiment before the war. There is a worn and faded 11th Armored Calvary Regiment's insignia just above the visor. The helmet itself has some scratches and dents sustained from battle."
+	icon_state = "rigscustom_helmet"
+	item_state = "rigscustom_helmet"
+	icon = 'icons/fallout/clothing/hats.dmi'
 
 /obj/item/clothing/head/helmet/f13/ncr/rangercombat/desert
 	name = "desert ranger combat helmet"
@@ -934,6 +980,14 @@
 	armor = list("melee" = 65, "bullet" = 60, "laser" = 50, "energy" = 60, "bomb" = 62, "bio" = 100, "rad" = 90, "fire" = 90, "acid" = 0)
 	var/brightness_on = 4 //luminosity when the light is on
 	var/on = 0
+
+/obj/item/clothing/head/helmet/f13/power_armor/t45d/gunslinger
+	name = "Gunslinger T-51b Helm"
+	desc = "With most of the external plating stripped to allow for internal thermal and night vision scanners, as well as aided targeting assist via onboard systems, this helm provides much more utility then protection. To support these systems, secondary power cells were installed into the helm, and covered with a stylish hat."
+	icon_state = "t51bgs"
+	item_state = "t51bgs"
+	slowdown = 0
+	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEFACIALHAIR
 
 /obj/item/clothing/head/helmet/f13/power_armor/midwest
 	name = "midwestern power helmet"

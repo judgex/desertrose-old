@@ -54,9 +54,14 @@
 	icon_state = "moulding"
 	desc = "A moulding bench, used for superheating metal into its molten form and moulding it."
 	machine_tool_behaviour = list(TOOL_FWORKBENCH)
+	wrenchable = FALSE
 
-/obj/machinery/workbench/fbench/attackby(obj/item/W, mob/user, params)//todo me 
-	if(istype(W, /obj/item/screwdriver) && mould)
+/obj/machinery/workbench/fbench/attackby(obj/item/W, mob/user, params)//todo me
+	var/mob/living/carbon/human/H = usr
+	if (istype(W, /obj/item/stack/sheet/prewar) && !H.has_trait(TRAIT_MASTER_GUNSMITH))
+		to_chat(usr,"You have no clue as to how to work this material.")
+		return
+	else if(istype(W, /obj/item/screwdriver) && mould)
 		var/obj/item/prefabs/mould/B = mould
 		B.forceMove(src.loc)
 		mould = null
@@ -89,41 +94,57 @@
 					qdel(Q)
 				else
 					if(src.contents.len>0)
-						if(istype(src.contents[1],/obj/item/prefabs/mould/barrel/m556))
+						if(istype(src.contents[1],/obj/item/prefabs/mould/barrel/m556))//556
 							Q.amount -= 1
 							var/obj/item/prefabs/complex/barrel/m556/C = new /obj/item/prefabs/complex/barrel/m556
 							C.forceMove(src.loc)
-						if(istype(src.contents[1],/obj/item/prefabs/mould/barrel/mm9))
+						if(istype(src.contents[1],/obj/item/prefabs/mould/barrel/mm9))//9mm
 							Q.amount -= 1
-							var/obj/item/prefabs/complex/barrel/m556/C = new /obj/item/prefabs/complex/barrel/mm9
+							var/obj/item/prefabs/complex/barrel/mm9/C = new /obj/item/prefabs/complex/barrel/mm9
 							C.forceMove(src.loc)
-						if(istype(src.contents[1],/obj/item/prefabs/mould/barrel/mm10))
+						if(istype(src.contents[1],/obj/item/prefabs/mould/barrel/mm10))//10mm
 							Q.amount -= 1
-							var/obj/item/prefabs/complex/barrel/m556/C = new /obj/item/prefabs/complex/barrel/mm10
+							var/obj/item/prefabs/complex/barrel/mm10/C = new /obj/item/prefabs/complex/barrel/mm10
 							C.forceMove(src.loc)
-						if(istype(src.contents[1],/obj/item/prefabs/mould/barrel/m357))
+						if(istype(src.contents[1],/obj/item/prefabs/mould/barrel/m357))//357
 							Q.amount -= 1
-							var/obj/item/prefabs/complex/barrel/m556/C = new /obj/item/prefabs/complex/barrel/m357
+							var/obj/item/prefabs/complex/barrel/m357/C = new /obj/item/prefabs/complex/barrel/m357
 							C.forceMove(src.loc)
-						if(istype(src.contents[1],/obj/item/prefabs/mould/barrel/m44))
+						if(istype(src.contents[1],/obj/item/prefabs/mould/barrel/m44))//44
 							Q.amount -= 1
-							var/obj/item/prefabs/complex/barrel/m556/C = new /obj/item/prefabs/complex/barrel/m44
+							var/obj/item/prefabs/complex/barrel/m44/C = new /obj/item/prefabs/complex/barrel/m44
 							C.forceMove(src.loc)
-						if(istype(src.contents[1],/obj/item/prefabs/mould/barrel/m762))
+						if(istype(src.contents[1],/obj/item/prefabs/mould/barrel/m45))//45
 							Q.amount -= 1
-							var/obj/item/prefabs/complex/barrel/m556/C = new /obj/item/prefabs/complex/barrel/m762
+							var/obj/item/prefabs/complex/barrel/m45/C = new /obj/item/prefabs/complex/barrel/m45
 							C.forceMove(src.loc)
-						if(istype(src.contents[1],/obj/item/prefabs/mould/barrel/m4570))
+						if(istype(src.contents[1],/obj/item/prefabs/mould/barrel/m762))//762
 							Q.amount -= 1
-							var/obj/item/prefabs/complex/barrel/m556/C = new /obj/item/prefabs/complex/barrel/m4570
+							var/obj/item/prefabs/complex/barrel/m762/C = new /obj/item/prefabs/complex/barrel/m762
+							C.forceMove(src.loc)
+						if(istype(src.contents[1],/obj/item/prefabs/mould/barrel/m4570))//4570
+							Q.amount -= 1
+							var/obj/item/prefabs/complex/barrel/m4570/C = new /obj/item/prefabs/complex/barrel/m4570
+							C.forceMove(src.loc)
+						if(istype(src.contents[1],/obj/item/prefabs/mould/barrel/shotgun))//4570
+							Q.amount -= 1
+							var/obj/item/prefabs/complex/barrel/shotgun/C = new /obj/item/prefabs/complex/barrel/shotgun
 							C.forceMove(src.loc)
 						if(istype(src.contents[1],/obj/item/prefabs/mould/action/simple))
 							Q.amount -= 1
 							var/obj/item/prefabs/complex/action/simple/C = new /obj/item/prefabs/complex/action/simple
 							C.forceMove(src.loc)
+						if(istype(src.contents[1],/obj/item/prefabs/mould/action/auto))
+							Q.amount -= 1
+							var/obj/item/prefabs/complex/action/auto/C = new /obj/item/prefabs/complex/action/auto
+							C.forceMove(src.loc)
 						if(istype(src.contents[1],/obj/item/prefabs/mould/bolt/simple))
 							Q.amount -= 1
 							var/obj/item/prefabs/complex/bolt/simple/C = new /obj/item/prefabs/complex/bolt/simple
+							C.forceMove(src.loc)
+						if(istype(src.contents[1],/obj/item/prefabs/mould/bolt/high))
+							Q.amount -= 1
+							var/obj/item/prefabs/complex/bolt/high/C = new /obj/item/prefabs/complex/bolt/high
 							C.forceMove(src.loc)
 						if(istype(src.contents[1],/obj/item/prefabs/mould/screw))
 							Q.amount -= 1
@@ -135,7 +156,7 @@
 							C.forceMove(src.loc)
 						if(istype(src.contents[1],/obj/item/prefabs/mould/complexWeaponFrame))
 							Q.amount -= 1
-							var/obj/item/prefabs/complex/complexWeaponFrame/C = new /obj/item/prefabs/complex/complexWeaponFrame
+							var/obj/item/prefabs/complex/complexWeaponFrame/low/C = new /obj/item/prefabs/complex/complexWeaponFrame/low
 							C.forceMove(src.loc)
 						if(istype(src.contents[1],/obj/item/prefabs/mould/trigger))
 							Q.amount -= 1
@@ -151,6 +172,12 @@
 							Q.amount -= 1
 							var/obj/item/prefabs/complex/stock/mid/C = new /obj/item/prefabs/complex/stock/mid
 							C.forceMove(src.loc)
+			if(istype(O,/obj/item/stack/sheet/plasteel))
+				var/obj/item/stack/sheet/Q = O
+				if(Q.amount < 1)
+					qdel(Q)
+				else
+					if(src.contents.len>0)
 						if(istype(src.contents[1],/obj/item/prefabs/mould/simpleWeaponFrame))
 							Q.amount -= 1
 							var/obj/item/prefabs/complex/simpleWeaponFrame/mid/C = new /obj/item/prefabs/complex/simpleWeaponFrame/mid
@@ -159,7 +186,7 @@
 							Q.amount -= 1
 							var/obj/item/prefabs/complex/complexWeaponFrame/mid/C = new /obj/item/prefabs/complex/complexWeaponFrame/mid
 							C.forceMove(src.loc)
-			if(istype(O,/obj/item/stack/sheet/plasteel))
+			if(istype(O,/obj/item/stack/sheet/prewar))
 				var/obj/item/stack/sheet/Q = O
 				if(Q.amount < 1)
 					qdel(Q)
