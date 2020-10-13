@@ -142,7 +142,7 @@ Raider
 	flag = F13RAIDER
 	department_head = list("Captain")
 	head_announce = list("Security")
-	faction = "Wastelander"
+	faction = "Raider"
 	social_faction = "Raiders"
 	total_positions = 15
 	spawn_positions = 15
