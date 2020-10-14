@@ -124,17 +124,3 @@
 	icon_state = "cowboyrang"
 	item_state = "cowboyrang"
 	armor = list("melee" = 40, "bullet" = 30, "laser" = 20, "energy" = 30, "bomb" = 25, "bio" = 40, "rad" = 40, "fire" = 80, "acid" = 0)
-
-
-/obj/item/clothing/head/f13/ncr/vietnam
-	name = "M1 helmet"
-	desc = "Smells like a... napalm."
-	icon_state = "vietnam"
-
-/obj/item/clothing/head/f13/ncr/vietnam/attackby(obj/item/W, mob/user, params)
-	var/obj/item/toy/cards/singlecard/C
-	if(istype(W, C))
-		icon_state = "vietnam-card"
-		qdel(C)
-	else
-		return FALSE
