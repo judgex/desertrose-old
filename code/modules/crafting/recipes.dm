@@ -4062,3 +4062,13 @@
 	time = 30
 	category = CAT_MOULD
 	subcategory = CAT_MOULD_ONE
+
+/datum/crafting_recipe/landmine
+	name = "landmine"
+	result = /obj/item/grenade/bettermine/explosive
+	reqs = list(/obj/item/stack/sheet/metal = 2, /datum/reagent/blackpowder = 25)
+	traits = list(TRAIT_GUNSMITH_TWO)
+	tools = list(TOOL_WORKBENCH)
+	time = 25
+	category = CAT_WEAPONRY
+	subcategory = CAT_AMMO_ONE
