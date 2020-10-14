@@ -13,6 +13,9 @@
 /obj/item/gun/energy/laser/rcw/ui_action_click()
 	burst_select()
 
+/obj/item/gun/energy/laser/plasma/carbine/ui_action_click()
+	burst_select()
+
 /obj/item/gun/energy/laser/proc/burst_select()
 	var/mob/living/carbon/human/user = usr
 	select = !select
@@ -217,6 +220,21 @@
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 
+/obj/item/gun/energy/laser/ultra_rifle
+	name = "\improper Ultracite laser rifle"
+	desc = "A sturdy and advanced military grade pre-war service laser rifle, now enhanced with ultracite"
+	icon_state = "ultra_rifle"
+	item_state = "laser-rifle9"
+	zoomable = TRUE
+	zoom_amt = 10
+	zoom_out_amt = 13
+	fire_delay = 3
+	equipsound = 'sound/f13weapons/equipsounds/aer9equip.ogg'
+	ammo_type = list(/obj/item/ammo_casing/energy/laser/lasgun)
+	cell_type = /obj/item/stock_parts/cell/ammo/ultracite
+	w_class = WEIGHT_CLASS_BULKY
+	weapon_weight = WEAPON_HEAVY
+
 /obj/item/gun/energy/laser/pistol
 	name = "\improper AEP7 laser pistol"
 	desc = "A basic energy-based laser gun that fires concentrated beams of light."
@@ -230,6 +248,20 @@
 	scope_x_offset = 7
 	scope_y_offset = 22
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/pistol)
+	cell_type = /obj/item/stock_parts/cell/ammo/ec
+	slot_flags = ITEM_SLOT_BELT
+
+/obj/item/gun/energy/laser/ultra_pistol
+	name = "\improper Ultracite laser pistol"
+	desc = "An ultracite enhanced energy-based laser gun that fires concentrated beams of light."
+	icon_state = "ultra_pistol"
+	item_state = "laser-pistol"
+	equipsound = 'sound/f13weapons/equipsounds/aep7equip.ogg'
+	w_class = WEIGHT_CLASS_NORMAL
+	fire_delay = 2
+	scope_x_offset = 7
+	scope_y_offset = 22
+	ammo_type = list(/obj/item/ammo_casing/energy/laser/ultra_pistol)
 	cell_type = /obj/item/stock_parts/cell/ammo/ec
 	slot_flags = ITEM_SLOT_BELT
 
@@ -269,7 +301,40 @@
 	equipsound = 'sound/f13weapons/equipsounds/plasequip.ogg'
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
-	projectile_speed = 1.1
+	projectile_speed = 0.9
+
+/obj/item/gun/energy/laser/plasma/carbine
+	name ="plasma carbine"
+	item_state = "plasma"
+	icon_state = "plasmacarbine"
+	desc = ""
+	ammo_type = list(/obj/item/ammo_casing/energy/plasmacarbine)
+	cell_type = /obj/item/stock_parts/cell/ammo/mfc
+	burst_size = 2
+	burst_delay = 1
+	equipsound = 'sound/f13weapons/equipsounds/plasequip.ogg'
+	w_class = WEIGHT_CLASS_BULKY
+	weapon_weight = WEAPON_HEAVY
+	projectile_speed = 1.6
+	can_scope = TRUE
+	scopestate = "plasma_scope"
+	scope_x_offset = 13
+	scope_y_offset = 16
+
+/obj/item/gun/energy/laser/plasma/carbine/burst_select()
+	var/mob/living/carbon/human/user = usr
+	switch(select)
+		if(0)
+			select += 1
+			burst_size = 2
+			to_chat(user, "<span class='notice'>You switch to dual-stream plasma.</span>")
+		if(1)
+			select = 0
+			burst_size = 1
+			to_chat(user, "<span class='notice'>You switch to singular stream plasma.</span>")
+	playsound(user, 'sound/f13weapons/equipsounds/plasequip.ogg', 80, 1)
+	update_icon()
+	return
 
 /obj/item/gun/energy/laser/plasma/scatter
 	name = "multiplas Rifle"
@@ -408,6 +473,10 @@
 	desc = "The AER14, a successor to the AER9 and AER12, was a prototype in development before the Great War. It features an orange trim and higher firepower at the cost of slower firing rate."
 	icon_state = "aer14"
 	item_state = "laser-rifle9"
+	can_scope = TRUE
+	scopestate = "AEP7_scope"
+	scope_x_offset = 12
+	scope_y_offset = 20
 	fire_delay = 3.5
 	equipsound = 'sound/f13weapons/equipsounds/aer14equip.ogg'
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/aer14)

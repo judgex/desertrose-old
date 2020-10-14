@@ -12,6 +12,11 @@
 	damage = 45 //40
 	armour_penetration = -22 //20
 
+//5mm minigun
+/obj/item/projectile/bullet/c5mm
+	damage = 19 //30
+	armour_penetration = 30
+
 //9x19mm
 /obj/item/projectile/bullet/c9mm
 	damage = 29 //30
@@ -50,6 +55,11 @@
     name = "armour piercing needle"
     damage = 30
     armour_penetration = 35
+
+/obj/item/projectile/bullet/needle/ultra
+    name = "ultracite needle"
+    damage = 50
+    armour_penetration = 25
 
 /*
 /obj/item/ammo_casing/c9mmr

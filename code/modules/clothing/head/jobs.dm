@@ -86,6 +86,13 @@
 	dog_fashion = /datum/dog_fashion/head/beret
 	dynamic_hair_suffix = ""
 
+/obj/item/clothing/head/beret/remnant
+	name = "remnant beret"
+	desc = "A beret commonly worn by the officers of the enclave. It has their symbol on a silver medal at the front."
+	icon_state = "remnant"
+	item_state = "remnant"
+	dynamic_hair_suffix = ""
+
 /obj/item/clothing/head/beret/militia
 	name = "ODF beret"
 	desc = "A green beret issued to members of the Oasis Defense Force."

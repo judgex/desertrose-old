@@ -154,6 +154,7 @@
 		if(prob(1))
 			new/obj/item/reagent_containers/food/snacks/pastatomato(get_turf(H)) //now that's what I call spaghetti code
 
+/*
 /datum/quirk/underprepared
 	name = "Underprepared"
 	desc = "You are not suited to a life in the Wastes! Instantly lose 15 maximum health and walk slower on desert tiles."
@@ -166,6 +167,7 @@
 	var/mob/living/carbon/human/mob_tar = quirk_holder
 	mob_tar.maxHealth += -15
 	mob_tar.health += -15
+*/
 
 /datum/quirk/mute
 	name = "Mute"

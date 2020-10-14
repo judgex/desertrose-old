@@ -1,8 +1,8 @@
 //lewd
 /mob/living
-	var/has_penis = FALSE
-	var/has_vagina = FALSE
-	var/has_breasts = FALSE
+	var/has_dick = FALSE
+	var/has_vulva = FALSE
+	var/has_breast = FALSE
 	var/last_partner
 	var/last_orifice
 	var/lastmoan
@@ -27,14 +27,14 @@
 	sexual_potency = (prob(80) ? rand(9, 14) : pick(rand(5, 13), rand(15, 20)))
 	lust_tolerance = (prob(80) ? rand(150, 300) : pick(rand(10, 100), rand(350,600)))
 	if(gender == MALE)
-		has_penis = TRUE
-		has_vagina = FALSE
-		has_breasts = FALSE
+		has_dick = TRUE
+		has_vulva = FALSE
+		has_breast = FALSE
 
 	if(gender == FEMALE)
-		has_vagina = TRUE
-		has_breasts = TRUE
-		has_penis = FALSE
+		has_vulva = TRUE
+		has_breast = TRUE
+		has_dick = FALSE
 	//end of lewd
 
 	overlay_fullscreen("noise", /obj/screen/fullscreen/noisescreen)
@@ -541,7 +541,6 @@
 	if(isopenturf(loc) && !is_flying())
 		var/turf/open/T = loc
 		. += ( has_trait(TRAIT_HARD_YARDS) ? T.slowdown * 0.5 : T.slowdown )
-		. += ( has_trait(TRAIT_UNDERPREPARED) ? T.slowdown * 2 : T.slowdown )
 	var/static/datum/config_entry/number/run_delay/config_run_delay
 	var/static/datum/config_entry/number/walk_delay/config_walk_delay
 	if(isnull(config_run_delay))
@@ -1217,3 +1216,9 @@
 			update_transform()
 		if("lighting_alpha")
 			sync_lighting_plane_alpha()
+
+/mob/living/proc/set_gender(ngender = NEUTER, silent = FALSE, update_icon = TRUE, forced = FALSE)
+	if(forced || (!ckey || client?.prefs.cit_toggles & (ngender == FEMALE ? FORCED_FEM : FORCED_MASC)))
+		gender = ngender
+		return TRUE
+	return FALSE

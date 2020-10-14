@@ -316,6 +316,8 @@
 	item_state = "arclight"
 	dynamic_hair_suffix = ""
 	visor_flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE
+	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEFACIALHAIR
+
 
 /obj/item/clothing/head/helmet/f13/raider/arclight/Initialize()
 	. = ..()
@@ -432,6 +434,11 @@
 	item_state = "combat_helmet_mk2"
 	armor = list("melee" = 45, "bullet" = 50, "laser" = 45, "energy" = 40, "bomb" = 39, "bio" = 70, "rad" = 70, "fire" = 70, "acid" = 0)
 
+/obj/item/clothing/head/helmet/f13/combat/remnant
+    desc = "A dark helmet with yellow lenses, used commonly in espionage or shadow ops. Worn by CAG or OS members."
+    icon_state = "remnant_helmet"
+    item_state = "remnant_helmet"
+
 /obj/item/clothing/head/helmet/f13/combat/mk2/dark
 	name = "reinforced combat helmet"
 	color = "#302E2E" // Dark Grey
@@ -546,6 +553,16 @@
 	dynamic_fhair_suffix = ""
 	flash_protect = 1
 
+/obj/item/clothing/head/helmet/f13/rangercustomflicker
+	name = "broken riot helmet"
+	icon_state = "rangercustom"
+	item_state = "rangercustom"
+	desc = "A broken old riot police helmet, out of use around the time of the war. The visor of this one has been spray-painted orange and the lower half a deep red."
+	armor = list("melee" = 40, "bullet" = 30, "laser" = 20, "energy" = 30, "bomb" = 25, "bio" = 40, "rad" = 40, "fire" = 80, "acid" = 0)
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR|HIDEFACE
+	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
+	resistance_flags = LAVA_PROOF | FIRE_PROOF
+
 //Legion
 /obj/item/clothing/head/helmet/f13/legion
 	name = "legion helmet"
@@ -637,6 +654,33 @@
 	item_state = "legdecanprim"
 	icon_state = "legdecanprim"
 
+/obj/item/clothing/head/helmet/f13/legion/vet/decan/alt
+	name = "legion veteran decanus helmet"
+	desc = "This is a metal helmet that's been reinforced with stronger leather patches and anointed with a array of red and dark red feathers. This one has several large white and black feathers sewn along side the rest of the feathers aswell. There is also a ballistic face-shield attached to the helmet that protects the face from physical blows and small pistol calibers."
+	item_state = "vetdecalt"
+	icon_state = "vetdecalt"
+
+/obj/item/clothing/head/helmet/f13/legion/vet/decan/alt/attack_self(mob/user)
+	if(can_toggle && !user.incapacitated())
+		if(world.time > cooldown + toggle_cooldown)
+			cooldown = world.time
+			up = !up
+			flags_1 ^= visor_flags
+			flags_inv ^= visor_flags_inv
+			flags_cover ^= visor_flags_cover
+			icon_state = "[initial(icon_state)][up ? "up" : ""]"
+			to_chat(user, "[up ? alt_toggle_message : toggle_message] \the [src]")
+
+			user.update_inv_head()
+			if(iscarbon(user))
+				var/mob/living/carbon/C = user
+				C.head_update(src, forced = 1)
+
+			if(active_sound)
+				while(up)
+					playsound(src.loc, "[active_sound]", 100, 0, 4)
+					sleep(15)
+
 /obj/item/clothing/head/helmet/f13/legion/vet/decan
 	name = "legion veteran decanus helmet"
 	desc = "It's a leather legion helmet that's been reinforced with stronger leather patches and anointed with a array of red and dark red feathers. This one has several large white and black feathers sewn along side the rest of the feathers aswell."
@@ -667,6 +711,12 @@
 	armor = list("melee" = 75, "bullet" = 50, "laser" = 35, "energy" = 35, "bomb" = 39, "bio" = 60, "rad" = 20, "fire" = 80, "acid" = 0)
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
 
+/obj/item/clothing/head/helmet/f13/legion/palacent/custom_excess
+	name = "Champion of Kanab's Helm"
+	desc = "A custom forged steel full helmet made for the Conqueror and Champion of Kanab. It has a large plume of red horse hair across the top of it going horizontally, symbolizing the position of a Centurion."
+	icon_state = "palacent_excess"
+	item_state = "palacent_excess"
+
 /obj/item/clothing/head/helmet/f13/legion/legate
 	name = "legion legate helmet"
 	desc = "A custom forged steel full helmet complete with abstract points and arches. The face is extremely intimidating, as it was meant to be. This particular one was ordered to be forged by Caesar, given to his second legate in exchange for his undying loyalty to Caesar."
@@ -685,21 +735,28 @@
 	dynamic_hair_suffix = "+generic"
 
 //Ranger Armors
-/obj/item/clothing/head/helmet/f13/ncr/rangercombat
-	name = "ranger combat helmet"
-	desc = "An old combat helmet, out of use around the time of the war."
-	icon_state = "ranger"
-	item_state = "ranger"
-	armor = list("melee" = 60, "bullet" = 50, "laser" = 30, "energy" = 50, "bomb" = 39, "bio" = 60, "rad" = 60, "fire" = 90, "acid" = 0)
-	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR|HIDEFACE
-	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
-	resistance_flags = LAVA_PROOF | FIRE_PROOF
-	dynamic_hair_suffix = ""
-	dynamic_fhair_suffix = ""
-	flash_protect = 1
-	glass_colour_type = /datum/client_colour/glass_colour/red
-	lighting_alpha = LIGHTING_PLANE_ALPHA_LOWLIGHT_VISION
-	darkness_view = 128
+	/obj/item/clothing/head/helmet/f13/ncr/rangercombat
+		name = "ranger combat helmet"
+		desc = "An old combat helmet, out of use around the time of the war."
+		icon_state = "ranger"
+		item_state = "ranger"
+		armor = list("melee" = 60, "bullet" = 50, "laser" = 30, "energy" = 50, "bomb" = 39, "bio" = 60, "rad" = 60, "fire" = 90, "acid" = 0)
+		flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR|HIDEFACE
+		flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
+		resistance_flags = LAVA_PROOF | FIRE_PROOF
+		dynamic_hair_suffix = ""
+		dynamic_fhair_suffix = ""
+		flash_protect = 1
+		glass_colour_type = /datum/client_colour/glass_colour/red
+		lighting_alpha = LIGHTING_PLANE_ALPHA_LOWLIGHT_VISION
+		darkness_view = 128
+
+/obj/item/clothing/head/helmet/f13/ncr/rangercombat/rigscustom
+	name = "11th Armored Calvary Helmet"
+	desc = "An advanced combat helmet used by the 11th Armored Calvary Regiment before the war. There is a worn and faded 11th Armored Calvary Regiment's insignia just above the visor. The helmet itself has some scratches and dents sustained from battle."
+	icon_state = "rigscustom_helmet"
+	item_state = "rigscustom_helmet"
+	icon = 'icons/fallout/clothing/hats.dmi'
 
 /obj/item/clothing/head/helmet/f13/ncr/rangercombat/desert
 	name = "desert ranger combat helmet"
@@ -924,6 +981,13 @@
 	item_state = "t51bhelmet"
 	armor = list("melee" = 70, "bullet" = 65, "laser" = 55, "energy" = 65, "bomb" = 62, "bio" = 100, "rad" = 99, "fire" = 90, "acid" = 0)
 
+/obj/item/clothing/head/helmet/f13/power_armor/t51b/ultra
+	name = "Ultracite power helmet"
+	desc = "It's a T-51b power helmet, typically used by the Brotherhood. It looks somewhat charming. Now enhanced with ultracite."
+	icon_state = "ultracitepa_helm"
+	item_state = "ultracitepa_helm"
+	slowdown = 0
+
 /obj/item/clothing/head/helmet/f13/power_armor/t60
 	name = "T-60a power helmet"
 	desc = "The T-60 powered helmet, equipped with targetting software suite, Friend-or-Foe identifiers, dynamic HuD, and an internal music player."
@@ -937,6 +1001,26 @@
 	icon_state = "t45dhelmet"
 	item_state = "t45dhelmet"
 	armor = list("melee" = 65, "bullet" = 60, "laser" = 50, "energy" = 60, "bomb" = 62, "bio" = 100, "rad" = 90, "fire" = 90, "acid" = 0)
+
+/obj/item/clothing/head/helmet/f13/power_armor/t45d/gunslinger
+	name = "Gunslinger T-51b Helm"
+	desc = "With most of the external plating stripped to allow for internal thermal and night vision scanners, as well as aided targeting assist via onboard systems, this helm provides much more utility then protection. To support these systems, secondary power cells were installed into the helm, and covered with a stylish hat."
+	icon_state = "t51bgs"
+	item_state = "t51bgs"
+	slowdown = 0
+	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEFACIALHAIR
+
+/obj/item/clothing/head/helmet/f13/power_armor/midwest
+	name = "midwestern power helmet"
+	desc = "This helmet once belonged to the Mid Western branch of the Brotherhood of Steel now residing wherever it's user currently is situated."
+	icon_state = "midwestpa_helm"
+	item_state = "midwestpa_helm"
+	armor = list("melee" = 65, "bullet" = 60, "laser" = 50, "energy" = 60, "bomb" = 62, "bio" = 100, "rad" = 90, "fire" = 90, "acid" = 0)
+
+/obj/item/clothing/head/helmet/f13/power_armor/midwest/hardened
+	name = "hardened midwestern power helmet"
+	desc = "This helmet once belonged to the Mid Western branch of the Brotherhood of Steel now residing wherever it's user currently is situated. This particular one has gone through a chemical hardening process, increasing it's armor capabilities."
+	armor = list("melee" = 70, "bullet" = 65, "laser" = 55, "energy" = 65, "bomb" = 62, "bio" = 100, "rad" = 99, "fire" = 90, "acid" = 0)
 
 /obj/item/clothing/head/helmet/f13/power_armor/excavator
 	name = "excavator power helmet"

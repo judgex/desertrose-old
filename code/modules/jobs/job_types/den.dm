@@ -68,7 +68,7 @@ Mayor
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "the mayor"
-	description = "Seems like you're Johnny Law these days. Outside of the more obvious day to day tasks in dealing with local disputes and keeping the peace, your main trade is in corpses - dead or alive... doesn't matter much to the town. Whether you obtain these bounties yourself or through the means of notorious gunslingers is up to you, just as long as you keep the road safe and your people alive."
+	description = "As the chief law enforcer of the Town, your job is to keep the peace, settle local disputes, and keep your townsfolk safe and alive. Unfortunately, with the NCR and Legion closing in on the region, the Town is caught between a rock and a hard place, as with the war brings with it unsavory elements like the Khans and Outlaws. Sometimes the people you handle inside the town will be alive in cuffs, or dead on the street. Other times, they'll escape the limits of the town, to which you can put a bounty on their head for their capture, or have your deputies capture them. However, you must remember these three critical things: never leave the town undefended, keep the townsfolk alive and safe, and most importantly - keep your hand on your gun and don't you trust anyone."
 	selection_color = "#d7b088"
 
 	outfit = /datum/outfit/job/den/f13sheriff
@@ -92,7 +92,7 @@ Mayor
 	suit = 			/obj/item/clothing/suit/armor/f13/town/sheriff
 	head = 			/obj/item/clothing/head/f13/town/sheriff
 	glasses =		/obj/item/clothing/glasses/sunglasses
-	l_hand = 		/obj/item/gun/ballistic/shotgun/automatic/hunting/brush/scoped
+	l_hand = 		/obj/item/gun/ballistic/shotgun/automatic/hunting/brush
 	l_pocket =		/obj/item/storage/bag/money/small/den
 	backpack_contents = list(
 		/obj/item/storage/box/deputy_badges=1, \
@@ -149,9 +149,6 @@ Mayor
 		/obj/item/ammo_box/tube/m44=2, \
 		/obj/item/restraints/handcuffs=1, \
 		/obj/item/kitchen/knife/combat)
-
-/datum/job/den/f13deputy/after_spawn(mob/living/carbon/human/H, mob/M)
-	H.add_quirk("Hard Yards")
 
 /*--------------------------------------------------------------*/
 
@@ -412,7 +409,7 @@ Mayor
 	shoes = 		/obj/item/clothing/shoes/jackboots
 	backpack = 		/obj/item/storage/backpack/cultpack
 	satchel = 		/obj/item/storage/backpack/cultpack
-	r_hand = 		/obj/item/gun/ballistic/revolver/m29/alt
+	r_hand = 		/obj/item/gun/ballistic/revolver/m29
 	r_pocket = /obj/item/flashlight/flare
 	backpack_contents = list(
 		/obj/item/ammo_box/m44=2, \
@@ -744,3 +741,6 @@ Detective
 	if(visualsOnly)
 		return
 	H.add_trait(TRAIT_TECHNOPHREAK)
+
+/datum/job/den/f13shopkeeper/after_spawn(mob/living/carbon/human/H, mob/M)
+	H.add_quirk("Master Gunsmith")

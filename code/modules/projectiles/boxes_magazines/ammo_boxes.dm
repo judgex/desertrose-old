@@ -342,6 +342,14 @@
 	multiple_sprites = 1
 	materials = list(MAT_METAL = 5000)
 
+/obj/item/ammo_box/needleultra
+	name = "ultracite needler stripper clip (needle darts)"
+	icon_state = "ultraneedler"
+	ammo_type = /obj/item/ammo_casing/caseless/needle/ultra
+	max_ammo = 5
+	multiple_sprites = 1
+	materials = list(MAT_METAL = 5000)
+
 //Stripper clips
 
 //7.62x51, .308 Winchester
