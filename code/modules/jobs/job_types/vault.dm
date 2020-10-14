@@ -41,13 +41,11 @@ Overseer
 	supervisors = "Vault-tec"
 	selection_color = "#ccffcc"
 	req_admin_notify = 1
-	minimal_player_age = 12
+
 	outfit = /datum/outfit/job/vault/f13overseer
 
 	access = list()			//See get_access()
 	minimal_access = list()	//See get_access()
-	exp_requirements = 580
-	exp_type = EXP_TYPE_VAULT
 
 /datum/job/vault/f13overseer/get_access()
 	return get_all_accesses()
@@ -95,7 +93,7 @@ Head of Security
 	supervisors = "the Overseer"
 	selection_color = "#ccffcc"
 	req_admin_notify = 1
-	minimal_player_age = 10
+
 	outfit = /datum/outfit/job/vault/f13hos
 
 	access = list(ACCESS_SECURITY, ACCESS_SEC_DOORS, ACCESS_BRIG, ACCESS_ARMORY, ACCESS_WEAPONS,ACCESS_FORENSICS_LOCKERS,
@@ -104,9 +102,6 @@ Head of Security
 	minimal_access = list(ACCESS_SECURITY, ACCESS_SEC_DOORS, ACCESS_BRIG, ACCESS_ARMORY, ACCESS_WEAPONS, ACCESS_FORENSICS_LOCKERS,
 						ACCESS_MORGUE, ACCESS_ALL_PERSONAL_LOCKERS, ACCESS_MINING, ACCESS_MEDICAL, ACCESS_CARGO, ACCESS_HEADS,
 						ACCESS_HOS, ACCESS_RC_ANNOUNCE, ACCESS_KEYCARD_AUTH, ACCESS_MINERAL_STOREROOM)
-
-	exp_requirements = 380
-	exp_type = EXP_TYPE_VAULT
 
 /datum/outfit/job/vault/f13hos
 	name = "Chief of Security"
@@ -148,14 +143,11 @@ Medical Doctor
 	description = "You answer directly to the Overseer. You are tasked with providing medical care to Vault Dwellers and ensuring the medical well-being of everyone in the Vault."
 	supervisors = "the Overseer"
 	selection_color = "#ddffdd"
-	minimal_player_age = 5
+
 	outfit = /datum/outfit/job/vault/f13doctor
 
 	access = list(ACCESS_MEDICAL, ACCESS_MORGUE, ACCESS_SURGERY, ACCESS_CHEMISTRY, ACCESS_MINERAL_STOREROOM, ACCESS_CARGO)
 	minimal_access = list(ACCESS_MEDICAL, ACCESS_MORGUE, ACCESS_SURGERY, ACCESS_CHEMISTRY, ACCESS_MINERAL_STOREROOM, ACCESS_CARGO)
-
-	exp_requirements = 280
-	exp_type = EXP_TYPE_VAULT
 
 /datum/outfit/job/vault/f13doctor
 	name = "Medical Doctor"
@@ -197,14 +189,14 @@ Scientist
 	description = "You answer directly to the Overseer. You are tasked with researching new technologies, conducting mining expeditions (with the approval of Security or the Overseer), and upgrading the machinery of the Vault."
 	supervisors = "the Overseer"
 	selection_color = "#ddffdd"
-	minimal_player_age = 5
+
 	outfit = /datum/outfit/job/vault/f13vaultscientist
 
 	access = list(ACCESS_ROBOTICS, ACCESS_RESEARCH, ACCESS_MINERAL_STOREROOM, ACCESS_TECH_STORAGE, ACCESS_CARGO)
 	minimal_access = list(ACCESS_ROBOTICS, ACCESS_RESEARCH, ACCESS_MINERAL_STOREROOM, ACCESS_CARGO)
 
-	exp_requirements = 250
-	exp_type = EXP_TYPE_VAULT
+/datum/job/vault/f13vaultscientist/after_spawn(mob/living/carbon/human/H, mob/M)
+	H.add_quirk("Master Gunsmith")
 
 /datum/outfit/job/vault/f13vaultscientist
 	name = "Scientist"
@@ -235,14 +227,12 @@ Security Officer
 	description = "You answer directly to the Chief of Security, and in their absence, the Overseer. You are the first line of defense against civil unrest and outside intrusion. It is your duty to enforce the laws created by the Overseer and proactively seek out potential threats to the safety of Vault residents."
 	supervisors = "the head of security"
 	selection_color = "#ddffdd"
-	minimal_player_age = 7
+
 	outfit = /datum/outfit/job/vault/f13security
 
 	access = list(ACCESS_CARGO, ACCESS_SECURITY, ACCESS_SEC_DOORS, ACCESS_BRIG, ACCESS_MORGUE, ACCESS_WEAPONS, ACCESS_FORENSICS_LOCKERS, ACCESS_MINERAL_STOREROOM)
 	minimal_access = list(ACCESS_CARGO, ACCESS_SECURITY, ACCESS_SEC_DOORS, ACCESS_BRIG, ACCESS_WEAPONS, ACCESS_MINERAL_STOREROOM) //BUT SEE /DATUM/JOB/WARDEN/GET_ACCESS()
 
-	exp_requirements = 290
-	exp_type = EXP_TYPE_VAULT
 
 /datum/job/vault/f13officer/get_access()
 	var/list/L = list()
@@ -389,14 +379,11 @@ Vault Engineer
 	description = "You answer directly to the Overseer. You are tasked with overseeing the Reactor, maintaining Vault defenses and machinery, and engaging in construction projects to improve the Vault as a whole."
 	supervisors = "the Overseer"
 	selection_color = "#ddffdd"
-	minimal_player_age = 6
+
 	outfit = /datum/outfit/job/vault/f13vaultengineer
 
 	access = list(ACCESS_CARGO, ACCESS_ENGINE, ACCESS_ENGINE_EQUIP, ACCESS_TECH_STORAGE, ACCESS_ATMOSPHERICS, ACCESS_TCOMSAT, ACCESS_MINERAL_STOREROOM)
 	minimal_access = list(ACCESS_CARGO, ACCESS_ENGINE, ACCESS_ENGINE_EQUIP, ACCESS_TECH_STORAGE, ACCESS_MINERAL_STOREROOM)
-
-	exp_requirements = 220
-	exp_type = EXP_TYPE_VAULT
 
 /datum/outfit/job/vault/f13vaultengineer
 	name = "Vault-tec Engineer"
@@ -430,7 +417,7 @@ Vault Engineer
 	minimal_access = list()	//See /datum/job/vault/assistant/get_access()
 	exp_requirements = 12
 	exp_type = EXP_TYPE_CREW
-	minimal_player_age = 2
+
 	outfit = /datum/outfit/job/vault/f13vaultDweller
 
 /datum/job/vault/f13vaultDweller/get_access()

@@ -8,8 +8,6 @@
 	enforces = "The Legion expects: Obeying orders of superiors. A roman style name. Wearing the uniform, unless acting as a nonlethal infiltrator."
 	objectivesList = list("Leadership recommends the following goal for this week: Establish an outpost at the radio tower","Leadership recommends the following goal for this week: Establish patrols and fortifications around the main road", "Leadership recommends the following goal for this week: Acquire and train slaves")
 
-	disallowed_gender = FEMALE
-
 /datum/outfit/job/CaesarsLegion
 	id = null
 	ears = null
@@ -41,12 +39,6 @@
 		H.sexual_potency = 0
 		H.lust = 0
 
-/datum/outfit/job/CaesarsLegion/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
-	..()
-	if(visualsOnly)
-		return
-	H.add_trait(TRAIT_TECHNOPHOBE, TRAIT_GENERIC, TRAIT_MEDEBIL)
-
 /*
 Legate
 
@@ -68,8 +60,6 @@ Needs whitelist
 	access = list()
 	minimal_access = list()
 
-	exp_requirements = 300
-	exp_type = EXP_TYPE_LEGION
 
 /datum/job/CaesarsLegion/Legionnaire/f13legate/after_spawn(mob/living/carbon/human/H, mob/M)
 	H.add_quirk("Hard Yards")
@@ -92,7 +82,6 @@ Needs whitelist
 		/obj/item/flashlight/flare/torch=1, \
 		/obj/item/storage/bag/money/small/legion)
 
-
 /*
 Centurion
 */
@@ -107,9 +96,6 @@ Centurion
 	supervisors = "the Legate"
 	selection_color = "#ffdddd"
 	req_admin_notify = 1
-
-	exp_requirements = 250
-	exp_type = EXP_TYPE_LEGION
 
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13centurion
 
@@ -141,8 +127,7 @@ Centurion
 		/obj/item/key/bcollar=1, \
 		/obj/item/assembly/signaler/electropack/shockcollar=1, \
 		/obj/item/assembly/signaler/electropack/boomcollar=2, \
-		/obj/item/storage/bag/money/small/legofficers=1, \
-		)
+		/obj/item/storage/bag/money/small/legofficers=1 )
 
 /datum/outfit/loadout/centheavy
 	name = "Paladin-Slayer Centurion"
@@ -184,9 +169,6 @@ Orator
 	description = "You are the the resonator of Caesar's better wills; a Legionnaire who has, perhaps through injury or advanced age, proven himself unable to fight effectively any longer. Instead of facing \"retirement\" in the Legion, one of your superiors took note of your studies and way with words, and you have been made the face and voice of the Conturbernae."
 	supervisors = "the Centurion"
 
-	exp_requirements = 65
-	exp_type = EXP_TYPE_LEGION
-
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13orator
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13orator
@@ -199,6 +181,12 @@ Orator
 		/obj/item/flashlight/lantern=1,
 		/obj/item/storage/box/ids/follower=1
 		)
+
+/datum/outfit/job/CaesarsLegion/Legionnaire/f13orator/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	..()
+	if(visualsOnly)
+		return
+	H.add_trait(TRAIT_TECHNOPHOBE, TRAIT_GENERIC)
 
 /*
 Priestess of Mars
@@ -214,9 +202,6 @@ Priestess of Mars
 	supervisors = "the Centurion, Mars"
 
 	outfit = /datum/outfit/job/CaesarsLegion/f13priestess
-
-	exp_requirements = 100
-	exp_type = EXP_TYPE_LEGION
 
 /datum/outfit/job/CaesarsLegion/f13priestess
 	name = "Priestess of Mars"
@@ -251,6 +236,7 @@ Priestess of Mars
 
 /datum/job/CaesarsLegion/f13priestess/after_spawn(mob/living/carbon/human/H, mob/M)
 	H.add_quirk("Spiritual")
+
 
 /* Decanus
 /datum/job/CaesarsLegion/Legionnaire/f13decan
@@ -338,21 +324,24 @@ Decanii
 	description = "You answer directly to the Centurion, working with them to organize the Legionaries. You lead the Veteran Legionaries on patrols, raids and scouting missions on behalf of your Centurion."
 	supervisors = "the Centurion"
 
-	exp_requirements = 65
-	exp_type = EXP_TYPE_LEGION
-
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13decanvet
 
 /datum/job/CaesarsLegion/Legionnaire/f13decanvet/after_spawn(mob/living/carbon/human/H, mob/M)
 	H.add_quirk("Big Leagues")
 	H.add_quirk("Iron Fist")
 
+/datum/outfit/job/CaesarsLegion/Legionnaire/f13decanvet/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	..()
+	if(visualsOnly)
+		return
+	H.add_trait(TRAIT_TECHNOPHOBE, TRAIT_GENERIC)
+
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13decanvet
 	name = "Legion Veteran Decanus"
 	jobtype = /datum/job/CaesarsLegion/Legionnaire/f13decanvet
 	id = 			/obj/item/card/id/dogtag/legveteran
-	suit = 			/obj/item/clothing/suit/armor/f13/legion/heavy
-	head = 			/obj/item/clothing/head/helmet/f13/legion/heavy
+	suit = 			/obj/item/clothing/suit/armor/f13/legion/vet
+	head = 			/obj/item/clothing/head/helmet/f13/legion/vet/decan/alt
 	mask =			/obj/item/clothing/mask/bandana/legdecan
 	glasses = 		/obj/item/clothing/glasses/sunglasses/big
 	ears = 			/obj/item/radio/headset/headset_legion
@@ -381,14 +370,17 @@ Decanii
 	description = "You answer directly to the Centurion, working with them to organize the Legionaries. You lead the Prime Legionaries on patrols, raids and scouting missions on behalf of your Centurion."
 	supervisors = "the Veteran Decanus and the Centurion"
 
-	exp_requirements = 60
-	exp_type = EXP_TYPE_LEGION
-
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13decan
 
 /datum/job/CaesarsLegion/Legionnaire/f13decanrec/after_spawn(mob/living/carbon/human/H, mob/M)
 	H.add_quirk("Big Leagues")
 	H.add_quirk("Iron Fist")
+
+/datum/outfit/job/CaesarsLegion/Legionnaire/f13decan/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	..()
+	if(visualsOnly)
+		return
+	H.add_trait(TRAIT_TECHNOPHOBE, TRAIT_GENERIC)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13decan
 	name = "Prime Decanus"
@@ -423,14 +415,18 @@ Decanii
 	description = "You answer directly to the Centurion, working with them to organize the Legionaries. You lead the Recruit Legionaries on patrols, raids and scouting missions on behalf of your Centurion."
 	supervisors = "the Prime Decanus and the Centurion"
 
-	exp_requirements = 50
-	exp_type = EXP_TYPE_LEGION
-
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13decanrec
 
 /datum/job/CaesarsLegion/Legionnaire/f13decanrec/after_spawn(mob/living/carbon/human/H, mob/M)
 	H.add_quirk("Big Leagues")
 	H.add_quirk("Iron Fist")
+
+/datum/outfit/job/CaesarsLegion/Legionnaire/f13decanrec/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	..()
+	if(visualsOnly)
+		return
+	H.add_trait(TRAIT_TECHNOPHOBE, TRAIT_GENERIC)
+
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13decanrec
 	name = "Legion Recruit Decanus"
@@ -468,9 +464,6 @@ Vexillarius
 	description = "You answer directly to the Decani and the Centurion, acting as a standard bearer for your squad. You raise troop morale, relay orders from the Decanii and the Centurion, and rally men when ordered, however, you hold no actual authority over the troops and should instead only relay orders from your superiors."
 	supervisors = "the Decani and Centurion"
 
-	exp_requirements = 45
-	exp_type = EXP_TYPE_LEGION
-
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13vexillarius
 
 	loadout_options = list(
@@ -482,6 +475,12 @@ Vexillarius
 	H.add_quirk("Hard Yards")
 	H.add_quirk("Big Leagues")
 	H.add_quirk("Iron Fist")
+
+/datum/outfit/job/CaesarsLegion/Legionnaire/f13vexillarius/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	..()
+	if(visualsOnly)
+		return
+	H.add_trait(TRAIT_TECHNOPHOBE, TRAIT_GENERIC)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13vexillarius
 	name = "Legion Vexillarius"
@@ -531,10 +530,13 @@ datum/job/CaesarsLegion/Legionnaire/f13slavemaster
 	description = "You are the feared and respected disciplinary corps of the Legion. Acting as both master of the Slaves and de-facto executioner of the Centurion's will within his ranks, you are a faceless and undoubtedly cruel torturer... but be careful to not let your hubris and malice lead to a strikeback from those you thought broken."
 	supervisors = "the Decani and Centurion"
 
-	exp_requirements = 35
-	exp_type = EXP_TYPE_LEGION
-
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13slavemaster
+
+/datum/outfit/job/CaesarsLegion/Legionnaire/f13slavemaster/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	..()
+	if(visualsOnly)
+		return
+	H.add_trait(TRAIT_TECHNOPHOBE, TRAIT_GENERIC)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13slavemaster
 	name = "Legion Slavemaster"
@@ -571,14 +573,17 @@ Veteran Legionary
 
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13vetlegionary
 
-	exp_requirements = 65
-	exp_type = EXP_TYPE_LEGION
-
 	loadout_options = list(
 	/datum/outfit/loadout/vetlegassault, //scoped .44 revolver
-	/datum/outfit/loadout/vetlegbreach, //lever-action shotgun
-	/datum/outfit/loadout/vetlegclose //shotgun
+	/datum/outfit/loadout/vetlegrange, //marksman rifle
+	/datum/outfit/loadout/vetlegclose //lever-action shotgun
 	)
+
+/datum/outfit/job/CaesarsLegion/Legionnaire/f13vetlegionary/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	..()
+	if(visualsOnly)
+		return
+	H.add_trait(TRAIT_TECHNOPHOBE, TRAIT_GENERIC)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13vetlegionary
 	name = "Veteran Legionary"
@@ -591,9 +596,7 @@ Veteran Legionary
 	ears	=		/obj/item/radio/headset/headset_legion
 	backpack_contents = list(
 		/obj/item/restraints/legcuffs/bola=1, \
-		/obj/item/throwing_star/spear, \
-		/obj/item/claymore/machete/reinforced=1, \
-		/obj/item/reagent_containers/pill/patch/healingpowder=2, \
+		/obj/item/reagent_containers/pill/patch/healingpowder=3, \
 		/obj/item/flashlight/lantern=1, \
 		/obj/item/storage/bag/money/small/legenlisted,
 		/obj/item/radio)
@@ -601,28 +604,30 @@ Veteran Legionary
 
 /datum/outfit/loadout/vetlegassault
 	name = "Assault Legionary"
-	suit_store = /obj/item/gun/ballistic/revolver/thatgun
+	suit_store = /obj/item/gun/ballistic/automatic/mini_uzi
 	backpack_contents = list(
-		/obj/item/twohanded/fireaxe=1,
+		/obj/item/ammo_box/magazine/uzim9mm=2
 		)
 
-/datum/outfit/loadout/vetlegbreach
-	name = "Foot Legionary"
-	suit_store = /obj/item/gun/ballistic/shotgun/automatic/hunting/trail
+/datum/outfit/loadout/vetlegrange
+	name = "Ranged Legionary"
+	suit_store = /obj/item/gun/ballistic/automatic/marksman
 	backpack_contents = list(
-		/obj/item/ammo_box/tube/m44=1,
+		/obj/item/ammo_box/magazine/m556/rifle=2
 		)
 
 /datum/outfit/loadout/vetlegclose
 	name = "Protector Legionary"
 	suit_store = /obj/item/gun/ballistic/shotgun/trench
 	backpack_contents = list(
-		/obj/item/storage/box/slugshot=1,
+		/obj/item/storage/box/slugshot=1, \
+		/obj/item/storage/box/beanbag=1, \
 		/obj/item/shield/riot/roman=1
 		)
 
 /datum/job/CaesarsLegion/Legionnaire/f13vetlegionary/after_spawn(mob/living/carbon/human/H, mob/M)
 	H.add_quirk("Big Leagues")
+	H.add_quirk("Hard Yards")
 
 /*
 Prime Legionairy
@@ -637,15 +642,20 @@ Prime Legionairy
 	description = "You answer to the Decani and the Centurion, as well as Veterans above you. Acting as a loyal soldier of the Centuria, you have the great honour of serving under Caesar in his quest to unite the scattered tribes of The Mojave. You have been through enough battles to call yourself a prime, but you are by no means yet a Veteran."
 	supervisors = "the Decani and Centurion"
 
-	exp_requirements = 35
-	exp_type = EXP_TYPE_LEGION
-
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13legionary
 
 	loadout_options = list(
 	/datum/outfit/loadout/legassault, //.357 revolver
-	/datum/outfit/loadout/legbreach //hunting shotgun
+	/datum/outfit/loadout/legline, //glaive
+	/datum/outfit/loadout/legbreach, //hunting shotgun
+	/datum/outfit/loadout/legrange //trail carbine
 	)
+
+/datum/outfit/job/CaesarsLegion/Legionnaire/f13legionary/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	..()
+	if(visualsOnly)
+		return
+	H.add_trait(TRAIT_TECHNOPHOBE, TRAIT_GENERIC)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13legionary
 	name = "Prime Legionary"
@@ -658,8 +668,6 @@ Prime Legionairy
 	ears	=		/obj/item/radio/headset/headset_legion
 	backpack_contents = list(
 		/obj/item/restraints/legcuffs/bola=1, \
-		/obj/item/throwing_star/spear, \
-		/obj/item/claymore/machete=1, \
 		/obj/item/reagent_containers/pill/patch/healingpowder=2, \
 		/obj/item/flashlight/flare/torch=1, \
 		/obj/item/radio)
@@ -667,15 +675,34 @@ Prime Legionairy
 
 /datum/outfit/loadout/legassault
 	name = "Foot Legionary"
-	suit_store = /obj/item/gun/ballistic/revolver/colt357
+	suit_store = /obj/item/gun/ballistic/revolver/thatgun
 	backpack_contents = list(
-		/obj/item/ammo_box/a357=2)
+		/obj/item/storage/backpack/spearquiver=1, \
+		/obj/item/claymore/machete/reinforced=1, \
+		/obj/item/ammo_box/magazine/m556/rifle=2)
+
+/datum/outfit/loadout/legline
+	name = "Lineman"
+	suit_store = /obj/item/twohanded/spear
+	backpack_contents = list(
+		/obj/item/gun/ballistic/automatic/pistol/n99=1, \
+		/obj/item/ammo_box/magazine/m10mm_adv=2, \
+		/obj/item/claymore/machete/reinforced=1)
 
 /datum/outfit/loadout/legbreach
 	name = "Close Quarters Legionary"
 	suit_store = /obj/item/gun/ballistic/shotgun/hunting
 	backpack_contents = list(
-		/obj/item/storage/box/lethalshot=1)
+		/obj/item/storage/box/slugshot=1, \
+		/obj/item/storage/box/beanbag=1, \
+		/obj/item/claymore/machete/gladius=1)
+
+/datum/outfit/loadout/legrange
+	name = "Ranged Legionary"
+	suit_store = /obj/item/gun/ballistic/shotgun/automatic/hunting/trail/scoped
+	backpack_contents = list(
+		/obj/item/ammo_box/tube/m44=2, \
+		/obj/item/claymore/machete/reinforced)
 
 /datum/job/CaesarsLegion/Legionnaire/f13legionary/after_spawn(mob/living/carbon/human/H, mob/M)
 	H.add_quirk("Big Leagues")
@@ -696,6 +723,12 @@ Recruit Legionary
 
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13recleg
 
+/datum/outfit/job/CaesarsLegion/Legionnaire/f13recleg/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	..()
+	if(visualsOnly)
+		return
+	H.add_trait(TRAIT_TECHNOPHOBE, TRAIT_GENERIC)
+
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13recleg
 	name = "Recruit Legionary"
 	jobtype = /datum/job/CaesarsLegion/Legionnaire/f13recleg
@@ -705,12 +738,14 @@ Recruit Legionary
 	head = 			/obj/item/clothing/head/helmet/f13/legion/recruit
 	mask =			/obj/item/clothing/mask/bandana/legrecruit
 	glasses = 		/obj/item/clothing/glasses/legiongoggles
+	ears	=		/obj/item/radio/headset/headset_legion
 	r_pocket =      /obj/item/restraints/handcuffs
-	suit_store =	/obj/item/gun/ballistic/revolver/pipe_rifle
+	suit_store =	/obj/item/gun/ballistic/revolver/colt357
 	backpack_contents = list(
-		/obj/item/kitchen/knife/butcher, \
-		/obj/item/flashlight/flare/torch=1,
-		/obj/item/radio)
+		/obj/item/kitchen/knife/butcher=1, \
+		/obj/item/reagent_containers/pill/patch/healingpowder=2, \
+		/obj/item/flashlight/flare/torch=1, \
+		/obj/item/restraints/handcuffs)
 
 /*
 Venator
@@ -725,9 +760,6 @@ Venator
 	supervisors = "the Centurion"
 	selection_color = "#ffdddd"
 
-	exp_requirements = 45
-	exp_type = EXP_TYPE_LEGION
-
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13venator
 
 	loadout_options = list(
@@ -737,6 +769,12 @@ Venator
 
 /datum/job/CaesarsLegion/Legionnaire/f13venator/after_spawn(mob/living/carbon/human/H, mob/M)
 	H.add_quirk("Hard Yards")
+
+/datum/outfit/job/CaesarsLegion/Legionnaire/f13venator/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	..()
+	if(visualsOnly)
+		return
+	H.add_trait(TRAIT_TECHNOPHOBE, TRAIT_GENERIC)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13venator
 	name = "Legion Venator"
@@ -782,16 +820,19 @@ Explorer
 	description = "Acting as the eyes and ears of the Legion, you are in the region to scout it out for potential conquest. Make note of your surroundings and above all, survive to report back."
 	supervisors = "the Venator and Centurion"
 
-	exp_requirements = 40
-	exp_type = EXP_TYPE_LEGION
-
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13explorer
 
 	loadout_options = list(
 	/datum/outfit/loadout/explinfil, //C4, engineering supplies
-	/datum/outfit/loadout/explscout, //.44 trail carbine
+	/datum/outfit/loadout/explscout //.44 trail carbine
 	//datum/outfit/loadout/explassassin //.308 DKS sniper rifle
 	)
+
+/datum/outfit/job/CaesarsLegion/Legionnaire/f13explorer/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	..()
+	if(visualsOnly)
+		return
+	H.add_trait(TRAIT_TECHNOPHOBE, TRAIT_GENERIC)
 
 /datum/job/CaesarsLegion/Legionnaire/f13explorer/after_spawn(mob/living/carbon/human/H, mob/M)
 	H.add_quirk("Hard Yards")
@@ -848,6 +889,9 @@ Auxilia
 	/datum/outfit/loadout/auxmedic, //Healing poultices and surgical tools
 	/datum/outfit/loadout/auxengi //Toolbelt, wood, metal, leather
 	)
+
+/datum/job/CaesarsLegion/f13auxilia/after_spawn(mob/living/carbon/human/H, mob/M)
+	H.add_quirk("Master Gunsmith")
 
 /datum/outfit/job/CaesarsLegion/f13auxilia
 	name = "Auxilia"
