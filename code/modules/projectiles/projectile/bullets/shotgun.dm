@@ -65,12 +65,13 @@
 
 /obj/item/projectile/bullet/pellet/magnum_buckshot
 	name = "magnum buckshot pellet"
-	damage = 11
+	damage = 11.5
+	armour_penetration = 7
 
 /obj/item/projectile/bullet/pellet/shotgun_rubbershot
 	name = "rubbershot pellet"
 	damage = 0
-	stamina = 11
+	stamina = 8
 
 /obj/item/projectile/bullet/pellet/Range()
 	..()

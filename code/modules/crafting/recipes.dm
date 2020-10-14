@@ -250,6 +250,16 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO_FOUR
 
+/datum/crafting_recipe/ecrecharge
+	name = "Small Energy Cell (recycle)"
+	result = /obj/item/stock_parts/cell/ammo/ec
+	reqs = list(/obj/item/stock_parts/cell/ammo/ec=2)
+	traits = list(TRAIT_GUNSMITH_ONE)
+	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER1)
+	time = 10
+	category = CAT_WEAPONRY
+	subcategory = CAT_AMMO_FOUR
+
 /datum/crafting_recipe/mfc
 	name = "Microfusion Cell"
 	result = /obj/item/stock_parts/cell/ammo/mfc
@@ -260,10 +270,30 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO_FOUR
 
+/datum/crafting_recipe/mfcrecharge
+	name = "Microfusion Cell (recycle)"
+	result = /obj/item/stock_parts/cell/ammo/mfc
+	reqs = list(/obj/item/stock_parts/cell/ammo/mfc=2)
+	traits = list(TRAIT_GUNSMITH_TWO)
+	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER2)
+	time = 20
+	category = CAT_WEAPONRY
+	subcategory = CAT_AMMO_FOUR
+
 /datum/crafting_recipe/ecp
 	name = "Electron Charge Pack"
 	result = /obj/item/stock_parts/cell/ammo/ecp
 	reqs = list(/obj/item/stack/crafting/goodparts=3, /obj/item/stock_parts/capacitor=5)
+	traits = list(TRAIT_GUNSMITH_THREE)
+	tools = list(TOOL_AWORKBENCH, TOOL_GUNTIER3)
+	time = 30
+	category = CAT_WEAPONRY
+	subcategory = CAT_AMMO_FOUR
+
+/datum/crafting_recipe/ecprecharge
+	name = "Electron Charge Pack (recycle)"
+	result = /obj/item/stock_parts/cell/ammo/ecp
+	reqs = list(/obj/item/stock_parts/cell/ammo/ecp=2)
 	traits = list(TRAIT_GUNSMITH_THREE)
 	tools = list(TOOL_AWORKBENCH, TOOL_GUNTIER3)
 	time = 30
