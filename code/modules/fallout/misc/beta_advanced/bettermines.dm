@@ -3,7 +3,7 @@
 	desc = "Better stay away from that thing."
 	density = FALSE
 	anchored = FALSE
-	icon = 'icons/obj/items_and_weapons.dmi'
+	icon = 'icons/obj/betaadvanced.dmi'
 	icon_state = "landmine"
 	var/triggered = 0
 	var/press_bolted = 1
