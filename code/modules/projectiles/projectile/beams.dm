@@ -238,6 +238,18 @@
 	damage = 28
 	armour_penetration = 15
 
+/obj/item/projectile/beam/laser/ultra_pistol
+	name = "laser beam"
+	damage = 40
+	armour_penetration = 15
+	irradiate = 200
+
+/obj/item/projectile/beam/laser/ultra_rifle
+	name = "laser beam"
+	damage = 45
+	armour_penetration = 20
+	irradiate = 200
+
 /obj/item/projectile/beam/laser/gatling //Gatling Laser Projectile
 	name = "rapid-fire laser beam"
 	damage = 12
@@ -265,8 +277,18 @@
 	name = "plasma bolt"
 	icon_state = "plasma_clot"
 	damage_type = BURN
-	damage = 42
-	armour_penetration = 12
+	damage = 48
+	armour_penetration = 15
+	flag = "laser" //checks vs. energy protection
+	eyeblur = 0
+	is_reflectable = TRUE
+
+/obj/item/projectile/plasmacarbine //Plasma carbine
+	name = "plasma bolt"
+	icon_state = "plasma_clot"
+	damage_type = BURN
+	damage = 45
+	armour_penetration = 15
 	flag = "laser" //checks vs. energy protection
 	eyeblur = 0
 	is_reflectable = TRUE
@@ -283,7 +305,7 @@
 
 /obj/item/projectile/plasma/pistol //Plasma pistol
 	damage = 45
-	armour_penetration = 3
+	armour_penetration = 5
 
 /obj/item/projectile/plasma/pistol/glock //Glock (streamlined plasma pistol)
 	damage = 30

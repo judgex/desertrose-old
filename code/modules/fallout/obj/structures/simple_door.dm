@@ -387,4 +387,5 @@
 	material_type = /obj/item/stack/sheet/cloth
 	open_sound = "sound/effects/curtain.ogg"
 	close_sound = "sound/effects/curtain.ogg"
+	can_hold_padlock = TRUE
 	hard_open = 0

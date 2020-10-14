@@ -128,7 +128,7 @@ VersionDate = '20150101'
 # 20091018 2.7 handles empty tracks gracefully
 # 20091015 2.6 grep() selects channels
 # 20091010 2.5 merge_scores reassigns channels to avoid conflicts
-# 20091010 2.4 fixed bug in to_millisecs which now only does opusses
+# 20091010 2.4 fixed bug in to_millisecs which now only does ovulvaes
 # 20091010 2.3 score2stats returns channels & patch_changes, by_track & total
 # 20091010 2.2 score2stats() returns also pitches and percussion dicts
 # 20091010 2.1 bugs: >= not > in segment, to notice patch_change at time 0

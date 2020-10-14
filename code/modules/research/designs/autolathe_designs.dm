@@ -651,7 +651,7 @@
 	name = "Shotgun Slug Box"
 	id = "shotgun_slug"
 	build_type = AUTOLATHE
-	materials = list(MAT_METAL = 14000)
+	materials = list(MAT_METAL = 16000)
 	build_path = /obj/item/storage/box/slugshot
 	category = list("initial", "Security")
 
@@ -659,7 +659,7 @@
 	name = "Buckshot Shell Box"
 	id = "buckshot_shell"
 	build_type = AUTOLATHE
-	materials = list(MAT_METAL = 14000)
+	materials = list(MAT_METAL = 16000)
 	build_path = /obj/item/storage/box/lethalshot
 	category = list("initial", "Security")
 
@@ -667,7 +667,7 @@
 	name = "Magnum Buckshot Shell Box"
 	id = "magnum_shot"
 	build_type = AUTOLATHE
-	materials = list(MAT_METAL = 35000)
+	materials = list(MAT_METAL = 30000)
 	build_path = /obj/item/storage/box/magnumshot
 	category = list("initial", "Security")
 
@@ -675,7 +675,7 @@
 	name = "Rubbershot Shell Box"
 	id = "rubber_shot"
 	build_type = AUTOLATHE
-	materials = list(MAT_METAL = 14000)
+	materials = list(MAT_METAL = 16000)
 	build_path = /obj/item/storage/box/rubbershot
 	category = list("initial", "Security")
 
@@ -683,7 +683,7 @@
 	name = "Beanbag Shell Box"
 	id = "beanbag_shot"
 	build_type = AUTOLATHE
-	materials = list(MAT_METAL = 14000)
+	materials = list(MAT_METAL = 16000)
 	build_path = /obj/item/storage/box/beanbag
 	category = list("initial", "Security")
 
@@ -770,7 +770,7 @@
 	category = list("initial", "Security")
 
 /datum/design/m44box
-	name = ".44 FMJ Ammobox"
+	name = ".44 FMJ Ammo box"
 	id = "m44box"
 	build_type = AUTOLATHE
 	materials = list(MAT_METAL = 4000)
