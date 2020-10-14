@@ -8,6 +8,8 @@
 	enforces = "The Legion expects: Obeying orders of superiors. A roman style name. Wearing the uniform, unless acting as a nonlethal infiltrator."
 	objectivesList = list("Leadership recommends the following goal for this week: Establish an outpost at the radio tower","Leadership recommends the following goal for this week: Establish patrols and fortifications around the main road", "Leadership recommends the following goal for this week: Acquire and train slaves")
 
+	disallowed_gender = FEMALE
+
 /datum/outfit/job/CaesarsLegion
 	id = null
 	ears = null
@@ -59,7 +61,8 @@ Needs whitelist
 
 	access = list()
 	minimal_access = list()
-
+	exp_requirements = 300
+	exp_type = EXP_TYPE_LEGION
 
 /datum/job/CaesarsLegion/Legionnaire/f13legate/after_spawn(mob/living/carbon/human/H, mob/M)
 	H.add_quirk("Hard Yards")
@@ -98,6 +101,9 @@ Centurion
 	req_admin_notify = 1
 
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13centurion
+
+	exp_requirements = 250
+	exp_type = EXP_TYPE_LEGION
 
 	loadout_options = list(
 	/datum/outfit/loadout/centheavy, //10mm SMG and powerfist
@@ -169,6 +175,9 @@ Orator
 	description = "You are the the resonator of Caesar's better wills; a Legionnaire who has, perhaps through injury or advanced age, proven himself unable to fight effectively any longer. Instead of facing \"retirement\" in the Legion, one of your superiors took note of your studies and way with words, and you have been made the face and voice of the Conturbernae."
 	supervisors = "the Centurion"
 
+	exp_requirements = 65
+	exp_type = EXP_TYPE_LEGION
+
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13orator
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13orator
@@ -200,6 +209,9 @@ Priestess of Mars
 	spawn_positions = 1
 	description = "You are a spiritual and logistics advisor for the Legion forces in the area. Being raised in and from the homeland, you have fully adapted to the Legion's ideals and fully committed yourself to the role as mother and caretaker of the Legion's future. You are an icon to be respected, even by fellow Legion; and although a woman, your status does not allow you to be belittled."
 	supervisors = "the Centurion, Mars"
+
+	exp_requirements = 100
+	exp_type = EXP_TYPE_LEGION
 
 	outfit = /datum/outfit/job/CaesarsLegion/f13priestess
 
@@ -326,6 +338,9 @@ Decanii
 
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13decanvet
 
+	exp_requirements = 65
+	exp_type = EXP_TYPE_LEGION
+
 /datum/job/CaesarsLegion/Legionnaire/f13decanvet/after_spawn(mob/living/carbon/human/H, mob/M)
 	H.add_quirk("Big Leagues")
 	H.add_quirk("Iron Fist")
@@ -372,6 +387,9 @@ Decanii
 
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13decan
 
+	exp_requirements = 60
+	exp_type = EXP_TYPE_LEGION
+
 /datum/job/CaesarsLegion/Legionnaire/f13decanrec/after_spawn(mob/living/carbon/human/H, mob/M)
 	H.add_quirk("Big Leagues")
 	H.add_quirk("Iron Fist")
@@ -416,6 +434,9 @@ Decanii
 	supervisors = "the Prime Decanus and the Centurion"
 
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13decanrec
+
+	exp_requirements = 50
+	exp_type = EXP_TYPE_LEGION
 
 /datum/job/CaesarsLegion/Legionnaire/f13decanrec/after_spawn(mob/living/carbon/human/H, mob/M)
 	H.add_quirk("Big Leagues")
@@ -465,6 +486,9 @@ Vexillarius
 	supervisors = "the Decani and Centurion"
 
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13vexillarius
+
+	exp_requirements = 45
+	exp_type = EXP_TYPE_LEGION
 
 	loadout_options = list(
 		/datum/outfit/loadout/vexassault, //ripper, m29scoped
@@ -530,6 +554,9 @@ datum/job/CaesarsLegion/Legionnaire/f13slavemaster
 	description = "You are the feared and respected disciplinary corps of the Legion. Acting as both master of the Slaves and de-facto executioner of the Centurion's will within his ranks, you are a faceless and undoubtedly cruel torturer... but be careful to not let your hubris and malice lead to a strikeback from those you thought broken."
 	supervisors = "the Decani and Centurion"
 
+	exp_requirements = 35
+	exp_type = EXP_TYPE_LEGION
+
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13slavemaster
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13slavemaster/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -572,6 +599,9 @@ Veteran Legionary
 	supervisors = "the Decani and Centurion"
 
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13vetlegionary
+
+	exp_requirements = 65
+	exp_type = EXP_TYPE_LEGION
 
 	loadout_options = list(
 	/datum/outfit/loadout/vetlegassault, //scoped .44 revolver
@@ -643,6 +673,9 @@ Prime Legionairy
 	supervisors = "the Decani and Centurion"
 
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13legionary
+
+	exp_requirements = 45
+	exp_type = EXP_TYPE_LEGION
 
 	loadout_options = list(
 	/datum/outfit/loadout/legassault, //.357 revolver
