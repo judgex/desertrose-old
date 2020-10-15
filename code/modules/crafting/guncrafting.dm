@@ -126,13 +126,25 @@
 							Q.amount -= 1
 							var/obj/item/prefabs/complex/barrel/m4570/C = new /obj/item/prefabs/complex/barrel/m4570
 							C.forceMove(src.loc)
+						if(istype(src.contents[1],/obj/item/prefabs/mould/barrel/shotgun))//4570
+							Q.amount -= 1
+							var/obj/item/prefabs/complex/barrel/shotgun/C = new /obj/item/prefabs/complex/barrel/shotgun
+							C.forceMove(src.loc)
 						if(istype(src.contents[1],/obj/item/prefabs/mould/action/simple))
 							Q.amount -= 1
 							var/obj/item/prefabs/complex/action/simple/C = new /obj/item/prefabs/complex/action/simple
 							C.forceMove(src.loc)
+						if(istype(src.contents[1],/obj/item/prefabs/mould/action/auto))
+							Q.amount -= 1
+							var/obj/item/prefabs/complex/action/auto/C = new /obj/item/prefabs/complex/action/auto
+							C.forceMove(src.loc)
 						if(istype(src.contents[1],/obj/item/prefabs/mould/bolt/simple))
 							Q.amount -= 1
 							var/obj/item/prefabs/complex/bolt/simple/C = new /obj/item/prefabs/complex/bolt/simple
+							C.forceMove(src.loc)
+						if(istype(src.contents[1],/obj/item/prefabs/mould/bolt/high))
+							Q.amount -= 1
+							var/obj/item/prefabs/complex/bolt/high/C = new /obj/item/prefabs/complex/bolt/high
 							C.forceMove(src.loc)
 						if(istype(src.contents[1],/obj/item/prefabs/mould/screw))
 							Q.amount -= 1

@@ -445,6 +445,18 @@
 			return 1
 	return 0
 
+/obj/item/gun/ballistic/revolver/shotgunrevolver
+	name = "\improper judge"
+	desc = "A large revolver that has been modified to fire shotgun shells."
+	icon_state = "revolvershotgun"
+	item_state = "gun"
+	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/shotgunrevolver
+	fire_sound = 'sound/f13weapons/caravan_shotgun.ogg'
+	fire_delay = 10
+	w_class = WEIGHT_CLASS_SMALL
+	weapon_weight = WEAPON_LIGHT
+	spread = 40
+
 /obj/item/gun/ballistic/revolver/needler
 	name = "needler pistol"
 	desc = "You suspect this Bringham needler pistol was once used in scientific field studies. It uses small hard-plastic hypodermic darts as ammo. "
@@ -479,12 +491,80 @@
 	fire_delay = 4
 
 /obj/item/gun/ballistic/revolver/sequoia/scoped
-	name = "hunting revolver"
+	name = "hunting revolver (standard)"
 	desc = "A scoped double action revolver chambered in 45-70."
 	icon_state = "hunting_revolver"
 	zoomable = TRUE
 	zoom_amt = 10
 	zoom_out_amt = 13
+	extra_damage = -5
+	extra_penetration = -5
+
+/obj/item/gun/ballistic/revolver/sequoia/scoped/attackby(obj/item/W, mob/user, params)
+	if(istype(W,/obj/item/screwdriver))
+		var/obj/item/A = new /obj/item/prefabs/complex/screw
+		var/obj/item/B = new /obj/item/prefabs/complex/trigger
+		var/obj/item/C = new /obj/item/prefabs/complex/bolt/simple
+		var/obj/item/D = new /obj/item/prefabs/complex/action/simple
+		var/obj/item/E = new /obj/item/prefabs/complex/barrel/m4570
+		var/obj/item/G = new /obj/item/prefabs/complex/complexWeaponFrame/low
+		A.forceMove(usr.loc)
+		B.forceMove(usr.loc)
+		C.forceMove(usr.loc)
+		D.forceMove(usr.loc)
+		E.forceMove(usr.loc)
+		G.forceMove(usr.loc)
+		qdel(src)
+		to_chat(usr,"You dissasemble the [src].")
+	. = ..()
+
+/obj/item/gun/ballistic/revolver/sequoia/scoped/mid
+	name = "hunting revolver (improved)"
+	extra_damage = 0
+	extra_penetration = 0
+
+/obj/item/gun/ballistic/revolver/sequoia/scoped/mid/attackby(obj/item/W, mob/user, params)
+	if(istype(W,/obj/item/screwdriver))
+		var/obj/item/A = new /obj/item/prefabs/complex/screw
+		var/obj/item/B = new /obj/item/prefabs/complex/trigger
+		var/obj/item/C = new /obj/item/prefabs/complex/bolt/simple
+		var/obj/item/D = new /obj/item/prefabs/complex/action/simple
+		var/obj/item/E = new /obj/item/prefabs/complex/barrel/m4570
+		var/obj/item/G = new /obj/item/prefabs/complex/complexWeaponFrame/mid
+		A.forceMove(usr.loc)
+		B.forceMove(usr.loc)
+		C.forceMove(usr.loc)
+		D.forceMove(usr.loc)
+		E.forceMove(usr.loc)
+		G.forceMove(usr.loc)
+		qdel(src)
+		to_chat(usr,"You dissasemble the [src].")
+	. = ..()
+
+/obj/item/gun/ballistic/revolver/sequoia/scoped/high
+	name = "hunting revolver (masterwork)"
+	zoom_amt = 13
+	zoom_out_amt = 16
+	extra_damage = 7
+	extra_penetration = 7
+
+/obj/item/gun/ballistic/revolver/sequoia/scoped/high/attackby(obj/item/W, mob/user, params)
+	if(istype(W,/obj/item/screwdriver))
+		var/obj/item/A = new /obj/item/prefabs/complex/screw
+		var/obj/item/B = new /obj/item/prefabs/complex/trigger
+		var/obj/item/C = new /obj/item/prefabs/complex/bolt/simple
+		var/obj/item/D = new /obj/item/prefabs/complex/action/simple
+		var/obj/item/E = new /obj/item/prefabs/complex/barrel/m4570
+		var/obj/item/G = new /obj/item/prefabs/complex/complexWeaponFrame/high
+		A.forceMove(usr.loc)
+		B.forceMove(usr.loc)
+		C.forceMove(usr.loc)
+		D.forceMove(usr.loc)
+		E.forceMove(usr.loc)
+		G.forceMove(usr.loc)
+		qdel(src)
+		to_chat(usr,"You dissasemble the [src].")
+	. = ..()
 
 /obj/item/gun/ballistic/revolver/zipgun
 	name = "zipgun"

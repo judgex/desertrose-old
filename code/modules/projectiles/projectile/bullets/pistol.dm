@@ -12,6 +12,11 @@
 	damage = 45 //40
 	armour_penetration = -22 //20
 
+//5mm minigun
+/obj/item/projectile/bullet/c5mm
+	damage = 19 //30
+	armour_penetration = 30
+
 //9x19mm
 /obj/item/projectile/bullet/c9mm
 	damage = 29 //30

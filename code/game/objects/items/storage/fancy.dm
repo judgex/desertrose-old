@@ -23,7 +23,7 @@
 	var/icon_type = "donut"
 	var/spawn_type = null
 	var/fancy_open = FALSE
-
+	
 /obj/item/storage/fancy/PopulateContents()
 	GET_COMPONENT(STR, /datum/component/storage)
 	for(var/i = 1 to STR.max_items)
@@ -381,6 +381,9 @@
 	var/spawn_type = /obj/item/ammo_casing/shotgun/rubbershot
 	var/fancy_open = FALSE
 
+/obj/item/storage/box/rubbershot/Initialize()
+	. = ..()
+
 /obj/item/storage/box/rubbershot/PopulateContents()
 	GET_COMPONENT(STR, /datum/component/storage)
 	for(var/i = 1 to STR.max_items)
@@ -389,6 +392,7 @@
 /obj/item/storage/box/rubbershot/update_icon()
 	if(fancy_open)
 		icon_state = "[icon_type]box[contents.len]"
+		materials = list(MAT_METAL = (contents.len * 1000) + 2000)
 	else
 		icon_state = "[icon_type]box"
 
@@ -456,6 +460,7 @@
 /obj/item/storage/box/lethalshot/update_icon()
 	if(fancy_open)
 		icon_state = "[icon_type]box[contents.len]"
+		materials = list(MAT_METAL = (contents.len * 1000) + 2000)
 	else
 		icon_state = "[icon_type]box"
 
@@ -506,6 +511,7 @@
 /obj/item/storage/box/magnumshot/update_icon()
 	if(fancy_open)
 		icon_state = "[icon_type]box[contents.len]"
+		materials = list(MAT_METAL = (contents.len * 2000) + 2000)
 	else
 		icon_state = "[icon_type]box"
 
@@ -556,6 +562,7 @@
 /obj/item/storage/box/slugshot/update_icon()
 	if(fancy_open)
 		icon_state = "[icon_type]box[contents.len]"
+		materials = list(MAT_METAL = (contents.len * 1000) + 2000)
 	else
 		icon_state = "[icon_type]box"
 
@@ -606,6 +613,7 @@
 /obj/item/storage/box/beanbag/update_icon()
 	if(fancy_open)
 		icon_state = "[icon_type]box[contents.len]"
+		materials = list(MAT_METAL = (contents.len * 1000) + 2000)
 	else
 		icon_state = "[icon_type]box"
 

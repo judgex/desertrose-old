@@ -127,8 +127,7 @@ Centurion
 		/obj/item/key/bcollar=1, \
 		/obj/item/assembly/signaler/electropack/shockcollar=1, \
 		/obj/item/assembly/signaler/electropack/boomcollar=2, \
-		/obj/item/storage/bag/money/small/legofficers=1, \
-		)
+		/obj/item/storage/bag/money/small/legofficers=1 )
 
 /datum/outfit/loadout/centheavy
 	name = "Paladin-Slayer Centurion"
@@ -341,8 +340,8 @@ Decanii
 	name = "Legion Veteran Decanus"
 	jobtype = /datum/job/CaesarsLegion/Legionnaire/f13decanvet
 	id = 			/obj/item/card/id/dogtag/legveteran
-	suit = 			/obj/item/clothing/suit/armor/f13/legion/heavy
-	head = 			/obj/item/clothing/head/helmet/f13/legion/heavy
+	suit = 			/obj/item/clothing/suit/armor/f13/legion/vet
+	head = 			/obj/item/clothing/head/helmet/f13/legion/vet/decan/alt
 	mask =			/obj/item/clothing/mask/bandana/legdecan
 	glasses = 		/obj/item/clothing/glasses/sunglasses/big
 	ears = 			/obj/item/radio/headset/headset_legion
@@ -607,14 +606,14 @@ Veteran Legionary
 	name = "Assault Legionary"
 	suit_store = /obj/item/gun/ballistic/automatic/mini_uzi
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/uzim9mm=2 ,
+		/obj/item/ammo_box/magazine/uzim9mm=2
 		)
 
 /datum/outfit/loadout/vetlegrange
 	name = "Ranged Legionary"
 	suit_store = /obj/item/gun/ballistic/automatic/marksman
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m556/rifle=2,
+		/obj/item/ammo_box/magazine/m556/rifle=2
 		)
 
 /datum/outfit/loadout/vetlegclose
@@ -686,9 +685,9 @@ Prime Legionairy
 	name = "Lineman"
 	suit_store = /obj/item/twohanded/spear
 	backpack_contents = list(
-		/obj/item/gun/ballistic/automatic/pistol/n99, \
+		/obj/item/gun/ballistic/automatic/pistol/n99=1, \
 		/obj/item/ammo_box/magazine/m10mm_adv=2, \
-		/obj/item/claymore/machete/reinforced)
+		/obj/item/claymore/machete/reinforced=1)
 
 /datum/outfit/loadout/legbreach
 	name = "Close Quarters Legionary"
@@ -825,7 +824,7 @@ Explorer
 
 	loadout_options = list(
 	/datum/outfit/loadout/explinfil, //C4, engineering supplies
-	/datum/outfit/loadout/explscout, //.44 trail carbine
+	/datum/outfit/loadout/explscout //.44 trail carbine
 	//datum/outfit/loadout/explassassin //.308 DKS sniper rifle
 	)
 
@@ -891,7 +890,7 @@ Auxilia
 	/datum/outfit/loadout/auxengi //Toolbelt, wood, metal, leather
 	)
 
-/datum/job/den/f13auxilia/after_spawn(mob/living/carbon/human/H, mob/M)
+/datum/job/CaesarsLegion/f13auxilia/after_spawn(mob/living/carbon/human/H, mob/M)
 	H.add_quirk("Master Gunsmith")
 
 /datum/outfit/job/CaesarsLegion/f13auxilia
