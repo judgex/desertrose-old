@@ -87,7 +87,7 @@ Medic
 	belt = /obj/item/gun/energy/laser/plasma/pistol
 	ears = /obj/item/radio/headset/headset_enclave
 	back = /obj/item/storage/backpack/trekker
-	pa_wear = TRUE
+	pa_wear = FALSE
 	suit = /obj/item/clothing/suit/toggle/labcoat/f13/followers
 
 /datum/outfit/loadout/enclave_medic_1
