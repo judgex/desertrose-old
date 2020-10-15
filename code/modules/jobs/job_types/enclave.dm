@@ -243,6 +243,8 @@ Scientist
 	name = "US Scientist"
 	jobtype = /datum/job/enclave/f13usscientist
 
+	chemwhiz = TRUE
+
 	id = /obj/item/card/id/dogtag
 	uniform =  /obj/item/clothing/under/f13/dbdu
 	shoes = /obj/item/clothing/shoes/combat/swat

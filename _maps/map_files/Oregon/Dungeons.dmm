@@ -3245,7 +3245,7 @@
 "bku" = (/obj/machinery/chem_dispenser,/turf/open/floor/plating/tunnel,/area/f13/bunker)
 "bkv" = (/obj/structure/flora/grass/jungle,/turf/closed/mineral/random/high_chance,/area/f13/caves)
 "bkw" = (/obj/machinery/workbench,/turf/open/floor/plating/tunnel,/area/f13/bunker)
-"bkx" = (/obj/item/clothing/head/f13/ncr/vietnam,/obj/item/gun/ballistic/automatic/assault_carbine,/turf/open/floor/grass,/area/f13/underground/cave)
+"bkx" = (/obj/item/gun/ballistic/automatic/assault_carbine,/turf/open/floor/grass,/area/f13/underground/cave)
 "bky" = (/turf/closed/indestructible/rock,/area/f13/wasteland)
 "bkz" = (/turf/open/floor/f13{icon_state = "dark"},/area/f13/enclave)
 "bkA" = (/obj/structure/chair,/obj/machinery/light{dir = 1},/turf/open/floor/f13{icon_state = "dark"},/area/f13/enclave)
