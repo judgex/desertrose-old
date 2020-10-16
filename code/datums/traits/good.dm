@@ -69,6 +69,15 @@
 	lose_text = "<span class='danger'>You forget how to make weapons.</span>"
 	locked = TRUE
 
+/datum/quirk/machine_spirits
+	name = "Spirit Blessed"
+	desc = "You respect the teachings of the Machine Spirits."
+	value = 3
+	mob_trait = TRAIT_MACHINE_SPIRITS
+	gain_text = "<span class='notice'>You have recieved the blessing of the Machine Spirits.</span>"
+	lose_text = "<span class='danger'>You've lost the  blessing of the Machine Spirits.</span>"
+	locked = TRUE
+
 /datum/quirk/drunkhealing
 	name = "Drunken Resilience"
 	desc = "Nothing like a good drink to make you feel on top of the world. Whenever you're drunk, you slowly recover from injuries."

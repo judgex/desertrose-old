@@ -38,7 +38,7 @@
 	..()
 	if(!amount)
 		remove_language(/datum/language/beachbum)
-
+/*
 /mob/living/carbon/human/adjust_drugginess(amount)
 	..()
 	if(!dna.check_mutation(STONER))
@@ -46,3 +46,4 @@
 			grant_language(/datum/language/beachbum)
 		else
 			remove_language(/datum/language/beachbum)
+*/

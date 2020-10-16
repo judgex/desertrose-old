@@ -114,7 +114,7 @@
 	user.visible_message("<span class='suicide'>[user] is tightening \the [src]'s straps around [user.p_their()] neck! It looks like [user.p_theyre()] trying to commit suicide!</span>")
 	return OXYLOSS
 
-/obj/item/clothing/glasses/night/optisight
+/obj/item/clothing/glasses/optisight
 	name = "Optisight X-26"
 	desc = "Normally, human eyes and lasers don't mix. Except this prototype eye invented and manufactured by RobCo. Few were ever manufactured, as a result the primary function of this prosthetic eye- inbuilt laser fire- is not functional. The surgery is an incredibly painful procedure involving laser eye removal and invasive brain surgery, meaning the survival rate is low. Should one make it through the process, they could indeed one day activate the laser function. Even then, it is perhaps the most advanced prosthetic eye in the world, capable of night vision and target diagnostics."
 	icon_state = "optisight"
