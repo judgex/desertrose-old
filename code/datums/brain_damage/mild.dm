@@ -18,7 +18,7 @@
 /datum/brain_trauma/mild/hallucinations/on_lose()
 	owner.hallucination = 0
 	..()
-
+/*
 /datum/brain_trauma/mild/stuttering
 	name = "Stuttering"
 	desc = "Patient can't speak properly."
@@ -45,7 +45,7 @@
 	owner.add_trait(TRAIT_DUMB, TRAUMA_TRAIT)
 	SEND_SIGNAL(owner, COMSIG_ADD_MOOD_EVENT, "dumb", /datum/mood_event/oblivious)
 	..()
-/*
+
 /datum/brain_trauma/mild/dumbness/on_life()
 	owner.derpspeech = min(owner.derpspeech + 5, 25)
 	if(prob(3))
@@ -53,7 +53,7 @@
 	else if(owner.stat == CONSCIOUS && prob(3))
 		owner.say(pick_list_replacements(BRAIN_DAMAGE_FILE, "brain_damage"))
 	..()
-*/
+
 /datum/brain_trauma/mild/dumbness/on_lose()
 	owner.remove_trait(TRAIT_DUMB, TRAUMA_TRAIT)
 	owner.derpspeech = 0
@@ -80,7 +80,7 @@
 /datum/brain_trauma/mild/speech_impediment/on_lose()
 	owner.dna.remove_mutation(UNINTELLIGIBLE)
 	..()
-
+*/
 /datum/brain_trauma/mild/concussion
 	name = "Concussion"
 	desc = "Patient's brain is concussed."
