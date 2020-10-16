@@ -382,7 +382,7 @@
 /obj/machinery/chem_master/advanced/attackby(obj/item/I, mob/user, params)
 	if(default_deconstruction_screwdriver(user, "mixerad0_nopower", "mixerad0", I))
 		return
-	
+
 	else if(default_deconstruction_crowbar(I))
 		return
 
