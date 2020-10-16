@@ -198,6 +198,7 @@ GLOBAL_LIST_INIT(plasteel_recipes, list ( \
  */
 GLOBAL_LIST_INIT(wood_recipes, list ( \
 	new/datum/stack_recipe("wooden sandals", /obj/item/clothing/shoes/sandal, 1), \
+	new/datum/stack_recipe("wooden bucket", /obj/item/reagent_containers/glass/bucket/wooden, 10), \
 	new/datum/stack_recipe("wood floor tile", /obj/item/stack/tile/wood, 1, 4, 20), \
 	new/datum/stack_recipe("wood table frame", /obj/structure/table_frame/wood, 2, time = 10), \
 	new/datum/stack_recipe("rifle stock", /obj/item/weaponcrafting/stock, 10, time = 40), \
