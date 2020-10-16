@@ -84,6 +84,7 @@
 #define TRAIT_PA_WEAR           "pa_wear"
 #define TRAIT_MEDICALEXPERT		"Medicinal Expert" //Can do revival surgery
 #define TRAIT_PRACTITIONER		"Practitioner" //Has access to FoA specific surgeries
+#define TRAIT_MACHINE_SPIRITS	"machine_spirits" //for tribe unique functions.
 
 
 // fallout crafting traits

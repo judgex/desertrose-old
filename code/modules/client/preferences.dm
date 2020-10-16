@@ -2279,8 +2279,8 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	character.special_e = special_e
 	character.special_c = special_c
 	character.special_i = special_i
-	if (character.special_i<3)
-		character.dna.add_mutation(UNINTELLIGIBLE)
+//	if (character.special_i<3)
+//		character.dna.add_mutation(UNINTELLIGIBLE)
 	character.special_a = special_a
 	character.special_l = special_l
 
