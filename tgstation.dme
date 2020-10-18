@@ -15,6 +15,7 @@
 // BEGIN_INCLUDE
 #include "_maps\_basemap.dm"
 #include "_maps\templates\fallout_templates.dm"
+#include "_maps\templates\oasisbunker\east_minibunker.dm"
 #include "_maps\templates\ranch\ranch.dm"
 #include "code\_compile_options.dm"
 #include "code\world.dm"
