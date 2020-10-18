@@ -2462,6 +2462,15 @@
 	category = CAT_ASSEM
 	subcategory = CAT_MACHINES
 
+/datum/crafting_recipe/fbench
+	name = "Moulding bench"
+	result = /obj/machinery/workbench/fbench
+	reqs = list(/obj/item/stack/sheet/mineral/wood = 10,
+				/obj/item/stack/sheet/metal = 20)
+	time = 200
+	category = CAT_ASSEM
+	subcategory = CAT_MACHINES
+
 //Knives
 
 /datum/crafting_recipe/butchers

@@ -499,47 +499,19 @@
 	zoom_out_amt = 13
 	extra_damage = -5
 	extra_penetration = -5
-
-/obj/item/gun/ballistic/revolver/sequoia/scoped/attackby(obj/item/W, mob/user, params)
-	if(istype(W,/obj/item/screwdriver))
-		var/obj/item/A = new /obj/item/prefabs/complex/screw
-		var/obj/item/B = new /obj/item/prefabs/complex/trigger
-		var/obj/item/C = new /obj/item/prefabs/complex/bolt/simple
-		var/obj/item/D = new /obj/item/prefabs/complex/action/simple
-		var/obj/item/E = new /obj/item/prefabs/complex/barrel/m4570
-		var/obj/item/G = new /obj/item/prefabs/complex/complexWeaponFrame/low
-		A.forceMove(usr.loc)
-		B.forceMove(usr.loc)
-		C.forceMove(usr.loc)
-		D.forceMove(usr.loc)
-		E.forceMove(usr.loc)
-		G.forceMove(usr.loc)
-		qdel(src)
-		to_chat(usr,"You dissasemble the [src].")
-	. = ..()
+	extra_parts = list(/obj/item/prefabs/complex/bolt/simple,
+	/obj/item/prefabs/complex/action/simple,
+	/obj/item/prefabs/complex/barrel/m4570,
+	/obj/item/prefabs/complex/complexWeaponFrame/low)
 
 /obj/item/gun/ballistic/revolver/sequoia/scoped/mid
 	name = "hunting revolver (improved)"
 	extra_damage = 0
 	extra_penetration = 0
-
-/obj/item/gun/ballistic/revolver/sequoia/scoped/mid/attackby(obj/item/W, mob/user, params)
-	if(istype(W,/obj/item/screwdriver))
-		var/obj/item/A = new /obj/item/prefabs/complex/screw
-		var/obj/item/B = new /obj/item/prefabs/complex/trigger
-		var/obj/item/C = new /obj/item/prefabs/complex/bolt/simple
-		var/obj/item/D = new /obj/item/prefabs/complex/action/simple
-		var/obj/item/E = new /obj/item/prefabs/complex/barrel/m4570
-		var/obj/item/G = new /obj/item/prefabs/complex/complexWeaponFrame/mid
-		A.forceMove(usr.loc)
-		B.forceMove(usr.loc)
-		C.forceMove(usr.loc)
-		D.forceMove(usr.loc)
-		E.forceMove(usr.loc)
-		G.forceMove(usr.loc)
-		qdel(src)
-		to_chat(usr,"You dissasemble the [src].")
-	. = ..()
+	extra_parts = list(/obj/item/prefabs/complex/bolt/simple,
+	/obj/item/prefabs/complex/action/simple,
+	/obj/item/prefabs/complex/barrel/m4570,
+	/obj/item/prefabs/complex/complexWeaponFrame/mid)
 
 /obj/item/gun/ballistic/revolver/sequoia/scoped/high
 	name = "hunting revolver (masterwork)"
@@ -547,24 +519,10 @@
 	zoom_out_amt = 16
 	extra_damage = 7
 	extra_penetration = 7
-
-/obj/item/gun/ballistic/revolver/sequoia/scoped/high/attackby(obj/item/W, mob/user, params)
-	if(istype(W,/obj/item/screwdriver))
-		var/obj/item/A = new /obj/item/prefabs/complex/screw
-		var/obj/item/B = new /obj/item/prefabs/complex/trigger
-		var/obj/item/C = new /obj/item/prefabs/complex/bolt/simple
-		var/obj/item/D = new /obj/item/prefabs/complex/action/simple
-		var/obj/item/E = new /obj/item/prefabs/complex/barrel/m4570
-		var/obj/item/G = new /obj/item/prefabs/complex/complexWeaponFrame/high
-		A.forceMove(usr.loc)
-		B.forceMove(usr.loc)
-		C.forceMove(usr.loc)
-		D.forceMove(usr.loc)
-		E.forceMove(usr.loc)
-		G.forceMove(usr.loc)
-		qdel(src)
-		to_chat(usr,"You dissasemble the [src].")
-	. = ..()
+	extra_parts = list(/obj/item/prefabs/complex/bolt/simple,
+	/obj/item/prefabs/complex/action/simple,
+	/obj/item/prefabs/complex/barrel/m4570,
+	/obj/item/prefabs/complex/complexWeaponFrame/high)
 
 /obj/item/gun/ballistic/revolver/zipgun
 	name = "zipgun"
