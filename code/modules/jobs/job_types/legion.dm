@@ -372,7 +372,7 @@ Decanii
 
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13decan
 
-/datum/job/CaesarsLegion/Legionnaire/f13decanrec/after_spawn(mob/living/carbon/human/H, mob/M)
+/datum/job/CaesarsLegion/Legionnaire/f13decan/after_spawn(mob/living/carbon/human/H, mob/M)
 	H.add_quirk("Big Leagues")
 	H.add_quirk("Iron Fist")
 
@@ -551,8 +551,7 @@ datum/job/CaesarsLegion/Legionnaire/f13slavemaster
 		/obj/item/claymore/machete/reinforced=1, \
 		/obj/item/reagent_containers/pill/patch/healingpowder=2, \
 		/obj/item/flashlight/lantern=1, \
-		/obj/item/storage/bag/money/small/legenlisted,
-		/obj/item/radio)
+		/obj/item/storage/bag/money/small/legenlisted)
 	r_pocket = /obj/item/restraints/handcuffs
 
 /datum/job/CaesarsLegion/Legionnaire/f13slavemaster/after_spawn(mob/living/carbon/human/H, mob/M)
@@ -599,21 +598,24 @@ Veteran Legionary
 		/obj/item/reagent_containers/pill/patch/healingpowder=3, \
 		/obj/item/flashlight/lantern=1, \
 		/obj/item/storage/bag/money/small/legenlisted,
-		/obj/item/radio)
+		/obj/item/claymore/machete/reinforced=1
+		)
 	r_pocket = /obj/item/restraints/handcuffs
 
 /datum/outfit/loadout/vetlegassault
 	name = "Assault Legionary"
 	suit_store = /obj/item/gun/ballistic/automatic/mini_uzi
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/uzim9mm=2
+		/obj/item/ammo_box/magazine/uzim9mm=2,
+		/obj/item/claymore/machete/reinforced=1
 		)
 
 /datum/outfit/loadout/vetlegrange
 	name = "Ranged Legionary"
 	suit_store = /obj/item/gun/ballistic/automatic/marksman
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m556/rifle=2
+		/obj/item/ammo_box/magazine/m556/rifle=2,
+		/obj/item/claymore/machete/reinforced=1
 		)
 
 /datum/outfit/loadout/vetlegclose
@@ -622,7 +624,8 @@ Veteran Legionary
 	backpack_contents = list(
 		/obj/item/storage/box/slugshot=1, \
 		/obj/item/storage/box/beanbag=1, \
-		/obj/item/shield/riot/roman=1
+		/obj/item/shield/riot/roman=1,
+		/obj/item/claymore/machete/reinforced=1
 		)
 
 /datum/job/CaesarsLegion/Legionnaire/f13vetlegionary/after_spawn(mob/living/carbon/human/H, mob/M)
@@ -669,8 +672,7 @@ Prime Legionairy
 	backpack_contents = list(
 		/obj/item/restraints/legcuffs/bola=1, \
 		/obj/item/reagent_containers/pill/patch/healingpowder=2, \
-		/obj/item/flashlight/flare/torch=1, \
-		/obj/item/radio)
+		/obj/item/flashlight/flare/torch=1)
 	r_pocket = /obj/item/restraints/handcuffs
 
 /datum/outfit/loadout/legassault
@@ -789,8 +791,7 @@ Venator
 	backpack_contents = list(
 		/obj/item/restraints/legcuffs/bola=1, \
 		/obj/item/reagent_containers/pill/patch/healpoultice=2, \
-		/obj/item/storage/bag/money/small/legenlisted,
-		/obj/item/radio)
+		/obj/item/storage/bag/money/small/legenlisted)
 
 /datum/outfit/loadout/vensniper
 	name = "Venator Assassin"
@@ -851,8 +852,7 @@ Explorer
 		/obj/item/claymore/machete/reinforced=1, \
 		/obj/item/reagent_containers/pill/patch/healingpowder=2, \
 		/obj/item/flashlight/flare/torch=1, \
-		/obj/item/storage/bag/money/small/legenlisted,
-		/obj/item/radio)
+		/obj/item/storage/bag/money/small/legenlisted)
 	r_pocket = /obj/item/twohanded/binocs
 
 /datum/outfit/loadout/explinfil
@@ -906,8 +906,7 @@ Auxilia
 	backpack_contents = list(
 		/obj/item/reagent_containers/pill/patch/healingpowder=1, \
 		/obj/item/flashlight/flare/torch=1, \
-		/obj/item/storage/bag/money/small/legenlisted,
-		/obj/item/radio)
+		/obj/item/storage/bag/money/small/legenlisted)
 
 /datum/outfit/loadout/auxmedic
 	name = "Medicus Auxilia"

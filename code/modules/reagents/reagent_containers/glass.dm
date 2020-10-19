@@ -269,6 +269,14 @@
 		SLOT_GENERC_DEXTROUS_STORAGE
 	)
 
+/obj/item/reagent_containers/glass/bucket/wooden
+	name = "wooden bucket"
+	icon_state = "woodbucket"
+	item_state = "woodbucket"
+	materials = list(MAT_WOOD = 200)
+	armor = list(MELEE = 10, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 0, RAD = 0, FIRE = 0, ACID = 50)
+	resistance_flags = FLAMMABLE
+
 /obj/item/reagent_containers/glass/bucket/attackby(obj/O, mob/user, params)
 	if(istype(O, /obj/item/mop))
 		if(reagents.total_volume < 1)
@@ -504,4 +512,3 @@
 	I.forceMove(src)
 	grinded = I
 	to_chat(user, SPAN_NOTICE("You put [I] in [src]."))
-	
