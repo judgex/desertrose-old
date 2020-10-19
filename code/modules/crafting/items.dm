@@ -265,7 +265,20 @@
 		else
 			to_chat(usr,"The weapon frame does not contain anything.")
 	if(istype(W, /obj/item/wrench))
-		if(screw&&trigger&&boltsimple&&actionsimple&&mm10barrel)//10mm
+		if (FALSE)
+			var/obj/item/gun/ballistic/gun = new /obj/item/gun/ballistic/automatic/pistol/n99(usr.loc)//some base gun idk
+			for(var/obj/item/prefabs/complex/F in src.contents)
+				if(istype(F,/obj/item/prefabs/complex/barrel))
+					gun.mag_type = F.mag_type
+				if(istype(F,/obj/item/prefabs/complex/action))
+					gun.burst_size = F.burst_size
+				//etc
+				//choose gun sound and model based on?(overall stats?, idk)
+				//gun.icon/item state = x
+	/*
+	
+	*/
+		else if(screw&&trigger&&boltsimple&&actionsimple&&mm10barrel)//10mm
 			if(istype(src,/obj/item/prefabs/complex/simpleWeaponFrame/low))
 				var/obj/item/B = new /obj/item/gun/ballistic/automatic/pistol/n99
 				B.forceMove(usr.loc)
@@ -785,6 +798,10 @@
 	desc = ""
 
 //components
+/obj/item/prefabs/complex
+	var/burst_size = 1
+	var/mag_type = null
+
 /obj/item/prefabs/complex/action/simple
 	name = "Simple Action"
 	desc = ""
@@ -794,6 +811,7 @@
 	name = "Automatic Action"
 	desc = ""
 	icon_state = "action"
+	burst_size = 2
 
 /obj/item/prefabs/complex/barrel
 	name = "Barrel"
@@ -809,6 +827,7 @@
 	name = "10mm Barrel"
 	desc = ""
 	icon_state = "barrel"
+	mag_type = /obj/item/ammo_box/magazine/m10mm_auto
 
 /obj/item/prefabs/complex/barrel/mm9
 	name = "9mm Barrel"

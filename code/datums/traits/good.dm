@@ -77,6 +77,14 @@
 	gain_text = "<span class='notice'>You have recieved the blessing of the Machine Spirits.</span>"
 	lose_text = "<span class='danger'>You've lost the  blessing of the Machine Spirits.</span>"
 	locked = TRUE
+/datum/quirk/magic_hands
+	name = "Magic Hands"
+	desc = "You're an expert in operating weaponry and are able to manually operated guns quickly."
+	value = 3
+	mob_trait = TRAIT_MAGIC_HANDS
+	gain_text = "<span class='notice'>You realize how to move your fingers quickly.</span>"
+	lose_text = "<span class='danger'>You lose the agility in your fingers.</span>"
+	locked = FALSE
 
 /datum/quirk/drunkhealing
 	name = "Drunken Resilience"

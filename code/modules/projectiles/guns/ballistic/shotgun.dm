@@ -45,6 +45,9 @@
 	if(recentpump > world.time)
 		return
 	pump(user)
+	if(user.has_trait(TRAIT_MAGIC_HANDS))
+		var/obj/item/F = user.get_inactive_held_item()
+		F.attack_self()
 	recentpump = world.time + 10
 	return
 
