@@ -77,6 +77,7 @@
 	gain_text = "<span class='notice'>You have recieved the blessing of the Machine Spirits.</span>"
 	lose_text = "<span class='danger'>You've lost the  blessing of the Machine Spirits.</span>"
 	locked = TRUE
+
 /datum/quirk/magic_hands
 	name = "Magic Hands"
 	desc = "You're an expert in operating weaponry and are able to manually operated guns quickly."
