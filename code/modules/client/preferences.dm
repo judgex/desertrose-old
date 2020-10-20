@@ -746,7 +746,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				dat += "<b>Combo HUD Lighting:</b> <a href = '?_src_=prefs;preference=combohud_lighting'>[(toggles & COMBOHUD_LIGHTING)?"Full-bright":"No Change"]</a><br>"
 				dat += "</td>"
 			dat += "</tr></table>"
-		
+
 		if(3)//lewd preferences
 			dat += "<table><tr><td width='340px' height='300px' valign='top'>"
 			dat += "<h2>Lewd content</h2>"
@@ -2279,8 +2279,8 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	character.special_e = special_e
 	character.special_c = special_c
 	character.special_i = special_i
-	if (character.special_i<3)
-		character.dna.add_mutation(UNINTELLIGIBLE)
+//	if (character.special_i<3)
+//		character.dna.add_mutation(UNINTELLIGIBLE)
 	character.special_a = special_a
 	character.special_l = special_l
 

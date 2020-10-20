@@ -9,6 +9,30 @@
 	var/obj/item/ammo_box/magazine/magazine
 	var/casing_ejector = TRUE //whether the gun ejects the chambered casing
 	var/en_bloc = 0
+	var/list/gunparts = list(/obj/item/prefabs/complex/screw,
+                /obj/item/prefabs/complex/trigger
+				)
+	var/list/extra_parts = list()
+	var/can_disassemble = FALSE
+
+
+/obj/item/gun/ballistic/attackby(obj/item/W, mob/user, params)
+	if(istype(W,/obj/item/screwdriver) && can_disassemble)
+		if(LAZYLEN(gunparts))
+			for(var/I in gunparts)
+				var/obj/item/O = I
+				//if(istype(O))
+				new O(get_turf(src))
+		if(LAZYLEN(extra_parts))
+			for(var/I in extra_parts)
+				var/obj/item/O = I
+				//if(istype(O))
+				new O(get_turf(src))
+		qdel(src)
+		to_chat(usr,"You dissasemble \the [src].")
+		return
+	. = ..()
+
 
 /obj/item/gun/ballistic/Initialize()
 	. = ..()

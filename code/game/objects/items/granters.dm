@@ -124,6 +124,15 @@
 	traitname = "chemistry"
 	remarks = list("Always have a safe working environment...", "Don't give chems to strangers...", "Never drink any chemicals straight from the dispenser...", "Always wear your labcoat...", "Never forget your goggles...")
 
+/obj/item/book/granter/trait/spirit_teachings
+	name = "Teachings of the Machine Spirits"
+	desc = "A book all about tribal life among the Machine Spirits."
+	icon_state = "ms_teachings"
+	oneuse = TRUE
+	granted_trait = TRAIT_MACHINE_SPIRITS
+	traitname = "The Machine Spirits"
+	remarks = list("There are five Machine Spirits...", "Each govern an aspect of life...", "Always respect the Machine Spirits", "Never use them for selfish reasons", "Honour and love those blessed by the machine spirits.")
+
 /obj/item/book/granter/trait/techno
 	name = "Craftsmanship Monthly"
 	desc = "A book on how to use advanced tools and production machinery. It's pretty complicated."

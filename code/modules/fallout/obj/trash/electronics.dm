@@ -31,10 +31,10 @@
 		/obj/item/reagent_containers/food/snacks/cracker, //Why toast a cracker? Who the fuck knows
 		/obj/item/reagent_containers/food/snacks/customizable/sandwich)) //Ehhhhhhhhhhhhhhhhh. I guess for toaster ovens, and "toast" items
 
-	if(!rand(0,9) && isturf(loc) && !istype(src,/obj/item/trash/f13/electronic/toaster/oven)) //Randomized variants
+	if(!rand(0,9) && isturf(loc) && src.type == /obj/item/trash/f13/electronic/toaster) //Randomized variants. strict type check, not istype, as that checks subtypes
 		new /obj/item/trash/f13/electronic/toaster/oven(get_turf(src))
 		qdel(src)
-	else if(!rand(0,9999) && isturf(loc) && !istype(src,/obj/item/trash/f13/electronic/toaster/atomics))
+	else if(!rand(0,9999) && isturf(loc) && src.type == /obj/item/trash/f13/electronic/toaster)
 		new /obj/item/trash/f13/electronic/toaster/atomics(get_turf(src))
 		qdel(src)
 
@@ -52,7 +52,7 @@
 
 /obj/item/trash/f13/electronic/toaster/attackby(obj/item/W, mob/user, params)
 	var/mob/living/carbon/human/U = user
-	if(!istype(U) || is_toasting || !istype(W))
+	if(!istype(U) || !istype(W))
 		return ..()
 
 	if(istype(W,/obj/item/kitchen/fork) || istype(W,/obj/item/kitchen/knife))
@@ -63,7 +63,7 @@
 				playsound(get_turf(src), "sparks", 40, 1)
 				if(cell && cell.charge)
 					U.electrocute_act(fork_damage,src)
-				addtimer(CALLBACK(src,.proc/spew_contents), 5)
+				addtimer(CALLBACK(src,.proc/spew_contents), rand(5,15))
 				is_toasting = 0
 				return
 
@@ -100,7 +100,7 @@
 			continue
 		throw_target = get_edge_target_turf(get_turf(src), pick(GLOB.alldirs))
 		I.forceMove(get_turf(src))
-		I.throw_at(throw_target,10,5)
+		I.throw_at(throw_target,2,3)
 
 /obj/item/trash/f13/electronic/toaster/proc/toasterize()
 	if(!cell || cell.charge <= 0 || !is_toasting)

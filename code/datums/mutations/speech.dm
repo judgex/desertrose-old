@@ -1,6 +1,8 @@
 //These are all minor mutations that affect your speech somehow.
 //Individual ones aren't commented since their functions should be evident at a glance
 
+//Fuck ALL of these
+/*
 /datum/mutation/human/nervousness
 	name = "Nervousness"
 	quality = MINOR_NEGATIVE
@@ -37,7 +39,6 @@
 		return
 	owner.remove_trait(TRAIT_MUTE, GENETIC_MUTATION)
 
-
 /datum/mutation/human/smile
 	name = "Smile"
 	quality = MINOR_NEGATIVE
@@ -50,48 +51,6 @@
 		message = " [message] "
 		//Time for a friendly game of SS13
 		message = replacetext(message," stupid "," smart ")
-		message = replacetext(message," retard "," genius ")
-		message = replacetext(message," unrobust "," robust ")
-		message = replacetext(message," dumb "," smart ")
-		message = replacetext(message," awful "," great ")
-		message = replacetext(message," gay ",pick(" nice "," ok "," alright "))
-		message = replacetext(message," horrible "," fun ")
-		message = replacetext(message," terrible "," terribly fun ")
-		message = replacetext(message," terrifying "," wonderful ")
-		message = replacetext(message," gross "," cool ")
-		message = replacetext(message," disgusting "," amazing ")
-		message = replacetext(message," loser "," winner ")
-		message = replacetext(message," useless "," useful ")
-		message = replacetext(message," oh god "," cheese and crackers ")
-		message = replacetext(message," jesus "," gee wiz ")
-		message = replacetext(message," weak "," strong ")
-		message = replacetext(message," kill "," hug ")
-		message = replacetext(message," murder "," tease ")
-		message = replacetext(message," ugly "," beautiful ")
-		message = replacetext(message," douchbag "," nice guy ")
-		message = replacetext(message," whore "," lady ")
-		message = replacetext(message," nerd "," smart guy ")
-		message = replacetext(message," moron "," fun person ")
-		message = replacetext(message," IT'S LOOSE "," EVERYTHING IS FINE ")
-		message = replacetext(message," sex "," hug fight ")
-		message = replacetext(message," idiot "," genius ")
-		message = replacetext(message," fat "," thin ")
-		message = replacetext(message," beer "," water with ice ")
-		message = replacetext(message," drink "," water ")
-		message = replacetext(message," feminist "," empowered woman ")
-		message = replacetext(message," i hate you "," you're mean ")
-		message = replacetext(message," nigger "," african american ")
-		message = replacetext(message," jew "," jewish ")
-		message = replacetext(message," shit "," shiz ")
-		message = replacetext(message," crap "," poo ")
-		message = replacetext(message," slut "," tease ")
-		message = replacetext(message," ass "," butt ")
-		message = replacetext(message," damn "," dang ")
-		message = replacetext(message," fuck ","  ")
-		message = replacetext(message," penis "," privates ")
-		message = replacetext(message," cunt "," privates ")
-		message = replacetext(message," dick "," jerk ")
-		message = replacetext(message," vagina "," privates ")
 	return trim(message)
 
 
@@ -209,7 +168,6 @@
 		message = replacetext(message," thank you "," thank you, thank you very much ")
 		message = replacetext(message," what are you "," whatcha ")
 		message = replacetext(message," yes ",pick(" sure", "yea "))
-		message = replacetext(message," faggot "," square ")
 		message = replacetext(message," muh valids "," getting my kicks ")
 	return trim(message)
 
@@ -230,3 +188,4 @@
 	..()
 	owner.grant_language(/datum/language/common)
 	owner.remove_language(/datum/language/beachbum)
+*/

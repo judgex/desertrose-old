@@ -21,6 +21,7 @@
 	H.add_trait(TRAIT_TECHNOPHOBE, TRAIT_GENERIC)
 	H.add_quirk("Hard Yards")
 	H.add_quirk("Trapper")
+	H.add_quirk("Spirit Blessed")
 
 /*
 Tribal Chief
@@ -101,9 +102,12 @@ Tribal Shaman
 	r_hand = /obj/item/twohanded/sledgehammer/shamanstaff
 	id = 		/obj/item/card/id/tribetattoo
 	backpack_contents = list(
+		/obj/item/book/granter/trait/spirit_teachings=1,
 		/obj/item/reagent_containers/pill/patch/healingpowder=2,
 		/obj/item/stack/medical/gauze=1,
-		/obj/item/flashlight/flare/torch=1)
+		/obj/item/flashlight/flare/torch=1,
+		/obj/item/reagent_containers/glass/mortar=2,
+		/obj/item/pestle=1)
 
 /*
 Tribal Head Hunter
@@ -169,7 +173,7 @@ Villager
 	minimal_access = list(ACCESS_TRIBE)
 
 	loadout_options = list(
-	//datum/outfit/loadout/huntervillager, //Bow and quiver
+	/datum/outfit/loadout/acoloytevillager, //mortar and pistol
 	/datum/outfit/loadout/farmervillager //Warclub farming gear
 	)
 
@@ -198,6 +202,12 @@ Villager
 		/obj/item/hatchet=1,
 	/obj/item/shovel/spade=1)
 
+/datum/outfit/loadout/acoloytevillager
+	name = "Village Acoloyte"
+	belt = /obj/item/storage/bag/plants
+	backpack_contents = list(
+		/obj/item/reagent_containers/glass/mortar=1,
+		/obj/item/pestle=1)
 
 /*
 Hunter
