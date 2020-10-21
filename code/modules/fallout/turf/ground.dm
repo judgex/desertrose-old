@@ -169,6 +169,20 @@
 	icon = 'icons/fallout/turfs/sidewalk.dmi'
 //	step_sounds = list("human" = "erikafootsteps")
 
+/obj/effect/overlay/sidewalk_side
+	name = "desert"
+	icon = 'icons/fallout/turfs/smoothing.dmi'
+	icon_state = "sidewalk_side"
+	density = FALSE
+	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
+	plane = FLOOR_PLANE
+	layer = ABOVE_OPEN_TURF_LAYER
+	anchored = TRUE
+	resistance_flags = INDESTRUCTIBLE
+
+/obj/effect/overlay/sidewalk_side/corner
+	icon_state = "sidewalk_corner"
+
 /turf/open/indestructible/ground/outside/ruins
 	name = "ruins"
 	desc = "It's just a pile of concrete rubble."
@@ -307,3 +321,17 @@
 	layer = ABOVE_OPEN_TURF_LAYER
 	anchored = TRUE
 	resistance_flags = INDESTRUCTIBLE
+
+/obj/effect/overlay/sand_w_side
+	name = "sand"
+	icon = 'icons/fallout/turfs/smoothing.dmi'
+	icon_state = "sand_water_side"
+	density = FALSE
+	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
+	plane = FLOOR_PLANE
+	layer = ABOVE_OPEN_TURF_LAYER
+	anchored = TRUE
+	resistance_flags = INDESTRUCTIBLE
+
+/obj/effect/overlay/sand_w_side/corner
+	icon_state = "sand_water_corner"

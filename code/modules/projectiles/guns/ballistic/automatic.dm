@@ -500,28 +500,13 @@
 	spread = 10
 	can_attachments = TRUE
 	can_suppress = TRUE
-
-/obj/item/gun/ballistic/automatic/mini_uzi/attackby(obj/item/W, mob/user, params)
-	if(istype(W,/obj/item/screwdriver))
-		var/obj/item/A = new /obj/item/prefabs/complex/screw
-		var/obj/item/B = new /obj/item/prefabs/complex/trigger
-		var/obj/item/C = new /obj/item/prefabs/complex/bolt/simple
-		var/obj/item/D = new /obj/item/prefabs/complex/action/auto
-		var/obj/item/E = new /obj/item/prefabs/complex/barrel/mm9
-		var/obj/item/F = new /obj/item/prefabs/complex/stock/mid
-		var/obj/item/G = new /obj/item/prefabs/complex/complexWeaponFrame/low
-		var/obj/item/H = new /obj/item/advanced_crafting_components/receiver
-		A.forceMove(usr.loc)
-		B.forceMove(usr.loc)
-		C.forceMove(usr.loc)
-		D.forceMove(usr.loc)
-		E.forceMove(usr.loc)
-		F.forceMove(usr.loc)
-		G.forceMove(usr.loc)
-		H.forceMove(usr.loc)
-		qdel(src)
-		to_chat(usr,"You dissasemble the [src].")
-	. = ..()
+	can_disassemble = TRUE
+	extra_parts = list(/obj/item/prefabs/complex/bolt/simple,
+	/obj/item/prefabs/complex/action/auto,
+	/obj/item/prefabs/complex/barrel/mm9,
+	/obj/item/prefabs/complex/stock/mid,
+	/obj/item/prefabs/complex/complexWeaponFrame/low,
+	/obj/item/advanced_crafting_components/receiver)
 
 /obj/item/gun/ballistic/automatic/mini_uzi/mid
 	name = "\improper Type U3 Uzi (improved)"
@@ -532,28 +517,12 @@
 	extra_penetration = 0
 	extra_damage = 0
 	randomspread = 0
-
-/obj/item/gun/ballistic/automatic/mini_uzi/mid/attackby(obj/item/W, mob/user, params)
-	if(istype(W,/obj/item/screwdriver))
-		var/obj/item/A = new /obj/item/prefabs/complex/screw
-		var/obj/item/B = new /obj/item/prefabs/complex/trigger
-		var/obj/item/C = new /obj/item/prefabs/complex/bolt/simple
-		var/obj/item/D = new /obj/item/prefabs/complex/action/auto
-		var/obj/item/E = new /obj/item/prefabs/complex/barrel/mm9
-		var/obj/item/F = new /obj/item/prefabs/complex/stock/mid
-		var/obj/item/G = new /obj/item/prefabs/complex/complexWeaponFrame/mid
-		var/obj/item/H = new /obj/item/advanced_crafting_components/receiver
-		A.forceMove(usr.loc)
-		B.forceMove(usr.loc)
-		C.forceMove(usr.loc)
-		D.forceMove(usr.loc)
-		E.forceMove(usr.loc)
-		F.forceMove(usr.loc)
-		G.forceMove(usr.loc)
-		H.forceMove(usr.loc)
-		qdel(src)
-		to_chat(usr,"You dissasemble the [src].")
-	. = ..()
+	extra_parts = list(/obj/item/prefabs/complex/bolt/simple,
+	/obj/item/prefabs/complex/action/auto,
+	/obj/item/prefabs/complex/barrel/mm9,
+	/obj/item/prefabs/complex/stock/mid,
+	/obj/item/prefabs/complex/complexWeaponFrame/mid,
+	/obj/item/advanced_crafting_components/receiver)
 
 /obj/item/gun/ballistic/automatic/mini_uzi/high
 	name = "\improper Type U3 Uzi (masterwork)"
@@ -564,28 +533,12 @@
 	extra_damage = 5
 	extra_penetration = 5
 	randomspread = 0
-
-/obj/item/gun/ballistic/automatic/mini_uzi/high/attackby(obj/item/W, mob/user, params)
-	if(istype(W,/obj/item/screwdriver))
-		var/obj/item/A = new /obj/item/prefabs/complex/screw
-		var/obj/item/B = new /obj/item/prefabs/complex/trigger
-		var/obj/item/C = new /obj/item/prefabs/complex/bolt/simple
-		var/obj/item/D = new /obj/item/prefabs/complex/action/auto
-		var/obj/item/E = new /obj/item/prefabs/complex/barrel/mm9
-		var/obj/item/F = new /obj/item/prefabs/complex/stock/mid
-		var/obj/item/G = new /obj/item/prefabs/complex/complexWeaponFrame/high
-		var/obj/item/H = new /obj/item/advanced_crafting_components/receiver
-		A.forceMove(usr.loc)
-		B.forceMove(usr.loc)
-		C.forceMove(usr.loc)
-		D.forceMove(usr.loc)
-		E.forceMove(usr.loc)
-		F.forceMove(usr.loc)
-		G.forceMove(usr.loc)
-		H.forceMove(usr.loc)
-		qdel(src)
-		to_chat(usr,"You dissasemble the [src].")
-	. = ..()
+	extra_parts = list(/obj/item/prefabs/complex/bolt/simple,
+	/obj/item/prefabs/complex/action/auto,
+	/obj/item/prefabs/complex/barrel/mm9,
+	/obj/item/prefabs/complex/stock/mid,
+	/obj/item/prefabs/complex/complexWeaponFrame/high,
+	/obj/item/advanced_crafting_components/receiver)
 
 /obj/item/gun/ballistic/automatic/mini_uzi/burst_select()
 	var/mob/living/carbon/human/user = usr
@@ -612,7 +565,7 @@
 
 /obj/item/gun/ballistic/automatic/pps
 	spawnwithmagazine = FALSE
-	name = "\improper ancient SMG (standard)"
+	name = "\improper PPSh-41 (standard)"
 	desc = "An extremely fast firing, innacurate SMG from past wars. Low fire rate and low damage. Uses 9mm rounds."
 	icon_state = "pps"
 	mag_type = /obj/item/ammo_box/magazine/pps9mm
@@ -630,63 +583,30 @@
 	randomspread = 10
 	extra_damage = -14
 	extra_penetration = -5
-
-/obj/item/gun/ballistic/automatic/pps/attackby(obj/item/W, mob/user, params)
-	if(istype(W,/obj/item/screwdriver))
-		var/obj/item/A = new /obj/item/prefabs/complex/screw
-		var/obj/item/B = new /obj/item/prefabs/complex/trigger
-		var/obj/item/C = new /obj/item/prefabs/complex/bolt/simple
-		var/obj/item/D = new /obj/item/prefabs/complex/action/auto
-		var/obj/item/E = new /obj/item/prefabs/complex/barrel/mm9
-		var/obj/item/F = new /obj/item/prefabs/complex/stock/low
-		var/obj/item/G = new /obj/item/prefabs/complex/complexWeaponFrame/low
-		var/obj/item/H = new /obj/item/advanced_crafting_components/receiver
-		A.forceMove(usr.loc)
-		B.forceMove(usr.loc)
-		C.forceMove(usr.loc)
-		D.forceMove(usr.loc)
-		E.forceMove(usr.loc)
-		F.forceMove(usr.loc)
-		G.forceMove(usr.loc)
-		H.forceMove(usr.loc)
-		qdel(src)
-		to_chat(usr,"You dissasemble the [src].")
-	. = ..()
+	extra_parts = list(/obj/item/prefabs/complex/bolt/simple,
+	/obj/item/prefabs/complex/action/auto,
+	/obj/item/prefabs/complex/barrel/mm9,
+	/obj/item/prefabs/complex/stock/low,
+	/obj/item/prefabs/complex/complexWeaponFrame/low,
+	/obj/item/advanced_crafting_components/receiver)
 
 /obj/item/gun/ballistic/automatic/pps/mid
-	name = "\improper ancient SMG (improved)"
+	name = "\improper PPSh-41 (improved)"
 	burst_delay = 1.5
 	fire_delay = 5
 	can_attachments = TRUE
 	extra_damage = -9
 	extra_penetration = 0
 	randomspread = 0
-
-
-/obj/item/gun/ballistic/automatic/pps/mid/attackby(obj/item/W, mob/user, params)
-	if(istype(W,/obj/item/screwdriver))
-		var/obj/item/A = new /obj/item/prefabs/complex/screw
-		var/obj/item/B = new /obj/item/prefabs/complex/trigger
-		var/obj/item/C = new /obj/item/prefabs/complex/bolt/simple
-		var/obj/item/D = new /obj/item/prefabs/complex/action/auto
-		var/obj/item/E = new /obj/item/prefabs/complex/barrel/mm9
-		var/obj/item/F = new /obj/item/prefabs/complex/stock/low
-		var/obj/item/G = new /obj/item/prefabs/complex/complexWeaponFrame/mid
-		var/obj/item/H = new /obj/item/advanced_crafting_components/receiver
-		A.forceMove(usr.loc)
-		B.forceMove(usr.loc)
-		C.forceMove(usr.loc)
-		D.forceMove(usr.loc)
-		E.forceMove(usr.loc)
-		F.forceMove(usr.loc)
-		G.forceMove(usr.loc)
-		H.forceMove(usr.loc)
-		qdel(src)
-		to_chat(usr,"You dissasemble the [src].")
-	. = ..()
+	extra_parts = list(/obj/item/prefabs/complex/bolt/simple,
+	/obj/item/prefabs/complex/action/auto,
+	/obj/item/prefabs/complex/barrel/mm9,
+	/obj/item/prefabs/complex/stock/low,
+	/obj/item/prefabs/complex/complexWeaponFrame/mid,
+	/obj/item/advanced_crafting_components/receiver)
 
 /obj/item/gun/ballistic/automatic/pps/high
-	name = "\improper ancient SMG (masterwork)"
+	name = "\improper PPSh-41 (masterwork)"
 	burst_size = 3
 	extra_damage = 0
 	extra_penetration = 5
@@ -695,28 +615,12 @@
 	can_attachments = TRUE
 	w_class = WEIGHT_CLASS_SMALL
 	weapon_weight = WEAPON_LIGHT
-
-/obj/item/gun/ballistic/automatic/pps/high/attackby(obj/item/W, mob/user, params)
-	if(istype(W,/obj/item/screwdriver))
-		var/obj/item/A = new /obj/item/prefabs/complex/screw
-		var/obj/item/B = new /obj/item/prefabs/complex/trigger
-		var/obj/item/C = new /obj/item/prefabs/complex/bolt/simple
-		var/obj/item/D = new /obj/item/prefabs/complex/action/auto
-		var/obj/item/E = new /obj/item/prefabs/complex/barrel/mm9
-		var/obj/item/F = new /obj/item/prefabs/complex/stock/low
-		var/obj/item/G = new /obj/item/prefabs/complex/complexWeaponFrame/high
-		var/obj/item/H = new /obj/item/advanced_crafting_components/receiver
-		A.forceMove(usr.loc)
-		B.forceMove(usr.loc)
-		C.forceMove(usr.loc)
-		D.forceMove(usr.loc)
-		E.forceMove(usr.loc)
-		F.forceMove(usr.loc)
-		G.forceMove(usr.loc)
-		H.forceMove(usr.loc)
-		qdel(src)
-		to_chat(usr,"You dissasemble the [src].")
-	. = ..()
+	extra_parts = list(/obj/item/prefabs/complex/bolt/simple,
+	/obj/item/prefabs/complex/action/auto,
+	/obj/item/prefabs/complex/barrel/mm9,
+	/obj/item/prefabs/complex/stock/low,
+	/obj/item/prefabs/complex/complexWeaponFrame/high,
+	/obj/item/advanced_crafting_components/receiver)
 
 /obj/item/gun/ballistic/automatic/pps/burst_select()
 	var/mob/living/carbon/human/user = usr
@@ -815,57 +719,25 @@
 	force = 15
 	spread = 18
 	can_attachments = TRUE
-
-/obj/item/gun/ballistic/automatic/smg10mm/attackby(obj/item/W, mob/user, params)
-	if(istype(W,/obj/item/screwdriver))
-		var/obj/item/A = new /obj/item/prefabs/complex/screw
-		var/obj/item/B = new /obj/item/prefabs/complex/trigger
-		var/obj/item/C = new /obj/item/prefabs/complex/bolt/simple
-		var/obj/item/D = new /obj/item/prefabs/complex/action/auto
-		var/obj/item/E = new /obj/item/prefabs/complex/barrel/mm10
-		var/obj/item/F = new /obj/item/prefabs/complex/stock/mid
-		var/obj/item/G = new /obj/item/prefabs/complex/complexWeaponFrame/low
-		var/obj/item/H = new /obj/item/advanced_crafting_components/receiver
-		A.forceMove(usr.loc)
-		B.forceMove(usr.loc)
-		C.forceMove(usr.loc)
-		D.forceMove(usr.loc)
-		E.forceMove(usr.loc)
-		F.forceMove(usr.loc)
-		G.forceMove(usr.loc)
-		H.forceMove(usr.loc)
-		qdel(src)
-		to_chat(usr,"You dissasemble the [src].")
-	. = ..()
+	can_disassemble = TRUE
+	extra_parts = list(/obj/item/prefabs/complex/bolt/simple,
+	/obj/item/prefabs/complex/action/auto,
+	/obj/item/prefabs/complex/barrel/mm10,
+	/obj/item/prefabs/complex/stock/mid,
+	/obj/item/prefabs/complex/complexWeaponFrame/low,
+	/obj/item/advanced_crafting_components/receiver)
 
 /obj/item/gun/ballistic/automatic/smg10mm/mid
 	name = "10mm submachine gun (improved)"
 	randomspread = 0
 	extra_penetration = 0
 	extra_damage = 0
-
-/obj/item/gun/ballistic/automatic/smg10mm/mid/attackby(obj/item/W, mob/user, params)
-	if(istype(W,/obj/item/screwdriver))
-		var/obj/item/A = new /obj/item/prefabs/complex/screw
-		var/obj/item/B = new /obj/item/prefabs/complex/trigger
-		var/obj/item/C = new /obj/item/prefabs/complex/bolt/simple
-		var/obj/item/D = new /obj/item/prefabs/complex/action/auto
-		var/obj/item/E = new /obj/item/prefabs/complex/barrel/mm10
-		var/obj/item/F = new /obj/item/prefabs/complex/stock/mid
-		var/obj/item/G = new /obj/item/prefabs/complex/complexWeaponFrame/mid
-		var/obj/item/H = new /obj/item/advanced_crafting_components/receiver
-		A.forceMove(usr.loc)
-		B.forceMove(usr.loc)
-		C.forceMove(usr.loc)
-		D.forceMove(usr.loc)
-		E.forceMove(usr.loc)
-		F.forceMove(usr.loc)
-		G.forceMove(usr.loc)
-		H.forceMove(usr.loc)
-		qdel(src)
-		to_chat(usr,"You dissasemble the [src].")
-	. = ..()
-
+	extra_parts = list(/obj/item/prefabs/complex/bolt/simple,
+	/obj/item/prefabs/complex/action/auto,
+	/obj/item/prefabs/complex/barrel/mm10,
+	/obj/item/prefabs/complex/stock/mid,
+	/obj/item/prefabs/complex/complexWeaponFrame/mid,
+	/obj/item/advanced_crafting_components/receiver)
 
 /obj/item/gun/ballistic/automatic/smg10mm/high
 	name = "10mm submachine gun (masterwork)"
@@ -877,29 +749,12 @@
 	extra_penetration = 6
 	w_class = WEIGHT_CLASS_SMALL
 	weapon_weight = WEAPON_LIGHT
-
-/obj/item/gun/ballistic/automatic/smg10mm/high/attackby(obj/item/W, mob/user, params)
-	if(istype(W,/obj/item/screwdriver))
-		var/obj/item/A = new /obj/item/prefabs/complex/screw
-		var/obj/item/B = new /obj/item/prefabs/complex/trigger
-		var/obj/item/C = new /obj/item/prefabs/complex/bolt/simple
-		var/obj/item/D = new /obj/item/prefabs/complex/action/auto
-		var/obj/item/E = new /obj/item/prefabs/complex/barrel/mm10
-		var/obj/item/F = new /obj/item/prefabs/complex/stock/mid
-		var/obj/item/G = new /obj/item/prefabs/complex/complexWeaponFrame/high
-		var/obj/item/H = new /obj/item/advanced_crafting_components/receiver
-		A.forceMove(usr.loc)
-		B.forceMove(usr.loc)
-		C.forceMove(usr.loc)
-		D.forceMove(usr.loc)
-		E.forceMove(usr.loc)
-		F.forceMove(usr.loc)
-		G.forceMove(usr.loc)
-		H.forceMove(usr.loc)
-		qdel(src)
-		to_chat(usr,"You dissasemble the [src].")
-	. = ..()
-
+	extra_parts = list(/obj/item/prefabs/complex/bolt/simple,
+	/obj/item/prefabs/complex/action/auto,
+	/obj/item/prefabs/complex/barrel/mm10,
+	/obj/item/prefabs/complex/stock/mid,
+	/obj/item/prefabs/complex/complexWeaponFrame/high,
+	/obj/item/advanced_crafting_components/receiver)
 
 /obj/item/gun/ballistic/automatic/smg10mm/burst_select()
 	var/mob/living/carbon/human/user = usr
@@ -991,30 +846,14 @@
 	can_bayonet = TRUE
 	knife_x_offset = 23
 	knife_y_offset = 11
-
-/obj/item/gun/ballistic/automatic/assault_rifle/attackby(obj/item/W, mob/user, params)
-	if(istype(W,/obj/item/screwdriver))
-		var/obj/item/A = new /obj/item/prefabs/complex/screw
-		var/obj/item/B = new /obj/item/prefabs/complex/trigger
-		var/obj/item/C = new /obj/item/prefabs/complex/bolt/high
-		var/obj/item/D = new /obj/item/prefabs/complex/action/auto
-		var/obj/item/E = new /obj/item/prefabs/complex/barrel/m556
-		var/obj/item/F = new /obj/item/prefabs/complex/stock/mid
-		var/obj/item/G = new /obj/item/prefabs/complex/complexWeaponFrame/low
-		var/obj/item/H = new /obj/item/advanced_crafting_components/receiver
-		var/obj/item/Z = new /obj/item/advanced_crafting_components/assembly
-		A.forceMove(usr.loc)
-		B.forceMove(usr.loc)
-		C.forceMove(usr.loc)
-		D.forceMove(usr.loc)
-		E.forceMove(usr.loc)
-		F.forceMove(usr.loc)
-		G.forceMove(usr.loc)
-		H.forceMove(usr.loc)
-		Z.forceMove(usr.loc)
-		qdel(src)
-		to_chat(usr,"You dissasemble the [src].")
-	. = ..()
+	can_disassemble = TRUE
+	extra_parts = list(/obj/item/prefabs/complex/bolt/high,
+	/obj/item/prefabs/complex/action/auto,
+	/obj/item/prefabs/complex/barrel/m556,
+	/obj/item/prefabs/complex/stock/mid,
+	/obj/item/prefabs/complex/complexWeaponFrame/low,
+	/obj/item/advanced_crafting_components/receiver,
+	/obj/item/advanced_crafting_components/assembly)
 
 /obj/item/gun/ballistic/automatic/assault_rifle/mid
 	name = "assault rifle (improved)"
@@ -1023,30 +862,13 @@
 	extra_penetration = 0
 	extra_damage = 0
 	burst_delay = 2
-
-/obj/item/gun/ballistic/automatic/assault_rifle/mid/attackby(obj/item/W, mob/user, params)
-	if(istype(W,/obj/item/screwdriver))
-		var/obj/item/A = new /obj/item/prefabs/complex/screw
-		var/obj/item/B = new /obj/item/prefabs/complex/trigger
-		var/obj/item/C = new /obj/item/prefabs/complex/bolt/simple
-		var/obj/item/D = new /obj/item/prefabs/complex/action/auto
-		var/obj/item/E = new /obj/item/prefabs/complex/barrel/m556
-		var/obj/item/F = new /obj/item/prefabs/complex/stock/mid
-		var/obj/item/G = new /obj/item/prefabs/complex/complexWeaponFrame/low
-		var/obj/item/H = new /obj/item/advanced_crafting_components/receiver
-		var/obj/item/Z = new /obj/item/advanced_crafting_components/assembly
-		A.forceMove(usr.loc)
-		B.forceMove(usr.loc)
-		C.forceMove(usr.loc)
-		D.forceMove(usr.loc)
-		E.forceMove(usr.loc)
-		F.forceMove(usr.loc)
-		G.forceMove(usr.loc)
-		H.forceMove(usr.loc)
-		Z.forceMove(usr.loc)
-		qdel(src)
-		to_chat(usr,"You dissasemble the [src].")
-	. = ..()
+	extra_parts = list(/obj/item/prefabs/complex/bolt/high,
+	/obj/item/prefabs/complex/action/auto,
+	/obj/item/prefabs/complex/barrel/m556,
+	/obj/item/prefabs/complex/stock/mid,
+	/obj/item/prefabs/complex/complexWeaponFrame/mid,
+	/obj/item/advanced_crafting_components/receiver,
+	/obj/item/advanced_crafting_components/assembly)
 
 /obj/item/gun/ballistic/automatic/assault_rifle/high
 	name = "assault rifle (masterwork)"
@@ -1056,30 +878,13 @@
 	extra_penetration = 6
 	burst_delay = 2
 	weapon_weight = WEAPON_LIGHT
-
-/obj/item/gun/ballistic/automatic/assault_rifle/high/attackby(obj/item/W, mob/user, params)
-	if(istype(W,/obj/item/screwdriver))
-		var/obj/item/A = new /obj/item/prefabs/complex/screw
-		var/obj/item/B = new /obj/item/prefabs/complex/trigger
-		var/obj/item/C = new /obj/item/prefabs/complex/bolt/simple
-		var/obj/item/D = new /obj/item/prefabs/complex/action/auto
-		var/obj/item/E = new /obj/item/prefabs/complex/barrel/m556
-		var/obj/item/F = new /obj/item/prefabs/complex/stock/mid
-		var/obj/item/G = new /obj/item/prefabs/complex/complexWeaponFrame/high
-		var/obj/item/H = new /obj/item/advanced_crafting_components/receiver
-		var/obj/item/Z = new /obj/item/advanced_crafting_components/assembly
-		A.forceMove(usr.loc)
-		B.forceMove(usr.loc)
-		C.forceMove(usr.loc)
-		D.forceMove(usr.loc)
-		E.forceMove(usr.loc)
-		F.forceMove(usr.loc)
-		G.forceMove(usr.loc)
-		H.forceMove(usr.loc)
-		Z.forceMove(usr.loc)
-		qdel(src)
-		to_chat(usr,"You dissasemble the [src].")
-	. = ..()
+	extra_parts = list(/obj/item/prefabs/complex/bolt/high,
+	/obj/item/prefabs/complex/action/auto,
+	/obj/item/prefabs/complex/barrel/m556,
+	/obj/item/prefabs/complex/stock/mid,
+	/obj/item/prefabs/complex/complexWeaponFrame/high,
+	/obj/item/advanced_crafting_components/receiver,
+	/obj/item/advanced_crafting_components/assembly)
 
 /obj/item/gun/ballistic/automatic/assault_rifle/burst_select()
 	var/mob/living/carbon/human/user = usr
@@ -1170,7 +975,6 @@
 	actions_types = null
 	select = 0
 	can_attachments = TRUE
-
 	bayonetstate = "rifles"
 	can_bayonet = TRUE
 	knife_x_offset = 23
@@ -1211,26 +1015,12 @@
 	randomspread = 10
 	knife_x_offset = 22
 	knife_y_offset = 12
-
-/obj/item/gun/ballistic/automatic/marksman/servicerifle/attackby(obj/item/W, mob/user, params)
-	if(istype(W,/obj/item/screwdriver))
-		var/obj/item/A = new /obj/item/prefabs/complex/screw
-		var/obj/item/B = new /obj/item/prefabs/complex/trigger
-		var/obj/item/C = new /obj/item/prefabs/complex/bolt/simple
-		var/obj/item/D = new /obj/item/prefabs/complex/action/simple
-		var/obj/item/E = new /obj/item/prefabs/complex/barrel/m556
-		var/obj/item/F = new /obj/item/prefabs/complex/stock/mid
-		var/obj/item/G = new /obj/item/prefabs/complex/complexWeaponFrame/low
-		A.forceMove(usr.loc)
-		B.forceMove(usr.loc)
-		C.forceMove(usr.loc)
-		D.forceMove(usr.loc)
-		E.forceMove(usr.loc)
-		F.forceMove(usr.loc)
-		G.forceMove(usr.loc)
-		qdel(src)
-		to_chat(usr,"You dissasemble the [src].")
-	. = ..()
+	can_disassemble = TRUE
+	extra_parts = list(/obj/item/prefabs/complex/bolt/simple,
+	/obj/item/prefabs/complex/action/simple,
+	/obj/item/prefabs/complex/barrel/m556,
+	/obj/item/prefabs/complex/stock/mid,
+	/obj/item/prefabs/complex/complexWeaponFrame/low)
 
 /obj/item/gun/ballistic/automatic/marksman/servicerifle/mid
 	name = "service rifle (improved)"
@@ -1238,26 +1028,11 @@
 	fire_delay = 4
 	extra_damage = 0
 	extra_penetration = 0
-
-/obj/item/gun/ballistic/automatic/marksman/servicerifle/mid/attackby(obj/item/W, mob/user, params)
-	if(istype(W,/obj/item/screwdriver))
-		var/obj/item/A = new /obj/item/prefabs/complex/screw
-		var/obj/item/B = new /obj/item/prefabs/complex/trigger
-		var/obj/item/C = new /obj/item/prefabs/complex/bolt/simple
-		var/obj/item/D = new /obj/item/prefabs/complex/action/simple
-		var/obj/item/E = new /obj/item/prefabs/complex/barrel/m556
-		var/obj/item/F = new /obj/item/prefabs/complex/stock/mid
-		var/obj/item/G = new /obj/item/prefabs/complex/complexWeaponFrame/mid
-		A.forceMove(usr.loc)
-		B.forceMove(usr.loc)
-		C.forceMove(usr.loc)
-		D.forceMove(usr.loc)
-		E.forceMove(usr.loc)
-		F.forceMove(usr.loc)
-		G.forceMove(usr.loc)
-		qdel(src)
-		to_chat(usr,"You dissasemble the [src].")
-	. = ..()
+	extra_parts = list(/obj/item/prefabs/complex/bolt/simple,
+	/obj/item/prefabs/complex/action/simple,
+	/obj/item/prefabs/complex/barrel/m556,
+	/obj/item/prefabs/complex/stock/mid,
+	/obj/item/prefabs/complex/complexWeaponFrame/mid)
 
 /obj/item/gun/ballistic/automatic/marksman/servicerifle/high
 	name = "service rifle (masterwork)"
@@ -1266,26 +1041,11 @@
 	extra_damage = 10
 	extra_penetration = 10
 	weapon_weight = WEAPON_LIGHT
-
-/obj/item/gun/ballistic/automatic/marksman/servicerifle/high/attackby(obj/item/W, mob/user, params)
-	if(istype(W,/obj/item/screwdriver))
-		var/obj/item/A = new /obj/item/prefabs/complex/screw
-		var/obj/item/B = new /obj/item/prefabs/complex/trigger
-		var/obj/item/C = new /obj/item/prefabs/complex/bolt/simple
-		var/obj/item/D = new /obj/item/prefabs/complex/action/simple
-		var/obj/item/E = new /obj/item/prefabs/complex/barrel/m556
-		var/obj/item/F = new /obj/item/prefabs/complex/stock/mid
-		var/obj/item/G = new /obj/item/prefabs/complex/complexWeaponFrame/high
-		A.forceMove(usr.loc)
-		B.forceMove(usr.loc)
-		C.forceMove(usr.loc)
-		D.forceMove(usr.loc)
-		E.forceMove(usr.loc)
-		F.forceMove(usr.loc)
-		G.forceMove(usr.loc)
-		qdel(src)
-		to_chat(usr,"You dissasemble the [src].")
-	. = ..()
+	extra_parts = list(/obj/item/prefabs/complex/bolt/simple,
+	/obj/item/prefabs/complex/action/simple,
+	/obj/item/prefabs/complex/barrel/m556,
+	/obj/item/prefabs/complex/stock/mid,
+	/obj/item/prefabs/complex/complexWeaponFrame/high)
 
 /obj/item/gun/ballistic/automatic/marksman/servicerifle/r82
 	name = "R82 heavy service rifle"
@@ -1390,56 +1150,26 @@
 	randomspread = 10
 	can_attachments = TRUE
 	spawnwithmagazine = FALSE
-	
-/obj/item/gun/ballistic/automatic/greasegun/attackby(obj/item/W, mob/user, params)
-	if(istype(W,/obj/item/screwdriver))
-		var/obj/item/A = new /obj/item/prefabs/complex/screw
-		var/obj/item/B = new /obj/item/prefabs/complex/trigger
-		var/obj/item/C = new /obj/item/prefabs/complex/bolt/simple
-		var/obj/item/D = new /obj/item/prefabs/complex/action/auto
-		var/obj/item/E = new /obj/item/prefabs/complex/barrel/m45
-		var/obj/item/F = new /obj/item/prefabs/complex/stock/mid
-		var/obj/item/G = new /obj/item/prefabs/complex/complexWeaponFrame/low
-		var/obj/item/H = new /obj/item/advanced_crafting_components/receiver
-		A.forceMove(usr.loc)
-		B.forceMove(usr.loc)
-		C.forceMove(usr.loc)
-		D.forceMove(usr.loc)
-		E.forceMove(usr.loc)
-		F.forceMove(usr.loc)
-		G.forceMove(usr.loc)
-		H.forceMove(usr.loc)
-		qdel(src)
-		to_chat(usr,"You dissasemble the [src].")
-	. = ..()
+	can_disassemble = TRUE
+	extra_parts = list(/obj/item/prefabs/complex/bolt/simple, 
+					/obj/item/prefabs/complex/action/auto,
+					/obj/item/prefabs/complex/barrel/m45,
+					/obj/item/prefabs/complex/stock/mid,
+					/obj/item/prefabs/complex/complexWeaponFrame/low,
+					/obj/item/advanced_crafting_components/receiver)
 
 /obj/item/gun/ballistic/automatic/greasegun/mid
 	name = "M3A1 Grease Gun (improved)"
 	randomspread = 0
 	fire_delay = 3
 	burst_delay = 3
-
-/obj/item/gun/ballistic/automatic/greasegun/mid/attackby(obj/item/W, mob/user, params)
-	if(istype(W,/obj/item/screwdriver))
-		var/obj/item/A = new /obj/item/prefabs/complex/screw
-		var/obj/item/B = new /obj/item/prefabs/complex/trigger
-		var/obj/item/C = new /obj/item/prefabs/complex/bolt/simple
-		var/obj/item/D = new /obj/item/prefabs/complex/action/auto
-		var/obj/item/E = new /obj/item/prefabs/complex/barrel/m45
-		var/obj/item/F = new /obj/item/prefabs/complex/stock/mid
-		var/obj/item/G = new /obj/item/prefabs/complex/complexWeaponFrame/mid
-		var/obj/item/H = new /obj/item/advanced_crafting_components/receiver
-		A.forceMove(usr.loc)
-		B.forceMove(usr.loc)
-		C.forceMove(usr.loc)
-		D.forceMove(usr.loc)
-		E.forceMove(usr.loc)
-		F.forceMove(usr.loc)
-		G.forceMove(usr.loc)
-		H.forceMove(usr.loc)
-		qdel(src)
-		to_chat(usr,"You dissasemble the [src].")
-	. = ..()
+	can_disassemble = TRUE
+	extra_parts = list(/obj/item/prefabs/complex/bolt/simple, 
+					/obj/item/prefabs/complex/action/auto,
+					/obj/item/prefabs/complex/barrel/m45,
+					/obj/item/prefabs/complex/stock/mid,
+					/obj/item/prefabs/complex/complexWeaponFrame/mid,
+					/obj/item/advanced_crafting_components/receiver)
 
 /obj/item/gun/ballistic/automatic/greasegun/high
 	name = "M3A1 Grease Gun (masterwork)"
@@ -1450,28 +1180,13 @@
 	randomspread = 0
 	w_class = WEIGHT_CLASS_SMALL
 	weapon_weight = WEAPON_LIGHT
-
-/obj/item/gun/ballistic/automatic/greasegun/high/attackby(obj/item/W, mob/user, params)
-	if(istype(W,/obj/item/screwdriver))
-		var/obj/item/A = new /obj/item/prefabs/complex/screw
-		var/obj/item/B = new /obj/item/prefabs/complex/trigger
-		var/obj/item/C = new /obj/item/prefabs/complex/bolt/simple
-		var/obj/item/D = new /obj/item/prefabs/complex/action/auto
-		var/obj/item/E = new /obj/item/prefabs/complex/barrel/m45
-		var/obj/item/F = new /obj/item/prefabs/complex/stock/mid
-		var/obj/item/G = new /obj/item/prefabs/complex/complexWeaponFrame/high
-		var/obj/item/H = new /obj/item/advanced_crafting_components/receiver
-		A.forceMove(usr.loc)
-		B.forceMove(usr.loc)
-		C.forceMove(usr.loc)
-		D.forceMove(usr.loc)
-		E.forceMove(usr.loc)
-		F.forceMove(usr.loc)
-		G.forceMove(usr.loc)
-		H.forceMove(usr.loc)
-		qdel(src)
-		to_chat(usr,"You dissasemble the [src].")
-	. = ..()
+	can_disassemble = TRUE
+	extra_parts = list(/obj/item/prefabs/complex/bolt/simple, 
+					/obj/item/prefabs/complex/action/auto,
+					/obj/item/prefabs/complex/barrel/m45,
+					/obj/item/prefabs/complex/stock/mid,
+					/obj/item/prefabs/complex/complexWeaponFrame/high,
+					/obj/item/advanced_crafting_components/receiver)
 
 /obj/item/gun/ballistic/automatic/greasegun/burst_select()
 	var/mob/living/carbon/human/user = usr
@@ -1590,7 +1305,7 @@
 	return
 
 /obj/item/gun/ballistic/automatic/mg34
-	name = "\improper ancient machine gun"
+	name = "\improper Maschinengewehr 34"
 	desc = "An old light machine gun, manufactured over 100 years ago still in use by some NCR forces today."
 	icon_state = "mg34"
 	item_state = "R84"
@@ -1689,6 +1404,14 @@
 	knife_x_offset = 24
 	knife_y_offset = 21
 	randomspread = 10
+	can_disassemble = TRUE
+	extra_parts = list(/obj/item/prefabs/complex/bolt/high,
+	/obj/item/prefabs/complex/action/simple,
+	/obj/item/prefabs/complex/barrel/m762,
+	/obj/item/prefabs/complex/stock/mid,
+	/obj/item/prefabs/complex/complexWeaponFrame/low,
+	/obj/item/advanced_crafting_components/receiver,
+	/obj/item/advanced_crafting_components/assembly)
 
 /obj/item/gun/ballistic/automatic/rangemaster/scoped
 	name = "Scoped Colt Rangemaster (standard)"
@@ -1702,59 +1425,18 @@
 	spawnwithmagazine = FALSE
 	can_scope = FALSE
 
-/obj/item/gun/ballistic/automatic/rangemaster/scoped/attackby(obj/item/W, mob/user, params)
-	if(istype(W,/obj/item/screwdriver))
-		var/obj/item/A = new /obj/item/prefabs/complex/screw
-		var/obj/item/B = new /obj/item/prefabs/complex/trigger
-		var/obj/item/C = new /obj/item/prefabs/complex/bolt/high
-		var/obj/item/D = new /obj/item/prefabs/complex/action/simple
-		var/obj/item/E = new /obj/item/prefabs/complex/barrel/m762
-		var/obj/item/F = new /obj/item/prefabs/complex/stock/mid
-		var/obj/item/G = new /obj/item/prefabs/complex/complexWeaponFrame/low
-		var/obj/item/H = new /obj/item/advanced_crafting_components/receiver
-		var/obj/item/Z = new /obj/item/advanced_crafting_components/assembly
-		A.forceMove(usr.loc)
-		B.forceMove(usr.loc)
-		C.forceMove(usr.loc)
-		D.forceMove(usr.loc)
-		E.forceMove(usr.loc)
-		F.forceMove(usr.loc)
-		G.forceMove(usr.loc)
-		H.forceMove(usr.loc)
-		Z.forceMove(usr.loc)
-		qdel(src)
-		to_chat(usr,"You dissasemble the [src].")
-	. = ..()
-
 /obj/item/gun/ballistic/automatic/rangemaster/scoped/mid
 	name = "Scoped Colt Rangemaster (improved)"
 	randomspread = 0
 	extra_penetration = 0
 	extra_damage = 0
-
-/obj/item/gun/ballistic/automatic/rangemaster/scoped/mid/attackby(obj/item/W, mob/user, params)
-	if(istype(W,/obj/item/screwdriver))
-		var/obj/item/A = new /obj/item/prefabs/complex/screw
-		var/obj/item/B = new /obj/item/prefabs/complex/trigger
-		var/obj/item/C = new /obj/item/prefabs/complex/bolt/high
-		var/obj/item/D = new /obj/item/prefabs/complex/action/simple
-		var/obj/item/E = new /obj/item/prefabs/complex/barrel/m762
-		var/obj/item/F = new /obj/item/prefabs/complex/stock/mid
-		var/obj/item/G = new /obj/item/prefabs/complex/complexWeaponFrame/mid
-		var/obj/item/H = new /obj/item/advanced_crafting_components/receiver
-		var/obj/item/Z = new /obj/item/advanced_crafting_components/assembly
-		A.forceMove(usr.loc)
-		B.forceMove(usr.loc)
-		C.forceMove(usr.loc)
-		D.forceMove(usr.loc)
-		E.forceMove(usr.loc)
-		F.forceMove(usr.loc)
-		G.forceMove(usr.loc)
-		H.forceMove(usr.loc)
-		Z.forceMove(usr.loc)
-		qdel(src)
-		to_chat(usr,"You dissasemble the [src].")
-	. = ..()
+	extra_parts = list(/obj/item/prefabs/complex/bolt/high,
+	/obj/item/prefabs/complex/action/simple,
+	/obj/item/prefabs/complex/barrel/m762,
+	/obj/item/prefabs/complex/stock/mid,
+	/obj/item/prefabs/complex/complexWeaponFrame/mid,
+	/obj/item/advanced_crafting_components/receiver,
+	/obj/item/advanced_crafting_components/assembly)
 
 /obj/item/gun/ballistic/automatic/rangemaster/scoped/high
 	name = "Scoped Colt Rangemaster (masterwork)"
@@ -1762,30 +1444,13 @@
 	fire_delay = 4
 	extra_penetration = 7
 	extra_damage = 7
-
-/obj/item/gun/ballistic/automatic/rangemaster/scoped/high/attackby(obj/item/W, mob/user, params)
-	if(istype(W,/obj/item/screwdriver))
-		var/obj/item/A = new /obj/item/prefabs/complex/screw
-		var/obj/item/B = new /obj/item/prefabs/complex/trigger
-		var/obj/item/C = new /obj/item/prefabs/complex/bolt/high
-		var/obj/item/D = new /obj/item/prefabs/complex/action/simple
-		var/obj/item/E = new /obj/item/prefabs/complex/barrel/m762
-		var/obj/item/F = new /obj/item/prefabs/complex/stock/mid
-		var/obj/item/G = new /obj/item/prefabs/complex/complexWeaponFrame/high
-		var/obj/item/H = new /obj/item/advanced_crafting_components/receiver
-		var/obj/item/Z = new /obj/item/advanced_crafting_components/assembly
-		A.forceMove(usr.loc)
-		B.forceMove(usr.loc)
-		C.forceMove(usr.loc)
-		D.forceMove(usr.loc)
-		E.forceMove(usr.loc)
-		F.forceMove(usr.loc)
-		G.forceMove(usr.loc)
-		H.forceMove(usr.loc)
-		Z.forceMove(usr.loc)
-		qdel(src)
-		to_chat(usr,"You dissasemble the [src].")
-	. = ..()
+	extra_parts = list(/obj/item/prefabs/complex/bolt/high,
+	/obj/item/prefabs/complex/action/simple,
+	/obj/item/prefabs/complex/barrel/m762,
+	/obj/item/prefabs/complex/stock/mid,
+	/obj/item/prefabs/complex/complexWeaponFrame/high,
+	/obj/item/advanced_crafting_components/receiver,
+	/obj/item/advanced_crafting_components/assembly)
 
 /obj/item/gun/ballistic/automatic/fnfal
 	name = "FN FAL"
@@ -1801,3 +1466,20 @@
 	weapon_weight = WEAPON_HEAVY
 	spread = 10
 	fire_delay = 3
+
+/obj/item/gun/ballistic/automatic/p90
+	name = "FN P90c"
+	desc = "The Fabrique Nationale P90c was just coming into use at the time of the war. The weapon's bullpup layout, and compact design, make it easy to control. The durable P90c is prized for its reliability, and high firepower in a ruggedly-compact package. Chambered in 10mm."
+	icon_state = "p90"
+	item_state = "m90"
+	burst_size = 3
+	fire_delay = 1
+	burst_delay = 1
+	automatic = 1
+	mag_type = /obj/item/ammo_box/magazine/m10mm_p90
+	init_mag_type = /obj/item/ammo_box/magazine/m10mm_p90
+	fire_sound = 'sound/f13weapons/10mm_fire_03.ogg'
+	w_class = WEIGHT_CLASS_NORMAL
+	weapon_weight = WEAPON_LIGHT
+	extra_damage = 5
+	extra_penetration = 5
