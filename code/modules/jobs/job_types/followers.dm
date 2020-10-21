@@ -84,7 +84,7 @@ Administrator
 
 /*
 Professor
-*/
+
 /datum/job/followers/f13Professor
 	title = "Followers Scientist"
 	flag = F13PRACTITIONER
@@ -124,7 +124,7 @@ Professor
 	chemwhiz = TRUE
 	backpack_contents = list(
 		/obj/item/storage/firstaid/ancient=1)
-
+*/
 
 /*
 Practitioner
@@ -145,10 +145,12 @@ Practitioner
 	exp_type = EXP_TYPE_FOLLOWERS
 
 	outfit = /datum/outfit/job/followers/f13practitioner
+
 	loadout_options = list(
-	/datum/outfit/loadout/chemist,
 	/datum/outfit/loadout/physician,
-	/datum/outfit/loadout/emt
+	/datum/outfit/loadout/pharmacist,
+	/datum/outfit/loadout/paramedic,
+	/datum/outfit/loadout/medical_researcher
 	)
 
 /datum/outfit/job/followers/f13practitioner/pre_equip(mob/living/carbon/human/H, mob/M)
@@ -156,8 +158,6 @@ Practitioner
 
 	//the follower practitioner doesn't need access because it's already set in the /datum/job/follower
 	//personally, I don't think a practitioner should have more access than a volunteer.
-
-
 
 /datum/outfit/job/followers/f13practitioner
 	name = "Followers Doctor"
@@ -169,32 +169,45 @@ Practitioner
 	backpack_contents = list(
 	/obj/item/reagent_containers/hypospray/medipen/stimpak=2,
 	/obj/item/reagent_containers/medspray/synthflesh=1,
-	/obj/item/storage/firstaid/ancient=1,
-	/obj/item/defibrillator/compact/loaded)
-
-/datum/outfit/loadout/chemist
-	name = "Chemist"
-	backpack_contents = list(
-		/obj/item/reagent_containers/glass/beaker/meta=2,
-		/obj/item/clothing/glasses/science=1,
-		/obj/item/pda/chemist=1,
-		/obj/item/clothing/suit/toggle/labcoat/f13/followers=1)
+	/obj/item/storage/firstaid/ancient=1)
 
 /datum/outfit/loadout/physician
-	name = "Physician"
+	name = "Emergency Physician"
+	suit = /obj/item/clothing/suit/toggle/labcoat/f13/followers
+	mask = /obj/item/clothing/mask/surgical
+	gloves = /obj/item/clothing/gloves/color/latex/nitrile
+	glasses = /obj/item/clothing/glasses/hud/health
 	backpack_contents = list(
+		/obj/item/clothing/suit/apron/surgical=1,
 		/obj/item/reagent_containers/medspray/synthflesh=1,
-		/obj/item/clothing/suit/toggle/labcoat/f13/followers=1,
-		/obj/item/reagent_containers/hypospray/CMO=1,
-		/obj/item/clothing/glasses/hud/health=1)
+		/obj/item/healthanalyzer/advanced=1,)
 
-/datum/outfit/loadout/emt
-	name = "EMT"
+/datum/outfit/loadout/pharmacist
+	name = "Pharmacist"
+	suit = /obj/item/clothing/suit/toggle/labcoat/chemist
+	head = /obj/item/clothing/head/soft/mime
+	gloves = /obj/item/clothing/gloves/latexsleeves
+	glasses = /obj/item/clothing/glasses/science
 	backpack_contents = list(
-	    /obj/item/clothing/suit/toggle/labcoat/emt=1,
-	    /obj/item/clothing/head/soft/emt=1,
-		/obj/item/storage/firstaid/tactical=1,
-		/obj/item/reagent_containers/medspray/synthflesh=3)
+		/obj/item/flashlight/pen=1,
+		/obj/item/pda/chemist=1)
+
+/datum/outfit/loadout/paramedic
+	name = "Paramedic"
+	head = /obj/item/clothing/head/soft/emt
+	suit = /obj/item/clothing/suit/toggle/labcoat/emt
+	backpack_contents = list(
+		/obj/item/reagent_containers/medspray/synthflesh=2)
+
+/datum/outfit/loadout/medical_researcher
+	name = "Medical Researcher"
+	suit = /obj/item/clothing/suit/toggle/labcoat/f13/followers
+	backpack_contents = list(
+		/obj/item/clothing/accessory/pocketprotector/full=1,
+		/obj/item/folder/white=1,
+		/obj/item/pda/medical=1,
+		/obj/item/book/granter/trait/techno=1
+	)
 
 //datum/outfit/job/followers/practitioner/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 //	..()
@@ -219,8 +232,13 @@ Follower Volunteer
 	enforces = "Followers are not fond of the NCR due to their corruption, but they will help them. They dislike the Brotherhood for hoarding tech, but will make deals to work with them if it furthers the spreading of knowledge. Legion is our mistake and its our job to correct the mistake by speaking of the truth, but recognize that the best way to fight the legion is to teach them and sometimes that can mean helping them. Preaching humanitarianism and valuing human life. Assist and provide medical services to any who require it, regardless of faction. Provide free education for all those who are willing to learn."
 	selection_color = "#FFDDFF"
 	exp_type = EXP_TYPE_FOLLOWERS
-
 	outfit = /datum/outfit/job/followers/f13followervolunteer
+	loadout_options = list(
+	/datum/outfit/loadout/volunteer_emt,
+	/datum/outfit/loadout/volunteer_mechanic,
+	/datum/outfit/loadout/volunteer_farmer,
+	/datum/outfit/loadout/volunteer_student
+	)
 
 	//the follower volunteer doesn't need more access as it is already stored in the /datum/job/followers
 
@@ -229,14 +247,53 @@ Follower Volunteer
 	jobtype = /datum/job/followers/f13followervolunteer
 	backpack = /obj/item/storage/backpack/explorer
 	id = /obj/item/card/id/silver
-	backpack_contents =  list(
-		/obj/item/storage/firstaid/ancient=1)
 	uniform = /obj/item/clothing/under/f13/followers
 	shoes = /obj/item/clothing/shoes/f13/explorer
+	backpack_contents =  list(
+		/obj/item/storage/firstaid/ancient=1)
+
+/datum/outfit/loadout/volunteer_emt
+	name = "EMT"
+	suit = /obj/item/clothing/suit/toggle/labcoat/emt
+	head = /obj/item/clothing/head/soft/emt
+	backpack_contents = list(
+		/obj/item/healthanalyzer=1,
+		/obj/item/reagent_containers/medspray/synthflesh=1
+		)
+
+/datum/outfit/loadout/volunteer_mechanic
+	name = "Mechanic"
+	suit = /obj/item/clothing/suit/apron
+	head = /obj/item/clothing/head/hardhat/orange
+	belt = /obj/item/storage/belt/utility/full
+	gloves = /obj/item/clothing/gloves/color/yellow
+	glasses = /obj/item/clothing/glasses/welding
+	backpack_contents = list(
+		/obj/item/flashlight/pen=1,
+		/obj/item/pda/chemist=1)
+
+/datum/outfit/loadout/volunteer_farmer
+	name = "Farmer"
+	head = /obj/item/clothing/head/helmet/f13/vaquerohat
+	suit = /obj/item/clothing/suit/apron/overalls
+	belt = /obj/item/storage/bag/plants/portaseeder
+	backpack_contents = list(
+		/obj/item/hatchet=1,
+		/obj/item/cultivator=1,
+		/obj/item/shovel/spade=1)
+
+/datum/outfit/loadout/volunteer_student
+	name = "Student"
+	backpack_contents = list(
+		/obj/item/taperecorder=1,
+		/obj/item/clothing/accessory/pocketprotector/full=1,
+		/obj/item/clipboard=1,
+		/obj/item/pen/fourcolor=1
+	)
 
 /*
 Follower Guard
-*/
+
 
 /datum/job/followers/f13followerguard
 	title = "Followers Guard"
@@ -274,3 +331,5 @@ Follower Guard
 		/obj/item/flashlight/seclite=1, \
 		/obj/item/storage/box/rubbershot/beanbag=1, \
 		/obj/item/storage/firstaid/ancient=1)
+
+*/

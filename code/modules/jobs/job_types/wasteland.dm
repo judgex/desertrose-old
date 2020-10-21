@@ -384,7 +384,7 @@ Raider
 	loadout_options = list(
 	/datum/outfit/loadout/vault_refugee,
 	/datum/outfit/loadout/petro,
-	/datum/outfit/loadout/follower,
+	///datum/outfit/loadout/follower,
 	/datum/outfit/loadout/merchant,
 	/datum/outfit/loadout/gambler,
 	/datum/outfit/loadout/citizen,
@@ -453,6 +453,7 @@ Raider
 		/obj/item/gun/ballistic/revolver/colt357=2,
 		/obj/item/ammo_box/a357=2)
 
+/*
 /datum/outfit/loadout/follower
 	name = "Follower"
 	uniform = /obj/item/clothing/under/f13/follower
@@ -462,6 +463,7 @@ Raider
 	l_hand = /obj/item/storage/firstaid/ancient
 	backpack_contents =  list(
 		/obj/item/gun/ballistic/automatic/pistol/m1911=1)
+*/
 
 /datum/outfit/loadout/merchant
 	name = "Roving Trader"

@@ -23,7 +23,7 @@ GLOBAL_LIST_INIT(command_positions, list(
     "Shaman",
     "Head Hunter",
 
-	"Lead Practitioner"
+	"Followers Administrator"
     ))
 
 GLOBAL_LIST_INIT(silicon_whitelist_positions, list(
@@ -82,7 +82,7 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 "Shaman",
 "Head Hunter",
 
-"Lead Practitioner",
+"Followers Administrator",
 
 "Cyborg",
 "Vault-tec Security",
@@ -260,9 +260,9 @@ GLOBAL_LIST_INIT(followers_command_positions, list(
 ))
 GLOBAL_LIST_INIT(followers_positions, list(
     "Followers Doctor",
-    "Followers Guard",
-    "Followers Volunteer",
-	"Followers Scientist"
+    //"Followers Guard",
+    "Followers Volunteer"
+	//"Followers Scientist"
 ))
 /*
 GLOBAL_LIST_INIT(engineering_positions, list(

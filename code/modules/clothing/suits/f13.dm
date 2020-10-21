@@ -140,6 +140,31 @@
 	item_state = "sexymaid_s"
 	body_parts_covered = CHEST
 
+/obj/item/clothing/suit/f13/blacksmith_apron
+	name = "blacksmith apron"
+	desc = "A heavy leather apron designed for protecting the user when metalforging."
+	icon_state = "opifex_apron"
+	item_state = "opifex_apron"
+	body_parts_covered = CHEST|GROIN
+	blood_overlay_type = "armor"
+	allowed = list(/obj/item/crowbar,
+		/obj/item/screwdriver,
+		/obj/item/weldingtool,
+		/obj/item/wirecutters,
+		/obj/item/wrench,
+		/obj/item/multitool,
+		/obj/item/flashlight,
+		/obj/item/stack/cable_coil,
+		/obj/item/t_scanner,
+		/obj/item/analyzer,
+		/obj/item/geiger_counter,
+		/obj/item/extinguisher/mini,
+		/obj/item/radio,
+		/obj/item/clothing/gloves,
+		/obj/item/holosign_creator,
+		/obj/item/assembly/signaler
+	) //robust storage options!! -superballs
+
 //Special Biosuit
 
 /obj/item/clothing/suit/bio_suit/f13/hazmat
