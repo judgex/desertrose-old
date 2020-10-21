@@ -44,7 +44,11 @@
 /obj/item/gun/ballistic/shotgun/attack_self(mob/living/user)
 	if(recentpump > world.time)
 		return
-	pump(user)
+	pump(user)		
+	if(user.has_trait(TRAIT_MAGIC_HANDS))
+		var/obj/item/F = user.get_inactive_held_item()
+		if(istype(F, /obj/item/gun/ballistic/shotgun))
+			F.attack_self()
 	recentpump = world.time + 10
 	return
 
