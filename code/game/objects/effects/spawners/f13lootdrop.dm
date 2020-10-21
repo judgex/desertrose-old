@@ -530,7 +530,8 @@
 				/obj/item/claymore/machete/pipe,
 				/obj/item/kitchen/knife/cosmicdirty,
 				/obj/item/melee/unarmed/brass,
-				/obj/item/melee/unarmed/brass/spiked
+				/obj/item/melee/unarmed/brass/spiked,
+				/obj/item/kitchen/knife/bowie
 				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/melee/tier3 //TIER 3 MELEE WEAPON
@@ -549,7 +550,8 @@
 				/obj/item/shield/legion/buckler,
 				/obj/item/melee/unarmed/tigerclaw,
 				/obj/item/melee/unarmed/bladed,
-				/obj/item/melee/unarmed/sappers
+				/obj/item/melee/unarmed/sappers,
+				/obj/item/kitchen/knife/trench
 				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/melee/tier4 //TIER 4 MELEE WEAPON
@@ -563,7 +565,7 @@
 				/obj/item/melee/unarmed/lacerator,
 				/obj/item/melee/unarmed/maceglove,
 				/obj/item/melee/unarmed/punchdagger,
-				/obj/item/shield/riot
+				/obj/item/shield/riot,
 				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/melee/tier5 //TIER 5 MELEE WEAPON

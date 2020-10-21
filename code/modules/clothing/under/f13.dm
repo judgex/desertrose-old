@@ -225,6 +225,27 @@
 	body_parts_covered = CHEST|GROIN|ARMS|LEGS
 	flags_inv = HIDEGLOVES|HIDESHOES
 
+//Roma Legion
+
+/obj/item/clothing/under/f13/romaskirt
+	name = "roma legionary fatigues"
+	desc = "A worn and abused pair of fatigues, leftover from the legionary's service to Caesar."
+	icon_state = "roma_legion"
+	item_state = "roma_legion"
+	item_color = "roma_legion"
+
+/obj/item/clothing/under/f13/romaskirt/auxilia
+	name = "roma auxilia fatigues"
+	desc = "A black skirt and a thick long sleeve cotton shirt."
+	icon_state = "roma_auxilia"
+	item_state = "roma_auxilia"
+	item_color = "roma_auxilia"
+	var/sleeves_adjusted = 0
+	lefthand_file = 'icons/mob/inhands/clothing_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/clothing_righthand.dmi'
+	alt_covers_chest = TRUE
+	can_adjust = TRUE
+
 // Generic
 
 /obj/item/clothing/under/f13/machinist

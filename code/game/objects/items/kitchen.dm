@@ -114,6 +114,24 @@
 	attack_verb = list("cleaved", "slashed", "lacerated", "sliced", "torn", "ripped", "diced", "cut")
 	w_class = WEIGHT_CLASS_NORMAL
 
+/obj/item/kitchen/knife/bowie
+	name = "bowie knife"
+	icon_state = "bowie_knife"
+	item_state = "knife"
+	desc = "A large clip point fighting knife."
+	force = 35
+	throwforce = 25
+	attack_verb = list("slashed", "stabbed", "sliced", "shanked", "ripped", "lacerated")
+
+/obj/item/kitchen/knife/trench
+	name = "trench knife"
+	icon_state = "trench_knife"
+	item_state = "knife"
+	desc = "A jagged and sharp combat knife designed for brutal close quarters combat."
+	force = 40
+	throwforce = 25
+	attack_verb = list("slashed", "stabbed", "sliced", "shanked", "ripped", "lacerated")
+
 /obj/item/kitchen/knife/combat
 	name = "combat knife"
 	icon_state = "buckknife"
