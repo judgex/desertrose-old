@@ -84,7 +84,7 @@ Administrator
 
 /*
 Professor
-*/
+
 /datum/job/followers/f13Professor
 	title = "Followers Scientist"
 	flag = F13PRACTITIONER
@@ -124,7 +124,7 @@ Professor
 	chemwhiz = TRUE
 	backpack_contents = list(
 		/obj/item/storage/firstaid/ancient=1)
-
+*/
 
 /*
 Practitioner
@@ -293,7 +293,7 @@ Follower Volunteer
 
 /*
 Follower Guard
-*/
+
 
 /datum/job/followers/f13followerguard
 	title = "Followers Guard"
@@ -331,3 +331,5 @@ Follower Guard
 		/obj/item/flashlight/seclite=1, \
 		/obj/item/storage/box/rubbershot/beanbag=1, \
 		/obj/item/storage/firstaid/ancient=1)
+
+*/
