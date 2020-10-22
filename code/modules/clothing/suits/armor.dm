@@ -420,6 +420,16 @@
 	. = ..()
 	AddComponent(/datum/component/armor_plate)
 
+/obj/item/clothing/suit/armor/f13/raider/localranger
+	name = "Deserters Duster"
+	desc = "A worn NCR duster, ravaged by the sands and time. A large red X marks the back."
+	icon_state = "localranger"
+	item_state = "localranger"
+
+/obj/item/clothing/suit/armor/f13/raider/painspike/Initialize()
+	. = ..()
+	AddComponent(/datum/component/armor_plate)
+
 /obj/item/clothing/suit/armor/f13/raider/iconoclast/
 	name = "iconoclast raider armor"
 	desc = "A rigid armor set that appears to be fashioned from a radiation suit, or a mining suit."
