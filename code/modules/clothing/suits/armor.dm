@@ -724,6 +724,13 @@
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
 	armor = list("melee" = 55, "bullet" = 55, "laser" = 55, "energy" = 40, "bomb" = 55, "bio" = 60, "rad" = 60, "fire" = 90, "acid" = 20)
 
+/obj/item/clothing/suit/armor/f13/rangercombat/rigscustom
+	name = "11th Armored Calvary Armor"
+	desc = "A suit of special military grade riot control gear and a duster, worn by 11th Armored Calvary Regiment members in The Divide before the war. Yellow markings are painted on the shoulderpads and forearm guards."
+	icon_state = "rigscustom_suit"
+	item_state = "rigscustom_suit"
+	icon = 'icons/fallout/clothing/suits.dmi'
+
 /obj/item/clothing/suit/armor/f13/rangercombat/desert
 	name = "desert ranger combat armor"
 	desc = "This is the original armor the NCR Ranger Combat armor was based off of. An awe inspiring suit of armor used by the legendary Desert Rangers."
@@ -1104,6 +1111,18 @@
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
 	armor = list("melee" = 85, "bullet" = 60, "laser" = 40, "energy" = 40, "bomb" = 45, "bio" = 60, "rad" = 20, "fire" = 80, "acid" = 0)
 
+/obj/item/clothing/suit/armor/f13/roma
+	name = "roma legion armor"
+	desc = "A well-forged suit of lorica segmentata, standard issue to all Legionaries and Auxilia within the Roma Legion."
+	icon_state = "roma_armor"
+	item_state = "legarmor"
+	lefthand_file = 'icons/mob/inhands/clothing_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/clothing_righthand.dmi'
+	body_parts_covered = CHEST|GROIN
+	allowed = list(/obj/item/gun, /obj/item/claymore, /obj/item/throwing_star/spear, /obj/item/restraints/legcuffs/bola, /obj/item/twohanded)
+	armor = list("melee" = 60, "bullet" = 40, "laser" = 25, "energy" = 15, "bomb" = 25, "bio" = 50, "rad" = 20, "fire" = 70, "acid" = 0)
+	slowdown = -0.1
+
 /obj/item/clothing/suit/armor/f13/ncrarmor
 	name = "NCR patrol vest"
 	desc = "A standard issue NCR Infantry vest."
@@ -1212,6 +1231,15 @@
 	desc = "A thicker than average duster worn by NCR recon rangers out in the field. It's not heavily armored by any means, but is easy to move around in and provides excellent protection from the harsh desert environment."
 	icon_state = "duster_recon"
 	item_state = "duster_recon"
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
+	armor = list("melee" = 35, "bullet" = 30, "laser" = 20, "energy" = 20, "bomb" = 25, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
+	slowdown = -0.1
+
+/obj/item/clothing/suit/toggle/armor/f13/rangercustomdark
+	name = "tattered recon duster"
+	desc = "A thicker than average duster worn by rangers out in the field. This one has been dyed black and appears to be a little more heavily armoured."
+	icon_state = "duster_recon_custom"
+	item_state = "duster_recon_custom"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list("melee" = 35, "bullet" = 30, "laser" = 20, "energy" = 20, "bomb" = 25, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
 	slowdown = -0.1

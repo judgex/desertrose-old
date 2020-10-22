@@ -44,7 +44,11 @@
 /obj/item/gun/ballistic/shotgun/attack_self(mob/living/user)
 	if(recentpump > world.time)
 		return
-	pump(user)
+	pump(user)		
+	if(user.has_trait(TRAIT_MAGIC_HANDS))
+		var/obj/item/F = user.get_inactive_held_item()
+		if(istype(F, /obj/item/gun/ballistic/shotgun))
+			F.attack_self()
 	recentpump = world.time + 10
 	return
 
@@ -434,7 +438,7 @@
 		..()
 
 /obj/item/gun/ballistic/shotgun/ww2rifle
-	name = "\improper ancient rifle"
+	name = "\improper Karabiner 98k"
 	desc = "An ancient military rifle in use over 100 years ago, chambered in .308 and packing an additional punch."
 	icon_state = "kar98"
 	item_state = "308"
@@ -448,7 +452,7 @@
 	extra_penetration = 10
 
 /obj/item/gun/ballistic/shotgun/ww2rifle/scoped
-	name = "\improper scoped ancient rifle"
+	name = "\improper scoped Karabiner 98k"
 	desc = "An ancient military rifle in use over 100 years ago, chambered in .308 and packing an additional punch. Now with a scope."
 	icon_state = "kar98scope"
 	item_state = "308"
@@ -523,7 +527,7 @@
 	pump_sound = 'sound/f13weapons/cowboyrepeaterreload.ogg'
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
-	fire_delay = 6
+	fire_delay = 4
 	can_scope = TRUE
 
 /obj/item/gun/ballistic/shotgun/automatic/hunting/cowboy/scoped
@@ -539,7 +543,7 @@
 	zoom_out_amt = 13
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
-	fire_delay = 8
+	fire_delay = 6
 	can_scope = FALSE
 
 /obj/item/gun/ballistic/shotgun/automatic/hunting/brush
@@ -551,11 +555,11 @@
 	fire_sound = 'sound/f13weapons/brushgunfire.ogg'
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
-	fire_delay = 6
+	fire_delay = 4
 	can_scope = TRUE
 
 /obj/item/gun/ballistic/shotgun/automatic/hunting/brush/scoped
-	name = "scoped brush gun"
+	name = "scoped brush gun (standard)"
 	desc = "A short lever action rifle chambered in the heavy 45-70 round. Issued to NCR Veteran Rangers in the absence of heavier weaponry."
 	icon_state = "scopedbrushgun"
 	item_state = "scopedbrushgun"
@@ -566,8 +570,82 @@
 	zoom_out_amt = 13
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
-	fire_delay = 8
+	fire_delay = 6
 	can_scope = FALSE
+	extra_penetration = -5
+	extra_damage = -5
+
+/obj/item/gun/ballistic/shotgun/automatic/hunting/brush/scoped/attackby(obj/item/W, mob/user, params)
+	if(istype(W,/obj/item/screwdriver))
+		var/obj/item/A = new /obj/item/prefabs/complex/screw
+		var/obj/item/B = new /obj/item/prefabs/complex/trigger
+		var/obj/item/C = new /obj/item/prefabs/complex/bolt/simple
+		var/obj/item/D = new /obj/item/prefabs/complex/action/simple
+		var/obj/item/E = new /obj/item/prefabs/complex/barrel/m4570
+		var/obj/item/F = new /obj/item/prefabs/complex/stock/low
+		var/obj/item/G = new /obj/item/prefabs/complex/complexWeaponFrame/low
+		A.forceMove(usr.loc)
+		B.forceMove(usr.loc)
+		C.forceMove(usr.loc)
+		D.forceMove(usr.loc)
+		E.forceMove(usr.loc)
+		F.forceMove(usr.loc)
+		G.forceMove(usr.loc)
+		qdel(src)
+		to_chat(usr,"You dissasemble the [src].")
+	. = ..()
+
+/obj/item/gun/ballistic/shotgun/automatic/hunting/brush/scoped/mid
+	name = "scoped brush gun (improved)"
+	extra_damage = 5
+	extra_penetration = 5
+	fire_delay = 5
+
+/obj/item/gun/ballistic/shotgun/automatic/hunting/brush/scoped/mid/attackby(obj/item/W, mob/user, params)
+	if(istype(W,/obj/item/screwdriver))
+		var/obj/item/A = new /obj/item/prefabs/complex/screw
+		var/obj/item/B = new /obj/item/prefabs/complex/trigger
+		var/obj/item/C = new /obj/item/prefabs/complex/bolt/simple
+		var/obj/item/D = new /obj/item/prefabs/complex/action/simple
+		var/obj/item/E = new /obj/item/prefabs/complex/barrel/m4570
+		var/obj/item/F = new /obj/item/prefabs/complex/stock/low
+		var/obj/item/G = new /obj/item/prefabs/complex/complexWeaponFrame/mid
+		A.forceMove(usr.loc)
+		B.forceMove(usr.loc)
+		C.forceMove(usr.loc)
+		D.forceMove(usr.loc)
+		E.forceMove(usr.loc)
+		F.forceMove(usr.loc)
+		G.forceMove(usr.loc)
+		qdel(src)
+		to_chat(usr,"You dissasemble the [src].")
+	. = ..()
+
+/obj/item/gun/ballistic/shotgun/automatic/hunting/brush/scoped/high
+	name = "scoped brush gun (masterwork)"
+	extra_damage = 12
+	extra_damage = 12
+	fire_delay = 4
+
+/obj/item/gun/ballistic/shotgun/automatic/hunting/brush/scoped/high/attackby(obj/item/W, mob/user, params)
+	if(istype(W,/obj/item/screwdriver))
+		var/obj/item/A = new /obj/item/prefabs/complex/screw
+		var/obj/item/B = new /obj/item/prefabs/complex/trigger
+		var/obj/item/C = new /obj/item/prefabs/complex/bolt/simple
+		var/obj/item/D = new /obj/item/prefabs/complex/action/simple
+		var/obj/item/E = new /obj/item/prefabs/complex/barrel/m4570
+		var/obj/item/F = new /obj/item/prefabs/complex/stock/low
+		var/obj/item/G = new /obj/item/prefabs/complex/complexWeaponFrame/high
+		A.forceMove(usr.loc)
+		B.forceMove(usr.loc)
+		C.forceMove(usr.loc)
+		D.forceMove(usr.loc)
+		E.forceMove(usr.loc)
+		F.forceMove(usr.loc)
+		G.forceMove(usr.loc)
+		qdel(src)
+		to_chat(usr,"You dissasemble the [src].")
+	. = ..()
 
 /obj/item/gun/ballistic/revolver/widowmaker
 	name = "winchester widowmaker"

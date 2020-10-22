@@ -83,6 +83,7 @@
 #define TRAIT_PA_WEAR           "pa_wear"
 #define TRAIT_MEDICALEXPERT		"Medicinal Expert" //Can do revival surgery
 #define TRAIT_PRACTITIONER		"Practitioner" //Has access to FoA specific surgeries
+#define TRAIT_MACHINE_SPIRITS	"machine_spirits" //for tribe unique functions.
 
 
 // fallout crafting traits
@@ -90,6 +91,8 @@
 #define TRAIT_GUNSMITH_TWO      "gunsmith_two"
 #define TRAIT_GUNSMITH_THREE    "gunsmith_three"
 #define TRAIT_GUNSMITH_FOUR     "gunsmith_four"
+#define TRAIT_MASTER_GUNSMITH   "master_gunsmith"
+#define TRAIT_MAGIC_HANDS   "magic_hands"
 
 // common trait sources
 #define TRAIT_GENERIC "generic"

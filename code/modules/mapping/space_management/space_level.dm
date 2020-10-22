@@ -3,7 +3,7 @@
 	var/list/neigbours = list()
 	var/list/traits
 	var/z_value = 1 //actual z placement
-	var/linkage = SELFLOOPING
+	var/linkage = UNAFFECTED
 	var/xi
 	var/yi   //imaginary placements on the grid
 

@@ -54,9 +54,14 @@
 	icon_state = "moulding"
 	desc = "A moulding bench, used for superheating metal into its molten form and moulding it."
 	machine_tool_behaviour = list(TOOL_FWORKBENCH)
+	wrenchable = FALSE
 
-/obj/machinery/workbench/fbench/attackby(obj/item/W, mob/user, params)//todo me 
-	if(istype(W, /obj/item/screwdriver) && mould)
+/obj/machinery/workbench/fbench/attackby(obj/item/W, mob/user, params)//todo me
+	var/mob/living/carbon/human/H = usr
+	if (istype(W, /obj/item/stack/sheet/prewar) && !H.has_trait(TRAIT_MASTER_GUNSMITH))
+		to_chat(usr,"You have no clue as to how to work this material.")
+		return
+	else if(istype(W, /obj/item/screwdriver) && mould)
 		var/obj/item/prefabs/mould/B = mould
 		B.forceMove(src.loc)
 		mould = null
@@ -121,13 +126,25 @@
 							Q.amount -= 1
 							var/obj/item/prefabs/complex/barrel/m4570/C = new /obj/item/prefabs/complex/barrel/m4570
 							C.forceMove(src.loc)
+						if(istype(src.contents[1],/obj/item/prefabs/mould/barrel/shotgun))//4570
+							Q.amount -= 1
+							var/obj/item/prefabs/complex/barrel/shotgun/C = new /obj/item/prefabs/complex/barrel/shotgun
+							C.forceMove(src.loc)
 						if(istype(src.contents[1],/obj/item/prefabs/mould/action/simple))
 							Q.amount -= 1
 							var/obj/item/prefabs/complex/action/simple/C = new /obj/item/prefabs/complex/action/simple
 							C.forceMove(src.loc)
+						if(istype(src.contents[1],/obj/item/prefabs/mould/action/auto))
+							Q.amount -= 1
+							var/obj/item/prefabs/complex/action/auto/C = new /obj/item/prefabs/complex/action/auto
+							C.forceMove(src.loc)
 						if(istype(src.contents[1],/obj/item/prefabs/mould/bolt/simple))
 							Q.amount -= 1
 							var/obj/item/prefabs/complex/bolt/simple/C = new /obj/item/prefabs/complex/bolt/simple
+							C.forceMove(src.loc)
+						if(istype(src.contents[1],/obj/item/prefabs/mould/bolt/high))
+							Q.amount -= 1
+							var/obj/item/prefabs/complex/bolt/high/C = new /obj/item/prefabs/complex/bolt/high
 							C.forceMove(src.loc)
 						if(istype(src.contents[1],/obj/item/prefabs/mould/screw))
 							Q.amount -= 1
@@ -139,7 +156,7 @@
 							C.forceMove(src.loc)
 						if(istype(src.contents[1],/obj/item/prefabs/mould/complexWeaponFrame))
 							Q.amount -= 1
-							var/obj/item/prefabs/complex/complexWeaponFrame/C = new /obj/item/prefabs/complex/complexWeaponFrame
+							var/obj/item/prefabs/complex/complexWeaponFrame/low/C = new /obj/item/prefabs/complex/complexWeaponFrame/low
 							C.forceMove(src.loc)
 						if(istype(src.contents[1],/obj/item/prefabs/mould/trigger))
 							Q.amount -= 1
