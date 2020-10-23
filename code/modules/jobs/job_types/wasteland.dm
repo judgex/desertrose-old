@@ -269,7 +269,7 @@ Raider
 	head = /obj/item/clothing/head/helmet/f13/raider/blastmaster
 	backpack_contents = list(
 		/obj/item/twohanded/fireaxe=1,
-		/obj/item/gun/ballistic/automatic/pistol/n99/pers/glock,
+		/obj/item/gun/ballistic/automatic/pistol/n99/pers/glock=1,
 		/obj/item/grenade/iedcasing=2,
 		/obj/item/ammo_box/magazine/m10mm_auto = 2)
 
