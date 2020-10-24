@@ -12,3 +12,11 @@
 
 /obj/item/ammo_box/magazine/recharge/attack_self() //No popping out the "bullets"
  	return
+
+/obj/item/ammo_box/magazine/ultrarecharge
+ 	name = "ultracite cell"
+ 	desc = "A shard of ultracite acting as a potent energy source. This small chunk alone could keep the lights on for a year.."
+ 	icon_state = "oldrifle-20"
+ 	ammo_type = /obj/item/ammo_casing/caseless/ultralaser
+ 	caliber = "ultralaser"
+ 	max_ammo = 30
