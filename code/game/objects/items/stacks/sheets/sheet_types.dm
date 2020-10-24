@@ -131,6 +131,9 @@ GLOBAL_LIST_INIT(metal_recipes, list ( \
 /obj/item/stack/sheet/metal/fifty
 	amount = 50
 
+/obj/item/stack/sheet/metal/twentyfive
+	amount = 25
+
 /obj/item/stack/sheet/metal/twenty
 	amount = 20
 
@@ -224,6 +227,7 @@ GLOBAL_LIST_INIT(plasteel_recipes, list ( \
  */
 GLOBAL_LIST_INIT(wood_recipes, list ( \
 	new/datum/stack_recipe("wooden sandals", /obj/item/clothing/shoes/sandal, 1), \
+	new/datum/stack_recipe("wooden bucket", /obj/item/reagent_containers/glass/bucket/wooden, 10), \
 	new/datum/stack_recipe("wood floor tile", /obj/item/stack/tile/wood, 1, 4, 20), \
 	new/datum/stack_recipe("wood table frame", /obj/structure/table_frame/wood, 2, time = 10), \
 	new/datum/stack_recipe("wooden stock", /obj/item/prefabs/complex/stock/low, 2, time = 50), \
@@ -288,10 +292,11 @@ GLOBAL_LIST_INIT(wood_recipes, list ( \
 /obj/item/stack/sheet/mineral/wood/fifty
 	amount = 50
 
+/obj/item/stack/sheet/mineral/wood/twentyfive
+	amount = 25
 
 /obj/item/stack/sheet/mineral/wood/twenty
     amount = 20
-
 
 /obj/item/stack/sheet/mineral/wood/five
 	amount = 5
@@ -379,6 +384,9 @@ GLOBAL_LIST_INIT(cloth_recipes, list ( \
 /obj/item/stack/sheet/cloth/Initialize(mapload, new_amount, merge = TRUE)
 	recipes = GLOB.cloth_recipes
 	return ..()
+
+/obj/item/stack/sheet/cloth/twenty
+	amount = 20
 
 /obj/item/stack/sheet/cloth/ten
 	amount = 10

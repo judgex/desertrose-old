@@ -315,9 +315,13 @@
 	icon_state = "arclight"
 	item_state = "arclight"
 	dynamic_hair_suffix = ""
+	flash_protect = 2
+	tint = 1
 	visor_flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE
 	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEFACIALHAIR
 
+/obj/item/clothing/head/helmet/f13/raider/arclight/attack_self(mob/user)
+	weldingvisortoggle(user)
 
 /obj/item/clothing/head/helmet/f13/raider/arclight/Initialize()
 	. = ..()
@@ -596,6 +600,33 @@
 	icon_state = "legprime"
 	armor = list("melee" = 50, "bullet" = 35, "laser" = 15, "energy" = 15, "bomb" = 25, "bio" = 40, "rad" = 20, "fire" = 60, "acid" = 0)
 
+/obj/item/clothing/head/helmet/f13/legion/prime/alt
+	name = "legion prime helmet"
+	desc = "A helmet belonging to a legion prime, it looks sturdier than a normal legion recruit helmet. Comes with a pair of goggles."
+	item_state = "leglineman"
+	icon_state = "leglineman"
+
+/obj/item/clothing/head/helmet/f13/legion/prime/alt/attack_self(mob/user)
+	if(can_toggle && !user.incapacitated())
+		if(world.time > cooldown + toggle_cooldown)
+			cooldown = world.time
+			up = !up
+			flags_1 ^= visor_flags
+			flags_inv ^= visor_flags_inv
+			flags_cover ^= visor_flags_cover
+			icon_state = "[initial(icon_state)][up ? "up" : ""]"
+			to_chat(user, "[up ? alt_toggle_message : toggle_message] \the [src]")
+
+			user.update_inv_head()
+			if(iscarbon(user))
+				var/mob/living/carbon/C = user
+				C.head_update(src, forced = 1)
+
+			if(active_sound)
+				while(up)
+					playsound(src.loc, "[active_sound]", 100, 0, 4)
+					sleep(15)
+
 /obj/item/clothing/head/helmet/f13/legion/vet
 	name = "legion veteran helmet"
 	desc = "It's a metal legion veteran helmet, looks pretty sturdy."
@@ -654,6 +685,33 @@
 	item_state = "legdecanprim"
 	icon_state = "legdecanprim"
 
+/obj/item/clothing/head/helmet/f13/legion/vet/decan/alt
+	name = "legion veteran decanus helmet"
+	desc = "This is a metal helmet that's been reinforced with stronger leather patches and anointed with a array of red and dark red feathers. This one has several large white and black feathers sewn along side the rest of the feathers aswell. There is also a ballistic face-shield attached to the helmet that protects the face from physical blows and small pistol calibers."
+	item_state = "vetdecalt"
+	icon_state = "vetdecalt"
+
+/obj/item/clothing/head/helmet/f13/legion/vet/decan/alt/attack_self(mob/user)
+	if(can_toggle && !user.incapacitated())
+		if(world.time > cooldown + toggle_cooldown)
+			cooldown = world.time
+			up = !up
+			flags_1 ^= visor_flags
+			flags_inv ^= visor_flags_inv
+			flags_cover ^= visor_flags_cover
+			icon_state = "[initial(icon_state)][up ? "up" : ""]"
+			to_chat(user, "[up ? alt_toggle_message : toggle_message] \the [src]")
+
+			user.update_inv_head()
+			if(iscarbon(user))
+				var/mob/living/carbon/C = user
+				C.head_update(src, forced = 1)
+
+			if(active_sound)
+				while(up)
+					playsound(src.loc, "[active_sound]", 100, 0, 4)
+					sleep(15)
+
 /obj/item/clothing/head/helmet/f13/legion/vet/decan
 	name = "legion veteran decanus helmet"
 	desc = "It's a leather legion helmet that's been reinforced with stronger leather patches and anointed with a array of red and dark red feathers. This one has several large white and black feathers sewn along side the rest of the feathers aswell."
@@ -706,6 +764,19 @@
 	icon_state = "mars_headdress"
 	item_state = "mars_headdress"
 	dynamic_hair_suffix = "+generic"
+
+/obj/item/clothing/head/helmet/f13/roma
+	name = "roma legionary helmet"
+	desc = "A well-forged metal helmet standard issue to all Roma Legionaries and Auxilia."
+	icon_state = "roma_helmet"
+	item_state = "roma_helmet"
+	armor = list("melee" = 60, "bullet" = 40, "laser" = 25, "energy" = 15, "bomb" = 25, "bio" = 50, "rad" = 20, "fire" = 70, "acid" = 0)
+	lefthand_file = ""
+	righthand_file = ""
+	flags_inv = HIDEHAIR
+	strip_delay = 50
+	dynamic_hair_suffix = ""
+	dynamic_fhair_suffix = ""
 
 //Ranger Armors
 	/obj/item/clothing/head/helmet/f13/ncr/rangercombat

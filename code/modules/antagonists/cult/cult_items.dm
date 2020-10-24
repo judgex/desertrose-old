@@ -471,6 +471,23 @@
 		user.Knockdown(100)
 		user.blind_eyes(30)
 
+/obj/item/clothing/glasses/hud/health/night/technoveil
+	desc = "A complex veil which covers the eyes, allowing the chosen few to glimpse into the Void beyond."
+	name = "technoveil"
+	icon_state = "technoveil"
+	item_state = "technoveil"
+	flash_protect = 1
+
+/obj/item/clothing/glasses/night/cultblind/equipped(mob/living/user, slot)
+	..()
+	if(!iscultist(user))
+		to_chat(user, "<span class='cultlarge'>\"Your brain burns as it takes in that which you cannot understand.\"</span>")
+		user.dropItemToGround(src, TRUE)
+		user.Dizzy(30)
+		user.Knockdown(100)
+		user.blind_eyes(30)
+
+
 /obj/item/reagent_containers/glass/beaker/unholywater
 	name = "flask of unholy water"
 	desc = "Toxic to nonbelievers; reinvigorating to the faithful - this flask may be sipped or thrown."
