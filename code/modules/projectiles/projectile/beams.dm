@@ -240,14 +240,18 @@
 
 /obj/item/projectile/beam/laser/ultra_pistol
 	name = "laser beam"
+	icon = 'icons/obj/guns/projectile.dmi'
+	icon_state = 'ultralaser'
 	damage = 40
 	armour_penetration = 15
 	irradiate = 200
 
 /obj/item/projectile/beam/laser/ultra_rifle
 	name = "laser beam"
+	icon = 'icons/obj/guns/projectile.dmi'
+	icon_state = 'ultralaser'
 	damage = 45
-	armour_penetration = 20
+	armour_penetration = 25
 	irradiate = 200
 
 /obj/item/projectile/beam/laser/gatling //Gatling Laser Projectile

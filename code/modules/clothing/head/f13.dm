@@ -65,6 +65,16 @@
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	strip_delay = 30
 
+
+/obj/item/clothing/head/helmet/f13/localranger
+	name = "Worn Scout Beret"
+	desc = "Once a sign of status, now a faded head covering."
+	icon_state = "localranger"
+	item_state = "localranger"
+	armor = list(melee = 40, bullet = 25, laser = 15, energy = 10, bomb = 16, bio = 20, rad = 0, fire = 50, acid = 0)
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+	strip_delay = 30
+
 /obj/item/clothing/head/helmet/f13/fiend
 	name = "fiend helmet"
 	desc = "A leather cap cobbled together adorned with a bighorner skull, perfect for any drug-fueled frenzy."

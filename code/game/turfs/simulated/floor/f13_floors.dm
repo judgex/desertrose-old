@@ -515,3 +515,62 @@
 /turf/open/floor/circuit/f13_red/off
 	icon_state = "rcircuitoff1"
 	on = FALSE
+
+/turf/open/floor/ultramolten
+	gender = PLURAL
+	name = "liquid ultracite"
+	desc = "molten glass, casting off a sickly green glow. You feel your skin bubbling just looking at it."
+	icon = '/icon/fallout/turfs/ultra.dmi"
+	icon_state = "molten"
+	baseturfs = /turf/open/indestructible/ground/outside/desert
+	slowdown = 2
+	bullet_sizzle = TRUE
+	bullet_bounce_sound = null //needs a splashing sound one day.	light_range = 2
+	light_power = 0.75
+	light_color = #d7f736
+	bullet_bounce_sound = 'sound/items/welder2.ogg'
+
+/turf/open/floor/fissurel
+	gender = PLURAL
+	name = "ultracite fissure"
+	desc = "The ground here has broken open, revealing molten glastthat is casting off a sickly green glow. You feel your skin bubbling just looking at it."
+	icon = '/icon/fallout/turfs/ultra.dmi"
+	icon_state = "fissurel"
+	baseturfs = /turf/open/indestructible/ground/outside/desert
+	slowdown = 2
+	bullet_sizzle = TRUE
+	bullet_bounce_sound = null //needs a splashing sound one day.	light_range = 2
+	light_power = 0.75
+	light_color = #d7f736
+	bullet_bounce_sound = 'sound/items/welder2.ogg'
+
+/turf/open/floor/fissurem
+	gender = PLURAL
+	name = "ultracite fissure"
+	desc = "The ground here has broken open, revealing molten glastthat is casting off a sickly green glow. You feel your skin bubbling just looking at it."
+	icon = '/icon/fallout/turfs/ultra.dmi"
+	icon_state = "fissurem"
+	baseturfs = /turf/open/indestructible/ground/outside/desert
+	slowdown = 2
+	bullet_sizzle = TRUE
+	bullet_bounce_sound = null //needs a splashing sound one day.	light_range = 2
+	light_power = 0.75
+	light_color = #d7f736
+	bullet_bounce_sound = 'sound/items/welder2.ogg'
+
+/turf/open/floor/fissurer
+	gender = PLURAL
+	name = "ultracite fissure"
+	desc = "The ground here has broken open, revealing molten glastthat is casting off a sickly green glow. You feel your skin bubbling just looking at it."
+	icon = '/icon/fallout/turfs/ultra.dmi"
+	icon_state = "fissurer"
+	baseturfs = /turf/open/indestructible/ground/outside/desert
+	slowdown = 2
+	bullet_sizzle = TRUE
+	bullet_bounce_sound = null //needs a splashing sound one day.	light_range = 2
+	light_power = 0.75
+	light_color = #d7f736
+	bullet_bounce_sound = 'sound/items/welder2.ogg'
+
+
+
