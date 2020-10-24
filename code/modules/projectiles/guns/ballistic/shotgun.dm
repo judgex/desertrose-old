@@ -551,7 +551,7 @@
 	desc = "A long, makeshift weapon created from items found across the wasteland. Pneumatic in nature, what it lacks in a punch it makes up for in literal shards of radioactive glass sticking in your target."
 	icon_state = "ultraneedle"
 	item_state = "ultraneedle"
-	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/heavyneedle
+	//mag_type = /obj/item/ammo_box/magazine/internal/boltaction/heavyneedle todo me
 	fire_sound = 'sound/f13weapons/hunting_rifle.ogg'
 	fire_delay = 3
 	zoomable = TRUE

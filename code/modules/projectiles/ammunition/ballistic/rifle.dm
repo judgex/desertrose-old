@@ -62,7 +62,7 @@
 /obj/item/ammo_casing/heavyneedle
 	name = "heavy ultracite needle"
 	desc = "A heavy ultracite needle"
-	projectile_type = /obj/item/projectile/bullet/heavyneedle
+	//projectile_type = /obj/item/projectile/bullet/heavyneedle todo me
 
 
 /obj/item/ammo_casing/F13/m308
