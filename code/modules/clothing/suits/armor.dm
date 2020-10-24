@@ -426,7 +426,7 @@
 	icon_state = "localranger"
 	item_state = "localranger"
 
-/obj/item/clothing/suit/armor/f13/raider/painspike/Initialize()
+/obj/item/clothing/suit/armor/f13/raider/localranger/Initialize()
 	. = ..()
 	AddComponent(/datum/component/armor_plate)
 
