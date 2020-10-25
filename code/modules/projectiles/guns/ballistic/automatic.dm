@@ -565,7 +565,7 @@
 
 /obj/item/gun/ballistic/automatic/pps
 	spawnwithmagazine = FALSE
-	name = "\improper ancient SMG (standard)"
+	name = "\improper PPSh-41 (standard)"
 	desc = "An extremely fast firing, innacurate SMG from past wars. Low fire rate and low damage. Uses 9mm rounds."
 	icon_state = "pps"
 	mag_type = /obj/item/ammo_box/magazine/pps9mm
@@ -591,7 +591,7 @@
 	/obj/item/advanced_crafting_components/receiver)
 
 /obj/item/gun/ballistic/automatic/pps/mid
-	name = "\improper ancient SMG (improved)"
+	name = "\improper PPSh-41 (improved)"
 	burst_delay = 1.5
 	fire_delay = 5
 	can_attachments = TRUE
@@ -606,7 +606,7 @@
 	/obj/item/advanced_crafting_components/receiver)
 
 /obj/item/gun/ballistic/automatic/pps/high
-	name = "\improper ancient SMG (masterwork)"
+	name = "\improper PPSh-41 (masterwork)"
 	burst_size = 3
 	extra_damage = 0
 	extra_penetration = 5
@@ -1305,7 +1305,7 @@
 	return
 
 /obj/item/gun/ballistic/automatic/mg34
-	name = "\improper ancient machine gun"
+	name = "\improper Maschinengewehr 34"
 	desc = "An old light machine gun, manufactured over 100 years ago still in use by some NCR forces today."
 	icon_state = "mg34"
 	item_state = "R84"
@@ -1466,3 +1466,20 @@
 	weapon_weight = WEAPON_HEAVY
 	spread = 10
 	fire_delay = 3
+
+/obj/item/gun/ballistic/automatic/p90
+	name = "FN P90c"
+	desc = "The Fabrique Nationale P90c was just coming into use at the time of the war. The weapon's bullpup layout, and compact design, make it easy to control. The durable P90c is prized for its reliability, and high firepower in a ruggedly-compact package. Chambered in 10mm."
+	icon_state = "p90"
+	item_state = "m90"
+	burst_size = 3
+	fire_delay = 1
+	burst_delay = 1
+	automatic = 1
+	mag_type = /obj/item/ammo_box/magazine/m10mm_p90
+	init_mag_type = /obj/item/ammo_box/magazine/m10mm_p90
+	fire_sound = 'sound/f13weapons/10mm_fire_03.ogg'
+	w_class = WEIGHT_CLASS_NORMAL
+	weapon_weight = WEAPON_LIGHT
+	extra_damage = 5
+	extra_penetration = 5
