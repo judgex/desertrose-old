@@ -10,6 +10,7 @@
 	glass_name = "glass of tomato juice"
 	glass_desc = "Are you sure this is tomato juice?"
 	shot_glass_icon_state = "shotglassred"
+	can_synth = FALSE
 
 /datum/reagent/blood/reaction_mob(mob/living/L, method=TOUCH, reac_volume)
 	if(data && data["viruses"])
@@ -96,6 +97,7 @@
 	id = "vaccine"
 	color = "#C81040" // rgb: 200, 16, 64
 	taste_description = "slime"
+	can_synth = FALSE
 
 /datum/reagent/vaccine/reaction_mob(mob/living/L, method=TOUCH, reac_volume)
 	if(islist(data) && (method == INGEST || method == INJECT))
@@ -189,6 +191,7 @@
 	glass_icon_state  = "glass_clear"
 	glass_name = "glass of holy water"
 	glass_desc = "A glass of holy water."
+	can_synth = FALSE
 
 /datum/reagent/water/holywater/on_mob_add(mob/living/L)
 	..()
@@ -260,6 +263,7 @@
 	id = "unholywater"
 	description = "Something that shouldn't exist on this plane of existence."
 	taste_description = "suffering"
+	can_synth = FALSE //Not a Fallout or real world chem
 
 /datum/reagent/fuel/unholywater/reaction_mob(mob/living/M, method=TOUCH, reac_volume)
 	if(method == TOUCH || method == VAPOR)
@@ -294,6 +298,7 @@
 	id = "hell_water"
 	description = "YOUR FLESH! IT BURNS!"
 	taste_description = "burning"
+	can_synth = FALSE //Not a Fallout or real world chem
 
 /datum/reagent/hellwater/on_mob_life(mob/living/carbon/M)
 	M.fire_stacks = min(5,M.fire_stacks + 3)
@@ -308,6 +313,7 @@
 	id = "godblood"
 	description = "Slowly heals all damage types. Has a rather high overdose threshold. Glows with mysterious power."
 	overdose_threshold = 150
+	can_synth = FALSE //Not a Fallout or real world chem
 
 /datum/reagent/lube
 	name = "Industrial Lube"
@@ -332,6 +338,7 @@
 	var/datum/species/race = /datum/species/human
 	var/mutationtext = "<span class='danger'>The pain subsides. You feel... human.</span>"
 	can_synth = FALSE
+
 /datum/reagent/mutationtoxin/on_mob_life(mob/living/carbon/human/H)
 	..()
 	if(!istype(H))
@@ -475,6 +482,7 @@
 	color = "#5EFF3B" //RGB: 94, 255, 59
 	taste_description = "slime"
 	metabolization_rate = 0.2
+	can_synth = FALSE
 
 /datum/reagent/slime_toxin/on_mob_life(mob/living/carbon/human/H)
 	..()
@@ -512,6 +520,7 @@
 	color = "#5EFF3B" //RGB: 94, 255, 59
 	metabolization_rate = INFINITY
 	taste_description = "slime"
+	can_synth = FALSE
 
 /datum/reagent/mulligan/on_mob_life(mob/living/carbon/human/H)
 	..()
@@ -527,6 +536,7 @@
 	description = "An advanced corruptive toxin produced by slimes."
 	color = "#13BC5E" // rgb: 19, 188, 94
 	taste_description = "slime"
+	can_synth = FALSE
 
 /datum/reagent/aslimetoxin/reaction_mob(mob/living/L, method=TOUCH, reac_volume)
 	if(method != TOUCH)
@@ -539,6 +549,7 @@
 	color = "#5EFF3B" //RGB: 94, 255, 59
 	can_synth = FALSE
 	taste_description = "decay"
+	can_synth = FALSE
 
 /datum/reagent/gluttonytoxin/reaction_mob(mob/living/L, method=TOUCH, reac_volume)
 	L.ForceContractDisease(new /datum/disease/transformation/morph(), FALSE, TRUE)
@@ -1378,7 +1389,7 @@
 	color = "#C8A5DC"
 	var/list/random_color_list = list("#00aedb","#a200ff","#f47835","#d41243","#d11141","#00b159","#00aedb","#f37735","#ffc425","#008744","#0057e7","#d62d20","#ffa700")
 	taste_description = "rainbows"
-
+	can_synth = FALSE
 
 /datum/reagent/colorful_reagent/on_mob_life(mob/living/carbon/M)
 	M.add_atom_colour(pick(random_color_list), WASHABLE_COLOUR_PRIORITY)
@@ -1576,6 +1587,7 @@
 	description = "An experimental serum which causes rapid muscular growth in Hominidae. Side-affects may include hypertrichosis, violent outbursts, and an unending affinity for bananas."
 	reagent_state = LIQUID
 	color = "#00f041"
+	can_synth = FALSE
 
 /datum/reagent/magillitis/on_mob_life(mob/living/carbon/M)
 	..()
@@ -1589,6 +1601,7 @@
 	color = "#ff0000"//strong red. rgb 255, 0, 0
 	var/current_size = 1
 	taste_description = "bitterness" // apparently what viagra tastes like
+	can_synth = FALSE
 
 /datum/reagent/growthserum/on_mob_life(mob/living/carbon/H)
 	var/newsize = current_size
@@ -1629,6 +1642,7 @@
 	taste_description = "plastic"
 	reagent_state = SOLID
 	var/glitter_type = /obj/effect/decal/cleanable/glitter
+	can_synth = FALSE
 
 /datum/reagent/glitter/reaction_turf(turf/T, reac_volume)
 	if(!istype(T))
@@ -1662,6 +1676,7 @@
 	color = "#AAAAAA55"
 	taste_description = "water"
 	metabolization_rate = 0.25 * REAGENTS_METABOLISM
+	can_synth = FALSE
 
 /datum/reagent/pax/on_mob_add(mob/living/L)
 	..()
@@ -1678,6 +1693,7 @@
 	color = "#FAFF00"
 	taste_description = "acrid cinnamon"
 	metabolization_rate = 0.2 * REAGENTS_METABOLISM
+	can_synth = FALSE
 
 /datum/reagent/bz_metabolites/on_mob_add(mob/living/L)
 	..()
