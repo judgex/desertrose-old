@@ -246,8 +246,8 @@ Raider
 	suit = /obj/item/clothing/suit/armor/f13/raider/supafly
 	head = /obj/item/clothing/head/helmet/f13/raider
 	backpack_contents = list(
-		/obj/item/gun/ballistic/automatic/mini_uzi,
-		/obj/item/ammo_box/magazine/uzim9mm = 3,
+		/obj/item/gun/ballistic/automatic/mini_uzi=1,
+		/obj/item/ammo_box/magazine/uzim9mm=3,
 		/obj/item/kitchen/knife/combat=1,
 		/obj/item/storage/pill_bottle/dice=1,
 		/obj/item/storage/fancy/cigarettes/cigpack_cannabis=1)
@@ -269,7 +269,7 @@ Raider
 	head = /obj/item/clothing/head/helmet/f13/raider/blastmaster
 	backpack_contents = list(
 		/obj/item/twohanded/fireaxe=1,
-		/obj/item/gun/ballistic/automatic/pistol/n99/pers/glock,
+		/obj/item/gun/ballistic/automatic/pistol/n99/pers/glock=1,
 		/obj/item/grenade/iedcasing=2,
 		/obj/item/ammo_box/magazine/m10mm_auto = 2)
 
@@ -311,6 +311,7 @@ Raider
 /datum/outfit/loadout/raider_bos
 	name = "Brotherhood Exile"
 	suit = /obj/item/clothing/suit/armor/f13/exile/bosexile
+	uniform = /obj/item/clothing/under/syndicate
 	id = /obj/item/card/id/rusted/brokenholodog
 	backpack_contents = list(
 		/obj/item/gun/energy/laser/pistol=1,
@@ -323,7 +324,7 @@ Raider
 	id = /obj/item/card/id/rusted
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/marksman/servicerifle=1,
-		/obj/item/ammo_box/magazine/m556/rifle=2)
+		/obj/item/ammo_box/magazine/m556/rifle=3)
 
 /datum/outfit/loadout/raider_legion
 	name = "Punished Legionnaire"
@@ -353,7 +354,7 @@ Raider
     glasses = /obj/item/clothing/glasses/sunglasses
     shoes = /obj/item/clothing/shoes/f13/fancy
     backpack_contents = list(
-        /obj/item/gun/ballistic/automatic/pistol/ninemil/mafia = 1,
+        /obj/item/gun/ballistic/automatic/pistol/ninemil/mafia=1,
         /obj/item/ammo_box/magazine/m9mm=2,
 		/obj/item/card/id/dogtag/town/mafia=1,
         /obj/item/toy/cards/deck=1)
@@ -365,7 +366,7 @@ Raider
 	id = /obj/item/card/id/rusted/fadedvaultid
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/pistol/n99=1,
-		/obj/item/ammo_box/magazine/m10mm_adv=2)
+		/obj/item/ammo_box/magazine/m10mm_adv=3)
 
 /datum/job/wasteland/f13wastelander
 	title = "Wastelander"
@@ -384,7 +385,7 @@ Raider
 	loadout_options = list(
 	/datum/outfit/loadout/vault_refugee,
 	/datum/outfit/loadout/petro,
-	/datum/outfit/loadout/follower,
+	///datum/outfit/loadout/follower,
 	/datum/outfit/loadout/merchant,
 	/datum/outfit/loadout/gambler,
 	/datum/outfit/loadout/citizen,
@@ -453,6 +454,7 @@ Raider
 		/obj/item/gun/ballistic/revolver/colt357=2,
 		/obj/item/ammo_box/a357=2)
 
+/*
 /datum/outfit/loadout/follower
 	name = "Follower"
 	uniform = /obj/item/clothing/under/f13/follower
@@ -462,6 +464,7 @@ Raider
 	l_hand = /obj/item/storage/firstaid/ancient
 	backpack_contents =  list(
 		/obj/item/gun/ballistic/automatic/pistol/m1911=1)
+*/
 
 /datum/outfit/loadout/merchant
 	name = "Roving Trader"
