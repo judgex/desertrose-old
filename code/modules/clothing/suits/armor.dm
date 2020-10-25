@@ -420,16 +420,6 @@
 	. = ..()
 	AddComponent(/datum/component/armor_plate)
 
-/obj/item/clothing/suit/armor/f13/raider/localranger
-	name = "Deserters Duster"
-	desc = "A worn NCR duster, ravaged by the sands and time. A large red X marks the back."
-	icon_state = "localranger"
-	item_state = "localranger"
-
-/obj/item/clothing/suit/armor/f13/raider/localranger/Initialize()
-	. = ..()
-	AddComponent(/datum/component/armor_plate)
-
 /obj/item/clothing/suit/armor/f13/raider/iconoclast/
 	name = "iconoclast raider armor"
 	desc = "A rigid armor set that appears to be fashioned from a radiation suit, or a mining suit."
@@ -1045,6 +1035,12 @@
 	icon_state = "legvet"
 	slowdown = -0.1
 	armor = list("melee" = 60, "bullet" = 40, "laser" = 25, "energy" = 15, "bomb" = 25, "bio" = 50, "rad" = 20, "fire" = 70, "acid" = 0)
+
+/obj/item/clothing/suit/armor/f13/legion/vet/jonesarmormain
+	name = "Lorica Articuli"
+	desc = "A refurbished set of battle-worn veteran armor. Still made of leather and steel, it's relatively simple, but the modifications aren't. The metal has been engraved with exquisite patterns and wording, some of which is so small that you'd need a magnifying glass to properly see. Even still, it provides a noticeable improvement in aesthetics, though the engravings provide no tactical advantage whatsoever. The pauldrons have been plated with brass and engraved as well, providing the ultimate combination of protection and aesthetics. Just under the neck, an absolutely beautiful gemstone has been securely placed on the armor. To the trained eye or informed mind, it appears to be zircon. Red zircon. A steel, brass-plated belt goes around the midsection of the armor. 'Victoria Odds Contra Omnes' has been engraved into the belt in relatively large and fancy lettering, noticeable without having to get on your knees and go in for a whiff of the wearer's crotch in order to see."
+	icon_state = "jonesarmormain"
+	item_state = "jonesarmormain"
 
 /obj/item/clothing/suit/armor/f13/legion/heavy
 	name = "legion veteran decan armor"
