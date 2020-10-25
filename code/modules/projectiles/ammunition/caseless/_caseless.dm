@@ -72,4 +72,4 @@
 
 /obj/item/ammo_casing/caseless/ultralaser
 	name = "Ultra laser"
-	//projectile_type = /obj/item/projectile/bullet/F13/musketball todo me
+	projectile_type = /obj/item/projectile/beam/laser/ultra_rifle
