@@ -119,7 +119,7 @@
 	icon_state = "bowie_knife"
 	item_state = "knife"
 	desc = "A large clip point fighting knife."
-	force = 35
+	force = 33
 	throwforce = 25
 	attack_verb = list("slashed", "stabbed", "sliced", "shanked", "ripped", "lacerated")
 
@@ -128,7 +128,7 @@
 	icon_state = "trench_knife"
 	item_state = "knife"
 	desc = "A jagged and sharp combat knife designed for brutal close quarters combat."
-	force = 40
+	force = 37
 	throwforce = 25
 	attack_verb = list("slashed", "stabbed", "sliced", "shanked", "ripped", "lacerated")
 
@@ -151,6 +151,7 @@
 	name = "scrapper combat knife"
 	icon_state = "scrapknife"
 	desc = "A forged combat utility survival knife."
+	bayonet = FALSE
 
 /obj/item/kitchen/knife/combat/survival
 	name = "survival knife"
@@ -158,8 +159,6 @@
 	item_state = "knife"
 	desc = "A hunting grade survival knife."
 	force = 25
-	bayonet = TRUE
-
 /obj/item/kitchen/knife/cosmicdirty
 	name = "dirty cosmic knife"
 	desc = "A high-quality kitchen knife made from Saturnite alloy."

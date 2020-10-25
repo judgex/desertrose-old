@@ -260,7 +260,7 @@ GLOBAL_LIST_INIT(followers_command_positions, list(
 ))
 GLOBAL_LIST_INIT(followers_positions, list(
     "Followers Doctor",
-    //"Followers Guard",
+    "Followers Guard",
     "Followers Volunteer"
 	//"Followers Scientist"
 ))

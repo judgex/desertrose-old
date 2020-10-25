@@ -44,7 +44,7 @@
 /obj/item/gun/ballistic/shotgun/attack_self(mob/living/user)
 	if(recentpump > world.time)
 		return
-	pump(user)		
+	pump(user)
 	if(user.has_trait(TRAIT_MAGIC_HANDS))
 		var/obj/item/F = user.get_inactive_held_item()
 		if(istype(F, /obj/item/gun/ballistic/shotgun))
@@ -544,6 +544,19 @@
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 	fire_delay = 6
+	can_scope = FALSE
+
+/obj/item/gun/ballistic/shotgun/remington/ultraneedle
+	name = "heavy ultracite needler"
+	desc = "A long, makeshift weapon created from items found across the wasteland. Pneumatic in nature, what it lacks in a punch it makes up for in literal shards of radioactive glass sticking in your target."
+	icon_state = "ultraneedle"
+	item_state = "ultraneedle"
+	//mag_type = /obj/item/ammo_box/magazine/internal/boltaction/heavyneedle todo me
+	fire_sound = 'sound/f13weapons/hunting_rifle.ogg'
+	fire_delay = 3
+	zoomable = TRUE
+	zoom_amt = 10
+	zoom_out_amt = 13
 	can_scope = FALSE
 
 /obj/item/gun/ballistic/shotgun/automatic/hunting/brush
