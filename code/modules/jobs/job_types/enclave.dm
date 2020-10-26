@@ -237,7 +237,7 @@ Scientist
 	minimal_access = list(ACCESS_ENCLAVE)
 
 	exp_requirements = 500
-	exp_type = EXP_TYPE_NCR
+	exp_type = EXP_TYPE_ENCLAVE
 
 /datum/outfit/job/enclave/f13usscientist
 	name = "US Scientist"

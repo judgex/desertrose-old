@@ -45,7 +45,7 @@ Stated terms of service fully comply with the original AGPL v3 license of /TG/ S
 
 **Графика / Спрайты / Иконки**
 
-Ivan_mrr, Nienhaus, Llego_man007, WalterJe, Danowar, Superballs, Fo4an, Hankkits, MrSnapwalk, **BartNixon**, Uboaaaaaa, *BlackJack22*, Nikston, Omen111, Talamus, The_Harvester, Lydee, Murmillo, HITHISISFRONK, *DoctorWho08*, Alexlox, Zhuppa, *iWuna*, Yarinevar, *TheRiddler*.
+Ivan_mrr, Nienhaus, Llego_man007, WalterJe, Danowar, Superballs, Fo4an, Hankkits, MrSnapwalk, **BartNixon**, Uboaaaaaa, *BlackJack22*, Nikston, Omen111, Talamus, The_Harvester, Lydee, Murmillo, HITHISISFRONK, *DoctorWho08*, Alexlox, Zhuppa, *iWuna*, Yarinevar, *TheRiddler*, BadTeammate.
 
 **Ideas / Testing / Support** 
 
