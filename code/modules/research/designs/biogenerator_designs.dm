@@ -178,3 +178,11 @@
 	materials = list(MAT_BIOMASS = 5)
 	build_path = /obj/item/stack/tile/carpet
 	category = list("initial","Misc")
+
+/datum/design/strange_seed
+	name = "Strange Seed"
+	id = "strange_seed"
+	build_type = BIOGENERATOR
+	materials = list(MAT_BIOMASS = 5000)
+	build_path = /obj/item/seeds/random
+	category = list("initial","Misc")	
