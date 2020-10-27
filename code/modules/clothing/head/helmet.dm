@@ -315,9 +315,13 @@
 	icon_state = "arclight"
 	item_state = "arclight"
 	dynamic_hair_suffix = ""
+	flash_protect = 2
+	tint = 1
 	visor_flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE
 	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEFACIALHAIR
 
+/obj/item/clothing/head/helmet/f13/raider/arclight/attack_self(mob/user)
+	weldingvisortoggle(user)
 
 /obj/item/clothing/head/helmet/f13/raider/arclight/Initialize()
 	. = ..()
@@ -596,12 +600,46 @@
 	icon_state = "legprime"
 	armor = list("melee" = 50, "bullet" = 35, "laser" = 15, "energy" = 15, "bomb" = 25, "bio" = 40, "rad" = 20, "fire" = 60, "acid" = 0)
 
+/obj/item/clothing/head/helmet/f13/legion/prime/alt
+	name = "legion prime helmet"
+	desc = "A helmet belonging to a legion prime, it looks sturdier than a normal legion recruit helmet. Comes with a pair of goggles."
+	item_state = "leglineman"
+	icon_state = "leglineman"
+
+/obj/item/clothing/head/helmet/f13/legion/prime/alt/attack_self(mob/user)
+	if(can_toggle && !user.incapacitated())
+		if(world.time > cooldown + toggle_cooldown)
+			cooldown = world.time
+			up = !up
+			flags_1 ^= visor_flags
+			flags_inv ^= visor_flags_inv
+			flags_cover ^= visor_flags_cover
+			icon_state = "[initial(icon_state)][up ? "up" : ""]"
+			to_chat(user, "[up ? alt_toggle_message : toggle_message] \the [src]")
+
+			user.update_inv_head()
+			if(iscarbon(user))
+				var/mob/living/carbon/C = user
+				C.head_update(src, forced = 1)
+
+			if(active_sound)
+				while(up)
+					playsound(src.loc, "[active_sound]", 100, 0, 4)
+					sleep(15)
+
 /obj/item/clothing/head/helmet/f13/legion/vet
 	name = "legion veteran helmet"
 	desc = "It's a metal legion veteran helmet, looks pretty sturdy."
 	icon_state = "legvet"
 	item_state = "legvet"
 	armor = list("melee" = 60, "bullet" = 40, "laser" = 25, "energy" = 15, "bomb" = 25, "bio" = 50, "rad" = 20, "fire" = 70, "acid" = 0)
+
+/obj/item/clothing/head/helmet/f13/legion/vet/jonesarmorhelmet
+	name= "Galea Articuli"
+	desc = "A hand-forged helmet seemingly made for a veteran legionary, taking into account the general shape and similarity to the standard-issue helmet. Not only does it look sturdy as hell, it also looks absolutely beautiful to the average engraving enjoyer. The patterns of the engravings are elegant and they curve and twist around the helmet with the utmost grace as to not sully a helmet of such high quality. In place of the standard red stripe going down the middle of the helmet, there's a gold one instead. It shines beautifully in light, and hides the wearer well in darkness. Upon closer inspection, there's a small space carved out inside the helmet. It's not rough or makeshift, in fact, it looks like it was designed with that space in mind. As a result of not being solid metal, the area the space resides in is slightly thinner and provides less protection than a normal helmet. The space is similar in size to that of a fedora's, but without the capacity to store guns or other larger items due to the rigidity of the helmet. Don't worry, though. You can still tip it."
+	icon_state = "jonesarmorhelmet"
+	item_state = "jonesarmorhelmet"
+	pocket_storage_component_path = /datum/component/storage/concrete/pockets/small/detective
 
 /obj/item/clothing/head/helmet/f13/legion/heavy
 	name = "legion veteran decan helmet"
@@ -733,6 +771,19 @@
 	icon_state = "mars_headdress"
 	item_state = "mars_headdress"
 	dynamic_hair_suffix = "+generic"
+
+/obj/item/clothing/head/helmet/f13/roma
+	name = "roma legionary helmet"
+	desc = "A well-forged metal helmet standard issue to all Roma Legionaries and Auxilia."
+	icon_state = "roma_helmet"
+	item_state = "roma_helmet"
+	armor = list("melee" = 60, "bullet" = 40, "laser" = 25, "energy" = 15, "bomb" = 25, "bio" = 50, "rad" = 20, "fire" = 70, "acid" = 0)
+	lefthand_file = ""
+	righthand_file = ""
+	flags_inv = HIDEHAIR
+	strip_delay = 50
+	dynamic_hair_suffix = ""
+	dynamic_fhair_suffix = ""
 
 //Ranger Armors
 	/obj/item/clothing/head/helmet/f13/ncr/rangercombat
