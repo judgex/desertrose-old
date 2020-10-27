@@ -1,3 +1,6 @@
+#define SYNTH_HANDS_LAYER 1
+#define SYNTH_TOTAL_LAYERS 1
+
 /mob/living/simple_animal/hostile/synth
 	name = "synth mk1"
 	desc = "Synth strider. Looks like weird human but it's machine."
@@ -40,6 +43,8 @@
 	projectiletype = /obj/item/projectile/beam
 	projectilesound = 'sound/f13weapons/laser_pistol.ogg'
 
+	var/list/synth_overlays[SYNTH_TOTAL_LAYERS]
+
 /mob/living/simple_animal/hostile/synth/playable
 	emote_taunt_sound = null
 	emote_taunt = null
@@ -70,3 +75,58 @@
 	wander = 0
 	anchored = FALSE
 	dextrous = TRUE
+
+/mob/living/simple_animal/hostile/synth/proc/apply_overlay(cache_index)
+	. = synth_overlays[cache_index]
+	if(.)
+		add_overlay(.)
+
+/mob/living/simple_animal/hostile/synth/proc/remove_overlay(cache_index)
+	var/I = synth_overlays[cache_index]
+	if(I)
+		cut_overlay(I)
+		synth_overlays[cache_index] = null
+
+/mob/living/simple_animal/hostile/synth/update_inv_hands()
+	cut_overlays("standing_overlay")
+	remove_overlay(SYNTH_HANDS_LAYER)
+
+	var/standing = FALSE
+	for(var/I in held_items)
+		if(I)
+			standing = TRUE
+			break
+	if(!standing)
+		if(stat != DEAD)
+			icon_state = "crawling"
+			speed = 1
+		return ..()
+	if(stat != DEAD)
+		icon_state = "standing"
+		speed = 3 // synths are slow when standing up.
+
+	var/list/hands_overlays = list()
+
+	var/obj/item/l_hand = get_item_for_held_index(1)
+	var/obj/item/r_hand = get_item_for_held_index(2)
+
+	if(r_hand)
+		var/r_state = r_hand.item_state ? r_hand.item_state : r_hand.icon_state
+		var/mutable_appearance/r_hand_overlay = r_hand.build_worn_icon(state = r_state, default_layer = SYNTH_HANDS_LAYER, default_icon_file = r_hand.righthand_file, isinhands = TRUE)
+		r_hand_overlay.pixel_y -= 1
+		hands_overlays += r_hand_overlay
+
+	if(l_hand)
+		var/l_state = l_hand.item_state ? l_hand.item_state : l_hand.icon_state
+		var/mutable_appearance/l_hand_overlay = l_hand.build_worn_icon(state = l_state, default_layer = SYNTH_HANDS_LAYER, default_icon_file = l_hand.lefthand_file, isinhands = TRUE)
+		l_hand_overlay.pixel_y -= 1
+		hands_overlays += l_hand_overlay
+
+	if(hands_overlays.len)
+		synth_overlays[SYNTH_HANDS_LAYER] = hands_overlays
+	apply_overlay(SYNTH_HANDS_LAYER)
+	add_overlay("standing_overlay")
+	return ..()
+
+/mob/living/simple_animal/hostile/synth/regenerate_icons()
+	update_inv_hands()	
