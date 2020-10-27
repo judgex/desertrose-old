@@ -112,12 +112,6 @@
 	transfer_prints = TRUE
 	var/warcry = "AT"
 
-/obj/item/clothing/gloves/inquisition
-	name = "рукавицы инквизитора"
-	desc = "Nobody expects spanish inquisition."
-	icon_state = "inquisition"
-	item_state = "inquisition"	
-
 /obj/item/clothing/gloves/rapid/Touch(mob/living/target,proximity = TRUE)
 	var/mob/living/M = loc
 

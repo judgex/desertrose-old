@@ -86,6 +86,7 @@
 		user.dropItemToGround(src)
 
 /obj/item/gun/ballistic/automatic/pistol/n99
+	spawnwithmagazine = FALSE
 	name = "10mm pistol (standard)"
 	desc = "A pre-war large-framed, gas-operated advanced 10mm pistol."
 	icon_state = "n99"
@@ -96,28 +97,59 @@
 	fire_delay = 3
 	can_suppress = TRUE
 	spread = 15
+	extra_penetration = -5
+	extra_damage = -3
+	can_disassemble = TRUE
+	extra_parts =  list(/obj/item/prefabs/complex/bolt/simple,
+	/obj/item/prefabs/complex/action/simple,
+	/obj/item/prefabs/complex/barrel/mm10,
+	/obj/item/prefabs/complex/simpleWeaponFrame/low)
 
 /obj/item/gun/ballistic/automatic/pistol/n99/mid//improved
 	spread = 0
 	name = "10mm pistol (improved)"
+	extra_damage = 0
+	extra_penetration = 0
+	extra_parts = list(/obj/item/prefabs/complex/bolt/simple,
+	/obj/item/prefabs/complex/action/simple,
+	/obj/item/prefabs/complex/barrel/mm10,
+	/obj/item/prefabs/complex/simpleWeaponFrame/mid)
 
 /obj/item/gun/ballistic/automatic/pistol/n99/high//masterwork
 	spread = 0
-	
+	fire_delay = 1
 	name = "10mm pistol (masterwork)"
+	extra_damage = 3
+	extra_penetration = 5
+	extra_parts = list(/obj/item/prefabs/complex/bolt/simple,
+	/obj/item/prefabs/complex/action/simple,
+	/obj/item/prefabs/complex/barrel/mm10,
+	/obj/item/prefabs/complex/simpleWeaponFrame/high)
 
 /obj/item/gun/ballistic/automatic/pistol/n99/pers/gunslinger
 	name = "10mm pistol (gunslinger variant)"
-	fire_delay = 2
 	gunslinger = TRUE
 	fire_delay = 1.9
+	extra_damage = 0
+	extra_penetration = 0
+	extra_parts = list(/obj/item/prefabs/complex/bolt/simple,
+	/obj/item/prefabs/complex/action/simple,
+	/obj/item/prefabs/complex/barrel/mm10,
+	/obj/item/prefabs/complex/simpleWeaponFrame/mid,
+	/obj/item/advanced_crafting_components/alloys)
 
 /obj/item/gun/ballistic/automatic/pistol/n99/pers/glock
 	name = "10mm pistol (extended variant)"
 	mag_type = /obj/item/ammo_box/magazine/m10mm_auto
 	fire_delay = 1
+	extra_damage = 0
 	extra_penetration = -5
-	spread = 30
+	spread = 25
+	extra_parts = list(/obj/item/prefabs/complex/bolt/simple,
+	/obj/item/prefabs/complex/action/simple,
+	/obj/item/prefabs/complex/barrel/mm10,
+	/obj/item/prefabs/complex/simpleWeaponFrame/mid,
+	/obj/item/advanced_crafting_components/receiver)
 
 /obj/item/gun/ballistic/automatic/pistol/n99/pers/long
 	name = "10mm pistol (scoped variant)"
@@ -129,12 +161,17 @@
 	zoomable = TRUE
 	zoom_amt = 8
 	zoom_out_amt = 11
+	extra_parts = list(/obj/item/prefabs/complex/bolt/simple,
+	/obj/item/prefabs/complex/action/simple,
+	/obj/item/prefabs/complex/barrel/mm10,
+	/obj/item/prefabs/complex/simpleWeaponFrame/mid,
+	/obj/item/advanced_crafting_components/assembly)
 
 /obj/item/gun/ballistic/automatic/pistol/n99/executive
 	name = "\improper Executive" //'the Executive'
 	desc = "A gas-operated N99 pistol chambered in 10mm rounds. It has an accurate two-round-burst and a blue Vault-Tec finish, for only the most robust overseers."
 	icon_state = "executive"
-	can_suppress = FALSE
+	can_suppress = TRUE //YES NOW WE CAN!
 	burst_size = 2
 	extra_penetration = 10 //2x 35 damage, 10 AP- hits like a 2rd burst 5.56, but more accurate
 
@@ -144,10 +181,34 @@
 	icon_state = "ninemil"
 	mag_type = /obj/item/ammo_box/magazine/m9mm
 	w_class = WEIGHT_CLASS_NORMAL
-	fire_delay = 2
+	fire_delay = 1
 	can_suppress = FALSE
 	fire_sound = 'sound/f13weapons/ninemil.ogg'
 	can_attachments = TRUE
+
+/obj/item/gun/ballistic/automatic/pistol/beretta
+	name = "beretta M9FS"
+	desc = "One of the more common 9mm pistols, the Beretta is popular due to its reliability, 15 round magazine and good looks."
+	icon_state = "beretta"
+	mag_type = /obj/item/ammo_box/magazine/m9mmds
+	w_class = WEIGHT_CLASS_NORMAL
+	fire_delay = 2 
+	can_suppress = FALSE
+	fire_sound = 'sound/f13weapons/ninemil.ogg'
+	can_attachments = TRUE
+	extra_damage = 3
+
+/obj/item/gun/ballistic/automatic/pistol/sig
+	name = "sig P220"
+	desc = "The P220 Sig Sauer. A Swiss designed pistol, the Sig Sauer benefits from compact and lightweight construction."
+	icon_state = "sig"
+	mag_type = /obj/item/ammo_box/magazine/m9mm
+	w_class = WEIGHT_CLASS_SMALL
+	fire_delay = 0
+	can_suppress = FALSE
+	fire_sound = 'sound/f13weapons/ninemil.ogg'
+	can_attachments = TRUE
+	extra_damage = 2
 
 /obj/item/gun/ballistic/automatic/pistol/type17
 	name = "type 17"
@@ -167,3 +228,11 @@
 	extra_damage = 10 //40 damage, 20 AP- hits like a 7.62 and fires faster
 	extra_penetration = 20
 	can_attachments = TRUE
+
+/obj/item/gun/ballistic/automatic/pistol/ninemil/mafia
+	name = "mafia browning"
+	desc = "A mass produced pre-war Browning Hi-power 9mm pistol. This one is has been modified to better serve in street gunfights."
+	w_class = WEIGHT_CLASS_SMALL
+	fire_delay = 1.5
+	extra_damage = 5
+	extra_penetration = 10

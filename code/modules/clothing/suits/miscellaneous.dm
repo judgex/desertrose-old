@@ -707,9 +707,3 @@
 	throw_range = 2
 	w_class = WEIGHT_CLASS_TINY
 	flags_inv = HIDEGLOVES|HIDEEARS|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
-
-/obj/item/clothing/suit/inquisition
-	name = "костюм инквизитора"
-	desc = "Nobody expaects spanish inquisition."
-	icon_state = "inquisition"
-	item_state = "inquisition"	

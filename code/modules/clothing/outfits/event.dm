@@ -28,11 +28,3 @@
 	var/obj/item/a_gift/gift = new(H)
 	while(SEND_SIGNAL(bag, COMSIG_TRY_STORAGE_INSERT, gift, null, TRUE, FALSE))
 		gift = new(H)
-
-/datum/outfit/inquisitor
-	name = "Инквизитор"
-
-	suit = /obj/item/clothing/suit/inquisition
-	head = /obj/item/clothing/head/helmet/f13/inqusition
-	gloves = /obj/item/clothing/gloves/inquisition
-	id = /obj/item/card/id/gold

@@ -51,7 +51,7 @@ Great Khan
 	flag = F13PUSHER
 	department_head = list("Captain")
 	head_announce = list("Security")
-	faction = "Wastelander"
+	faction = "Raider"
 	total_positions = 6
 	spawn_positions = 6
 	description = "You are no common raider or tribal settler, for you are a Great Khan. Your ancestry is that of fierce warriors and noble chieftans, whose rites and sagas tell of blood soaked battlefields and great sacrifice for your tribe. At least, this was once the case: after the massacre at Bitter Springs by the NCR, your people have lost much of their strength - now you and many other Khans travel west of Vegas through Red Rock Canyon in the hopes of settling in the region of Yuma."
@@ -149,8 +149,10 @@ Raider
 	description = "You are an undesirable figure of some kind- perhaps a corrupt official, or a cannibalistic bartender, or a devious conman, to name a few examples. You have more freedom than anyone else in the wastes, and are not bound by the same moral code as others, but though you may only be interested in self-gain, you still have a responsibility to make your time here interesting, fun, and engaging for others- this means that whatever path you pursue should be more nuanced and flavorful than simple highway robbery or slavery. (Adminhelp if you require help setting up your character for the round.)"
 	supervisors = "Your desire to make things interesting and fun"
 	selection_color = "#ff4747"
-	exp_requirements = 280
+
 	outfit = /datum/outfit/job/wasteland/f13raider
+
+	exp_requirements = 280
 
 	access = list()
 	minimal_access = list()
@@ -246,8 +248,8 @@ Raider
 	suit = /obj/item/clothing/suit/armor/f13/raider/supafly
 	head = /obj/item/clothing/head/helmet/f13/raider
 	backpack_contents = list(
-		/obj/item/gun/ballistic/automatic/autopipe=1,
-		/obj/item/ammo_box/magazine/autopipe=2,
+		/obj/item/gun/ballistic/automatic/mini_uzi=1,
+		/obj/item/ammo_box/magazine/uzim9mm=3,
 		/obj/item/kitchen/knife/combat=1,
 		/obj/item/storage/pill_bottle/dice=1,
 		/obj/item/storage/fancy/cigarettes/cigpack_cannabis=1)
@@ -269,20 +271,21 @@ Raider
 	head = /obj/item/clothing/head/helmet/f13/raider/blastmaster
 	backpack_contents = list(
 		/obj/item/twohanded/fireaxe=1,
-		/obj/item/gun/ballistic/revolver/colt6250=1,
+		/obj/item/gun/ballistic/automatic/pistol/n99/pers/glock=1,
 		/obj/item/grenade/iedcasing=2,
-		/obj/item/ammo_box/l10mm=2)
+		/obj/item/ammo_box/magazine/m10mm_auto = 2)
 
 /datum/outfit/loadout/raider_sadist
 	name = "Sadist"
 	suit = /obj/item/clothing/suit/armor/f13/raider/sadist
 	head = /obj/item/clothing/head/helmet/f13/raider/arclight
 	backpack_contents = list(
-		/obj/item/gun/ballistic/revolver/colt357=1,
-		/obj/item/ammo_box/a357=2,
+		/obj/item/gun/ballistic/revolver/m29 = 1,
+		/obj/item/ammo_box/m44 = 2,
 		/obj/item/clothing/mask/gas/explorer/folded=1,
-		/obj/item/throwing_star/spear=1,
-		/obj/item/grenade/chem_grenade/teargas=1)
+		/obj/item/storage/belt/tribe_quiver = 1,
+		/obj/item/twohanded/spear = 1,
+		/obj/item/skub = 1)
 
 /datum/outfit/loadout/raider_badlands
 	name = "Badlands"
@@ -290,9 +293,9 @@ Raider
 	head = /obj/item/clothing/head/helmet/f13/fiend
 	backpack_contents = list(
 		/obj/item/restraints/legcuffs/bola/tactical=1,
-		/obj/item/gun/ballistic/revolver/police=1,
-		/obj/item/ammo_box/a357=1,
-		/obj/item/reagent_containers/hypospray/medipen/psycho=1,
+		/obj/item/gun/ballistic/automatic/pistol/m1911 = 1,
+		/obj/item/ammo_box/magazine/m45 = 2,
+		/obj/item/reagent_containers/hypospray/medipen/psycho=2,
 		/obj/item/reagent_containers/pill/patch/turbo=1)
 
 /datum/outfit/loadout/raider_painspike
@@ -310,6 +313,7 @@ Raider
 /datum/outfit/loadout/raider_bos
 	name = "Brotherhood Exile"
 	suit = /obj/item/clothing/suit/armor/f13/exile/bosexile
+	uniform = /obj/item/clothing/under/syndicate
 	id = /obj/item/card/id/rusted/brokenholodog
 	backpack_contents = list(
 		/obj/item/gun/energy/laser/pistol=1,
@@ -322,7 +326,7 @@ Raider
 	id = /obj/item/card/id/rusted
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/marksman/servicerifle=1,
-		/obj/item/ammo_box/magazine/m556/rifle=2)
+		/obj/item/ammo_box/magazine/m556/rifle=3)
 
 /datum/outfit/loadout/raider_legion
 	name = "Punished Legionnaire"
@@ -352,7 +356,7 @@ Raider
     glasses = /obj/item/clothing/glasses/sunglasses
     shoes = /obj/item/clothing/shoes/f13/fancy
     backpack_contents = list(
-        /obj/item/gun/ballistic/automatic/pistol/ninemil=1,
+        /obj/item/gun/ballistic/automatic/pistol/ninemil/mafia=1,
         /obj/item/ammo_box/magazine/m9mm=2,
 		/obj/item/card/id/dogtag/town/mafia=1,
         /obj/item/toy/cards/deck=1)
@@ -364,7 +368,7 @@ Raider
 	id = /obj/item/card/id/rusted/fadedvaultid
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/pistol/n99=1,
-		/obj/item/ammo_box/magazine/m10mm_adv=2)
+		/obj/item/ammo_box/magazine/m10mm_adv=3)
 
 /datum/job/wasteland/f13wastelander
 	title = "Wastelander"
@@ -383,7 +387,7 @@ Raider
 	loadout_options = list(
 	/datum/outfit/loadout/vault_refugee,
 	/datum/outfit/loadout/petro,
-	/datum/outfit/loadout/follower,
+	///datum/outfit/loadout/follower,
 	/datum/outfit/loadout/merchant,
 	/datum/outfit/loadout/gambler,
 	/datum/outfit/loadout/citizen,
@@ -452,6 +456,7 @@ Raider
 		/obj/item/gun/ballistic/revolver/colt357=2,
 		/obj/item/ammo_box/a357=2)
 
+/*
 /datum/outfit/loadout/follower
 	name = "Follower"
 	uniform = /obj/item/clothing/under/f13/follower
@@ -461,6 +466,7 @@ Raider
 	l_hand = /obj/item/storage/firstaid/ancient
 	backpack_contents =  list(
 		/obj/item/gun/ballistic/automatic/pistol/m1911=1)
+*/
 
 /datum/outfit/loadout/merchant
 	name = "Roving Trader"
@@ -514,4 +520,3 @@ Raider
 	l_hand = /obj/item/gun/ballistic/automatic/marksman/servicerifle/varmint
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/m556/rifle/small=2)
-
