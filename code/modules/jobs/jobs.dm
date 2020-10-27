@@ -23,6 +23,8 @@ GLOBAL_LIST_INIT(command_positions, list(
     "Shaman",
     "Head Hunter",
 
+	"US Commander",
+
 	"Followers Administrator"
     ))
 
@@ -131,7 +133,22 @@ GLOBAL_LIST_INIT(faction_player_positions, list(
 GLOBAL_LIST_INIT(antagonist_whitelist_positions, list(
     "Raider",
 	"Outlaw",
-    "Great Khan" //DA KHANZ, BAY BEEEEEEE
+    "Great Khan", //DA KHANZ, BAY BEEEEEEE
+	"US Private",
+	"US Heavy Soldier",
+	"US Scientist",
+	"US Medic",
+	"US Engineer",
+	"US Commander"
+))
+
+GLOBAL_LIST_INIT(ankap_positions, list(
+	"US Private",
+	"US Heavy Soldier",
+	"US Scientist",
+	"US Medic",
+	"US Engineer",
+	"US Commander"
 ))
 
 GLOBAL_LIST_INIT(brotherhood_command_positions, list(

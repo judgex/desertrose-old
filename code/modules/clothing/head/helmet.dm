@@ -923,7 +923,7 @@
 
 /obj/item/clothing/head/helmet/f13/power_armor/attack_self(mob/user)
 	on = !on
-	icon_state = "[initial(icon_state)][on]"
+//	icon_state = "[initial(icon_state)][on]"
 	user.update_inv_head()	//so our mob-overlays update
 
 	if(on)

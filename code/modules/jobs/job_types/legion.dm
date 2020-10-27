@@ -8,6 +8,8 @@
 	enforces = "The Legion expects: Obeying orders of superiors. A roman style name. Wearing the uniform, unless acting as a nonlethal infiltrator."
 	objectivesList = list("Leadership recommends the following goal for this week: Establish an outpost at the radio tower","Leadership recommends the following goal for this week: Establish patrols and fortifications around the main road", "Leadership recommends the following goal for this week: Acquire and train slaves")
 
+	disallowed_gender = FEMALE
+
 /datum/outfit/job/CaesarsLegion
 	id = null
 	ears = null
@@ -59,6 +61,8 @@ Needs whitelist
 	access = list()
 	minimal_access = list()
 
+	exp_requirements = 300
+	exp_type = EXP_TYPE_LEGION
 
 /datum/job/CaesarsLegion/Legionnaire/f13legate/after_spawn(mob/living/carbon/human/H, mob/M)
 	H.add_quirk("Hard Yards")
@@ -103,6 +107,9 @@ Centurion
 	/datum/outfit/loadout/centassault, //9mm uzi and thermic lance
 	/datum/outfit/loadout/centbreacher //breacher shotgun and fire axe
 	)
+
+	exp_requirements = 250
+	exp_type = EXP_TYPE_LEGION
 
 /datum/job/CaesarsLegion/Legionnaire/f13centurion/after_spawn(mob/living/carbon/human/H, mob/M)
 	H.add_quirk("Hard Yards")
@@ -170,6 +177,9 @@ Orator
 
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13orator
 
+	exp_requirements = 65
+	exp_type = EXP_TYPE_LEGION
+
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13orator
 	name = "Legion Orator"
 	suit = 	/obj/item/clothing/suit/armor/f13/legion/vet/orator
@@ -201,6 +211,9 @@ Priestess of Mars
 	supervisors = "the Centurion, Mars"
 
 	outfit = /datum/outfit/job/CaesarsLegion/f13priestess
+
+	exp_requirements = 100
+	exp_type = EXP_TYPE_LEGION
 
 /datum/outfit/job/CaesarsLegion/f13priestess
 	name = "Priestess of Mars"
@@ -317,6 +330,9 @@ Decanii
 
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13decanvet
 
+	exp_requirements = 65
+	exp_type = EXP_TYPE_LEGION
+
 /datum/job/CaesarsLegion/Legionnaire/f13decanvet/after_spawn(mob/living/carbon/human/H, mob/M)
 	H.add_quirk("Big Leagues")
 	H.add_quirk("Iron Fist")
@@ -363,6 +379,9 @@ Decanii
 
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13decan
 
+	exp_requirements = 60
+	exp_type = EXP_TYPE_LEGION
+
 /datum/job/CaesarsLegion/Legionnaire/f13decan/after_spawn(mob/living/carbon/human/H, mob/M)
 	H.add_quirk("Big Leagues")
 	H.add_quirk("Iron Fist")
@@ -407,6 +426,9 @@ Decanii
 	supervisors = "the Prime Decanus and the Centurion"
 
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13decanrec
+
+	exp_requirements = 50
+	exp_type = EXP_TYPE_LEGION
 
 /datum/job/CaesarsLegion/Legionnaire/f13decanrec/after_spawn(mob/living/carbon/human/H, mob/M)
 	H.add_quirk("Big Leagues")
@@ -461,6 +483,9 @@ Vexillarius
 		/datum/outfit/loadout/vexassault, //ripper, m29scoped
 		/datum/outfit/loadout/vexsupport //trail carbine, smoke bombs
 		)
+
+	exp_requirements = 45
+	exp_type = EXP_TYPE_LEGION
 
 /datum/job/CaesarsLegion/Legionnaire/f13vexillarius/after_spawn(mob/living/carbon/human/H, mob/M)
 	H.add_quirk("Hard Yards")
@@ -523,6 +548,9 @@ datum/job/CaesarsLegion/Legionnaire/f13slavemaster
 
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13slavemaster
 
+	exp_requirements = 35
+	exp_type = EXP_TYPE_LEGION
+
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13slavemaster/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
 	if(visualsOnly)
@@ -568,6 +596,9 @@ Veteran Legionary
 	/datum/outfit/loadout/vetlegrange, //marksman rifle
 	/datum/outfit/loadout/vetlegclose //lever-action shotgun
 	)
+
+	exp_requirements = 65
+	exp_type = EXP_TYPE_LEGION
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13vetlegionary/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
@@ -644,6 +675,9 @@ Prime Legionairy
 	/datum/outfit/loadout/legbreach, //hunting shotgun
 	/datum/outfit/loadout/legrange //trail carbine
 	)
+
+	exp_requirements = 45
+	exp_type = EXP_TYPE_LEGION
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13legionary/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()

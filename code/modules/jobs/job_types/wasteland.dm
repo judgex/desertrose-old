@@ -51,7 +51,7 @@ Great Khan
 	flag = F13PUSHER
 	department_head = list("Captain")
 	head_announce = list("Security")
-	faction = "Wastelander"
+	faction = "Raider"
 	total_positions = 6
 	spawn_positions = 6
 	description = "You are no common raider or tribal settler, for you are a Great Khan. Your ancestry is that of fierce warriors and noble chieftans, whose rites and sagas tell of blood soaked battlefields and great sacrifice for your tribe. At least, this was once the case: after the massacre at Bitter Springs by the NCR, your people have lost much of their strength - now you and many other Khans travel west of Vegas through Red Rock Canyon in the hopes of settling in the region of Yuma."
@@ -142,7 +142,7 @@ Raider
 	flag = F13RAIDER
 	department_head = list("Captain")
 	head_announce = list("Security")
-	faction = "Wastelander"
+	faction = "Raider"
 	social_faction = "Raiders"
 	total_positions = 15
 	spawn_positions = 15
@@ -177,6 +177,8 @@ Raider
 	belt = null
 	backpack = /obj/item/storage/backpack/satchel/explorer
 	satchel = /obj/item/storage/backpack/satchel/explorer
+
+	exp_requirements = 280
 
 /datum/outfit/job/wasteland/f13raider/pre_equip(mob/living/carbon/human/H)
 	..()
