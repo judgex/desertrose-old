@@ -23,9 +23,7 @@ GLOBAL_LIST_INIT(command_positions, list(
     "Shaman",
     "Head Hunter",
 
-	"Lead Practitioner",
-
-	"US Commander"
+	"Followers Administrator"
     ))
 
 GLOBAL_LIST_INIT(silicon_whitelist_positions, list(
@@ -84,7 +82,7 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 "Shaman",
 "Head Hunter",
 
-"Lead Practitioner",
+"Followers Administrator",
 
 "Cyborg",
 "Vault-tec Security",
@@ -133,11 +131,7 @@ GLOBAL_LIST_INIT(faction_player_positions, list(
 GLOBAL_LIST_INIT(antagonist_whitelist_positions, list(
     "Raider",
 	"Outlaw",
-    "Great Khan", //DA KHANZ, BAY BEEEEEEE
-    "US Private",
-    "US Medic",
-    "US Engineer",
-    "US Commander"
+    "Great Khan" //DA KHANZ, BAY BEEEEEEE
 ))
 
 GLOBAL_LIST_INIT(brotherhood_command_positions, list(
@@ -226,16 +220,6 @@ GLOBAL_LIST_INIT(ncr_positions, list(
     "NCR Administrator"
 ))
 
-GLOBAL_LIST_INIT(ankap_positions, list(
-    "US Engineer",
-    "US Scientist",
-    "US Private",
-    "US Heavy Soldier",
-    "US Medic",
-    "US Commander"
-))
-
-
 GLOBAL_LIST_INIT(vault_command_positions, list(
     "Overseer",
     "Chief of Security"
@@ -277,33 +261,29 @@ GLOBAL_LIST_INIT(followers_command_positions, list(
 GLOBAL_LIST_INIT(followers_positions, list(
     "Followers Doctor",
     "Followers Guard",
-    "Followers Volunteer",
-	"Followers Scientist"
+    "Followers Volunteer"
+	//"Followers Scientist"
 ))
 /*
 GLOBAL_LIST_INIT(engineering_positions, list(
     "Chief Engineer",
     "Station Engineer",
     "Atmospheric Technician"))
-
 GLOBAL_LIST_INIT(medical_positions, list(
     "Chief Medical Officer",
     "Medical Doctor",
     "Geneticist",
     "Virologist",
     "Chemist"))
-
 GLOBAL_LIST_INIT(science_positions, list(
     "Research Director",
     "Scientist",
     "Roboticist"))
-
 GLOBAL_LIST_INIT(supply_positions, list(
     "Head of Personnel",
     "Quartermaster",
     "Cargo Technician",
     "Shaft Miner"))
-
 GLOBAL_LIST_INIT(civilian_positions, list(
     "Bartender",
     "Botanist",
@@ -315,13 +295,11 @@ GLOBAL_LIST_INIT(civilian_positions, list(
     "Clown",
     "Mime",
     "Assistant"))
-
 GLOBAL_LIST_INIT(security_positions, list(
     "Head of Security",
     "Warden",
     "Detective",
     "Security Officer"))
-
 GLOBAL_LIST_INIT(nonhuman_positions, list(
     "AI",
     "Cyborg",

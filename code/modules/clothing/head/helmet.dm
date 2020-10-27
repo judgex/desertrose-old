@@ -1029,12 +1029,6 @@
 	item_state = "excavator"
 	armor = list("melee" = 60, "bullet" = 55, "laser" = 45, "energy" = 60, "bomb" = 62, "bio" = 100, "rad" = 90, "fire" = 90, "acid" = 0)
 
-/obj/item/clothing/head/helmet/f13/inqusition
-	name = "шляпа инквизитора"
-	desc = "Nobody expects inquisition."
-	icon_state = "inquisition"
-	item_state = "inquisition"
-
 //LightToggle
 
 /obj/item/clothing/head/helmet/update_icon()

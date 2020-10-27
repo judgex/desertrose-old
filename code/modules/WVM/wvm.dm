@@ -52,6 +52,7 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 	var/expected_price = 0
 	var/obj/item/vending_item
 	var/item_not_acceptable_message = "Something is wrong... Can't insert an item."
+	var/free_wares = FALSE
 
 /* Weapon Vending Machine*/
 /obj/machinery/trading_machine/weapon
@@ -390,7 +391,7 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 	popup.open()
 
 /obj/machinery/trading_machine/proc/get_ui_content(var/state)
-	var/dat = "<meta charset=UTF-8>"
+	var/dat = ""
 	switch(state)
 		// --- Work
 		if(STATE_IDLE)
@@ -505,160 +506,6 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 	var/expected_price = 0
 	var/list/prize_list = list()  //if you add something to this, please, for the love of god, sort it by price/type. use tabs and not spaces.
 
-/obj/machinery/mineral/wasteland_vendor/medical
-	name = "Wasteland Vending Machine - Medical"
-	icon_state = "med_idle"
-	prize_list = list(
-		new /datum/data/wasteland_equipment("Syringe",						/obj/item/reagent_containers/syringe,								10),
-		new /datum/data/wasteland_equipment("Empty pillbottle",				/obj/item/storage/pill_bottle,										15),
-		new /datum/data/wasteland_equipment("Rad-X pill",					/obj/item/reagent_containers/pill/radx,								20),
-		new /datum/data/wasteland_equipment("RadAway",						/obj/item/reagent_containers/blood/radaway,							30),
-		new /datum/data/wasteland_equipment("Stimpak",						/obj/item/reagent_containers/hypospray/medipen/stimpak,				100),
-		new /datum/data/wasteland_equipment("Chemistry for Wastelanders",	/obj/item/book/granter/trait/chemistry,								600)
-		)
-
-/obj/machinery/mineral/wasteland_vendor/weapons
-	name = "Wasteland Vending Machine - Weapons"
-	icon_state = "weapon_idle"
-	prize_list = list(
-		new /datum/data/wasteland_equipment("survival knife",				/obj/item/kitchen/knife/combat/survival, 							70),
-		new /datum/data/wasteland_equipment("9mm pistol",					/obj/item/gun/ballistic/automatic/pistol/ninemil,					150),
-		new /datum/data/wasteland_equipment("M1911",						/obj/item/gun/ballistic/automatic/pistol/m1911,						170),
-		new /datum/data/wasteland_equipment("Guns and Bullets, Part 1",		/obj/item/book/granter/trait/gunsmith_one, 							100),
-		new /datum/data/wasteland_equipment("Guns and Bullets, Part 2",		/obj/item/book/granter/trait/gunsmith_two,							200),
-		new /datum/data/wasteland_equipment("Guns and Bullets, Part 3",		/obj/item/book/granter/trait/gunsmith_three, 						300),
-		new /datum/data/wasteland_equipment("Guns and Bullets, Part 4",		/obj/item/book/granter/trait/gunsmith_four, 							400)
-		)
-
-/obj/machinery/mineral/wasteland_vendor/ammo
-	name = "Wasteland Vending Machine - Ammo"
-	icon_state = "ammo_idle"
-	prize_list = list(
-		new /datum/data/wasteland_equipment("Handgun magazine (.45)",		/obj/item/ammo_box/magazine/m45,									50),
-		new /datum/data/wasteland_equipment("9mm pistol magazine (9mm)",	/obj/item/ammo_box/magazine/m9mm,									50),
-		new /datum/data/wasteland_equipment("10mm pistol magazine (10mm)",	/obj/item/ammo_box/magazine/m10mm_adv,								60),
-		new /datum/data/wasteland_equipment("Speed strip (.357)",			/obj/item/ammo_box/a357,											70),
-		new /datum/data/wasteland_equipment("Speed loader (.44)",			/obj/item/ammo_box/m44,												70),
-		new /datum/data/wasteland_equipment("Speed loader (.38)",			/obj/item/ammo_box/c38,												70),
-		new /datum/data/wasteland_equipment("small rifle magazine (5.56mm)",/obj/item/ammo_box/magazine/m556/rifle/small,						100),
-		new /datum/data/wasteland_equipment("Blackpowder",					/obj/item/reagent_containers/glass/bottle/blackpowder,				50)
-		)
-
-/obj/machinery/mineral/wasteland_vendor/clothing
-	name = "Wasteland Vending Machine - Clothing"
-	icon_state = "armor_idle"
-	prize_list = list(
-		new /datum/data/wasteland_equipment("Worn outft",						/obj/item/clothing/under/f13/worn,								15),
-		new /datum/data/wasteland_equipment("Settler outfit",					/obj/item/clothing/under/f13/settler,							30),
-		new /datum/data/wasteland_equipment("Merchant outfit",					/obj/item/clothing/under/f13/merchant,							40),
-		new /datum/data/wasteland_equipment("Followers outfit",					/obj/item/clothing/under/f13/followers,							80),
-		new /datum/data/wasteland_equipment("Combat uniform",					/obj/item/clothing/under/f13/combat,							250),
-		new /datum/data/wasteland_equipment("Ranger's Guide to the Wasteland",	/obj/item/book/granter/trait/trekking,							600)
-		)
-
-/obj/machinery/mineral/wasteland_vendor/general
-	name = "Wasteland Vending Machine - General"
-	icon_state = "generic_idle"
-	prize_list = list(
-		new /datum/data/wasteland_equipment("Drinking glass",				/obj/item/reagent_containers/food/drinks/drinkingglass,				5),
-		new /datum/data/wasteland_equipment("Zippo",						/obj/item/lighter,													20),
-		new /datum/data/wasteland_equipment("Explorer satchel",				/obj/item/storage/backpack/satchel/explorer,						25),
-		new /datum/data/wasteland_equipment("Spray bottle",					/obj/item/reagent_containers/spray,									35),
-		new /datum/data/wasteland_equipment("Bottle of E-Z-Nutrient",		/obj/item/reagent_containers/glass/bottle/nutrient/ez,				40),
-		new /datum/data/wasteland_equipment("Craftsmanship Monthly",		/obj/item/book/granter/trait/techno,								600),
-		)
-
-/obj/machinery/mineral/wasteland_vendor/camp
-	name = "Wasteland Camp-O-Vend"
-	icon_state = "generic_idle"
-	prize_list = list(
-		new /datum/data/wasteland_equipment("Vault-Tec C.A.M.P. Basic Edition",			/obj/item/survivalcapsule,								50),
-		new /datum/data/wasteland_equipment("Vault-Tec C.A.M.P. Premium Edition",		/obj/item/survivalcapsule/premium,						100),
-		new /datum/data/wasteland_equipment("Vault-Tec C.A.M.P. Expanded Edition",		/obj/item/survivalcapsule/quad,							150),
-		new /datum/data/wasteland_equipment("Vault-Tec C.A.M.P. Merchant Edition",		/obj/item/survivalcapsule/merchant,						300),
-		new /datum/data/wasteland_equipment("Vault-Tec C.A.M.P. Party-Tent Edition",	/obj/item/survivalcapsule/party,						150),
-		new /datum/data/wasteland_equipment("Vault-Tec C.A.M.P. Mess-Hall Edition",		/obj/item/survivalcapsule/kitchen,						250),
-		new /datum/data/wasteland_equipment("Vault-Tec C.A.M.P. Farm-N-Go Edition",		/obj/item/survivalcapsule/farm,							200),
-		new /datum/data/wasteland_equipment("Vault-Tec C.A.M.P. Occult Edition",		/obj/item/survivalcapsule/fortuneteller,				125),
-		new /datum/data/wasteland_equipment("Vault-Tec C.A.M.P. Smithery Edition",		/obj/item/survivalcapsule/blacksmith,					400),
-		new /datum/data/wasteland_equipment("Vault-Tec C.A.M.P. Ultra-Deluxe Edition",	/obj/item/survivalcapsule/super_deluxe,					600),
-		new /datum/data/wasteland_equipment("Keep your C.A.M.P. Clean: Trashbag",		/obj/item/storage/bag/trash,							30),
-		new /datum/data/wasteland_equipment("Keep your C.A.M.P. Clean: Soap",			/obj/item/soap/homemade,								25)
-		)
-
-
-/obj/machinery/mineral/wasteland_vendor/pipboy
-	name = "Wasteland Pip-N-Walk"
-	icon_state = "generic_idle"
-	prize_list = list(
-		new /datum/data/wasteland_equipment("Pip-boy 3000",			/obj/item/pda,																150),
-		new /datum/data/wasteland_equipment("Reprogrammable ID",	/obj/item/card/id/selfassign,												100),
-		new /datum/data/wasteland_equipment("E.N.H.A.N.C.E. Your Pip-boy: Reagent Scanner",	/obj/item/cartridge/chemistry,						50),
-		new /datum/data/wasteland_equipment("E.N.H.A.N.C.E. Your Pip-boy: Health Scanner",	/obj/item/cartridge/medical,						50),
-		new /datum/data/wasteland_equipment("E.N.H.A.N.C.E. Your Pip-boy: Signaler",	/obj/item/cartridge/signal,								50),
-
-
-		)
-
-
-/obj/machinery/mineral/wasteland_vendor/special
-	name = "Wasteland Vending Machine - Special"
-	icon_state = "liberationstation_idle"
-	prize_list = list(
-		new /datum/data/wasteland_equipment("Random manual",					/obj/item/book/manual/random,									40),
-		new /datum/data/wasteland_equipment("Box of ingredients - American",	/obj/item/storage/box/ingredients/american,						80),
-		new /datum/data/wasteland_equipment("Music box",						/obj/item/holodisk/musicbox,									400),
-		new /datum/data/wasteland_equipment("Advanced Armor and You",			/obj/item/book/granter/trait/pa_wear,							600),
-		new /datum/data/wasteland_equipment("???",								/obj/item/toy/syndicateballoon,									3000)
-		)
-
-/obj/machinery/mineral/wasteland_vendor/advcomponents
-	name = "Wasteland Vending Machine - Components"
-	icon_state = "generic_idle"
-	prize_list = list(
-		new /datum/data/wasteland_equipment("Advanced Modular Receiver",		/obj/item/advanced_crafting_components/receiver,					200),
-		new /datum/data/wasteland_equipment("Weapon Assembly",					/obj/item/advanced_crafting_components/assembly,					200),
-		new /datum/data/wasteland_equipment("Superconductor Coils",				/obj/item/advanced_crafting_components/conductors,					200),
-		new /datum/data/wasteland_equipment("Focused crystal lenses",			/obj/item/advanced_crafting_components/lenses,						200),
-		new /datum/data/wasteland_equipment("Flux capacitator",					/obj/item/advanced_crafting_components/flux,						200),
-		new /datum/data/wasteland_equipment("Superlight Alloys",				/obj/item/advanced_crafting_components/alloys,						200)
-		)
-
-/obj/machinery/mineral/wasteland_vendor/attachments
-	name = "Wasteland Vending Machine - Attachments"
-	icon_state = "generic_idle"
-	prize_list = list(
-		new /datum/data/wasteland_equipment("Weapon Optics",				/obj/item/attachments/scope,									150),
-		new /datum/data/wasteland_equipment("Recoil Compensator",			/obj/item/attachments/recoil_decrease,							100),
-		new /datum/data/wasteland_equipment("Improved Barrel",				/obj/item/attachments/bullet_speed,								100),
-		new /datum/data/wasteland_equipment("Burst Cam",					/obj/item/attachments/burst_improvement,						200)
-		)
-
-/obj/machinery/mineral/wasteland_vendor/crafting
-	name = "Wasteland Vending Machine - Crafting"
-	icon_state = "generic_idle"
-	prize_list = list(
-		new /datum/data/wasteland_equipment("High Quality Parts",				/obj/item/stack/crafting/goodparts,									25),
-		new /datum/data/wasteland_equipment("Metal Parts",						/obj/item/stack/crafting/metalparts,								10),
-		new /datum/data/wasteland_equipment("Electronic Parts",					/obj/item/stack/crafting/electronicparts,							5),
-		new /datum/data/wasteland_equipment("Metal Sheets x 20",				/obj/item/stack/sheet/metal/twenty,									50),
-		new /datum/data/wasteland_equipment("Metal Sheets x 50",				/obj/item/stack/sheet/metal/fifty,									115),
-		new /datum/data/wasteland_equipment("Glass Sheets x 10",				/obj/item/stack/sheet/glass/ten,									30),
-		new /datum/data/wasteland_equipment("Glass Sheets x 50",				/obj/item/stack/sheet/glass/fifty,									90)
-		)
-
-/obj/machinery/mineral/wasteland_vendor/mining
-	name = "Wasteland Vending Machine - Mining"
-	icon_state = "generic_idle"
-	prize_list = list(
-		new /datum/data/wasteland_equipment("Pickaxe",					/obj/item/pickaxe,											25),
-		new /datum/data/wasteland_equipment("Mining drill",				/obj/item/pickaxe/drill,									100),
-		new /datum/data/wasteland_equipment("Manual mining scanner",	/obj/item/mining_scanner,									25),
-		new /datum/data/wasteland_equipment("Automatic mining scanner",	/obj/item/t_scanner/adv_mining_scanner/lesser,				200),
-		new /datum/data/wasteland_equipment("Advanced mining scanner",	/obj/item/t_scanner/adv_mining_scanner,						300),
-		new /datum/data/wasteland_equipment("Proto-kinetic crusher",	/obj/item/twohanded/required/kinetic_crusher,				500),
-		new /datum/data/wasteland_equipment("ORM Board",				/obj/item/circuitboard/machine/ore_redemption,				150)
-		)
 
 /datum/data/wasteland_equipment
 	var/equipment_name = "generic"
@@ -777,3 +624,193 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		stored_caps = 0
 	playsound(src, 'sound/items/coinflip.ogg', 60, 1)
 	src.ui_interact(usr)
+
+
+/obj/machinery/mineral/wasteland_vendor/medical
+	name = "Med-Tek Vending Machine"
+	desc = "A battered prewar vending machine, somehow still stocked with Med-Tek medical supplies."
+	icon_state = "med_idle"
+	prize_list = list(
+//		new /datum/data/wasteland_equipment("Syringe",						/obj/item/reagent_containers/syringe,								10),
+		new /datum/data/wasteland_equipment("Empty pill bottle",				/obj/item/storage/pill_bottle,									5),
+		new /datum/data/wasteland_equipment("Rad-X pill",					/obj/item/reagent_containers/pill/radx,								15),
+		new /datum/data/wasteland_equipment("Bottle of Charcoal",			/obj/item/storage/pill_bottle/charcoal,								50),
+		new /datum/data/wasteland_equipment("Super Stimpak",				/obj/item/reagent_containers/hypospray/medipen/stimpak/super,		100),
+		new /datum/data/wasteland_equipment("Chemistry for Wastelanders",	/obj/item/book/granter/trait/chemistry,								600)
+		)
+/obj/machinery/mineral/wasteland_vendor/medical/shitty
+	name = "Arktos Pharma Vending Machine"
+	desc = "A battered prewar vending machine, filled with off-brand medical junk. Most of it's probably got tetanus."
+	icon_state = "custom_idle"
+	prize_list = list(
+		new /datum/data/wasteland_equipment("Flask of water",				/obj/item/reagent_containers/food/drinks/flask,						5),
+		new /datum/data/wasteland_equipment("Meal Ready to Eat",			/obj/item/reagent_containers/food/snacks/f13/mre,					15),
+		new /datum/data/wasteland_equipment("RadAway",						/obj/item/reagent_containers/blood/radaway,							30),
+		new /datum/data/wasteland_equipment("Stimpak",						/obj/item/reagent_containers/hypospray/medipen/stimpak,				50),
+		new /datum/data/wasteland_equipment("Styptic Powder Spray",			/obj/item/reagent_containers/medspray/styptic,						70),
+		new /datum/data/wasteland_equipment("Tin of Mentats",				/obj/item/storage/pill_bottle/chem_tin/mentats,						90)
+		)
+
+/obj/machinery/mineral/wasteland_vendor/weapons
+	name = "Guns and Bullets Magazine Vendor"
+	desc = "A battered, abused vending machine owned and supplied by the fine authors at Guns and Bullets Magazine. It also stocks blackpowder."
+	icon_state = "weapon_idle"
+	prize_list = list(
+		new /datum/data/wasteland_equipment("Blackpowder",					/obj/item/reagent_containers/glass/bottle/blackpowder,				50),
+		new /datum/data/wasteland_equipment("Guns and Bullets, Part 1",		/obj/item/book/granter/trait/gunsmith_one, 							100),
+		new /datum/data/wasteland_equipment("Guns and Bullets, Part 2",		/obj/item/book/granter/trait/gunsmith_two,							200),
+		new /datum/data/wasteland_equipment("Guns and Bullets, Part 3",		/obj/item/book/granter/trait/gunsmith_three, 						300),
+		new /datum/data/wasteland_equipment("Guns and Bullets, Part 4",		/obj/item/book/granter/trait/gunsmith_four, 						400)
+		)
+
+/obj/machinery/mineral/wasteland_vendor/weapons/shitty
+	name = "Gun Runners Vending Machine"
+	desc = "A battered, abused vending machine owned and supplied by the Gun Runners."
+	icon_state = "weapon_idle"
+	prize_list = list(
+		new /datum/data/wasteland_equipment("survival knife",				/obj/item/kitchen/knife/combat/survival, 							5),
+		new /datum/data/wasteland_equipment("9mm pistol",					/obj/item/gun/ballistic/automatic/pistol/ninemil,					50),
+		new /datum/data/wasteland_equipment("M1911",						/obj/item/gun/ballistic/automatic/pistol/m1911,						70),
+		new /datum/data/wasteland_equipment("Blackpowder",					/obj/item/reagent_containers/glass/bottle/blackpowder,				50),
+		)
+
+/obj/machinery/mineral/wasteland_vendor/ammo
+	name = "Hauer Premium Ammo Vending Machine"
+	desc = "A prewar vending machine with a tiny, delicate internal fabricator for printing magazines. A label for Hauer Premium Ammo is printed on the side in blocky letters."
+	icon_state = "ammo_idle"
+	prize_list = list(
+		new /datum/data/wasteland_equipment("Handgun magazine (.45)",		/obj/item/ammo_box/magazine/m45,									6),
+		new /datum/data/wasteland_equipment("9mm pistol magazine (9mm)",	/obj/item/ammo_box/magazine/m9mm,									6),
+		new /datum/data/wasteland_equipment("10mm pistol magazine (10mm)",	/obj/item/ammo_box/magazine/m10mm_adv,								10),
+		new /datum/data/wasteland_equipment("Speed strip (.357)",			/obj/item/ammo_box/a357,											5),
+		new /datum/data/wasteland_equipment("Speed loader (.44)",			/obj/item/ammo_box/m44,												8),
+		new /datum/data/wasteland_equipment("Speed loader (.38)",			/obj/item/ammo_box/c38,												5),
+		new /datum/data/wasteland_equipment("small rifle magazine (5.56mm)",/obj/item/ammo_box/magazine/m556/rifle/small,						22)
+		)
+
+/obj/machinery/mineral/wasteland_vendor/clothing
+	name = "Lady Frumperton's Fashion Vending Machine"
+	desc = "A rusty vending machine labeled with the faded logo of an obscure, low-cost prewar clothing company."
+	icon_state = "armor_idle"
+	prize_list = list(
+		new /datum/data/wasteland_equipment("Waistcoat",					/obj/item/clothing/accessory/waistcoat,								5),
+		new /datum/data/wasteland_equipment("Bandage dress",				/obj/item/clothing/under/f13/erpdress,								8),
+		new /datum/data/wasteland_equipment("Classy dress",					/obj/item/clothing/under/f13/classdress,							12),
+		new /datum/data/wasteland_equipment("White Dress",					/obj/item/clothing/suit/whitedress,									15),
+		new /datum/data/wasteland_equipment("Loanshark outfit",				/obj/item/clothing/under/f13/sleazeball,							18),
+		new /datum/data/wasteland_equipment("Bowler Hat",					/obj/item/clothing/head/bowler,										20),
+		new /datum/data/wasteland_equipment("Psychologist's turtleneck",	/obj/item/clothing/under/f13/psychologist,							24),
+		new /datum/data/wasteland_equipment("Kitty headband",				/obj/item/clothing/head/simplekitty,								25),
+		new /datum/data/wasteland_equipment("Armor kit",					/obj/item/clothing/suit/armor/f13/punk,								25),
+		new /datum/data/wasteland_equipment("Dusty garb",					/obj/item/clothing/under/f13/ranger,								40),
+		new /datum/data/wasteland_equipment("Officer's uniform",			/obj/item/clothing/under/f13/navyofficer,							120),
+		new /datum/data/wasteland_equipment("Desert Battle Uniform",		/obj/item/clothing/under/f13/dbdu,									240),
+		new /datum/data/wasteland_equipment("Bodyguard's outfit",			/obj/item/clothing/under/f13/bodyguard,								300),
+		new /datum/data/wasteland_equipment("Advanced Armor and You",		/obj/item/book/granter/trait/pa_wear,								600)
+		)
+
+/obj/machinery/mineral/wasteland_vendor/general
+	name = "Wasteland Vending Machine"
+	desc = "A crappy vending machine filled with junk. Who even put this here?"
+	icon_state = "trade_idle"
+	prize_list = list(
+		new /datum/data/wasteland_equipment("Drinking glass",				/obj/item/reagent_containers/food/drinks/drinkingglass,				5),
+		new /datum/data/wasteland_equipment("Zippo",						/obj/item/lighter,													20),
+		new /datum/data/wasteland_equipment("Explorer satchel",				/obj/item/storage/backpack/satchel/explorer,						25),
+		new /datum/data/wasteland_equipment("Spray bottle",					/obj/item/reagent_containers/spray,									35),
+		new /datum/data/wasteland_equipment("Bottle of E-Z-Nutrient",		/obj/item/reagent_containers/glass/bottle/nutrient/ez,				40),
+		new /datum/data/wasteland_equipment("Craftsmanship Monthly",		/obj/item/book/granter/trait/techno,								600),
+		)
+
+/obj/machinery/mineral/wasteland_vendor/camp
+	name = "Vault-Tec Camp-O-Vend (tm)"
+	desc = "Compressed matter in pill-form. Do not swallow!"
+	icon_state = "generic_idle"
+	prize_list = list(
+//		new /datum/data/wasteland_equipment("Vault-Tec C.A.M.P. Expanded Edition",		/obj/item/survivalcapsule/quad,							150),
+//		new /datum/data/wasteland_equipment("Vault-Tec C.A.M.P. Farm-N-Go Edition",		/obj/item/survivalcapsule/farm,							200),
+//		new /datum/data/wasteland_equipment("Vault-Tec C.A.M.P. Occult Edition",		/obj/item/survivalcapsule/fortuneteller,				125),
+//		new /datum/data/wasteland_equipment("Vault-Tec C.A.M.P. Ultra-Deluxe Edition",	/obj/item/survivalcapsule/super_deluxe,					600),
+		new /datum/data/wasteland_equipment("Vault-Tec C.A.M.P. Basic Edition",			/obj/item/survivalcapsule,								50),
+		new /datum/data/wasteland_equipment("Vault-Tec C.A.M.P. Premium Edition",		/obj/item/survivalcapsule/premium,						250),
+		new /datum/data/wasteland_equipment("Vault-Tec C.A.M.P. Merchant Edition",		/obj/item/survivalcapsule/merchant,						300),
+		new /datum/data/wasteland_equipment("Vault-Tec C.A.M.P. Smithery Edition",		/obj/item/survivalcapsule/blacksmith,					400),
+		new /datum/data/wasteland_equipment("Vault-Tec C.A.M.P. Party-Tent Edition",	/obj/item/survivalcapsule/party,						450),
+		new /datum/data/wasteland_equipment("Vault-Tec C.A.M.P. Mess-Hall Edition",		/obj/item/survivalcapsule/kitchen,						450),
+		new /datum/data/wasteland_equipment("Keep your C.A.M.P. Clean: Trashbag",		/obj/item/storage/bag/trash,							30),
+		new /datum/data/wasteland_equipment("Keep your C.A.M.P. Clean: Soap",			/obj/item/soap/homemade,								25)
+		)
+/obj/machinery/mineral/wasteland_vendor/pipboy
+	name = "Wasteland Pip-N-Walk"
+	desc = "A prewar vending machine tightly stocked with possibly millions of Pip-boys. How do they all get in there? Nobody knows."
+	icon_state = "generic_idle"
+	prize_list = list(
+		new /datum/data/wasteland_equipment("Pip-boy 3000",			/obj/item/pda,																150),
+		new /datum/data/wasteland_equipment("Reprogrammable ID",	/obj/item/card/id/selfassign,												100),
+		new /datum/data/wasteland_equipment("E.N.H.A.N.C.E. Your Pip-boy: Reagent Scanner",	/obj/item/cartridge/chemistry,						50),
+		new /datum/data/wasteland_equipment("E.N.H.A.N.C.E. Your Pip-boy: Health Scanner",	/obj/item/cartridge/medical,						50),
+		new /datum/data/wasteland_equipment("E.N.H.A.N.C.E. Your Pip-boy: Signaler",	/obj/item/cartridge/signal,								50),
+		)
+
+/obj/machinery/mineral/wasteland_vendor/special
+	name = "Ticknor & Fields Publishing Vendor"
+	desc = "Apparently, at some point in time books were popular enough to be kept in vending machines. This one's labeled with a local publisher."
+	icon_state = "liberationstation_idle"
+	prize_list = list(
+		new /datum/data/wasteland_equipment("Ranger's Guide to the Wasteland",	/obj/item/book/granter/trait/trekking,							400),
+		new /datum/data/wasteland_equipment("Guns and Bullets, Part 4",			/obj/item/book/granter/trait/gunsmith_four, 					400),
+		new /datum/data/wasteland_equipment("Craftsmanship Monthly",			/obj/item/book/granter/trait/techno,							600),
+		new /datum/data/wasteland_equipment("Advanced Armor and You",			/obj/item/book/granter/trait/pa_wear,							600),
+		)
+
+/obj/machinery/mineral/wasteland_vendor/advcomponents
+	name = "ArmCo Components Vending Machine"
+	desc = "A vending machine filled with parts for crafting various things, labeled with a faded prewar ArmCo logo."
+	icon_state = "components_idle"
+	prize_list = list(
+		new /datum/data/wasteland_equipment("Advanced Modular Receiver",		/obj/item/advanced_crafting_components/receiver,					200),
+		new /datum/data/wasteland_equipment("Weapon Assembly",					/obj/item/advanced_crafting_components/assembly,					200),
+		new /datum/data/wasteland_equipment("Superconductor Coils",				/obj/item/advanced_crafting_components/conductors,					200),
+		new /datum/data/wasteland_equipment("Focused crystal lenses",			/obj/item/advanced_crafting_components/lenses,						200),
+		new /datum/data/wasteland_equipment("Flux capacitator",					/obj/item/advanced_crafting_components/flux,						200),
+		new /datum/data/wasteland_equipment("Superlight Alloys",				/obj/item/advanced_crafting_components/alloys,						200)
+		)
+
+/obj/machinery/mineral/wasteland_vendor/attachments
+	name = "Long Branch Arsenal Attachments Vendor"
+	desc = "A prewar vending machine in remarkably good shape. It's loaded down with firearm attachments."
+	icon_state = "parts_idle"
+	prize_list = list(
+		new /datum/data/wasteland_equipment("Weapon Optics",				/obj/item/attachments/scope,									150),
+		new /datum/data/wasteland_equipment("Recoil Compensator",			/obj/item/attachments/recoil_decrease,							100),
+		new /datum/data/wasteland_equipment("Improved Barrel",				/obj/item/attachments/bullet_speed,								100),
+		new /datum/data/wasteland_equipment("Burst Cam",					/obj/item/attachments/burst_improvement,						200)
+		)
+
+/obj/machinery/mineral/wasteland_vendor/crafting
+	name = "Sunnyfield Construction Vending Machine"
+	desc = "A vending machine loaded down with raw materials and various parts. Sadly, it's impossible to break in and steal it all."
+	icon_state = "trade_idle"
+	prize_list = list(
+		new /datum/data/wasteland_equipment("High Quality Parts",				/obj/item/stack/crafting/goodparts,									50),
+		new /datum/data/wasteland_equipment("Metal Parts",						/obj/item/stack/crafting/metalparts,								10),
+		new /datum/data/wasteland_equipment("Electronic Parts",					/obj/item/stack/crafting/electronicparts,							5),
+		new /datum/data/wasteland_equipment("Metal Sheets x 20",				/obj/item/stack/sheet/metal/twenty,									50),
+		new /datum/data/wasteland_equipment("Metal Sheets x 50",				/obj/item/stack/sheet/metal/fifty,									115),
+		new /datum/data/wasteland_equipment("Glass Sheets x 10",				/obj/item/stack/sheet/glass/ten,									30),
+		new /datum/data/wasteland_equipment("Glass Sheets x 50",				/obj/item/stack/sheet/glass/fifty,									90)
+		)
+
+/obj/machinery/mineral/wasteland_vendor/mining
+	name = "Quincy Quarries Mining Vendor"
+	desc = "A commonly-found machine wherever mining is to be done, maintained by the Quincy Quarry company."
+	icon_state = "mining_idle"
+	prize_list = list(
+		new /datum/data/wasteland_equipment("Pickaxe",					/obj/item/pickaxe,											25),
+		new /datum/data/wasteland_equipment("Mining drill",				/obj/item/pickaxe/drill,									100),
+		new /datum/data/wasteland_equipment("Manual mining scanner",	/obj/item/mining_scanner,									25),
+		new /datum/data/wasteland_equipment("Automatic mining scanner",	/obj/item/t_scanner/adv_mining_scanner/lesser,				150),
+		new /datum/data/wasteland_equipment("Advanced mining scanner",	/obj/item/t_scanner/adv_mining_scanner,						300),
+		new /datum/data/wasteland_equipment("Proto-kinetic crusher",	/obj/item/twohanded/required/kinetic_crusher,				1000),
+		new /datum/data/wasteland_equipment("ORM Board",				/obj/item/circuitboard/machine/ore_redemption,				150)
+		)
