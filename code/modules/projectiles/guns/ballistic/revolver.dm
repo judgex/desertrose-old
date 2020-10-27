@@ -501,18 +501,12 @@
 	fire_delay = 4
 
 /obj/item/gun/ballistic/revolver/sequoia/scoped
-	name = "hunting revolver (standard)"
+	name = "hunting revolver"
 	desc = "A scoped double action revolver chambered in 45-70."
 	icon_state = "hunting_revolver"
 	zoomable = TRUE
 	zoom_amt = 10
 	zoom_out_amt = 13
-	extra_damage = -5
-	extra_penetration = -5
-	extra_parts = list(/obj/item/prefabs/complex/bolt/simple,
-	/obj/item/prefabs/complex/action/simple,
-	/obj/item/prefabs/complex/barrel/m4570,
-	/obj/item/prefabs/complex/complexWeaponFrame/low)
 
 /obj/item/gun/ballistic/revolver/sequoia/scoped/mid
 	name = "hunting revolver (improved)"
