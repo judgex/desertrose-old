@@ -58,6 +58,9 @@
 /mob/living/simple_animal/hostile/deathclaw/mother
 	name = "mother deathclaw"
 	desc = "A massive, reptilian creature with powerful muscles, razor-sharp claws, and aggression to match. This one is an angry mother."
+	icon_state = "deathclaw_queen"
+	icon_living = "deathclaw_queen"
+	icon_dead = "deathclaw_queen_dead"
 	gender = FEMALE
 	maxHealth = 750
 	health = 750
