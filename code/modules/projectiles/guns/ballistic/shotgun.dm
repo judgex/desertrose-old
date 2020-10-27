@@ -572,7 +572,7 @@
 	can_scope = TRUE
 
 /obj/item/gun/ballistic/shotgun/automatic/hunting/brush/scoped
-	name = "scoped brush gun (standard)"
+	name = "scoped brush gun"
 	desc = "A short lever action rifle chambered in the heavy 45-70 round. Issued to NCR Veteran Rangers in the absence of heavier weaponry."
 	icon_state = "scopedbrushgun"
 	item_state = "scopedbrushgun"
@@ -585,8 +585,6 @@
 	weapon_weight = WEAPON_HEAVY
 	fire_delay = 6
 	can_scope = FALSE
-	extra_penetration = -5
-	extra_damage = -5
 
 /obj/item/gun/ballistic/shotgun/automatic/hunting/brush/scoped/attackby(obj/item/W, mob/user, params)
 	if(istype(W,/obj/item/screwdriver))

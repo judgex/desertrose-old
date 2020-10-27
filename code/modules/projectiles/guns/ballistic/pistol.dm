@@ -13,7 +13,10 @@
 
 /obj/item/gun/ballistic/automatic/pistol/update_icon()
 	..()
-	icon_state = "[initial(icon_state)][chambered ? "" : "-e"][suppressed ? "-suppressed" : ""]"
+	if(gun_icon_state)//It's a custom gun, it plays by its own rules
+		icon_state = "[gun_icon_state][chambered ? "" : "-e"][suppressed ? "-suppressed" : ""]"
+	else
+		icon_state = "[initial(icon_state)][chambered ? "" : "-e"][suppressed ? "-suppressed" : ""]"
 
 /obj/item/gun/ballistic/automatic/pistol/suppressed/Initialize(mapload)
 	. = ..()
@@ -87,7 +90,7 @@
 
 /obj/item/gun/ballistic/automatic/pistol/n99
 	spawnwithmagazine = FALSE
-	name = "10mm pistol (standard)"
+	name = "10mm pistol"
 	desc = "A pre-war large-framed, gas-operated advanced 10mm pistol."
 	icon_state = "n99"
 	mag_type = /obj/item/ammo_box/magazine/m10mm_adv
@@ -96,14 +99,7 @@
 	can_attachments = TRUE
 	fire_delay = 3
 	can_suppress = TRUE
-	spread = 15
-	extra_penetration = -5
-	extra_damage = -3
 	can_disassemble = TRUE
-	extra_parts =  list(/obj/item/prefabs/complex/bolt/simple,
-	/obj/item/prefabs/complex/action/simple,
-	/obj/item/prefabs/complex/barrel/mm10,
-	/obj/item/prefabs/complex/simpleWeaponFrame/low)
 
 /obj/item/gun/ballistic/automatic/pistol/n99/mid//improved
 	spread = 0
