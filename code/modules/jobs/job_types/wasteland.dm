@@ -152,6 +152,8 @@ Raider
 
 	outfit = /datum/outfit/job/wasteland/f13raider
 
+	exp_requirements = 280
+
 	access = list()
 	minimal_access = list()
 	loadout_options = list(
@@ -177,8 +179,6 @@ Raider
 	belt = null
 	backpack = /obj/item/storage/backpack/satchel/explorer
 	satchel = /obj/item/storage/backpack/satchel/explorer
-
-	exp_requirements = 280
 
 /datum/outfit/job/wasteland/f13raider/pre_equip(mob/living/carbon/human/H)
 	..()
