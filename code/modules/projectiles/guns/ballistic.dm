@@ -3,7 +3,7 @@
 	name = "projectile gun"
 	icon_state = "pistol"
 	w_class = WEIGHT_CLASS_NORMAL
-	var/spawnwithmagazine = TRUE
+	var/spawnwithmagazine = FALSE
 	var/mag_type = /obj/item/ammo_box/magazine/m10mm //Removes the need for max_ammo and caliber info
 	var/init_mag_type = null
 	var/obj/item/ammo_box/magazine/magazine
@@ -48,11 +48,17 @@
 	update_icon()
 
 /obj/item/gun/ballistic/update_icon()
-	..()
-	if(current_skin)
-		icon_state = "[unique_reskin[current_skin]][suppressed ? "-suppressed" : ""][sawn_off ? "-sawn" : ""]"
-	else
-		icon_state = "[initial(icon_state)][suppressed ? "-suppressed" : ""][sawn_off ? "-sawn" : ""]"
+    ..()
+    if(current_skin)
+        icon_state = "[unique_reskin[current_skin]][suppressed ? "-suppressed" : ""][sawn_off ? "-sawn" : ""]"
+    else
+        var/ico = ""
+        if(gun_icon_state)
+            ico = "[gun_icon_state]" //It's a crafted gun and has a custom skin
+        else
+            ico = "[initial(icon_state)]" //just use default
+            
+        icon_state = "[ico][suppressed ? "-suppressed" : ""][sawn_off ? "-sawn" : ""]"
 
 
 /obj/item/gun/ballistic/process_chamber(empty_chamber = 1)
