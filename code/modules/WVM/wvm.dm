@@ -814,3 +814,4 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		new /datum/data/wasteland_equipment("Proto-kinetic crusher",	/obj/item/twohanded/required/kinetic_crusher,				1000),
 		new /datum/data/wasteland_equipment("ORM Board",				/obj/item/circuitboard/machine/ore_redemption,				150)
 		)
+
