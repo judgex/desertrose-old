@@ -2,8 +2,8 @@
 "ab" = (/turf/closed/wall/f13/wood/house,/area/f13/bunker)
 "ac" = (/obj/machinery/light/small{dir = 8},/turf/template_noop,/area/template_noop)
 "ad" = (/obj/machinery/workbench/advanced,/obj/effect/spawner/lootdrop/f13/advcrafting,/turf/open/floor/f13{icon_state = "floorrusty"; tag = "icon-floorrusty"},/area/f13/bunker)
-"ae" = (/mob/living/simple_animal/hostile/abomination,/turf/open/floor/f13{icon_state = "floorrusty"; tag = "icon-floorrusty"},/area/f13/bunker)
-"af" = (/mob/living/simple_animal/hostile/abomination,/turf/open/floor/plating,/area/f13/bunker)
+"ae" = (/mob/living/simple_animal/hostile/centaur,/turf/open/floor/plating,/area/f13/bunker)
+"af" = (/mob/living/simple_animal/hostile/centaur,/turf/open/floor/f13{icon_state = "floorrusty"; tag = "icon-floorrusty"},/area/f13/bunker)
 "ag" = (/obj/effect/spawner/lootdrop/f13/junkspawners,/turf/open/floor/f13{icon_state = "floorrusty"; tag = "icon-floorrusty"},/area/f13/bunker)
 "ah" = (/turf/open/floor/f13{icon_state = "floorrusty"; tag = "icon-floorrusty"},/area/f13/bunker)
 "ai" = (/mob/living/simple_animal/hostile/cazador,/turf/template_noop,/area/template_noop)
@@ -59,8 +59,8 @@
 
 (1,1,1) = {"
 aaaaaaaaaaaaaaabbdbdbdbdbdbdbd
-aaadaeafagahaaabacaibdbdbdbdbd
-aaakaeafahalaaabbdbdbdbdajbdbd
+aaadahaeagafaaabacaibdbdbdbdbd
+aaakafarahalaaabbdbdbdbdajbdbd
 aaaaaaanaaaaaaabaoababbdbdbdbd
 aaapaqarasataaabauavababawabbd
 aaaxaqarasayaaabazaAaBaCaDabbd
