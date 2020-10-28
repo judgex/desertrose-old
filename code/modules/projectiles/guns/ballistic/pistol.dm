@@ -90,7 +90,7 @@
 
 /obj/item/gun/ballistic/automatic/pistol/n99
 	spawnwithmagazine = FALSE
-	name = "10mm pistol"
+	name = "colt N99"
 	desc = "A pre-war large-framed, gas-operated advanced 10mm pistol."
 	icon_state = "n99"
 	mag_type = /obj/item/ammo_box/magazine/m10mm_adv
@@ -103,7 +103,7 @@
 
 /obj/item/gun/ballistic/automatic/pistol/n99/mid//improved
 	spread = 0
-	name = "10mm pistol (improved)"
+	name = "colt N99 (improved)"
 	extra_damage = 0
 	extra_penetration = 0
 	extra_parts = list(/obj/item/prefabs/complex/bolt/simple,
@@ -114,7 +114,7 @@
 /obj/item/gun/ballistic/automatic/pistol/n99/high//masterwork
 	spread = 0
 	fire_delay = 1
-	name = "10mm pistol (masterwork)"
+	name = "colt N99 (masterwork)"
 	extra_damage = 3
 	extra_penetration = 5
 	extra_parts = list(/obj/item/prefabs/complex/bolt/simple,
@@ -123,7 +123,7 @@
 	/obj/item/prefabs/complex/simpleWeaponFrame/high)
 
 /obj/item/gun/ballistic/automatic/pistol/n99/pers/gunslinger
-	name = "10mm pistol (gunslinger variant)"
+	name = "colt N99 (gunslinger variant)"
 	gunslinger = TRUE
 	fire_delay = 1.9
 	extra_damage = 0
@@ -135,7 +135,7 @@
 	/obj/item/advanced_crafting_components/alloys)
 
 /obj/item/gun/ballistic/automatic/pistol/n99/pers/glock
-	name = "10mm pistol (extended variant)"
+	name = "colt N99 (extended variant)"
 	mag_type = /obj/item/ammo_box/magazine/m10mm_auto
 	fire_delay = 1
 	extra_damage = 0
@@ -148,7 +148,7 @@
 	/obj/item/advanced_crafting_components/receiver)
 
 /obj/item/gun/ballistic/automatic/pistol/n99/pers/long
-	name = "10mm pistol (scoped variant)"
+	name = "colt N99 (scoped variant)"
 	fire_delay = 2.5
 	extra_penetration = 10
 	extra_damage = 3
