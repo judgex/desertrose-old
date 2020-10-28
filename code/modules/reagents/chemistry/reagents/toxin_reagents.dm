@@ -855,3 +855,15 @@
 
 /datum/reagent/toxin/mimesbane/on_mob_delete(mob/living/L)
 	L.remove_trait(TRAIT_EMOTEMUTE, id)
+
+/datum/reagent/toxin/cloud
+	name = "cloud toxin"
+	id = "cloud_tox"
+	color = "#9ACD32"
+	toxpwr = 1
+
+/datum/reagent/toxin/cloud/on_mob_life(mob/living/carbon/C)
+	C.damageoverlaytemp = 60
+	C.update_damage_hud()
+	C.blur_eyes(3)
+	return ..()

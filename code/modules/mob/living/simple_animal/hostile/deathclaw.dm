@@ -68,7 +68,6 @@
 	melee_damage_lower = 76
 	melee_damage_upper = 78
 	armour_penetration = 45
-	color = rgb(95,104,94)
 	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab/deathclaw = 6,
 							/obj/item/stack/sheet/animalhide/deathclaw = 3)
 
