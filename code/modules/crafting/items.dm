@@ -964,6 +964,7 @@
 	complexity = 60
 	burst_mod = 1
 	burst_delay_mod = -2
+	spread_mod = 15
 
 // obsolete
 /obj/item/prefabs/complex/barrel/shotgun
