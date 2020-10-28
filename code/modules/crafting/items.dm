@@ -34,6 +34,7 @@
 	var/armorpen_mod = 0
 	var/recoil_mod = 0
 	var/spread_mod = 0
+	var/burst_delay_mod = 0
 	var/bullet_speed_mod = 0
 	var/force_mod = 0
 	var/fire_delay_mod = 0
@@ -649,6 +650,7 @@
 	G.desc = ""
 
 	if(alloys)
+		to_chat(user,"You use the alloys to improve the weapon.")
 		G.extra_damage += pick(4,2,1)
 		G.extra_penetration += pick(4,2,1)
 	if(enables_automatic)
@@ -670,12 +672,14 @@
 			G.fire_delay += -0.5
 
 	for(var/obj/item/prefabs/C in src.contents)
-		G.extra_damage += C.dam_mod
-		G.burst_size += C.burst_mod
-		G.extra_penetration += C.armorpen_mod
-		G.recoil += C.recoil_mod
-		G.spread += C.spread_mod
+		G.extra_damage += C.dam_mod//0
+		G.burst_size += C.burst_mod//1
+		G.burst_delay += C.burst_delay_mod//2
+		G.extra_penetration += C.armorpen_mod//0
+		G.recoil += C.recoil_mod//0
+		G.spread += C.spread_mod//0
 		G.projectile_speed += C.bullet_speed_mod //Should be tiny increments, normally is 0.8
+		G.fire_delay += 3//set base as 3
 		G.fire_delay += C.fire_delay_mod
 		if(G.w_class < C.gun_weight_class)
 			G.w_class = C.gun_weight_class
@@ -889,9 +893,18 @@
 	tags = list("semiauto")
 	incompatible_tags = list("automatic","smg","lmg")
 
-
 /obj/item/prefabs/complex/action/auto
 	name = "Automatic Action"
+	desc = ""
+	icon_state = "action"
+	complexity = 15
+	tags = list("automatic")
+	incompatible_tags = list("semiauto","smg","lmg")
+	spread_mod = 10
+	enables_automatic = TRUE
+
+/obj/item/prefabs/complex/action/autoburst
+	name = "Automatic Burst Action"
 	desc = ""
 	icon_state = "action"
 	complexity = 20
@@ -911,6 +924,7 @@
 	incompatible_tags = list("revolver","shotgun","sniper","pistol")
 	spread_mod = 20
 	burst_mod = 2
+	burst_delay_mod = -1
 	enables_automatic = TRUE
 
 /obj/item/prefabs/complex/barrel
@@ -942,6 +956,14 @@
 	icon_state = "barrel"
 	complexity = 40
 	bullet_speed_mod = -0.4
+
+/obj/item/prefabs/complex/barrel/dual
+	name = "Dual Barrel"
+	desc = ""
+	icon_state = "barrel"
+	complexity = 60
+	burst_mod = 1
+	burst_delay_mod = -2
 
 // obsolete
 /obj/item/prefabs/complex/barrel/shotgun
@@ -1056,7 +1078,6 @@
 	icon_state = "trigger"
 	complexity = 10
 	part_type = "trigger"
-	fire_delay_mod = 0
 
 /obj/item/prefabs/complex/trigger/hair
 	name = "Hair Trigger"
@@ -1191,6 +1212,30 @@
 	complexity = 60
 	caliber_name = ".45-70"
 
+/obj/item/prefabs/complex/ammo_loader/m44
+	name = ".44 Internal Magazine Loader"
+	mag_type = /obj/item/ammo_box/magazine/internal/shot/tube44
+	complexity = 40
+	caliber_name = ".44"
+
+/obj/item/prefabs/complex/ammo_loader/m44
+	name = ".357 Internal Magazine Loader"
+	mag_type = /obj/item/ammo_box/magazine/internal/shot/tube357
+	complexity = 30
+	caliber_name = ".357"
+
+/obj/item/prefabs/complex/ammo_loader/m50MG
+	name = ".50MG Internal Magazine Loader"
+	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/antimateriel
+	complexity = 80
+	caliber_name = ".50"
+
+//more stuff here
+//energy weapons
+//scopes
+
+
+//more stuff here
 /obj/item/prefabs/complex/gunframe
 	name = "frame"
 	part_type = "frame"
