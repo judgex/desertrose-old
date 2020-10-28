@@ -691,7 +691,7 @@
 	force = 15
 	spread = 18
 	can_attachments = TRUE
-	can_disassemble = TRUE
+	can_disassemble = FALSE
 
 /obj/item/gun/ballistic/automatic/smg10mm/mid
 	name = "10mm submachine gun (improved)"
@@ -1102,7 +1102,7 @@
 	randomspread = 0
 	fire_delay = 3
 	burst_delay = 3
-	can_disassemble = TRUE
+	can_disassemble = FALSE
 	extra_parts = list(/obj/item/prefabs/complex/bolt/simple, 
 					/obj/item/prefabs/complex/action/auto,
 					/obj/item/prefabs/complex/barrel/m45,
@@ -1119,7 +1119,7 @@
 	randomspread = 0
 	w_class = WEIGHT_CLASS_SMALL
 	weapon_weight = WEAPON_LIGHT
-	can_disassemble = TRUE
+	can_disassemble = FALSE
 	extra_parts = list(/obj/item/prefabs/complex/bolt/simple, 
 					/obj/item/prefabs/complex/action/auto,
 					/obj/item/prefabs/complex/barrel/m45,
@@ -1343,7 +1343,7 @@
 	knife_x_offset = 24
 	knife_y_offset = 21
 	randomspread = 10
-	can_disassemble = TRUE
+	can_disassemble = FALSE
 	extra_parts = list(/obj/item/prefabs/complex/bolt/high,
 	/obj/item/prefabs/complex/action/simple,
 	/obj/item/prefabs/complex/barrel/m762,

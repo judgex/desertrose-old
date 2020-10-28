@@ -4061,6 +4061,15 @@
 	category = CAT_MOULD
 	subcategory = CAT_MOULD_ONE
 
+/datum/crafting_recipe/mould/autoaction
+	result = /obj/item/prefabs/mould/action/auto
+	name = "Automatic Action Mould"
+	tools = list(TOOL_FORGE, TOOL_GUNTIER4)
+	traits = list(TRAIT_GUNSMITH_FOUR)
+	time = 30
+	category = CAT_MOULD
+	subcategory = CAT_MOULD_ONE
+
 /datum/crafting_recipe/mould/bolt
 	result = /obj/item/prefabs/mould/bolt/simple
 	name = "Simple Bolt Mould"

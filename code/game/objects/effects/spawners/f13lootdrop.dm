@@ -1454,6 +1454,7 @@
 	icon_state = "blueprint_loot"
 	lootcount = 1
 	loot = list(
+		/obj/item/prefabs/complex/action/auto,
 		/obj/item/prefabs/complex/action/rapid,
 		/obj/item/prefabs/complex/barrel/long,
 		/obj/item/prefabs/complex/ammo_loader/m762,
@@ -1462,7 +1463,9 @@
 		/obj/item/prefabs/complex/ammo_loader/m12g,
 		/obj/item/prefabs/complex/ammo_loader/m4570,
 		/obj/item/prefabs/complex/WeaponFrame/masterwork,
-		/obj/item/prefabs/complex/WeaponFrame/improved
+		/obj/item/prefabs/complex/WeaponFrame/improved,
+		/obj/item/prefabs/complex/barrel/dual,
+		/obj/item/prefabs/complex/ammo_loader/m50MG
 	)
 /obj/effect/spawner/lootdrop/f13/blueprintMid
 	name = "blueprint-tier(Mid) item spawner"
