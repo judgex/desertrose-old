@@ -1206,7 +1206,7 @@
 	mag_type = /obj/item/ammo_box/magazine/d12g
 	complexity = 60
 	caliber_name = "12g"
-
+/*
 /obj/item/prefabs/complex/ammo_loader/m4570
 	name = "45-70 Internal Magazine Loader"
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/tube4570
@@ -1230,7 +1230,7 @@
 	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/antimateriel
 	complexity = 80
 	caliber_name = ".50"
-
+*/
 //more stuff here
 //energy weapons
 //scopes
