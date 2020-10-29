@@ -383,7 +383,8 @@
 			ammo_loader = null
 			assembly = null
 			stock = null
-
+			
+			//temp disabled
 			//if(!M.has_trait(TRAIT_MASTER_GUNSMITH) && prob(destroy_chance))
 			//	to_chat(M,"<span_class='warning'>[P] is ruined when you remove it!</span>")
 			//	P.forceMove(get_turf(src))
