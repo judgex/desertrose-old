@@ -1461,11 +1461,11 @@
 		/obj/item/prefabs/complex/ammo_loader/m45mmext,
 		/obj/item/prefabs/complex/ammo_loader/m50AE,
 		/obj/item/prefabs/complex/ammo_loader/m12g,
-		//obj/item/prefabs/complex/ammo_loader/m4570,
+		/obj/item/prefabs/complex/ammo_loader/m4570,
 		/obj/item/prefabs/complex/WeaponFrame/masterwork,
 		/obj/item/prefabs/complex/WeaponFrame/improved,
 		/obj/item/prefabs/complex/barrel/dual,
-		//obj/item/prefabs/complex/ammo_loader/m50MG
+		/obj/item/prefabs/complex/ammo_loader/m50MG
 	)
 /obj/effect/spawner/lootdrop/f13/blueprintMid
 	name = "blueprint-tier(Mid) item spawner"

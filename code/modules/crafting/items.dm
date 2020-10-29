@@ -31,6 +31,7 @@
 	var/enables_automatic = FALSE
 	var/burst_mod = 0
 	var/dam_mod = 0
+	var/canpulloutmag = TRUE
 	var/armorpen_mod = 0
 	var/recoil_mod = 0
 	var/spread_mod = 0
@@ -686,6 +687,7 @@
 		if(C.mag_type && istype(G,/obj/item/gun/ballistic))
 			var/obj/item/gun/ballistic/B = G
 			B.mag_type = C.mag_type
+			B.pulloutmag = C.canpulloutmag
 		else if(C.mag_type && istype(G,/obj/item/gun/energy))
 			var/obj/item/gun/energy/E = G
 			E.cell_type = C.mag_type
@@ -718,6 +720,9 @@
 			quality = "enhanced"
 
 	G.name = "[prefix][ammo_loader.caliber_name] [assembly.frame_type] ([quality])"
+	
+	var/obj/item/gun/ballistic/B = G
+	B.magazine = new B.mag_type(B)
 	src.forceMove(G) //Entire assembly gets thrown in the gun
 
 /obj/item/prefabs/complex/simpleWeaponFrame/low
@@ -1206,31 +1211,35 @@
 	mag_type = /obj/item/ammo_box/magazine/d12g
 	complexity = 60
 	caliber_name = "12g"
-/*
+
 /obj/item/prefabs/complex/ammo_loader/m4570
 	name = "45-70 Internal Magazine Loader"
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/tube4570
 	complexity = 60
 	caliber_name = ".45-70"
+	canpulloutmag = FALSE
 
 /obj/item/prefabs/complex/ammo_loader/m44
 	name = ".44 Internal Magazine Loader"
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/tube44
 	complexity = 40
 	caliber_name = ".44"
+	canpulloutmag = FALSE
 
 /obj/item/prefabs/complex/ammo_loader/m44
 	name = ".357 Internal Magazine Loader"
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/tube357
 	complexity = 30
 	caliber_name = ".357"
+	canpulloutmag = FALSE
 
 /obj/item/prefabs/complex/ammo_loader/m50MG
 	name = ".50MG Internal Magazine Loader"
 	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/antimateriel
 	complexity = 80
 	caliber_name = ".50"
-*/
+	canpulloutmag = FALSE
+
 //more stuff here
 //energy weapons
 //scopes
