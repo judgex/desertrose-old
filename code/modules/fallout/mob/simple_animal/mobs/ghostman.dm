@@ -37,7 +37,7 @@
 
 /mob/living/simple_animal/hostile/ghostman/death()
 	. = ..()
-	var/mob/living/L = locate(href_list["revive"])
+	var/mob/living/L
 	spawn(50)
 		heal_overall_damage(100)
 		L.revive(full_heal = 1, admin_revive = 1)
