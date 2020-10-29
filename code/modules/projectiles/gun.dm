@@ -30,7 +30,7 @@
 	var/sawn_desc = null				//description change if weapon is sawn-off
 	var/sawn_off = FALSE
 	var/burst_size = 1					//how large a burst is
-	var/fire_delay = 4					//rate of fire for burst firing and semi auto
+	var/fire_delay = 6					//rate of fire for burst firing and semi auto
 	var/burst_delay = 2					//rate of fire between shots in a burst
 	var/firing_burst = 0				//Prevent the weapon from firing again while already firing
 	var/semicd = 0						//cooldown handler

@@ -1090,7 +1090,7 @@
 	icon_state = "trigger"
 	complexity = 20
 	part_type = "trigger"
-	fire_delay_mod = -0.5
+	fire_delay_mod = -2.5
 
 /obj/item/prefabs/complex/trigger/advhair
 	name = "Advanced Hair Trigger"
@@ -1098,7 +1098,7 @@
 	icon_state = "trigger"
 	complexity = 40
 	part_type = "trigger"
-	fire_delay_mod = -1
+	fire_delay_mod = -5
 
 /obj/item/prefabs/complex/stock
 	name = "Stock"
