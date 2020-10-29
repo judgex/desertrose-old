@@ -287,21 +287,21 @@
 	quality = "makeshift" //This just adds a suffix at the end of the gun name
 
 /obj/item/prefabs/complex/WeaponFrame/standard
-	max_complexity = 100
+	max_complexity = 120
 	destroy_chance = 10
 	tags = list("standard_quality")
 	quality = "standard"
 
 /obj/item/prefabs/complex/WeaponFrame/improved
 	name = "Improved Weapon Frame"
-	max_complexity = 150
+	max_complexity = 170
 	destroy_chance = 25
 	tags = list("improved_quality")
 	quality = "improved"
 
 /obj/item/prefabs/complex/WeaponFrame/masterwork
 	name = "Masterwork Weapon Frame"
-	max_complexity = 250
+	max_complexity = 270
 	destroy_chance = 0
 	tags = list("masterwork_quality")
 	incompatible_tags = "makeshift_quality"
@@ -371,6 +371,13 @@
 		if(!LAZYLEN(src.contents))
 			to_chat(M,"\The [src] does not contain anything.")
 			return 0
+		
+		for(var/obj/item/advanced_crafting_components/A in src.contents)
+			receiver = null
+			alloys = null
+			assembly = null
+			to_chat(M,"You remove \the [A] from \the [src].")
+			A.forceMove(get_turf(src))
 
 		for(var/obj/item/prefabs/P in src.contents)
 			action = null
@@ -378,12 +385,9 @@
 			trigger = null
 			bolt = null
 			screw = null
-			receiver = null
-			alloys = null
 			ammo_loader = null
-			assembly = null
 			stock = null
-			
+
 			//temp disabled
 			//if(!M.has_trait(TRAIT_MASTER_GUNSMITH) && prob(destroy_chance))
 			//	to_chat(M,"<span_class='warning'>[P] is ruined when you remove it!</span>")
