@@ -962,7 +962,7 @@
 	bullet_speed_mod = -0.4
 
 /obj/item/prefabs/complex/barrel/dual
-	name = "Dual Barrel"
+	name = "Multiple barrels"
 	desc = ""
 	icon_state = "barrel"
 	complexity = 60
