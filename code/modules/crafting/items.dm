@@ -680,7 +680,6 @@
 		G.recoil += C.recoil_mod//0
 		G.spread += C.spread_mod//0
 		G.projectile_speed += C.bullet_speed_mod //Should be tiny increments, normally is 0.8
-		G.fire_delay = 3//set base as 3
 		G.fire_delay += C.fire_delay_mod
 		if(G.w_class < C.gun_weight_class)
 			G.w_class = C.gun_weight_class
