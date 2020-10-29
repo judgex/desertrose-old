@@ -384,11 +384,11 @@
 			assembly = null
 			stock = null
 
-			if(!M.has_trait(TRAIT_MASTER_GUNSMITH) && prob(destroy_chance))
-				to_chat(M,"<span_class='warning'>[P] is ruined when you remove it!</span>")
-				P.forceMove(get_turf(src))
-				qdel(P)
-				continue
+			//if(!M.has_trait(TRAIT_MASTER_GUNSMITH) && prob(destroy_chance))
+			//	to_chat(M,"<span_class='warning'>[P] is ruined when you remove it!</span>")
+			//	P.forceMove(get_turf(src))
+			//	qdel(P)
+			//	continue
 			to_chat(M,"You remove \the [P] from \the [src].")
 			P.forceMove(get_turf(src))
 
