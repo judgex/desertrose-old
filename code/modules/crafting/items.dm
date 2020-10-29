@@ -1172,13 +1172,13 @@
 
 /obj/item/prefabs/complex/ammo_loader/m10mm
 	name = "10mm Simple Magazine Loader"
-	mag_type = /obj/item/ammo_box/magazine/m762
+	mag_type = /obj/item/ammo_box/magazine/m10mm_adv
 	complexity = 12
 	caliber_name = "10mm"
 
 /obj/item/prefabs/complex/ammo_loader/m10mmdouble
 	name = "10mm Double Magazine Loader"
-	mag_type = /obj/item/ammo_box/magazine/m762
+	mag_type = /obj/item/ammo_box/magazine/m10mm_auto
 	complexity = 20
 	caliber_name = "10mm"
 

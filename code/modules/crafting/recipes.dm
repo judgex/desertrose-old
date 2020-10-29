@@ -4204,3 +4204,58 @@
 	time = 30
 	category = CAT_MOULD
 	subcategory = CAT_MOULD_ONE
+/*
+/datum/crafting_recipe/ultrapistol
+	name = "Ultracite Pistol"
+	result = /obj/item/gun/energy/laser/ultra_pistol
+	reqs = list(/obj/item/gun/energy/laser/pistol = 1,/obj/item/advanced_crafting_components/conductors = 1, /obj/item/stack/crafting/metalparts/five = 1, /obj/item/advanced_crafting_components/ultra = 1)
+	tools = list(TOOL_WORKBENCH)
+	category = CAT_EXPERIMENTAL
+	subcategory = CAT_WEAPONS
+	time = 30
+ 
+/datum/crafting_recipe/ultrarifle	
+	name = "Ultracite Laser Rifle"
+	result = /obj/item/gun/energy/laser/ultra_rifle	
+	reqs = list(/obj/item/gun/energy/laser/aer9/ = 1, /obj/item/advanced_crafting_components/flux = 1, /obj/item/advanced_crafting_components/lenses = 1, /obj/item/advanced_crafting_components/ultra = 1)
+	tools = list(TOOL_WORKBENCH)
+	category = CAT_EXPERIMENTAL
+	subcategory = CAT_UNREFIENED
+	time = 30
+ 
+/datum/crafting_recipe/ultraneedle
+	name = "Ultracite Needle Pistol"
+	result = /obj/item/gun/ballistic/revolver/needler/ultra
+	reqs = list(/obj/item/gun/ballistic/revolver/needler = 1, /obj/item/toy/crayon/spraycan = 1, /obj/item/crafting/duct_tape = 1, /obj/item/advanced_crafting_components/ultra = 1)
+	tools = list(TOOL_WORKBENCH)
+	category = CAT_EXPERIMENTAL
+	subcategory = CAT_UNREFIENED
+	time = 30
+ 
+/datum/crafting_recipe/heavyneedle
+	name = "Ultracite Needle Rifle"
+	result = /obj/item/gun/ballistic/shotgun/remington/ultraneedle
+	reqs = list(/obj/item/toy/crayon/spraycan = 1, /obj/item/advanced_crafting_components/assembly = 1, /obj/item/claymore/machete/pipe = 1, /obj/item/advanced_crafting_components/ultra = 1)
+	tools = list(TOOL_WORKBENCH)
+	category = CAT_EXPERIMENTAL
+	subcategory = CAT_UNREFIENED
+	time = 45
+ 
+/datum/crafting_recipe/ultrat51bhead
+	name = "Ultracite T51b Helmet"
+	result = /obj/item/clothing/head/helmet/f13/power_armor/t51b/ultra
+	reqs = list(/obj/item/clothing/head/helmet/f13/power_armor/t51b = 1, /obj/item/crafting/sensor = 1, obj/item/stack/crafting/goodparts/five = 1, /obj/item/advanced_crafting_components/ultra = 1)
+	tools = list(TOOL_WORKBENCH, /obj/item/weldingtool)
+	category = CAT_EXPERIMENTAL
+	subcategory = CAT_UNREFIENED
+	time = 30
+ 
+/datum/crafting_recipe/ultrat51b
+	name = "Ultracite T51b"
+	result = /obj/item/clothing/suit/armor/f13/power_armor/t51b/ultra
+	reqs = list(/obj/item/clothing/suit/armor/f13/power_armor/t51b = 1)
+	tools = list(TOOL_WORKBENCH)
+	category = CAT_EXPERIMENTAL
+	subcategory = CAT_UNREFIENED
+	time = 30
+*/
