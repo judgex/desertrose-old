@@ -14,6 +14,10 @@
 	..()
 	START_PROCESSING(SSobj, src)
 
+/obj/item/ring/Destroy()
+	STOP_PROCESSING(SSobj,src)
+	. = ..()
+
 /obj/item/ring/process()
 	if(iscarbon(loc))
 		var/mob/living/carbon/M = loc

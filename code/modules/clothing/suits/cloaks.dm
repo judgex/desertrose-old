@@ -81,3 +81,9 @@
 	icon_state = "talisman"
 	item_state = "talisman"
 	body_parts_covered = null
+
+/obj/item/clothing/neck/cloak/Hhuntercloak
+	name = "Razorclaw cloak"
+	desc = "A cloak decorated with bones of a deathclaw and small trinkets repersenting the machine spirit of fire."
+	icon_state = "chiefcloak"
+	allowed = list(/obj/item/gun, /obj/item/kitchen, /obj/item/twohanded, /obj/item/claymore, /obj/item/twohanded/spear)

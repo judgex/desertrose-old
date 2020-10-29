@@ -59,6 +59,10 @@
 	caliber = "2mm"
 	projectile_type = /obj/item/projectile/bullet/c2mm
 
+/obj/item/ammo_casing/heavyneedle
+	name = "heavy ultracite needle"
+	desc = "A heavy ultracite needle"
+	projectile_type = /obj/item/projectile/bullet/needle/ultra
 
 /obj/item/ammo_casing/F13/m308
 	desc = "A .308 bullet casing."
@@ -98,4 +102,5 @@
 
 /obj/item/ammo_casing/F13/a556/fire
 	projectile_type = /obj/item/projectile/bullet/F13/c556Bullet/fire
+
 

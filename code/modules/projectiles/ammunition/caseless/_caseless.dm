@@ -69,3 +69,7 @@
  	desc = "This is a lead ball for a musket."
  	caliber = "musketball"
  	projectile_type = /obj/item/projectile/bullet/F13/musketball
+
+/obj/item/ammo_casing/caseless/ultralaser
+	name = "Ultra laser"
+	projectile_type = /obj/item/projectile/beam/laser/ultra_rifle

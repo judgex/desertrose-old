@@ -148,7 +148,9 @@
 
 #define F13CHIEF		(1<<0)
 #define F13SHAMAN		(1<<1)
-#define F13VILLAGER		(1<<2)
+#define F13HHUNTER		(1<<2)
+#define F13VILLAGER		(1<<3)
+#define F13HUNTER		(1<<4)
 
 #define FOLLOWERS		(1<<11)
 

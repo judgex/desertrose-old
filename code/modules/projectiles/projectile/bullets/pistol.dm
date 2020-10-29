@@ -12,6 +12,11 @@
 	damage = 45 //40
 	armour_penetration = -22 //20
 
+//5mm minigun
+/obj/item/projectile/bullet/c5mm
+	damage = 19 //30
+	armour_penetration = 30
+
 //9x19mm
 /obj/item/projectile/bullet/c9mm
 	damage = 29 //30
@@ -52,9 +57,20 @@
     armour_penetration = 35
 
 /obj/item/projectile/bullet/needle/ultra
-    name = "ultracite needle"
-    damage = 50
-    armour_penetration = 25
+	name = "ultracite needle"
+	icon = 'icons/obj/guns/projectile.dmi'
+	icon_state = "ultraneedle"
+	damage = 50
+	armour_penetration = 25
+
+/obj/item/projectile/bullet/needle/heavy
+	name = "heavy ultracite needle"
+	icon = 'icons/obj/guns/projectile.dmi'
+	icon_state = "ultraneedle"//todo me fix this firing guns
+	damage = 40
+	armour_penetration = 40
+	embedding = list("pain_mult" = 6, "embed_chance" = 100, "fall_chance" = 0, "embed_chance_turf_mod" = 15)
+	irradiate = 200
 
 /*
 /obj/item/ammo_casing/c9mmr

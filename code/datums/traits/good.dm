@@ -60,6 +60,33 @@
 	lose_text = "<span class='danger'>You forget how Power Armor works.</span>"
 	locked = TRUE
 
+/datum/quirk/master_gunsmith
+	name = "Master Gunsmith"
+	desc = "You're a master gunsmith, able to make weapons of previously unseen power."
+	value = 3
+	mob_trait = TRAIT_MASTER_GUNSMITH
+	gain_text = "<span class='notice'>You realize how to make great weapons.</span>"
+	lose_text = "<span class='danger'>You forget how to make weapons.</span>"
+	locked = TRUE
+
+/datum/quirk/machine_spirits
+	name = "Spirit Blessed"
+	desc = "You respect the teachings of the Machine Spirits."
+	value = 3
+	mob_trait = TRAIT_MACHINE_SPIRITS
+	gain_text = "<span class='notice'>You have recieved the blessing of the Machine Spirits.</span>"
+	lose_text = "<span class='danger'>You've lost the  blessing of the Machine Spirits.</span>"
+	locked = TRUE
+
+/datum/quirk/magic_hands
+	name = "Magic Hands"
+	desc = "You're an expert in operating weaponry and are able to manually operated guns quickly."
+	value = 5
+	mob_trait = TRAIT_MAGIC_HANDS
+	gain_text = "<span class='notice'>You realize how to move your fingers quickly.</span>"
+	lose_text = "<span class='danger'>You lose the agility in your fingers.</span>"
+	locked = FALSE
+
 /datum/quirk/drunkhealing
 	name = "Drunken Resilience"
 	desc = "Nothing like a good drink to make you feel on top of the world. Whenever you're drunk, you slowly recover from injuries."

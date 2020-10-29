@@ -420,6 +420,16 @@
 	. = ..()
 	AddComponent(/datum/component/armor_plate)
 
+/obj/item/clothing/suit/armor/f13/raider/localranger
+	name = "Deserters Duster"
+	desc = "A worn NCR duster, ravaged by the sands and time. A large red X marks the back."
+	icon_state = "localranger"
+	item_state = "localranger"
+
+/obj/item/clothing/suit/armor/f13/raider/localranger/Initialize()
+	. = ..()
+	AddComponent(/datum/component/armor_plate)
+
 /obj/item/clothing/suit/armor/f13/raider/iconoclast/
 	name = "iconoclast raider armor"
 	desc = "A rigid armor set that appears to be fashioned from a radiation suit, or a mining suit."
@@ -560,6 +570,16 @@
 	armor = list("melee" = 45, "bullet" = 55, "laser" = 45, "energy" = 45, "bomb" = 55, "bio" = 65, "rad" = 10, "fire" = 60, "acid" = 20)
 	icon = 'icons/fallout/clothing_w/suit.dmi'
 
+/obj/item/clothing/suit/armor/f13/gunnerplates
+	name = "gunner armor"
+	desc = "An old military grade pre war combat armor. This armor has a skull painted on the back to symbolize the gunners."
+	icon_state = "GunnerPlates"
+	item_state = "GunnerPlates"
+	slowdown = 0
+	flags_inv = HIDEJUMPSUIT|HIDENECK
+	icon = 'icons/fallout/clothing_w/suit.dmi'
+	armor = list("melee" = 45, "bullet" = 55, "laser" = 45, "energy" = 45, "bomb" = 55, "bio" = 65, "rad" = 10, "fire" = 60, "acid" = 20)
+
 /obj/item/clothing/suit/armor/f13/combatmk2leg
 	name = "legatus armor mk2"
 	desc = "An old military grade pre war combat armor, specially designed for a Legionary Legatus."
@@ -674,6 +694,13 @@
 	item_state = "enclave_armor"
 	armor = list("melee" = 45, "bullet" = 50, "laser" = 45, "energy" = 75, "bomb" = 70, "bio" = 80, "rad" = 80, "fire" = 80, "acid" = 50)
 
+/obj/item/clothing/suit/armor/f13/combat/remnant
+	name = "combat armor"
+	desc = "A dark armor, used commonly in espionage or shadow ops. Worn by CAG or OS members."
+	icon_state = "remnant"
+	item_state = "remnant"
+	armor = list("melee" = 45, "bullet" = 50, "laser" = 45, "energy" = 75, "bomb" = 70, "bio" = 80, "rad" = 80, "fire" = 80, "acid" = 50)
+
 /obj/item/clothing/suit/armor/f13/combat/swat
 	name = "SWAT combat armor"
 	desc = "A custom version of the pre-war combat armor, slimmed down and minimalist for domestic S.W.A.T. teams. It gives excellent protection, but only to the chest."
@@ -696,6 +723,13 @@
 	item_state = "ranger"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
 	armor = list("melee" = 55, "bullet" = 55, "laser" = 55, "energy" = 40, "bomb" = 55, "bio" = 60, "rad" = 60, "fire" = 90, "acid" = 20)
+
+/obj/item/clothing/suit/armor/f13/rangercombat/rigscustom
+	name = "11th Armored Calvary Armor"
+	desc = "A suit of special military grade riot control gear and a duster, worn by 11th Armored Calvary Regiment members in The Divide before the war. Yellow markings are painted on the shoulderpads and forearm guards."
+	icon_state = "rigscustom_suit"
+	item_state = "rigscustom_suit"
+	icon = 'icons/fallout/clothing/suits.dmi'
 
 /obj/item/clothing/suit/armor/f13/rangercombat/desert
 	name = "desert ranger combat armor"
@@ -896,6 +930,14 @@
 	item_state = "t45dpowerarmor"
 	armor = list("melee" = 65, "bullet" = 60, "laser" = 50, "energy" = 60, "bomb" = 62, "bio" = 100, "rad" = 90, "fire" = 90, "acid" = 0)
 
+/obj/item/clothing/suit/armor/f13/power_armor/t45d/gunslinger
+	name = "Gunslinger T-51b"
+	desc = "What was once a suit of T-51 Power Armor is now an almost unrecognizable piece of art or garbage, depending on who you ask. Almost all of the external plating has either been removed or stripped to allow for maximum mobility, and overlapping underplates protect the user from small arms fire. Whoever designed this had a very specific purpose in mind: mobility and aesthetics over defense."
+	icon_state = "t51bgs"
+	item_state = "t51bgs"
+	slowdown = 0
+	flags_inv = HIDEJUMPSUIT|HIDENECK
+
 /obj/item/clothing/suit/armor/f13/power_armor/t45d/sierra
 	name = "sierra power armor"
 	desc = "A captured set of T-45d power armor put into use by the NCR, it's been heavily modified and decorated with the head of a bear and intricate gold trimming. A two headed bear is scorched into the breastplate."
@@ -1004,6 +1046,12 @@
 	slowdown = -0.1
 	armor = list("melee" = 60, "bullet" = 40, "laser" = 25, "energy" = 15, "bomb" = 25, "bio" = 50, "rad" = 20, "fire" = 70, "acid" = 0)
 
+/obj/item/clothing/suit/armor/f13/legion/vet/jonesarmormain
+	name = "Lorica Articuli"
+	desc = "A refurbished set of battle-worn veteran armor. Still made of leather and steel, it's relatively simple, but the modifications aren't. The metal has been engraved with exquisite patterns and wording, some of which is so small that you'd need a magnifying glass to properly see. Even still, it provides a noticeable improvement in aesthetics, though the engravings provide no tactical advantage whatsoever. The pauldrons have been plated with brass and engraved as well, providing the ultimate combination of protection and aesthetics. Just under the neck, an absolutely beautiful gemstone has been securely placed on the armor. To the trained eye or informed mind, it appears to be zircon. Red zircon. A steel, brass-plated belt goes around the midsection of the armor. 'Victoria Odds Contra Omnes' has been engraved into the belt in relatively large and fancy lettering, noticeable without having to get on your knees and go in for a whiff of the wearer's crotch in order to see."
+	icon_state = "jonesarmormain"
+	item_state = "jonesarmormain"
+
 /obj/item/clothing/suit/armor/f13/legion/heavy
 	name = "legion veteran decan armor"
 	desc = "Heavy metal armor worn by the Veteran Decanii retinue of the region."
@@ -1068,6 +1116,18 @@
 	icon_state = "leglegat"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
 	armor = list("melee" = 85, "bullet" = 60, "laser" = 40, "energy" = 40, "bomb" = 45, "bio" = 60, "rad" = 20, "fire" = 80, "acid" = 0)
+
+/obj/item/clothing/suit/armor/f13/roma
+	name = "roma legion armor"
+	desc = "A well-forged suit of lorica segmentata, standard issue to all Legionaries and Auxilia within the Roma Legion."
+	icon_state = "roma_armor"
+	item_state = "legarmor"
+	lefthand_file = 'icons/mob/inhands/clothing_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/clothing_righthand.dmi'
+	body_parts_covered = CHEST|GROIN
+	allowed = list(/obj/item/gun, /obj/item/claymore, /obj/item/throwing_star/spear, /obj/item/restraints/legcuffs/bola, /obj/item/twohanded)
+	armor = list("melee" = 60, "bullet" = 40, "laser" = 25, "energy" = 15, "bomb" = 25, "bio" = 50, "rad" = 20, "fire" = 70, "acid" = 0)
+	slowdown = -0.1
 
 /obj/item/clothing/suit/armor/f13/ncrarmor
 	name = "NCR patrol vest"
@@ -1177,6 +1237,15 @@
 	desc = "A thicker than average duster worn by NCR recon rangers out in the field. It's not heavily armored by any means, but is easy to move around in and provides excellent protection from the harsh desert environment."
 	icon_state = "duster_recon"
 	item_state = "duster_recon"
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
+	armor = list("melee" = 35, "bullet" = 30, "laser" = 20, "energy" = 20, "bomb" = 25, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
+	slowdown = -0.1
+
+/obj/item/clothing/suit/toggle/armor/f13/rangercustomdark
+	name = "tattered recon duster"
+	desc = "A thicker than average duster worn by rangers out in the field. This one has been dyed black and appears to be a little more heavily armoured."
+	icon_state = "duster_recon_custom"
+	item_state = "duster_recon_custom"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list("melee" = 35, "bullet" = 30, "laser" = 20, "energy" = 20, "bomb" = 25, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
 	slowdown = -0.1

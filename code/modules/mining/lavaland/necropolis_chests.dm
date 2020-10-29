@@ -609,15 +609,15 @@
 
 ///Bosses
 
-//Miniboss Miner
-
 /obj/item/melee/transforming/cleaving_saw
 	name = "cleaving saw"
-	desc = "This saw, effective at drawing the blood of beasts, transforms into a long cleaver that makes use of centrifugal force."
-	force = 12
-	force_on = 20 //force when active
+	desc = "This saw is the tool of choice for the Head Hunter. Capable of switching its reach and attack speed on the fly, it's an incredibly useful weapon for slaying the denizens of the wastes. Animal or human, the saw doesn't judge."
+	force = 30
+	force_on = 40 //force when active
 	throwforce = 20
 	throwforce_on = 20
+	reach = 1
+	reach_on = 2
 	icon = 'icons/obj/lavaland/artefacts.dmi'
 	lefthand_file = 'icons/mob/inhands/64x64_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/64x64_righthand.dmi'
@@ -660,9 +660,9 @@
 /obj/item/melee/transforming/cleaving_saw/transform_messages(mob/living/user, supress_message_text)
 	if(!supress_message_text)
 		if(active)
-			to_chat(user, "<span class='notice'>You open [src]. It will now cleave enemies in a wide arc.</span>")
+			to_chat(user, "<span class='notice'>You open [src]. It will now deal increased damage and reach further.</span>")
 		else
-			to_chat(user, "<span class='notice'>You close [src]. It will now attack rapidly and cause beastly enemies to bleed.</span>")
+			to_chat(user, "<span class='notice'>You close [src]. It will now attack rapidly!</span>")
 	playsound(user, 'sound/magic/clockwork/fellowship_armory.ogg', 35, TRUE, frequency = 90000 - (active * 30000))
 
 /obj/item/melee/transforming/cleaving_saw/clumsy_transform_effect(mob/living/user)
@@ -674,33 +674,6 @@
 	..()
 	if(!active)
 		user.changeNext_move(CLICK_CD_MELEE * 0.5) //when closed, it attacks very rapidly
-
-/obj/item/melee/transforming/cleaving_saw/nemesis_effects(mob/living/user, mob/living/target)
-	var/datum/status_effect/saw_bleed/B = target.has_status_effect(STATUS_EFFECT_SAWBLEED)
-	if(!B)
-		if(!active) //This isn't in the above if-check so that the else doesn't care about active
-			target.apply_status_effect(STATUS_EFFECT_SAWBLEED)
-	else
-		B.add_bleed(B.bleed_buildup)
-
-/obj/item/melee/transforming/cleaving_saw/attack(mob/living/target, mob/living/carbon/human/user)
-	if(!active || swiping || !target.density || get_turf(target) == get_turf(user))
-		if(!active)
-			faction_bonus_force = 0
-		..()
-		if(!active)
-			faction_bonus_force = initial(faction_bonus_force)
-	else
-		var/turf/user_turf = get_turf(user)
-		var/dir_to_target = get_dir(user_turf, get_turf(target))
-		swiping = TRUE
-		var/static/list/cleaving_saw_cleave_angles = list(0, -45, 45) //so that the animation animates towards the target clicked and not towards a side target
-		for(var/i in cleaving_saw_cleave_angles)
-			var/turf/T = get_step(user_turf, turn(dir_to_target, i))
-			for(var/mob/living/L in T)
-				if(user.Adjacent(L) && L.density)
-					melee_attack_chain(user, L)
-		swiping = FALSE
 
 //Dragon
 

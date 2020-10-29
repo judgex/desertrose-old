@@ -2,8 +2,8 @@
 	department_flag = NCR
 	selection_color = "#ffeeaa"
 
-	access = list(ACCESS_NCR)
-	minimal_access = list(ACCESS_NCR)
+	access = list(ACCESS_NCR, ACCESS_NCROFFDUTY)
+	minimal_access = list(ACCESS_NCR, ACCESS_NCROFFDUTY)
 	forbids = "The NCR forbids: Chem and drug use such as jet or alcohol while on duty. Execution of unarmed or otherwise subdued targets without authorisation."
 	enforces = "The NCR expects: Obeying the lawful orders of superiors. Proper treatment of prisoners.  Good conduct within the Republic's laws. Wearing the uniform."
 	objectivesList = list("Leadership recommends the following goal for this week: Establish an outpost at the radio tower","Leadership recommends the following goal for this week: Neutralize and capture dangerous criminals", "Leadership recommends the following goal for this week: Free slaves and establish good relations with unaligned individuals.")
@@ -350,12 +350,7 @@ Sergeant
 	suit = 			/obj/item/clothing/suit/armor/f13/power_armor/ncr
 	head = 			/obj/item/clothing/head/helmet/f13/power_armor/t45b
 	belt = 			/obj/item/storage/belt/military/assault/ncr
-	suit_store = 	/obj/item/gun/ballistic/automatic/lmg
-	backpack_contents = list(
-		/obj/item/ammo_box/magazine/lmg=3, \
-		/obj/item/book/granter/trait/trekking=1
-	)
-
+	back = 			/obj/item/minigunpackbal
 /*
 Corporal
 */
@@ -379,6 +374,9 @@ Corporal
 	/datum/outfit/loadout/specmp, //Hunting shotgun, baton, beanbags
 	///datum/outfit/loadout/specmech //Power armor, assault rifle
 	)
+
+/datum/job/ncr/f13specialist/after_spawn(mob/living/carbon/human/H, mob/M)
+	H.add_quirk("Master Gunsmith")
 
 /datum/outfit/job/ncr/f13specialist
 	name = "NCR Corporal"
@@ -696,6 +694,9 @@ Recruit
 	selection_color = "#fff5cc"
 	exp_requirements = 12
 	exp_type = EXP_TYPE_CREW
+
+	access = list(ACCESS_NCROFFDUTY)
+	minimal_access = list(ACCESS_NCROFFDUTY)
 
 	outfit = /datum/outfit/job/ncr/f13ncrcitizen
 
