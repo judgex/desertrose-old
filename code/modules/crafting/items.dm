@@ -31,6 +31,7 @@
 	var/enables_automatic = FALSE
 	var/burst_mod = 0
 	var/dam_mod = 0
+	var/canpulloutmag = TRUE
 	var/armorpen_mod = 0
 	var/recoil_mod = 0
 	var/spread_mod = 0
@@ -279,28 +280,28 @@
 
 /obj/item/prefabs/complex/WeaponFrame/makeshift
 	name = "Makeshift weapon frame"
-	max_complexity = 60
+	max_complexity = 100
 	destroy_chance = 30
 	tags = list("makeshift_quality")
 	incompatible_tags = list("masterwork_quality")
 	quality = "makeshift" //This just adds a suffix at the end of the gun name
 
 /obj/item/prefabs/complex/WeaponFrame/standard
-	max_complexity = 100
+	max_complexity = 140
 	destroy_chance = 10
 	tags = list("standard_quality")
 	quality = "standard"
 
 /obj/item/prefabs/complex/WeaponFrame/improved
 	name = "Improved Weapon Frame"
-	max_complexity = 150
+	max_complexity = 170
 	destroy_chance = 25
 	tags = list("improved_quality")
 	quality = "improved"
 
 /obj/item/prefabs/complex/WeaponFrame/masterwork
 	name = "Masterwork Weapon Frame"
-	max_complexity = 250
+	max_complexity = 270
 	destroy_chance = 0
 	tags = list("masterwork_quality")
 	incompatible_tags = "makeshift_quality"
@@ -370,6 +371,13 @@
 		if(!LAZYLEN(src.contents))
 			to_chat(M,"\The [src] does not contain anything.")
 			return 0
+		
+		for(var/obj/item/advanced_crafting_components/A in src.contents)
+			receiver = null
+			alloys = null
+			assembly = null
+			to_chat(M,"You remove \the [A] from \the [src].")
+			A.forceMove(get_turf(src))
 
 		for(var/obj/item/prefabs/P in src.contents)
 			action = null
@@ -377,17 +385,15 @@
 			trigger = null
 			bolt = null
 			screw = null
-			receiver = null
-			alloys = null
 			ammo_loader = null
-			assembly = null
 			stock = null
 
-			if(!M.has_trait(TRAIT_MASTER_GUNSMITH) && prob(destroy_chance))
-				to_chat(M,"<span_class='warning'>[P] is ruined when you remove it!</span>")
-				P.forceMove(get_turf(src))
-				qdel(P)
-				continue
+			//temp disabled
+			//if(!M.has_trait(TRAIT_MASTER_GUNSMITH) && prob(destroy_chance))
+			//	to_chat(M,"<span_class='warning'>[P] is ruined when you remove it!</span>")
+			//	P.forceMove(get_turf(src))
+			//	qdel(P)
+			//	continue
 			to_chat(M,"You remove \the [P] from \the [src].")
 			P.forceMove(get_turf(src))
 
@@ -679,13 +685,13 @@
 		G.recoil += C.recoil_mod//0
 		G.spread += C.spread_mod//0
 		G.projectile_speed += C.bullet_speed_mod //Should be tiny increments, normally is 0.8
-		G.fire_delay += 3//set base as 3
 		G.fire_delay += C.fire_delay_mod
 		if(G.w_class < C.gun_weight_class)
 			G.w_class = C.gun_weight_class
 		if(C.mag_type && istype(G,/obj/item/gun/ballistic))
 			var/obj/item/gun/ballistic/B = G
 			B.mag_type = C.mag_type
+			B.pulloutmag = C.canpulloutmag
 		else if(C.mag_type && istype(G,/obj/item/gun/energy))
 			var/obj/item/gun/energy/E = G
 			E.cell_type = C.mag_type
@@ -718,6 +724,9 @@
 			quality = "enhanced"
 
 	G.name = "[prefix][ammo_loader.caliber_name] [assembly.frame_type] ([quality])"
+	
+	var/obj/item/gun/ballistic/B = G
+	B.magazine = new B.mag_type(B)
 	src.forceMove(G) //Entire assembly gets thrown in the gun
 
 /obj/item/prefabs/complex/simpleWeaponFrame/low
@@ -958,7 +967,7 @@
 	bullet_speed_mod = -0.4
 
 /obj/item/prefabs/complex/barrel/dual
-	name = "Dual Barrel"
+	name = "Multiple barrels"
 	desc = ""
 	icon_state = "barrel"
 	complexity = 60
@@ -1086,7 +1095,7 @@
 	icon_state = "trigger"
 	complexity = 20
 	part_type = "trigger"
-	fire_delay_mod = -0.5
+	fire_delay_mod = -2.5
 
 /obj/item/prefabs/complex/trigger/advhair
 	name = "Advanced Hair Trigger"
@@ -1094,7 +1103,7 @@
 	icon_state = "trigger"
 	complexity = 40
 	part_type = "trigger"
-	fire_delay_mod = -1
+	fire_delay_mod = -5
 
 /obj/item/prefabs/complex/stock
 	name = "Stock"
@@ -1167,13 +1176,13 @@
 
 /obj/item/prefabs/complex/ammo_loader/m10mm
 	name = "10mm Simple Magazine Loader"
-	mag_type = /obj/item/ammo_box/magazine/m762
+	mag_type = /obj/item/ammo_box/magazine/m10mm_adv
 	complexity = 12
 	caliber_name = "10mm"
 
 /obj/item/prefabs/complex/ammo_loader/m10mmdouble
 	name = "10mm Double Magazine Loader"
-	mag_type = /obj/item/ammo_box/magazine/m762
+	mag_type = /obj/item/ammo_box/magazine/m10mm_auto
 	complexity = 20
 	caliber_name = "10mm"
 
@@ -1206,31 +1215,35 @@
 	mag_type = /obj/item/ammo_box/magazine/d12g
 	complexity = 60
 	caliber_name = "12g"
-/*
+
 /obj/item/prefabs/complex/ammo_loader/m4570
 	name = "45-70 Internal Magazine Loader"
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/tube4570
 	complexity = 60
 	caliber_name = ".45-70"
+	canpulloutmag = FALSE
 
 /obj/item/prefabs/complex/ammo_loader/m44
 	name = ".44 Internal Magazine Loader"
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/tube44
 	complexity = 40
 	caliber_name = ".44"
+	canpulloutmag = FALSE
 
 /obj/item/prefabs/complex/ammo_loader/m44
 	name = ".357 Internal Magazine Loader"
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/tube357
 	complexity = 30
 	caliber_name = ".357"
+	canpulloutmag = FALSE
 
 /obj/item/prefabs/complex/ammo_loader/m50MG
 	name = ".50MG Internal Magazine Loader"
 	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/antimateriel
 	complexity = 80
 	caliber_name = ".50"
-*/
+	canpulloutmag = FALSE
+
 //more stuff here
 //energy weapons
 //scopes
