@@ -1483,3 +1483,18 @@
 	weapon_weight = WEAPON_LIGHT
 	extra_damage = 5
 	extra_penetration = 5
+
+/obj/item/gun/ballistic/automatic/m1carbine
+	name = "m1 carbine"
+	desc = "The M1 Carbine is a renowned carbine that has been in service since WW2. Recently retired, these guns were transferred to National Guard Armouries and rechambered to 10mm."
+	icon_state = "m1carbine"
+	item_state = "rifle"
+	burst_size = 1
+	fire_delay = 2
+	automatic = 0
+	mag_type = /obj/item/ammo_box/magazine/m10mm_adv
+	fire_sound = 'sound/f13weapons/varmint_rifle.ogg'
+	w_class = WEIGHT_CLASS_BULKY
+	weapon_weight = WEAPON_HEAVY
+	extra_damage = 4
+	extra_penetration = 4
