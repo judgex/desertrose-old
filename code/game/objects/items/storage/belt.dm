@@ -455,6 +455,15 @@
 	GET_COMPONENT(STR, /datum/component/storage)
 	STR.max_items = 7
 
+/obj/item/storage/belt/military/followers/PopulateContents()
+	new /obj/item/reagent_containers/spray/pepper(src)
+	new /obj/item/restraints/handcuffs(src)
+	new /obj/item/melee/classic_baton(src)
+	new /obj/item/kitchen/knife/combat(src)
+	new /obj/item/ammo_box/magazine/m9mmds(src)
+	update_icon()
+
+
 /obj/item/storage/belt/grenade
 	name = "grenadier belt"
 	desc = "A belt for holding grenades."
