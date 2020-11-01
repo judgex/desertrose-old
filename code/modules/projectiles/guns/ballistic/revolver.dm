@@ -513,10 +513,6 @@
 	name = "hunting revolver (improved)"
 	extra_damage = 0
 	extra_penetration = 0
-	extra_parts = list(/obj/item/prefabs/complex/bolt/simple,
-	/obj/item/prefabs/complex/action/simple,
-	/obj/item/prefabs/complex/barrel/m4570,
-	/obj/item/prefabs/complex/complexWeaponFrame/mid)
 
 /obj/item/gun/ballistic/revolver/sequoia/scoped/high
 	name = "hunting revolver (masterwork)"
@@ -524,10 +520,6 @@
 	zoom_out_amt = 16
 	extra_damage = 7
 	extra_penetration = 7
-	extra_parts = list(/obj/item/prefabs/complex/bolt/simple,
-	/obj/item/prefabs/complex/action/simple,
-	/obj/item/prefabs/complex/barrel/m4570,
-	/obj/item/prefabs/complex/complexWeaponFrame/high)
 
 /obj/item/gun/ballistic/revolver/zipgun
 	name = "zipgun"

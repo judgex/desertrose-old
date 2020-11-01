@@ -42,6 +42,7 @@
 	var/gun_weight_class = WEIGHT_CLASS_TINY //bulky, tiny, small. uses the highest weighted part
 	var/caliber_name = ""
 	var/frame_type = "pistol"
+	var/scope = FALSE
 
 /obj/item/stack/prefabs
     name = "crafting prefabs"
@@ -624,11 +625,11 @@
 				gun_icon = "fnfal"
 
 		if("sniper")
+			scope = TRUE
 			if(enables_automatic)
 				gun_path = /obj/item/gun/ballistic/automatic
 			else
 				gun_path = /obj/item/gun/ballistic/shotgun //Bolt action
-
 			gun_icon = "308"
 			switch(barrel.caliber_name)
 				if(".357")
@@ -725,6 +726,12 @@
 
 	G.name = "[prefix][ammo_loader.caliber_name] [assembly.frame_type] ([quality])"
 	
+	if(scope)
+		G.zoomable = TRUE
+		G.zoom_amt = 10
+		G.zoom_out_amt = 13
+		G.build_zooming()
+
 	var/obj/item/gun/ballistic/B = G
 	B.magazine = new B.mag_type(B)
 	src.forceMove(G) //Entire assembly gets thrown in the gun
@@ -900,15 +907,15 @@
 	icon_state = "action"
 	complexity = 10
 	tags = list("semiauto")
-	incompatible_tags = list("automatic","smg","lmg")
+	incompatible_tags = list("automatic")
 
 /obj/item/prefabs/complex/action/auto
 	name = "Automatic Action"
 	desc = ""
 	icon_state = "action"
-	complexity = 15
+	complexity = 30
 	tags = list("automatic")
-	incompatible_tags = list("semiauto","smg","lmg")
+	incompatible_tags = list("semiauto")
 	spread_mod = 10
 	enables_automatic = TRUE
 
@@ -918,7 +925,7 @@
 	icon_state = "action"
 	complexity = 20
 	tags = list("automatic")
-	incompatible_tags = list("semiauto","revolver","shotgun","sniper")
+	incompatible_tags = list("revolver","shotgun","sniper")
 	burst_mod = 1
 	spread_mod = 10
 	enables_automatic = TRUE
@@ -976,89 +983,6 @@
 	spread_mod = 15
 
 // obsolete
-/obj/item/prefabs/complex/barrel/shotgun
-	name = "Shotgun Barrel"
-	desc = ""
-	icon_state = "barrel"
-	tags = list("shotgun")
-	incompatible_tags = list("rifle","pistol","smg","sniper","lmg")//Shotguns and revolvers
-	caliber_name = "12g"
-	complexity = 12
-
-/obj/item/prefabs/complex/barrel/mm10
-	name = "10mm Barrel"
-	desc = ""
-	icon_state = "barrel"
-	tags = list("10")
-	incompatible_tags = list("sniper","revolver")
-	caliber_name = "10mm"
-	complexity = 15
-
-/obj/item/prefabs/complex/barrel/mm9
-	name = "9mm Barrel"
-	desc = ""
-	icon_state = "barrel"
-	tags = list("9")
-	incompatible_tags = list("sniper","lmg","revolver")
-	caliber_name = "9mm"
-	complexity = 12
-
-/obj/item/prefabs/complex/barrel/m357
-	name = ".357 Barrel"
-	desc = ""
-	tags = list("357")
-	caliber_name = ".357"
-	incompatible_tags = list("smg","lmg")
-	complexity = 20
-
-/obj/item/prefabs/complex/barrel/m44
-	name = ".44 Barrel"
-	desc = ""
-	tags = list("44")
-	caliber_name = ".44"
-	incompatible_tags = list()		//Highly compatible, but complex
-	complexity = 26
-
-/obj/item/prefabs/complex/barrel/m45
-	name = ".45 Barrel"
-	desc = ""
-	tags = list("45")
-	caliber_name = ".45"
-	incompatible_tags = list()		//Ditto
-	complexity = 28
-
-/obj/item/prefabs/complex/barrel/m4570
-	name = ".45-70 Barrel"
-	desc = ""
-	tags = list("45-70","prewar_quality")
-	caliber_name = ".45-70"
-	incompatible_tags = list("smg","lmg")
-	complexity = 60 //Ouch
-
-/obj/item/prefabs/complex/barrel/m556
-	name = "5.56 Barrel"
-	desc = ""
-	tags = list("556","good_quality")
-	caliber_name = "5.56"
-	incompatible_tags = list("revolver","smg")
-	complexity = 30
-
-/obj/item/prefabs/complex/barrel/m762
-	name = "7.62 Barrel"
-	desc = ""
-	tags = list("762","prewar_quality")
-	caliber_name = "7.62"
-	incompatible_tags = list("smg","revolver","pistol")
-	complexity = 45
-
-/obj/item/prefabs/complex/barrel/m50
-	name = ".50 Barrel"
-	desc = ""
-	tags = list("50","prewar_quality")
-	caliber_name = ".50"
-	incompatible_tags = list("smg","rifle","lmg","revolver") //Hahaha no
-	complexity = 80
-
 /obj/item/prefabs/complex/bolt
 	name = "Bolt"
 	desc = ""
@@ -1111,7 +1035,7 @@
 	icon_state = "stockwood"
 	//tags = list("rifle","shotgun","lmg")
 	//tags = list("rifle")
-	incompatible_tags = list("pistol")
+	incompatible_tags = list("pistol","revolver")
 	complexity = 5
 	part_type = "stock"
 
@@ -1149,78 +1073,91 @@
 	mag_type = /obj/item/ammo_box/magazine/m556
 	complexity = 30
 	caliber_name = "5.56"
+	incompatible_tags = list("revolver")
 
 /obj/item/prefabs/complex/ammo_loader/m762
 	name = "762 Magazine Loader"
 	mag_type = /obj/item/ammo_box/magazine/m762
 	complexity = 80
 	caliber_name = "7.62"
+	incompatible_tags = list("revolver")
 
 /obj/item/prefabs/complex/ammo_loader/m9mm
 	name = "9mm Simple Magazine Loader"
 	mag_type = /obj/item/ammo_box/magazine/m9mm
 	complexity = 10
 	caliber_name = "9mm"
+	incompatible_tags = list("revolver")
 
 /obj/item/prefabs/complex/ammo_loader/m9mmdouble
 	name = "9mm Double Stack Magazine Loader"
 	mag_type = /obj/item/ammo_box/magazine/m9mmds
 	complexity = 15
 	caliber_name = "9mm"
+	incompatible_tags = list("revolver")
 
 /obj/item/prefabs/complex/ammo_loader/m9mmext
 	name = "9mm Extended Magazine Loader"
 	mag_type = /obj/item/ammo_box/magazine/uzim9mm
 	complexity = 20
 	caliber_name = "9mm"
+	incompatible_tags = list("revolver")
 
 /obj/item/prefabs/complex/ammo_loader/m10mm
 	name = "10mm Simple Magazine Loader"
 	mag_type = /obj/item/ammo_box/magazine/m10mm_adv
 	complexity = 12
 	caliber_name = "10mm"
+	incompatible_tags = list("revolver")
 
 /obj/item/prefabs/complex/ammo_loader/m10mmdouble
 	name = "10mm Double Magazine Loader"
 	mag_type = /obj/item/ammo_box/magazine/m10mm_auto
 	complexity = 20
 	caliber_name = "10mm"
+	incompatible_tags = list("revolver")
 
 /obj/item/prefabs/complex/ammo_loader/m45mm
 	name = ".45 Simple Magazine Loader"
 	mag_type = /obj/item/ammo_box/magazine/m45
 	complexity = 8
 	caliber_name = ".45"
+	incompatible_tags = list("revolver")
 
 /obj/item/prefabs/complex/ammo_loader/m45mmdouble
 	name = ".45 Double Magazine Loader"
 	mag_type = /obj/item/ammo_box/magazine/greasegun
 	complexity = 20
 	caliber_name = ".45"
+	incompatible_tags = list("revolver")
 
 /obj/item/prefabs/complex/ammo_loader/m45mmext
 	name = ".45 Extended Magazine Loader"
 	mag_type = /obj/item/ammo_box/magazine/tommygunm45
 	complexity = 30
 	caliber_name = ".45"
+	incompatible_tags = list("revolver")
 
 /obj/item/prefabs/complex/ammo_loader/m50AE
 	name = ".50AE Magazine Loader"
 	mag_type = /obj/item/ammo_box/magazine/a50
 	complexity = 30
 	caliber_name = ".50"
+	incompatible_tags = list("revolver")
 
 /obj/item/prefabs/complex/ammo_loader/m12g
 	name = "12g Drum Magazine Loader"
 	mag_type = /obj/item/ammo_box/magazine/d12g
 	complexity = 60
 	caliber_name = "12g"
+	incompatible_tags = list("automatic","revolver","pistol")
 
 /obj/item/prefabs/complex/ammo_loader/m4570
 	name = "45-70 Internal Magazine Loader"
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/tube4570
 	complexity = 60
 	caliber_name = ".45-70"
+	incompatible_tags = list("automatic","pistol")
 	canpulloutmag = FALSE
 
 /obj/item/prefabs/complex/ammo_loader/m44
@@ -1228,6 +1165,7 @@
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/tube44
 	complexity = 40
 	caliber_name = ".44"
+	incompatible_tags = list("automatic","pistol")
 	canpulloutmag = FALSE
 
 /obj/item/prefabs/complex/ammo_loader/m44
@@ -1235,6 +1173,7 @@
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/tube357
 	complexity = 30
 	caliber_name = ".357"
+	incompatible_tags = list("automatic","pistol")
 	canpulloutmag = FALSE
 
 /obj/item/prefabs/complex/ammo_loader/m50MG
@@ -1242,8 +1181,16 @@
 	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/antimateriel
 	complexity = 80
 	caliber_name = ".50"
+	tags = list("semiauto")
+	incompatible_tags = list("automatic","pistol","shotgun")
 	canpulloutmag = FALSE
 
+//guns you should be able to make
+/*
+*/
+//guns you shouldn't be able to make
+/*
+*/
 //more stuff here
 //energy weapons
 //scopes

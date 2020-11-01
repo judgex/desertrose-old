@@ -106,10 +106,6 @@
 	name = "colt N99 (improved)"
 	extra_damage = 0
 	extra_penetration = 0
-	extra_parts = list(/obj/item/prefabs/complex/bolt/simple,
-	/obj/item/prefabs/complex/action/simple,
-	/obj/item/prefabs/complex/barrel/mm10,
-	/obj/item/prefabs/complex/simpleWeaponFrame/mid)
 
 /obj/item/gun/ballistic/automatic/pistol/n99/high//masterwork
 	spread = 0
@@ -117,10 +113,7 @@
 	name = "colt N99 (masterwork)"
 	extra_damage = 3
 	extra_penetration = 5
-	extra_parts = list(/obj/item/prefabs/complex/bolt/simple,
-	/obj/item/prefabs/complex/action/simple,
-	/obj/item/prefabs/complex/barrel/mm10,
-	/obj/item/prefabs/complex/simpleWeaponFrame/high)
+
 
 /obj/item/gun/ballistic/automatic/pistol/n99/pers/gunslinger
 	name = "colt N99 (gunslinger variant)"
@@ -128,11 +121,6 @@
 	fire_delay = 1.9
 	extra_damage = 0
 	extra_penetration = 0
-	extra_parts = list(/obj/item/prefabs/complex/bolt/simple,
-	/obj/item/prefabs/complex/action/simple,
-	/obj/item/prefabs/complex/barrel/mm10,
-	/obj/item/prefabs/complex/simpleWeaponFrame/mid,
-	/obj/item/advanced_crafting_components/alloys)
 
 /obj/item/gun/ballistic/automatic/pistol/n99/pers/glock
 	name = "colt N99 (extended variant)"
@@ -141,11 +129,6 @@
 	extra_damage = 0
 	extra_penetration = -5
 	spread = 25
-	extra_parts = list(/obj/item/prefabs/complex/bolt/simple,
-	/obj/item/prefabs/complex/action/simple,
-	/obj/item/prefabs/complex/barrel/mm10,
-	/obj/item/prefabs/complex/simpleWeaponFrame/mid,
-	/obj/item/advanced_crafting_components/receiver)
 
 /obj/item/gun/ballistic/automatic/pistol/n99/pers/long
 	name = "colt N99 (scoped variant)"
@@ -157,11 +140,6 @@
 	zoomable = TRUE
 	zoom_amt = 8
 	zoom_out_amt = 11
-	extra_parts = list(/obj/item/prefabs/complex/bolt/simple,
-	/obj/item/prefabs/complex/action/simple,
-	/obj/item/prefabs/complex/barrel/mm10,
-	/obj/item/prefabs/complex/simpleWeaponFrame/mid,
-	/obj/item/advanced_crafting_components/assembly)
 
 /obj/item/gun/ballistic/automatic/pistol/n99/executive
 	name = "\improper Executive" //'the Executive'

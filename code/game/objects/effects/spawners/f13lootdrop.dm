@@ -1462,7 +1462,6 @@
 		/obj/item/prefabs/complex/action/rapid,
 		/obj/item/prefabs/complex/barrel/long,
 		/obj/item/prefabs/complex/ammo_loader/m762,
-		/obj/item/prefabs/complex/ammo_loader/m45mmext,
 		/obj/item/prefabs/complex/ammo_loader/m50AE,
 		/obj/item/prefabs/complex/ammo_loader/m12g,
 		/obj/item/prefabs/complex/ammo_loader/m4570,
@@ -1497,7 +1496,6 @@
 		/obj/item/blueprint/weapon/mg34/limited,
 		/obj/item/prefabs/complex/action/auto,
 		/obj/item/prefabs/complex/bolt/high,
-		/obj/item/prefabs/complex/barrel/m4570
 	)
 /obj/effect/spawner/lootdrop/f13/blueprintHigh
 	name = "blueprint-tier(High) item spawner"
