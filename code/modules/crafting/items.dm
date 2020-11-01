@@ -924,7 +924,7 @@
 	desc = ""
 	icon_state = "action"
 	complexity = 20
-	tags = list("automatic")
+	tags = list("automatic","burst")
 	incompatible_tags = list("revolver","shotgun","sniper")
 	burst_mod = 1
 	spread_mod = 10
@@ -936,7 +936,7 @@
 	icon_state = "action"
 	part_type = "action"
 	complexity = 50
-	tags = list("automatic")
+	tags = list("automatic","burst")
 	incompatible_tags = list("revolver","shotgun","sniper","pistol")
 	spread_mod = 20
 	burst_mod = 2
@@ -1150,14 +1150,14 @@
 	mag_type = /obj/item/ammo_box/magazine/d12g
 	complexity = 60
 	caliber_name = "12g"
-	incompatible_tags = list("automatic","revolver","pistol")
+	incompatible_tags = list("burst","revolver","pistol")
 
 /obj/item/prefabs/complex/ammo_loader/m4570
 	name = "45-70 Internal Magazine Loader"
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/tube4570
 	complexity = 60
 	caliber_name = ".45-70"
-	incompatible_tags = list("automatic","pistol")
+	incompatible_tags = list("pistol")
 	canpulloutmag = FALSE
 
 /obj/item/prefabs/complex/ammo_loader/m44
@@ -1165,7 +1165,7 @@
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/tube44
 	complexity = 40
 	caliber_name = ".44"
-	incompatible_tags = list("automatic","pistol")
+	incompatible_tags = list("pistol")
 	canpulloutmag = FALSE
 
 /obj/item/prefabs/complex/ammo_loader/m44
@@ -1173,7 +1173,7 @@
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/tube357
 	complexity = 30
 	caliber_name = ".357"
-	incompatible_tags = list("automatic","pistol")
+	incompatible_tags = list("pistol")
 	canpulloutmag = FALSE
 
 /obj/item/prefabs/complex/ammo_loader/m50MG
