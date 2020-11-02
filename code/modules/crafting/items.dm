@@ -980,7 +980,7 @@
 	complexity = 60
 	burst_mod = 1
 	burst_delay_mod = -2
-	spread_mod = 15
+	spread_mod = 30
 
 // obsolete
 /obj/item/prefabs/complex/bolt
@@ -1000,7 +1000,7 @@
 /obj/item/prefabs/complex/bolt/high
 	name = "Advanced Bolt"
 	desc = ""
-	tags = list("prewar_quality")
+	tags = list("prewar_quality","bonusdmg")
 	incompatible_tags = list("crude_quality")
 	complexity = 35
 	dam_mod = 5
@@ -1150,7 +1150,7 @@
 	mag_type = /obj/item/ammo_box/magazine/d12g
 	complexity = 60
 	caliber_name = "12g"
-	incompatible_tags = list("burst","revolver","pistol")
+	incompatible_tags = list("bonusdmg","burst","revolver","pistol")
 
 /obj/item/prefabs/complex/ammo_loader/m4570
 	name = "45-70 Internal Magazine Loader"
@@ -1185,24 +1185,23 @@
 	incompatible_tags = list("automatic","pistol","shotgun")
 	canpulloutmag = FALSE
 
-//guns you should be able to make
-/*
-*/
-//guns you shouldn't be able to make
-/*
-*/
 //more stuff here
+//internal shotgun magazines
+//etc
 //energy weapons
-//scopes
 
-
-//more stuff here
 /obj/item/prefabs/complex/gunframe
 	name = "frame"
 	part_type = "frame"
 	icon_state = "weapon_parts_1"
 	var/gun_type = ""
 	var/needs_stock = FALSE
+
+/obj/item/prefabs/complex/loot
+	name = "Ruined Pre-War Assembly"
+	desc = "Someone might be able to salvage this using an advanced workbench..."
+	part_type = "frame"
+	icon_state = "weapon_parts_1"
 
 //plasma
 /obj/item/advanced_crafting_components/flux
