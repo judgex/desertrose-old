@@ -923,11 +923,11 @@
 	name = "Automatic Burst Action"
 	desc = ""
 	icon_state = "action"
-	complexity = 20
+	complexity = 50
 	tags = list("automatic","burst")
 	incompatible_tags = list("revolver","shotgun","sniper")
 	burst_mod = 1
-	spread_mod = 10
+	spread_mod = 20
 	enables_automatic = TRUE
 
 /obj/item/prefabs/complex/action/rapid
@@ -935,10 +935,10 @@
 	desc = "Rare!"
 	icon_state = "action"
 	part_type = "action"
-	complexity = 50
+	complexity = 80
 	tags = list("automatic","burst")
 	incompatible_tags = list("revolver","shotgun","sniper","pistol")
-	spread_mod = 20
+	spread_mod = 30
 	burst_mod = 2
 	burst_delay_mod = -1
 	enables_automatic = TRUE
@@ -977,7 +977,7 @@
 	name = "Multiple barrels"
 	desc = ""
 	icon_state = "barrel"
-	complexity = 60
+	complexity = 70
 	burst_mod = 1
 	burst_delay_mod = -2
 	spread_mod = 30
@@ -1002,9 +1002,9 @@
 	desc = ""
 	tags = list("prewar_quality","bonusdmg")
 	incompatible_tags = list("crude_quality")
-	complexity = 35
-	dam_mod = 5
-	armorpen_mod = 5
+	complexity = 40
+	dam_mod = 6
+	armorpen_mod = 6
 
 /obj/item/prefabs/complex/trigger/simple
 	name = "Simple Trigger"
@@ -1127,7 +1127,7 @@
 /obj/item/prefabs/complex/ammo_loader/m45mmdouble
 	name = ".45 Double Magazine Loader"
 	mag_type = /obj/item/ammo_box/magazine/greasegun
-	complexity = 20
+	complexity = 18
 	caliber_name = ".45"
 	incompatible_tags = list("revolver")
 
@@ -1163,7 +1163,7 @@
 /obj/item/prefabs/complex/ammo_loader/m44
 	name = ".44 Internal Magazine Loader"
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/tube44
-	complexity = 40
+	complexity = 15
 	caliber_name = ".44"
 	incompatible_tags = list("pistol")
 	canpulloutmag = FALSE
@@ -1171,7 +1171,7 @@
 /obj/item/prefabs/complex/ammo_loader/m44
 	name = ".357 Internal Magazine Loader"
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/tube357
-	complexity = 30
+	complexity = 10
 	caliber_name = ".357"
 	incompatible_tags = list("pistol")
 	canpulloutmag = FALSE
@@ -1199,8 +1199,7 @@
 
 /obj/item/prefabs/complex/loot
 	name = "Ruined Pre-War Assembly"
-	desc = "Someone might be able to salvage this using an advanced workbench..."
-	part_type = "frame"
+	desc = "You might be able to salvage this using an advanced workbench, a gunsmith might get better results..."
 	icon_state = "weapon_parts_1"
 
 //plasma
