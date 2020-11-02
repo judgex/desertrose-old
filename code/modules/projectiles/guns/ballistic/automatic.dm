@@ -4,7 +4,7 @@
 	var/select = 1
 	can_suppress = FALSE
 	w_class = WEIGHT_CLASS_BULKY
-	burst_size = 3
+	burst_size = 1
 	fire_delay = 2
 	actions_types = list(/datum/action/item_action/toggle_firemode)
 	force = 20
@@ -16,6 +16,7 @@
 	name = "compact submachine gun"
 	desc = "A prototype three-round burst 9mm submachine gun, designated 'SABR'. Has a threaded barrel for suppressors."
 	icon_state = "saber"
+	burst_size = 3
 	mag_type = /obj/item/ammo_box/magazine/smgm9mm
 	pin = null
 
@@ -573,12 +574,6 @@
 	extra_damage = -9
 	extra_penetration = 0
 	randomspread = 0
-	extra_parts = list(/obj/item/prefabs/complex/bolt/simple,
-	/obj/item/prefabs/complex/action/auto,
-	/obj/item/prefabs/complex/barrel/mm9,
-	/obj/item/prefabs/complex/stock/low,
-	/obj/item/prefabs/complex/complexWeaponFrame/mid,
-	/obj/item/advanced_crafting_components/receiver)
 
 /obj/item/gun/ballistic/automatic/pps/high
 	name = "\improper PPSh-41 (masterwork)"
@@ -590,12 +585,6 @@
 	can_attachments = TRUE
 	w_class = WEIGHT_CLASS_SMALL
 	weapon_weight = WEAPON_LIGHT
-	extra_parts = list(/obj/item/prefabs/complex/bolt/simple,
-	/obj/item/prefabs/complex/action/auto,
-	/obj/item/prefabs/complex/barrel/mm9,
-	/obj/item/prefabs/complex/stock/low,
-	/obj/item/prefabs/complex/complexWeaponFrame/high,
-	/obj/item/advanced_crafting_components/receiver)
 
 /obj/item/gun/ballistic/automatic/pps/burst_select()
 	var/mob/living/carbon/human/user = usr
@@ -698,12 +687,6 @@
 	randomspread = 0
 	extra_penetration = 0
 	extra_damage = 0
-	extra_parts = list(/obj/item/prefabs/complex/bolt/simple,
-	/obj/item/prefabs/complex/action/auto,
-	/obj/item/prefabs/complex/barrel/mm10,
-	/obj/item/prefabs/complex/stock/mid,
-	/obj/item/prefabs/complex/complexWeaponFrame/mid,
-	/obj/item/advanced_crafting_components/receiver)
 
 /obj/item/gun/ballistic/automatic/smg10mm/high
 	name = "10mm submachine gun (masterwork)"
@@ -715,12 +698,7 @@
 	extra_penetration = 6
 	w_class = WEIGHT_CLASS_SMALL
 	weapon_weight = WEAPON_LIGHT
-	extra_parts = list(/obj/item/prefabs/complex/bolt/simple,
-	/obj/item/prefabs/complex/action/auto,
-	/obj/item/prefabs/complex/barrel/mm10,
-	/obj/item/prefabs/complex/stock/mid,
-	/obj/item/prefabs/complex/complexWeaponFrame/high,
-	/obj/item/advanced_crafting_components/receiver)
+
 
 /obj/item/gun/ballistic/automatic/smg10mm/burst_select()
 	var/mob/living/carbon/human/user = usr
@@ -817,13 +795,6 @@
 	extra_penetration = 0
 	extra_damage = 0
 	burst_delay = 2
-	extra_parts = list(/obj/item/prefabs/complex/bolt/high,
-	/obj/item/prefabs/complex/action/auto,
-	/obj/item/prefabs/complex/barrel/m556,
-	/obj/item/prefabs/complex/stock/mid,
-	/obj/item/prefabs/complex/complexWeaponFrame/mid,
-	/obj/item/advanced_crafting_components/receiver,
-	/obj/item/advanced_crafting_components/assembly)
 
 /obj/item/gun/ballistic/automatic/assault_rifle/high
 	name = "assault rifle (masterwork)"
@@ -833,13 +804,6 @@
 	extra_penetration = 6
 	burst_delay = 2
 	weapon_weight = WEAPON_LIGHT
-	extra_parts = list(/obj/item/prefabs/complex/bolt/high,
-	/obj/item/prefabs/complex/action/auto,
-	/obj/item/prefabs/complex/barrel/m556,
-	/obj/item/prefabs/complex/stock/mid,
-	/obj/item/prefabs/complex/complexWeaponFrame/high,
-	/obj/item/advanced_crafting_components/receiver,
-	/obj/item/advanced_crafting_components/assembly)
 
 /obj/item/gun/ballistic/automatic/assault_rifle/burst_select()
 	var/mob/living/carbon/human/user = usr
@@ -977,11 +941,6 @@
 	fire_delay = 4
 	extra_damage = 0
 	extra_penetration = 0
-	extra_parts = list(/obj/item/prefabs/complex/bolt/simple,
-	/obj/item/prefabs/complex/action/simple,
-	/obj/item/prefabs/complex/barrel/m556,
-	/obj/item/prefabs/complex/stock/mid,
-	/obj/item/prefabs/complex/complexWeaponFrame/mid)
 
 /obj/item/gun/ballistic/automatic/marksman/servicerifle/high
 	name = "service rifle (masterwork)"
@@ -990,11 +949,7 @@
 	extra_damage = 10
 	extra_penetration = 10
 	weapon_weight = WEAPON_LIGHT
-	extra_parts = list(/obj/item/prefabs/complex/bolt/simple,
-	/obj/item/prefabs/complex/action/simple,
-	/obj/item/prefabs/complex/barrel/m556,
-	/obj/item/prefabs/complex/stock/mid,
-	/obj/item/prefabs/complex/complexWeaponFrame/high)
+
 
 /obj/item/gun/ballistic/automatic/marksman/servicerifle/r82
 	name = "R82 heavy service rifle"
@@ -1103,12 +1058,6 @@
 	fire_delay = 3
 	burst_delay = 3
 	can_disassemble = FALSE
-	extra_parts = list(/obj/item/prefabs/complex/bolt/simple, 
-					/obj/item/prefabs/complex/action/auto,
-					/obj/item/prefabs/complex/barrel/m45,
-					/obj/item/prefabs/complex/stock/mid,
-					/obj/item/prefabs/complex/complexWeaponFrame/mid,
-					/obj/item/advanced_crafting_components/receiver)
 
 /obj/item/gun/ballistic/automatic/greasegun/high
 	name = "M3A1 Grease Gun (masterwork)"
@@ -1120,12 +1069,6 @@
 	w_class = WEIGHT_CLASS_SMALL
 	weapon_weight = WEAPON_LIGHT
 	can_disassemble = FALSE
-	extra_parts = list(/obj/item/prefabs/complex/bolt/simple, 
-					/obj/item/prefabs/complex/action/auto,
-					/obj/item/prefabs/complex/barrel/m45,
-					/obj/item/prefabs/complex/stock/mid,
-					/obj/item/prefabs/complex/complexWeaponFrame/high,
-					/obj/item/advanced_crafting_components/receiver)
 
 /obj/item/gun/ballistic/automatic/greasegun/burst_select()
 	var/mob/living/carbon/human/user = usr
@@ -1344,13 +1287,7 @@
 	knife_y_offset = 21
 	randomspread = 10
 	can_disassemble = FALSE
-	extra_parts = list(/obj/item/prefabs/complex/bolt/high,
-	/obj/item/prefabs/complex/action/simple,
-	/obj/item/prefabs/complex/barrel/m762,
-	/obj/item/prefabs/complex/stock/mid,
-	/obj/item/prefabs/complex/complexWeaponFrame/low,
-	/obj/item/advanced_crafting_components/receiver,
-	/obj/item/advanced_crafting_components/assembly)
+
 
 /obj/item/gun/ballistic/automatic/rangemaster/scoped
 	name = "Scoped Colt Rangemaster"
@@ -1368,13 +1305,6 @@
 	randomspread = 0
 	extra_penetration = 0
 	extra_damage = 0
-	extra_parts = list(/obj/item/prefabs/complex/bolt/high,
-	/obj/item/prefabs/complex/action/simple,
-	/obj/item/prefabs/complex/barrel/m762,
-	/obj/item/prefabs/complex/stock/mid,
-	/obj/item/prefabs/complex/complexWeaponFrame/mid,
-	/obj/item/advanced_crafting_components/receiver,
-	/obj/item/advanced_crafting_components/assembly)
 
 /obj/item/gun/ballistic/automatic/rangemaster/scoped/high
 	name = "Scoped Colt Rangemaster (masterwork)"
@@ -1382,13 +1312,7 @@
 	fire_delay = 4
 	extra_penetration = 7
 	extra_damage = 7
-	extra_parts = list(/obj/item/prefabs/complex/bolt/high,
-	/obj/item/prefabs/complex/action/simple,
-	/obj/item/prefabs/complex/barrel/m762,
-	/obj/item/prefabs/complex/stock/mid,
-	/obj/item/prefabs/complex/complexWeaponFrame/high,
-	/obj/item/advanced_crafting_components/receiver,
-	/obj/item/advanced_crafting_components/assembly)
+
 
 /obj/item/gun/ballistic/automatic/fnfal
 	name = "FN FAL"
