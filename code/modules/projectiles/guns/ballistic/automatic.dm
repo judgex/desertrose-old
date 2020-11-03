@@ -776,8 +776,8 @@
 	fire_sound = 'sound/f13weapons/assaultrifle_fire.ogg'
 	burst_size = 2
 	automatic = 1
-	fire_delay = 4
-	burst_delay = 3
+	fire_delay = 3
+	burst_delay = 2
 	spread = 8
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
