@@ -1292,7 +1292,7 @@
 	..()
 
 /datum/reagent/medicine/stimpak/overdose_process(mob/living/M)
-	M.adjustToxLoss(5*REM, 0)
+//	M.adjustToxLoss(5*REM, 0) Spasibo pendosi, segodnya bez peredozov
 	M.adjustOxyLoss(8*REM, 0)
 	..()
 	. = 1
@@ -1342,7 +1342,7 @@ datum/reagent/medicine/bitter_drink/on_mob_life(mob/living/M)
 	if(!M.reagents.has_reagent("stimpak") && !M.reagents.has_reagent("healing_powder")) //should prevent stacking with healing powder and stimpaks
 		M.adjustFireLoss(-3*REM)
 		M.adjustBruteLoss(-3*REM)
-		M.hallucination = max(M.hallucination, 5)
+//		M.hallucination = max(M.hallucination, 5) Da, da oxuenno logicno, gallucinacii n pohodnogo lekarsta
 		. = 1
 	..()
 
@@ -1367,7 +1367,7 @@ datum/reagent/medicine/bitter_drink/on_mob_life(mob/living/M)
 		metabolization_rate = 1000 * REAGENTS_METABOLISM //instant metabolise if it won't help you, prevents prehealing before combat
 	M.adjustFireLoss(-3*REM)
 	M.adjustBruteLoss(-3*REM)
-	M.hallucination = max(M.hallucination, 5)
+//	M.hallucination = max(M.hallucination, 5) Raznefaem nefrocik
 	. = 1
 	..()
 
@@ -1401,7 +1401,7 @@ datum/reagent/medicine/bitter_drink/on_mob_life(mob/living/M)
 		M.adjustFireLoss(-4*REM)
 		M.adjustBruteLoss(-4*REM)
 		M.adjustOxyLoss(-2*REM)
-		M.hallucination = max(M.hallucination, 5)
+//		M.hallucination = max(M.hallucination, 5) Ebaniy rot etih pendosov
 	..()
 
 /datum/reagent/medicine/healing_poultice/reaction_mob(mob/living/M, method=TOUCH, reac_volume, show_message = 1)
