@@ -4,7 +4,7 @@
 	var/select = 1
 	can_suppress = FALSE
 	w_class = WEIGHT_CLASS_BULKY
-	burst_size = 3
+	burst_size = 1
 	fire_delay = 2
 	actions_types = list(/datum/action/item_action/toggle_firemode)
 	force = 20
@@ -16,6 +16,7 @@
 	name = "compact submachine gun"
 	desc = "A prototype three-round burst 9mm submachine gun, designated 'SABR'. Has a threaded barrel for suppressors."
 	icon_state = "saber"
+	burst_size = 3
 	mag_type = /obj/item/ammo_box/magazine/smgm9mm
 	pin = null
 
@@ -28,7 +29,10 @@
 		add_overlay("[initial(icon_state)]semi")
 	if(select == 1)
 		add_overlay("[initial(icon_state)]burst")
-	icon_state = "[initial(icon_state)][magazine ? "-[magazine.max_ammo]" : ""][chambered ? "" : "-e"][suppressed ? "-suppressed" : ""]"
+	if(gun_icon_state)//It's a custom gun, it plays by its own rules
+		icon_state = "[gun_icon_state][chambered ? "" : "-e"][suppressed ? "-suppressed" : ""]"
+	else
+		icon_state = "[initial(icon_state)][magazine ? "-[magazine.max_ammo]" : ""][chambered ? "" : "-e"][suppressed ? "-suppressed" : ""]"
 
 /obj/item/gun/ballistic/automatic/attackby(obj/item/A, mob/user, params)
 	. = ..()
@@ -480,7 +484,7 @@
 
 /obj/item/gun/ballistic/automatic/mini_uzi
 	spawnwithmagazine = FALSE
-	name = "\improper Type U3 Uzi (standard)"
+	name = "\improper Type U3 Uzi"
 	desc = "A lightweight, burst-fire submachine gun, for when you really want someone dead. Uses 9mm rounds."
 	icon_state = "mini-uzi"
 	mag_type = /obj/item/ammo_box/magazine/uzim9mm
@@ -494,19 +498,9 @@
 	burst_delay = 2
 	fire_delay = 5
 	force = 15
-	extra_damage = -5
-	extra_penetration = -5
-	randomspread = 10
 	spread = 10
 	can_attachments = TRUE
 	can_suppress = TRUE
-	can_disassemble = TRUE
-	extra_parts = list(/obj/item/prefabs/complex/bolt/simple,
-	/obj/item/prefabs/complex/action/auto,
-	/obj/item/prefabs/complex/barrel/mm9,
-	/obj/item/prefabs/complex/stock/mid,
-	/obj/item/prefabs/complex/complexWeaponFrame/low,
-	/obj/item/advanced_crafting_components/receiver)
 
 /obj/item/gun/ballistic/automatic/mini_uzi/mid
 	name = "\improper Type U3 Uzi (improved)"
@@ -517,12 +511,6 @@
 	extra_penetration = 0
 	extra_damage = 0
 	randomspread = 0
-	extra_parts = list(/obj/item/prefabs/complex/bolt/simple,
-	/obj/item/prefabs/complex/action/auto,
-	/obj/item/prefabs/complex/barrel/mm9,
-	/obj/item/prefabs/complex/stock/mid,
-	/obj/item/prefabs/complex/complexWeaponFrame/mid,
-	/obj/item/advanced_crafting_components/receiver)
 
 /obj/item/gun/ballistic/automatic/mini_uzi/high
 	name = "\improper Type U3 Uzi (masterwork)"
@@ -533,12 +521,6 @@
 	extra_damage = 5
 	extra_penetration = 5
 	randomspread = 0
-	extra_parts = list(/obj/item/prefabs/complex/bolt/simple,
-	/obj/item/prefabs/complex/action/auto,
-	/obj/item/prefabs/complex/barrel/mm9,
-	/obj/item/prefabs/complex/stock/mid,
-	/obj/item/prefabs/complex/complexWeaponFrame/high,
-	/obj/item/advanced_crafting_components/receiver)
 
 /obj/item/gun/ballistic/automatic/mini_uzi/burst_select()
 	var/mob/living/carbon/human/user = usr
@@ -565,7 +547,7 @@
 
 /obj/item/gun/ballistic/automatic/pps
 	spawnwithmagazine = FALSE
-	name = "\improper ancient SMG (standard)"
+	name = "\improper PPSh-41"
 	desc = "An extremely fast firing, innacurate SMG from past wars. Low fire rate and low damage. Uses 9mm rounds."
 	icon_state = "pps"
 	mag_type = /obj/item/ammo_box/magazine/pps9mm
@@ -581,32 +563,20 @@
 	spread = 20
 	can_attachments = TRUE
 	randomspread = 10
-	extra_damage = -14
+	extra_damage = -9
 	extra_penetration = -5
-	extra_parts = list(/obj/item/prefabs/complex/bolt/simple,
-	/obj/item/prefabs/complex/action/auto,
-	/obj/item/prefabs/complex/barrel/mm9,
-	/obj/item/prefabs/complex/stock/low,
-	/obj/item/prefabs/complex/complexWeaponFrame/low,
-	/obj/item/advanced_crafting_components/receiver)
 
 /obj/item/gun/ballistic/automatic/pps/mid
-	name = "\improper ancient SMG (improved)"
+	name = "\improper PPSh-41 (improved)"
 	burst_delay = 1.5
 	fire_delay = 5
 	can_attachments = TRUE
 	extra_damage = -9
 	extra_penetration = 0
 	randomspread = 0
-	extra_parts = list(/obj/item/prefabs/complex/bolt/simple,
-	/obj/item/prefabs/complex/action/auto,
-	/obj/item/prefabs/complex/barrel/mm9,
-	/obj/item/prefabs/complex/stock/low,
-	/obj/item/prefabs/complex/complexWeaponFrame/mid,
-	/obj/item/advanced_crafting_components/receiver)
 
 /obj/item/gun/ballistic/automatic/pps/high
-	name = "\improper ancient SMG (masterwork)"
+	name = "\improper PPSh-41 (masterwork)"
 	burst_size = 3
 	extra_damage = 0
 	extra_penetration = 5
@@ -615,12 +585,6 @@
 	can_attachments = TRUE
 	w_class = WEIGHT_CLASS_SMALL
 	weapon_weight = WEAPON_LIGHT
-	extra_parts = list(/obj/item/prefabs/complex/bolt/simple,
-	/obj/item/prefabs/complex/action/auto,
-	/obj/item/prefabs/complex/barrel/mm9,
-	/obj/item/prefabs/complex/stock/low,
-	/obj/item/prefabs/complex/complexWeaponFrame/high,
-	/obj/item/advanced_crafting_components/receiver)
 
 /obj/item/gun/ballistic/automatic/pps/burst_select()
 	var/mob/living/carbon/human/user = usr
@@ -700,7 +664,7 @@
 
 /obj/item/gun/ballistic/automatic/smg10mm
 	spawnwithmagazine = FALSE
-	name = "10mm submachine gun (standard)"
+	name = "10mm submachine gun"
 	desc = "A select fire open bolt 10mm submachine gun. The serial number and manufactuer markings have been scratched off."
 	icon_state = "smg10mm"
 	item_state = "smg10mm"
@@ -712,32 +676,17 @@
 	burst_size = 2
 	fire_delay = 4
 	burst_delay = 3
-	extra_damage = -6
-	extra_penetration = -6
-	randomspread = 10
 	can_suppress = FALSE //we dont have sprites therefore cease
 	force = 15
 	spread = 18
 	can_attachments = TRUE
-	can_disassemble = TRUE
-	extra_parts = list(/obj/item/prefabs/complex/bolt/simple,
-	/obj/item/prefabs/complex/action/auto,
-	/obj/item/prefabs/complex/barrel/mm10,
-	/obj/item/prefabs/complex/stock/mid,
-	/obj/item/prefabs/complex/complexWeaponFrame/low,
-	/obj/item/advanced_crafting_components/receiver)
+	can_disassemble = FALSE
 
 /obj/item/gun/ballistic/automatic/smg10mm/mid
 	name = "10mm submachine gun (improved)"
 	randomspread = 0
 	extra_penetration = 0
 	extra_damage = 0
-	extra_parts = list(/obj/item/prefabs/complex/bolt/simple,
-	/obj/item/prefabs/complex/action/auto,
-	/obj/item/prefabs/complex/barrel/mm10,
-	/obj/item/prefabs/complex/stock/mid,
-	/obj/item/prefabs/complex/complexWeaponFrame/mid,
-	/obj/item/advanced_crafting_components/receiver)
 
 /obj/item/gun/ballistic/automatic/smg10mm/high
 	name = "10mm submachine gun (masterwork)"
@@ -749,12 +698,7 @@
 	extra_penetration = 6
 	w_class = WEIGHT_CLASS_SMALL
 	weapon_weight = WEAPON_LIGHT
-	extra_parts = list(/obj/item/prefabs/complex/bolt/simple,
-	/obj/item/prefabs/complex/action/auto,
-	/obj/item/prefabs/complex/barrel/mm10,
-	/obj/item/prefabs/complex/stock/mid,
-	/obj/item/prefabs/complex/complexWeaponFrame/high,
-	/obj/item/advanced_crafting_components/receiver)
+
 
 /obj/item/gun/ballistic/automatic/smg10mm/burst_select()
 	var/mob/living/carbon/human/user = usr
@@ -822,7 +766,7 @@
 
 /obj/item/gun/ballistic/automatic/assault_rifle
 	spawnwithmagazine = FALSE
-	name = "assault rifle (standard)"
+	name = "assault rifle"
 	desc = "A standard R91 assault rifle, out of use around the time of the Great War."
 	icon_state = "assault_rifle"
 	item_state = "fnfal"
@@ -834,26 +778,15 @@
 	automatic = 1
 	fire_delay = 4
 	burst_delay = 3
-	extra_damage = -6
-	extra_penetration = -6
 	spread = 8
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 	can_attachments = TRUE
 	randomspread = 10
-
 	bayonetstate = "rifles"
 	can_bayonet = TRUE
 	knife_x_offset = 23
 	knife_y_offset = 11
-	can_disassemble = TRUE
-	extra_parts = list(/obj/item/prefabs/complex/bolt/high,
-	/obj/item/prefabs/complex/action/auto,
-	/obj/item/prefabs/complex/barrel/m556,
-	/obj/item/prefabs/complex/stock/mid,
-	/obj/item/prefabs/complex/complexWeaponFrame/low,
-	/obj/item/advanced_crafting_components/receiver,
-	/obj/item/advanced_crafting_components/assembly)
 
 /obj/item/gun/ballistic/automatic/assault_rifle/mid
 	name = "assault rifle (improved)"
@@ -862,13 +795,6 @@
 	extra_penetration = 0
 	extra_damage = 0
 	burst_delay = 2
-	extra_parts = list(/obj/item/prefabs/complex/bolt/high,
-	/obj/item/prefabs/complex/action/auto,
-	/obj/item/prefabs/complex/barrel/m556,
-	/obj/item/prefabs/complex/stock/mid,
-	/obj/item/prefabs/complex/complexWeaponFrame/mid,
-	/obj/item/advanced_crafting_components/receiver,
-	/obj/item/advanced_crafting_components/assembly)
 
 /obj/item/gun/ballistic/automatic/assault_rifle/high
 	name = "assault rifle (masterwork)"
@@ -878,13 +804,6 @@
 	extra_penetration = 6
 	burst_delay = 2
 	weapon_weight = WEAPON_LIGHT
-	extra_parts = list(/obj/item/prefabs/complex/bolt/high,
-	/obj/item/prefabs/complex/action/auto,
-	/obj/item/prefabs/complex/barrel/m556,
-	/obj/item/prefabs/complex/stock/mid,
-	/obj/item/prefabs/complex/complexWeaponFrame/high,
-	/obj/item/advanced_crafting_components/receiver,
-	/obj/item/advanced_crafting_components/assembly)
 
 /obj/item/gun/ballistic/automatic/assault_rifle/burst_select()
 	var/mob/living/carbon/human/user = usr
@@ -1000,7 +919,7 @@
 
 /obj/item/gun/ballistic/automatic/marksman/servicerifle
 	spawnwithmagazine = FALSE
-	name = "service rifle (standard)"
+	name = "service rifle"
 	desc = "A 5.56x45 semi-automatic service rifle manufactured by the NCR and issued to all combat personnel."
 	icon_state = "service_rifle"
 	item_state = "servicerifle"
@@ -1015,12 +934,6 @@
 	randomspread = 10
 	knife_x_offset = 22
 	knife_y_offset = 12
-	can_disassemble = TRUE
-	extra_parts = list(/obj/item/prefabs/complex/bolt/simple,
-	/obj/item/prefabs/complex/action/simple,
-	/obj/item/prefabs/complex/barrel/m556,
-	/obj/item/prefabs/complex/stock/mid,
-	/obj/item/prefabs/complex/complexWeaponFrame/low)
 
 /obj/item/gun/ballistic/automatic/marksman/servicerifle/mid
 	name = "service rifle (improved)"
@@ -1028,11 +941,6 @@
 	fire_delay = 4
 	extra_damage = 0
 	extra_penetration = 0
-	extra_parts = list(/obj/item/prefabs/complex/bolt/simple,
-	/obj/item/prefabs/complex/action/simple,
-	/obj/item/prefabs/complex/barrel/m556,
-	/obj/item/prefabs/complex/stock/mid,
-	/obj/item/prefabs/complex/complexWeaponFrame/mid)
 
 /obj/item/gun/ballistic/automatic/marksman/servicerifle/high
 	name = "service rifle (masterwork)"
@@ -1041,11 +949,7 @@
 	extra_damage = 10
 	extra_penetration = 10
 	weapon_weight = WEAPON_LIGHT
-	extra_parts = list(/obj/item/prefabs/complex/bolt/simple,
-	/obj/item/prefabs/complex/action/simple,
-	/obj/item/prefabs/complex/barrel/m556,
-	/obj/item/prefabs/complex/stock/mid,
-	/obj/item/prefabs/complex/complexWeaponFrame/high)
+
 
 /obj/item/gun/ballistic/automatic/marksman/servicerifle/r82
 	name = "R82 heavy service rifle"
@@ -1132,7 +1036,7 @@
 
 /obj/item/gun/ballistic/automatic/greasegun
 	spawnwithmagazine = FALSE
-	name = "M3A1 Grease Gun (standard)"
+	name = "M3A1 Grease Gun"
 	desc = "An inexpensive .45 ACP submachine gun. Slow fire rate means less waste of ammo and controllable bursts."
 	icon_state = "grease_gun"
 	item_state = "smg9mm"
@@ -1143,33 +1047,17 @@
 	burst_size = 2
 	fire_delay = 3
 	burst_delay = 3
-	extra_damage = -5
-	extra_penetration = -5
 	force = 15
 	spread = 10
 	randomspread = 10
 	can_attachments = TRUE
-	spawnwithmagazine = FALSE
-	can_disassemble = TRUE
-	extra_parts = list(/obj/item/prefabs/complex/bolt/simple, 
-					/obj/item/prefabs/complex/action/auto,
-					/obj/item/prefabs/complex/barrel/m45,
-					/obj/item/prefabs/complex/stock/mid,
-					/obj/item/prefabs/complex/complexWeaponFrame/low,
-					/obj/item/advanced_crafting_components/receiver)
 
 /obj/item/gun/ballistic/automatic/greasegun/mid
 	name = "M3A1 Grease Gun (improved)"
 	randomspread = 0
 	fire_delay = 3
 	burst_delay = 3
-	can_disassemble = TRUE
-	extra_parts = list(/obj/item/prefabs/complex/bolt/simple, 
-					/obj/item/prefabs/complex/action/auto,
-					/obj/item/prefabs/complex/barrel/m45,
-					/obj/item/prefabs/complex/stock/mid,
-					/obj/item/prefabs/complex/complexWeaponFrame/mid,
-					/obj/item/advanced_crafting_components/receiver)
+	can_disassemble = FALSE
 
 /obj/item/gun/ballistic/automatic/greasegun/high
 	name = "M3A1 Grease Gun (masterwork)"
@@ -1180,13 +1068,7 @@
 	randomspread = 0
 	w_class = WEIGHT_CLASS_SMALL
 	weapon_weight = WEAPON_LIGHT
-	can_disassemble = TRUE
-	extra_parts = list(/obj/item/prefabs/complex/bolt/simple, 
-					/obj/item/prefabs/complex/action/auto,
-					/obj/item/prefabs/complex/barrel/m45,
-					/obj/item/prefabs/complex/stock/mid,
-					/obj/item/prefabs/complex/complexWeaponFrame/high,
-					/obj/item/advanced_crafting_components/receiver)
+	can_disassemble = FALSE
 
 /obj/item/gun/ballistic/automatic/greasegun/burst_select()
 	var/mob/living/carbon/human/user = usr
@@ -1305,7 +1187,7 @@
 	return
 
 /obj/item/gun/ballistic/automatic/mg34
-	name = "\improper ancient machine gun"
+	name = "\improper Maschinengewehr 34"
 	desc = "An old light machine gun, manufactured over 100 years ago still in use by some NCR forces today."
 	icon_state = "mg34"
 	item_state = "R84"
@@ -1385,7 +1267,7 @@
 	can_scope = FALSE
 
 /obj/item/gun/ballistic/automatic/rangemaster
-	name = "Colt Rangemaster (standard)"
+	name = "Colt Rangemaster"
 	desc = "A Colt Rangemaster semi-automatic rifle, chambered for 7.62x51. Single-shot only."
 	icon_state = "rangemaster"
 	item_state = "308"
@@ -1404,17 +1286,11 @@
 	knife_x_offset = 24
 	knife_y_offset = 21
 	randomspread = 10
-	can_disassemble = TRUE
-	extra_parts = list(/obj/item/prefabs/complex/bolt/high,
-	/obj/item/prefabs/complex/action/simple,
-	/obj/item/prefabs/complex/barrel/m762,
-	/obj/item/prefabs/complex/stock/mid,
-	/obj/item/prefabs/complex/complexWeaponFrame/low,
-	/obj/item/advanced_crafting_components/receiver,
-	/obj/item/advanced_crafting_components/assembly)
+	can_disassemble = FALSE
+
 
 /obj/item/gun/ballistic/automatic/rangemaster/scoped
-	name = "Scoped Colt Rangemaster (standard)"
+	name = "Scoped Colt Rangemaster"
 	desc = "Nothing's better than seeing that surprised look on your target's face. The Loophole x20 Scope on this hunting rifle makes it easier than ever before. Accurate from first shot to last, no matter what kind of game you're gunning for."
 	icon_state = "rangemaster"
 	item_state = "scoped308"
@@ -1422,7 +1298,6 @@
 	zoomable = TRUE
 	zoom_amt = 10
 	zoom_out_amt = 13
-	spawnwithmagazine = FALSE
 	can_scope = FALSE
 
 /obj/item/gun/ballistic/automatic/rangemaster/scoped/mid
@@ -1430,13 +1305,6 @@
 	randomspread = 0
 	extra_penetration = 0
 	extra_damage = 0
-	extra_parts = list(/obj/item/prefabs/complex/bolt/high,
-	/obj/item/prefabs/complex/action/simple,
-	/obj/item/prefabs/complex/barrel/m762,
-	/obj/item/prefabs/complex/stock/mid,
-	/obj/item/prefabs/complex/complexWeaponFrame/mid,
-	/obj/item/advanced_crafting_components/receiver,
-	/obj/item/advanced_crafting_components/assembly)
 
 /obj/item/gun/ballistic/automatic/rangemaster/scoped/high
 	name = "Scoped Colt Rangemaster (masterwork)"
@@ -1444,13 +1312,7 @@
 	fire_delay = 4
 	extra_penetration = 7
 	extra_damage = 7
-	extra_parts = list(/obj/item/prefabs/complex/bolt/high,
-	/obj/item/prefabs/complex/action/simple,
-	/obj/item/prefabs/complex/barrel/m762,
-	/obj/item/prefabs/complex/stock/mid,
-	/obj/item/prefabs/complex/complexWeaponFrame/high,
-	/obj/item/advanced_crafting_components/receiver,
-	/obj/item/advanced_crafting_components/assembly)
+
 
 /obj/item/gun/ballistic/automatic/fnfal
 	name = "FN FAL"
@@ -1466,3 +1328,35 @@
 	weapon_weight = WEAPON_HEAVY
 	spread = 10
 	fire_delay = 3
+
+/obj/item/gun/ballistic/automatic/p90
+	name = "FN P90c"
+	desc = "The Fabrique Nationale P90c was just coming into use at the time of the war. The weapon's bullpup layout, and compact design, make it easy to control. The durable P90c is prized for its reliability, and high firepower in a ruggedly-compact package. Chambered in 10mm."
+	icon_state = "p90"
+	item_state = "m90"
+	burst_size = 3
+	fire_delay = 1
+	burst_delay = 1
+	automatic = 1
+	mag_type = /obj/item/ammo_box/magazine/m10mm_p90
+	init_mag_type = /obj/item/ammo_box/magazine/m10mm_p90
+	fire_sound = 'sound/f13weapons/10mm_fire_03.ogg'
+	w_class = WEIGHT_CLASS_NORMAL
+	weapon_weight = WEAPON_LIGHT
+	extra_damage = 5
+	extra_penetration = 5
+
+/obj/item/gun/ballistic/automatic/m1carbine
+	name = "m1 carbine"
+	desc = "The M1 Carbine is a renowned carbine that has been in service since WW2. Recently retired, these guns were transferred to National Guard Armouries and rechambered to 10mm."
+	icon_state = "m1carbine"
+	item_state = "rifle"
+	burst_size = 1
+	fire_delay = 2
+	automatic = 0
+	mag_type = /obj/item/ammo_box/magazine/m10mm_adv
+	fire_sound = 'sound/f13weapons/varmint_rifle.ogg'
+	w_class = WEIGHT_CLASS_BULKY
+	weapon_weight = WEAPON_HEAVY
+	extra_damage = 4
+	extra_penetration = 4

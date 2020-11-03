@@ -530,7 +530,8 @@
 				/obj/item/claymore/machete/pipe,
 				/obj/item/kitchen/knife/cosmicdirty,
 				/obj/item/melee/unarmed/brass,
-				/obj/item/melee/unarmed/brass/spiked
+				/obj/item/melee/unarmed/brass/spiked,
+				/obj/item/kitchen/knife/bowie
 				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/melee/tier3 //TIER 3 MELEE WEAPON
@@ -549,7 +550,8 @@
 				/obj/item/shield/legion/buckler,
 				/obj/item/melee/unarmed/tigerclaw,
 				/obj/item/melee/unarmed/bladed,
-				/obj/item/melee/unarmed/sappers
+				/obj/item/melee/unarmed/sappers,
+				/obj/item/kitchen/knife/trench
 				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/melee/tier4 //TIER 4 MELEE WEAPON
@@ -563,7 +565,7 @@
 				/obj/item/melee/unarmed/lacerator,
 				/obj/item/melee/unarmed/maceglove,
 				/obj/item/melee/unarmed/punchdagger,
-				/obj/item/shield/riot
+				/obj/item/shield/riot,
 				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/melee/tier5 //TIER 5 MELEE WEAPON
@@ -631,7 +633,7 @@
 	var/loot3 = list(
 				/obj/item/gun/ballistic/shotgun/boltaction,
 				/obj/item/ammo_box/a762,
-				//obj/item/ammo_box/a762
+				/obj/item/ammo_box/a762
 				)
 
 	var/loot4 = list(
@@ -649,40 +651,45 @@
 	var/loot6 = list(
 				/obj/item/gun/ballistic/shotgun/remington,
 				/obj/item/ammo_box/a308,
-				//obj/item/ammo_box/a308
+				/obj/item/ammo_box/a308
 				)
 
 	var/loot7 = list(
 				/obj/item/gun/ballistic/automatic/pistol/n99,
 				/obj/item/ammo_box/magazine/m10mm_adv,
-				//obj/item/ammo_box/magazine/m10mm_adv
+				/obj/item/ammo_box/magazine/m10mm_adv
 				)
 
 	var/loot8 = list(
 				/obj/item/gun/ballistic/automatic/pistol/m1911,
 				/obj/item/ammo_box/magazine/m45,
-				//obj/item/ammo_box/magazine/m45
+				/obj/item/ammo_box/magazine/m45
 				)
 
 	var/loot9 = list(
 				/obj/item/gun/ballistic/automatic/pistol/ninemil,
 				/obj/item/ammo_box/magazine/m9mm,
-				//obj/item/ammo_box/magazine/m9mm
+				/obj/item/ammo_box/magazine/m9mm
 				)
 
 	var/loot10 = list(
 				/obj/item/gun/ballistic/revolver/colt6250,
 				/obj/item/ammo_box/l10mm,
-				//obj/item/ammo_box/l10mm
+				/obj/item/ammo_box/l10mm
 				)
 
 	var/loot11 = list(
 				/obj/item/gun/ballistic/automatic/marksman/servicerifle/varmint,
-				//obj/item/ammo_box/magazine/m556/rifle/small,
+				/obj/item/ammo_box/magazine/m556/rifle/small,
 				/obj/item/ammo_box/magazine/m556/rifle/small)
+	
+	var/loot12 = list(
+				/obj/item/gun/ballistic/revolver/m29/snub,
+				/obj/item/ammo_box/m44
+	)
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/tier1/Initialize(mapload) //on mapload, pick what shit to spawn
-	loot = pick(loot1, loot2, loot3, loot4, loot5, loot6, loot7, loot8, loot9, loot10, loot11)
+	loot = pick(loot1, loot2, loot3, loot4, loot5, loot6, loot7, loot8, loot9, loot10, loot11, loot12)
 	. = ..()
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/tier2 //TIER 2 GUN
@@ -698,45 +705,45 @@
 	var/loot2 = list(
 				/obj/item/gun/ballistic/revolver/m29,
 				/obj/item/ammo_box/m44,
-				//obj/item/ammo_box/m44
+				/obj/item/ammo_box/m44
 				)
 
 	var/loot3 = list(
 				/obj/item/gun/ballistic/shotgun/remington/scoped,
-				//obj/item/ammo_box/a308,
+				/obj/item/ammo_box/a308,
 				/obj/item/ammo_box/a308
 				)
 
 	var/loot4 = list(
 				/obj/item/gun/ballistic/revolver/m29/scoped,
-				//obj/item/ammo_box/m44,
+				/obj/item/ammo_box/m44,
 				/obj/item/ammo_box/m44
 				)
 
 	var/loot5 = list(/obj/item/gun/ballistic/shotgun/automatic/hunting/cowboy,
-				//obj/item/ammo_box/tube/a357,
+				/obj/item/ammo_box/tube/a357,
 				/obj/item/ammo_box/tube/a357
 				)
 
 	var/loot6 = list(/obj/item/gun/ballistic/shotgun/automatic/hunting/cowboy/scoped,
-				//obj/item/ammo_box/tube/a357,
+				/obj/item/ammo_box/tube/a357,
 				/obj/item/ammo_box/tube/a357
 				)
 
 	var/loot7 = list(/obj/item/gun/ballistic/revolver/colt357,
-				//obj/item/ammo_box/a357,
+				/obj/item/ammo_box/a357,
 				/obj/item/ammo_box/a357
 				)
 
 	var/loot8 = list(
 				/obj/item/gun/ballistic/automatic/marksman/servicerifle,
-				//obj/item/ammo_box/magazine/m556/rifle,
+				/obj/item/ammo_box/magazine/m556/rifle,
 				/obj/item/ammo_box/magazine/m556/rifle
 				)
 
 	var/loot9 = list(
 				/obj/item/gun/ballistic/revolver/police,
-				//obj/item/ammo_box/a357,
+				/obj/item/ammo_box/a357,
 				/obj/item/ammo_box/a357
 	)
 	var/loot10 = list(
@@ -744,9 +751,21 @@
 				/obj/item/stock_parts/cell/ammo/ec,
 				""
 				)
+	var/loot11 = list(
+				/obj/item/gun/ballistic/automatic/pistol/beretta,
+				/obj/item/ammo_box/magazine/m9mmds
+	)
+	var/loot12 = list(
+				/obj/item/gun/ballistic/automatic/pistol/sig,
+				/obj/item/ammo_box/magazine/m9mm
+	)
+	var/loot13 = list(
+				/obj/item/gun/ballistic/automatic/m1carbine,
+				/obj/item/ammo_box/magazine/m10mm_adv
+	)
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/tier2/Initialize(mapload) //on mapload, pick what shit to spawn
-	loot = pick(loot1, loot2, loot3, loot4, loot5, loot6, loot7, loot8, loot9, loot10)
+	loot = pick(loot1, loot2, loot3, loot4, loot5, loot6, loot7, loot8, loot9, loot10, loot11, loot12, loot13)
 	. = ..()
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/tier3 //TIER 3 GUN
@@ -756,18 +775,18 @@
 	var/loot1 = list(
 				/obj/item/gun/ballistic/automatic/mini_uzi,
 				/obj/item/ammo_box/magazine/uzim9mm,
-				//obj/item/ammo_box/magazine/uzim9mm
+				/obj/item/ammo_box/magazine/uzim9mm
 				)
 
 	var/loot2 = list(
 				/obj/item/gun/ballistic/automatic/smg10mm,
-				//obj/item/ammo_box/magazine/m10mm_auto,
+				/obj/item/ammo_box/magazine/m10mm_auto,
 				/obj/item/ammo_box/magazine/m10mm_auto
 				)
 
 	var/loot3 = list(
 				/obj/item/gun/ballistic/automatic/greasegun,
-				//obj/item/ammo_box/magazine/greasegun,
+				/obj/item/ammo_box/magazine/greasegun,
 				/obj/item/ammo_box/magazine/greasegun
 				)
 
@@ -784,19 +803,19 @@
 
 	var/loot6 = list(
 				/obj/item/gun/ballistic/revolver/needler,
-				//obj/item/ammo_box/needle,
+				/obj/item/ammo_box/needle,
 				/obj/item/ammo_box/needle
 				)
 
 	var/loot7 = list(
 				/obj/item/gun/ballistic/shotgun/automatic/hunting/trail,
-			    //obj/item/ammo_box/tube/m44,
+			    /obj/item/ammo_box/tube/m44,
 				/obj/item/ammo_box/tube/m44
 				)
 
 	var/loot8 = list(
 				/obj/item/gun/ballistic/shotgun/automatic/hunting/trail/scoped,
-				//obj/item/ammo_box/tube/m44,
+				/obj/item/ammo_box/tube/m44,
 				/obj/item/ammo_box/tube/m44
 				)
 	var/loot9 = list(
@@ -814,20 +833,20 @@
 	lootcount = 3
 	var/loot1 = list(
 				/obj/item/gun/ballistic/automatic/assault_rifle,
-				//obj/item/ammo_box/magazine/m556/rifle/assault,
+				/obj/item/ammo_box/magazine/m556/rifle/assault,
 				/obj/item/ammo_box/magazine/m556/rifle/assault
 				)
 
 	var/loot2 = list(
 				/obj/item/gun/ballistic/automatic/marksman,
-				//obj/item/ammo_box/magazine/m556/rifle,
+				/obj/item/ammo_box/magazine/m556/rifle,
 				/obj/item/ammo_box/magazine/m556/rifle
 				)
 
 	var/loot3 = list(
 				/obj/item/gun/ballistic/automatic/pistol/deagle,
 				/obj/item/ammo_box/magazine/a50,
-				//obj/item/ammo_box/magazine/a50
+				/obj/item/ammo_box/magazine/a50
 				)
 
 	var/loot4 = list(
@@ -850,40 +869,40 @@
 
 	var/loot7 = list(
 				/obj/item/gun/ballistic/automatic/assault_rifle/infiltrator,
-				//obj/item/ammo_box/magazine/m556/rifle,
+				/obj/item/ammo_box/magazine/m556/rifle,
 				/obj/item/ammo_box/magazine/m556/rifle
 				)
 
 	var/loot8 = list(
 				 /obj/item/gun/ballistic/shotgun/automatic/hunting/brush,
-				 //obj/item/ammo_box/tube/c4570,
+				 /obj/item/ammo_box/tube/c4570,
 				 /obj/item/ammo_box/tube/c4570
 				 )
 
 	var/loot9 = list(
 				/obj/item/gun/ballistic/shotgun/automatic/hunting/brush/scoped,
 				/obj/item/ammo_box/tube/c4570,
-				//obj/item/ammo_box/tube/c4570,
+				/obj/item/ammo_box/tube/c4570,
 				""
 				)
 
 	var/loot10 = list(
 				/obj/item/gun/ballistic/shotgun/antimateriel,
-				//obj/item/ammo_box/a50MG,
+				/obj/item/ammo_box/a50MG,
 				/obj/item/ammo_box/a50MG,
 				""
 				)
 
 	var/loot11 = list(
 				/obj/item/gun/ballistic/automatic/rangemaster,
-				//obj/item/ammo_box/magazine/m762,
+				/obj/item/ammo_box/magazine/m762,
 				/obj/item/ammo_box/magazine/m762,
 				""
 				)
 
 	var/loot12 = list(
 				/obj/item/gun/ballistic/automatic/shotgun/riot,
-				//obj/item/ammo_box/magazine/d12g,
+				/obj/item/ammo_box/magazine/d12g,
 				/obj/item/ammo_box/magazine/d12g,
 				""
 				)
@@ -896,7 +915,7 @@
 
 	var/loot14 = list(
 				/obj/item/gun/energy/laser/plasma/glock,
-				//obj/item/stock_parts/cell/ammo/ec,
+				/obj/item/stock_parts/cell/ammo/ec,
 				/obj/item/stock_parts/cell/ammo/ec,
 				)
 
@@ -920,7 +939,8 @@
 				/obj/item/gun/energy/laser/scatter,
 				/obj/item/gun/ballistic/revolver/sequoia/scoped,
 				/obj/item/gun/ballistic/automatic/bozar,
-				/obj/item/gun/energy/gammagun
+				/obj/item/gun/energy/gammagun,
+				/obj/item/gun/ballistic/automatic/p90
 				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/unique //UNIQUE GUN
@@ -1052,7 +1072,8 @@
 				/obj/item/ammo_box/a50MG/incendiary,
 				/obj/item/ammo_box/magazine/m556/rifle/extended,
 				/obj/item/ammo_box/magazine/m762/ext,
-				/obj/item/ammo_box/magazine/d12g
+				/obj/item/ammo_box/magazine/d12g,
+				/obj/item/ammo_box/magazine/m10mm_p90
 				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier5/Initialize(mapload) //on mapload, pick how many shit to spawn
@@ -1437,13 +1458,17 @@
 	icon_state = "blueprint_loot"
 	lootcount = 1
 	loot = list(
-		//obj/item/blueprint/weapon/AEP7,
-		//obj/item/blueprint/weapon/lever_action,
-		//obj/item/blueprint/weapon/kar98,
 		/obj/item/prefabs/complex/action/auto,
-		/obj/item/prefabs/complex/bolt/high,
-		/obj/item/prefabs/complex/barrel/m4570,
-		/obj/item/prefabs/complex/barrel/m762
+		/obj/item/prefabs/complex/action/rapid,
+		/obj/item/prefabs/complex/barrel/long,
+		/obj/item/prefabs/complex/ammo_loader/m762,
+		/obj/item/prefabs/complex/ammo_loader/m50AE,
+		/obj/item/prefabs/complex/ammo_loader/m12g,
+		/obj/item/prefabs/complex/ammo_loader/m4570,
+		//obj/item/prefabs/complex/WeaponFrame/masterwork,
+		/obj/item/prefabs/complex/WeaponFrame/improved,
+		/obj/item/prefabs/complex/barrel/dual,
+		/obj/item/prefabs/complex/ammo_loader/m50MG
 	)
 /obj/effect/spawner/lootdrop/f13/blueprintMid
 	name = "blueprint-tier(Mid) item spawner"
@@ -1471,7 +1496,6 @@
 		/obj/item/blueprint/weapon/mg34/limited,
 		/obj/item/prefabs/complex/action/auto,
 		/obj/item/prefabs/complex/bolt/high,
-		/obj/item/prefabs/complex/barrel/m4570
 	)
 /obj/effect/spawner/lootdrop/f13/blueprintHigh
 	name = "blueprint-tier(High) item spawner"

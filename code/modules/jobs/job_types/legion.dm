@@ -387,7 +387,7 @@ Decanii
 	jobtype = /datum/job/CaesarsLegion/Legionnaire/f13decan
 	id = 			/obj/item/card/id/dogtag/legveteran
 	suit =			/obj/item/clothing/suit/armor/f13/legion/vet
-	head =			/obj/item/clothing/head/helmet/f13/legion/prime/decan
+	head =			/obj/item/clothing/head/helmet/f13/legion/prime/alt
 	mask =			/obj/item/clothing/mask/bandana/legdecan
 	glasses = 		/obj/item/clothing/glasses/sunglasses/big
 	ears = 			/obj/item/radio/headset/headset_legion
@@ -878,7 +878,7 @@ Auxilia
 	flag = F13AUXILIA
 	faction = "Legion"
 	head_announce = list("Security")
-	total_positions = 2
+	total_positions = 4
 	spawn_positions = 2
 	description = "You are a respected and valued noncombatant for the Legion, commanding the slaves and Camp Followers and providing important surgical or engineering expertise. Though you hold more authority than the Legionaries in camp, you are not a warrior, and should not act as such unless absolutely necessary."
 	supervisors = "the Decani and Centurion"
@@ -887,7 +887,10 @@ Auxilia
 
 	loadout_options = list(
 	/datum/outfit/loadout/auxmedic, //Healing poultices and surgical tools
-	/datum/outfit/loadout/auxengi //Toolbelt, wood, metal, leather
+	/datum/outfit/loadout/auxengi, //Toolbelt, wood, metal, leather
+	/datum/outfit/loadout/auxchef, //Flour, rice, bowls, rolling pin, knife and eggs
+	/datum/outfit/loadout/auxfarm, //Ambrosia, cultivator, spade, plant bags
+	/datum/outfit/loadout/auxassist //Four color pen, briefcase, sunglasses, natural paper
 	)
 
 /datum/job/CaesarsLegion/f13auxilia/after_spawn(mob/living/carbon/human/H, mob/M)
@@ -904,32 +907,73 @@ Auxilia
 	belt =			null
 	backpack = /obj/item/storage/backpack/satchel/explorer
 	backpack_contents = list(
-		/obj/item/reagent_containers/pill/patch/healingpowder=1, \
-		/obj/item/flashlight/flare/torch=1, \
-		/obj/item/storage/bag/money/small/legenlisted)
+		/obj/item/flashlight/flare/torch=1,
+		/obj/item/storage/bag/money/small/legenlisted,
+		/obj/item/reagent_containers/pill/patch/healingpowder=3)
 
 /datum/outfit/loadout/auxmedic
 	name = "Medicus Auxilia"
+	mask = /obj/item/clothing/mask/surgical
+	gloves = /obj/item/clothing/gloves/color/latex/nitrile
 	backpack_contents = list(
 		/obj/item/reagent_containers/pill/patch/healpoultice=3,
-		/obj/item/reagent_containers/pill/patch/healingpowder=3,
 		/obj/item/scalpel=1,
 		/obj/item/hemostat=1,
 		/obj/item/retractor=1,
 		/obj/item/circular_saw=1,
 		/obj/item/cautery=1,
-		/obj/item/surgical_drapes=1)
+		/obj/item/surgical_drapes=1,
+		/obj/item/storage/firstaid/ancient=1
+	)
 
 /datum/outfit/loadout/auxengi
-	name = "Architecti Auxilia"
+	name = "Opifex Auxilia"
 	glasses = /obj/item/clothing/glasses/welding
 	belt = /obj/item/storage/belt/utility/full/engi
+	suit = /obj/item/clothing/suit/f13/blacksmith_apron
+	gloves = /obj/item/clothing/gloves/f13/blacksmith
 	backpack_contents = list(
-		/obj/item/stack/sheet/metal/twenty=1,
-		/obj/item/stack/sheet/plasteel/five=1,
-		/obj/item/stack/sheet/leather/twenty=1,
-		/obj/item/stack/sheet/mineral/wood/fifty=1)
+		/obj/item/stack/sheet/metal/twentyfive=1,
+		/obj/item/stack/sheet/mineral/wood/twentyfive=1,
+		/obj/item/stack/sheet/leather/twenty,
+		/obj/item/stack/sheet/cloth/twenty=1,
+		/obj/item/stack/sheet/prewar=1
+	)
 
+/datum/outfit/loadout/auxchef
+	name = "Archimagirus Auxilia"
+	head = /obj/item/clothing/head/chefhat
+	suit = /obj/item/clothing/suit/toggle/chef
+	suit_store = /obj/item/kitchen/rollingpin
+	belt = /obj/item/kitchen/knife/cosmic
+	backpack_contents = list(
+		/obj/item/reagent_containers/food/condiment/flour=2,
+		/obj/item/reagent_containers/food/condiment/rice=1,
+		/obj/item/storage/box/bowls=1,
+		/obj/item/reagent_containers/glass/beaker/large=1,
+		/obj/item/storage/fancy/egg_box=1
+	)
+
+/datum/outfit/loadout/auxfarm
+	name = "Cultor Auxilia"
+	head = /obj/item/reagent_containers/food/snacks/grown/ambrosia/deus
+	backpack_contents = list(
+		/obj/item/cultivator=1,
+		/obj/item/shovel/spade=1,
+		/obj/item/reagent_containers/glass/beaker/large=1,
+		/obj/item/storage/bag/plants=2
+	)
+
+/datum/outfit/loadout/auxassist
+	name = "Exceptor Auxilia"
+	glasses = /obj/item/clothing/glasses/sunglasses
+	r_hand = /obj/item/storage/briefcase
+	backpack_contents = list(
+		/obj/item/folder/red=1,
+		/obj/item/paper_bin/bundlenatural=1,
+		/obj/item/pen/fourcolor=1,
+		/obj/item/taperecorder=1
+	)
 /*
 Camp Follower
 

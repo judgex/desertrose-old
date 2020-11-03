@@ -6,6 +6,14 @@
 	max_ammo = 5
 	multiload = 1
 
+/obj/item/ammo_box/magazine/internal/heavyneedle
+	name = "heavy needle mag"
+	desc = "Oh god, this shouldn't be here"
+	ammo_type = /obj/item/ammo_casing/caseless/needle/ultra
+	caliber = "ultraneedle"
+	max_ammo = 5
+	multiload = 1
+
 /obj/item/ammo_box/magazine/internal/musket
 	name = "musket internal magazine"
 	desc = "Oh god, this shouldn't be here"
