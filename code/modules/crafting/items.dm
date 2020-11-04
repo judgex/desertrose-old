@@ -977,6 +977,7 @@
 	name = "Multiple barrels"
 	desc = ""
 	icon_state = "barrel"
+	tags = list("automatic")
 	complexity = 70
 	burst_mod = 1
 	burst_delay_mod = -2
@@ -1200,7 +1201,7 @@
 /obj/item/prefabs/complex/loot
 	name = "Ruined Pre-War Assembly"
 	desc = "You might be able to salvage this using an advanced workbench, a gunsmith might get better results..."
-	icon_state = "weapon_parts_1"
+	icon_state = "advancedframe"
 
 //plasma
 /obj/item/advanced_crafting_components/flux
@@ -1230,7 +1231,7 @@
 /obj/item/advanced_crafting_components/assembly
 	name = "weapon assembly"
 	desc = "A ballistic weapon part, a craftsman might want to have this. Activate it in hand to shape it into a type of firearm. This cannot be undone!"
-	icon_state = "weapon_parts_1"
+	icon_state = "rifleframe"
 
 	//Ideally these would all have their own sprites
 	var/list/frame_types = list("pistol" = WEIGHT_CLASS_TINY,
@@ -1250,7 +1251,7 @@
 	if(do_after(user,80,target = src))
 		var/obj/item/prefabs/complex/gunframe/G = new(get_turf(src))
 		if(selection == "pistol" || selection == "revolver")
-			G.icon_state = "weapon_parts_2" //lil pistol icon hackiness
+			G.icon_state = "pistolframe" //lil pistol icon hackiness
 		G.frame_type = selection
 		G.gun_type = selection
 		G.tags = list(selection)
