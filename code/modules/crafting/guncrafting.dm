@@ -36,6 +36,7 @@
 	desc = "A large and advanced pre-war workbench to tackle any project!"
 	machine_tool_behaviour = list(TOOL_AWORKBENCH, TOOL_WORKBENCH)
 	var/list/salvage_typeTrait = list("Automatic Action" = /obj/item/prefabs/complex/action/auto,
+							"Automatic Burst Action" = /obj/item/prefabs/complex/action/autoburst,
 							"Rapid Blowback Action" = /obj/item/prefabs/complex/action/rapid,
 							"Long Barrel" = /obj/item/prefabs/complex/barrel/long,
 							"762 Magazine Loader" = /obj/item/prefabs/complex/ammo_loader/m762,
