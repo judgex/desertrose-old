@@ -658,24 +658,24 @@
 
 	if(alloys)
 		to_chat(user,"You use the alloys to improve the weapon.")
-		G.extra_damage += pick(4,2,1)
-		G.extra_penetration += pick(4,2,1)
+		G.extra_damage += pick(6,4,2)
+		G.extra_penetration += pick(6,4,2)
 	if(enables_automatic)
 		G.automatic = 1
 
 	if(M.has_trait(TRAIT_MASTER_GUNSMITH))
 		to_chat(user,"Your skills come in handy while assembling the weapon")
-		if(prob(5))
+		if(prob(7))
 			G.extra_damage += 5
-		if(prob(5))
+		if(prob(7))
 			G.extra_penetration += 5
-		if(prob(5))
+		if(prob(7))
 			G.burst_size += 1
-		if(prob(5))
+		if(prob(7))
 			G.spread += -15
-		if(prob(5))
+		if(prob(7))
 			G.projectile_speed += -0.2
-		if(prob(5))
+		if(prob(7))
 			G.fire_delay += -0.5
 
 	for(var/obj/item/prefabs/C in src.contents)
@@ -829,7 +829,7 @@
 /obj/item/prefabs/mould/stock
 	name = "Stock Mould"
 	desc = ""
-	item_path = /obj/item/prefabs/complex/stock
+	item_path = /obj/item/prefabs/complex/stock/mid
 	mould_sheet_type = /obj/item/stack/sheet/plastic
 
 /obj/item/prefabs/mould/screw
@@ -965,7 +965,7 @@
 	desc = ""
 	icon_state = "barrel"
 	complexity = 20
-	bullet_speed_mod = -0.1
+	bullet_speed_mod = -0.2
 
 /obj/item/prefabs/complex/barrel/long
 	name = "Long Barrel"
@@ -981,7 +981,7 @@
 	tags = list("automatic")
 	complexity = 70
 	burst_mod = 1
-	burst_delay_mod = -2
+	burst_delay_mod = -1.5
 	spread_mod = 30
 
 // obsolete
@@ -1045,7 +1045,7 @@
 	name = "Wooden Stock"
 	desc = ""
 	icon_state = "stockwood"
-	complexity = 4
+	complexity = 5
 	spread_mod = -5
 
 /obj/item/prefabs/complex/stock/mid
