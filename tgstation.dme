@@ -1631,7 +1631,6 @@
 #include "code\modules\fallout\misc\beta_advanced\lighting\sun\time_of_day_datums.dm"
 #include "code\modules\fallout\mob\simple_animal\mobs\eyebot.dm"
 #include "code\modules\fallout\mob\simple_animal\mobs\fallout_NPC.dm"
-#include "code\modules\fallout\mob\simple_animal\mobs\ghostman.dm"
 #include "code\modules\fallout\mob\simple_animal\mobs\Securitron.dm"
 #include "code\modules\fallout\mob\simple_animal\mobs\supermutant.dm"
 #include "code\modules\fallout\mob\simple_animal\mobs\wolf.dm"
