@@ -10,6 +10,7 @@
 	pressure_resistance = 5*ONE_ATMOSPHERE
 
 /obj/structure/ore_box/Initialize()
+	. = ..()
 	icon_state = "orebox[rand(1,4)]"
 
 /obj/structure/ore_box/attackby(obj/item/W, mob/user, params)
