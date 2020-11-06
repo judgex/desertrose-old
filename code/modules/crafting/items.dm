@@ -536,12 +536,12 @@
 					if(complexity > 100)
 						gun_icon = "deagle"
 		if("rifle")
-			if(enables_automatic)
-				gun_path = /obj/item/gun/ballistic/automatic
-				gun_icon = "service_rifle"
-			else
-				gun_path = /obj/item/gun/ballistic/shotgun //It's a bolt action rifle
-				gun_icon = pick("varmint_rifle","308")
+			//if(enables_automatic)
+			gun_path = /obj/item/gun/ballistic/automatic
+			gun_icon = "service_rifle"
+			//else
+			//	gun_path = /obj/item/gun/ballistic/shotgun //It's a bolt action rifle
+			//	gun_icon = pick("varmint_rifle","308")
 			switch(ammo_loader.caliber_name)
 				if("9mm")
 					gun_icon = "auto_pipe_rifle"
@@ -565,7 +565,7 @@
 						gun_icon = "moistnugget"
 
 		if("shotgun")
-			gun_path = /obj/item/gun/ballistic/shotgun
+			gun_path = /obj/item/gun/ballistic/shotgun/automatic
 			//if(!istype(barrel,/obj/item/prefabs/complex/barrel/shotgun))
 			//	if(user)
 			//		to_chat(user,"<span class='warning'>Shotguns must have shotgun barrels!</span>")
@@ -626,10 +626,10 @@
 
 		if("sniper")
 			scope = TRUE
-			if(enables_automatic)
-				gun_path = /obj/item/gun/ballistic/automatic
-			else
-				gun_path = /obj/item/gun/ballistic/shotgun //Bolt action
+			//if(enables_automatic)
+			gun_path = /obj/item/gun/ballistic/automatic
+			//else
+			//	gun_path = /obj/item/gun/ballistic/shotgun //Bolt action
 			gun_icon = "308"
 			switch(barrel.caliber_name)
 				if(".357")
@@ -681,6 +681,7 @@
 	for(var/obj/item/prefabs/C in src.contents)
 		G.extra_damage += C.dam_mod//0
 		G.burst_size += C.burst_mod//1
+		G.customburst += C.burst_mod//1
 		G.burst_delay += C.burst_delay_mod//2
 		G.extra_penetration += C.armorpen_mod//0
 		G.recoil += C.recoil_mod//0
@@ -1194,7 +1195,7 @@
 /obj/item/prefabs/complex/gunframe
 	name = "frame"
 	part_type = "frame"
-	icon_state = "weapon_parts_1"
+	icon_state = "rifleframe"
 	var/gun_type = ""
 	var/needs_stock = FALSE
 
