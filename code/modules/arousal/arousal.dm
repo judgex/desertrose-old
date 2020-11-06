@@ -1,17 +1,17 @@
 //Mob vars
 /mob/living
-	var/arousalloss = 0									//How aroused the mob is.
+	var/arousalloss = 10									//How aroused the mob is.
 	var/min_arousal = AROUSAL_MINIMUM_DEFAULT			//The lowest this mobs arousal will get. default = 0
 	var/max_arousal = AROUSAL_MAXIMUM_DEFAULT			//The highest this mobs arousal will get. default = 100
 	var/arousal_rate = AROUSAL_START_VALUE				//The base rate that arousal will increase in this mob.
 	var/arousal_loss_rate = AROUSAL_START_VALUE			//How easily arousal can be relieved for this mob.
 	var/canbearoused = FALSE					//Mob-level disabler for arousal. Starts off and can be enabled as features are added for different mob types.
-	var/mb_cd_length = 120 SECONDS						//5 second cooldown for masturbating because fuck spam.
+	var/mb_cd_length = 10 SECONDS						//5 second cooldown for masturbating because fuck spam.
 	var/mb_cd_timer = 50									//The timer itself
 
 
 /mob/living/carbon/human
-	canbearoused = FALSE
+	canbearoused = TRUE
 
 	var/saved_underwear = ""//saves their underwear so it can be toggled later
 	var/saved_undershirt = ""
@@ -80,7 +80,7 @@
 						amt_nude++
 				if(amt_nude)
 					var/watchers = 0
-					for(var/mob/_M in view(world.view, src)) 
+					for(var/mob/_M in view(world.view, src))
 						var/mob/living/M = _M
 						if(!istype(M))
 							continue
@@ -335,7 +335,7 @@
 				fluid_source.reaction(L.loc, TOUCH, 1, 0)
 			fluid_source.clear_reagents()
 			src.visible_message("<span class='love'>[src] climaxes with [L][spillage ? ", overflowing and spilling":""], using [p_their()] [G.name]!</span>", \
-								"<span class='userlove'>You orgasm with [L][spillage ? ", spilling out of them":""], using your [G.name].</span>", \
+								"<span class='userlove'>You orgasm inside [L][spillage ? ", spilling out of them":""], using your [G.name].</span>", \
 								"<span class='userlove'>You have climaxed with someone[spillage ? ", spilling out of them":""], using your [G.name].</span>")
 			SEND_SIGNAL(src, COMSIG_ADD_MOOD_EVENT, "orgasm", /datum/mood_event/orgasm)
 			SEND_SIGNAL(L, COMSIG_ADD_MOOD_EVENT, "orgasm", /datum/mood_event/orgasm)
@@ -348,20 +348,13 @@
 			fluid_source.trans_to(L, total_fluids)
 			total_fluids = 0
 			src.visible_message("<span class='love'>[src] climaxes with [L], [p_their()] [G.name] spilling nothing!</span>", \
-								"<span class='userlove'>You ejaculate with [L], your [G.name] spilling nothing.</span>", \
+								"<span class='userlove'>You ejaculate inside [L], your [G.name] spilling nothing.</span>", \
 								"<span class='userlove'>You have climaxed inside someone, your [G.name] spilling nothing.</span>")
 			SEND_SIGNAL(src, COMSIG_ADD_MOOD_EVENT, "orgasm", /datum/mood_event/orgasm)
 			SEND_SIGNAL(L, COMSIG_ADD_MOOD_EVENT, "orgasm", /datum/mood_event/orgasm)
 
 			if(G.can_climax)
 				setArousalLoss(min_arousal)
-/*
-	//Hyper - antag code
-	if(src.mind.special_role == ROLE_LEWD_TRAITOR)
-		for(var/datum/objective/obj in src.mind.objectives)
-			if (L.mind == obj.target)
-				L.mind.sexed = TRUE //sexed
-				to_chat(src, "<span class='userlove'>You feel deep satisfaction with yourself.</span>")
 
 	if(impreg)
 		//Role them odds, only people with the dicks can send the chance to the person with the settings enabled at the momment.
@@ -375,7 +368,6 @@
 
 			if (B.fluid_mult < 0.5 && B) //pregnancy causes mammals to produce milk faster. no point setting their fluid, lower if they are already higher.
 				B.fluid_mult = 0.5
-*/
 
 
 /mob/living/carbon/human/proc/mob_fill_container(obj/item/organ/genital/G, obj/item/reagent_containers/container, mb_time = 30) //For beaker-filling, beware the bartender
@@ -610,7 +602,7 @@
 				if(picked_organ)
 					var/mob/living/partner = pick_partner() //Get someone
 					if(partner)
-						var/spillage = input(src, "Would your fluids spill outside?", "Choose overflowing option", "Yes") as anything in list("Yes", "No")
+						var/spillage = input(src, "Would you spill your liquids outside of your loved one?", "Choose overflowing option", "Yes") as anything in list("Yes", "No")
 						if(spillage == "Yes")
 							mob_climax_partner(picked_organ, partner, TRUE, FALSE)
 						else
@@ -660,5 +652,5 @@
 /mob/living/carbon/human/verb/climax_verb()
 	set category = "IC"
 	set name = "Climax"
-	set desc = "Lets you choose a couple ways to ejaculate."
+	set desc = "Lets you choose a couple ways of cumming"
 	mob_climax()
