@@ -44,7 +44,8 @@
 							"12g Drum Magazine Loader" = /obj/item/prefabs/complex/ammo_loader/m12g,
 							"45-70 Internal Magazine Loader" = /obj/item/prefabs/complex/ammo_loader/m4570,
 							"Multiple barrels" = /obj/item/prefabs/complex/barrel/dual,
-							".50MG Internal Magazine Loader" = /obj/item/prefabs/complex/ammo_loader/m50MG)
+							".50MG Internal Magazine Loader" = /obj/item/prefabs/complex/ammo_loader/m50MG,
+							"Advanced Hair Trigger" = /obj/item/prefabs/complex/trigger/advhair)
 
 	var/list/salvage_typeNoTrait = list("Automatic Action" = /obj/item/prefabs/complex/action/auto,
 							"Long Barrel" = /obj/item/prefabs/complex/barrel/long,
@@ -52,7 +53,8 @@
 							".50AE Magazine Loader" = /obj/item/prefabs/complex/ammo_loader/m50AE,
 							"12g Drum Magazine Loader" = /obj/item/prefabs/complex/ammo_loader/m12g,
 							"45-70 Internal Magazine Loader" = /obj/item/prefabs/complex/ammo_loader/m4570,
-							"Improved Weapon Frame" = /obj/item/prefabs/complex/WeaponFrame/improved)
+							"Improved Weapon Frame" = /obj/item/prefabs/complex/WeaponFrame/improved,
+							"Hair Trigger" = /obj/item/prefabs/complex/trigger/hair)
 
 /obj/machinery/workbench/advanced/attackby(obj/item/W, mob/user, params)
 	. = ..()

@@ -17,6 +17,7 @@
 	attack_verb = list("struck", "hit", "bashed")
 	item_flags = SLOWS_WHILE_IN_HAND
 	
+	var/customburst = 1
 	var/gun_icon_state = null
 	var/gunslinger = FALSE
 	var/fire_sound = "gunshot"

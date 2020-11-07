@@ -71,6 +71,8 @@
 		to_chat(user, "<span class='notice'>You switch to semi-automatic.</span>")
 	else
 		burst_size = initial(burst_size)
+		if (customburst>1)
+			burst_size = customburst
 		if (burst_improvement)
 			burst_size = 1 + initial(burst_size)
 		to_chat(user, "<span class='notice'>You switch to [burst_size]-rnd burst.</span>")
