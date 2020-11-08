@@ -286,3 +286,4 @@ GLOBAL_VAR_INIT(collar_number, 0)
 	icon_state = "eldritch_tie"
 	item_color = "eldritch_tie"
 	item_state = "eldritch_tie"
+	w_class = WEIGHT_CLASS_SMALL
