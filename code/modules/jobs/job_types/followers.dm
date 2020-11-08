@@ -196,8 +196,12 @@ Practitioner
 	name = "Paramedic"
 	head = /obj/item/clothing/head/soft/emt
 	suit = /obj/item/clothing/suit/toggle/labcoat/emt
+	glasses = /obj/item/clothing/glasses/hud/health
+	belt = /obj/item/storage/belt/medical
 	backpack_contents = list(
-		/obj/item/reagent_containers/medspray/synthflesh=2)
+		/obj/item/reagent_containers/medspray/synthflesh=2,
+		/obj/item/pda/medical=1,
+		/obj/item/healthanalyzer=1)
 
 /datum/outfit/loadout/medical_researcher
 	name = "Medical Researcher"
@@ -291,10 +295,6 @@ Follower Volunteer
 		/obj/item/pen/fourcolor=1
 	)
 
-/*
-Follower Guard
-
-
 /datum/job/followers/f13followerguard
 	title = "Followers Guard"
 	flag = F13FOLLOWERGUARD
@@ -313,23 +313,40 @@ Follower Guard
 	access = list(ACCESS_FOLLOWER, ACCESS_MILITARY)
 	minimal_access = list(ACCESS_FOLLOWER, ACCESS_MILITARY)
 
+	loadout_options = list(
+	/datum/outfit/loadout/guard_ranged,
+	/datum/outfit/loadout/guard_close,
+	)
+
 /datum/outfit/job/followers/f13followerguard
 	name = "Followers Guard"
 	jobtype = /datum/job/followers/f13followerguard
 	backpack = /obj/item/storage/backpack/explorer
-	belt = /obj/item/storage/belt/security/follower
+	belt = /obj/item/storage/belt/military/followers
 	id = /obj/item/card/id/silver
 	uniform = /obj/item/clothing/under/f13/bodyguard
 	suit = /obj/item/clothing/suit/armor/vest
 	head = /obj/item/clothing/head/helmet/riot/vaultsec
-	suit_store = /obj/item/gun/ballistic/shotgun/hunting
 	glasses = /obj/item/clothing/glasses/sunglasses
 	shoes = /obj/item/clothing/shoes/combat
 	neck = 	/obj/item/storage/belt/holster
 	backpack_contents = list(
-	    /obj/item/gun/ballistic/automatic/pistol/n99=1, \
+	    /obj/item/gun/ballistic/automatic/pistol/beretta=1, \
 		/obj/item/flashlight/seclite=1, \
-		/obj/item/storage/box/rubbershot/beanbag=1, \
 		/obj/item/storage/firstaid/ancient=1)
 
-*/
+/datum/outfit/loadout/guard_ranged
+	name = "Followers Ranged Guard"
+	suit_store = /obj/item/gun/ballistic/automatic/m1carbine
+	backpack_contents = list(
+		/obj/item/ammo_box/magazine/m10mm_adv,
+		/obj/item/ammo_box/magazine/m10mm_adv
+	)
+
+/datum/outfit/loadout/guard_close
+	name = "Followers Close Protection Guard"
+	suit_store = /obj/item/gun/ballistic/shotgun/hunting
+	backpack_contents = list(
+		/obj/item/storage/box/rubbershot/beanbag=1,
+		/obj/item/storage/box/lethalshot=1
+	)
