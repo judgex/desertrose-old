@@ -673,6 +673,12 @@
 	item_state = "legvenator"
 	armor = list("melee" = 60, "bullet" = 50, "laser" = 30, "energy" = 15, "bomb" = 25, "bio" = 50, "rad" = 20, "fire" = 70, "acid" = 0)
 
+/obj/item/clothing/head/helmet/f13/legion/venator/diohelmet
+	name = "stilio oculatus helmet"
+	desc = "The hollowed head of a deadly green gecko carefully affixed over a reinforced legion helmet. Its ghastly appearance serves as an intimidating gesture to those who do not yet fear the Lizard King.
+	icon_state = "diohelmet"
+	item_state = "diohelmet"
+
 /obj/item/clothing/head/helmet/f13/legion/libritor
 	name = "legion libritor helmet"
 	desc = "A metal legion veteran helmet with an inverted color scheme for libritors"
