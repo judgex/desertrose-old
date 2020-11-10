@@ -431,7 +431,7 @@
 	AddComponent(/datum/component/armor_plate)
 
 /obj/item/clothing/suit/armor/f13/raider/combatduster
-    name = "Deserters Duster"
+    name = "Combat Duster"
     desc = "An old military-grade pre-war combat armor under a weathered duster. It appears to be fitted with metal plates to replace the crumbling ceramic."
     icon_state = "combatduster"
     item_state = "combatduster"
