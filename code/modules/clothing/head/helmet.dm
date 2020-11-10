@@ -675,7 +675,7 @@
 
 /obj/item/clothing/head/helmet/f13/legion/venator/diohelmet
 	name = "stilio oculatus helmet"
-	desc = "The hollowed head of a deadly green gecko carefully affixed over a reinforced legion helmet. Its ghastly appearance serves as an intimidating gesture to those who do not yet fear the Lizard King.
+	desc = "The hollowed head of a deadly green gecko carefully affixed over a reinforced legion helmet. Its ghastly appearance serves as an intimidating gesture to those who do not yet fear the Lizard King."
 	icon_state = "diohelmet"
 	item_state = "diohelmet"
 
