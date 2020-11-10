@@ -576,7 +576,7 @@
 	icon_state = "GunnerPlates"
 	item_state = "GunnerPlates"
 	slowdown = 0
-	flags_inv = HIDEJUMPSUIT|HIDENECK
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	icon = 'icons/fallout/clothing_w/suit.dmi'
 	armor = list("melee" = 45, "bullet" = 55, "laser" = 45, "energy" = 45, "bomb" = 55, "bio" = 65, "rad" = 10, "fire" = 60, "acid" = 20)
 
