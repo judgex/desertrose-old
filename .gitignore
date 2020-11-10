@@ -221,3 +221,4 @@ tools/MapAtmosFixer/MapAtmosFixer/bin/*
 config/config.txt
 interactions/lewd
 config/config.txt
+*.txt
