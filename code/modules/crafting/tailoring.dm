@@ -425,6 +425,17 @@
 	category = CAT_CLOTHING
 	subcategory = CAT_BELTS
 
+/datum/crafting_recipe/shotgunbandolier
+	name = "shotgun bandolier"
+	result = /obj/item/storage/belt/bandolier/shotgun
+	reqs = list(/obj/item/stack/sheet/hay = 2,
+				/obj/item/stack/sheet/cloth = 2,
+				/obj/item/storage/belt = 1)
+	tools = list(TOOL_WORKBENCH)
+	time = 15
+	category = CAT_CLOTHING
+	subcategory = CAT_BELTS
+
 /datum/crafting_recipe/settler
 	name = "settler outfit"
 	result = /obj/item/clothing/under/f13/settler
