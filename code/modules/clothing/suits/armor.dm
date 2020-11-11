@@ -430,11 +430,25 @@
 	. = ..()
 	AddComponent(/datum/component/armor_plate)
 
-/obj/item/clothing/suit/armor/f13/raider/iconoclast/
+/obj/item/clothing/suit/armor/f13/raider/combatduster
+    name = "Combat Duster"
+    desc = "An old military-grade pre-war combat armor under a weathered duster. It appears to be fitted with metal plates to replace the crumbling ceramic."
+    icon_state = "combatduster"
+    item_state = "combatduster"
+
+/obj/item/clothing/suit/armor/f13/raider/combatduster/Initialize()
+    . = ..()
+    AddComponent(/datum/component/armor_plate)
+
+/obj/item/clothing/suit/armor/f13/raider/iconoclast
 	name = "iconoclast raider armor"
 	desc = "A rigid armor set that appears to be fashioned from a radiation suit, or a mining suit."
 	icon_state = "iconoclast"
 	item_state = "iconoclast"
+
+/obj/item/clothing/suit/armor/f13/raider/iconoclast/Initialize()
+    . = ..()
+    AddComponent(/datum/component/armor_plate)
 
 /obj/item/clothing/suit/armor/f13/harbingermantle
 	name = "Harbinger's Mantle"
@@ -576,7 +590,7 @@
 	icon_state = "GunnerPlates"
 	item_state = "GunnerPlates"
 	slowdown = 0
-	flags_inv = HIDEJUMPSUIT|HIDENECK
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	icon = 'icons/fallout/clothing_w/suit.dmi'
 	armor = list("melee" = 45, "bullet" = 55, "laser" = 45, "energy" = 45, "bomb" = 55, "bio" = 65, "rad" = 10, "fire" = 60, "acid" = 20)
 
