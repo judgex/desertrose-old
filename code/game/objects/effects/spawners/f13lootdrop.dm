@@ -923,6 +923,11 @@
 				/obj/item/gun/medbeam,
 				""
 				)
+	var/loot16 = list(
+				/obj/item/gun/ballistic/automatic/type93,	
+				/obj/item/ammo_box/magazine/m556/rifle/assault,
+				/obj/item/ammo_box/magazine/m556/rifle/assault
+				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/tier4/Initialize(mapload) //on mapload, pick what shit to spawn
 	loot = pick(loot1, loot2, loot3, loot4, loot5, loot6, loot7, loot8, loot9, loot10, loot11, loot12, loot13, loot14, loot15)
@@ -960,11 +965,11 @@
     lootcount = 1
 
     loot = list(
-            /obj/effect/spawner/lootdrop/f13/weapon/gun/tier1 = 80,
+            /obj/effect/spawner/lootdrop/f13/weapon/gun/tier1 = 60,
             /obj/effect/spawner/lootdrop/f13/weapon/gun/tier2 = 14,
             /obj/effect/spawner/lootdrop/f13/weapon/gun/tier3 = 4,
             /obj/effect/spawner/lootdrop/f13/weapon/gun/tier4 = 1,
-            /obj/effect/spawner/lootdrop/f13/weapon/gun/tier5 = 1
+            /obj/effect/spawner/lootdrop/trash = 21
             )
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/random_high
@@ -1458,7 +1463,7 @@
 	icon_state = "blueprint_loot"
 	lootcount = 1
 	loot = list(/obj/item/prefabs/complex/loot)
-	
+
 /obj/effect/spawner/lootdrop/f13/blueprintMid
 	name = "blueprint-tier(Mid) item spawner"
 	icon_state = "blueprint_loot"
