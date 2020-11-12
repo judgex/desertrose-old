@@ -536,12 +536,12 @@
 					if(complexity > 100)
 						gun_icon = "deagle"
 		if("rifle")
-			if(enables_automatic)
-				gun_path = /obj/item/gun/ballistic/automatic
-				gun_icon = "service_rifle"
-			else
-				gun_path = /obj/item/gun/ballistic/shotgun //It's a bolt action rifle
-				gun_icon = pick("varmint_rifle","308")
+			//if(enables_automatic)
+			gun_path = /obj/item/gun/ballistic/automatic
+			gun_icon = "service_rifle"
+			//else
+			//	gun_path = /obj/item/gun/ballistic/shotgun //It's a bolt action rifle
+			//	gun_icon = pick("varmint_rifle","308")
 			switch(ammo_loader.caliber_name)
 				if("9mm")
 					gun_icon = "auto_pipe_rifle"
@@ -565,7 +565,7 @@
 						gun_icon = "moistnugget"
 
 		if("shotgun")
-			gun_path = /obj/item/gun/ballistic/shotgun
+			gun_path = /obj/item/gun/ballistic/shotgun/automatic
 			//if(!istype(barrel,/obj/item/prefabs/complex/barrel/shotgun))
 			//	if(user)
 			//		to_chat(user,"<span class='warning'>Shotguns must have shotgun barrels!</span>")
@@ -626,10 +626,10 @@
 
 		if("sniper")
 			scope = TRUE
-			if(enables_automatic)
-				gun_path = /obj/item/gun/ballistic/automatic
-			else
-				gun_path = /obj/item/gun/ballistic/shotgun //Bolt action
+			//if(enables_automatic)
+			gun_path = /obj/item/gun/ballistic/automatic
+			//else
+			//	gun_path = /obj/item/gun/ballistic/shotgun //Bolt action
 			gun_icon = "308"
 			switch(barrel.caliber_name)
 				if(".357")
@@ -658,29 +658,30 @@
 
 	if(alloys)
 		to_chat(user,"You use the alloys to improve the weapon.")
-		G.extra_damage += pick(4,2,1)
-		G.extra_penetration += pick(4,2,1)
+		G.extra_damage += pick(6,4,2)
+		G.extra_penetration += pick(6,4,2)
 	if(enables_automatic)
 		G.automatic = 1
 
 	if(M.has_trait(TRAIT_MASTER_GUNSMITH))
 		to_chat(user,"Your skills come in handy while assembling the weapon")
-		if(prob(5))
+		if(prob(7))
 			G.extra_damage += 5
-		if(prob(5))
+		if(prob(7))
 			G.extra_penetration += 5
-		if(prob(5))
+		if(prob(7))
 			G.burst_size += 1
-		if(prob(5))
+		if(prob(7))
 			G.spread += -15
-		if(prob(5))
+		if(prob(7))
 			G.projectile_speed += -0.2
-		if(prob(5))
+		if(prob(7))
 			G.fire_delay += -0.5
 
 	for(var/obj/item/prefabs/C in src.contents)
 		G.extra_damage += C.dam_mod//0
 		G.burst_size += C.burst_mod//1
+		G.customburst += C.burst_mod//1
 		G.burst_delay += C.burst_delay_mod//2
 		G.extra_penetration += C.armorpen_mod//0
 		G.recoil += C.recoil_mod//0
@@ -828,7 +829,7 @@
 /obj/item/prefabs/mould/stock
 	name = "Stock Mould"
 	desc = ""
-	item_path = /obj/item/prefabs/complex/stock
+	item_path = /obj/item/prefabs/complex/stock/mid
 	mould_sheet_type = /obj/item/stack/sheet/plastic
 
 /obj/item/prefabs/mould/screw
@@ -923,11 +924,11 @@
 	name = "Automatic Burst Action"
 	desc = ""
 	icon_state = "action"
-	complexity = 20
+	complexity = 50
 	tags = list("automatic","burst")
 	incompatible_tags = list("revolver","shotgun","sniper")
 	burst_mod = 1
-	spread_mod = 10
+	spread_mod = 20
 	enables_automatic = TRUE
 
 /obj/item/prefabs/complex/action/rapid
@@ -935,10 +936,10 @@
 	desc = "Rare!"
 	icon_state = "action"
 	part_type = "action"
-	complexity = 50
+	complexity = 80
 	tags = list("automatic","burst")
 	incompatible_tags = list("revolver","shotgun","sniper","pistol")
-	spread_mod = 20
+	spread_mod = 30
 	burst_mod = 2
 	burst_delay_mod = -1
 	enables_automatic = TRUE
@@ -964,7 +965,7 @@
 	desc = ""
 	icon_state = "barrel"
 	complexity = 20
-	bullet_speed_mod = -0.1
+	bullet_speed_mod = -0.2
 
 /obj/item/prefabs/complex/barrel/long
 	name = "Long Barrel"
@@ -977,9 +978,10 @@
 	name = "Multiple barrels"
 	desc = ""
 	icon_state = "barrel"
-	complexity = 60
+	tags = list("automatic")
+	complexity = 70
 	burst_mod = 1
-	burst_delay_mod = -2
+	burst_delay_mod = -1.5
 	spread_mod = 30
 
 // obsolete
@@ -1002,9 +1004,9 @@
 	desc = ""
 	tags = list("prewar_quality","bonusdmg")
 	incompatible_tags = list("crude_quality")
-	complexity = 35
-	dam_mod = 5
-	armorpen_mod = 5
+	complexity = 40
+	dam_mod = 6
+	armorpen_mod = 6
 
 /obj/item/prefabs/complex/trigger/simple
 	name = "Simple Trigger"
@@ -1043,7 +1045,7 @@
 	name = "Wooden Stock"
 	desc = ""
 	icon_state = "stockwood"
-	complexity = 4
+	complexity = 5
 	spread_mod = -5
 
 /obj/item/prefabs/complex/stock/mid
@@ -1127,7 +1129,7 @@
 /obj/item/prefabs/complex/ammo_loader/m45mmdouble
 	name = ".45 Double Magazine Loader"
 	mag_type = /obj/item/ammo_box/magazine/greasegun
-	complexity = 20
+	complexity = 18
 	caliber_name = ".45"
 	incompatible_tags = list("revolver")
 
@@ -1163,7 +1165,7 @@
 /obj/item/prefabs/complex/ammo_loader/m44
 	name = ".44 Internal Magazine Loader"
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/tube44
-	complexity = 40
+	complexity = 15
 	caliber_name = ".44"
 	incompatible_tags = list("pistol")
 	canpulloutmag = FALSE
@@ -1171,7 +1173,7 @@
 /obj/item/prefabs/complex/ammo_loader/m44
 	name = ".357 Internal Magazine Loader"
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/tube357
-	complexity = 30
+	complexity = 10
 	caliber_name = ".357"
 	incompatible_tags = list("pistol")
 	canpulloutmag = FALSE
@@ -1193,15 +1195,14 @@
 /obj/item/prefabs/complex/gunframe
 	name = "frame"
 	part_type = "frame"
-	icon_state = "weapon_parts_1"
+	icon_state = "rifleframe"
 	var/gun_type = ""
 	var/needs_stock = FALSE
 
 /obj/item/prefabs/complex/loot
 	name = "Ruined Pre-War Assembly"
-	desc = "Someone might be able to salvage this using an advanced workbench..."
-	part_type = "frame"
-	icon_state = "weapon_parts_1"
+	desc = "You might be able to salvage this using an advanced workbench, a gunsmith might get better results..."
+	icon_state = "advancedframe"
 
 //plasma
 /obj/item/advanced_crafting_components/flux
@@ -1231,7 +1232,7 @@
 /obj/item/advanced_crafting_components/assembly
 	name = "weapon assembly"
 	desc = "A ballistic weapon part, a craftsman might want to have this. Activate it in hand to shape it into a type of firearm. This cannot be undone!"
-	icon_state = "weapon_parts_1"
+	icon_state = "rifleframe"
 
 	//Ideally these would all have their own sprites
 	var/list/frame_types = list("pistol" = WEIGHT_CLASS_TINY,
@@ -1251,7 +1252,7 @@
 	if(do_after(user,80,target = src))
 		var/obj/item/prefabs/complex/gunframe/G = new(get_turf(src))
 		if(selection == "pistol" || selection == "revolver")
-			G.icon_state = "weapon_parts_2" //lil pistol icon hackiness
+			G.icon_state = "pistolframe" //lil pistol icon hackiness
 		G.frame_type = selection
 		G.gun_type = selection
 		G.tags = list(selection)

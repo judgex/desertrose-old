@@ -196,8 +196,12 @@ Practitioner
 	name = "Paramedic"
 	head = /obj/item/clothing/head/soft/emt
 	suit = /obj/item/clothing/suit/toggle/labcoat/emt
+	glasses = /obj/item/clothing/glasses/hud/health
+	belt = /obj/item/storage/belt/medical
 	backpack_contents = list(
-		/obj/item/reagent_containers/medspray/synthflesh=2)
+		/obj/item/reagent_containers/medspray/synthflesh=2,
+		/obj/item/pda/medical=1,
+		/obj/item/healthanalyzer=1)
 
 /datum/outfit/loadout/medical_researcher
 	name = "Medical Researcher"

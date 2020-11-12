@@ -71,6 +71,8 @@
 		to_chat(user, "<span class='notice'>You switch to semi-automatic.</span>")
 	else
 		burst_size = initial(burst_size)
+		if (customburst>1)
+			burst_size = customburst
 		if (burst_improvement)
 			burst_size = 1 + initial(burst_size)
 		to_chat(user, "<span class='notice'>You switch to [burst_size]-rnd burst.</span>")
@@ -776,8 +778,8 @@
 	fire_sound = 'sound/f13weapons/assaultrifle_fire.ogg'
 	burst_size = 2
 	automatic = 1
-	fire_delay = 4
-	burst_delay = 3
+	fire_delay = 3
+	burst_delay = 2
 	spread = 8
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
