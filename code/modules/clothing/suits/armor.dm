@@ -701,6 +701,25 @@
 	item_state = "knightcap"
 	armor = list("melee" = 45, "bullet" = 50, "laser" = 45, "energy" = 45, "bomb" = 60, "bio" = 60, "rad" = 15, "fire" = 60, "acid" = 30)
 
+/obj/item/clothing/suit/armor/f13/combat/environmental
+	name = "environmental armor"
+	desc = "A pre-war suit developed for use in heavily contaminated environments, and is prized in the Wasteland for its ability to protect against biological threats."
+	icon_state = "environmental_armor"
+	item_state = "environmental_armor"
+	w_class = WEIGHT_CLASS_BULKY
+	gas_transfer_coefficient = 0.9
+	permeability_coefficient = 0.5
+	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
+	allowed = list(/obj/item/flashlight, /obj/item/tank/internals/emergency_oxygen, /obj/item/tank/internals/plasmaman, /obj/item/geiger_counter)
+	armor = list("melee" = 40, "bullet" = 45, "laser" = 45,"energy" = 45, "bomb" = 55, "bio" = 70, "rad" = 100, "fire" = 60, "acid" = 50)
+	strip_delay = 60
+	equip_delay_other = 60
+	flags_inv = HIDEJUMPSUIT
+
+/obj/item/clothing/suit/armor/f13/combat/environmental/ComponentInitialize()
+	. = ..()
+	AddComponent(/datum/component/rad_insulation, RAD_NO_INSULATION, TRUE, FALSE)
+
 /obj/item/clothing/suit/armor/f13/combat/enclave
 	name = "enclave combat armor"
 	desc = "An old set of pre-war combat armor, painted black."
