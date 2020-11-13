@@ -454,6 +454,21 @@
 	item_state = "brotherhood_helmet"
 	armor = list("melee" = 40, "bullet" = 45, "laser" = 40, "energy" = 45, "bomb" = 55, "bio" = 60, "rad" = 15, "fire" = 60, "acid" = 30)
 
+/obj/item/clothing/head/helmet/f13/combat/environmental
+	name = "environmental armor helmet"
+	desc = "A full head helmet and gas mask, developed for use in heavily contaminated environments."
+	icon_state = "env_helmet"
+	item_state = "env_helmet"
+	flags_inv = HIDEMASK|HIDEEARS|HIDEFACE|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR
+	armor = list("melee" = 40, "bullet" = 45, "laser" = 40, "energy" = 45, "bomb" = 55, "bio" = 70, "rad" = 100, "fire" = 60, "acid" = 50)
+	strip_delay = 60
+	equip_delay_other = 60
+	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
+
+/obj/item/clothing/head/helmet/f13/combat/environmental/ComponentInitialize()
+	. = ..()
+	AddComponent(/datum/component/rad_insulation, RAD_NO_INSULATION, TRUE, FALSE)
+
 /obj/item/clothing/head/helmet/f13/atomzealot
 	name = "zealot helm"
 	desc = "The helmet of an agent of the Division."
@@ -646,7 +661,7 @@
 	desc = "A hand-forged helmet seemingly made for a veteran legionary, taking into account the general shape and similarity to the standard-issue helmet. Not only does it look sturdy as hell, it also looks absolutely beautiful to the average engraving enjoyer. The patterns of the engravings are elegant, curving and twisting around the helmet with the utmost grace as to not sully a helmet of such high quality. In place of the standard red stripe going down the middle of the helmet, there's a gold one instead. It shines beautifully in light, and hides the wearer well in darkness. Upon closer inspection, there's a small space carved out inside the helmet. It's not rough or makeshift, in fact, it looks like it was designed with that space in mind. As a result of not being solid metal, the area the space resides in is slightly thinner and provides less protection than a normal helmet. The space is similar in size to that of a fedora's, but without the capacity to store guns or other large items due to the rigidity of the helmet. Don't worry, though. It's been loosened around the neck area, so you can still tip it. In addition, a large amount of feathers have been added to the helmet. They're not useful for much, except for both denoting the rank of a veteran decanus due to the differing feather colors, and serving to cover up the area of thin metal around the helmet's storage space."
 	icon_state = "jonesarmordecan"
 	item_state = "jonesarmordecan"
-	
+
 /obj/item/clothing/head/helmet/f13/legion/heavy
 	name = "legion veteran decan helmet"
 	desc = "It's a metal legion helmet, with a plume, denoting veteran Decanus status."
