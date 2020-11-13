@@ -187,6 +187,11 @@
 /datum/action/item_action/toggle_light
 	name = "Toggle Light"
 
+/datum/action/item_action/toggle_light/pda/Trigger()
+	if (target)
+		var/obj/item/pda/p = target
+		p.toggle_light()
+
 /datum/action/item_action/toggle_hood
 	name = "Toggle Hood"
 
