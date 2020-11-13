@@ -871,7 +871,6 @@
 	desc = "An ancient combat uniform, that went out of use around the time of the Great War. it has scratch marks and a skull painted on it to symbolize that its part of the gunners"
 	icon_state = "GunnerPlates"
 	item_state = "GunnerPlates"
-	item_color = "GunnerPlates"
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 20, "fire" = 20, "acid" = 40)
 
 /obj/item/clothing/under/f13/combat/militia
@@ -1136,3 +1135,9 @@
 	desc = "A harness made out of a number of black belts sewn together end on end to form a coiling piece of clothing. A symbol in red has been painted on the front, and a pair of hide pants go with it."
 	icon_state = "raven_harness"
 	item_state = "raven_harness"
+
+/obj/item/clothing/under/f13/jamrock
+	name = "Disco-Ass Shirt and Pants"
+	desc = "This white satin shirt used to be fancy. It used to really catch the light. Now it smells like someone took a piss in the armpits while the golden brown trousers are flare-cut. Normal bell-bottom trousers would be boot-cut, but these are far from normal. They are someone's piss-soaked, cum-stained party pants."
+	icon_state = "jamrock_uniform"
+	item_state = "jamrock_uniform"
