@@ -830,7 +830,7 @@
 		darkness_view = 128
 
 /obj/item/clothing/head/helmet/f13/ncr/rangercombat/rigscustom
-	name = "11th Armored Calvary Helmet"
+	name = "11th armored calvary helmet"
 	desc = "An advanced combat helmet used by the 11th Armored Calvary Regiment before the war. There is a worn and faded 11th Armored Calvary Regiment's insignia just above the visor. The helmet itself has some scratches and dents sustained from battle."
 	icon_state = "rigscustom_helmet"
 	item_state = "rigscustom_helmet"
