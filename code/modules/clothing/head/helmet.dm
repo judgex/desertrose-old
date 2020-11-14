@@ -838,9 +838,11 @@
 
 /obj/item/clothing/head/helmet/f13/ncr/rangercombat/mosshelmet
 	name = "veteran patrol stetson"
-	desc = "A weathered campaign hat tightly fitted over the viscera of a modified ranger combat helmet."
+	desc = "A weathered campaign hat tightly fitted over the viscera of a modified ranger combat helmet. The old stetson is faded with age and heavy use, having seen the green shores of California to the white peaks of the rockies."
 	icon_state = "mosshelmet"
 	item_state = "mosshelmet"
+	flags_inv = HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACE
+	flags_cover = HEADCOVERSEYES
 
 /obj/item/clothing/head/helmet/f13/ncr/rangercombat/desert
 	name = "desert ranger combat helmet"
