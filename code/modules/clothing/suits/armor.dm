@@ -758,11 +758,17 @@
 	armor = list("melee" = 55, "bullet" = 55, "laser" = 55, "energy" = 40, "bomb" = 55, "bio" = 60, "rad" = 60, "fire" = 90, "acid" = 20)
 
 /obj/item/clothing/suit/armor/f13/rangercombat/rigscustom
-	name = "11th Armored Calvary Armor"
+	name = "11th armored calvary armor"
 	desc = "A suit of special military grade riot control gear and a duster, worn by 11th Armored Calvary Regiment members in The Divide before the war. Yellow markings are painted on the shoulderpads and forearm guards."
 	icon_state = "rigscustom_suit"
 	item_state = "rigscustom_suit"
 	icon = 'icons/fallout/clothing/suits.dmi'
+
+/obj/item/clothing/suit/armor/f13/rangercombat/mossarmor
+	name = "veteran patrol armor"
+	desc = "A full suit of ballistic patrol ranger armor, weathered and faded with age. This set has been modified heavily, with added layering on exposed or vital areas and with a thick rawhide duster worn over."
+	icon_state = "mossarmor"
+	item_state = "mossarmor"
 
 /obj/item/clothing/suit/armor/f13/rangercombat/desert
 	name = "desert ranger combat armor"
