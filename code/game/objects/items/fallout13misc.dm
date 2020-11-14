@@ -164,14 +164,6 @@
 	item_state = "ncrflag"
 	faction = "NCR"
 
-/obj/item/flag/gunners
-	name = "Gunners flag"
-	desc = " A flag with a skull, the symbol of The Gunners."
-	icon_state = "gunnerflag"
-	item_state = "gunnerflag"
-	faction = "Gunner"
-
-
 /obj/item/flag/bos
 	name = "Brotherhood of Steel flag"
 	desc = "A red and black flag with a sword surrounded in gears and wings, in a dazzling gold."
@@ -206,7 +198,7 @@
 		if(do_after(user, 60, target = src))
 			var/obj/item/stack/sheet/leather/H = I
 			if(H.use(1))
-				var/flag = alert(user, "Please choose which faction flag you wish to create.", "Flag type", "NCR", "Legion", "Oasis")
+				var/flag = alert(user, "Please choose which faction flag you wish to create.", "Flag type", "NCR", "Legion", "Oasis",)
 				switch(flag)
 					if("NCR")
 						name = "NCR flag"
