@@ -836,6 +836,12 @@
 	item_state = "rigscustom_helmet"
 	icon = 'icons/fallout/clothing/hats.dmi'
 
+/obj/item/clothing/head/helmet/f13/ncr/rangercombat/mosshelmet
+	name = "veteran patrol stetson"
+	desc = "A weathered campaign hat tightly fitted over the viscera of a modified ranger combat helmet."
+	icon_state = "mosshelmet"
+	item_state = "mosshelmet"
+
 /obj/item/clothing/head/helmet/f13/ncr/rangercombat/desert
 	name = "desert ranger combat helmet"
 	desc = "An U.S Marine Corps helmet, used by the legendary Desert Rangers."
