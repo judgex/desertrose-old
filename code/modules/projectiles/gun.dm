@@ -17,6 +17,7 @@
 	attack_verb = list("struck", "hit", "bashed")
 	item_flags = SLOWS_WHILE_IN_HAND
 	
+	var/customburst = 1
 	var/gun_icon_state = null
 	var/gunslinger = FALSE
 	var/fire_sound = "gunshot"
@@ -430,6 +431,9 @@
 			knife_overlay.pixel_x = knife_x_offset
 			knife_overlay.pixel_y = knife_y_offset
 			add_overlay(knife_overlay, TRUE)
+	else if(istype(I, /obj/item/hatchet))
+		if (istype(src,/obj/item/gun/ballistic/shotgun/trench))
+			combine_items(user,I,src, new /obj/item/gun/ballistic/shotgun/trench/hatchet)//hatchet shotgun
 	else if(istype(I, /obj/item/attachments/scope))
 		if(!can_scope)
 			return ..()

@@ -763,6 +763,11 @@
 				/obj/item/gun/ballistic/automatic/m1carbine,
 				/obj/item/ammo_box/magazine/m10mm_adv
 	)
+	var/loot14 = list(
+				/obj/item/gun/ballistic/automatic/pistol/socommk23kalibmanbad,
+				/obj/item/ammo_box/magazine/m45exp,
+				/obj/item/ammo_box/magazine/m45exp
+	)
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/tier2/Initialize(mapload) //on mapload, pick what shit to spawn
 	loot = pick(loot1, loot2, loot3, loot4, loot5, loot6, loot7, loot8, loot9, loot10, loot11, loot12, loot13)
@@ -923,6 +928,11 @@
 				/obj/item/gun/medbeam,
 				""
 				)
+	var/loot16 = list(
+				/obj/item/gun/ballistic/automatic/type93,	
+				/obj/item/ammo_box/magazine/m556/rifle/assault,
+				/obj/item/ammo_box/magazine/m556/rifle/assault
+				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/tier4/Initialize(mapload) //on mapload, pick what shit to spawn
 	loot = pick(loot1, loot2, loot3, loot4, loot5, loot6, loot7, loot8, loot9, loot10, loot11, loot12, loot13, loot14, loot15)
@@ -960,11 +970,11 @@
     lootcount = 1
 
     loot = list(
-            /obj/effect/spawner/lootdrop/f13/weapon/gun/tier1 = 80,
+            /obj/effect/spawner/lootdrop/f13/weapon/gun/tier1 = 60,
             /obj/effect/spawner/lootdrop/f13/weapon/gun/tier2 = 14,
             /obj/effect/spawner/lootdrop/f13/weapon/gun/tier3 = 4,
             /obj/effect/spawner/lootdrop/f13/weapon/gun/tier4 = 1,
-            /obj/effect/spawner/lootdrop/f13/weapon/gun/tier5 = 1
+            /obj/effect/spawner/lootdrop/trash = 21
             )
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/random_high
@@ -1457,20 +1467,8 @@
 	name = "gun comps spawner"
 	icon_state = "blueprint_loot"
 	lootcount = 1
-	loot = list(
-		/obj/item/prefabs/complex/action/auto,
-		/obj/item/prefabs/complex/action/rapid,
-		/obj/item/prefabs/complex/barrel/long,
-		/obj/item/prefabs/complex/ammo_loader/m762,
-		/obj/item/prefabs/complex/ammo_loader/m45mmext,
-		/obj/item/prefabs/complex/ammo_loader/m50AE,
-		/obj/item/prefabs/complex/ammo_loader/m12g,
-		/obj/item/prefabs/complex/ammo_loader/m4570,
-		/obj/item/prefabs/complex/WeaponFrame/masterwork,
-		/obj/item/prefabs/complex/WeaponFrame/improved,
-		/obj/item/prefabs/complex/barrel/dual,
-		/obj/item/prefabs/complex/ammo_loader/m50MG
-	)
+	loot = list(/obj/item/prefabs/complex/loot)
+
 /obj/effect/spawner/lootdrop/f13/blueprintMid
 	name = "blueprint-tier(Mid) item spawner"
 	icon_state = "blueprint_loot"
@@ -1497,7 +1495,6 @@
 		/obj/item/blueprint/weapon/mg34/limited,
 		/obj/item/prefabs/complex/action/auto,
 		/obj/item/prefabs/complex/bolt/high,
-		/obj/item/prefabs/complex/barrel/m4570
 	)
 /obj/effect/spawner/lootdrop/f13/blueprintHigh
 	name = "blueprint-tier(High) item spawner"

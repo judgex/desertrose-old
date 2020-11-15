@@ -92,11 +92,13 @@
 		if(give_round(AC, replace_spent))
 			user.transferItemToLoc(AC, src, TRUE)
 			num_loaded++
+	/* why was this even added 
 	if(istype(A, /obj/item/ammo_box/tube))
 		var/obj/item/ammo_box/tube/AC = A
 		if(give_round(AC, replace_spent))
 			user.transferItemToLoc(AC, src, TRUE)
-			num_loaded++
+			num_loaded++*/
+
 
 	if(num_loaded)
 		if(!silent)

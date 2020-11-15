@@ -35,6 +35,44 @@
 	icon_state = "advanced_bench"
 	desc = "A large and advanced pre-war workbench to tackle any project!"
 	machine_tool_behaviour = list(TOOL_AWORKBENCH, TOOL_WORKBENCH)
+	var/list/salvage_typeTrait = list("Automatic Action" = /obj/item/prefabs/complex/action/auto,
+							"Automatic Burst Action" = /obj/item/prefabs/complex/action/autoburst,
+							"Rapid Blowback Action" = /obj/item/prefabs/complex/action/rapid,
+							"Long Barrel" = /obj/item/prefabs/complex/barrel/long,
+							"762 Magazine Loader" = /obj/item/prefabs/complex/ammo_loader/m762,
+							".50AE Magazine Loader" = /obj/item/prefabs/complex/ammo_loader/m50AE,
+							"12g Drum Magazine Loader" = /obj/item/prefabs/complex/ammo_loader/m12g,
+							"45-70 Internal Magazine Loader" = /obj/item/prefabs/complex/ammo_loader/m4570,
+							"Multiple barrels" = /obj/item/prefabs/complex/barrel/dual,
+							".50MG Internal Magazine Loader" = /obj/item/prefabs/complex/ammo_loader/m50MG,
+							"Advanced Hair Trigger" = /obj/item/prefabs/complex/trigger/advhair)
+
+	var/list/salvage_typeNoTrait = list("Automatic Action" = /obj/item/prefabs/complex/action/auto,
+							"Long Barrel" = /obj/item/prefabs/complex/barrel/long,
+							"762 Magazine Loader" = /obj/item/prefabs/complex/ammo_loader/m762,
+							".50AE Magazine Loader" = /obj/item/prefabs/complex/ammo_loader/m50AE,
+							"12g Drum Magazine Loader" = /obj/item/prefabs/complex/ammo_loader/m12g,
+							"45-70 Internal Magazine Loader" = /obj/item/prefabs/complex/ammo_loader/m4570,
+							"Improved Weapon Frame" = /obj/item/prefabs/complex/WeaponFrame/improved,
+							"Hair Trigger" = /obj/item/prefabs/complex/trigger/hair)
+
+/obj/machinery/workbench/advanced/attackby(obj/item/W, mob/user, params)
+	. = ..()
+	var/mob/living/M = user
+	if(istype(W,/obj/item/prefabs/complex/loot))
+		if(do_after(user,80,target = src))
+			if(M.has_trait(TRAIT_MASTER_GUNSMITH))// if gunsmith get options
+				//var/selection = input(user,"What would you like to try and salvage?") as null|anything in salvage_type
+				//if(!selection)
+				//	return
+				//var/item_path = salvage_type[selection]
+				var/item_path = salvage_typeTrait[pick(salvage_typeTrait)]
+				new item_path(get_turf(src))
+				qdel(W)
+			else//otherwise random
+				var/item_path = salvage_typeNoTrait[pick(salvage_typeNoTrait)]
+				new item_path(get_turf(src))
+				qdel(W)
 
 /obj/machinery/workbench/mbench
 	name = "machine workbench"
