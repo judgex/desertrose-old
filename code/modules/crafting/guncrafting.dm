@@ -35,8 +35,7 @@
 	icon_state = "advanced_bench"
 	desc = "A large and advanced pre-war workbench to tackle any project!"
 	machine_tool_behaviour = list(TOOL_AWORKBENCH, TOOL_WORKBENCH)
-	var/list/salvage_typeTrait = list("Automatic Action" = /obj/item/prefabs/complex/action/auto,
-							"Automatic Burst Action" = /obj/item/prefabs/complex/action/autoburst,
+	var/list/salvage_typeTrait = list("Automatic Burst Action" = /obj/item/prefabs/complex/action/autoburst,
 							"Rapid Blowback Action" = /obj/item/prefabs/complex/action/rapid,
 							"Long Barrel" = /obj/item/prefabs/complex/barrel/long,
 							"762 Magazine Loader" = /obj/item/prefabs/complex/ammo_loader/m762,
@@ -45,10 +44,10 @@
 							"45-70 Internal Magazine Loader" = /obj/item/prefabs/complex/ammo_loader/m4570,
 							"Multiple barrels" = /obj/item/prefabs/complex/barrel/dual,
 							".50MG Internal Magazine Loader" = /obj/item/prefabs/complex/ammo_loader/m50MG,
+							"Pre-War Alloys" = /obj/item/stack/sheet/prewar,
 							"Advanced Hair Trigger" = /obj/item/prefabs/complex/trigger/advhair)
 
-	var/list/salvage_typeNoTrait = list("Automatic Action" = /obj/item/prefabs/complex/action/auto,
-							"Long Barrel" = /obj/item/prefabs/complex/barrel/long,
+	var/list/salvage_typeNoTrait = list("Long Barrel" = /obj/item/prefabs/complex/barrel/long,
 							"762 Magazine Loader" = /obj/item/prefabs/complex/ammo_loader/m762,
 							".50AE Magazine Loader" = /obj/item/prefabs/complex/ammo_loader/m50AE,
 							"12g Drum Magazine Loader" = /obj/item/prefabs/complex/ammo_loader/m12g,
