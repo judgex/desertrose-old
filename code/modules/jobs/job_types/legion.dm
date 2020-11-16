@@ -14,11 +14,12 @@
 	box = null
 
 /datum/outfit/job/CaesarsLegion/Legionnaire
-	belt = /obj/item/storage/belt/military/assault/legion
-	backpack = /obj/item/storage/backpack/satchel/explorer
-	uniform = 		/obj/item/clothing/under/f13/legskirt
-	shoes = 		/obj/item/clothing/shoes/f13/military/legionmetal
-	gloves =		/obj/item/clothing/gloves/legion
+	belt = 		/obj/item/storage/belt/military/assault/legion
+	backpack = 	/obj/item/storage/backpack/explorer
+	satchel = 	/obj/item/storage/backpack/satchel/explorer
+	uniform = 	/obj/item/clothing/under/f13/legskirt
+	shoes = 	/obj/item/clothing/shoes/f13/military/legionmetal
+	gloves =	/obj/item/clothing/gloves/legion
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
