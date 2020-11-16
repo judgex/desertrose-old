@@ -282,8 +282,7 @@ Raider
 		/obj/item/ammo_box/m44 = 2,
 		/obj/item/clothing/mask/gas/explorer/folded=1,
 		/obj/item/storage/belt/tribe_quiver = 1,
-		/obj/item/twohanded/spear = 1,
-		/obj/item/skub = 1)
+		/obj/item/twohanded/spear = 1)
 
 /datum/outfit/loadout/raider_badlands
 	name = "Badlands"
