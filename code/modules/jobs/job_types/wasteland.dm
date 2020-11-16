@@ -518,3 +518,38 @@ Raider
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/m556/rifle/small=2)
 
+//////////////////////////////////Locust Mercenaries////////////////////
+/*
+/datum/job/wasteland/f13locustcaptain
+	title = "Locust Captain"
+	flag = F13LOCUSTCAPTAIN
+	head_announce = list("Security")
+	faction = "Neutral"
+	total_positions = 1
+	spawn_positions = 1
+	description = "You are the Captain of the Locust Mercenary Outfit of Yuma. Your job is to grab contracts and tear down anyone in your path to get the mission done"
+	supervisors = "Colonel"
+	req_admin_notify = 1
+	outfit = /datum/outfit/job/ncr/f13locustcaptain
+
+/datum/outfit/job/wasteland/f13locustcaptain
+	name = "Locust Captain"
+	jobtype 	= /datum/job/ncr/f13captain
+	uniform		= /obj/item/clothing/under/f13/ncr/officer
+	accessory 	= /obj/item/clothing/accessory/ncr/CPT
+	suit 		= /obj/item/clothing/suit/armor/f13/ncrarmor/captain
+	suit_store 	= /obj/item/gun/ballistic/automatic/pistol/ninemil
+	glasses 	= /obj/item/clothing/glasses/sunglasses/big
+	shoes       = /obj/item/clothing/shoes/f13/military/ncr_officer
+	neck = 		/obj/item/storage/belt/holster
+	backpack_contents = list(
+		/obj/item/ammo_box/magazine/m9mm=2, \
+		/obj/item/kitchen/knife/combat=1, \
+		/obj/item/melee/classic_baton/telescopic=1, \
+		/obj/item/twohanded/binocs=1)
+
+/datum/job/wasteland/f13locustcaptain/after_spawn(mob/living/carbon/human/H, mob/M)
+	H.add_quirk("Hard Yards")
+	H.add_quirk("Lifegiver")
+	H.add_quirk("Self-Aware")
+*/
