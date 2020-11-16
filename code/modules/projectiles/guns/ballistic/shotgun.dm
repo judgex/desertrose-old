@@ -347,6 +347,15 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	weapon_weight = WEAPON_LIGHT
 
+/obj/item/gun/ballistic/shotgun/trench/hatchet	
+	embedding = list("embedded_pain_multiplier" = 4, "embed_chance" = 100, "embedded_fall_chance" = 0)
+	force = 35
+	throwforce = 40
+	name = "lever action shotgun (with axe)"
+	desc = "A lever action hunting shotgun with a five-shell capacity underneath plus one in chamber. This one has an axe attached to it."
+	icon_state = "trenchgun-axe"
+	hitsound = 'sound/weapons/bladeslice.ogg'	
+
 /obj/item/gun/ballistic/shotgun/hunting
 	name = "hunting shotgun"
 	desc = "A traditional hunting shotgun with wood furniture and a four-shell capacity underneath."

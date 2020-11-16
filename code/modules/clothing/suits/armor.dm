@@ -430,11 +430,25 @@
 	. = ..()
 	AddComponent(/datum/component/armor_plate)
 
-/obj/item/clothing/suit/armor/f13/raider/iconoclast/
+/obj/item/clothing/suit/armor/f13/raider/combatduster
+    name = "Combat Duster"
+    desc = "An old military-grade pre-war combat armor under a weathered duster. It appears to be fitted with metal plates to replace the crumbling ceramic."
+    icon_state = "combatduster"
+    item_state = "combatduster"
+
+/obj/item/clothing/suit/armor/f13/raider/combatduster/Initialize()
+    . = ..()
+    AddComponent(/datum/component/armor_plate)
+
+/obj/item/clothing/suit/armor/f13/raider/iconoclast
 	name = "iconoclast raider armor"
 	desc = "A rigid armor set that appears to be fashioned from a radiation suit, or a mining suit."
 	icon_state = "iconoclast"
 	item_state = "iconoclast"
+
+/obj/item/clothing/suit/armor/f13/raider/iconoclast/Initialize()
+    . = ..()
+    AddComponent(/datum/component/armor_plate)
 
 /obj/item/clothing/suit/armor/f13/harbingermantle
 	name = "Harbinger's Mantle"
@@ -576,7 +590,7 @@
 	icon_state = "GunnerPlates"
 	item_state = "GunnerPlates"
 	slowdown = 0
-	flags_inv = HIDEJUMPSUIT|HIDENECK
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	icon = 'icons/fallout/clothing_w/suit.dmi'
 	armor = list("melee" = 45, "bullet" = 55, "laser" = 45, "energy" = 45, "bomb" = 55, "bio" = 65, "rad" = 10, "fire" = 60, "acid" = 20)
 
@@ -687,6 +701,25 @@
 	item_state = "knightcap"
 	armor = list("melee" = 45, "bullet" = 50, "laser" = 45, "energy" = 45, "bomb" = 60, "bio" = 60, "rad" = 15, "fire" = 60, "acid" = 30)
 
+/obj/item/clothing/suit/armor/f13/combat/environmental
+	name = "environmental armor"
+	desc = "A pre-war suit developed for use in heavily contaminated environments, and is prized in the Wasteland for its ability to protect against biological threats."
+	icon_state = "environmental_armor"
+	item_state = "environmental_armor"
+	w_class = WEIGHT_CLASS_BULKY
+	gas_transfer_coefficient = 0.9
+	permeability_coefficient = 0.5
+	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
+	allowed = list(/obj/item/flashlight, /obj/item/tank/internals/emergency_oxygen, /obj/item/tank/internals/plasmaman, /obj/item/geiger_counter, /obj/item/gun)
+	armor = list("melee" = 40, "bullet" = 45, "laser" = 45,"energy" = 45, "bomb" = 55, "bio" = 70, "rad" = 100, "fire" = 60, "acid" = 50)
+	strip_delay = 60
+	equip_delay_other = 60
+	flags_inv = HIDEJUMPSUIT
+
+/obj/item/clothing/suit/armor/f13/combat/environmental/ComponentInitialize()
+	. = ..()
+	AddComponent(/datum/component/rad_insulation, RAD_NO_INSULATION, TRUE, FALSE)
+
 /obj/item/clothing/suit/armor/f13/combat/enclave
 	name = "enclave combat armor"
 	desc = "An old set of pre-war combat armor, painted black."
@@ -725,11 +758,17 @@
 	armor = list("melee" = 55, "bullet" = 55, "laser" = 55, "energy" = 40, "bomb" = 55, "bio" = 60, "rad" = 60, "fire" = 90, "acid" = 20)
 
 /obj/item/clothing/suit/armor/f13/rangercombat/rigscustom
-	name = "11th Armored Calvary Armor"
+	name = "11th armored calvary armor"
 	desc = "A suit of special military grade riot control gear and a duster, worn by 11th Armored Calvary Regiment members in The Divide before the war. Yellow markings are painted on the shoulderpads and forearm guards."
 	icon_state = "rigscustom_suit"
 	item_state = "rigscustom_suit"
 	icon = 'icons/fallout/clothing/suits.dmi'
+
+/obj/item/clothing/suit/armor/f13/rangercombat/mossarmor
+	name = "veteran patrol armor"
+	desc = "A full suit of ballistic patrol ranger armor, weathered and faded with age. This set has been modified heavily, with added layering on exposed or vital areas and with a thick rawhide duster worn over."
+	icon_state = "mossarmor"
+	item_state = "mossarmor"
 
 /obj/item/clothing/suit/armor/f13/rangercombat/desert
 	name = "desert ranger combat armor"
@@ -1297,3 +1336,9 @@
 	armor = list("melee" = 30, "bullet" = 30, "laser" = 15, "energy" = 10, "bomb" = 15, "bio" = 0, "rad" = 0, "fire" = 30, "acid" = 0)
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	flags_inv = HIDEJUMPSUIT
+
+/obj/item/clothing/suit/armor/f13/harpercoat
+	name = "outlaw coat"
+	desc = "A combat duster"
+	icon_state = "harperduster"
+	armor = list("melee" = 50, "bullet" = 40, "laser" = 25, "energy" = 40, "bomb" = 25, "bio" = 40, "rad" = 35, "fire" = 80, "acid" = 0)
