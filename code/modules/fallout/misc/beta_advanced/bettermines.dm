@@ -31,6 +31,11 @@
 			user.dropItemToGround(src)
 			anchored = 1
 
+			var/image/I = image(icon = 'icons/obj/betaadvanced.dmi', icon_state = "landmine_active", loc = src)
+			I.override = TRUE
+			I.transform *= 1.5
+			add_alt_appearance(/datum/atom_hud/alternate_appearance/basic/landmines, "landmine_large", I)
+
 /obj/item/grenade/bettermine/proc/triggermine(mob/victim)
 	if(triggered)
 		return

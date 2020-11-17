@@ -180,3 +180,20 @@ datum/atom_hud/alternate_appearance/basic/onePerson
 	..(key, I, FALSE)
 	seer = M
 	add_hud_to(seer)
+
+
+/datum/atom_hud/alternate_appearance/basic/landmines
+
+
+
+/datum/atom_hud/alternate_appearance/basic/landmines/mobShouldSee(mob/M)
+	if (M.special_p > 7)
+		return TRUE
+	return FALSE
+
+
+/datum/atom_hud/alternate_appearance/basic/landmines/New()
+	..()
+	for(var/mob in GLOB.player_list)
+		if(mobShouldSee(mob))
+			add_hud_to(mob)
