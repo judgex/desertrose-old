@@ -3987,7 +3987,7 @@
 "bIj" = (/obj/structure/barricade/wooden/strong,/turf/open/indestructible/ground/inside/mountain,/area/f13/tunnel)
 "bIk" = (/obj/effect/decal/cleanable/blood/old,/turf/open/floor/plasteel/f13/vault_floor/yellow,/area/f13/tunnel)
 "bIl" = (/obj/structure/bed/mattress,/turf/open/floor/plasteel/f13/vault_floor/yellow,/area/f13/tunnel)
-"bIm" = (/obj/item/folder/documents{desc = "A folder stamped \"Top Secret - Property of The Brotherhood.\""},/obj/item/clothing/suit/f13/elder,/obj/item/clothing/accessory/bos/elder,/obj/item/pda/syndicate,/obj/item/storage/firstaid/regular,/obj/structure/closet/cabinet,/turf/open/floor/plasteel/dark,/area/f13/brotherhood)
+"bIm" = (/obj/item/folder/documents{desc = "A folder stamped \"Top Secret - Property of The Brotherhood.\""},/obj/item/clothing/suit/f13/elder,/obj/item/clothing/accessory/bos/elder,/obj/item/storage/firstaid/regular,/obj/structure/closet/cabinet,/turf/open/floor/plasteel/dark,/area/f13/brotherhood)
 "bIn" = (/obj/machinery/door/airlock/hatch{name = "Elder Office"; req_access_txt = "120"},/obj/machinery/door/firedoor/heavy,/turf/open/floor/plasteel/vault,/area/f13/brotherhood)
 "bIo" = (/obj/machinery/door/airlock/hatch{name = "Sentinel Office"; req_access_txt = "120"},/obj/machinery/door/firedoor/heavy,/turf/open/floor/plasteel/vault,/area/f13/brotherhood)
 "bIp" = (/obj/machinery/light/small{dir = 1},/obj/structure/closet/crate/trashcart,/obj/effect/spawner/lootdrop/f13/weapon/gun/tier2,/turf/open/floor/plating/tunnel,/area/f13/tunnel)
