@@ -141,17 +141,17 @@
 /obj/item/grenade/bettermine/explosive/mineEffect(mob/victim)
 	// explosion(loc, range_devastation, range_heavy, range_light, range_flash)
 	var/mob/living/target = victim
-	if(!isliving(victim))
-		return
-
-	explosion(target.loc, 0, 0, 0, 0, 4)
-
+	
+	explosion(target.loc, 0, 0, 0, 0, 3)
 	var/turf/open/floor/T = get_turf(target)
 	if(istype(T))
 		if(prob(80))
 			T.break_tile_to_plating()
 		else
 			T.break_tile()
+
+	if(!isliving(victim))
+		return
 
 	if(target.health <= 1)
 		target.gib(1, 1)
