@@ -77,6 +77,11 @@
     name = "dirt overlay"
     icon_state = "dirt_overlay"
 
+/obj/effect/overlay/wateredge/watergrasss
+    name = "water grass overlay"
+    icon_state = "water_grass_overlay"
+
+
 /obj/effect/overlay/rubbleoverlay
     name = "rubble overlay"
     desc = "rubble goes brrrr."
