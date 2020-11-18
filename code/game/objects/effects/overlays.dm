@@ -72,3 +72,28 @@
 /obj/effect/overlay/wateredge/dirtwater
     name = "dirt water overlay"
     icon_state = "dirt_water_overlay"
+
+/obj/effect/overlay/wateredge/dirtedge
+    name = "dirt overlay"
+    icon_state = "dirt_overlay"
+
+/obj/effect/overlay/rubbleoverlay
+    name = "rubble overlay"
+    desc = "rubble goes brrrr."
+    icon = 'icons/effects/turf_overlay.dmi'
+    icon_state = "rubble_overlay"
+    anchored = TRUE
+    layer = FLY_LAYER
+
+/obj/effect/overlay/rubbleoverlay/bottomleft
+    name = "rubble overlay"
+    icon_state = "0,0"
+/obj/effect/overlay/rubbleoverlay/bottomright
+    name = "rubble overlay"
+    icon_state = "1,0"
+/obj/effect/overlay/rubbleoverlay/topleft
+    name = "rubble overlay"
+    icon_state = "0,1"
+/obj/effect/overlay/rubbleoverlay/topright
+    name = "rubble overlay"
+    icon_state = "1,1"
