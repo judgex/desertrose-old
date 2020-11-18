@@ -138,6 +138,16 @@
 	strip_delay = 70
 	equip_delay_other = 50
 
+/obj/item/clothing/suit/armor/locustjacket
+	name = "locust jacket"
+	desc = "A reinforced jacket used primarily by the locust mercenaries"
+	icon_state = "locustjacket"
+	item_state = "locustjacket"
+	blood_overlay_type = "armor"
+	armor = list("melee" = 35, "bullet" = 55, "laser" = 35, "energy" = 35, "bomb" = 55, "bio" = 0, "rad" = 0, "fire" = 55, "acid" = 55)
+	strip_delay = 70
+	equip_delay_other = 50
+
 /obj/item/clothing/suit/armor/laserproof
 	name = "tesla armor"
 	desc = "A prewar armor design by Nikola Tesla before being confinscated by the U.S. government. Provides the high energy weapons resistance."

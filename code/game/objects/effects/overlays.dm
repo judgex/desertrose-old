@@ -52,3 +52,23 @@
 /obj/effect/overlay/beam/temp/impact_effect/plasma/Initialize()
 	. = ..()
 	QDEL_IN(src, 10)
+
+/obj/effect/overlay/wateredge
+    name = "sand overlay"
+    desc = "water goes brrrr."
+    icon = 'icons/effects/turf_overlay.dmi'
+    icon_state = "sand_overlay"
+    anchored = TRUE
+    layer = FLY_LAYER
+
+/obj/effect/overlay/wateredge/sandwater
+    name = "sand water overlay"
+    icon_state = "sand_water_overlay"
+
+/obj/effect/overlay/wateredge/waterwood
+    name = "water wood overlay"
+    icon_state = "water_wood_overlay"
+
+/obj/effect/overlay/wateredge/dirtwater
+    name = "dirt water overlay"
+    icon_state = "dirt_water_overlay"
