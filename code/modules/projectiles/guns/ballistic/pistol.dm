@@ -36,7 +36,7 @@
 /obj/item/gun/ballistic/automatic/pistol/socommk23kalibmanbad
 	name = "\improper mk23"
 	desc = "A sleek looking handgun chambered in .45 ACP for all your operating needs."
-	icon_state = "SOCOMmk23"
+	icon_state = "mk23"
 	w_class = WEIGHT_CLASS_NORMAL
 	mag_type = /obj/item/ammo_box/magazine/m45exp
 	fire_sound = 'sound/weapons/Gunshot_large_silenced.ogg'
