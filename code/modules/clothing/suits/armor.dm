@@ -474,7 +474,7 @@
 	AddComponent(/datum/component/armor_plate)
 
 /obj/item/clothing/suit/armor/f13/raider/ant
-	name = "AntAgonizer suit"
+	name = "AntAgonizer's suit"
 	desc = "Coming to a wasteland near you: replica armor, right out of Grognak the Barbarian. Hand-sewn from only the finest insect chitin around, it'll inspire gasps at the next costume party, guaranteed!"
 	icon_state = "antsuit"
 	item_state = "antsuit"
