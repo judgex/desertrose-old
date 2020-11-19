@@ -9,11 +9,14 @@
 	disliked_food = GROSS | RAW
 	liked_food = JUNKFOOD | FRIED
 
-
 /datum/species/human/after_equip_job(datum/job/J, mob/living/carbon/human/H)
 	if(H.special_i < 4)
 		H.grant_language(/datum/language/aphasia)
 		H.remove_language(/datum/language/common)
+	punchdamagelow = initial(punchdamagelow) * (1 + H.special_s * 0.05)
+	punchdamagehigh = initial(punchdamagehigh) * (1 + H.special_s * 0.05)
+	punchstunthreshold -= initial(punchstunthreshold) * (1 + H.special_s * 0.03)
+	speedmod = initial(speedmod) * (1 + H.special_a * 0.5)
 
 /datum/species/human/qualifies_for_rank(rank, list/features)
 	return TRUE	//Pure humans are always allowed in all roles.
