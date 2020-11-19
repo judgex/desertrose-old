@@ -184,6 +184,11 @@
 		I.plane = old_plane
 		current_button.appearance_cache = I.appearance
 
+
+/datum/action/item_action/toggle_stealthboy
+	name = "Toggle Stealth Boy"
+
+
 /datum/action/item_action/toggle_light
 	name = "Toggle Light"
 
