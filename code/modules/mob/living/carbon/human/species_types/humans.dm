@@ -13,9 +13,9 @@
 	if(H.special_i < 4)
 		H.grant_language(/datum/language/aphasia)
 		H.remove_language(/datum/language/common)
-	punchdamagelow = initial(punchdamagelow) * (1 + H.special_s * 0.05)
-	punchdamagehigh = initial(punchdamagehigh) * (1 + H.special_s * 0.05)
-	punchstunthreshold -= initial(punchstunthreshold) * (1 + H.special_s * 0.03)
+	punchdamagelow = initial(punchdamagelow) * (1 + H.special_s * 0.2)
+	punchdamagehigh = initial(punchdamagehigh) * (1 + H.special_s * 0.2)
+	punchstunthreshold -= initial(punchstunthreshold) * (1 + H.special_s * 0.1)
 	speedmod = initial(speedmod) * (1 + H.special_a * 0.5)
 
 /datum/species/human/qualifies_for_rank(rank, list/features)
