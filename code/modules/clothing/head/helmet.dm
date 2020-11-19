@@ -376,6 +376,16 @@
 /obj/item/clothing/head/helmet/f13/raider/psychotic/Initialize()
 	. = ..()
 	AddComponent(/datum/component/armor_plate)
+	
+/obj/item/clothing/head/helmet/f13/raider/ant
+	name = "AntAgonizer's cowl"
+	desc = "A handmade cowl made from the chitin of oversized ants. Seriously looks like something out of a comic book. Could probably be reinforced, if you're so inclined."
+	icon_state = "anthelm"
+	item_state = "anthelm"
+
+/obj/item/clothing/head/helmet/f13/raider/ant/Initialize()
+	. = ..()
+	AddComponent(/datum/component/armor_plate)
 
 /*
 /obj/item/clothing/head/helmet/f13/raider/r
