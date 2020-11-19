@@ -2288,6 +2288,10 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	character.has_vulva = has_vulva
 	character.has_breast = has_breast
 
+
+	character.maxHealth = initial(character.maxHealth) * (1 + special_e * 0.05)
+	character.health = initial(character.health) * (1 + special_e * 0.05)
+
 	character.eye_color = eye_color
 	var/obj/item/organ/eyes/organ_eyes = character.getorgan(/obj/item/organ/eyes)
 	if(organ_eyes)

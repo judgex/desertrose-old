@@ -50,6 +50,8 @@
 				var/mob/MM = AM
 				if(!(MM.movement_type & FLYING))
 					triggermine(AM)
+				if(!MM.special_a > 8)
+					triggermine(AM)
 			else
 				triggermine(AM)
 
@@ -141,7 +143,7 @@
 /obj/item/grenade/bettermine/explosive/mineEffect(mob/victim)
 	// explosion(loc, range_devastation, range_heavy, range_light, range_flash)
 	var/mob/living/target = victim
-	
+
 	explosion(target.loc, 0, 0, 0, 0, 3)
 	var/turf/open/floor/T = get_turf(target)
 	if(istype(T))
