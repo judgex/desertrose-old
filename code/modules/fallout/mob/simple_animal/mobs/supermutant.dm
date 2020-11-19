@@ -35,6 +35,8 @@
 	death_sound = list('sound/f13npc/supermutant/death1.ogg', 'sound/f13npc/supermutant/death2.ogg')
 	aggrosound = list('sound/f13npc/supermutant/alert1.ogg', 'sound/f13npc/supermutant/alert2.ogg', 'sound/f13npc/supermutant/alert3.ogg', 'sound/f13npc/supermutant/alert4.ogg')
 
+	XP = 20
+
 /mob/living/simple_animal/hostile/supermutant/playable
 	health = 500
 	maxHealth = 500

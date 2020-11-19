@@ -1619,6 +1619,7 @@
 #include "code\modules\fallout\misc\beta_advanced\crawling.dm"
 #include "code\modules\fallout\misc\beta_advanced\death_screens.dm"
 #include "code\modules\fallout\misc\beta_advanced\decoration_f13.dm"
+#include "code\modules\fallout\misc\beta_advanced\exp.dm"
 #include "code\modules\fallout\misc\beta_advanced\fluff.dm"
 #include "code\modules\fallout\misc\beta_advanced\gender_jobs.dm"
 #include "code\modules\fallout\misc\beta_advanced\noise.dm"
