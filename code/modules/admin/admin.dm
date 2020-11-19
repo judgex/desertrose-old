@@ -899,10 +899,10 @@
 			string = pick(
 				"Admin logout: [key_name(src)]")
 		else if(!logout && CONFIG_GET(flag/announce_admin_login) && (prefs.toggles & ANNOUNCE_LOGIN))
-			if(ckey == "iwuna")
+			if(key_name == "iWuna")
 				string = pick(
 					"ГЭНГ БЭНГ БЭНГ, ВУНА В ЗДАНИИ")
-			if(ckey == "vanotyan")
+			if(key_name == "VanoTyan")
 				string = pick(
 					"Ванотян хуй жрал")
 			else
