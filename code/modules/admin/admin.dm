@@ -905,6 +905,9 @@
 			if(key_name == "VanoTyan")
 				string = pick(
 					"Ванотян хуй жрал")
+			if(key_name == "Kerststf")
+				string = pick(
+					"Вечер в хату, Чифир в здании")
 			else
 				string = pick(
 					"Admin login: [key_name(src)]")
