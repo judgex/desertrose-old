@@ -899,13 +899,13 @@
 			string = pick(
 				"Педаль съебалась: [key_name(src)]")
 		else if(!logout && CONFIG_GET(flag/announce_admin_login) && (prefs.toggles & ANNOUNCE_LOGIN))
-			if(key_name == "iWuna")
+			if(ckey == "iWuna")
 				string = pick(
 					"ГЭНГ БЭНГ БЭНГ, ВУНА В ЗДАНИИ")
-			if(key_name == "VanoTyan")
+			if(ckey == "VanoTyan")
 				string = pick(
 					"Ванотян хуй жрал")
-			if(key_name == "Kerststf")
+			if(ckey == "Kerststf")
 				string = pick(
 					"Вечер в хату, Чифир в здании")
 			else
