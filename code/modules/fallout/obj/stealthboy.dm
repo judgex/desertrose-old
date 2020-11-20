@@ -1,5 +1,5 @@
 /obj/item/stealthboy
-	name = "Stealth Boy"
+	name = "Stealth Boy MK1"
 	desc = "Pre-war device that generates a modulating field that transmits the reflected light from one side of an object to another"
 	icon = 'icons/fallout/objects/medicine/chemical.dmi'
 	icon_state = "stealth_boy"
@@ -7,13 +7,15 @@
 	w_class = WEIGHT_CLASS_SMALL
 	var/active = FALSE
 	var/mob/living/target
-	var/charge = 300
-	var/charge_use = 1
-	var/brain_loss = 0.5
+	var/charge = 150
+	var/charge_use = 1.5
+	var/brain_loss = 1
 	var/cooldown = 0
 	actions_types = list(/datum/action/item_action/toggle_stealthboy)
 
-
+/obj/item/stealthboy/examine(mob/user)
+	..()
+	to_chat(user, "The charge meter reads: [charge].")
 
 /obj/item/stealthboy/Destroy()
 	if(active)
@@ -71,5 +73,12 @@
 		target.adjustBrainLoss(brain_loss)
 		if (charge == 0)
 			Deactivate()
-			icon_state = "stealth_boy_used"
+			icon_state = initial(icon_state) + "_used"
 			STOP_PROCESSING(SSobj,src)
+
+/obj/item/stealthboy/mk2
+	name = "Stealth Boy MK2"
+	icon_state = "stealth_boy_mk2"
+	charge = 250
+	charge_use = 1
+	brain_loss = 0.6
