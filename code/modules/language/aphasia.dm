@@ -13,6 +13,6 @@
 	"su","shi","cho","yee","me","lo","sh","im","caw","todd","ve","wa","all","and","are","but","ent","era","ere","eve",
 	"for","had","hat","hen","her","hin","on","or","ou","re","se","st","te","wuna","trap","","pidor","suka","chuska",
 	"pankoval","omae","totoro","wa","shinderu","haduken","russkie","pendosi","piss","cock","jopa","love","собака","ебанака")
-	space_chance = 45
+	space_chance = 65
 	default_priority = 10
 	icon_state = "aphasia"
