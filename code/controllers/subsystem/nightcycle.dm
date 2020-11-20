@@ -23,6 +23,8 @@ SUBSYSTEM_DEF(nightcycle)
 	can_fire = TRUE
 	//var/list/timeBrackets = list("SUNRISE" = , "MORNING" = , "DAYTIME" = , "EVENING" = , "" = ,)
 	var/currentTime
+	var/currentZOffset = 1
+	var/z_list = list(2,3)
 	var/sunColour
 	var/sunPower
 	var/sunRange
@@ -30,6 +32,14 @@ SUBSYSTEM_DEF(nightcycle)
 	var/working = 0
 	var/doColumns //number of columns to do at a time
 	var/newTime
+
+
+/datum/controller/subsystem/nightcycle/Initialize()
+	if(nextBracket())
+		working = 1
+		currentColumn = 1
+	while(working != 0)
+		doWork()
 
 /datum/controller/subsystem/nightcycle/fire(resumed = FALSE)
 	if(nextBracket())
@@ -76,10 +86,9 @@ SUBSYSTEM_DEF(nightcycle)
 //	for (var/z in SSmapping.levels_by_trait(ZTRAIT_STATION))
 	//HACK. Z level 2 is always surface and nobody sets their fucking traits correctly.
 	//This should be done with a ztrait for surface/subsurface
-	var/z = 2
+	var/z = z_list[currentZOffset]
 	var/start_turf = locate(x,world.maxy,z)
 	var/end_turf = locate(x,1,z)
-
 //	currentTurfs = block(locate(currentColumn,1,z), locate(x,world.maxy,z)) //this is probably brutal on the overhead
 	currentTurfs = getline(start_turf,end_turf)
 	for (var/turf/T in currentTurfs)
@@ -88,8 +97,13 @@ SUBSYSTEM_DEF(nightcycle)
 
 	currentColumn = x + 1
 	if (currentColumn > world.maxx)
-		currentColumn = 1
-		working = 0
+		if (currentZOffset < length(z_list))
+			currentZOffset++
+			currentColumn = 1
+		else
+			currentZOffset = 1
+			currentColumn = 1
+			working = 0
 		return
 
 /datum/controller/subsystem/nightcycle/proc/updateLight(newTime)
@@ -110,8 +124,8 @@ SUBSYSTEM_DEF(nightcycle)
 			sunColour = "#ffcccc"
 			sunPower = 0.3
 		if("NIGHTTIME")
-			sunColour = "#00111a"
-			sunPower = 0.20
+			sunColour = "#171718"
+			sunPower = 0.3
 
 
 
