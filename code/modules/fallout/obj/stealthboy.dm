@@ -77,6 +77,11 @@
 			icon_state = initial(icon_state) + "_used"
 			STOP_PROCESSING(SSobj,src)
 
+/obj/item/stealthboy/makeshift
+	name = "Makeshift Stealth Boy"
+	charge = 80
+	brain_loss = 2
+
 /obj/item/stealthboy/mk2
 	name = "Stealth Boy MK2"
 	icon_state = "stealth_boy_mk2"
