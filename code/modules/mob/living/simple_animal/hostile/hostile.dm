@@ -161,6 +161,9 @@
 		var/mob/M = the_target
 		if(M.status_flags & GODMODE)
 			return FALSE
+		if(M.alpha < 100)
+			if (!src.Adjacent(M))
+				return FALSE
 
 	if(see_invisible < the_target.invisibility)//Target's invisible to us, forget it
 		return FALSE

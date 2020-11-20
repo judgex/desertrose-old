@@ -1457,6 +1457,17 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 /datum/species/proc/apply_damage(damage, damagetype = BRUTE, def_zone = null, blocked, mob/living/carbon/human/H)
 	var/hit_percent = (100-(blocked+armor))/100
 	hit_percent = (hit_percent * (100-H.physiology.damage_resistance))/100
+
+	var/missProb = 2 * H.special_l + 6.5
+
+	if(H.stat == DEAD)
+		missProb = 0
+
+	if(prob(missProb))
+		H.visible_message("<font color='green'>[H] are lucky!</font>")
+		hit_percent = 0
+
+
 	if(!damage || hit_percent <= 0)
 		return 0
 
@@ -1501,6 +1512,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 			H.adjustBrainLoss(damage * hit_percent * H.physiology.brain_mod)
 		if(AROUSAL)											//Citadel edit - arousal
 			H.adjustArousalLoss(damage * hit_percent)
+
 	return 1
 
 /datum/species/proc/on_hit(obj/item/projectile/P, mob/living/carbon/human/H)
