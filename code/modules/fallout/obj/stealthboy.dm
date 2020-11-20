@@ -72,7 +72,7 @@
 	if(active == TRUE)
 		charge -= charge_use
 		target.adjustBrainLoss(brain_loss)
-		if(charge == 0)
+		if(charge <= 0)
 			Deactivate()
 			icon_state = initial(icon_state) + "_used"
 			STOP_PROCESSING(SSobj,src)
