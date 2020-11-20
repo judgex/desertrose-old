@@ -7,8 +7,8 @@
 	w_class = WEIGHT_CLASS_SMALL
 	var/active = FALSE
 	var/mob/living/target
-	var/charge = 150
-	var/charge_use = 1.5
+	var/charge = 100
+	var/charge_use = 1
 	var/brain_loss = 1
 	var/cooldown = 0
 	actions_types = list(/datum/action/item_action/toggle_stealthboy)
@@ -40,6 +40,7 @@
 	new /obj/effect/temp_visual/dir_setting/ninja/cloak(get_turf(target), target.dir)
 	target.alpha = 60 - target.special_a * 5
 	do_sparks(2, FALSE, target)
+	charge -= 10 * charge_use
 	playsound(target, 'sound/effects/sparks4.ogg', 20, 1)
 	START_PROCESSING(SSobj, src)
 
@@ -80,5 +81,4 @@
 	name = "Stealth Boy MK2"
 	icon_state = "stealth_boy_mk2"
 	charge = 250
-	charge_use = 1
 	brain_loss = 0.6
