@@ -64,15 +64,15 @@
 
 /obj/item/stealthboy/dropped(mob/user)
 	. = ..()
-	if (active && user != loc)
+	if(active && user != loc)
 		Deactivate()
 		target = null
 
 /obj/item/stealthboy/process()
-	if (active == TRUE)
+	if(active == TRUE)
 		charge -= charge_use
 		target.adjustBrainLoss(brain_loss)
-		if (charge == 0)
+		if(charge == 0)
 			Deactivate()
 			icon_state = initial(icon_state) + "_used"
 			STOP_PROCESSING(SSobj,src)
