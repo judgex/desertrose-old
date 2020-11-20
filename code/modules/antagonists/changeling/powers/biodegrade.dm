@@ -68,7 +68,7 @@
 		new /obj/effect/decal/cleanable/greenglow(O.drop_location())
 		qdel(O)
 
-/datum/action/changeling/biodegrade/proc/dissolve_legcuffs(mob/living/carbon/human/user, obj/O)
+/obj/effect/proc_holder/changeling/biodegrade/proc/dissolve_legcuffs(mob/living/carbon/human/user, obj/O)
 	if(O && user.legcuffed == O)
 		user.visible_message("<span class='warning'>[O] dissolve[O.gender==PLURAL?"":"s"] into a puddle of sizzling goop.</span>")
 		new /obj/effect/decal/cleanable/greenglow(O.drop_location())
