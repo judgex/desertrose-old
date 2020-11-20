@@ -48,7 +48,9 @@
 	wander = 0
 	anchored = FALSE
 	dextrous = TRUE
-	possible_a_intents = list(INTENT_HELP, INTENT_HARM)
+	held_items = list(null, null)
+	mob_biotypes = list(MOB_ORGANIC, MOB_HUMANOID)
+	possible_a_intents = list(INTENT_HELP, INTENT_GRAB, INTENT_DISARM, INTENT_HARM)
 
 
 /mob/living/simple_animal/hostile/supermutant/Aggro()
@@ -172,6 +174,21 @@
 	melee_damage_upper = 70
 	attacktext = "slashes"
 	attack_sound = "sound/weapons/bladeslice.ogg"
+
+/mob/living/simple_animal/hostile/supermutant/nightkin/playable
+	health = 600
+	maxHealth = 600
+	emote_taunt_sound = null
+	emote_taunt = null
+	aggrosound = null
+	idlesound = null
+	see_in_dark = 8
+	wander = 0
+	anchored = FALSE
+	dextrous = TRUE
+	held_items = list(null, null)
+	mob_biotypes = list(MOB_ORGANIC, MOB_HUMANOID)
+	possible_a_intents = list(INTENT_HELP, INTENT_GRAB, INTENT_DISARM, INTENT_HARM)
 
 /mob/living/simple_animal/hostile/supermutant/nightkin/Aggro()
 	..()
