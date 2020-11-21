@@ -86,48 +86,6 @@
 #define ui_building "EAST-4:22,SOUTH:21"
 #define ui_language_menu "EAST-4:6,SOUTH:21"
 
-//АЛЬТЕРНАТИВНЫЕ ПОЗИЦИИ ДЛЯ НОВОГО ИНТЕРФЕЙСА
-#define ui_throw_new "EAST-3:26,SOUTH+1:5"
-#define ui_drop_new "EAST-1:26,SOUTH+1:4"
-#define ui_resist_new "EAST-2:26,SOUTH+1:5"
-#define ui_pull_new "EAST-2:26,SOUTH+2:4"
-#define ui_movi_new "EAST-2:26,SOUTH:5"
-#define ui_acti_new "EAST-3:26,SOUTH:5"
-#define ui_zonesel_new "EAST-1:26,SOUTH:5"
-#define ui_acti_alt_new "EAST-1:28,SOUTH:5"	//alternative intent switcher for when the interface is hidden (F12)
-#define ui_crafting_new	"EAST-4:22,SOUTH:5"
-#define ui_building_new "EAST-4:22,SOUTH:21"
-#define ui_language_menu_new "EAST-3:26,SOUTH+2:5"
-
-#define ui_shoes_new "WEST+1:6,SOUTH:5"
-
-#define ui_iclothing_new "WEST:6,SOUTH+1:5"
-#define ui_oclothing_new "WEST+1:6,SOUTH+1:5"
-#define ui_gloves_new "WEST+2:6,SOUTH+1:5"
-
-#define ui_glasses_new "WEST:6,SOUTH+3:5"
-#define ui_mask_new "WEST+1:6,SOUTH+2:5"
-#define ui_ears_new "WEST+2:6,SOUTH+2:5"
-#define ui_neck_new "WEST:6,SOUTH+2:5"
-#define ui_head_new "WEST+1:6,SOUTH+3:5"
-
-#define ui_storage1_new "CENTER+1:16,SOUTH:5"
-#define ui_storage2_new "CENTER+2:16,SOUTH:5"
-
-#define ui_sstore1_new "CENTER-5:6,SOUTH:5"
-#define ui_id_new "CENTER-4:16,SOUTH:5"
-#define ui_belt_new "CENTER-3:16,SOUTH:5"
-#define ui_back_new "CENTER-2:16,SOUTH:5"
-
-#define ui_crafting_new "EAST-1:26,SOUTH+2:4"
-#define ui_wield_new "EAST-3:26,SOUTH+2:5"//In case you want to change it's location later.
-#define ui_lockdir_new	"12:-10,2:5"//In case you want to change it's location later.
-#define ui_building_new "12:-10,1:21"
-
-#define ui_inventory_new "WEST:6,SOUTH:5"
-
-//
-
 #define ui_borg_pull "EAST-2:26,SOUTH+1:7"
 #define ui_borg_radio "EAST-1:28,SOUTH+1:7"
 #define ui_borg_intents "EAST-2:26,SOUTH:5"

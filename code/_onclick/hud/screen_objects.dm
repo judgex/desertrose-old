@@ -64,7 +64,7 @@
 	name = "crafting menu"
 	icon = 'icons/mob/screen_midnight.dmi'
 	icon_state = "craft"
-	screen_loc = ui_crafting_new
+	screen_loc = ui_crafting
 
 /obj/screen/craft/Click()
 	var/mob/living/M = usr
@@ -76,7 +76,7 @@
 	name = "create new area"
 	icon = 'icons/mob/screen_midnight.dmi'
 	icon_state = "area_edit"
-	screen_loc = ui_building_new
+	screen_loc = ui_building
 
 /obj/screen/area_creator/Click()
 	if(usr.incapacitated() || (isobserver(usr) && !IsAdminGhost(usr)))
@@ -91,7 +91,7 @@
 	name = "language menu"
 	icon = 'icons/mob/screen_midnight.dmi'
 	icon_state = "talk_wheel"
-	screen_loc = ui_language_menu_new
+	screen_loc = ui_language_menu
 
 /obj/screen/language_menu/Click()
 	var/mob/M = usr
@@ -210,7 +210,7 @@
 /obj/screen/act_intent
 	name = "intent"
 	icon_state = "help"
-	screen_loc = ui_acti_new
+	screen_loc = ui_acti
 
 /obj/screen/act_intent/Click(location, control, params)
 	usr.a_intent_change(INTENT_HOTKEY_RIGHT)
@@ -389,7 +389,7 @@
 /obj/screen/zone_sel
 	name = "damage zone"
 	icon_state = "zone_sel"
-	screen_loc = ui_zonesel_new
+	screen_loc = ui_zonesel
 	var/selecting = BODY_ZONE_CHEST
 
 /obj/screen/zone_sel/Click(location, control,params)
