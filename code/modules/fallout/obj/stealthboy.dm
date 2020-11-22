@@ -74,16 +74,17 @@
 		target.adjustBrainLoss(brain_loss)
 		if(charge <= 0)
 			Deactivate()
-			icon_state = initial(icon_state) + "_used"
+			icon_state = initial(icon_state) + "0"
 			STOP_PROCESSING(SSobj,src)
 
 /obj/item/stealthboy/makeshift
 	name = "Makeshift Stealth Boy"
+	icon_state = "makeshift_stealth"
 	charge = 80
 	brain_loss = 2
 
 /obj/item/stealthboy/mk2
 	name = "Stealth Boy MK2"
-	icon_state = "stealth_boy_mk2"
+	icon_state = "stealth_woona"
 	charge = 250
 	brain_loss = 0.6
