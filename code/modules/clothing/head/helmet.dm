@@ -376,7 +376,7 @@
 /obj/item/clothing/head/helmet/f13/raider/psychotic/Initialize()
 	. = ..()
 	AddComponent(/datum/component/armor_plate)
-	
+
 /obj/item/clothing/head/helmet/f13/raider/ant
 	name = "AntAgonizer's cowl"
 	desc = "A handmade cowl made from the chitin of oversized ants. Seriously looks like something out of a comic book. Could probably be reinforced, if you're so inclined."
@@ -855,7 +855,7 @@
 
 /obj/item/clothing/head/helmet/f13/ncr/rangercombat/mosshelmet
 	name = "veteran patrol stetson"
-	desc = "A weathered campaign hat tightly fitted over the viscera of a modified ranger combat helmet. The old stetson is faded with age and heavy use, having seen the green shores of California to the white peaks of the rockies."
+	desc = "A weathered campaign hat tightly fitted over the viscera of a ranger combat helmet. The old stetson is faded with age and heavy use, having seen the green shores of California to the white peaks of the rockies."
 	icon_state = "mosshelmet"
 	item_state = "mosshelmet"
 	flags_inv = HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACE
