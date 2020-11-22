@@ -164,12 +164,12 @@
 	item_state = "ncrflag"
 	faction = "NCR"
 
-/obj/item/flag/gunners
-	name = "Gunners flag"
-	desc = " A flag with a skull, the symbol of The Gunners."
-	icon_state = "gunnerflag"
-	item_state = "gunnerflag"
-	faction = "Gunner"
+/obj/item/flag/locust
+	name = "Locust flag"
+	desc = " A flag with a skull, the symbol of Locusts."
+	icon_state = "locustflag"
+	item_state = "locustflag"
+	faction = "Locust"
 
 
 /obj/item/flag/bos

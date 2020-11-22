@@ -138,6 +138,16 @@
 	strip_delay = 70
 	equip_delay_other = 50
 
+/obj/item/clothing/suit/armor/locustjacket
+	name = "locust jacket"
+	desc = "A reinforced jacket used primarily by the locust mercenaries"
+	icon_state = "locustjacket"
+	item_state = "locustjacket"
+	blood_overlay_type = "armor"
+	armor = list("melee" = 35, "bullet" = 55, "laser" = 35, "energy" = 35, "bomb" = 55, "bio" = 0, "rad" = 0, "fire" = 55, "acid" = 55)
+	strip_delay = 70
+	equip_delay_other = 50
+
 /obj/item/clothing/suit/armor/laserproof
 	name = "tesla armor"
 	desc = "A prewar armor design by Nikola Tesla before being confinscated by the U.S. government. Provides the high energy weapons resistance."
@@ -463,6 +473,16 @@
 	. = ..()
 	AddComponent(/datum/component/armor_plate)
 
+/obj/item/clothing/suit/armor/f13/raider/ant
+	name = "AntAgonizer's suit"
+	desc = "Coming to a wasteland near you: replica armor, right out of Grognak the Barbarian. Hand-sewn from only the finest insect chitin around, it'll inspire gasps at the next costume party, guaranteed!"
+	icon_state = "antsuit"
+	item_state = "antsuit"
+
+/obj/item/clothing/suit/armor/f13/raider/ant/Initialize()
+	. = ..()
+	AddComponent(/datum/component/armor_plate)
+
 /*
 /obj/item/clothing/suit/armor/f13/raider/r/
 	name = "reinforced base raider armor"
@@ -710,7 +730,7 @@
 	gas_transfer_coefficient = 0.9
 	permeability_coefficient = 0.5
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
-	allowed = list(/obj/item/flashlight, /obj/item/tank/internals/emergency_oxygen, /obj/item/tank/internals/plasmaman, /obj/item/geiger_counter)
+	allowed = list(/obj/item/flashlight, /obj/item/tank/internals/emergency_oxygen, /obj/item/tank/internals/plasmaman, /obj/item/geiger_counter, /obj/item/gun)
 	armor = list("melee" = 40, "bullet" = 45, "laser" = 45,"energy" = 45, "bomb" = 55, "bio" = 70, "rad" = 100, "fire" = 60, "acid" = 50)
 	strip_delay = 60
 	equip_delay_other = 60

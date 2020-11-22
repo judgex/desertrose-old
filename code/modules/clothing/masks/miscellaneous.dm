@@ -191,6 +191,12 @@
 	item_state = "rat"
 	flags_inv = HIDEFACE
 	flags_cover = MASKCOVERSMOUTH
+	
+/obj/item/clothing/mask/rat/stupid
+	name = "Ratt's Mask"
+	desc = "Looks like he finally got his own fucking mask."
+	icon_state = "greenrat"
+	item_state = "greenrat"
 
 /obj/item/clothing/mask/rat/fox
 	name = "fox mask"

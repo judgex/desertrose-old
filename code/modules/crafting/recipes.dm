@@ -476,6 +476,15 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO_ONE
 
+/datum/crafting_recipe/m45exp
+	name = "empty socom magazine (.45)"
+	result = /obj/item/ammo_box/magazine/m45exp/empty
+	reqs = list(/obj/item/stack/sheet/metal = 2)
+	tools = list(TOOL_WORKBENCH, TOOL_GUNTIER1)
+	time = 10
+	category = CAT_WEAPONRY
+	subcategory = CAT_AMMO_ONE
+
 /datum/crafting_recipe/m50
 	name = "empty handgun magazine (.50 AE)"
 	result = /obj/item/ammo_box/magazine/a50/empty
