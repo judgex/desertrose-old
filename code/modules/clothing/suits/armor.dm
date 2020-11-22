@@ -1251,6 +1251,13 @@
 	desc = "A specialized variant of combat armor issued to officers of the 3rd Scout Battalion."
 	armor = list("melee" = 60, "bullet" = 50, "laser" = 40, "energy" = 20, "bomb" = 25, "bio" = 30, "rad" = 30, "fire" = 60, "acid" = 0)
 
+/obj/item/clothing/suit/armor/f13/ncrcfjacket
+	name = "NCRCF jacket"
+	icon_state = "ncrcfjacket"
+	item_state = "ncrcfjacket"
+	desc = "A cheap, standard issue teal canvas jacket issued to poor suckers who find themselves at the butt-end of the NCR's judiciary system."
+	armor = list("melee" = 10, "bullet" = 5, "laser" = 0, "energy" = 0, "bomb" = 15, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
+
 /obj/item/clothing/suit/armor/f13/ghostechoe
 	name = "tattered peace coat"
 	desc = "An old coat belonging to a Desert Ranger once. It has been stripped of most useful protection, and has seen better days. A crude peace symbol has been painted on the back in white."
