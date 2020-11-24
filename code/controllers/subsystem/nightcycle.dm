@@ -11,12 +11,12 @@
 #define CYCLE_SUNSET 	783000
 #define CYCLE_NIGHTTIME 810000
 
-#define STEP_SUNRISE 0
-#define STEP_MORNING 1
-#define STEP_DAY 2
-#define STEP_AFTERNOON 3
-#define STEP_SUNSET 4
-#define STEP_NIGHT 5
+#define STEP_SUNRISE 1
+#define STEP_MORNING 2
+#define STEP_DAY 3
+#define STEP_AFTERNOON 4
+#define STEP_SUNSET 5
+#define STEP_NIGHT 6
 
 GLOBAL_LIST_INIT(nightcycle_turfs, typecacheof(list(
 	/turf/open/indestructible/ground/outside,
@@ -106,26 +106,12 @@ SUBSYSTEM_DEF(nightcycle)
 	duration = world.time + step_datum.duration
 
 
-/datum/controller/subsystem/nightcycle/proc/updateLight(newTime)
-	switch (newTime)
-		if ("SUNRISE")
-			sunColour = "#ffd1b3"
-			sunPower = 0.3
-		if ("MORNING")
-			sunColour = "#fff2e6"
-			sunPower = 0.5
-		if ("DAYTIME")
-			sunColour = "#FFFFFF"
-			sunPower = 0.75
-		if ("AFTERNOON")
-			sunColour = "#fff2e6"
-			sunPower = 0.5
-		if ("SUNSET")
-			sunColour = "#ffcccc"
-			sunPower = 0.3
-		if("NIGHTTIME")
-			sunColour = "#171718"
-			sunPower = 0.3
+/datum/controller/subsystem/nightcycle/proc/setTime(var/force_step)
+	step = force_step
+	step_datum = steps[step]
+	duration = world.time + step_datum.duration
+	working = 1
+	currentColumn = 1
 
 
 /datum/time_of_day
@@ -138,43 +124,37 @@ SUBSYSTEM_DEF(nightcycle)
 	name = "SUNRISE"
 	color = "#ffd1b3"
 	sunPower = 0.3
-	// duration = 2250
-	duration = 100
+	duration = 2250
 
 /datum/time_of_day/morning
 	name = "MORNING"
 	color = "#fff2e6"
 	sunPower = 0.5
-	// duration = 2250
-	duration = 100
+	duration = 2250
 
 /datum/time_of_day/daytime
-	name = "DAYTIME"
+	name = "DAY"
 	color = "#FFFFFF"
 	sunPower = 0.75
-	// duration = 9000
-	duration = 100
+	duration = 9000
 
 /datum/time_of_day/afternoon
 	name = "AFTERNOON"
 	color = "#fff2e6"
 	sunPower = 0.5
-	// duration = 2250
-	duration = 100
+	duration = 2250
 
 /datum/time_of_day/sunset
 	name = "SUNSET"
 	color = "#ffcccc"
 	sunPower = 0.3
-	// duration = 2250
-	duration = 100
+	duration = 2250
 
 /datum/time_of_day/night
 	name = "NIGHTTIME"
 	color = "#171718"
 	sunPower = 0.3
-	// duration = 9000
-	duration = 100
+	duration = 9000
 
 #undef CYCLE_SUNRISE
 #undef CYCLE_MORNING
