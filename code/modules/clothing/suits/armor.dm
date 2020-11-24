@@ -1369,3 +1369,13 @@
 	desc = "A combat duster"
 	icon_state = "harperduster"
 	armor = list("melee" = 50, "bullet" = 40, "laser" = 25, "energy" = 40, "bomb" = 25, "bio" = 40, "rad" = 35, "fire" = 80, "acid" = 0)
+
+/obj/item/clothing/suit/armor/f13/raider/reptiliatenebris
+	name = "Reptilia Tenebris"
+	desc = "An old military-grade pre-war combat armor under a weathered duster. It appears to be fitted with metal plates to replace the crumbling ceramic. The color of this duster has been washed out time and time again, giving it a more faded look as if time gripped it heavily. Along with that, the duster has been dyed a deep shade of grey, and the body armor a darker shade of green."
+	icon_state = "reptiliatenebris"
+	item_state = "reptiliatenebris"
+
+/obj/item/clothing/suit/armor/f13/raider/reptiliatenebris/Initialize()
+    . = ..()
+    AddComponent(/datum/component/armor_plate)
