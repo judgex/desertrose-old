@@ -714,6 +714,12 @@
 	item_state = "brotherhood_armor"
 	armor = list("melee" = 40, "bullet" = 45, "laser" = 40, "energy" = 45, "bomb" = 55, "bio" = 60, "rad" = 15, "fire" = 60, "acid" = 30)
 
+/obj/item/clothing/suit/armor/f13/combat/brotherhood/senior
+	name = "brotherhood senior knight combat armor"
+	desc = "A superior combat armor set made by the Brotherhood of Steel, standard issue for all Senior Knights. It bears a silver stripe, and the crest of the Brotherhood of Steel."
+	icon_state = "brotherhood_armor_senior"
+	item_state = "brotherhood_armor_senior"
+
 /obj/item/clothing/suit/armor/f13/combat/knightcap
 	name = "knight-captain combat armor"
 	desc = "A customized set of combat armor designed for the Knight-Captain, with golden embroidery."
