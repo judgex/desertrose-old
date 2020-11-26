@@ -63,6 +63,7 @@
 	icon_state = "scoutclothes"
 	item_state = "scoutclothes"
 	item_color = "scoutclothes"
+	can_adjust = FALSE
 
 /obj/item/clothing/under/f13/ncrcf
 	name = "NCRCF fatigues"
@@ -205,7 +206,7 @@
 
 /obj/item/clothing/under/f13/legskirt
 	name = "legionary fatigues"
-	desc = "A black learthery skirt and a thick long sleeve cotton shirt."
+	desc = "A leathery skirt and a thick, long-sleeve cotton shirt."
 	icon_state = "legskirt"
 	item_state = "legskirt"
 	item_color = "legskirt"
@@ -214,6 +215,13 @@
 	righthand_file = 'icons/mob/inhands/clothing_righthand.dmi'
 	alt_covers_chest = TRUE
 	can_adjust = TRUE
+
+/obj/item/clothing/under/f13/legskirt/tac //whoaaa mama humina humina
+	name = ""tactical" combat skirt"
+	desc = "A leathery skirt below a thick, black, long-sleeve cotton shirt. Perfect for operatives favoring wardrobe malfunctions."
+	icon_state = "tacskirt"
+	item_state = "tacskirt"
+	item_color = "tacskirt"
 
 /obj/item/clothing/under/f13/priestess
 	name = "priestess robes"
