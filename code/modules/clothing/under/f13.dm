@@ -217,7 +217,7 @@
 	can_adjust = TRUE
 
 /obj/item/clothing/under/f13/legskirt/tac //whoaaa mama humina humina
-	name = ""tactical" combat skirt"
+	name = "''tactical'' combat skirt"
 	desc = "A leathery skirt below a thick, black, long-sleeve cotton shirt. Perfect for operatives favoring wardrobe malfunctions."
 	icon_state = "tacskirt"
 	item_state = "tacskirt"
