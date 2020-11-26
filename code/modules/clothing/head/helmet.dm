@@ -376,7 +376,7 @@
 /obj/item/clothing/head/helmet/f13/raider/psychotic/Initialize()
 	. = ..()
 	AddComponent(/datum/component/armor_plate)
-	
+
 /obj/item/clothing/head/helmet/f13/raider/ant
 	name = "AntAgonizer's cowl"
 	desc = "A handmade cowl made from the chitin of oversized ants. Seriously looks like something out of a comic book. Could probably be reinforced, if you're so inclined."
@@ -463,6 +463,12 @@
 	icon_state = "brotherhood_helmet"
 	item_state = "brotherhood_helmet"
 	armor = list("melee" = 40, "bullet" = 45, "laser" = 40, "energy" = 45, "bomb" = 55, "bio" = 60, "rad" = 15, "fire" = 60, "acid" = 30)
+
+/obj/item/clothing/head/helmet/f13/combat/brotherhood/senior
+	name = "brotherhood senior knight combat helmet"
+	desc = "An improved combat helmet, bearing the symbol of the Knights in silver."
+	icon_state = "brotherhood_helmet_senior"
+	item_state = "brotherhood_helmet_senior"
 
 /obj/item/clothing/head/helmet/f13/combat/environmental
 	name = "environmental armor helmet"
@@ -855,7 +861,7 @@
 
 /obj/item/clothing/head/helmet/f13/ncr/rangercombat/mosshelmet
 	name = "veteran patrol stetson"
-	desc = "A weathered campaign hat tightly fitted over the viscera of a modified ranger combat helmet. The old stetson is faded with age and heavy use, having seen the green shores of California to the white peaks of the rockies."
+	desc = "A weathered campaign hat tightly fitted over the viscera of a ranger combat helmet. The old stetson is faded with age and heavy use, having seen the green shores of California to the white peaks of the rockies."
 	icon_state = "mosshelmet"
 	item_state = "mosshelmet"
 	flags_inv = HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACE
