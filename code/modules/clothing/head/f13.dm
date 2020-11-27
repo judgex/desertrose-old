@@ -83,6 +83,12 @@
 	armor = list("melee" = 40, "bullet" = 25, "laser" = 15, "energy" = 10, "bomb" = 16, "bio" = 20, "rad" = 0, "fire" = 50, "acid" = 0)
 	flags_inv = HIDEEARS|HIDEHAIR
 
+/obj/item/clothing/head/helmet/f13/fiend/landohelm
+	name = "pyro-psycho fiend skull"
+	desc = "A ragged leather cap topped with a heavily scorched skull of an abnormally large bighorner, the eye-sockets of the skull seem to constantly be on fire. All in all a perfect helmet for a fire starting psychopath."
+	icon_state = "landohelm"
+	item_state = "landohelm"
+
 /obj/item/clothing/head/helmet/f13/drake
 	name = "drake helm"
 	icon_state = "dragon"
