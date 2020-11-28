@@ -1222,12 +1222,13 @@
 
 /obj/item/prefabs/complex/eburst/simple
 	name = "Single Stream"
-	burst_mod = 1
+	burst_mod = 0
 	complexity = 25
 
 /obj/item/prefabs/complex/eburst/dual
 	name = "Dual Stream"
 	burst_mod = 1
+	burst_delay_mod = -0.5
 	complexity = 75
 
 /obj/item/prefabs/complex/eburst/fast
@@ -1239,6 +1240,7 @@
 /obj/item/prefabs/complex/eburst/triple
 	name = "Triple Stream"
 	burst_mod = 2
+	burst_delay_mod = -0.5
 	complexity = 100
 
 /obj/item/prefabs/complex/ecell
