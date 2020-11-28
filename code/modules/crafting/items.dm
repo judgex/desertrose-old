@@ -1222,7 +1222,7 @@
 
 /obj/item/prefabs/complex/eburst/simple
 	name = "Single Stream"
-	burst_mod = 1
+	burst_mod = 0
 	complexity = 25
 
 /obj/item/prefabs/complex/eburst/dual
