@@ -233,6 +233,7 @@
     icon_state = "blueprint_empty"
     w_class = WEIGHT_CLASS_TINY
 
+/*
 /obj/item/stack/prefabs/mWeaponParts
 	name = "Metal Weapon Parts"
 	desc = ""
@@ -737,6 +738,7 @@
 	B.magazine = new B.mag_type(B)
 	src.forceMove(G) //Entire assembly gets thrown in the gun
 
+
 /obj/item/prefabs/complex/simpleWeaponFrame/low
 	name = "Simple Weapon Frame (standard)"
 	desc = ""
@@ -1203,7 +1205,7 @@
 	name = "Ruined Pre-War Assembly"
 	desc = "You might be able to salvage this using an advanced workbench, a gunsmith might get better results..."
 	icon_state = "advancedframe"
-
+*/
 //plasma
 /obj/item/advanced_crafting_components/flux
 	name = "Flux capacitator"
@@ -1234,6 +1236,7 @@
 	desc = "A ballistic weapon part, a craftsman might want to have this. Activate it in hand to shape it into a type of firearm. This cannot be undone!"
 	icon_state = "rifleframe"
 
+/*
 	//Ideally these would all have their own sprites
 	var/list/frame_types = list("pistol" = WEIGHT_CLASS_TINY,
 							"rifle" = WEIGHT_CLASS_BULKY,
@@ -1270,7 +1273,7 @@
 		else
 			G.needs_stock = TRUE
 		qdel(src)
-
+*/
 //general
 /obj/item/advanced_crafting_components/alloys
 	name = "Superlight alloys"

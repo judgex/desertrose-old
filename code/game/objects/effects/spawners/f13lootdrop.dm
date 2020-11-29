@@ -1467,7 +1467,17 @@
 	name = "gun comps spawner"
 	icon_state = "blueprint_loot"
 	lootcount = 1
-	loot = list(/obj/item/prefabs/complex/loot)
+	loot = list(		
+		/obj/item/advanced_crafting_components/flux,
+		/obj/item/advanced_crafting_components/lenses,
+		/obj/item/advanced_crafting_components/conductors,
+		/obj/item/advanced_crafting_components/receiver,
+		/obj/item/advanced_crafting_components/assembly,
+	    /obj/item/advanced_crafting_components/alloys,
+		/obj/item/attachments/scope,
+		/obj/item/attachments/bullet_speed,
+		/obj/item/attachments/burst_improvement,
+		/obj/item/attachments/recoil_decrease)
 
 /obj/effect/spawner/lootdrop/f13/blueprintMid
 	name = "blueprint-tier(Mid) item spawner"
@@ -1492,9 +1502,11 @@
 		/obj/item/blueprint/weapon/AER9/limited,
 		//obj/item/blueprint/weapon/brush/limited,
 		//obj/item/blueprint/weapon/grease_gun/limited,
-		/obj/item/blueprint/weapon/mg34/limited,
+		/obj/item/blueprint/weapon/mg34/limited
+		/*
 		/obj/item/prefabs/complex/action/auto,
 		/obj/item/prefabs/complex/bolt/high,
+		*/
 	)
 /obj/effect/spawner/lootdrop/f13/blueprintHigh
 	name = "blueprint-tier(High) item spawner"
