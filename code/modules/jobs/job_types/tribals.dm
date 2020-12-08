@@ -220,6 +220,9 @@ Hunter
     description = "You are a Hunter for the tribe; you bring back food and relics, anything that may house a machine spirit that can be purified by the shaman. You also are the protectors of the tribe, and work with the Head Hunter during Great Hunts or times of War."
     selection_color = "#006666"
 
+	exp_requirements = 12
+	exp_type = EXP_TYPE_CREW
+
     outfit = /datum/outfit/job/tribal/f13hunter
 
     access = list(ACCESS_TRIBE)
