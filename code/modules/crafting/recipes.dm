@@ -2491,6 +2491,7 @@
 	category = CAT_ASSEM
 	subcategory = CAT_MACHINES
 
+/*
 /datum/crafting_recipe/fbench
 	name = "Moulding bench"
 	result = /obj/machinery/workbench/fbench
@@ -2499,6 +2500,7 @@
 	time = 200
 	category = CAT_ASSEM
 	subcategory = CAT_MACHINES
+*/
 
 //Knives
 
@@ -4052,6 +4054,8 @@
 	category = CAT_MOULD
 	subcategory = CAT_MOULD_ONE
 */
+
+/*
 /datum/crafting_recipe/mould/boltadvanced
 	result = /obj/item/prefabs/mould/bolt/high
 	name = "Advanced Bolt Mould"
@@ -4213,6 +4217,7 @@
 	time = 30
 	category = CAT_MOULD
 	subcategory = CAT_MOULD_ONE
+*/
 /*
 /datum/crafting_recipe/ultrapistol
 	name = "Ultracite Pistol"

@@ -138,6 +138,16 @@
 	strip_delay = 70
 	equip_delay_other = 50
 
+/obj/item/clothing/suit/armor/locustjacket
+	name = "locust jacket"
+	desc = "A reinforced jacket used primarily by the locust mercenaries"
+	icon_state = "locustjacket"
+	item_state = "locustjacket"
+	blood_overlay_type = "armor"
+	armor = list("melee" = 35, "bullet" = 55, "laser" = 35, "energy" = 35, "bomb" = 55, "bio" = 0, "rad" = 0, "fire" = 55, "acid" = 55)
+	strip_delay = 70
+	equip_delay_other = 50
+
 /obj/item/clothing/suit/armor/laserproof
 	name = "tesla armor"
 	desc = "A prewar armor design by Nikola Tesla before being confinscated by the U.S. government. Provides the high energy weapons resistance."
@@ -463,6 +473,16 @@
 	. = ..()
 	AddComponent(/datum/component/armor_plate)
 
+/obj/item/clothing/suit/armor/f13/raider/ant
+	name = "AntAgonizer's suit"
+	desc = "Coming to a wasteland near you: replica armor, right out of Grognak the Barbarian. Hand-sewn from only the finest insect chitin around, it'll inspire gasps at the next costume party, guaranteed!"
+	icon_state = "antsuit"
+	item_state = "antsuit"
+
+/obj/item/clothing/suit/armor/f13/raider/ant/Initialize()
+	. = ..()
+	AddComponent(/datum/component/armor_plate)
+
 /*
 /obj/item/clothing/suit/armor/f13/raider/r/
 	name = "reinforced base raider armor"
@@ -693,6 +713,12 @@
 	icon_state = "brotherhood_armor"
 	item_state = "brotherhood_armor"
 	armor = list("melee" = 40, "bullet" = 45, "laser" = 40, "energy" = 45, "bomb" = 55, "bio" = 60, "rad" = 15, "fire" = 60, "acid" = 30)
+
+/obj/item/clothing/suit/armor/f13/combat/brotherhood/senior
+	name = "brotherhood senior knight combat armor"
+	desc = "A superior combat armor set made by the Brotherhood of Steel, standard issue for all Senior Knights. It bears a silver stripe, and the crest of the Brotherhood of Steel."
+	icon_state = "brotherhood_armor_senior"
+	item_state = "brotherhood_armor_senior"
 
 /obj/item/clothing/suit/armor/f13/combat/knightcap
 	name = "knight-captain combat armor"
@@ -1231,6 +1257,13 @@
 	desc = "A specialized variant of combat armor issued to officers of the 3rd Scout Battalion."
 	armor = list("melee" = 60, "bullet" = 50, "laser" = 40, "energy" = 20, "bomb" = 25, "bio" = 30, "rad" = 30, "fire" = 60, "acid" = 0)
 
+/obj/item/clothing/suit/armor/f13/ncrcfjacket
+	name = "NCRCF jacket"
+	icon_state = "ncrcfjacket"
+	item_state = "ncrcfjacket"
+	desc = "A cheap, standard issue teal canvas jacket issued to poor suckers who find themselves at the butt-end of the NCR's judiciary system."
+	armor = list("melee" = 10, "bullet" = 5, "laser" = 0, "energy" = 0, "bomb" = 15, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
+
 /obj/item/clothing/suit/armor/f13/ghostechoe
 	name = "tattered peace coat"
 	desc = "An old coat belonging to a Desert Ranger once. It has been stripped of most useful protection, and has seen better days. A crude peace symbol has been painted on the back in white."
@@ -1342,3 +1375,13 @@
 	desc = "A combat duster"
 	icon_state = "harperduster"
 	armor = list("melee" = 50, "bullet" = 40, "laser" = 25, "energy" = 40, "bomb" = 25, "bio" = 40, "rad" = 35, "fire" = 80, "acid" = 0)
+
+/obj/item/clothing/suit/armor/f13/raider/reptiliatenebris
+	name = "Reptilia Tenebris"
+	desc = "An old military-grade pre-war combat armor under a weathered duster. It appears to be fitted with metal plates to replace the crumbling ceramic. The color of this duster has been washed out time and time again, giving it a more faded look as if time gripped it heavily. Along with that, the duster has been dyed a deep shade of grey, and the body armor a darker shade of green."
+	icon_state = "reptiliatenebris"
+	item_state = "reptiliatenebris"
+
+/obj/item/clothing/suit/armor/f13/raider/reptiliatenebris/Initialize()
+    . = ..()
+    AddComponent(/datum/component/armor_plate)

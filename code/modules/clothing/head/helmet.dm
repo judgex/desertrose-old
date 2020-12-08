@@ -377,6 +377,16 @@
 	. = ..()
 	AddComponent(/datum/component/armor_plate)
 
+/obj/item/clothing/head/helmet/f13/raider/ant
+	name = "AntAgonizer's cowl"
+	desc = "A handmade cowl made from the chitin of oversized ants. Seriously looks like something out of a comic book. Could probably be reinforced, if you're so inclined."
+	icon_state = "anthelm"
+	item_state = "anthelm"
+
+/obj/item/clothing/head/helmet/f13/raider/ant/Initialize()
+	. = ..()
+	AddComponent(/datum/component/armor_plate)
+
 /*
 /obj/item/clothing/head/helmet/f13/raider/r
 	name = "reinforced base raider helmet"
@@ -454,6 +464,12 @@
 	item_state = "brotherhood_helmet"
 	armor = list("melee" = 40, "bullet" = 45, "laser" = 40, "energy" = 45, "bomb" = 55, "bio" = 60, "rad" = 15, "fire" = 60, "acid" = 30)
 
+/obj/item/clothing/head/helmet/f13/combat/brotherhood/senior
+	name = "brotherhood senior knight combat helmet"
+	desc = "An improved combat helmet, bearing the symbol of the Knights in silver."
+	icon_state = "brotherhood_helmet_senior"
+	item_state = "brotherhood_helmet_senior"
+
 /obj/item/clothing/head/helmet/f13/combat/environmental
 	name = "environmental armor helmet"
 	desc = "A full head helmet and gas mask, developed for use in heavily contaminated environments."
@@ -504,6 +520,13 @@
 	item_state = "Hooded_Gas_Mask"
 	armor = list("melee" = 20, "bullet" = 20, "laser" = 20, "energy" = 20, "bomb" = 70, "bio" = 70, "rad" = 70, "fire" = 65, "acid" = 30)
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+
+/obj/item/clothing/head/helmet/f13/jasonmask
+	name = "jasons mask"
+	desc = "A metal mask made specifically for jason."
+	icon_state = "jasonmask"
+	item_state = "jasonmask"
+	armor = list("melee" = 20, "bullet" = 20, "laser" = 20, "energy" = 20, "bomb" = 70, "bio" = 70, "rad" = 70, "fire" = 65, "acid" = 30)
 
 /obj/item/clothing/head/helmet/f13/brahmincowboyhat
 	name = "brahmin leather cowboy hat"
@@ -838,7 +861,7 @@
 
 /obj/item/clothing/head/helmet/f13/ncr/rangercombat/mosshelmet
 	name = "veteran patrol stetson"
-	desc = "A weathered campaign hat tightly fitted over the viscera of a modified ranger combat helmet. The old stetson is faded with age and heavy use, having seen the green shores of California to the white peaks of the rockies."
+	desc = "A weathered campaign hat tightly fitted over the viscera of a ranger combat helmet. The old stetson is faded with age and heavy use, having seen the green shores of California to the white peaks of the rockies."
 	icon_state = "mosshelmet"
 	item_state = "mosshelmet"
 	flags_inv = HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACE

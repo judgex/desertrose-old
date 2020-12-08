@@ -530,17 +530,17 @@ Raider
 	description = "You are the Captain of the Locust Mercenary Outfit of Yuma. Your job is to grab contracts and tear down anyone in your path to get the mission done"
 	supervisors = "Colonel"
 	req_admin_notify = 1
-	outfit = /datum/outfit/job/ncr/f13locustcaptain
+	outfit = /datum/outfit/job/wasteland/f13locustcaptain
 
 /datum/outfit/job/wasteland/f13locustcaptain
 	name = "Locust Captain"
-	jobtype 	= /datum/job/ncr/f13captain
-	uniform		= /obj/item/clothing/under/f13/ncr/officer
+	jobtype 	= /datum/job/wasteland/f13locustcaptain
+	uniform		= /obj/item/clothing/under/f13/locust
 	accessory 	= /obj/item/clothing/accessory/ncr/CPT
-	suit 		= /obj/item/clothing/suit/armor/f13/ncrarmor/captain
+	suit 		= /obj/item/clothing/suit/armor/locustjacket
 	suit_store 	= /obj/item/gun/ballistic/automatic/pistol/ninemil
 	glasses 	= /obj/item/clothing/glasses/sunglasses/big
-	shoes       = /obj/item/clothing/shoes/f13/military/ncr_officer
+	shoes       = /obj/item/clothing/shoes/combat/swat
 	neck = 		/obj/item/storage/belt/holster
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/m9mm=2, \
@@ -551,5 +551,36 @@ Raider
 /datum/job/wasteland/f13locustcaptain/after_spawn(mob/living/carbon/human/H, mob/M)
 	H.add_quirk("Hard Yards")
 	H.add_quirk("Lifegiver")
+	H.add_quirk("Self-Aware")
+
+/datum/job/wasteland/f13locust
+	title = "Locust Private"
+	flag = F13LOCUST
+	head_announce = list("Security")
+	faction = "Neutral"
+	total_positions = 5
+	spawn_positions = 5
+	description = "You are part of the Locust Mercenary Outfit of Yuma. Your job is to grab contracts and tear down anyone in your path to get the mission done"
+	supervisors = "Captain"
+	req_admin_notify = 1
+	outfit = /datum/outfit/job/wasteland/f13locust
+
+/datum/outfit/job/wasteland/f13locust
+	name = "Locust Private"
+	jobtype 	= /datum/job/wasteland/f13locust
+	uniform		= /obj/item/clothing/under/f13/locust
+	suit 		= /obj/item/clothing/suit/armor/locustjacket
+	suit_store 	= /obj/item/gun/ballistic/automatic/pistol/ninemil
+	glasses 	= /obj/item/clothing/glasses/sunglasses/big
+	shoes       = /obj/item/clothing/shoes/combat/swat
+	neck = 		/obj/item/storage/belt/holster
+	backpack_contents = list(
+		/obj/item/ammo_box/magazine/m9mm=2, \
+		/obj/item/kitchen/knife/combat=1, \
+		/obj/item/melee/classic_baton/telescopic=1, \
+		/obj/item/twohanded/binocs=1)
+
+/datum/job/wasteland/f13locustcaptain/after_spawn(mob/living/carbon/human/H, mob/M)
+	H.add_quirk("Hard Yards")
 	H.add_quirk("Self-Aware")
 */

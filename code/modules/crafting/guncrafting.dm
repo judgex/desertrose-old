@@ -35,6 +35,7 @@
 	icon_state = "advanced_bench"
 	desc = "A large and advanced pre-war workbench to tackle any project!"
 	machine_tool_behaviour = list(TOOL_AWORKBENCH, TOOL_WORKBENCH)
+/*
 	var/list/salvage_typeTrait = list("Automatic Burst Action" = /obj/item/prefabs/complex/action/autoburst,
 							"Rapid Blowback Action" = /obj/item/prefabs/complex/action/rapid,
 							"Long Barrel" = /obj/item/prefabs/complex/barrel/long,
@@ -54,24 +55,49 @@
 							"45-70 Internal Magazine Loader" = /obj/item/prefabs/complex/ammo_loader/m4570,
 							"Improved Weapon Frame" = /obj/item/prefabs/complex/WeaponFrame/improved,
 							"Hair Trigger" = /obj/item/prefabs/complex/trigger/hair)
+	
+	var/list/esalvage_type = list(/obj/item/prefabs/complex/ecell/mfc,
+	/obj/item/prefabs/complex/ecell/ecp,
+	/obj/item/prefabs/complex/eburst/triple,
+	/obj/item/prefabs/complex/eburst/fast,
+	/obj/item/prefabs/complex/eburst/dual,
+	/obj/item/prefabs/complex/ebarrel/plasma/weak,
+	/obj/item/prefabs/complex/ebarrel/laser/scatter,
+	/obj/item/prefabs/complex/ebarrel/laser/strong)
 
 /obj/machinery/workbench/advanced/attackby(obj/item/W, mob/user, params)
 	. = ..()
 	var/mob/living/M = user
-	if(istype(W,/obj/item/prefabs/complex/loot))
+	if(istype(W,/obj/item/gun/energy/laser/aer9))
+		if(do_after(user,30,target = src))
+			qdel(W)
+			new /obj/item/prefabs/complex/eWeaponFrame/rifle(get_turf(src))
+			new /obj/item/prefabs/complex/ecell/mfc(get_turf(src))
+			new /obj/item/prefabs/complex/eburst/simple(get_turf(src))
+			new /obj/item/prefabs/complex/ebarrel/laser/avg(get_turf(src))
+	if(istype(W,/obj/item/gun/energy/laser/pistol))
+		if(do_after(user,30,target = src))			
+			qdel(W)
+			new /obj/item/prefabs/complex/eWeaponFrame/pistol(get_turf(src))
+			new /obj/item/prefabs/complex/ecell/ec(get_turf(src))
+			new /obj/item/prefabs/complex/eburst/simple(get_turf(src))
+			new /obj/item/prefabs/complex/ebarrel/laser/weak(get_turf(src))
+	if(istype(W,/obj/item/prefabs/complex/loot/energy))
+		if(do_after(user,80,target = src)&& M.has_trait(TRAIT_MASTER_GUNSMITH))
+			var/item_path = pick(esalvage_type)
+			new item_path(get_turf(src))
+			qdel(W)
+	else if(istype(W,/obj/item/prefabs/complex/loot))
 		if(do_after(user,80,target = src))
-			if(M.has_trait(TRAIT_MASTER_GUNSMITH))// if gunsmith get options
-				//var/selection = input(user,"What would you like to try and salvage?") as null|anything in salvage_type
-				//if(!selection)
-				//	return
-				//var/item_path = salvage_type[selection]
+			if(M.has_trait(TRAIT_MASTER_GUNSMITH))
 				var/item_path = salvage_typeTrait[pick(salvage_typeTrait)]
 				new item_path(get_turf(src))
 				qdel(W)
-			else//otherwise random
+			else
 				var/item_path = salvage_typeNoTrait[pick(salvage_typeNoTrait)]
 				new item_path(get_turf(src))
 				qdel(W)
+*/
 
 /obj/machinery/workbench/mbench
 	name = "machine workbench"
@@ -85,6 +111,7 @@
 	desc = "An assembly bench, useful for assembling complex parts into semi-finished products."
 	machine_tool_behaviour = list(TOOL_ASSWORKBENCH)
 
+/*
 /obj/machinery/workbench/fbench
 	name = "moulding workbench"
 	icon_state = "moulding"
@@ -126,7 +153,7 @@
 		return 1
 	else if(user.transferItemToLoc(W, drop_location()))
 		return TRUE
-/*
+
 /obj/machinery/workbench/fbench/Crossed(atom/movable/AM)
 	for(var/A in src.loc)
 		if(A == src)
