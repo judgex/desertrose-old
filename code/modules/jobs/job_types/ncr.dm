@@ -37,7 +37,7 @@ Colonel
 	..()
 	if(visualsOnly)
 		return
-	H.add_trait(TRAIT_TECHNOPHREAK)
+	H.add_trait(TRAIT_TECHNOPHREAK, TRAIT_GENERIC)
 
 /datum/outfit/job/ncr/f13colonel
 	name 		= "NCR Colonel"
@@ -84,7 +84,7 @@ Captain
 	..()
 	if(visualsOnly)
 		return
-	H.add_trait(TRAIT_TECHNOPHREAK)
+	H.add_trait(TRAIT_TECHNOPHREAK, TRAIT_GENERIC)
 
 /datum/outfit/job/ncr/f13captain
 	name = "NCR Captain"
@@ -116,6 +116,8 @@ Captain
 	shoes = 		/obj/item/clothing/shoes/f13/military/ncr_scout
 	gloves = 		/obj/item/clothing/gloves/rifleman
 	l_hand 	= 		/obj/item/gun/ballistic/automatic/m1garand/republicspride
+	uniform = 		/obj/item/clothing/under/f13/ncr/scout
+	belt = 			/obj/item/storage/belt/military/NCR_Bandolier
 	backpack_contents = list(
 	/obj/item/ammo_box/magazine/garand308=3)
 
@@ -189,7 +191,7 @@ Lieutenant
 	..()
 	if(visualsOnly)
 		return
-	H.add_trait(TRAIT_TECHNOPHREAK)
+	H.add_trait(TRAIT_TECHNOPHREAK, TRAIT_GENERIC)
 
 /datum/outfit/job/ncr/f13lieutenant
 	name = "NCR Lieutenant"
@@ -245,6 +247,7 @@ Lieutenant
 	suit = 			/obj/item/clothing/suit/armor/f13/ncrarmor/scout/officer
 	suit_store = 	/obj/item/gun/ballistic/automatic/marksman/sniper
 	belt = 			/obj/item/storage/belt/military/NCR_Bandolier
+	uniform = 		/obj/item/clothing/under/f13/ncr/scout
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/w308=3,
 		/obj/item/book/granter/trait/trekking=1)
@@ -341,6 +344,7 @@ Sergeant
 	gloves = 		/obj/item/clothing/gloves/rifleman
 	suit_store = 	/obj/item/gun/ballistic/automatic/marksman
 	belt = 			/obj/item/storage/belt/military/NCR_Bandolier
+	uniform = 		/obj/item/clothing/under/f13/ncr/scout
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/m556/rifle=3)
 
@@ -438,6 +442,7 @@ Corporal
 	gloves = 		/obj/item/clothing/gloves/rifleman
 	shoes = 		/obj/item/clothing/shoes/f13/military/ncr_scout
 	belt = 			/obj/item/storage/belt/military/NCR_Bandolier
+	uniform = 		/obj/item/clothing/under/f13/ncr/scout
 	backpack_contents = list(
 		/obj/item/ammo_box/a308=3,
 		/obj/item/twohanded/binocs=1
@@ -795,7 +800,7 @@ Veteran Ranger
 	..()
 	if(visualsOnly)
 		return
-	H.add_trait(TRAIT_TECHNOPHREAK)
+	H.add_trait(TRAIT_TECHNOPHREAK, TRAIT_GENERIC)
 
 /datum/outfit/job/ncr/f13vetranger
 	name = "NCR Veteran Ranger"
@@ -809,10 +814,11 @@ Veteran Ranger
 	shoes =			/obj/item/clothing/shoes/laced
 	glasses = 		/obj/item/clothing/glasses/orange
 	r_pocket = 		/obj/item/twohanded/binocs
+	neck = 			/obj/item/storage/belt/holster
 	backpack_contents = list(
 		/obj/item/gun/ballistic/revolver/sequoia=1, \
 		/obj/item/ammo_box/c4570=3, \
-		/obj/item/kitchen/knife/combat=1, \
+		/obj/item/kitchen/knife/bowie=1, \
 		/obj/item/reagent_containers/hypospray/medipen/stimpak=1, \
 		/obj/item/storage/bag/money/small/ncrofficers)
 
@@ -862,7 +868,7 @@ Ranger -- Split into Patrol and Scout
 	..()
 	if(visualsOnly)
 		return
-	H.add_trait(TRAIT_TECHNOPHREAK)
+	H.add_trait(TRAIT_TECHNOPHREAK, TRAIT_GENERIC)
 
 /datum/outfit/job/ncr/f13ranger
 	name = "NCR Ranger"
@@ -931,7 +937,7 @@ Ranger -- Split into Patrol and Scout
 	..()
 	if(visualsOnly)
 		return
-	H.add_trait(TRAIT_TECHNOPHREAK)
+	H.add_trait(TRAIT_TECHNOPHREAK, TRAIT_GENERIC)
 
 /datum/outfit/job/ncr/f13rangerpatrol
 	name = "NCR Patrol Ranger"
@@ -945,7 +951,8 @@ Ranger -- Split into Patrol and Scout
 	shoes =			/obj/item/clothing/shoes/laced
 	glasses = 		/obj/item/clothing/glasses/orange
 	suit_store =	/obj/item/gun/ballistic/automatic/marksman
-	r_pocket = /obj/item/twohanded/binocs
+	r_pocket = 		/obj/item/twohanded/binocs
+	neck = 			/obj/item/storage/belt/holster
 	backpack_contents = list(
 		/obj/item/gun/ballistic/revolver/m29,
 		/obj/item/ammo_box/m44=2, \
@@ -982,7 +989,7 @@ Ranger -- Split into Patrol and Scout
 	..()
 	if(visualsOnly)
 		return
-	H.add_trait(TRAIT_TECHNOPHREAK)
+	H.add_trait(TRAIT_TECHNOPHREAK, TRAIT_GENERIC)
 
 /datum/outfit/job/ncr/f13rangerscout
 	name = "NCR Scout Ranger"
@@ -993,12 +1000,12 @@ Ranger -- Split into Patrol and Scout
 	shoes =			/obj/item/clothing/shoes/laced
 	glasses = 		/obj/item/clothing/glasses/sunglasses
 	r_pocket = 		/obj/item/twohanded/binocs
+	neck = 			/obj/item/storage/belt/holster
 	backpack_contents = list(
 		/obj/item/gun/ballistic/revolver/m29,
 		/obj/item/ammo_box/m44=2, \
-		/obj/item/ammo_box/tube/m44=2, \
 		/obj/item/restraints/handcuffs=1, \
-		/obj/item/kitchen/knife/combat=1, \
+		/obj/item/kitchen/knife/bowie=1, \
 		/obj/item/reagent_containers/hypospray/medipen/stimpak=1, \
 		/obj/item/storage/bag/money/small/ncrofficers)
 
@@ -1009,7 +1016,7 @@ Ranger -- Split into Patrol and Scout
 	belt =	/obj/item/storage/belt/military/reconbandolier
 	suit_store = /obj/item/gun/ballistic/automatic/marksman/sniper
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/w308=3)
+		/obj/item/ammo_box/magazine/w308=4)
 
 /datum/outfit/loadout/rangertrail
 	name = "Trail Ranger"
@@ -1018,4 +1025,4 @@ Ranger -- Split into Patrol and Scout
 	belt =	/obj/item/storage/belt/military/assault/ncr
 	suit_store = /obj/item/gun/ballistic/automatic/m1garand
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/garand308=3)
+		/obj/item/ammo_box/magazine/garand308=4)
