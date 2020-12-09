@@ -140,6 +140,11 @@
 /obj/item/clothing/head/HoS/beret/syndicate
 	name = "black beret"
 	desc = "A black beret with thin armor padding inside. Stylish and robust."
+	
+/obj/item/clothing/head/HoS/beret/headband
+	name = "plated red headband"
+	desc = "A red headband that holds multiple tough metal plates for forehead protection."
+	icon_state = "platedheadbandred"
 
 /obj/item/clothing/head/warden
 	name = "warden's police hat"
