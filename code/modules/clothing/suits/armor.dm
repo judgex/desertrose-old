@@ -707,6 +707,12 @@
 	icon_state = "ncr_patrol"
 	item_state = "ncr_patrol"
 
+/obj/item/clothing/suit/armor/f13/combat/ncr_nightops
+    name = "night-ops ranger combat armor"
+    desc = "A set of patrol ranger armor, reinforced with the salvaged parts of Brotherhood combat armor. Used by the NCR rangers when they want to be extra sneaky."
+    icon_state = "ncr_patrol_knightsalvage"
+    item_state = "ncr_patrol_knightsalvage"
+
 /obj/item/clothing/suit/armor/f13/combat/brotherhood
 	name = "brotherhood combat armor"
 	desc = "A superior combat armor set made by the Brotherhood of Steel, standard issue for all Knights. It bears a red stripe."
