@@ -1071,8 +1071,8 @@
 /obj/item/clothing/suit/armor/f13/power_armor/midwest
 	name = "midwestern power armor"
 	desc = "This set of power armor once belonged to the Mid Western branch of the Brotherhood of Steel now residing wherever it's user currently is situated."
-	icon_state = "midwestpa_grey"
-	item_state = "midwestpa_grey"
+	icon_state = "midwestgrey_pa"
+	item_state = "midwestgrey_pa"
 	armor = list("melee" = 65, "bullet" = 60, "laser" = 50, "energy" = 60, "bomb" = 62, "bio" = 100, "rad" = 90, "fire" = 90, "acid" = 0)
 
 /obj/item/clothing/suit/armor/f13/power_armor/midwest/reinforced // PATREON SUPPORTER CUSTOM GEAR, DO NOT USE.
