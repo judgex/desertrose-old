@@ -926,14 +926,11 @@
 	icon_state = "service_rifle"
 	item_state = "servicerifle"
 	fire_sound = 'sound/f13weapons/varmint_rifle.ogg'
-	fire_delay = 5
-	extra_damage = -6
-	extra_penetration = -6
+	fire_delay = 4
 	mag_type = /obj/item/ammo_box/magazine/m556/rifle
 	zoomable = FALSE
 	weapon_weight = WEAPON_HEAVY
 	//bayonetstate = "rifles"
-	randomspread = 10
 	knife_x_offset = 22
 	knife_y_offset = 12
 
@@ -1278,16 +1275,13 @@
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 	burst_size = 1
-	fire_delay = 5
-	extra_penetration = -10
-	extra_damage = -10
+	fire_delay = 4
 	can_attachments = TRUE
 	can_scope = TRUE
 	can_bayonet = TRUE
 	bayonetstate = "lasmusket"
 	knife_x_offset = 24
 	knife_y_offset = 21
-	randomspread = 10
 	can_disassemble = FALSE
 
 
