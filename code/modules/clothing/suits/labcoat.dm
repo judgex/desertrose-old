@@ -21,6 +21,8 @@
 	desc = "A dark blue jacket with reflective strips for emergency medical technicians."
 	icon_state = "labcoat_emt"
 	item_state = "labcoat_cmo"
+	armor = list("melee" = 0, "bullet" = 0, "laser" = 10,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 10, "acid" = 0)
+	
 
 /obj/item/clothing/suit/toggle/labcoat/mad
 	name = "\improper The Mad's labcoat"
