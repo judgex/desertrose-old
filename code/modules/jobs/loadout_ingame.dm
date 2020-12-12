@@ -82,6 +82,8 @@
 	var/selected_direction = SOUTH
 
 	var/obj/item/loadout_token/token = null
+	
+	var/confirming = FALSE // prevents double-confirmation
 
 //Lets check that the assigned parent is a mob with a job
 /datum/component/loadout_selector/Initialize()
@@ -125,6 +127,8 @@
 /datum/component/loadout_selector/ui_interact(mob/user, ui_key="loadout_select", datum/tgui/ui=null, force_open=0, datum/tgui/master_ui=null, datum/ui_state/state=GLOB.default_state)
 	ui = SStgui.try_update_ui(user, src, ui_key, ui, force_open)
 	if(!ui)
+		var/datum/asset/assets = get_asset_datum(/datum/asset/spritesheet/loadout)
+		assets.send(user)
 		ui = new(user, src, ui_key, "loadout_select", "Loadout Select", 800, 500, master_ui, state)
 		ui.set_autoupdate(FALSE)
 		//ui.set_style(ui_style)
@@ -147,17 +151,16 @@
 	switch(action)
 		if("loadout_select")
 			select_outfit(params["name"])
-			. = TRUE
 		if("loadout_confirm")
-		/*	if (selected_datum)			//Confirmation for loadout is bugged, can click a loadout multiple times then click finish multiple times.
-				var/response = alert(usr, "Are you sure you wish to finish loadout selection? The currently selected outfit will be spawned in a box, which will be placed in your hand.", "Confirm Loadout Select", "Yes I'm done", "No, wait!")
-				if (response == "Yes I'm done")
-					finish()	*/
-			finish()
-			. = TRUE
+			if (!confirming && selected_datum)
+				confirming = TRUE
+				var/response = alert(usr, "Are you sure you wish to finish loadout selection? The currently selected outfit will be spawned in a box, which will be placed in your hand.", "Confirm Loadout Select", "Yes, I'm done.", "No, wait!")
+				if (response == "Yes, I'm done.")
+					finish()
+			confirming = FALSE
 		if("loadout_preview_direction")
 			selected_direction = turn(selected_direction, 90 * text2num(params["direction"]))
-			. = TRUE
+	return TRUE
 
 //Selects an outfit and loads the preview of it
 /datum/component/loadout_selector/proc/select_outfit(var/newname)
@@ -201,7 +204,7 @@
 	if (!M.client)
 		return
 
-	if (preview_images[selected_datum.name])
+	if (preview_images[selected_datum.name] && !selected_datum.contains_randomisation)
 		return //The images have already been generated
 
 	//They've not been made yet, lets do them. First of all, we make a mannequin based on the user's current appearance
@@ -211,24 +214,12 @@
 	selected_datum.equip(mannequin, visualsOnly = TRUE, overwrite = TRUE)
 
 	COMPILE_OVERLAYS(mannequin)
-	//mannequin.loc = M.loc //Debug
-
-	//This is a mild hack, something is making dummies not initialise properly
 
 	//Now we have our mannequin, photoshoot time!
 	var/list/cached_icons = list()
 	for (var/direction in GLOB.cardinals)
 		var/icon/preview = getFlatIcon(mannequin, direction)
-
-		preview.Scale(preview.Width() * 2.5, preview.Height() * 2.5)
-
-		//If randomisation is involved, we use the datum ref instead of the mob ref, so it will change every time we select the outfit and make a new datum
-		if (selected_datum.contains_randomisation)
-			cached_icons[dir2text(direction)] = "\ref[selected_datum]_[selected_datum.name]_[direction].png"
-		else
-			cached_icons[dir2text(direction)] = "\ref[M]_[selected_datum.name]_[direction].png"
-		//Use send_asset with verify = true, to load it to the client, this will sleep until it arrives, preventing missing images
-		send_asset(M.client, cached_icons[dir2text(direction)], TRUE, preview)
+		//preview.Scale(preview.Width() * 2.5, preview.Height() * 2.5) // scaled in CSS
+		cached_icons[dir2text(direction)] = icon2base64(preview)
 
 	preview_images[selected_datum.name] = cached_icons
-
