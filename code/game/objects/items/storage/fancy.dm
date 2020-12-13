@@ -377,6 +377,7 @@
 	icon = 'icons/obj/ammo.dmi'
 	illustration = null
 	w_class = WEIGHT_CLASS_SMALL
+	icon_state = "bbox"
 	var/icon_type = "b"
 	var/spawn_type = /obj/item/ammo_casing/shotgun/rubbershot
 	var/fancy_open = FALSE
@@ -434,6 +435,7 @@
 	illustration = null
 	w_class = WEIGHT_CLASS_SMALL
 	icon_type = "stun"
+	icon_state = "stunbox"
 	spawn_type = /obj/item/ammo_casing/shotgun/beanbag
 
 /obj/item/storage/box/rubbershot/beanbag/ComponentInitialize()
@@ -448,6 +450,7 @@
 	icon = 'icons/obj/ammo.dmi'
 	illustration = null
 	w_class = WEIGHT_CLASS_SMALL
+	icon_state = "gbox"
 	var/icon_type = "g"
 	var/spawn_type = /obj/item/ammo_casing/shotgun/buckshot
 	var/fancy_open = FALSE
@@ -499,6 +502,7 @@
 	icon = 'icons/obj/ammo.dmi'
 	illustration = null
 	w_class = WEIGHT_CLASS_SMALL
+	icon_state = "gbox"
 	var/icon_type = "g"
 	var/spawn_type = /obj/item/ammo_casing/shotgun/magnumshot
 	var/fancy_open = FALSE
@@ -550,6 +554,7 @@
 	desc = "A box full of slug rounds, designed for riot shotguns."
 	icon = 'icons/obj/ammo.dmi'
 	w_class = WEIGHT_CLASS_SMALL
+	icon_state = "lbox"
 	var/icon_type = "l"
 	var/spawn_type = /obj/item/ammo_casing/shotgun
 	var/fancy_open = FALSE
@@ -601,6 +606,7 @@
 	icon = 'icons/obj/ammo.dmi'
 	illustration = null
 	w_class = WEIGHT_CLASS_SMALL
+	icon_state = "stunbox"
 	var/icon_type = "stun"
 	var/spawn_type = /obj/item/ammo_casing/shotgun/beanbag
 	var/fancy_open = FALSE
