@@ -107,6 +107,18 @@
 	icon_state = "capformal"
 	item_state = "capspacesuit"
 
+/obj/item/clothing/suit/armor/vest/shank
+	name = "follower's duster"
+	desc = "An old military-grade pre-war combat armor under a white weathered duster. An emblem of the Followers is painted on the back of it. It appears to be fitted with metal plates to replace the crumbling ceramic."
+	icon_state = "shank_follower"
+	item_state = "shank_follower"
+	body_parts_covered = CHEST|GROIN|ARMS|LEGS
+
+/obj/item/clothing/suit/armor/vest/shank/doctor
+	name = "follower's duster"
+	desc = "An old military-grade pre-war combat armor under a white weathered duster. An emblem of the Followers is painted on the back of it. This one lacks armor inserts."
+	armor = list(melee = 0, bullet = 0, laser = 10, energy = 10, bomb = 0, bio = 10, rad = 10, fire = 10, acid = 10)
+
 /obj/item/clothing/suit/armor/riot
 	name = "riot suit"
 	desc = "A suit of semi-flexible polycarbonate body armor with heavy padding to protect against melee attacks."
@@ -707,6 +719,12 @@
 	icon_state = "ncr_patrol"
 	item_state = "ncr_patrol"
 
+/obj/item/clothing/suit/armor/f13/combat/ncr_nightops
+    name = "night-ops ranger combat armor"
+    desc = "A set of patrol ranger armor, reinforced with the salvaged parts of Brotherhood combat armor. Used by the NCR rangers when they want to be extra sneaky."
+    icon_state = "ncr_patrol_knightsalvage"
+    item_state = "ncr_patrol_knightsalvage"
+
 /obj/item/clothing/suit/armor/f13/combat/brotherhood
 	name = "brotherhood combat armor"
 	desc = "A superior combat armor set made by the Brotherhood of Steel, standard issue for all Knights. It bears a red stripe."
@@ -1065,15 +1083,15 @@
 /obj/item/clothing/suit/armor/f13/power_armor/midwest
 	name = "midwestern power armor"
 	desc = "This set of power armor once belonged to the Mid Western branch of the Brotherhood of Steel now residing wherever it's user currently is situated."
-	icon_state = "midwestpa"
-	item_state = "midwestpa"
+	icon_state = "midwestgrey_pa"
+	item_state = "midwestgrey_pa"
 	armor = list("melee" = 65, "bullet" = 60, "laser" = 50, "energy" = 60, "bomb" = 62, "bio" = 100, "rad" = 90, "fire" = 90, "acid" = 0)
 
-/obj/item/clothing/suit/armor/f13/power_armor/midwest/reinforced
-	name = "hardened midwestern power armor"
-	desc = "This set of power armor once belonged to the Mid Western branch of the Brotherhood of Steel now residing wherever it's user currently is situated. This particular one has gone through a chemical hardening process, increasing it's armor capabilities."
-	slowdown = 0.15 //+0.1 from helmet = total 0.25
-	armor = list("melee" = 70, "bullet" = 65, "laser" = 55, "energy" = 65, "bomb" = 62, "bio" = 100, "rad" = 99, "fire" = 90, "acid" = 0)
+/obj/item/clothing/suit/armor/f13/power_armor/midwest/reinforced // PATREON SUPPORTER CUSTOM GEAR, DO NOT USE.
+	name = "hardened midwestern power armor" // PATREON SUPPORTER CUSTOM GEAR, DO NOT USE.
+	icon_state = "midwestpa" // PATREON SUPPORTER CUSTOM GEAR, DO NOT USE.
+	item_state = "midwestpa" // PATREON SUPPORTER CUSTOM GEAR, DO NOT USE.
+	desc = "This set of power armor once belonged to the Mid Western branch of the Brotherhood of Steel now residing wherever it's user currently is situated. This particular one has gone through a chemical hardening process, increasing it's armor capabilities." // PATREON SUPPORTER CUSTOM GEAR, DO NOT USE.
 
 /obj/item/clothing/suit/armor/f13/legion
 	name = "legion armor"

@@ -72,11 +72,6 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 
 "Mayor",
 "Sheriff",
-"Deputy",
-"Shopkeeper",
-"Doctor",
-"Prospector",
-"Detective",
 
 "Chief",
 "Shaman",
@@ -84,11 +79,6 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 
 "Followers Administrator",
 
-"Cyborg",
-"Vault-tec Security",
-"Vault-tec Doctor",
-"Vault-tec Scientist",
-"Vault-tec Engineer",
 "Chief of Security",
 "Overseer"
 ))
@@ -127,7 +117,10 @@ GLOBAL_LIST_INIT(faction_player_positions, list(
 "Detective",
 
 "Cyborg",
-"Vault-tec Security"
+"Vault-tec Security",
+"Vault-tec Doctor",
+"Vault-tec Engineer",
+"Vault-tec Scientist"
 ))
 
 //Whitelisted positions list FO13 anything that shows up here requires that the user have an entry in the 'role_whitelist' table of id,ckey,"antagonist"
