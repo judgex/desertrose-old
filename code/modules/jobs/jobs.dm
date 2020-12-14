@@ -76,6 +76,7 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 "Chief",
 "Shaman",
 "Head Hunter",
+"Hunter",
 
 "Followers Administrator",
 
@@ -108,7 +109,9 @@ GLOBAL_LIST_INIT(faction_player_positions, list(
 "NCR Corporal",
 "NCR Military Police",
 "NCR Heavy Trooper",
-"NCR Trooper"
+"NCR Trooper",
+
+"Hunter"
 
 ))
 
