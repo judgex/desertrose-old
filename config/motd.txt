@@ -34,9 +34,6 @@ Name00
 BurningCold
 Mexrex
 MintCookie
-<<<<<<< HEAD
 Cythisia
-=======
 Octus
->>>>>>> acf6b0904f1f9a7c439793c6feb36d56e4ea7add
 </i>
