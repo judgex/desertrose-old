@@ -654,9 +654,9 @@ Prime Legionary
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13legionary
 
 	loadout_options = list(
-	/datum/outfit/loadout/legassault, //.357 revolver
-	/datum/outfit/loadout/legline, //glaive
-	/datum/outfit/loadout/legbreach, //hunting shotgun
+	/datum/outfit/loadout/legassault, //5.56 pistol, spear quiver
+	/datum/outfit/loadout/legline, //Glaive, extended 10mm
+	/datum/outfit/loadout/legbreach, //Lever-action shotgun
 	/datum/outfit/loadout/legrange //trail carbine
 	)
 
