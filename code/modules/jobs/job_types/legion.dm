@@ -124,7 +124,7 @@ Centurion
 		/obj/item/restraints/legcuffs/bola=1, \
 		/obj/item/melee/powerfist/goliath=1, \
 		/obj/item/reagent_containers/pill/patch/healpoultice=3, \
-		/obj/item/restraints/handcuffs=2 \
+		/obj/item/restraints/handcuffs=2, \
 		/obj/item/key/scollar=1, \
 		/obj/item/key/bcollar=1, \
 		/obj/item/assembly/signaler/electropack/shockcollar=1, \
@@ -186,8 +186,8 @@ Orator
 	backpack_contents = list(
 		/obj/item/reagent_containers/pill/patch/healpoultice=3, \
 		/obj/item/flashlight/lantern=1,
-		/obj/item/storage/box/ids/follower=1
-		/obj/item/ammo_box/magazine/m45exp=3
+		/obj/item/storage/box/ids/follower=1,
+		/obj/item/ammo_box/magazine/m45exp=3,
 		/obj/item/stack/f13Cash/aureus=3
 		)
 
