@@ -101,9 +101,9 @@ Centurion
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13centurion
 
 	loadout_options = list(
-	/datum/outfit/loadout/centheavy, //10mm SMG and powerfist
-	/datum/outfit/loadout/centassault, //9mm uzi and thermic lance
-	/datum/outfit/loadout/centbreacher //breacher shotgun and fire axe
+	/datum/outfit/loadout/centheavy, //AER9 and Glock 86
+	/datum/outfit/loadout/centassault, //AMR and Desert Eagle
+	/datum/outfit/loadout/centbreacher //M39 and Browning Hi-Power
 	)
 
 /datum/job/CaesarsLegion/Legionnaire/f13centurion/after_spawn(mob/living/carbon/human/H, mob/M)
@@ -119,11 +119,12 @@ Centurion
 	mask =			/obj/item/clothing/mask/bandana/legcenturion
 	glasses = 		/obj/item/clothing/glasses/sunglasses/big
 	ears = 			/obj/item/radio/headset/headset_legion
-	r_pocket =      /obj/item/restraints/handcuffs
+	r_pocket =      /obj/item/flashlight/lantern
 	backpack_contents = list(
 		/obj/item/restraints/legcuffs/bola=1, \
-		/obj/item/reagent_containers/pill/patch/healingpowder=2, \
-		/obj/item/flashlight/lantern=1, \
+		/obj/item/melee/powerfist/goliath=1, \
+		/obj/item/reagent_containers/pill/patch/healpoultice=3, \
+		/obj/item/restraints/handcuffs=2, \
 		/obj/item/key/scollar=1, \
 		/obj/item/key/bcollar=1, \
 		/obj/item/assembly/signaler/electropack/shockcollar=1, \
@@ -134,28 +135,31 @@ Centurion
 	name = "Paladin-Slayer Centurion"
 	suit = 			/obj/item/clothing/suit/armor/f13/legion/palacent
 	head = 			/obj/item/clothing/head/helmet/f13/legion/palacent
-	suit_store = /obj/item/gun/ballistic/automatic/smg10mm
+	suit_store = /obj/item/gun/energy/laser/aer9
 	backpack_contents = list(
-		/obj/item/melee/powerfist/goliath=1,
-		/obj/item/ammo_box/magazine/m10mm_auto=2)
+		/obj/item/stock_parts/cell/ammo/mfc=2,
+		/obj/item/gun/energy/laser/plasma/glock=1,
+		/obj/item/stock_parts/cell/ammo/ec=2)
 
 /datum/outfit/loadout/centassault
 	name = "Ranger-Hunter Centurion"
 	suit = 			/obj/item/clothing/suit/armor/f13/legion/rangercent
 	head = 			/obj/item/clothing/head/helmet/f13/legion/rangercent
-	suit_store = /obj/item/gun/ballistic/automatic/mini_uzi
+	suit_store = /obj/item/gun/ballistic/shotgun/antimateriel
 	backpack_contents = list(
-		/obj/item/twohanded/required/thermic_lance=1,
-		/obj/item/ammo_box/magazine/uzim9mm=2)
+		/obj/item/ammo_box/a50MG=2,	
+		/obj/item/gun/ballistic/automatic/pistol/deagle=1,
+		/obj/item/ammo_box/magazine/a50=3)
 
 /datum/outfit/loadout/centbreacher
 	name = "Standard Centurion"
 	suit = 			/obj/item/clothing/suit/armor/f13/legion/centurion
 	head = 			/obj/item/clothing/head/helmet/f13/legion/centurion
-	suit_store = /obj/item/gun/ballistic/automatic/shotgun/riot
+	suit_store = /obj/item/gun/ballistic/automatic/l6_saw/m38
 	backpack_contents = list(
-		/obj/item/twohanded/fireaxe=1,
-		/obj/item/ammo_box/magazine/d12g=2)
+		/obj/item/ammo_box/magazine/mm762=2,
+		/obj/item/gun/ballistic/automatic/pistol/ninemil=1,
+		/obj/item/ammo_box/magazine/m9mm=3)
 
 /*
 Orator
@@ -177,10 +181,14 @@ Orator
 	suit = 	/obj/item/clothing/suit/armor/f13/legion/vet/orator
 	ears =	/obj/item/radio/headset/headset_legion
 	id = /obj/item/card/id/dogtag/legorator
+	belt = /obj/item/claymore/machete/gladius
+	suit_store = /obj/item/gun/ballistic/automatic/pistol/socommk23kalibmanbad
 	backpack_contents = list(
-		/obj/item/reagent_containers/pill/patch/healingpowder=3, \
+		/obj/item/reagent_containers/pill/patch/healpoultice=3, \
 		/obj/item/flashlight/lantern=1,
-		/obj/item/storage/box/ids/follower=1
+		/obj/item/storage/box/ids/follower=1,
+		/obj/item/ammo_box/magazine/m45exp=3,
+		/obj/item/stack/f13Cash/aureus=3
 		)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13orator/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -346,16 +354,15 @@ Decanii
 	mask =			/obj/item/clothing/mask/bandana/legdecan
 	glasses = 		/obj/item/clothing/glasses/sunglasses/big
 	ears = 			/obj/item/radio/headset/headset_legion
-	suit_store = 	/obj/item/gun/ballistic/revolver/ballisticfist
+	suit_store = 	/obj/item/gun/ballistic/automatic/marksman/servicerifle/r82
 	r_pocket =		/obj/item/flashlight/lantern
 	backpack_contents = list(
-		/obj/item/storage/box/lethalshot=1,	\
-		/obj/item/storage/box/slugshot=1, \
-		/obj/item/shield/riot/roman=1, \
+		/obj/item/ammo_box/magazine/m556/rifle=3, \
 		/obj/item/restraints/legcuffs/bola=1, \
-		/obj/item/throwing_star/spear, \
-		/obj/item/reagent_containers/pill/patch/healingpowder=2, \
-		/obj/item/storage/box/handcuffs=1, \
+		/obj/item/reagent_containers/pill/patch/healpoultice=3, \
+		/obj/item/restraints/handcuffs=2, \
+		/obj/item/twohanded/binocs=1, \
+		/obj/item/claymore/machete/gladius=1, \
 		/obj/item/key/scollar=1, \
 		/obj/item/assembly/signaler/electropack/shockcollar=1, \
 		/obj/item/storage/bag/money/small/legofficers)
@@ -392,15 +399,17 @@ Decanii
 	mask =			/obj/item/clothing/mask/bandana/legdecan
 	glasses = 		/obj/item/clothing/glasses/sunglasses/big
 	ears = 			/obj/item/radio/headset/headset_legion
-	suit_store =	/obj/item/gun/ballistic/automatic/assault_rifle/infiltrator
+	suit_store =	/obj/item/gun/ballistic/automatic/m1garand
 	r_pocket =		/obj/item/flashlight/lantern
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m556/rifle=1, \
+		/obj/item/ammo_box/magazine/garand308=3, \
 		/obj/item/restraints/legcuffs/bola=1, \
-		/obj/item/throwing_star/spear, \
-		/obj/item/claymore/machete/gladius, \
-		/obj/item/reagent_containers/pill/patch/healingpowder=2, \
-		/obj/item/storage/box/handcuffs=1, \
+		/obj/item/gun/ballistic/automatic/pistol/m1911=1, \
+		/obj/item/ammo_box/magazine/m45=3, \
+		/obj/item/claymore/machete/gladius=1, \
+		/obj/item/reagent_containers/pill/patch/healpoultice=3, \
+		/obj/item/restraints/handcuffs=2, \
+		/obj/item/twohanded/binocs=1, \
 		/obj/item/key/scollar=1, \
 		/obj/item/assembly/signaler/electropack/shockcollar=1, \
 		/obj/item/storage/bag/money/small/legofficers)
@@ -438,15 +447,15 @@ Decanii
 	mask =			/obj/item/clothing/mask/bandana/legdecan
 	glasses = 		/obj/item/clothing/glasses/sunglasses/big
 	ears = 			/obj/item/radio/headset/headset_legion
-	suit_store = 	/obj/item/gun/ballistic/automatic/greasegun
+	suit_store = 	/obj/item/gun/ballistic/automatic/mini_uzi
 	r_pocket =		/obj/item/flashlight/lantern
 	backpack_contents = list(
-		/obj/item/twohanded/fireaxe/bmprsword=1, \
-		/obj/item/ammo_box/magazine/greasegun=1, \
+		/obj/item/ammo_box/magazine/uzim9mm=3, \
+		/obj/item/gun/ballistic/revolver/m29/snub=1, \
+		/obj/item/ammo_box/m44=2, \
 		/obj/item/restraints/legcuffs/bola=1, \
-		/obj/item/throwing_star/spear, \
-		/obj/item/reagent_containers/pill/patch/healingpowder=2, \
-		/obj/item/storage/box/handcuffs=1, \
+		/obj/item/reagent_containers/pill/patch/healpoultice=3, \
+		/obj/item/restraints/handcuffs=2, \
 		/obj/item/key/scollar=1, \
 		/obj/item/assembly/signaler/electropack/shockcollar=1, \
 		/obj/item/storage/bag/money/small/legofficers)
@@ -574,9 +583,9 @@ Veteran Legionary
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13vetlegionary
 
 	loadout_options = list(
-	/datum/outfit/loadout/vetlegassault, //scoped .44 revolver
-	/datum/outfit/loadout/vetlegrange, //marksman rifle
-	/datum/outfit/loadout/vetlegclose //lever-action shotgun
+	/datum/outfit/loadout/vetlegassault, //10mm SMG and Shield
+	/datum/outfit/loadout/vetlegrange, //Infiltrator
+	/datum/outfit/loadout/vetlegclose //Breacher
 	)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13vetlegionary/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -596,7 +605,7 @@ Veteran Legionary
 	ears	=		/obj/item/radio/headset/headset_legion
 	backpack_contents = list(
 		/obj/item/restraints/legcuffs/bola=1, \
-		/obj/item/reagent_containers/pill/patch/healingpowder=3, \
+		/obj/item/reagent_containers/pill/patch/healpoultice=3, \
 		/obj/item/flashlight/lantern=1, \
 		/obj/item/storage/bag/money/small/legenlisted,
 		/obj/item/claymore/machete/reinforced=1
@@ -605,28 +614,24 @@ Veteran Legionary
 
 /datum/outfit/loadout/vetlegassault
 	name = "Assault Legionary"
-	suit_store = /obj/item/gun/ballistic/automatic/mini_uzi
+	suit_store = /obj/item/gun/ballistic/automatic/smg10mm
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/uzim9mm=2,
-		/obj/item/claymore/machete/reinforced=1
+		/obj/item/ammo_box/magazine/m10mm_auto=3,
+		/obj/item/shield/riot/roman=1
 		)
 
 /datum/outfit/loadout/vetlegrange
 	name = "Ranged Legionary"
-	suit_store = /obj/item/gun/ballistic/automatic/marksman
+	suit_store = /obj/item/gun/ballistic/automatic/assault_rifle/infiltrator
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m556/rifle=2,
-		/obj/item/claymore/machete/reinforced=1
+		/obj/item/ammo_box/magazine/m556/rifle=3,
 		)
 
 /datum/outfit/loadout/vetlegclose
 	name = "Protector Legionary"
-	suit_store = /obj/item/gun/ballistic/shotgun/trench
+	suit_store = /obj/item/gun/ballistic/automatic/shotgun/riot
 	backpack_contents = list(
-		/obj/item/storage/box/slugshot=1, \
-		/obj/item/storage/box/beanbag=1, \
-		/obj/item/shield/riot/roman=1,
-		/obj/item/claymore/machete/reinforced=1
+		/obj/item/ammo_box/magazine/d12g=2, 
 		)
 
 /datum/job/CaesarsLegion/Legionnaire/f13vetlegionary/after_spawn(mob/living/carbon/human/H, mob/M)
@@ -634,7 +639,7 @@ Veteran Legionary
 	H.add_quirk("Hard Yards")
 
 /*
-Prime Legionairy
+Prime Legionary
 */
 
 /datum/job/CaesarsLegion/Legionnaire/f13legionary
@@ -643,15 +648,15 @@ Prime Legionairy
 	faction = "Legion"
 	total_positions = 3
 	spawn_positions = 3
-	description = "You answer to the Decani and the Centurion, as well as Veterans above you. Acting as a loyal soldier of the Centuria, you have the great honour of serving under Caesar in his quest to unite the scattered tribes of The Mojave. You have been through enough battles to call yourself a prime, but you are by no means yet a Veteran."
+	description = "You answer to the Decanii and the Centurion, as well as Veterans above you. Acting as a loyal soldier of the Centuria, you have the great honour of serving under Caesar in his quest to unite the scattered tribes of The Mojave. You have been through enough battles to call yourself a Prime, but you are by no means yet a Veteran."
 	supervisors = "the Decani and Centurion"
 
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13legionary
 
 	loadout_options = list(
-	/datum/outfit/loadout/legassault, //.357 revolver
-	/datum/outfit/loadout/legline, //glaive
-	/datum/outfit/loadout/legbreach, //hunting shotgun
+	/datum/outfit/loadout/legassault, //5.56 pistol, spear quiver
+	/datum/outfit/loadout/legline, //Glaive, extended 10mm
+	/datum/outfit/loadout/legbreach, //Lever-action shotgun
 	/datum/outfit/loadout/legrange //trail carbine
 	)
 
@@ -672,7 +677,7 @@ Prime Legionairy
 	ears	=		/obj/item/radio/headset/headset_legion
 	backpack_contents = list(
 		/obj/item/restraints/legcuffs/bola=1, \
-		/obj/item/reagent_containers/pill/patch/healingpowder=2, \
+		/obj/item/reagent_containers/pill/patch/healingpowder=3, \
 		/obj/item/flashlight/flare/torch=1)
 	r_pocket = /obj/item/restraints/handcuffs
 
@@ -688,13 +693,13 @@ Prime Legionairy
 	name = "Lineman"
 	suit_store = /obj/item/twohanded/spear
 	backpack_contents = list(
-		/obj/item/gun/ballistic/automatic/pistol/n99=1, \
-		/obj/item/ammo_box/magazine/m10mm_adv=2, \
+		/obj/item/gun/ballistic/automatic/pistol/n99/pers/glock=1, \
+		/obj/item/ammo_box/magazine/m10mm_auto=3, \
 		/obj/item/claymore/machete/reinforced=1)
 
 /datum/outfit/loadout/legbreach
 	name = "Close Quarters Legionary"
-	suit_store = /obj/item/gun/ballistic/shotgun/hunting
+	suit_store = /obj/item/gun/ballistic/shotgun/trench
 	backpack_contents = list(
 		/obj/item/storage/box/slugshot=1, \
 		/obj/item/storage/box/beanbag=1, \
@@ -705,7 +710,8 @@ Prime Legionairy
 	suit_store = /obj/item/gun/ballistic/shotgun/automatic/hunting/trail/scoped
 	backpack_contents = list(
 		/obj/item/ammo_box/tube/m44=2, \
-		/obj/item/claymore/machete/reinforced)
+		/obj/item/ammo_box/m44box=1, \
+		/obj/item/claymore/machete/reinforced=1)
 
 /datum/job/CaesarsLegion/Legionnaire/f13legionary/after_spawn(mob/living/carbon/human/H, mob/M)
 	H.add_quirk("Big Leagues")
