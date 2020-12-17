@@ -630,6 +630,13 @@ update_label("John Doe", "Clowny")
 	item_state = "legionmedallioncent"
 	id_type = "orator medallion"
 
+//For PilotBland's frumentarii custom loadout
+/obj/item/card/id/dogtag/legfrumentariiremus
+	name = "Remus Amius' frumentarius medallion"
+	desc = "A golden disc with a string threaded through the top, displaying official markings confirming a frumentarius' status."
+	icon_state = "legionmedallioncent"
+	id_type = "frumentarius medallion"
+
 /obj/item/card/id/legionbrand
 	name = "Legion's brand"
 	desc = "A brand for identifying Caesar's Legion's slaves."
