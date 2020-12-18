@@ -228,15 +228,15 @@ GLOBAL_LIST_EMPTY(asset_datums)
 	if (!name)
 		CRASH("spritesheet [type] cannot register without a name")
 	ensure_stripped()
-
-	var/res_name = "spritesheet_[name].css"
-	var/fname = "data/spritesheets/[res_name]"
-	text2file(generate_css(), fname)
-	register_asset(res_name, file(fname))
-
 	for(var/size_id in sizes)
 		var/size = sizes[size_id]
 		register_asset("[name]_[size_id].png", size[SPRSZ_STRIPPED])
+	var/res_name = "spritesheet_[name].css"
+	var/fname = "data/spritesheets/[res_name]"
+	fdel(fname)
+	text2file(generate_css(), fname)
+	register_asset(res_name, fcopy_rsc(fname))
+	fdel(fname)
 
 /datum/asset/spritesheet/send(client/C)
 	if (!name)
@@ -323,8 +323,14 @@ GLOBAL_LIST_EMPTY(asset_datums)
 	var/sprite = sprites[sprite_name]
 	if (!sprite)
 		return null
+	return {"<span class="[icon_class_name(sprite_name)]"></span>"}
+
+/datum/asset/spritesheet/proc/icon_class_name(sprite_name)
+	var/sprite = sprites[sprite_name]
+	if(!sprite)
+		return null
 	var/size_id = sprite[SPR_SIZE]
-	return {"<span class="[name][size_id] [sprite_name]"></span>"}
+	return {"[name][size_id] [sprite_name]"}
 
 #undef SPR_SIZE
 #undef SPR_IDX
@@ -574,9 +580,13 @@ GLOBAL_LIST_EMPTY(asset_datums)
 	name = "design"
 
 /datum/asset/spritesheet/research_designs/register()
-	for (var/path in subtypesof(/datum/design))
-		var/datum/design/D = path
-
+	var/list/used_asset_paths = list()
+	for (var/id in SSresearch.techweb_designs)
+		var/datum/design/D = SSresearch.techweb_designs[id]
+		var/asset_path = D.get_asset_path()
+		if(asset_path in used_asset_paths)
+			continue
+		used_asset_paths |= asset_path
 		// construct the icon and slap it into the resource cache
 		var/atom/item = initial(D.build_path)
 		if (!ispath(item, /atom))
@@ -606,12 +616,16 @@ GLOBAL_LIST_EMPTY(asset_datums)
 			if (keyboard && (keyboard in all_states))
 				I.Blend(icon(icon_file, keyboard, SOUTH), ICON_OVERLAY)
 
-		Insert(initial(D.id), I)
+		Insert(D.get_asset_path(), I)
 	return ..()
 
 
-/datum/asset/simple/loadout_icons/register()
+/datum/asset/spritesheet/loadout
+	name = "loadout"
+
+/datum/asset/spritesheet/loadout/register()
 	var/list/outfits = list()
+	var/list/ics = list() // We can afford the processing here to avoid using unnecessary bandwidth.
 	for(var/j in subtypesof(/datum/job))
 		var/datum/job/J = new j
 		for (var/D in J.loadout_options)
@@ -619,17 +633,46 @@ GLOBAL_LIST_EMPTY(asset_datums)
 				continue
 			outfits += D
 			var/datum/outfit/O = new D
-			var/list/types = O.get_all_possible_item_paths()
-
-			for (var/item in types)
-				if(item == "" || isnull(item))
-					log_game("There was an error with the loadouts! Blame: [j]:[D]") //Can remove this after finding
+			for(var/itemtype in O.get_all_possible_item_paths())
+				var/obj/item/I = itemtype
+				if(isnull(initial(I.icon)))
+					world.log << "MISSING ICON FOR [initial(I.name)] IN [j]"
 					continue
-				var/filename = sanitize_filename("[item].png")
-				var/icon/I = getFlatTypeIcon(item)
-				if(I)
-					register_asset(filename, I)
-					assets[filename] = I
+				if(isnull(initial(I.icon_state)))
+					world.log << "MISSING ICON STATE FOR [itemtype]"
+					continue
+				var/ic_string = "[initial(I.icon)]*[initial(I.icon_state)]" // delimiter must be illegal to use in filenames
+				var/c = initial(I.color)
+				if(!isnull(c) && c != "#ffffff")
+					ic_string += "*[c]"
+				ics |= ic_string
+	for (var/i in ics)
+		var/list/tmp = splittext(i, "*")
+		if(length(tmp) < 2) continue
+		var/icon_file = tmp[1]
+		var/icon_state = tmp[2]
+		var/c = LAZYACCESS(tmp, 3)
+		var/icon_string = "[sanitize_filename(replacetext(replacetext(icon_file, "icons/", ""), ".dmi", ""))]-[icon_state]"
+		var/icon/I
+
+		world.log << icon_file
+		if(!fexists(icon_file))
+			stack_trace("Invalid icon file [icon_file]")
+			continue
+		var/icon_states_list = icon_states(icon_file)
+		if(icon_state in icon_states_list)
+			I = icon(icon_file, icon_state, SOUTH)
+			if (!isnull(c) && uppertext(c) != "#FFFFFF")
+				I.Blend(c, ICON_MULTIPLY)
+				icon_string += "-[c]"
+		else
+			var/icon_states_string
+			for (var/an_icon_state in icon_states_list)
+				if (!icon_states_string)
+					icon_states_string = "[json_encode(an_icon_state)](\ref[an_icon_state])"
 				else
-					log_game("Error loading icon file! Blame: [j]:[D]:[I]")
-				//design.ui_data["icon"] = filename
+					icon_states_string += ", [json_encode(an_icon_state)](\ref[an_icon_state])"
+			stack_trace("Invalid icon state, icon=[icon_file], icon_state=[json_encode(icon_state)](\ref[icon_state]), icon_states=[icon_states_string]")
+			I = icon('icons/turf/floors.dmi', "", SOUTH)
+		Insert(icon_string, I)
+	return ..()

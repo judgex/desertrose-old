@@ -30,6 +30,8 @@
 	var/list/all_types = list()
 	var/list/all_possible_types = list()
 	var/contains_randomisation = FALSE //Used to redo asset loading with randomised outfits
+	
+	var/static/datum/asset/spritesheet/loadout/loadout_sheet
 
 //Simple randomisation support. If any of the piece types is a list, a random item is picked from that list
 //Supports weighted selection too, optionally
@@ -252,13 +254,20 @@
 	//"icon" = path of the cached icon for the typepath
 	//"quantity" = how many of the item there are. 1 in most cases
 /datum/outfit/ui_data()
+	if(!loadout_sheet)
+		loadout_sheet = get_asset_datum(/datum/asset/spritesheet/loadout)
 	var/list/data = list()
 	var/list/items = get_all_item_paths()
 	for (var/item in items)
 		var/list/subdata = list()
-		var/datum/outfit/d = item
-		subdata["name"] = initial(d.name)
-		subdata["icon"] = sanitize_filename("[item].png")
+		var/atom/I = item
+		subdata["name"] = initial(I.name)
+		var/iconfile = "[initial(I.icon)]" // doesn't work if you directly embed it
+		var/icon_string = "[sanitize_filename(replacetext(replacetext(iconfile, "icons/", ""), ".dmi", ""))]-[initial(I.icon_state)]"
+		var/c = initial(I.color)
+		if(!isnull(c) && uppertext(c) != "#FFFFFF")
+			icon_string += "-[c]"
+		subdata["icon"] = loadout_sheet.icon_class_name(icon_string)
 		subdata["quantity"] = items[item]
 		data += list(subdata)
 	return data

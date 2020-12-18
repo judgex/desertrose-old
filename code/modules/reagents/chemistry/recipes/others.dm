@@ -35,6 +35,13 @@
 	results = list("sodiumchloride" = 3)
 	required_reagents = list("water" = 1, "sodium" = 1, "chlorine" = 1)
 
+/datum/chemical_reaction/stable_plasma
+	name = "stable plasma"
+	id = "stable_plasma"
+	results = list("stable_plasma" = 1)
+	required_reagents = list("plasma" = 1)
+	required_catalysts = list("stabilizing_agent" = 1)
+	
 /datum/chemical_reaction/plasmasolidification
 	name = "Solid Plasma"
 	id = "solidplasma"

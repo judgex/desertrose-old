@@ -8,7 +8,7 @@
 	category = list("Ammo")
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
 
-/datum/design/rubbershot/sec
+/datum/design/rubber_shell/sec
 	id = "sec_rshot"
 	build_type = PROTOLATHE
 	category = list("Ammo")
@@ -27,14 +27,20 @@
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
 
 /datum/design/shotgun_dart/sec
+	name = "Shotgun Dart"
 	id = "sec_dart"
 	build_type = PROTOLATHE
 	category = list("Ammo")
+	materials = list(MAT_METAL = 1000)
+	build_path = /obj/item/ammo_casing/shotgun/dart
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
 
 /datum/design/incendiary_slug/sec
+	name = "Incendiary Slug"
 	id = "sec_Islug"
 	build_type = PROTOLATHE
+	materials = list(MAT_METAL = 1000)
+	build_path = /obj/item/ammo_casing/shotgun/incendiary
 	category = list("Ammo")
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
 
