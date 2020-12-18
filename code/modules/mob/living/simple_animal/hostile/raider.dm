@@ -72,6 +72,21 @@
 	projectiletype = /obj/item/projectile/bullet/c9mm
 	projectilesound = 'sound/f13weapons/ninemil.ogg'
 
+/mob/living/simple_animal/hostile/raider/ranged/legendary
+	name = "Legendary Raider"
+	desc = "Another murderer churned out by the wastes, wielding a decent pistol and looking very strong"
+	color = "#FFFF00"
+	icon_state = "raiderranged"
+	icon_living = "raiderranged"
+	loot = list(/obj/effect/mob_spawn/human/corpse/raiderranged, /obj/item/gun/ballistic/revolver/m29)
+	ranged = 1
+	maxHealth = 650
+	health = 650
+	retreat_distance = 4
+	minimum_distance = 6
+	projectiletype = /obj/item/projectile/bullet/m44
+	projectilesound = 'sound/f13weapons/44mag.ogg'
+
 /mob/living/simple_animal/hostile/raider/ranged/sulphiteranged
 	icon_state = "ranged_sulphitemob"
 	icon_living = "ranged_sulphitemob"
@@ -81,7 +96,7 @@
 	health = 180
 	projectiletype = /obj/item/projectile/bullet/c45
 	projectilesound = 'sound/weapons/gunshot.ogg'
-	
+
 /mob/living/simple_animal/hostile/raider/ranged/boss
 	name = "Raider Boss"
 	icon_state = "raiderboss"
