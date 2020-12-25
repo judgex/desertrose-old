@@ -652,10 +652,9 @@ GLOBAL_LIST_EMPTY(asset_datums)
 		var/icon_file = tmp[1]
 		var/icon_state = tmp[2]
 		var/c = LAZYACCESS(tmp, 3)
-		var/icon_string = "[sanitize_filename(replacetext(replacetext(icon_file, "icons/", ""), ".dmi", ""))]-[icon_state]"
+		var/icon_string = "[sanitize_filename(replacetext(icon_file, ".dmi", ""))]-[icon_state]"
 		var/icon/I
 
-		world.log << icon_file
 		if(!fexists(icon_file))
 			stack_trace("Invalid icon file [icon_file]")
 			continue
