@@ -152,7 +152,9 @@
 		if("loadout_select")
 			select_outfit(params["name"])
 		if("loadout_confirm")
-			if (!confirming && selected_datum)
+			if(confirming)
+				return // No duplication.
+			if (selected_datum)
 				confirming = TRUE
 				var/response = alert(usr, "Are you sure you wish to finish loadout selection? The currently selected outfit will be spawned in a box, which will be placed in your hand.", "Confirm Loadout Select", "Yes, I'm done.", "No, wait!")
 				if (response == "Yes, I'm done.")
