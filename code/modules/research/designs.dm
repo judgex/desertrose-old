@@ -66,7 +66,7 @@ other types of metals and chemistry for reagents).
 		if (machine)
 			item = machine
 	var/icon_file = "[initial(item.icon)]"
-	var/icon_string = "[sanitize_filename(replacetext(replacetext(icon_file, "icons/", ""), ".dmi", ""))]-[initial(item.icon_state)]"
+	var/icon_string = "[sanitize_filename(replacetext(icon_file, ".dmi", ""))]-[initial(item.icon_state)]"
 	// computers (and snowflakes) get their screen and keyboard sprites
 	if (ispath(item, /obj/machinery/computer) || ispath(item, /obj/machinery/power/solar_control))
 		var/obj/machinery/computer/C = item
