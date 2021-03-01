@@ -7,12 +7,15 @@
 				if(!equipped_belt) // We also let you equip a belt like this
 					if(!thing)
 						to_chat(user, "<span class='notice'>You have no belt to take something out of.</span>")
-						return
-					equip_to_slot_if_possible(thing, SLOT_BELT)
+					else
+						equip_to_slot_if_possible(thing, SLOT_BELT)
+						var/mob/living/carbon/human/H = src
+						if(istype(H))
+							H.update_inv_hands()
 					return
 				if(!istype(equipped_belt)) // not a storage item
 					if(!thing)
-						to_chat(user, "<span class='notice'>You have no belt to take something out of.</span>")
+						equipped_belt.attack_hand(src)
 					else
 						to_chat(user, "<span class='notice'>You can't fit anything in.</span>")
 					return
@@ -36,11 +39,15 @@
 					if(!thing)
 						to_chat(user, "<span class='notice'>You have no backpack to take something out of.</span>")
 						return
-					equip_to_slot_if_possible(thing, SLOT_BACK)
+					else
+						equip_to_slot_if_possible(thing, SLOT_BACK)
+						var/mob/living/carbon/human/H = src
+						if(istype(H))
+							H.update_inv_hands()
 					return
 				if(!istype(equipped_backpack)) // not a storage item
 					if(!thing)
-						to_chat(user, "<span class='notice'>You have no backpack to take something out of.</span>")
+						equipped_backpack.attack_hand(src)
 					else
 						to_chat(user, "<span class='notice'>You can't fit anything in.</span>")
 					return

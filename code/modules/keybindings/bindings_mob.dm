@@ -19,7 +19,7 @@
 		if("X", "Northeast") // Northeast is Page-up
 			swap_hand()
 			return
-		if("Y", "Z", "Southeast")	// Southeast is Page-down
+		if("Z", "Southeast")	// Southeast is Page-down
 			mode()					// attack_self(). No idea who came up with "mode()"
 			return
 		if("Q", "Northwest") // Northwest is Home
