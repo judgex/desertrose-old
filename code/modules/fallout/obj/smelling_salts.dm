@@ -4,11 +4,14 @@
 	desc = "A large glass phial of pungent smelling salts, used to revive those who have fainted."
 	w_class = WEIGHT_CLASS_NORMAL
 	icon = 'icons/obj/fallout/smelling_salts.dmi'
-	icon_state = "smelling_salts_premade"
+	icon_state = "smelling_salts_legion"
 	var/time_limit = DEFIB_TIME_LIMIT * 5 // half compared to an actual defib
 	var/charges = 8 // a bit lower than a normal defib's 10
 	var/in_use = FALSE
 	var/time_to_use = 10 SECONDS // a defib is 5 seconds
+
+/obj/item/smelling_salts/wayfarer
+	icon_state = "smelling_salts_wayfarer"
 
 /obj/item/smelling_salts/crafted
 	name = "small phial of smelling salts"
@@ -39,6 +42,10 @@
 		target_carbon.notify_ghost_cloning("You're being revived with smelling salts. Re-enter your corpse if you want to be revived!", source = src)
 
 	do_revive(target_carbon, user)
+	charges--
+	if(charges <= 0)
+		to_chat(user, SPAN_NOTICE("[src] is now empty and useless; you throw it away."))
+		qdel(src)
 
 /obj/item/smelling_salts/proc/can_revive(mob/living/carbon/target)
 	var/obj/item/organ/brain/BR = target.getorgan(/obj/item/organ/brain)

@@ -209,8 +209,7 @@
 /area/f13/bunker)
 "aaN" = (
 /obj/machinery/conveyor/auto{
-	dir = 4;
-	icon_state = "conveyor_map"
+	dir = 4
 	},
 /turf/open/floor/plasteel/barber{
 	icon = 'icons/turf/f13floors2.dmi';
@@ -231,8 +230,7 @@
 /area/f13/bunker)
 "aaP" = (
 /obj/machinery/conveyor/auto{
-	dir = 6;
-	icon_state = "conveyor_map"
+	dir = 6
 	},
 /turf/open/floor/plasteel/barber{
 	icon = 'icons/turf/f13floors2.dmi';
@@ -304,8 +302,7 @@
 /area/f13/bunker)
 "abb" = (
 /obj/machinery/mineral/processing_unit_console{
-	machinedir = 1;
-	pixel_y = 0
+	machinedir = 1
 	},
 /turf/closed/wall/r_wall/rust,
 /area/f13/bunker)
@@ -382,8 +379,7 @@
 /area/f13/bunker)
 "abp" = (
 /obj/machinery/mineral/stacking_unit_console{
-	machinedir = 5;
-	pixel_x = 0
+	machinedir = 5
 	},
 /turf/closed/wall/r_wall/rust,
 /area/f13/bunker)
@@ -604,7 +600,6 @@
 "acd" = (
 /obj/structure/chair/wood{
 	dir = 1;
-	icon_state = "wooden_chair_settler";
 	tag = "icon-wooden_chair_settler (NORTH)"
 	},
 /obj/item/storage/backpack/satchel/leather,
@@ -3317,8 +3312,6 @@
 /obj/item/ammo_casing/caseless{
 	dir = 10;
 	icon_state = "sS-casing";
-	pixel_x = 0;
-	pixel_y = 0;
 	tag = "icon-sS-casing (SOUTHWEST)"
 	},
 /obj/item/storage/trash_stack,
@@ -3723,8 +3716,6 @@
 /obj/item/ammo_casing/caseless{
 	dir = 10;
 	icon_state = "sS-casing";
-	pixel_x = 0;
-	pixel_y = 0;
 	tag = "icon-sS-casing (SOUTHWEST)"
 	},
 /turf/open/indestructible/ground/outside/desert,
@@ -3898,8 +3889,6 @@
 "alj" = (
 /obj/item/ammo_casing/caseless{
 	dir = 6;
-	icon_state = "s-casing";
-	pixel_x = 0;
 	tag = "icon-s-casing (SOUTHEAST)"
 	},
 /turf/open/indestructible/ground/outside/desert,
@@ -4109,8 +4098,6 @@
 "alP" = (
 /obj/item/ammo_casing/caseless{
 	dir = 6;
-	icon_state = "s-casing";
-	pixel_x = 0;
 	tag = "icon-s-casing (SOUTHEAST)"
 	},
 /turf/open/indestructible/ground/inside/mountain,
@@ -17319,6 +17306,7 @@
 /obj/structure/table/wood/settler,
 /obj/item/pestle,
 /obj/item/reagent_containers/glass/mortar,
+/obj/item/smelling_salts/wayfarer,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/village)
 "aYv" = (
@@ -39440,17 +39428,6 @@
 /obj/structure/chair/comfy/black,
 /turf/open/floor/f13/wood,
 /area/f13/building)
-"heQ" = (
-/obj/structure/fence{
-	dir = 4;
-	icon_state = "straight";
-	tag = "icon-metal_fence3"
-	},
-/turf/open/indestructible/ground/outside/sidewalk{
-	dir = 1;
-	icon_state = "outerpavement"
-	},
-/area/f13/wasteland)
 "hff" = (
 /obj/item/chair,
 /turf/open/floor/plasteel/f13/vault_floor/dark{
@@ -39514,14 +39491,6 @@
 "hmu" = (
 /turf/open/floor/plasteel/f13/vault_floor/dark,
 /area/f13/ncr)
-"hor" = (
-/obj/structure/fence{
-	dir = 4;
-	icon_state = "straight";
-	tag = "icon-metal_fence3"
-	},
-/turf/open/indestructible/ground/outside/desert,
-/area/f13/wasteland)
 "how" = (
 /obj/effect/spawner/lootdrop/f13/foodspawner,
 /obj/effect/decal/cleanable/dirt,
@@ -80584,9 +80553,9 @@ aft
 aft
 aft
 afF
-heQ
+ahW
 aat
-hor
+agy
 aat
 aat
 aat
@@ -81098,7 +81067,7 @@ aft
 agN
 ahc
 aft
-heQ
+ahW
 aat
 aae
 aae
