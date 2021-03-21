@@ -22,7 +22,7 @@
 	icon_state = "labcoat_emt"
 	item_state = "labcoat_cmo"
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 10,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 10, "acid" = 0)
-	
+
 
 /obj/item/clothing/suit/toggle/labcoat/mad
 	name = "\improper The Mad's labcoat"
@@ -54,6 +54,14 @@
 	name = "fieldscribe suit"
 	desc = "A suit that protects against the weather, and looks stylish, but not much else."
 	icon_state = "fieldscribe"
+	body_parts_covered = CHEST|ARMS
+	allowed = list(/obj/item/gun)
+	armor = list("melee" = 15, "bullet" = 16, "laser" = 0, "energy" = 0, "bomb" = 16, "bio" = 0, "rad" = 0, "fire" = 10, "acid" = 0)
+
+/obj/item/clothing/suit/toggle/labcoat/scribecoat
+	name = "fieldscribe coat"
+	desc = "A heavy-duty coat and chestrig fitted with tons of pockets for every scribe's storage needs."
+	icon_state = "scribecoat"
 	body_parts_covered = CHEST|ARMS
 	allowed = list(/obj/item/gun)
 	armor = list("melee" = 15, "bullet" = 16, "laser" = 0, "energy" = 0, "bomb" = 16, "bio" = 0, "rad" = 0, "fire" = 10, "acid" = 0)

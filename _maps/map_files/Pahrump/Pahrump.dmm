@@ -18075,6 +18075,7 @@
 /obj/structure/table,
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier1,
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier2,
+/obj/item/restraints/handcuffs/fake,
 /turf/open/floor/f13{
 	icon_state = "floorrusty"
 	},
@@ -25582,6 +25583,8 @@
 "bBM" = (
 /obj/structure/closet/crate/bin,
 /obj/item/toy/plush/slimeplushie,
+/obj/item/restraints/handcuffs/fake,
+/obj/item/restraints/handcuffs/fake,
 /turf/open/floor/plasteel/dark,
 /area/f13/brotherhood)
 "bBN" = (
@@ -26897,6 +26900,9 @@
 /obj/item/clothing/suit/toggle/labcoat/fieldscribe,
 /obj/item/clothing/suit/toggle/labcoat/fieldscribe,
 /obj/item/storage/firstaid/regular,
+/obj/item/clothing/suit/toggle/labcoat/scribecoat,
+/obj/item/clothing/suit/toggle/labcoat/scribecoat,
+/obj/item/clothing/suit/toggle/labcoat/scribecoat,
 /turf/open/floor/carpet/black,
 /area/f13/brotherhood)
 "bFl" = (
